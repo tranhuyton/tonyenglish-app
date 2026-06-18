@@ -1,1 +1,514 @@
-{"basicInfo":{"skill":"Standard-Reading","title":"Unit 8","category":"exercise","timeLimit":0},"parts":[{"id":"part1","title":"Word List","content":"<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit8_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit8_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">broad</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[brɔ:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is broad, it is wide.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The river is very long and broad.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bush</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[buʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bush is a plant with many thin branches. It is smaller than a tree.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad and I planted some small bushes around the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">capable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[keipəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is capable of something, they can do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Olympic athlete is capable of lifting a lot of weight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cheat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃi:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To cheat is to be dishonest so that you can win or do well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They cheated on the test by sharing answers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concentrate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnsəntreit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To concentrate on someone or something is to give your full attention.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I could not concentrate on my homework because the room was so loud.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conclude</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənklu:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To conclude is to arrive at a logical end by looking at evidence.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw crumbs on my dog’s face, so I concluded that he ate my cookie.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">confident</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnfidənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Confident means that one believes they can do something without failing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was confident she could climb the mountain due to her training.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">considerable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsidərəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is considerable, it is large in size, amount or extent.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They paid a considerable amount of money for that car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convey</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To convey is to communicate or make ideas known.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That picture of a crying child conveys a feeling of sadness.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">definite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[defənit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is definite, it is certain or sure to be true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is a definite connection between hard work and success.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">delight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dilait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Delight is a feeling of being very happy with something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He felt such delight after getting a promotion at work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">destination</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[destəneiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A destination is the place where someone or something is going to.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The destination of this plane is Munich, Germany.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dictate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dikteit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dictate something is to read it aloud so it can be written down.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He dictated his speech so his secretary could write it down.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">edge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[edʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The edge of something is the part of it that is farthest from the center.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He ran to the edge of the cliff.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">path</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pæθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A path is a way from one place to another that people can walk along.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We followed a path through the woods.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">resort</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rizɔ:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To resort to something is to depend on it in order to solve a problem.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I hope they don’t resort to violence to end the argument.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shadow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃædou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shadow is the dark area that is made when something blocks light.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man’s shadow was taller than he was.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">succeed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səksi:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To succeed is to complete something that you planned or tried to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He will continue to work on the robot until he succeeds.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">suspect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səspekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To suspect something is to believe that it is true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I suspect that those kids stole the money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">valley</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[væli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A valley is a low area of land between two mountains or hills.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We looked at the valley below from the top of the mountain.</div></div></div></div></div></div>","sections":[{"id":"sec1_wordlist_ex1","title":"Exercise 1: Fill in the blanks with the correct words from the word bank.","content":"","questionType":"Trắc nghiệm","questions":[{"id":"1","content":"1. This river will take us through the_________________ .","options":["valley","bush","edge","resort"],"correctAnswer":"valley","explanation":"valley: a low area of land between two mountains or hills."},{"id":"2","content":"2. The doctor must_________________during surgery to keep the patient alive.","options":["convey","concentrate","broad","capable"],"correctAnswer":"concentrate","explanation":"concentrate: to give your full attention."},{"id":"3","content":"3. The sign was so_________________ we couldn’t see around it.","options":["broad","capable","resort","edge"],"correctAnswer":"broad","explanation":"broad: wide."},{"id":"4","content":"4. People can_________________ their happiness by smiling.","options":["path","convey","concentrate","bush"],"correctAnswer":"convey","explanation":"convey: to communicate or make ideas known."},{"id":"5","content":"5. What is the_________________ of this train?","options":["destination","valley","edge","resort"],"correctAnswer":"destination","explanation":"destination: the place where someone or something is going to."},{"id":"6","content":"6. We walked to the_________________ of the cliff and looked down.","options":["path","bush","edge","valley"],"correctAnswer":"edge","explanation":"edge: the part of it that is farthest from the center."},{"id":"7","content":"7. The hikers walked along the_________________ in the forest.","options":["bush","path","destination","broad"],"correctAnswer":"path","explanation":"path: a way from one place to another that people can walk along."},{"id":"8","content":"8. I planted a _________________ in my yard last weekend.","options":["bush","valley","capable","concentrate"],"correctAnswer":"bush","explanation":"bush: a plant with many thin branches."},{"id":"9","content":"9. She is_________________ of running faster than any boy in her class.","options":["capable","broad","convey","resort"],"correctAnswer":"capable","explanation":"capable: able to do something."},{"id":"10","content":"10. If the boys can’t agree, they will__________________ to fighting.","options":["resort","convey","concentrate","destination"],"correctAnswer":"resort","explanation":"resort to: to depend on it in order to solve a problem."}]},{"id":"sec1_wordlist_ex2","title":"Exercise 2: Write a word that is similar in meaning to the underlined part.","content":"","questionType":"Trắc nghiệm","questions":[{"id":"11","content":"1. He wants to win so much that he will not obey the rules to do it.","options":["cheat","shadow","suspect","succeed"],"correctAnswer":"cheat","explanation":"cheat: to be dishonest so that you can win or do well."},{"id":"12","content":"2. I’m going to stand in the dark area of the tree because the sun is too hot here.","options":["shadow","dictate","confident","delight"],"correctAnswer":"shadow","explanation":"shadow: the dark area that is made when something blocks light."},{"id":"13","content":"3. The police believe it’s true that the clerk stole the money.","options":["suspect","conclude","definite","considerable"],"correctAnswer":"suspect","explanation":"suspect: to believe that it is true."},{"id":"14","content":"4. If we do what we are trying to do, we will become very rich!","options":["succeed","cheat","dictate","shadow"],"correctAnswer":"succeed","explanation":"succeed: to complete something that you planned or tried to do."},{"id":"15","content":"5. Please read aloud the questions so the students can write them down.","options":["dictate","convey","suspect","confident"],"correctAnswer":"dictate","explanation":"dictate: to read it aloud so it can be written down."},{"id":"16","content":"6. I am sure I can do something because I have practiced for years.","options":["confident","definite","considerable","delight"],"correctAnswer":"confident","explanation":"confident: believes they can do something without failing."},{"id":"17","content":"7. After seeing the evidence, you must decide if the man is innocent.","options":["conclude","suspect","succeed","cheat"],"correctAnswer":"conclude","explanation":"conclude: to arrive at a logical end by looking at evidence."},{"id":"18","content":"8. It was a good feeling knowing that I had saved enough money to go on a trip.","options":["delight","shadow","dictate","confident"],"correctAnswer":"delight","explanation":"delight: a feeling of being very happy with something."},{"id":"19","content":"9. This horse is a certain winner.","options":["definite","considerable","delight","suspect"],"correctAnswer":"definite","explanation":"definite: certain or sure to be true."},{"id":"20","content":"10. The large size of the box made it difficult to move.","options":["considerable","confident","conclude","cheat"],"correctAnswer":"considerable","explanation":"considerable: large in size, amount or extent."}]}]},{"id":"part2","title":"Comprehensive Reading","content":"<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Tricky Turtle</h1><p style=\"margin-bottom: 1rem;\">Ricky the rabbit and Tera the turtle met by the <b>edge</b> of the river. “No one is <b>capable</b> of beating me in a race!” Ricky said. He was <b>confident</b>—his smile <b>conveyed</b> that.</p><p style=\"margin-bottom: 1rem;\">“I can beat you,” Tera said.</p><p style=\"margin-bottom: 1rem;\">Ricky laughed with <b>delight</b>.</p><p style=\"margin-bottom: 1rem;\">Tera said, “We will race tomorrow. The <b>destination</b> is the hill.”</p><p style=\"margin-bottom: 1rem;\">Ricky agreed. Tera <b>concentrated</b> on winning the race. She was not faster than Ricky. She needed a <b>definite</b> way to <b>succeed</b>. She told her family about the race, “I have <b>concluded</b> that I have to <b>resort</b> to something bad. I will <b>cheat</b>.” She <b>dictated</b> her instructions to them.</p><p style=\"margin-bottom: 1rem;\">At the race, they all wore white feathers. They looked exactly the same! Then, her family members hid in <b>shadows</b> on the <b>path</b>.</p><p style=\"margin-bottom: 1rem;\">The race began. Tera was soon far behind. However, Tera’s brother hid behind a <b>bush</b> in the <b>valley</b> below. When Ricky got close, Tera’s brother began to run. He looked just like Tera! Ricky ran as fast as he could along the <b>path</b>. But, to him, it seemed like Tera was always ahead. Ricky had used a <b>considerable</b> amount of energy.</p><p style=\"margin-bottom: 1rem;\">He reached the top, but Tera’s sister was already there. “Well, you win,” Ricky said.</p><p style=\"margin-bottom: 1rem;\">Later, Tera had a <b>broad</b> smile on her face. Ricky never <b>suspected</b>. He had been tricked by a family of slow turtles.</p></div>","imageUrl":"/unit8_story.png","sections":[{"id":"sec2_reading","title":"Answer the questions.","content":"","questionType":"Trắc nghiệm","questions":[{"id":"21","content":"1. What is this story about?","options":["A confident rabbit","A rabbit that cheats in a race","A turtle that rests in shadows","A turtle with a crazy idea and a broad family"],"correctAnswer":"A confident rabbit","explanation":"Theo đáp án khóa là (a) A confident rabbit."},{"id":"22","content":"2. Where was the final destination of the race?","options":["The edge of the river","Behind the first bush","The middle of the valley","The top of the hill"],"correctAnswer":"The top of the hill","explanation":"The destination is the hill (đỉnh đồi)."},{"id":"23","content":"3. Why was Tera the Turtle angry?","options":["Because Ricky the rabbit said no one was capable of beating him","Because she thought that the path of the race was too difficult","Because she knew Rabbit would resort to cheating","Because her family wouldn’t gather when she asked them to"],"correctAnswer":"Because Ricky the rabbit said no one was capable of beating him","explanation":"Ricky the rabbit said 'No one is capable of beating me in a race!'."},{"id":"24","content":"4. What did Tera say to her family?","options":["She concluded that she must concentrate on the race.","She conveyed that Rabbit would cheat.","She told them about her definite plan to succeed.","She said the race would take a considerable amount of energy."],"correctAnswer":"She told them about her definite plan to succeed.","explanation":"She needed a definite way to succeed. She told her family about the race..."}]}]}]}
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit8_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit8_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">access</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aekses] n.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Access is the right to enter or use something.<br/><i>Quyền truy cập là quyền để vào hoặc sử dụng một thứ gì đó.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The manager was the only person with access to the password.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conduct</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kandAkt] n.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Conduct is the way that someone acts.<br/><i>Hạnh kiểm là cách một người hành động.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— She was punished for her bad conduct.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">constant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kanstant] adj.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When an event or action is constant, it happens a lot or all the time.<br/><i>Khi một sự kiện hay hành động là liên tục, nó xảy ra nhiều hoặc mọi lúc.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The television at home is in constant use.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crack</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kraek] n.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A crack is a narrow space between the parts of something broken.<br/><i>Một vết nứt là một khoảng trống hẹp giữa các phần của một vật bị vỡ.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The old window was covered with cracks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">device</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[divais] n.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A device is an object or a machine.<br/><i>Một thiết bị là một đồ vật hay một cái máy.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— A thermometer is a device that tells temperature.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enclose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inklouz] v.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To enclose something is to contain it.<br/><i>Bao quanh một thứ gì đó là chứa đựng nó.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The cows in the field were enclosed by a fence.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[grip] v.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To grip something is to hold it very tightly.<br/><i>Nắm chặt một thứ gì đó là giữ nó rất chặt.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I was scared, so I gripped my older sister's hand.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">halt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ho:It] v.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To halt is to stop moving.<br/><i>Dừng lại là ngừng di chuyển.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The criminal halted when he saw the police coming.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impending</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impendir)] adj.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is impending, it is going to happen soon.<br/><i>Nếu một thứ gì đó đang đến gần, nó sẽ sớm xảy ra.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The student was nervous about his impending test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">influence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[influans] v.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To influence someone or something is to have an effect over them.<br/><i>Ảnh hưởng đến một người hay một vật là có tác động lên chúng.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— My friend influenced my decision to attend Terrance University.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">law</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[to:] n.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A law is a rule made by the legislative body.<br/><i>Một đạo luật là một quy định được tạo ra bởi cơ quan lập pháp.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The students learned about different laws during social studies class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mode</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[moud] n.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mode is a setting or condition on a machine.<br/><i>Một chế độ là một cài đặt hay điều kiện trên một cái máy.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— Mother turned the TV to quiet mode while she talked on the phone.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">perspire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[parspaiar] v.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To perspire means to sweat.<br/><i>Đổ mồ hôi có nghĩa là tiết ra mồ hôi.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I usually perspire a lot when I am at practice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">replace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ripleis] v.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To replace something is to put it in the place of something else.<br/><i>Thay thế một thứ gì đó là đặt nó vào vị trí của một thứ khác.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I replaced the tire on my car because it was flat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">snap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[snagp] v.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To snap something means to break it suddenly, which causes a loud noise.<br/><i>Bẻ gãy một thứ gì đó có nghĩa là làm vỡ nó một cách đột ngột, gây ra tiếng ồn lớn.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I took the stick and snapped it with my hands.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[slai] adj.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person or animal is sly, they are sneaky or good at tricking people.<br/><i>Nếu một người hay một con vật là gian xảo, họ rất lén lút hoặc giỏi lừa gạt mọi người.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The sly fox stole the eggs from the nest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tend] v.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tend to do something is to be likely to do it or to do it often.<br/><i>Có xu hướng làm gì đó là có khả năng làm nó hoặc thường xuyên làm nó.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— My mom tends to buy me the perfect gift each Christmas.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">valid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaelid] adj.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is valid, it is correct or based on good reasoning.<br/><i>Khi một thứ gì đó là hợp lệ, nó là đúng hoặc dựa trên lý luận tốt.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The expert's opinion on the subject was more valid than others.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">version</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[va:r3an] n.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A version is an account of something that differs slightly from the original.<br/><i>Một phiên bản là một lời kể về một thứ gì đó mà hơi khác với bản gốc.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— She read the students British version of the Chinese fairy tale.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whatsoever</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwatsouevar] adj.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">You use whatsoever after a noun to emphasize that there is nothing of that thing.<br/><i>Bạn sử dụng whatsoever sau một danh từ để nhấn mạnh rằng không có chút nào của thứ đó.</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The boy had no idea whatsoever how to solve the story problem.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "Mr. Holloway was sent to __________ the old coach, who was known for his wild __________ during games.",
+              "options": [
+                "replace / conduct",
+                "conduct / replace"
+              ],
+              "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q2",
+              "content": "Decisions made in courts are often __________ by the personal views of the judge. In some cases, the decisions help change __________.",
+              "options": [
+                "influenced / laws",
+                "laws / influenced"
+              ],
+              "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q3",
+              "content": "I __________ the pencil and squeezed it until it __________.",
+              "options": [
+                "gripped / snapped",
+                "snapped / gripped"
+              ],
+              "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q4",
+              "content": "My father __________ a check in the letter he sent me. He always offered to help even if I didn't ask for any help __________.",
+              "options": [
+                "enclosed / whatsoever",
+                "whatsoever / enclosed"
+              ],
+              "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q5",
+              "content": "The soldier dreaded the __________ battle. He __________ thought about what might happen to him.",
+              "options": [
+                "impending / constantly",
+                "constantly / impending"
+              ],
+              "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q6",
+              "content": "I saw several __________ in the ice. This __________ to happen when the weather becomes warmer.",
+              "options": [
+                "cracks / tends",
+                "tends / cracks"
+              ],
+              "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q7",
+              "content": "Sheila took the __________ from her purse and pressed a couple of buttons. It took her awhile to figure out how to turn it to silent __________.",
+              "options": [
+                "device / mode",
+                "mode / device"
+              ],
+              "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q8",
+              "content": "She ran from room to room quickly, but __________ suddenly. She couldn't have __________ to the room without a key.",
+              "options": [
+                "halted / access",
+                "access / halted"
+              ],
+              "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q9",
+              "content": "The student had a __________ reason for leaving the classroom when his teacher was gone. He tried to explain his __________ of what happened while she was gone.",
+              "options": [
+                "valid / version",
+                "version / valid"
+              ],
+              "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q10",
+              "content": "The thief __________ while the police questioned him. They didn't feel sorry for the __________ criminal.",
+              "options": [
+                "perspired / sly",
+                "sly / perspired"
+              ],
+              "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Part A. Match the phrases to make complete sentences.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "Scientists have a device that helps __________",
+              "options": [
+                "them tell how old an object is",
+                "as she turned around the corner",
+                "in the summer",
+                "when the electricity went out"
+              ],
+              "explanation": "Các nhà khoa học có một thiết bị giúp họ biết một vật thể bao nhiêu tuổi.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q12",
+              "content": "The driver gripped the wheel __________",
+              "options": [
+                "as she turned around the corner",
+                "by holding it too tightly",
+                "to miss school today",
+                "my brother in trouble"
+              ],
+              "explanation": "Người lái xe nắm chặt vô lăng khi rẽ ở góc đường.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q13",
+              "content": "I always perspire more often __________",
+              "options": [
+                "in the summer",
+                "by holding it too tightly",
+                "them tell how old an object is",
+                "his mother wasn't watching him"
+              ],
+              "explanation": "Tôi luôn đổ mồ hôi nhiều hơn vào mùa hè.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q14",
+              "content": "The concert halted __________",
+              "options": [
+                "when the electricity went out",
+                "light bulb with a new one",
+                "students who do all of their homework",
+                "my brother in trouble"
+              ],
+              "explanation": "Buổi hòa nhạc dừng lại khi mất điện.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q15",
+              "content": "The sly boy took a cookie while __________",
+              "options": [
+                "his mother wasn't watching him",
+                "by holding it too tightly",
+                "to miss school today",
+                "as she turned around the corner"
+              ],
+              "explanation": "Cậu bé tinh ranh lấy chiếc bánh quy khi mẹ không để ý.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q16",
+              "content": "My father replaced the old __________",
+              "options": [
+                "light bulb with a new one",
+                "them tell how old an object is",
+                "students who do all of their homework",
+                "my brother in trouble"
+              ],
+              "explanation": "Bố tôi thay bóng đèn cũ bằng một cái mới.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q17",
+              "content": "He had a valid reason __________",
+              "options": [
+                "to miss school today",
+                "as she turned around the corner",
+                "in the summer",
+                "when the electricity went out"
+              ],
+              "explanation": "Cậu ấy có một lý do chính đáng để nghỉ học hôm nay.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q18",
+              "content": "I snapped the toy __________",
+              "options": [
+                "by holding it too tightly",
+                "his mother wasn't watching him",
+                "my brother in trouble",
+                "light bulb with a new one"
+              ],
+              "explanation": "Tôi bẻ gãy món đồ chơi bằng cách cầm nó quá chặt.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q19",
+              "content": "The teacher tends to give the best grades to __________",
+              "options": [
+                "students who do all of their homework",
+                "them tell how old an object is",
+                "to miss school today",
+                "in the summer"
+              ],
+              "explanation": "Giáo viên có xu hướng cho điểm cao nhất cho những học sinh làm hết bài tập về nhà.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q20",
+              "content": "I got no joy whatsoever from getting __________",
+              "options": [
+                "my brother in trouble",
+                "when the electricity went out",
+                "by holding it too tightly",
+                "his mother wasn't watching him"
+              ],
+              "explanation": "Tôi không cảm thấy vui chút nào khi khiến anh trai tôi gặp rắc rối.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2: Part B. Match the clauses to make complete sentences.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q21",
+              "content": "He didn't understand, __________",
+              "options": [
+                "so they told him a different version",
+                "so his conduct was excellent",
+                "that he broke every law",
+                "it was enclosed in glass"
+              ],
+              "explanation": "Anh ấy không hiểu, nên họ kể cho anh ấy một phiên bản khác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q22",
+              "content": "He was told to behave, __________",
+              "options": [
+                "so his conduct was excellent",
+                "so the mode wouldn't disturb anyone",
+                "because he can influence people to do anything",
+                "but he wasn't given access to the room"
+              ],
+              "explanation": "Anh ấy được dặn phải cư xử tốt, nên hạnh kiểm của anh ấy rất xuất sắc.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q23",
+              "content": "Joe was such a bad person __________",
+              "options": [
+                "that he broke every law",
+                "because there were cracks in it",
+                "because the impeding test was so important",
+                "so the constant music wouldn't annoy the neighbors"
+              ],
+              "explanation": "Joe là một kẻ tồi tệ đến mức anh ta đã phá vỡ mọi điều luật.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q24",
+              "content": "To keep the jewels safe, __________",
+              "options": [
+                "it was enclosed in glass",
+                "but he wasn't given access to the room",
+                "because he can influence people to do anything",
+                "so the mode wouldn't disturb anyone"
+              ],
+              "explanation": "Để giữ an toàn cho những viên đá quý, nó được bọc trong kính.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q25",
+              "content": "Be careful __________",
+              "options": [
+                "because he can influence people to do anything",
+                "because there were cracks in it",
+                "so they told him a different version",
+                "because the impeding test was so important"
+              ],
+              "explanation": "Hãy cẩn thận vì anh ấy có thể ảnh hưởng người khác làm bất cứ điều gì.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q26",
+              "content": "Mark tried the code, __________",
+              "options": [
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
+                "so his conduct was excellent",
+                "that he broke every law"
+              ],
+              "explanation": "Mark đã thử mã số, nhưng anh ấy không được phép truy cập vào phòng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q27",
+              "content": "She practices the violin during the day, __________",
+              "options": [
+                "so the constant music wouldn't annoy the neighbors",
+                "so the mode wouldn't disturb anyone",
+                "because there were cracks in it",
+                "so they told him a different version"
+              ],
+              "explanation": "Cô ấy tập violin vào ban ngày, nên tiếng nhạc liên tục sẽ không làm phiền hàng xóm.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q28",
+              "content": "He studied hard __________",
+              "options": [
+                "because the impeding test was so important",
+                "because he can influence people to do anything",
+                "but he wasn't given access to the room",
+                "so his conduct was excellent"
+              ],
+              "explanation": "Anh ấy học hành chăm chỉ vì bài kiểm tra sắp tới rất quan trọng.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q29",
+              "content": "She turned her phone off, __________",
+              "options": [
+                "so the mode wouldn't disturb anyone",
+                "so the constant music wouldn't annoy the neighbors",
+                "that he broke every law",
+                "it was enclosed in glass"
+              ],
+              "explanation": "Cô ấy tắt điện thoại, nên chế độ đó sẽ không làm phiền ai.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q30",
+              "content": "He replaced the glass __________",
+              "options": [
+                "because there were cracks in it",
+                "so they told him a different version",
+                "because the impeding test was so important",
+                "because he can influence people to do anything"
+              ],
+              "explanation": "Anh ấy đã thay tấm kính vì có những vết nứt trên đó.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Janie and the Music Player</h1>        <p style=\"margin-bottom: 1rem;\">Janie had <b>constant</b> thoughts about getting a music player. One day, she was late to class. She hurried down the hall but <b>halted</b> when she saw a backpack on the floor. She looked inside and found nothing but some books. She reached inside the bag and felt a small object at the bottom. It was a music player <b>enclosed</b> in a black case! Janie <b>tended</b> to be honest, and she had no <b>valid</b> reason to take the <b>device</b>. However, her desire for the player <b>influenced</b> her decision. Janie was being <b>sly</b>. She put the <b>device</b> into her own backpack. When she arrived at class, she gave her teacher the bag. \"I found this,\" she said.</p>    <p style=\"margin-bottom: 1rem;\">Ms. Johnson asked, \"Does this backpack belong to anyone?\" A girl named Linda claimed the bag. Linda looked inside and yelled, \"My music player is missing! Janie took it!\" Janie answered, \"I did not.\" Linda responded, \"You were the only one that had <b>access</b> to it! If your <b>version</b> of the story is true, you'll let Ms. Johnson check your bag.\" Janie started to <b>perspire</b> as she realized the <b>impending</b> trouble she was in. She <b>gripped</b> her bag tightly.</p>    <p style=\"margin-bottom: 1rem;\">Ms. Johnson took the bag from Janie. Inside she found the player. \"Janie, I never expected this kind of <b>conduct</b> from you,\" she said. \"You've always been such a good student.\"</p>    <p style=\"margin-bottom: 1rem;\">Ms. Johnson gave Linda the player. Linda said, \"Ms. Johnson, look!\" There was a <b>crack</b> along one side. She turned it to the \"on\" <b>mode</b>, but it wouldn't work. It must've <b>snapped</b> while Janie was holding onto the bag so tightly.</p>    <p style=\"margin-bottom: 1rem;\">Ms. Johnson called Janie's parents. They were very upset. \"Stealing is illegal. You have no respect for the <b>law</b> <b>whatsoever</b>,\" they said. \"We bought you a music player, but we're giving it to Linda. It will <b>replace</b> the one you broke.\" In the end, Janie's bad behavior left her with nothing at all.</p></div>",
+      "imageUrl": "/unit8_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Reading Comprehension Part A: True or False",
+          "content": "",
+          "questions": [
+            {
+              "id": "q31",
+              "content": "Janie thought constantly about a device that played videos.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Janie thought constantly about a device that played music.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q32",
+              "content": "Janie halted while she walked to class because she found a backpack.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "She hurried down the hall but halted when she saw a backpack.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q33",
+              "content": "Janie found the player when she gripped the bag.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Janie found the player when she reached into the bag.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q34",
+              "content": "The backpack belonged to a student in Janie's class.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Một học sinh tên là Linda đã nhận chiếc cặp.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q35",
+              "content": "When Linda put the player to 'on' mode, it started to work.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "When Linda put the player to 'on' mode, it didn't work.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q36",
+              "content": "Janie's parents gave the music player to Linda to replace the one she broke.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Bố mẹ Janie mua một chiếc máy mới và đưa nó cho Linda để thay thế chiếc bị hỏng.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec5",
+          "title": "Reading Comprehension Part B: Choose the right answer",
+          "content": "",
+          "questions": [
+            {
+              "id": "q37",
+              "content": "What did Janie find enclosed in the black case?",
+              "options": [
+                "A music player",
+                "A backpack",
+                "A locker",
+                "A key"
+              ],
+              "explanation": "Cô bé tìm thấy một máy nghe nhạc (A music player) đựng trong hộp đen.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q38",
+              "content": "The reading explains that Janie lied to her teacher about what?",
+              "options": [
+                "A backpack she found",
+                "Taking Linda's music player",
+                "The reason she snapped the player",
+                "How the player got a crack"
+              ],
+              "explanation": "Janie nói dối về việc lấy máy nghe nhạc của Linda (Taking Linda's music player).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q39",
+              "content": "What did Ms. Johnson NOT expect from Janie?",
+              "options": [
+                "Bad conduct",
+                "Her banking information",
+                "Poor schoolwork",
+                "Her influence"
+              ],
+              "explanation": "Cô Johnson không ngờ Janie lại có hạnh kiểm xấu như vậy (Bad conduct).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q40",
+              "content": "Janie's parents said she had no respect whatsoever for what?",
+              "options": [
+                "Her impending trouble",
+                "The law",
+                "Her sly behavior",
+                "The valid reasons"
+              ],
+              "explanation": "Bố mẹ Janie nói rằng cô bé không hề có chút tôn trọng nào đối với pháp luật (The law).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 8: Volume 4",
+    "category": "exercise",
+    "timeLimit": 0,
+    "description": "4000 Essential English Words - Volume 4"
+  }
+}

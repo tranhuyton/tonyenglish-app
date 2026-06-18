@@ -1,149 +1,583 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 3",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arrow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈæroʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An arrow is a thin, straight stick shot from a bow.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The arrow flew through the air and hit the target.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">battle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbætl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A battle is a fight between two armies during a war.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The battle lasted for many days.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[boʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bow is a weapon made of curved wood and string that shoots arrows.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He went hunting with a bow and arrow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">brave</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[breɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people are brave, they are not afraid to face pain or danger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The brave firefighter saved the girl from the burning building.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chief</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃiːf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A chief is the leader of a group of people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The chief led the people through the mountains.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disadvantage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌdɪsədˈvæntɪdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A disadvantage is a situation where someone is likely to lose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mike had a disadvantage in the race since he hurt his knee.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enemy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈenəmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An enemy is a country that is fighting another country during a war.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The enemy prepared to attack the kingdom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">entrance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈentrəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An entrance is a place where someone can enter an area.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The gate was locked, so Bill had to find a different entrance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hardly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhɑːrdli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something hardly happens, it almost does not happen at all.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I hardly saw the concert since I had to leave early.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈtend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To intend to do something means to plan to do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I intend to finish college in three years.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">laughter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈlæftər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Laughter is the sound produced by laughing about something funny.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Susan's joke made her classmates burst into laughter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">log</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔːɡ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A log is a thick piece of wood that is cut from a tree.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fire was too small, so we added another log to it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">military</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmɪləteri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The military is the armed forces of a country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I joined the military after I finished high school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">obey</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[oʊˈbeɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To obey means to follow what a law or a person says you must do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My little sister did not obey my mother. Now she is in trouble.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">secure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɪˈkjʊr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To secure something means to get it after a lot of effort.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was able to secure a good grade on my test after weeks of studying.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steady</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈstedi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone or something is steady, they are under control.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The problem was hard but she remained steady and solved it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trust</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trʌst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To trust is to believe that someone is honest and will do what is right.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I trust my friends; they don't tell my secrets to other people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">twist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[twɪst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To twist something is to wrap it around itself or another thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She twisted the spaghetti around her fork.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unless</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ənˈles]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">conj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Unless means if not or except when.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Unless you clean your room, you cannot play with your friends.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">weapon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈwepən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A weapon is an object that can be used to hurt people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Swords have been used as weapons for thousands of years.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit3_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit3_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">analytic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænəlitik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is analytic, it is related to logic and reasoning.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The analytic article criticized the new plan and presented one of its own.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">assert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əsə:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To assert a fact or belief means to state it with confidence.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He asserted that his mother’s cooking was better than his best friend’s.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bachelor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bætʃələr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bachelor is an unmarried man.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since he was a bachelor, Jason did his shopping by himself.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">calculus</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kælkjələs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Calculus is an advanced type of mathematics.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ By using calculus, scientists determined small changes in the stars’ brightness.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">celestial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səlestʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is celestial, it is related to the sky or to outer space.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Comets are celestial objects that are rarely seen.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cognitive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑgnətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is cognitive, it is related to learning and knowing things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After her physical examination, her cognitive strengths were tested.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">collision</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəliʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A collision is the act of two things hitting into each another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The collision between the two cars created a loud noise.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">competent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑmpətənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is competent, they are able to think or act successfully.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Competent employees are much better than unknowledgeable ones.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diploma</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diploumə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A diploma is a certificate proving that someone has completed their studies.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After four years of college, Mary finally had a diploma.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">excel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To excel at a subject or activity means to be very good at it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jenny excels at playing the piano.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">geology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒi:ɑlədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Geology is the study of the Earth’s natural structures and how they change.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because he studied geology, he knew how the mountains were formed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">harness</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hɑ:rnis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To harness something means to control and use it, usually to make energy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sails harness the wind in order to move.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intellect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intəlekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An intellect is a person’s ability to understand things easily.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was known for her quick and strong intellect as well as her beauty.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">keen</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ki:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is keen, they are intelligent.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Only the keenest of students could have solved that math problem.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mythology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[miθɑlədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Mythology is a group of stories from a particular country or region.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Egyptian mythology was the basis for a religion.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">physiology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fiziɑlədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Physiology is the study of the various parts of living things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His work in physiology helped him understand how the human body works.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">radioactive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reidiouæktiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is radioactive, then it lets out, or is related to, radiation.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Radioactive materials can be very bad for anyone’s health.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">relativity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[relətivəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Relativity is a set of ideas about time and space developed by Albert Einstein.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Relativity teaches that light travels at the same speed in the universe.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sociology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sousiɑlədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Sociology is the study of human society, its organizations, and problems.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sociology teaches that people’s problems are a result of their society.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">theoretical</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θi:əretikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is theoretical, it is based on theory rather than experience.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His conclusion was only theoretical and not meant to be publicized.</div></div></div></div></div></div>",
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Part B: Choose the right word for the given definition.",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "1",
-              "content": "1. a person of the highest rank",
+              "id": "q1",
+              "content": "What is geology the study of?",
+              "options": [
+                "Earth’s life forms",
+                "Earth’s structures",
+                "Earth’s orbit",
+                "Earth’s atmosphere"
+              ],
+              "explanation": "geology (địa chất học) nghiên cứu cấu trúc của Trái Đất.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q2",
+              "content": "In physiology, you would probably study something like______ .",
+              "options": [
+                "the ocean’s waves",
+                "the soil",
+                "time and space",
+                "parts of living things"
+              ],
+              "explanation": "physiology (sinh lý học) nghiên cứu về các bộ phận của sinh vật sống.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q3",
+              "content": "Which of the following would NOT be considered celestial?",
+              "options": [
+                "Stars",
+                "Comets",
+                "Navigation",
+                "Meteors"
+              ],
+              "explanation": "celestial liên quan đến thiên thể, bầu trời. Điều hướng (Navigation) không phải là thiên thể.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q4",
+              "content": "What else does sociology deal with besides people and their culture?",
+              "options": [
+                "People’s problems",
+                "Plant reproduction",
+                "Alien life forms",
+                "Ocean currents"
+              ],
+              "explanation": "sociology (xã hội học) nghiên cứu các vấn đề của con người.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q5",
+              "content": "If you excel at something, then that means you are______ .",
+              "options": [
+                "incompetent",
+                "brave",
+                "literate",
+                "good at something"
+              ],
+              "explanation": "excel là xuất sắc. Xuất sắc nghĩa là giỏi về điều gì đó.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q6",
+              "content": "intellect",
+              "options": [
+                "name",
+                "ability",
+                "speed",
+                "growth"
+              ],
+              "explanation": "intellect (trí tuệ) tương đương với ability (khả năng).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q7",
+              "content": "calculus",
+              "options": [
+                "content",
+                "religion",
+                "design",
+                "math"
+              ],
+              "explanation": "calculus (giải tích) tương đương với math (toán học).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q8",
+              "content": "assert",
+              "options": [
+                "state",
+                "explode",
+                "purchase",
+                "permit"
+              ],
+              "explanation": "assert (khẳng định) tương đương với state (tuyên bố).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q9",
+              "content": "cognitive",
+              "options": [
+                "friendly",
+                "expensive",
+                "colorful",
+                "learning"
+              ],
+              "explanation": "cognitive (nhận thức) tương quan với learning (học tập).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q10",
+              "content": "diploma",
+              "options": [
+                "money",
+                "mammal",
+                "license",
+                "tower"
+              ],
+              "explanation": "diploma (chứng chỉ) tương đương với license (giấy phép).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q11",
+              "content": "mythology",
+              "options": [
+                "folklore",
+                "business",
+                "freedom",
+                "beauty"
+              ],
+              "explanation": "mythology (thần thoại) tương đương với folklore (văn học dân gian).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q12",
+              "content": "analytic",
+              "options": [
+                "official",
+                "ancient",
+                "logical",
+                "patient"
+              ],
+              "explanation": "analytic (phân tích) tương đương với logical (hợp lý, logic).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q13",
+              "content": "harness",
+              "options": [
+                "use",
+                "expand",
+                "discover",
+                "insist"
+              ],
+              "explanation": "harness (khai thác) tương đương với use (sử dụng).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q14",
+              "content": "competent",
               "options": [
                 "brave",
-                "obey",
-                "chief",
-                "trust"
+                "capable",
+                "handsome",
+                "broken"
               ],
-              "correctAnswer": "chief",
-              "explanation": "chief nghĩa là a person of the highest rank (người đứng đầu)."
+              "explanation": "competent (có năng lực) tương đương với capable (có khả năng).",
+              "correctAnswer": "B"
             },
             {
-              "id": "2",
-              "content": "2. barely or almost unable to do",
+              "id": "q15",
+              "content": "collision",
               "options": [
-                "hardly",
-                "unless",
-                "secure",
-                "disadvantage"
+                "hammer",
+                "scar",
+                "school",
+                "crash"
               ],
-              "correctAnswer": "hardly",
-              "explanation": "hardly nghĩa là barely or almost unable to do (hầu như không)."
-            },
-            {
-              "id": "3",
-              "content": "3. to wrap around itself or another thing",
-              "options": [
-                "steady",
-                "arrow",
-                "bow",
-                "twist"
-              ],
-              "correctAnswer": "twist",
-              "explanation": "twist nghĩa là to wrap around itself or another thing (quấn lại)."
-            },
-            {
-              "id": "4",
-              "content": "4. to plan to do",
-              "options": [
-                "laughter",
-                "intend",
-                "battle",
-                "military"
-              ],
-              "correctAnswer": "intend",
-              "explanation": "intend nghĩa là to plan to do (dự định làm gì)."
-            },
-            {
-              "id": "5",
-              "content": "5. space used to go into an area",
-              "options": [
-                "enemy",
-                "entrance",
-                "log",
-                "weapon"
-              ],
-              "correctAnswer": "entrance",
-              "explanation": "entrance nghĩa là space used to go into an area (lối vào)."
+              "explanation": "collision (sự va chạm) tương đương với crash.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q16",
+              "content": "In physiology, we studied various types of rock and the process that made them.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "physiology (sinh lý học) không nghiên cứu về các loại đá. Sử dụng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q17",
+              "content": "She feared that if no one married her, she’d be a bachelor her entire life.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "bachelor chỉ người đàn ông độc thân, không dùng cho phụ nữ. Sử dụng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q18",
+              "content": "Many old factories harnessed rivers and streams to power their equipment.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "harness (khai thác, sử dụng). Khai thác sông suối để làm năng lượng là đúng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q19",
+              "content": "Her knowledge of different societies came from her work in sociology.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "sociology (xã hội học) nghiên cứu về các xã hội khác nhau là đúng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q20",
+              "content": "If the two bikes hadn’t turned at the last moment, there would have been a collision.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "collision (sự va chạm). Nếu không rẽ kịp sẽ có va chạm là đúng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q21",
+              "content": "In geology, we learned about the importance of our bones.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "geology (địa chất học) nghiên cứu về đá, không phải về xương. Sử dụng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q22",
+              "content": "The only proof that the new rocket would work was theoretical.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "theoretical (trên lý thuyết). Bằng chứng duy nhất chỉ nằm trên lý thuyết là đúng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q23",
+              "content": "The car excelled every time he stepped on the gas pedal.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "excel (xuất sắc) không dùng để miêu tả xe ô tô tăng tốc. Sử dụng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q24",
+              "content": "Learning about calculus in my literature class was a really enjoyable time.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "calculus (giải tích) không thể được học trong lớp văn học (literature). Sử dụng sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q25",
+              "content": "The test proved that Mark was keener than his older brother Dave.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "keen (thông minh, sắc sảo). Bài kiểm tra chứng minh Mark thông minh hơn là đúng.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q26",
+              "content": "She really learned a lot from just one class of the beliefs and stories of different cultures.",
+              "options": [
+                "mythology",
+                "geology",
+                "sociology",
+                "physiology"
+              ],
+              "explanation": "beliefs and stories of different cultures tương đương với mythology.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q27",
+              "content": "When he states the fact with confidence that flowers can grow here, you believe him.",
+              "options": [
+                "asserts",
+                "excels",
+                "harnesses",
+                "deprives"
+              ],
+              "explanation": "states the fact with confidence tương đương với asserts.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q28",
+              "content": "The tests will prove whether or not his discovery is real and not just based on theory.",
+              "options": [
+                "theoretical",
+                "analytic",
+                "cognitive",
+                "celestial"
+              ],
+              "explanation": "based on theory tương đương với theoretical.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q29",
+              "content": "The dangerous thing about nuclear power is the radiation waste it produces.",
+              "options": [
+                "radioactive",
+                "competent",
+                "keen",
+                "celestial"
+              ],
+              "explanation": "radiation tương đương với radioactive.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q30",
+              "content": "John has good learning skills that have helped him in his studies.",
+              "options": [
+                "cognitive",
+                "analytic",
+                "theoretical",
+                "radioactive"
+              ],
+              "explanation": "learning skills tương quan với cognitive.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q31",
+              "content": "The stars and moon in outer space objects lit the path so I could see where I was walking.",
+              "options": [
+                "celestial",
+                "competent",
+                "analytic",
+                "theoretical"
+              ],
+              "explanation": "outer space objects tương đương với celestial.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q32",
+              "content": "Having a certificate of completed studies will give him more options for the future.",
+              "options": [
+                "diploma",
+                "intellect",
+                "collision",
+                "mythology"
+              ],
+              "explanation": "certificate of completed studies tương đương với diploma.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q33",
+              "content": "Albert Einstein’s ideas about time and space changed both science and the world.",
+              "options": [
+                "relativity",
+                "calculus",
+                "geology",
+                "sociology"
+              ],
+              "explanation": "ideas about time and space của Einstein gọi là relativity.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q34",
+              "content": "You have to be very intelligent in order to solve this puzzle in a short amount of time.",
+              "options": [
+                "keen",
+                "competent",
+                "celestial",
+                "radioactive"
+              ],
+              "explanation": "intelligent tương đương với keen.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q35",
+              "content": "Every day the unmarried men came to her home to see which of them she might choose.",
+              "options": [
+                "bachelors",
+                "intellects",
+                "collisions",
+                "diplomas"
+              ],
+              "explanation": "unmarried men tương đương với bachelors.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Battle of Thermopylae</h1><p style=\"margin-bottom: 1rem;\">This is a true story. It happened long ago in Greece.</p><p style=\"margin-bottom: 1rem;\">\"We must fight,\" the Spartan <b>chief</b> told his small army of <b>brave</b> men. They were at a great <b>disadvantage</b>. There were only three hundred of them. The Persian <b>military</b> had hundreds of thousands of men.</p><p style=\"margin-bottom: 1rem;\">They were going to lose <b>unless</b> they could <b>secure</b> a small <b>entrance</b>. The <b>enemy</b> couldn't move through it easily. They <b>intended</b> to stop the <b>enemy</b> here. The <b>chief</b> and his men got ready for the <b>battle</b>.</p><p style=\"margin-bottom: 1rem;\">Soon, long lines of the <b>enemy</b>'s army <b>twisted</b> around the hills. The <b>chief</b> met the <b>enemy</b> with <b>laughter</b>. He knew that his men's <b>weapons</b> and skills were better. The Spartans <b>trusted</b> their leader and <b>obeyed</b> him.</p><p style=\"margin-bottom: 1rem;\">First, the <b>enemy</b> soldiers shot <b>arrows</b> from their <b>bows</b>. The <b>chief</b> told his men to lift their shields. The <b>arrows</b> stuck into the shields but did not hurt any of the men.</p><p style=\"margin-bottom: 1rem;\">Then the <b>enemy</b>'s soldiers attacked the Spartans with long spears. The <b>chief</b> surprised them. His troops rolled <b>logs</b> down on the <b>enemy</b>.</p><p style=\"margin-bottom: 1rem;\">They fought for three days. Though they <b>hardly</b> slept at all, the <b>chief</b> and his men remained <b>steady</b>.</p><p style=\"margin-bottom: 1rem;\">But the <b>enemy</b> found a way to beat the Spartans. The <b>chief</b> and all of his men were killed. Even though they lost, the Battle of Thermopylae is one of the most famous <b>battles</b> in history.</p></div>",
-      "imageUrl": "/unit3_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Bachelor’s Lesson</h1>        <p style=\"margin-bottom: 1rem;\">A <b>keen</b> young <b>bachelor</b> had finished his studies at the university. As soon as he had received his <b>diploma</b>, he <b>asserted</b> to everyone he met that he was the smartest person in town.</p>    <p style=\"margin-bottom: 1rem;\">“I <b>excel</b> at everything I study,” he said, bragging about his knowledge. “I’ve mastered <b>calculus</b> and <b>physiology</b>. I even understand the great <b>theoretical</b> teachings of science, such as <b>relativity</b>. There is nothing that I don’t know. Whether it’s the movements of <b>celestial</b> objects, like planets and stars, or how to <b>harness</b> the power of <b>radioactive</b> substances, I know everything.”</p>    <p style=\"margin-bottom: 1rem;\">But actually, there was something the bachelor did not know. Though his <b>analytic</b> abilities were great, he failed to notice he was missing something very important in his life.</p>    <p style=\"margin-bottom: 1rem;\">One day while walking through town, the bachelor witnessed a <b>collision</b> between two cars. Both drivers appeared to be injured, but the scholar only stood and watched.</p>    <p style=\"margin-bottom: 1rem;\">He thought to himself, “Those idiots should have been more alert. They really must not be very <b>competent</b>.” He never thought the drivers needed help.</p>    <p style=\"margin-bottom: 1rem;\">“Please help me,” said the female driver in a weak voice. “Help me, too,” said the male driver. “I’m hurt and can’t move.”</p>    <p style=\"margin-bottom: 1rem;\">Suddenly the bachelor realized he was the only person near the accident. He quit thinking and ran to help the drivers. He carefully helped them out of their vehicles and then called an ambulance.</p>    <p style=\"margin-bottom: 1rem;\">The drivers were saved, and the bachelor felt the best he had in his entire life. Studying <b>mythology</b>, <b>sociology</b>, and <b>geology</b> didn’t give him this wonderful feeling. It was the act of helping others, not his <b>cognitive</b> skills, that gave him this great feeling.</p>    <p style=\"margin-bottom: 1rem;\">He had learned an important lesson. He learned that <b>intellect</b> isn’t everything; being helpful is just as important. “Having only a brain is not enough,” he thought. “You must also have a heart.”</p></div>",
+      "imageUrl": "/unit3_vol5_story.png",
       "sections": [
         {
-          "id": "sec2_reading",
-          "title": "Answer the questions based on the story.",
+          "id": "sec5_reading_A",
+          "title": "Part A: Mark each statement True (T) or False (F).",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "1",
-              "content": "1. What is this story about?",
+              "id": "q36",
+              "content": "The bachelor excelled at calculus, physiology, and theoretical science, such as relativity.",
               "options": [
-                "How an enemy made an attack against shields",
-                "Why logs were rolled down on soldiers",
-                "How a small disadvantaged army nearly beat a large military",
-                "Why good soldiers obey their leaders"
+                "True",
+                "False"
               ],
-              "correctAnswer": "How a small disadvantaged army nearly beat a large military",
-              "explanation": "Câu chuyện kể về một đạo quân nhỏ bé ở thế bất lợi gần như đánh bại một quân đội lớn."
+              "explanation": "Đúng với câu chuyện: 'I excel at everything... I’ve mastered calculus and physiology. I even understand the great theoretical teachings... relativity.'",
+              "correctAnswer": "A"
             },
             {
-              "id": "2",
-              "content": "2. Why was the smaller army not afraid of the larger one?",
+              "id": "q37",
+              "content": "He knew the movements of radioactive materials and how to harness the power of celestial objects.",
               "options": [
-                "The larger army didn't have any weapons.",
-                "The smaller army had better weapons and skills.",
-                "The larger army did not trust their leader.",
-                "The smaller army did not intend to fight."
+                "True",
+                "False"
               ],
-              "correctAnswer": "The smaller army had better weapons and skills.",
-              "explanation": "Bởi vì họ có vũ khí và kỹ năng tốt hơn (He knew that his men's weapons and skills were better)."
+              "explanation": "Sai. Anh ta biết về 'movements of celestial objects' và 'harness the power of radioactive substances', câu hỏi đã đổi ngược hai khái niệm này.",
+              "correctAnswer": "B"
             },
             {
-              "id": "3",
-              "content": "3. The brave men knew they would lose______",
+              "id": "q38",
+              "content": "The bachelor thought the drivers in the collision were not competent.",
               "options": [
-                "because they heard the soldiers' laughter",
-                "unless they secured the narrow entrance",
-                "against the other army's bows and arrows",
-                "hardly any men fighting the large army"
+                "True",
+                "False"
               ],
-              "correctAnswer": "unless they secured the narrow entrance",
-              "explanation": "Họ sẽ thua trừ khi họ chiếm được một lối vào nhỏ hẹp (They were going to lose unless they could secure a small entrance)."
+              "explanation": "Đúng với câu chuyện: 'They really must not be very competent.'",
+              "correctAnswer": "A"
             },
             {
-              "id": "4",
-              "content": "4. According to the passage, all the following are true about the Persian army EXCEPT_____________.",
+              "id": "q39",
+              "content": "Studying mythology, sociology, and geology gave the bachelor a wonderful feeling.",
               "options": [
-                "their long lines of soldiers twisted around the hills",
-                "they used bows and arrows",
-                "they had a steady three-day attack against the Spartans",
-                "they used fire to defeat the Spartans"
+                "True",
+                "False"
               ],
-              "correctAnswer": "they used fire to defeat the Spartans",
-              "explanation": "Trong bài đọc không đề cập đến việc quân Ba Tư sử dụng lửa để đánh bại quân Spartan."
+              "explanation": "Sai. Việc giúp đỡ người khác mới mang lại cảm giác tuyệt vời, không phải việc học.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q40",
+              "content": "The bachelor’s intellect and not his cognitive talents had made him feel this great.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Sai. Chính hành động giúp đỡ người khác (the act of helping others), chứ không phải tài năng nhận thức (cognitive talents), đã làm anh cảm thấy như vậy.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec6_reading_B",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q41",
+              "content": "What did the keen bachelor assert after receiving his diploma?",
+              "options": [
+                "He asserted to everyone he met that he was the smartest person in town.",
+                "He asserted he wanted to travel the world.",
+                "He asserted he would become a doctor.",
+                "He asserted he wanted to get married."
+              ],
+              "explanation": "As soon as he had received his diploma, he asserted to everyone he met that he was the smartest person in town.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q42",
+              "content": "What happened while the bachelor was strolling through town?",
+              "options": [
+                "He witnessed a collision between two cars.",
+                "He met an old friend.",
+                "He found a lot of money.",
+                "He bought a new book."
+              ],
+              "explanation": "One day while strolling through the town, the bachelor witnessed a collision between two cars.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q43",
+              "content": "How did the bachelor feel after saving the drivers?",
+              "options": [
+                "He felt the best he had in his entire life.",
+                "He felt very tired and hungry.",
+                "He felt angry at them.",
+                "He felt like he wasted his time."
+              ],
+              "explanation": "The bachelor felt the best he had in his entire life.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q44",
+              "content": "Despite his analytic abilities, what did the bachelor fail to notice about his life?",
+              "options": [
+                "He failed to notice he was missing something very important in his life.",
+                "He failed to notice his clothes were dirty.",
+                "He failed to notice the beautiful weather.",
+                "He failed to notice his family."
+              ],
+              "explanation": "Despite his analytic abilities, he failed to notice he was missing something very important in his life.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q45",
+              "content": "Besides a brain, what did the bachelor realize was important to have in life?",
+              "options": [
+                "He realized that you must also have a heart.",
+                "He realized he needed a lot of money.",
+                "He realized he needed to read more books.",
+                "He realized he must have a car."
+              ],
+              "explanation": "Besides a brain, the bachelor realized that you must also have a heart.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 3: Volume 5",
+    "category": "exercise",
+    "timeLimit": 0
+  }
 }

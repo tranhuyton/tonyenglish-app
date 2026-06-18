@@ -1,337 +1,474 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 12",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit12_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit12_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abuse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əbjúːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To abuse someone or something means to hurt them on purpose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mean man abused his dog when it barked too loudly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">afford</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əfɔ́ːrd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To afford something means you have enough money to pay for it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I've been saving my money, so I can afford to buy a new bike.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bake</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[beik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bake means to cook food with heat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister is a good cook. She bakes delicious cakes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bean</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[biːn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bean is a plant seed that is good to eat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are many different kinds of beans to eat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">candle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kǽndl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A candle is a stick of wax that is lit on fire for light or heat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the lights went out, we lit some candles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvə́ːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To convert something means to change it into something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man converted his messy field into a garden of flowers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">debt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[det]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A debt is an amount of money that a person owes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have not paid my gas bill. I owe a debt to the gas company.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decrease</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dikríːs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To decrease something is to make it less than it was before.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Hiring more police officers has decreased crime in the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fault</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔːlt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fault is a mistake.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is my fault that the cat ran away. I left the door open.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fund</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fʌnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fund is an amount of money that people have.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We all put money into our club's fund.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">generous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒénərəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is generous, they like to give things to people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The generous man donated several new computers to our school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ingredient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ingríːdiənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An ingredient is something that is part of a food dish.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The main ingredients in cake are eggs, sugar and flour.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">insist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[insíst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To insist means to be firm in telling people what to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I insist that you try some of these cookies.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mess</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mes]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mess is a condition that is not clean or neat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Heather's room was a complete mess.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">metal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[métl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Metal is a strong material people use to build things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Steel is a common metal that is used to build buildings.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">monitor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑ́nitər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To monitor people or things is to watch them closely.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher monitors the students when they take tests.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">oppose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əpóuz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To oppose something means to dislike it or act against it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I want to be a police officer because I oppose crime.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">passive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pǽsiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person is passive, they do not take action to solve problems.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Marcie is so passive that she never solves her own problems.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">quantity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kwɑ́ntəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A quantity is a certain amount of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have a small quantity of milk in my glass.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[suː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sue someone is to take them to court for something wrong they did.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I sued the company after I slipped on a banana peel in their hallway.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit12_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit12_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alternative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:ltə:rnətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An alternative is something that you can choose instead of your first choice. (Từ thay thế, sự lựa chọn thay thế)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ Her first plan to make extra money seemed weak, so she chose an alternative.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">avenue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ævənju:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An avenue is a road, often a large one with buildings on each side. (Đại lộ, con đường lớn)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ Drive down this avenue and then turn left to go to the park.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">belly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[beli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The belly is the stomach of a person or animal. (Bụng, dạ dày)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ His belly was full because he ate a lot of food.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bid to do something is an attempt to do it. (Sự nỗ lực, cố gắng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ He made a bid to become the university's next president.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To blow means to move air or move something through the air, as in the wind. (Thổi)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The wind is blowing very hard today. We should stay inside.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conflict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnflikt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A conflict is a fight between different people or groups. (Sự xung đột, cuộc xung đột)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The two nations had a conflict over which one could use the water in the river.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">continent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑntənənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A continent is one of the seven large areas of land on the Earth. (Lục địa, châu lục)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ Asia is the largest continent.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">current</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kə:rənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A current is a steady and constant flow of air or water in a river or ocean. (Dòng chảy, dòng nước/khí)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The ocean currents took the ship far off into the sea.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disrespect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disrispekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Disrespect is rudeness or a behavior that shows a lack of respect. (Sự thiếu tôn trọng, sự vô lễ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ He showed disrespect by arguing with his boss during a meeting.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enthusiasm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inθu:ziæzəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Enthusiasm is a very strong good feeling about something. (Sự nhiệt tình, sự hăng hái)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The crowd showed their enthusiasm for the soccer team by cheering loudly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">harsh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hɑ:rʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is harsh, it is very unpleasant. (Khắc nghiệt, thô ráp)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The desert can be a very harsh environment.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lean</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[li:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lean is to bend the body in a particular direction. (Tựa, dựa, nghiêng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The woman leaned against the counter because she was tired.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">meantime</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mi:ntaim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The meantime is the time between two events. (Trong lúc đó, thời gian giữa hai sự việc)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ Ted began setting the table. In the meantime, I began preparing the food.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mischief</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mistʃif]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Mischief is behavior that is meant to trick or cause trouble for people. (Trò nghịch ngợm, sự ranh mãnh)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ Ben was up to mischief when he persuaded Ken to paint his face.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">muscle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mʌsl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Muscle is a mass of tissue attached to bone that helps you move. (Cơ bắp)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ She went to the gym in order to make her muscles stronger.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rescue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reskju:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rescue someone means to remove them from danger. (Cứu nguy, giải cứu)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The firefighter rescued the man from the burning building.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">succession</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səkseʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A succession is a number of things that follow one after the other. (Sự liên tiếp, chuỗi liên tục)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The student said the letters of the alphabet in succession.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">terrain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tərein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The terrain is the land and all of its physical features or parts. (Địa hình)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The terrain below was rocky and full of hills.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">timid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[timid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is timid, they are afraid, shy, or nervous. (Rụt rè, bẽn lẽn)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The timid child hides behind her mother whenever she sees a stranger.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">violence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaiələns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Violence is forceful action that is meant to injure or kill people. (Bạo lực)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➜ The boy hit his brother in an act of violence.</div></div></div></div></div></div>",
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Part A: Choose the right word for the given definition.",
+          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. a certain amount",
+              "content": "It was bad that the man had a lot of __________ because he used it to cause __________.",
               "options": [
-                "a. ingredient",
-                "b. quantity",
-                "c. metal",
-                "d. fault"
+                "muscles - violence",
+                "violence - muscles",
+                "muscles - disrespect",
+                "violence - disrespect"
               ],
-              "correctAnswer": "b. quantity",
-              "explanation": "quantity (n): một số lượng nhất định (a certain amount)."
+              "explanation": "\"muscle\" (cơ bắp) và \"violence\" (bạo lực). Người đàn ông có nhiều cơ bắp (muscles) và sử dụng nó để gây ra bạo lực (violence).",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "2. to make less",
+              "content": "He had a __________ to win the race, but he had to quit when he got a bad pain in his __________.",
               "options": [
-                "a. decrease",
-                "b. oppose",
-                "c. insist",
-                "d. abuse"
+                "belly - bid",
+                "bid - belly",
+                "muscle - bid",
+                "bid - muscle"
               ],
-              "correctAnswer": "a. decrease",
-              "explanation": "decrease (v): làm giảm đi (to make less)."
+              "explanation": "\"bid\" (sự nỗ lực) và \"belly\" (bụng). Anh ta đã nỗ lực (bid) để chiến thắng nhưng phải từ bỏ vì đau bụng (belly).",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
-              "content": "3. to watch closely",
+              "content": "The boy was always __________ because his classmates were mean and treated him with __________.",
               "options": [
-                "a. bake",
-                "b. monitor",
-                "c. mess",
-                "d. afford"
+                "timid - disrespect",
+                "disrespect - timid",
+                "harsh - disrespect",
+                "timid - harsh"
               ],
-              "correctAnswer": "b. monitor",
-              "explanation": "monitor (v): giám sát, theo dõi chặt chẽ (to watch closely)."
+              "explanation": "\"timid\" (rụt rè) và \"disrespect\" (sự thiếu tôn trọng). Cậu bé rụt rè (timid) vì bạn học đối xử thiếu tôn trọng (disrespect).",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
-              "content": "4. a plant seed",
+              "content": "The boy had a lot of __________ before his trip to Europe. He had never been to a different __________ before.",
               "options": [
-                "a. sue",
-                "b. passive",
-                "c. bean",
-                "d. fund"
+                "continent - enthusiasm",
+                "enthusiasm - continent",
+                "avenue - enthusiasm",
+                "enthusiasm - avenue"
               ],
-              "correctAnswer": "c. bean",
-              "explanation": "bean (n): hạt đỗ, đậu (a plant seed)."
+              "explanation": "\"enthusiasm\" (sự nhiệt tình, hăng hái) và \"continent\" (lục địa). Cậu bé rất hăng hái (enthusiasm) vì chưa từng đến một lục địa (continent) khác.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
-              "content": "5. money you owe",
+              "content": "The movie will start soon. In the __________, help me to __________ these heavy boards against the wall.",
               "options": [
-                "a. convert",
-                "b. debt",
-                "c. candle",
-                "d. generous"
+                "meantime - lean",
+                "lean - meantime",
+                "alternative - lean",
+                "lean - alternative"
               ],
-              "correctAnswer": "b. debt",
-              "explanation": "debt (n): món nợ, tiền nợ (money you owe)."
-            }
-          ]
-        },
-        {
-          "id": "sec2_wordlist",
-          "title": "Part B: Circle two words that are related in each group.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
+              "explanation": "\"meantime\" (trong lúc đó) và \"lean\" (tựa). Trong lúc đó (meantime), giúp tôi tựa (lean) tấm ván này vào tường.",
+              "correctAnswer": "A"
+            },
             {
               "id": "6",
-              "content": "1.",
+              "content": "The __________ that the man wanted to drive on was blocked, so he found an __________ route.",
               "options": [
-                "a. debt / b. fund",
-                "a. debt / c. bean",
-                "b. fund / d. abuse",
-                "c. bean / d. abuse"
+                "alternative - avenue",
+                "avenue - alternative",
+                "terrain - avenue",
+                "avenue - terrain"
               ],
-              "correctAnswer": "a. debt / b. fund",
-              "explanation": "debt (nợ) và fund (quỹ) đều liên quan đến tiền bạc."
+              "explanation": "\"avenue\" (đại lộ) và \"alternative\" (sự thay thế). Đại lộ (avenue) bị kẹt nên anh ta phải tìm đường thay thế (alternative).",
+              "correctAnswer": "B"
             },
             {
               "id": "7",
-              "content": "2.",
+              "content": "The police officer had to __________ the woman from a bad __________ she had with another woman.",
               "options": [
-                "a. fault / b. abuse",
-                "b. abuse / c. monitor",
-                "c. monitor / d. sue",
-                "a. fault / d. sue"
+                "conflict - rescue",
+                "rescue - conflict",
+                "rescue - violence",
+                "conflict - violence"
               ],
-              "correctAnswer": "a. fault / d. sue",
-              "explanation": "fault (lỗi) và sue (kiện) có liên quan đến nhau: ai đó có lỗi nên bị kiện."
+              "explanation": "\"rescue\" (giải cứu) và \"conflict\" (cuộc xung đột). Cảnh sát phải giải cứu (rescue) người phụ nữ khỏi cuộc xung đột (conflict).",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
-              "content": "3.",
+              "content": "The girl walked along the rough beach. The rocky __________ was __________ on her feet.",
               "options": [
-                "a. afford / b. bake",
-                "b. bake / d. ingredient",
-                "c. insist / d. ingredient",
-                "a. afford / c. insist"
+                "harsh - terrain",
+                "terrain - harsh",
+                "terrain - timid",
+                "timid - terrain"
               ],
-              "correctAnswer": "b. bake / d. ingredient",
-              "explanation": "bake (nướng) và ingredient (nguyên liệu) đều liên quan đến nấu ăn."
+              "explanation": "\"terrain\" (địa hình) và \"harsh\" (khắc nghiệt, thô ráp). Địa hình (terrain) nhiều đá rất thô ráp/khắc nghiệt (harsh) với chân cô.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
-              "content": "4.",
+              "content": "The boys were up to their usual __________ and were throwing balls of paper at each other in __________.",
               "options": [
-                "a. fault / b. decrease",
-                "b. decrease / c. quantity",
-                "c. quantity / d. convert",
-                "a. fault / d. convert"
+                "succession - mischief",
+                "mischief - succession",
+                "conflict - succession",
+                "succession - conflict"
               ],
-              "correctAnswer": "b. decrease / c. quantity",
-              "explanation": "decrease (giảm) và quantity (số lượng) có liên quan đến nhau."
+              "explanation": "\"mischief\" (trò nghịch ngợm) và \"succession\" (liên tiếp). Bọn trẻ nghịch ngợm (mischief) và ném giấy liên tiếp (succession) vào nhau.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "5.",
+              "content": "I turned on the fan so that it would __________ air on me. The __________ of cool air felt wonderful.",
               "options": [
-                "a. debt / b. monitor",
-                "b. monitor / c. afford",
-                "a. debt / c. afford",
-                "c. afford / d. generous"
+                "current - blow",
+                "blow - current",
+                "blow - terrain",
+                "current - terrain"
               ],
-              "correctAnswer": "a. debt / c. afford",
-              "explanation": "debt (nợ) và afford (đủ khả năng chi trả) đều liên quan đến tài chính."
+              "explanation": "\"blow\" (thổi) và \"current\" (dòng chảy). Quạt thổi (blow) ra dòng (current) không khí mát mẻ.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
-          "id": "sec3_wordlist",
-          "title": "Exercise 2: Check (V) the one that suits the blank naturally.",
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Write a word that is similar in meaning to the bracketed part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "1. To make sure the door was built strong, ____________.",
+              "content": "Australia is an island that is also the smallest [large area of land] on the planet.",
               "options": [
-                "a. it was made out of metal",
-                "b. it was monitored to the floor"
+                "continent",
+                "avenue",
+                "terrain",
+                "current"
               ],
-              "correctAnswer": "a. it was made out of metal",
-              "explanation": "made out of metal (được làm bằng kim loại) mang ý nghĩa cửa vững chắc."
+              "explanation": "\"large area of land\" (khu vực đất rộng lớn) có nghĩa tương đương với \"continent\" (lục địa).",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
-              "content": "2. I was treated unfairly by my company, so ____________.",
+              "content": "The land's [feature] was quite hilly.",
               "options": [
-                "a. we decreased the table",
-                "b. I decided to sue them in court"
+                "avenue",
+                "terrain",
+                "conflict",
+                "alternative"
               ],
-              "correctAnswer": "b. I decided to sue them in court",
-              "explanation": "sue them in court (kiện họ ra tòa) vì bị đối xử bất công."
+              "explanation": "\"feature\" (đặc điểm địa hình) trong ngữ cảnh này tương đương với \"terrain\" (địa hình).",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
-              "content": "3. I went to the grocery store. ____________.",
+              "content": "The pitcher threw the balls to home plate in a [series, one after another].",
               "options": [
-                "a. I converted the milk",
-                "b. I got a small quantity of eggs"
+                "succession",
+                "meantime",
+                "mischief",
+                "enthusiasm"
               ],
-              "correctAnswer": "b. I got a small quantity of eggs",
-              "explanation": "got a small quantity of eggs (mua một lượng nhỏ trứng) phù hợp với việc đi siêu thị."
+              "explanation": "\"series, one after another\" (chuỗi liên tiếp) tương đương với \"succession\" (sự liên tiếp).",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
-              "content": "4. When your friend borrows money from you, ____________.",
+              "content": "The student left for school early. She had to walk down an [extended road] to get there.",
               "options": [
-                "a. he owes you a debt",
-                "b. he opposes you"
+                "alternative",
+                "current",
+                "continent",
+                "avenue"
               ],
-              "correctAnswer": "a. he owes you a debt",
-              "explanation": "owes you a debt (nợ bạn một khoản) phù hợp với việc mượn tiền."
+              "explanation": "\"extended road\" (con đường kéo dài) tương đương với \"avenue\" (đại lộ).",
+              "correctAnswer": "D"
             },
             {
               "id": "15",
-              "content": "5. The man wants to cook noodles. ____________.",
+              "content": "Brian was tired. He needed to [bend over and rest] on the side of his car.",
               "options": [
-                "a. He will get the ingredients",
-                "b. He will insist the water"
+                "blow",
+                "rescue",
+                "lean",
+                "bid"
               ],
-              "correctAnswer": "a. He will get the ingredients",
-              "explanation": "get the ingredients (lấy các nguyên liệu) hợp lý khi muốn nấu ăn."
+              "explanation": "\"bend over and rest\" (cúi người và nghỉ ngơi) tương đương với \"lean\" (tựa, dựa).",
+              "correctAnswer": "C"
             },
             {
               "id": "16",
-              "content": "6. I have enough money. ____________.",
+              "content": "The student decided that the answer was A and not the [other choice], B.",
               "options": [
-                "a. My fund is too small",
-                "b. I can afford to buy the shirt"
+                "alternative",
+                "bid",
+                "mischief",
+                "conflict"
               ],
-              "correctAnswer": "b. I can afford to buy the shirt",
-              "explanation": "afford to buy the shirt (có đủ tiền để mua chiếc áo) phù hợp với câu trước đó."
+              "explanation": "\"other choice\" (sự lựa chọn khác) tương đương với \"alternative\" (sự lựa chọn thay thế).",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
-              "content": "7. When the oven was hot enough, ____________.",
+              "content": "The river's [fast steady movement of water] made it difficult to swim to the other side.",
               "options": [
-                "a. it baked the potato",
-                "b. it made a mess in the kitchen"
+                "avenue",
+                "current",
+                "succession",
+                "terrain"
               ],
-              "correctAnswer": "a. it baked the potato",
-              "explanation": "Lò nướng đủ nóng để nướng khoai tây (baked the potato)."
+              "explanation": "\"fast steady movement of water\" (sự di chuyển nhanh và ổn định của nước) tương đương với \"current\" (dòng chảy).",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
-              "content": "8. In case the power goes out, ____________.",
+              "content": "He talked about US history, and the pupils wrote notes in the [time during the event].",
               "options": [
-                "a. you should keep candles at home",
-                "b. you will be generous"
+                "mischief",
+                "succession",
+                "meantime",
+                "enthusiasm"
               ],
-              "correctAnswer": "a. you should keep candles at home",
-              "explanation": "Cần giữ nến (keep candles) ở nhà phòng khi mất điện."
+              "explanation": "\"time during the event\" (thời gian diễn ra sự kiện) tương đương với \"meantime\" (trong lúc đó).",
+              "correctAnswer": "C"
             },
             {
               "id": "19",
-              "content": "9. When the girl became hungry, ____________.",
+              "content": "The dog continued barking. The loud noise was painful and [rough] to her ears.",
               "options": [
-                "a. she became passive and decided to do something about it",
-                "b. she cooked some beans"
+                "timid",
+                "harsh",
+                "alternative",
+                "enthusiastic"
               ],
-              "correctAnswer": "b. she cooked some beans",
-              "explanation": "Cô gái nấu đậu (cooked some beans) khi đói."
+              "explanation": "\"rough\" (thô ráp, chói tai) tương đương với \"harsh\" (khắc nghiệt, chói tai).",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
-              "content": "10. My homework was not turned in.",
+              "content": "The boys used [forceful action] to get what they wanted.",
               "options": [
-                "a. I abused it at home",
-                "b. It was all my fault"
+                "violence",
+                "disrespect",
+                "mischief",
+                "conflict"
               ],
-              "correctAnswer": "b. It was all my fault",
-              "explanation": "Đó là lỗi của tôi (my fault) khi không nộp bài tập."
+              "explanation": "\"forceful action\" (hành động dùng sức mạnh) tương đương với \"violence\" (bạo lực).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the answer that best fits the question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "Which word best describes a student who is very happy and excited?",
+              "options": [
+                "Enthusiasm",
+                "Violence",
+                "Current",
+                "Alternative"
+              ],
+              "explanation": "Sự nhiệt tình, hào hứng (Enthusiasm) mô tả một học sinh rất vui vẻ và phấn khích.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "Which of the following describes a scared person best?",
+              "options": [
+                "Timid",
+                "Disrespect",
+                "Muscle",
+                "Succession"
+              ],
+              "explanation": "Rụt rè, sợ hãi (Timid) mô tả tốt nhất một người đang sợ hãi.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "What is something that can be soft and round?",
+              "options": [
+                "Something in the meantime",
+                "An avenue",
+                "A person's belly",
+                "A continent"
+              ],
+              "explanation": "Bụng của một người (belly) có thể mềm và tròn.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "24",
+              "content": "Which word best describes behavior meant to trick or cause trouble?",
+              "options": [
+                "Mischief",
+                "Conflict",
+                "Terrain",
+                "Harsh"
+              ],
+              "explanation": "Trò nghịch ngợm (Mischief) là hành vi nhằm trêu chọc hoặc gây rắc rối.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "25",
+              "content": "Which of the following best describes the action of the wind?",
+              "options": [
+                "It bids.",
+                "It rescues.",
+                "It blows.",
+                "It leans."
+              ],
+              "explanation": "Gió thổi (blows).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Mean Chef</h1><p style=\"margin-bottom: 1rem;\">Once there was a chef, who was mean to his cooks. He was mean to the people who came in to eat. He charged too much for meals. Many people were not able to <b>afford</b> the cheapest <b>bean</b> dish. When his <b>metal</b> oven broke, he did not have it fixed. So everything <b>baked</b> in it burned. The only light was from <b>candles</b>, and the whole place was a <b>mess</b>. Sometimes, he didn't pay his waiters. Since they had no <b>funds</b>, they had many <b>debts</b>.</p><p style=\"margin-bottom: 1rem;\">The chef behaved this way all the time. He <b>monitored</b> the cooks and yelled if they did not do things his way.</p><p style=\"margin-bottom: 1rem;\">One day, the cooks decided that they were tired of the <b>abuse</b> and that they would not be <b>passive</b> anymore. Everyone <b>opposed</b> the chef. At first, they thought about <b>suing</b> him. Instead, they tied up the chef with rope. Now, they controlled the restaurant! They <b>decreased</b> the price of food. They used the best <b>ingredients</b> and made large <b>quantities</b> of food. They turned on the lights. The restaurant was <b>converted</b> into a happy place. For the first time, many people came to eat.</p><p style=\"margin-bottom: 1rem;\">The chef realized that the restaurant's problems were his <b>fault</b>. The chef learned an important lesson. The new, <b>generous</b> chef <b>insisted</b> on giving the customers a free meal.</p></div>",
-      "imageUrl": "/unit12_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Sun and the North Wind</h1>        <p style=\"margin-bottom: 1rem;\">The Sun and the North Wind were talking to each other in the sky. The North Wind was saying that he was better than everyone else. The Sun listened as the North Wind talked with <b>enthusiasm</b> about how powerful he was and how he could push something from one <b>continent</b> to another with one breath. He said, “I am the strongest thing in the sky.”</p>    <p style=\"margin-bottom: 1rem;\">“Really?” asked the Sun. “How do you know that you are more powerful than the stars, or the rain, or even me?”</p>    <p style=\"margin-bottom: 1rem;\">The North Wind laughed with <b>disrespect</b>. He yelled, “You? That’s a joke!”</p>    <p style=\"margin-bottom: 1rem;\">This hurt the Sun. He was usually <b>timid</b> and did not want to cause <b>conflict</b>. Today he decided that he should teach the North Wind a lesson.</p>    <p style=\"margin-bottom: 1rem;\">In the <b>meantime</b>, a man began walking along the <b>avenue</b> down on Earth. When the Sun looked down on the <b>terrain</b> below, he saw the man. He pointed down to the Earth and said, “Do you see that man walking below? I bet I can get his jacket off of him. Can you?”</p>    <p style=\"margin-bottom: 1rem;\">“Of course!” the North Wind replied as he took a deep breath and filled his lungs with air. He used all of his <b>muscles</b> in his face and <b>belly</b> to <b>blow</b> winds at his target in <b>succession</b>.</p>    <p style=\"margin-bottom: 1rem;\">The <b>harsh</b> air <b>currents</b> made the man cold. The man pulled his jacket more tightly around him. It did not come off. The Sun decided to <b>rescue</b> the man from the <b>mischief</b> of the North Wind. He said, “May I try?” Then he sent down sunlight that made the man warm. The man <b>leaned</b> against a tree. He took off his jacket and enjoyed the nice weather.</p>    <p style=\"margin-bottom: 1rem;\">“You are very powerful,” the Sun said to the North Wind, “but you use <b>violence</b> in your <b>bid</b> to appear strong. You should think of an <b>alternative</b>. The strongest people don’t use force to get what they want.”</p></div>",
+      "imageUrl": "/unit12_vol4_story.png",
       "sections": [
         {
           "id": "sec4_reading",
-          "title": "Reading Comprehension",
+          "title": "Reading Comprehension - Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "21",
-              "content": "1. What is this story about?",
+              "id": "26",
+              "content": "The North Wind thought that he was stronger than everyone else.",
               "options": [
-                "a. How a mean chef was converted into a generous man",
-                "b. Why metal ovens bake food until it burns",
-                "c. Why waiters' funds are not enough to pay their debts",
-                "d. How simple beans brought a large quantity of customers"
+                "True",
+                "False"
               ],
-              "correctAnswer": "a. How a mean chef was converted into a generous man",
-              "explanation": "Câu chuyện kể về một bếp trưởng khó tính đã thay đổi (converted) thành một người hào phóng."
+              "explanation": "Gió Bắc cho rằng mình mạnh hơn tất cả mọi người.",
+              "correctAnswer": "A"
             },
             {
-              "id": "22",
-              "content": "2. Why could people not afford to eat at the restaurant?",
+              "id": "27",
+              "content": "The North Wind blew the jacket off of the man.",
               "options": [
-                "a. The chef insisted they take free food.",
-                "b. The chef made prices too high.",
-                "c. The chef monitored the cooks.",
-                "d. The chef got tied up."
+                "True",
+                "False"
               ],
-              "correctAnswer": "b. The chef made prices too high.",
-              "explanation": "Bếp trưởng thu phí quá cao (charged too much) khiến khách không đủ tiền trả."
+              "explanation": "Gió Bắc không thể thổi bay chiếc áo khoác của người đàn ông.",
+              "correctAnswer": "B"
             },
             {
-              "id": "23",
-              "content": "3. What did the chef learn at the end of the story?",
+              "id": "28",
+              "content": "The North Wind treated the Sun with disrespect.",
               "options": [
-                "a. Electricity was better than using candles.",
-                "b. It was his fault that the restaurant did so well.",
-                "c. The waiters and cooks took over his restaurant.",
-                "d. Behaving in a nice way is better than being mean."
+                "True",
+                "False"
               ],
-              "correctAnswer": "d. Behaving in a nice way is better than being mean.",
-              "explanation": "Bếp trưởng đã học được bài học rằng cư xử tử tế thì tốt hơn là xấu tính (Behaving in a nice way is better than being mean)."
+              "explanation": "Gió Bắc đối xử với Mặt trời bằng sự thiếu tôn trọng.",
+              "correctAnswer": "A"
             },
             {
-              "id": "24",
-              "content": "4. According to the passage, all the following are true of the waiters and cooks EXCEPT ____________.",
+              "id": "29",
+              "content": "The Sun was the target for the North Wind.",
               "options": [
-                "a. they decreased prices",
-                "b. they used good ingredients",
-                "c. they were replaced by robots",
-                "d. they opposed the abuse of the chef"
+                "True",
+                "False"
               ],
-              "correctAnswer": "c. they were replaced by robots",
-              "explanation": "Trong bài không hề đề cập đến robots."
+              "explanation": "Mục tiêu của Gió Bắc là người đàn ông trên đường, không phải Mặt trời.",
+              "correctAnswer": "B"
             },
             {
-              "id": "25",
-              "content": "5. Why did the chef insist on giving his customers a free meal at the end of the story?",
+              "id": "30",
+              "content": "The Sun was timid and did not teach the North Wind a lesson.",
               "options": [
-                "a. He wanted to trick them.",
-                "b. He gave customers free meals to celebrate his big change.",
-                "c. He had too much food.",
-                "d. The food was going to spoil."
+                "True",
+                "False"
               ],
-              "correctAnswer": "b. He gave customers free meals to celebrate his big change.",
-              "explanation": "Answer key là 'He gave customers free meals to celebrate his big change'."
+              "explanation": "Mặt trời tuy thường rụt rè nhưng đã quyết định dạy cho Gió Bắc một bài học.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "31",
+              "content": "The North Wind used violence in his bid to be powerful.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Gió Bắc đã sử dụng bạo lực trong nỗ lực tỏ ra mạnh mẽ.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec5_reading",
+          "title": "Reading Comprehension - Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "32",
+              "content": "Why was the North Wind so full of enthusiasm?",
+              "options": [
+                "He thought he was all-powerful.",
+                "He was very rich.",
+                "He was the people's favorite.",
+                "He was going on a date."
+              ],
+              "explanation": "Gió Bắc tràn đầy sự nhiệt tình vì anh ta cho rằng mình có sức mạnh vô song.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "33",
+              "content": "Why did the North Wind fill his lungs with air?",
+              "options": [
+                "To avoid conflict",
+                "To find an alternative to violence",
+                "To help his muscles",
+                "To blow air at his target"
+              ],
+              "explanation": "Gió Bắc hít đầy không khí vào phổi để thổi vào mục tiêu của mình.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "34",
+              "content": "How was the North Wind causing mischief?",
+              "options": [
+                "By hurting the Sun",
+                "By leaning on a tree",
+                "By blowing harsh wind at the man",
+                "By walking along the terrain"
+              ],
+              "explanation": "Gió Bắc gây ra trò nghịch ngợm bằng cách thổi luồng gió khắc nghiệt vào người đàn ông.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "35",
+              "content": "What happened in the meantime while the Sun and the North Wind were talking?",
+              "options": [
+                "The man started to laugh.",
+                "The man felt the cold air currents.",
+                "The man took off his jacket.",
+                "The man began walking along the avenue."
+              ],
+              "explanation": "Trong lúc đó (meantime), một người đàn ông bắt đầu đi dọc theo đại lộ.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 12: Volume 4",
+    "category": "exercise",
+    "timeLimit": 0,
+    "description": "4000 Essential English Words - Volume 4"
+  }
 }

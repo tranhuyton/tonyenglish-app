@@ -211,7 +211,7 @@ export default function App() {
     try {
       setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
       let targetView = type.toLowerCase();
-      if (data?.title?.includes('Volume 4') || data?.title?.includes('Volume 3')) targetView = 'standard-splitscreen';
+      if (data?.title?.includes('Volume 4') || data?.title?.includes('Volume 3') || data?.title?.includes('Volume 2') || data?.title?.includes('Volume 1')) targetView = 'standard-splitscreen';
       else if (targetView.includes('igcse-direct')) targetView = 'igcse-direct';
       else if (targetView.includes('igcse')) targetView = 'igcse';
       else if (targetView.includes('standard-reading') || (targetView.includes('splitscreen') && targetView.includes('standard'))) targetView = 'standard-splitscreen';

@@ -1,197 +1,538 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 11",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">admission</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədmíʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Admission is the act of allowing to enter a place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The admission ticket to the movie was $5.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">astronomy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əstrɑ́nəmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Astronomy is the study of the stars and planets.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Harold loved watching the stars, so he decided to study astronomy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blame</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bleim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To blame someone for something bad is to say they did it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My mom blamed me for something I didn’t do.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chemistry</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kémistri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Chemistry the study of and reaction to substances.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In chemistry class, the professor taught us about chemical reactions.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">despite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dispáit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something happens despite what you do, it happens anyway.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We still played the game despite the cold weather.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dinosaur</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dáinəsɔ̀:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dinosaur is a very big animal that lived millions of years ago.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I like to see the dinosaur bones at the museum.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exhibit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[igzíbit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An exhibit is a display of interesting things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was an animal exhibit at the fair.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fame</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fame is reputation one has gained among the public.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He had fame and fortune, but he was not happy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">forecast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ́:rkæ̀st]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A forecast is an idea about what the weather will be like in the future.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The forecast says that it will rain all week.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">genius</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒí:njəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A genius is a very smart person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since she was a genius, she easily passed all of her school exams.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gentle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒéntl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Someone who is gentle is kind and calm.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He is very gentle with the baby.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">geography</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒiɑ́grəfi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Geography is the study of where things are.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I had to draw a map for geography class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">interfere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ìntərfíər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To interfere is to cause problems and keep something from happening.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My little sister always interferes when I’m trying to study.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lightly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[láitli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To do something lightly is to not push very hard.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Draw lightly so you do not tear your paper.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">principal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prínsəpəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A principal is a person in charge of a school.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My school’s principal can be very strict with the rules.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">row</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A row is a line of things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ James put all of his toy soldiers into neat rows.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shelf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃelf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shelf is a place on a wall where you put things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I keep my clothes on a shelf in my closet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you do something out of spite, you want to be mean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He snuck into his sister’s room and stole her bag out of spite.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">super</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sú:pər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Super means really good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad said I did a super job cleaning the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wet]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is wet, it has water on it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since my dog was wet, he tried to shake all the water off his body.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alliance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈlaɪəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An alliance is a group of people who work together. (Liên minh là một nhóm người làm việc cùng nhau.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The junior executives formed an alliance with each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">applause</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈplɔːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Applause is the noise made when people clap hands to show approval. (Tiếng vỗ tay là âm thanh tạo ra khi mọi người vỗ tay để thể hiện sự tán thành.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At the end of his speech, everyone gave applause.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">armed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑːrmd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are armed, you are carrying a weapon. (Nếu bạn được vũ trang, bạn đang mang theo vũ khí.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The robber was armed with a gun.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">authoritative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈθɔːrəteɪtɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is authoritative, it uses the best information available. (Nếu một thứ gì đó có tính thẩm quyền, nó sử dụng thông tin tốt nhất có sẵn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This book is an authoritative source on Ancient Egypt’s Queen Nefertiti.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ceremony</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈserəmoʊni]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ceremony is an event that happens on special occasions. (Một buổi lễ là một sự kiện diễn ra vào những dịp đặc biệt.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tom and Amy’s marriage ceremony is in June.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">culture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkʌltʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Culture is the music, art, and writings of a certain place or group of people. (Văn hóa là âm nhạc, nghệ thuật và chữ viết của một địa phương hoặc một nhóm người nhất định.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Ancient Mexican culture is renowned for its architecture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">defense</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈfens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A defense is something that is done to protect another thing. (Phòng thủ là một việc được thực hiện để bảo vệ một thứ khác.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The airforce works in defense of its country.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">detail</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdiːteɪl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A detail is a small piece of information. (Chi tiết là một mẩu thông tin nhỏ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jane told Ben all the details of her trip to China.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diverse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈvɜːrs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a group of things is diverse, it is made up of a wide variety of things. (Khi một nhóm có tính đa dạng, nó được tạo thành từ nhiều thứ khác nhau.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Big cities have diverse populations with people of different races and ages.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enchant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈtʃænt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To enchant someone is to make them feel very interested or happy. (Mê hoặc ai đó là làm cho họ cảm thấy rất thích thú hoặc vui vẻ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The beautiful woman enchanted everybody in the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">equip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈkwɪp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To equip someone is to give them the things needed to do something. (Trang bị cho ai đó là cung cấp cho họ những thứ cần thiết để làm việc gì đó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Steve was equipped with the tools needed to do the job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exception</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪkˈsepʃn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An exception is someone or something not conforming to a rule. (Ngoại lệ là người hoặc điều gì đó không tuân theo một quy tắc chung.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Most students thought the test was hard, but Tim was the exception.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">genre</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈʒɑːnrə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A genre is a type of literature, art, or music characterized by its style. (Thể loại là một loại hình văn học, nghệ thuật hoặc âm nhạc đặc trưng bởi phong cách của nó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She is considered a master in the comedy genre.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impact</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪmpækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An impact is the effect someone or something has on another. (Tác động là ảnh hưởng mà một người hoặc một vật gây ra cho người/vật khác.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandmother had a great impact on my life.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lʊr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lure someone is to convince them to do something, by using a trick. (Dụ dỗ ai đó là thuyết phục họ làm điều gì đó bằng cách sử dụng mánh khóe.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The store lures people in with big signs that say “Sale!”</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">obstacle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɑːbstəkl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An obstacle is an object or a problem that stops you from doing something. (Chướng ngại vật là một vật thể hoặc một vấn đề ngăn cản bạn làm điều gì đó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Climbing over the giant rock was the biggest obstacle for the hikers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shelter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈʃeltər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shelter is a place to go that is safe from danger or bad weather. (Nơi trú ẩn là nơi an toàn giúp tránh khỏi nguy hiểm hoặc thời tiết xấu.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The frog took shelter from the storm in a nearby cave.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sort</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɔːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sort means to separate things into different groups or classes. (Phân loại có nghĩa là tách các vật thành các nhóm hoặc lớp khác nhau.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He sorted his clothes by colors and sizes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">supply</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səˈplaɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To supply something means to give people what they need or want. (Cung cấp điều gì đó có nghĩa là mang đến cho mọi người những gì họ cần hoặc muốn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The water heater supplied the house with warm water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[veɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If people are vain, they are only concerned with how they look. (Nếu mọi người tự phụ/kiêu ngạo, họ chỉ quan tâm đến vẻ bề ngoài của mình.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Rebecca is so vain that she looks at herself in every mirror.</div></div></div></div></div></div>",
       "sections": [
         {
-          "id": "sec2_wordlist",
-          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "1",
-              "content": "1.",
+              "id": "ex1_1",
+              "content": "to provide the things that someone needs to do something",
               "options": [
-                "a. We learned about grammar in astronomy class.",
-                "b. Do not interfere when I am working."
+                "sort",
+                "enchant",
+                "equip",
+                "lure"
               ],
-              "correctAnswer": "b. Do not interfere when I am working.",
-              "explanation": "interfere có nghĩa là xen vào, cản trở. astronomy là thiên văn học, không học ngữ pháp."
+              "explanation": "equip (v.): trang bị cho ai đó là cung cấp cho họ những thứ cần thiết để làm việc gì đó.",
+              "correctAnswer": "C"
             },
             {
-              "id": "2",
-              "content": "2.",
+              "id": "ex1_2",
+              "content": "a safe place",
               "options": [
-                "a. It was very kind of him to spite his sister.",
-                "b. Which shelf should I put this on?"
+                "genre",
+                "shelter",
+                "defense",
+                "culture"
               ],
-              "correctAnswer": "b. Which shelf should I put this on?",
-              "explanation": "shelf là cái kệ. spite là ác ý."
+              "explanation": "shelter (n.): nơi trú ẩn là nơi an toàn khỏi nguy hiểm hoặc thời tiết xấu.",
+              "correctAnswer": "B"
             },
             {
-              "id": "3",
-              "content": "3.",
+              "id": "ex1_3",
+              "content": "holding a weapon",
               "options": [
-                "a. Do you have a shelf in your yard?",
-                "b. In astronomy class, I learned about the Solar System."
+                "authoritative",
+                "vain",
+                "diverse",
+                "armed"
               ],
-              "correctAnswer": "b. In astronomy class, I learned about the Solar System.",
-              "explanation": "astronomy học về hệ mặt trời."
+              "explanation": "armed (adj.): được trang bị vũ khí, mang theo vũ khí.",
+              "correctAnswer": "D"
             },
             {
-              "id": "4",
-              "content": "4.",
+              "id": "ex1_4",
+              "content": "pieces of information",
               "options": [
-                "a. He drank all the milk in the fridge to spite me.",
-                "b. Mrs. Joyner is a strict principal, but she is actually very nice."
+                "details",
+                "impacts",
+                "applause",
+                "supplies"
               ],
-              "correctAnswer": "b. Mrs. Joyner is a strict principal, but she is actually very nice.",
-              "explanation": "The answer key states Exercise 2 Q4 is b."
+              "explanation": "details (n.): chi tiết, những mẩu thông tin.",
+              "correctAnswer": "A"
             },
             {
-              "id": "5",
-              "content": "5.",
+              "id": "ex1_5",
+              "content": "a group working together",
               "options": [
-                "a. The loud music interferes with my concentration.",
-                "b. It is against his principals to be dishonest."
+                "ceremony",
+                "alliance",
+                "exception",
+                "obstacle"
               ],
-              "correctAnswer": "a. The loud music interferes with my concentration.",
-              "explanation": "interfere nghĩa là làm cản trở. principal ở câu b bị sai chính tả so với principles."
+              "explanation": "alliance (n.): liên minh là một nhóm người làm việc cùng nhau.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "Please (put into different groups) all the leaves you find.",
+              "options": [
+                "sort",
+                "impact",
+                "equip",
+                "lure"
+              ],
+              "explanation": "sort (v.) đồng nghĩa với 'put into different groups' (phân loại).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_2",
+              "content": "Everybody was (very interested) when Kate read that beautiful poem out loud.",
+              "options": [
+                "armed",
+                "vain",
+                "enchanted",
+                "diverse"
+              ],
+              "explanation": "enchanted (v.) đồng nghĩa với 'very interested' (mê hoặc, thích thú).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "ex2_3",
+              "content": "The performer heard great (sounds of people clapping their hands).",
+              "options": [
+                "defense",
+                "applause",
+                "alliance",
+                "ceremony"
+              ],
+              "explanation": "applause (n.) đồng nghĩa với 'sounds of people clapping their hands' (tiếng vỗ tay).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_4",
+              "content": "Tim takes a long time to get ready because he is so (concerned with how he looks).",
+              "options": [
+                "vain",
+                "authoritative",
+                "diverse",
+                "armed"
+              ],
+              "explanation": "vain (adj.) đồng nghĩa với 'concerned with how he looks' (tự phụ, kiêu ngạo, chú trọng vẻ bề ngoài).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_5",
+              "content": "Ocean life is made up of a (wide variety of things).",
+              "options": [
+                "vain",
+                "diverse",
+                "authoritative",
+                "armed"
+              ],
+              "explanation": "diverse (adj.) đồng nghĩa với 'wide variety of things' (đa dạng).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_6",
+              "content": "What is your favorite (kind or style) of music?",
+              "options": [
+                "obstacle",
+                "genre",
+                "culture",
+                "shelter"
+              ],
+              "explanation": "genre (n.) đồng nghĩa với 'kind or style' (thể loại).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_7",
+              "content": "The (special event) will start at 8 o’clock tonight.",
+              "options": [
+                "alliance",
+                "defense",
+                "exception",
+                "ceremony"
+              ],
+              "explanation": "ceremony (n.) đồng nghĩa với 'special event' (buổi lễ, sự kiện đặc biệt).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "ex2_8",
+              "content": "The city’s only (action taken to protect itself) was to build a giant brick wall around it.",
+              "options": [
+                "defense",
+                "impact",
+                "obstacle",
+                "detail"
+              ],
+              "explanation": "defense (n.) đồng nghĩa với 'action taken to protect itself' (phòng thủ, bảo vệ).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_9",
+              "content": "Ben went through many (problems) before he finished his project.",
+              "options": [
+                "obstacles",
+                "supplies",
+                "alliances",
+                "ceremonies"
+              ],
+              "explanation": "obstacles (n.) đồng nghĩa với 'problems' (chướng ngại vật, vấn đề).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_10",
+              "content": "Most girls like to play with dolls, but Samantha is the one who (doesn’t conform).",
+              "options": [
+                "exception",
+                "genre",
+                "culture",
+                "applause"
+              ],
+              "explanation": "exception (n.) đồng nghĩa với 'the one who doesn’t conform' (ngoại lệ).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
-          "title": "Exercise 3: Choose the word that is a better fit for each sentence.",
+          "title": "Exercise 3: Match the phrases and clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "6",
-              "content": "1. Oil and water do not have a good ______ together. / We should go ______ the weather.",
+              "id": "ex3a_1",
+              "content": "I’m going to try to lure my friends ____.",
               "options": [
-                "chemistry / despite",
-                "despite / chemistry"
+                "into coming to the museum with me",
+                "into three equal groups",
+                "was not being able to read very well",
+                "was popularized by artists like Picasso and Dali"
               ],
-              "correctAnswer": "chemistry / despite",
-              "explanation": "chemistry: hóa học/sự hòa hợp. despite: mặc dù."
+              "explanation": "lure (dụ dỗ) bạn bè đi đến bảo tàng.",
+              "correctAnswer": "A"
             },
             {
-              "id": "7",
-              "content": "2. I wanted to see the bird ______. / My daughter has gained ______ to an Ivy League university.",
+              "id": "ex3a_2",
+              "content": "Sort the pieces ____.",
               "options": [
-                "admission / exhibit",
-                "exhibit / admission"
+                "into coming to the museum with me",
+                "into three equal groups",
+                "was not being able to read very well",
+                "was popularized by artists like Picasso and Dali"
               ],
-              "correctAnswer": "exhibit / admission",
-              "explanation": "exhibit: cuộc triển lãm. admission: sự nhận vào."
+              "explanation": "sort (phân loại) các mảnh thành ba nhóm bằng nhau.",
+              "correctAnswer": "B"
             },
             {
-              "id": "8",
-              "content": "3. I wish I could see a real ______ at the zoo. / I learned about a South American country in my ______ book.",
+              "id": "ex3a_3",
+              "content": "The biggest obstacle Mary faced ____.",
               "options": [
-                "geography / dinosaur",
-                "dinosaur / geography"
+                "into coming to the museum with me",
+                "into three equal groups",
+                "was not being able to read very well",
+                "was popularized by artists like Picasso and Dali"
               ],
-              "correctAnswer": "dinosaur / geography",
-              "explanation": "dinosaur: khủng long. geography: địa lý."
+              "explanation": "obstacle (trở ngại) lớn nhất của Mary là không đọc tốt.",
+              "correctAnswer": "C"
             },
             {
-              "id": "9",
-              "content": "4. Be very ______ with the old dishes. / ______ push the dirt in around the flowers.",
+              "id": "ex3a_4",
+              "content": "The genre of abstract art ____.",
               "options": [
-                "lightly / gentle",
-                "gentle / lightly"
+                "into coming to the museum with me",
+                "into three equal groups",
+                "was not being able to read very well",
+                "was popularized by artists like Picasso and Dali"
               ],
-              "correctAnswer": "gentle / lightly",
-              "explanation": "gentle: nhẹ nhàng. lightly: một cách nhẹ nhàng."
+              "explanation": "genre (thể loại) nghệ thuật trừu tượng được phổ biến bởi các nghệ sĩ như Picasso và Dali.",
+              "correctAnswer": "D"
             },
             {
-              "id": "10",
-              "content": "5. I don’t know if I would enjoy ______. / My son is a ______.",
+              "id": "ex3a_5",
+              "content": "The awards ceremony is ____.",
               "options": [
-                "genius / fame",
-                "fame / genius"
+                "tonight at the Royal Crown Hotel",
+                "known for its interesting folk art",
+                "is to wear a lot of sunscreen",
+                "with pencils, scissors, and a lot of glue"
               ],
-              "correctAnswer": "fame / genius",
-              "explanation": "fame: sự nổi tiếng. genius: thiên tài."
+              "explanation": "ceremony (buổi lễ) trao giải diễn ra vào tối nay tại khách sạn Royal Crown.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3a_6",
+              "content": "Mexican culture is ____.",
+              "options": [
+                "tonight at the Royal Crown Hotel",
+                "known for its interesting folk art",
+                "is to wear a lot of sunscreen",
+                "with pencils, scissors, and a lot of glue"
+              ],
+              "explanation": "culture (văn hóa) Mexico nổi tiếng với nghệ thuật dân gian thú vị.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex3a_7",
+              "content": "The best defense against skin cancer ____.",
+              "options": [
+                "tonight at the Royal Crown Hotel",
+                "known for its interesting folk art",
+                "is to wear a lot of sunscreen",
+                "with pencils, scissors, and a lot of glue"
+              ],
+              "explanation": "defense (phòng thủ) tốt nhất để chống ung thư da là thoa nhiều kem chống nắng.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "ex3a_8",
+              "content": "The students were equipped ____.",
+              "options": [
+                "tonight at the Royal Crown Hotel",
+                "known for its interesting folk art",
+                "is to wear a lot of sunscreen",
+                "with pencils, scissors, and a lot of glue"
+              ],
+              "explanation": "equip (trang bị) cho học sinh bút chì, kéo và nhiều hồ dán.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "ex3a_9",
+              "content": "An armed man ran into ____.",
+              "options": [
+                "the jewelry store and stole diamonds",
+                "talk about herself for hours and hours",
+                "with pencils, scissors, and a lot of glue",
+                "is to wear a lot of sunscreen"
+              ],
+              "explanation": "Một người đàn ông có vũ trang (armed) lao vào cửa hàng trang sức và ăn trộm kim cương.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3a_10",
+              "content": "The vain woman could ____.",
+              "options": [
+                "the jewelry store and stole diamonds",
+                "talk about herself for hours and hours",
+                "with pencils, scissors, and a lot of glue",
+                "is to wear a lot of sunscreen"
+              ],
+              "explanation": "Người phụ nữ kiêu ngạo (vain) có thể nói về bản thân hàng giờ liền.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex3b_1",
+              "content": "It started raining really hard, ____.",
+              "options": [
+                "so we ran inside for shelter",
+                "so he supplied them with blankets",
+                "and officer Jones is no exception",
+                "because he sounds authoritative when he speaks"
+              ],
+              "explanation": "Trời mưa rất to nên chúng tôi chạy vào trong để trú ẩn (shelter).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3b_2",
+              "content": "He saw that the children were cold, ____.",
+              "options": [
+                "so we ran inside for shelter",
+                "so he supplied them with blankets",
+                "and officer Jones is no exception",
+                "because he sounds authoritative when he speaks"
+              ],
+              "explanation": "Anh ấy thấy những đứa trẻ bị lạnh, vì vậy anh ấy đã cung cấp (supplied) chăn cho chúng.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex3b_3",
+              "content": "Police officers work very hard, ____.",
+              "options": [
+                "so we ran inside for shelter",
+                "so he supplied them with blankets",
+                "and officer Jones is no exception",
+                "because he sounds authoritative when he speaks"
+              ],
+              "explanation": "Các sĩ quan cảnh sát làm việc rất chăm chỉ, và sĩ quan Jones cũng không phải là ngoại lệ (exception).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "ex3b_4",
+              "content": "Everyone always trusts Seth ____.",
+              "options": [
+                "so we ran inside for shelter",
+                "so he supplied them with blankets",
+                "and officer Jones is no exception",
+                "because he sounds authoritative when he speaks"
+              ],
+              "explanation": "Mọi người luôn tin tưởng Seth vì giọng anh ấy nghe có vẻ rất có thẩm quyền (authoritative) khi nói.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "ex3b_5",
+              "content": "Mother Teresa was a very well-known person, ____.",
+              "options": [
+                "and her work impacted many lives",
+                "but I like a diverse selection",
+                "but it had so many details that he couldn't finish",
+                "but everyone else is enchanted by her"
+              ],
+              "explanation": "Mẹ Teresa là một người rất nổi tiếng, và công việc của bà đã tác động (impacted) đến nhiều cuộc đời.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3b_6",
+              "content": "He only likes one type of music, ____.",
+              "options": [
+                "and her work impacted many lives",
+                "but I like a diverse selection",
+                "but it had so many details that he couldn't finish",
+                "but everyone else is enchanted by her"
+              ],
+              "explanation": "Anh ấy chỉ thích một loại nhạc, nhưng tôi thích sự lựa chọn đa dạng (diverse) hơn.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex3b_7",
+              "content": "James tried to write the report last night, ____.",
+              "options": [
+                "and her work impacted many lives",
+                "but I like a diverse selection",
+                "but it had so many details that he couldn't finish",
+                "but everyone else is enchanted by her"
+              ],
+              "explanation": "James đã cố gắng viết báo cáo vào đêm qua, nhưng nó có quá nhiều chi tiết (details) khiến anh ấy không thể hoàn thành.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "ex3b_8",
+              "content": "I don’t really like Jennifer, ____.",
+              "options": [
+                "and her work impacted many lives",
+                "but I like a diverse selection",
+                "but it had so many details that he couldn't finish",
+                "but everyone else is enchanted by her"
+              ],
+              "explanation": "Tôi không thực sự thích Jennifer, nhưng mọi người khác đều bị cô ấy mê hoặc (enchanted).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "ex3b_9",
+              "content": "Bob and Eric both want to beat James at the game, ____.",
+              "options": [
+                "so they will form an alliance",
+                "and the crowd gave him great applause",
+                "and her work impacted many lives",
+                "but I like a diverse selection"
+              ],
+              "explanation": "Cả Bob và Eric đều muốn đánh bại James trong trò chơi, vì vậy họ sẽ thành lập một liên minh (alliance).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3b_10",
+              "content": "The performer did a great job, ____.",
+              "options": [
+                "so they will form an alliance",
+                "and the crowd gave him great applause",
+                "and her work impacted many lives",
+                "but I like a diverse selection"
+              ],
+              "explanation": "Người biểu diễn đã làm rất tốt và đám đông đã dành cho anh ấy những tràng pháo tay (applause) nồng nhiệt.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dinosaur Drawings</h1><p style=\"margin-bottom: 1rem;\">It was the worst morning ever. When Carl woke up, he realized that he didn’t do his <b>astronomy</b> and <b>chemistry</b> homework. Also, the <b>forecast</b> called for rain and that would affect baseball practice. Suddenly, his mother yelled, “Take out the garbage right now!” When Carl returned from taking the garbage outside, he was all <b>wet</b>. “What a terrible day,” he said.</p><p style=\"margin-bottom: 1rem;\">He walked to class. He put his umbrella on the <b>shelf</b> and sat in the third <b>row</b>. But the teacher asked why Carl’s umbrella was on the floor. He told her not to <b>blame</b> him. But she sent him to the <b>principal</b> out of <b>spite</b>.</p><p style=\"margin-bottom: 1rem;\">Next, he took a <b>geography</b> test. <b>Despite</b> studying, Carl didn’t know the answers. He started drawing <b>lightly</b> on his paper.</p><p style=\"margin-bottom: 1rem;\">Carl drew a huge <b>dinosaur</b>. What if it were real? He saw it in his mind. Carl’s class said he was a <b>genius</b> for having a <b>dinosaur</b>. It could <b>interfere</b> with math class, too! Soon, Carl’s <b>fame</b> spread through school.</p><p style=\"margin-bottom: 1rem;\">He taught his <b>dinosaur</b> to be very <b>gentle</b> and put it on <b>exhibit</b>. But <b>admission</b> would only be given to those classmates who paid him a fee. His idea was <b>super</b>.</p><p style=\"margin-bottom: 1rem;\">“It’s time to turn in your tests,” the teacher said. Carl looked at his paper. As he was dreaming in class, he hadn’t finished the test!</p></div>",
-      "imageUrl": "/unit11_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How a Singer Helped Win the War</h1>        <p style=\"margin-bottom: 1rem;\">Sometimes famous people are <b>vain</b>. They only care about themselves. But Josephine Baker was an <b>exception</b>. In the 1930s and 1940s, Baker was one of the most famous women in France. She was a big part of the new jazz <b>genre</b> and <b>culture</b> and had a <b>diverse</b> group of fans. The French people especially loved her. And she loved France. So when World War II started, she wanted to help the nation that had given her so much.</p>    <p style=\"margin-bottom: 1rem;\">In 1940, <b>armed</b> German troops entered Paris. When this happened, some French people formed a secret <b>alliance</b>. It was called the French Resistance. The group worked for the <b>defense</b> of France. It helped the European and American armies fight the Germans.</p>    <p style=\"margin-bottom: 1rem;\">Baker was an important member of the Resistance. She had three jobs. The first was to carry messages to and from other members. The messages were written in code on her sheets of music. The second was to provide <b>shelter</b> and <b>supply</b> goods to Resistance members. It would have been dangerous if the Germans found them.</p>    <p style=\"margin-bottom: 1rem;\">Baker’s third job was the most important. Baker held concerts for European politicians and army members. She <b>lured</b> them in, promising an entertaining show. She <b>enchanted</b> them with her singing and dancing and got lots of <b>applause</b>.</p>    <p style=\"margin-bottom: 1rem;\">But Baker was always <b>equipped</b> with a small notebook at these concerts. She listened for <b>details</b> about the war and wrote them down. Baker <b>sorted</b> the details and gave <b>authoritative</b> reports to the Resistance.</p>    <p style=\"margin-bottom: 1rem;\">Some thought Baker’s fame would be an <b>obstacle</b>. The Germans knew who she was, but they didn’t think she was smart enough to work for the Resistance. So she could get information from the Germans easily. This helped the Resistance and the French army save lives and win the war.</p>    <p style=\"margin-bottom: 1rem;\">Baker had a big <b>impact</b> on the Resistance’s work. She got many awards for her help. When she died, the army had a special <b>ceremony</b> to thank her again for her bravery.</p></div>",
+      "imageUrl": "/unit11_vol4_story.png",
       "sections": [
         {
-          "id": "sec4_reading",
-          "title": "Answer the questions.",
+          "id": "sec_reading_1",
+          "title": "Reading Comprehension",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "11",
-              "content": "1. What is this story about?",
+              "id": "rc_1",
+              "content": "Which is true about Josephine Baker's first job for the Resistance?",
               "options": [
-                "a. A wet classroom",
-                "b. A boy who is a genius",
-                "c. A bell that keeps ringing",
-                "d. A day that was not super"
+                "Baker’s first job was to carry messages written in code to and from European politicians.",
+                "Baker’s first job was to carry messages written in code to and from Resistance members.",
+                "Baker's first job was to provide shelter.",
+                "Baker's first job was to supply goods."
               ],
-              "correctAnswer": "d. A day that was not super",
-              "explanation": "The story starts with 'It was the worst morning ever' and describes Carl's bad day."
+              "explanation": "Dựa vào bài đọc: 'The first was to carry messages to and from other members. The messages were written in code on her sheets of music.'",
+              "correctAnswer": "B"
             },
             {
-              "id": "12",
-              "content": "2. What does Carl think his dinosaur can do?",
+              "id": "rc_2",
+              "content": "Which genre of music was Josephine Baker famous for?",
               "options": [
-                "a. Make money for him on admission fees",
-                "b. Interfere with taking out the garbage",
-                "c. Take the blame for failing geography",
-                "d. Reach things on the top shelf"
+                "She was famous for jazz music.",
+                "She was famous for blues music.",
+                "She was famous for rock music.",
+                "She was famous for country music."
               ],
-              "correctAnswer": "a. Make money for him on admission fees",
-              "explanation": "Carl thinks 'admission would only be given to those classmates who paid him a fee.'"
+              "explanation": "Dựa vào bài: 'She was a big part of the new jazz genre and culture'.",
+              "correctAnswer": "A"
             },
             {
-              "id": "13",
-              "content": "3. What did Carl do?",
+              "id": "rc_3",
+              "content": "What happened when the Germans entered Paris?",
               "options": [
-                "a. Break a jar at breakfast",
-                "b. Draw lightly on his test paper",
-                "c. Forget his hat on the bus",
-                "d. Stay after school for being late"
+                "Armed soldiers fought them.",
+                "Baker lured them back to Germany.",
+                "The French formed a secret alliance.",
+                "They sent messages in code."
               ],
-              "correctAnswer": "b. Draw lightly on his test paper",
-              "explanation": "The story says 'He started drawing lightly on his paper.'"
+              "explanation": "Dựa vào bài: 'In 1940, armed German troops entered Paris. When this happened, some French people formed a secret alliance.'",
+              "correctAnswer": "C"
             },
             {
-              "id": "14",
-              "content": "4. Despite Carl studying for his test, what happened?",
+              "id": "rc_4",
+              "content": "What was Baker’s most important job?",
               "options": [
-                "a. His teacher was not gentle with him.",
-                "b. He had to sit in the last row.",
-                "c. The exhibit did not earn him any fame.",
-                "d. He did not do well on his geography test."
+                "To provide shelter",
+                "To give authoritative reports",
+                "To write messages in code",
+                "To have a diverse group of fans"
               ],
-              "correctAnswer": "d. He did not do well on his geography test.",
-              "explanation": "The story says 'Despite studying, Carl didn’t know the answers.'"
+              "explanation": "Dựa vào bài: 'Baker’s third job was the most important... Baker sorted the details and gave authoritative reports to the Resistance.'",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "rc_5",
+              "content": "What happened when Baker died?",
+              "options": [
+                "The army had a special ceremony.",
+                "Baker had an impact on France.",
+                "Her fame became an obstacle.",
+                "The Resistance found her secret codes."
+              ],
+              "explanation": "Dựa vào đoạn cuối: 'When she died, the army had a special ceremony to thank her again for her bravery.'",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 11: Volume 4",
+    "category": "exercise",
+    "timeLimit": 0,
+    "description": "4000 Essential English Words - Volume 4"
+  }
 }

@@ -497,6 +497,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         onStartTest('split-standard', testData);
     } else if (type.includes('standard-reading')) {
         onStartTest('standard-reading', testData);
+    } else if (type.includes('splitscreen') && type.includes('standard')) {
+        onStartTest('standard-splitscreen', testData);
     } else if (type.includes('standard')) {
         onStartTest('standard', testData);
     } else if (type.includes('case-study') || type.includes('business')) {
@@ -1862,7 +1864,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                             const type = String(testDataToUse.test_type || '').toLowerCase();
                             let targetMode = 'standard';
-                            if (type.includes('standard-reading')) targetMode = 'standard-reading';
+                            if (type.includes('split-standard')) targetMode = 'split-standard';
+                            else if (type.includes('splitscreen') && type.includes('standard')) targetMode = 'standard-splitscreen';
+                            else if (type.includes('standard-reading')) targetMode = 'standard-reading';
                             else if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
                             else if (type === 'ielts-writing') targetMode = 'ielts-writing';
                             else if (type === 'ielts-speaking') targetMode = 'ielts-speaking';

@@ -1,252 +1,471 @@
 const fs = require('fs');
-const path = require('path');
 
 const words = [
-  { word: 'aim', ipa: '[eɪm]', type: 'n.', def: 'An aim is a goal someone wants to make happen.', ex: 'My aim is to become a helicopter pilot.' },
-  { word: 'attach', ipa: '[əˈtætʃ]', type: 'v.', def: 'To attach is to put two things together.', ex: 'I attached the socks to the clothesline to dry.' },
-  { word: 'bet', ipa: '[bet]', type: 'v.', def: 'To bet is to risk money on the result of a game or a business.', ex: 'How much will you bet that your horse will win?' },
-  { word: 'carriage', ipa: '[ˈkærɪdʒ]', type: 'n.', def: 'A carriage is a vehicle pulled by a horse.', ex: 'We took a carriage ride in the park.' },
-  { word: 'classic', ipa: '[ˈklæsɪk]', type: 'adj.', def: 'If something is classic, it is typical.', ex: 'The athlete made a classic mistake-he started running too soon.' },
-  { word: 'commute', ipa: '[kəˈmjuːt]', type: 'v.', def: 'To commute is to travel a long distance to get to work.', ex: 'I usually commute to work on the train.' },
-  { word: 'confirm', ipa: '[kənˈfɜːrm]', type: 'v.', def: 'To confirm is to make sure something is correct.', ex: 'Winning the game confirmed that James was a good player.' },
-  { word: 'criticize', ipa: '[ˈkrɪtɪsaɪz]', type: 'v.', def: 'To criticize is to say you do not like someone or something.', ex: 'He criticized his wife for spending too much money.' },
-  { word: 'differ', ipa: '[ˈdɪfər]', type: 'v.', def: 'To differ is to not be the same as another person or thing.', ex: 'I differ from my brother: he is short, while I am tall.' },
-  { word: 'expense', ipa: '[ɪkˈspens]', type: 'n.', def: 'An expense is the money that people spend on something.', ex: 'She wrote down all the expenses for her trip.' },
-  { word: 'formal', ipa: '[ˈfɔːrməl]', type: 'adj.', def: 'If something is formal, it is done in an official way.', ex: 'It was a formal dinner, so we wore our best clothes.' },
-  { word: 'height', ipa: '[haɪt]', type: 'n.', def: 'Height is how tall someone or something is.', ex: 'My height is 168 centimeters.' },
-  { word: 'invent', ipa: '[ɪnˈvent]', type: 'v.', def: 'To invent something is to create something that never existed before.', ex: 'My grandfather has invented some interesting things.' },
-  { word: 'junior', ipa: '[ˈdʒuːniər]', type: 'adj.', def: 'If someone is junior in their job, they do not have a lot of power.', ex: 'When she started at the company, she was only a junior manager.' },
-  { word: 'labor', ipa: '[ˈleɪbər]', type: 'n.', def: 'Labor is the act of doing or making something.', ex: 'Building the house took a lot of labor.' },
-  { word: 'mechanic', ipa: '[məˈkænɪk]', type: 'n.', def: 'A mechanic is someone who fixes vehicles or machines.', ex: 'We took the car to the mechanic to be fixed.' },
-  { word: 'prime', ipa: '[praɪm]', type: 'adj.', def: 'If something is prime, it is the most important one.', ex: 'Dirty air is a prime cause of illness.' },
-  { word: 'shift', ipa: '[ʃɪft]', type: 'v.', def: 'To shift to something is to move into a new place or direction.', ex: 'He shifted to the other side of the table to eat his breakfast.' },
-  { word: 'signal', ipa: '[ˈsɪɡnəl]', type: 'n.', def: 'A signal is a sound or action that tells someone to do something.', ex: 'The coach blew his whistle as a signal to begin the game.' },
-  { word: 'sincere', ipa: '[sɪnˈsɪr]', type: 'adj.', def: 'When people are sincere, they tell the truth.', ex: 'He sounded sincere when he apologized to me.' }
+    {word: "accelerate", phonetic: "[ækseləreit]", type: "v.", definition: "To accelerate means to increase in speed.", example: "When he stepped on the gas pedal, the motorcycle accelerated."},
+    {word: "anew", phonetic: "[ənu:]", type: "adv.", definition: "If you do something anew, you do it again and in a different way.", example: "Though he had failed his driving test, he decided to try it anew."},
+    {word: "defect", phonetic: "[difekt]", type: "n.", definition: "A defect is a part of something that is wrong or missing.", example: "All these bottles have a defect and must be sent back to the warehouse."},
+    {word: "dreary", phonetic: "[driəri]", type: "adj.", definition: "If something is dreary, then it is dull, dark, and lifeless.", example: "After the fire, this section of forest is rather dreary."},
+    {word: "duplicate", phonetic: "[dju:pləkeit]", type: "v.", definition: "To duplicate something means to copy it.", example: "She duplicated her friend’s movements like she was in front of a mirror."},
+    {word: "electromagnetic", phonetic: "[ilektroumægnetik]", type: "adj.", definition: "If something is electromagnetic, it is related to electricity and magnetic fields.", example: "Different colors of light come from different levels of electromagnetic energy."},
+    {word: "electron", phonetic: "[ilektrɔn]", type: "n.", definition: "An electron is a particle in all atoms that has a negative electric charge.", example: "The number of electrons in an atom determines the substance the atoms make."},
+    {word: "glide", phonetic: "[glaid]", type: "v.", definition: "To glide means to fly on extended wings with little or no effort.", example: "When the wind is blowing, birds can glide easily through the sky."},
+    {word: "ingenious", phonetic: "[indʒi:njəs]", type: "adj.", definition: "If someone is ingenious, then they are very smart.", example: "Charles was the only person ingenious enough to repair the plane’s engines."},
+    {word: "innovation", phonetic: "[inouveiʃən]", type: "n.", definition: "An innovation is a product or an idea that is new or very original.", example: "Mrs. Johnson made a great innovation to the company’s business plan."},
+    {word: "innovative", phonetic: "[inouveitiv]", type: "adj.", definition: "If something or someone is innovative, they can think in creative ways.", example: "Since Peter was so innovative, he was chosen to lead the science team."},
+    {word: "launch", phonetic: "[lɔ:ntʃ]", type: "v.", definition: "To launch something means to make it go into motion.", example: "The boat launched from the dock and floated down the river."},
+    {word: "meteorological", phonetic: "[mi:tiərəlɔdʒikəl]", type: "adj.", definition: "If something is meteorological, it is concerned with the science of weather.", example: "The thunderstorm was so large that it became a great meteorological event."},
+    {word: "meteorology", phonetic: "[mi:tiərɔlədʒi]", type: "n.", definition: "Meteorology is the science that studies the weather.", example: "In order to understand the weather, you have to study meteorology."},
+    {word: "penetrate", phonetic: "[penətreit]", type: "v.", definition: "To penetrate something means to enter into it.", example: "The knife easily penetrated the surface of the orange."},
+    {word: "propulsion", phonetic: "[prəpʌlʃən]", type: "n.", definition: "Propulsion is the force that moves something forward.", example: "The propulsion lifted the rocket into the sky."},
+    {word: "simulate", phonetic: "[simjəleit]", type: "v.", definition: "To simulate something means to copy its actions or characteristics.", example: "The French language teacher could simulate the accent of a French citizen."},
+    {word: "spur", phonetic: "[spə:r]", type: "v.", definition: "To spur someone means to urge them into action.", example: "The coach’s speech spurred her team into playing the best game of their lives."},
+    {word: "stimulate", phonetic: "[stimjəleit]", type: "v.", definition: "To stimulate something means to cause or to increase activity in it.", example: "Doctors sometimes use electric shock to stimulate a patient’s heartbeat."},
+    {word: "tenacious", phonetic: "[təneiʃəs]", type: "adj.", definition: "If someone is tenacious, then they do not easily give up.", example: "I’m sure that he’ll finish that difficult sale. He is very tenacious."}
 ];
 
-let wordHtml = `<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit17_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit17_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;">`;
+let wordlist_html = '<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit17_vol6_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit17_vol6_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;">';
 
-words.forEach(w => {
-  wordHtml += `<div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">${w.word}</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">${w.ipa}</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">${w.type}</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">${w.def}</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ ${w.ex}</div></div></div>`;
-});
-wordHtml += `</div></div></div>`;
+for (const w of words) {
+    wordlist_html += `<div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">${w.word}</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">${w.phonetic}</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">${w.type}</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">${w.definition}</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ ${w.example}</div></div></div>`;
+}
 
-const storyText = `<div style="font-family: Arial, sans-serif; "><h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Henry Ford’s Famous Car</h1><p style="margin-bottom: 1rem;">My name is Henry Ford, and I <b>invented</b> a car called the Model T. I used to watch <b>carriages</b> on the streets. They fascinated me. Then I got a job as a <b>junior</b> <b>mechanic</b>. My father <b>criticized</b> me. He wanted me to run the farm. But I did not <b>shift</b> my plans.</p><p style="margin-bottom: 1rem;">Then I worked for the Detroit Auto Company. But I wanted to make cars using less <b>labor</b>. That way, there would be fewer <b>expenses</b>. I started the Ford Motor Company in 1903. At first, the company did not do well. But many people were <b>betting</b> on my success. I also had a <b>sincere</b> <b>aim</b> to make a car that anybody could buy.</p><p style="margin-bottom: 1rem;">Then, in 1908, I introduced the Model-T in a <b>formal</b> ceremony. It <b>confirmed</b> that I was right: it was possible to build a car my way!</p><p style="margin-bottom: 1rem;">The Model T <b>differed</b> from other vehicles. Workers could <b>attach</b> different parts for cars or trucks. This saved time. One Model T could be put together in 93 minutes. All of them had the same <b>classic</b> design. They were all the same size and <b>height</b>. The <b>prime</b> reason for doing this was to save money.</p><p style="margin-bottom: 1rem;">Over 19 years, I sold over 15 million Model Ts. This sent a <b>signal</b> to other companies. People would buy cars to <b>commute</b> to work if the price was low enough.</p></div>`;
+wordlist_html += '</div></div></div>';
 
-const contentJson = {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 17",
-    "category": "exercise",
-    "timeLimit": 0
-  },
-  "parts": [
-    {
-      "id": "part1",
-      "title": "Word List",
-      "content": wordHtml,
-      "sections": [
+let reading_text = `A young student of meteorology was having a difficult time with an experiment. He was attempting to duplicate lightning in clouds. He had made a device that could simulate lightning. It worked by releasing an electromagnetic pulse into the cloud. This pulse, in turn, stimulated the electrons in the cloud’s particles. Then the electrons produced lightning.
+But his meteorological experiment had a major defect. He couldn’t get the device into the sky.
+He had tied it to balloons, but they had burst. He had shot the device from a cannon, but the force of the cannon had damaged it.
+“You should give up,” his friends told him. “You’ll never get that thing into the air.”
+But his friends’ criticisms only spurred him to try again. The student was very innovative, and at last, he thought that he had an innovation that would work. He attached wings to the device, and on one dreary day, when clouds blocked the light of the sun, he started his experiment anew.
+He placed the device on a rocket and launched it into the sky. The propulsion of the rocket carried the device high into the air. The rocket accelerated into the clouds and then released the device. It glided on its wings through the clouds, and when it penetrated the center of a large black cloud, it emitted the electromagnetic pulse. And just as he had predicted, lightning shot from the cloud!
+He called his professors, and the next day they came to watch. He successfully duplicated the experiment. His teachers were extremely impressed and called the student and his invention ingenious.
+The student was given many awards and became a famous inventor. He had not given up. He had remained tenacious and succeeded.`;
+
+let target_words = words.map(w => w.word);
+target_words.sort((a, b) => b.length - a.length);
+
+for (const w of target_words) {
+    const pattern = new RegExp('\\\\b(' + w + '(?:s|d|ed|ing|ly|es)?)\\\\b', 'gi');
+    reading_text = reading_text.replace(pattern, '<b>$1</b>');
+}
+
+const paragraphs = reading_text.split('\n');
+let reading_html = '<div style="font-family: Arial, sans-serif; "><h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">The Tenacious Inventor</h1>';
+for (const p of paragraphs) {
+    if (p.trim()) {
+        reading_html += `<p style="margin-bottom: 1rem;">${p.trim()}</p>`;
+    }
+}
+reading_html += '</div>';
+
+// minify html
+wordlist_html = wordlist_html.replace(/\n/g, '').replace(/\t/g, '');
+reading_html = reading_html.replace(/\n/g, '').replace(/\t/g, '');
+
+const data = {
+    "basicInfo": {
+        "skill": "Standard-Reading",
+        "title": "Unit 17: Volume 6",
+        "category": "exercise",
+        "timeLimit": 0
+    },
+    "parts": [
         {
-          "id": "sec1_wordlist",
-          "title": "Part A: Choose the right word for the given definition.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": "1",
-              "content": "1. to create something for the first time",
-              "options": ["aim", "signal", "mechanic", "invent"],
-              "correctAnswer": "invent",
-              "explanation": "invent có nghĩa là tạo ra thứ gì đó lần đầu tiên."
-            },
-            {
-              "id": "2",
-              "content": "2. most important",
-              "options": ["differ", "junior", "prime", "commute"],
-              "correctAnswer": "prime",
-              "explanation": "prime có nghĩa là quan trọng nhất."
-            },
-            {
-              "id": "3",
-              "content": "3. to move",
-              "options": ["attach", "shift", "bet", "confirm"],
-              "correctAnswer": "shift",
-              "explanation": "shift có nghĩa là di chuyển."
-            },
-            {
-              "id": "4",
-              "content": "4. cost",
-              "options": ["carriage", "expense", "height", "labor"],
-              "correctAnswer": "expense",
-              "explanation": "expense có nghĩa là chi phí."
-            },
-            {
-              "id": "5",
-              "content": "5. typical",
-              "options": ["classic", "criticize", "formal", "sincere"],
-              "correctAnswer": "classic",
-              "explanation": "classic có nghĩa là điển hình."
-            }
-          ]
+            "id": "part1",
+            "title": "Word List",
+            "content": wordlist_html,
+            "sections": [
+                {
+                    "id": "sec1_wordlist",
+                    "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
+                    "content": "",
+                    "questionType": "Trắc nghiệm",
+                    "questions": [
+                        {
+                            "id": "1",
+                            "content": "1. defect",
+                            "options": ["perfect", "broken", "clean", "magical"],
+                            "correctAnswer": "broken",
+                            "explanation": "defect (n): a part of something that is wrong or missing. Similar to broken."
+                        },
+                        {
+                            "id": "2",
+                            "content": "2. innovation",
+                            "options": ["obsolete", "cunning", "original", "compatible"],
+                            "correctAnswer": "original",
+                            "explanation": "innovation (n): a product or an idea that is new or very original. Similar to original."
+                        },
+                        {
+                            "id": "3",
+                            "content": "3. accelerate",
+                            "options": ["speed up", "slow down", "open", "melt"],
+                            "correctAnswer": "speed up",
+                            "explanation": "accelerate (v): to increase in speed. Similar to speed up."
+                        },
+                        {
+                            "id": "4",
+                            "content": "4. meteorological",
+                            "options": ["weather", "past", "body", "mind"],
+                            "correctAnswer": "weather",
+                            "explanation": "meteorological (adj): concerned with the science of weather. Similar to weather."
+                        },
+                        {
+                            "id": "5",
+                            "content": "5. dreary",
+                            "options": ["bright", "fluorescent", "frigid", "dull"],
+                            "correctAnswer": "dull",
+                            "explanation": "dreary (adj): dull, dark, and lifeless. Similar to dull."
+                        }
+                    ]
+                },
+                {
+                    "id": "sec2_wordlist",
+                    "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+                    "content": "",
+                    "questionType": "Trắc nghiệm",
+                    "questions": [
+                        {
+                            "id": "6",
+                            "content": "1. You can hear because sound causes activity in the tiny hairs on the inside of your ear.",
+                            "options": ["stimulates", "penetrate", "duplicate", "spur"],
+                            "correctAnswer": "stimulates",
+                            "explanation": "stimulates means to cause or to increase activity in."
+                        },
+                        {
+                            "id": "7",
+                            "content": "2. Some worms are small enough to enter into the skin without being detected.",
+                            "options": ["penetrate", "launch", "glide", "duplicate"],
+                            "correctAnswer": "penetrate",
+                            "explanation": "penetrate means to enter into it."
+                        },
+                        {
+                            "id": "8",
+                            "content": "3. She tried to copy the way her best friend dressed.",
+                            "options": ["duplicate", "simulate", "accelerate", "anew"],
+                            "correctAnswer": "duplicate",
+                            "explanation": "duplicate means to copy it."
+                        },
+                        {
+                            "id": "9",
+                            "content": "4. The teacher offered the kids candy in order to urge them into finishing their homework.",
+                            "options": ["spur", "launch", "stimulate", "innovative"],
+                            "correctAnswer": "spur",
+                            "explanation": "spur means to urge them into action."
+                        },
+                        {
+                            "id": "10",
+                            "content": "5. In science class, we learned about the particles in atoms that have a negative electric charge.",
+                            "options": ["electrons", "meteorology", "innovation", "defect"],
+                            "correctAnswer": "electrons",
+                            "explanation": "electron is a particle in all atoms that has a negative electric charge."
+                        },
+                        {
+                            "id": "11",
+                            "content": "6. Every time the children’s fort fell down, they built it again and better.",
+                            "options": ["anew", "tenacious", "dreary", "ingenious"],
+                            "correctAnswer": "anew",
+                            "explanation": "anew means again and in a different way."
+                        },
+                        {
+                            "id": "12",
+                            "content": "7. She took classes in the science that studies the weather and became a weatherperson.",
+                            "options": ["meteorology", "propulsion", "electromagnetic", "innovation"],
+                            "correctAnswer": "meteorology",
+                            "explanation": "meteorology is the science that studies the weather."
+                        },
+                        {
+                            "id": "13",
+                            "content": "8. The small airplane flew without any effort through the sky.",
+                            "options": ["glided", "launched", "accelerated", "penetrated"],
+                            "correctAnswer": "glided",
+                            "explanation": "glided means flew on extended wings with little or no effort."
+                        },
+                        {
+                            "id": "14",
+                            "content": "9. A rocket requires a lot of fuel in order to start it into the sky.",
+                            "options": ["launch", "glide", "spur", "duplicate"],
+                            "correctAnswer": "launch",
+                            "explanation": "launch means to make it go into motion."
+                        },
+                        {
+                            "id": "15",
+                            "content": "10. Amanda is quite an intelligent girl for her young age.",
+                            "options": ["ingenious", "tenacious", "innovative", "dreary"],
+                            "correctAnswer": "ingenious",
+                            "explanation": "ingenious means very smart."
+                        }
+                    ]
+                },
+                {
+                    "id": "sec3_wordlist",
+                    "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+                    "content": "",
+                    "questionType": "Trắc nghiệm",
+                    "questions": [
+                        {
+                            "id": "16",
+                            "content": "1. Just when you thought you’d caught up to Brian, he’d *accelerate* and quickly get away.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "accelerate means to increase in speed."
+                        },
+                        {
+                            "id": "17",
+                            "content": "2. The orchestra made a very *tenacious* sound, and many in the audience decided to leave.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "tenacious means not giving up easily, not a sound."
+                        },
+                        {
+                            "id": "18",
+                            "content": "3. Dan had *duplicated* the sculpture exactly. It now looked nothing like the original one.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "duplicated means copied exactly, so it would look like the original."
+                        },
+                        {
+                            "id": "19",
+                            "content": "4. Lions are dangerous hunters. They can *glide* through the air to capture their prey.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "lions do not glide (fly on wings)."
+                        },
+                        {
+                            "id": "20",
+                            "content": "5. They had a picnic in the park and *launched* on small sandwiches and grapes.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "launched means to put into motion, not eaten."
+                        },
+                        {
+                            "id": "21",
+                            "content": "6. We made a small toy train that *stimulated* how real trains worked 100 years ago.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "should be simulated, not stimulated."
+                        },
+                        {
+                            "id": "22",
+                            "content": "7. Cellular phones are one of the most popular *innovations* in the world today.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "innovation is a new product or idea."
+                        },
+                        {
+                            "id": "23",
+                            "content": "8. The knight’s sword could not *penetrate* his opponent’s armor.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "penetrate means to enter into."
+                        },
+                        {
+                            "id": "24",
+                            "content": "9. The thought of his warm bed *spurred* the traveler on through the cold night.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "spurred means urged into action."
+                        },
+                        {
+                            "id": "25",
+                            "content": "10. We didn’t mind that our paintings got ruined. It was fun to start them *anew*.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "anew means again."
+                        },
+                        {
+                            "id": "26",
+                            "content": "11. Satellites are very important for gathering *meteorological* data.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "meteorological relates to weather science."
+                        },
+                        {
+                            "id": "27",
+                            "content": "12. Fish use their fins for *propulsion* in the water.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "propulsion is the force that moves something forward."
+                        },
+                        {
+                            "id": "28",
+                            "content": "13. I wish Dad wasn’t so *innovative*. He always comes into my room without knocking.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "innovative means thinking in creative ways, not entering without knocking."
+                        },
+                        {
+                            "id": "29",
+                            "content": "14. Some metals are attracted to other metals due to an *electromagnetic* force.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "electromagnetic relates to electricity and magnetic fields."
+                        },
+                        {
+                            "id": "30",
+                            "content": "15. Certain kinds of light can *simulate* flowers into producing seeds earlier than usual.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "should be stimulate, not simulate."
+                        },
+                        {
+                            "id": "31",
+                            "content": "16. John is so *ingenious*. He hasn’t passed a single test so far this year.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "ingenious means smart, which contradicts not passing tests."
+                        },
+                        {
+                            "id": "32",
+                            "content": "17. I’ve always been interested in meteors. That’s why I want to study *meteorology*.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "meteorology is weather, not meteors."
+                        },
+                        {
+                            "id": "33",
+                            "content": "18. The lake was frightening. The water was still and *dreary*.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "C",
+                            "explanation": "dreary means dull, dark, lifeless."
+                        },
+                        {
+                            "id": "34",
+                            "content": "19. Everyone who voted in the *electron* was given the day off of work.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "should be election, not electron."
+                        },
+                        {
+                            "id": "35",
+                            "content": "20. The new pot looked perfect. It was covered in new, shiny *defects*.",
+                            "options": ["C", "I"],
+                            "correctAnswer": "I",
+                            "explanation": "defects are flaws, so it wouldn't look perfect."
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "id": "sec2_wordlist",
-          "title": "Part B: Check (V) the sentence with the bolded word that makes the better sense.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": "6",
-              "content": "1. a. It is a good idea to bet your money on silly things.\nb. You should go to a mechanic if you have a problem with your car.",
-              "options": ["a", "b"],
-              "correctAnswer": "b",
-              "explanation": "mechanic (thợ cơ khí) sửa xe, đây là lựa chọn hợp lý."
-            },
-            {
-              "id": "7",
-              "content": "2. a. Drivers use signals to make their cars go faster.\nb. You should attach a stamp to a letter before you mail it.",
-              "options": ["a", "b"],
-              "correctAnswer": "b",
-              "explanation": "attach a stamp (dán tem) là hành động đúng trước khi gửi thư."
-            },
-            {
-              "id": "8",
-              "content": "3. a. If you and your date differ too much, you might not like each other.\nb. When you confirm the results of the test, you make them better.",
-              "options": ["a", "b"],
-              "correctAnswer": "a",
-              "explanation": "differ (khác biệt): nếu hai người khác biệt quá nhiều, có thể họ không thích nhau."
-            },
-            {
-              "id": "9",
-              "content": "4. a. It is O.K. to wear sandals to a formal party.\nb. Teachers often criticize lazy students.",
-              "options": ["a", "b"],
-              "correctAnswer": "b",
-              "explanation": "criticize (chỉ trích): giáo viên thường phê bình học sinh lười biếng."
-            },
-            {
-              "id": "10",
-              "content": "5. a. People must pay attention to signals when they are driving.\nb. When you visit a mechanic they will sell you a new car.",
-              "options": ["a", "b"],
-              "correctAnswer": "a",
-              "explanation": "signals (tín hiệu): người lái xe phải chú ý đến các tín hiệu."
-            },
-            {
-              "id": "11",
-              "content": "6. a. You should wear nice clothing if you go to a formal event.\nb. Good friends like to criticize each other.",
-              "options": ["a", "b"],
-              "correctAnswer": "a",
-              "explanation": "formal event (sự kiện trang trọng): nên mặc đồ đẹp."
-            },
-            {
-              "id": "12",
-              "content": "7. a. Husbands and wives who differ are often very busy people.\nb. If you commute to work, you have to travel a certain distance.",
-              "options": ["a", "b"],
-              "correctAnswer": "b",
-              "explanation": "commute (đi làm xa): đi lại một khoảng cách nhất định."
-            },
-            {
-              "id": "13",
-              "content": "8. a. It is a good idea to confirm your plans before you travel.\nb. If you attach a large sign to your door, no one will see it.",
-              "options": ["a", "b"],
-              "correctAnswer": "a",
-              "explanation": "confirm (xác nhận): nên xác nhận kế hoạch trước khi đi."
-            },
-            {
-              "id": "14",
-              "content": "9. a. If your aim is to learn how to swim, you must get in the water.\nb. Everyone commutes in math class.",
-              "options": ["a", "b"],
-              "correctAnswer": "a",
-              "explanation": "aim (mục tiêu): nếu mục tiêu là học bơi, phải xuống nước."
-            },
-            {
-              "id": "15",
-              "content": "10. a. People who have an aim to succeed are very lazy.\nb. When you bet money, you might lose it.",
-              "options": ["a", "b"],
-              "correctAnswer": "b",
-              "explanation": "bet (cá cược): khi cá cược bạn có thể bị mất tiền."
-            }
-          ]
+            "id": "part2",
+            "title": "Comprehensive Reading",
+            "content": reading_html,
+            "imageUrl": "/unit17_vol6_story.png",
+            "sections": [
+                {
+                    "id": "sec4_reading",
+                    "title": "Part A: Mark each statement T for true or F for false.",
+                    "content": "",
+                    "questionType": "Trắc nghiệm",
+                    "questions": [
+                        {
+                            "id": "36",
+                            "content": "1. The student of meteorology had bought a device that simulated lightning in clouds.",
+                            "options": ["T", "F"],
+                            "correctAnswer": "F",
+                            "explanation": "F, The student of meteorology had made a device that simulated lightning in clouds."
+                        },
+                        {
+                            "id": "37",
+                            "content": "2. The electromagnetic pulse stimulated the electrons in the cloud’s particles.",
+                            "options": ["T", "F"],
+                            "correctAnswer": "T",
+                            "explanation": "T"
+                        },
+                        {
+                            "id": "38",
+                            "content": "3. The student’s friends’ criticisms spurred him to try his experiment anew.",
+                            "options": ["T", "F"],
+                            "correctAnswer": "T",
+                            "explanation": "T"
+                        },
+                        {
+                            "id": "39",
+                            "content": "4. It was a dreary day when the device glided into the clouds.",
+                            "options": ["T", "F"],
+                            "correctAnswer": "T",
+                            "explanation": "T"
+                        },
+                        {
+                            "id": "40",
+                            "content": "5. The propulsion of the rocket accelerated the speed of the lightning.",
+                            "options": ["T", "F"],
+                            "correctAnswer": "F",
+                            "explanation": "F, The propulsion of the rocket carried the device high into the air."
+                        }
+                    ]
+                },
+                {
+                    "id": "sec5_reading",
+                    "title": "Part B: Answer the questions.",
+                    "content": "",
+                    "questionType": "Trắc nghiệm",
+                    "questions": [
+                        {
+                            "id": "41",
+                            "content": "1. What was the defect of the student’s meteorological experiment?",
+                            "options": [
+                                "It couldn't get into the sky.",
+                                "It was too expensive.",
+                                "It did not produce lightning.",
+                                "It burst the balloons."
+                            ],
+                            "correctAnswer": "It couldn't get into the sky.",
+                            "explanation": "The meteorological experiment had a major defect. It couldn't get into the sky."
+                        },
+                        {
+                            "id": "42",
+                            "content": "2. What innovation did the innovative student use to launch his device into the clouds?",
+                            "options": [
+                                "He placed the device on a rocket and launched it into the sky.",
+                                "He shot it from a cannon.",
+                                "He tied it to balloons.",
+                                "He carried it on a plane."
+                            ],
+                            "correctAnswer": "He placed the device on a rocket and launched it into the sky.",
+                            "explanation": "He placed the device on a rocket and launched it into the sky."
+                        },
+                        {
+                            "id": "43",
+                            "content": "3. For whom did the student duplicate his ingenious experiment?",
+                            "options": [
+                                "His professors.",
+                                "His friends.",
+                                "His parents.",
+                                "The government."
+                            ],
+                            "correctAnswer": "His professors.",
+                            "explanation": "He duplicated the experiment for his professors."
+                        },
+                        {
+                            "id": "44",
+                            "content": "4. What did the device do when it finally penetrated the center of a large black cloud?",
+                            "options": [
+                                "It emitted the electromagnetic pulse.",
+                                "It exploded.",
+                                "It produced rain.",
+                                "It accelerated."
+                            ],
+                            "correctAnswer": "It emitted the electromagnetic pulse.",
+                            "explanation": "When it penetrated the center of a large black cloud, it emitted the electromagnetic pulse."
+                        },
+                        {
+                            "id": "45",
+                            "content": "5. What happened to the student because he was tenacious?",
+                            "options": [
+                                "He succeeded and became a famous inventor.",
+                                "He gave up and studied something else.",
+                                "He failed the class.",
+                                "He got struck by lightning."
+                            ],
+                            "correctAnswer": "He succeeded and became a famous inventor.",
+                            "explanation": "Because he was so tenacious, the student had succeeded."
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": "part2",
-      "title": "Comprehensive Reading",
-      "content": storyText,
-      "imageUrl": "/unit17_story.png",
-      "sections": [
-        {
-          "id": "sec3",
-          "title": "Answer the questions based on the story.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": "16",
-              "content": "1. What is this story about?",
-              "options": [
-                "a. How Ford attached cars and engines",
-                "b. How Ford aimed to build a better car",
-                "c. Why Ford shifted away from carriages",
-                "d. Why Ford bet on the gasoline engine"
-              ],
-              "correctAnswer": "b. How Ford aimed to build a better car",
-              "explanation": "Câu chuyện kể về cách Ford nhắm đến việc tạo ra một chiếc xe hơi tốt hơn."
-            },
-            {
-              "id": "17",
-              "content": "2. How did the Model T change other car companies?",
-              "options": [
-                "a. It confirmed that their expenses were large.",
-                "b. It made workers criticize their bosses about their labor.",
-                "c. It created a signal for them to start making cheaper cars.",
-                "d. It forced car companies to bet on Ford’s success."
-              ],
-              "correctAnswer": "c. It created a signal for them to start making cheaper cars.",
-              "explanation": "Nó tạo ra một tín hiệu cho họ bắt đầu sản xuất xe giá rẻ hơn."
-            },
-            {
-              "id": "18",
-              "content": "3. In paragraph 1, we can infer that_______",
-              "options": [
-                "a. Ford had a very formal childhood",
-                "b. Ford differed in thought from his father",
-                "c. Ford was not of great height",
-                "d. Ford’s father was sincere"
-              ],
-              "correctAnswer": "b. Ford differed in thought from his father",
-              "explanation": "Ford khác biệt trong suy nghĩ so với cha mình."
-            },
-            {
-              "id": "19",
-              "content": "4. According to the passage, all the following are true EXCEPT___",
-              "options": [
-                "a. the Model-T had a classic design",
-                "b. people would use cars to commute if they weren’t expensive",
-                "c. Ford worked as a junior mechanic",
-                "d. the first vehicle from the Ford Motor Company was a truck"
-              ],
-              "correctAnswer": "d. the first vehicle from the Ford Motor Company was a truck",
-              "explanation": "Mệnh đề d là sai vì xe đầu tiên không phải là xe tải."
-            },
-            {
-              "id": "20",
-              "content": "5. What was the prime reason for making the Model T with one design?",
-              "options": [
-                "a. To save money.",
-                "b. To make it go faster.",
-                "c. To save time on labor.",
-                "d. To make it look classic."
-              ],
-              "correctAnswer": "a. To save money.",
-              "explanation": "Lý do chính yếu là để tiết kiệm tiền."
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 };
 
-fs.writeFileSync(path.join(__dirname, 'unit17.json'), JSON.stringify(contentJson, null, 2));
-console.log('Successfully wrote unit17.json');
+fs.writeFileSync('public/unit17_vol6.json', JSON.stringify(data, null, 2), 'utf-8');
+console.log('Saved to public/unit17_vol6.json');

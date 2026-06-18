@@ -1,1 +1,535 @@
-{"basicInfo":{"skill":"Standard-Reading","title":"Unit 5","category":"exercise","timeLimit":0},"parts":[{"id":"part1","title":"Word List","content":"<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ancestor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænsestər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An ancestor is a family member from the past.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My ancestors came from Germany.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">angle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æŋgl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An angle is the direction from which you look at something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The giraffe turned its head to see from another angle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">boot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bu:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A boot is a heavy shoe that goes over your ankle.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He wore boots so that his feet wouldn't get wet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">border</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɔ:rdər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A border is the edge of an area.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The postcard had a pretty green border of pine needles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">congratulate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənˈgræʧəˌleɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To congratulate someone is to tell them that you are happy for them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Bill and Angela congratulated each other on a job well done.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frame</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[freim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A frame is a border for a picture or mirror.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have to get a frame for my friend's picture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">heaven</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hevən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Heaven is the place that some people believe people go when they die.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I die, I hope that I go to heaven.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">incredible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkredəbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is incredible, it is hard to believe they are true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have an incredible story to tell you about my vacation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">legend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[leʤənd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A legend is a story from the past.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is a well-known legend about a king and his queen.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">praise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[preiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To praise is to show that you like someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The coach praised both athletes after a good practice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">proceed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəˈsiːd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To proceed is to go in a certain direction.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My son and I proceeded to the beach so we could go fishing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pjuər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is pure, it is very clear and beautiful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The rose was pure. It had no dirt or imperfections.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">relative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[relətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A relative is a family member.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My relatives came by to see the new baby.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">senior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[si:njər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If one is senior, they are the oldest or have been there the longest.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because he got his job first, Bob is the senior chef.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">silent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sailənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is silent, they make no sound.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since no one was home, the house was silent.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sink</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sink]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sink into something is to slowly fall into it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boat had a hole in it, and it sank into the ocean.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">superior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səpiəriər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is superior, they are better than another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I think cooking outdoors is superior to cooking indoors.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">surround</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səraund]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To surround something is to close in on it from all sides.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We surrounded the suspect on all four sides.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thick</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is thick, it is wide and solid.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fog was so thick that I couldn't see through it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wrap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To wrap is to cover something on all sides.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I wrapped his gift and put a bow on it.</div></div></div></div></div></div>","sections":[{"id":"sec1_wordlist","title":"Choose the right definition for the given word.","content":"","questionType":"Trắc nghiệm","questions":[{"id":"1","content":"1. praise","options":["a picture border","to cover","to show you like something","to go in a direction"],"correctAnswer":"to show you like something","explanation":"praise: to show that you like someone or something."},{"id":"2","content":"2. thick","options":["wide and solid","having no sound","clean and untouched","better or more important"],"correctAnswer":"wide and solid","explanation":"thick: wide and solid."},{"id":"3","content":"3. incredible","options":["oldest","hard to believe","wide and solid","clear and beautiful"],"correctAnswer":"hard to believe","explanation":"incredible: hard to believe they are true."},{"id":"4","content":"4. border","options":["a heavy shoe","a story from the past","an edge","a family member"],"correctAnswer":"an edge","explanation":"border: the edge of an area."},{"id":"5","content":"5. heaven","options":["of great value","a place people go when they die","a family member","an edge"],"correctAnswer":"a place people go when they die","explanation":"heaven: the place that some people believe people go when they die."},{"id":"6","content":"6. surround","options":["to show you like something","to close in from all sides","to say you are happy for someone","to cover"],"correctAnswer":"to close in from all sides","explanation":"surround: to close in on it from all sides."},{"id":"7","content":"7. ancestor","options":["a family member from the past","of great value","a heavy shoe","to slowly fall in"],"correctAnswer":"a family member from the past","explanation":"ancestor: a family member from the past."},{"id":"8","content":"8. boot","options":["an edge","a story from the past","a family member","a heavy shoe"],"correctAnswer":"a heavy shoe","explanation":"boot: a heavy shoe that goes over your ankle."},{"id":"9","content":"9. proceed","options":["to cover","to go in a direction","to close in from all sides","to show you like something"],"correctAnswer":"to go in a direction","explanation":"proceed: to go in a certain direction."},{"id":"10","content":"10. silent","options":["more important","oldest","having no sound","hard to believe"],"correctAnswer":"having no sound","explanation":"silent: they make no sound."}]}]},{"id":"part2","title":"Comprehensive Reading","content":"<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">May 29, 1953</h1><p style=\"margin-bottom: 1rem;\">Today is the most important day of my life. I finally climbed Mt. Everest, the tallest mountain in the world.</p><p style=\"margin-bottom: 1rem;\">The top of the mountain was amazing. It felt like we were close to <b>heaven</b>. The snow was so <b>thick</b> that my <b>boots</b> <b>sank</b>. The air was <b>silent</b>. I looked at the beauty that <b>surrounded</b> me. Maybe my story will be a <b>legend</b> someday.</p><p style=\"margin-bottom: 1rem;\">I want people to remember this forever. I was the <b>senior</b> explorer in my group, and I knew we needed proof of our climb. I took many pictures with my camera. I'll put them in a <b>frame</b> and hang them.</p><p style=\"margin-bottom: 1rem;\">On the mountain, the air was very cold. I <b>wrapped</b> my coat around my body.</p><p style=\"margin-bottom: 1rem;\">I looked over the side of the mountaintop. From that <b>angle</b>, I saw the <b>border</b> of the clouds touch the rocks below. The snow was <b>thick</b>. It looked <b>pure</b>. There was no sign of modern life. Thousands of years ago, my <b>ancestors</b> saw the world this way.</p><p style=\"margin-bottom: 1rem;\">After fifteen minutes, I knew it was time to <b>proceed</b> down the mountain. The whole team <b>congratulated</b> us. My <b>superior</b>, John Hunt, <b>praised</b> us all. I sent messages to my <b>relatives</b> to tell them that I was safe. But it was hard to leave the mountain so quickly. I wanted to enjoy the <b>incredible</b> sight even longer.</p></div>","imageUrl":"/unit5_story.png","sections":[{"id":"sec2_reading","title":"Answer the questions.","content":"","questionType":"Trắc nghiệm","questions":[{"id":"11","content":"1. What is this story about?","options":["Edmund Hillary's incredible experience","The lives of Edmund Hillary's ancestors","The legend of Mt. Everest","How to use a camera when surrounded by snow"],"correctAnswer":"Edmund Hillary's incredible experience","explanation":"The story is about Edmund Hillary's incredible experience climbing Mt. Everest."},{"id":"12","content":"2. What did Hillary see from the angle over the side of the mountaintop?","options":["The sun in the east","His boots on the rocks below","His picture in a frame","The border of the clouds touching the rocks"],"correctAnswer":"The border of the clouds touching the rocks","explanation":"He saw the border of the clouds touch the rocks below."},{"id":"13","content":"3. Hillary was happy to do all of the following EXCEPT__________","options":["proceed down the mountain","get praise from his superior","hear his team congratulate him","send messages to his relatives"],"correctAnswer":"proceed down the mountain","explanation":"He says 'But it was hard to leave the mountain so quickly', implying he wasn't happy to proceed down."},{"id":"14","content":"4. According to the passage, the air at the top of the mountain was","options":["silent","thick","pure","senior"],"correctAnswer":"silent","explanation":"The passage states: 'The air was silent.'"}]}]}]}
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit5_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit5_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">assess</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əses]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To assess something means to judge the structure, purpose, or quality of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She assessed the condition of the toy car before buying it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">astonish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əstɑniʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To astonish someone means to greatly surprise them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The amount of people that came to her party astonished her.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">commence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To commence something means to begin it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His speech commenced with a “thank you” to all who had helped him succeed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">essence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[esəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The essence of something is its important qualities or basic characteristics.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The essence of the argument was that both sides felt they had lost money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">extract</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikstrækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To extract something means to remove it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dentist extracted the woman’s damaged tooth and put in a fake one.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fabulous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæbjələs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fabulous, it is extremely good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This strawberry is the best I’ve ever had. It’s fabulous.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">haste</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[heist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Haste is speed in movement or action.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In order to get to the meeting in time, he proceeds with haste.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impulse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impʌls]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An impulse is a sudden thoughtless urge to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because of the scary noise, she had an impulse to run somewhere and hide.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">latter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lætər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Latter describes something last in a series or the second choice of two things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the latter minutes of the game, the visitors scored the winning goal.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">molecule</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑləkju:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A molecule is the smallest basic unit that makes up a physical substance.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A tiny drop of water is made up of thousands of molecules of water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ongoing</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑngouiŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ongoing, then it is still happening or still growing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The development of plants is ongoing because it takes time for them to mature.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pharmaceutical</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɑ:rməsu:tikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is pharmaceutical, then it is related to the development of drugs.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Pharmaceutical companies discover new cures to illnesses all the time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">precise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prisais]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is precise, then they are exact and careful about their work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The builder was very precise about where he placed the nails.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">proximity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑksiməti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Proximity is closeness in time, space, or relationships.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All the trees in the proximity of the beach had been cut down.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">publicity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌblisəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Publicity is public attention given to someone or something by the media.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She received a lot of publicity after her performance in the film.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">remedy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[remədi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A remedy is a cure for a disease, argument, or problem.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A good remedy for a headache is an aspirin and a glass of water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">significance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[signifikəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The significance of something is the quality that makes it important.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The significance of the snowy weather was that we didn’t have to go to school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">subsequent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌbsikwənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is subsequent, then it comes after something else in time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The flood and the subsequent rescue of those caught in the flood were on TV.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">synthetic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sinθetik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is synthetic, then it is made to be like something natural.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Clothing made out of synthetic fabrics is very effective at keeping people warm.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">terminal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tə:rmənəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is terminal, then it causes or results in death.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since his condition was not terminal, he felt a great sense of relief.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the one that is opposite in meaning to the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "remedy",
+              "options": [
+                "island",
+                "instance",
+                "movie",
+                "poison"
+              ],
+              "explanation": "remedy (phương thuốc, cách chữa trị) trái nghĩa với poison (chất độc).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q2",
+              "content": "latter",
+              "options": [
+                "first",
+                "rough",
+                "temporary",
+                "trivial"
+              ],
+              "explanation": "latter (cái sau, thứ hai) trái nghĩa với first (đầu tiên).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q3",
+              "content": "terminal",
+              "options": [
+                "brief",
+                "chilly",
+                "pleasant",
+                "curable"
+              ],
+              "explanation": "terminal (gây tử vong, vô phương cứu chữa) trái nghĩa với curable (có thể chữa khỏi).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q4",
+              "content": "commence",
+              "options": [
+                "rescue",
+                "finish",
+                "require",
+                "twirl"
+              ],
+              "explanation": "commence (bắt đầu) trái nghĩa với finish (kết thúc).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q5",
+              "content": "precise",
+              "options": [
+                "moist",
+                "insane",
+                "messy",
+                "hungry"
+              ],
+              "explanation": "precise (chính xác, tỉ mỉ) trái nghĩa với messy (bừa bộn, cẩu thả).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q6",
+              "content": "synthetic",
+              "options": [
+                "natural",
+                "rhythmic",
+                "shiny",
+                "harmless"
+              ],
+              "explanation": "synthetic (nhân tạo) trái nghĩa với natural (tự nhiên).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q7",
+              "content": "extract",
+              "options": [
+                "manage",
+                "anger",
+                "insert",
+                "explode"
+              ],
+              "explanation": "extract (chiết xuất, rút ra) trái nghĩa với insert (chèn vào, nhét vào).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q8",
+              "content": "publicity",
+              "options": [
+                "gravity",
+                "privacy",
+                "bravery",
+                "energy"
+              ],
+              "explanation": "publicity (sự chú ý của công chúng) trái nghĩa với privacy (sự riêng tư).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q9",
+              "content": "impulse",
+              "options": [
+                "truck",
+                "music",
+                "revenge",
+                "plan"
+              ],
+              "explanation": "impulse (sự bốc đồng, không suy nghĩ) trái nghĩa với plan (kế hoạch, có tính toán).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q10",
+              "content": "fabulous",
+              "options": [
+                "rude",
+                "noisy",
+                "fertile",
+                "awful"
+              ],
+              "explanation": "fabulous (tuyệt vời) trái nghĩa với awful (tồi tệ).",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "The patient’s illness seemed like it might be _____________.",
+              "options": [
+                "terminal",
+                "extract",
+                "impulse",
+                "subsequent"
+              ],
+              "explanation": "Bệnh tình của bệnh nhân có vẻ như vô phương cứu chữa (terminal).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q12",
+              "content": "To save him, doctors had to ______________the infected tissue.",
+              "options": [
+                "assess",
+                "extract",
+                "essence",
+                "ongoing"
+              ],
+              "explanation": "Bác sĩ phải cắt bỏ (extract) phần mô bị nhiễm trùng.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q13",
+              "content": "On an _____________, he kicked the wall and it revealed a secret pass.",
+              "options": [
+                "fabulous",
+                "impulse",
+                "publicity",
+                "subsequent"
+              ],
+              "explanation": "Theo một sự bốc đồng (on an impulse), anh ta đá vào tường.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q14",
+              "content": "It led to his ______________ escape from the prison.",
+              "options": [
+                "subsequent",
+                "terminal",
+                "astonished",
+                "assess"
+              ],
+              "explanation": "Dẫn đến cuộc vượt ngục sau đó (subsequent) của anh ta.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q15",
+              "content": "It was difficult to ______________ in which direction the forest fire would go.",
+              "options": [
+                "ongoing",
+                "essence",
+                "assess",
+                "extract"
+              ],
+              "explanation": "Thật khó để đánh giá (assess) hướng cháy rừng.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q16",
+              "content": "One reason was that anything could happen while the fire was _____________.",
+              "options": [
+                "ongoing",
+                "fabulous",
+                "terminal",
+                "publicity"
+              ],
+              "explanation": "Trong khi đám cháy đang diễn ra (ongoing).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q17",
+              "content": "The ______________ of the mayor’s speech was about building the new library.",
+              "options": [
+                "essence",
+                "assess",
+                "subsequent",
+                "impulse"
+              ],
+              "explanation": "Bản chất/ý chính (essence) của bài phát biểu.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q18",
+              "content": "The building would be a(n) _____________ addition to the scenery downtown.",
+              "options": [
+                "fabulous",
+                "terminal",
+                "extract",
+                "ongoing"
+              ],
+              "explanation": "Sự bổ sung tuyệt vời (fabulous).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q19",
+              "content": "His amazing skills during the last half of the game _____________ the crowd.",
+              "options": [
+                "astonished",
+                "publicity",
+                "assess",
+                "essence"
+              ],
+              "explanation": "Kỹ năng tuyệt vời đã làm kinh ngạc (astonished) đám đông.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q20",
+              "content": "Then that night, he received a lot of ______________ from all the news shows.",
+              "options": [
+                "publicity",
+                "fabulous",
+                "ongoing",
+                "terminal"
+              ],
+              "explanation": "Nhận được nhiều sự chú ý (publicity) từ truyền thông.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q21",
+              "content": "Because she took the test with such speed, she made several silly mistakes.",
+              "options": [
+                "haste",
+                "proximity",
+                "latter",
+                "synthetic"
+              ],
+              "explanation": "speed (tốc độ) tương đương với haste (sự vội vã).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q22",
+              "content": "Her anniversary had a quality that made it important because it was also her birthday.",
+              "options": [
+                "significance",
+                "pharmaceutical",
+                "molecules",
+                "remedy"
+              ],
+              "explanation": "quality that made it important tương đương significance (ý nghĩa quan trọng).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q23",
+              "content": "Though the smallest basic units in ice and steam are similar, their shapes are different.",
+              "options": [
+                "molecules",
+                "assess",
+                "synthetic",
+                "proximity"
+              ],
+              "explanation": "smallest basic units tương đương molecules (phân tử).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q24",
+              "content": "They began the ceremony at 9:00 in the evening.",
+              "options": [
+                "commenced",
+                "latter",
+                "pharmaceutical",
+                "haste"
+              ],
+              "explanation": "began (bắt đầu) tương đương commenced.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q25",
+              "content": "The closeness in space of her office is only a short distance from mine.",
+              "options": [
+                "proximity",
+                "remedy",
+                "significance",
+                "synthetic"
+              ],
+              "explanation": "closeness in space tương đương proximity (sự gần gũi).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q26",
+              "content": "He could sleep late that day or get up early and start his work. He chose the second choice.",
+              "options": [
+                "latter",
+                "assess",
+                "haste",
+                "commenced"
+              ],
+              "explanation": "second choice (sự lựa chọn thứ hai) tương đương latter.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q27",
+              "content": "The noises on the computer sounded like they were made to sound like real ones.",
+              "options": [
+                "synthetic",
+                "proximity",
+                "molecules",
+                "pharmaceutical"
+              ],
+              "explanation": "made to sound like real ones (làm giả giống thật) tương đương synthetic (nhân tạo).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q28",
+              "content": "Please judge the quality of his proposal before we decide to meet with him.",
+              "options": [
+                "assess",
+                "remedy",
+                "commence",
+                "haste"
+              ],
+              "explanation": "judge the quality (đánh giá chất lượng) tương đương assess.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q29",
+              "content": "The best cure for a slightly injured foot is putting ice on it.",
+              "options": [
+                "remedy",
+                "significance",
+                "latter",
+                "proximity"
+              ],
+              "explanation": "cure (cách chữa trị) tương đương remedy.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q30",
+              "content": "Most of the advertisements on TV are related to the development of drugs commercials.",
+              "options": [
+                "pharmaceutical",
+                "molecules",
+                "synthetic",
+                "assess"
+              ],
+              "explanation": "related to the development of drugs tương đương pharmaceutical.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Famous Accident</h1>        <p style=\"margin-bottom: 1rem;\">One of the greatest <b>pharmaceutical</b> discoveries happened by accident. In his <b>haste</b> to go on vacation, Alexander Fleming had left his laboratory in a mess. The <b>essence</b> of his <b>ongoing</b> work involved a type of bacteria. An infection caused by the bacteria was often <b>terminal</b>, and he was looking for a <b>remedy</b>. He had left the bacteria out while he was away.</p>    <p style=\"margin-bottom: 1rem;\">When he returned from vacation, he found that his lab was covered in fungus. He started cleaning up the mess. While he was cleaning, he had an <b>impulse</b> to examine the fungus. He saw that whenever the fungus was in close <b>proximity</b> to the bacteria, the bacteria died.</p>    <p style=\"margin-bottom: 1rem;\">Though he was a messy scientist, his experiments were <b>precise</b>. He thought that there might be some <b>significance</b> to the fungus. He immediately <b>commenced</b> an experiment to <b>assess</b> what had happened to the bacteria. It had either died by accident or the fungus had killed it. The <b>subsequent</b> tests proved it was the <b>latter</b> reason.</p>    <p style=\"margin-bottom: 1rem;\">What he found <b>astonished</b> him. The fungus actually killed the bad bacteria. All this time, he had been looking for a <b>synthetic</b> material to kill the bacteria. Instead, a common fungus did the job.</p>    <p style=\"margin-bottom: 1rem;\">He knew that something in the fungus had killed the bacteria. His next step was to find those <b>molecules</b> that had done it. When he found them, he <b>extracted</b> them and put them into a pill. The drug proved to be very effective. It also worked against other types of harmful bacteria.</p>    <p style=\"margin-bottom: 1rem;\">The discovery received a lot of <b>publicity</b>. Soon after, the new drug was being used all over the world. Because of the success, the scientist was able to develop even more <b>fabulous</b> drugs to help people. His accidental discovery changed the world and helped save many people’s lives.</p></div>",
+      "imageUrl": "/unit5_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading_A",
+          "title": "Part A: Mark each statement True (T) or False (F).",
+          "content": "",
+          "questions": [
+            {
+              "id": "q31",
+              "content": "One of the most fabulous pharmaceutical discoveries was an accident.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Đúng với câu chuyện: 'One of the greatest pharmaceutical discoveries happened by accident.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q32",
+              "content": "The essence of the scientist’s ongoing work was to find a remedy for a terminal infection.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Đúng với câu chuyện: 'The essence of his ongoing work... An infection caused by the bacteria was often terminal, and he was looking for a remedy.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q33",
+              "content": "The infection caused by the bacteria he was working on was not terminal.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Sai. Trong câu chuyện: 'An infection caused by the bacteria was often terminal'.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q34",
+              "content": "Fleming examined the fungus on an impulse.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Đúng với câu chuyện: 'he had an impulse to examine the fungus.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q35",
+              "content": "Whenever the synthetic material was far from the bacteria, the bacteria died.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Sai. Bất cứ khi nào nấm (fungus) ở gần (in close proximity to) vi khuẩn, vi khuẩn sẽ chết.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec5_reading_B",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q36",
+              "content": "In his haste to go on vacation, how had Alexander Fleming left his laboratory?",
+              "options": [
+                "In his haste to go on vacation, Alexander Fleming left his laboratory in a mess.",
+                "He left it very clean.",
+                "He left it locked.",
+                "He left it empty."
+              ],
+              "explanation": "In his haste to go on vacation, Alexander Fleming left his laboratory in a mess.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q37",
+              "content": "What was the significance of the fungus?",
+              "options": [
+                "The significance of the fungus was that it could kill the bacteria.",
+                "It was very rare.",
+                "It smelled bad.",
+                "It could cure headaches."
+              ],
+              "explanation": "The significance of the fungus was that it could kill the bacteria.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q38",
+              "content": "When did the scientist get an impulse to examine the fungus?",
+              "options": [
+                "While he was cleaning, he had an impulse to examine the fungus.",
+                "Before he went on vacation.",
+                "When he was dreaming.",
+                "When he saw a rat."
+              ],
+              "explanation": "While he was cleaning, he had an impulse to examine the fungus.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q39",
+              "content": "What did the scientist extract molecules from?",
+              "options": [
+                "The scientist extracted molecules from the fungus.",
+                "He extracted them from the bacteria.",
+                "He extracted them from plants.",
+                "He extracted them from water."
+              ],
+              "explanation": "The scientist extracted molecules from the fungus.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q40",
+              "content": "What received a lot of publicity?",
+              "options": [
+                "The discovery received a lot of publicity.",
+                "His vacation received a lot of publicity.",
+                "His messy lab received a lot of publicity.",
+                "The bacteria received a lot of publicity."
+              ],
+              "explanation": "The discovery received a lot of publicity.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 5: Volume 5",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

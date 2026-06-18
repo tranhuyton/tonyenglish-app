@@ -1397,7 +1397,7 @@ const handleFinish = async () => {
                                  rawContentText = sec.content;
                                  if (Array.isArray(sec.questions)) {
                                    sec.questions.forEach((q: any) => {
-                                     if (q.content && q.content !== sec.content && String(q.content).match(/\[\s*\d+\s*\]/)) {
+                                     if (q.content && q.content !== sec.content && String(q.content).match(/\[\s*\d+\s*\]/) && !/^\[\s*\d+\s*\]$/.test(String(q.content).replace(/<[^>]*>/g, '').trim())) {
                                        rawContentText += '<br><br>' + q.content;
                                      }
                                    });

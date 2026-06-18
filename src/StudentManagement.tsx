@@ -256,6 +256,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
         const type = String(foundTest.test_type || '').toLowerCase();
         let targetMode = 'standard';
         if (type.includes('split-standard')) targetMode = 'split-standard';
+        else if (type.includes('splitscreen') && type.includes('standard')) targetMode = 'standard-splitscreen';
         else if (type.includes('standard-reading')) targetMode = 'standard-reading';
         else if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
         else if (type.includes('igcse') && type.includes('direct')) targetMode = 'igcse-direct';

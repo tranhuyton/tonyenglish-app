@@ -1,189 +1,533 @@
 {
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 2",
-    "category": "exercise",
-    "timeLimit": 0
-  },
   "parts": [
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit2_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit2_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bring</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[briŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bring means to take someone or something to a person or place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Oscar will bring in all the boxes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">castle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæsl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A castle is a building with strong walls where royalty usually lives.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The castle was built many years ago.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">command</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To command someone is to tell them to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The general commanded his army to attack.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">counsel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kaunsəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To counsel someone is to listen and give advice about a problem.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher counseled the girl about her troubles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ensure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inʃuər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To ensure is to make certain that something happens.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Eating good food ensures that we stay healthy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">explosion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksplouʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An explosion is a violent burst, usually with a loud sound.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A nuclear explosion can cause great damage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">jewelry</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒu:əlri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Jewelry is something that people wear like earrings or necklaces.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The woman looked beautiful with her nice dress and jewelry.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">land</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To land means to come to the ground usually from a ship or aircraft.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The parachutist landed safely on the ground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">meteor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mi:tiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A meteor is a rock from outer space that falls to Earth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We saw a meteor in the sky last night.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">monster</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑnstər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A monster is any imaginary frightening creature that looks strange.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The monster scared everyone in the village.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">northern</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɔ:rðərn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is northern, it is in the direction of north.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is much colder in northern countries than it is here.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">remote</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rimout]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is remote, it is very far away and difficult to get to.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It took many days to get to the remote island.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">southern</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌðərn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is southern, it is in the direction of south.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Taegu is located in the southern part of the Korean peninsula.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">statue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stætʃu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A statue is an image of a person or animal made of stone or metal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw a beautiful statue of a lion today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steam</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sti:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Steam is water that has become hot and has turned into a misty gas.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We could see the steam rise from the boiling water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">submit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səbmit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To submit to someone is to agree to do what they tell you to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She submitted to her mother’s wishes and did her homework.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">temple</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tempəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A temple is a building that is used for religious purposes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The people visited the temple to pray.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">upper</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌpər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Upper means higher in position or place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A home’s attic is at the upper part of the structure.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">weed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wi:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A weed is a plant, especially one that is not useful or wanted.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The yard of the house was full of ugly weeds.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wing</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wiŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wing is the part of an animal that lets it fly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bird used its wings to fly across the water.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit2_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit2_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abbey</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æbi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An abbey is a house or group of houses where monks or nuns live.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the monk returned to the abbey, he went immediately to his bedroom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abundant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əbʌndənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is abundant, then it is available in large quantities.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Cakes, cookies, and candy were so abundant that the child was very happy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adjoin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədʒɔin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To adjoin something means to be next to or attached to something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She can listen to her brother’s conversations because her room adjoins his.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ample</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æmpl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ample, then it is enough or more than enough.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was an ample supply of oats to feed the horses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ærid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a place is arid, then it is hot and dry and gets very little or no rain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Not many plants grow in the arid desert.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cathedral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəθi:drəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cathedral is an important and often large and beautifully built church.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The large cathedral is full of people on Sunday mornings.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deprive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipraiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To deprive someone of something means to not let them have it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because the child was bad, she was deprived of her dessert after dinner.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">drought</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[draut]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A drought is a long period of time in which little or no rain falls.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After three months of drought, the vegetation and trees started dying.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">eligible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[elidʒəbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is eligible, then they are permitted to do or have something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Only people who bought tickets were eligible to win a prize.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To fast means to go without food or drink for a period of time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In her religion, they fast for five days and then have a big feast.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grumble</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[grʌmbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To grumble means to complain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He grumbled about having to work late on Friday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inland</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inlənd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone goes inland, they travel into the center of a country or land.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The river curved inland near the campground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">moisture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɔistʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Moisture is small drops of water in the air or on a surface.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you breathe on a window, moisture from your breath collects on the glass.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nonetheless</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nʌnðəles]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something happens nonetheless, then it occurs despite some other thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She tried to keep the dog out of the mud, but it got dirty nonetheless.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">oath</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An oath is a formal, often public, promise.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Judges must take an oath to be fair to everyone in court.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prairie</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[preri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A prairie is a large flat area of grassland.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The prairie was perfect for a farm because there were hills and trees.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ragged</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rægid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ragged, then it is old, torn, and falling apart.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They could see his toes through the holes in his ragged shoes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rugged</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rʌgid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If an area of land is rugged, then it is rocky and difficult to travel through.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Their car couldn’t make it far along the rugged roads.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scarce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skers]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is scarce, then it is in a very small amount.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When gasoline was scarce, we rode our bikes, instead of driving, to school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">speculate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spekjəleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To speculate means to guess about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister looked at the sky and speculated that it would rain tomorrow.</div></div></div></div></div></div>",
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Check (V) the sentence with the bolded word that makes better sense.",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "1",
-              "content": "1.",
+              "id": "q1",
+              "content": "1. What would probably happen if you deprived someone of food?",
               "options": [
-                "Many castles are built with thick stone walls.",
-                "When you command somebody, you work for them."
+                "They could die.",
+                "They could feel relieved.",
+                "They could feel happy.",
+                "They could feel peace."
               ],
-              "correctAnswer": "Many castles are built with thick stone walls.",
-              "explanation": "Câu này hợp lý vì lâu đài thường được xây bằng tường đá dày."
+              "explanation": "deprive là tước đoạt. Tước đoạt thức ăn có thể dẫn đến cái chết.",
+              "correctAnswer": "A"
             },
             {
-              "id": "2",
-              "content": "2.",
+              "id": "q2",
+              "content": "2. A rugged surface would feel.",
               "options": [
-                "All children bring live animals to the zoo.",
-                "Some women wear jewelry on their ears and hands."
+                "very rough",
+                "smooth",
+                "cool and slippery",
+                "warm and hard"
               ],
-              "correctAnswer": "Some women wear jewelry on their ears and hands.",
-              "explanation": "Câu này hợp lý vì trang sức (jewelry) được đeo trên tai và tay."
+              "explanation": "rugged là gồ ghề. Bề mặt gồ ghề sẽ có cảm giác rất thô ráp (very rough).",
+              "correctAnswer": "A"
             },
             {
-              "id": "3",
-              "content": "3.",
+              "id": "q3",
+              "content": "3. If you were speculating about something, you would be doing what?",
               "options": [
-                "You put on jewelry when you take a bath.",
-                "When I counsel you, I am trying to help you."
+                "Stating a fact",
+                "Looking for truth",
+                "Making a speech",
+                "Making a guess"
               ],
-              "correctAnswer": "When I counsel you, I am trying to help you.",
-              "explanation": "Câu này hợp lý vì 'counsel' (khuyên bảo) là để giúp đỡ người khác."
+              "explanation": "speculate là suy đoán. Suy đoán tức là đưa ra phỏng đoán (Making a guess).",
+              "correctAnswer": "D"
             },
             {
-              "id": "4",
-              "content": "4.",
+              "id": "q4",
+              "content": "4. Where would someone take an oath?",
               "options": [
-                "It takes a long time to get to remote places.",
-                "Weeds make a house more beautiful."
+                "At the subway",
+                "In court",
+                "On vacation",
+                "In their sleep"
               ],
-              "correctAnswer": "It takes a long time to get to remote places.",
-              "explanation": "Câu này hợp lý vì những nơi xa xôi (remote places) mất nhiều thời gian để đi tới."
+              "explanation": "oath là lời thề. Người ta thường lập lời thề trước tòa án (In court).",
+              "correctAnswer": "B"
             },
             {
-              "id": "5",
-              "content": "5.",
+              "id": "q5",
+              "content": "5. If something were covered with moisture, then it would feel.",
               "options": [
-                "Good parents ensure that their children are safe.",
-                "The people were happy when the monster was elected president."
+                "hard",
+                "rough",
+                "soft",
+                "wet"
               ],
-              "correctAnswer": "Good parents ensure that their children are safe.",
-              "explanation": "Câu này hợp lý vì cha mẹ tốt luôn đảm bảo (ensure) sự an toàn cho con cái."
-            },
-            {
-              "id": "6",
-              "content": "6.",
-              "options": [
-                "The explosion made everyone sleepy.",
-                "I forgot to bring my camera when I went on vacation."
-              ],
-              "correctAnswer": "I forgot to bring my camera when I went on vacation.",
-              "explanation": "Câu này hợp lý vì 'bring' (mang theo) phù hợp với ngữ cảnh đi nghỉ mát."
-            },
-            {
-              "id": "7",
-              "content": "7.",
-              "options": [
-                "If I command you to work, then I want you to work.",
-                "You can easily ensure that it rains."
-              ],
-              "correctAnswer": "If I command you to work, then I want you to work.",
-              "explanation": "Câu này hợp lý vì 'command' (ra lệnh) nghĩa là bạn muốn người khác làm việc đó."
-            },
-            {
-              "id": "8",
-              "content": "8.",
-              "options": [
-                "The scary monster caused much damage to the village.",
-                "Students visit remote places after school every day."
-              ],
-              "correctAnswer": "The scary monster caused much damage to the village.",
-              "explanation": "Câu này hợp lý vì 'monster' (quái vật) có thể gây ra nhiều thiệt hại."
-            },
-            {
-              "id": "9",
-              "content": "9.",
-              "options": [
-                "Many people have a castle inside their house.",
-                "If you don't keep your yard clean, weeds will grow."
-              ],
-              "correctAnswer": "If you don't keep your yard clean, weeds will grow.",
-              "explanation": "Câu này hợp lý vì cỏ dại (weeds) sẽ mọc nếu sân không được dọn dẹp sạch sẽ."
-            },
-            {
-              "id": "10",
-              "content": "10.",
-              "options": [
-                "Students must counsel their teachers.",
-                "The explosion in the sky was caused by the fireworks."
-              ],
-              "correctAnswer": "The explosion in the sky was caused by the fireworks.",
-              "explanation": "Câu này hợp lý vì tiếng nổ (explosion) trên bầu trời có thể do pháo hoa gây ra."
+              "explanation": "moisture là hơi ẩm. Bề mặt có hơi ẩm sẽ có cảm giác ướt (wet).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q6",
+              "content": "1. Traveling across the _____________ was more difficult than it seemed.",
+              "options": [
+                "prairie",
+                "rugged",
+                "arid",
+                "moisture"
+              ],
+              "explanation": "Đi ngang qua thảo nguyên (prairie) khó khăn hơn so với vẻ bề ngoài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q7",
+              "content": "2. The ground was very _____________, and the grass was high.",
+              "options": [
+                "rugged",
+                "prairie",
+                "oath",
+                "eligible"
+              ],
+              "explanation": "Mặt đất rất gồ ghề (rugged).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q8",
+              "content": "3. John had been in a place with a(n) ______________climate for a long time.",
+              "options": [
+                "abundant",
+                "scarce",
+                "arid",
+                "fast"
+              ],
+              "explanation": "Nơi có khí hậu khô cằn (arid).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q9",
+              "content": "4. He forgot that in a humid place everything was covered with _____________.",
+              "options": [
+                "moisture",
+                "cathedral",
+                "oath",
+                "prairie"
+              ],
+              "explanation": "Nơi ẩm ướt mọi thứ được bao phủ bởi hơi ẩm (moisture).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q10",
+              "content": "5. The people who attend that church ______________for two weeks in March.",
+              "options": [
+                "fast",
+                "grumble",
+                "adjoin",
+                "speculate"
+              ],
+              "explanation": "Người đến nhà thờ thường nhịn ăn (fast) trong hai tuần.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q11",
+              "content": "6. Then they go to the ______________where they pray and eat a small meal of soup.",
+              "options": [
+                "cathedral",
+                "abbey",
+                "prairie",
+                "inland"
+              ],
+              "explanation": "Đến nhà thờ lớn (cathedral) để cầu nguyện.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q12",
+              "content": "7. We didn’t know what to do with such a(n) ______________supply of wood.",
+              "options": [
+                "scarce",
+                "ample",
+                "abundant",
+                "ragged"
+              ],
+              "explanation": "Nguồn cung cấp gỗ dồi dào (abundant).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q13",
+              "content": "8. We had gotten used to making small fires when it was so _____________.",
+              "options": [
+                "scarce",
+                "abundant",
+                "eligible",
+                "arid"
+              ],
+              "explanation": "Quen với việc đốt lửa nhỏ khi gỗ khan hiếm (scarce).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q14",
+              "content": "9. In order for the students to attend the dance, they had to take a(n) _____________.",
+              "options": [
+                "oath",
+                "fast",
+                "drought",
+                "moisture"
+              ],
+              "explanation": "Phải tuyên thệ/thề (take an oath) để tham gia.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q15",
+              "content": "10. Those that didn’t promise to be on their best behavior were not _____________.",
+              "options": [
+                "eligible",
+                "ragged",
+                "rugged",
+                "arid"
+              ],
+              "explanation": "Những người không hứa hẹn sẽ không đủ điều kiện (eligible).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q16",
+              "content": "1. Climbing up the prairie was more difficult without the help of ropes.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "prairie (thảo nguyên) là vùng đất bằng phẳng, không cần leo trèo bằng dây thừng.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q17",
+              "content": "2. There was no way he could mend the holes in his shirt. It was too rugged to wear.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "rugged dùng cho địa hình gồ ghề. Quần áo rách phải dùng ragged.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q18",
+              "content": "3. In some countries, only people who owned land were eligible to vote.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "eligible (đủ điều kiện). Đủ điều kiện để bỏ phiếu là cách dùng đúng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q19",
+              "content": "4. The capital was in the middle of the country. They had to travel inland to get there.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "inland (vào sâu trong đất liền). Đi vào đất liền để đến thủ đô là hợp lý.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q20",
+              "content": "5. He knew she didn’t like him, but he helped her nonetheless.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "explanation": "nonetheless (tuy nhiên, dù sao). Biết cô ấy không thích nhưng anh ta vẫn giúp là đúng.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q21",
+              "content": "1. That part of the country is so hot and dry that no one lives there.",
+              "options": [
+                "arid",
+                "ragged",
+                "ample",
+                "inland"
+              ],
+              "explanation": "hot and dry (nóng và khô) tương đương với arid (khô cằn).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q22",
+              "content": "2. After getting off the boat, they took a train toward the center of the country.",
+              "options": [
+                "inland",
+                "prairie",
+                "oath",
+                "fast"
+              ],
+              "explanation": "toward the center of the country (vào trung tâm đất nước) tương đương inland.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q23",
+              "content": "3. They survived through the time in which no rain fell by carrying water down from the hills.",
+              "options": [
+                "drought",
+                "moisture",
+                "cathedral",
+                "abbey"
+              ],
+              "explanation": "time in which no rain fell (thời gian không có mưa) tương đương drought (hạn hán).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q24",
+              "content": "4. This house for the monks was built well over 200 years ago.",
+              "options": [
+                "abbey",
+                "cathedral",
+                "oath",
+                "prairie"
+              ],
+              "explanation": "house for the monks (nhà cho các nhà sư) tương đương abbey (tu viện).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q25",
+              "content": "5. He knew he’d get in trouble, but he stole the money despite the punishment.",
+              "options": [
+                "nonetheless",
+                "fast",
+                "speculate",
+                "deprive"
+              ],
+              "explanation": "despite the punishment (bất chấp hình phạt) mang nghĩa mặc dù vậy, tương đương nonetheless.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q26",
+              "content": "6. He guessed that the visitor’s team would win the game.",
+              "options": [
+                "speculated",
+                "grumbled",
+                "adjoined",
+                "deprived"
+              ],
+              "explanation": "guessed (đoán) tương đương speculated (suy đoán).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q27",
+              "content": "7. The number of people helping to clean the trash near the river was more than enough.",
+              "options": [
+                "ample",
+                "scarce",
+                "arid",
+                "rugged"
+              ],
+              "explanation": "more than enough (nhiều hơn đủ) tương đương ample (dư dả).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q28",
+              "content": "8. There was a small park that was next to the yard surrounding the church.",
+              "options": [
+                "adjoined",
+                "fast",
+                "speculate",
+                "deprive"
+              ],
+              "explanation": "next to (kế bên) tương đương adjoined (giáp ranh).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q29",
+              "content": "9. Because his pants were old and torn. Dad bought him a new pair.",
+              "options": [
+                "ragged",
+                "rugged",
+                "ample",
+                "eligible"
+              ],
+              "explanation": "old and torn (cũ và rách) tương đương ragged.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q30",
+              "content": "10. The long lines did not allow her of a chance to buy a ticket for the concert.",
+              "options": [
+                "deprived",
+                "speculated",
+                "grumbled",
+                "adjoined"
+              ],
+              "explanation": "did not allow (không cho phép/tước đi) tương đương deprived.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Dragon</h1><p style=\"margin-bottom: 1rem;\">An evil dragon lived in a <b>castle</b> in the <b>remote</b> <b>southern</b> mountains.</p><p style=\"margin-bottom: 1rem;\">One day the <b>monster</b> <b>landed</b> in a town. The dragon <b>commanded</b> the people, \"Give me food now, or I will eat you!\" The dragon lifted its <b>wings</b> so that its lungs could be completely filled with hot <b>steam</b>, and breathed it upon the people. A man turned into a stone <b>statue</b>!</p><p style=\"margin-bottom: 1rem;\">The people <b>submitted</b> and <b>brought</b> food. The dragon ate all of it and left.</p><p style=\"margin-bottom: 1rem;\">The people sent a boy to ask for help from a wise old man. He resided in a <b>temple</b>.</p><p style=\"margin-bottom: 1rem;\">The boy told the old man about the dragon. Then, the old man <b>counseled</b> the boy. \"A <b>meteor</b> will fall in the <b>northern</b> sky. It will make a huge <b>explosion</b>. Find the meteor and <b>bring</b> it to me. I will use it to make a sword for you.\"</p><p style=\"margin-bottom: 1rem;\">The boy did as the old man said. Soon, the sword was ready.</p><p style=\"margin-bottom: 1rem;\">\"Use this to kill the dragon. But be careful. You must cover yourself with <b>weeds</b> that smell bad. That will <b>ensure</b> that he does not smell you,\" the man said.</p><p style=\"margin-bottom: 1rem;\">The boy traveled for many days to find the <b>castle</b>. He went to the <b>upper</b> level and opened a door. He could see the dragon's tail. It was sleeping, so the boy killed it. Then, he took the dragon's gold and <b>jewelry</b> and returned to his town. The people were happy.</p></div>",
-      "imageUrl": "/unit2_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Helpful Abbey</h1>        <p style=\"margin-bottom: 1rem;\">It had not rained on the <b>prairie</b> for several months. Because of the <b>drought</b>, the climate had become very <b>arid</b>. There was no <b>moisture</b> left in the soil. No crops could grow in the dry ground. By wintertime, the people had nothing to eat.</p>    <p style=\"margin-bottom: 1rem;\">The hungry families heard about an <b>abbey</b> near the mountains where food and water was still <b>abundant</b>. So they traveled <b>inland</b>, across the prairie, to the abbey.</p>    <p style=\"margin-bottom: 1rem;\">At first only a few families arrived, seeking food and shelter. Then there was <b>ample</b> food. The monks fed them and let them sleep in the small <b>cathedral</b>.</p>    <p style=\"margin-bottom: 1rem;\">Soon, however, more families were arriving every day. These people had to travel farther, so they were in worse condition. The <b>rugged</b> journey had made their clothes <b>ragged</b>. They were cold and tired. The tiny cathedral was soon full.</p>    <p style=\"margin-bottom: 1rem;\">Food became <b>scarce</b>. The monks began to <b>grumble</b>. They began to <b>speculate</b> that there would be no food. “If more families come, we won’t make it through the winter,” said a young monk. “We must ask some of them to leave.”</p>    <p style=\"margin-bottom: 1rem;\">The abbot heard this. “We cannot do that,” he said. “It would be wrong to <b>deprive</b> them of food and shelter. We took an <b>oath</b> to help those that need help. All here are in need, so all are <b>eligible</b> to receive our food and shelter.”</p>    <p style=\"margin-bottom: 1rem;\">“But we won’t have enough,” the monk said.</p>    <p style=\"margin-bottom: 1rem;\">“That might be true, but we must help them <b>nonetheless</b>. We will <b>fast</b>,” the abbot replied. “Also, we will give our rooms in the abbey to those sleeping outside, and we will sleep in the churchyard that <b>adjoins</b> the cathedral.”</p>    <p style=\"margin-bottom: 1rem;\">The monks were reluctant at first, but they did what the oldest monk said. By the end of winter, there was still enough food and shelter for everyone. They learned that sometimes helping others means you must give more help than you first expected.</p></div>",
+      "imageUrl": "/unit2_vol5_story.png",
       "sections": [
         {
-          "id": "sec3",
-          "title": "Answer the questions based on the story.",
+          "id": "sec5_reading_A",
+          "title": "Part A: Mark each statement True (T) or False (F).",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "11",
-              "content": "1. What is this story about?",
+              "id": "q31",
+              "content": "1. The moisture in the soil was gone because a drought made the prairie become arid.",
               "options": [
-                "How a dragon met a boy",
-                "Why dragons live in castles",
-                "Why a boy killed an evil dragon",
-                "How a boy found a remote place"
+                "True",
+                "False"
               ],
-              "correctAnswer": "Why a boy killed an evil dragon",
-              "explanation": "Câu chuyện kể về hành trình một cậu bé tiêu diệt con rồng độc ác."
+              "explanation": "Đúng với câu chuyện: 'Because of the drought, the climate had become very arid. There was no moisture left in the soil.'",
+              "correctAnswer": "A"
             },
             {
-              "id": "12",
-              "content": "2. How did the dragon turn the people into statues?",
+              "id": "q32",
+              "content": "2. The hungry families traveled inland to an abbey that still had abundant food.",
               "options": [
-                "It breathed steam on them.",
-                "It hit them with its wings.",
-                "It covered them with weeds.",
-                "It touched them with its tail."
+                "True",
+                "False"
               ],
-              "correctAnswer": "It breathed steam on them.",
-              "explanation": "Con rồng thở ra hơi nước nóng (steam) vào người dân, biến một người đàn ông thành tượng đá."
+              "explanation": "Đúng với câu chuyện: 'traveled inland, across the prairie, to the abbey' nơi thức ăn vẫn abundant.",
+              "correctAnswer": "A"
             },
             {
-              "id": "13",
-              "content": "3. What can be assumed about the old man?",
+              "id": "q33",
+              "content": "3. Food was scarce, but the monks had to deprive the families nonetheless.",
               "options": [
-                "He enjoyed commanding the townspeople.",
-                "He resided in the temple all his life.",
-                "Other dragons submitted to him in the past.",
-                "He counseled the townspeople when they had trouble."
+                "True",
+                "False"
               ],
-              "correctAnswer": "He counseled the townspeople when they had trouble.",
-              "explanation": "Dựa vào việc người dân cử cậu bé đến xin lời khuyên, có thể thấy ông lão thường khuyên bảo (counsel) họ khi gặp rắc rối."
+              "explanation": "Các nhà sư không tước đoạt (deprive) mà vẫn tiếp tục giúp đỡ họ (help the families nonetheless).",
+              "correctAnswer": "B"
             },
             {
-              "id": "14",
-              "content": "4. According to the passage, all of the following are true EXCEPT",
+              "id": "q34",
+              "content": "4. At first there was ample food and enough room in the cathedral for everyone.",
               "options": [
-                "a meteor fell in the northern sky",
-                "a boy killed the dragon with a golden sword",
-                "a boy took the dragon’s jewelry",
-                "a dragon lived in the southern mountains"
+                "True",
+                "False"
               ],
-              "correctAnswer": "a boy killed the dragon with a golden sword",
-              "explanation": "Chi tiết dùng kiếm vàng không đúng, thanh kiếm được làm từ thiên thạch (meteor) chứ không nói là vàng."
+              "explanation": "Đúng với câu chuyện: 'At first... there was ample food. The monks fed them and let them sleep in the small cathedral.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q35",
+              "content": "5. The rugged journey to the abbey had left many people’s clothing looking ragged.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Đúng với câu chuyện: 'The rugged journey had made their clothes ragged.'",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec6_reading_B",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q36",
+              "content": "1. According to the abbot, who was eligible to receive the monks’ help?",
+              "options": [
+                "All were eligible",
+                "Only monks",
+                "Only the rich",
+                "Only the healthy"
+              ],
+              "explanation": "The abbot said, 'All were eligible.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q37",
+              "content": "2. When the monks grumbled, what did the young monk speculate would happen if more families arrived?",
+              "options": [
+                "They wouldn't make it through the winter",
+                "They would have more food",
+                "They would build more houses",
+                "They would dance"
+              ],
+              "explanation": "When the monks grumbled, the young monk speculated that if more families came, then they wouldn't make it through the winter.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q38",
+              "content": "3. Why did the monks fast and sleep in the churchyard that adjoined the cathedral?",
+              "options": [
+                "So that the families would have enough food and shelter",
+                "Because they liked the cold",
+                "Because they were being punished",
+                "To plant more trees"
+              ],
+              "explanation": "The monks fasted and slept in the churchyard that adjoined the cathedral so that the families would have enough food and shelter.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q39",
+              "content": "4. What was the oath that the monks had taken?",
+              "options": [
+                "To help those that need help",
+                "To eat abundant food",
+                "To travel inland",
+                "To ignore the poor"
+              ],
+              "explanation": "The monks had taken an oath to help those that need help.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q40",
+              "content": "5. What did the monks learn about helping others?",
+              "options": [
+                "Sometimes it means giving more help than expected",
+                "It is always easy",
+                "It is not worth it",
+                "They shouldn't help strangers"
+              ],
+              "explanation": "They learned that sometimes helping others means you must give more help than you first expected.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 2: Volume 5",
+    "category": "exercise",
+    "timeLimit": 0
+  }
 }

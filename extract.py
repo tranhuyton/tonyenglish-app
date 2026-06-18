@@ -1,14 +1,23 @@
-import fitz
 import sys
 
-def extract_text(pdf_path, out_path, start_page, end_page):
-    doc = fitz.open(pdf_path)
-    with open(out_path, "w", encoding="utf-8") as f:
-        for i in range(start_page, min(end_page, len(doc))):
-            f.write(f"--- PAGE {i} ---\n")
-            f.write(doc[i].get_text())
-            f.write("\n")
-
-extract_text("public/4000 english words volume 2.pdf", "pdf_vol2_text.txt", 0, 195)
-extract_text("public/4000 Essential English Words 2 - Answer Key.pdf", "pdf_vol2_key.txt", 0, 30)
-print("Done")
+try:
+    import fitz  # PyMuPDF
+    doc = fitz.open('public/4000 english words volume 6.pdf')
+    text = ""
+    for i in range(20):
+        text += doc[i].get_text()
+    with open('public/unit1_vol6_text.txt', 'w', encoding='utf-8') as f:
+        f.write(text)
+    print("Successfully extracted using PyMuPDF")
+except ImportError:
+    try:
+        import PyPDF2
+        reader = PyPDF2.PdfReader('public/4000 english words volume 6.pdf')
+        text = ""
+        for i in range(20):
+            text += reader.pages[i].extract_text()
+        with open('public/unit1_vol6_text.txt', 'w', encoding='utf-8') as f:
+            f.write(text)
+        print("Successfully extracted using PyPDF2")
+    except ImportError:
+        print("Neither PyMuPDF nor PyPDF2 is installed.")
