@@ -775,6 +775,17 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     setTestData(newData); 
   };
 
+  const movePart = (pIdx: number, direction: 'up' | 'down') => {
+    if (direction === 'up' && pIdx === 0) return;
+    if (direction === 'down' && pIdx === testData.parts.length - 1) return;
+    const newData = { ...testData };
+    const targetIdx = direction === 'up' ? pIdx - 1 : pIdx + 1;
+    const temp = newData.parts[pIdx];
+    newData.parts[pIdx] = newData.parts[targetIdx];
+    newData.parts[targetIdx] = temp;
+    setTestData(newData);
+  };
+
   const addSection = (pIdx: number) => {
     const newData = { ...testData }; 
     if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
@@ -795,6 +806,18 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     const newData = { ...testData }; 
     newData.parts[pIdx].sections.splice(sIdx, 1); 
     setTestData(newData); 
+  };
+
+  const moveSection = (pIdx: number, sIdx: number, direction: 'up' | 'down') => {
+    const sections = testData.parts[pIdx].sections;
+    if (direction === 'up' && sIdx === 0) return;
+    if (direction === 'down' && sIdx === sections.length - 1) return;
+    const newData = { ...testData };
+    const targetIdx = direction === 'up' ? sIdx - 1 : sIdx + 1;
+    const temp = newData.parts[pIdx].sections[sIdx];
+    newData.parts[pIdx].sections[sIdx] = newData.parts[pIdx].sections[targetIdx];
+    newData.parts[pIdx].sections[targetIdx] = temp;
+    setTestData(newData);
   };
 
   // --- HÀM THÊM CÂU HỎI THÔNG MINH (SMART GUESSER) ---
@@ -856,6 +879,18 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     const newData = { ...testData }; 
     newData.parts[pIdx].sections[sIdx].questions.splice(qIdx, 1); 
     setTestData(newData); 
+  };
+
+  const moveQuestion = (pIdx: number, sIdx: number, qIdx: number, direction: 'up' | 'down') => {
+    const questions = testData.parts[pIdx].sections[sIdx].questions;
+    if (direction === 'up' && qIdx === 0) return;
+    if (direction === 'down' && qIdx === questions.length - 1) return;
+    const newData = { ...testData };
+    const targetIdx = direction === 'up' ? qIdx - 1 : qIdx + 1;
+    const temp = newData.parts[pIdx].sections[sIdx].questions[qIdx];
+    newData.parts[pIdx].sections[sIdx].questions[qIdx] = newData.parts[pIdx].sections[sIdx].questions[targetIdx];
+    newData.parts[pIdx].sections[sIdx].questions[targetIdx] = temp;
+    setTestData(newData);
   };
 
   const addOption = (pIdx: number, sIdx: number, qIdx: number) => {
@@ -1060,12 +1095,16 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                         className="font-black text-[#00a651] text-xl bg-transparent outline-none border-b border-dashed border-[#00a651]/50 focus:border-[#00a651] w-64" 
                         placeholder="Part Title..." 
                       />
-                      <button 
-                        onClick={() => removePart(pIdx)} 
-                        className="text-red-500 font-bold px-3 py-1 bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition hover:bg-red-500 hover:text-white"
-                      >
-                        Xóa Part ✖
-                      </button>
+                      <div className="flex gap-2">
+                        <button onClick={() => movePart(pIdx, 'up')} disabled={pIdx === 0} className="text-slate-500 hover:text-emerald-700 bg-emerald-100 hover:bg-emerald-200 px-2 py-1 rounded-lg font-bold transition disabled:opacity-30" title="Di chuyển Part lên trên">↑</button>
+                        <button onClick={() => movePart(pIdx, 'down')} disabled={pIdx === testData.parts.length - 1} className="text-slate-500 hover:text-emerald-700 bg-emerald-100 hover:bg-emerald-200 px-2 py-1 rounded-lg font-bold transition disabled:opacity-30" title="Di chuyển Part xuống dưới">↓</button>
+                        <button 
+                          onClick={() => removePart(pIdx)} 
+                          className="text-red-500 font-bold px-3 py-1 bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition hover:bg-red-500 hover:text-white"
+                        >
+                          Xóa Part ✖
+                        </button>
+                      </div>
                     </div>
                     
                     <div className="p-6 md:p-8 space-y-4 bg-slate-50 border-b border-slate-200">
@@ -1094,12 +1133,17 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                               className="font-black text-white text-base bg-transparent outline-none border-b border-dashed border-white/50 focus:border-white w-64 placeholder:text-white/60" 
                               placeholder="Section Title..." 
                             />
-                            <button 
-                              onClick={() => removeSection(pIdx, sIdx)} 
-                              className="text-white hover:text-red-200 font-bold opacity-0 group-hover:opacity-100 transition"
-                            >
-                              ✖
-                            </button>
+                            <div className="flex gap-2">
+                              <button onClick={() => moveSection(pIdx, sIdx, 'up')} disabled={sIdx === 0} className="text-blue-100 hover:text-white bg-blue-600 hover:bg-blue-700 px-2 py-0.5 rounded font-bold transition disabled:opacity-30" title="Di chuyển Section lên trên">↑</button>
+                              <button onClick={() => moveSection(pIdx, sIdx, 'down')} disabled={sIdx === part.sections.length - 1} className="text-blue-100 hover:text-white bg-blue-600 hover:bg-blue-700 px-2 py-0.5 rounded font-bold transition disabled:opacity-30" title="Di chuyển Section xuống dưới">↓</button>
+                              <button 
+                                onClick={() => removeSection(pIdx, sIdx)} 
+                                className="text-white hover:text-red-200 font-bold opacity-0 group-hover:opacity-100 transition ml-2"
+                                title="Xóa Section"
+                              >
+                                ✖
+                              </button>
+                            </div>
                           </div>
                           
                           <div className="p-6 bg-blue-50/30 border-b border-blue-100 space-y-4">
@@ -1153,12 +1197,17 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
                               return (
                                 <div key={`q-${pIdx}-${sIdx}-${qIdx}`} className={`border rounded-xl bg-white shadow-sm transition group relative ${isComboChild ? 'border-amber-300 bg-amber-50/20 ml-8 border-l-[6px]' : 'border-slate-200 hover:border-amber-300'}`}>
-                                  <button 
-                                    onClick={() => removeQuestion(pIdx, sIdx, qIdx)} 
-                                    className="absolute -top-3 -right-3 bg-red-500 text-white w-7 h-7 rounded-full opacity-0 group-hover:opacity-100 transition shadow-lg z-10"
-                                  >
-                                    ✖
-                                  </button>
+                                  <div className="absolute -top-3 -right-3 flex gap-1 z-10 opacity-0 group-hover:opacity-100 transition">
+                                    <button onClick={() => moveQuestion(pIdx, sIdx, qIdx, 'up')} disabled={qIdx === 0} className="bg-slate-200 hover:bg-slate-300 text-slate-600 w-7 h-7 rounded-full shadow-lg font-bold flex items-center justify-center disabled:opacity-30" title="Di chuyển Câu hỏi lên trên">↑</button>
+                                    <button onClick={() => moveQuestion(pIdx, sIdx, qIdx, 'down')} disabled={qIdx === sec.questions.length - 1} className="bg-slate-200 hover:bg-slate-300 text-slate-600 w-7 h-7 rounded-full shadow-lg font-bold flex items-center justify-center disabled:opacity-30" title="Di chuyển Câu hỏi xuống dưới">↓</button>
+                                    <button 
+                                      onClick={() => removeQuestion(pIdx, sIdx, qIdx)} 
+                                      className="bg-red-500 hover:bg-red-600 text-white w-7 h-7 rounded-full shadow-lg font-bold flex items-center justify-center"
+                                      title="Xóa Câu hỏi"
+                                    >
+                                      ✖
+                                    </button>
+                                  </div>
                                   
                                   <div className="p-5">
                                       <div className="flex gap-4 items-start">

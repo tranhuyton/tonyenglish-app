@@ -932,11 +932,23 @@ const handleFinish = async () => {
         const children = Array.from(el.childNodes).map((child, i) => renderNode(child, `${pathKey}-${i}`));
         const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
 
+        if (tagName === 'table') {
+          props.className = `${props.className || ''} w-full border-collapse border border-slate-700 text-[15px]`.trim();
+        } else if (tagName === 'th') {
+          props.className = `${props.className || ''} border border-slate-700 bg-slate-100 p-3 font-bold text-left text-slate-800`.trim();
+        } else if (tagName === 'td') {
+          props.className = `${props.className || ''} border border-slate-700 p-3 text-left align-top`.trim();
+        }
+
         if (voidElements.includes(tagName)) {
           return React.createElement(tagName, props);
         }
 
-        return React.createElement(tagName, props, children.length > 0 ? children : null);
+        const element = React.createElement(tagName, props, children.length > 0 ? children : null);
+        if (tagName === 'table') {
+          return React.createElement('div', { key: `${pathKey}-wrapper`, className: 'w-full overflow-x-auto custom-scrollbar my-6' }, element);
+        }
+        return element;
       }
       return null;
     };

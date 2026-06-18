@@ -69,7 +69,7 @@ b, strong { font-weight: bold !important; }
 .prose table,
 table {
   border-collapse: collapse !important;
-  width: auto !important;
+  width: 100% !important;
   min-width: 50%;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -78,7 +78,7 @@ table {
 .content-area table th, .content-area table td,
 .prose table th, .prose table td,
 table th, table td {
-  border: 1px solid #94a3b8 !important; /* slate-400 */
+  border: 1px solid #334155 !important; /* slate-700 */
   padding: 10px 16px !important;
   text-align: left;
 }
