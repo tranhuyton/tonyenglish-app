@@ -1057,8 +1057,16 @@ export default function LectureViewer({
          
          const type = String(testData.test_type || '').toLowerCase();
 
-          if (type.includes('standard-reading')) {
+          if (type === 'igcse-direct') {
+              onStartTest('igcse-direct', testData);
+          } else if (type.includes('igcse')) {
+              onStartTest('igcse', testData);
+          } else if (type.includes('split-standard')) {
+              onStartTest('split-standard', testData);
+          } else if (type.includes('standard-reading')) {
               onStartTest('standard-reading', testData);
+          } else if (type.includes('splitscreen') && type.includes('standard')) {
+              onStartTest('standard-splitscreen', testData);
           } else if (type.includes('standard')) {
               onStartTest('standard', testData);
          } else if (type.includes('case-study') || type.includes('business')) {
