@@ -170,8 +170,8 @@
           "content": "",
           "questions": [
             {
-              "id": "u4_q16",
-              "content": "What is this story mainly about?",
+              "id": "16",
+              "content": "16. What is this story mainly about?",
               "options": [
                 "A. A dog that is frequently bad",
                 "B. A dog's stroll through town",
@@ -182,8 +182,8 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u4_q17",
-              "content": "What is true of the dog?",
+              "id": "17",
+              "content": "17. What is true of the dog?",
               "options": [
                 "A. He likes none of John's friends.",
                 "B. He shakes his head too much.",
@@ -194,8 +194,8 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u4_q18",
-              "content": "Why did the issue with the dog bother John?",
+              "id": "18",
+              "content": "18. Why did the issue with the dog bother John?",
               "options": [
                 "A. People didn't think of John in a positive way.",
                 "B. People avoided going to John's house.",
@@ -206,8 +206,8 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u4_q19",
-              "content": "What did John do to stop the dog's bad habit?",
+              "id": "19",
+              "content": "19. What did John do to stop the dog's bad habit?",
               "options": [
                 "A. He instructed the dog on learning tricks.",
                 "B. He punished the dog for biting.",
@@ -218,8 +218,8 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u4_q20",
-              "content": "What did the other dogs say about the bell?",
+              "id": "20",
+              "content": "20. What did the other dogs say about the bell?",
               "options": [
                 "A. It makes people avoid him.",
                 "B. It sounds beautiful.",
@@ -227,6 +227,18 @@
                 "D. It is a positive thing."
               ],
               "explanation": "Những con chó khác nói rằng cái chuông làm cho mọi người tránh xa con chó của John.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "21",
+              "content": "21. What did the other dogs say about the bell?",
+              "options": [
+                "It tells people where he is so they can avoid him",
+                "It is a beautiful piece of jewelry",
+                "It makes him very popular with everyone",
+                "It helps him find people to bite"
+              ],
+              "explanation": "Những con chó khác cười nhạo và nói rằng chiếc chuông báo cho mọi người biết vị trí của chú chó để họ tránh xa (avoid him).",
               "correctAnswer": "A"
             }
           ],
