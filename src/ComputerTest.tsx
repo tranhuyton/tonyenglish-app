@@ -738,9 +738,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const onDrop = (qId: string) => {
     stopAutoScroll();
     if (isReviewMode || !draggedOption) return;
-    const match = draggedOption.match(/^([A-Z])[\.\):]\s/);
-    const valueToSave = match ? match[1].toUpperCase() : draggedOption;
-    handleAnswer(qId, valueToSave);
+    handleAnswer(qId, draggedOption);
     setDraggedOption(null);
   };
 
