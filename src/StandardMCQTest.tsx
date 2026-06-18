@@ -1575,7 +1575,7 @@ const handleFinish = async () => {
                                 const cleanQText = getCleanQuestionText(q.content);
                                 const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
                                 const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
-                                const isQuestionCorrect = userAns === correctAns;
+                                const isQuestionCorrect = isAnswerCorrect(userAns, correctAns);
                                 const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                 
                                 const isTFNG = sec?.questionType === "TFNG" || q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
@@ -1613,7 +1613,7 @@ const handleFinish = async () => {
                                                 const safeOpt = String(opt || '');
                                                 const val = safeOpt.replace(/<[^>]*>/g, '').trim().toUpperCase();
                                                 const isSelected = userAns === val;
-                                                const isCorrectOpt = correctAns === val;
+                                                const isCorrectOpt = isAnswerCorrect(val, correctAns);
 
                                                 let labelStyle = "flex items-center gap-2 p-1.5 transition rounded-lg border border-transparent";
                                                 
@@ -1722,7 +1722,7 @@ const handleFinish = async () => {
                                            const cleanOpt = getCleanOptionText(opt, i);
                                            const val = String.fromCharCode(65+i);
                                            const isSelected = userAns === val;
-                                           const isCorrectOpt = correctAns === val;
+                                           const isCorrectOpt = isAnswerCorrect(val, correctAns);
 
                                            let labelStyle = "flex items-start gap-4 p-3 rounded-xl transition-colors border border-transparent";
                                            let circleStyle = "border-slate-300 bg-white";
