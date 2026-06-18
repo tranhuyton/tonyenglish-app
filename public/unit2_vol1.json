@@ -1,0 +1,292 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\">    <img src=\"/unit2_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit2_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />  </div><div style=\"display: flex; flex-direction: column; gap: 16px; padding-top: 16px; border-top: 2px dashed #e2e8f0;\"><h3 style=\"font-size: 18px; font-weight: bold; color: #334155; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0;\">Detailed Meanings</h3><div style=\"font-family: 'Inter', sans-serif; width: 100%; position: relative;\"><div style=\"position: absolute; left: 32px; top: 0; bottom: 0; width: 2px; background-color: #a855f7;\"></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">⛰️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">adventure</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[ædvéntʃər]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">An adventure is a fun or exciting thing that you do.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Riding in the rough water was an <b>adventure</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🚶</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">approach</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[əpróutʃ]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To approach something means to move close to it.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The boy <b>approached</b> his school.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🧐</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">carefully</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[kέərfəli]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adv.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">Carefully means with great attention, especially to detail or safety.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The baby <b>carefully</b> climbed down the stairs.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🧪</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">chemical</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[kémikəl]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A chemical is something that scientists use in chemistry.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The scientist mixed the <b>chemicals</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🎨</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">create</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[kriéit]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To create means to make something new.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ She <b>create</b>d an igloo from blocks of snow.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😈</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">evil</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[í:vəl]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">Evil describes something or someone bad or cruel, not good.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The <b>evil</b> figure scared us all.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🔬</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">experiment</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[ikspérəmənt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">An experiment is a test that you do to see what will happen.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The student did an <b>experiment</b> in science class.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">☠️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">kill</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[kil]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To kill someone or something is to make them die.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I <b>killed</b> the fly with a fly swatter.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🏢</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">laboratory</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[lǽbərətɔ̀:ri]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A laboratory is a room where a scientist works.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ My mother works in a <b>laboratory</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😂</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">laugh</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[læf]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">Laugh is the sound made when someone is happy or a funny thing occurs.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The sound of their <b>laugh</b> filled the room.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🔊</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">loud</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[laud]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If a sound is loud, it is strong and very easy to hear.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The man's voice was so <b>loud</b> that we all could hear him.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😰</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">nervous</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[nə́:rvəs]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When a person is nervous, they think something bad will happen.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The boy became <b>nervous</b> when he heard the news.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">📢</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">noise</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[nɔiz]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A noise is an unpleasant sound.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The crying baby made a loud <b>noise</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">📋</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">project</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[prάdʒekt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A project is a type of work that you do for school or a job.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ His afternoon work <b>project</b> was to paint the room green.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😱</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">scare</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[skɛər]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To scare someone is to make them feel afraid.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ My uncle was <b>scare</b>d by what he saw in the room.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🤫</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">secret</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[sí:krit]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A secret is something that you do not tell other people.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The two boys were sharing a <b>secret</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🗣️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">shout</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[ʃaut]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To shout is to say something loudly.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ My boss <b>shouted</b> at me because I was late for work.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">👃</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">smell</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[smel]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To smell something means to use your nose to sense it.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The two friends <b>smelled</b> the flower.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😖</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">terrible</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[térəbl]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If something is terrible, it is very bad.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The way he treated his classmate was <b>terrible</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">📉</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">worse</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[wə:rs]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If something is worse, it is of poorer quality than another thing.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Business was <b>worse</b> this month than last month.</p></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Part A: Which word is related to the given word?",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "Which word is related to 'laboratory'?",
+              "options": [
+                "experiment",
+                "shout",
+                "smell",
+                "approach"
+              ],
+              "explanation": "Laboratory (phòng thí nghiệm) là nơi diễn ra các experiment (cuộc thí nghiệm).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "Which word is related to 'laugh'?",
+              "options": [
+                "shout",
+                "carefully",
+                "create",
+                "laugh"
+              ],
+              "explanation": "Laugh (cười) và shout (hét) đều là những âm thanh phát ra từ miệng để biểu lộ cảm xúc.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "Which word is related to 'terrible'?",
+              "options": [
+                "nervous",
+                "approach",
+                "worse",
+                "project"
+              ],
+              "explanation": "Terrible (tồi tệ) có nét nghĩa tương đồng với worse (tệ hơn).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "4",
+              "content": "Which word is related to 'noise'?",
+              "options": [
+                "chemical",
+                "secret",
+                "loud",
+                "project"
+              ],
+              "explanation": "Noise (tiếng ồn) thường đi kèm với loud (to, ầm ĩ).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "Which word is related to 'scare'?",
+              "options": [
+                "nervous",
+                "adventure",
+                "project",
+                "create"
+              ],
+              "explanation": "Scare (làm sợ hãi) sẽ khiến người khác cảm thấy nervous (lo lắng, hồi hộp).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2",
+          "title": "Part B: Choose a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "William wanted to <u>make a new thing</u>.",
+              "options": [
+                "approach",
+                "create",
+                "solve",
+                "fail"
+              ],
+              "explanation": "\"Make a new thing\" (tạo ra một thứ mới) đồng nghĩa với \"create\".",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "7",
+              "content": "I'm not having fun, so let's go on an <u>exciting trip</u>.",
+              "options": [
+                "adventure",
+                "experiment",
+                "project",
+                "report"
+              ],
+              "explanation": "\"Exciting trip\" (chuyến đi thú vị) đồng nghĩa với \"adventure\" (chuyến phiêu lưu).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "8",
+              "content": "Mrs. O'Malley asked me to <u>get close to</u> the desk and write my name.",
+              "options": [
+                "approach",
+                "scare",
+                "laugh",
+                "shout"
+              ],
+              "explanation": "\"Get close to\" (tiến lại gần) đồng nghĩa với \"approach\".",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "9",
+              "content": "Don't worry. I won't tell anyone your <u>thing that other people don't know</u>.",
+              "options": [
+                "chemical",
+                "secret",
+                "noise",
+                "cloud"
+              ],
+              "explanation": "\"Thing that other people don't know\" (điều người khác không biết) chính là \"secret\" (bí mật).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "10",
+              "content": "I have to finish my <u>special job</u> before I can go home.",
+              "options": [
+                "project",
+                "laboratory",
+                "experiment",
+                "chart"
+              ],
+              "explanation": "\"Special job\" (công việc đặc biệt) tương đương với \"project\" (dự án).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2: Check the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "When the jar hit the floor, __________ .",
+              "options": [
+                "it made a very <b>loud noise</b>",
+                "it <b>shouted</b> on the ground",
+                "it <b>laughed carefully</b>",
+                "it <b>smelled terrible</b>"
+              ],
+              "explanation": "Khi cái lọ rơi xuống sàn, nó sẽ tạo ra một tiếng ồn lớn (made a very loud noise).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "When the sun went down, __________ .",
+              "options": [
+                "it was <b>scared</b>",
+                "the woods looked <b>evil</b>",
+                "it did an <b>experiment</b>",
+                "it <b>created</b> a <b>project</b>"
+              ],
+              "explanation": "Khi mặt trời lặn (trời tối), khu rừng trông có vẻ đáng sợ/ma quái (looked evil).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "13",
+              "content": "To test his idea, the scientist __________ .",
+              "options": [
+                "went on an <b>adventure</b>",
+                "did an <b>experiment</b>",
+                "<b>killed</b> a bug",
+                "<b>laughed</b>"
+              ],
+              "explanation": "Để kiểm tra ý tưởng của mình, nhà khoa học đã làm một cuộc thí nghiệm (did an experiment).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "Your phone will not work __________ .",
+              "options": [
+                "someone <b>kills</b> the window",
+                "if you don't <b>carefully</b> pay attention to your power supply",
+                "if you <b>approach</b> it",
+                "if you <b>shout</b> at it"
+              ],
+              "explanation": "Điện thoại của bạn sẽ không hoạt động nếu bạn không cẩn thận chú ý đến nguồn pin (carefully pay attention to your power supply).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "15",
+              "content": "The dog seemed unhappy when __________ .",
+              "options": [
+                "I <b>approached</b> it",
+                "it <b>created</b> me",
+                "it <b>laughed</b>",
+                "it <b>smelled</b>"
+              ],
+              "explanation": "Con chó trông không vui khi tôi tiến lại gần nó (I approached it).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Laboratory</h1>        <p style=\"margin-bottom: 1rem;\">Mia's father had a <b>laboratory</b>, but she had no idea what was in it. Her dad always closed and locked the door when he went in. She knew that he used it to do <b>projects</b> for work. He never told Mia what these <b>projects</b> were.</p>    <p style=\"margin-bottom: 1rem;\">One night, Mia <b>approached</b> the door to the <b>laboratory</b>. She stopped and thought, \"I wonder what crazy <b>experiment</b> he is doing now.\" Suddenly, she heard a <b>loud noise</b>. It sounded like an <b>evil laugh</b>. The <b>noise scared</b> her, so she walked quickly back to her room.</p>    <p style=\"margin-bottom: 1rem;\">The next night, her friend Liz came to her house. When Liz arrived, Mia told her about the night before. \"Oh, it was <b>terrible</b>,\" she said.</p>    <p style=\"margin-bottom: 1rem;\">\"Why don't we see what is in there?\" Liz asked. \"It will be a fun <b>adventure</b>!\" Mia felt <b>nervous</b> about going into her father's <b>laboratory</b>, but she agreed. As always, the door was locked. They waited until Mia's father left the <b>laboratory</b> to eat dinner. \"He didn't lock the door!\" Liz said. \"Let's go.\"</p>    <p style=\"margin-bottom: 1rem;\">The <b>laboratory</b> was dark. The girls walked down the stairs <b>carefully</b>. Mia <b>smelled</b> strange <b>chemicals</b>. What <b>terrible</b> thing was her father <b>creating</b>?</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, they heard an <b>evil laugh</b>. It was even <b>worse</b> than the one Mia heard the night before. What if a monster was going to <b>kill</b> them? Mia had to do something. She <b>shouted</b> for help.</p>    <p style=\"margin-bottom: 1rem;\">Mia's father ran into the room and turned on the lights. \"Oh, no,\" he said. \"You must have learned my <b>secret</b>.\" \"Your monster <b>secret</b>?\" Mia asked. \"Monster? No,\" he said. \"Your brother and I are making a <b>chemistry</b> set for you. I was testing it! It will be a great surprise!\" \"What about the <b>evil laugh</b>?\" Liz asked. \"That was just your brother,\" he said. \"He has a <b>terrible laugh</b>.\"</p></div>",
+      "imageUrl": "/unit2_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "What is this story about?",
+              "options": [
+                "A girl's terrible experiment",
+                "A secret that two girls have",
+                "A girl who gets nervous about what's in a laboratory",
+                "A man who creates chemicals"
+              ],
+              "explanation": "Câu chuyện kể về một cô bé (Mia) cảm thấy lo lắng/hồi hộp về những gì có trong phòng thí nghiệm của bố mình.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "17",
+              "content": "What scares Mia when she approaches the door?",
+              "options": [
+                "The room is very dark.",
+                "She hears a person shout.",
+                "She smells fire.",
+                "She hears a loud noise."
+              ],
+              "explanation": "Trong bài có câu: \"Suddenly, she heard a loud noise. It sounded like an evil laugh. The noise scared her...\" (Đột nhiên, cô bé nghe thấy một tiếng ồn lớn... Tiếng ồn đó làm cô sợ hãi).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "18",
+              "content": "What is true of Mia in the story?",
+              "options": [
+                "A monster kills her friend.",
+                "She does not like adventures.",
+                "She always locks the door of her room.",
+                "Her birthday has not come yet."
+              ],
+              "explanation": "Ở cuối truyện, bố Mia nói: \"I made this for your birthday. I wanted to give it to you then, but you found it now.\" (Bố làm cái này cho sinh nhật con. Bố định lúc đó mới đưa...). Điều này chứng tỏ sinh nhật Mia chưa đến.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "19",
+              "content": "What project was Mia's father working on?",
+              "options": [
+                "A doll to give to Mia for her birthday",
+                "A way to keep the door closed",
+                "A chemical that smells worse than fire",
+                "A monster that had an evil laugh"
+              ],
+              "explanation": "Dự án của bố Mia thực chất là làm một con búp bê xinh xắn để tặng sinh nhật Mia (\"He had a pretty doll in his hands... I made this for your birthday\").",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec5",
+          "title": "Paragraph AI Grading",
+          "content": "",
+          "questions": [],
+          "questionType": "Đoạn văn"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 2: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

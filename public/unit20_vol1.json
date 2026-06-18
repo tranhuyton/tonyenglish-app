@@ -1,0 +1,307 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit20_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit20_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏆</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">achieve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ətʃíːv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To achieve something is to successfully do it after trying hard.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was happy that I could achieve my goal.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">advise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədváiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To advise someone is to tell them what to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My mother often advises people about their money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⏰</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">already</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔːlrédi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something happens already, it happens before a certain time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is already time for the movie to start. Let's go in.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🧱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">basic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[béisik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is basic, it is very simple or easy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I learned some basic English skills in school today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤏</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bit is a small amount of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I ate a bit of chocolate before I went to bed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤔</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consider</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsídər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To consider something means to think about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Pete didn't like his job. He considered getting a new one.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💥</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">destroy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[distrɔ́i]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To destroy means to damage something so badly that it cannot be used.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The glass was destroyed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎭</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">entertain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[èntərtéin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To entertain someone is to do something that they enjoy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The clown entertained the kids at the party.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">➕</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">extra</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ékstrə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is extra, it is more than what is needed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The squirrel had extra nuts for the winter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎯</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">goal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[goul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A goal is something you work toward.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her goal was to become a doctor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤥</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lie</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lie is to say or write something untrue to deceive someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Whenever Pinocchio lied to his father, his nose grew.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🥩</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">meat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[miːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Meat is food made of animals.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This piece of meat I'm eating tastes very good.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💭</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">opinion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əpínjən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An opinion is a thought about a person or a thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Meg told me her opinion of my story. She said it was not funny.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💯</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">real</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ríːəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is real, it actually exists.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The handbag has a stamp on it, so it's real.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🪞</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reflect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[riflékt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To reflect is when a surface sends back light, heat, sound or an image.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her face was reflected on the smooth glass.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👁️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">regard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rigɑ́ːrd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To regard someone or something is to think of them in a certain way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy regarded the girl as a good friend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🍽️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">serve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səːrv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To serve someone is to give them food or drinks.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He served us our drinks quickly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🥦</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vegetable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[védʒətəbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A vegetable is a plant used as food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Carrots are my favorite vegetable.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⚔️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">war</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wɔːr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A war is a big fight between two groups of people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many young men died in the war.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💰</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">worth</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wəːrθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is worth an amount of money, it costs that amount.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our house is worth a lot of money.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "achieve",
+              "options": [
+                "to think about something",
+                "to get something",
+                "to tell someone what to do",
+                "to break into pieces"
+              ],
+              "explanation": "achieve (đạt được) đồng nghĩa với get something.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "reflect",
+              "options": [
+                "to tell someone what to do",
+                "to think about something",
+                "to damage something very badly",
+                "to send back an image"
+              ],
+              "explanation": "reflect (phản chiếu) đồng nghĩa với send back an image.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "3",
+              "content": "opinion",
+              "options": [
+                "a thought",
+                "a plant",
+                "an animal",
+                "a fight"
+              ],
+              "explanation": "opinion (ý kiến) đồng nghĩa với a thought.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "already",
+              "options": [
+                "not made up",
+                "before a certain time",
+                "more than is needed",
+                "very simple"
+              ],
+              "explanation": "already (rồi, đã) đồng nghĩa với before a certain time.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "goal",
+              "options": [
+                "a thought about someone or something",
+                "a fight between groups of people",
+                "something you work toward",
+                "a small amount of something"
+              ],
+              "explanation": "goal (mục tiêu) đồng nghĩa với something you work toward.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
+          "content": "WORD BANK: meat, war, serve, regard, destroy",
+          "questions": [
+            {
+              "id": "6",
+              "content": "Chicken, pork, and beef are all kinds of (mea[6]).",
+              "explanation": "meat: thịt (gà, lợn, bò đều là thịt).",
+              "correctAnswer": "meat"
+            },
+            {
+              "id": "7",
+              "content": "Don't drop the glass bowl. You will (dest[7]) it.",
+              "explanation": "destroy: phá huỷ.",
+              "correctAnswer": "destroy"
+            },
+            {
+              "id": "8",
+              "content": "Restaurants often (ser[8]) tea and coffee with breakfast.",
+              "explanation": "serve: phục vụ.",
+              "correctAnswer": "serve"
+            },
+            {
+              "id": "9",
+              "content": "Many teachers (reg[9]) their students as smart kids.",
+              "explanation": "regard: xem như, đánh giá.",
+              "correctAnswer": "regard"
+            },
+            {
+              "id": "10",
+              "content": "It is sad when two countries start a (w[10]) with each other.",
+              "explanation": "war: chiến tranh.",
+              "correctAnswer": "war"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Check (V) the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "",
+              "options": [
+                "a. A basic tool has many parts.",
+                "b. If a toy is worth $1, it costs $1."
+              ],
+              "explanation": "worth (trị giá) $1 nghĩa là giá của nó là $1.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "12",
+              "content": "",
+              "options": [
+                "a. Anyone can pet a real dog.",
+                "b. If a man has extra socks, he does not have enough."
+              ],
+              "explanation": "real (thật): ai cũng có thể vuốt ve một con chó thật.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "",
+              "options": [
+                "a. It is not smart to lie to your parents.",
+                "b. If a woman considers leaving, she doesn't want to go."
+              ],
+              "explanation": "lie (nói dối): không khôn ngoan khi nói dối cha mẹ.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "14",
+              "content": "",
+              "options": [
+                "a. If a bike is worth $50, it costs much less.",
+                "b. When you eat vegetables, you are eating plants."
+              ],
+              "explanation": "vegetable (rau củ): rau củ là thực vật.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "15",
+              "content": "",
+              "options": [
+                "a. When a teacher advises her students, she asks them what they want to do.",
+                "b. Some people entertain others by telling funny stories."
+              ],
+              "explanation": "entertain (giải trí): kể chuyện cười để giải trí người khác.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "16",
+              "content": "",
+              "options": [
+                "a. If a boy considers studying, he is thinking about doing it.",
+                "b. Many people like making new types of vegetables."
+              ],
+              "explanation": "consider (cân nhắc): anh ấy đang suy nghĩ về việc đó.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "",
+              "options": [
+                "a. A basic answer is a simple one.",
+                "b. A bit of food is a lot of it."
+              ],
+              "explanation": "basic (cơ bản): câu trả lời đơn giản.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "",
+              "options": [
+                "a. If a girl brings extra paper, she has more than she needs.",
+                "b. People entertain others to make them sad."
+              ],
+              "explanation": "extra (thêm): mang nhiều hơn số cần thiết.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "",
+              "options": [
+                "a. People believe others who lie often.",
+                "b. When you advise your friend, you tell him what to do."
+              ],
+              "explanation": "advise (khuyên bảo): bảo họ nên làm gì.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "",
+              "options": [
+                "a. A real story never happened.",
+                "b. A bit of paper is a small piece."
+              ],
+              "explanation": "bit (một mẩu/chút): một mảnh giấy nhỏ.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Seven Cities of Gold</h1>        <p style=\"margin-bottom: 1rem;\">Many years ago, a Spanish officer named Coronado heard the story of seven great cities. \"The walls of these cities are made of gold,\" his friends told him. \"The people eat <b>meat</b> from golden plates and dress in nice clothes,\" they said. They called these cities the Seven Cities of Gold. Were the cities <b>real</b>? Coronado never <b>considered</b> asking his friends.</p>    <p style=\"margin-bottom: 1rem;\">Coronado thought to himself, \"The things in these cities must be <b>worth</b> a lot of money.\" So he went to find the Seven Cities of Gold. He took along three hundred men, many horses, and <b>extra</b> food. They headed west. Coronado wanted to <b>achieve</b> his <b>goal</b> very badly.</p>    <p style=\"margin-bottom: 1rem;\">Coronado and his men rode for many days. Then they saw some cities. \"We found the Seven Cities of Gold!\" his men yelled, but Coronado wasn't happy. He had a different <b>opinion</b>. \"These can't be the Seven Cities of Gold,\" he said. \"Look, they're made of dirt!\"</p>    <p style=\"margin-bottom: 1rem;\">Coronado was right. The cities weren't bright and golden. They were dirty and brown. The people didn't eat <b>meat</b> from golden plates. They ate <b>vegetables</b> from regular bowls. They wore the most <b>basic</b> clothes.</p>    <p style=\"margin-bottom: 1rem;\">Coronado <b>regarded</b> the cities as ugly places. \"What happened to the cities of gold?\" he thought. \"Did someone <b>destroy</b> them? Was there a <b>war</b>? Did someone <b>already</b> come and take the gold?\"</p>    <p style=\"margin-bottom: 1rem;\">That night, the people of the cities <b>entertained</b> Coronado and his men and <b>served</b> them food. They <b>advised</b> Coronado to go home. \"There is no gold here,\" they told him. Coronado was angry. Did his friends <b>lie</b> to him?</p>    <p style=\"margin-bottom: 1rem;\">He left the next morning. He looked back at the cities one more time. The sun <b>reflected</b> light on the dirt houses. Coronado thought he saw a <b>bit</b> of gold. Were his friends right after all? \"No,\" he told himself. \"It's just the sun.\" Then he turned away and went home.</p></div>",
+      "imageUrl": "/unit20_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Reading Comprehension",
+          "content": "Answer the questions based on the story.",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "a. A man who achieves his goal",
+                "b. An officer who looks for cities of gold",
+                "c. Men who destroy cities",
+                "d. People who entertain and serve"
+              ],
+              "explanation": "Câu chuyện kể về một viên sĩ quan đi tìm các thành phố vàng.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "22",
+              "content": "What did Coronado NOT consider asking his friends?",
+              "options": [
+                "a. How much money the cities were worth",
+                "b. If the people of the cities ate meat",
+                "c. If the Seven Cities of Gold were real",
+                "d. How much extra food to take west"
+              ],
+              "explanation": "Bài đọc viết: 'Were the cities real? Coronado never considered asking his friends.'",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "23",
+              "content": "Why was Coronado unhappy when he saw the cities?",
+              "options": [
+                "a. They were not made of gold.",
+                "b. They were at war with each other.",
+                "c. Someone destroyed them.",
+                "d. He had already been to the cities."
+              ],
+              "explanation": "Bởi vì chúng làm bằng bụi đất (dirt) chứ không phải vàng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "24",
+              "content": "What did the people of the cities advise Coronado to do?",
+              "options": [
+                "a. Eat basic vegetables",
+                "b. Go home",
+                "c. Regard the cities as dirty places",
+                "d. Talk about his opinion of the cities"
+              ],
+              "explanation": "Họ khuyên: 'They advised Coronado to go home.'",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "What did Coronodo do when he thought he saw a bit of gold on the houses?",
+              "options": [
+                "a. He rode his horse to the houses.",
+                "b. He turned away and went home.",
+                "c. He told his men.",
+                "d. He stayed one more night."
+              ],
+              "explanation": "Dựa trên Answer Key, câu trả lời là b. (Hoặc anh ấy quay đi và đi về nhà như cuối đoạn truyện).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 20: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

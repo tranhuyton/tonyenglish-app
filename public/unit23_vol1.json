@@ -1,0 +1,337 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit23_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit23_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">advance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədˈvæns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To advance is to go forward.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He advanced up the ladder slowly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">athlete</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈæθliːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An athlete is a person who plays sports.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some athletes can play many sports very well.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">average</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈævərɪdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is average, it is at a normal level.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I’m not rich or poor; I’m average.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">behavior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɪˈheɪvjər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Your behavior is the way you act.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Their behavior was good this semester. They didn’t cause trouble.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">behind</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɪˈhaɪnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Behind means to be at the back of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The little girl was hiding behind a tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">course</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔːrs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A course is a class in school.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I took a P.E. course in school this year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lower</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈloʊər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lower something is to make it go down.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The chart shows how his production has lowered over the year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">match</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mætʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To match is to be the same or similar.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The two shoes matched. They looked the same.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">member</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmɛmbər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A member is a person who is part of a group.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Julie is the newest member of our team.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mental</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmɛntl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is mental, it has to do with your mind.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I made a mental picture of the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">passenger</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpæsəndʒər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A passenger is a person who rides in a car, train, or airplane.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ One passenger was standing in the subway train.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">personality</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌpɜːrsəˈnæləti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Your personality is what you are like and how you behave.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ John has a bad personality.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">poem</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpoʊəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A poem is a short kind of writing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ William Shakespeare wrote many poems.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pole</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[poʊl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pole is a long thin stick made of wood or metal that supports things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The flag was hanging from the flag pole.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">remove</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɪˈmuːv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To remove something is to take it away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I removed the nail from the board.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">safety</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈseɪfti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Safety means to be the condition of being safe and free from danger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ For his own safety, he was placed in a car seat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shoot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃuːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To shoot is to fire something like a bullet at someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hunter raised his gun to shoot at the target.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sound</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[saʊnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sound means to make a noise.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The alarm clock sounded and woke us all up.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">swim</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[swɪm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To swim is to move through water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I love to swim in the ocean.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">web</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wɛb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A web is a home made by a spider.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom cleaned the spider webs out of the garage.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "matches"
+                }
+              ],
+              "content": "I need to find the other sock that is the same as this one. ma[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "2",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "remove"
+                }
+              ],
+              "content": "Please take away your feet from the table. rem[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "3",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "average"
+                }
+              ],
+              "content": "This is a(an) very normal morning. Nothing bad has happened. ave[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "4",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "sounded"
+                }
+              ],
+              "content": "The bell rattled, so we changed classes. so[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "5",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "advance"
+                }
+              ],
+              "content": "William wanted to go forward, but a wall stopped him. adv[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "6",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "member"
+                }
+              ],
+              "content": "Clara is a person in a group of the running club. me[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "7",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "athlete"
+                }
+              ],
+              "content": "jesse is a very good sports player. at[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "8",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "course"
+                }
+              ],
+              "content": "What is your favorite class? c[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "9",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "passenger"
+                }
+              ],
+              "content": "He was a person taking a ride on the ship. pa[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            },
+            {
+              "id": "10",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "personality"
+                }
+              ],
+              "content": "What kind of character does Ted have? P[1]",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. I was behind the winner, so I won the race!",
+                "b. Webs are made by spiders."
+              ],
+              "explanation": "Webs are made by spiders. is the logically correct sentence.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "12",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Reading increases your mental activity.",
+                "b. We removed the city last week."
+              ],
+              "explanation": "Reading increases your mental activity. is logical.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. My shoes were behind the couch.",
+                "b. This mental exercise makes my arms tired."
+              ],
+              "explanation": "My shoes were behind the couch. is logical.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "14",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Have you ever found a bird's web?",
+                "b. I lowered the box onto the ground."
+              ],
+              "explanation": "I lowered the box onto the ground. is logical.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "15",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Could you help me lower my seat please?",
+                "b. Be sure to remove the trash from the house."
+              ],
+              "explanation": "The correct choice is b based on the answer key.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "to move through water",
+              "options": [
+                "a. lower",
+                "b. average",
+                "c. advance",
+                "d. swim"
+              ],
+              "explanation": "swim nghĩa là to move through water.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "17",
+              "content": "something nice to read",
+              "options": [
+                "a. poem",
+                "b. web",
+                "c. member",
+                "d. behind"
+              ],
+              "explanation": "poem nghĩa là something nice to read (a short kind of writing).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "the condition free from any danger",
+              "options": [
+                "a. shoot",
+                "b. safety",
+                "c. athlete",
+                "d. personality"
+              ],
+              "explanation": "safety nghĩa là the condition free from any danger.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "19",
+              "content": "a metal or wooden stick used to support things",
+              "options": [
+                "a. pole",
+                "b. remove",
+                "c. passenger",
+                "d. sound"
+              ],
+              "explanation": "pole nghĩa là a metal or wooden stick used to support things.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "the way you act",
+              "options": [
+                "a. mental",
+                "b. match",
+                "c. course",
+                "d. behavior"
+              ],
+              "explanation": "behavior nghĩa là the way you act.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Camp</h1>        <p style=\"margin-bottom: 1rem;\">Stacie wanted to stay at a nice hotel for vacation. But her parents sent her to a terrible camp instead. For breakfast, Stacie liked fresh juice and chocolate milk, but she got water at the camp. In the afternoon she wanted to write <b>poems</b>, but she had to <b>swim</b>. The camp was near an airport with loud planes. Spider<b>webs</b> hung over her bed. To her, the kids' <b>average</b> <b>behavior</b> was very bad. No girl <b>matched</b> her <b>personality</b>. She hated it.</p>    <p style=\"margin-bottom: 1rem;\">One day, they had a class. <b>Mental</b> exercise <b>sounded</b> good to Stacie. But it was a <b>course</b> on water <b>safety</b>. They learned how to be safe <b>passengers</b> on a boat. Stacie didn't ever plan to go on a boat.</p>    <p style=\"margin-bottom: 1rem;\">The next day, they played a game. There were a red team and a blue team. Stacie was on the blue team. Each team had to try to <b>remove</b> the other team's flag from a <b>pole</b>. They also had to use water guns. \"I'm not much of an <b>athlete</b>,\" she said. But she still had to play.</p>    <p style=\"margin-bottom: 1rem;\">Stacie took a water gun and looked for somewhere to hide. A boy said, \"Stacie, you <b>advance</b> to the middle. I will go right. Those two will go left.\"</p>    <p style=\"margin-bottom: 1rem;\">Stacie still didn't want to play. She walked into the forest and saw a red team player coming. Stacie hid <b>behind</b> a tree and then jumped out and <b>shot</b> the other player. \"This is fun!\" Stacie thought.</p>    <p style=\"margin-bottom: 1rem;\">Several minutes after <b>advancing</b> further, Stacie saw the red flag. A red team <b>member</b> was watching over it. She <b>shot</b> him with her water gun. Then she <b>lowered</b> the flag and ran back to her team. \"I got it!\" she yelled. The blue team won!</p>    <p style=\"margin-bottom: 1rem;\">Stacie was the hero. For the rest of the week, Stacie had fun.</p></div>",
+      "imageUrl": "/unit23_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "How did Stacie win the game?",
+              "options": [
+                "a. She advanced to the right.",
+                "b. She lowered the red team's flag.",
+                "c. She hit the red team with her water gun.",
+                "d. She swam all afternoon."
+              ],
+              "explanation": "In the story, she lowered the red team's flag and ran back, making her team win.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "22",
+              "content": "Because of her personality, what would Stacie likely NOT want to do?",
+              "options": [
+                "a. Read a poem",
+                "b. Play a mental game",
+                "c. Become an athlete",
+                "d. Stay at a nice hotel"
+              ],
+              "explanation": "She says 'I'm not much of an athlete' in the story.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "23",
+              "content": "Instead of camp, where did Stacie want to be?",
+              "options": [
+                "a. At a fancy hotel",
+                "b. At the airport",
+                "c. On a boat as a passenger",
+                "d. With an average student"
+              ],
+              "explanation": "The story says she wanted to stay at a nice hotel for vacation.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "24",
+              "content": "What did Stacie start to like about the camp?",
+              "options": [
+                "a. The other kids' behavior",
+                "b. Having chocolate milk",
+                "c. Spider webs over her bed",
+                "d. Beating the red team"
+              ],
+              "explanation": "She thought shooting the other player was fun, and winning made her the hero.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "25",
+              "content": "What was Stacie's course about?",
+              "options": [
+                "a. It was a course on water safety. They learned how to be safe passengers on a boat.",
+                "b. It was a mental exercise game.",
+                "c. It was a class about swimming.",
+                "d. It was a course on reading poems."
+              ],
+              "explanation": "The story explicitly says 'But it was a course on water safety. They learned how to be safe passengers on a boat.'",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 23: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

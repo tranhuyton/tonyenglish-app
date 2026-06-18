@@ -1,0 +1,328 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit22_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit22_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎯</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">actual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æktʃuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Actual means that something is real or true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This is the actual sword that the King owned, not a fake one.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😲</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">amaze</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əméiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To amaze someone is to surprise them very much.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The news in the paper amazed Jack.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💰</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">charge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃɑ:rdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A charge is the price to pay for something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The charge for the shirts was $15.00.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🫂</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">comfort</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kʌ́mfərt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To comfort someone means to make them feel better.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I wanted to comfort my friend after I heard the bad news.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📞</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contact</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑ́ntækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To contact someone is to speak or write to them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I contacted Sue about my party.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🛒</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">customer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kʌ́stəmər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A customer is a person who buys something at a store.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The customer put a few items in a bag.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🚚</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deliver</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dilívər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To deliver something is to take it from one place to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man delivered Chinese food to my house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💵</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">earn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ə:rn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To earn means to get money for the work you do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He earns his living as a chef in a great restaurant.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🚪</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[geit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A gate is a type of door. Gates are usually made of metal or wood.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We want to put up a wooden gate around our house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">➕</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">include</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inklu:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To include something means to have it as part of a group.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Does this meal include a soft drink?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👨‍💼</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">manage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mǽnidʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To manage something means to control or be in charge of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I had to manage the meeting myself.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🕵️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mystery</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[místəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mystery is something that is difficult to understand or explain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The path on the map was a complete mystery to me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⚡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">occur</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To occur means to happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When did the thunderstorm occur?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">↔️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">opposite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑ́pəzit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If A is the opposite of B, A is completely different from B.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The opposite of black is white.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🍽️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A plate is a flat round thing that you put food on.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I put my plate down so I could put some food on it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎁</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">receive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[risí:v]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To receive something is to get it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I received a present on my birthday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏆</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reward</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[riwɔ́:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A reward is something given in exchange for good behavior or work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was given a reward for his excellent performance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎲</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">set</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[set]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To set something is to put it somewhere.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please set the dice down on the table.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🦹</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sti:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To steal is to take something that is not yours.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The men tried to steal money from the bank.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🥷</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thief</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θi:f]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A thief is someone who quietly takes things that do not belong to them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A thief broke into our home and took my mother's jewelry.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "to take something that does not belong to you",
+              "options": [
+                "steal",
+                "include",
+                "amaze",
+                "plate"
+              ],
+              "explanation": "steal (ăn cắp).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "to happen",
+              "options": [
+                "manage",
+                "set",
+                "deliver",
+                "occur"
+              ],
+              "explanation": "occur (xảy ra).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "3",
+              "content": "to make someone feel better",
+              "options": [
+                "reward",
+                "earn",
+                "comfort",
+                "contact"
+              ],
+              "explanation": "comfort (an ủi).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "4",
+              "content": "to get",
+              "options": [
+                "receive",
+                "gate",
+                "charge",
+                "actual"
+              ],
+              "explanation": "receive (nhận).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "5",
+              "content": "a person who buys something",
+              "options": [
+                "opposite",
+                "mystery",
+                "customer",
+                "thief"
+              ],
+              "explanation": "customer (khách hàng).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Check (√) the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "If I receive a present, I give someone something.",
+                "If you steal money, you can get in trouble."
+              ],
+              "explanation": "Ăn cắp tiền (steal money) thì sẽ gặp rắc rối.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "7",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "A man who is alone can contact many people.",
+                "If a woman is sad, someone should comfort her."
+              ],
+              "explanation": "Khi buồn thì cần được an ủi (comfort).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "He was given a reward for his poor work performance.",
+                "You eat dinner off a plate."
+              ],
+              "explanation": "Ăn tối trên đĩa (plate).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "9",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "Everything that is for sale has a charge.",
+                "A customer sells things to people."
+              ],
+              "explanation": "Mọi thứ để bán đều có giá (charge).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "If you earn something, you give it to someone.",
+                "Postmen deliver mail from one house to another."
+              ],
+              "explanation": "Người đưa thư giao thư (deliver).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Check (√) the better response to each question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "Who should manage the classroom?",
+              "options": [
+                "The teacher should be in charge.",
+                "The students should go to the classroom."
+              ],
+              "explanation": "manage (quản lý).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "When did the theft occur?",
+              "options": [
+                "It happened this afternoon.",
+                "It stopped early."
+              ],
+              "explanation": "occur (xảy ra).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "What is the actual number of people there?",
+              "options": [
+                "There are 31,872 people there.",
+                "There are a lot of people there."
+              ],
+              "explanation": "actual (thực tế, chính xác).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "14",
+              "content": "Did that movie amaze you?",
+              "options": [
+                "Yes, I had seen it many times before.",
+                "Yes, the ending surprised me very much."
+              ],
+              "explanation": "amaze (làm ngạc nhiên).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "15",
+              "content": "Where should I set this book?",
+              "options": [
+                "Put it on the bookshelf.",
+                "It came from the library."
+              ],
+              "explanation": "set (đặt).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "Does the wall have a gate?",
+              "options": [
+                "Yes, and it is often locked.",
+                "Yes, the wall is very high."
+              ],
+              "explanation": "gate (cổng).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "Does the book include a CD?",
+              "options": [
+                "No, it is inside the book.",
+                "No, we must buy the extra CD."
+              ],
+              "explanation": "include (bao gồm).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "Has he received my present?",
+              "options": [
+                "He got it yesterday.",
+                "He sent it to you yesterday."
+              ],
+              "explanation": "receive (nhận).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "What happened to the plate?",
+              "options": [
+                "It broke when I dropped it.",
+                "It helped me with my homework."
+              ],
+              "explanation": "plate (cái đĩa).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "Did you hear the news about the thief?",
+              "options": [
+                "He stole some expensive diamonds from the jewelry store.",
+                "There was a person buying something."
+              ],
+              "explanation": "thief (kẻ trộm).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Better Reward</h1>        <p style=\"margin-bottom: 1rem;\">Jenny <b>delivered</b> food for a restaurant. She read the newspaper and said, \"Uh oh.\" There was a story about a <b>thief</b>. He <b>stole</b> food, and no one had seen him. Even the police couldn't catch him. Jenny was a little scared. She worked close to that area.</p>    <p style=\"margin-bottom: 1rem;\">The newspaper <b>included</b> a message from the police: \"If anything strange <b>occurs</b>, call us. If you help us catch the <b>thief</b>, you'll <b>earn</b> a <b>reward</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">Jenny talked to Jim. He <b>managed</b> the restaurant. \"Do you know about the <b>thief</b>?\"</p>    <p style=\"margin-bottom: 1rem;\">\"Yes,\" he said. \"But he <b>steals</b> more than one person can eat. And why haven't the police stopped him yet? It's a <b>mystery</b>. If you see him, <b>contact</b> the police. Don't run after him.\"</p>    <p style=\"margin-bottom: 1rem;\">Jenny drove to a <b>customer</b>'s house. She left her car and opened the <b>gate</b> to the house. But then she heard a noise by her car. She yelled, \"Thief!\" She wasn't scared. She wanted the <b>reward</b>! She did the <b>opposite</b> of what Jim told her to do.</p>    <p style=\"margin-bottom: 1rem;\">\"Hey,\" she yelled. \"Get back here!\" She <b>set</b> the food on the ground and ran to her car.</p>    <p style=\"margin-bottom: 1rem;\">But the <b>thief</b> had already left with the food. Jenny followed a noise around the corner. She was <b>amazed</b>. She saw a dog and some puppies. They were eating her food! They looked thin and scared. \"The <b>actual</b> <b>thief</b> is just a dog. She's feeding her puppies,\" she said. \"That's why she <b>steals</b> so much food.\"</p>    <p style=\"margin-bottom: 1rem;\">Jenny felt bad. She tried to <b>comfort</b> the dogs with another <b>plate</b> of food. Then she took them back to the store. Everyone there took a puppy home. Jenny called the police. She told them there was no real <b>thief</b>.</p>    <p style=\"margin-bottom: 1rem;\">Jenny didn't do it to <b>receive</b> the <b>reward</b> anymore. She said, \"It was just a dog. But there's no <b>charge</b> for catching this '<b>thief</b>,'\" she said. \"My new dog is a better <b>reward</b>.\"</p></div>",
+      "imageUrl": "/unit22_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "A dog that steals a plate",
+                "A man who tells a mystery",
+                "A man who writes for a newspaper",
+                "A girl who delivers food"
+              ],
+              "explanation": "Câu chuyện về cô gái đi giao thức ăn.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "22",
+              "content": "Why did Jenny decide to run after the thief?",
+              "options": [
+                "She wanted to earn the reward.",
+                "She knew that there was no actual thief.",
+                "She always did the opposite of what Jim said.",
+                "She wanted to charge a customer for that food."
+              ],
+              "explanation": "Cô ấy muốn phần thưởng (She wanted the reward!).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "What was true of Jim?",
+              "options": [
+                "He tried to comfort Jenny with food.",
+                "He told Jenny that she should contact the police.",
+                "He wrote a story that included a message from the police.",
+                "He received a reward because he managed the store."
+              ],
+              "explanation": "Anh ta khuyên cô ấy gọi cảnh sát (contact the police).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "How did Jenny act when she heard the noise?",
+              "options": [
+                "She was amazed by the noise.",
+                "She followed it around the corner.",
+                "She ran through the gate to get away from it.",
+                "She set the food on a table and ran to her car."
+              ],
+              "explanation": "Cô ấy đi theo tiếng động qua góc đường (Jenny followed a noise around the corner).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "What did the police say to do if something strange occured?",
+              "options": [
+                "\"If anything strange occurs, call us. If you help us catch the thief, you'll earn a reward.\"",
+                "Do not run after the thief.",
+                "Wait for a reward.",
+                "Contact Jim at the restaurant."
+              ],
+              "explanation": "Cảnh sát nói hãy gọi họ và nhận thưởng (call us... earn a reward).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 22: Volume 1",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
+}

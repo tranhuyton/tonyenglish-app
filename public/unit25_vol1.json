@@ -1,0 +1,312 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit25_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit25_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">associate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əsouʃieit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To associate means to connect something with a person or thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Most people associate birthday parties with having fun.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">environment</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[invaiərənmənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The environment is the place where people work or live.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Keeping our environment clean is important to our health.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">factory</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæktəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A factory is a building where things are made or put together.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We have only one factory in our town.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">feature</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fi:tʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A feature is an important part of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The cell phone has many features.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">instance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[instəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An instance is an example of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have never experienced an instance of hate. Have you?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">involve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[invɑlv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To involve means to be actively taking part in something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The whole family was involved in playing the game.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">medicine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[medəsən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Medicine is something you take to feel better or treat an illness.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctor gave me medicine for my cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mix</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[miks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mix is different things put together.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The green mix we made in science class spilled onto the table.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">organize</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:rgənaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To organize is to plan or get ready for an event.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Make a list to help you organize the things you need.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">period</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[piəriəd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A period is an amount of time when something happens.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In one period in Europe, there were many knights.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">populate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pɑpjəleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If people populate an area, they live there.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Billions of people populate the Earth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">produce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prədju:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To produce something is to make or grow it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This tree produces apples every year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">range</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reindʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A range is a number or a set of similar things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw a range of cars to choose from.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recognize</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rekəgnaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To recognize something is to know it because you have seen it before.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I recognized an old friend from many years ago.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">regular</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[regjələr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is regular, it happens often and in equal amounts of time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our regular lunch time is around noon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sign</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sain]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sign is a notice giving information, directions, a warning, etc.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sign indicated that today would be a bad day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tip is a pointed end of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The tip of his pen was very sharp.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tradition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trədiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tradition is something people have been doing for a long time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Marriage is a tradition all over the world.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trash</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[træʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Trash is waste material or unwanted or worthless things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please take out the trash; it smells bad.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wide</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[waid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is wide, it is large from side to side.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The door was as wide as my arms.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "to remember someone or something",
+              "options": [
+                "mix",
+                "range",
+                "populate",
+                "recognize"
+              ],
+              "explanation": "recognize có nghĩa là nhận ra/nhớ ra (to remember someone or something).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "2",
+              "content": "the sharp end of a stick",
+              "options": [
+                "instance",
+                "regular",
+                "tip",
+                "environment"
+              ],
+              "explanation": "tip có nghĩa là đầu nhọn (the sharp end of a stick).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "3",
+              "content": "large from side to side",
+              "options": [
+                "wide",
+                "period",
+                "produce",
+                "factory"
+              ],
+              "explanation": "wide có nghĩa là rộng (large from side to side).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "to be an important part of",
+              "options": [
+                "sign",
+                "medicine",
+                "involve",
+                "organize"
+              ],
+              "explanation": "involve được hiểu là bao gồm/đóng vai trò quan trọng (to be an important part of) theo ngữ cảnh sách.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "to make or create",
+              "options": [
+                "feature",
+                "produce",
+                "associate",
+                "tradition"
+              ],
+              "explanation": "produce có nghĩa là sản xuất/tạo ra (to make or create).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2",
+          "title": "Part B: Fill in the blanks with the correct words from the word bank (produce, sign, populate, period, range).",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "Large companies can (pro[1]) many products.",
+              "options": [],
+              "explanation": "produce (sản xuất). Những công ty lớn có thể sản xuất nhiều sản phẩm.",
+              "correctAnswer": "produce"
+            },
+            {
+              "id": "7",
+              "content": "I offered her a (ran[1]) of choices from one to ten.",
+              "options": [],
+              "explanation": "range (loạt/phạm vi). Tôi cung cấp cho cô ấy một loạt lựa chọn từ một đến mười.",
+              "correctAnswer": "range"
+            },
+            {
+              "id": "8",
+              "content": "How many people (pop[1]) this area?",
+              "options": [],
+              "explanation": "populate (cư trú/sinh sống). Có bao nhiêu người sống ở khu vực này?",
+              "correctAnswer": "populate"
+            },
+            {
+              "id": "9",
+              "content": "Give me a (sig[1]) if you need help.",
+              "options": [],
+              "explanation": "sign (dấu hiệu). Hãy cho tôi một dấu hiệu nếu bạn cần giúp đỡ.",
+              "correctAnswer": "sign"
+            },
+            {
+              "id": "10",
+              "content": "This (per[1]) will last for one hour.",
+              "options": [],
+              "explanation": "period (khoảng thời gian/tiết học). Tiết học/Khoảng thời gian này sẽ kéo dài một giờ.",
+              "correctAnswer": "period"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "",
+              "options": [
+                "a. When you mix things, you take them somewhere.",
+                "b. They make toys in a toy factory."
+              ],
+              "explanation": "Câu b hợp lý vì nhà máy đồ chơi (toy factory) là nơi làm đồ chơi. Câu a sai nghĩa của mix.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "12",
+              "content": "",
+              "options": [
+                "a. A feature of this computer is its small size.",
+                "b. We populate over the ocean."
+              ],
+              "explanation": "Câu a hợp lý: tính năng (feature) của máy tính này là kích thước nhỏ.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "",
+              "options": [
+                "a. We put the trash outside so it could be taken away.",
+                "b. We ate chicken once, so now it is a tradition."
+              ],
+              "explanation": "Câu a hợp lý: đặt rác (trash) bên ngoài để mang đi.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "14",
+              "content": "",
+              "options": [
+                "a. He went to the tip of the school.",
+                "b. Doing a book report involves reading."
+              ],
+              "explanation": "Câu b hợp lý: làm báo cáo sách bao gồm/đòi hỏi (involves) việc đọc.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "15",
+              "content": "",
+              "options": [
+                "a. The garbage truck came and produced some sunshine.",
+                "b. I associate dogs with good pets."
+              ],
+              "explanation": "Câu b hợp lý: tôi liên tưởng (associate) chó là thú cưng tốt.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "16",
+              "content": "",
+              "options": [
+                "a. You recognize someone whom you have already met.",
+                "b. Blue is a range of color."
+              ],
+              "explanation": "Câu a hợp lý: bạn nhận ra (recognize) người bạn đã từng gặp.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "",
+              "options": [
+                "a. The sign was open all evening.",
+                "b. I have a regular schedule. It doesn't change."
+              ],
+              "explanation": "Câu b hợp lý: tôi có một lịch trình thường xuyên/đều đặn (regular) và không thay đổi.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "",
+              "options": [
+                "a. The tree is very wide because it is small.",
+                "b. Don't forget to organize a meeting for next week."
+              ],
+              "explanation": "Câu b hợp lý: đừng quên tổ chức (organize) một cuộc họp.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "19",
+              "content": "",
+              "options": [
+                "a. The clothing store had a sale on medicine.",
+                "b. Our environment has many plants and animals."
+              ],
+              "explanation": "Câu b hợp lý: môi trường (environment) của chúng ta có nhiều thực vật và động vật.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "",
+              "options": [
+                "a. An instance of kindness is sharing food.",
+                "b. He had no period to work."
+              ],
+              "explanation": "Câu a hợp lý: một ví dụ (instance) của lòng tốt là chia sẻ thức ăn.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Joe’s Pond</h1>        <p style=\"margin-bottom: 1rem;\">Joe made the world a better place. He got the idea to do that at school. He watched a video there. It was about a <b>factory</b>. This <b>factory</b> <b>produced</b> a lot of <b>trash</b> and put it in a river. The <b>trash</b> and water were a bad <b>mix</b>. People <b>populated</b> the area by the river and drank its water. This made them sick. Many of them needed <b>medicine</b> and made <b>regular</b> visits to doctors.</p>    <p style=\"margin-bottom: 1rem;\">But the video wasn’t all bad news. It showed ways to pick up <b>trash</b> and why it’s important to do this. It said people can make a difference to their <b>environment</b>. The video’s important <b>features</b> made Joe <b>associate</b> <b>trash</b> with hurting people.</p>    <p style=\"margin-bottom: 1rem;\">One day Joe walked through a park. He <b>recognized</b> some of the problems from the video. One <b>instance</b> of these problems was the <b>trash</b> in the pond. It was full of plastic cups. There was too much <b>trash</b>. Joe didn’t want it to hurt anyone.</p>    <p style=\"margin-bottom: 1rem;\">He told his grandfather about the park. His grandfather said, “You know, it’s a <b>tradition</b> in our family to help people. That’s why we give food to poor people. Maybe you can help people by cleaning the park.”</p>    <p style=\"margin-bottom: 1rem;\">Cleaning the park would <b>involve</b> hard work. Joe decided to <b>organize</b> a group to help him. He chose a <b>wide</b> area of the park. It had the most <b>trash</b>. He asked his family and friends to come. On Saturday, he gave everyone a sharp stick. They wondered why. He said, “You use the stick’s <b>tip</b> to pick up <b>trash</b>. This makes it easier.” They worked for six weeks. Different people helped each time, but Joe was always there.</p>    <p style=\"margin-bottom: 1rem;\">In that <b>period</b> of time, Joe saw a <b>range</b> of results. There was no <b>trash</b> in the water. People could swim in it. Joe knew that was a good <b>sign</b>. He was happy because he helped his <b>environment</b>.</p></div>",
+      "imageUrl": "/unit25_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Reading Comprehension: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is the main idea of this story?",
+              "options": [
+                "a. A grandfather teaching traditions",
+                "b. How to recognize signs of sickness",
+                "c. An instance of videos helping students study",
+                "d. A boy helping the environment"
+              ],
+              "explanation": "Chủ đề chính của câu chuyện là một cậu bé giúp ích cho môi trường (A boy helping the environment).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "22",
+              "content": "When did the boy decide to clean the park?",
+              "options": [
+                "a. After he saw a video about a factory harming a river with its trash",
+                "b. After he went there on regular visits",
+                "c. After he saw a range of people cleaning it",
+                "d. After he associated trash with harming people"
+              ],
+              "explanation": "Cậu bé quyết định dọn dẹp sau khi xem video về một nhà máy làm ô nhiễm dòng sông.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "Why did the people in the video get sick?",
+              "options": [
+                "a. A factory put trash in a river.",
+                "b. They produced too much trash.",
+                "c. They populated too many parks.",
+                "d. They had no medicine for a long period."
+              ],
+              "explanation": "Người dân trong video bị ốm do một nhà máy xả rác xuống sông.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "24",
+              "content": "Why was it easy to pick up the trash?",
+              "options": [
+                "a. It did not involve hard work.",
+                "b. Joe did not organize the group.",
+                "c. They used the tips of sharp sticks.",
+                "d. The people had a good mix of tools to use."
+              ],
+              "explanation": "Dọn rác dễ dàng hơn vì họ dùng đầu nhọn của chiếc gậy (the tips of sharp sticks).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "25",
+              "content": "What did the features of the video make Joe do?",
+              "options": [
+                "a. They made him associate trash with hurting people and their environment.",
+                "b. They made him recognize signs of sickness.",
+                "c. They made him populate too many parks.",
+                "d. They made him organize a meeting for next week."
+              ],
+              "explanation": "Những nội dung/chi tiết trong video đã làm cho Joe liên tưởng việc rác thải gây tổn hại đến con người và môi trường.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 25: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

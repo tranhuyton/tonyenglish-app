@@ -1,0 +1,266 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/word_list_new_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/word_list_new_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 16px; padding-top: 16px; border-top: 2px dashed #e2e8f0;\"><h3 style=\"font-size: 18px; font-weight: bold; color: #334155; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0;\">Detailed Meanings</h3><div style=\"font-family: 'Inter', sans-serif; width: 100%; position: relative;\"><div style=\"position: absolute; left: 32px; top: 0; bottom: 0; width: 2px; background-color: #a855f7;\"></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😱</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">afraid</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[əfréid]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When someone is afraid, they feel fear.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The woman was <b>afraid</b> of what she saw.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🤝</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">agree</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[əgrí:]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To agree is to say \"yes\" or to think the same way.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ A: The food is very good in that restaurant. B: I <b>agree</b> with you.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😠</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">angry</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[ǽŋgri]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When someone is angry, they may want to speak loudly or fight.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ She didn't do her homework, so her father is <b>angry</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🚌</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">arrive</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[əráiv]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To arrive is to get to or reach some place.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The bus always <b>arrives</b> at the corner of my street at 4:00.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">⚔️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">attack</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[ətǽk]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To attack is to try to fight or to hurt.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The man with the sword <b>attacked</b> the other man first.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">⬇️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">bottom</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[bάtəm]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">The bottom is the lowest part.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The <b>bottom</b> of my shoe has a hole in it.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">💡</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">clever</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[klévər]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When someone is clever, they can solve a hard puzzle or problem.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The <b>clever</b> boy thought of a good idea.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😈</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">cruel</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[krú:əl]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When someone is cruel, they do bad things to hurt others.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The <b>cruel</b> man yelled at his sister.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🏁</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">finally</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[fáinəli]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adv.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If something happens finally, it happens after a long time or at the end.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ He <b>finally</b> crossed the finish line after five hours of running.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🙈</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">hide</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[haid]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To hide is to try not to let others see you.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The other children will <b>hide</b> while you count to 100.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🏹</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">hunt</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[hʌnt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To hunt is to look for or search for an animal to kill.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Long ago, people <b>hunted</b> with bows and arrows.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🍎</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">lot</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[lɑt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A lot means a large number or amount of people, animals, things, etc.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ There are a <b>lot</b> of apples in the basket.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🍁</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">middle</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[mídl]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">The middle of something is the center or halfway point.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The Canadian flag has a maple leaf in the <b>middle</b> of it.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">⏱️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">moment</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[móumənt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A moment is a second or a very short time.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I was only a few <b>moments</b> late for the meeting.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😄</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">pleased</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[pli:zd]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When someone is pleased, they are happy.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ She was <b>pleased</b> with the phone call she received.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🤞</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">promise</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[prάmis]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To promise is to say you will do something for sure.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ He <b>promised</b> to return my key by tomorrow.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">💬</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">reply</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[riplái]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To reply is to give an answer or say back to someone.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ She asked him what time his meeting was. He <b>replied</b>, \"at three.\"</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🛡️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">safe</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[seif]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When a person is safe, they are not in danger.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Put on your seat belt in the car to be <b>safe</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🎩</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">trick</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[trik]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A trick is something you do to fool another person.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ His card <b>trick</b> really surprised us.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">💃</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">well</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[wel]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adv.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">You use well to say that something was done in a good way.</p><p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The couple can dance quite <b>well</b>.</p></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. bad or hurting others",
+              "options": [
+                "afraid",
+                "clever",
+                "cruel",
+                "hunt"
+              ],
+              "explanation": "<b>cruel</b> nghĩa là độc ác, tàn nhẫn, gây đau đớn cho người khác.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "2. at last or at the end",
+              "options": [
+                "angry",
+                "clever",
+                "finally",
+                "reply"
+              ],
+              "explanation": "<b>finally</b> nghĩa là cuối cùng, sau cùng.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "3",
+              "content": "3. to try to fight or hurt",
+              "options": [
+                "attack",
+                "middle",
+                "pleased",
+                "trick"
+              ],
+              "explanation": "<b>attack</b> nghĩa là tấn công, cố gắng đánh hoặc làm đau người khác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "4. to not let others see",
+              "options": [
+                "agree",
+                "hide",
+                "safe",
+                "well"
+              ],
+              "explanation": "<b>hide</b> nghĩa là trốn, ẩn nấp, không để người khác nhìn thấy.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "5. the lowest part",
+              "options": [
+                "bottom",
+                "lot",
+                "moment",
+                "promise"
+              ],
+              "explanation": "<b>bottom</b> nghĩa là phần dưới cùng, đáy.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2",
+          "title": "Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. angry",
+              "options": [
+                "happy",
+                "low",
+                "mad",
+                "scared"
+              ],
+              "explanation": "<b>mad</b> là từ đồng nghĩa với <b>angry</b>, có nghĩa là tức giận.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3",
+          "title": "Check (✓) the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "7",
+              "content": "1.",
+              "options": [
+                "A <b>clever</b> person can solve a puzzle easily.",
+                "When a plane <b>arrives</b>, it leaves the ground and goes into the sky."
+              ],
+              "explanation": "<b>Clever</b> (thông minh): Người thông minh có thể giải câu đố dễ dàng (Hợp lý). Câu kia sai vì máy bay <b>arrives</b> (hạ cánh) thì nó phải chạm đất chứ không phải bay lên trời.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "8",
+              "content": "2.",
+              "options": [
+                "At noon, the sun is near the <b>bottom</b> of the sky.",
+                "If I break my brother's bike, he will be <b>angry</b>."
+              ],
+              "explanation": "<b>Angry</b> (tức giận): Nếu làm hỏng xe của anh trai, anh ấy sẽ tức giận (Hợp lý). Câu kia sai vì buổi trưa mặt trời ở trên đỉnh đầu chứ không phải ở <b>bottom</b> (dưới đáy) bầu trời.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "9",
+              "content": "3.",
+              "options": [
+                "It is easy to <b>hide</b> in a dark place.",
+                "Many kinds of fish are <b>afraid</b> of water."
+              ],
+              "explanation": "<b>Hide</b> (trốn): Rất dễ để trốn trong bóng tối (Hợp lý). Câu kia sai vì cá sống dưới nước nên không thể <b>afraid</b> (sợ) nước.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "4.",
+              "options": [
+                "At night, your parents may say, \"<b>Hide</b> your eyes and go to sleep.\"",
+                "Heavy things will go down to the <b>bottom</b> of the ocean."
+              ],
+              "explanation": "<b>Bottom</b> (đáy): Đồ vật nặng sẽ chìm xuống đáy đại dương (Hợp lý). Câu kia sai vì bố mẹ thường nói 'Close your eyes' (Nhắm mắt lại) chứ không nói <b>Hide</b> your eyes (Giấu mắt đi).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "11",
+              "content": "5.",
+              "options": [
+                "It is <b>cruel</b> to keep a dog in a small cage all day.",
+                "Your mother will be <b>angry</b> when you get good grades in school."
+              ],
+              "explanation": "<b>Cruel</b> (tàn nhẫn): Nhốt chó trong lồng nhỏ cả ngày là tàn nhẫn (Hợp lý). Câu kia sai vì mẹ sẽ vui chứ không <b>angry</b> (tức giận) khi bạn điểm cao.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "6.",
+              "options": [
+                "Animals cannot <b>hunt</b> because they do not have hands.",
+                "It is a good idea to arrive early for class."
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "13",
+              "content": "7.",
+              "options": [
+                "People sometimes <b>attack</b> pictures to email messages.",
+                "Some people are <b>afraid</b> of spiders."
+              ],
+              "explanation": "<b>Afraid</b> (sợ hãi): Nhiều người sợ nhện (Hợp lý). Câu kia sai vì người ta đính kèm (attach) chứ không <b>attack</b> (tấn công) bức ảnh vào email.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "8.",
+              "options": [
+                "A <b>moment</b> is like a second or two.",
+                "New shoes are usually not very comfortable or <b>clever</b>."
+              ],
+              "explanation": "<b>Moment</b> (một lát, một chốc): Một khoảnh khắc giống như một hoặc hai giây (Hợp lý). Câu kia sai vì đôi giày không thể <b>clever</b> (thông minh).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "9.",
+              "options": [
+                "Small animals do not usually <b>attack</b> big animals.",
+                "There are twelve <b>moments</b> in a year."
+              ],
+              "explanation": "<b>Attack</b> (tấn công): Động vật nhỏ thường không tấn công động vật lớn (Hợp lý). Câu kia sai vì một năm có 12 tháng (months) chứ không phải 12 <b>moments</b> (khoảnh khắc).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "10.",
+              "options": [
+                "A <b>cruel</b> person will try to help others at all times.",
+                "You can use a gun to <b>hunt</b> in the forest."
+              ],
+              "explanation": "<b>Hunt</b> (săn bắn): Bạn có thể dùng súng để đi săn trong rừng (Hợp lý). Câu kia sai vì người <b>cruel</b> (tàn nhẫn) sẽ không giúp đỡ người khác.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lion<br/>and the Rabbit</h1>        <p style=\"margin-bottom: 1rem;\">A <b>cruel</b> lion lived in the forest. Every day, he killed and ate a <b>lot</b> of animals. The other animals were <b>afraid</b> the lion would kill them all.</p>    <p style=\"margin-bottom: 1rem;\">The animals told the lion, \"Let's make a deal. If you <b>promise</b> to eat only one animal each day, then one of us will come to you every day. Then you don't have to <b>hunt</b> and kill us.\"</p>    <p style=\"margin-bottom: 1rem;\">The plan sounded <b>well</b> thought-out to the lion, so he <b>agreed</b>, but he also said, \"If you don't come every day, I promise to kill all of you the next day!\"</p>    <p style=\"margin-bottom: 1rem;\">Each day after that, one animal went to the lion so that the lion could eat it. Then, all the other animals were <b>safe</b>.</p>    <p style=\"margin-bottom: 1rem;\"><b>Finally</b>, it was the rabbit's turn to go to the lion. The rabbit went very slowly that day, so the lion was <b>angry</b> when the rabbit finally <b>arrived</b>.</p>    <p style=\"margin-bottom: 1rem;\">The lion angrily asked the rabbit, \"Why are you late?\"</p>    <p style=\"margin-bottom: 1rem;\">\"I was <b>hiding</b> from another lion in the forest. That lion said he was the king, so I was afraid.\"</p>    <p style=\"margin-bottom: 1rem;\">The lion told the rabbit, \"I am the only king here! Take me to that other lion, and I will kill him.\"</p>    <p style=\"margin-bottom: 1rem;\">The rabbit <b>replied</b>, \"I will be happy to show you where he lives.\"</p>    <p style=\"margin-bottom: 1rem;\">The rabbit led the lion to an old well in the <b>middle</b> of the forest. The well was very deep with water at the <b>bottom</b>. The rabbit told the lion, \"Look in there. The lion lives at the bottom.\"</p>    <p style=\"margin-bottom: 1rem;\">When the lion looked in the well, he could see his own face in the water. He thought that was the other lion. Without waiting another <b>moment</b>, the lion jumped into the well to <b>attack</b> the other lion. He never came out.</p>    <p style=\"margin-bottom: 1rem;\">All of the other animals in the forest were very <b>pleased</b> with the rabbit's <b>clever trick</b>.</p></div>",
+      "imageUrl": "/lion_and_rabbit.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "17",
+              "content": "1. What did all the animals say to the lion?",
+              "options": [
+                "They said they wanted him to be their king.",
+                "They said that the rabbit would be there in a moment.",
+                "They said that they would allow him to eat one of them a day.",
+                "They said that they would hide at the bottom of the well."
+              ],
+              "explanation": "Trong bài đọc, các con vật đã thỏa thuận: 'We will give you one animal every day.' (Chúng tôi sẽ giao cho ngài một con vật mỗi ngày) để sư tử không săn bắt chúng lung tung nữa.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "18",
+              "content": "2. Why did the rabbit take the lion to the well in the middle of the forest?",
+              "options": [
+                "So a lot of animals could see the rabbit walking with the lion",
+                "So the lion could attack the \"other\" lion",
+                "So the lion could drink water",
+                "So the other animals would be afraid of the rabbit"
+              ],
+              "explanation": "Thỏ muốn lừa (trick) sư tử nhìn xuống giếng để sư tử tưởng cái bóng của mình là một con sư tử khác, từ đó tức giận và nhảy xuống giếng.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "19",
+              "content": "3. Which of the following is true at the end of the story?",
+              "options": [
+                "The lion attacked another lion, and they both got hurt.",
+                "The lion cannot reply to the rabbit, so the rabbit wins.",
+                "The lion finally dies.",
+                "The lion is pleased by the rabbit's words, so it does not eat the rabbit."
+              ],
+              "explanation": "Đoạn cuối bài viết: 'The rabbit went back to the other animals. They were very pleased... They were safe.' (Thỏ quay về, các con vật rất hài lòng, và chúng đã được an toàn).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 1: Volume 1",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit16_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit16_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">academy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈkædəmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An academy is a special type of school.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are many courses taught at the academy that I go to.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ancient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈeɪnʃənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ancient, it is very old.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I want to see the ancient buildings in Rome.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">board</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɔːrd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A board is a flat piece of wood.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sign was made of a few wooden boards.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">century</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsentʃəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A century is one hundred years.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our company is celebrating a century of business in London.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">clue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kluː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A clue is a fact or object that helps solve a mystery or crime.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The detective found some clues on the sidewalk.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɒnsərt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A concert is an event where you listen to people play music.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I enjoyed the concert last night. The band was very good.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">county</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkaʊnti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A county is the largest political division of a state in the US.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He wanted to represent the citizens of his county.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dictionary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdɪkʃəneri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dictionary is a book that tells you what words mean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I use the dictionary to learn new words.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪɡˈzɪst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To exist is to be real.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Do you really think that unicorns ever existed?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flæt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Flat describes something that is level and smooth with no curved parts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My parents bought a new flat screen TV over the weekend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gentleman</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdʒentlmən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A gentleman is a nice man.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandfather is a kind and helpful gentleman.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hidden</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhɪdn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hidden means to be not easily noticed or too hard to find.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hidden camera recorded everything in the parking lot.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">maybe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmeɪbi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Maybe is used to show that something is possible or may be true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If I focus hard enough, maybe I can come up with the right answer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">officer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɔːfɪsər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An officer is a leader in the army.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The soldiers followed the orders of the officer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">original</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈrɪdʒənl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is original, it is the first one of that thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This is the original painting of the Mona Lisa.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pound</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paʊnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pound something is to hit it many times with a lot of force.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He pounded the nail with the hammer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">process</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈprɑːses]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A process is the steps to take to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Making a cake is a long process.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">publish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpʌblɪʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To publish a book is to get it printed and ready to sell.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That company publishes daily newspapers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">theater</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈθiːətər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A theater is a building where you watch plays, shows, and movies.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We went to the theater to see a play.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wealth</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[welθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Wealth is a large amount of money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ One of the most important things to some people is wealth.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "exist",
+              "options": [
+                "A. the first one",
+                "B. to print a book",
+                "C. to be real",
+                "D. something to help you"
+              ],
+              "explanation": "exist (tồn tại) có nghĩa là có thật (to be real).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "clue",
+              "options": [
+                "A. hint",
+                "B. steps",
+                "C. heavy",
+                "D. wood"
+              ],
+              "explanation": "clue (manh mối) có nghĩa là gợi ý (hint).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "maybe",
+              "options": [
+                "A. where you see shows",
+                "B. possible or likely to be true",
+                "C. where classes are held",
+                "D. where you hear music"
+              ],
+              "explanation": "maybe (có thể) chỉ điều có khả năng là thật (possible or likely to be true).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "4",
+              "content": "hidden",
+              "options": [
+                "A. one hundred years",
+                "B. level with no curves",
+                "C. a nice man",
+                "D. not able to be seen"
+              ],
+              "explanation": "hidden (bị giấu) có nghĩa là không thể nhìn thấy được (not able to be seen).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "5",
+              "content": "wealth",
+              "options": [
+                "A. old",
+                "B. leader",
+                "C. money",
+                "D. season"
+              ],
+              "explanation": "wealth (sự giàu có) có nghĩa là có nhiều tiền (money).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "6",
+              "content": "pound",
+              "options": [
+                "A. to hit hard many times",
+                "B. the steps you take",
+                "C. metal used in money",
+                "D. the largest political division of a state"
+              ],
+              "explanation": "pound (đập) có nghĩa là đánh mạnh nhiều lần (to hit hard many times).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "7",
+              "content": "century",
+              "options": [
+                "A. first",
+                "B. hundred",
+                "C. school",
+                "D. man"
+              ],
+              "explanation": "century (thế kỷ) có nghĩa là một trăm năm (hundred years).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "officer",
+              "options": [
+                "A. a leader in the army",
+                "B. where you listen to music",
+                "C. a sports group",
+                "D. something you use to help get a job done"
+              ],
+              "explanation": "officer (sĩ quan) là một nhà lãnh đạo trong quân đội (a leader in the army).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "9",
+              "content": "theater",
+              "options": [
+                "A. where you see a movie",
+                "B. a lot of money",
+                "C. a hint about something",
+                "D. a piece of wood"
+              ],
+              "explanation": "theater (nhà hát) là nơi bạn xem phim hoặc kịch (where you see a movie).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "ancient",
+              "options": [
+                "A. to be real",
+                "B. possible or likely to be true",
+                "C. very old",
+                "D. to get a book ready to sell"
+              ],
+              "explanation": "ancient (cổ xưa) có nghĩa là rất cũ (very old).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Circle two words that are related in each group.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "a. process / b. maybe / c. flat / d. publish",
+              "options": [
+                "A. process & maybe",
+                "B. maybe & flat",
+                "C. flat & publish",
+                "D. process & publish"
+              ],
+              "explanation": "Hai từ liên quan: process (quá trình) và publish (xuất bản).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "12",
+              "content": "a. board / b. century / c. pound / d. ancient",
+              "options": [
+                "A. board & century",
+                "B. century & ancient",
+                "C. board & pound",
+                "D. pound & ancient"
+              ],
+              "explanation": "Hai từ liên quan: century (thế kỷ) và ancient (cổ đại).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "13",
+              "content": "a. county / b. concert / c. theater / d. clue",
+              "options": [
+                "A. county & concert",
+                "B. concert & theater",
+                "C. theater & clue",
+                "D. county & clue"
+              ],
+              "explanation": "Hai từ liên quan: concert (buổi hòa nhạc) và theater (nhà hát).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "a. gentleman / b. officer / c. exist / d. concert",
+              "options": [
+                "A. gentleman & officer",
+                "B. officer & exist",
+                "C. exist & concert",
+                "D. gentleman & concert"
+              ],
+              "explanation": "Hai từ liên quan: gentleman (quý ông) và officer (sĩ quan).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "a. ancient / b. original / c. process / d. dictionary",
+              "options": [
+                "A. ancient & original",
+                "B. original & process",
+                "C. ancient & dictionary",
+                "D. process & dictionary"
+              ],
+              "explanation": "Theo Answer Key (a / d), hai từ liên quan: ancient (cổ xưa) và dictionary (từ điển).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
+          "content": "WORD BANK: flat, academy, theater, process, maybe",
+          "questions": [
+            {
+              "id": "16",
+              "content": "My school was playing against a private 1 ______________ (aca[16])",
+              "explanation": "Chống lại một trường học (academy) tư thục.",
+              "correctAnswer": "academy"
+            },
+            {
+              "id": "17",
+              "content": "In the 2_________________ (pro[17]) of winning games, we had worked hard and had fun.",
+              "explanation": "Quá trình (process) chiến thắng.",
+              "correctAnswer": "process"
+            },
+            {
+              "id": "18",
+              "content": "If we won today, our coach said that 3 ______________ (may[18]) he would take us all...",
+              "explanation": "Có lẽ (maybe) huấn luyện viên sẽ dẫn chúng tôi đi...",
+              "correctAnswer": "maybe"
+            },
+            {
+              "id": "19",
+              "content": "...to the 4_____________ (the[19]) to see a new movie",
+              "explanation": "Tới rạp hát/rạp chiếu phim (theater) để xem phim mới.",
+              "correctAnswer": "theater"
+            },
+            {
+              "id": "20",
+              "content": "...on their latest 5 _______________ (fla[20]) screen.",
+              "explanation": "Màn hình phẳng (flat screen).",
+              "correctAnswer": "flat"
+            }
+          ],
+          "questionType": "Điền từ"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Adams County's Gold</h1>        <p style=\"margin-bottom: 1rem;\">Adams <b>Academy</b> was a good school. Boys lived there and took classes. Tom worked hard all week. On a spring Saturday, he wanted to do something fun!</p>    <p style=\"margin-bottom: 1rem;\">He asked his friend Jeff to go to the movie <b>theater</b>. \"Sorry,\" Jeff answered. \"I'm going to a <b>concert</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">So Tom asked Joe to go to the movies. But Joe's soccer team had a game.</p>    <p style=\"margin-bottom: 1rem;\">Next, Tom went down the hall to Brad's room. Brad was reading a very large old book. \"Hi, Brad,\" Tom said. \"Are you reading a <b>dictionary</b>? It looks <b>ancient</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">\"No. This is called The <b>Wealth</b> of Adams <b>County</b>. It's about <b>hidden</b> gold in Adams County. It's more than a <b>century</b> old. It was <b>published</b> in 1870! Look, it even has the <b>original</b> cover on it.\"</p>    <p style=\"margin-bottom: 1rem;\">Tom asked, \"Where did you get it?\"</p>    <p style=\"margin-bottom: 1rem;\">\"It's from my dad's friend. He is a nice <b>gentleman</b>, an <b>officer</b> in the army,\" answered Brad.</p>    <p style=\"margin-bottom: 1rem;\">\"The gold doesn't really <b>exist</b>, does it?\" Tom asked.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't know, but <b>maybe</b>! There are <b>clues</b> to it in this book. Let's find it!\"</p>    <p style=\"margin-bottom: 1rem;\">Looking for gold sounded like fun.</p>    <p style=\"margin-bottom: 1rem;\">The first clue was to find a <b>flat</b> tree underground. \"It must be in the forest,\" Tom said.</p>    <p style=\"margin-bottom: 1rem;\">Brad said, \"The flat tree could be a <b>board</b> under the dirt. It could cover the gold.\"</p>    <p style=\"margin-bottom: 1rem;\">Tom and Brad dug in the dirt all morning. The <b>process</b> of looking for gold made them hungry. They were ready to stop for lunch.</p>    <p style=\"margin-bottom: 1rem;\">But then Brad hit something hard. It was a board!</p>    <p style=\"margin-bottom: 1rem;\">Brad <b>pounded</b> on the board until it broke. There was a small hole under it. \"Look!\" He held up a gold coin.</p>    <p style=\"margin-bottom: 1rem;\">Tom saw a piece of paper in the hole. \"Brad, there's more. It's a map to the rest of the gold!\"</p>    <p style=\"margin-bottom: 1rem;\">Brad smiled. \"Let's go!\" And they hurried to find the wealth of Adams County.</p></div>",
+      "imageUrl": "/unit16_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "Where do the boys look for the gold?",
+              "options": [
+                "A. At Adams Academy",
+                "B. At the movie theater",
+                "C. In the forest",
+                "D. In a concert hall"
+              ],
+              "explanation": "Trong rừng (In the forest).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "22",
+              "content": "What is NOT true of The Wealth of Adams County?",
+              "options": [
+                "A. It was published more than a century ago.",
+                "B. It was written by an army officer.",
+                "C. It still has its original cover.",
+                "D. It tells about a board in the forest floor."
+              ],
+              "explanation": "Chi tiết này không đúng: Cuốn sách không được viết bởi sĩ quan quân đội (It was written by an army officer).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "23",
+              "content": "Why does Brad think the gold really exists?",
+              "options": [
+                "A. Because there are clues to it in a book",
+                "B. Because a gentleman told him it did",
+                "C. Because he was given an ancient dictionary",
+                "D. Because it was hidden in the spring"
+              ],
+              "explanation": "Vì có manh mối về nó trong sách (Because there are clues to it in a book).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "24",
+              "content": "Where will the boys probably go at the end of the story?",
+              "options": [
+                "A. To get tools to carry the gold",
+                "B. To continue the process of finding gold",
+                "C. To watch Joe’s soccer team",
+                "D. To pound on more boards"
+              ],
+              "explanation": "Để tiếp tục quá trình tìm vàng (To continue the process of finding gold).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "Why can’t Jeff go to the movie theater?",
+              "options": [
+                "A. Jeff was going to a concert.",
+                "B. Jeff had a soccer game.",
+                "C. Jeff was reading an ancient dictionary.",
+                "D. Jeff was looking for hidden gold."
+              ],
+              "explanation": "Jeff đang đi nghe hòa nhạc (Jeff was going to a concert).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 16: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit19_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit19_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[alaiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is alive, they are not dead.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandparents are still alive even though they are over 90.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🚀</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bone</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[boun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bone is a hard part of the body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I brought home a nice bone for my dog.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌟</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bother</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɑðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bother is to make the effort to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ No one bothered to wash the dishes today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎨</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">captain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæptin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A captain is the person who leads a ship or airplane.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The captain sailed his ship to Australia.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conclusion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənklu:ʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The conclusion of something is the final part of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At the conclusion of the race, the spectators cheered for the winner.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🧩</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">doubt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[daut]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Doubt is a feeling of not being sure.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have doubt that the story is true.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏆</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">explore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksplɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To explore is to look for new places.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He wants to explore the world and see new things.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">foreign</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ(:)rin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is foreign, it is from a different country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mexican food is a popular foreign food.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎸</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">glad</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[glæd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are glad, you are happy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I am glad you came to my party.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌍</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">however</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hauevər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">However means despite or not being influenced by something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She is a great cook. However, she never had professional lessons.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">injustice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[indʒʌstis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Injustice is a lack of fairness or justice.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Putting an innocent person in jail is an act of injustice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🚀</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">international</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intərnæʃənəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is international, it involves more than one country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The United Nations is a powerful international organization.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌟</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lawyer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔ:jər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A lawyer works with the law and represents people in court.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lawyer left the courthouse after the judge made her decision.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎨</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mention</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[menʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To mention something is to talk about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctors mentioned the problems that the patient was having.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">policy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paləsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A policy is a rule.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He told us that his policy was to put customers first.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🧩</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">social</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[souʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is social, it is about many people in a community.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People should come together and fix the world's social problems.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏆</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">speech</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spi:tʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A speech is something said to a group of people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She gave a speech to the class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">staff</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stæf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A staff is a group of people working together in a company.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad has a staff of four people to help him at the office.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎸</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">toward</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[təwɔ:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you go toward something, you go closer to it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Santa walked toward my house with a special tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌍</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wood</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wud]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Wood is the thing that trees are made of.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I put the pieces of wood in a pile.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "mention",
+              "options": [
+                "to say",
+                "to look at",
+                "to not believe",
+                "to be happy"
+              ],
+              "explanation": "mention nghĩa là nói đến (to say/talk about).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "social",
+              "options": [
+                "about many countries",
+                "not dead",
+                "about many people",
+                "about a different country"
+              ],
+              "explanation": "social nghĩa là thuộc về xã hội, liên quan đến nhiều người.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "3",
+              "content": "lawyer",
+              "options": [
+                "to be treated unfairly",
+                "a person who works with the law",
+                "leader",
+                "a part of the body"
+              ],
+              "explanation": "lawyer là luật sư.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "4",
+              "content": "however",
+              "options": [
+                "the last part",
+                "part of a tree",
+                "a rule",
+                "despite something"
+              ],
+              "explanation": "however có nghĩa là tuy nhiên (despite something).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "5",
+              "content": "bother",
+              "options": [
+                "to look for new places",
+                "to make the effort to do something",
+                "to talk about something",
+                "to not believe"
+              ],
+              "explanation": "bother nghĩa là cất công, nỗ lực làm gì.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank: wood, policy, staff, toward, speech",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "My new desk is made of (wo____[6]).",
+              "explanation": "desk made of wood (gỗ).",
+              "correctAnswer": "wood"
+            },
+            {
+              "id": "7",
+              "content": "Students must start class at 9:00 each morning. This is the school's (po____[7]).",
+              "explanation": "rule (quy định) -> policy.",
+              "correctAnswer": "policy"
+            },
+            {
+              "id": "8",
+              "content": "There are over 500 people on the hospital's (st____[8]).",
+              "explanation": "people working -> staff (nhân viên).",
+              "correctAnswer": "staff"
+            },
+            {
+              "id": "9",
+              "content": "Go (to____[9]) the river, but stop before you get in the water!",
+              "explanation": "hướng về phía -> toward.",
+              "correctAnswer": "toward"
+            },
+            {
+              "id": "10",
+              "content": "The president gave a (sp____[10]) last night.",
+              "explanation": "give a speech (bài phát biểu).",
+              "correctAnswer": "speech"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "He gave a talk to a group of people at the meeting. (spe[11])",
+              "explanation": "talk to a group -> speech.",
+              "correctAnswer": "speech"
+            },
+            {
+              "id": "12",
+              "content": "Did anyone make the effort to do their homework? (bo[12])",
+              "explanation": "make the effort -> bother.",
+              "correctAnswer": "bother"
+            },
+            {
+              "id": "13",
+              "content": "The chair is made of the material trees are made of. (wo[13])",
+              "explanation": "material trees are made of -> wood.",
+              "correctAnswer": "wood"
+            },
+            {
+              "id": "14",
+              "content": "The group of workers helped him with his work. (s[14])",
+              "explanation": "group of workers -> staff.",
+              "correctAnswer": "staff"
+            },
+            {
+              "id": "15",
+              "content": "He is not dead; I saw him yesterday. (a[15])",
+              "explanation": "not dead -> alive.",
+              "correctAnswer": "alive"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Fill in the blanks with the correct words from the word bank: mentioned, however, policy, staff, speech, bothered, conclusion, injustice, bones, doubt",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "My teacher's name is Mrs. Smith. Yesterday, she gave a (sp____[16]) to our class.",
+              "explanation": "gave a speech.",
+              "correctAnswer": "speech"
+            },
+            {
+              "id": "17",
+              "content": "She said there was a new (po____[17]) about the school diet.",
+              "explanation": "new policy (quy định).",
+              "correctAnswer": "policy"
+            },
+            {
+              "id": "18",
+              "content": "The school's (st____[18]) decided that their students didn't eat healthily.",
+              "explanation": "school staff (nhân viên).",
+              "correctAnswer": "staff"
+            },
+            {
+              "id": "19",
+              "content": "She said milk gives our bodies stronger (bo____[19]).",
+              "explanation": "stronger bones (xương).",
+              "correctAnswer": "bones"
+            },
+            {
+              "id": "20",
+              "content": "She also (me____[20]) that sugar is bad for us.",
+              "explanation": "mentioned (nhắc đến).",
+              "correctAnswer": "mentioned"
+            },
+            {
+              "id": "21",
+              "content": "She said she had no (do____[21]) that we would all feel better.",
+              "explanation": "no doubt (không nghi ngờ).",
+              "correctAnswer": "doubt"
+            },
+            {
+              "id": "22",
+              "content": "We all thought that it was an (in____[22]).",
+              "explanation": "an injustice (sự bất công).",
+              "correctAnswer": "injustice"
+            },
+            {
+              "id": "23",
+              "content": "But at the (co____[23]) of class, she told us one more thing, 'It was a joke!'",
+              "explanation": "at the conclusion (cuối).",
+              "correctAnswer": "conclusion"
+            },
+            {
+              "id": "24",
+              "content": "(Ho____[24]), no one thought that it was very funny.",
+              "explanation": "however (tuy nhiên).",
+              "correctAnswer": "however"
+            },
+            {
+              "id": "25",
+              "content": "And no students (bo____[25]) to laugh.",
+              "explanation": "bothered to laugh (bận tâm cười).",
+              "correctAnswer": "bothered"
+            }
+          ],
+          "questionType": "Điền từ"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Shipwrecked</h1>        <p style=\"margin-bottom: 1rem;\">Simon Yates was a <b>lawyer</b>. He helped many people. <b>However</b>, he was not a nice man. His <b>policy</b> was to help only rich people. He didn't <b>bother</b> about <b>social</b> <b>injustice</b>. He made a lot of money, but many people didn't like him. Even people on his <b>staff</b> didn't like him. They wanted bad things to happen to him. In fact, they were <b>glad</b> when he got into trouble.</p>    <p style=\"margin-bottom: 1rem;\">Simon had a very bad day. He did many things wrong and lost his job. Soon, he didn't have any money. His wife, Mrs. Yates, began to have <b>doubts</b> about him. Simon wanted to start a new life. He planned to leave the country.</p>    <p style=\"margin-bottom: 1rem;\">He <b>mentioned</b> his plan to the <b>captain</b> of a ship. The <b>captain</b> was <b>exploring</b> the world. The <b>captain</b> felt bad for Simon and said, \"I will take you to <b>foreign</b> countries.\" They left the next day.</p>    <p style=\"margin-bottom: 1rem;\">Near the <b>conclusion</b> of their <b>international</b> trip, the weather turned bad. A wave pushed Simon off the boat. But he was <b>alive</b>. He swam <b>toward</b> an island. After a long time he got there.</p>    <p style=\"margin-bottom: 1rem;\">At first he was upset. He was lost and alone. \"I'll never go home again,\" he thought. He had a lot of problems, but he survived. He built a house in a tree. He lived on a diet of fish. He made tools from <b>wood</b> and <b>bones</b>. He made a cup to drink rainwater.</p>    <p style=\"margin-bottom: 1rem;\">Slowly he learned to be happy on the island. He swam every day. He had trouble sometimes, but he always found a way to fix the problem. Life was simple. He liked it.</p>    <p style=\"margin-bottom: 1rem;\">Finally, people on a ship saw Simon on the island. They wanted to take him home. But Simon was happy. He gave them a long <b>speech</b> about life. He said he wanted to stay. He liked his new, simple life more than his old life.</p></div>",
+      "imageUrl": "/unit19_story.png",
+      "sections": [
+        {
+          "id": "sec5_reading",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "26",
+              "content": "What is this story about?",
+              "options": [
+                "How the captain of a ship explored foreign places",
+                "How a lawyer stayed alive alone on an island",
+                "Why a man and a woman went on an international trip",
+                "Why it is a good policy to worry about social problems"
+              ],
+              "explanation": "Câu chuyện kể về một luật sư sống sót một mình trên đảo.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "27",
+              "content": "Why does Simon not stay on the boat?",
+              "options": [
+                "The staff do not like him.",
+                "He wants to swim toward an island.",
+                "A wave pushes him off the ship.",
+                "He does not like the diet of only fish."
+              ],
+              "explanation": "Một cơn sóng đã đẩy ông ta khỏi thuyền (A wave pushed Simon off the boat).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "28",
+              "content": "How does Simon stay alive on the island?",
+              "options": [
+                "He makes tools from bones and wood.",
+                "He makes clothes from a tree.",
+                "He eats food from the trees.",
+                "He uses a cup to drink seawater."
+              ],
+              "explanation": "Ông ta tạo ra công cụ từ xương và gỗ (He made tools from wood and bones).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "29",
+              "content": "What did Simon mention in his speech?",
+              "options": [
+                "He wanted to see Mrs. Yates.",
+                "He was unhappy to be alone.",
+                "He was glad to be on the island.",
+                "He had doubts about staying on the island."
+              ],
+              "explanation": "Ông nói muốn ở lại và thích cuộc sống mới (glad to be on the island).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "30",
+              "content": "What happens near the conclusion of Simon's trip?",
+              "options": [
+                "The weather became very bad.",
+                "He saw a ship",
+                "He went home",
+                "He got lost"
+              ],
+              "explanation": "Gần cuối chuyến đi quốc tế, thời tiết trở nên tồi tệ (the weather turned bad).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 19: Volume 1",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
+}

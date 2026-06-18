@@ -1,0 +1,298 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit18_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit18_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">argue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑːrgjuː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To argue is to angrily speak to someone because you do not agree.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We argued about where to go for dinner.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">communicate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmjuːnəkeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To communicate is to give information by talking, writing, etc.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I communicated with Paul about his new ideas.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crowd</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kraud]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A crowd is a large group of people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A large crowd had gathered on the street to see the accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">depend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To depend on someone or something is to need them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Children depend on their parents for many things.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dish is a plate.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She put a clean white dish on the table.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">empty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[empti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is empty, it does not have anything in it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My gas tank was almost empty, so I couldn't drive my car very long.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exact</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[igzækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is exact, it is just the right amount.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please use the exact amount of sugar for the cake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fresh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[freʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fresh, it is new.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I just bought these oranges. They are very fresh.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gather</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gæðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To gather is to collect several things usually from different places.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sam gathered some flowers for his mother.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">indicate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[indikeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To indicate means to show, point or make something clear.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He pointed to his eyes to indicate where he had hurt himself.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">item</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aitəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An item is a thing that you buy or sell.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have many items for school in my bag.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">offer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔːfər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To offer is to present someone with something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He offered me the keys to his car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">price</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prais]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The price of something is how much it costs.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ What is the price of this item?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">product</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑːdʌkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A product is something that is made.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister has many beauty products in her room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">property</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑːpərti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Property is something that someone owns.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The house is now my property.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">purchase</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pəːrtʃəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To purchase something is to buy it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I recently purchased a new car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recommend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rekəmend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To recommend something is to say that someone should do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My doctor recommended that I get some exercise.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">select</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[silekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To select something is to choose it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I hope that I selected the right answers on the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tool</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tuːl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tool is something that helps you do a task.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We used a tool to fix the window.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">treat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[triːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To treat is to act in a certain way toward someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The cats treated the mouse very nicely.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. empty",
+              "options": [
+                "a. in your mind",
+                "b. not containing anything",
+                "c. easy to see",
+                "d. sick"
+              ],
+              "explanation": "empty: trống rỗng",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "2. depend",
+              "options": [
+                "a. to move forward",
+                "b. to jump",
+                "c. to need someone or something",
+                "d. to look at something"
+              ],
+              "explanation": "depend: phụ thuộc",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "3",
+              "content": "3. price",
+              "options": [
+                "a. a sweet candy",
+                "b. how much something costs",
+                "c. a music show",
+                "d. a school"
+              ],
+              "explanation": "price: giá tiền",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "4",
+              "content": "4. select",
+              "options": [
+                "a. to change",
+                "b. to keep doing something",
+                "c. to choose",
+                "d. to fight"
+              ],
+              "explanation": "select: lựa chọn",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "5. item",
+              "options": [
+                "a. a path",
+                "b. someone who keeps the law",
+                "c. a thing",
+                "d. a place to watch a show"
+              ],
+              "explanation": "item: món đồ, sự vật",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "6",
+              "content": "6. tool",
+              "options": [
+                "a. something you study",
+                "b. a group of players",
+                "c. a loud noise",
+                "d. something that helps you do a task"
+              ],
+              "explanation": "tool: công cụ",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "7",
+              "content": "7. crowd",
+              "options": [
+                "a. a group of people",
+                "b. a flat piece of wood",
+                "c. 100 years",
+                "d. a sign"
+              ],
+              "explanation": "crowd: đám đông",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "8",
+              "content": "8. dish",
+              "options": [
+                "a. something no one knows",
+                "b. an answer",
+                "c. a grown person",
+                "d. a plate"
+              ],
+              "explanation": "dish: cái đĩa",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "9",
+              "content": "9. communicate",
+              "options": [
+                "a. to shut",
+                "b. to go to where you can't be seen",
+                "c. to talk",
+                "d. to leave"
+              ],
+              "explanation": "communicate: giao tiếp, nói chuyện",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "10",
+              "content": "10. exact",
+              "options": [
+                "a. not on the top",
+                "b. not light",
+                "c. from a place nearby",
+                "d. the perfect amount"
+              ],
+              "explanation": "exact: chính xác",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2 Part A: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. I suggest the oranges. They are delicious! (reco[11])",
+              "explanation": "recommend (gợi ý) tương đồng với suggest.",
+              "correctAnswer": "recommend"
+            },
+            {
+              "id": "12",
+              "content": "2. Do not disagree with your sister. (ar[12])",
+              "explanation": "argue (tranh cãi) tương đồng với disagree.",
+              "correctAnswer": "argue"
+            },
+            {
+              "id": "13",
+              "content": "3. The company's things that it makes are very useful in the kitchen. (Pr[13])",
+              "explanation": "products (sản phẩm) tương đồng với things that it makes.",
+              "correctAnswer": "products"
+            },
+            {
+              "id": "14",
+              "content": "4. We can talk by phone. (com[14])",
+              "explanation": "communicate (giao tiếp) tương đồng với talk.",
+              "correctAnswer": "communicate"
+            },
+            {
+              "id": "15",
+              "content": "5. Why don't you present her a fair price for her house? (of[15])",
+              "explanation": "offer (đề nghị) tương đồng với present.",
+              "correctAnswer": "offer"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2 Part B: Fill in the blanks with the correct words from the word bank.",
+          "content": "Word bank: fresh, select, gathered, dish, treated",
+          "questions": [
+            {
+              "id": "16",
+              "content": "Today, my friend (1[16]) me so nicely. First, he gave me some beautiful (2[17]) flowers. Next, he asked me to (3[18]) any CD from the store, and he bought it for me! Later when we got home, he made me close my eyes. When I opened them, I saw a great meal on a pretty (4[19]). There was even a vase full of flowers that he had (5[20]) from earlier that day. I will never forget this wonderful day.",
+              "explanation": "treated: đối xử",
+              "correctAnswer": "treated"
+            },
+            {
+              "id": "17",
+              "content": "",
+              "explanation": "fresh: tươi",
+              "correctAnswer": "fresh"
+            },
+            {
+              "id": "18",
+              "content": "",
+              "explanation": "select: chọn lựa",
+              "correctAnswer": "select"
+            },
+            {
+              "id": "19",
+              "content": "",
+              "explanation": "dish: cái đĩa",
+              "correctAnswer": "dish"
+            },
+            {
+              "id": "20",
+              "content": "",
+              "explanation": "gathered: thu thập, hái",
+              "correctAnswer": "gathered"
+            }
+          ],
+          "questionType": "Điền từ"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Little Red Chicken</h1>        <p style=\"margin-bottom: 1rem;\">A little red chicken had a store in a small town. She sold many different <b>items</b> to people in the town. The people loved her <b>products</b>.</p>    <p style=\"margin-bottom: 1rem;\">One day, a cat came to her <b>property</b>. He saw the sign that <b>indicated</b> where the chicken's store was located. He wanted to <b>purchase</b> bread, but the chicken's store was almost <b>empty</b>. She had only a bag of wheat.*</p>    <p style=\"margin-bottom: 1rem;\">\"You can use the wheat to make bread,\" the chicken said.</p>    <p style=\"margin-bottom: 1rem;\">\"No, I don't want to work,\" the cat said. \"I just want to buy bread.\" The cat became angry and left the store.</p>    <p style=\"margin-bottom: 1rem;\">Later, the little red chicken saw the cat in a <b>crowd</b>.</p>    <p style=\"margin-bottom: 1rem;\">\"I will help you make the bread,\" she said.</p>    <p style=\"margin-bottom: 1rem;\">But the cat <b>treated</b> her badly. He did not even <b>communicate</b> with her. He did not want to do any work.</p>    <p style=\"margin-bottom: 1rem;\">So the chicken decided to make the bread. She <b>selected</b> the <b>exact</b> amount of wheat to make <b>fresh</b> bread. She used a stone to pound the wheat to get it ready. Soon, her bread was ready.</p>    <p style=\"margin-bottom: 1rem;\">The cat came and saw the bread on a <b>dish</b>.</p>    <p style=\"margin-bottom: 1rem;\">\"Give me some of your bread,\" he said.</p>    <p style=\"margin-bottom: 1rem;\">\"No,\" said the little red chicken. \"You did not help me make the bread. So you shall not have any to eat.\"</p>    <p style=\"margin-bottom: 1rem;\">The cat <b>argued</b> with the chicken. He tried to <b>offer</b> a <b>price</b> for it. But the little red chicken did not want to sell her bread.</p>    <p style=\"margin-bottom: 1rem;\">\"Don't <b>depend</b> on others to do work for you,\" said the little red chicken.</p>    <p style=\"margin-bottom: 1rem;\">\"Then how will I get bread?\" the cat asked.</p>    <p style=\"margin-bottom: 1rem;\">\"I <b>recommend</b> doing some work,\" said the little red chicken. \"Use a <b>tool</b> to plant your own wheat. When it grows big, you can <b>gather</b> it and make your own bread. You need to learn to do work for what you want.\"</p>    <p style=\"margin-bottom: 1rem;\">*wheat - a type of plant used to make bread</p></div>",
+      "imageUrl": "/unit18_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. What is the story about?",
+              "options": [
+                "a. A chicken finding a friend to depend on",
+                "b. A chicken making bread out of wheat",
+                "c. Why a cat's store did not have any items",
+                "d. The exact amount of wheat needed to make bread"
+              ],
+              "explanation": "Theo câu chuyện, gà con làm bánh mì từ lúa mì.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "22",
+              "content": "2. What did the cat do when the chicken asked him to help make the bread?",
+              "options": [
+                "a. He did not communicate with her.",
+                "b. He argued with the little red chicken.",
+                "c. He said that he would gather all the things needed to make the bread.",
+                "d. He treated her very nicely."
+              ],
+              "explanation": "He did not even communicate with her.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "3. How did the cat find the chicken's store?",
+              "options": [
+                "a. He saw tools being sold outside of the store.",
+                "b. He saw a stone with the store's name.",
+                "c. His friend told him to purchase bread there.",
+                "d. He saw a sign that indicated her property."
+              ],
+              "explanation": "He saw the sign that indicated where the chicken's store was located.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "24",
+              "content": "4. What did the cat do when he saw the fresh bread?",
+              "options": [
+                "a. He selected the product for himself.",
+                "b. He tried to buy some of it for a price.",
+                "c. He brought a crowd of friends with him to eat.",
+                "d. He asked why her store was empty."
+              ],
+              "explanation": "He tried to offer a price for it.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "5. What did the little red chicken recommend the cat to do to have some bread?",
+              "options": [
+                "a. Use a tool to plant your own wheat.",
+                "b. Ask another friend in the crowd.",
+                "c. Come back the next morning.",
+                "d. Offer a higher price."
+              ],
+              "explanation": "Cô khuyên anh dùng công cụ để trồng lúa mì của riêng mình.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 18: Volume 1",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
+}

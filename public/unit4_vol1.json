@@ -1,0 +1,245 @@
+{
+  "parts": [
+    {
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 16px; padding-top: 16px; border-top: 2px dashed #e2e8f0;\"><h3 style=\"font-size: 18px; font-weight: bold; color: #334155; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0;\">Detailed Meanings</h3><div style=\"font-family: 'Inter', sans-serif; width: 100%; position: relative;\"><div style=\"position: absolute; left: 32px; top: 0; bottom: 0; width: 2px; background-color: #a855f7;\"></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">👔</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">appropriate</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[əpróupriət]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When a thing is appropriate, it is right or normal.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ It’s <b>appropriate</b> to wear a suit when you go to the office.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🚷</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">avoid</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[əvɔ́id]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To avoid something is to stay away from it.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ <b>Avoid</b> the broken bottle on the floor.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😇</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">behave</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[bihéiv]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To behave is to act in a particular way, especially to be good.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ She always <b>behaves</b> well when her father is around.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😌</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">calm</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[kɑːm]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When someone is calm, they do not get excited or upset.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ A nice warm bath makes me feel so <b>calm</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😟</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">concern</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[kənsə́ːrn]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">Concern is a feeling of worry.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I was filled with <b>concern</b> after reading the newspaper.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">👶</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">content</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[kəntént]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To be content is to be happy and not want more.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The baby looked very <b>content</b> sitting on the floor.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🚌</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">expect</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[ikspékt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If you expect something to happen, you believe it will happen.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I <b>expect</b> the bus to be here very soon.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">📅</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">frequently</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[fríːkwəntli]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adv.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">When something happens frequently, it happens often.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ We meet <b>frequently</b>, either at the beginning or ending of the week.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🚬</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">habit</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[hǽbit]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A habit is a thing that you do often.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Smoking is a bad <b>habit</b> that can kill you.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">👨‍🏫</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">instruct</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[instrʌ́kt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To instruct is to teach.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ My teacher <b>instructs</b> us in several subjects.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">📰</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">issue</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[íʃuː]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">An issue is an important topic.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The men spoke about <b>issues</b> that were important to the people.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">💸</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">none</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[nʌn]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">pron.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">None means not any of someone or something.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ He spent all his money. There is <b>none</b> left.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">⏳</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">patient</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[péiʃənt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If a person is patient, they don’t become angry or upset easily.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I had to be <b>patient</b> and wait until 5 o’clock to leave.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">👍</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">positive</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[pɑ́zətiv]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If something is positive, it is good.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ She has a <b>positive</b> future ahead of her after finishing college.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">⚖️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">punish</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[pʌ́niʃ]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To punish means to make someone suffer for breaking the rules or laws.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ To <b>punish</b> me, my teacher had me stand in the corner.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">👨‍⚖️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">represent</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[rèprizént]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To represent is to speak or act for a person or group.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ My lawyer will <b>represent</b> me in court.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🤝</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">shake</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[ʃeik]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To shake is to move back and forth or up and down quickly.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ When people <b>shake</b> hands, it usually means they agree.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🧈</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">spread</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[spred]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To spread is to move quickly to more places.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I like to <b>spread</b> butter on my toast.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🚶</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">stroll</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[stroul]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To stroll means to walk slowly and calmly.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ My dog and I <b>strolled</b> through the park today.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🏡</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">village</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[vílidʒ]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A village is a very small town.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ There are only a few houses in my <b>village</b>.</p></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "u4_wl_ex1",
+          "title": "Part A: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "The story about the police dog got to many people in town. (spr[1])",
+              "explanation": "spread (lan truyền) tương đồng với 'got to many people' (đến với nhiều người).",
+              "correctAnswer": "spread"
+            },
+            {
+              "id": "2",
+              "content": "I was happy to sit and listen to music all night. (con[2])",
+              "explanation": "content (hài lòng, vui vẻ) tương đồng với 'happy' (vui vẻ).",
+              "correctAnswer": "content"
+            },
+            {
+              "id": "3",
+              "content": "The house will move back and forth if a strong wind blows. (sh[3])",
+              "explanation": "shake (rung lắc) tương đồng với 'move back and forth'.",
+              "correctAnswer": "shake"
+            },
+            {
+              "id": "4",
+              "content": "I waited for the monster to come out of the cave. (ex[4])",
+              "explanation": "expect (chờ đợi, mong đợi) tương đồng với 'waited for'.",
+              "correctAnswer": "expected"
+            },
+            {
+              "id": "5",
+              "content": "I didn’t want to talk to my sister, so I stayed away from her. (av[5])",
+              "explanation": "avoid (tránh xa) tương đồng với 'stayed away from'.",
+              "correctAnswer": "avoided"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "u4_wl_ex2",
+          "title": "Part B: Check (V) the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u4_q6",
+              "content": "Before Kimberly sang, __________ .",
+              "options": [
+                "the teacher reminded everyone to behave",
+                "she instructed the people to go to sleep"
+              ],
+              "explanation": "Trước khi hát thì nhắc nhở mọi người cư xử đúng mực (behave) là hợp lý.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u4_q7",
+              "content": "When we heard the loud sound, __________ .",
+              "options": [
+                "I turned around out of habit",
+                "there was none left"
+              ],
+              "explanation": "Quay lại theo thói quen (habit) khi nghe tiếng động lớn là phản ứng tự nhiên.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u4_q8",
+              "content": "The man told us to be quiet, __________ .",
+              "options": [
+                "so I decided to stroll through town",
+                "so I knew it was not appropriate to talk"
+              ],
+              "explanation": "Người đàn ông bảo im lặng nên biết rằng nói chuyện là không phù hợp (appropriate).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u4_q9",
+              "content": "They asked us to wait, __________ .",
+              "options": [
+                "so I felt concerned about them",
+                "so I had to be patient"
+              ],
+              "explanation": "Họ bảo đợi nên tôi phải kiên nhẫn (patient).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u4_q10",
+              "content": "I met a new friend yesterday, and __________ .",
+              "options": [
+                "frequently I would sit and read",
+                "I shook his hand"
+              ],
+              "explanation": "Gặp bạn mới thì bắt tay (shook his hand) là phép lịch sự.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "u4_wl_ex3",
+          "title": "Part C: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u4_q11",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "The girl's positive words made me feel better.",
+                "We took the village out of the house."
+              ],
+              "explanation": "Từ ngữ tích cực (positive) làm cảm thấy tốt hơn là có nghĩa.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u4_q12",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "The calm girl yelled a lot.",
+                "The team members asked Kate to represent them at the dinner."
+              ],
+              "explanation": "Đại diện (represent) cho đội là hợp lý. Người điềm tĩnh (calm) thì không la hét nhiều.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u4_q13",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "I was content to stay at home by the warm fire.",
+                "My mom punished me for doing my homework."
+              ],
+              "explanation": "Hài lòng (content) khi ở nhà bên bếp lửa là có nghĩa.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u4_q14",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "The man expected me to say yes.",
+                "The issue did not taste very good."
+              ],
+              "explanation": "Mong đợi (expected) ai đó nói đồng ý là có nghĩa.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u4_q15",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "I behaved wisely while I was asleep.",
+                "I avoided my friend because she had laughed at me."
+              ],
+              "explanation": "Tránh mặt (avoided) bạn vì bị cười nhạo là có lý.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif;\"><img src=\"/unit4_story.png\" style=\"width: 100%; border-radius: 12px; margin-bottom: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2; text-transform: uppercase;\">The Dog's Bell</h1>        <p style=\"margin-bottom: 1rem; line-height: 1.6; color: #374151; font-size: 1.125rem;\">John's dog was a bad dog. He bit people <b>frequently</b>. John had great <b>concern</b> about this. It was not an <b>appropriate</b> way for a dog to <b>behave</b>. His friends in the <b>village</b> always <b>expected</b> the dog to bite them. The news about John's dog <b>spread</b> through the <b>village</b>. <b>None</b> of the people wanted to go to John's house.</p>    <p style=\"margin-bottom: 1rem; line-height: 1.6; color: #374151; font-size: 1.125rem;\">John tried to <b>instruct</b> the dog to <b>behave</b>, but it never worked. He tried to be <b>patient</b> and teach the dog to be <b>calm</b>. That also didn't work. John didn't want to <b>punish</b> the dog. \"How will I stop my dog's bad <b>habit</b>?\" John asked himself.</p>    <p style=\"margin-bottom: 1rem; line-height: 1.6; color: #374151; font-size: 1.125rem;\">John's friend came to talk to him about the <b>issue</b>. During their important meeting, his friend said, \"The people in the <b>village</b> asked me to <b>represent</b> them. We want your dog to stop this <b>habit</b>. Why don't you put a bell around the dog's neck? This way, we would hear your dog coming down the street.\"</p>    <p style=\"margin-bottom: 1rem; line-height: 1.6; color: #374151; font-size: 1.125rem;\">John thought this was a great idea. Now, people could stay away from the dog. It would not be able to bite anyone anymore.</p>    <p style=\"margin-bottom: 1rem; line-height: 1.6; color: #374151; font-size: 1.125rem;\">The dog liked the bell, too. People looked at him when they heard his bell. This made the dog very <b>content</b>. He liked the song the bell played when he walked.</p>    <p style=\"margin-bottom: 1rem; line-height: 1.6; color: #374151; font-size: 1.125rem;\">One day, John's dog <b>strolled</b> through the <b>village</b> and met some other dogs. He <b>expected</b> them to want a bell like his. But they laughed at his bell. They said the bell made people <b>avoid</b> him. John's dog <b>shook</b> his head. \"No, they look at me because they like the bell.\"</p>    <p style=\"margin-bottom: 1rem; line-height: 1.6; color: #374151; font-size: 1.125rem;\">The other dogs said, \"You have the wrong idea of what makes you popular. Of course they like your bell. It tells them where you are so they can <b>avoid</b> you. You aren't able to bite them anymore!\"</p>    <p style=\"margin-bottom: 1rem; line-height: 1.6; color: #374151; font-size: 1.125rem;\">You see, being popular isn't something <b>positive</b> when it's for the wrong reason.</p></div>",
+      "sections": [
+        {
+          "id": "u4_rd_ex1",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u4_q16",
+              "content": "What is this story mainly about?",
+              "options": [
+                "A. A dog that is frequently bad",
+                "B. A dog's stroll through town",
+                "C. A content man and his dog",
+                "D. A village that liked John's dog"
+              ],
+              "explanation": "Câu chuyện chủ yếu nói về một con chó thường xuyên làm điều xấu (cắn người).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u4_q17",
+              "content": "What is true of the dog?",
+              "options": [
+                "A. He likes none of John's friends.",
+                "B. He shakes his head too much.",
+                "C. He bites when it's not appropriate.",
+                "D. He expects people to be calm around him."
+              ],
+              "explanation": "Con chó hay cắn người một cách không thích hợp.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "u4_q18",
+              "content": "Why did the issue with the dog bother John?",
+              "options": [
+                "A. People didn't think of John in a positive way.",
+                "B. People avoided going to John's house.",
+                "C. People didn't want John to represent them.",
+                "D. People didn't like the song that John played."
+              ],
+              "explanation": "Vấn đề làm John bận tâm là mọi người tránh đến nhà John vì con chó.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u4_q19",
+              "content": "What did John do to stop the dog's bad habit?",
+              "options": [
+                "A. He instructed the dog on learning tricks.",
+                "B. He punished the dog for biting.",
+                "C. He was patient and showed concern.",
+                "D. He put a bell around the dog's neck."
+              ],
+              "explanation": "John đã đeo một cái chuông vào cổ con chó để ngăn thói quen xấu.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "u4_q20",
+              "content": "What did the other dogs say about the bell?",
+              "options": [
+                "A. It makes people avoid him.",
+                "B. It sounds beautiful.",
+                "C. It is very heavy.",
+                "D. It is a positive thing."
+              ],
+              "explanation": "Những con chó khác nói rằng cái chuông làm cho mọi người tránh xa con chó của John.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 4: Volume 1",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit8_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit8_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accept</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æksept]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To accept something that is offered is to take it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I accepted the girl's very nice gift.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arrange</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əreindʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To arrange things is to put them in the right place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please arrange the bowling pins in order so we can play.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">attend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ətend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To attend something is to go to it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister and I attend the same school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">balance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bæləns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To balance something is to keep it from falling.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We saw an elephant balance itself on a ball.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contrast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑntræst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A contrast is the sharp difference between two things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The contrast between my parents is very noticeable.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">encourage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkə:ridʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To encourage someone is to make them want to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My football coach will encourage us when we are losing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">familiar</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fəmiljər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is familiar to you, you know them well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The two friends were very familiar with each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grab</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[græb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To grab is to take a hold of someone or something suddenly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I grabbed a pear from the tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hang</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hæŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To hang something is to keep it above the ground.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I drew a picture of my family, and my mother hung it on the wall.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">huge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hju:dʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is huge, it is very big.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At work, my father drives a huge truck.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">necessary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nesəseri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is necessary, you must do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is necessary to have a passport when you travel to a foreign country.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pattern</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pætərn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pattern is a way in which something is done or organized.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My pattern of brushing my teeth is the same as most people's.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">propose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəpouz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To propose something is to say that it should be done.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Santa Claus proposed that I try to be a good boy all year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">purpose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pə:rpəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A purpose is the reason that you do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The purpose of exercising is to get into shape.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">release</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rili:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To release something is to stop holding it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She released the bird from her hands.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">require</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rikwaiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To require something is to say that it is necessary.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We require teachers to have a university degree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">single</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[siŋgəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is single, then there is only one.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have a single key in my hand.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">success</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səkses]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Success is doing something well that you choose to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My daughter was a big success at school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tear</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[teər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tear something means to pull it apart.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is easy to tear paper.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">theory</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θi:əri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A theory is an idea about how something works.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We talked about Einstein's theory of relativity in class.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_ex1",
+          "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "10",
+              "content": "She looks like someone that I know well, (fami[10])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "familiar"
+            },
+            {
+              "id": "11",
+              "content": "Drinking water is something that she must do. (neces[11])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "necessary"
+            },
+            {
+              "id": "12",
+              "content": "He has an idea of how the machine works, (the[12])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "theory"
+            },
+            {
+              "id": "13",
+              "content": "The reason that I am doing this is to help children, (pur[13])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "purpose"
+            },
+            {
+              "id": "14",
+              "content": "My teacher will make me want to get good grades, (enc[14])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "encourage"
+            },
+            {
+              "id": "15",
+              "content": "I agree with your idea. I think it will work. (ac[15])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "accept"
+            },
+            {
+              "id": "16",
+              "content": "It is difficult to keep from falling when you stand on one foot, (ba[16])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "balance"
+            },
+            {
+              "id": "17",
+              "content": "Her routine of exercising after work is common for many people. (Pa[17])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "pattern"
+            },
+            {
+              "id": "18",
+              "content": "There is a big difference between day and night. (c[18])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "contrast"
+            },
+            {
+              "id": "19",
+              "content": "The Earth has a solitary moon, (s[19])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "single"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "used when something must be done",
+              "options": [
+                "propose",
+                "hang",
+                "require",
+                "tear"
+              ],
+              "explanation": "require nghĩa là yêu cầu (used when something must be done).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "to stop something from falling down",
+              "options": [
+                "balance",
+                "arrange",
+                "attend",
+                "release"
+              ],
+              "explanation": "balance nghĩa là giữ thăng bằng (to stop something from falling down).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "a way that something is very different",
+              "options": [
+                "grab",
+                "success",
+                "accept",
+                "contrast"
+              ],
+              "explanation": "contrast nghĩa là sự tương phản (a way that something is very different).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "4",
+              "content": "an idea about something",
+              "options": [
+                "theory",
+                "familiar",
+                "necessary",
+                "encourage"
+              ],
+              "explanation": "theory nghĩa là lý thuyết (an idea about something).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "5",
+              "content": "the only one",
+              "options": [
+                "pattern",
+                "single",
+                "huge",
+                "attend"
+              ],
+              "explanation": "single nghĩa là duy nhất (the only one).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec1_ex2_b",
+          "title": "Part B: Check (V) the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "20",
+              "content": "It started to rain, ____________.",
+              "options": [
+                "it hung on the wall",
+                "so I grabbed my umbrella."
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "21",
+              "content": "When she heard I was leaving, ____________.",
+              "options": [
+                "she proposed a party",
+                "she had huge fun"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "Don't pull on my shirt, or ____________.",
+              "options": [
+                "you might tear it",
+                "you might arrange it"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "If you try hard, ____________.",
+              "options": [
+                "you can attend many things",
+                "you will have success"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "When I catch fish, ____________.",
+              "options": [
+                "I usually release them back into the water",
+                "they require a good dinner"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the Sun and the Moon Were Made</h1>        <p style=\"margin-bottom: 1rem;\">Do you ever wonder where the moon and the sun came from? The Inuit people of Alaska have a <b>theory</b>.</p>    <p style=\"margin-bottom: 1rem;\">They tell a story about a beautiful girl. She was very nice. In <b>contrast</b>, her brother was a mean little boy. One day he <b>proposed</b> something. \"We should go to a party,\" he said. The girl <b>accepted</b>. First, it was <b>necessary</b> for her to prepare. She <b>arranged</b> her hair and put on nice clothes. This <b>required</b> a lot of time. But the girl worked hard, and soon she had <b>success</b>. She looked perfect.</p>    <p style=\"margin-bottom: 1rem;\">They <b>attended</b> the party together. The girl was having fun. Later, she walked into the bathroom. Suddenly, the lights were turned off! Someone <b>grabbed</b> her hair and <b>tore</b> her clothes. She ran out of the bathroom. She wanted to know who did this to her.</p>    <p style=\"margin-bottom: 1rem;\">Then she had an idea. She fixed her hair again. This time it was even more beautiful. She even <b>balanced</b> beautiful jewels in it. She wanted to <b>encourage</b> the person to <b>grab</b> it again. She put black dirt in her hair. The <b>purpose</b> of this was to catch the person.</p>    <p style=\"margin-bottom: 1rem;\">She went to the bathroom again, and it was the same <b>pattern</b>. The lights went off, and someone <b>grabbed</b> her hair. When he <b>released</b> it, his hand was black. The girl returned to the party. She knew there was only a <b>single</b> person with a black hand. When she saw that person, he was very <b>familiar</b>. It was her brother!</p>    <p style=\"margin-bottom: 1rem;\">He ran into the woods. The girl ran after him. They both carried fire so they could see in the dark. The smoke went into the air. As they ran, they grew. They became <b>huge</b>. Then they went into space. When the girl's fire went out, she <b>hung</b> in the sky. She became the moon, and her brother became the sun. They chase each other forever.</p></div>",
+      "imageUrl": "/unit8_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "What is this story about?",
+              "options": [
+                "The contrast between the sun and the moon",
+                "A theory of how the moon and the sun were made",
+                "The purpose of the sun and the moon",
+                "Why it is necessary for the moon to balance in the sky"
+              ],
+              "explanation": "Bài đọc nói về giả thuyết mặt trăng và mặt trời được tạo ra như thế nào.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "7",
+              "content": "Why does the girl encourage someone to grab her hair?",
+              "options": [
+                "She doesn't want him to tear her dress.",
+                "She wants to become huge and hang in the sky.",
+                "She wants to know who grabbed her hair.",
+                "She wants the party to be a success."
+              ],
+              "explanation": "Cô gái làm vậy để xem ai là người đã túm tóc cô.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "8",
+              "content": "What was true of the boy in the story?",
+              "options": [
+                "He accepted the invitation when his sister proposed a party.",
+                "He didn't want to attend the party.",
+                "He was the only person with a black hand.",
+                "He wore a shirt with a beautiful pattern."
+              ],
+              "explanation": "Cậu bé là người duy nhất có bàn tay màu đen vì dính bẩn từ tóc cô gái.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "9",
+              "content": "Why does the girl become angry?",
+              "options": [
+                "The boy doesn't release her hair.",
+                "She is required to arrange her hair.",
+                "The smoke from her fire went into the air.",
+                "She sees someone familiar with a black hand."
+              ],
+              "explanation": "Cô gái nhận ra người làm việc đó chính là em trai của mình.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_reading_q5",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "25",
+              "content": "How does the girl get ready for the party?",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "She arranged her hair and wore a dress with a beautiful pattern."
+            }
+          ],
+          "questionType": "Tự luận"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 8: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

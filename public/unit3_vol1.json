@@ -1,0 +1,291 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\">    <img src=\"/unit3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />  </div><div style=\"display: flex; flex-direction: column; gap: 16px; padding-top: 16px; border-top: 2px dashed #e2e8f0;\"><h3 style=\"font-size: 18px; font-weight: bold; color: #334155; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0;\">Detailed Meanings</h3><div style=\"font-family: 'Inter', sans-serif; width: 100%; position: relative;\"><div style=\"position: absolute; left: 32px; top: 0; bottom: 0; width: 2px; background-color: #a855f7;\"></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">👽</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">alien</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[éiljən]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">An alien is a creature from a different world.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The <b>alien</b> came in peace.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🏘️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">among</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[əmʌ́ŋ]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">prep.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If you are among certain things, they are all around you.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ There was a red apple <b>among</b> the green ones.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">📊</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">chart</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[tʃɑːrt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A chart is a list of information.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ We used a <b>chart</b> to see how we had improved.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">☁️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">cloud</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[klaud]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A cloud is a group of water drops in the sky.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The sky was filled with white <b>clouds</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🤔</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">comprehend</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[kὰmprihénd]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To comprehend something is to understand it.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Henry could not <b>comprehend</b> the message.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🗣️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">describe</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[diskráib]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To describe is to say or write what someone or something is like.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ They <b>describe</b>d their tree as colorful with gold ribbon and a star.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">⏳</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">ever</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[évər]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adv.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">Ever means at any time.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Going skiing last winter was the most fun I've <b>ever</b> had.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">❌</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">fail</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[feil]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To fail means you do not succeed in what you try to do.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Since he <b>failed</b> to get the job, he was sad.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">😊</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">friendly</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[fréndli]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">Friendly is behaving in a pleasant, kind way toward someone.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The <b>friendly</b> animals came up to the girl.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🅰️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">grade</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[greid]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A grade is a score or mark given to someone's work.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I managed to get good <b>grades</b> on my report card.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">↔️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">instead</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[instéd]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adv.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">Instead means in place of.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ He ate the carrot <b>instead</b> of the ice cream.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">📚</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">library</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[láibrèri]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A library is a place where you go to read books.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The <b>library</b> at school is full of books.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🪐</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">planet</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[plǽnit]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A planet is a large round thing in space.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Saturn is the <b>planet</b> with the ring around it.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">📝</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">report</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[ripɔ́ːrt]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">A report is something students write for school.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Karen had trouble writing her <b>report</b>.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🔢</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">several</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[sévərəl]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adj.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">Several is more than two but not many.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ He had to read <b>several</b> books for class.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🧩</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">solve</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[sɑlv]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To solve something is to find an answer to it.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ All the students could easily <b>solve</b> the math problem.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">⚡</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">suddenly</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[sʌ́dnli]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">adv.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">If something happens suddenly, it happens quickly and unexpectedly.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I was <b>suddenly</b> surprised by the cake my friends brought me.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">💭</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">suppose</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[səpóuz]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To suppose is to guess.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ I <b>suppose</b> I should go home now.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">🌌</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">universe</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[júːnəvə̀ːrs]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">n.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">The universe is the known or supposed objects in space.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ The <b>universe</b> is so large that it cannot be measured.</p></div></div><div style=\"display: flex; align-items: flex-start; margin-bottom: 24px; position: relative; z-index: 1;\"><div style=\"width: 64px; flex-shrink: 0; display: flex; justify-content: center; position: relative;\"><div style=\"width: 56px; height: 56px; border-radius: 50%; background-color: white; border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 4px; overflow: hidden;\"><span style=\"font-size: 28px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; text-align: center; margin: 0; padding: 0;\">👁️</span></div></div><div style=\"flex-grow: 1; padding-left: 16px;\"><div style=\"display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px;\"><h4 style=\"font-size: 22px; font-weight: 800; color: #65a30d; margin: 0;\">view</h4><span style=\"font-size: 14px; color: #94a3b8; font-family: monospace;\">[vjuː]</span><span style=\"font-size: 14px; color: #94a3b8; font-style: italic;\">v.</span></div><p style=\"font-size: 16px; color: #334155; margin: 0 0 4px 0; line-height: 1.4;\">To view is to look at something.</p>    <p style=\"font-size: 16px; color: #475569; font-style: italic; margin: 0; line-height: 1.4;\">→ Michael likes to <b>view</b> himself in the mirror.</p></div></div></div></div></div>",
+      "audioUrl": "",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "friendly",
+              "options": [
+                "space",
+                "a list of information",
+                "acting or behaving nicely",
+                "a picture"
+              ],
+              "explanation": "friendly nghĩa là thân thiện (acting or behaving nicely).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "grade",
+              "options": [
+                "a score or mark on someone's work",
+                "a small copy of something larger",
+                "where you go to read books",
+                "a paper written for school"
+              ],
+              "explanation": "grade nghĩa là điểm số.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "view",
+              "options": [
+                "to find an answer",
+                "to not succeed in what you try to do",
+                "to guess",
+                "to look at something"
+              ],
+              "explanation": "view nghĩa là nhìn, ngắm (to look at something).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "4",
+              "content": "ever",
+              "options": [
+                "quickly and unexpectantly",
+                "at anytime",
+                "all around you",
+                "to do the first thing"
+              ],
+              "explanation": "ever nghĩa là bất cứ lúc nào (at anytime).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "library",
+              "options": [
+                "space and things in space",
+                "from a different world",
+                "a place where books are",
+                "a round thing in space"
+              ],
+              "explanation": "library nghĩa là thư viện.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "6",
+              "content": "report",
+              "options": [
+                "many of something",
+                "a round thing",
+                "drops of water in the sky",
+                "a paper"
+              ],
+              "explanation": "report là bài báo cáo, một bài giấy (a paper).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "7",
+              "content": "alien",
+              "options": [
+                "something written for school",
+                "a creature from a different world",
+                "in place of",
+                "a small copy of something"
+              ],
+              "explanation": "alien là sinh vật ngoài hành tinh.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "chart",
+              "options": [
+                "a paper",
+                "a copy",
+                "a group",
+                "a list"
+              ],
+              "explanation": "chart là biểu đồ, danh sách thông tin (a list of information).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "9",
+              "content": "among",
+              "options": [
+                "in the middle of something",
+                "a score or mark",
+                "at anytime",
+                "to understand"
+              ],
+              "explanation": "among nghĩa là ở giữa (in the middle of something).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "solve",
+              "options": [
+                "to guess",
+                "to look at something",
+                "to find an answer",
+                "to not succeed in what you try to do"
+              ],
+              "explanation": "solve nghĩa là giải quyết, tìm ra câu trả lời.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Part B: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "everything that exists in space",
+              "options": [
+                "universe",
+                "instead",
+                "suddenly",
+                "chart"
+              ],
+              "explanation": "universe nghĩa là vũ trụ.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "not an exact amount but less than many",
+              "options": [
+                "ever",
+                "among",
+                "several",
+                "fail"
+              ],
+              "explanation": "several nghĩa là một vài.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "13",
+              "content": "a creature from a different world",
+              "options": [
+                "report",
+                "alien",
+                "view",
+                "solve"
+              ],
+              "explanation": "alien nghĩa là sinh vật ngoài hành tinh.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "in place of",
+              "options": [
+                "solve",
+                "suppose",
+                "instead",
+                "comprehend"
+              ],
+              "explanation": "instead nghĩa là thay vì.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "15",
+              "content": "to guess",
+              "options": [
+                "fail",
+                "suppose",
+                "view",
+                "among"
+              ],
+              "explanation": "suppose nghĩa là đoán, cho rằng.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Report</h1>        <p style=\"margin-bottom: 1rem;\">Lee sat <b>among</b> the books at the <b>library</b> and thought about his group project. They had to turn it in soon, but he hadn't even started his part! Jack and Claire were in his group. They had worked hard. They were also very smart, and Lee didn't want them to get a bad <b>grade</b>.</p>    <p style=\"margin-bottom: 1rem;\">Jack did the <b>report</b>. He wrote a lot of very good sentences and <b>described</b> things with great adjectives. Claire drew a nice map of the stars. Now, Lee needed to do his part of the project.</p>    <p style=\"margin-bottom: 1rem;\">\"Well, I <b>suppose</b> I need to start my model,\" Lee thought.</p>    <p style=\"margin-bottom: 1rem;\">Making a model of a <b>planet</b> was really hard. Lee tried to read <b>several</b> books, but he couldn't <b>comprehend</b> any of the <b>charts</b>. \"We're going to <b>fail</b> because of me!\" Lee said. He put his head down on the table and said, \"I wish I could see a <b>planet</b>, <b>instead</b> of having to read about it!\"</p>    <p style=\"margin-bottom: 1rem;\"><b>Suddenly</b>, there was a bright light. Lee was pulled from his chair, through the roof, and right into a strange ship! \"Hello, kid,\" said an <b>alien</b>. \"Did you ask for help?\"</p>    <p style=\"margin-bottom: 1rem;\">Lee told the <b>friendly alien</b> all about his project. The <b>alien</b> agreed to help Lee <b>solve</b> his problem. \"First, we'll fly through space to <b>view</b> the <b>universe</b>. Then, I can help you make a model of my <b>planet</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">Soon, they were going through the <b>clouds</b>. They passed the moon. Then they <b>viewed</b> Mars. Lee was very excited. <b>Instead</b> of a bad <b>grade</b>, his group would have the best project <b>ever</b>!</p>    <p style=\"margin-bottom: 1rem;\">\"It's time to go home,\" the <b>alien finally</b> said. On the way back, he helped Lee make a model of the <b>planet</b> Mars. Soon, they were on Earth.</p>    <p style=\"margin-bottom: 1rem;\">\"Thanks,\" Lee said. \"My model will be awesome!\" Then he took his model and said goodbye to his new friend.</p></div>",
+      "audioUrl": "",
+      "imageUrl": "/unit3_story.png",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "What is this story about?",
+              "options": [
+                "Why a smart boy fails a class",
+                "A boy's trip into the universe",
+                "A boy who wants to write instead of draw",
+                "An alien living in a library"
+              ],
+              "explanation": "Câu chuyện kể về chuyến đi vào vũ trụ của một cậu bé với sự giúp đỡ của sinh vật ngoài hành tinh.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "17",
+              "content": "What is Lee unable to comprehend?",
+              "options": [
+                "How to make a model of a planet",
+                "Why there are maps among the books",
+                "Where the best place is to view the stars",
+                "How to read the information in a chart"
+              ],
+              "explanation": "Trong đoạn 4: \"Lee tried to read several books, but he couldn't comprehend any of the charts\" (Lee cố gắng đọc một vài quyển sách, nhưng cậu ấy không thể hiểu được bất kỳ biểu đồ nào).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "18",
+              "content": "What can you suppose is true of the group's report?",
+              "options": [
+                "It has three sentences.",
+                "It must describe clouds.",
+                "It is not due until several days.",
+                "It is about the stars and planets."
+              ],
+              "explanation": "Báo cáo về các vì sao và hành tinh vì Claire vẽ bản đồ các vì sao, còn Lee phải làm mô hình hành tinh.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "19",
+              "content": "What did the alien want to do to help Lee?",
+              "options": [
+                "Get several books from the library",
+                "Hear the best report ever",
+                "Make the model of a planet",
+                "Solve his own problems"
+              ],
+              "explanation": "Người ngoài hành tinh nói: \"First, we'll fly through space to view the universe. Then, I can help you make a model of my planet.\" (Đầu tiên, chúng ta sẽ bay vào không gian để ngắm nhìn vũ trụ. Sau đó, tôi có thể giúp cậu làm một mô hình hành tinh của tôi).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "20",
+              "content": "What planet did Lee see on his trip?",
+              "options": [
+                "The Sun",
+                "The Moon",
+                "Mars",
+                "Venus"
+              ],
+              "explanation": "Trong câu chuyện có viết: \"Then they viewed Mars\" (Sau đó họ đã nhìn ngắm sao Hỏa).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 3: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

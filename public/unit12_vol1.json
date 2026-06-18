@@ -1,0 +1,307 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit12_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit12_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">appreciate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əpríːʃièit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To appreciate something is to understand its good qualities.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I can appreciate the lovely scenery.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">available</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əvéiləbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is available, it means you can get it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There were many seats available in the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[biːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To beat someone means to do better than they do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I managed to beat everyone in the race.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bright</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[brait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is bright, it shows a lot of light.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bright light from the explosion hurt my eyes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">celebrate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[séləbrèit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To celebrate is to do something to show that an event is special.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We all celebrated when we heard the great news.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">determine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ditə́ːrmin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To determine means to choose or make a decision.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He tried to determine which one to eat first.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disappear</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dìsəpíər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To disappear means to go away or not be seen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The top of the building is disappearing in the clouds.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">else</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[els]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you talk about something else, you talk about something different.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I wanted a bike for my birthday, but I got something else.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fair</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɛər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fair describes treating someone in a way that is reasonable or right.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He sold me his car for a fair price.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To flow is to move easily and continuously in one direction.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The water flowed over the rocks and into the lake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">forward</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ́ːrwərd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you move forward, you move in the direction in front of you.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When he saw his mother, the baby crawled forward to her.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hill</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hill is a round area of land. It is higher than the land around it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sun was rising above the green hills.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">level</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lévəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A level is a point on a scale that measures something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please check the level of the temperature.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lone</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[loun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is lone, they are the only one of that kind.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A lone man walked along the street.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">puddle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌ́dl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A puddle is a pool of liquid on the ground.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the ice melted, it formed a puddle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">response</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rispɑ́ns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A response is the answer to a question.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He asked if I was sad. My response was “No.”</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">season</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[síːzn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A season is a time of the year: spring, summer, fall or winter.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Fall is a warm season, while winter is very cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">solution</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səlúːʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A solution is a way to solve a problem.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are many problems. We need solutions!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">waste</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[weist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To waste means to carelessly use something all up.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Turn off the water so you don’t waste it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whether</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwéðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">conj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">You use whether when you must choose between two things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I could not decide whether to go left or right.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist_part_a",
+          "title": "Exercise 1 - Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "a person who paints, draws, or sculpts",
+              "options": [
+                "magazine",
+                "article",
+                "artist",
+                "alone"
+              ],
+              "explanation": "Định nghĩa của artist",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "to decide that something is good or bad",
+              "options": [
+                "neighbor",
+                "judge",
+                "meal",
+                "compare"
+              ],
+              "explanation": "Định nghĩa của judge",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "3",
+              "content": "a way of doing something",
+              "options": [
+                "method",
+                "profit",
+                "professional",
+                "attitude"
+              ],
+              "explanation": "Định nghĩa của method",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "how good something is",
+              "options": [
+                "apartment",
+                "thin",
+                "quality",
+                "stairs"
+              ],
+              "explanation": "Định nghĩa của quality",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "something used to make other things",
+              "options": [
+                "shape",
+                "symbol",
+                "material",
+                "space"
+              ],
+              "explanation": "Định nghĩa của material",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist_part_b",
+          "title": "Exercise 1 - Part B: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "I don't like the person who lives near me.\n(neigh[6])",
+              "explanation": "neighbor: người hàng xóm",
+              "correctAnswer": "neighbor"
+            },
+            {
+              "id": "7",
+              "content": "I read a regular publication about sports.\n(maga[7])",
+              "explanation": "magazine: tạp chí",
+              "correctAnswer": "magazine"
+            },
+            {
+              "id": "8",
+              "content": "The doctor gave his expert and qualified advice.\n(profe[8])",
+              "explanation": "professional: chuyên nghiệp",
+              "correctAnswer": "professional"
+            },
+            {
+              "id": "9",
+              "content": "He looked at the differences between two books.\n(co[9])",
+              "explanation": "compared: so sánh",
+              "correctAnswer": "compared"
+            },
+            {
+              "id": "10",
+              "content": "She has a good way of thinking about things.\n(a[10])",
+              "explanation": "attitude: thái độ",
+              "correctAnswer": "attitude"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3_exercise2",
+          "title": "Exercise 2: Check (V) the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "When you are alone, you are with another person.",
+                "You can read articles in a newspaper."
+              ],
+              "explanation": "b đúng",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "12",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "If you make a profit, you have more money than you did before.",
+                "If you have professional training, you can't do a difficult job."
+              ],
+              "explanation": "a đúng",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "The Earth is a very thin planet.",
+                "If something is a symbol, it stands for something else."
+              ],
+              "explanation": "b đúng",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "You can use stairs to go up inside a building.",
+                "Since she is a lawyer, people call my wife an artist."
+              ],
+              "explanation": "a đúng",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "There are many apartments in one building.",
+                "Your attitude is the way you look."
+              ],
+              "explanation": "a đúng",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "You cannot get information from a magazine.",
+                "If you compare two things, you say how they are different."
+              ],
+              "explanation": "b đúng",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "17",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "If you judge something, you know if it is good or bad.",
+                "Neighbors are people who live far from you."
+              ],
+              "explanation": "a đúng",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "A meal has food and a drink.",
+                "A shape is something you cannot see."
+              ],
+              "explanation": "a đúng",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "A symbol is a picture of two different things.",
+                "You must have space to add more things to a room."
+              ],
+              "explanation": "b đúng",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "Check the sentence with the bolded word that makes better sense.",
+              "options": [
+                "If something has low quality, it is very good.",
+                "A material is used to make something else."
+              ],
+              "explanation": "b đúng",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Crazy Artist</h1>        <p style=\"margin-bottom: 1rem;\">Frenhofer was the best <b>artist</b> in the world. Everyone loved him. The <b>quality</b> of his paintings was very high. He always used the best <b>materials</b>. He made a big <b>profit</b> from his paintings. He had delicious <b>meals</b> with his rich <b>neighbors</b>. He taught art classes. Life was good.</p>    <p style=\"margin-bottom: 1rem;\">Then his <b>attitude</b> changed. He stopped selling paintings and teaching. He tried a new <b>method</b> of painting. He stayed <b>alone</b> in his <b>apartment</b> all day. He worked all day and all night, rarely eating. Soon Frenhofer became very <b>thin</b>. But he kept working on the same painting for many years. He worked as hard as he could.</p>    <p style=\"margin-bottom: 1rem;\">Finally, he finished the painting. He was very happy and invited other <b>artists</b> to see it. \"I want your <b>professional</b> opinion,\" he said. He wanted them to <b>judge</b> it and <b>compare</b> it to other paintings. Everyone was very excited as they went up the <b>stairs</b> to his <b>apartment</b>. Frenhofer was excited to show his painting, and the <b>artists</b> were excited to see it. \"They'll love it,\" he thought. But they did not.</p>    <p style=\"margin-bottom: 1rem;\">They were surprised by his painting. There was no white anywhere. Frenhofer filled the whole painting with lines and colors. There was no <b>space</b> for a normal picture. It was full of strange <b>shapes</b>. It looked bad to the other <b>artists</b>. He used <b>symbols</b>, and they didn't understand them. They thought it was terrible. \"Why did you paint this strange picture?\" someone asked. They didn't understand its beauty.</p>    <p style=\"margin-bottom: 1rem;\">But after some time, many people began to like his painting. People wrote <b>articles</b> about it in <b>magazines</b>. They said it was his best work. They loved his strange <b>symbols</b>. They loved his strange colors. Frenhofer's painting reminded everyone that just because something was new didn't mean that it was bad. He also helped them to realize that sometimes it takes people a little time to understand great things.</p></div>",
+      "imageUrl": "/unit12_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "A painter whose neighbors judge his art as poor quality",
+                "An artist who teaches art classes in his apartment",
+                "A man who writes articles for a magazine",
+                "A thin man who eats meals with friends"
+              ],
+              "explanation": "a",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "Why does Frenhofer want the artists to see his painting?",
+              "options": [
+                "He wants to sell it to them for a profit.",
+                "He wants them to judge his materials.",
+                "He wants them to give their professional opinion.",
+                "He wants to compare his new method to theirs."
+              ],
+              "explanation": "c",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "23",
+              "content": "What is true of Frenhofer's painting?",
+              "options": [
+                "It is made with low-quality materials.",
+                "It is full of strange colors and shapes.",
+                "It does not have any symbols in it.",
+                "It is a picture of other artists."
+              ],
+              "explanation": "b",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "Where do the other artists see his painting?",
+              "options": [
+                "It is alone in the space used for art classes.",
+                "They go to Frenhofer's apartment.",
+                "Frenhofer takes it to their apartment.",
+                "It is on sale at a famous store."
+              ],
+              "explanation": "b",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "How do the artists feel as they go up the stairs?",
+              "options": [
+                "His friends felt excited about seeing his painting.",
+                "They felt tired from climbing the stairs.",
+                "They felt angry at his attitude.",
+                "They were sad about the quality."
+              ],
+              "explanation": "excited",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 12: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

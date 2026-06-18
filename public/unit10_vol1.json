@@ -1,0 +1,711 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit10_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit10_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blood</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blʌd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Blood is the red liquid in your body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I cut my finger and got blood on my shirt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">burn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bə:rn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To burn something is to set it on fire.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I burned some wood in the camp fire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cell</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cell is a small room where a person is locked in.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The jail cell was very small.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəntein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To contain something is to have it inside.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mailbox contained a letter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">correct</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kərekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be correct is to be right.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All of my answers on the test were correct.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crop</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[krap]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A crop is food that a farmer grows.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wheat is a crop that is made into bread.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">demand</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dimænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To demand something is to say strongly that you want it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The workers demanded to be paid more money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">equal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[i:kwəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be equal is to be the same.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Both students are equal in age.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">feed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fi:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To feed is to give food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mother feeds my baby brother everyday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hole</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[houl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hole is an opening in something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man was going to jump into the hole in the ice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">increase</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkri:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To increase something is to make it larger or more.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They've increased the price of gas by 15 cents!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lord</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lo:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Long ago, a lord was a man in charge of a town.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lord of the town was not kind.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">owe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To owe is to have to pay or give back something received from another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I owed him twenty dollars, so I paid him back.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">position</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pəziʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A position is the way something is placed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ How can you sit in that position?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">raise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To raise something is to lift it up.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We had to work together to raise the last piece.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">responsible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rispansəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person is responsible, they do the right things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I try to be responsible and save money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sight is something interesting to see.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw the pyramids of Egypt. What a sight!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spat]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spot is a place where something happens.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The kitchen is a good spot to eat meals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">structure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strʌktʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A structure is a building.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They just built a beautiful new structure downtown.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whole</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[houl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Whole means all of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I ate the whole pie. We don't have any more.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "the liquid in your body",
+              "options": [
+                "spot",
+                "blood",
+                "cell",
+                "owe"
+              ],
+              "explanation": "blood nghĩa là chất lỏng màu đỏ trong cơ thể bạn (the liquid in your body).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q2",
+              "content": "to set on fire",
+              "options": [
+                "burn",
+                "increase",
+                "feed",
+                "contain"
+              ],
+              "explanation": "burn nghĩa là đốt cháy (to set on fire).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q3",
+              "content": "doing what you should do",
+              "options": [
+                "demand",
+                "raise",
+                "position",
+                "responsible"
+              ],
+              "explanation": "responsible nghĩa là có trách nhiệm (doing what you should do).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q4",
+              "content": "the same as something else",
+              "options": [
+                "hole",
+                "structure",
+                "lord",
+                "equal"
+              ],
+              "explanation": "equal nghĩa là bằng nhau, giống nhau (the same as something else).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q5",
+              "content": "something interesting to see",
+              "options": [
+                "sight",
+                "correct",
+                "whole",
+                "crop"
+              ],
+              "explanation": "sight nghĩa là cảnh tượng thú vị (something interesting to see).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q6",
+              "content": "I left my coat in the __________ by the window.",
+              "options": [
+                "feed",
+                "whole",
+                "cell",
+                "spot"
+              ],
+              "explanation": "Từ phù hợp nhất để điền vào chỗ trống là spot (chỗ, vị trí).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q7",
+              "content": "The poor man had no money to __________ his family.",
+              "options": [
+                "feed",
+                "whole",
+                "cell",
+                "spot"
+              ],
+              "explanation": "Từ phù hợp nhất là feed (nuôi ăn).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q8",
+              "content": "The robber was locked in a __________ for a year.",
+              "options": [
+                "feed",
+                "whole",
+                "cell",
+                "correct"
+              ],
+              "explanation": "Từ phù hợp nhất là cell (phòng giam).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q9",
+              "content": "Did you read the __________ book or just part of it?",
+              "options": [
+                "feed",
+                "whole",
+                "cell",
+                "spot"
+              ],
+              "explanation": "Từ phù hợp nhất là whole (toàn bộ).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q10",
+              "content": "If I get the answers __________, I will pass the test.",
+              "options": [
+                "feed",
+                "whole",
+                "correct",
+                "spot"
+              ],
+              "explanation": "Từ phù hợp nhất là correct (đúng).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Check the better response to each question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "What did your father demand?",
+              "options": [
+                "He is not nice.",
+                "That I clean my room."
+              ],
+              "explanation": "Câu hỏi: Bố bạn đã yêu cầu điều gì? Trả lời: Rằng tôi phải dọn phòng.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q12",
+              "content": "Will you help me raise this?",
+              "options": [
+                "Yes. How high?",
+                "Yes, it goes lower."
+              ],
+              "explanation": "Câu hỏi: Bạn sẽ giúp tôi nâng cái này lên chứ? Trả lời: Được. Cao bao nhiêu?",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q13",
+              "content": "What position were these in?",
+              "options": [
+                "They were next to each other.",
+                "They came from the store."
+              ],
+              "explanation": "Câu hỏi: Những cái này ở vị trí nào? Trả lời: Chúng ở cạnh nhau.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q14",
+              "content": "Does that bottle contain water?",
+              "options": [
+                "Yes. What is inside it?",
+                "No, it has milk in it."
+              ],
+              "explanation": "Câu hỏi: Cái chai đó có chứa nước không? Trả lời: Không, nó chứa sữa.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q15",
+              "content": "Did you hear that Jim's house burned down?",
+              "options": [
+                "That is terrible!",
+                "Is it bigger now?"
+              ],
+              "explanation": "Câu hỏi: Bạn có nghe tin nhà Jim bị cháy không? Trả lời: Thật khủng khiếp!",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q16",
+              "content": "The bad guy sat on the floor of his __________.",
+              "options": [
+                "structure",
+                "cell",
+                "lord",
+                "owe"
+              ],
+              "explanation": "Kẻ xấu ngồi trên sàn phòng giam của hắn (cell).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q17",
+              "content": "Dad says the old __________ is not safe.",
+              "options": [
+                "structure",
+                "cell",
+                "lord",
+                "owe"
+              ],
+              "explanation": "Bố nói cấu trúc/tòa nhà cũ kỹ (structure) này không an toàn.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q18",
+              "content": "The __________ ruled over 100 people in the town.",
+              "options": [
+                "lord",
+                "owe",
+                "structure",
+                "cell"
+              ],
+              "explanation": "Lãnh chúa (lord) cai trị hơn 100 người trong thị trấn.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q19",
+              "content": "I still __________ the bank money for my university loan.",
+              "options": [
+                "lord",
+                "owe",
+                "spot",
+                "position"
+              ],
+              "explanation": "Tôi vẫn còn nợ (owe) ngân hàng tiền vay học đại học.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q20",
+              "content": "Won't your legs hurt if you stay in that __________ for long?",
+              "options": [
+                "spot",
+                "position",
+                "whole",
+                "hole"
+              ],
+              "explanation": "Chân bạn sẽ không đau nếu bạn ở tư thế (position) đó lâu chứ?",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q21",
+              "content": "This is our favorite picnic __________.",
+              "options": [
+                "spot",
+                "position",
+                "crop",
+                "feed"
+              ],
+              "explanation": "Đây là địa điểm (spot) dã ngoại yêu thích của chúng tôi.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q22",
+              "content": "The __________ class was excited.",
+              "options": [
+                "whole",
+                "hole",
+                "spot",
+                "position"
+              ],
+              "explanation": "Cả lớp (whole class) đều hào hứng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q23",
+              "content": "I dug a __________ to put a tree in.",
+              "options": [
+                "whole",
+                "hole",
+                "spot",
+                "position"
+              ],
+              "explanation": "Tôi đã đào một cái lỗ (hole) để trồng cây.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q24",
+              "content": "Do not __________ any of the animals at the zoo.",
+              "options": [
+                "crop",
+                "feed",
+                "structure",
+                "lord"
+              ],
+              "explanation": "Đừng cho bất kỳ con vật nào ở sở thú ăn (feed).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q25",
+              "content": "The farmer grew a __________ of potatoes.",
+              "options": [
+                "crop",
+                "feed",
+                "whole",
+                "hole"
+              ],
+              "explanation": "Người nông dân trồng một vụ (crop) khoai tây.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec5_wordlist",
+          "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q31",
+              "content": "It is very important that you call your mother soon, (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "essential"
+            },
+            {
+              "id": "q32",
+              "content": "The good thing about being old is that you know many things, (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "benefit"
+            },
+            {
+              "id": "q33",
+              "content": "I have problems with my science homework, (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "trouble"
+            },
+            {
+              "id": "q34",
+              "content": "I am sure that she will come to his party, (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "certain"
+            },
+            {
+              "id": "q35",
+              "content": "The job of the stove is to cook, (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "function"
+            },
+            {
+              "id": "q36",
+              "content": "That is the place where they met, (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "site"
+            },
+            {
+              "id": "q37",
+              "content": "I saw his picture on TV. (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "image"
+            },
+            {
+              "id": "q38",
+              "content": "The twins don't like to be apart. (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "separate"
+            },
+            {
+              "id": "q39",
+              "content": "I like to stay at home on the weekends, (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "remain"
+            },
+            {
+              "id": "q40",
+              "content": "His part that comes out of his rear was shaking because he was happy, (spr[1])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "tail"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec6_wordlist",
+          "title": "Exercise 2 Part A: Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q41",
+              "content": "The __________ of the rain was slippery roads.",
+              "options": [
+                "effect",
+                "benefit"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q42",
+              "content": "The __________ of waking up early is being at work on time.",
+              "options": [
+                "effect",
+                "benefit"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q43",
+              "content": "She had to make a(an) __________ phone call.",
+              "options": [
+                "primary",
+                "immediate"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q44",
+              "content": "The __________ cause of my problems is laziness.",
+              "options": [
+                "primary",
+                "immediate"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q45",
+              "content": "He was __________ when he got the best score.",
+              "options": [
+                "rested",
+                "proud"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q46",
+              "content": "We __________ under the shade of a tree.",
+              "options": [
+                "rested",
+                "proud"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q47",
+              "content": "Her new school is __________ from here.",
+              "options": [
+                "far",
+                "separate"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q48",
+              "content": "She and her best friend hate to be in __________ classrooms.",
+              "options": [
+                "far",
+                "separate"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q49",
+              "content": "I have to __________ my money from my little brother.",
+              "options": [
+                "guard",
+                "remain"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q50",
+              "content": "I have to __________ in school for four more years.",
+              "options": [
+                "guard",
+                "remain"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec7_wordlist",
+          "title": "Exercise 2 Part B: Check the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q51",
+              "content": "Every year for my birthday, ________________.",
+              "options": [
+                "I return to the site of my birth",
+                "my cat has a short tail"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q52",
+              "content": "I believe her _________________.",
+              "options": [
+                "because she has a chance to lie",
+                "because she's certain of the facts"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q53",
+              "content": "My new watch is great. ________________.",
+              "options": [
+                "It has many functions",
+                "It causes me trouble"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q54",
+              "content": "I was afraid ________________.",
+              "options": [
+                "because I thought of a scary image of a snake",
+                "because I didn't focus on my work"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q55",
+              "content": "I eat many fruits ________________.",
+              "options": [
+                "because they are essential for good health",
+                "because they taste like grass"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Farmer and the Cats</h1>        <p style=\"margin-bottom: 1rem;\">Arthur was a <b>responsible</b> farmer, and Maria was a nice lady. But they were poor. They <b>owed</b> the town <b>lord</b> money for their land. One summer, their farm <b>burned</b>. One <b>structure</b> caught fire, and most of the animals ran away. Only the cats stayed. So Arthur and Maria had to bring in their <b>crops</b> without an animal's help.</p>    <p style=\"margin-bottom: 1rem;\">On a fall day, the <b>lord</b> <b>demanded</b> his money. Arthur asked if the <b>lord</b> could wait until he brought in his <b>crops</b>.</p>    <p style=\"margin-bottom: 1rem;\">The <b>lord</b> was angry. He <b>raised</b> his hands high and yelled, \"Pay me by the end of the week. If you don't, I will <b>increase</b> the money you have to pay. I might put you in a jail <b>cell</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">So Arthur and Maria worked until there was <b>blood</b> on their hands. They finished four lines of corn and went to bed.</p>    <p style=\"margin-bottom: 1rem;\">But the next morning, eight lines were finished! \"Maria, didn't we stop in this <b>spot</b> here?\" Arthur asked.</p>    <p style=\"margin-bottom: 1rem;\">\"Yes, that is <b>correct</b>. And the tools were in a different <b>position</b>, too,\" Maria said. They were surprised and happy. That day, they worked hard and finished five lines.</p>    <p style=\"margin-bottom: 1rem;\">But in the morning, ten lines were done! Each day they did a lot of work. Each night, someone else did an <b>equal</b> amount of work. In a week, the <b>whole</b> field was finished. \"Tomorrow I will sell the <b>crops</b> and pay the <b>lord</b>,\" Arthur said. But that morning, the <b>crops</b> were gone. A bag was in the middle of the field. It <b>contained</b> money.</p>    <p style=\"margin-bottom: 1rem;\">\"Maria, let's see who has helped us work.\" Through a <b>hole</b> in the wall, they saw a funny <b>sight</b>. The cats were dancing in the field and eating corn! Now Arthur knew what had happened. The cats had worked at night! After that, Arthur was very nice to his cats and <b>fed</b> them lots of corn.</p></div>",
+      "imageUrl": "/unit10_story.png",
+      "sections": [
+        {
+          "id": "sec5_reading",
+          "title": "Reading Comprehension: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q26",
+              "content": "What does Arthur do in the story?",
+              "options": [
+                "Put the lady in a jail cell",
+                "Raise his hands high",
+                "Demand money from people",
+                "Work until there is blood on his hands"
+              ],
+              "explanation": "Trong truyện, Arthur làm việc chăm chỉ cho đến khi tay rớm máu (Work until there is blood on his hands).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q27",
+              "content": "What is true of the cats in the story?",
+              "options": [
+                "They burn the farm and scare the animals.",
+                "They do work equal to Arthur's work.",
+                "They think Arthur is very responsible.",
+                "They put all the tools in one spot."
+              ],
+              "explanation": "Mỗi đêm mèo làm một lượng công việc bằng với công việc của Arthur (They do work equal to Arthur's work).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q28",
+              "content": "What does the bag contain?",
+              "options": [
+                "A gift for the lady",
+                "Corn to feed the animals",
+                "Money for the lord",
+                "A new kind of crop"
+              ],
+              "explanation": "Trong truyện có đoạn nói túi đó chứa tiền. Ở đây đáp án đúng là Money for the lord.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q29",
+              "content": "What sight did Maria and Arthur see in the morning?",
+              "options": [
+                "A hole in the wall of their house",
+                "A whole new structure on the farm",
+                "The lord working in their fields",
+                "The cats dancing on the farm"
+              ],
+              "explanation": "Sáng hôm đó họ nhìn thấy qua lỗ hổng trên tường những con mèo đang nhảy múa trên cánh đồng (The cats dancing on the farm).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "q30",
+              "content": "When will the lord increase the money that Arthur has to pay?",
+              "options": [
+                "If he doesn't pay by the end of the week",
+                "If he doesn't bring in his crops",
+                "If he doesn't put the lady in a cell",
+                "If he doesn't find the cats"
+              ],
+              "explanation": "Lãnh chúa sẽ tăng tiền nếu Arthur không trả vào cuối tuần (If you don't [pay me by the end of the week], I will increase the money you have to pay).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec6_reading",
+          "title": "Reading Comprehension (The First Peacock): Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "q56",
+              "content": "What is this story about?",
+              "options": [
+                "Why it is essential to guard cows",
+                "How to play beautiful music",
+                "How the image of a peacock in the sky came about",
+                "How being born with 100 eyes benefited a man"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q57",
+              "content": "Why was guarding Hera's cow easy for Argos?",
+              "options": [
+                "All it did was eat grass all day.",
+                "It was kept separate from all the other cows.",
+                "He had a chance to listen to music.",
+                "He was able to sleep instead of focusing on it."
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "q58",
+              "content": "Why did Zeus turn Argos into a group of stars?",
+              "options": [
+                "He wanted Argos to see the site of his trouble.",
+                "He was certain that Argos would fall asleep.",
+                "He wanted to make Argos remain in the sky forever.",
+                "He wanted to cause Argos immediate trouble."
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "q59",
+              "content": "What was the primary function of Argos' job?",
+              "options": [
+                "To make sure the cow was never sad",
+                "To keep the cow far away from people",
+                "To see the effects of music on the cow",
+                "Work for a proud goddess named Hera"
+              ],
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "q60",
+              "content": "How did Argos sleep?",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "He only rested a few eyes at a time. The others stayed awake."
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 10: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit6_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">advantage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ædvæntɪdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An advantage is something that helps you.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Being tall is an advantage to a basketball player.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cause</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔ:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To cause is to make something happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The cold weather caused her to get sick.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">choice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃɔɪs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A choice is the act or possibility of picking something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I had my choice of five doors to open.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">community</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmju:nəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A community is a group of people who live together.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The kids from my community usually play together.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dead</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ded]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be dead is to not be alive.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A dead person is usually buried in the ground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪstəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The distance between two things is how far it is between them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The distance between the Earth and the Moon is 384,400 kilometers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">escape</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪskeɪp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To escape is to run away from something bad.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The butterfly could not escape from the cage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">face</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feɪs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you face a problem, you deal with it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister and I have to find a better way to face our differences.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">follow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɑlou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To follow means to go behind someone and go where they go.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The little boy followed his mother home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fright</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fraɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fright is the feeling of being scared.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was filled with fright.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ghost</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[goust]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ghost is the spirit of a dead person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many people are afraid of ghosts.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">individual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪndəvɪdʒuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An individual is one person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Only one individual could win the bicycle race.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pet]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pet is an animal that lives with people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Out of all my pets, the dog is my favorite.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reach</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ri:tʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To reach means to arrive at a place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was happy to finally reach my destination.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">return</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɪtə:rn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To return is to go back to a place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was happy to return home to my mom after school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">survive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sərvaɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To survive is to stay alive.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dog survived her fall into the water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">upset</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌpset]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be upset is to be unhappy about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was upset because she broke her toy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">voice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vɔɪs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A voice is the sound a person makes when they talk or sing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He used a microphone, so everyone could hear his voice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">weather</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[weðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The weather is the condition of the air: hot, rainy, windy, etc.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The weather can be sunny, rainy, or cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[waɪz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be wise is to use experience and intelligence to make good choices.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many people believe that owls are very wise animals.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_part_a",
+          "title": "Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "Sam was happy to <u>go back to</u> his house. (spr[16])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "return"
+            },
+            {
+              "id": "17",
+              "content": "Her grandfather is a <u>smart</u> old man. (spr[17])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "wise"
+            },
+            {
+              "id": "18",
+              "content": "William wanted an <u>animal to live with</u>. (spr[18])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "pet"
+            },
+            {
+              "id": "19",
+              "content": "He studies what the <u>condition of the air</u> is like. (spr[19])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "weather"
+            },
+            {
+              "id": "20",
+              "content": "I have to <u>deal with</u> my rising credit card bill. (spr[20])",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "face"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec_part_b",
+          "title": "Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "fright / ghost\nThe (spr[21]) lives in the old house.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "ghost"
+            },
+            {
+              "id": "22",
+              "content": "A scary place might cause (spr[22]).",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "fright"
+            },
+            {
+              "id": "23",
+              "content": "dead / upset\nThe tree fell down because it was (spr[23]).",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "dead"
+            },
+            {
+              "id": "24",
+              "content": "I was (spr[24]) when I got a bad grade on the test.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "upset"
+            },
+            {
+              "id": "25",
+              "content": "advantage / reached\nAfter 10 hours of driving, I finally (spr[25]) California.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "reached"
+            },
+            {
+              "id": "26",
+              "content": "He is smart and has a(n) (spr[26]) in class.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "advantage"
+            },
+            {
+              "id": "27",
+              "content": "escape / distance\nHe wanted to (spr[27]) from the room.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "escape"
+            },
+            {
+              "id": "28",
+              "content": "He lived a long (spr[28]) from the school.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "distance"
+            },
+            {
+              "id": "29",
+              "content": "community / individual\nThe man is a nice (spr[29]).",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "individual"
+            },
+            {
+              "id": "30",
+              "content": "The town is a small (spr[30]).",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "community"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec1_wordlist",
+          "title": "Check the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "It rained for two days, __________.",
+              "options": [
+                "and caused the river to rise",
+                "it was dead"
+              ],
+              "explanation": "Trời mưa 2 ngày làm cho nước sông dâng cao.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "As I was walking home from school today, __________.",
+              "options": [
+                "I was a ghost",
+                "I hardly noticed that a dog was following me"
+              ],
+              "explanation": "Đang đi bộ về nhà thì không nhận ra có một con chó đang đi theo (following).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "3",
+              "content": "After my vacation, __________.",
+              "options": [
+                "I returned to work",
+                "I was an advantage"
+              ],
+              "explanation": "Sau kỳ nghỉ thì quay lại (returned) làm việc.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "Many people like him __________.",
+              "options": [
+                "because they make him upset",
+                "because he is a wise man"
+              ],
+              "explanation": "Mọi người thích ông ấy vì ông ấy là một người khôn ngoan (wise).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "They are afraid of the king because __________.",
+              "options": [
+                "he has too much power",
+                "he has a quiet voice"
+              ],
+              "explanation": "Sợ vị vua vì ông ấy có quá nhiều quyền lực, còn 'quiet voice' không làm người khác sợ.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "6",
+              "content": "I love my dog. __________.",
+              "options": [
+                "He’s my favorite pet",
+                "He causes fright"
+              ],
+              "explanation": "Yêu chó vì nó là thú cưng (pet) yêu thích.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "7",
+              "content": "I like living here because __________.",
+              "options": [
+                "I make many choices",
+                "it is a nice community"
+              ],
+              "explanation": "Thích sống ở đây vì nó là một cộng đồng (community) tốt.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "I want to live in Hawaii because __________.",
+              "options": [
+                "it has good weather",
+                "smoking causes lung cancer"
+              ],
+              "explanation": "Muốn sống ở Hawaii vì nó có thời tiết (weather) đẹp.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "9",
+              "content": "The storm was very bad, but __________.",
+              "options": [
+                "all of the people survived",
+                "it went a very long distance"
+              ],
+              "explanation": "Cơn bão rất tệ nhưng mọi người đều sống sót (survived).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "We closed the door, but __________.",
+              "options": [
+                "the dog escaped",
+                "it was an individual"
+              ],
+              "explanation": "Chúng tôi đã đóng cửa nhưng con chó đã trốn thoát (escaped).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Friendly Ghost</h1>        <p style=\"margin-bottom: 1rem;\">A nice woman lived by a large river. She loved children. She wanted to help them in any way. She loved her <b>community</b>, and everyone in the <b>community</b> loved her. She lived a very long time and became very <b>wise</b>.</p>    <p style=\"margin-bottom: 1rem;\">When she died, she became a <b>ghost</b>. She was <b>dead</b>, but every night she <b>returned</b> to her <b>community</b>. She wanted to help children and not to <b>cause</b> them <b>fright</b>. But she had a scary <b>voice</b>. Children were afraid of her, but the <b>ghost</b> was a good one. She only scared them to help them.</p>    <p style=\"margin-bottom: 1rem;\">One night, some children and a dog were playing by the river. They were having fun with their <b>pet</b>. But they were far from home. Then the <b>weather</b> became bad. It rained and rained. The river was rising. It was very dark. The children knew they were lost. They needed to go north, but they didn't know which direction it was. When the moon came out, they saw a <b>ghost</b> by the river. The <b>ghost</b> said, \"Go away!\"</p>    <p style=\"margin-bottom: 1rem;\">The children felt great <b>fright</b>. They knew it was a <b>ghost</b>. Then the <b>ghost</b> moved closer. She yelled again, \"Go away!\" The children became very <b>upset</b>. Some of them began to cry. The children knew they had a <b>choice</b>: they could <b>escape</b>, or they could stay and <b>face</b> this scary <b>individual</b> in the dark.</p>    <p style=\"margin-bottom: 1rem;\">The children ran a long <b>distance</b> away. The <b>ghost</b> <b>followed</b> them all the way. Finally, the children <b>reached</b> home. The <b>ghost</b> was very happy. Soon the river rose higher and higher. It was very dangerous. The <b>ghost</b> had helped the children <b>survive</b>! She had saved them from the rising water. She also used her power to lead them home. Sometimes, meeting a <b>ghost</b> has <b>advantages</b>. A <b>ghost</b> can save your life!</p></div>",
+      "imageUrl": "/unit6_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "What is this story about?",
+              "options": [
+                "How a ghost returns to help her community",
+                "How a wise pet helps children escape a ghost",
+                "Why an individual has a job in the north",
+                "How some children escaped bad weather"
+              ],
+              "explanation": "Câu chuyện kể về một hồn ma (người phụ nữ tốt bụng) quay trở lại để giúp đỡ mọi người trong cộng đồng của bà.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "What caused fright in the children?",
+              "options": [
+                "The power of the moon at night",
+                "The bad weather near the river",
+                "The voice of the ghost",
+                "Their dead pet"
+              ],
+              "explanation": "Những đứa trẻ sợ hãi do giọng nói đáng sợ của hồn ma (she had a scary voice).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "13",
+              "content": "What was true of the children in the story?",
+              "options": [
+                "Their home was a short distance from the river.",
+                "They had the advantage of being ghosts.",
+                "They didn’t like to play near the river.",
+                "They were upset when they saw the ghost."
+              ],
+              "explanation": "Những đứa trẻ trở nên rất buồn bã và khóc khi nhìn thấy hồn ma (The children became very upset).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "14",
+              "content": "Why did the ghost scare the children?",
+              "options": [
+                "She wanted to help them.",
+                "She had no other choice.",
+                "She was afraid of their pet.",
+                "She didn’t want them to see her."
+              ],
+              "explanation": "Hồn ma hù dọa để giúp chúng chạy về nhà, tránh dòng nước lũ (She only scared them to help them).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "Where did the woman live?",
+              "options": [
+                "By a large river",
+                "In a big city",
+                "Far from the community",
+                "On a mountain"
+              ],
+              "explanation": "Người phụ nữ tốt bụng sống gần một con sông lớn (A nice woman lived by a large river).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 6: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit9_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit9_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">against</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[agenst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be against something is to be touching it or opposed to it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They both leaned against the wall.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beach</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bi:tʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The beach is a sandy or rocky place by the ocean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The little girl built a sandcastle on the beach.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">damage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dæmidʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To damage something is to break it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The car was damaged in the accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">discover</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diskʌvər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To discover something is to find it for the first time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I discovered some new information in this book!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">emotion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[imouʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An emotion is how you feel.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Anger is a common emotion that we all feel.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fix</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fiks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To fix something is to make it work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad has many tools to help him fix broken things.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frank</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fræŋk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are frank, you are being very honest.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher had a frank discussion with her students.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">identify</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aidentəfai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To identify something is to be able to name it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I used the file to identify his name.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">island</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ailənd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An island is land in the middle of water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Japan is a group of islands.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ocean</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The ocean is all of the salt water that surrounds land.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The ocean can make powerful waves.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">perhaps</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pərhæps]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Perhaps is used when you say that something could happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Perhaps I will eat an apple for lunch.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pleasant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pleznt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is pleasant, you enjoy it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The character had a pleasant look on its face.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prevent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[privent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To prevent something is to stop it from happening.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The handcuffs prevented me from moving my hands.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rock</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɑk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rock is a hard thing in the dirt.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I stacked rocks on top of one another.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">save</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[seiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To save something is to keep it from being hurt.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I want to help save the world.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">step</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[step]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To step is to walk.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Be careful where you step.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">still</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Still is used when you say that a situation keeps going on.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They are still waiting in line to get tickets.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">taste</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[teist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A taste is the flavor something makes in your mouth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The taste of the fruit was sweet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">throw</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θrou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To throw something is to use your hand to make it go through the air.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The pitcher can throw the baseball very fast.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wave</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[weiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wave is a line of water that moves higher than the rest of the water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The water was filled with large blue waves.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "wave",
+              "options": [
+                "to pass from physical life",
+                "salt water that surrounds land",
+                "a raised line of water",
+                "land in the middle of water"
+              ],
+              "explanation": "wave nghĩa là làn sóng (a raised line of water).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "taste",
+              "options": [
+                "to hurt",
+                "to find",
+                "flavor",
+                "to walk"
+              ],
+              "explanation": "taste nghĩa là hương vị (flavor).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "3",
+              "content": "against",
+              "options": [
+                "to be touching something",
+                "to stop from happening",
+                "maybe",
+                "enjoyable"
+              ],
+              "explanation": "against nghĩa là dựa vào, chống lại (to be touching something).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "rock",
+              "options": [
+                "feelings",
+                "a place by the ocean",
+                "honest",
+                "a hard thing in the ground"
+              ],
+              "explanation": "rock nghĩa là đá (a hard thing in the ground).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "5",
+              "content": "throw",
+              "options": [
+                "to name something",
+                "to put something into the air",
+                "to make something work",
+                "to make something move in the air"
+              ],
+              "explanation": "throw nghĩa là ném (to make something move in the air).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "6",
+              "content": "island",
+              "options": [
+                "land",
+                "salt water",
+                "feelings",
+                "land in the middle of water"
+              ],
+              "explanation": "island nghĩa là hòn đảo (land in the middle of water).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "7",
+              "content": "discover",
+              "options": [
+                "to be nice",
+                "to find something",
+                "to stop",
+                "to name"
+              ],
+              "explanation": "discover nghĩa là khám phá (to find something).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "step",
+              "options": [
+                "to keep from harm",
+                "to be next to",
+                "to walk",
+                "to hurt"
+              ],
+              "explanation": "step nghĩa là bước đi (to walk).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "9",
+              "content": "beach",
+              "options": [
+                "water that comes on land",
+                "a sandy or rocky place by the ocean",
+                "the flavor of something",
+                "something could happen"
+              ],
+              "explanation": "beach nghĩa là bãi biển (a sandy or rocky place by the ocean).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "10",
+              "content": "fix",
+              "options": [
+                "to make something work",
+                "to pass from physical life",
+                "to be honest",
+                "to make something move in the air"
+              ],
+              "explanation": "fix nghĩa là sửa chữa (to make something work).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Part B: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "to be touching something",
+              "options": [
+                "beach",
+                "against",
+                "discover",
+                "wave"
+              ],
+              "explanation": "to be touching something nghĩa là against.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "12",
+              "content": "to break something",
+              "options": [
+                "identify",
+                "maybe",
+                "damage",
+                "ocean"
+              ],
+              "explanation": "to break something nghĩa là damage.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "13",
+              "content": "a way that you feel",
+              "options": [
+                "prevent",
+                "emotion",
+                "rock",
+                "pleasant"
+              ],
+              "explanation": "a way that you feel nghĩa là emotion.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "very honest",
+              "options": [
+                "still",
+                "step",
+                "throw",
+                "frank"
+              ],
+              "explanation": "very honest nghĩa là frank.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "15",
+              "content": "land in the middle of water",
+              "options": [
+                "save",
+                "taste",
+                "island",
+                "fix"
+              ],
+              "explanation": "land in the middle of water nghĩa là island.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Part C: Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "wave / beach\nI like to play on the (sec3[1]).\nThe big (sec3[2]) pushed the swimmer back.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "{\"1\":\"beach\",\"2\":\"wave\"}"
+            },
+            {
+              "id": "22",
+              "content": "ocean / island\nThey walked across the (sec3[1]) to find food.\nI am scared of some animals that live in the (sec3[2]).",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "{\"1\":\"island\",\"2\":\"ocean\"}"
+            },
+            {
+              "id": "23",
+              "content": "fix / damage\nMy dad knows how to (sec3[1]) cars.\nIf you (sec3[2]) the light, we won't be able to see at night.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "{\"1\":\"fix\",\"2\":\"damage\"}"
+            },
+            {
+              "id": "24",
+              "content": "still / rock\nWe have to go around that large (sec3[1]).\nWe are (sec3[2]) planning to go to Florida this winter.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "{\"1\":\"rock\",\"2\":\"still\"}"
+            },
+            {
+              "id": "25",
+              "content": "step / throw\nDo you know how to (sec3[1]) a football?\nPlease (sec3[2]) into the house.",
+              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
+              "correctAnswer": "{\"1\":\"throw\",\"2\":\"step\"}"
+            }
+          ],
+          "questionType": "Điền từ"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Starfish</h1>        <p style=\"margin-bottom: 1rem;\">Last summer I took a trip to an <b>island</b>. I had a lot of fun. I sat and watched the <b>wave</b>s and listened to the <b>ocean</b>. I learned to <b>identify</b> birds. I <b>discover</b>ed pretty things and enjoyed the <b>taste</b> of new foods. It was a very nice time.</p>    <p style=\"margin-bottom: 1rem;\">One evening I took a <b>pleasant</b> walk by the ocean. When the waves came in, many starfish fell on the <b>beach</b>. Some starfish went back into the water, and they were <b>save</b>d. But other starfish were <b>still</b> on the sand. They would die if they did not get into the water. There were many starfish on the beach that night. It made me sad, but I knew I could not <b>fix</b> the problem. I <b>step</b>ped very carefully so I did not <b>damage</b> them.</p>    <p style=\"margin-bottom: 1rem;\">Then I saw a little girl. She was also sad about the starfish. She wanted to <b>prevent</b> all of them from dying. She asked me if I could <b>perhaps</b> help her.</p>    <p style=\"margin-bottom: 1rem;\">\"To be <b>frank</b>, I don't think we can do anything,\" I said.</p>    <p style=\"margin-bottom: 1rem;\">The little girl started to cry. She sat back <b>against</b> a <b>rock</b> and thought for a while. Finally, the <b>emotion</b> was gone. She stopped crying and stood up. Then she picked up a starfish and <b>throw</b> threw it into the water.</p>    <p style=\"margin-bottom: 1rem;\">\"What are you doing?\" I asked her. But she did not answer me. She just threw as many starfish as she could. \"You cannot save all of them!\" I said.</p>    <p style=\"margin-bottom: 1rem;\">She stopped to look at me. \"No, I cannot save them all,\" she replied. Then she picked up a very big starfish and said, \"But I can save this one.\" And then she smiled and threw the starfish as far as she could into the ocean.</p></div>",
+      "imageUrl": "/unit9_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "What is this story about?",
+              "options": [
+                "A girl who wants to save starfish",
+                "How to throw starfish",
+                "A girl who is too frank",
+                "Birds and animals at the ocean"
+              ],
+              "explanation": "Câu chuyện kể về một cô bé muốn cứu những con sao biển trên bãi biển.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "What causes the little girl's emotion?",
+              "options": [
+                "She cannot fix the damage she finds to homes.",
+                "She cannot prevent starfish from dying in the sand.",
+                "She discovers starfish in the water.",
+                "She steps on a rock and hurts her foot."
+              ],
+              "explanation": "Cô bé cảm thấy buồn vì không thể ngăn sao biển chết trên cát.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "What does the man think is NOT good about the island?",
+              "options": [
+                "Watching the waves",
+                "Identifying birds",
+                "The starfish dying on the sand",
+                "Tasting new food"
+              ],
+              "explanation": "Người đàn ông cảm thấy buồn vì những con sao biển chết trên bãi cát.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "19",
+              "content": "What does the girl think the man can perhaps do?",
+              "options": [
+                "Identify birds",
+                "Take a walk on the beach",
+                "Discover something pretty",
+                "Help her save starfish"
+              ],
+              "explanation": "Cô bé hỏi người đàn ông xem ông có thể giúp cô bé cứu sao biển không.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec4",
+          "title": "Answer the question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "20",
+              "content": "Which starfish were safe on the beach?\n(sec4[1])",
+              "explanation": "Những con sao biển có thể quay trở lại nước thì được an toàn.",
+              "correctAnswer": "{\"1\":\"Some starfish went back into the water, and they were safe.\"}"
+            }
+          ],
+          "questionType": "Điền từ"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 9: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

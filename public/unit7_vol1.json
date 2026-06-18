@@ -1,0 +1,301 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit7_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit7_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">allow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[alau]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To allow something to happen means to let it happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Having a ticket will allow you to enter the show.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">announce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[anauns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To announce something is to make it known.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He announced to everyone his new idea for the company.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beside</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bisaid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone or something is beside you, they are next to you.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The two brothers stood beside each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">challenge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tjceiind3]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A challenge is something difficult to complete.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was a challenge to climb to the top of the mountain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">claim</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kleim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To claim means to say that something is true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He claimed to know why the country's laws were weak.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">condition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kandijan]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The condition of someone or something is the state that they are in.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The patient's condition was very good.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contribute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kantribju:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To contribute to something means to do something to make it successful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We decided to contribute money to the new hospital.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">difference</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[difarans]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A difference is a way that something is not like other things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The biggest difference between the birds is the color of their feathers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">divide</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[divaid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To divide something is to make it into smaller parts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We divided the pizza.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">expert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ekspa:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An expert is someone who is very good at doing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wizard was an expert at magic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">famous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feimas]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is famous, they are known to many people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Eiffel Tower in Paris is very famous.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">force</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fo:rs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Force is a person's strength or power.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He used all his force to try and open the door.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">harm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ha:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Harm is hurt or problems caused to someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A hot iron can cause great harm if you are not careful.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lay means to put or place in a horizontal or flat position.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Don't lay your socks on the floor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">peace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pi:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Peace is a time without war.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A white dove is a symbol for peace.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prince</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prins]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A prince is the son of a king.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The prince and the princess were married.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">protect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pratekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To protect someone is to stop them from getting hurt.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Firemen protect us from fires.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sense</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sense something is to know about it without being told.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I could sense that he was watching me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sudden</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sAdn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is sudden, it happens very quickly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He felt a sudden pain in his chest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">therefore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dea:rfo:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Therefore means for this reason.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He is fat. Therefore, he will go on a diet.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "something difficult that you have to do",
+              "options": [
+                "condition",
+                "sense",
+                "challenge",
+                "divide"
+              ],
+              "explanation": "challenge nghĩa là một thử thách, điều gì đó khó khăn cần phải làm.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "the son of a king",
+              "options": [
+                "prince",
+                "expert",
+                "famous",
+                "force"
+              ],
+              "explanation": "prince nghĩa là hoàng tử, con trai của vua.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "to do something to help succeed",
+              "options": [
+                "contribute",
+                "sudden",
+                "harm",
+                "peace"
+              ],
+              "explanation": "contribute nghĩa là đóng góp vào việc gì đó.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "for this reason",
+              "options": [
+                "allow",
+                "therefore",
+                "announce",
+                "beside"
+              ],
+              "explanation": "therefore có nghĩa là vì lý do đó, do vậy.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "to stop someone from getting hurt",
+              "options": [
+                "claim",
+                "protect",
+                "lay",
+                "difference"
+              ],
+              "explanation": "protect nghĩa là bảo vệ khỏi bị tổn thương.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Part B: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "10",
+              "content": "Sarah let Tim go to the game. (spr[10])",
+              "explanation": "let go -> allowed (từ cho trước là allow)",
+              "correctAnswer": "allowed"
+            },
+            {
+              "id": "11",
+              "content": "The child promised not to hurt our cat. (spr[11])",
+              "explanation": "hurt -> harm (từ cho trước là harm)",
+              "correctAnswer": "harm"
+            },
+            {
+              "id": "12",
+              "content": "She was a well-known writer in our town. (spr[12])",
+              "explanation": "well-known -> famous (từ cho trước là famous)",
+              "correctAnswer": "famous"
+            },
+            {
+              "id": "13",
+              "content": "You should say it's true that you never lie. (spr[13])",
+              "explanation": "say it's true -> claim (từ cho trước là claim)",
+              "correctAnswer": "claim"
+            },
+            {
+              "id": "14",
+              "content": "The food was cut into smaller parts so we could all eat. (spr[14])",
+              "explanation": "cut into smaller parts -> divided (từ cho trước là divide)",
+              "correctAnswer": "divided"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2: Check (V) the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "15",
+              "content": "It wasn't right for the coach _________.",
+              "options": [
+                "to make the race such a challenge",
+                "to allow me to play"
+              ],
+              "explanation": "Dựa vào nghĩa của câu, 'to make the race such a challenge' phù hợp ngữ cảnh hơn.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "My sister and I were fighting._________.",
+              "options": [
+                "We announced the winners",
+                "My sister claimed she didn't like me"
+              ],
+              "explanation": "Hai chị em đang đánh nhau nên cô em 'claimed' (khẳng định) là không thích tôi.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "17",
+              "content": "Everyone knew her _________.",
+              "options": [
+                "because I stood beside her",
+                "because she was famous"
+              ],
+              "explanation": "Mọi người đều biết cô ấy vì cô ấy nổi tiếng ('famous').",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "The man would not buy the bike_________.",
+              "options": [
+                "because of his difference",
+                "because of its bad condition"
+              ],
+              "explanation": "Người đàn ông không mua xe đạp vì nó ở tình trạng tồi tệ ('bad condition').",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "19",
+              "content": "No one could win against Sally _________.",
+              "options": [
+                "because she was an expert",
+                "because she never used force"
+              ],
+              "explanation": "Không ai có thể thắng Sally vì cô ấy là một chuyên gia ('expert').",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "We were scared because the dog_________.",
+              "options": [
+                "might harm us",
+                "might bring us peace"
+              ],
+              "explanation": "Chúng tôi sợ hãi vì con chó có thể làm hại ('harm') chúng tôi.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "21",
+              "content": "The police wanted_________.",
+              "options": [
+                "to protect us from danger",
+                "to not make any sense"
+              ],
+              "explanation": "Cảnh sát muốn bảo vệ ('protect') chúng tôi khỏi nguy hiểm.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "You are too sick to play outside._________.",
+              "options": [
+                "Don't lay your feet on the table",
+                "Therefore, play inside"
+              ],
+              "explanation": "Vì bạn quá ốm để chơi ở ngoài, vì vậy ('Therefore') hãy chơi ở trong nhà.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "23",
+              "content": "She was surprised by _________.",
+              "options": [
+                "the expected amount contributed by the animals",
+                "the sudden noise outside"
+              ],
+              "explanation": "Cô ấy ngạc nhiên bởi tiếng ồn bất ngờ ('sudden') ở bên ngoài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "Please be fair _________.",
+              "options": [
+                "when you meet the prince",
+                "when you divide the land"
+              ],
+              "explanation": "Xin hãy công bằng khi bạn chia ('divide') đất đai.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Best Prince</h1>        <p style=\"margin-bottom: 1rem;\">King Minos was very sick. His <b>condition</b> was getting worse. He had three sons. He loved them all. He had to <b>announce</b> who would become king.</p>    <p style=\"margin-bottom: 1rem;\">Two of the princes stood waiting outside the king's room. Theseus was the oldest and strongest. He thought his father would make him king. Pelias, the second son, thought differently. He was an <b>expert</b> with weapons. He thought the king would choose him.</p>    <p style=\"margin-bottom: 1rem;\">\"When I'm king,\" Theseus told Pelias, \"I'll let you <b>contribute</b> to the defense of our country. You can lead the army.\"</p>    <p style=\"margin-bottom: 1rem;\">Pelias became angry. \"Father knows I'm <b>famous</b> for my sword skills. He'll make me king.\"</p>    <p style=\"margin-bottom: 1rem;\">\"You?\" Theseus yelled. \"He won't choose you!\"</p>    <p style=\"margin-bottom: 1rem;\">\"The kingdom is mine!\" Pelias <b>claimed</b>. \"Father will give it to me—or I'll use <b>force</b> to take it!\"</p>    <p style=\"margin-bottom: 1rem;\">Theseus made a <b>sudden</b> move to take out his sword. Then Pelias did the same.</p>    <p style=\"margin-bottom: 1rem;\">\"Beating me will be a <b>challenge</b>,\" Theseus said. \"Fight me now. The winner gets the kingdom!\"</p>    <p style=\"margin-bottom: 1rem;\">Pelias agreed.</p>    <p style=\"margin-bottom: 1rem;\">King Minos could hear his sons fighting. The youngest son, Jason, stood <b>beside</b> him. He <b>sensed</b> his father's sadness. The king <b>laid</b> his hand flat on Jason's arm.</p>    <p style=\"margin-bottom: 1rem;\">\"Your brothers fight too much,\" the king told him. \"I must <b>protect</b> my kingdom from all <b>harm</b>. They'll <b>divide</b> it between them. The people won't know what to do. There'll be war. I can't <b>allow</b> either of them to be king. <b>Therefore</b>, I'm making you king. Your kindness has always made you special. It's the <b>difference</b> between you and your brothers. You can bring <b>peace</b>. They can't.\"</p>    <p style=\"margin-bottom: 1rem;\">Then the king died. Theseus and Pelias heard that their youngest brother was king. They were surprised.</p>    <p style=\"margin-bottom: 1rem;\">They realized that their fighting was wrong. It had kept them from saying goodbye to their father. They agreed to have Jason as their king. He was the best choice.</p></div>",
+      "imageUrl": "/unit7_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "What is this story about?",
+              "options": [
+                "A sudden fight between kings",
+                "A kind prince who got a kingdom",
+                "An expert sister and a famous king",
+                "The challenge to divide the kingdom"
+              ],
+              "explanation": "Câu chuyện kể về một vị hoàng tử tốt bụng (Jason) được trao ngôi báu.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "7",
+              "content": "What did the king need to protect the kingdom from?",
+              "options": [
+                "The fighting between the two princes",
+                "The harm caused by sudden fights",
+                "The differences between the three brothers",
+                "The poor condition of the king's army"
+              ],
+              "explanation": "Nhà vua lo sợ hai người anh em đánh nhau sẽ chia cắt vương quốc và gây ra chiến tranh.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "8",
+              "content": "What was probably true of Jason in the story?",
+              "options": [
+                "He wanted to bring peace to the kingdom.",
+                "The challenge of being king was too much for him.",
+                "He wanted harm to come to his brothers.",
+                "He hoped to divide the kingdom."
+              ],
+              "explanation": "Jason có bản tính nhân hậu và được tin tưởng sẽ mang lại hòa bình (peace).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "9",
+              "content": "What was the difference between Jason and his brothers?",
+              "options": [
+                "He was an expert with weapons.",
+                "He was older and stronger.",
+                "He made more sense.",
+                "He had always been kind."
+              ],
+              "explanation": "Sự khác biệt là sự nhân hậu của Jason ('Your kindness has always made you special. It\\'s the difference...').",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "25",
+              "content": "What did the king have to announce?",
+              "explanation": "The story states that the king had to announce who would become king.",
+              "correctAnswer": "He would have to announce who would become king."
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 7: Volume 1",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

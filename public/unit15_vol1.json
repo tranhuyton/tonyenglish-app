@@ -1,0 +1,318 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit15_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit15_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">across</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkrɔ́s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To go across something is to go to the other side of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He walked across the board to the other side.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">breathe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[briːð]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To breathe means to let air go in and out of your body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We need strong healthy lungs to help us breathe well.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">characteristic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæriktəristik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A characteristic is something that shows what a person or a thing is like.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ One characteristic of tigers is their black stripes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consume</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsúːm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To consume something means to eat or drink it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jack consumed a whole plate of spaghetti.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">excite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksáit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To excite someone means to make them happy and interested.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I heard about the school dance on Friday. This excited me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">extreme</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikstríːm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is extreme, it is in a large amount or degree.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His workout was so extreme that he was sweating heavily.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fear</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fear is the feeling of being afraid.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have a great fear of skateboarding.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fortunate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ́ːrtʃənit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are fortunate, you are lucky.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was fortunate to get a seat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">happen</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hæpən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone happens to do something, they do it by chance.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I happened to meet some new friends at school today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">length</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[leŋkθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The length of something is how long it is from one end to the other.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The length of the floor is three meters.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mistake</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mistéik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mistake is something you do wrong.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My boss always yells at me when I make a mistake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">observe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əbzə́ːrv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To observe something is to watch it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Brian observed the sun rising over the mountains.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">opportunity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑpərtjúːnəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An opportunity is a chance to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I had an opportunity to take pictures in the jungle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prize</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[praiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A prize is something of value that is given to the winner.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I won a prize for getting the best grade on my science test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">race</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A race is a contest to see who is the fastest.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Paul is a fast runner, so he easily won the race.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">realize</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ríːəlaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To realize is to suddenly understand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After I left my house, I realized that I left the light on.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">respond</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rispɑ́nd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To respond is to give an answer to what someone else said.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the teacher asked the question, we all responded.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">risk</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[risk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A risk is a chance of something bad happening.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I took a risk and climbed the snowy mountain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wonder</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wʌndər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To wonder is to ask yourself questions or have a need to know.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The young mother wondered if she'd have a boy or a girl.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">yet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[jet]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Yet is used to say something has not happened up to now.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We can't go out yet; we're still eating.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_ex1",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "something of value that is given to the winner",
+              "options": [
+                "opportunity",
+                "prize",
+                "risk",
+                "happen"
+              ],
+              "explanation": "a prize is something of value given to the winner.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "lucky",
+              "options": [
+                "extreme",
+                "across",
+                "fortunate",
+                "yet"
+              ],
+              "explanation": "fortunate means lucky.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "3",
+              "content": "to eat",
+              "options": [
+                "consume",
+                "breathe",
+                "realize",
+                "observe"
+              ],
+              "explanation": "to consume means to eat.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "the feeling of being afraid",
+              "options": [
+                "length",
+                "fear",
+                "happen",
+                "characteristic"
+              ],
+              "explanation": "fear is the feeling of being afraid.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "to do by chance",
+              "options": [
+                "respond",
+                "realize",
+                "excite",
+                "happen"
+              ],
+              "explanation": "happen means to do by chance.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "6",
+              "content": "how long something is",
+              "options": [
+                "length",
+                "characteristic",
+                "wonder",
+                "mistake"
+              ],
+              "explanation": "length is how long something is.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "7",
+              "content": "to let air in and out of your body",
+              "options": [
+                "observe",
+                "breathe",
+                "consume",
+                "excite"
+              ],
+              "explanation": "to breathe means to let air in and out of your body.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "something you did wrong",
+              "options": [
+                "happen",
+                "fear",
+                "mistake",
+                "risk"
+              ],
+              "explanation": "a mistake is something you did wrong.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "9",
+              "content": "up to this point",
+              "options": [
+                "extreme",
+                "length",
+                "across",
+                "yet"
+              ],
+              "explanation": "yet means up to this point.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "10",
+              "content": "to understand",
+              "options": [
+                "realize",
+                "breathe",
+                "respond",
+                "observe"
+              ],
+              "explanation": "to realize means to understand.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_ex2_partA",
+          "title": "Exercise 2 Part A: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "I had to walk to the other side of the school to get to my next class. (acr[11])",
+              "explanation": "across matches 'to the other side of'.",
+              "correctAnswer": "across"
+            },
+            {
+              "id": "12",
+              "content": "Brad chose not to give an answer when I asked about his weekend. (resp[12])",
+              "explanation": "respond matches 'give an answer'.",
+              "correctAnswer": "respond"
+            },
+            {
+              "id": "13",
+              "content": "Sarah ran around the park to get ready for the contest where people run against each other. (ra[13])",
+              "explanation": "race matches 'contest where people run against each other'.",
+              "correctAnswer": "race"
+            },
+            {
+              "id": "14",
+              "content": "Michael saw the accident that occurred today. (obs[14])",
+              "explanation": "observed matches 'saw'.",
+              "correctAnswer": "observed"
+            },
+            {
+              "id": "15",
+              "content": "Renee knew there was a chance of something bad happening when she went swimming in the ocean. (r[15])",
+              "explanation": "risk matches 'chance of something bad happening'.",
+              "correctAnswer": "risk"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3_ex2_partB",
+          "title": "Exercise 2 Part B: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "",
+              "options": [
+                "a. Being tall is a characteristic of many trees.",
+                "b. I was fortunate because I received some useless gifts."
+              ],
+              "explanation": "characteristic is correctly used.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "",
+              "options": [
+                "a. Because he left work early, Carl had an opportunity to go to the concert.",
+                "b. I could feel the length of the air outside."
+              ],
+              "explanation": "opportunity is correctly used.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "",
+              "options": [
+                "a. Angela felt fear when she got a good grade on her test.",
+                "b. Our team won. We were fortunate."
+              ],
+              "explanation": "fortunate means lucky.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "19",
+              "content": "",
+              "options": [
+                "a. Jeremy thought his hair was just the right length.",
+                "b. Michelle left her characteristic at my house."
+              ],
+              "explanation": "length is correctly used.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "",
+              "options": [
+                "a. Theresa found an opportunity on the ground outside.",
+                "b. Billy feels fear when he has to talk in front of people."
+              ],
+              "explanation": "fear is correctly used.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Big Race</h1>        <p style=\"margin-bottom: 1rem;\">A dog saw a group of animals <b>across</b> the road. He walked over to meet them.</p>    <p style=\"margin-bottom: 1rem;\">\"What are you doing?\" he asked them.</p>    <p style=\"margin-bottom: 1rem;\">\"I just sold them tickets to a <b>race</b> between the rabbit and the turtle,\" the duck <b>responded</b>.</p>    <p style=\"margin-bottom: 1rem;\">This news <b>excited</b> the dog. He felt <b>fortunate</b> that he <b>happened</b> to be there. \"I don't have anything to do today,\" the dog said. \"I want to buy a ticket, too.\"</p>    <p style=\"margin-bottom: 1rem;\">The dog sat down to <b>observe</b> the <b>race</b>. The <b>race</b> would be <b>extreme</b>. It would be many kilometers in <b>length</b>. The rabbit and the turtle stood next to each other. They waited for the <b>race</b> to start. The dog <b>wondered</b> why the turtle agreed to run against the rabbit. Being fast was not a <b>characteristic</b> of turtles. The rabbit was going to win easily.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, the <b>race</b> began. The rabbit ran extremely quickly. The turtle walked slowly. After a minute, the rabbit looked back. He saw that the turtle was far behind him and was <b>breathing</b> quickly because he was so tired. The rabbit smiled and slowed to a walk.</p>    <p style=\"margin-bottom: 1rem;\">A minute later, the rabbit said, \"I'm winning, so I'll take a rest.\" He sat and began to <b>consume</b> some grass. Then, he let his eyes close. He wasn't the winner <b>yet</b>. But there was no <b>risk</b> of him losing the <b>race</b>. He went to sleep.</p>    <p style=\"margin-bottom: 1rem;\">Hours later, a loud sound woke him. All of the animals were yelling and looking at the field. He felt <b>fear</b> for the first time. The turtle was almost at the finish line. Now, the rabbit <b>realized</b> his <b>mistake</b>. But the <b>race</b> was over. He gave the turtle an <b>opportunity</b> to win, and the turtle took it. The duck handed the turtle his <b>prize</b>. It was the happiest day of the turtle's life.</p>    <p style=\"margin-bottom: 1rem;\">The dog was happy for the turtle. \"He isn't fast,\" the dog thought. \"But he tried his best and did something great.\"</p></div>",
+      "imageUrl": "/unit15_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "A race between a rabbit and a turtle",
+                "The risk of running in a race",
+                "The extreme speed of rabbits",
+                "How to observe a turtle"
+              ],
+              "explanation": "The story is about a race between a rabbit and a turtle.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "What did the duck do for the other animals?",
+              "options": [
+                "He told them the news.",
+                "He gave them a prize.",
+                "He responded to their questions.",
+                "He sold tickets to them."
+              ],
+              "explanation": "The duck sold tickets to a race between the rabbit and the turtle.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "23",
+              "content": "Why did the dog think the turtle had no opportunity to win the race?",
+              "options": [
+                "The turtle hadn't won a race yet.",
+                "The turtle couldn't walk across such a length.",
+                "Being fast was not a characteristic of turtles.",
+                "The turtle was not fortunate."
+              ],
+              "explanation": "The dog wondered why the turtle agreed because being fast was not a characteristic of turtles.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "24",
+              "content": "What did the rabbit do after he woke up?",
+              "options": [
+                "He consumed some grass.",
+                "He realized his mistake.",
+                "He breathed quickly.",
+                "He excited the animals."
+              ],
+              "explanation": "Now, the rabbit realized his mistake.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "What did the rabbit see to make him feel fear?",
+              "options": [
+                "The rabbit saw the turtle almost at the finish line.",
+                "He saw the dog crossing the road.",
+                "He saw the duck eating the prize.",
+                "He saw the turtle sleeping."
+              ],
+              "explanation": "He felt fear because the turtle was almost at the finish line.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 15: Volume 1",
+    "category": "exercise",
+    "courseId": "8c3bea0e-458c-4c18-ab60-44b432e71170",
+    "timeLimit": 0
+  }
+}
