@@ -1174,7 +1174,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const filteredLibraryTests = useMemo(() => {
       let result = libraryTests.filter(test => {
           const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase());
-          const matchesCourse = filterCourse === 'all' || test.course_id === filterCourse;
+          const matchesCourse = filterCourse === 'all' || (filterCourse === 'none' ? !test.course_id : test.course_id === filterCourse);
           const matchesCategory = filterCategory === 'all';
           return matchesSearch && matchesCourse && matchesCategory;
       });
@@ -1196,6 +1196,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       let result = globalLectures.filter(lec => {
           const matchesSearch = lec.title.toLowerCase().includes(searchQuery.toLowerCase());
           if (filterLectureCourse === 'all') return matchesSearch;
+          if (filterLectureCourse === 'none') return matchesSearch && !lec.course_id;
           return matchesSearch && lec.course_id === filterLectureCourse;
       });
       result = [...result].sort((a, b) => {
@@ -1787,6 +1788,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                    <input type="text" placeholder="Tìm kiếm tên bài giảng..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[250px] pl-3 pr-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] text-[13px] md:text-sm transition-colors" />
                    <select value={filterLectureCourse} onChange={e => setFilterLectureCourse(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
                       <option value="all">Tất cả khóa học</option>
+                      <option value="none">-- Chung --</option>
                       {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                    </select>
                    <select value={sortLecture} onChange={e => setSortLecture(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
@@ -1902,7 +1904,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   <input type="text" placeholder="Tìm kiếm tên đề thi, bài tập..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:flex-1 max-w-[400px] px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 text-[13px] md:text-sm transition-all" />
                   
                   <select value={filterCourse} onChange={e => setFilterCourse(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
-                    <option value="all">Tất cả khóa học</option>{courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+                    <option value="all">Tất cả khóa học</option>
+                    <option value="none">-- Chung --</option>
+                    {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                   </select>
 
                   <select value={sortTest} onChange={e => setSortTest(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
