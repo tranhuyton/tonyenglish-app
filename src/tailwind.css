@@ -58,11 +58,6 @@ div[class*="jodit-ui-dialog__footer"] button:first-child {
   /* Đảm bảo các thanh cuộn bên trong vẫn mượt mà */
   .custom-scrollbar {
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .custom-scrollbar::-webkit-scrollbar {
-    display: none;
   }
 
 u { text-decoration: underline !important; }

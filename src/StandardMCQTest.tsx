@@ -942,7 +942,14 @@ const handleFinish = async () => {
 
         const element = React.createElement(tagName, props, children.length > 0 ? children : null);
         if (tagName === 'table') {
-          return React.createElement('div', { key: `${pathKey}-wrapper`, className: 'w-full my-6 overflow-visible' }, element);
+          return React.createElement('div', { key: `${pathKey}-wrapper`, className: 'w-full my-6 overflow-x-auto overflow-y-hidden', style: { scrollbarWidth: 'none', msOverflowStyle: 'none' } }, 
+            React.createElement('style', null, `
+              div[key="${pathKey}-wrapper"]::-webkit-scrollbar {
+                display: none;
+              }
+            `),
+            element
+          );
         }
         return element;
       }
