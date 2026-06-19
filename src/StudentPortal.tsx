@@ -310,7 +310,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             if (testIds.length > 0 && !document.hidden) {
                 const fetchRichData = async () => {
                     try {
-                        const chunkSize = 50; // Giảm từ 100 xuống 50 để giảm tải mỗi query
+                        const chunkSize = 10; // Giảm từ 50 xuống 10 để tránh lỗi statement timeout trên Supabase
                         const allRichData: any[] = [];
                         for (let i = 0; i < testIds.length; i += chunkSize) {
                             const chunk = testIds.slice(i, i + chunkSize);

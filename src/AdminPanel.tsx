@@ -443,15 +443,28 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     // Chỉ giữ basicInfo để giảm tải DB
     if (ast && ast.length > 0) {
       const loadedCourseId = courseId;
-      supabase.from('tests').select('id, content_json').eq('course_id', courseId).then(({ data: cjData }) => {
-        if (cjData && selectedCourse?.id === loadedCourseId) {
-          const cjMap = new Map(cjData.map(c => [c.id, { basicInfo: c.content_json?.basicInfo || {} }]));
-          setAssignedTests(prev => prev.map(t => {
-            const cj = cjMap.get(t.id);
-            return cj !== undefined ? { ...t, content_json: cj } : t;
-          }));
+      const fetchRichData = async () => {
+        try {
+          const testIds = ast.map((t: any) => t.id);
+          const chunkSize = 10;
+          const allRichData: any[] = [];
+          for (let i = 0; i < testIds.length; i += chunkSize) {
+            const chunk = testIds.slice(i, i + chunkSize);
+            const { data } = await supabase.from('tests').select('id, content_json').eq('course_id', courseId).in('id', chunk);
+            if (data) allRichData.push(...data);
+          }
+          if (allRichData.length > 0 && selectedCourse?.id === loadedCourseId) {
+            const cjMap = new Map(allRichData.map(c => [c.id, { basicInfo: c.content_json?.basicInfo || {} }]));
+            setAssignedTests(prev => prev.map(t => {
+              const cj = cjMap.get(t.id);
+              return cj !== undefined ? { ...t, content_json: cj } : t;
+            }));
+          }
+        } catch (e) {
+          console.error("Error loading content_json in background:", e);
         }
-      });
+      };
+      fetchRichData();
     }
 
     const { data: enrolls } = await supabase.from('enrollments').select('user_id').eq('course_id', courseId);
