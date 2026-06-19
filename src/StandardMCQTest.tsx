@@ -1248,7 +1248,7 @@ const handleFinish = async () => {
                         
                         {part?.content && (
                           <div 
-                              className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm" 
+                              className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm w-fit min-w-full" 
                               dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} 
                           />
                         )}
@@ -1439,7 +1439,7 @@ const handleFinish = async () => {
                                if ((sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") && !hasInlineBrackets) return null;
                                
                                return (
-                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
+                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6 w-fit min-w-full">
                                   {sec?.imageUrl && !isListening && (
                                       <img src={sec.imageUrl} className="max-w-full mb-6 rounded-lg border border-slate-200" alt="Fill Image" />
                                   )}
@@ -1809,7 +1809,7 @@ const handleFinish = async () => {
 
                              {/* DẠNG BÀI DROPLIST KHỐI (chỉ khi KHÔNG CÓ [num] inline) */}
                              {sec?.questionType === "Droplist" && !/\[\s*\d+\s*\]/.test(String(sec.content || '') + ' ' + String(sec.questions?.[0]?.content || '')) && (
-                                <div className="space-y-4 bg-white p-6 md:p-8 border border-slate-200 rounded-2xl shadow-sm mb-6">
+                                <div className="space-y-4 bg-white p-6 md:p-8 border border-slate-200 rounded-2xl shadow-sm mb-6 w-fit min-w-full">
                                   {sec.questions?.map((q: any) => {
                                       if (!q?.id) return null;
                                       const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
