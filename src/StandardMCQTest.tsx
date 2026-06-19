@@ -942,7 +942,7 @@ const handleFinish = async () => {
 
         const element = React.createElement(tagName, props, children.length > 0 ? children : null);
         if (tagName === 'table') {
-          return React.createElement('div', { key: `${pathKey}-wrapper`, className: 'w-full my-6 overflow-x-auto overflow-y-hidden custom-scrollbar' }, element);
+          return React.createElement('div', { key: `${pathKey}-wrapper`, className: 'w-full my-6 overflow-visible' }, element);
         }
         return element;
       }
