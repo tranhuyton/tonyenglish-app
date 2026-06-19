@@ -310,22 +310,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             if (testIds.length > 0 && !document.hidden) {
                 const fetchRichData = async () => {
                     try {
-                        const chunkSize = 10; // Giảm từ 50 xuống 10 để tránh lỗi statement timeout trên Supabase
+                        const chunkSize = 50; // Tăng lại lên 50 vì query giờ đã siêu nhẹ (chỉ lấy basicInfo)
                         const allRichData: any[] = [];
                         for (let i = 0; i < testIds.length; i += chunkSize) {
                             const chunk = testIds.slice(i, i + chunkSize);
-                            const { data } = await supabase.from('tests').select('id, content_json').eq('is_published', true).in('id', chunk);
+                            const { data } = await supabase.from('tests').select('id, basicInfo:content_json->basicInfo').eq('is_published', true).in('id', chunk);
                             if (data) allRichData.push(...data);
                         }
                         if (allRichData.length > 0) {
                             const contentMap = new Map<string, any>();
                             allRichData.forEach((r: any) => {
-                                let content = r.content_json;
-                                if (typeof content === 'string') {
-                                    try { content = JSON.parse(content); } catch(e) { content = {}; }
+                                let basicInfo = r.basicInfo;
+                                if (typeof basicInfo === 'string') {
+                                    try { basicInfo = JSON.parse(basicInfo); } catch(e) { basicInfo = {}; }
                                 }
-                                // Chỉ giữ lại basicInfo để tiết kiệm bộ nhớ, không cần toàn bộ parts/questions
-                                contentMap.set(r.id, { basicInfo: content?.basicInfo || {} });
+                                contentMap.set(r.id, { basicInfo: basicInfo || {} });
                             });
                             setAllTests(prev => prev.map(t => ({
                                 ...t,

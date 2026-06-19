@@ -446,15 +446,21 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       const fetchRichData = async () => {
         try {
           const testIds = ast.map((t: any) => t.id);
-          const chunkSize = 10;
+          const chunkSize = 50;
           const allRichData: any[] = [];
           for (let i = 0; i < testIds.length; i += chunkSize) {
             const chunk = testIds.slice(i, i + chunkSize);
-            const { data } = await supabase.from('tests').select('id, content_json').eq('course_id', courseId).in('id', chunk);
+            const { data } = await supabase.from('tests').select('id, basicInfo:content_json->basicInfo').eq('course_id', courseId).in('id', chunk);
             if (data) allRichData.push(...data);
           }
           if (allRichData.length > 0 && selectedCourse?.id === loadedCourseId) {
-            const cjMap = new Map(allRichData.map(c => [c.id, { basicInfo: c.content_json?.basicInfo || {} }]));
+            const cjMap = new Map(allRichData.map(c => {
+               let bi = c.basicInfo;
+               if (typeof bi === 'string') {
+                  try { bi = JSON.parse(bi); } catch(e) { bi = {}; }
+               }
+               return [c.id, { basicInfo: bi || {} }];
+            }));
             setAssignedTests(prev => prev.map(t => {
               const cj = cjMap.get(t.id);
               return cj !== undefined ? { ...t, content_json: cj } : t;
