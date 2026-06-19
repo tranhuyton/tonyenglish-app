@@ -346,19 +346,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         if (hData) {
             // Lọc dữ liệu: Chỉ giữ bài làm nghiêm túc
             const validHistory = hData.filter((item: any) => {
-                let detailsObj = item.details || {};
-                if (typeof detailsObj === 'string') {
-                    try { detailsObj = JSON.parse(detailsObj); } catch(e) { detailsObj = {}; }
-                }
-                const sc = parseFloat(item.score || 0);
-                const type = String(item.test_type || item.test_title || '').toLowerCase();
-                const isIeltsTest = type.includes('ielts') || detailsObj.bandScore !== undefined;
-                
-                if (isIeltsTest) {
-                    const band = parseFloat(detailsObj.bandScore || 0);
-                    return band > 3.0;
-                }
-                return sc > 3.0;
+                return true; // Bỏ lọc điểm để ghi nhận mọi bài đã nộp là hoàn thành
             });
 
             setHistoryData(validHistory.map((item: any) => {
@@ -499,10 +487,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         onStartTest('standard-reading', testData);
     } else if (type.includes('splitscreen') && type.includes('standard')) {
         onStartTest('standard-splitscreen', testData);
+    } else if (type === 'splitscreen' || type.includes('case-study') || type.includes('business')) {
+        onStartTest('case-study', testData);
     } else if (type.includes('standard')) {
         onStartTest('standard', testData);
-    } else if (type.includes('case-study') || type.includes('business')) {
-        onStartTest('case-study', testData);
     } else if (type === 'ielts-writing') {
         onStartTest('ielts-writing', testData);
     } else if (type === 'ielts-speaking') {
