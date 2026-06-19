@@ -254,6 +254,7 @@ export default function StandardMCQTest({
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [fontSize, setFontSize] = useState<'S' | 'M' | 'L'>('M');
+  const [leftWidth, setLeftWidth] = useState(50);
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
