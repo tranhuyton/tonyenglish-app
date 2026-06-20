@@ -1384,7 +1384,7 @@ const handleFinish = async () => {
                              <div className="mb-6">
                                 {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
                                 {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
-                                {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
+                                {sec?.content && !( ["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(sec?.questionType) && /\[\s*\d+\s*\]/.test(String(sec.content || '')) ) && (
                                     <div className="text-[15px] text-slate-600 leading-relaxed mb-6 format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
                                 )}
                              </div>
@@ -1415,7 +1415,7 @@ const handleFinish = async () => {
                                    });
                                  }
                                } else {
-                                  rawContentText = sec.content || '';
+                                  rawContentText = '';
                                   if (Array.isArray(sec.questions)) {
                                     sec.questions.forEach((q: any) => {
                                       let qContent = String(q.content || '').trim();
