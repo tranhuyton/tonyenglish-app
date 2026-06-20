@@ -235,12 +235,11 @@ export default function StandardMCQTest({
     let flag = false;
     parts.forEach((p: any) => {
       if (isRealContent(p.content)) flag = true;
-      p.sections?.forEach((s: any) => {
-        if (isRealContent(s.content) && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(s.questionType) && !(s.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(s.content || '')))) flag = true;
-      });
+      if (p.imageUrl) flag = true;
+      if (isReviewMode && isRealContent(p.explanation)) flag = true;
     });
     return flag;
-  }, [parts]);
+  }, [parts, isReviewMode]);
 
   const showLeftPane = isReviewMode && hasAnyContent;
   const [leftWidth, setLeftWidth] = useState(50);
