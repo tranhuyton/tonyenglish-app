@@ -1113,6 +1113,11 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                         value={part.content} 
                         onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} 
                       />
+                      <JoditEditorRow 
+                        label="Lời giải thích Part / Audio Transcript (Tùy chọn, chỉ hiện khi chữa bài)" 
+                        value={part.explanation} 
+                        onChange={(e:any) => updateField([pIdx], 'explanation', e.target.value)} 
+                      />
                       <MediaRow 
                         label="File Âm thanh Part" 
                         value={part.audioUrl} 
@@ -1151,6 +1156,11 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                               label="Nội dung Section (Đoạn văn/Hướng dẫn)" 
                               value={sec.content} 
                               onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} 
+                            />
+                            <JoditEditorRow 
+                              label="Lời giải thích Section / Audio Transcript (Tùy chọn, chỉ hiện khi chữa bài)" 
+                              value={sec.explanation} 
+                              onChange={(e:any) => updateField([pIdx, sIdx], 'explanation', e.target.value)} 
                             />
                             <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 gap-2">
                               <label className="w-32 shrink-0 text-[13px] font-bold text-slate-600">Kiểu làm</label>

@@ -243,6 +243,7 @@ export default function StandardMCQTest({
   }, [parts]);
 
   const showLeftPane = isReviewMode && hasAnyContent;
+  const [leftWidth, setLeftWidth] = useState(50);
   const [scoreResult, setScoreResult] = useState({ 
       score: parseInt(safeData?.past_score || 0), 
       total: parseInt(safeData?.past_total || 0) 
@@ -1259,6 +1260,15 @@ const handleFinish = async () => {
                               dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} 
                           />
                         )}
+
+                        {isReviewMode && part?.explanation && (
+                            <div className="mb-8 p-6 bg-amber-50 rounded-2xl border border-amber-200 shadow-sm">
+                                <h4 className="font-bold text-amber-800 text-[16px] mb-3 flex items-center gap-2">
+                                    <Volume2 className="w-5 h-5 text-amber-600" /> Audio Transcript / Giải thích Part
+                                </h4>
+                                <div className="text-[15px] text-amber-900 leading-[1.9] font-serif whitespace-pre-wrap html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.explanation) }} />
+                            </div>
+                        )}
                         
                         {part?.sections?.map((sec: any, sIdx: number) => {
                           let displaySecTitle = sec.title;
@@ -1388,7 +1398,7 @@ const handleFinish = async () => {
                              {isReviewMode && sec?.explanation && (
                                 <div className="mb-6 p-5 bg-amber-50 rounded-xl border border-amber-200 shadow-inner">
                                     <h4 className="font-bold text-amber-800 text-[15px] mb-2 flex items-center gap-2">
-                                        <Volume2 className="w-5 h-5 text-amber-600" /> Audio Transcript
+                                        <Volume2 className="w-5 h-5 text-amber-600" /> Audio Transcript / Giải thích Section
                                     </h4>
                                     <div className="text-[14px] text-amber-900 leading-relaxed font-serif whitespace-pre-wrap html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.explanation) }} />
                                 </div>
