@@ -1295,13 +1295,7 @@ const handleFinish = async () => {
                               {/* {sec?.imageUrl && (
                                   <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />
                               )} */}
-                              
-                              {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
-                                <div 
-                                    className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm" 
-                                    dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} 
-                                />
-                              )}
+                              {/* Section content has been moved to the right pane above questions */}
                             </div>
                           )
                         })}
@@ -1390,7 +1384,7 @@ const handleFinish = async () => {
                              <div className="mb-6">
                                 {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
                                 {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
-                                {sec?.content && !showLeftPane && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
+                                {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
                                     <div className="text-[15px] text-slate-600 leading-relaxed mb-6 format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
                                 )}
                              </div>
