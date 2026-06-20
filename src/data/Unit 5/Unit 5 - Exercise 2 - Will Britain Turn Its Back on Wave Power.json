@@ -1,0 +1,127 @@
+{
+  "title": "Unit 5: Exercise 2 - Will Britain Turn Its Back on Wave Power?",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Will Britain Turn Its Back on Wave Power?",
+        "content": "<p><b>1</b> Wave energy research in Britain is under threat again following a report which argues that public funding for large offshore projects should be restricted to a token sum. The report, by the government's Renewable Energy Advisory Group, calls instead for more government investment to develop ways of generating electricity from hydroelectric plants, wind, waste and crops: technologies which have existing markets.</p><br><p><b>2</b> The decision is complicated by the publication of a review of wave energy by the government's Energy Technology Support Unit, which shows that the cost of electricity generated from wave devices has fallen considerably in recent years, and that new designs could make even greater savings.</p><br><p><b>3</b> The wave energy review was not completed in time for the renewables group to consider it. Nevertheless, the group gives offshore wave machines the thumbs down on economic grounds, and suggests that they should be given \"no further significant research and development expenditure\".</p><br><p><b>4</b> Stephen Salter, professor of engineering design at the University of Edinburgh and a pioneer of wave power, described the group's conclusions as \"nonsense\". Improvements made over the past decade have brought down the theoretical costs of producing electricity from his departments device, the Edinburgh Duck, to about 16p per kilowatt-hour. A radical redesign to overcome technical problems highlighted by ETSU has further reduced the cost.</p><br><p><b>5</b> Salter is reticent about the scale of these reductions, but ETSU's own computer models are believed to put the cost at around 4p/kWh, similar to the cost of energy from coal and gas.</p><br><p><b>6</b> ETSU's estimates are based on the assumption that all technical problems with a wave device are solved. It stresses that wave energy technology is \"relatively immature\", and that a great deal of R&D will be needed before a practical offshore machine is built. The best prospects, it says, may lie with radical redesigns of older ideas, such as Salter's Duck, or one of several new designs which promise electricity \"at substantially lower costs\".</p><br><p><b>7</b> The renewables group makes no recommendations about the most developed wave energy devices — those sited on the coastline. One such machine has been built on the island of Islay by researchers from Queen's University of Belfast. ETSU estimates that it could produce electricity at 6p/kWh.</p><br><p><b>8</b> Trevor Whittacker, who manages the wave energy programme at Queen's, believes that the market for shoreline machines must be developed now. Offshore devices will not be needed for 20 years, he says, but \"if you're going to go for serious energy production, you've got to go offshore\". He warns that if the basic research is not done now, \"you're going to grind to a halt in 10 to 15 years\".</p><br><p><b>9</b> A theme running through the group's report is the need to bolster the industries that have grown up over the past two years for generating electricity from, for example, wind and biomass. These markets have grown chiefly because regional electricity companies have been forced to buy electricity from Nuclear Electric and renewable energy producers at an inflated price under the non-fossil fuel obligation.</p><br><p><b>10</b> The NFFO was conceived as a means to keep Nuclear Electric \"cash rich\", but is proving to be \"a useful mechanism\" for creating markets in new technologies, says the report. Twidell says that by accident the government has found an ingenious way of forcing the pace of technology. Companies receive a return on their wind turbines, or chicken litter furnaces only when they begin producing electricity. \"Once the companies are generating, they want to make the plant more efficient, so the research is very applied and market-oriented,\" he says.</p><br><p><b>11</b> According to Martin Holdgate, director of the World Conservation Union, and chairman of the renewables group, \"the hope is that as the technology becomes proven, it will become an increasingly attractive investment\".</p><br><p><b>12</b> The group argues that by 2025, renewables should contribute about 60 terawatt-hours of electricity a year, which is equivalent to one fifth of present annual production. To reach this goal, it says \"the government must intervene in the market\".</p><br><p><b>13</b> Holdgate argues that Britain's commitment to the Climate Change Convention, signed at the Earth Summit last June, is reason enough for the government to give extra support to technologies that produce no polluting gases. Renewables are also at a disadvantage because the full environmental damage of fossil fuels is not taken into account in their costs.</p><br><p><b>14</b> Despite its optimistic view, the group calls on the government to increase the amount of renewable energy bought under the NFFO to around 1,500 megawatts over the next seven years. This would still leave renewables with only 0.1 per cent of Britain's electricity supply. Environmentalists say this is a pitiable increase.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-7",
+            "content": "<p><b>Decide if each of the following supports generating electricity from wave power. Please write</b></p><br><p><b>YES</b> if the person/institution supports using wave power;</p><br><p><b>NO</b> if the person/institution doesn't support using wave power;</p><br><p><b>NOT GIVEN</b> if there is no information about this in the passage.</p><br><p>Example: The Renewable Energy Advisory Group: <b>NO</b></p><br><p>1. The Energy Technology Support Unit [1]</p><br><p>2. Stephen Salter [2]</p><br><p>3. Trevor Whittacker [3]</p><br><p>4. John Twidell [4]</p><br><p>5. The World Conservation Union [5]</p><br><p>6. Martin Holdgate [6]</p><br><p>7. The British Government [7]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 2 nêu rõ Đơn vị Hỗ trợ Công nghệ Năng lượng (ETSU) công bố báo cáo cho thấy chi phí điện từ sóng đã giảm đáng kể và tiềm năng tiết kiệm lớn hơn nữa."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 4 nhắc đến Stephen Salter là một người tiên phong trong năng lượng sóng và đã chỉ trích nhóm tư vấn vì bác bỏ năng lượng sóng."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 8 cho biết Trevor Whittacker tin rằng thị trường máy phát điện ven bờ phải được phát triển ngay và phải tiến ra ngoài khơi."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "YES",
+                "explanation": "Ông John Twidell (đoạn 10) ủng hộ các cơ chế tạo động lực cho công nghệ năng lượng mới nói chung."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Bài đọc chỉ nhắc đến Martin Holdgate là giám đốc của World Conservation Union (đoạn 11), nhưng không đề cập đến quan điểm của tổ chức này đối với năng lượng sóng."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "NO",
+                "explanation": "Theo đoạn 11, Martin Holdgate là chủ tịch của nhóm năng lượng tái tạo (Renewables group). Ở đoạn 3, nhóm này đã bác bỏ (give thumbs down) các máy phát điện từ sóng ngoài khơi."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Bài viết không nêu trực tiếp việc chính phủ Anh ủng hộ năng lượng sóng, chỉ đề cập chung việc chính phủ có cam kết chống biến đổi khí hậu."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "Questions 8-16",
+            "content": "<p><b>Do the following statements agree with the view of the writer of the passage? Please write</b></p><br><p><b>YES</b> if the statement agrees with the view of the writer;</p><br><p><b>NO</b> if the statement does not agree with the view of the writer;</p><br><p><b>NOT GIVEN</b> if there is no information about this in the passage.</p><br><p>Example: Offshore facilities could be built to harness wave power. Answer: <b>YES</b></p><br><p>8. Wind energy is more cost-effective than tidal power. [1]</p><br><p>9. The Edinburgh Duck is not as viable as the machine built by researchers from Queen's University. [2]</p><br><p>10. Producing electricity at the cost of 4p/kWh is the aim of scientists studying wave power. [3]</p><br><p>11. The Renewable Energy Advisory Group feels that the government should give more support to efforts to use renewable energy. [4]</p><br><p>12. Renewable energy includes nuclear energy and energy from wave, biomass and wind. [5]</p><br><p>13. Currently, electricity from renewable resources accounts for 0.1% of the total electricity generated in Britain. [6]</p><br><p>14. Scientists from the University of Strathclyde have been working on a pilot project for a number of years. [7]</p><br><p>15. The NFFO means to generate electricity using nuclear power and renewable energy. [8]</p><br><p>16. Chicken litter is used to generate electricity. [9]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Bài đọc không hề nhắc đến hay so sánh với năng lượng thủy triều (tidal power)."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "YES",
+                "explanation": "Theo đoạn 6 và 7, Edinburgh Duck là máy ngoài khơi vẫn đang cần nghiên cứu thêm, trong khi máy của đại học Queen's ở trên bờ và đã được xây dựng thành công."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn 5 nhắc đến 4p/kWh là chi phí ước tính, không đề cập đây là 'mục tiêu' của các nhà khoa học."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 1 nêu rõ nhóm tư vấn kêu gọi chính phủ tăng cường đầu tư vào các nhà máy thủy điện, năng lượng gió... và đoạn 14 nhóm này tiếp tục kêu gọi chính phủ tăng mua năng lượng tái tạo."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 9 phân biệt rõ 'Nuclear Electric' (điện hạt nhân) và 'renewable energy producers' (các nhà sản xuất năng lượng tái tạo), chứng tỏ năng lượng hạt nhân không thuộc nhóm năng lượng tái tạo."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 14 cho biết 0,1% là mức ước tính trong tương lai (sau 7 năm nữa) dù đã được tăng cường đầu tư, không phải tỷ lệ hiện tại."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Bài đọc không nhắc đến University of Strathclyde."
+              },
+              {
+                "id": "8",
+                "content": "[8]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 9 quy định NFFO bắt buộc các công ty điện địa phương phải mua điện từ năng lượng hạt nhân và năng lượng tái tạo."
+              },
+              {
+                "id": "9",
+                "content": "[9]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 10 nhắc đến 'chicken litter furnaces' (lò đốt phân gà) như một công nghệ được các công ty sử dụng để sản xuất điện."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

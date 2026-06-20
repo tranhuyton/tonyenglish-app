@@ -1,0 +1,252 @@
+{
+  "title": "Unit 1: Exercise 4 - Energy from Biological Sources",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<h3>Energy from Biological Sources</h3>\n<p><b>A</b> Radiation from the sun is the earth's primary source of energy. More than 99 per cent of the processes that are happening on earth are energized by the sun either directly or indirectly. As solar radiation is a permanent and renewable source of energy, why, then, do we have an \"energy crisis\"? The problem, of course, lies in how to utilize this energy. It is diffuse and intermittent on a daily and seasonal basis, thus collection and storage costs can be high. But we already have at our disposal a means of capturing and storing a proportion of this energy, and we have always had such a means. It is plant life — the \"biomass\". The process involved is photosynthesis.</p>\n<p><b>B</b> This capture of solar energy and conversion into a stored product occurs, with only a low overall efficiency of about 0.1 per cent on a world-wide basis but because of the adaptability of plants, it takes place and can be used over most of the earth.</p>\n<p><b>C</b> We should remember two things about this energy source. First, the world's present and precarious dependence on fossil fuels — first coal, and then oil — is only about two hundred years old. Before that, most of the energy required by human beings for heating, cooking and industrial purpose was supplied from biological sources. By this, we mean mainly wood, or its derivative, charcoal. Secondly, wood still accounts for one sixth of the world's fuel supply. In the non-OPEC developing countries, which contain 40 per cent of the world's population, non-commercial fuel often comprises up to 90 per cent of their total energy use. With the increasingly doubtful future of fossil fuel supplies, fuel from biological sources may have to become even more important.</p>\n<p><b>D</b> Traditional fuels of biological origin include wood, charcoal, agricultural residues such as straw and dried animal dung. With the growth in world population, there has been increasing pressure on these resources, leading to what is sometimes called the \"second energy crisis\". This is more drastic for mankind than the \"first\", or oil crisis. It takes the form of deforestation, with loss of green cover in hot lands, leading to desiccation and the loss of fertile land to desert.</p>\n<p><b>E</b> The threat from both energy crises can be partly met by utilizing the enormous supply of energy built up annually in green plants. The question is, how should this be done? In the past, photosynthesis has given us food, fuel wood, fibre and chemicals. It has also, ultimately, given us the fossil fuels — coal, oil and natural gas, but these are not renewable while the other products are. Recently, however, with abundant oil, the products of present-day photosynthesis are mainly evident to the developed world as food. We should re-examine and, if possible, re-employ the previous systems; but, with today's increased population and standard of living, we cannot revert to old technology and must instead develop new means of using present-day photosynthetic systems more efficiently.</p>\n<p><b>F</b> Fortunately for us, plants are very adaptable and exist in great diversity — they could thus continue indefinitely to supply us with renewable quantities of food, fibre, fuel and chemicals. If the impending fuel problem which is predicted within the next ten to fifteen years comes about, we may turn to plant products sooner than we expect. Let us be prepared!</p>\n<p><b>G</b> Some basic research can be done centrally, without reference to the conditions in any one country. For example, all plant energy storage depends ultimately on the process of photosynthesis. Experiments are being made to see whether this process can either be speeded up, or even reproduced artificially, in order to produce a higher efficiency in energy extraction. Most research should be done locally, however, because of climatic and vegetation differences, and also because of the difference in needs and emphasis in varying countries. Such research and development is an excellent opportunity to encourage local scientists, engineers and administrators in one field of energy supply. Even if biomass systems do not become significant suppliers of energy in a specific country in the future, the spin-off in terms of benefits to agriculture, forestry, land use patterns and bioconversion technology is certain to be valuable.</p>\n<p><b>H</b> What are the methods currently in use or under trial for deriving energy from biomass? The first is the traditional use outlined in paragraph C, which may be termed the \"non-commercial\" use of biomass energy. The second also has a long traditional history: the use of wood-fuel under boilers to generate steam. This has now been revised on an intensive scale. In a study from the Philippines, it has been estimated that a 9,100 hectare fuel wood plantation \"would supply the needs of a 75 megawatt steam power station if it were not more than fifty kilometres distant\". Such a plantation would use a species of fast-growing tree — leucaena leucocephala, or the giant \"ipil-ipil\". The investment requirements and cost of power produced looks favourable and competitive with oil-fired power stations of similar capacity. In addition, residues from cropland after harvest and from sawmills could be used as steam-producing fuel. The steam could then be used to generate electricity.</p>\n<p><b>I</b> There are also bioconversion processes to produce liquid fuels such as oil and alcohol. Some fuel oils can be pressed directly from certain crops. Alcohols, on the other hand, can be produced by converting plant material by fermentation. Ethanol (ethyl alcohol) can be extracted from growing plants such as sugar cane, from waste plant material, or from whole grain. Methanol (methyl alcohol) can be produced from coal, wood, sewage and various waste products. These alcohols have several industrial uses and can also be used as fuels in the internal combustion engines of vehicles. Technology is already advanced, and the main problem is devising ways of collecting enough organic material to make the installations commercially viable. Some crops can be grown specifically for this purpose. In other cases, the installations can make use of the residue, or \"trash\" produced in the large-scale plantation farming of such crops as sugar cane and pineapple. Another fuel product produced by a fermentation process is fuel gas of various kinds, including a biogas called methane. Several of these processes can be applied to household or municipal wastes and refuse — a large and concentrated source in all big towns and cities.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-8",
+            "content": "<p>Choose the correct heading for each paragraph from the list of headings below.</p>\n<div style=\"border: 1px solid black; padding: 10px;\">\n<p><b>List of Headings</b></p>\n<ul style=\"list-style-type: none;\">\n<li>(i) Fuels from biological sources</li>\n<li>(ii) Research and development into biomass systems</li>\n<li>(iii) Solar energy and its utilization</li>\n<li>(iv) The energy crisis and photosynthetic systems</li>\n<li>(v) The second energy crisis</li>\n<li>(vi) Plant power</li>\n<li>(vii) Efficiency of the solar conversion process</li>\n<li>(viii) Tree biomass</li>\n<li>(ix) Other forms of renewable energy</li>\n<li>(x) Liquid and gaseous fuels from biomass</li>\n</ul>\n</div>\n<p><i>Example: Paragraph A - Answer: iii</i></p>",
+            "questionType": "Kéo thả",
+            "questions": [
+              {
+                "id": "1",
+                "content": "Paragraph B",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x"
+                ],
+                "correctAnswer": "vii",
+                "explanation": "Đoạn B đề cập đến việc quá trình chuyển đổi năng lượng mặt trời diễn ra với \"low overall efficiency of about 0.1 per cent\" (hiệu suất tổng thể thấp khoảng 0,1%). Điều này khớp với tiêu đề \"Efficiency of the solar conversion process\" (Hiệu suất của quá trình chuyển đổi năng lượng mặt trời)."
+              },
+              {
+                "id": "2",
+                "content": "Paragraph C",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x"
+                ],
+                "correctAnswer": "i",
+                "explanation": "Đoạn C nói về việc con người đã sử dụng nguồn năng lượng sinh học (biological sources) từ trước khi phụ thuộc vào nhiên liệu hóa thạch, trong đó gỗ và than củi đóng vai trò quan trọng làm nhiên liệu. Điều này khớp với tiêu đề \"Fuels from biological sources\" (Nhiên liệu từ các nguồn sinh học)."
+              },
+              {
+                "id": "3",
+                "content": "Paragraph D",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x"
+                ],
+                "correctAnswer": "v",
+                "explanation": "Đoạn D trực tiếp nhắc đến cụm từ \"the 'second energy crisis'\" (cuộc khủng hoảng năng lượng thứ hai) xảy ra do sự gia tăng dân số dẫn đến áp lực lên các nguồn nhiên liệu sinh học truyền thống như gỗ, than củi."
+              },
+              {
+                "id": "4",
+                "content": "Paragraph E",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x"
+                ],
+                "correctAnswer": "iv",
+                "explanation": "Đoạn E nói về mối đe dọa từ cả hai cuộc khủng hoảng năng lượng (\"both energy crises\") và cách giải quyết thông qua việc phát triển các công nghệ mới để sử dụng hệ thống quang hợp hiện tại (\"present-day photosynthetic systems\") một cách hiệu quả hơn."
+              },
+              {
+                "id": "5",
+                "content": "Paragraph F",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x"
+                ],
+                "correctAnswer": "vi",
+                "explanation": "Đoạn F thảo luận về khả năng thích ứng và sự đa dạng của thực vật, giúp chúng có thể liên tục cung cấp thực phẩm, chất xơ và nhiên liệu (\"fuel\"). Cụm từ \"plant products\" thể hiện sức mạnh và tiềm năng của thực vật (Plant power) trong việc giải quyết vấn đề nhiên liệu."
+              },
+              {
+                "id": "6",
+                "content": "Paragraph G",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x"
+                ],
+                "correctAnswer": "ii",
+                "explanation": "Đoạn G tập trung vào các nghiên cứu cơ bản (\"basic research\") và nghiên cứu tại địa phương về quang hợp và hệ thống sinh khối (\"biomass systems\"). Cụm từ \"research and development\" cũng xuất hiện trực tiếp trong đoạn văn này."
+              },
+              {
+                "id": "7",
+                "content": "Paragraph H",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x"
+                ],
+                "correctAnswer": "viii",
+                "explanation": "Đoạn H mô tả việc sử dụng nhiên liệu từ củi gỗ (\"wood-fuel\") và đề cập đến một đồn điền trồng cây lấy củi (fuel wood plantation) với các loại cây phát triển nhanh. Điều này thể hiện việc sử dụng sinh khối từ cây (Tree biomass)."
+              },
+              {
+                "id": "8",
+                "content": "Paragraph I",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x"
+                ],
+                "correctAnswer": "x",
+                "explanation": "Đoạn I trình bày chi tiết về quá trình chuyển đổi sinh học để tạo ra nhiên liệu lỏng (\"liquid fuels\") như dầu và cồn (ethanol, methanol) và nhiên liệu khí (\"gaseous fuels\" / \"fuel gas\") như khí sinh học (biogas). Tiêu đề này tóm tắt chính xác nội dung đoạn văn."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "Questions 9-15",
+            "content": "<p>Decide if each of the following statements is true or false according to the information provided in the passage.</p>",
+            "questionType": "TFNG",
+            "questions": [
+              {
+                "id": "9",
+                "content": "Practically all the plant biomass produced by farmers around the world is a potential source of energy, whether the crop is grown for food, fuel or fibre.",
+                "options": [
+                  "TRUE",
+                  "FALSE",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "TRUE",
+                "explanation": "Đoạn H và I đề cập rằng các phế phẩm nông nghiệp sau thu hoạch (\"residues from cropland after harvest\"), nguyên liệu thực vật bỏ đi (\"waste plant material\") hay rác (\"trash\") từ các đồn điền đều có thể được dùng làm nguồn năng lượng. Điều này chứng tỏ mọi sinh khối thực vật, dù trồng với mục đích gì, đều là nguồn năng lượng tiềm năng."
+              },
+              {
+                "id": "10",
+                "content": "Sugar cane is an important crop that can be used to produce ethanol for motor fuel.",
+                "options": [
+                  "TRUE",
+                  "FALSE",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "TRUE",
+                "explanation": "Đoạn I có viết: \"Ethanol (ethyl alcohol) can be extracted from growing plants such as sugar cane... These alcohols... can also be used as fuels in the internal combustion engines of vehicles.\" (Ethanol có thể được chiết xuất từ cây mía và làm nhiên liệu cho động cơ xe cộ), xác nhận thông tin này là đúng."
+              },
+              {
+                "id": "11",
+                "content": "Only developing countries that have large areas of agricultural or forest land can benefit from biomass sources of energy.",
+                "options": [
+                  "TRUE",
+                  "FALSE",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "FALSE",
+                "explanation": "Đoạn I chỉ ra rằng các quá trình chuyển đổi sinh học có thể áp dụng cho rác thải sinh hoạt và đô thị (\"household or municipal wastes and refuse\"), một nguồn tài nguyên lớn tập trung ở \"tất cả các thị trấn và thành phố lớn\" (\"all big towns and cities\"). Vì vậy, không chỉ các nước đang phát triển có đất nông/lâm nghiệp mới được hưởng lợi từ năng lượng sinh khối."
+              },
+              {
+                "id": "12",
+                "content": "The use of charcoal for cooking has been a common practice for hundreds of years.",
+                "options": [
+                  "TRUE",
+                  "FALSE",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "TRUE",
+                "explanation": "Đoạn C nói rằng: \"Before that [about two hundred years old], most of the energy required by human beings for heating, cooking... was supplied from biological sources... mainly wood, or its derivative, charcoal.\" (Trước đó khoảng 200 năm, năng lượng đun nấu chủ yếu từ gỗ và than củi). Do đó, việc dùng than củi để đun nấu đã là một thực tiễn phổ biến từ hàng trăm năm nay."
+              },
+              {
+                "id": "13",
+                "content": "Systematic deforestation to supply steam-producing fuel serves to improve the fertility of the land and reduce desiccation.",
+                "options": [
+                  "TRUE",
+                  "FALSE",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "FALSE",
+                "explanation": "Đoạn D giải thích rằng nạn phá rừng (\"deforestation\") dẫn đến mất đi lớp phủ xanh, gây khô hạn (\"desiccation\") và làm mất đi đất đai màu mỡ để biến thành sa mạc (\"the loss of fertile land to desert\"). Nhận định trong câu hỏi nói rằng phá rừng cải thiện độ phì nhiêu và giảm khô hạn là hoàn toàn sai."
+              },
+              {
+                "id": "14",
+                "content": "OPEC countries use more fuel from non-fossil biological sources than the developing world in general.",
+                "options": [
+                  "TRUE",
+                  "FALSE",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "FALSE",
+                "explanation": "Đoạn C đề cập: \"In the non-OPEC developing countries... non-commercial fuel often comprises up to 90 per cent of their total energy use\" (Ở các nước đang phát triển không thuộc khối OPEC, nhiên liệu phi thương mại có thể chiếm tới 90% tổng năng lượng sử dụng). Ngược lại, khối OPEC giàu dầu mỏ nên họ dùng nhiều nhiên liệu hóa thạch, vì vậy không thể nói các nước OPEC dùng nhiều nhiên liệu sinh học phi hóa thạch hơn các nước đang phát triển nói chung."
+              },
+              {
+                "id": "15",
+                "content": "Traditional use of biomass material for fuel caused no serious problems when population levels were low.",
+                "options": [
+                  "TRUE",
+                  "FALSE",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "TRUE",
+                "explanation": "Đoạn D viết: \"With the growth in world population, there has been increasing pressure on these resources, leading to what is sometimes called the 'second energy crisis'.\" Sự gia tăng dân số đã gây áp lực lên tài nguyên và dẫn đến khủng hoảng, điều này ngụ ý rằng khi mức dân số còn thấp trước đây, việc sử dụng sinh khối truyền thống không gây ra vấn đề nghiêm trọng nào."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

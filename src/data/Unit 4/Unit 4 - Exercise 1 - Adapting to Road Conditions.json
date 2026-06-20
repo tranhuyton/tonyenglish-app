@@ -1,0 +1,77 @@
+{
+  "title": "Unit 4: Exercise 1 - Adapting to Road Conditions",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Adapting to Road Conditions",
+        "content": "<p><b>1</b> Sitting in stationary traffic is, at best, a Zen experience. Drivers mired in a jam learn to cede control to the powers that be, becoming at one with the universe as they breathe in the mind-numbing fumes all around. At worst, it is an ongoing battle for sanity. But now, according to several groups of researchers in America and Germany, there is something that drivers can do to take back control over the roads. Get adaptive cruise control. And, of course, use it.</p><br><p><b>2</b> Adaptive cruise control (ACC), as its name suggests, is a modified version of traditional cruise control. It employs radar to monitor the road ahead of a vehicle, automatically adjusting that vehicle's speed to maintain a safe distance from the one in front. This is safer than manual driving because it reduces the system's reaction time from nearly a second (human) to practically instantaneous (machine), thus helping to forestall shunts. But ACC may have a useful side-effect, arising from the fact that another effect of slow human reaction times is to produce traffic jams on apparently open roads.</p><br><p><b>3</b> Such jams start when a car slows suddenly to allow, for example, another vehicle to enter the traffic stream. Slow reaction times mean that instead of responding smoothly, the drivers behind such a vehicle often end up slamming on the brakes. That slamming propagates backwards, and before long the traffic is at a standstill. So it makes sense that ACC would reduce not only collisions, but also congestion. What is unexpected is how few vehicles need to have it operating for all to benefit. As Craig Davis of the University of Michigan reports in Physical Review E, only 20% of cars need to employ ACC in order to prevent completely those jams that are caused by a slow lead car on a high-speed, single-lane road. According to Dr. Davis's computer model, even a rate of use of ACC as low as 13% can improve the flow of traffic significantly.</p><br><p><b>4</b> ACC is not a panacea. Dr. Davis got less promising results for more complex road conditions, particularly those near junctions. And a similar model built by Boris Kerner, a researcher for Daimler Chrysler, in Stuttgart, Germany, indicates that in certain bottleneck conditions, ACC may even cause extra congestion. These disappointing results can, however, be ameliorated by shortening the \"headway\" in ACC-equipped vehicles, according to Martin Treiber of the Dresden University of Technology, also in Germany.</p><br><p><b>5</b> Headway is the gap, measured in seconds, that a driver puts between himself and the car ahead. Since ACC reacts more quickly than a human, people who have it fitted can afford to allow less headway.</p><br><p><b>6</b> In his simulation, Dr. Davis instructed both his ACC-equipped and his manually driven cars to leave about 1.1 seconds of headway (equivalent to 28 metres at about 100 km an hour). Dr. Kerner allowed for as much as 1.8 seconds, the distance at which drivers in Germany are taught to follow. But Dr. Treiber says 0.9 seconds is safe and realistic. Using this headway in their simulations, he and his colleague Dirk Helbing saw big improvements in traffic flow even in the most dire road conditions. The question remains, of course, of whether real drivers will trust the technology sufficiently to allow it to follow the car in front so closely.</p><br><p><b>7</b> ACC has been an option in a number of luxury vehicles for several years. Now it is becoming available in mid-range cars. But its presence on the roads is still limited, and many people who have it do not use it. If drivers could be convinced to fit ACC and use it, it would not only improve their own driving experience, but also that of their fellow motorists.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-9",
+            "content": "<p>Stationary traffic can drive people mad. However, according to American and German researchers, adaptive cruise control (ACC) can help drivers [1]. ACC adapts a car's [2] to keep a safe distance from the one ahead by using [3] to monitor the road ahead. ACC is safer than manual driving because it significantly reduces [4], and collisions and congestion in addition. According to Dr. Davis' computer model, if [5] of cars use ACC, [6] can be improved significantly. However, ACC should not be seen as [7]. In [8] conditions, it may even cause extra jams, according to a computer model. But this situation can be improved by reducing [9] in ACC-equipped vehicles.</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "take back control",
+                "explanation": "Đoạn 1 viết: 'there is something that drivers can do to take back control over the roads. Get adaptive cruise control.' Nghĩa là ACC có thể giúp tài xế lấy lại quyền kiểm soát."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "speed",
+                "explanation": "Đoạn 2 viết: 'automatically adjusting that vehicle's speed to maintain a safe distance from the one in front.' ACC tự động điều chỉnh tốc độ để giữ khoảng cách an toàn."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "radar",
+                "explanation": "Đoạn 2 viết: 'It employs radar to monitor the road ahead of a vehicle...'. ACC sử dụng radar để theo dõi con đường phía trước."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "the system's reaction time",
+                "explanation": "Đoạn 2 viết: 'This is safer than manual driving because it reduces the system’s reaction time...'. ACC an toàn hơn lái xe thủ công vì nó giảm thiểu đáng kể thời gian phản ứng của hệ thống."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "13%",
+                "explanation": "Đoạn 3 viết: 'According to Dr. Davis’s computer model, even a rate of use of ACC as low as 13% can improve the flow of traffic significantly.' Chỉ cần 13% xe sử dụng ACC là có thể cải thiện dòng lưu thông giao thông."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "the flow of traffic",
+                "explanation": "Đoạn 3 viết: '...even a rate of use of ACC as low as 13% can improve the flow of traffic significantly.' Mô hình của Dr. Davis cho thấy lưu lượng giao thông có thể được cải thiện đáng kể."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "a panacea",
+                "explanation": "Đoạn 4 viết: 'ACC is not a panacea.' (ACC không phải là một giải pháp chữa bách bệnh). Do đó nó không nên được xem như 'a panacea'."
+              },
+              {
+                "id": "8",
+                "content": "[8]",
+                "correctAnswer": "complex road / bottleneck",
+                "explanation": "Đoạn 4 viết: 'Dr. Davis got less promising results for more complex road conditions... indicates that in certain bottleneck conditions, ACC may even cause extra congestion.' Từ cần điền là 'complex road' hoặc 'bottleneck'."
+              },
+              {
+                "id": "9",
+                "content": "[9]",
+                "correctAnswer": "headway",
+                "explanation": "Đoạn 4 viết: 'These disappointing results can, however, be ameliorated by shortening the \"headway\" in ACC-equipped vehicles...'. Tình trạng này có thể được cải thiện bằng cách giảm 'headway' (khoảng cách an toàn) ở những xe có ACC."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

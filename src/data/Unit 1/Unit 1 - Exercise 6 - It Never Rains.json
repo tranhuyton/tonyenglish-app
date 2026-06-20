@@ -1,0 +1,243 @@
+{
+  "title": "Unit 1: Exercise 6 - It Never Rains",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<h3>It Never Rains</h3>\n<p><b>A</b> Weather forecasts on Hurricane Floyd, which has just hit North Carolina, persuaded state governors along the southeastern seaboard to urge more than 2 million people to evacuate inland. Since 1854, when state-sponsored meteorology was born, weather forecasting has always been recognized as a valuable business - one dollar invested in meteorology is said to yield about $15 in terms of casualties avoided, harvests saved and so on. But now that the Internet has made selling weather information so easy, the market is being fought over as never before.</p>\n<p><b>B</b> Weather forecasts have become much more accurate over the past 20 years. Today's three-day forecasts are as good as one-day forecasts were in 1981. Ten-day forecasts are fast becoming the standard.</p>\n<p><b>C</b> The more accurate the forecasts, the more they are worth. Sales of iced tea multiply by five each time the thermometer rises above 15°C. With a three-day forecast, retailers can send their orders to their sunniest outlets and soft-drinks companies can adjust their rate of production. Movie audiences, medicine consumption and toll receipts all vary according to the sky. In winter, power companies can save up to $100,000 a day if they know in advance how high users will turn up their heating.</p>\n<p><b>D</b> Throughout most of its history, weather forecasting has been done by national governments, although, since any rain forecast for London incorporates data collected from as far away as Fiji, they have to cooperate. The World Meteorological Organization (WMO), part of the United Nations, organizes the free exchange of data among 185 member states. But the more accurate - and therefore valuable - the weather forecasts become, the more commercial companies want to get into the business.</p>\n<p><b>E</b> By some estimate, Europe's weather forecasting market is currently worth $150m and it may soon be worth $700m. The state-owned weather forecasters are keen to cash in, but they remain heavily dependent on their governments. Britain's meteorological office earns more in commercial revenues than any of its European counterparts, but it brings in only £24m of its £155m budget.</p>\n<p><b>F</b> One reason is that commercial companies have been taking an increasing slice of the weather business in Europe. Over the past five years, global companies, such as Japan's Weathernews, or national forecaster, such as the Netherlands' Meteo Consult, have captured 20% of the market from government weather services. Accuweather, an American company, has been courting European media, businessmen, mariners and mountain-climbing fanatics.</p>\n<p><b>G</b> Europe's state-owned weather services complain that the commercial companies have unfair advantages. Unlike them, the American Weather Service - which, according to the rules that govern it, is not allowed to sell information - passes on without charge the data it receives from the WMO to private companies. Thus, private forecaster can stock up on free American data and resell it to other markets without investing in costly satellites or supercomputers.</p>\n<p><b>H</b> In 1995, European weathermen, supported by the South Americans, made the WMO adopt a new rule - Regulation 40 - that identifies two categories of products. Raw data needed by meteorologists all over the world remain at everybody's disposal. But weather services may not sell the data that have the greatest economic value - forecasts for a particular city, for instance - outside their national markets.</p>\n<p><b>I</b> So naturally everybody sets about circumventing Regulation 40. Universities, which still enjoy free access to all weather data, are under suspicion, but the main way around the rules is to use the Internet, where the notion of national markets, used by Regulation 40, simply does not apply.</p>\n<p><b>J</b> Private companies have also complained about government weather services to the European Commission, claiming that the absence of competition between them proves collusion. And they say that those services dump weather data. In France, for example, the government weather service, Meteo France, gets FFr 2m a year from selling forecasts to TF1, the biggest commercial television station. TF1, meanwhile, gets FFr 1.7 billion in revenue from advertising spots around the weather report.</p>\n<p><b>K</b> So far, the commission has turned a deaf ear and the WMO has managed to persuade its members to take a united stand. Too much competition from the private sector would jeopardize the free exchange of data that allows any country to formulate forecasts. But the amounts at stake may soon change this.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-10",
+            "content": "<p>Choose the correct heading for Paragraphs B-K from the list of headings below.</p><div style=\"padding: 10px; border: 1px solid black;\"><b>List of Headings</b><br>(i) Commercial companies have cashed in<br>(ii) A business coveted by commercial companies<br>(iii) A new regulation enforced by European weathermen<br>(iv) A profitable market<br>(v) Complaints made by private companies<br>(vi) Commercial companies enjoyed unfair advantages<br>(vii) Value brought by accurate forecasts<br>(viii) How scientists get accurate forecasts<br>(ix) The situation will be changed soon<br>(x) Improved weather forecasts<br>(xi) The history of weather forecasting<br>(xii) How people avoid complying with the rule<br>(xiii) Damages caused by the hurricane<br>(xiv) Little profit made from a profitable market</div><p><i>Example: Paragraph A - Answer: iv</i></p>",
+            "questionType": "Kéo thả",
+            "questions": [
+              {
+                "id": "1",
+                "content": "Paragraph B",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "x",
+                "explanation": "Đoạn B nói về sự cải thiện độ chính xác của các dự báo thời tiết qua thời gian (\"Weather forecasts have become much more accurate over the past 20 years\"), tương ứng với \"Improved weather forecasts\" (Dự báo thời tiết được cải thiện)."
+              },
+              {
+                "id": "2",
+                "content": "Paragraph C",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "vii",
+                "explanation": "Đoạn C đề cập đến việc dự báo càng chính xác thì giá trị mang lại càng lớn (\"The more accurate the forecasts, the more they are worth\") kèm theo các ví dụ về lợi ích, khớp với \"Value brought by accurate forecasts\"."
+              },
+              {
+                "id": "3",
+                "content": "Paragraph D",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "ii",
+                "explanation": "Đoạn D nói về việc các công ty thương mại ngày càng muốn nhảy vào lĩnh vực kinh doanh dự báo thời tiết khi nó có giá trị hơn (\"the more commercial companies want to get into the business\"), khớp với \"A business coveted by commercial companies\"."
+              },
+              {
+                "id": "4",
+                "content": "Paragraph E",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "xiv",
+                "explanation": "Đoạn E nêu rằng thị trường dự báo thời tiết rất có giá trị, nhưng các cơ quan nhà nước chỉ thu về lợi nhuận khá nhỏ so với ngân sách của họ (\"brings in only £24m of its £155m budget\"), khớp với \"Little profit made from a profitable market\"."
+              },
+              {
+                "id": "5",
+                "content": "Paragraph F",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "i",
+                "explanation": "Đoạn F giải thích rằng các công ty thương mại đã kiếm lời và chiếm được thị phần đáng kể trong ngành công nghiệp thời tiết (\"commercial companies have been taking an increasing slice... captured 20% of the market\"), tương ứng với \"Commercial companies have cashed in\"."
+              },
+              {
+                "id": "6",
+                "content": "Paragraph G",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "vi",
+                "explanation": "Đoạn G đề cập trực tiếp đến việc các dịch vụ thời tiết của nhà nước than phiền rằng các công ty thương mại có lợi thế không công bằng (\"commercial companies have unfair advantages\") khi họ lấy được dữ liệu miễn phí từ Mỹ."
+              },
+              {
+                "id": "7",
+                "content": "Paragraph H",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "iii",
+                "explanation": "Đoạn H nói về việc các nhà khí tượng học châu Âu đã thúc đẩy áp dụng một quy định mới - Regulation 40 (\"European weathermen... made the WMO adopt a new rule - Regulation 40\"), đúng với \"A new regulation enforced by European weathermen\"."
+              },
+              {
+                "id": "8",
+                "content": "Paragraph I",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "xii",
+                "explanation": "Đoạn I nói về cách mọi người tìm cách lách quy định 40 bằng cách sử dụng Internet (\"everybody sets about circumventing Regulation 40... the main way around the rules is to use the Internet\"), khớp với \"How people avoid complying with the rule\"."
+              },
+              {
+                "id": "9",
+                "content": "Paragraph J",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "v",
+                "explanation": "Đoạn J đề cập đến việc các công ty tư nhân phàn nàn (\"Private companies have also complained...\") về các dịch vụ thời tiết của chính phủ, tương ứng với \"Complaints made by private companies\"."
+              },
+              {
+                "id": "10",
+                "content": "Paragraph K",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "ix",
+                "explanation": "Đoạn K kết luận rằng số tiền lớn liên quan (the amounts at stake) có thể sẽ sớm thay đổi tình hình này (\"may soon change this\"), phù hợp với \"The situation will be changed soon\"."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1349,7 +1349,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                 let qContent = String(q.content || '').trim();
                                 if (qContent) {
                                     if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
-                                        qContent += ` [${q.id}]`;
+                                        const alreadyHasHole = new RegExp('\\\[\\s*' + q.id + '\\s*\\\]').test(rawContentText);
+                                        if (!alreadyHasHole) {
+                                            qContent += ` [${q.id}]`;
+                                        }
                                     }
                                     rawContentText += (rawContentText ? '<br><br>' : '') + qContent;
                                 }

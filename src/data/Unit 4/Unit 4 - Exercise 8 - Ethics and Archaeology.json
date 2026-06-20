@@ -1,0 +1,106 @@
+{
+  "title": "Unit 4: Exercise 8 - Ethics and Archaeology",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Ethics and Archaeology",
+        "content": "<p><b>1</b> The first-world-war battlefields of Belgium and France are dangerous places where, even today, unexploded shells lurk, making excavation a potentially lethal activity. But as archaeologists pick up their trowels, they must consider more than their personal safety. For the trenches, dug-outs and tunnels, many containing human remains and personal belongings, are ethical minefields too. In a paper in this month's Antiquity, Nicholas Saunders, an anthropologist at University College, London, says that archaeologists on these battlefields face a concentration of all the issues that have concerned archaeology in the past ten to fifteen years.</p><br><p><b>2</b> These ethical concerns fall into three broad areas. First, there is the question of how to treat human remains. Over the past few years, archaeologists have often come into conflict with indigenous peoples over the custody and handling of excavated human remains. In Belgium and France, the situation is particularly complex because the allied armies included soldiers from a variety of faiths and ethnicities, including Africans, Indians, Australians and Native Americans, all of whose traditions may prefer to treat remains differently.</p><br><p><b>3</b> Next is the question of ownership of artefacts. In the case of first-world-war sites, local people armed with metal detectors routinely collect medals and other memorabilia. The sale of such items, says Dr. Saunders, has provided an important source of income ever since refugees first returned to the area after the conflict. Archaeologists, though, regard such activities as looting. Around the world, the general question of who has the first claim on buried items — local people, the descendants of the original owners or archaeologists, is deeply controversial.</p><br><p><b>4</b> A third ethical problem concerns the preservation of sites. Should battlefields be left alone as memorials, redeveloped for tourism, or preserved for the archaeologists of the future? Archaeologists increasingly consider the third option: in recent years, they have become more selective about what and where they dig, so that they do not preclude investigations by subsequent generations.</p><br><p><b>5</b> In short, archaeologists' investigations frequently pit their interests against those of other people, and the concerns of the present against the possible concerns of the future. As ethical considerations come to matter more, there has been a change in the way the public sees archaeologists, and the way archaeologists see themselves. We went through a period when we thought \"Hey, we're scientists, we should be the number one priority here,\" says William Lipe, an archaeologist at Washington State University in Pullman. But most of us have now come to see it differently.</p><br><p><b>6</b> Archaeology is now changing dramatically, says Karen Vitelli, an archaeologist at Indiana University. Dr. Vitelli also chairs the ethics committee of the Society for American Archaeology (SAA) and is editor of a forthcoming book on archaeological ethics. She was one of the first archaeologists to integrate the study of ethics into archaeological training, and it has now, she says, become a standard part of many degree courses. At the same time, archaeological societies around the world (including the SAA) have adopted codes of ethics to regulate their members. What has brought about this transformation?</p><br><p><b>7</b> <b>Skeletons in the Closet</b><br><br>Ethics and archaeology began to collide relatively recently. The modern discipline traces its roots back to the gentleman amateurs of the early 19th century, who brought statues, columns, mummies and trinkets back as souvenirs from their travels around the Mediterranean. Subsequent generations of archaeologists have tended to regard men such as Giovanni Belzoni, a one-time circus strong-man who shipped Egyptian antiquities back to the British Museum in London, as little better than tomb-robbers.</p><br><p><b>8</b> By the early 20th century, however, archaeologists had begun to adopt the methodology of science. Increasing emphasis was placed on the accurate measurement and description of sites and publication of results in archaeological journals. Technological advances such as the advent of radiocarbon dating led to further refinements, and the new archaeology movement of the 1960s promoted quantitative methods such as statistical analysis. The transformation of archaeology, from tomb-robbing by amateurs into a coherent scientific discipline, was complete.</p><br><p><b>9</b> Paradoxically, the ethical arguments over the treatment of human remains, the ownership of artefacts and responsibility to future generations, all stem in part from archaeology's new-found scientific authority. Having eschewed their dubious forebears, archaeologists reinvented themselves as respectable scientists in search of truth. Who could argue with that?</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-7",
+            "content": "<p>Ethical considerations have become increasingly important in archaeology. There are generally three categories of [1]: how to treat human remains, who owns [2] and how [3] should be conserved. The growing importance of such concerns has changed the way how [4] views archaeologists and also how the archaeologists view themselves, who used to see themselves as [5]. Around the world archaeology is changing dramatically. The study of ethics has become part of [6]. Throughout the world, codes of ethics have been [7] to regulate the members of archaeological societies.</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "ethical concerns / considerations",
+                "explanation": "Đoạn 2 có viết \"These ethical concerns fall into three broad areas. First, there is the question of how to treat human remains.\" (Những mối quan ngại về đạo đức này chia làm ba lĩnh vực lớn. Đầu tiên là vấn đề cách xử lý hài cốt người). Từ đồng nghĩa: \"three categories\" = \"three broad areas\". Do đó đáp án là \"ethical concerns\" (hoặc \"ethical considerations\" như trong câu đầu bài tóm tắt)."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "the artefacts",
+                "explanation": "Đoạn 3 viết \"Next is the question of ownership of artefacts.\" (Tiếp theo là vấn đề quyền sở hữu các đồ tạo tác). \"who owns\" tương ứng với \"ownership of\". Từ cần điền là \"the artefacts\"."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "the sites",
+                "explanation": "Đoạn 4 viết \"A third ethical problem concerns the preservation of sites.\" (Vấn đề đạo đức thứ ba liên quan đến việc bảo tồn các di chỉ). \"conserved\" tương ứng với \"preservation\". Vậy từ cần điền là \"the sites\"."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "the public",
+                "explanation": "Đoạn 5 viết \"...there has been a change in the way the public sees archaeologists, and the way archaeologists see themselves.\" (...đã có sự thay đổi trong cách công chúng nhìn nhận các nhà khảo cổ học...). \"views\" tương ứng với \"sees\". Từ cần điền là \"the public\"."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "the number one priority",
+                "explanation": "Đoạn 5 viết \"We went through a period when we thought 'Hey, we're scientists, we should be the number one priority here'... But most of us have now come to see it differently.\" (Chúng ta từng trải qua thời kỳ nghĩ rằng mình là ưu tiên số một). Từ cần điền là \"the number one priority\"."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "archaeological training",
+                "explanation": "Đoạn 6 viết \"She was one of the first archaeologists to integrate the study of ethics into archaeological training...\" (Bà là một trong những nhà khảo cổ đầu tiên đưa việc nghiên cứu đạo đức vào đào tạo khảo cổ). Từ cần điền là \"archaeological training\"."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "adopted",
+                "explanation": "Đoạn 6 viết \"...archaeological societies around the world (including the SAA) have adopted codes of ethics to regulate their members.\" (...các hiệp hội khảo cổ trên thế giới đã thông qua các quy tắc đạo đức để quản lý thành viên). Từ cần điền là \"adopted\"."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "Questions 8-10",
+            "content": "<p>Do the following statements agree with the view of the writer in the reading passage?</p><br><p><b>YES</b> if the statement agrees with the view of the writer<br><b>NO</b> if the statement does not agree with the view of the writer<br><b>NOT GIVEN</b> if there is no information about this in the passage</p>",
+            "questionType": "Trắc nghiệm",
+            "questions": [
+              {
+                "id": "8",
+                "content": "In the early 19th century, European scientists brought back statues, columns and mummies from their travels.",
+                "options": [
+                  "YES",
+                  "NO",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 7 (Skeletons in the Closet) viết \"The modern discipline traces its roots back to the gentleman amateurs of the early 19th century, who brought statues, columns, mummies and trinkets back as souvenirs...\". Bài đọc nói những người mang tượng, xác ướp về là \"gentleman amateurs\" (những quý ông nghiệp dư), chứ không phải \"scientists\" (nhà khoa học). Do đó, thông tin trong câu là sai (NO)."
+              },
+              {
+                "id": "9",
+                "content": "The methodology of science was adopted in archaeological research in the early 20th century.",
+                "options": [
+                  "YES",
+                  "NO",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 8 viết \"By the early 20th century, however, archaeologists had begun to adopt the methodology of science.\" (Đến đầu thế kỷ 20, các nhà khảo cổ đã bắt đầu áp dụng phương pháp khoa học). Thông tin này hoàn toàn khớp với câu hỏi. Đáp án là YES."
+              },
+              {
+                "id": "10",
+                "content": "Radiocarbon dating appeared in the 1960s.",
+                "options": [
+                  "YES",
+                  "NO",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn 8 viết \"Technological advances such as the advent of radiocarbon dating led to further refinements, and the new archaeology movement of the 1960s promoted quantitative methods...\". Bài đọc nhắc đến \"radiocarbon dating\" và \"1960s\" riêng biệt, nhưng không khẳng định phương pháp định tuổi bằng carbon phóng xạ xuất hiện vào những năm 1960. Do đó thông tin này không được đề cập (NOT GIVEN)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

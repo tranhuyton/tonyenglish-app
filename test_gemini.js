@@ -1,110 +1,68 @@
 const { createClient } = require('@supabase/supabase-js');
-const fs = require('fs');
-const { GoogleGenerativeAI, SchemaType } = require('@google/generative-ai');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+const dotenv = require('dotenv');
 
-const env = fs.readFileSync('.env', 'utf-8');
-const urlMatch = env.match(/^VITE_SUPABASE_URL=(.*)$/m);
-const keyMatch = env.match(/^VITE_SUPABASE_SERVICE_ROLE_KEY=(.*)$/m);
-const geminiMatch = env.match(/^VITE_GEMINI_API_KEY=(.*)$/m);
+dotenv.config();
 
-const supabase = createClient(urlMatch[1].trim(), keyMatch[1].trim());
-const genAI = new GoogleGenerativeAI(geminiMatch[1].trim());
+const supabase = createClient(
+  process.env.VITE_SUPABASE_URL,
+  process.env.VITE_SUPABASE_SERVICE_ROLE_KEY
+);
+
+const genAI = new GoogleGenerativeAI(process.env.VITE_GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash", generationConfig: { responseMimeType: "application/json" } });
 
 async function run() {
-    const { data } = await supabase.from('tests').select('id, title, content_json').ilike('title', '%Unit 15: Volume 6%');
-    if (!data || data.length === 0) {
-        console.log('Unit not found');
-        return;
+  const i = 2; // Test with Activity 2
+  const title = 'Unit 3: Listening Activity ' + i;
+  const { data } = await supabase.from('tests').select('id, content_json').eq('title', title).single();
+  
+  if (data && data.content_json && data.content_json.parts && data.content_json.parts[0].sections[0].questions) {
+    let cj = data.content_json;
+    let sec = cj.parts[0].sections[0];
+    const questions = sec.questions;
+    const transcript = sec.explanation; // This is where the transcript is stored now
+    
+    if (!transcript) {
+      console.log('No transcript found in sec.explanation');
+      return;
     }
-    
-    const test = data[0];
-    console.log('Testing on:', test.title);
-    
-    if (!test.content_json || !test.content_json.parts || !test.content_json.parts[1]) {
-        console.log('No reading part found');
-        return;
-    }
-    
-    const readingPart = test.content_json.parts[1];
-    const storyHtml = readingPart.content;
-    const storyText = storyHtml.replace(/<[^>]*>/g, '').trim();
-    
-    const questionsToProcess = [];
-    
-    // Flatten all questions
-    for (const sec of readingPart.sections) {
-        if (!sec.questions) continue;
-        for (const q of sec.questions) {
-            questionsToProcess.push({
-                sectionId: sec.id,
-                questionId: q.id,
-                content: q.content,
-                options: q.options || [],
-                correctAnswer: q.correctAnswer,
-                originalExplanation: q.explanation
-            });
-        }
-    }
-    
-    console.log(`Found ${questionsToProcess.length} questions to explain.`);
-    
-    // Prepare prompt
-    const prompt = `Bạn là một gia sư tiếng Anh tận tâm và chuyên nghiệp.
-Dưới đây là một bài đọc hiểu tiếng Anh:
----
-${storyText}
----
 
-Dưới đây là danh sách các câu hỏi trắc nghiệm / True-False, kèm theo các đáp án (nếu có) và ĐÁP ÁN ĐÚNG:
-${questionsToProcess.map((q, i) => `
-Câu hỏi ${i + 1}: ${q.content}
-Các lựa chọn: ${q.options.join(' | ')}
-Đáp án đúng: ${q.correctAnswer}
-`).join('\n')}
+    const qs = questions.map((q, idx) => `Question ${idx + 1}: ${q.answer || q.content}\nCorrect Answer: ${q.correctAnswer}`).join('\n\n');
+    
+    const prompt = `You are an English teacher creating answer explanations for a listening test.
+Here is the audio transcript:
+"""
+${transcript}
+"""
 
-Nhiệm vụ của bạn là viết "giải thích đáp án" bằng TIẾNG VIỆT cho TỪNG câu hỏi một cách chi tiết, dễ hiểu nhất.
-Yêu cầu:
-- Trích dẫn câu văn hoặc cụm từ cụ thể trong bài đọc làm bằng chứng.
-- Giải thích ngắn gọn tại sao dựa vào bằng chứng đó ta lại chọn đáp án này.
-- Đối với câu True/False, hãy giải thích rõ thông tin trong bài ủng hộ hay bác bỏ nhận định đó.
-- Đối với từ vựng khó, bạn có thể dịch nhanh nghĩa của từ vựng đó trong ngữ cảnh bài đọc.
-- Văn phong thân thiện, truyền cảm hứng, giống như một gia sư (xưng là "Gia sư", gọi người học là "bạn").
+Here are the questions and their correct answers:
+"""
+${qs}
+"""
 
-Trả về kết quả CỰC KỲ NGHIÊM NGẶT dưới định dạng MẢNG JSON.
-Mảng này chứa đúng ${questionsToProcess.length} chuỗi (string), mỗi chuỗi là phần giải thích cho một câu hỏi tương ứng theo đúng thứ tự.`;
+For each question, extract the exact short sentence or phrase from the transcript that contains the answer, and provide a short Vietnamese translation/explanation. 
+Format each explanation EXACTLY like this: "Dựa vào transcript: '[English quote]'. ([Vietnamese translation/explanation])."
+Keep it very concise. Only include the most relevant part of the transcript.
 
-    const schema = {
-        type: SchemaType.ARRAY,
-        description: "List of explanations for the questions",
-        items: {
-            type: SchemaType.STRING,
-        },
-    };
+Return ONLY a valid JSON array of strings, where each string is the explanation for the corresponding question in order. The array length must exactly match the number of questions (${questions.length}).`;
 
-    const model = genAI.getGenerativeModel({
-        model: "gemini-2.5-flash",
-        generationConfig: {
-            responseMimeType: "application/json",
-            responseSchema: schema,
-        }
-    });
-
+    console.log('Calling Gemini...');
+    const result = await model.generateContent(prompt);
+    const responseText = result.response.text();
+    console.log(responseText);
+    
     try {
-        console.log('Sending request to Gemini...');
-        const result = await model.generateContent(prompt);
-        const responseText = result.response.text();
-        const explanations = JSON.parse(responseText);
-        
-        console.log('\n--- RESULTS ---\n');
-        for (let i = 0; i < questionsToProcess.length; i++) {
-            console.log(`Q: ${questionsToProcess[i].content}`);
-            console.log(`A: ${questionsToProcess[i].correctAnswer}`);
-            console.log(`NEW EXP: ${explanations[i]}`);
-            console.log('-------------------------');
-        }
+      const explanations = JSON.parse(responseText);
+      if (explanations.length === questions.length) {
+        console.log('Success!');
+      } else {
+        console.log(`Length mismatch: got ${explanations.length}, expected ${questions.length}`);
+      }
     } catch (e) {
-        console.error('Error generating explanations:', e);
+      console.log('JSON Parse error:', e);
     }
+  }
 }
 
 run();

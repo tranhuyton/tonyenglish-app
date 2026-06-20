@@ -1,0 +1,83 @@
+{
+  "title": "Unit 3: Exercise 4 - Separate, But EQ",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<p><b>1</b> Bad news for readers of this magazine: it's not enough to be smart anymore. That's the sobering message from the folks behind the Bar-On Emotional Quotient Inventory, which is being billed as the world's first commercially available test for measuring \"emotional intelligence.\" Israeli psychologist Reuven Bar-On, who according to promotional materials has spent more than 16 years honing the EQ test, defines emotional intelligence as \"capabilities, competencies, and skills that influence one's ability to succeed in coping with environmental demands and pressures and directly affect one's overall psychological well-being.\"</p><br><p><b>2</b> In the early 1960s, examiners would give three-year-olds a marshmallow. The children were told that if they could hold off eating it until the examiner returned from some non-existent errand, they would get a second marshmallow. Only about 15 per cent of the kids withstood the marshmallow temptation, with the other 85 per cent becoming the people who lean over the tracks to see if a train is coming. This test of \"impulse control\", one of Bar-On's components of emotional intelligence, turned out to be the single most important indicator for how well those kids adapted in terms of number of friends and performance in school, according to Stein.</p><br><p><b>3</b> The Bar-On test itself consists of neither chocolate nor marshmallows, and unlike some psychological exams, it's not designed to uncover nuts. Bar-On and Stein see the test as a tool to create emotional profiles, which can be used to match people to suitable careers or to identify and improve weak areas. The test lists 152 statements, including \"I like everyone I meet\" and \"I do very weird things\", which subjects judge themselves to agree or disagree with on a five-point scale. The statements cover five areas: intrapersonal, interpersonal, adaptability, stress management and general mood. Those areas can then be further broken down. For example, general mood consists of optimism and happiness. (Yours truly scored a full 20 points higher in happiness than in optimism. I'm still pretty happy, but I doubt it will last.)</p><br><p><b>4</b> In developing the test, Bar-On administered it to more than 9,000 subjects in nine countries. The large pool includes enough journalists for a comparison between purveyors of print versus broadcast news. \"We found that people in the electronic media tend to be more optimistic than those in the print media,\" Stein said. That difference can be easily explained. A few years back, this writer covered an auction of vintage Rolls-Royces and Bentleys for another publication. A prominent television journalist, who is safer left unidentified, also showed up. My optimism took a permanent hit that day, for whereas I was scrambling for a story, he came to shop. Although he might have a strong faith in the future, my broadcast brother could afford to be more lenient with his impulse control: if he opted to eat his marshmallow, he could always afford another Bentley-load.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-5",
+            "content": "",
+            "questionType": "Trắc nghiệm",
+            "questions": [
+              {
+                "id": "1",
+                "content": "According to the passage, the EQ test",
+                "options": [
+                  "A. is administered by a non-profit organization.",
+                  "B. has been designed to discover people who are mentally ill.",
+                  "C. can influence one's mental health.",
+                  "D. is available to paying individuals."
+                ],
+                "answer": "D. is available to paying individuals.",
+                "explanation": "Đáp án D đúng vì đoạn 1 có đề cập rằng bài kiểm tra EQ Bar-On được quảng cáo là \"commercially available test\" (bài kiểm tra thương mại có sẵn đầu tiên) để đo lường trí tuệ cảm xúc, điều này đồng nghĩa với việc nó được cung cấp cho những cá nhân trả phí (\"paying individuals\")."
+              },
+              {
+                "id": "2",
+                "content": "The marshmallow test showed that",
+                "options": [
+                  "A. most children could not resist the temptation of eating the marshmallow.",
+                  "B. the four-year-olds are better able to control their impulse than the three-year-olds.",
+                  "C. most children were eager to get on the train.",
+                  "D. most children got a second marshmallow."
+                ],
+                "answer": "A. most children could not resist the temptation of eating the marshmallow.",
+                "explanation": "Đáp án A đúng vì đoạn 2 có nêu rõ: \"Only about 15 per cent of the kids withstood the marshmallow temptation\" (Chỉ khoảng 15 phần trăm trẻ em chống lại được sự cám dỗ của kẹo marshmallow). Điều này có nghĩa là 85% còn lại (phần lớn trẻ em) không thể cưỡng lại được cám dỗ để ăn viên kẹo."
+              },
+              {
+                "id": "3",
+                "content": "What is the purpose of the EQ test?",
+                "options": [
+                  "A. To tell people it's not enough to be smart.",
+                  "B. To tell whether people are psychologically healthy.",
+                  "C. To tell how well people can manage personal relationship and stress.",
+                  "D. To help people find good jobs."
+                ],
+                "answer": "C. To tell how well people can manage personal relationship and stress.",
+                "explanation": "Đáp án C đúng vì mục đích của bài kiểm tra EQ là đánh giá khả năng của một người trong việc đối phó với áp lực và quản lý các mối quan hệ. Đoạn 1 định nghĩa trí tuệ cảm xúc bao gồm các kỹ năng ảnh hưởng đến sự thành công trong việc \"coping with environmental demands and pressures\" (đối phó với những yêu cầu và áp lực từ môi trường). Hơn nữa, đoạn 3 liệt kê các lĩnh vực đánh giá của bài kiểm tra bao gồm \"interpersonal\" (quan hệ giữa các cá nhân) và \"stress management\" (quản lý căng thẳng)."
+              },
+              {
+                "id": "4",
+                "content": "\"I'm still pretty happy, but I doubt it will last.\" (Paragraph 3) Why does the writer say that?",
+                "options": [
+                  "A. He scored high in general mood.",
+                  "B. He is a pessimistic person.",
+                  "C. He scored much higher in happiness than in optimism.",
+                  "D. He does not manage stress well."
+                ],
+                "answer": "C. He scored much higher in happiness than in optimism.",
+                "explanation": "Đáp án C đúng vì câu đùa này xuất phát từ kết quả bài kiểm tra của chính tác giả được đề cập ngay trước đó trong đoạn 3: \"Yours truly scored a full 20 points higher in happiness than in optimism.\" (Người viết bài này đạt điểm hạnh phúc cao hơn hẳn 20 điểm so với điểm lạc quan). Vì điểm lạc quan (tin tưởng vào tương lai tốt đẹp) thấp hơn nhiều so với điểm hạnh phúc hiện tại, nên tác giả mới nói đùa rằng mình nghi ngờ niềm hạnh phúc đó sẽ không kéo dài."
+              },
+              {
+                "id": "5",
+                "content": "\"People in the electronic media tend to be more optimistic than people in the print media.\" (Paragraph 4) According to the author, this is because TV journalists are",
+                "options": [
+                  "A. wealthier.",
+                  "B. less stressful.",
+                  "C. more adaptable.",
+                  "D. more prominent."
+                ],
+                "answer": "A. wealthier.",
+                "explanation": "Đáp án A đúng vì trong đoạn 4, tác giả đã giải thích sự khác biệt này thông qua một ví dụ cá nhân tại buổi đấu giá xe siêu sang. Tác giả (nhà báo viết - print media) đến đó chỉ để \"scrambling for a story\" (chật vật tìm kiếm bài viết), trong khi nhà báo truyền hình (electronic media/TV journalist) lại đến để \"shop\" (mua sắm) và \"could always afford another Bentley-load\" (luôn có thể dư sức mua thêm một chiếc Bentley nữa). Điều này ám chỉ một cách hài hước rằng các nhà báo truyền hình lạc quan hơn vì họ giàu có hơn (wealthier)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

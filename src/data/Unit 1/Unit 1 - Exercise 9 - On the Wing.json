@@ -1,0 +1,306 @@
+{
+  "title": "Unit 1: Exercise 9 - On the Wing",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<h2 style=\"text-align: center;\">On the Wing</h2>\n<p style=\"text-align: center;\"><em>Hang gliding has come a long way since participants flew a few hundred feet from the top of a hill to the bottom, and were lucky to finish up in one piece.</em></p>\n<p><strong>A</strong> Suppose a friend told you he had just spent $4,000 on a new hang glider weighing a mere 60lb (27 kilos) which he could transport on top of his car and carry on his shoulder. Would you believe his plan to fly scores of miles without an engine? A flight of fancy? Not at all, he would explain. Hang gliding no longer deserves its reputation as a sport for reckless idiots who get a thrill risking life and limb by leaping off cliffs and mountains.</p>\n<p><strong>B</strong> Accidents still happen, but they are usually caused by pilot error. Equipment failure is rare and most mishaps result in nothing more than a bit of bent aluminium and a bruised ego. <em>Hang Gliding</em>, a magazine for American enthusiasts, reckons that for every 100,000 participants the number of fatalities each year for hang gliding is 22. This, it claims, makes pilots of hang gliders less intrepid than balloonists (death rate 67) or airline pilots (97).</p>\n<p><strong>C</strong> Hang gliders are a marvel of simplicity and strength. A tough framework of aluminium tubing supports a tailored sail stiffened by lots of alloy battens (these hold the wing in shape). The whole structure is braced by stainless-steel rigging wires. Tolerances are so fine that manufacturers have to cut the entire sail on the same day to avoid variations induced by changes in temperature and humidity. And the designs of hang gliders have changed radically from early prototypes made from bamboo and polythene.</p>\n<p><strong>D</strong> This unusual form of unpowered flight traces its origins back to the work of a German pioneer, Otto Lilienthal, in the 1890s. He carefully recorded the results of more than 2,000 experimental flights by man-carrying gliders, many of them made from a 50-foot (15-metre) high purpose-built hill near Berlin.</p>\n<p><strong>E</strong> But modern hang gliding owes everything to a pioneer who is still alive: Francis Rogallo. He was employed in America's space effort during the 1950s to design a steerable parachute for space-capsule reentry. His work was never used for its intended purpose, but adapted instead by water-skiers to produce a simple kite which could be towed aloft. It was a small step from this to attempting to make foot-launched flights on these fragile craft, from the gentle and forgiving sand dunes of coastal California. By the early 1960s, hang gliding was reborn.</p>\n<p><strong>F</strong> Since then home-built kits have been replaced by production-line models made by about 20 manufacturers. Flights used to last a minute or two. Today's pilot can remain aloft for hours while travelling huge distances. The world distance record is currently held by an American, Larry Tudor, at 303 miles (488 km). It took him nearly nine hours to travel from Hobbs, New Mexico, to Elkhart, Kansas.</p>\n<p><strong>G</strong> Once airborne, actually flying requires subtlety rather than strength — one reason why women pilots often perform better than men. The pilot is suspended prone in a cocoon-like harness and controls direction and speed through gentle shifts of body weight. Launching the machine demands a committed run of just a few steps down a slope facing the prevailing wind. Landing is harder. The pilot needs the same kind of precision possessed by large birds when they land on level ground.</p>\n<p><strong>H</strong> The necessary accessories include a helmet, gloves, an emergency parachute and a variety of instruments, including a variometer. This clever box of electronics detects tiny changes in air pressure, and relays this information as an audio tone and visual readout. Changes occur as the pilot climbs (lower pressure) or descends (higher pressure). The skill is in loitering in the rising air and avoiding the inevitable sink.</p>\n<p><strong>I</strong> All new glider designs undergo rigorous tests before being certified airworthy. There are no internationally agreed standards, but it is generally accepted that the systems adopted by Germany and Britain are especially stringent.</p>\n<p><strong>J</strong> In Britain, the British Hang Gliding and Paragliding Association (BHGPA) employs a mobile test rig upon which the aircraft is mounted. The whole unit is towed at high speeds behind a suitable vehicle, allowing various flying profiles to be tested and measured against the required extremes.</p>\n<p><strong>K</strong> Training and coaching have also kept pace with technology and design. In Britain, full-time BHGPA officers regulate training for beginners in commercial schools, and volunteer coaches at the 40 local clubs throughout the country provide further training for their 3,500 members. Different countries have different systems for rating the proficiency of pilots, but all aim to measure attainment, skill and knowledge through practical tasks and written examinations.</p>\n<p><strong>L</strong> Hang gliding attracts the sort of people who enjoy a sense of freedom and adventure. What organization there is exists mainly to stave off the threat of external controls and to foster competition at the highest level. At the 1991 World Championships in Brazil, 114 pilots represented 30 countries. The 1993 event, to be held at Owens Valley, California, from June 26th to July 10th, is expected to attract an even wider international field. Quite a change since foolhardy Germans jumped off Otto Lilienthal's hill.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-11",
+            "content": "<p><em>The following reading passage has twelve paragraphs A-L. Choose the most suitable headings for paragraphs B-L from the list of headings below. Write the appropriate numbers (i-xiv) in the spaces provided.</em></p>\n<p><em><strong>NB</strong> There are more headings than paragraphs so you will not use all of them. You may use any of the headings more than once.</em></p>\n<div style=\"padding: 10px; border: 1px solid black;\">\n<p><strong>List of Headings</strong></p>\n<p>(i) What else is needed to fly<br>\n(ii) Hang gliders' German origin<br>\n(iii) Unpowered flying — a flight fancy?<br>\n(iv) World competitions of hang glider flying<br>\n(v) The function of battens<br>\n(vi) Safer than balloons and airplanes<br>\n(vii) Training of hang glider fliers<br>\n(viii) The British test<br>\n(ix) Flying a hang glider<br>\n(x) What to do in case of emergency<br>\n(xi) Hang gliders can fly hundreds of miles<br>\n(xii) Development of hang gliders in America<br>\n(xiii) Testing systems to ensure safety<br>\n(xiv) The structure of hang gliders</p>\n</div>\n<p><em>Example: Paragraph A  Answer: iii</em></p>",
+            "questionType": "Kéo thả",
+            "questions": [
+              {
+                "id": "1",
+                "content": "Paragraph B",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "vi",
+                "explanation": "Đoạn B đưa ra tỷ lệ tử vong để chứng minh rằng bay diều lượn an toàn hơn bay khinh khí cầu và lái máy bay (22 so với 67 và 97). Do đó tiêu đề phù hợp là \"Safer than balloons and airplanes\"."
+              },
+              {
+                "id": "2",
+                "content": "Paragraph C",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "xiv",
+                "explanation": "Đoạn C mô tả chi tiết về cấu trúc của diều lượn, bao gồm khung ống nhôm (aluminium tubing), dây thừng (rigging wires) và thiết kế. Tiêu đề \"The structure of hang gliders\" là chính xác."
+              },
+              {
+                "id": "3",
+                "content": "Paragraph D",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "ii",
+                "explanation": "Đoạn D đề cập đến nguồn gốc của diều lượn bắt nguồn từ một người tiên phong người Đức, Otto Lilienthal vào những năm 1890. Tiêu đề \"Hang gliders' German origin\" phù hợp."
+              },
+              {
+                "id": "4",
+                "content": "Paragraph E",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "xii",
+                "explanation": "Đoạn E nói về sự phát triển lại của diều lượn tại Mỹ, nhờ vào công trình của Francis Rogallo trong nỗ lực không gian của Mỹ và sự ra đời của các chuyến bay dọc bờ biển California. Vì vậy, tiêu đề \"Development of hang gliders in America\" là phù hợp nhất."
+              },
+              {
+                "id": "5",
+                "content": "Paragraph F",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "xi",
+                "explanation": "Đoạn F nhắc đến việc phi công hiện nay có thể bay những khoảng cách rất xa, và kỷ lục thế giới là 303 dặm (488 km). Do đó tiêu đề \"Hang gliders can fly hundreds of miles\" là đúng."
+              },
+              {
+                "id": "6",
+                "content": "Paragraph G",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "ix",
+                "explanation": "Đoạn G mô tả các thao tác thực tế khi bay diều lượn: từ việc bay trên không (flying), cất cánh (launching) đến hạ cánh (landing). Vì vậy, tiêu đề \"Flying a hang glider\" là bao quát nội dung đoạn."
+              },
+              {
+                "id": "7",
+                "content": "Paragraph H",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "i",
+                "explanation": "Đoạn H liệt kê các phụ kiện và thiết bị cần thiết khác để bay như mũ bảo hiểm, găng tay, dù cứu hộ và đồng hồ đo tốc độ lên xuống. Tiêu đề \"What else is needed to fly\" là hoàn toàn phù hợp."
+              },
+              {
+                "id": "8",
+                "content": "Paragraph I",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "xiii",
+                "explanation": "Đoạn I nói về các hệ thống kiểm tra nghiêm ngặt mà diều lượn phải vượt qua để được chứng nhận đủ điều kiện bay, nhằm đảm bảo an toàn. Tiêu đề \"Testing systems to ensure safety\" là chính xác."
+              },
+              {
+                "id": "9",
+                "content": "Paragraph J",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "viii",
+                "explanation": "Đoạn J mô tả chi tiết phương pháp kiểm tra diều lượn tại Anh (Britain) do tổ chức BHGPA thực hiện. Tiêu đề \"The British test\" là đúng."
+              },
+              {
+                "id": "10",
+                "content": "Paragraph K",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "vii",
+                "explanation": "Đoạn K tập trung vào công tác huấn luyện và đào tạo (training and coaching) cho những người mới bắt đầu và các học viên khác. Tiêu đề \"Training of hang glider fliers\" khớp với nội dung này."
+              },
+              {
+                "id": "11",
+                "content": "Paragraph L",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix",
+                  "x",
+                  "xi",
+                  "xii",
+                  "xiii",
+                  "xiv"
+                ],
+                "correctAnswer": "iv",
+                "explanation": "Đoạn L nhắc đến các giải vô địch thế giới về diều lượn (World Championships) tại Brazil (1991) và California (1993). Do đó, tiêu đề \"World competitions of hang glider flying\" là phù hợp."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "Questions 12-14",
+            "content": "<p><em>Do the following statements agree with the writer of the above passage? Please write</em></p>\n<p><strong>YES</strong> if the statement agrees with the writer;<br>\n<strong>NO</strong> if the statement does not agree with the writer;<br>\n<strong>NOT GIVEN</strong> if there is no information about this in the passage.</p>\n<p><em>Example: Gliders used to be made of bamboo and polythene. Answer: YES</em></p>",
+            "questionType": "TFNG",
+            "questions": [
+              {
+                "id": "12",
+                "content": "Francis Rogallo was involved in the retrieval of spacecraft.",
+                "options": [
+                  "YES",
+                  "NO",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "YES",
+                "explanation": "Trong đoạn E có thông tin: \"He was employed in America's space effort... to design a steerable parachute for space-capsule reentry\" (Ông được thuê để thiết kế dù có thể điều khiển được phục vụ cho sự trở lại khí quyển của tàu vũ trụ). Việc đưa tàu trở lại chính là \"retrieval of spacecraft\". Do đó đáp án là YES."
+              },
+              {
+                "id": "13",
+                "content": "It is more difficult to land a hang glider than to control it while flying.",
+                "options": [
+                  "YES",
+                  "NO",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn G có nhắc đến \"Landing is harder\" (Hạ cánh khó hơn) ngay sau câu nói về cất cánh (\"Launching the machine demands...\"). Tuy nhiên, bài viết không so sánh trực tiếp độ khó giữa việc hạ cánh và việc điều khiển trên không (controlling it while flying). Vì vậy đáp án là NOT GIVEN."
+              },
+              {
+                "id": "14",
+                "content": "The new world distance record was set at the 1991 World Championships in Brazil.",
+                "options": [
+                  "YES",
+                  "NO",
+                  "NOT GIVEN"
+                ],
+                "correctAnswer": "NO",
+                "explanation": "Theo đoạn F, kỷ lục khoảng cách thế giới được Larry Tudor thiết lập khi bay từ New Mexico đến Kansas, chứ không phải tại Giải vô địch thế giới năm 1991 ở Brazil (được nhắc đến ở đoạn L). Do đó, nhận định này là sai (NO)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

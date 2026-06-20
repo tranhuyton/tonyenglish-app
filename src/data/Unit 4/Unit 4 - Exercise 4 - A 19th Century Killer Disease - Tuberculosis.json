@@ -1,0 +1,95 @@
+{
+  "title": "Unit 4: Exercise 4 - A 19th Century Killer Disease: Tuberculosis",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<p><b>1</b> In 1882, Robert Koch, a German country doctor, succeeded in isolating the bacillus of tuberculosis. This discovery came at a time when this disease was the greatest single killer of the human race.</p><br><p><b>2</b> All during the 19th century, it had spread remorselessly with the growth of cities, until it had reached epidemic proportions throughout the industrialized world.</p><br><p><b>3</b> Its record in the United States was one of frightful devastation. Immigrants from Europe, many of them debilitated from famines at home, flooded into the poorest and dirtiest sections of cities, there to die of the disease by the thousand. Working children were infected in staggering numbers. Hundreds of thousands of children worked twelve hours a day, six days a week. Chronically exhausted and undernourished, they made particularly susceptible victims. Since tuberculosis was not considered contagious, its victims spread the disease amongst those about them as they coughed, spat and drank from communal cups.</p><br><p><b>4</b> It is now known that tuberculosis is chiefly spread by droplet infection. It can also occur as a result of drinking unpasteurized milk from tubercular cows, where the pathogen penetrates the body through the alimentary canal. However, entry of the bacillus into the body is not necessarily followed by a clinical illness, the development of which depends on several other factors. Many people, for instance, seem to have a high natural resistance and although the acquired immunity is not fully understood, it has been proved that if a person contracts and recovers from a primary tuberculosis infection, he is less likely to develop active tuberculosis on subsequent exposure to the tubercle bacillus than a patient who has not previously been infected.</p><br><p><b>5</b> Tuberculosis has notoriously been associated with poverty, with its accompanying mal-nutrition, overcrowding and stress, and while the exact role of nutrition is uncertain, it seems that a diet based on cheap carbohydrate and a lack of protein and vitamins is another contributing factor.</p><br><p><b>6</b> In addition, a condition such as diabetes mellitus also leads to increased risk of developing the disease, and statistics from certain mining areas in Africa show that sufferers of respiratory disorders, such as silicosis, are especially vulnerable to attacks of pulmonary tuberculosis.</p><br><p><b>7</b> The introduction of mass immunization against TB by the use of BCG vaccine, and of mass radiography, where it is possible to screen large numbers of people for early signs of tuberculosis, has dramatically reduced the incidence of the disease in the last few decades.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-12",
+            "content": "<p>Despite the fact that tuberculosis was the number one [1] in the 19th century, it was not proved that the disease was [2] until 1882 when Robert Koch succeeded in isolating the tubercle bacillus. While it is now well known that tuberculosis is spread by [3] infection, it is also evident that entry of the tubercle bacillus does not [4] lead to development of the disease. Although we do not yet fully understand [5], there is evidence to show that a person who has contracted and recovered from the disease is [6] likely to develop active tuberculosis on subsequent exposure to the bacillus than a patient who has not been [7] infected. As with all diseases spread by droplet infection, living in overcrowded insanitary conditions greatly increases the risk of [8]. It is obvious, therefore, that in crowded cities the risk of contracting tuberculosis is far higher than in rural areas. Inadequate diet also seems to be a [9], and sufferers of conditions such as diabetes mellitus or [10] appear to have a lower effective degree of [11]. In the last thirty years or so, many thousands of people throughout the world have been substantially protected from developing tuberculosis largely as a result of [12] programmes.</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "killer",
+                "explanation": "Dựa vào đoạn 1: 'This discovery came at a time when this disease was the greatest single killer of the human race.', từ 'killer' phù hợp với ngữ cảnh 'the number one [1]' (nguyên nhân gây tử vong hàng đầu)."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "contagious",
+                "explanation": "Dựa vào đoạn 3: 'Since tuberculosis was not considered contagious,...'. Bệnh này không được chứng minh là 'contagious' (lây nhiễm) cho đến khi Robert Koch phân lập được trực khuẩn lao vào năm 1882."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "droplet",
+                "explanation": "Dựa vào đoạn 4: 'It is now known that tuberculosis is chiefly spread by droplet infection.'. Từ cần điền là 'droplet' để tạo thành cụm 'droplet infection' (lây nhiễm qua đường giọt bắn)."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "necessarily",
+                "explanation": "Dựa vào đoạn 4: 'However, entry of the bacillus into the body is not necessarily followed by a clinical illness,...'. Việc vi khuẩn xâm nhập vào cơ thể không 'necessarily' (nhất thiết) dẫn đến sự phát triển của bệnh."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "acquired immunity",
+                "explanation": "Dựa vào đoạn 4: '...although the acquired immunity is not fully understood,...'. Chúng ta chưa hiểu đầy đủ về 'acquired immunity' (miễn dịch thu được)."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "less",
+                "explanation": "Dựa vào đoạn 4: '...he is less likely to develop active tuberculosis on subsequent exposure...'. Người đã từng mắc và khỏi bệnh thì 'less' (ít) có khả năng phát triển bệnh lao hoạt động hơn."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "previously",
+                "explanation": "Dựa vào đoạn 4: '...than a patient who has not previously been infected.'. So với một bệnh nhân chưa từng bị nhiễm trùng 'previously' (trước đó)."
+              },
+              {
+                "id": "8",
+                "content": "[8]",
+                "correctAnswer": "infection",
+                "explanation": "Đoạn 4 nói về 'droplet infection' (lây nhiễm qua giọt bắn). Tình trạng đông đúc, mất vệ sinh làm tăng nguy cơ 'infection' (lây nhiễm/nhiễm trùng)."
+              },
+              {
+                "id": "9",
+                "content": "[9]",
+                "correctAnswer": "contributing factor",
+                "explanation": "Dựa vào đoạn 5: '...it seems that a diet based on cheap carbohydrate and a lack of protein and vitamins is another contributing factor.'. Chế độ ăn uống không đủ chất cũng có vẻ là một 'contributing factor' (yếu tố góp phần)."
+              },
+              {
+                "id": "10",
+                "content": "[10]",
+                "correctAnswer": "silicosis",
+                "explanation": "Dựa vào đoạn 6: '...sufferers of respiratory disorders, such as silicosis, are especially vulnerable...'. Người mắc các bệnh như đái tháo đường hoặc 'silicosis' (bệnh bụi phổi silic) có nguy cơ mắc cao hơn."
+              },
+              {
+                "id": "11",
+                "content": "[11]",
+                "correctAnswer": "immunity / resistance",
+                "explanation": "Người mắc các bệnh nền xuất hiện mức độ 'immunity / resistance' (sức đề kháng/miễn dịch) hiệu quả thấp hơn, khiến họ dễ bị tổn thương."
+              },
+              {
+                "id": "12",
+                "content": "[12]",
+                "correctAnswer": "(mass) immunization",
+                "explanation": "Dựa vào đoạn 7: 'The introduction of mass immunization against TB... has dramatically reduced the incidence of the disease...'. Nhiều ngàn người đã được bảo vệ nhờ vào các chương trình '(mass) immunization' (tiêm chủng diện rộng)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

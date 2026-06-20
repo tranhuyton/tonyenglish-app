@@ -1,0 +1,127 @@
+{
+  "title": "Unit 5: Exercise 3 - Will Britain Turn Its Back on Wave Power?",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Will Britain Turn Its Back on Wave Power?",
+        "content": "<p><b>1</b> Wave energy research in Britain is under threat again following a report which argues that public funding for large offshore projects should be restricted to a token sum. The report, by the government's Renewable Energy Advisory Group, calls instead for more government investment to develop ways of generating electricity from hydroelectric plants, wind, waste and crops: technologies which have existing markets.</p><br><p><b>2</b> The decision is complicated by the publication of a review of wave energy by the government's Energy Technology Support Unit, which shows that the cost of electricity generated from wave devices has fallen considerably in recent years, and that new designs could make even greater savings.</p><br><p><b>3</b> The wave energy review was not completed in time for the renewables group to consider it. Nevertheless, the group gives offshore wave machines the thumbs down on economic grounds, and suggests that they should be given \"no further significant research and development expenditure\".</p><br><p><b>4</b> Stephen Salter, professor of engineering design at the University of Edinburgh and a pioneer of wave power, described the group's conclusions as \"nonsense\". Improvements made over the past decade have brought down the theoretical costs of producing electricity from his department's device, the Edinburgh Duck, to about 16p per kilowatt-hour. A radical redesign to overcome technical problems highlighted by ETSU has further reduced the cost.</p><br><p><b>5</b> Salter is reticent about the scale of these reductions, but ETSU's own computer models are believed to put the cost at around 4p/kWh, similar to the cost of energy from coal and gas.</p><br><p><b>6</b> ETSU's estimates are based on the assumption that all technical problems with a wave device are solved. It stresses that wave energy technology is \"relatively immature\", and that a great deal of R&D will be needed before a practical offshore machine is built. The best prospects, it says, may lie with radical redesigns of older ideas, such as Salter's Duck, or one of several new designs which promise electricity \"at substantially lower costs\".</p><br><p><b>7</b> The renewables group makes no recommendations about the most developed wave energy devices - those sited on the coastline. One such machine has been built on the island of Islay by researchers from Queen's University of Belfast. ETSU estimates that it could produce electricity at 6p/kWh.</p><br><p><b>8</b> Trevor Whittacker, who manages the wave energy programme at Queen's, believes that the market for shoreline machines must be developed now. Offshore devices will not be needed for 20 years, he says, but \"if you're going to go for serious energy production, you've got to go offshore\". He warns that if the basic research is not done now, \"you're going to grind to a halt in 10 to 15 years\".</p><br><p><b>9</b> A theme running through the group's report is the need to bolster the industries that have grown up over the past two years for generating electricity from, for example, wind and biomass. These markets have grown chiefly because regional electricity companies have been forced to buy electricity from Nuclear Electric and renewable energy producers at an inflated price under the non-fossil fuel obligation.</p><br><p><b>10</b> The NFFO was conceived as a means to keep Nuclear Electric \"cash rich\", but is proving to be \"a useful mechanism\" for creating markets in new technologies, says the report. Twidell says that by accident the government has found an ingenious way of forcing the pace of technology. Companies receive a return on their wind turbines, or chicken litter furnaces only when they begin producing electricity. \"Once the companies are generating, they want to make the plant more efficient, so the research is very applied and market-oriented,\" he says.</p><br><p><b>11</b> According to Martin Holdgate, director of the World Conservation Union, and chairman of the renewables group, \"the hope is that as the technology becomes proven, it will become an increasingly attractive investment\".</p><br><p><b>12</b> The group argues that by 2025, renewables should contribute about 60 terawatt-hours of electricity a year, which is equivalent to one fifth of present annual production. To reach this goal, it says \"the government must intervene in the market\".</p><br><p><b>13</b> Holdgate argues that Britain's commitment to the Climate Change Convention, signed at the Earth Summit last June, is reason enough for the government to give extra support to technologies that produce no polluting gases. Renewables are also at a disadvantage because the full environmental damage of fossil fuels is not taken into account in their costs.</p><br><p><b>14</b> Despite its optimistic view, the group calls on the government to increase the amount of renewable energy bought under the NFFO to around 1,500 megawatts over the next seven years. This would still leave renewables with only 0.1 per cent of Britain's electricity supply. Environmentalists say this is a pitiable increase.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-7",
+            "content": "<p>Decide if each of the following supports generating electricity from wave power. Please write</p><p><b>YES</b> if the person/institution supports using wave power;</p><p><b>NO</b> if the person/institution doesn't support using wave power;</p><p><b>NOT GIVEN</b> if there is no information about this in the passage.</p><br><p><i>Example: The Renewable Energy Advisory Group &nbsp;&nbsp;&nbsp;&nbsp; <b>NO</b></i></p><p>1. The Energy Technology Support Unit [1]</p><p>2. Stephen Salter [2]</p><p>3. Trevor Whittacker [3]</p><p>4. John Twidell [4]</p><p>5. The World Conservation Union [5]</p><p>6. Martin Holdgate [6]</p><p>7. The British Government [7]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 2 ghi \"a review of wave energy by the government's Energy Technology Support Unit, which shows that the cost of electricity generated from wave devices has fallen considerably... and that new designs could make even greater savings.\" Họ có vẻ ủng hộ do nhấn mạnh chi phí giảm và tiềm năng tiết kiệm."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 4 ghi \"Stephen Salter, professor of engineering design at the University of Edinburgh and a pioneer of wave power, described the group's conclusions (which rejected wave power) as 'nonsense'.\" Ông là người tiên phong và bảo vệ năng lượng sóng."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 8 ghi \"Trevor Whittacker, who manages the wave energy programme at Queen's, believes that the market for shoreline machines must be developed now... 'if you're going to go for serious energy production, you've got to go offshore'.\" Ông ủng hộ phát triển cả máy móc trên bờ và ngoài khơi."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 10 nhắc đến Twidell thảo luận về việc đạo luật NFFO vô tình buộc công nghệ năng lượng phát triển nhanh. Nhìn chung, ông có quan điểm ủng hộ việc áp dụng nghiên cứu để thúc đẩy sự phát triển của năng lượng tái tạo."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn 11 nhắc đến \"Martin Holdgate, director of the World Conservation Union...\". Nhưng không có thông tin cụ thể nào về quan điểm chính thức của riêng tổ chức World Conservation Union đối với năng lượng sóng."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 11 và 12 ghi Martin Holdgate là \"chairman of the renewables group\". Ở đoạn 3, nhóm này \"gives offshore wave machines the thumbs down on economic grounds, and suggests that they should be given 'no further significant research and development expenditure'\". Do đó ông đại diện cho nhóm này và không ủng hộ."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Bài đọc nhắc đến nhiều báo cáo từ các nhóm tư vấn chính phủ (Renewables Energy Advisory Group, ETSU) có quan điểm trái chiều nhau, nhưng không nêu rõ quan điểm chính thức cuối cùng của Chính phủ Anh đối với năng lượng sóng là ủng hộ hay phản đối."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "Questions 8-16",
+            "content": "<p>Do the following statements agree with the view of the writer of the passage? Please write</p><p><b>YES</b> if the statement agrees with the view of the writer;</p><p><b>NO</b> if the statement does not agree with the view of the writer;</p><p><b>NOT GIVEN</b> if there is no information about this in the passage.</p><br><p><i>Example: Offshore facilities could be built to harness wave power. Answer: <b>YES</b></i></p><p>8. Wind energy is more cost-effective than tidal power. [1]</p><p>9. The Edinburgh Duck is not as viable as the machine built by researchers from Queen's University. [2]</p><p>10. Producing electricity at the cost of 4p/kWh is the aim of scientists studying wave power. [3]</p><p>11. The Renewable Energy Advisory Group feels that the government should give more support to efforts to use renewable energy. [4]</p><p>12. Renewable energy includes nuclear energy and energy from wave, biomass and wind. [5]</p><p>13. Currently, electricity from renewable resources accounts for 0.1% of the total electricity generated in Britain. [6]</p><p>14. Scientists from the University of Strathclyde have been working on a pilot project for a number of years. [7]</p><p>15. The NFFO means to generate electricity using nuclear power and renewable energy. [8]</p><p>16. Chicken litter is used to generate electricity. [9]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Bài đọc có nhắc đến năng lượng gió (\"wind\") nhưng không hề nhắc đến hay so sánh hiệu quả chi phí với năng lượng thủy triều (\"tidal power\")."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 7 đề cập rằng thiết bị năng lượng sóng phát triển nhất (\"the most developed wave energy devices\") là các thiết bị ven bờ, ví dụ như máy do Đại học Queen's Belfast xây dựng. Điều này cho thấy nó khả thi hơn so với thiết kế The Edinburgh Duck vốn còn cần nhiều R&D theo đánh giá của ETSU."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn 5 có nhắc đến việc các mô hình máy tính của ETSU ước tính chi phí khoảng 4p/kWh, nhưng không có thông tin khẳng định đây là mục tiêu cụ thể mà các nhà khoa học đang theo đuổi."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 1 ghi báo cáo của nhóm Renewable Energy Advisory Group kêu gọi chính phủ đầu tư thêm (\"calls instead for more government investment to develop ways of generating electricity...\"). Đoạn 14 cũng ghi nhóm này kêu gọi chính phủ tăng lượng năng lượng tái tạo mua theo NFFO."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 9 phân biệt rõ \"Nuclear Electric\" và \"renewable energy producers\". Đoạn 1 cũng liệt kê năng lượng tái tạo gồm nhà máy thủy điện, gió, rác thải và cây trồng. Do đó, năng lượng hạt nhân không được xem là một phần của năng lượng tái tạo trong bài."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 14 ghi: \"This would still leave renewables with only 0.1 per cent of Britain's electricity supply.\" Đây là dự báo sau khi tăng trưởng trong tương lai 7 năm tới, chứ không phải tỷ lệ hiện tại (currently). Do đó câu này là sai."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Bài đọc không hề nhắc đến \"University of Strathclyde\" hay bất cứ dự án thử nghiệm nào của họ."
+              },
+              {
+                "id": "8",
+                "content": "[8]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 9 và 10 giải thích rằng đạo luật NFFO (Non-Fossil Fuel Obligation) buộc các công ty điện mua điện từ Nuclear Electric (năng lượng hạt nhân) và các nhà sản xuất năng lượng tái tạo. Do đó NFFO bao gồm cả việc sử dụng hai nguồn này để tạo ra điện."
+              },
+              {
+                "id": "9",
+                "content": "[9]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 10 có nhắc đến việc các công ty nhận được lợi nhuận từ các tuabin gió hoặc lò đốt phân gà (\"chicken litter furnaces\") khi chúng bắt đầu sản xuất điện, chứng tỏ phân gà được dùng làm chất đốt phát điện."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "title": "Unit 5: Exercise 7 - Stuffed",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Stuffed",
+        "content": "<i>The British seem to be going off chocolate, but some bits of the market are doing deliciously well</i><br><br><p><b>1</b> It's usually nice to top an international league, but perhaps not this one. In the matter of chocolate consumption, Britain is the most self-indulgent country among the world's big economies.</p><br><p><b>2</b> That may not last. Perhaps brow-beaten by the obesity scaremongers, perhaps disgusted by their inability to see their toes, the British seem to be going off chocolate. The market has been static for five years and this is troubling Nestlé, Cadbury and Masterfoods, the three firms that dominate the British industry. \"It's a saturated market,\" says Jeremy Cunnington, an analyst for Euromonitor, a market research agency. \"Penetration has gone as far as it can.\" Mintel, another market research firm, agrees, predicting a slight drop in sales volume by 2006. With profits constrained by tight pricing on supermarket shelves, firms will focus more and more on extending a few superbrands with lasting appeal, subsuming existing products into them and trying to improve sales value rather than volume.</p><br><p><b>3</b> If they do, it will continue a trend towards emphasising established brand names instead of new ones. Cadbury has stopped selling its Wispa and Caramel products under their old names, bundling them under the Dairy Milk brand instead. Nestlé has been tinkering with its own big name, Kit Kat. A new version of the snack, Chunky, was launched in 1999, followed by bite-sized Kubes in 2003. There was even talk recently of a lemon cheesecake flavour — apparently popular with the Japanese and the Germans.</p><br><p><b>4</b> Not all the news is gloomy, though. There are lively niche markets, where consumers' sharpening social consciences and growing fondness for luxury have been lifting sales.</p><br><p><b>5</b> Clever companies satisfy both at once. Green &amp; Black's, a small firm that sells expensive, organic GM-free chocolate, has seen its sales rise five-fold since 1999 to £23.4m in 2003. The firm has recently been moving away from its green roots to focus on its premium credentials, but \"organic\" and \"premium\" are linked in many people's minds.</p><br><p><b>6</b> The \"fair trade\" segment is another impressive performer. Such organizations guarantee producers in poor countries a minimum price, shielding them from the ups and downs of the world cocoa market. Figures from the Fair Trade Foundation show that Britain ate just over 1,000 tonnes of their chocolate in 2003, up from 82 tonnes in 1998 — a 12-fold increase in five years, albeit from a very low base. The big players are beginning to cotton on, with the Co-op, a supermarket chain, announcing in 2002 that it would source all its own-brand chocolate from \"fair trade\" suppliers. Most British supermarkets now offer some sort of \"fair trade\" chocolate.</p><br><p><b>7</b> So will posh, socially responsible chocolate conquer the market? Unlikely, says Mr. Cunnington. Luxury firms do not compete directly against the big companies — indeed their products have little in common. Most British chocolate contains vegetable solids, and tastes quite different from the \"real\" chocolate that the luxury firms offer. As for \"fair trade\", higher prices for producers mean higher prices for consumers, limiting its appeal to a cost-conscious public. Although the two sectors are expected to continue growing strongly, they are unlikely to escape from their niches. The cocoa-leaf readers see a future of consolidation, limited innovation and a gentle decline in sales volume. Lemon cheesecake Kit Kats all round, then.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-6",
+            "content": "<p>Do the following statements agree with the view of the writer in the reading passage? In boxes 1-6 on your answer sheet write</p><br><p><b>YES</b> if the statement agrees with the view of the writer;</p><p><b>NO</b> if the statement does not agree with the view of the writer;</p><p><b>NOT GIVEN</b> if there is no information about this in the passage.</p><br><p>1. Britain no longer leads the world in its consumption of chocolate. [1]</p><p>2. Nestlé, Cadbury and Masterfoods are the biggest producers of chocolate in the world. [2]</p><p>3. Firms will try to increase their profits by boosting the amount of sales. [3]</p><p>4. Firms will continue focusing on well-known brands instead of new ones. [4]</p><p>5. Companies find it hard to sell expensive chocolate. [5]</p><p>6. With more innovation, the chocolate market will enjoy an increase in sales volume in the future. [6]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 1 nêu \"In the matter of chocolate consumption, Britain is the most self-indulgent country among the world's big economies.\" (Về vấn đề tiêu thụ sô-cô-la, Anh là quốc gia tự nuông chiều bản thân nhất trong số các nền kinh tế lớn). Điều này có nghĩa là Anh vẫn đang dẫn đầu thế giới."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn 2 chỉ đề cập \"...Nestlé, Cadbury and Masterfoods, the three firms that dominate the British industry\" (ba công ty thống trị ngành công nghiệp ở Anh), chứ không cung cấp thông tin họ có phải là nhà sản xuất lớn nhất thế giới hay không."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 2 cho biết \"...firms will focus more and more on extending a few superbrands... and trying to improve sales value rather than volume.\" (các công ty sẽ cố gắng cải thiện giá trị doanh thu thay vì số lượng). Do đó, họ không muốn tăng số lượng bán ra."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 3 nêu rõ: \"...it will continue a trend towards emphasising established brand names instead of new ones.\" (...sẽ tiếp tục xu hướng nhấn mạnh các tên thương hiệu đã được thành lập thay vì các tên mới.)"
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 5 đề cập \"Green & Black's, a small firm that sells expensive... chocolate, has seen its sales rise five-fold since 1999\" (một công ty bán sô-cô-la đắt tiền đã thấy doanh thu tăng gấp 5 lần). Đoạn 4 cũng nói sự yêu thích hàng xa xỉ đã làm tăng doanh số bán hàng, chứng tỏ việc bán sô-cô-la đắt tiền không hề khó khăn."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "NO",
+                "explanation": "Cuối đoạn 7 dự đoán: \"The cocoa-leaf readers see a future of consolidation, limited innovation and a gentle decline in sales volume.\" (dự đoán một tương lai củng cố, ít sự đổi mới và doanh số bán hàng sẽ giảm nhẹ). Điều này trái ngược hoàn toàn với nhận định của câu hỏi."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "Questions 7-10",
+            "content": "<p>Complete the sentences below. Choose <b>NO MORE THAN THREE WORDS</b> from the passage for each answer.</p><br><p>7. [1] seems to be one reason why the British are going off chocolate.</p><p>8. The British chocolate market has remained [2] for five years.</p><p>9. Clever companies try to improve sales by catering to [3] markets.</p><p>10. [4] chocolate suppliers have entered big supermarkets because of their practice with poor countries.</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "Obesity",
+                "explanation": "Đoạn 2 có câu \"Perhaps brow-beaten by the obesity scaremongers... the British seem to be going off chocolate.\" (Có lẽ bị dọa dẫm bởi những người gieo rắc nỗi sợ béo phì... người Anh dường như đang chán sô-cô-la). Từ cần điền là \"Obesity\"."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "static",
+                "explanation": "Đoạn 2 cho biết \"The market has been static for five years...\" (Thị trường đã chững lại trong 5 năm...). Từ cần điền là \"static\"."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "niche",
+                "explanation": "Đoạn 4 nhắc đến \"There are lively niche markets... lifting sales\" và đoạn 5 tiếp nối \"Clever companies satisfy both at once.\" (Các thị trường ngách sôi động giúp tăng doanh số... Các công ty thông minh đáp ứng cả hai). Từ cần điền là \"niche\"."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "Fair trade",
+                "explanation": "Đoạn 6 đề cập \"The 'fair trade' segment... Such organizations guarantee producers in poor countries a minimum price... The big players are beginning to cotton on, with the Co-op, a supermarket chain, announcing... it would source all its own-brand chocolate from 'fair trade' suppliers.\" (Các tổ chức thương mại công bằng đảm bảo giá tối thiểu cho nhà sản xuất ở nước nghèo... Các siêu thị lớn đang nhập sô-cô-la từ các nhà cung cấp \"fair trade\"). Từ cần điền là \"Fair trade\"."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

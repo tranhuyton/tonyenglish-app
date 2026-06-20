@@ -1,0 +1,415 @@
+{
+  "title": "Unit 4: Exercise 2 - Who's Crazy? Who Says Who Is Mad?",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Passage 1: Who's Crazy?",
+        "content": "<p><b>1</b> A bizarre experiment in the United States has demonstrated that psychiatrists cannot distinguish effectively between people who are mentally disturbed and those who are sane.</p><br><p><b>2</b> According to its originators, the experiment demonstrates the fallibility of conventional psychiatric diagnosis. It also lends considerable support to the position taken by radical psychiatrists like R. D. Laing, who argue that diagnoses of mental disease are often no more than convenient labels designed to make life easier for doctors.</p><br><p><b>3</b> Eight perfectly normal people, by shamming symptoms of a mild kind, successfully gained admission to psychiatric wards where they remained undetected for as long as they could stand it. Once admitted, their behaviour was normal in every way, but doctors and nurses continued to treat them as disturbed.</p><br><p><b>4</b> In every case but one the diagnosis was schizophrenia. Once they were labelled as mentally ill, everything the \"pseudopatients\" did tended to confirm the diagnosis in the eyes of the medical staff, though other patients in the hospital were much less easy to convince.</p><br><p><b>5</b> The eight pseudopatients included three psychologists, a pediatrician, a psychiatrist, a painter and a housewife. All eight assumed false names and those connected with the medical profession also invented false occupations, so as not to attract special attention from fellow-professionals. The hospitals chosen ranged from expensive private units to dingy publicly-run institutions.</p><br><p><b>6</b> To gain admission, the pseudopatients told the whole truth about their lives, their emotions and their personal relationships — all of which were within the normal range — and lied only about their names, symptoms, and in some cases their occupations. The symptoms they complained of were hearing disembodied voices saying the words \"empty\", \"hollow\" and \"thud\".</p><br><p><b>7</b> This was sufficient in every case for them to be classified as mentally ill. Once inside they stopped pretending and behaved as normally as they could. Their stays inside varied from 7 to 52 days, with an average of 19 days.</p><br><p><b>8</b> As many as a third of the real patients inside detected that they were frauds. \"You're not crazy. You're a journalist or a professor. You're checking up on the hospital,\" was a typical comment from a fellow-patient.</p><br><p><b>9</b> The pseudopatients spent much of their time taking extensive notes, but even this did not apparently raise any suspicions in the doctors' mind. \"Patient engages in writing behaviour,\" was the daily nursing comment on one patient, but nobody troubled to ask him what he was writing.</p><br><p><b>10</b> The experiment was carried out under the supervision of Professor D. L. Rosenhan of Stanford University, himself one of the eight fake patients. Writing about the experiment in this week's Science, he concludes: \"We cannot distinguish the sane from the insane in mental hospitals ... how many people, one wonders, are sane but not recognized as such in our psychiatric institutions? ... How many have been stigmatized by well-intentioned, but nevertheless erroneous, diagnoses?\"</p><br><p><b>11</b> In Professor Rosenhan's view, the hospital itself is an environment that distorts judgment. As evidence, he quotes what happened to patients who asked doctors perfectly sensible questions. They took the form: \"Pardon me, Dr. X, could you tell me when I will be eligible for ground privileges?\" — or some similar request, courteously presented. In almost three quarters of the cases, the psychiatrist's response was to walk on, head averted. Only one doctor in 25 stopped and tried to answer the question.</p><br><p><b>12</b> But the clinching piece of evidence comes from another experiment in which a hospital was warned that pseudopatients would be presenting themselves. Faced with this threat to their professional reputation, the doctors admitting patients became much more conservative in their diagnosis. Of 193 patients presenting themselves, one doctor was firmly convinced that 41 were frauds, while another doctor suspected 23. In fact, no fake patient had arrived at all.</p><br><p><b>13</b> In the present state of knowledge, there seems little hope of more accurate diagnostics. Doctors should try to err on the side of caution, in Rosenhan's opinion, and \"refrain from sending the distressed to insane places\". That, and a more benign environment inside institutions, could help to sort out the insane from the merely confused.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-10",
+            "content": "<p>The following are what some / all of the eight pseudopatients did / didn't do. Please tick appropriate letters.</p><p>A. none<br>B. some<br>C. all<br>D. can't tell if it's some or all</p><p><i>Example: were accepted by private hospitals (Answer: B)</i></p>",
+            "questionType": "Trắc nghiệm",
+            "questions": [
+              {
+                "id": "1",
+                "content": "1. used real names",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "A",
+                "explanation": "Đoạn 5: \"All eight assumed false names\" (Tất cả 8 người đều lấy tên giả). Do đó không có ai dùng tên thật (none)."
+              },
+              {
+                "id": "2",
+                "content": "2. invented false occupations",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "B",
+                "explanation": "Đoạn 5: \"those connected with the medical profession also invented false occupations\" (chỉ những người làm trong ngành y mới bịa ra nghề nghiệp giả). Do đó chỉ một số người (some) làm việc này."
+              },
+              {
+                "id": "3",
+                "content": "3. were diagnosed to be suffering from schizophrenia",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "B",
+                "explanation": "Đoạn 4: \"In every case but one the diagnosis was schizophrenia\" (Tất cả trừ một trường hợp được chẩn đoán là tâm thần phân liệt). Do đó chỉ có 7/8 (some) được chẩn đoán bệnh này."
+              },
+              {
+                "id": "4",
+                "content": "4. told truth about their lives, emotions, personal relationships",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "C",
+                "explanation": "Đoạn 6: \"To gain admission, the pseudopatients told the whole truth about their lives...\" (Để được nhập viện, các bệnh nhân giả đã nói toàn bộ sự thật về cuộc sống của họ...). Do đó tất cả (all) đều làm việc này."
+              },
+              {
+                "id": "5",
+                "content": "5. lied about their symptoms",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "C",
+                "explanation": "Đoạn 6: \"...and lied only about their names, symptoms...\" (...và chỉ nói dối về tên, triệu chứng...). Do đó tất cả (all) đều nói dối về triệu chứng."
+              },
+              {
+                "id": "6",
+                "content": "6. continued to behave abnormally after being admitted to hospital",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "A",
+                "explanation": "Đoạn 7: \"Once inside they stopped pretending and behaved as normally as they could.\" (Khi đã vào trong, họ ngừng giả vờ và cư xử bình thường nhất có thể). Do đó không có ai (none) tiếp tục cư xử bất thường."
+              },
+              {
+                "id": "7",
+                "content": "7. were detected by some real patients as frauds",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "D",
+                "explanation": "Đoạn 8: \"As many as a third of the real patients inside detected that they were frauds.\" (Có đến một phần ba số bệnh nhân thật bên trong phát hiện ra họ là kẻ lừa đảo). Bài đọc không nói rõ là một số hay tất cả các bệnh nhân giả bị phát hiện (can't tell if it's some or all)."
+              },
+              {
+                "id": "8",
+                "content": "8. spent much of their time writing",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "C",
+                "explanation": "Đoạn 9: \"The pseudopatients spent much of their time taking extensive notes...\" (Các bệnh nhân giả dành phần lớn thời gian để ghi chép...). Ám chỉ tất cả (all) đều làm vậy."
+              },
+              {
+                "id": "9",
+                "content": "9. stayed in hospital for more than three weeks",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "B",
+                "explanation": "Đoạn 7: \"Their stays inside varied from 7 to 52 days\" (Thời gian ở lại của họ kéo dài từ 7 đến 52 ngày). Do đó chỉ một số (some) ở lại hơn 3 tuần (21 ngày)."
+              },
+              {
+                "id": "10",
+                "content": "10. were classified as mentally ill",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correctAnswer": "C",
+                "explanation": "Đoạn 7: \"This was sufficient in every case for them to be classified as mentally ill.\" (Điều này đủ để tất cả các trường hợp bị phân loại là bệnh tâm thần). Do đó tất cả (all) đều bị phân loại như vậy."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "Questions 11-16",
+            "content": "<p>Some of the following statements are either true or false according to the passage. If a statement is true, please write T in the space provided; if it is false, please write F. There are other statements about which no information is provided in the passage. If this is the case, please write NI in the space provided.</p>",
+            "questionType": "Trắc nghiệm",
+            "questions": [
+              {
+                "id": "11",
+                "content": "11. R. D. Laing feels that though labelling patients with psychiatric labels makes doctors' work easier, these labels may be wrong.",
+                "options": [
+                  "T",
+                  "F",
+                  "NI"
+                ],
+                "correctAnswer": "T",
+                "explanation": "Đoạn 2: \"R. D. Laing, who argue that diagnoses of mental disease are often no more than convenient labels designed to make life easier for doctors\" (R.D. Laing lập luận rằng các chẩn đoán... thường chỉ là những nhãn mác tiện lợi để làm cho cuộc sống của các bác sĩ dễ dàng hơn). Và câu trước nói về sự sai lầm của chẩn đoán (fallibility of conventional psychiatric diagnosis). Do đó nhận định này là True."
+              },
+              {
+                "id": "12",
+                "content": "12. Professor Rosenhan holds a similar opinion to that of Laing.",
+                "options": [
+                  "T",
+                  "F",
+                  "NI"
+                ],
+                "correctAnswer": "T",
+                "explanation": "Đoạn 10: \"...How many have been stigmatized by well-intentioned, but nevertheless erroneous, diagnoses?\" (Rosenhan cũng nói về những chẩn đoán sai lầm). Và đoạn 11: \"In Professor Rosenhan's view, the hospital itself is an environment that distorts judgment.\" Do đó ý kiến của Rosenhan tương tự như Laing (True)."
+              },
+              {
+                "id": "13",
+                "content": "13. When patients in the mental institutions asked doctors perfectly sensible questions like \"Could you tell me when I will be eligible for ground privileges?\" most doctors usually stopped and tried to answer the questions.",
+                "options": [
+                  "T",
+                  "F",
+                  "NI"
+                ],
+                "correctAnswer": "F",
+                "explanation": "Đoạn 11: \"In almost three quarters of the cases, the psychiatrist's response was to walk on, head averted. Only one doctor in 25 stopped and tried to answer the question.\" (Hầu hết bác sĩ bước đi và quay đầu đi chỗ khác, chỉ 1/25 dừng lại trả lời). Do đó nhận định này là False."
+              },
+              {
+                "id": "14",
+                "content": "14. Doctors working in public institutions are more likely to give wrong diagnoses.",
+                "options": [
+                  "T",
+                  "F",
+                  "NI"
+                ],
+                "correctAnswer": "NI",
+                "explanation": "Đoạn 5 có đề cập: \"The hospitals chosen ranged from expensive private units to dingy publicly-run institutions.\" (Các bệnh viện được chọn từ bệnh viện tư đắt tiền đến viện công tồi tàn). Tuy nhiên, bài không có thông tin nào so sánh khả năng chẩn đoán sai giữa bác sĩ ở viện công và viện tư."
+              },
+              {
+                "id": "15",
+                "content": "15. The results of the second experiment described in the passage contradict the results of the experiment supervised by Professor Rosenhan.",
+                "options": [
+                  "T",
+                  "F",
+                  "NI"
+                ],
+                "correctAnswer": "F",
+                "explanation": "Đoạn 12: Thí nghiệm thứ hai (\"another experiment...\") cho thấy 41 người bị chẩn đoán là giả mạo trong khi không có ai giả mạo. Điều này tiếp tục chứng minh sự sai lầm trong chẩn đoán, củng cố thêm (\"But the clinching piece of evidence comes from...\") chứ không hề mâu thuẫn (contradict) với thí nghiệm đầu. Do đó là False."
+              },
+              {
+                "id": "16",
+                "content": "16. Some pseudopatients invented false occupations in order to attract attention.",
+                "options": [
+                  "T",
+                  "F",
+                  "NI"
+                ],
+                "correctAnswer": "F",
+                "explanation": "Đoạn 5: \"...invented false occupations, so as not to attract special attention from fellow-professionals.\" (...nhằm không thu hút sự chú ý đặc biệt). Nhận định nói \"để thu hút sự chú ý\" là ngược lại với bài đọc."
+              }
+            ]
+          },
+          {
+            "id": "3",
+            "title": "Question 17",
+            "content": "<p>Find a word in Passage 1 that has a similar meaning to \"fake\" or \"pseudo\". [1]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "17",
+                "content": "[1]",
+                "correctAnswer": "shamming",
+                "explanation": "Đoạn 3 có cụm từ \"by shamming symptoms of a mild kind\" (bằng cách giả vờ các triệu chứng nhẹ). Từ \"shamming\" mang nghĩa là giả vờ, tương đương với \"fake\" hoặc \"pseudo\"."
+              }
+            ]
+          },
+          {
+            "id": "4",
+            "title": "Questions 18-25",
+            "content": "<p>Passage 2 describes the same experiment reported in Passage 1, Who's Crazy?, but in a more brief manner. Some of the words and phrases in the box below are taken from Passage 2. Decide which word of phrase should go in each gap and then write the letter in the space provided. Note that there are more words and phrases than gaps.</p><p>How reliable are conventional psychiatric diagnoses? A study in which eight normal people attempted to gain admission to different psychiatric hospitals has given us some alarming answers. Each of the eight phoned the hospital asking for an appointment. Upon arrival at the admission office, each of them complained of [1] which appeared to be saying \"empty\", \"hollow\", and \"thud\". All of them were judged to be mentally ill, and all of them were admitted to hospital. As soon as these [2] had been admitted to the psychiatric ward, they stopped simulating signs of abnormality and their behaviour was normal, friendly and cooperative. The only unusual aspect of their behaviour was that they spent a fair amount of time [3] their observations about the ward, its patients, and the staff. All eight people were released within [4] of admission. But it was not because the psychiatric staff discovered that they had been sane all the time. Instead, all of them were [5] with a diagnosis of \"schizophrenia in remission\", indicating that the deception had not been detected. Interestingly, several of the real patients became suspicious about the pseudopatients. They said things like \"You are not crazy. You're [6] or a professor. You are checking up on the hospital\". In a reversed experiment, 41 of the 193 [7] were judged to be pseudopatients. If we accept these findings at [8], they suggest that the distinction between the sane and the insane is so blurred that it is entirely possible for the sane to be mistaken for the insane — at least by psychiatrists.</p>",
+            "questionType": "Kéo thả",
+            "questions": [
+              {
+                "id": "18",
+                "content": "[1]",
+                "options": [
+                  "A. discharged",
+                  "B. several weeks",
+                  "C. phoned",
+                  "D. frauds",
+                  "E. hearing voices",
+                  "F. genuine patients",
+                  "G. an expert",
+                  "H. pseudopatients",
+                  "I. face value",
+                  "J. talked",
+                  "K. recording",
+                  "L. a journalist",
+                  "M. writing down",
+                  "N. a few months"
+                ],
+                "correctAnswer": "E. hearing voices",
+                "explanation": "Đoạn 6 của Passage 1: \"The symptoms they complained of were hearing disembodied voices...\". Từ phù hợp điền vào ô trống mô tả triệu chứng là \"hearing voices\" (E)."
+              },
+              {
+                "id": "19",
+                "content": "[2]",
+                "options": [
+                  "A. discharged",
+                  "B. several weeks",
+                  "C. phoned",
+                  "D. frauds",
+                  "E. hearing voices",
+                  "F. genuine patients",
+                  "G. an expert",
+                  "H. pseudopatients",
+                  "I. face value",
+                  "J. talked",
+                  "K. recording",
+                  "L. a journalist",
+                  "M. writing down",
+                  "N. a few months"
+                ],
+                "correctAnswer": "H. pseudopatients",
+                "explanation": "Đoạn 5 và 7 dùng từ \"pseudopatients\" để chỉ 8 người giả làm bệnh nhân này. Chọn H."
+              },
+              {
+                "id": "20",
+                "content": "[3]",
+                "options": [
+                  "A. discharged",
+                  "B. several weeks",
+                  "C. phoned",
+                  "D. frauds",
+                  "E. hearing voices",
+                  "F. genuine patients",
+                  "G. an expert",
+                  "H. pseudopatients",
+                  "I. face value",
+                  "J. talked",
+                  "K. recording",
+                  "L. a journalist",
+                  "M. writing down",
+                  "N. a few months"
+                ],
+                "correctAnswer": "M. writing down",
+                "explanation": "Đoạn 9: \"spent much of their time taking extensive notes\". Cụm từ mang nghĩa ghi chép tương đương là \"writing down\" (M)."
+              },
+              {
+                "id": "21",
+                "content": "[4]",
+                "options": [
+                  "A. discharged",
+                  "B. several weeks",
+                  "C. phoned",
+                  "D. frauds",
+                  "E. hearing voices",
+                  "F. genuine patients",
+                  "G. an expert",
+                  "H. pseudopatients",
+                  "I. face value",
+                  "J. talked",
+                  "K. recording",
+                  "L. a journalist",
+                  "M. writing down",
+                  "N. a few months"
+                ],
+                "correctAnswer": "B. several weeks",
+                "explanation": "Đoạn 7: \"Their stays inside varied from 7 to 52 days\" (từ 1 đến hơn 7 tuần). Do đó \"several weeks\" (B) là phù hợp nhất để chỉ khoảng thời gian họ ở lại."
+              },
+              {
+                "id": "22",
+                "content": "[5]",
+                "options": [
+                  "A. discharged",
+                  "B. several weeks",
+                  "C. phoned",
+                  "D. frauds",
+                  "E. hearing voices",
+                  "F. genuine patients",
+                  "G. an expert",
+                  "H. pseudopatients",
+                  "I. face value",
+                  "J. talked",
+                  "K. recording",
+                  "L. a journalist",
+                  "M. writing down",
+                  "N. a few months"
+                ],
+                "correctAnswer": "A. discharged",
+                "explanation": "Từ mang nghĩa được xuất viện/cho ra viện với một chẩn đoán bệnh là \"discharged\" (A)."
+              },
+              {
+                "id": "23",
+                "content": "[6]",
+                "options": [
+                  "A. discharged",
+                  "B. several weeks",
+                  "C. phoned",
+                  "D. frauds",
+                  "E. hearing voices",
+                  "F. genuine patients",
+                  "G. an expert",
+                  "H. pseudopatients",
+                  "I. face value",
+                  "J. talked",
+                  "K. recording",
+                  "L. a journalist",
+                  "M. writing down",
+                  "N. a few months"
+                ],
+                "correctAnswer": "L. a journalist",
+                "explanation": "Đoạn 8: \"You're a journalist or a professor.\" Chọn \"a journalist\" (L) để điền vào chỗ trống."
+              },
+              {
+                "id": "24",
+                "content": "[7]",
+                "options": [
+                  "A. discharged",
+                  "B. several weeks",
+                  "C. phoned",
+                  "D. frauds",
+                  "E. hearing voices",
+                  "F. genuine patients",
+                  "G. an expert",
+                  "H. pseudopatients",
+                  "I. face value",
+                  "J. talked",
+                  "K. recording",
+                  "L. a journalist",
+                  "M. writing down",
+                  "N. a few months"
+                ],
+                "correctAnswer": "F. genuine patients",
+                "explanation": "Đoạn 12: Thí nghiệm thứ hai có 193 bệnh nhân thật đến khám nhưng không có bệnh nhân giả nào cả. Tức là họ đều là \"genuine patients\" (F)."
+              },
+              {
+                "id": "25",
+                "content": "[8]",
+                "options": [
+                  "A. discharged",
+                  "B. several weeks",
+                  "C. phoned",
+                  "D. frauds",
+                  "E. hearing voices",
+                  "F. genuine patients",
+                  "G. an expert",
+                  "H. pseudopatients",
+                  "I. face value",
+                  "J. talked",
+                  "K. recording",
+                  "L. a journalist",
+                  "M. writing down",
+                  "N. a few months"
+                ],
+                "correctAnswer": "I. face value",
+                "explanation": "Thành ngữ \"accept at face value\" (tin vào những gì mình thấy/nghe mà không nghi ngờ). Chọn \"face value\" (I)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

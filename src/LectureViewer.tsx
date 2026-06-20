@@ -607,6 +607,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          style={{ width: '100%', height: isIframeOnly ? '100%' : `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
          sandbox="allow-scripts allow-same-origin allow-popups"
          scrolling="no"
+         allowFullScreen
        />
      </div>
    );
