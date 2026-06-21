@@ -50,7 +50,7 @@ const stripHtmlRegex = /[<][^>]*[>]/g;
 
 const cleanHtmlContent = (html: any) => {
   if (!html) return '';
-  return String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
+  let cleaned = String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
       let newStyle = styleContent
           .replace(/(?:^|;)\s*(max-width|width|max-height|min-height|height|overflow|overflow-y|overflow-x)\s*:[^;]+/gi, '')
           .replace(/^;+|;+$/g, '')
@@ -60,6 +60,9 @@ const cleanHtmlContent = (html: any) => {
       }
       return '';
   });
+  // Xóa khoảng trắng/xuống dòng thừa giữa các thẻ block để tránh tạo khoảng trống khổng lồ do whitespace-pre-wrap
+  cleaned = cleaned.replace(/<\/(p|div|h[1-6])>\s+<(p|div|h[1-6])\b/gi, '</$1><$2');
+  return cleaned;
 };
 
 const isRealContent = (htmlContent: any) => {
@@ -1416,7 +1419,7 @@ const handleFinish = async () => {
                                  if (Array.isArray(sec.questions)) {
                                    sec.questions.forEach((q: any) => {
                                      if (q.content && q.content !== sec.content && String(q.content).match(/\[\s*\d+\s*\]/) && !/^\[\s*\d+\s*\]$/.test(String(q.content).replace(/<[^>]*>/g, '').trim())) {
-                                       rawContentText += '<br><br>' + q.content;
+                                       rawContentText += '<div class="mb-5"></div>' + q.content;
                                      }
                                    });
                                  }
@@ -1429,9 +1432,9 @@ const handleFinish = async () => {
                                         if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
                                           qContent += ` [${q.id}]`;
                                         }
-                                        if (rawContentText && !rawContentText.endsWith('<br><br>')) {
+                                        if (rawContentText && !rawContentText.endsWith('<div class="mb-5"></div>')) {
                                           if (!/^<p\b|^<div\b/i.test(qContent.trim())) {
-                                              rawContentText += '<br><br>';
+                                              rawContentText += '<div class="mb-5"></div>';
                                           } else {
                                               // Nếu đã là thẻ block (như <p>), chỉ cần thêm dấu cách để code HTML sạch hơn
                                               rawContentText += ' ';
@@ -1464,7 +1467,7 @@ const handleFinish = async () => {
                                     let mainContent = rawContentText;
                                     let wordBankItems: string[] = [];
                                     
-                                    const splitKeywords = ['<br><br>Options:<br>', '<br>Options:<br>', 'Options:<br>', 'Options:'];
+                                    const splitKeywords = ['<div class="mb-5"></div>Options:<br>', '<br><br>Options:<br>', '<br>Options:<br>', 'Options:<br>', 'Options:'];
                                     for (const keyword of splitKeywords) {
                                       if (mainContent.includes(keyword)) {
                                         const partsArr = mainContent.split(keyword);
