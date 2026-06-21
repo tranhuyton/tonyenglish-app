@@ -429,18 +429,15 @@ const handleFinish = async () => {
                    combo.flatMap((q:any) => String(q.correctAnswer).split(',').map((x:string) => x.trim().toUpperCase()).filter(Boolean))
                );
                
-               let comboPoints = 0;
-               userAnsComboSet.forEach(ans => { 
-                   if (correctAnsComboSet.has(ans)) {
-                       comboPoints++; 
-                   }
-               });
-               comboPoints = Math.min(comboPoints, combo.length); 
+               // Phải lựa chọn hết các ô đúng và không chọn ô sai thì mới có 1 điểm
+               const isPerfect = userAnsComboSet.size === correctAnsComboSet.size && 
+                                 [...userAnsComboSet].every(ans => correctAnsComboSet.has(ans));
+               let comboPoints = isPerfect ? 1 : 0;
                
                score += comboPoints;
-               total += combo.length;
+               total += 1;
                questionTypeStats[qType].correct += comboPoints;
-               questionTypeStats[qType].total += combo.length;
+               questionTypeStats[qType].total += 1;
            });
 
         } else if (qType === 'Đoạn văn') {
@@ -623,10 +620,12 @@ const handleFinish = async () => {
     }
   }, [answers, marked, allQuestionIds]);
 
-  const getCleanQuestionText = (htmlContent: string) => {
+  const getCleanQuestionText = (htmlContent: string, keepNumber: boolean = false) => {
     let txt = cleanHtmlContent(String(htmlContent || '')).trim();
     txt = txt.replace(/^<p[^>]*>/i, '').replace(/<\/p>$/i, '').trim();
-    txt = txt.replace(/^(<[^>]+>)*(Câu\s*\d+|\d+[\-\d]*)\s*[\.\):]?\s*(<\/[^>]+>)*\s*/i, '').trim();
+    if (!keepNumber) {
+        txt = txt.replace(/^(<[^>]+>)*(Câu\s*\d+|\d+[\-\d]*)\s*[\.\):]?\s*(<\/[^>]+>)*\s*/i, '').trim();
+    }
     return txt;
   };
 
@@ -1423,7 +1422,12 @@ const handleFinish = async () => {
                                           qContent += ` [${q.id}]`;
                                         }
                                         if (rawContentText && !rawContentText.endsWith('<br><br>')) {
-                                          rawContentText += '<br><br>';
+                                          if (!/^<p\b|^<div\b/i.test(qContent.trim())) {
+                                              rawContentText += '<br><br>';
+                                          } else {
+                                              // Nếu đã là thẻ block (như <p>), chỉ cần thêm dấu cách để code HTML sạch hơn
+                                              rawContentText += ' ';
+                                          }
                                         }
                                         rawContentText += qContent;
                                       }
@@ -2093,7 +2097,8 @@ const handleFinish = async () => {
                                               });
                                           };
 
-                                          const qText = getCleanQuestionText(combo[0]?.content);
+                                          const isCheckbox = sec.questionType === 'Checkbox';
+                                          const qText = getCleanQuestionText(combo[0]?.content, isCheckbox);
                                           const firstQIdx = questionIndexMap[comboIds[0]] || comboIds[0];
                                           const lastQIdx = questionIndexMap[comboIds[comboIds.length - 1]] || comboIds[comboIds.length - 1];
                                           const displayIndexText = comboIds.length > 1 ? `Câu ${firstQIdx}-${lastQIdx}` : `Câu ${firstQIdx}`;
@@ -2119,9 +2124,11 @@ const handleFinish = async () => {
                                                )}
 
                                                <div className="flex flex-col mb-4 pr-16">
-                                                 <div className="font-bold text-slate-700 text-[15px] mb-2">
-                                                     {displayIndexText}.
-                                                 </div>
+                                                 {!isCheckbox && (
+                                                     <div className="font-bold text-slate-700 text-[15px] mb-2">
+                                                         {displayIndexText}.
+                                                     </div>
+                                                 )}
                                                  
                                                  {qText && (
                                                      <div 
