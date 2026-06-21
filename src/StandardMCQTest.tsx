@@ -1243,7 +1243,7 @@ const handleFinish = async () => {
                     return (
                       <div key={part?.id || pIdx} className="mb-12">
                         {part?.title && (
-                            <h3 className="font-black text-xl text-slate-800 mb-6 uppercase tracking-tight border-b-2 border-slate-800 pb-3">
+                            <h3 className="font-bold text-[16px] text-slate-800 mb-6 border-b border-slate-200 pb-3 leading-relaxed">
                                 {part.title}
                             </h3>
                         )}
