@@ -1580,7 +1580,7 @@ const handleFinish = async () => {
 
                              {(sec?.questionType === "Trắc nghiệm" || sec?.questionType === "TFNG") && sec?.questions?.map((q: any) => {
                                 if (!q?.id) return null;
-                                const cleanQText = getCleanQuestionText(q.content);
+                                const cleanQText = getCleanQuestionText(q.content, true);
                                 const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
                                 const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
                                 const isQuestionCorrect = isAnswerCorrect(userAns, correctAns);
@@ -1709,16 +1709,7 @@ const handleFinish = async () => {
                                         </div>
                                      )}
 
-                                     {isListening && (
-                                        <div className="flex justify-between items-center mb-5 border-b border-slate-100 pb-3 pr-8">
-                                            <h3 className="font-bold text-lg text-slate-800">Question {displayIdx}:</h3>
-                                        </div>
-                                     )}
-
                                      <div className="flex gap-4 mb-5 pr-10 items-start">
-                                        {!isListening && (
-                                           <span className="font-bold text-white bg-slate-800 px-2 py-0.5 rounded text-[13px] mt-0.5">{displayIdx}</span>
-                                        )}
                                         <div className="flex-1 w-full">
                                            {q.imageUrl && <img src={q.imageUrl} className={`mb-4 rounded-xl border border-slate-200 shadow-sm ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
                                            {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium mb-3 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
