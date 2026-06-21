@@ -1347,8 +1347,16 @@ const handleFinish = async () => {
                        
                        {/* NỘI DUNG PART */}
                        <div className="mb-8 bg-transparent">
-                           {part?.title && <h3 className="font-black text-xl text-slate-800 mb-2">{part.title}</h3>}
-                           {/* part.content is displayed in the left pane during review mode */}
+                           {part?.title && <h3 className="font-bold text-[16px] text-slate-800 mb-6 border-b border-slate-200 pb-3 leading-relaxed">{part.title}</h3>}
+                           
+                           {isListening && part?.content && (
+                              <div 
+                                  className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-6 text-justify bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm" 
+                                  dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} 
+                              />
+                           )}
+                           
+                           {/* part.content is displayed in the left pane during review mode (or reading test) */}
                            {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />}
                        </div>
 
