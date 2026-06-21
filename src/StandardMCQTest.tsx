@@ -2119,8 +2119,8 @@ const handleFinish = async () => {
                                                )}
 
                                                <div className="flex flex-col mb-4 pr-16">
-                                                 <div className="font-bold text-white bg-slate-800 inline-block px-3 py-1 rounded w-fit text-[14px] mb-4">
-                                                     {displayIndexText}
+                                                 <div className="font-bold text-slate-700 text-[15px] mb-2">
+                                                     {displayIndexText}.
                                                  </div>
                                                  
                                                  {qText && (
