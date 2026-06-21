@@ -90,3 +90,11 @@ table th {
   font-weight: 600 !important;
 }
 
+/* Ensure paragraphs inside html-content-renderer have proper spacing */
+.html-content-renderer p {
+  margin-bottom: 1.25em;
+}
+.html-content-renderer p:last-child {
+  margin-bottom: 0;
+}
+
