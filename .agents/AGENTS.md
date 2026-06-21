@@ -32,3 +32,12 @@ Các agent khi làm việc với cấu trúc dữ liệu JSON của bài test tr
 - Giải pháp: Phải luôn tách các dạng bài có format options khác nhau thành các Section ĐỘC LẬP (VD: Section Trắc nghiệm riêng, Section Checkbox riêng, Section TFNG riêng).
 
 Tuân thủ nghiêm ngặt các điều trên để tránh mọi lỗi logic hay crash UI do dữ liệu dị dạng!
+
+## 6. Tiêu đề Part (Part Title)
+- **Tuyệt đối KHÔNG** gán các tiêu đề dư thừa như "Listening Activity No. X" vào thuộc tính `title` của Part, vì giao diện đã hiển thị sẵn thông tin này ở thanh Header phía trên.
+- Chỉ sử dụng Part Title cho các hướng dẫn chung chung thật sự cần thiết, nhưng tốt nhất nên đưa hướng dẫn này vào `part.content` để hiển thị thành một khối văn bản gọn gàng ở đầu khung câu hỏi bên phải.
+
+## 7. Định dạng Transcript
+- **Cách chia đoạn:** Khi nhập liệu Transcript, mỗi lượt lời của một người nói phải được đặt gọn trong MỘT thẻ `<p>` riêng biệt. TUYỆT ĐỐI KHÔNG gộp toàn bộ bài hội thoại vào chung một thẻ `<p>` rồi dùng `<br>` hoặc `\n` để xuống dòng (điều này sẽ gây ra lỗi khoảng trống kép do thuộc tính `whitespace-pre-wrap` trên giao diện).
+- **Bôi đậm tên người nói:** Tên nhân vật ở đầu mỗi câu thoại phải được bôi đậm để dễ theo dõi (Ví dụ: `<p><b>Customer 1:</b> Yes, good morning.</p>`).
+- **Không chứa hướng dẫn làm bài:** Transcript (nằm ở `part.explanation`) chỉ chứa nội dung lời thoại thuần túy của file Audio. TUYỆT ĐỐI KHÔNG để rớt lại các câu hướng dẫn đề bài (VD: "You will hear a job interview. As you listen...") vào trong khu vực này.
