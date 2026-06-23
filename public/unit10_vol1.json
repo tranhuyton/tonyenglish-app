@@ -12,61 +12,61 @@
           "questions": [
             {
               "id": "1",
-              "content": "It is <u>very important</u> that you call your mother soon. essen [ 1 ]",
+              "content": "<p>1. It is <u>very important</u> that you call your mother soon.</p><p>essen [ 1 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "essential"
             },
             {
               "id": "2",
-              "content": "The <u>good thing</u> about being old is that you know many things. bene [ 1 ]",
+              "content": "<p>2. The <u>good thing</u> about being old is that you know many things.</p><p>bene [ 2 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "benefit"
             },
             {
               "id": "3",
-              "content": "I have <u>problems</u> with my science homework. tro [ 1 ]",
+              "content": "<p>3. I have <u>problems</u> with my science homework.</p><p>tro [ 3 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "trouble"
             },
             {
               "id": "4",
-              "content": "I am <u>sure</u> that she will come to his party. cer [ 1 ]",
+              "content": "<p>4. I am <u>sure</u> that she will come to his party.</p><p>cer [ 4 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "certain"
             },
             {
               "id": "5",
-              "content": "The <u>job</u> of the stove is to cook. fun [ 1 ]",
+              "content": "<p>5. The <u>job</u> of the stove is to cook.</p><p>fun [ 5 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "function"
             },
             {
               "id": "6",
-              "content": "That is the <u>place</u> where they met. si [ 1 ]",
+              "content": "<p>6. That is the <u>place</u> where they met.</p><p>si [ 6 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "site"
             },
             {
               "id": "7",
-              "content": "I saw his <u>picture</u> on TV. i [ 1 ]",
+              "content": "<p>7. I saw his <u>picture</u> on TV.</p><p>i [ 7 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "image"
             },
             {
               "id": "8",
-              "content": "The twins don't like to be <u>apart</u>. s [ 1 ]",
+              "content": "<p>8. The twins don't like to be <u>apart</u>.</p><p>s [ 8 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "separate"
             },
             {
               "id": "9",
-              "content": "I like to <u>stay</u> at home on the weekends. r [ 1 ]",
+              "content": "<p>9. I like to <u>stay</u> at home on the weekends.</p><p>r [ 9 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "remain"
             },
             {
               "id": "10",
-              "content": "His <u>part that comes out of his rear</u> was shaking because he was happy. t [ 1 ]",
+              "content": "<p>10. His <u>part that comes out of his rear</u> was shaking because he was happy.</p><p>t [ 10 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "tail"
             }
@@ -244,8 +244,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Farmer and the Cats</h1>        <p style=\"margin-bottom: 1rem;\">Arthur was a <b>responsible</b> farmer, and Maria was a nice lady. But they were poor. They <b>owed</b> the town <b>lord</b> money for their land. One summer, their farm <b>burned</b>. One <b>structure</b> caught fire, and most of the animals ran away. Only the cats stayed. So Arthur and Maria had to bring in their <b>crops</b> without an animal's help.</p>    <p style=\"margin-bottom: 1rem;\">On a fall day, the <b>lord</b> <b>demanded</b> his money. Arthur asked if the <b>lord</b> could wait until he brought in his <b>crops</b>.</p>    <p style=\"margin-bottom: 1rem;\">The <b>lord</b> was angry. He <b>raised</b> his hands high and yelled, \"Pay me by the end of the week. If you don't, I will <b>increase</b> the money you have to pay. I might put you in a jail <b>cell</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">So Arthur and Maria worked until there was <b>blood</b> on their hands. They finished four lines of corn and went to bed.</p>    <p style=\"margin-bottom: 1rem;\">But the next morning, eight lines were finished! \"Maria, didn't we stop in this <b>spot</b> here?\" Arthur asked.</p>    <p style=\"margin-bottom: 1rem;\">\"Yes, that is <b>correct</b>. And the tools were in a different <b>position</b>, too,\" Maria said. They were surprised and happy. That day, they worked hard and finished five lines.</p>    <p style=\"margin-bottom: 1rem;\">But in the morning, ten lines were done! Each day they did a lot of work. Each night, someone else did an <b>equal</b> amount of work. In a week, the <b>whole</b> field was finished. \"Tomorrow I will sell the <b>crops</b> and pay the <b>lord</b>,\" Arthur said. But that morning, the <b>crops</b> were gone. A bag was in the middle of the field. It <b>contained</b> money.</p>    <p style=\"margin-bottom: 1rem;\">\"Maria, let's see who has helped us work.\" Through a <b>hole</b> in the wall, they saw a funny <b>sight</b>. The cats were dancing in the field and eating corn! Now Arthur knew what had happened. The cats had worked at night! After that, Arthur was very nice to his cats and <b>fed</b> them lots of corn.</p></div>",
-      "imageUrl": "/unit10_story.png",
+      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The First Peacock</h1>\n<p style=\"margin-bottom: 1rem;\">Argos lived in Ancient Greece. He was a husband and a <b>proud</b> father. He worked hard and did well at his job. But one thing about him wasn't normal. He was born with 100 eyes. Having many eyes was usually a <b>benefit</b> to him. He had a <b>chance</b> to see many things.</p>\n<p style=\"margin-bottom: 1rem;\">Also, since he had so many eyes, he was very good at <b>guarding</b> things. While sleeping, he only <b>rested</b> a few eyes at a time. The others stayed awake. He worked for Hera, a great goddess. His <b>primary function</b> was to <b>guard</b> a special cow. The cow was very important to Hera. It was her favorite pet. The most <b>essential</b> part of his job was to keep the cow alone. It had to be kept <b>separate</b> from all the other cows and <b>far</b> away from people.</p>\n<p style=\"margin-bottom: 1rem;\">This was an easy job for Argos. The cow just ate <b>grass</b> all day. But the god Zeus wanted the cow. He wanted to take it away from Hera. He had a plan. He found a great music player. He asked the man to play a beautiful song for Argos. Zeus was <b>certain</b> Argos would go to sleep.</p>\n<p style=\"margin-bottom: 1rem;\">The song had an <b>immediate effect</b>. Argos couldn't <b>focus</b> on his job. He fell asleep. Zeus saw this, and he took the cow.</p>\n<p style=\"margin-bottom: 1rem;\">Hera was very angry with Argos. She turned him into a peacock. She put his many eyes on his <b>tail</b>. Argos was very sad.</p>\n<p style=\"margin-bottom: 1rem;\">Zeus saw how much <b>trouble</b> he had caused Argos. He made another plan. He turned Argos into a group of stars. He wanted Argos to <b>remain</b> in the sky forever. Even today, Argos' <b>image</b> remains there, above the <b>site</b> where all his problems began. We can still see him in the night sky.</p></div>",
       "sections": [
         {
           "id": "sec6_reading",
@@ -318,7 +317,7 @@
           "questionType": "Đoạn văn"
         }
       ],
-      "explanation": "<p class=\"font-bold text-lg mb-2 text-slate-800\">The First Peacock</p>\n<p>Argos lived in Ancient Greece. He was a husband and a <b>proud</b> father. He worked hard and did well at his job. But one thing about him wasn't normal. He was born with 100 eyes. Having many eyes was usually a <b>benefit</b> to him. He had a <b>chance</b> to see many things.</p>\n<p>Also, since he had so many eyes, he was very good at <b>guarding</b> things. While sleeping, he only <b>rested</b> a few eyes at a time. The others stayed awake. He worked for Hera, a great goddess. His <b>primary function</b> was to <b>guard</b> a special cow. The cow was very important to Hera. It was her favorite pet. The most <b>essential</b> part of his job was to keep the cow alone. It had to be kept <b>separate</b> from all the other cows and <b>far</b> away from people.</p>\n<p>This was an easy job for Argos. The cow just ate <b>grass</b> all day. But the god Zeus wanted the cow. He wanted to take it away from Hera. He had a plan. He found a great music player. He asked the man to play a beautiful song for Argos. Zeus was <b>certain</b> Argos would go to sleep.</p>\n<p>The song had an <b>immediate effect</b>. Argos couldn't <b>focus</b> on his job. He fell asleep. Zeus saw this, and he took the cow.</p>\n<p>Hera was very angry with Argos. She turned him into a peacock. She put his many eyes on his <b>tail</b>. Argos was very sad.</p>\n<p>Zeus saw how much <b>trouble</b> he had caused Argos. He made another plan. He turned Argos into a group of stars. He wanted Argos to <b>remain</b> in the sky forever. Even today, Argos' <b>image</b> remains there, above the <b>site</b> where all his problems began. We can still see him in the night sky.</p>"
+      "explanation": ""
     }
   ],
   "basicInfo": {
