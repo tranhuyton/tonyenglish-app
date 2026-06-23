@@ -12,61 +12,61 @@
           "questions": [
             {
               "id": "1",
-              "content": "It is very important that you call your mother soon, (spr[1])",
+              "content": "It is very important that you call your mother soon. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "essential"
             },
             {
               "id": "2",
-              "content": "The good thing about being old is that you know many things, (spr[2])",
+              "content": "The good thing about being old is that you know many things. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "benefit"
             },
             {
               "id": "3",
-              "content": "I have problems with my science homework, (spr[3])",
+              "content": "I have problems with my science homework. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "trouble"
             },
             {
               "id": "4",
-              "content": "I am sure that she will come to his party, (spr[4])",
+              "content": "I am sure that she will come to his party. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "certain"
             },
             {
               "id": "5",
-              "content": "The job of the stove is to cook, (spr[5])",
+              "content": "The job of the stove is to cook. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "function"
             },
             {
               "id": "6",
-              "content": "That is the place where they met, (spr[6])",
+              "content": "That is the place where they met. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "site"
             },
             {
               "id": "7",
-              "content": "I saw his picture on TV. (spr[7])",
+              "content": "I saw his picture on TV. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "image"
             },
             {
               "id": "8",
-              "content": "The twins don't like to be apart. (spr[8])",
+              "content": "The twins don't like to be apart. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "separate"
             },
             {
               "id": "9",
-              "content": "I like to stay at home on the weekends, (spr[9])",
+              "content": "I like to stay at home on the weekends. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "remain"
             },
             {
               "id": "10",
-              "content": "His part that comes out of his rear was shaking because he was happy, (spr[10])",
+              "content": "His part that comes out of his rear was shaking because he was happy. [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "tail"
             }
@@ -317,7 +317,8 @@
           ],
           "questionType": "Đoạn văn"
         }
-      ]
+      ],
+      "explanation": "<p class=\"font-bold text-lg mb-2 text-slate-800\">The First Peacock</p>\n<p>Argos lived in Ancient Greece. He was a husband and a <b>proud</b> father. He worked hard and did well at his job. But one thing about him wasn't normal. He was born with 100 eyes. Having many eyes was usually a <b>benefit</b> to him. He had a <b>chance</b> to see many things.</p>\n<p>Also, since he had so many eyes, he was very good at <b>guarding</b> things. While sleeping, he only <b>rested</b> a few eyes at a time. The others stayed awake. He worked for Hera, a great goddess. His <b>primary function</b> was to <b>guard</b> a special cow. The cow was very important to Hera. It was her favorite pet. The most <b>essential</b> part of his job was to keep the cow alone. It had to be kept <b>separate</b> from all the other cows and <b>far</b> away from people.</p>\n<p>This was an easy job for Argos. The cow just ate <b>grass</b> all day. But the god Zeus wanted the cow. He wanted to take it away from Hera. He had a plan. He found a great music player. He asked the man to play a beautiful song for Argos. Zeus was <b>certain</b> Argos would go to sleep.</p>\n<p>The song had an <b>immediate effect</b>. Argos couldn't <b>focus</b> on his job. He fell asleep. Zeus saw this, and he took the cow.</p>\n<p>Hera was very angry with Argos. She turned him into a peacock. She put his many eyes on his <b>tail</b>. Argos was very sad.</p>\n<p>Zeus saw how much <b>trouble</b> he had caused Argos. He made another plan. He turned Argos into a group of stars. He wanted Argos to <b>remain</b> in the sky forever. Even today, Argos' <b>image</b> remains there, above the <b>site</b> where all his problems began. We can still see him in the night sky.</p>"
     }
   ],
   "basicInfo": {
