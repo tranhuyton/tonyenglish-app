@@ -140,7 +140,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. I should <b>quit</b> eating candy because it is bad for me.",
                 "b. The <b>tiny</b> tower stretched to the sky."
@@ -150,7 +150,7 @@
             },
             {
               "id": "12",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. We ran far above the mountain <b>peak</b>.",
                 "b. I will need water if I'm going to <b>hike</b> the long trail."
@@ -160,7 +160,7 @@
             },
             {
               "id": "13",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. If I want to get better at sports, I should <b>quit</b> playing.",
                 "b. The <b>tiny</b> ant crawled in under the door."
@@ -170,7 +170,7 @@
             },
             {
               "id": "14",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. The clouds look like they can touch the mountain <b>peaks</b>.",
                 "b. I have a great deal of <b>pride</b> when I lose a contest."
@@ -180,7 +180,7 @@
             },
             {
               "id": "15",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. The boy was filled with <b>pride</b> when he learned how to read.",
                 "b. I hiked downstairs from my room."

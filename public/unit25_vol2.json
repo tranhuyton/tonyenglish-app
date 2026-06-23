@@ -153,7 +153,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. My beans <b>yelled</b> when I dropped them.",
                 "b. I keep all of my money in my <b>wallet</b>."
@@ -163,7 +163,7 @@
             },
             {
               "id": "12",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. The <b>rude</b> boy always said 'please' and 'thank you'.",
                 "b. The <b>fence</b> around the house needed to be painted."
@@ -173,7 +173,7 @@
             },
             {
               "id": "13",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. The <b>criminal</b> was sent to jail.",
                 "b. I can <b>admit</b> to a race because I am fast."
@@ -183,7 +183,7 @@
             },
             {
               "id": "14",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. The man built a <b>cabin</b> in the forest.",
                 "b. The <b>cash</b> tasted good tonight."
@@ -193,7 +193,7 @@
             },
             {
               "id": "15",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. The <b>penalty</b> for your birthday is a big cake.",
                 "b. The coach kept the footballs in a large <b>bin</b>."
@@ -203,7 +203,7 @@
             },
             {
               "id": "16",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. We were nice to the <b>rude</b> man, but he was mean to us.",
                 "b. The <b>wallet</b> made his dinner taste better."
@@ -213,7 +213,7 @@
             },
             {
               "id": "17",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. The strong <b>fence</b> let all of the sheep go into the field.",
                 "b. It was loud at the party, so he had to <b>yell</b> for me to hear him."
@@ -223,7 +223,7 @@
             },
             {
               "id": "18",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. When he does something wrong, he always <b>admits</b> it.",
                 "b. The mean <b>cabin</b> told the boy to go away."
@@ -233,7 +233,7 @@
             },
             {
               "id": "19",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. If you cheat during the game, there will be a <b>penalty</b>.",
                 "b. <b>Criminals</b> are always nice to people."
@@ -243,7 +243,7 @@
             },
             {
               "id": "20",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. She liked to <b>bin</b> her toys.",
                 "b. I do not have enough <b>cash</b> to buy a car."

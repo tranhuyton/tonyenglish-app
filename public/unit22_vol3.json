@@ -148,7 +148,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "Be careful not to <b>slip</b> on the ice.",
                 "I hope my <b>yard</b> is ready to eat."
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "I made a cake with my <b>stable</b>.",
                 "The man robbed the store of over 200 dollars."
@@ -168,7 +168,7 @@
             },
             {
               "id": "13",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "The boy carried sand in his <b>bucket</b>.",
                 "He used the <b>contest</b> to clean the floor."
@@ -178,7 +178,7 @@
             },
             {
               "id": "14",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "The <b>award</b> for winning the game is a new toy.",
                 "The boy pulled the car <b>apart</b> by washing it."
@@ -188,7 +188,7 @@
             },
             {
               "id": "15",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "The mother <b>arrested</b> dinner for her family.",
                 "An <b>alarm</b> sounds to warn us of a fire."
@@ -198,7 +198,7 @@
             },
             {
               "id": "16",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "The <b>stable</b> tree did not fall in the wind.",
                 "She slipped the table after dinner."
@@ -208,7 +208,7 @@
             },
             {
               "id": "17",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "My dog likes to play in the <b>yard</b>.",
                 "The man was upset after he robbed himself."
@@ -218,7 +218,7 @@
             },
             {
               "id": "18",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "I fell down and got hurt as an <b>award</b>.",
                 "I won the <b>contest</b> because I was the fastest runner."
@@ -228,7 +228,7 @@
             },
             {
               "id": "19",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "China and Mexico are far <b>apart</b>.",
                 "The <b>alarm</b> washed away the dirt."
@@ -238,7 +238,7 @@
             },
             {
               "id": "20",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "The <b>bucket</b> wrote down every word.",
                 "If you steal, the police will <b>arrest</b> you."

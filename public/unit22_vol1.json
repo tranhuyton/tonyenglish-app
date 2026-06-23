@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "If I <b>receive</b> a present, I give someone something.",
                 "If you <b>steal</b> money, you can get in trouble."
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "A man who is alone can <b>contact</b> many people.",
                 "If a woman is sad, someone should <b>comfort</b> her."
@@ -100,7 +100,7 @@
             },
             {
               "id": "8",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "He was given a <b>reward</b> for his poor work performance.",
                 "You eat dinner off a <b>plate</b>."
@@ -110,7 +110,7 @@
             },
             {
               "id": "9",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "Everything that is for sale has a <b>charge</b>.",
                 "A <b>customer</b> sells things to people."
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "If you <b>earn</b> something, you give it to someone.",
                 "Postmen <b>deliver</b> mail from one house to another."

@@ -107,7 +107,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "The <b>girl's</b> positive words made me feel better.",
                 "We took the village out of the house."
@@ -117,7 +117,7 @@
             },
             {
               "id": "12",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "The calm <b>girl</b> yelled a lot.",
                 "The team members asked Kate to represent them at the dinner."
@@ -127,7 +127,7 @@
             },
             {
               "id": "13",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "I was content to stay at home by the warm fire.",
                 "My mom punished me for doing my homework."
@@ -137,7 +137,7 @@
             },
             {
               "id": "14",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "The man expected me to say yes.",
                 "The issue did not taste very good."
@@ -147,7 +147,7 @@
             },
             {
               "id": "15",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "I behaved wisely while I was asleep.",
                 "I avoided my friend because she had laughed at me."

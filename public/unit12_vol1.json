@@ -118,7 +118,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "When you are alone, you are with another person.",
                 "You can read articles in a newspaper."
@@ -128,7 +128,7 @@
             },
             {
               "id": "12",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "If you make a profit, you have more money than you did before.",
                 "If you have professional training, you can't do a difficult job."
@@ -138,7 +138,7 @@
             },
             {
               "id": "13",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "The Earth is a very thin planet.",
                 "If something is a symbol, it stands for something <b>else</b>."
@@ -148,7 +148,7 @@
             },
             {
               "id": "14",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "You can use stairs to go up inside a building.",
                 "Since she is a lawyer, people call my wife an artist."
@@ -158,7 +158,7 @@
             },
             {
               "id": "15",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "There are many apartments in one building.",
                 "Your attitude is the way you look."
@@ -168,7 +168,7 @@
             },
             {
               "id": "16",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "You cannot get information from a magazine.",
                 "If you compare two things, you say how they are different."
@@ -178,7 +178,7 @@
             },
             {
               "id": "17",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "If you judge something, you know if it is good or bad.",
                 "Neighbors are people who live far from you."
@@ -188,7 +188,7 @@
             },
             {
               "id": "18",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "A meal has food and a drink.",
                 "A shape is something you cannot see."
@@ -198,7 +198,7 @@
             },
             {
               "id": "19",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "A symbol is a picture of two different things.",
                 "You must have space to add more things to a room."
@@ -208,7 +208,7 @@
             },
             {
               "id": "20",
-              "content": "Check the sentence with the bolded word that makes better sense.",
+              "content": "",
               "options": [
                 "If something has low quality, it is very good.",
                 "A material is used to make something <b>else</b>."

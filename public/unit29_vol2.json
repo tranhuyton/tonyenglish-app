@@ -153,7 +153,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. Many people wear a <b>shell</b> before going out into the rain.",
                 "b. In the past three years, the city has had two <b>floods</b>."
@@ -163,7 +163,7 @@
             },
             {
               "id": "12",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. <b>Nowadays</b>, many students like using the Internet to do research.",
                 "b. Many groups have <b>annual</b> meetings every month."
@@ -173,7 +173,7 @@
             },
             {
               "id": "13",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. Some dogs have interesting <b>feathers</b>.",
                 "b. You cannot ride a bicycle if it doesn’t have <b>wheels</b>."
@@ -183,7 +183,7 @@
             },
             {
               "id": "14",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. Churches don’t let people read <b>religious</b> books.",
                 "b. Birds use their <b>feathers</b> to help them fly."
@@ -193,7 +193,7 @@
             },
             {
               "id": "15",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. Many people enjoy watching <b>romantic</b> movies.",
                 "b. If you get good grades, you don’t <b>deserve</b> to graduate."
@@ -203,7 +203,7 @@
             },
             {
               "id": "16",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. A crab is an example of an animal that has a <b>shell</b>.",
                 "b. People never go fishing near the <b>shore</b>."
@@ -213,7 +213,7 @@
             },
             {
               "id": "17",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. People who do bad things <b>deserve</b> to be punished.",
                 "b. Mountains and hills are examples of <b>floods</b>."
@@ -223,7 +223,7 @@
             },
             {
               "id": "18",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. Horses are more common than cars <b>nowadays</b>.",
                 "b. People who are <b>religious</b> go to church."
@@ -233,7 +233,7 @@
             },
             {
               "id": "19",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. If you are <b>romantic</b>, you probably don’t like movies about love.",
                 "b. There are beaches along the <b>shore</b> of some oceans and lakes."
@@ -243,7 +243,7 @@
             },
             {
               "id": "20",
-              "content": "Which sentence makes better sense?",
+              "content": "",
               "options": [
                 "a. You should see your doctor once a year for an <b>annual</b> checkup.",
                 "b. The wind makes the <b>wheels</b> of a car turn."

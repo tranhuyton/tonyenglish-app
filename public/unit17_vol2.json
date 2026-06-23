@@ -80,100 +80,100 @@
           "questions": [
             {
               "id": "6",
-              "content": "a. It is a good idea to bet your money on silly things.\nb. You should go to a mechanic if you have a problem with your car.",
+              "content": "<p>6.</p>",
               "options": [
-                "a",
-                "b"
+                "a. It is a good idea to bet your money on silly things.",
+                "b. You should go to a mechanic if you have a problem with your car."
               ],
               "explanation": "mechanic (thợ cơ khí) sửa xe, đây là lựa chọn hợp lý.",
               "correctAnswer": "b"
             },
             {
               "id": "7",
-              "content": "a. Drivers use signals to make their cars go faster.\nb. You should attach a stamp to a letter before you mail it.",
+              "content": "<p>7.</p>",
               "options": [
-                "a",
-                "b"
+                "a. Drivers use signals to make their cars go faster.",
+                "b. You should attach a stamp to a letter before you mail it."
               ],
               "explanation": "attach a stamp (dán tem) là hành động đúng trước khi gửi thư.",
               "correctAnswer": "b"
             },
             {
               "id": "8",
-              "content": "a. If you and your date differ too much, you might not like each other.\nb. When you confirm the results of the test, you make them better.",
+              "content": "<p>8.</p>",
               "options": [
-                "a",
-                "b"
+                "a. If you and your date differ too much, you might not like each other.",
+                "b. When you confirm the results of the test, you make them better."
               ],
               "explanation": "differ (khác biệt): nếu hai người khác biệt quá nhiều, có thể họ không thích nhau.",
               "correctAnswer": "a"
             },
             {
               "id": "9",
-              "content": "a. It is O.K. to wear sandals to a formal party.\nb. Teachers often criticize lazy students.",
+              "content": "<p>9.</p>",
               "options": [
-                "a",
-                "b"
+                "a. It is O.K. to wear sandals to a formal party.",
+                "b. Teachers often criticize lazy students."
               ],
               "explanation": "criticize (chỉ trích): giáo viên thường phê bình học sinh lười biếng.",
               "correctAnswer": "b"
             },
             {
               "id": "10",
-              "content": "a. People must pay attention to signals when they are driving.\nb. When you visit a mechanic they will sell you a new car.",
+              "content": "<p>10.</p>",
               "options": [
-                "a",
-                "b"
+                "a. People must pay attention to signals when they are driving.",
+                "b. When you visit a mechanic they will sell you a new car."
               ],
               "explanation": "signals (tín hiệu): người lái xe phải chú ý đến các tín hiệu.",
               "correctAnswer": "a"
             },
             {
               "id": "11",
-              "content": "a. You should wear nice clothing if you go to a formal event.\nb. Good friends like to criticize each other.",
+              "content": "<p>11.</p>",
               "options": [
-                "a",
-                "b"
+                "a. You should wear nice clothing if you go to a formal event.",
+                "b. Good friends like to criticize each other."
               ],
               "explanation": "formal event (sự kiện trang trọng): nên mặc đồ đẹp.",
               "correctAnswer": "a"
             },
             {
               "id": "12",
-              "content": "a. Husbands and wives who differ are often very busy people.\nb. If you commute to work, you have to travel a certain distance.",
+              "content": "<p>12.</p>",
               "options": [
-                "a",
-                "b"
+                "a. Husbands and wives who differ are often very busy people.",
+                "b. If you commute to work, you have to travel a certain distance."
               ],
               "explanation": "commute (đi làm xa): đi lại một khoảng cách nhất định.",
               "correctAnswer": "b"
             },
             {
               "id": "13",
-              "content": "a. It is a good idea to confirm your plans before you travel.\nb. If you attach a large sign to your door, no one will see it.",
+              "content": "<p>13.</p>",
               "options": [
-                "a",
-                "b"
+                "a. It is a good idea to confirm your plans before you travel.",
+                "b. If you attach a large sign to your door, no one will see it."
               ],
               "explanation": "confirm (xác nhận): nên xác nhận kế hoạch trước khi đi.",
               "correctAnswer": "a"
             },
             {
               "id": "14",
-              "content": "a. If your aim is to learn how to swim, you must get in the water.\nb. Everyone commutes in math class.",
+              "content": "<p>14.</p>",
               "options": [
-                "a",
-                "b"
+                "a. If your aim is to learn how to swim, you must get in the water.",
+                "b. Everyone commutes in math class."
               ],
               "explanation": "aim (mục tiêu): nếu mục tiêu là học bơi, phải xuống nước.",
               "correctAnswer": "a"
             },
             {
               "id": "15",
-              "content": "a. People who have an aim to succeed are very lazy.\nb. When you bet money, you might lose it.",
+              "content": "<p>15.</p>",
               "options": [
-                "a",
-                "b"
+                "a. People who have an aim to succeed are very lazy.",
+                "b. When you bet money, you might lose it."
               ],
               "explanation": "bet (cá cược): khi cá cược bạn có thể bị mất tiền.",
               "correctAnswer": "b"
