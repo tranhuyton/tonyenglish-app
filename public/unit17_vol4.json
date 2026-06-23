@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q1",
+              "id": "1",
               "content": "What word below best describes a superhero?",
               "options": [
                 "Mushrooms",
@@ -30,7 +30,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q2",
+              "id": "2",
               "content": "Something that is easy to do is described as what?",
               "options": [
                 "Drastic",
@@ -42,7 +42,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q3",
+              "id": "3",
               "content": "What is an activity done in the water?",
               "options": [
                 "Sway",
@@ -54,7 +54,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q4",
+              "id": "4",
               "content": "Which covers a box?",
               "options": [
                 "A den",
@@ -66,7 +66,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q5",
+              "id": "5",
               "content": "Which word fits best? Koalas are _________ to Australia.",
               "options": [
                 "loom",
@@ -94,7 +94,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q6",
+              "id": "6",
               "content": "Tracy invites Kara to visit a new civilization with her family.",
               "options": [
                 "True",
@@ -104,7 +104,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q7",
+              "id": "7",
               "content": "Tracy's father shows them native plants and animals.",
               "options": [
                 "True",
@@ -114,7 +114,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q8",
+              "id": "8",
               "content": "The group returns to camp because mighty clouds were looming.",
               "options": [
                 "True",
@@ -124,7 +124,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q9",
+              "id": "9",
               "content": "They used an umbrella to shield themselves from the rain.",
               "options": [
                 "True",
@@ -134,7 +134,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q10",
+              "id": "10",
               "content": "The weather was stormy on the second day of camping.",
               "options": [
                 "True",
@@ -144,7 +144,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q11",
+              "id": "11",
               "content": "Kara has a drastic change in opinion about camping at the end of the story.",
               "options": [
                 "True",
@@ -162,7 +162,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q12",
+              "id": "12",
               "content": "Which of the following does Kara NOT see during the trip?",
               "options": [
                 "A fox's den",
@@ -174,7 +174,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q13",
+              "id": "13",
               "content": "What does Kara miss about her urban lifestyle?",
               "options": [
                 "It is convenient.",
@@ -186,7 +186,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q14",
+              "id": "14",
               "content": "What does Kara see swaying in the water?",
               "options": [
                 "Birds",
@@ -198,7 +198,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q15",
+              "id": "15",
               "content": "How does Kara feel as she exits the park?",
               "options": [
                 "Relieved",

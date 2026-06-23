@@ -139,7 +139,7 @@
           "content": "",
           "questions": [
             {
-              "id": "16",
+              "id": "11",
               "content": "a. process b. maybe c. flat d. publish",
               "options": [
                 "process / publish",
@@ -151,7 +151,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "17",
+              "id": "12",
               "content": "a. board b. century c. pound d. ancient",
               "options": [
                 "board / pound",
@@ -163,7 +163,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "18",
+              "id": "13",
               "content": "a. county b. concert c. theater d. clue",
               "options": [
                 "county / clue",
@@ -175,7 +175,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "19",
+              "id": "14",
               "content": "a. gentleman b. officer c. exist d. concert",
               "options": [
                 "gentleman / officer",
@@ -187,7 +187,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "20",
+              "id": "15",
               "content": "a. ancient b. original c. process d. dictionary",
               "options": [
                 "ancient / dictionary",
@@ -207,31 +207,31 @@
           "content": "This morning, I walked down the hall to the field. It was time to get ready for the big soccer game! My school was playing against a private [21]. My team had won every game this year. In the [22] of winning games, we had worked hard and had fun. If we won today, our coach said that [23] he would take us all to the [24] to see a new movie on their latest [25] screen.<br><br>Options:<br>flat<br>academy<br>theater<br>process<br>maybe",
           "questions": [
             {
-              "id": "21",
+              "id": "16",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "academy"
             },
             {
-              "id": "22",
+              "id": "17",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "process"
             },
             {
-              "id": "23",
+              "id": "18",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "maybe"
             },
             {
-              "id": "24",
+              "id": "19",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "theater"
             },
             {
-              "id": "25",
+              "id": "20",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "flat"
@@ -253,7 +253,7 @@
           "content": "",
           "questions": [
             {
-              "id": "11",
+              "id": "21",
               "content": "Where do the boys look for the gold?",
               "options": [
                 "At Adams Academy",
@@ -265,7 +265,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "12",
+              "id": "22",
               "content": "What is NOT true of The Wealth of Adams County?",
               "options": [
                 "It was published more than a century ago.",
@@ -277,7 +277,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "13",
+              "id": "23",
               "content": "Why does Brad think the gold really exists?",
               "options": [
                 "Because there are clues to it in a book",
@@ -289,7 +289,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "14",
+              "id": "24",
               "content": "Where will the boys probably go at the end of the story?",
               "options": [
                 "To get tools to carry the gold",
@@ -301,7 +301,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "15",
+              "id": "25",
               "content": "Why can’t Jeff go to the movie theater?",
               "options": [
                 "He has a soccer game.",

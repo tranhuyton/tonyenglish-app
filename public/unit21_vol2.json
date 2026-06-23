@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1",
+              "id": "1",
               "content": "1. permission",
               "options": [
                 "to not be scared",
@@ -23,7 +23,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_2",
+              "id": "2",
               "content": "2. scale",
               "options": [
                 "size",
@@ -35,7 +35,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_3",
+              "id": "3",
               "content": "3. courage",
               "options": [
                 "to be alert",
@@ -47,7 +47,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex1_4",
+              "id": "4",
               "content": "4. satellite",
               "options": [
                 "to not do something",
@@ -59,7 +59,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_5",
+              "id": "5",
               "content": "5. pour",
               "options": [
                 "a chemical in the earth",
@@ -71,7 +71,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_6",
+              "id": "6",
               "content": "6. raw",
               "options": [
                 "a tool for looking",
@@ -83,7 +83,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_7",
+              "id": "7",
               "content": "7. telescope",
               "options": [
                 "a tube for water",
@@ -95,7 +95,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_8",
+              "id": "8",
               "content": "8. awake",
               "options": [
                 "to not do something",
@@ -107,7 +107,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_9",
+              "id": "9",
               "content": "9. gravity",
               "options": [
                 "a chart of numbers",
@@ -119,7 +119,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex1_10",
+              "id": "10",
               "content": "10. presence",
               "options": [
                 "a man in space",
@@ -139,7 +139,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2_1",
+              "id": "11",
               "content": "1. The movie had ____________ flying in heaven and singing beautiful songs.",
               "options": [
                 "angels",
@@ -149,7 +149,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_2",
+              "id": "12",
               "content": "2. I watched a TV show about how people trained to become ____________ .",
               "options": [
                 "angels",
@@ -159,7 +159,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_3",
+              "id": "13",
               "content": "3. Russia was the first country to send a ____________ into space.",
               "options": [
                 "satellite",
@@ -169,7 +169,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_4",
+              "id": "14",
               "content": "4. The teacher asked all of us to ____________ in writing the story.",
               "options": [
                 "satellite",
@@ -179,7 +179,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_5",
+              "id": "15",
               "content": "5. My mother gave me ____________ to attend the party.",
               "options": [
                 "permission",
@@ -189,7 +189,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_6",
+              "id": "16",
               "content": "6. The man at the door ____________ people permission to enter the building.",
               "options": [
                 "permission",
@@ -199,7 +199,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_7",
+              "id": "17",
               "content": "7. We are studying ____________ that we use in everyday life.",
               "options": [
                 "minerals",
@@ -209,7 +209,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_8",
+              "id": "18",
               "content": "8. The woman keeps her ____________ in a safe place.",
               "options": [
                 "minerals",
@@ -219,7 +219,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_9",
+              "id": "19",
               "content": "9. The water ____________ broke, and now the street is flooded.",
               "options": [
                 "telescope",
@@ -229,7 +229,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_10",
+              "id": "20",
               "content": "10. Thomas got a ____________ from his grandfather on his birthday.",
               "options": [
                 "telescope",
@@ -247,7 +247,7 @@
           "content": "WORD BANK: jewel, participate, permission, underground, awake.\n\nOne day I saw an ad in the newspaper. It was for a treasure hunt in some (1)____________ caves. I really wanted to (2)____________ , but I had to get my parents’ (3)____________. They said I could do it. The night before the hunt, I was (4)____________ all night long. I kept wondering what we’d be looking for. Maybe it would be a big (5)____________ or gold. When I got to the hunt, there were a lot of other kids there. We were given maps. Each map led to a different place. My treasure turned out to be a book called Treasure Island. I was a little disappointed. But I had fun looking for it!",
           "questions": [
             {
-              "id": "ex3_1",
+              "id": "21",
               "content": "(1)____________",
               "options": [
                 "jewel",
@@ -260,7 +260,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3_2",
+              "id": "22",
               "content": "(2)____________",
               "options": [
                 "jewel",
@@ -273,7 +273,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_3",
+              "id": "23",
               "content": "(3)____________",
               "options": [
                 "jewel",
@@ -286,7 +286,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex3_4",
+              "id": "24",
               "content": "(4)____________",
               "options": [
                 "jewel",
@@ -299,7 +299,7 @@
               "correctAnswer": "E"
             },
             {
-              "id": "ex3_5",
+              "id": "25",
               "content": "(5)____________",
               "options": [
                 "jewel",
@@ -328,7 +328,7 @@
           "content": "",
           "questions": [
             {
-              "id": "rc_1",
+              "id": "26",
               "content": "1. What is this story about?",
               "options": [
                 "Why satellites are useful",
@@ -340,7 +340,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "rc_2",
+              "id": "27",
               "content": "2. Why did Jeremy stop going underground?",
               "options": [
                 "It kept him awake all night long.",
@@ -352,7 +352,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "rc_3",
+              "id": "28",
               "content": "3. In the second paragraph, we can infer that Jeremy_____________ .",
               "options": [
                 "did not know how to float",
@@ -364,7 +364,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_4",
+              "id": "29",
               "content": "4. According to the passage, all the following are true EXCEPT_____________ .",
               "options": [
                 "Jeremy was granted permission to leave the mine",
@@ -376,7 +376,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_5",
+              "id": "30",
               "content": "5. What did Jeremy participate in after finishing astronaut school?",
               "options": [
                 "He participated in a mission to outer space.",

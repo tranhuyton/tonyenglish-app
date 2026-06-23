@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q1",
+              "id": "1",
               "content": "After weeks of hard work, the scientists must ________ the results of their ________.",
               "options": [
                 "await / research",
@@ -30,7 +30,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q2",
+              "id": "2",
               "content": "After the death of her ________ pet, the woman felt nothing but ________ for many weeks.",
               "options": [
                 "beloved / misery",
@@ -42,7 +42,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q3",
+              "id": "3",
               "content": "The store had a ________ of canned vegetables, but the man ________ that they didn’t have his favorite brand.",
               "options": [
                 "complained / variety",
@@ -54,7 +54,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q4",
+              "id": "4",
               "content": "The new schedule ________ passengers who thought the train was ________ at 8 a.m.",
               "options": [
                 "confused / due",
@@ -66,7 +66,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q5",
+              "id": "5",
               "content": "The island was a great place to ________ a hotel since the ________ was warm throughout the year.",
               "options": [
                 "establish / climate",
@@ -78,7 +78,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q6",
+              "id": "6",
               "content": "________ he had a lot of bad luck in the past, he refused to let ________ events stop him from moving forward.",
               "options": [
                 "Prior / although",
@@ -90,7 +90,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q7",
+              "id": "7",
               "content": "The ________ was turned up to the highest temperature, but it couldn’t heat the ________ room.",
               "options": [
                 "furnace / entire",
@@ -102,7 +102,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q8",
+              "id": "8",
               "content": "In the ________ of a terrible war, the young boys had to ________ quickly.",
               "options": [
                 "mature / midst",
@@ -114,7 +114,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q9",
+              "id": "9",
               "content": "To make sure the dog’s ________ was long enough, Bob took out a ruler and ________ it.",
               "options": [
                 "measured / leash",
@@ -126,7 +126,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q10",
+              "id": "10",
               "content": "She insisted that they ________ her mother’s favorite perfume before they ________ her.",
               "options": [
                 "buried / apply",
@@ -146,7 +146,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q11",
+              "id": "11",
               "content": "Although he didn’t know how to dance, _____",
               "options": [
                 "he went to the party anyway",
@@ -158,7 +158,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q12",
+              "id": "12",
               "content": "A furnace keeps _____",
               "options": [
                 "a room warm during the winter",
@@ -170,7 +170,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q13",
+              "id": "13",
               "content": "Florida’s warm climate makes _____",
               "options": [
                 "always calmed her",
@@ -182,7 +182,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q14",
+              "id": "14",
               "content": "He wanted to establish _____",
               "options": [
                 "food to choose from at the store",
@@ -194,7 +194,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q15",
+              "id": "15",
               "content": "The train was due to arrive at _____",
               "options": [
                 "around seven in the morning",
@@ -206,7 +206,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q16",
+              "id": "16",
               "content": "A lot of research is needed _____",
               "options": [
                 "a dog from running away",
@@ -218,7 +218,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q17",
+              "id": "17",
               "content": "Shoppers have a variety of _____",
               "options": [
                 "food to choose from at the store",
@@ -230,7 +230,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q18",
+              "id": "18",
               "content": "In the midst of the game _____",
               "options": [
                 "the team’s best player had to be replaced",
@@ -242,7 +242,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q19",
+              "id": "19",
               "content": "A leash keeps _____",
               "options": [
                 "a dog from running away",
@@ -254,7 +254,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q20",
+              "id": "20",
               "content": "Her beloved sister _____",
               "options": [
                 "before new medicines can be created",
@@ -274,7 +274,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q21",
+              "id": "21",
               "content": "To determine if the new drug was safe, _____",
               "options": [
                 "scientists measured all the effects",
@@ -286,7 +286,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q22",
+              "id": "22",
               "content": "His newest book did not sell well, _____",
               "options": [
                 "so he became confused",
@@ -298,7 +298,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q23",
+              "id": "23",
               "content": "He wanted to finish the race, _____",
               "options": [
                 "so they drank the entire bowl of punch",
@@ -310,7 +310,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q24",
+              "id": "24",
               "content": "He lost his map, _____",
               "options": [
                 "so he became confused",
@@ -322,7 +322,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q25",
+              "id": "25",
               "content": "The soup was cold, _____",
               "options": [
                 "so she patiently awaited his letters",
@@ -334,7 +334,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q26",
+              "id": "26",
               "content": "Sue was very silly as a child, _____",
               "options": [
                 "but she became more serious as she matured",
@@ -346,7 +346,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q27",
+              "id": "27",
               "content": "No one could find the treasure _____",
               "options": [
                 "but his prior works were very successful",
@@ -358,7 +358,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q28",
+              "id": "28",
               "content": "He said he would write to her, _____",
               "options": [
                 "but the pain in his ankle gave him too much misery",
@@ -370,7 +370,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q29",
+              "id": "29",
               "content": "She wanted to look older, _____",
               "options": [
                 "so she applied makeup to her face",
@@ -382,7 +382,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q30",
+              "id": "30",
               "content": "They were thirsty, _____",
               "options": [
                 "so they drank the entire bowl of punch",
@@ -410,7 +410,7 @@
           "content": "Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "questions": [
             {
-              "id": "q31",
+              "id": "31",
               "content": "Scientists did a variety of tests for research before the Sputnik 2 was due to leave.",
               "options": [
                 "True",
@@ -420,7 +420,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q32",
+              "id": "32",
               "content": "Wires were applied to Laika’s leash so that scientists could find the ship.",
               "options": [
                 "True",
@@ -430,7 +430,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q33",
+              "id": "33",
               "content": "Although Laika could not be buried, a spaceship was established in her honor.",
               "options": [
                 "True",
@@ -440,7 +440,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q34",
+              "id": "34",
               "content": "In the midst of the scientists’ excitement, Laika’s ship became too hot.",
               "options": [
                 "True",
@@ -450,7 +450,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q35",
+              "id": "35",
               "content": "In a prior launch, scientists sent two other dogs into space.",
               "options": [
                 "True",
@@ -460,7 +460,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q36",
+              "id": "36",
               "content": "Many people complained that Laika should not have gone to space.",
               "options": [
                 "True",
@@ -478,7 +478,7 @@
           "content": "Answer the questions.",
           "questions": [
             {
-              "id": "q37",
+              "id": "37",
               "content": "Why did scientists choose Laika for the mission?",
               "options": [
                 "She was tough.",
@@ -490,7 +490,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q38",
+              "id": "38",
               "content": "Why did Laika die during the trip?",
               "options": [
                 "The ship became as hot as a furnace.",
@@ -502,7 +502,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q39",
+              "id": "39",
               "content": "Scientists made Laika wear a special leash because they ________.",
               "options": [
                 "were awaiting information from the ship",
@@ -514,7 +514,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q40",
+              "id": "40",
               "content": "Why did scientists apply wires to Laika’s skin?",
               "options": [
                 "To measure her body’s reactions",

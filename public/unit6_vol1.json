@@ -11,31 +11,31 @@
           "content": "",
           "questions": [
             {
-              "id": "16",
+              "id": "1",
               "content": "Sam was happy to <u>go back to</u> his house. (spr[16])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "return"
             },
             {
-              "id": "17",
+              "id": "2",
               "content": "Her grandfather is a <u>smart</u> old man. (spr[17])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "wise"
             },
             {
-              "id": "18",
+              "id": "3",
               "content": "William wanted an <u>animal to live with</u>. (spr[18])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "pet"
             },
             {
-              "id": "19",
+              "id": "4",
               "content": "He studies what the <u>condition of the air</u> is like. (spr[19])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "weather"
             },
             {
-              "id": "20",
+              "id": "5",
               "content": "I have to <u>deal with</u> my rising credit card bill. (spr[20])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "face"
@@ -49,61 +49,61 @@
           "content": "",
           "questions": [
             {
-              "id": "21",
+              "id": "6",
               "content": "fright / ghost\nThe (spr[21]) lives in the old house.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "ghost"
             },
             {
-              "id": "22",
+              "id": "7",
               "content": "A scary place might cause (spr[22]).",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "fright"
             },
             {
-              "id": "23",
+              "id": "8",
               "content": "dead / upset\nThe tree fell down because it was (spr[23]).",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "dead"
             },
             {
-              "id": "24",
+              "id": "9",
               "content": "I was (spr[24]) when I got a bad grade on the test.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "upset"
             },
             {
-              "id": "25",
+              "id": "10",
               "content": "advantage / reached\nAfter 10 hours of driving, I finally (spr[25]) California.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "reached"
             },
             {
-              "id": "26",
+              "id": "11",
               "content": "He is smart and has a(n) (spr[26]) in class.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "advantage"
             },
             {
-              "id": "27",
+              "id": "12",
               "content": "escape / distance\nHe wanted to (spr[27]) from the room.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "escape"
             },
             {
-              "id": "28",
+              "id": "13",
               "content": "He lived a long (spr[28]) from the school.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "distance"
             },
             {
-              "id": "29",
+              "id": "14",
               "content": "community / individual\nThe man is a nice (spr[29]).",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "individual"
             },
             {
-              "id": "30",
+              "id": "15",
               "content": "The town is a small (spr[30]).",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "community"
@@ -117,7 +117,7 @@
           "content": "",
           "questions": [
             {
-              "id": "1",
+              "id": "16",
               "content": "It rained for two days, __________.",
               "options": [
                 "and caused the river to rise",
@@ -127,7 +127,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "2",
+              "id": "17",
               "content": "As I was walking home from school today, __________.",
               "options": [
                 "I was a ghost",
@@ -137,7 +137,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "3",
+              "id": "18",
               "content": "After my vacation, __________.",
               "options": [
                 "I returned to work",
@@ -147,7 +147,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "4",
+              "id": "19",
               "content": "Many people like him __________.",
               "options": [
                 "because they make him upset",
@@ -157,7 +157,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "5",
+              "id": "20",
               "content": "They are afraid of the king because __________.",
               "options": [
                 "he has too much power",
@@ -167,7 +167,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "6",
+              "id": "21",
               "content": "I love my dog. __________.",
               "options": [
                 "He’s my favorite pet",
@@ -177,7 +177,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "7",
+              "id": "22",
               "content": "I like living here because __________.",
               "options": [
                 "I make many choices",
@@ -187,7 +187,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "8",
+              "id": "23",
               "content": "I want to live in Hawaii because __________.",
               "options": [
                 "it has good weather",
@@ -197,7 +197,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "9",
+              "id": "24",
               "content": "The storm was very bad, but __________.",
               "options": [
                 "all of the people survived",
@@ -207,7 +207,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10",
+              "id": "25",
               "content": "We closed the door, but __________.",
               "options": [
                 "the dog escaped",
@@ -233,7 +233,7 @@
           "content": "",
           "questions": [
             {
-              "id": "11",
+              "id": "26",
               "content": "What is this story about?",
               "options": [
                 "How a ghost returns to help her community",
@@ -245,7 +245,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "12",
+              "id": "27",
               "content": "What caused fright in the children?",
               "options": [
                 "The power of the moon at night",
@@ -257,7 +257,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "13",
+              "id": "28",
               "content": "What was true of the children in the story?",
               "options": [
                 "Their home was a short distance from the river.",
@@ -269,7 +269,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "14",
+              "id": "29",
               "content": "Why did the ghost scare the children?",
               "options": [
                 "She wanted to help them.",
@@ -281,7 +281,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "15",
+              "id": "30",
               "content": "Where did the woman live?",
               "options": [
                 "By a large river",

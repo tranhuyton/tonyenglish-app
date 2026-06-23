@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "1_9A",
+              "id": "1",
               "content": "1. a gentle wind",
               "options": [
                 "breeze",
@@ -30,7 +30,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "2_9A",
+              "id": "2",
               "content": "2. money for a job",
               "options": [
                 "rumor",
@@ -42,7 +42,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "3_9A",
+              "id": "3",
               "content": "3. big and beautiful",
               "options": [
                 "feeble",
@@ -54,7 +54,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "4_9A",
+              "id": "4",
               "content": "4. full of energy",
               "options": [
                 "lively",
@@ -66,7 +66,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "5_9A",
+              "id": "5",
               "content": "5. used to show how two things are different",
               "options": [
                 "alongside",
@@ -86,7 +86,7 @@
           "content": "",
           "questions": [
             {
-              "id": "1_9B",
+              "id": "6",
               "content": "1. pessimistic",
               "options": [
                 "to show something",
@@ -98,7 +98,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "2_9B",
+              "id": "7",
               "content": "2. slap",
               "options": [
                 "to hit someone",
@@ -110,7 +110,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "3_9B",
+              "id": "8",
               "content": "3. rumor",
               "options": [
                 "to pay",
@@ -122,7 +122,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "4_9B",
+              "id": "9",
               "content": "4. outraged",
               "options": [
                 "angry",
@@ -134,7 +134,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "5_9B",
+              "id": "10",
               "content": "5. defy",
               "options": [
                 "hunger",
@@ -154,7 +154,7 @@
           "content": "",
           "questions": [
             {
-              "id": "1_9_Ex3",
+              "id": "11",
               "content": "1. Which of the following connects two negative ideas?",
               "options": [
                 "A breeze",
@@ -166,7 +166,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "2_9_Ex3",
+              "id": "12",
               "content": "2. What is a positive way to describe someone?",
               "options": [
                 "Forgive",
@@ -178,7 +178,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "3_9_Ex3",
+              "id": "13",
               "content": "3. What can you study in school?",
               "options": [
                 "A breeze",
@@ -190,7 +190,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "4_9_Ex3",
+              "id": "14",
               "content": "4. What controls how much you eat?",
               "options": [
                 "Your appetite",
@@ -202,7 +202,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "5_9_Ex3",
+              "id": "15",
               "content": "5. If you are showing something, what are you doing?",
               "options": [
                 "Assist",
@@ -230,7 +230,7 @@
           "content": "",
           "questions": [
             {
-              "id": "1_9",
+              "id": "16",
               "content": "1. Why did one of George's teachers begin to work with him?",
               "options": [
                 "George displayed a talent for baseball.",
@@ -242,7 +242,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "2_9",
+              "id": "17",
               "content": "2. When was George lively and happy?",
               "options": [
                 "When he had lunch with other children",
@@ -254,7 +254,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "3_9",
+              "id": "18",
               "content": "3. Why was George good at baseball?",
               "options": [
                 "He was very tall.",
@@ -266,7 +266,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "4_9",
+              "id": "19",
               "content": "4. What was the rumor about George's parents?",
               "options": [
                 "They were very sick.",

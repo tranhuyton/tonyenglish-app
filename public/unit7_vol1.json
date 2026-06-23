@@ -79,31 +79,31 @@
           "content": "",
           "questions": [
             {
-              "id": "10",
+              "id": "6",
               "content": "Sarah let Tim go to the game. (spr[10])",
               "explanation": "let go -> allowed (từ cho trước là allow)",
               "correctAnswer": "allowed"
             },
             {
-              "id": "11",
+              "id": "7",
               "content": "The child promised not to hurt our cat. (spr[11])",
               "explanation": "hurt -> harm (từ cho trước là harm)",
               "correctAnswer": "harm"
             },
             {
-              "id": "12",
+              "id": "8",
               "content": "She was a well-known writer in our town. (spr[12])",
               "explanation": "well-known -> famous (từ cho trước là famous)",
               "correctAnswer": "famous"
             },
             {
-              "id": "13",
+              "id": "9",
               "content": "You should say it's true that you never lie. (spr[13])",
               "explanation": "say it's true -> claim (từ cho trước là claim)",
               "correctAnswer": "claim"
             },
             {
-              "id": "14",
+              "id": "10",
               "content": "The food was cut into smaller parts so we could all eat. (spr[14])",
               "explanation": "cut into smaller parts -> divided (từ cho trước là divide)",
               "correctAnswer": "divided"
@@ -117,7 +117,7 @@
           "content": "",
           "questions": [
             {
-              "id": "15",
+              "id": "11",
               "content": "It wasn't right for the coach _________.",
               "options": [
                 "to make the race such a challenge",
@@ -127,7 +127,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "16",
+              "id": "12",
               "content": "My sister and I were fighting._________.",
               "options": [
                 "We announced the winners",
@@ -137,7 +137,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "17",
+              "id": "13",
               "content": "Everyone knew her _________.",
               "options": [
                 "because I stood beside her",
@@ -147,7 +147,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "18",
+              "id": "14",
               "content": "The man would not buy the bike_________.",
               "options": [
                 "because of his difference",
@@ -157,7 +157,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "19",
+              "id": "15",
               "content": "No one could win against Sally _________.",
               "options": [
                 "because she was an expert",
@@ -167,7 +167,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "20",
+              "id": "16",
               "content": "We were scared because the dog_________.",
               "options": [
                 "might harm us",
@@ -177,7 +177,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "21",
+              "id": "17",
               "content": "The police wanted_________.",
               "options": [
                 "to protect us from danger",
@@ -187,7 +187,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "22",
+              "id": "18",
               "content": "You are too sick to play outside._________.",
               "options": [
                 "Don't lay your feet on the table",
@@ -197,7 +197,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "23",
+              "id": "19",
               "content": "She was surprised by _________.",
               "options": [
                 "the expected amount contributed by the animals",
@@ -207,7 +207,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "24",
+              "id": "20",
               "content": "Please be fair _________.",
               "options": [
                 "when you meet the prince",
@@ -233,7 +233,7 @@
           "content": "",
           "questions": [
             {
-              "id": "6",
+              "id": "21",
               "content": "What is this story about?",
               "options": [
                 "A sudden fight between kings",
@@ -245,7 +245,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "7",
+              "id": "22",
               "content": "What did the king need to protect the kingdom from?",
               "options": [
                 "The fighting between the two princes",
@@ -257,7 +257,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "8",
+              "id": "23",
               "content": "What was probably true of Jason in the story?",
               "options": [
                 "He wanted to bring peace to the kingdom.",
@@ -269,7 +269,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "9",
+              "id": "24",
               "content": "What was the difference between Jason and his brothers?",
               "options": [
                 "He was an expert with weapons.",

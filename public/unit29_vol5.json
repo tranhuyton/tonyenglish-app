@@ -17,7 +17,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1",
+              "id": "1",
               "content": "Which of the following might humiliate someone?",
               "options": [
                 "Spilling a drink",
@@ -29,7 +29,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_2",
+              "id": "2",
               "content": "What might be antique?",
               "options": [
                 "A sweet fruit",
@@ -41,7 +41,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_3",
+              "id": "3",
               "content": "Who is referred to as her majesty?",
               "options": [
                 "A queen",
@@ -53,7 +53,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_4",
+              "id": "4",
               "content": "Where might a job applicant go for job?",
               "options": [
                 "An abandoned house",
@@ -65,7 +65,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_5",
+              "id": "5",
               "content": "What precedes waking up in the morning?",
               "options": [
                 "Going to sleep",
@@ -85,7 +85,7 @@
           "content": "Word Bank: antique, refund, monarch, artifact, authentic, register, Majesty, tusks, fossil, applicants",
           "questions": [
             {
-              "id": "ex2_1",
+              "id": "6",
               "content": "The statue of the walrus had long, beautiful _____________.",
               "options": [
                 "tusks",
@@ -97,7 +97,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_2",
+              "id": "7",
               "content": "The _____________ piece was over a hundred years old and quite valuable.",
               "options": [
                 "tusks",
@@ -109,7 +109,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_3",
+              "id": "8",
               "content": "Many stories have been told about the powerful _____________.",
               "options": [
                 "tusks",
@@ -121,7 +121,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_4",
+              "id": "9",
               "content": "All of the king’s servants addressed him as \"Your _____________.\"",
               "options": [
                 "tusks",
@@ -133,7 +133,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_5",
+              "id": "10",
               "content": "The college must decide who to accept among thousands of _____________.",
               "options": [
                 "applicants",
@@ -145,7 +145,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_6",
+              "id": "11",
               "content": "The most qualified will add their names to the elite _____________.",
               "options": [
                 "applicants",
@@ -157,7 +157,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_7",
+              "id": "12",
               "content": "I now see that my new leather boots are not _____________.",
               "options": [
                 "applicants",
@@ -169,7 +169,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_8",
+              "id": "13",
               "content": "I need to take these fake boots back to the store and get a _____________.",
               "options": [
                 "applicants",
@@ -181,7 +181,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_9",
+              "id": "14",
               "content": "Mark thought that the old bone he found was a dinosaur _____________.",
               "options": [
                 "fossil",
@@ -193,7 +193,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_10",
+              "id": "15",
               "content": "However, it turned out to be a man-made _____________.",
               "options": [
                 "fossil",
@@ -213,7 +213,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex3_1",
+              "id": "16",
               "content": "humiliate",
               "options": [
                 "impress",
@@ -225,7 +225,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3_2",
+              "id": "17",
               "content": "diplomat",
               "options": [
                 "a representative",
@@ -237,7 +237,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_3",
+              "id": "18",
               "content": "punctual",
               "options": [
                 "hurried",
@@ -249,7 +249,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_4",
+              "id": "19",
               "content": "precede",
               "options": [
                 "to fail",
@@ -261,7 +261,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3_5",
+              "id": "20",
               "content": "register",
               "options": [
                 "a control",
@@ -281,7 +281,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex4_1",
+              "id": "21",
               "content": "The circus performer held on to the elephant’s long, curved tooth.",
               "options": [
                 "tusk",
@@ -293,7 +293,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_2",
+              "id": "22",
               "content": "The salesman assured me that the artwork was not false or an imitation.",
               "options": [
                 "tusk",
@@ -305,7 +305,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_3",
+              "id": "23",
               "content": "At the end of the year, our club will select a new person to join.",
               "options": [
                 "tusk",
@@ -317,7 +317,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex4_4",
+              "id": "24",
               "content": "Janet isn’t able to arrive at the right time at all. She’s late to school every day.",
               "options": [
                 "tusk",
@@ -329,7 +329,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex4_5",
+              "id": "25",
               "content": "It is difficult to follow the series of past events and times of computer programming.",
               "options": [
                 "chronology",
@@ -341,7 +341,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_6",
+              "id": "26",
               "content": "DNA can be taken from a part of hard remains from a prehistoric animal.",
               "options": [
                 "chronology",
@@ -353,7 +353,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_7",
+              "id": "27",
               "content": "Please stand and read a(an) short piece of writing taken from a larger piece.",
               "options": [
                 "chronology",
@@ -365,7 +365,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex4_8",
+              "id": "28",
               "content": "I took a class at the university where I wrote simple and direct poetry.",
               "options": [
                 "chronology",
@@ -377,7 +377,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex4_9",
+              "id": "29",
               "content": "The Iliad is a wonderful long book about great events.",
               "options": [
                 "epic",
@@ -389,7 +389,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_10",
+              "id": "30",
               "content": "Her mother was a dancer of some quality of being well known for doing good things.",
               "options": [
                 "epic",
@@ -417,7 +417,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec5_1",
+              "id": "31",
               "content": "The museum director interviewed dozens of applicants when he recruited a new tour guide.",
               "options": [
                 "True",
@@ -427,7 +427,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_2",
+              "id": "32",
               "content": "Jen did not want to humiliate herself in front of the diplomat and the monarch.",
               "options": [
                 "True",
@@ -437,7 +437,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_3",
+              "id": "33",
               "content": "The queen bumped into the fossil of an authentic elephant tusk.",
               "options": [
                 "True",
@@ -447,7 +447,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec5_4",
+              "id": "34",
               "content": "Jen was chosen for the job because she was friendly, punctual, and had a register.",
               "options": [
                 "True",
@@ -457,7 +457,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec5_5",
+              "id": "35",
               "content": "Jen broke artifacts, including an antique vase.",
               "options": [
                 "True",
@@ -475,7 +475,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec6_1",
+              "id": "36",
               "content": "What did Jen say she hoped for in a subtle voice?",
               "options": [
                 "Jen hoped that the rest of the tour would go better.",
@@ -487,7 +487,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec6_2",
+              "id": "37",
               "content": "What chronology did Jen want to talk about to her tour group?",
               "options": [
                 "Jen wanted to talk about the chronology of Ancient Egypt.",
@@ -499,7 +499,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec6_3",
+              "id": "38",
               "content": "What happened as Jen was reading the excerpt from the epic lyric poem?",
               "options": [
                 "She sneezed and tore a page of the epic.",
@@ -511,7 +511,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec6_4",
+              "id": "39",
               "content": "Why did Jen offer her majesty a refund?",
               "options": [
                 "Jen thought she was a horrible tour guide.",
@@ -523,7 +523,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec6_5",
+              "id": "40",
               "content": "What precedes success, according to the queen?",
               "options": [
                 "Hard work",

@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec1_1",
+              "id": "1",
               "content": "to give something away",
               "options": [
                 "deposit",
@@ -30,7 +30,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec1_2",
+              "id": "2",
               "content": "extremely important",
               "options": [
                 "cumulative",
@@ -42,7 +42,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "sec1_3",
+              "id": "3",
               "content": "where something begins",
               "options": [
                 "birthplace",
@@ -54,7 +54,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec1_4",
+              "id": "4",
               "content": "a person’s goal",
               "options": [
                 "strategy",
@@ -66,7 +66,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "sec1_5",
+              "id": "5",
               "content": "unusual and unfamiliar",
               "options": [
                 "oxygen",
@@ -86,7 +86,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec2_1",
+              "id": "6",
               "content": "strategy",
               "options": [
                 "a plan",
@@ -98,7 +98,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec2_2",
+              "id": "7",
               "content": "beneficial",
               "options": [
                 "filled with trees",
@@ -110,7 +110,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec2_3",
+              "id": "8",
               "content": "formation",
               "options": [
                 "how something is made",
@@ -122,7 +122,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec2_4",
+              "id": "9",
               "content": "federal",
               "options": [
                 "made from added parts",
@@ -134,7 +134,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec2_5",
+              "id": "10",
               "content": "conserve",
               "options": [
                 "to protect",
@@ -154,7 +154,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec3_1",
+              "id": "11",
               "content": "I like going to the park because it’s [covered with trees], and I feel like I’m in the mountains.",
               "options": [
                 "wooded",
@@ -166,7 +166,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec3_2",
+              "id": "12",
               "content": "Sam [gave away] party invitations to his friends.",
               "options": [
                 "deposited",
@@ -178,7 +178,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec3_3",
+              "id": "13",
               "content": "The letter came from a [national government] office.",
               "options": [
                 "crucial",
@@ -190,7 +190,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "sec3_4",
+              "id": "14",
               "content": "The business’s [goal] is to earn more money this year than it did last year.",
               "options": [
                 "capacity",
@@ -202,7 +202,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "sec3_5",
+              "id": "15",
               "content": "My mother grows [unusual and unfamiliar] flowers in her garden.",
               "options": [
                 "crucial",
@@ -214,7 +214,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec3_6",
+              "id": "16",
               "content": "He needed [gas required for breathing] to help him survive.",
               "options": [
                 "equator",
@@ -226,7 +226,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "sec3_7",
+              "id": "17",
               "content": "This book about the history of India is [full of details].",
               "options": [
                 "cumulative",
@@ -238,7 +238,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "sec3_8",
+              "id": "18",
               "content": "I’m going to visit a small town in Ecuador that is near the [imaginary line].",
               "options": [
                 "formation",
@@ -250,7 +250,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "sec3_9",
+              "id": "19",
               "content": "The number of shoes that Jane and Beth have is [judged based on something else].",
               "options": [
                 "comparative",
@@ -262,7 +262,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec3_10",
+              "id": "20",
               "content": "Eddie didn’t want to eat it, but he knew the broccoli would be [good for his health].",
               "options": [
                 "exotic",
@@ -282,7 +282,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec4_1",
+              "id": "21",
               "content": "Which word has about the same meaning as capacity?",
               "options": [
                 "open",
@@ -294,7 +294,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "sec4_2",
+              "id": "22",
               "content": "Which of these can be cumulative?",
               "options": [
                 "Snow",
@@ -306,7 +306,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec4_3",
+              "id": "23",
               "content": "What is something you would deposit into a closet?",
               "options": [
                 "A television",
@@ -318,7 +318,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec4_4",
+              "id": "24",
               "content": "What is something you probably wouldn’t encounter in a rainforest?",
               "options": [
                 "Many trees",
@@ -330,7 +330,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "sec4_5",
+              "id": "25",
               "content": "In which place is there a high frequency of snowfall?",
               "options": [
                 "Antarctica",
@@ -358,7 +358,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec5_1",
+              "id": "26",
               "content": "Cloud forests provide much of the world’s oxygen supply.",
               "options": [
                 "True",
@@ -368,7 +368,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec5_2",
+              "id": "27",
               "content": "Cloud forests are located at the tops of mountains, generally near the equator.",
               "options": [
                 "True",
@@ -378,7 +378,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_3",
+              "id": "28",
               "content": "Cloud forests produce comparative amounts of water.",
               "options": [
                 "True",
@@ -388,7 +388,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_4",
+              "id": "29",
               "content": "These humid, wooded mountaintops are mainly in European and Asian countries.",
               "options": [
                 "True",
@@ -398,7 +398,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec5_5",
+              "id": "30",
               "content": "Cloud forests are the birthplace of countless species of plants that can’t be found anywhere else.",
               "options": [
                 "True",
@@ -408,7 +408,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_6",
+              "id": "31",
               "content": "One strategy to save the forests is to replace the destroyed plants.",
               "options": [
                 "True",
@@ -426,7 +426,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec6_1",
+              "id": "32",
               "content": "What is true about cloud forests?",
               "options": [
                 "They are located at the tops of mountains near the equator.",
@@ -438,7 +438,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec6_2",
+              "id": "33",
               "content": "What do the trees in cloud forests pull out of the clouds?",
               "options": [
                 "Water",
@@ -450,7 +450,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec6_3",
+              "id": "34",
               "content": "Why are cloud forests being destroyed?",
               "options": [
                 "To gather more moisture.",
@@ -462,7 +462,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "sec6_4",
+              "id": "35",
               "content": "What is one strategy people use to try to save the forests?",
               "options": [
                 "Cutting down trees.",

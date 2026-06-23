@@ -48,7 +48,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u4_q6",
+              "id": "6",
               "content": "Before Kimberly sang, __________ .",
               "options": [
                 "the teacher reminded everyone to behave",
@@ -58,7 +58,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u4_q7",
+              "id": "7",
               "content": "When we heard the loud sound, __________ .",
               "options": [
                 "I turned around out of habit",
@@ -68,7 +68,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u4_q8",
+              "id": "8",
               "content": "The man told us to be quiet, __________ .",
               "options": [
                 "so I decided to stroll through town",
@@ -78,7 +78,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u4_q9",
+              "id": "9",
               "content": "They asked us to wait, __________ .",
               "options": [
                 "so I felt concerned about them",
@@ -88,7 +88,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u4_q10",
+              "id": "10",
               "content": "I met a new friend yesterday, and __________ .",
               "options": [
                 "frequently I would sit and read",
@@ -106,7 +106,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u4_q11",
+              "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
                 "The girl's positive words made me feel better.",
@@ -116,7 +116,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u4_q12",
+              "id": "12",
               "content": "Which sentence makes better sense?",
               "options": [
                 "The calm girl yelled a lot.",
@@ -126,7 +126,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u4_q13",
+              "id": "13",
               "content": "Which sentence makes better sense?",
               "options": [
                 "I was content to stay at home by the warm fire.",
@@ -136,7 +136,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u4_q14",
+              "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
                 "The man expected me to say yes.",
@@ -146,7 +146,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u4_q15",
+              "id": "15",
               "content": "Which sentence makes better sense?",
               "options": [
                 "I behaved wisely while I was asleep.",

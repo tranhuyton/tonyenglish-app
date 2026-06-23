@@ -17,7 +17,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1",
+              "id": "1",
               "content": "What thing is a result of heredity?",
               "options": [
                 "Eye color",
@@ -29,7 +29,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_2",
+              "id": "2",
               "content": "What process is biological?",
               "options": [
                 "Walking to school",
@@ -41,7 +41,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_3",
+              "id": "3",
               "content": "What is something that is prescribed?",
               "options": [
                 "A car",
@@ -53,7 +53,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_4",
+              "id": "4",
               "content": "What might be transplanted?",
               "options": [
                 "A file",
@@ -65,7 +65,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_5",
+              "id": "5",
               "content": "What does a surgeon wear?",
               "options": [
                 "Gloves",
@@ -85,7 +85,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2_1",
+              "id": "6",
               "content": "The child received treatment for his mental condition after he became depressed.",
               "options": [
                 "therapy",
@@ -97,7 +97,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_2",
+              "id": "7",
               "content": "The medical students learned which processes were occurring inside living things.",
               "options": [
                 "therapy",
@@ -109,7 +109,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_3",
+              "id": "8",
               "content": "Unicorns only exist in a situation people think about but will not happen.",
               "options": [
                 "therapy",
@@ -121,7 +121,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_4",
+              "id": "9",
               "content": "When he begins his rule, people will have to change to the new situation.",
               "options": [
                 "therapy",
@@ -133,7 +133,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_5",
+              "id": "10",
               "content": "At the relating to cells level, plants and animals are quite similar.",
               "options": [
                 "cellular",
@@ -145,7 +145,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_6",
+              "id": "11",
               "content": "We thought his rules were too severe because they cannot be changed.",
               "options": [
                 "cellular",
@@ -157,7 +157,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_7",
+              "id": "12",
               "content": "The lively and creative scientist invented a new formula to help stop aging.",
               "options": [
                 "cellular",
@@ -169,7 +169,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_8",
+              "id": "13",
               "content": "The creative inventor was a first person to discover the process of electricity.",
               "options": [
                 "cellular",
@@ -181,7 +181,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_9",
+              "id": "14",
               "content": "There is a specific number of events that come in an order in which to use the tools.",
               "options": [
                 "sequence",
@@ -193,7 +193,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_10",
+              "id": "15",
               "content": "The brilliant doctor brought back to life the dead patient.",
               "options": [
                 "sequence",
@@ -213,7 +213,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex3_1",
+              "id": "16",
               "content": "The surgeon made a small cut into the patient’s skin.",
               "options": [
                 "C",
@@ -223,7 +223,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_2",
+              "id": "17",
               "content": "The building materials must be transferred to the new site.",
               "options": [
                 "C",
@@ -233,7 +233,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_3",
+              "id": "18",
               "content": "The rigid rules were confusing because they changed all the time.",
               "options": [
                 "C",
@@ -243,7 +243,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_4",
+              "id": "19",
               "content": "The baby prescribed his mother to get a piece of candy.",
               "options": [
                 "C",
@@ -253,7 +253,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_5",
+              "id": "20",
               "content": "You can observe water’s transition into ice when the temperature gets cold.",
               "options": [
                 "C",
@@ -263,7 +263,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_6",
+              "id": "21",
               "content": "Blood flow is a biological process.",
               "options": [
                 "C",
@@ -273,7 +273,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_7",
+              "id": "22",
               "content": "I never want to get a new house, so I substitute the one I have.",
               "options": [
                 "C",
@@ -283,7 +283,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_8",
+              "id": "23",
               "content": "The dynamic teacher thought of new and exciting teaching methods.",
               "options": [
                 "C",
@@ -293,7 +293,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_9",
+              "id": "24",
               "content": "Going to sleep at night is a fantasy.",
               "options": [
                 "C",
@@ -303,7 +303,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_10",
+              "id": "25",
               "content": "He needed plenty of rest after his liver transplant.",
               "options": [
                 "C",
@@ -313,7 +313,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_11",
+              "id": "26",
               "content": "The pieces must be put on the machine in the correct sequence.",
               "options": [
                 "C",
@@ -323,7 +323,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_12",
+              "id": "27",
               "content": "I admired how often he chose to be respective.",
               "options": [
                 "C",
@@ -333,7 +333,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_13",
+              "id": "28",
               "content": "My new school is great. I can’t adapt to my classes.",
               "options": [
                 "C",
@@ -343,7 +343,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_14",
+              "id": "29",
               "content": "Hot dogs are one of my favorite surgical foods to revive.",
               "options": [
                 "C",
@@ -353,7 +353,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_15",
+              "id": "30",
               "content": "The heredity expert can tell us how traits are passed on from a father.",
               "options": [
                 "C",
@@ -363,7 +363,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_16",
+              "id": "31",
               "content": "Please take the big, cellular pieces to the recycling center.",
               "options": [
                 "C",
@@ -373,7 +373,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_17",
+              "id": "32",
               "content": "The hours of therapy were worth it when I could move my arm again.",
               "options": [
                 "C",
@@ -383,7 +383,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_18",
+              "id": "33",
               "content": "He’s always the last to understand a joke. He’s such a pioneer.",
               "options": [
                 "C",
@@ -393,7 +393,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_19",
+              "id": "34",
               "content": "The internal roof got covered in snow after the storm.",
               "options": [
                 "C",
@@ -403,7 +403,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_20",
+              "id": "35",
               "content": "I was still hungry because I only ate a minimal amount of food at dinner.",
               "options": [
                 "C",
@@ -429,7 +429,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec4_1",
+              "id": "36",
               "content": "Internal organ transplants were a fantasy after 1954.",
               "options": [
                 "True",
@@ -439,7 +439,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec4_2",
+              "id": "37",
               "content": "Robert was a pioneer of new surgical procedures.",
               "options": [
                 "True",
@@ -449,7 +449,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec4_3",
+              "id": "38",
               "content": "The twins’ kidneys were identical on the cellular level because of their heredity.",
               "options": [
                 "True",
@@ -459,7 +459,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec4_4",
+              "id": "39",
               "content": "The dynamic surgeons followed a rigid sequence of directions to avoid mistakes.",
               "options": [
                 "True",
@@ -469,7 +469,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec4_5",
+              "id": "40",
               "content": "Richard’s body adapted to the kidney that was transferred from his brother.",
               "options": [
                 "True",
@@ -487,7 +487,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec5_1",
+              "id": "41",
               "content": "What was substituted in the passage?",
               "options": [
                 "Robert’s working kidney was substituted for Richard’s bad one.",
@@ -499,7 +499,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_2",
+              "id": "42",
               "content": "What was true of the twin’s biological traits?",
               "options": [
                 "They had the exact same biological traits and cellular features.",
@@ -511,7 +511,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_3",
+              "id": "43",
               "content": "What did the doctors prescribe to revive Richard’s strength?",
               "options": [
                 "Doctors prescribed physical therapy to revive Richard's strength.",
@@ -523,7 +523,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_4",
+              "id": "44",
               "content": "Where did the surgeons make minimal cuts in the respective bodies of each twin?",
               "options": [
                 "The surgeons made minimal cuts in the twins’ sides.",
@@ -535,7 +535,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_5",
+              "id": "45",
               "content": "What was the result of Richard’s transition after his therapy?",
               "options": [
                 "Richard was a healthy, happy person.",

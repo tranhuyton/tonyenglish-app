@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q1",
+              "id": "1",
               "content": "gift",
               "options": [
                 "a. somewhere you go",
@@ -23,7 +23,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q2",
+              "id": "2",
               "content": "value",
               "options": [
                 "a. worth",
@@ -35,7 +35,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q3",
+              "id": "3",
               "content": "earthquake",
               "options": [
                 "a. to see many things",
@@ -47,7 +47,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q4",
+              "id": "4",
               "content": "quite",
               "options": [
                 "a. to feel awake",
@@ -59,7 +59,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q5",
+              "id": "5",
               "content": "puzzle",
               "options": [
                 "a. sand",
@@ -71,7 +71,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q6",
+              "id": "6",
               "content": "deal",
               "options": [
                 "a. a lot of information",
@@ -83,7 +83,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q7",
+              "id": "7",
               "content": "hunger",
               "options": [
                 "a. a strong need for food",
@@ -95,7 +95,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q8",
+              "id": "8",
               "content": "desert",
               "options": [
                 "a. a place without water",
@@ -107,7 +107,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q9",
+              "id": "9",
               "content": "effective",
               "options": [
                 "a. to think in your head",
@@ -119,7 +119,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q10",
+              "id": "10",
               "content": "coast",
               "options": [
                 "a. to look at something",
@@ -139,7 +139,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q11",
+              "id": "11",
               "content": "Which would you have, juice or water?",
               "options": [
                 "a. I would like water, please.",
@@ -149,7 +149,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q12",
+              "id": "12",
               "content": "Where did you go on your trip?",
               "options": [
                 "a. We went to Rome.",
@@ -159,7 +159,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q13",
+              "id": "13",
               "content": "Do you enjoy solving puzzles?",
               "options": [
                 "a. They don't taste very good.",
@@ -169,7 +169,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q14",
+              "id": "14",
               "content": "Try to imagine what your future husband or wife will look like.",
               "options": [
                 "a. That's quite difficult.",
@@ -179,7 +179,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q15",
+              "id": "15",
               "content": "Have you studied Spanish? I'm a little worried about taking the class.",
               "options": [
                 "a. Actually it's not as hard as you think.",
@@ -197,35 +197,35 @@
           "content": "",
           "questions": [
             {
-              "id": "q16",
+              "id": "16",
               "content": "I have a (gift[1]) for you. Do you think that my car has much (value[2]).",
               "options": [],
               "explanation": "gift (món quà), value (giá trị)",
               "correctAnswer": "gift|value"
             },
             {
-              "id": "q17",
+              "id": "17",
               "content": "It is hot in the (desert[1]). I like to watch the ocean at the (coast[2]).",
               "options": [],
               "explanation": "desert (sa mạc), coast (bờ biển)",
               "correctAnswer": "desert|coast"
             },
             {
-              "id": "q18",
+              "id": "18",
               "content": "Having dinner will make my (hunger[1]) go away. Be careful around those dogs; they might (bite[2]) you.",
               "options": [],
               "explanation": "hunger (cơn đói), bite (cắn)",
               "correctAnswer": "hunger|bite"
             },
             {
-              "id": "q19",
+              "id": "19",
               "content": "I would like to take a (tour[1]) of the capital city sometime. I went on a (journey[2]) around the world last year.",
               "options": [],
               "explanation": "tour (chuyến tham quan), journey (chuyến hành trình)",
               "correctAnswer": "tour|journey"
             },
             {
-              "id": "q20",
+              "id": "20",
               "content": "I think this dress is (quite[1]) pretty. (Examine[2]) your paper to check for mistakes.",
               "options": [],
               "explanation": "quite (khá), examine (kiểm tra)",
@@ -248,7 +248,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q21",
+              "id": "21",
               "content": "Which is NOT part of the spider's puzzle?",
               "options": [
                 "a. The coast",
@@ -260,7 +260,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q22",
+              "id": "22",
               "content": "Why does the bird make a deal instead of flying away?",
               "options": [
                 "a. Her wings are quite effective in the web.",
@@ -272,7 +272,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q23",
+              "id": "23",
               "content": "What will be the bird's gift to the spider?",
               "options": [
                 "a. A tour of the coast",
@@ -284,7 +284,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q24",
+              "id": "24",
               "content": "What is the spider's response to the bird's answer?",
               "options": [
                 "a. Your answer is false!",
@@ -296,7 +296,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q25",
+              "id": "25",
               "content": "What is the first thing the spider does when a bug gets into his web?",
               "options": [
                 "a. He asks the bug a question first.",

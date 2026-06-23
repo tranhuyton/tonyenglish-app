@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "1a",
+              "id": "1",
               "content": "The _________ for the car is gas.",
               "options": [
                 "fuel",
@@ -23,7 +23,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "1b",
+              "id": "2",
               "content": "My favorite shirt is made out of _________.",
               "options": [
                 "fuel",
@@ -35,7 +35,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "2a",
+              "id": "3",
               "content": "The _________ of his job made Steve worry about money.",
               "options": [
                 "loss",
@@ -47,7 +47,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "2b",
+              "id": "4",
               "content": "She wanted to _________ that her car was safe, so she locked the door.",
               "options": [
                 "loss",
@@ -59,7 +59,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "3a",
+              "id": "5",
               "content": "The boy found a piece of colorful _________ in the ocean.",
               "options": [
                 "coral",
@@ -71,7 +71,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "3b",
+              "id": "6",
               "content": "That group of rocks coming out of the ocean is a _________.",
               "options": [
                 "coral",
@@ -83,7 +83,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "4a",
+              "id": "7",
               "content": "Funny stories always _________ me.",
               "options": [
                 "amuse",
@@ -95,7 +95,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "4b",
+              "id": "8",
               "content": "I _________ quite a bit when I was in Hawaii last summer.",
               "options": [
                 "amuse",
@@ -107,7 +107,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "5a",
+              "id": "9",
               "content": "I was given the _________ of editing his entire manuscript.",
               "options": [
                 "task",
@@ -119,7 +119,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "5b",
+              "id": "10",
               "content": "Don't forget to _________ the door on your way out.",
               "options": [
                 "task",
@@ -139,7 +139,7 @@
           "content": "Word Bank: accuse, grand, strict, ensure, shut",
           "questions": [
             {
-              "id": "ex2_1",
+              "id": "11",
               "content": "There are _________ rules about what people may wear at fancy parties.",
               "options": [
                 "strict",
@@ -152,7 +152,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_2",
+              "id": "12",
               "content": "Instead of normal things, people must _________ that they wear...",
               "options": [
                 "strict",
@@ -165,7 +165,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_3",
+              "id": "13",
               "content": "...that they wear _________ clothing.",
               "options": [
                 "strict",
@@ -178,7 +178,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_4",
+              "id": "14",
               "content": "If a man wears the wrong clothes, people will _________ him of ruining the evening.",
               "options": [
                 "strict",
@@ -191,7 +191,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_5",
+              "id": "15",
               "content": "They will make him leave and _________ the door behind him.",
               "options": [
                 "strict",
@@ -212,7 +212,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex3_1",
+              "id": "16",
               "content": "He blamed me of taking the last piece of pie. (ac__________)",
               "options": [
                 "accused",
@@ -224,7 +224,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_2",
+              "id": "17",
               "content": "The man's bedroom was very simple. (pla____)",
               "options": [
                 "plain",
@@ -236,7 +236,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_3",
+              "id": "18",
               "content": "The clown likes to entertain children. (amu____)",
               "options": [
                 "amuse",
@@ -248,7 +248,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_4",
+              "id": "19",
               "content": "I need to change the way I run so I can be faster. (adj______)",
               "options": [
                 "adjust",
@@ -260,7 +260,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_5",
+              "id": "20",
               "content": "During their free time, the children did many different activities. (en___________ in)",
               "options": [
                 "engaged",
@@ -272,7 +272,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_6",
+              "id": "21",
               "content": "This cloth dress is one of my favorites. (co_________)",
               "options": [
                 "cotton",
@@ -284,7 +284,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_7",
+              "id": "22",
               "content": "The bad storm over the ocean almost reached the land. (hu_______________)",
               "options": [
                 "hurricane",
@@ -296,7 +296,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_8",
+              "id": "23",
               "content": "Tightly close the window before the rain starts! (s______)",
               "options": [
                 "shut",
@@ -308,7 +308,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_9",
+              "id": "24",
               "content": "He will hit something and break his bike if he closes his eyes while riding. (c_____)",
               "options": [
                 "crash",
@@ -320,7 +320,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_10",
+              "id": "25",
               "content": "The army fights in the war area. (z____)",
               "options": [
                 "zone",
@@ -348,7 +348,7 @@
           "content": "",
           "questions": [
             {
-              "id": "rc_1",
+              "id": "26",
               "content": "1. What is this story about?",
               "options": [
                 "a. Why surfing amuses William",
@@ -360,7 +360,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "rc_2",
+              "id": "27",
               "content": "2. Why did Thomas turn his ship around?",
               "options": [
                 "a. He saw the hurricane and did not want to crash.",
@@ -372,7 +372,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_3",
+              "id": "28",
               "content": "3. Why did William's crew accuse him of being a bad captain?",
               "options": [
                 "a. William did not go into the storm's danger zone.",
@@ -384,7 +384,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_4",
+              "id": "29",
               "content": "4. According to the passage, all of the following are true about Thomas EXCEPT",
               "options": [
                 "a. he told his crew to put fuel in the tank",
@@ -396,7 +396,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "rc_5",
+              "id": "30",
               "content": "5. What happened when William's ship reached the hurricane?",
               "options": [
                 "When his ship reached the hurricane the wind blew it into the reef, and it crashed.",

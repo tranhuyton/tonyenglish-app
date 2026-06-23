@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q1",
+              "id": "1",
               "content": "It is important that you read the story carefully.",
               "options": [
                 "a. It will help to expose any mistakes",
@@ -21,7 +21,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q2",
+              "id": "2",
               "content": "Mike and Ike look the same.",
               "options": [
                 "a. They don’t resemble their mother",
@@ -31,7 +31,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q3",
+              "id": "3",
               "content": "If you want to be understood,",
               "options": [
                 "a. you must be bold",
@@ -41,7 +41,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q4",
+              "id": "4",
               "content": "Please keep our city clean.",
               "options": [
                 "a. It helps to preserve its beauty",
@@ -51,7 +51,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q5",
+              "id": "5",
               "content": "Children need to learn that",
               "options": [
                 "a. witches are in their schools",
@@ -61,7 +61,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q6",
+              "id": "6",
               "content": "Don’t worry about breaking the glass.",
               "options": [
                 "a. You don’t need to give an apology",
@@ -71,7 +71,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q7",
+              "id": "7",
               "content": "The man was caught for stealing the money",
               "options": [
                 "a. and went to jail",
@@ -81,7 +81,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q8",
+              "id": "8",
               "content": "It would be wonderful",
               "options": [
                 "a. if I had bugs in my bed",
@@ -91,7 +91,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q9",
+              "id": "9",
               "content": "I don’t have a baseball glove.",
               "options": [
                 "a. Can I borrow a duke",
@@ -101,7 +101,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q10",
+              "id": "10",
               "content": "If you do something bad,",
               "options": [
                 "a. you might feel guilty afterwards",

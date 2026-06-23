@@ -17,7 +17,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1",
+              "id": "1",
               "content": "Someone with integrity ______.",
               "options": [
                 "invents new things",
@@ -29,7 +29,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex1_2",
+              "id": "2",
               "content": "What does a person with a good understanding of a budget take care of?",
               "options": [
                 "Their safety",
@@ -41,7 +41,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_3",
+              "id": "3",
               "content": "Which of the following might an archeological expert be interested in?",
               "options": [
                 "Reading about ancient devices",
@@ -53,7 +53,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_4",
+              "id": "4",
               "content": "What does it mean to be a parachute addict?",
               "options": [
                 "To want to be on land",
@@ -65,7 +65,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_5",
+              "id": "5",
               "content": "In order to refine an invention, one has to _______.",
               "options": [
                 "spend money on it",
@@ -85,7 +85,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2_1",
+              "id": "6",
               "content": "The teacher held classes in the [outdoor area surrounded by walls] on warm days.",
               "options": [
                 "courtyard",
@@ -97,7 +97,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_2",
+              "id": "7",
               "content": "The airport is usually [hectic] on Saturdays because many people were traveling.",
               "options": [
                 "prehistoric",
@@ -109,7 +109,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_3",
+              "id": "8",
               "content": "The teacher made sure the correct answers [matched with] the questions on the test.",
               "options": [
                 "corresponded",
@@ -121,7 +121,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_4",
+              "id": "9",
               "content": "The student [gave an example] from an interview she heard on the radio.",
               "options": [
                 "cited",
@@ -133,7 +133,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_5",
+              "id": "10",
               "content": "The victim of the [crime of tricking] told the police about her experience.",
               "options": [
                 "fraud",
@@ -153,7 +153,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex3_1",
+              "id": "11",
               "content": "prehistoric",
               "options": [
                 "large",
@@ -165,7 +165,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_2",
+              "id": "12",
               "content": "outlook",
               "options": [
                 "outside",
@@ -177,7 +177,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3_3",
+              "id": "13",
               "content": "proponent",
               "options": [
                 "supporter",
@@ -189,7 +189,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_4",
+              "id": "14",
               "content": "estate",
               "options": [
                 "gas",
@@ -201,7 +201,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_5",
+              "id": "15",
               "content": "brainstorm",
               "options": [
                 "to come up with",
@@ -221,7 +221,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex4_1",
+              "id": "16",
               "content": "The farmer lived on a large estate. It was given to him by his father.",
               "options": [
                 "Correct",
@@ -231,7 +231,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_2",
+              "id": "17",
               "content": "The principal was a proponent of group learning. He wanted students to learn on their own.",
               "options": [
                 "Correct",
@@ -241,7 +241,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_3",
+              "id": "18",
               "content": "He wanted to refine the machine before he sold it. He spent three years improving it.",
               "options": [
                 "Correct",
@@ -251,7 +251,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_4",
+              "id": "19",
               "content": "The seat belt restricted the child’s movement in the car. He was able to move a lot.",
               "options": [
                 "Correct",
@@ -261,7 +261,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_5",
+              "id": "20",
               "content": "After an accident in the laboratory, hydrogen filled the air. The gas was completely invisible.",
               "options": [
                 "Correct",
@@ -271,7 +271,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_6",
+              "id": "21",
               "content": "The boy had a different outlook than his brother. He thought that people should try to save the environment, but his brother thought it wasn’t worth trying.",
               "options": [
                 "Correct",
@@ -281,7 +281,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_7",
+              "id": "22",
               "content": "The scientists found many archeological items in the desert. It would help them study modern societies.",
               "options": [
                 "Correct",
@@ -291,7 +291,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_8",
+              "id": "23",
               "content": "Brian brainstormed with his group. After an hour, they came up with a great idea.",
               "options": [
                 "Correct",
@@ -301,7 +301,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_9",
+              "id": "24",
               "content": "The people in the plane crash were saved by parachutes. They dropped safely to the ground using the device.",
               "options": [
                 "Correct",
@@ -311,7 +311,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_10",
+              "id": "25",
               "content": "Ellen wanted to learn how to knit. She wanted to save people from fires.",
               "options": [
                 "Correct",
@@ -321,7 +321,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_11",
+              "id": "26",
               "content": "The man was found guilty of fraud. He told people he was selling medicine, but it was only river water.",
               "options": [
                 "Correct",
@@ -331,7 +331,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_12",
+              "id": "27",
               "content": "The woman showed her integrity by lying to the police about her involvement in the crime.",
               "options": [
                 "Correct",
@@ -341,7 +341,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_13",
+              "id": "28",
               "content": "The chocolate addict ate chocolate bars about once a month.",
               "options": [
                 "Correct",
@@ -351,7 +351,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_14",
+              "id": "29",
               "content": "The archeology expert was called to study some ancient bones. They are thought to belong to dinosaurs.",
               "options": [
                 "Correct",
@@ -361,7 +361,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_15",
+              "id": "30",
               "content": "The children ran into the courtyard when it started raining. They didn’t want to get wet.",
               "options": [
                 "Correct",
@@ -387,7 +387,7 @@
           "content": "",
           "questions": [
             {
-              "id": "readA_1",
+              "id": "31",
               "content": "Archeological evidence shows there were prehistoric parachutes in China.",
               "options": [
                 "True",
@@ -397,7 +397,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "readA_2",
+              "id": "32",
               "content": "Archeology experts cite an old Chinese book that describes a parachute that corresponds with modern parachutes.",
               "options": [
                 "True",
@@ -407,7 +407,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "readA_3",
+              "id": "33",
               "content": "Sebastian brainstormed with scientists to invent a device that would allow people to jump from buildings safely.",
               "options": [
                 "True",
@@ -417,7 +417,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "readA_4",
+              "id": "34",
               "content": "On Sebastian’s first jump, he used a large blanket to restrict his speed as he traveled to the ground.",
               "options": [
                 "True",
@@ -427,7 +427,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "readA_5",
+              "id": "35",
               "content": "Jean-Pierre was a hot air balloon addict.",
               "options": [
                 "True",
@@ -445,7 +445,7 @@
           "content": "",
           "questions": [
             {
-              "id": "readB_1",
+              "id": "36",
               "content": "Why did Sebastian use umbrellas on his first jump?",
               "options": [
                 "Because he had a small budget",
@@ -457,7 +457,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "readB_2",
+              "id": "37",
               "content": "What did Sebastian think that a parachute would do?",
               "options": [
                 "Help him fly",
@@ -469,7 +469,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "readB_3",
+              "id": "38",
               "content": "Where did Sebastian jump with the parachute he refined and knitted?",
               "options": [
                 "In a prehistoric courtyard",
@@ -481,7 +481,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "readB_4",
+              "id": "39",
               "content": "How was Jean-Pierre’s outlook different from Sebastian?",
               "options": [
                 "He wanted to use parachutes to jump out of hot air balloons",
@@ -493,7 +493,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "readB_5",
+              "id": "40",
               "content": "Why did Jean-Pierre first use the parachute?",
               "options": [
                 "He wanted to test it",

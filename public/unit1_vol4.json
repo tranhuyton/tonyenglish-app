@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1_1",
+              "id": "1",
               "content": "The population growth in the city was incredibly ________.",
               "options": [
                 "rapid",
@@ -28,7 +28,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_1_2",
+              "id": "2",
               "content": "It is quite surprising that people settled there at such a fast ________.",
               "options": [
                 "rapid",
@@ -38,7 +38,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_2_1",
+              "id": "3",
               "content": "Many ________ laws make it illegal for business to compete in unfair ways.",
               "options": [
                 "contemporary",
@@ -48,7 +48,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_2_2",
+              "id": "4",
               "content": "However, the specific laws in different countries ________ greatly.",
               "options": [
                 "contemporary",
@@ -58,7 +58,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_3_1",
+              "id": "5",
               "content": "Because it is quite ________ on the island, various kinds of plants grow well there.",
               "options": [
                 "humid",
@@ -68,7 +68,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_3_2",
+              "id": "6",
               "content": "However, some of these plants are ________ to humans.",
               "options": [
                 "humid",
@@ -78,7 +78,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_4_1",
+              "id": "7",
               "content": "The cheese has a smooth ________.",
               "options": [
                 "texture",
@@ -88,7 +88,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_4_2",
+              "id": "8",
               "content": "However, some people find it hard to eat because of its powerful ________.",
               "options": [
                 "texture",
@@ -98,7 +98,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_5_1",
+              "id": "9",
               "content": "A ________ of people suggested that nearby cities could fight the invaders if they cooperated with each other.",
               "options": [
                 "cluster",
@@ -108,7 +108,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_5_2",
+              "id": "10",
               "content": "As a result, everyone ________ their efforts and defeated the invaders.",
               "options": [
                 "cluster",
@@ -118,7 +118,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_6_1",
+              "id": "11",
               "content": "The artist uses ________ differences of color in her landscapes.",
               "options": [
                 "soothing",
@@ -128,7 +128,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_6_2",
+              "id": "12",
               "content": "This has an overall calming and ________ effect on the viewer.",
               "options": [
                 "soothing",
@@ -138,7 +138,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_7_1",
+              "id": "13",
               "content": "A huge garden was ________ in the middle of the city.",
               "options": [
                 "cultivated",
@@ -148,7 +148,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_7_2",
+              "id": "14",
               "content": "However, a species of rare plants gave off an unpleasant ________.",
               "options": [
                 "cultivated",
@@ -158,7 +158,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_8_1",
+              "id": "15",
               "content": "During a four or five course meal, one should drink something to clean the ________ between courses.",
               "options": [
                 "beverage",
@@ -168,7 +168,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_8_2",
+              "id": "16",
               "content": "The perfect ________ for this is, of course, water.",
               "options": [
                 "beverage",
@@ -178,7 +178,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_9_1",
+              "id": "17",
               "content": "I can explain the basic story in a simple, ________ way.",
               "options": [
                 "condensed",
@@ -188,7 +188,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_9_2",
+              "id": "18",
               "content": "A boy is given a ________ message, and he begins an exciting adventure.",
               "options": [
                 "condensed",
@@ -198,7 +198,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_10_1",
+              "id": "19",
               "content": "The island of Oahu is not a natural ________ like Maui.",
               "options": [
                 "paradise",
@@ -208,7 +208,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_10_2",
+              "id": "20",
               "content": "However, tourists still visit its many ________.",
               "options": [
                 "paradise",
@@ -226,7 +226,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2a_1",
+              "id": "21",
               "content": "A soothing cup of tea ________.",
               "options": [
                 "feels so smooth",
@@ -238,7 +238,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2a_2",
+              "id": "22",
               "content": "The odor of the cheese ________.",
               "options": [
                 "was surprisingly fast",
@@ -250,7 +250,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2a_3",
+              "id": "23",
               "content": "The pot's texture ________.",
               "options": [
                 "feels so smooth",
@@ -262,7 +262,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2a_4",
+              "id": "24",
               "content": "The chemical is toxic ________.",
               "options": [
                 "to insects and small animals",
@@ -274,7 +274,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2a_5",
+              "id": "25",
               "content": "The contemporary fiction class ________.",
               "options": [
                 "was surprisingly fast",
@@ -286,7 +286,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2a_6",
+              "id": "26",
               "content": "The rate at which these flowers grew ________.",
               "options": [
                 "feels so smooth",
@@ -298,7 +298,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2a_7",
+              "id": "27",
               "content": "My mother cultivates ________.",
               "options": [
                 "several species of flowers as a hobby",
@@ -310,7 +310,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2a_8",
+              "id": "28",
               "content": "The plantation had ________.",
               "options": [
                 "covered almost a third of the country",
@@ -322,7 +322,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2a_9",
+              "id": "29",
               "content": "The thick and humid forest ________.",
               "options": [
                 "covered almost a third of the country",
@@ -334,7 +334,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2a_10",
+              "id": "30",
               "content": "That cluster of stars in the sky makes ________.",
               "options": [
                 "several species of flowers as a hobby",
@@ -354,7 +354,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2b_1",
+              "id": "31",
               "content": "The scientists wanted to find a cure for the sickness, ________.",
               "options": [
                 "so they combined the chemicals",
@@ -366,7 +366,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_2",
+              "id": "32",
               "content": "He offered to share his water, ________.",
               "options": [
                 "but I wanted my own beverage",
@@ -378,7 +378,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_3",
+              "id": "33",
               "content": "I prefer mocha to coffee ________.",
               "options": [
                 "and she looked at his palate",
@@ -390,7 +390,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2b_4",
+              "id": "34",
               "content": "Many new jobs were created, ________.",
               "options": [
                 "so economic growth was rapid",
@@ -402,7 +402,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_5",
+              "id": "35",
               "content": "The report was ten pages long, ________.",
               "options": [
                 "and she smelled the aroma of cookies",
@@ -414,7 +414,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2b_6",
+              "id": "36",
               "content": "The doctor asked him to open his mouth, ________.",
               "options": [
                 "and she looked at his palate",
@@ -426,7 +426,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_7",
+              "id": "37",
               "content": "She walked in the door, ________.",
               "options": [
                 "because it has a subtle taste of chocolate",
@@ -438,7 +438,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2b_8",
+              "id": "38",
               "content": "Because the island is so warm and beautiful, ________.",
               "options": [
                 "people call it a paradise",
@@ -450,7 +450,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_9",
+              "id": "39",
               "content": "Because patients’ bodies are so different, ________.",
               "options": [
                 "the effects of the medicine will vary",
@@ -462,7 +462,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_10",
+              "id": "40",
               "content": "It didn’t rain all summer, ________.",
               "options": [
                 "and Jim thought it was a divine message",
@@ -490,7 +490,7 @@
           "content": "",
           "questions": [
             {
-              "id": "rc_a_1",
+              "id": "41",
               "content": "Wild chocolate trees grow well in humid weather.",
               "options": [
                 "True",
@@ -500,7 +500,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_a_2",
+              "id": "42",
               "content": "The Mayans and Aztecs said chocolate was a divine plant brought from paradise.",
               "options": [
                 "True",
@@ -510,7 +510,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_a_3",
+              "id": "43",
               "content": "The Mayans cultivated chocolate trees on plantations.",
               "options": [
                 "True",
@@ -520,7 +520,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_a_4",
+              "id": "44",
               "content": "Beans were combined with condensed milk to give chocolate a smooth texture.",
               "options": [
                 "True",
@@ -530,7 +530,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_a_5",
+              "id": "45",
               "content": "The first chocolate beverages were made in Europe.",
               "options": [
                 "True",
@@ -540,7 +540,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_a_6",
+              "id": "46",
               "content": "The different types of chocolate available today vary widely.",
               "options": [
                 "True",
@@ -558,7 +558,7 @@
           "content": "",
           "questions": [
             {
-              "id": "rc_b_1",
+              "id": "47",
               "content": "Which word is NOT used to describe chocolate in the reading?",
               "options": [
                 "Aroma",
@@ -570,7 +570,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_b_2",
+              "id": "48",
               "content": "Which of the following did NOT consume chocolate as a beverage?",
               "options": [
                 "Cortes",
@@ -582,7 +582,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "rc_b_3",
+              "id": "49",
               "content": "Which group of people believed that chocolate was toxic to women and children?",
               "options": [
                 "Chocolate makers",
@@ -594,7 +594,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "rc_b_4",
+              "id": "50",
               "content": "What allowed chocolate to be produced at a rapid rate?",
               "options": [
                 "Cortes of Spain",

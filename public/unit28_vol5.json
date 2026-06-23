@@ -17,7 +17,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1",
+              "id": "1",
               "content": "1. What would you find at an aquarium?",
               "options": [
                 "A blanket",
@@ -29,7 +29,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_2",
+              "id": "2",
               "content": "2. What can you do to improve your grades?",
               "options": [
                 "Copy them",
@@ -41,7 +41,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_3",
+              "id": "3",
               "content": "3. What is the ultimate result of going to college?",
               "options": [
                 "Signing up for classes",
@@ -53,7 +53,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_4",
+              "id": "4",
               "content": "4. What happens if you insulate a house in the winter?",
               "options": [
                 "Cold air stays outside.",
@@ -65,7 +65,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_5",
+              "id": "5",
               "content": "5. Who would most likely publish an autobiography?",
               "options": [
                 "An important person",
@@ -85,7 +85,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2_1",
+              "id": "6",
               "content": "1. recipient",
               "options": [
                 "an attempt",
@@ -97,7 +97,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_2",
+              "id": "7",
               "content": "2. misplace",
               "options": [
                 "to try",
@@ -109,7 +109,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_3",
+              "id": "8",
               "content": "3. naughty",
               "options": [
                 "wanting more",
@@ -121,7 +121,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_4",
+              "id": "9",
               "content": "4. longevity",
               "options": [
                 "short life",
@@ -133,7 +133,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_5",
+              "id": "10",
               "content": "5. thrive",
               "options": [
                 "to create",
@@ -145,7 +145,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_6",
+              "id": "11",
               "content": "6. gracious",
               "options": [
                 "mean",
@@ -157,7 +157,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_7",
+              "id": "12",
               "content": "7. norm",
               "options": [
                 "abnormal",
@@ -169,7 +169,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_8",
+              "id": "13",
               "content": "8. intrigue",
               "options": [
                 "to excite",
@@ -181,7 +181,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_9",
+              "id": "14",
               "content": "9. arbitrary",
               "options": [
                 "accidental",
@@ -193,7 +193,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_10",
+              "id": "15",
               "content": "10. probe",
               "options": [
                 "to touch",
@@ -213,7 +213,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex3_1",
+              "id": "16",
               "content": "1. Make sure to misplace your money so that you will always have it.",
               "options": [
                 "C",
@@ -223,7 +223,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_2",
+              "id": "17",
               "content": "2. The orangutans at the zoo swung so gracefully from the trees.",
               "options": [
                 "C",
@@ -233,7 +233,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_3",
+              "id": "18",
               "content": "3. The tigers in the aquarium loved to run and play.",
               "options": [
                 "C",
@@ -243,7 +243,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_4",
+              "id": "19",
               "content": "4. The greedy man loved philanthropy. He never offered to help anybody.",
               "options": [
                 "C",
@@ -253,7 +253,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_5",
+              "id": "20",
               "content": "5. The box broke when he overloaded it with books.",
               "options": [
                 "C",
@@ -263,7 +263,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_6",
+              "id": "21",
               "content": "6. The mechanics of computers intrigue me.",
               "options": [
                 "C",
@@ -273,7 +273,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_7",
+              "id": "22",
               "content": "7. The longevity of the rat was fifty centimeters.",
               "options": [
                 "C",
@@ -283,7 +283,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_8",
+              "id": "23",
               "content": "8. Plants will thrive if they are not given any water.",
               "options": [
                 "C",
@@ -293,7 +293,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_9",
+              "id": "24",
               "content": "9. The naughty girl always obeyed her mother.",
               "options": [
                 "C",
@@ -303,7 +303,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_10",
+              "id": "25",
               "content": "10. The ultimate result of the game was a win for the home team.",
               "options": [
                 "C",
@@ -313,7 +313,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_11",
+              "id": "26",
               "content": "11. Some people play the lottery in hopes that they will improve their lives.",
               "options": [
                 "C",
@@ -323,7 +323,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_12",
+              "id": "27",
               "content": "12. Paying for gasoline before pumping it is a norm.",
               "options": [
                 "C",
@@ -333,7 +333,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_13",
+              "id": "28",
               "content": "13. I probed the audience because I didn’t want to hear what they had to say.",
               "options": [
                 "C",
@@ -343,7 +343,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_14",
+              "id": "29",
               "content": "14. Waiting your turn in line is a social convention.",
               "options": [
                 "C",
@@ -353,7 +353,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_15",
+              "id": "30",
               "content": "15. My dog is a great reptile.",
               "options": [
                 "C",
@@ -363,7 +363,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_16",
+              "id": "31",
               "content": "16. I insulated my room with blankets to keep the loud noises out.",
               "options": [
                 "C",
@@ -373,7 +373,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_17",
+              "id": "32",
               "content": "17. She was the recipient of the grand prize.",
               "options": [
                 "C",
@@ -383,7 +383,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_18",
+              "id": "33",
               "content": "18. Someday, I will write my father’s autobiography.",
               "options": [
                 "C",
@@ -393,7 +393,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_19",
+              "id": "34",
               "content": "19. I don’t want to play with you anymore. You make up arbitrary rules as we play.",
               "options": [
                 "C",
@@ -403,7 +403,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_20",
+              "id": "35",
               "content": "20. The store clerk was so gracious. He helped me find everything I was looking for.",
               "options": [
                 "C",
@@ -429,7 +429,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec4_1",
+              "id": "36",
               "content": "1. Joe was the recipient of a check because he won the lottery.",
               "options": [
                 "True",
@@ -439,7 +439,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec4_2",
+              "id": "37",
               "content": "2. He wanted to buy new glass walls for the aquarium because the old ones were cracked.",
               "options": [
                 "True",
@@ -449,7 +449,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec4_3",
+              "id": "38",
               "content": "3. If Joe wrote an autobiography, he would write about the norms of the overloaded aquarium.",
               "options": [
                 "True",
@@ -459,7 +459,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "sec4_4",
+              "id": "39",
               "content": "4. Joe made a photocopy of the check in case he misplaced the original one.",
               "options": [
                 "True",
@@ -469,7 +469,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec4_5",
+              "id": "40",
               "content": "5. When Joe opened the door, he saw one of the naughty neighborhood children.",
               "options": [
                 "True",
@@ -487,7 +487,7 @@
           "content": "",
           "questions": [
             {
-              "id": "sec5_1",
+              "id": "41",
               "content": "1. What did Joe think the naughty children were doing to him?",
               "options": [
                 "Joe thought the naughty neighborhood children were playing a trick on him.",
@@ -499,7 +499,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_2",
+              "id": "42",
               "content": "2. Why did Joe take out stationery?",
               "options": [
                 "He took out some stationery to write a letter to the zoo.",
@@ -511,7 +511,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_3",
+              "id": "43",
               "content": "3. What did Joe improve to help the orangutans increase their longevity?",
               "options": [
                 "He bought healthy food for them.",
@@ -523,7 +523,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_4",
+              "id": "44",
               "content": "4. What was the purpose of the zookeeper wanting to probe Joe with questions?",
               "options": [
                 "He probed Joe to learn why he spent his money on the zoo instead of on himself.",
@@ -535,7 +535,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "sec5_5",
+              "id": "45",
               "content": "5. If Joe were to write an autobiography, how would he describe this day?",
               "options": [
                 "He would describe this day as the happiest day of his life.",

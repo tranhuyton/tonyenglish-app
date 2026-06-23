@@ -17,7 +17,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1",
+              "id": "1",
               "content": "Who would most likely serve in a corps?",
               "options": [
                 "A teacher",
@@ -29,7 +29,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex1_2",
+              "id": "2",
               "content": "What would you find near a compound?",
               "options": [
                 "A fence",
@@ -41,7 +41,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_3",
+              "id": "3",
               "content": "Which would you most likely see in an auditorium?",
               "options": [
                 "A shark",
@@ -53,7 +53,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_4",
+              "id": "4",
               "content": "Who would most likely be involved in combat?",
               "options": [
                 "A warrior",
@@ -65,7 +65,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_5",
+              "id": "5",
               "content": "Which of the following is a dumb thing to do?",
               "options": [
                 "To go swimming",
@@ -85,7 +85,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2_1",
+              "id": "6",
               "content": "foe",
               "options": [
                 "shovel",
@@ -97,7 +97,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_2",
+              "id": "7",
               "content": "amnesty",
               "options": [
                 "education",
@@ -109,7 +109,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_3",
+              "id": "8",
               "content": "combat",
               "options": [
                 "peace",
@@ -121,7 +121,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_4",
+              "id": "9",
               "content": "sacred",
               "options": [
                 "brave",
@@ -133,7 +133,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_5",
+              "id": "10",
               "content": "distract",
               "options": [
                 "increase",
@@ -145,7 +145,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_6",
+              "id": "11",
               "content": "dumb",
               "options": [
                 "kind",
@@ -157,7 +157,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_7",
+              "id": "12",
               "content": "commonplace",
               "options": [
                 "unusual",
@@ -169,7 +169,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_8",
+              "id": "13",
               "content": "hack",
               "options": [
                 "mend",
@@ -181,7 +181,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_9",
+              "id": "14",
               "content": "aggressive",
               "options": [
                 "smart",
@@ -193,7 +193,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_10",
+              "id": "15",
               "content": "provoke",
               "options": [
                 "mash",
@@ -213,7 +213,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex3_1",
+              "id": "16",
               "content": "realm",
               "options": [
                 "lunch",
@@ -225,7 +225,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_2",
+              "id": "17",
               "content": "auditorium",
               "options": [
                 "market",
@@ -237,7 +237,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_3",
+              "id": "18",
               "content": "rust",
               "options": [
                 "morning",
@@ -249,7 +249,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3_4",
+              "id": "19",
               "content": "corps",
               "options": [
                 "basin",
@@ -261,7 +261,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3_5",
+              "id": "20",
               "content": "meditate",
               "options": [
                 "think",
@@ -273,7 +273,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_6",
+              "id": "21",
               "content": "compound",
               "options": [
                 "garbage",
@@ -285,7 +285,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3_7",
+              "id": "22",
               "content": "reign",
               "options": [
                 "bath",
@@ -297,7 +297,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex3_8",
+              "id": "23",
               "content": "arena",
               "options": [
                 "stadium",
@@ -309,7 +309,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_9",
+              "id": "24",
               "content": "nick",
               "options": [
                 "scratch",
@@ -321,7 +321,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3_10",
+              "id": "25",
               "content": "captive",
               "options": [
                 "challenge",
@@ -341,7 +341,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex4_1",
+              "id": "26",
               "content": "The arena was filled with adoring fans.",
               "options": [
                 "Correct",
@@ -351,7 +351,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_2",
+              "id": "27",
               "content": "The wooden fence was covered in a thick layer of rust.",
               "options": [
                 "Correct",
@@ -361,7 +361,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_3",
+              "id": "28",
               "content": "His reign only lasted three years before he became sick and passed away.",
               "options": [
                 "Correct",
@@ -371,7 +371,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex4_4",
+              "id": "29",
               "content": "You will like Jack. You both have so much commonplace together.",
               "options": [
                 "Correct",
@@ -381,7 +381,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex4_5",
+              "id": "30",
               "content": "Her perfume was too strong. I was distracted by it during the meeting.",
               "options": [
                 "Correct",
@@ -407,7 +407,7 @@
           "content": "",
           "questions": [
             {
-              "id": "readA_1",
+              "id": "31",
               "content": "The gate between the soldier and the auditorium was coated with rust.",
               "options": [
                 "True",
@@ -417,7 +417,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "readA_2",
+              "id": "32",
               "content": "The prisoner was led from the arena to the compound.",
               "options": [
                 "True",
@@ -427,7 +427,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "readA_3",
+              "id": "33",
               "content": "While he meditated, the soldier was distracted by his opponent.",
               "options": [
                 "True",
@@ -437,7 +437,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "readA_4",
+              "id": "34",
               "content": "The king gave the brave soldier amnesty and made him join his elite army corps.",
               "options": [
                 "True",
@@ -447,7 +447,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "readA_5",
+              "id": "35",
               "content": "The quiet soldier felt that all life was sacred.",
               "options": [
                 "True",
@@ -465,7 +465,7 @@
           "content": "",
           "questions": [
             {
-              "id": "readB_1",
+              "id": "36",
               "content": "Why did the captive seem like he was dumb?",
               "options": [
                 "He was quiet",
@@ -477,7 +477,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "readB_2",
+              "id": "37",
               "content": "What was commonplace during the reign of the enemy king?",
               "options": [
                 "Making captives fight one another",
@@ -489,7 +489,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "readB_3",
+              "id": "38",
               "content": "In what realm did the soldier’s opponent Darius have skill?",
               "options": [
                 "Sword fighting",
@@ -501,7 +501,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "readB_4",
+              "id": "39",
               "content": "Where did the soldier get nicked by his opponent?",
               "options": [
                 "On his cheek",
@@ -513,7 +513,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "readB_5",
+              "id": "40",
               "content": "What did the quiet soldier prove by refusing to engage his foe in combat?",
               "options": [
                 "That peace can conquer violence",

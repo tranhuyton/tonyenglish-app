@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u5_q1",
+              "id": "1",
               "content": "roll",
               "options": [
                 "to rest",
@@ -23,7 +23,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u5_q2",
+              "id": "2",
               "content": "error",
               "options": [
                 "a nice man",
@@ -35,7 +35,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u5_q3",
+              "id": "3",
               "content": "hurt",
               "options": [
                 "to disagree",
@@ -47,7 +47,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u5_q4",
+              "id": "4",
               "content": "reside",
               "options": [
                 "to relax",
@@ -59,7 +59,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u5_q5",
+              "id": "5",
               "content": "relax",
               "options": [
                 "to keep going",
@@ -71,7 +71,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u5_q6",
+              "id": "6",
               "content": "continue",
               "options": [
                 "to be in the right place",
@@ -83,7 +83,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u5_q7",
+              "id": "7",
               "content": "normal",
               "options": [
                 "the perfect amount",
@@ -95,7 +95,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u5_q8",
+              "id": "8",
               "content": "rare",
               "options": [
                 "quiet",
@@ -107,7 +107,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u5_q9",
+              "id": "9",
               "content": "visible",
               "options": [
                 "from nature",
@@ -119,7 +119,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u5_q10",
+              "id": "10",
               "content": "field",
               "options": [
                 "open land",
@@ -139,7 +139,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u5_q11",
+              "id": "11",
               "content": "in a severe or harmful way",
               "options": [
                 "continue",
@@ -151,7 +151,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u5_q12",
+              "id": "12",
               "content": "the ability to form opinions or decisions",
               "options": [
                 "experience",
@@ -163,7 +163,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u5_q13",
+              "id": "13",
               "content": "to fit or be in the right place",
               "options": [
                 "roll",
@@ -175,7 +175,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u5_q14",
+              "id": "14",
               "content": "not strange or different",
               "options": [
                 "normal",
@@ -187,7 +187,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u5_q15",
+              "id": "15",
               "content": "to do something that makes you feel pain",
               "options": [
                 "rare",
@@ -207,31 +207,31 @@
           "content": "",
           "questions": [
             {
-              "id": "1",
+              "id": "16",
               "content": "My day at school was not strange. (nor[1])",
               "explanation": "normal có nghĩa tương tự 'not strange'.",
               "correctAnswer": "normal"
             },
             {
-              "id": "2",
+              "id": "17",
               "content": "The bird was from nature. (wi[2])",
               "explanation": "wild có nghĩa tương tự 'from nature'.",
               "correctAnswer": "wild"
             },
             {
-              "id": "3",
+              "id": "18",
               "content": "Sorry I can’t come; I’m feeling discomfort in my body. (h[3])",
               "explanation": "hurt có nghĩa tương tự 'discomfort in my body'.",
               "correctAnswer": "hurt"
             },
             {
-              "id": "4",
+              "id": "19",
               "content": "He’s going to rest instead of going to the movie. (r[4])",
               "explanation": "relax có nghĩa tương tự 'rest'.",
               "correctAnswer": "relax"
             },
             {
-              "id": "5",
+              "id": "20",
               "content": "The man walked through a large area of land. (f[5])",
               "explanation": "field có nghĩa tương tự 'large area of land'.",
               "correctAnswer": "field"
@@ -253,7 +253,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u5_q21",
+              "id": "21",
               "content": "What is this story about?",
               "options": [
                 "Why the sun child has a beautiful smile",
@@ -265,7 +265,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u5_q22",
+              "id": "22",
               "content": "What kind of girl was the sun child?",
               "options": [
                 "She was rare and beautiful.",
@@ -277,7 +277,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u5_q23",
+              "id": "23",
               "content": "Why did the jackal run into the field?",
               "options": [
                 "To continue his journey",
@@ -289,7 +289,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u5_q24",
+              "id": "24",
               "content": "What happened at the end of the story?",
               "options": [
                 "The sun child forgot the experience.",
@@ -301,7 +301,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u5_q25",
+              "id": "25",
               "content": "What did the sun child request?",
               "options": [
                 "For the jackal to give her a necklace.",

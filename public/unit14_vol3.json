@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "w0_q1",
+              "id": "1",
               "content": "hardworking",
               "options": [
                 "diligent",
@@ -23,7 +23,7 @@
               "correctAnswer": "A. DILIGENT"
             },
             {
-              "id": "w0_q2",
+              "id": "2",
               "content": "to lose control because of stress",
               "options": [
                 "bleed",
@@ -35,7 +35,7 @@
               "correctAnswer": "C. PANIC"
             },
             {
-              "id": "w0_q3",
+              "id": "3",
               "content": "a person learning a job",
               "options": [
                 "emperor",
@@ -47,7 +47,7 @@
               "correctAnswer": "B. APPRENTICE"
             },
             {
-              "id": "w0_q4",
+              "id": "4",
               "content": "someone in control of a large area of land",
               "options": [
                 "priority",
@@ -59,7 +59,7 @@
               "correctAnswer": "D. EMPEROR"
             },
             {
-              "id": "w0_q5",
+              "id": "5",
               "content": "to angrily tell someone that they did something wrong",
               "options": [
                 "scold",
@@ -79,7 +79,7 @@
           "content": "",
           "questions": [
             {
-              "id": "w1_q1",
+              "id": "6",
               "content": "The dinner plates with designs made of gold were a [treat but not needed].",
               "options": [
                 "luxury",
@@ -91,7 +91,7 @@
               "correctAnswer": "LUXURY"
             },
             {
-              "id": "w1_q2",
+              "id": "7",
               "content": "The king wore a large, golden [hat].",
               "options": [
                 "crown",
@@ -103,7 +103,7 @@
               "correctAnswer": "CROWN"
             },
             {
-              "id": "w1_q3",
+              "id": "8",
               "content": "Joan is a [person who gets paid to cook in a restaurant].",
               "options": [
                 "chef",
@@ -115,7 +115,7 @@
               "correctAnswer": "CHEF"
             },
             {
-              "id": "w1_q4",
+              "id": "9",
               "content": "George started to [lose blood] when he cut his finger.",
               "options": [
                 "bleed",
@@ -127,7 +127,7 @@
               "correctAnswer": "BLEED"
             },
             {
-              "id": "w1_q5",
+              "id": "10",
               "content": "The book was so [bad] that I couldn't read the whole thing.",
               "options": [
                 "horrible",
@@ -139,7 +139,7 @@
               "correctAnswer": "HORRIBLE"
             },
             {
-              "id": "w1_q6",
+              "id": "11",
               "content": "It is [rude] to walk away when someone is talking to you.",
               "options": [
                 "impolite",
@@ -151,7 +151,7 @@
               "correctAnswer": "IMPOLITE"
             },
             {
-              "id": "w1_q7",
+              "id": "12",
               "content": "Everyone is supposed to [get down on one knee] when the king walks past.",
               "options": [
                 "kneel",
@@ -163,7 +163,7 @@
               "correctAnswer": "KNEEL"
             },
             {
-              "id": "w1_q8",
+              "id": "13",
               "content": "Her new boat is [very big]. Twenty people can ride on it.",
               "options": [
                 "massive",
@@ -175,7 +175,7 @@
               "correctAnswer": "MASSIVE"
             },
             {
-              "id": "w1_q9",
+              "id": "14",
               "content": "He wanted to [become friends] with his new co-workers.",
               "options": [
                 "bond",
@@ -187,7 +187,7 @@
               "correctAnswer": "BOND"
             },
             {
-              "id": "w1_q10",
+              "id": "15",
               "content": "The long [threads] were woven into a warm scarf.",
               "options": [
                 "fiber",
@@ -207,7 +207,7 @@
           "content": "",
           "questions": [
             {
-              "id": "w2_q1",
+              "id": "16",
               "content": "Why would someone need a bandage?",
               "options": [
                 "They have overeaten.",
@@ -219,7 +219,7 @@
               "correctAnswer": "B. THEY HAVE A CUT."
             },
             {
-              "id": "w2_q2",
+              "id": "17",
               "content": "If someone panics, what might they do?",
               "options": [
                 "Remain calm",
@@ -231,7 +231,7 @@
               "correctAnswer": "D. SCREAM AND LOSE CONTROL"
             },
             {
-              "id": "w2_q3",
+              "id": "18",
               "content": "Where would you probably not see someone wearing a robe?",
               "options": [
                 "At the office",
@@ -243,7 +243,7 @@
               "correctAnswer": "A. AT THE OFFICE"
             },
             {
-              "id": "w2_q4",
+              "id": "19",
               "content": "What is a good way to bond with a person?",
               "options": [
                 "To find something you both like",
@@ -255,7 +255,7 @@
               "correctAnswer": "A. TO FIND SOMETHING YOU BOTH LIKE"
             },
             {
-              "id": "w2_q5",
+              "id": "20",
               "content": "Which answer below would not be considered an important priority?",
               "options": [
                 "Paying your bills",
@@ -267,7 +267,7 @@
               "correctAnswer": "D. HAVING ICE CREAM"
             },
             {
-              "id": "w2_q6",
+              "id": "21",
               "content": "Which of the following best describes an apprentice?",
               "options": [
                 "An experienced chef",
@@ -279,7 +279,7 @@
               "correctAnswer": "D. A GIRL LEARNING A NEW JOB"
             },
             {
-              "id": "w2_q7",
+              "id": "22",
               "content": "What will usually happen if someone is diligent?",
               "options": [
                 "Success",
@@ -291,7 +291,7 @@
               "correctAnswer": "A. SUCCESS"
             },
             {
-              "id": "w2_q8",
+              "id": "23",
               "content": "If you kneel, what does that make you become?",
               "options": [
                 "Taller",
@@ -303,7 +303,7 @@
               "correctAnswer": "C. SMALLER"
             },
             {
-              "id": "w2_q9",
+              "id": "24",
               "content": "If you are assuring someone of something, what are you doing?",
               "options": [
                 "Making them feel less worried",
@@ -315,7 +315,7 @@
               "correctAnswer": "A. MAKING THEM FEEL LESS WORRIED"
             },
             {
-              "id": "w2_q10",
+              "id": "25",
               "content": "Besides a departure time, airplane tickets will also have what other kind of time?",
               "options": [
                 "A fun time",
@@ -343,7 +343,7 @@
           "content": "",
           "questions": [
             {
-              "id": "s1_q1",
+              "id": "26",
               "content": "Part A: Mark each statement T for true or F for false.",
               "options": [
                 "1. The apprentice helped the chef make food for the Emperor.",
@@ -357,7 +357,7 @@
               "correctAnswer": "1. T, 2. F (THE CHEF WAS A HORRIBLE PERSON THAT EVERYONE HATED.), 3. T, 4. T, 5. F (THE CHEF WAS VERY IMPOLITE AND ALWAYS SCOLDED HIS WORKERS.), 6. T"
             },
             {
-              "id": "s1_q2",
+              "id": "27",
               "content": "Part B: 1. Why was the restaurant famous?",
               "options": [
                 "It served beautiful fibers.",
@@ -369,7 +369,7 @@
               "correctAnswer": "C. THE BEST CHEF IN THE WORLD WORKED THERE."
             },
             {
-              "id": "s1_q3",
+              "id": "28",
               "content": "Part B: 2. Why did the chef panic before the Emperor arrived?",
               "options": [
                 "The apprentice assured him things were good.",
@@ -381,7 +381,7 @@
               "correctAnswer": "D. HE CUT HIMSELF AND COULDN'T COOK."
             },
             {
-              "id": "s1_q4",
+              "id": "29",
               "content": "Part B: 3. What was the apprentice's first priority?",
               "options": [
                 "To fill the restaurant with luxuries.",
@@ -393,7 +393,7 @@
               "correctAnswer": "B. TO COOK GREAT FOOD."
             },
             {
-              "id": "s1_q5",
+              "id": "30",
               "content": "Part B: 4. Why was the chef a bad person to work for?",
               "options": [
                 "He was the best chef in the world.",

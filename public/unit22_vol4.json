@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_q1",
+              "id": "1",
               "content": "Appliances are `things that are bought` that usually last for many years.",
               "options": [
                 "goods",
@@ -30,7 +30,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_q2",
+              "id": "2",
               "content": "After making five cakes, all the sugar in the house was `used up`.",
               "options": [
                 "heeded",
@@ -42,7 +42,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_q3",
+              "id": "3",
               "content": "During the holidays, `offering financial help to others` is very common.",
               "options": [
                 "unity",
@@ -54,7 +54,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_q4",
+              "id": "4",
               "content": "Because my views were different, I was `treated badly` by my classmates.",
               "options": [
                 "hitchhiked",
@@ -66,7 +66,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_q5",
+              "id": "5",
               "content": "`The group that wins` this game will have to play the very best team.",
               "options": [
                 "scribes",
@@ -78,7 +78,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex1_q6",
+              "id": "6",
               "content": "When his car ran out of gas, he `traveled by asking for rides` to the gas station.",
               "options": [
                 "hitchhiked",
@@ -90,7 +90,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_q7",
+              "id": "7",
               "content": "Though it might seem like fun at the time, it's not nice to `tease in a cruel way` people.",
               "options": [
                 "heed",
@@ -102,7 +102,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_q8",
+              "id": "8",
               "content": "The warm weather `lessened` the snow that covered the ground.",
               "options": [
                 "depleted",
@@ -114,7 +114,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_q9",
+              "id": "9",
               "content": "`The state of working together` the groups showed helped them to solve their problems.",
               "options": [
                 "economy",
@@ -126,7 +126,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_q10",
+              "id": "10",
               "content": "`The many countries ruled by one person` was beginning to slowly fall apart.",
               "options": [
                 "empire",
@@ -146,7 +146,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2_q1",
+              "id": "11",
               "content": "Who is someone who would NOT sit on a throne?",
               "options": [
                 "A king",
@@ -158,7 +158,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_q2",
+              "id": "12",
               "content": "All of the following describe something that's cozy EXCEPT _____.",
               "options": [
                 "relaxing",
@@ -170,7 +170,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_q3",
+              "id": "13",
               "content": "What is something that you might heed?",
               "options": [
                 "Food",
@@ -182,7 +182,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_q4",
+              "id": "14",
               "content": "If someone can't control their temper, then they are likely to easily become _____.",
               "options": [
                 "upset",
@@ -194,7 +194,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_q5",
+              "id": "15",
               "content": "Which of the following is something a scribe would use?",
               "options": [
                 "Goods",
@@ -222,7 +222,7 @@
           "content": "",
           "questions": [
             {
-              "id": "rc_q1",
+              "id": "16",
               "content": "Why were the citizens hungry?",
               "options": [
                 "Commerce was high.",
@@ -234,7 +234,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_q2",
+              "id": "17",
               "content": "The emperor's palace was all of the following EXCEPT _____.",
               "options": [
                 "large and cozy",
@@ -246,7 +246,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "rc_q3",
+              "id": "18",
               "content": "When the emperor heard the scribe's request, how did he behave?",
               "options": [
                 "He felt pity.",
@@ -258,7 +258,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "rc_q4",
+              "id": "19",
               "content": "At the end of the story, what happened to the emperor?",
               "options": [
                 "He was defeated.",

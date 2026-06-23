@@ -17,7 +17,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q1",
+              "id": "1",
               "content": "You would have empathy if you______.",
               "options": [
                 "shared sad feelings",
@@ -29,7 +29,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q2",
+              "id": "2",
               "content": "How would you feel if there was a dearth of food?",
               "options": [
                 "Happy",
@@ -41,7 +41,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q3",
+              "id": "3",
               "content": "If something is a convenience, then it makes______.",
               "options": [
                 "you very angry",
@@ -53,7 +53,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q4",
+              "id": "4",
               "content": "How would a resourceful person deal with a problem?",
               "options": [
                 "Ignore it",
@@ -65,7 +65,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q5",
+              "id": "5",
               "content": "If something was deliberate, then it was______.",
               "options": [
                 "done with pride",
@@ -77,7 +77,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q6",
+              "id": "6",
               "content": "How would you describe someone feeling a sense of outrage?",
               "options": [
                 "Peaceful",
@@ -89,7 +89,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q7",
+              "id": "7",
               "content": "What fanciful idea might a doctor have?",
               "options": [
                 "Give a patient medicine",
@@ -101,7 +101,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q8",
+              "id": "8",
               "content": "What would a tired person likely opt to do?",
               "options": [
                 "Watch a movie",
@@ -113,7 +113,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q9",
+              "id": "9",
               "content": "To rectify hurting your friend, you would___",
               "options": [
                 "say sorry",
@@ -125,7 +125,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q10",
+              "id": "10",
               "content": "What might appall a teacher?",
               "options": [
                 "Smart students",
@@ -145,7 +145,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q11",
+              "id": "11",
               "content": "outrage",
               "options": [
                 "idea",
@@ -157,7 +157,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q12",
+              "id": "12",
               "content": "rectify",
               "options": [
                 "to correct",
@@ -169,7 +169,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q13",
+              "id": "13",
               "content": "sustenance",
               "options": [
                 "belief",
@@ -181,7 +181,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q14",
+              "id": "14",
               "content": "dire",
               "options": [
                 "terrible",
@@ -193,7 +193,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q15",
+              "id": "15",
               "content": "opt",
               "options": [
                 "to remove",
@@ -213,7 +213,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q16",
+              "id": "16",
               "content": "tedious",
               "options": [
                 "fun",
@@ -225,7 +225,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q17",
+              "id": "17",
               "content": "appall",
               "options": [
                 "to greet",
@@ -237,7 +237,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q18",
+              "id": "18",
               "content": "paltry",
               "options": [
                 "worthless",
@@ -249,7 +249,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q19",
+              "id": "19",
               "content": "grueling",
               "options": [
                 "rough",
@@ -261,7 +261,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q20",
+              "id": "20",
               "content": "resourceful",
               "options": [
                 "foolish",
@@ -281,7 +281,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q21",
+              "id": "21",
               "content": "I had a big breakfast. Many hours will elapse before I feel hungry again.",
               "options": [
                 "Correct",
@@ -291,7 +291,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q22",
+              "id": "22",
               "content": "Dan was a nice man, but no one would work for him because of his fanciful ideas.",
               "options": [
                 "Correct",
@@ -301,7 +301,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q23",
+              "id": "23",
               "content": "I was very grateful for my birthday gifts. I griped about them to all of my friends.",
               "options": [
                 "Correct",
@@ -311,7 +311,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q24",
+              "id": "24",
               "content": "Because there was a dearth of food at home, the family went out to eat.",
               "options": [
                 "Correct",
@@ -321,7 +321,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q25",
+              "id": "25",
               "content": "The puppy was happy to learn new tricks. Each one was very mundane for him.",
               "options": [
                 "Correct",
@@ -331,7 +331,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q26",
+              "id": "26",
               "content": "Mother allotted me and my brother the money. Now she had all the money.",
               "options": [
                 "Correct",
@@ -341,7 +341,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q27",
+              "id": "27",
               "content": "The boy was proud of his trophies. He displayed them in a cache for everyone to see.",
               "options": [
                 "Correct",
@@ -351,7 +351,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q28",
+              "id": "28",
               "content": "Because he had planned for the trap to capture his victim, he was very deliberate.",
               "options": [
                 "Correct",
@@ -361,7 +361,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q29",
+              "id": "29",
               "content": "The violent criminal was on the news this evening. His actions appalled most people.",
               "options": [
                 "Correct",
@@ -371,7 +371,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q30",
+              "id": "30",
               "content": "That man is very selfish. He has empathy for every person he meets.",
               "options": [
                 "Correct",
@@ -397,7 +397,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q31",
+              "id": "31",
               "content": "Beth was resourceful and conservative, so she gathered a paltry pile of beans for her cache.",
               "options": [
                 "True",
@@ -407,7 +407,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q32",
+              "id": "32",
               "content": "Because gathering food was tedious, Beth allotted a few hours of every day to do it.",
               "options": [
                 "True",
@@ -417,7 +417,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q33",
+              "id": "33",
               "content": "Beth did grueling and mundane work to overcome the dearth of food in the winter.",
               "options": [
                 "True",
@@ -427,7 +427,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q34",
+              "id": "34",
               "content": "Beth’s reply appalled Mary and made her reply in outrage.",
               "options": [
                 "True",
@@ -437,7 +437,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q35",
+              "id": "35",
               "content": "When the hours of autumn elapsed, Mary had a massive amount of food.",
               "options": [
                 "True",
@@ -455,7 +455,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q36",
+              "id": "36",
               "content": "What was Beth’s primary job?",
               "options": [
                 "To play and dance",
@@ -467,7 +467,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q37",
+              "id": "37",
               "content": "What fanciful idea did Mary opt to try?",
               "options": [
                 "She thought that food would just come to her, and she wouldn’t have to work.",
@@ -479,7 +479,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q38",
+              "id": "38",
               "content": "What did Mary want her sister to have empathy about?",
               "options": [
                 "Her sore feet from dancing",
@@ -491,7 +491,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q39",
+              "id": "39",
               "content": "How did Mary rectify her dire situation and get sustenance?",
               "options": [
                 "She cried until Beth gave her the food.",
@@ -503,7 +503,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q40",
+              "id": "40",
               "content": "Even though she griped, what did Mary know at the end of the story?",
               "options": [
                 "She knew her sister was right.",

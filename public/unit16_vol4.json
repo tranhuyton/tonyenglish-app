@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1",
+              "id": "1",
               "content": "Greg had the _____ of falling in a pool, though he didn’t know how to swim. The experience left him with _____ feelings about swimming pools.",
               "options": [
                 "custom / stern",
@@ -30,7 +30,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_2",
+              "id": "2",
               "content": "After one day, the _____ on her lip began to go away. In a week, it had disappeared _____.",
               "options": [
                 "bruise / altogether",
@@ -42,7 +42,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_3",
+              "id": "3",
               "content": "For the _____ of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices _____ person.",
               "options": [
                 "foresee / altogether",
@@ -54,7 +54,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_4",
+              "id": "4",
               "content": "A woman _____ with the child to behave in the store. The child, however, continued to be _____.",
               "options": [
                 "scraped / negative",
@@ -66,7 +66,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_5",
+              "id": "5",
               "content": "They walked past a large river, which the guide said was the _____ of a waterfall. They finally _____ the waterfall when they reached the bottom of the hill.",
               "options": [
                 "misfortune / stitched",
@@ -78,7 +78,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex1_6",
+              "id": "6",
               "content": "The girl wanted to make her plastic _____ look pretty, so she _____ cloth around it.",
               "options": [
                 "bruise / scraped",
@@ -90,7 +90,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_7",
+              "id": "7",
               "content": "The family was _____ tightly. For example, on Saturdays, it was their _____ to go to the park together.",
               "options": [
                 "bound / custom",
@@ -102,7 +102,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_8",
+              "id": "8",
               "content": "The _____ teacher was angry to see the students passing notes. She took the note from the students and _____ it into pieces.",
               "options": [
                 "vehement / per",
@@ -114,7 +114,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex1_9",
+              "id": "9",
               "content": "The boy lost his balance and fell with a _____. When he got up, he noticed that he’d _____ his elbow.",
               "options": [
                 "bruise / bound",
@@ -126,7 +126,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_10",
+              "id": "10",
               "content": "The coach didn’t _____ the loss for his team. So, after the game, he was _____.",
               "options": [
                 "foresee / vehement",
@@ -146,7 +146,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2a_1",
+              "id": "11",
               "content": "Kelly had the misfortune of breaking _____.",
               "options": [
                 "her arm before the competition",
@@ -158,7 +158,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2a_2",
+              "id": "12",
               "content": "The disobedient dog ran away _____.",
               "options": [
                 "to give her a better grade",
@@ -170,7 +170,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2a_3",
+              "id": "13",
               "content": "She felt bound to her friends because she had _____.",
               "options": [
                 "bad weather this weekend",
@@ -182,7 +182,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2a_4",
+              "id": "14",
               "content": "The weatherman didn’t foresee any _____.",
               "options": [
                 "to give her a better grade",
@@ -194,7 +194,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2a_5",
+              "id": "15",
               "content": "The family had a custom of _____.",
               "options": [
                 "eating dinner early on Sundays",
@@ -206,7 +206,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2a_6",
+              "id": "16",
               "content": "She glimpsed at his painting _____.",
               "options": [
                 "before it was completed",
@@ -218,7 +218,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2a_7",
+              "id": "17",
               "content": "Charlie ripped the paper in half and _____.",
               "options": [
                 "gave one piece to his friend",
@@ -230,7 +230,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2a_8",
+              "id": "18",
               "content": "Jasmine pleaded with her teacher _____.",
               "options": [
                 "her arm before the competition",
@@ -242,7 +242,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2a_9",
+              "id": "19",
               "content": "Leslie scraped the ice _____.",
               "options": [
                 "to give her a better grade",
@@ -254,7 +254,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2a_10",
+              "id": "20",
               "content": "George was vehement about being allowed _____.",
               "options": [
                 "from its owner at the park",
@@ -274,7 +274,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2b_1",
+              "id": "21",
               "content": "There was a tear in my shirt, _____.",
               "options": [
                 "but only 2 cans per week",
@@ -286,7 +286,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2b_2",
+              "id": "22",
               "content": "She dropped the scissors on the carpet, _____.",
               "options": [
                 "so there was a slight thump",
@@ -298,7 +298,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_3",
+              "id": "23",
               "content": "His parents were strict, _____.",
               "options": [
                 "but only 2 cans per week",
@@ -310,7 +310,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2b_4",
+              "id": "24",
               "content": "The website was good, _____.",
               "options": [
                 "but the sources were unreliable",
@@ -322,7 +322,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_5",
+              "id": "25",
               "content": "The fight was horrifying, _____.",
               "options": [
                 "so my mom stitched it back together",
@@ -334,7 +334,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2b_6",
+              "id": "26",
               "content": "I enjoy soda, _____.",
               "options": [
                 "but only 2 cans per week",
@@ -346,7 +346,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_7",
+              "id": "27",
               "content": "He went to school despite being sick _____.",
               "options": [
                 "because the sake of his grade depended on it",
@@ -358,7 +358,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_8",
+              "id": "28",
               "content": "They used a different system _____.",
               "options": [
                 "but only 2 cans per week",
@@ -370,7 +370,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2b_9",
+              "id": "29",
               "content": "He liked showing off, _____.",
               "options": [
                 "so he tried jumping through the hoop",
@@ -382,7 +382,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2b_10",
+              "id": "30",
               "content": "He fell down the stairs, _____.",
               "options": [
                 "but the sources were unreliable",
@@ -410,7 +410,7 @@
           "content": "",
           "questions": [
             {
-              "id": "rc_a1",
+              "id": "31",
               "content": "The custom was to allow the girls to choose their own teams.",
               "options": [
                 "True",
@@ -420,7 +420,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_a2",
+              "id": "32",
               "content": "Gwen told her teammates that she could stitch her pants later.",
               "options": [
                 "True",
@@ -430,7 +430,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_a3",
+              "id": "33",
               "content": "There were eight girls per team.",
               "options": [
                 "True",
@@ -440,7 +440,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_a4",
+              "id": "34",
               "content": "Gwen pleaded to be on another team that had some of her friends.",
               "options": [
                 "True",
@@ -450,7 +450,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_a5",
+              "id": "35",
               "content": "Stephanie asked Gwen to lose on purpose for the sake of the team.",
               "options": [
                 "True",
@@ -460,7 +460,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_a6",
+              "id": "36",
               "content": "Gwen ripped her jeans, scraped her knee, and got a bruise when she fell.",
               "options": [
                 "True",
@@ -478,7 +478,7 @@
           "content": "",
           "questions": [
             {
-              "id": "rc_b1",
+              "id": "37",
               "content": "Why did Coach Peeves speak to Gwen in a stern voice?",
               "options": [
                 "For falling with a thump",
@@ -490,7 +490,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_b2",
+              "id": "38",
               "content": "How did Gwen know Stephanie?",
               "options": [
                 "They were old friends.",
@@ -502,7 +502,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "rc_b3",
+              "id": "39",
               "content": "What happened after Gwen’s shot went through the hoop?",
               "options": [
                 "She faced the stern coach.",
@@ -514,7 +514,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_b4",
+              "id": "40",
               "content": "How were the girls on Gwen’s team bound together?",
               "options": [
                 "They were all disobedient.",

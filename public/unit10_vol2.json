@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u10_ex1_1",
+              "id": "1",
               "content": "wanting to hurt someone",
               "options": [
                 "funeral",
@@ -23,7 +23,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u10_ex1_2",
+              "id": "2",
               "content": "very big",
               "options": [
                 "fog",
@@ -35,7 +35,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u10_ex1_3",
+              "id": "3",
               "content": "to show something",
               "options": [
                 "resist",
@@ -47,7 +47,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u10_ex1_4",
+              "id": "4",
               "content": "to capture",
               "options": [
                 "trap",
@@ -59,7 +59,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u10_ex1_5",
+              "id": "5",
               "content": "a way of thinking about a person",
               "options": [
                 "council",
@@ -79,7 +79,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u10_ex2_1",
+              "id": "6",
               "content": "mad",
               "options": [
                 "big",
@@ -91,7 +91,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u10_ex2_2",
+              "id": "7",
               "content": "income",
               "options": [
                 "to free from",
@@ -103,7 +103,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u10_ex2_3",
+              "id": "8",
               "content": "resist",
               "options": [
                 "to want to hurt someone",
@@ -115,7 +115,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u10_ex2_4",
+              "id": "9",
               "content": "sword",
               "options": [
                 "a long, sharp weapon",
@@ -127,7 +127,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u10_ex2_5",
+              "id": "10",
               "content": "tale",
               "options": [
                 "to hold clothes in place",
@@ -155,7 +155,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u10_rd_1",
+              "id": "11",
               "content": "What is this tale about?",
               "options": [
                 "How many pirates become fishermen",
@@ -167,7 +167,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u10_rd_2",
+              "id": "12",
               "content": "What can be assumed from the passage?",
               "options": [
                 "The town gave Blackbeard the medicine.",
@@ -179,7 +179,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u10_rd_3",
+              "id": "13",
               "content": "Which of the following is true about Blackbeard?",
               "options": [
                 "He kept his sword in his belt.",
@@ -191,7 +191,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u10_rd_4",
+              "id": "14",
               "content": "Why were the people in town trapped?",
               "options": [
                 "Blackbeard was waiting for a reward.",

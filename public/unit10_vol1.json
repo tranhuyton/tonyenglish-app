@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q1",
+              "id": "1",
               "content": "the liquid in your body",
               "options": [
                 "spot",
@@ -23,7 +23,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q2",
+              "id": "2",
               "content": "to set on fire",
               "options": [
                 "burn",
@@ -35,7 +35,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q3",
+              "id": "3",
               "content": "doing what you should do",
               "options": [
                 "demand",
@@ -47,7 +47,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q4",
+              "id": "4",
               "content": "the same as something else",
               "options": [
                 "hole",
@@ -59,7 +59,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q5",
+              "id": "5",
               "content": "something interesting to see",
               "options": [
                 "sight",
@@ -79,7 +79,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q6",
+              "id": "6",
               "content": "I left my coat in the __________ by the window.",
               "options": [
                 "feed",
@@ -91,7 +91,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q7",
+              "id": "7",
               "content": "The poor man had no money to __________ his family.",
               "options": [
                 "feed",
@@ -103,7 +103,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q8",
+              "id": "8",
               "content": "The robber was locked in a __________ for a year.",
               "options": [
                 "feed",
@@ -115,7 +115,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q9",
+              "id": "9",
               "content": "Did you read the __________ book or just part of it?",
               "options": [
                 "feed",
@@ -127,7 +127,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q10",
+              "id": "10",
               "content": "If I get the answers __________, I will pass the test.",
               "options": [
                 "feed",
@@ -147,7 +147,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q11",
+              "id": "11",
               "content": "What did your father demand?",
               "options": [
                 "He is not nice.",
@@ -157,7 +157,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q12",
+              "id": "12",
               "content": "Will you help me raise this?",
               "options": [
                 "Yes. How high?",
@@ -167,7 +167,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q13",
+              "id": "13",
               "content": "What position were these in?",
               "options": [
                 "They were next to each other.",
@@ -177,7 +177,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q14",
+              "id": "14",
               "content": "Does that bottle contain water?",
               "options": [
                 "Yes. What is inside it?",
@@ -187,7 +187,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q15",
+              "id": "15",
               "content": "Did you hear that Jim's house burned down?",
               "options": [
                 "That is terrible!",
@@ -205,7 +205,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q16",
+              "id": "16",
               "content": "The bad guy sat on the floor of his __________.",
               "options": [
                 "structure",
@@ -217,7 +217,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q17",
+              "id": "17",
               "content": "Dad says the old __________ is not safe.",
               "options": [
                 "structure",
@@ -229,7 +229,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q18",
+              "id": "18",
               "content": "The __________ ruled over 100 people in the town.",
               "options": [
                 "lord",
@@ -241,7 +241,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q19",
+              "id": "19",
               "content": "I still __________ the bank money for my university loan.",
               "options": [
                 "lord",
@@ -253,7 +253,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q20",
+              "id": "20",
               "content": "Won't your legs hurt if you stay in that __________ for long?",
               "options": [
                 "spot",
@@ -265,7 +265,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q21",
+              "id": "21",
               "content": "This is our favorite picnic __________.",
               "options": [
                 "spot",
@@ -277,7 +277,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q22",
+              "id": "22",
               "content": "The __________ class was excited.",
               "options": [
                 "whole",
@@ -289,7 +289,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q23",
+              "id": "23",
               "content": "I dug a __________ to put a tree in.",
               "options": [
                 "whole",
@@ -301,7 +301,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q24",
+              "id": "24",
               "content": "Do not __________ any of the animals at the zoo.",
               "options": [
                 "crop",
@@ -313,7 +313,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q25",
+              "id": "25",
               "content": "The farmer grew a __________ of potatoes.",
               "options": [
                 "crop",
@@ -333,61 +333,61 @@
           "content": "",
           "questions": [
             {
-              "id": "q31",
+              "id": "26",
               "content": "It is very important that you call your mother soon, (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "essential"
             },
             {
-              "id": "q32",
+              "id": "27",
               "content": "The good thing about being old is that you know many things, (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "benefit"
             },
             {
-              "id": "q33",
+              "id": "28",
               "content": "I have problems with my science homework, (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "trouble"
             },
             {
-              "id": "q34",
+              "id": "29",
               "content": "I am sure that she will come to his party, (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "certain"
             },
             {
-              "id": "q35",
+              "id": "30",
               "content": "The job of the stove is to cook, (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "function"
             },
             {
-              "id": "q36",
+              "id": "31",
               "content": "That is the place where they met, (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "site"
             },
             {
-              "id": "q37",
+              "id": "32",
               "content": "I saw his picture on TV. (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "image"
             },
             {
-              "id": "q38",
+              "id": "33",
               "content": "The twins don't like to be apart. (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "separate"
             },
             {
-              "id": "q39",
+              "id": "34",
               "content": "I like to stay at home on the weekends, (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "remain"
             },
             {
-              "id": "q40",
+              "id": "35",
               "content": "His part that comes out of his rear was shaking because he was happy, (spr[1])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "tail"
@@ -401,7 +401,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q41",
+              "id": "36",
               "content": "The __________ of the rain was slippery roads.",
               "options": [
                 "effect",
@@ -411,7 +411,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q42",
+              "id": "37",
               "content": "The __________ of waking up early is being at work on time.",
               "options": [
                 "effect",
@@ -421,7 +421,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q43",
+              "id": "38",
               "content": "She had to make a(an) __________ phone call.",
               "options": [
                 "primary",
@@ -431,7 +431,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q44",
+              "id": "39",
               "content": "The __________ cause of my problems is laziness.",
               "options": [
                 "primary",
@@ -441,7 +441,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q45",
+              "id": "40",
               "content": "He was __________ when he got the best score.",
               "options": [
                 "rested",
@@ -451,7 +451,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q46",
+              "id": "41",
               "content": "We __________ under the shade of a tree.",
               "options": [
                 "rested",
@@ -461,7 +461,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q47",
+              "id": "42",
               "content": "Her new school is __________ from here.",
               "options": [
                 "far",
@@ -471,7 +471,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q48",
+              "id": "43",
               "content": "She and her best friend hate to be in __________ classrooms.",
               "options": [
                 "far",
@@ -481,7 +481,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q49",
+              "id": "44",
               "content": "I have to __________ my money from my little brother.",
               "options": [
                 "guard",
@@ -491,7 +491,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q50",
+              "id": "45",
               "content": "I have to __________ in school for four more years.",
               "options": [
                 "guard",
@@ -509,7 +509,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q51",
+              "id": "46",
               "content": "Every year for my birthday, ________________.",
               "options": [
                 "I return to the site of my birth",
@@ -519,7 +519,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q52",
+              "id": "47",
               "content": "I believe her _________________.",
               "options": [
                 "because she has a chance to lie",
@@ -529,7 +529,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q53",
+              "id": "48",
               "content": "My new watch is great. ________________.",
               "options": [
                 "It has many functions",
@@ -539,7 +539,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q54",
+              "id": "49",
               "content": "I was afraid ________________.",
               "options": [
                 "because I thought of a scary image of a snake",
@@ -549,7 +549,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q55",
+              "id": "50",
               "content": "I eat many fruits ________________.",
               "options": [
                 "because they are essential for good health",
@@ -575,7 +575,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q26",
+              "id": "51",
               "content": "What does Arthur do in the story?",
               "options": [
                 "Put the lady in a jail cell",
@@ -587,7 +587,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q27",
+              "id": "52",
               "content": "What is true of the cats in the story?",
               "options": [
                 "They burn the farm and scare the animals.",
@@ -599,7 +599,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q28",
+              "id": "53",
               "content": "What does the bag contain?",
               "options": [
                 "A gift for the lady",
@@ -611,7 +611,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q29",
+              "id": "54",
               "content": "What sight did Maria and Arthur see in the morning?",
               "options": [
                 "A hole in the wall of their house",
@@ -623,7 +623,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q30",
+              "id": "55",
               "content": "When will the lord increase the money that Arthur has to pay?",
               "options": [
                 "If he doesn't pay by the end of the week",
@@ -643,7 +643,7 @@
           "content": "",
           "questions": [
             {
-              "id": "q56",
+              "id": "56",
               "content": "What is this story about?",
               "options": [
                 "Why it is essential to guard cows",
@@ -655,7 +655,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q57",
+              "id": "57",
               "content": "Why was guarding Hera's cow easy for Argos?",
               "options": [
                 "All it did was eat grass all day.",
@@ -667,7 +667,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q58",
+              "id": "58",
               "content": "Why did Zeus turn Argos into a group of stars?",
               "options": [
                 "He wanted Argos to see the site of his trouble.",
@@ -679,7 +679,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q59",
+              "id": "59",
               "content": "What was the primary function of Argos' job?",
               "options": [
                 "To make sure the cow was never sad",
@@ -691,7 +691,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q60",
+              "id": "60",
               "content": "How did Argos sleep?",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "He only rested a few eyes at a time. The others stayed awake."

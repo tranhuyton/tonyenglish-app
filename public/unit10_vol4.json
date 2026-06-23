@@ -19,7 +19,7 @@
           "content": "",
           "questions": [
             {
-              "id": "10_1_a_1",
+              "id": "1",
               "content": "a formal inspection",
               "options": [
                 "review",
@@ -31,7 +31,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_1_a_2",
+              "id": "2",
               "content": "to accept the truth",
               "options": [
                 "isolate",
@@ -43,7 +43,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "10_1_a_3",
+              "id": "3",
               "content": "an idea about how something is",
               "options": [
                 "decade",
@@ -55,7 +55,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "10_1_a_4",
+              "id": "4",
               "content": "knowing a lot about the world",
               "options": [
                 "upright",
@@ -67,7 +67,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_1_a_5",
+              "id": "5",
               "content": "important",
               "options": [
                 "refrain",
@@ -87,7 +87,7 @@
           "content": "",
           "questions": [
             {
-              "id": "10_1_b_1",
+              "id": "6",
               "content": "particle",
               "options": [
                 "a small piece of something",
@@ -99,7 +99,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_1_b_2",
+              "id": "7",
               "content": "decade",
               "options": [
                 "an idea about something",
@@ -111,7 +111,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_1_b_3",
+              "id": "8",
               "content": "upright",
               "options": [
                 "important",
@@ -123,7 +123,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "10_1_b_4",
+              "id": "9",
               "content": "isolate",
               "options": [
                 "to separate",
@@ -135,7 +135,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_1_b_5",
+              "id": "10",
               "content": "handy",
               "options": [
                 "to make something",
@@ -155,7 +155,7 @@
           "content": "",
           "questions": [
             {
-              "id": "10_2_1",
+              "id": "11",
               "content": "animate / particle\nScientists thought that the tiny _________ was not a living thing, so they were very surprised to find that it was indeed _________.",
               "options": [
                 "particle / animate",
@@ -165,7 +165,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_2_2",
+              "id": "12",
               "content": "handy / numerous\nMy uncle, the carpenter, keeps _________ tools in his truck. However, he keeps the most _________ ones on his tool belt at all times.",
               "options": [
                 "handy / numerous",
@@ -175,7 +175,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_2_3",
+              "id": "13",
               "content": "classify / upright\nOne way that scientists _________ the different species of early humans is by how they walked. Homo Erectus, for example, walked _________.",
               "options": [
                 "classify / upright",
@@ -185,7 +185,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_2_4",
+              "id": "14",
               "content": "longing / plea\nAfter sitting in the cell for just one hour, the prisoner felt a _________ to be free. He made a _________ to the officers to release him immediately.",
               "options": [
                 "longing / plea",
@@ -195,7 +195,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_2_5",
+              "id": "15",
               "content": "sophisticated / worthwhile\nLearning how to speak another language is a _________ skill to have in the world of international business. It also can make one into a more _________ person.",
               "options": [
                 "sophisticated / worthwhile",
@@ -205,7 +205,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_2_6",
+              "id": "16",
               "content": "review / concept\nJack had a great _________ for a new system, but his boss needs to conduct a thorough _________ to see if it will work.",
               "options": [
                 "review / concept",
@@ -215,7 +215,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_2_7",
+              "id": "17",
               "content": "diagram / isolate\nWilliam used a piece of white paper to _________ the different plants in the garden. That made it easier for him to draw a _________ of the leaves of each type of plant.",
               "options": [
                 "isolate / diagram",
@@ -225,7 +225,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_2_8",
+              "id": "18",
               "content": "constructed / decades\nThe great pyramids of Egypt were not _________ overnight. In fact, it took many _________ to complete them.",
               "options": [
                 "constructed / decades",
@@ -235,7 +235,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_2_9",
+              "id": "19",
               "content": "concede / ferry\nAs he drove his car onto the _________, John felt sad. He wanted to travel by airplane, but after looking at ticket prices, he had to _________ that air travel was just too expensive.",
               "options": [
                 "concede / ferry",
@@ -245,7 +245,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_2_10",
+              "id": "20",
               "content": "refrain / surrender\nIn maintaining good health, it is important to _________ from eating unhealthy foods. But that doesn't mean you must _________ all of the foods that you enjoy.",
               "options": [
                 "refrain / surrender",
@@ -271,7 +271,7 @@
           "content": "",
           "questions": [
             {
-              "id": "10_rc_A_1",
+              "id": "21",
               "content": "Anton's first microscope had an upright stand.",
               "options": [
                 "T (True)",
@@ -281,7 +281,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_rc_A_2",
+              "id": "22",
               "content": "Anton had a longing to become rich.",
               "options": [
                 "T (True)",
@@ -291,7 +291,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_rc_A_3",
+              "id": "23",
               "content": "The tiny particles Anton saw were bacteria.",
               "options": [
                 "T (True)",
@@ -301,7 +301,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_rc_A_4",
+              "id": "24",
               "content": "Anton classified the particles into different categories.",
               "options": [
                 "T (True)",
@@ -311,7 +311,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10_rc_A_5",
+              "id": "25",
               "content": "The sophisticated scientists drew diagrams of the bacteria.",
               "options": [
                 "T (True)",
@@ -321,7 +321,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_rc_A_6",
+              "id": "26",
               "content": "Anton took a ferry to Holland.",
               "options": [
                 "T (True)",
@@ -339,7 +339,7 @@
           "content": "",
           "questions": [
             {
-              "id": "10_rc_B_1",
+              "id": "27",
               "content": "Which is true about Anton's discovery?",
               "options": [
                 "It isolated him from his work.",
@@ -351,7 +351,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "10_rc_B_2",
+              "id": "28",
               "content": "Why was Anton's first microscope handy?",
               "options": [
                 "It made him rich.",
@@ -363,7 +363,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "10_rc_B_3",
+              "id": "29",
               "content": "What was Anton's plea to the scientists?",
               "options": [
                 "To buy his microscope",
@@ -375,7 +375,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "10_rc_B_4",
+              "id": "30",
               "content": "Why didn't Anton sell his concept of a powerful microscope?",
               "options": [
                 "He didn't want to surrender his secret.",

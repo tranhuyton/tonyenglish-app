@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex1_1",
+              "id": "1",
               "content": "to provide the things that someone needs to do something",
               "options": [
                 "sort",
@@ -30,7 +30,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex1_2",
+              "id": "2",
               "content": "a safe place",
               "options": [
                 "genre",
@@ -42,7 +42,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex1_3",
+              "id": "3",
               "content": "holding a weapon",
               "options": [
                 "authoritative",
@@ -54,7 +54,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex1_4",
+              "id": "4",
               "content": "pieces of information",
               "options": [
                 "details",
@@ -66,7 +66,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex1_5",
+              "id": "5",
               "content": "a group working together",
               "options": [
                 "ceremony",
@@ -86,7 +86,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex2_1",
+              "id": "6",
               "content": "Please (put into different groups) all the leaves you find.",
               "options": [
                 "sort",
@@ -98,7 +98,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_2",
+              "id": "7",
               "content": "Everybody was (very interested) when Kate read that beautiful poem out loud.",
               "options": [
                 "armed",
@@ -110,7 +110,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex2_3",
+              "id": "8",
               "content": "The performer heard great (sounds of people clapping their hands).",
               "options": [
                 "defense",
@@ -122,7 +122,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_4",
+              "id": "9",
               "content": "Tim takes a long time to get ready because he is so (concerned with how he looks).",
               "options": [
                 "vain",
@@ -134,7 +134,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_5",
+              "id": "10",
               "content": "Ocean life is made up of a (wide variety of things).",
               "options": [
                 "vain",
@@ -146,7 +146,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_6",
+              "id": "11",
               "content": "What is your favorite (kind or style) of music?",
               "options": [
                 "obstacle",
@@ -158,7 +158,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex2_7",
+              "id": "12",
               "content": "The (special event) will start at 8 o’clock tonight.",
               "options": [
                 "alliance",
@@ -170,7 +170,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex2_8",
+              "id": "13",
               "content": "The city’s only (action taken to protect itself) was to build a giant brick wall around it.",
               "options": [
                 "defense",
@@ -182,7 +182,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_9",
+              "id": "14",
               "content": "Ben went through many (problems) before he finished his project.",
               "options": [
                 "obstacles",
@@ -194,7 +194,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex2_10",
+              "id": "15",
               "content": "Most girls like to play with dolls, but Samantha is the one who (doesn’t conform).",
               "options": [
                 "exception",
@@ -214,7 +214,7 @@
           "content": "",
           "questions": [
             {
-              "id": "ex3a_1",
+              "id": "16",
               "content": "I’m going to try to lure my friends ____.",
               "options": [
                 "into coming to the museum with me",
@@ -226,7 +226,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3a_2",
+              "id": "17",
               "content": "Sort the pieces ____.",
               "options": [
                 "into coming to the museum with me",
@@ -238,7 +238,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3a_3",
+              "id": "18",
               "content": "The biggest obstacle Mary faced ____.",
               "options": [
                 "into coming to the museum with me",
@@ -250,7 +250,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex3a_4",
+              "id": "19",
               "content": "The genre of abstract art ____.",
               "options": [
                 "into coming to the museum with me",
@@ -262,7 +262,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3a_5",
+              "id": "20",
               "content": "The awards ceremony is ____.",
               "options": [
                 "tonight at the Royal Crown Hotel",
@@ -274,7 +274,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3a_6",
+              "id": "21",
               "content": "Mexican culture is ____.",
               "options": [
                 "tonight at the Royal Crown Hotel",
@@ -286,7 +286,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3a_7",
+              "id": "22",
               "content": "The best defense against skin cancer ____.",
               "options": [
                 "tonight at the Royal Crown Hotel",
@@ -298,7 +298,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex3a_8",
+              "id": "23",
               "content": "The students were equipped ____.",
               "options": [
                 "tonight at the Royal Crown Hotel",
@@ -310,7 +310,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3a_9",
+              "id": "24",
               "content": "An armed man ran into ____.",
               "options": [
                 "the jewelry store and stole diamonds",
@@ -322,7 +322,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3a_10",
+              "id": "25",
               "content": "The vain woman could ____.",
               "options": [
                 "the jewelry store and stole diamonds",
@@ -334,7 +334,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3b_1",
+              "id": "26",
               "content": "It started raining really hard, ____.",
               "options": [
                 "so we ran inside for shelter",
@@ -346,7 +346,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3b_2",
+              "id": "27",
               "content": "He saw that the children were cold, ____.",
               "options": [
                 "so we ran inside for shelter",
@@ -358,7 +358,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3b_3",
+              "id": "28",
               "content": "Police officers work very hard, ____.",
               "options": [
                 "so we ran inside for shelter",
@@ -370,7 +370,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex3b_4",
+              "id": "29",
               "content": "Everyone always trusts Seth ____.",
               "options": [
                 "so we ran inside for shelter",
@@ -382,7 +382,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3b_5",
+              "id": "30",
               "content": "Mother Teresa was a very well-known person, ____.",
               "options": [
                 "and her work impacted many lives",
@@ -394,7 +394,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3b_6",
+              "id": "31",
               "content": "He only likes one type of music, ____.",
               "options": [
                 "and her work impacted many lives",
@@ -406,7 +406,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "ex3b_7",
+              "id": "32",
               "content": "James tried to write the report last night, ____.",
               "options": [
                 "and her work impacted many lives",
@@ -418,7 +418,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "ex3b_8",
+              "id": "33",
               "content": "I don’t really like Jennifer, ____.",
               "options": [
                 "and her work impacted many lives",
@@ -430,7 +430,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "ex3b_9",
+              "id": "34",
               "content": "Bob and Eric both want to beat James at the game, ____.",
               "options": [
                 "so they will form an alliance",
@@ -442,7 +442,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "ex3b_10",
+              "id": "35",
               "content": "The performer did a great job, ____.",
               "options": [
                 "so they will form an alliance",
@@ -470,7 +470,7 @@
           "content": "",
           "questions": [
             {
-              "id": "rc_1",
+              "id": "36",
               "content": "Which is true about Josephine Baker's first job for the Resistance?",
               "options": [
                 "Baker’s first job was to carry messages written in code to and from European politicians.",
@@ -482,7 +482,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_2",
+              "id": "37",
               "content": "Which genre of music was Josephine Baker famous for?",
               "options": [
                 "She was famous for jazz music.",
@@ -494,7 +494,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "rc_3",
+              "id": "38",
               "content": "What happened when the Germans entered Paris?",
               "options": [
                 "Armed soldiers fought them.",
@@ -506,7 +506,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "rc_4",
+              "id": "39",
               "content": "What was Baker’s most important job?",
               "options": [
                 "To provide shelter",
@@ -518,7 +518,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "rc_5",
+              "id": "40",
               "content": "What happened when Baker died?",
               "options": [
                 "The army had a special ceremony.",

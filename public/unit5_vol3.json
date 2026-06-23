@@ -11,7 +11,7 @@
           "content": "",
           "questions": [
             {
-              "id": "w0_q1",
+              "id": "1",
               "content": "1. Mary ____________ the creature that came into her yard and ____________ her dog.",
               "options": [
                 "cursed / scared",
@@ -23,7 +23,7 @@
               "correctAnswer": "CURSED / SCARED"
             },
             {
-              "id": "w0_q2",
+              "id": "2",
               "content": "2. I don't like to walk in the ____________. I always think about the ____________ that are under the ground there.",
               "options": [
                 "cemetery / skeletons",
@@ -35,7 +35,7 @@
               "correctAnswer": "CEMETERY / SKELETONS"
             },
             {
-              "id": "w0_q3",
+              "id": "3",
               "content": "3. My mother bought me a ____________ new coat. My favorite part is the warm ____________.",
               "options": [
                 "fancy / hood",
@@ -47,7 +47,7 @@
               "correctAnswer": "FANCY / HOOD"
             },
             {
-              "id": "w0_q4",
+              "id": "4",
               "content": "4. When my friend stayed at my house, we sat with a ____________. Instead of sleeping, we sat and told ____________ for an hour!",
               "options": [
                 "flashlight / riddles",
@@ -59,7 +59,7 @@
               "correctAnswer": "FLASHLIGHT / RIDDLES"
             },
             {
-              "id": "w0_q5",
+              "id": "5",
               "content": "5. Judy wanted to find a ____________ that was scary. Finally, she decided to dress like a ____________ witch.",
               "options": [
                 "disguise / wicked",
@@ -71,7 +71,7 @@
               "correctAnswer": "DISGUISE / WICKED"
             },
             {
-              "id": "w0_q6",
+              "id": "6",
               "content": "6. We planted a vegetable garden to help ____________ our family. But many of the plants ____________ before we could eat them.",
               "options": [
                 "nourish / rotted",
@@ -83,7 +83,7 @@
               "correctAnswer": "NOURISH / ROTTED"
             },
             {
-              "id": "w0_q7",
+              "id": "7",
               "content": "7. The poor family was ____________ after all of their food ____________.",
               "options": [
                 "starving / spoiled",
@@ -95,7 +95,7 @@
               "correctAnswer": "STARVING / SPOILED"
             },
             {
-              "id": "w0_q8",
+              "id": "8",
               "content": "8. Tim loves being an ____________ of that town. Shortly after he moved there, he made many friends.",
               "options": [
                 "inhabitant / shortly",
@@ -107,7 +107,7 @@
               "correctAnswer": "INHABITANT / SHORTLY"
             },
             {
-              "id": "w0_q9",
+              "id": "9",
               "content": "9. I entered a contest that was in my favorite ____________. Imagine the ____________ when I won!",
               "options": [
                 "publication / thrill",
@@ -119,7 +119,7 @@
               "correctAnswer": "PUBLICATION / THRILL"
             },
             {
-              "id": "w0_q10",
+              "id": "10",
               "content": "10. Christie ____________ me with her city's library. Since then, I have read every book they have about ____________.",
               "options": [
                 "acquainted / pirates",
@@ -139,7 +139,7 @@
           "content": "",
           "questions": [
             {
-              "id": "w1_q1",
+              "id": "11",
               "content": "1. Which of the following best describes an evil person?",
               "options": [
                 "Shortly",
@@ -151,7 +151,7 @@
               "correctAnswer": "D. WICKED"
             },
             {
-              "id": "w1_q2",
+              "id": "12",
               "content": "2. Which one is a feeling?",
               "options": [
                 "A thrill",
@@ -163,7 +163,7 @@
               "correctAnswer": "A. A THRILL"
             },
             {
-              "id": "w1_q3",
+              "id": "13",
               "content": "3. Which one can you wear?",
               "options": [
                 "A cemetery",
@@ -175,7 +175,7 @@
               "correctAnswer": "B. A DISGUISE"
             },
             {
-              "id": "w1_q4",
+              "id": "14",
               "content": "4. Which of the following is most related to death?",
               "options": [
                 "Spoil",
@@ -187,7 +187,7 @@
               "correctAnswer": "C. STARVE"
             },
             {
-              "id": "w1_q5",
+              "id": "15",
               "content": "5. Which of the following is most commonly related to the ocean?",
               "options": [
                 "Rot",
@@ -207,7 +207,7 @@
           "content": "",
           "questions": [
             {
-              "id": "w2_q1",
+              "id": "16",
               "content": "1. Mom says we need to hurry because the game will start very soon.",
               "options": [
                 "shortly",
@@ -219,7 +219,7 @@
               "correctAnswer": "SHORTLY"
             },
             {
-              "id": "w2_q2",
+              "id": "17",
               "content": "2. It's a good idea to get to know with co-workers.",
               "options": [
                 "acquaint",
@@ -231,7 +231,7 @@
               "correctAnswer": "ACQUAINT"
             },
             {
-              "id": "w2_q3",
+              "id": "18",
               "content": "3. My little brother bothered me all day by asking me to solve his difficult questions.",
               "options": [
                 "riddles",
@@ -243,7 +243,7 @@
               "correctAnswer": "RIDDLES"
             },
             {
-              "id": "w2_q4",
+              "id": "19",
               "content": "4. A reporter at that newspaper won a prize.",
               "options": [
                 "publication",
@@ -255,7 +255,7 @@
               "correctAnswer": "PUBLICATION"
             },
             {
-              "id": "w2_q5",
+              "id": "20",
               "content": "5. I am an individual who lives in the central part of town.",
               "options": [
                 "inhabitant",
@@ -267,7 +267,7 @@
               "correctAnswer": "INHABITANT"
             },
             {
-              "id": "w2_q6",
+              "id": "21",
               "content": "6. He was crying because he was caused to feel fright.",
               "options": [
                 "scared",
@@ -279,7 +279,7 @@
               "correctAnswer": "SCARED"
             },
             {
-              "id": "w2_q7",
+              "id": "22",
               "content": "7. I want to buy that really nice dress I saw in the store.",
               "options": [
                 "fancy",
@@ -291,7 +291,7 @@
               "correctAnswer": "FANCY"
             },
             {
-              "id": "w2_q8",
+              "id": "23",
               "content": "8. I need a light I can carry to see in the dark cabin.",
               "options": [
                 "flashlight",
@@ -303,7 +303,7 @@
               "correctAnswer": "FLASHLIGHT"
             },
             {
-              "id": "w2_q9",
+              "id": "24",
               "content": "9. The children were afraid that the witch would hope bad things would happen to them.",
               "options": [
                 "curse",
@@ -315,7 +315,7 @@
               "correctAnswer": "CURSE"
             },
             {
-              "id": "w2_q10",
+              "id": "25",
               "content": "10. The part of your coat that covers your head keeps your head nice and warm.",
               "options": [
                 "hood",
@@ -343,7 +343,7 @@
           "content": "",
           "questions": [
             {
-              "id": "s1_q1",
+              "id": "26",
               "content": "Part A - 1. People from places like Iceland, Italy, Kenya and Canada believed souls needed food.",
               "options": [
                 "True",
@@ -355,7 +355,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "s1_q2",
+              "id": "27",
               "content": "Part A - 2. Many cultures believed that souls needed food to nourish them on their journey back to life.",
               "options": [
                 "True",
@@ -367,7 +367,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "s1_q3",
+              "id": "28",
               "content": "Part A - 3. Housewives gave children food if they did chores around their homes.",
               "options": [
                 "True",
@@ -379,7 +379,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "s1_q4",
+              "id": "29",
               "content": "Part A - 4. Shortly after a children's publication wrote about trick-or-treating, it became popular.",
               "options": [
                 "True",
@@ -391,7 +391,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "s1_q5",
+              "id": "30",
               "content": "Part A - 5. Children often wear fancy disguises for trick-or-treating today.",
               "options": [
                 "True",
@@ -403,7 +403,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "s1_q6",
+              "id": "31",
               "content": "Part A - 6. Inhabitants from villages started trick-or-treating in the 1940s.",
               "options": [
                 "True",
@@ -415,7 +415,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "s1_q7",
+              "id": "32",
               "content": "Part B - 1. Which of the following is the most popular disguise?",
               "options": [
                 "Hood",
@@ -427,7 +427,7 @@
               "correctAnswer": "B. SKELETON"
             },
             {
-              "id": "s1_q8",
+              "id": "33",
               "content": "Part B - 2. Why did souls need food?",
               "options": [
                 "Theirs rotted",
@@ -439,7 +439,7 @@
               "correctAnswer": "C. FOR THEIR LONG JOURNEY TO HEAVEN"
             },
             {
-              "id": "s1_q9",
+              "id": "34",
               "content": "Part B - 3. What did the souls do when they left cemeteries?",
               "options": [
                 "Got new bodies",
@@ -451,7 +451,7 @@
               "correctAnswer": "C. WENT TO HEAVEN"
             },
             {
-              "id": "s1_q10",
+              "id": "35",
               "content": "Part B - 4. Why do children perform riddles when they trick-or-treat?",
               "options": [
                 "To get candy",

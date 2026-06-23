@@ -11,61 +11,61 @@
           "content": "",
           "questions": [
             {
-              "id": "10",
+              "id": "1",
               "content": "She looks like someone that I know well, (fami[10])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "familiar"
             },
             {
-              "id": "11",
+              "id": "2",
               "content": "Drinking water is something that she must do. (neces[11])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "necessary"
             },
             {
-              "id": "12",
+              "id": "3",
               "content": "He has an idea of how the machine works, (the[12])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "theory"
             },
             {
-              "id": "13",
+              "id": "4",
               "content": "The reason that I am doing this is to help children, (pur[13])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "purpose"
             },
             {
-              "id": "14",
+              "id": "5",
               "content": "My teacher will make me want to get good grades, (enc[14])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "encourage"
             },
             {
-              "id": "15",
+              "id": "6",
               "content": "I agree with your idea. I think it will work. (ac[15])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "accept"
             },
             {
-              "id": "16",
+              "id": "7",
               "content": "It is difficult to keep from falling when you stand on one foot, (ba[16])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "balance"
             },
             {
-              "id": "17",
+              "id": "8",
               "content": "Her routine of exercising after work is common for many people. (Pa[17])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "pattern"
             },
             {
-              "id": "18",
+              "id": "9",
               "content": "There is a big difference between day and night. (c[18])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "contrast"
             },
             {
-              "id": "19",
+              "id": "10",
               "content": "The Earth has a solitary moon, (s[19])",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "single"
@@ -79,7 +79,7 @@
           "content": "",
           "questions": [
             {
-              "id": "1",
+              "id": "11",
               "content": "used when something must be done",
               "options": [
                 "propose",
@@ -91,7 +91,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "2",
+              "id": "12",
               "content": "to stop something from falling down",
               "options": [
                 "balance",
@@ -103,7 +103,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "3",
+              "id": "13",
               "content": "a way that something is very different",
               "options": [
                 "grab",
@@ -115,7 +115,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "4",
+              "id": "14",
               "content": "an idea about something",
               "options": [
                 "theory",
@@ -127,7 +127,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "5",
+              "id": "15",
               "content": "the only one",
               "options": [
                 "pattern",
@@ -147,7 +147,7 @@
           "content": "",
           "questions": [
             {
-              "id": "20",
+              "id": "16",
               "content": "It started to rain, ____________.",
               "options": [
                 "it hung on the wall",
@@ -157,7 +157,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "21",
+              "id": "17",
               "content": "When she heard I was leaving, ____________.",
               "options": [
                 "she proposed a party",
@@ -167,7 +167,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "22",
+              "id": "18",
               "content": "Don't pull on my shirt, or ____________.",
               "options": [
                 "you might tear it",
@@ -177,7 +177,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "23",
+              "id": "19",
               "content": "If you try hard, ____________.",
               "options": [
                 "you can attend many things",
@@ -187,7 +187,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "24",
+              "id": "20",
               "content": "When I catch fish, ____________.",
               "options": [
                 "I usually release them back into the water",
@@ -213,7 +213,7 @@
           "content": "",
           "questions": [
             {
-              "id": "6",
+              "id": "21",
               "content": "What is this story about?",
               "options": [
                 "The contrast between the sun and the moon",
@@ -225,7 +225,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "7",
+              "id": "22",
               "content": "Why does the girl encourage someone to grab her hair?",
               "options": [
                 "She doesn't want him to tear her dress.",
@@ -237,7 +237,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "8",
+              "id": "23",
               "content": "What was true of the boy in the story?",
               "options": [
                 "He accepted the invitation when his sister proposed a party.",
@@ -249,7 +249,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "9",
+              "id": "24",
               "content": "Why does the girl become angry?",
               "options": [
                 "The boy doesn't release her hair.",

@@ -18,7 +18,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u18_ex1_a_1",
+              "id": "1",
               "content": "an underground room",
               "options": [
                 "a. accent",
@@ -30,7 +30,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_ex1_a_2",
+              "id": "2",
               "content": "to think about something",
               "options": [
                 "a. complicate",
@@ -42,7 +42,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u18_ex1_a_3",
+              "id": "3",
               "content": "the written words of a play or film",
               "options": [
                 "a. script",
@@ -54,7 +54,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex1_a_4",
+              "id": "4",
               "content": "a group that sings",
               "options": [
                 "a. hermits",
@@ -66,7 +66,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u18_ex1_a_5",
+              "id": "5",
               "content": "in a fair way",
               "options": [
                 "a. comic",
@@ -86,7 +86,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u18_ex1_b_1",
+              "id": "6",
               "content": "slam",
               "options": [
                 "a. to close loudly",
@@ -98,7 +98,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex1_b_2",
+              "id": "7",
               "content": "decline",
               "options": [
                 "a. to look for",
@@ -110,7 +110,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_ex1_b_3",
+              "id": "8",
               "content": "hermit",
               "options": [
                 "a. clothing for your hands",
@@ -122,7 +122,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u18_ex1_b_4",
+              "id": "9",
               "content": "leather",
               "options": [
                 "a. a distinct way of speaking",
@@ -134,7 +134,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_ex1_b_5",
+              "id": "10",
               "content": "barber",
               "options": [
                 "a. a singing group",
@@ -154,7 +154,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u18_ex2_a_1",
+              "id": "11",
               "content": "The writer's comic stories_____",
               "options": [
                 "a. always make me laugh",
@@ -166,7 +166,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_a_2",
+              "id": "12",
               "content": "Donna usually ran errands_____",
               "options": [
                 "a. after hearing them sing in church",
@@ -178,7 +178,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "u18_ex2_a_3",
+              "id": "13",
               "content": "I tried to reserve_____",
               "options": [
                 "a. some seats for this week's show",
@@ -190,7 +190,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_a_4",
+              "id": "14",
               "content": "She wanted to join the choir_____",
               "options": [
                 "a. after hearing them sing in church",
@@ -202,7 +202,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_a_5",
+              "id": "15",
               "content": "A beautiful staircase_____",
               "options": [
                 "a. slept in small cave",
@@ -214,7 +214,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_ex2_a_6",
+              "id": "16",
               "content": "The speaker's strong accent_____",
               "options": [
                 "a. made him hard to understand",
@@ -226,7 +226,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_a_7",
+              "id": "17",
               "content": "Roger pondered a long time_____",
               "options": [
                 "a. led up to the second floor",
@@ -238,7 +238,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_ex2_a_8",
+              "id": "18",
               "content": "The hermit_____",
               "options": [
                 "a. just before I left the house",
@@ -250,7 +250,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u18_ex2_a_9",
+              "id": "19",
               "content": "I remembered to make sure I had my gloves_____",
               "options": [
                 "a. just before I left the house",
@@ -262,7 +262,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_a_10",
+              "id": "20",
               "content": "The large basement_____",
               "options": [
                 "a. makes a great playroom",
@@ -282,7 +282,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u18_ex2_b_1",
+              "id": "21",
               "content": "I put some medicine in my eyes,_____",
               "options": [
                 "a. so I had to keep blinking them",
@@ -294,7 +294,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_b_2",
+              "id": "22",
               "content": "The boy's mom yelled at him for getting mud on the couch,_____",
               "options": [
                 "a. because Tony spent a lot of time on the script",
@@ -306,7 +306,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_ex2_b_3",
+              "id": "23",
               "content": "He asked Sara to see the scary movie,_____",
               "options": [
                 "a. so I went to see the barber",
@@ -318,7 +318,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u18_ex2_b_4",
+              "id": "24",
               "content": "He spent the period daydreaming. So when he turned in his test,_____",
               "options": [
                 "a. it was completely blank",
@@ -330,7 +330,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_b_5",
+              "id": "25",
               "content": "The new play was great_____",
               "options": [
                 "a. because Tony spent a lot of time on the script",
@@ -342,7 +342,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_b_6",
+              "id": "26",
               "content": "I didn't pay attention in class,_____",
               "options": [
                 "a. so doing the homework was complicated",
@@ -354,7 +354,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_b_7",
+              "id": "27",
               "content": "My hair was a mess,_____",
               "options": [
                 "a. so I went to see the barber",
@@ -366,7 +366,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_b_8",
+              "id": "28",
               "content": "He couldn't stand the sound of the music,_____",
               "options": [
                 "a. so he left the room and slammed the door",
@@ -378,7 +378,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_b_9",
+              "id": "29",
               "content": "Dean and Anne finished the race at the same time,_____",
               "options": [
                 "a. so they justly shared the prize",
@@ -390,7 +390,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_ex2_b_10",
+              "id": "30",
               "content": "He lost his glasses,_____",
               "options": [
                 "a. so he had to search for them for an hour",
@@ -418,7 +418,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u18_rc_a_1",
+              "id": "31",
               "content": "The title of the script was The Big Barber.",
               "options": [
                 "A. True",
@@ -428,7 +428,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_rc_a_2",
+              "id": "32",
               "content": "Robby wanted the part of the hermit because he would get to talk with an accent.",
               "options": [
                 "A. True",
@@ -438,7 +438,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_rc_a_3",
+              "id": "33",
               "content": "Robby declined Peter's offer to practice together.",
               "options": [
                 "A. True",
@@ -448,7 +448,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_rc_a_4",
+              "id": "34",
               "content": "The scene on the staircase was about the migrant searching for a new job.",
               "options": [
                 "A. True",
@@ -458,7 +458,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_rc_a_5",
+              "id": "35",
               "content": "Peter's mind was blank during the audition.",
               "options": [
                 "A. True",
@@ -468,7 +468,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "u18_rc_a_6",
+              "id": "36",
               "content": "Peter felt that Robby justly received the lead role.",
               "options": [
                 "A. True",
@@ -486,7 +486,7 @@
           "content": "",
           "questions": [
             {
-              "id": "u18_rc_b_1",
+              "id": "37",
               "content": "Why did Peter decide not to practice?",
               "options": [
                 "a. He didn't want the part.",
@@ -498,7 +498,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_rc_b_2",
+              "id": "38",
               "content": "Where did Robby suggest they practice together?",
               "options": [
                 "a. At the school",
@@ -510,7 +510,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "u18_rc_b_3",
+              "id": "39",
               "content": "What was Peter's first excuse for not practicing with Robby?",
               "options": [
                 "a. He had to run errands.",
@@ -522,7 +522,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "u18_rc_b_4",
+              "id": "40",
               "content": "What kind of play were the boys auditioning for?",
               "options": [
                 "a. Romance",
