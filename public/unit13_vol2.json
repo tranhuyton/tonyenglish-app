@@ -142,8 +142,8 @@
               "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. I should quit eating candy because it is bad for me.",
-                "b. The tiny tower stretched to the sky."
+                "a. I should <b>quit</b> eating candy because it is bad for me.",
+                "b. The <b>tiny</b> tower stretched to the sky."
               ],
               "explanation": "quit (từ bỏ) hợp lý khi nói bỏ ăn kẹo vì nó không tốt.",
               "correctAnswer": "A"
@@ -152,7 +152,7 @@
               "id": "12",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. We ran far above the mountain peak.",
+                "a. We ran far above the <b>mountain</b> peak.",
                 "b. I will need water if I'm going to hike the long trail."
               ],
               "explanation": "hike (đi bộ đường dài) hợp lý khi cần nước uống.",
@@ -162,8 +162,8 @@
               "id": "13",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. If I want to get better at sports, I should quit playing.",
-                "b. The tiny ant crawled in under the door."
+                "a. If I want to get better at sports, I should <b>quit</b> playing.",
+                "b. The <b>tiny</b> ant crawled in under the door."
               ],
               "explanation": "tiny (nhỏ bé) hợp lý khi mô tả con kiến.",
               "correctAnswer": "B"
@@ -172,8 +172,8 @@
               "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The clouds look like they can touch the mountain peaks.",
-                "b. I have a great deal of pride when I lose a contest."
+                "a. The clouds look like they can touch the <b>mountain</b> peaks.",
+                "b. I have a great deal of <b>pride</b> when I lose a contest."
               ],
               "explanation": "peak (đỉnh núi) hợp lý khi nói mây chạm đến đỉnh núi.",
               "correctAnswer": "A"
@@ -182,7 +182,7 @@
               "id": "15",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The boy was filled with pride when he learned how to read.",
+                "a. The boy was filled with <b>pride</b> when he learned how to read.",
                 "b. I hiked downstairs from my room."
               ],
               "explanation": "pride (tự hào) hợp lý khi cậu bé học được cách đọc.",

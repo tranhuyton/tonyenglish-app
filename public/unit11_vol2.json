@@ -14,7 +14,7 @@
               "id": "1",
               "content": "<p>1.</p>",
               "options": [
-                "a. We learned about grammar in astronomy class.",
+                "a. We learned about grammar in <b>astronomy</b> class.",
                 "b. Do not interfere when I am working."
               ],
               "explanation": "interfere có nghĩa là xen vào, cản trở. astronomy là thiên văn học, không học ngữ pháp.",
@@ -24,8 +24,8 @@
               "id": "2",
               "content": "<p>2.</p>",
               "options": [
-                "a. It was very kind of him to spite his sister.",
-                "b. Which shelf should I put this on?"
+                "a. It was very kind of him to <b>spite</b> his sister.",
+                "b. Which <b>shelf</b> should I put this on?"
               ],
               "explanation": "shelf là cái kệ. spite là ác ý.",
               "correctAnswer": "B"
@@ -34,8 +34,8 @@
               "id": "3",
               "content": "<p>3.</p>",
               "options": [
-                "a. Do you have a shelf in your yard?",
-                "b. In astronomy class, I learned about the Solar System."
+                "a. Do you have a <b>shelf</b> in your yard?",
+                "b. In <b>astronomy</b> class, I learned about the Solar System."
               ],
               "explanation": "astronomy học về hệ mặt trời.",
               "correctAnswer": "B"
@@ -44,8 +44,8 @@
               "id": "4",
               "content": "<p>4.</p>",
               "options": [
-                "a. He drank all the milk in the fridge to spite me.",
-                "b. Mrs. Joyner is a strict principal, but she is actually very nice."
+                "a. He drank all the milk in the fridge to <b>spite</b> me.",
+                "b. Mrs. Joyner is a strict <b>principal</b>, but she is actually very nice."
               ],
               "explanation": "The answer key states Exercise 2 Q4 is b.",
               "correctAnswer": "B"
@@ -55,7 +55,7 @@
               "content": "<p>5.</p>",
               "options": [
                 "a. The loud music interferes with my concentration.",
-                "b. It is against his principals to be dishonest."
+                "b. It is against his <b>principals</b> to be dishonest."
               ],
               "explanation": "interfere nghĩa là làm cản trở. principal ở câu b bị sai chính tả so với principles.",
               "correctAnswer": "A"

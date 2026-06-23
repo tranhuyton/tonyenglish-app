@@ -156,7 +156,7 @@
               "content": "<p>1.</p>",
               "options": [
                 "a. When you mix things, you take them somewhere.",
-                "b. They make toys in a toy factory."
+                "b. They make <b>toys</b> in a toy factory."
               ],
               "explanation": "Câu b hợp lý vì nhà máy đồ chơi (toy factory) là nơi làm đồ chơi. Câu a sai nghĩa của mix.",
               "correctAnswer": "B"
@@ -165,7 +165,7 @@
               "id": "12",
               "content": "<p>2.</p>",
               "options": [
-                "a. A feature of this computer is its small size.",
+                "a. A feature of this computer is its <b>small</b> size.",
                 "b. We <b>populate</b> over the ocean."
               ],
               "explanation": "Câu a hợp lý: tính năng (feature) của máy tính này là kích thước nhỏ.",
@@ -225,7 +225,7 @@
               "id": "18",
               "content": "<p>8.</p>",
               "options": [
-                "a. The tree is very wide because it is small.",
+                "a. The tree is very wide because it is <b>small</b>.",
                 "b. Don't forget to organize a meeting for next week."
               ],
               "explanation": "Câu b hợp lý: đừng quên tổ chức (organize) một cuộc họp.",

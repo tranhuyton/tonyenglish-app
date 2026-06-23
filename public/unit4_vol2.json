@@ -191,7 +191,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "a. Eating rotten eggs satisfies me.",
-                "b. A marathon can last for hours."
+                "b. A <b>marathon</b> can last for hours."
               ],
               "explanation": "marathon là cuộc thi chạy dài.",
               "correctAnswer": "B"
@@ -200,8 +200,8 @@
               "id": "17",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. I have confidence that I can win the race.",
-                "b. It was a disaster when the students did well on the test."
+                "a. I have <b>confidence</b> that I can win the race.",
+                "b. It was a <b>disaster</b> when the students did well on the test."
               ],
               "explanation": "confidence là sự tự tin.",
               "correctAnswer": "A"
@@ -210,8 +210,8 @@
               "id": "18",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Some people scream when they watch a scary movie.",
-                "b. The narrow river was a mile wide."
+                "a. Some people <b>scream</b> when they watch a scary movie.",
+                "b. The <b>narrow</b> river was a mile wide."
               ],
               "explanation": "scream là hét lên vì sợ.",
               "correctAnswer": "A"
@@ -220,8 +220,8 @@
               "id": "19",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. A heart is inside a person’s chest.",
-                "b. My mother made a threat of giving me ice cream."
+                "a. A heart is inside a person’s <b>chest</b>.",
+                "b. My mother made a <b>threat</b> of giving me ice cream."
               ],
               "explanation": "chest là ngực.",
               "correctAnswer": "A"
@@ -230,8 +230,8 @@
               "id": "20",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The consequence of stealing is being punished.",
-                "b. If you win a prize, then you are a victim."
+                "a. The <b>consequence</b> of stealing is being punished.",
+                "b. If you win a prize, then you are a <b>victim</b>."
               ],
               "explanation": "consequence là hậu quả.",
               "correctAnswer": "A"
@@ -240,7 +240,7 @@
               "id": "21",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The boy wore pants on his chest.",
+                "a. The <b>boy</b> wore pants on his chest.",
                 "b. She supplemented her salary by working part-time on Saturdays."
               ],
               "explanation": "supplement là bổ sung.",
@@ -250,8 +250,8 @@
               "id": "22",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The bully made several threats to scare his classmates.",
-                "b. It’s a marathon from my front door to my bedroom."
+                "a. The bully made several <b>threats</b> to scare his classmates.",
+                "b. It’s a <b>marathon</b> from my front door to my bedroom."
               ],
               "explanation": "threat là lời đe dọa.",
               "correctAnswer": "A"
@@ -260,8 +260,8 @@
               "id": "23",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. When the girl did not know what to do, she had confidence.",
-                "b. The town was a disaster after the hurricane struck."
+                "a. When the girl did not know what to do, she had <b>confidence</b>.",
+                "b. The town was a <b>disaster</b> after the hurricane struck."
               ],
               "explanation": "disaster là thảm họa.",
               "correctAnswer": "B"
@@ -270,8 +270,8 @@
               "id": "24",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. You should always scream in the library.",
-                "b. The victim was badly hurt."
+                "a. You should always <b>scream</b> in the library.",
+                "b. The <b>victim</b> was badly hurt."
               ],
               "explanation": "victim là nạn nhân.",
               "correctAnswer": "B"
@@ -280,8 +280,8 @@
               "id": "25",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. It was hard to stay on the narrow path.",
-                "b. The boy created a consequence before the test started."
+                "a. It was hard to stay on the <b>narrow</b> path.",
+                "b. The <b>boy</b> created a consequence before the test started."
               ],
               "explanation": "narrow là hẹp.",
               "correctAnswer": "A"

@@ -190,7 +190,7 @@
               "id": "15",
               "content": "5. At the end of her speech...",
               "options": [
-                "a. don't forget to cheer loudly",
+                "a. don't forget to <b>cheer</b> loudly",
                 "b. fit into your clothes"
               ],
               "explanation": "Kết thúc bài phát biểu thì cổ vũ.",
@@ -231,7 +231,7 @@
               "content": "9. The artist made his art...",
               "options": [
                 "a. from a block of wood",
-                "b. the people cheered for victory"
+                "b. the people <b>cheered</b> for victory"
               ],
               "explanation": "Nghệ sĩ làm nghệ thuật từ một khối gỗ.",
               "correctAnswer": "A"

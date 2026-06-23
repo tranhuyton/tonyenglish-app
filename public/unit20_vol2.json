@@ -14,8 +14,8 @@
               "id": "1",
               "content": "<p>1.</p>",
               "options": [
-                "Learning Spanish was a gradual process for me.",
-                "The boy retired his mother."
+                "Learning Spanish was a <b>gradual</b> process for me.",
+                "The boy <b>retired</b> his mother."
               ],
               "explanation": "Option a makes better sense.",
               "correctAnswer": "A"
@@ -24,8 +24,8 @@
               "id": "2",
               "content": "<p>2.</p>",
               "options": [
-                "The bottle fell and broke in an instant.",
-                "I accomplish sleeping before I go to bed."
+                "The bottle fell and broke in an <b>instant</b>.",
+                "I <b>accomplish</b> sleeping before I go to bed."
               ],
               "explanation": "Option a makes better sense.",
               "correctAnswer": "A"
@@ -34,8 +34,8 @@
               "id": "3",
               "content": "<p>3.</p>",
               "options": [
-                "Four is the approximate number of forty.",
-                "The old man retired from his job."
+                "Four is the <b>approximate</b> number of forty.",
+                "The old man <b>retired</b> from his job."
               ],
               "explanation": "Option b makes better sense.",
               "correctAnswer": "B"
@@ -44,8 +44,8 @@
               "id": "4",
               "content": "<p>4.</p>",
               "options": [
-                "It is not always easy to accomplish hard goals.",
-                "The racecar won by going at a gradual speed."
+                "It is not always easy to <b>accomplish</b> hard goals.",
+                "The racecar won by going at a <b>gradual</b> speed."
               ],
               "explanation": "Option a makes better sense.",
               "correctAnswer": "A"
@@ -54,8 +54,8 @@
               "id": "5",
               "content": "<p>5.</p>",
               "options": [
-                "Peanuts are an instant to grow and eat.",
-                "His approximate height is two meters."
+                "Peanuts are an <b>instant</b> to grow and eat.",
+                "His <b>approximate</b> height is two meters."
               ],
               "explanation": "Option b makes better sense.",
               "correctAnswer": "B"

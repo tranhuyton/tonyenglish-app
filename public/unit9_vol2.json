@@ -14,8 +14,8 @@
               "id": "1",
               "content": "<p>1.</p>",
               "options": [
-                "a. Parents have authority over their children.",
-                "b. Poor people aid rich people by giving them money."
+                "a. Parents have <b>authority</b> over their children.",
+                "b. Poor people <b>aid</b> rich people by giving them money."
               ],
               "explanation": "Parents have authority over their children.",
               "correctAnswer": "A"
@@ -24,8 +24,8 @@
               "id": "2",
               "content": "<p>2.</p>",
               "options": [
-                "a. When you have authority, you cannot do anything.",
-                "b. When people cooperate, they can get more done."
+                "a. When you have <b>authority</b>, you cannot do anything.",
+                "b. When people <b>cooperate</b>, they can get more done."
               ],
               "explanation": "When people cooperate, they can get more done.",
               "correctAnswer": "B"
@@ -34,8 +34,8 @@
               "id": "3",
               "content": "<p>3.</p>",
               "options": [
-                "a. You should admire people who tell lies.",
-                "b. Learning a new language can frustrate some people."
+                "a. You should <b>admire</b> people who tell lies.",
+                "b. Learning a new language can <b>frustrate</b> some people."
               ],
               "explanation": "Learning a new language can frustrate some people.",
               "correctAnswer": "B"
@@ -44,8 +44,8 @@
               "id": "4",
               "content": "<p>4.</p>",
               "options": [
-                "a. If you aid someone, he or she will usually thank you.",
-                "b. If you cooperate with your friends, you will feel lonely."
+                "a. If you <b>aid</b> someone, he or she will usually thank you.",
+                "b. If you <b>cooperate</b> with your friends, you will feel lonely."
               ],
               "explanation": "If you aid someone, he or she will usually thank you.",
               "correctAnswer": "A"
@@ -54,8 +54,8 @@
               "id": "5",
               "content": "<p>5.</p>",
               "options": [
-                "a. You should frustrate your friends when they help you.",
-                "b. Most students admire teachers who work hard."
+                "a. You should <b>frustrate</b> your friends when they help you.",
+                "b. Most students <b>admire</b> teachers who work hard."
               ],
               "explanation": "Most students admire teachers who work hard.",
               "correctAnswer": "B"

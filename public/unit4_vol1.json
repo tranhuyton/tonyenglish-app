@@ -109,7 +109,7 @@
               "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
-                "The girl's positive words made me feel better.",
+                "The <b>girl's</b> positive words made me feel better.",
                 "We took the village out of the house."
               ],
               "explanation": "Từ ngữ tích cực (positive) làm cảm thấy tốt hơn là có nghĩa.",
@@ -119,7 +119,7 @@
               "id": "12",
               "content": "Which sentence makes better sense?",
               "options": [
-                "The calm girl yelled a lot.",
+                "The calm <b>girl</b> yelled a lot.",
                 "The team members asked Kate to represent them at the dinner."
               ],
               "explanation": "Đại diện (represent) cho đội là hợp lý. Người điềm tĩnh (calm) thì không la hét nhiều.",

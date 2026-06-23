@@ -132,8 +132,8 @@
               "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. I was behind the winner, so I won the race!",
-                "b. Webs are made by spiders."
+                "a. I was <b>behind</b> the winner, so I won the race!",
+                "b. <b>Webs</b> are made by spiders."
               ],
               "explanation": "Webs are made by spiders. is the logically correct sentence.",
               "correctAnswer": "B"
@@ -142,7 +142,7 @@
               "id": "12",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Reading increases your mental activity.",
+                "a. Reading increases your <b>mental</b> activity.",
                 "b. We removed the city last week."
               ],
               "explanation": "Reading increases your mental activity. is logical.",
@@ -152,8 +152,8 @@
               "id": "13",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. My shoes were behind the couch.",
-                "b. This mental exercise makes my arms tired."
+                "a. My shoes were <b>behind</b> the couch.",
+                "b. This <b>mental</b> exercise makes my arms tired."
               ],
               "explanation": "My shoes were behind the couch. is logical.",
               "correctAnswer": "A"
@@ -162,8 +162,8 @@
               "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Have you ever found a bird's web?",
-                "b. I lowered the box onto the ground."
+                "a. Have you ever found a bird's <b>web</b>?",
+                "b. I <b>lowered</b> the box onto the ground."
               ],
               "explanation": "I lowered the box onto the ground. is logical.",
               "correctAnswer": "B"
@@ -172,7 +172,7 @@
               "id": "15",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Could you help me lower my seat please?",
+                "a. Could you help me <b>lower</b> my seat please?",
                 "b. Be sure to remove the trash from the house."
               ],
               "explanation": "The correct choice is b based on the answer key.",

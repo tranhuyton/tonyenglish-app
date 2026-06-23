@@ -155,8 +155,8 @@
               "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Many people wear a shell before going out into the rain.",
-                "b. In the past three years, the city has had two floods."
+                "a. <b>Many</b> people wear a shell before going out into the rain.",
+                "b. In the past three <b>years</b>, the city has had two floods."
               ],
               "explanation": "flood (n): lũ lụt. Lũ lụt là hiện tượng nước bao phủ một khu vực vốn dĩ khô ráo.",
               "correctAnswer": "B"
@@ -165,8 +165,8 @@
               "id": "12",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Nowadays, many students like using the Internet to do research.",
-                "b. Many groups have annual meetings every month."
+                "a. <b>Nowadays</b>, many students like using the Internet to do research.",
+                "b. <b>Many</b> groups have annual meetings every month."
               ],
               "explanation": "nowadays (adv): ngày nay. Nowadays có nghĩa là ở thời điểm hiện tại.",
               "correctAnswer": "A"
@@ -175,8 +175,8 @@
               "id": "13",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Some dogs have interesting feathers.",
-                "b. You cannot ride a bicycle if it doesn’t have wheels."
+                "a. Some dogs have interesting <b>feathers</b>.",
+                "b. You cannot ride a bicycle if it doesn’t have <b>wheels</b>."
               ],
               "explanation": "wheel (n): bánh xe. Bánh xe là một bộ phận hình tròn trên các phương tiện giao thông, có thể quay khi di chuyển.",
               "correctAnswer": "B"
@@ -185,8 +185,8 @@
               "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Churches don’t let people read religious books.",
-                "b. Birds use their feathers to help them fly."
+                "a. <b>Churches</b> don’t let people read religious books.",
+                "b. Birds use their <b>feathers</b> to help them fly."
               ],
               "explanation": "feather (n): lông vũ. Lông vũ là những chiếc lông bao phủ cơ thể loài chim.",
               "correctAnswer": "B"
@@ -195,8 +195,8 @@
               "id": "15",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Many people enjoy watching romantic movies.",
-                "b. If you get good grades, you don’t deserve to graduate."
+                "a. <b>Many</b> people enjoy watching romantic movies.",
+                "b. If you get good grades, you don’t <b>deserve</b> to graduate."
               ],
               "explanation": "romantic (adj): lãng mạn. Lãng mạn có nghĩa là những gì liên quan đến tình yêu.",
               "correctAnswer": "A"
@@ -205,8 +205,8 @@
               "id": "16",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. A crab is an example of an animal that has a shell.",
-                "b. People never go fishing near the shore."
+                "a. A crab is an example of an animal that has a <b>shell</b>.",
+                "b. People never go fishing near the <b>shore</b>."
               ],
               "explanation": "shell (n): vỏ cứng. Vỏ cứng là lớp vỏ bảo vệ cơ thể của một số sinh vật biển.",
               "correctAnswer": "A"
@@ -215,8 +215,8 @@
               "id": "17",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. People who do bad things deserve to be punished.",
-                "b. Mountains and hills are examples of floods."
+                "a. People who do bad things <b>deserve</b> to be punished.",
+                "b. Mountains and hills are examples of <b>floods</b>."
               ],
               "explanation": "deserve (v): xứng đáng. Xứng đáng có nghĩa là đáng được nhận một điều gì đó như là kết quả của những hành động mình đã làm.",
               "correctAnswer": "A"
@@ -225,8 +225,8 @@
               "id": "18",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Horses are more common than cars nowadays.",
-                "b. People who are religious go to church."
+                "a. Horses are more common than cars <b>nowadays</b>.",
+                "b. People who are <b>religious</b> go to church."
               ],
               "explanation": "religious (adj): thuộc về tôn giáo. Religious có nghĩa là những gì liên quan đến tôn giáo.",
               "correctAnswer": "B"
@@ -235,8 +235,8 @@
               "id": "19",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. If you are romantic, you probably don’t like movies about love.",
-                "b. There are beaches along the shore of some oceans and lakes."
+                "a. If you are <b>romantic</b>, you probably don’t like movies about love.",
+                "b. There are beaches along the <b>shore</b> of some oceans and lakes."
               ],
               "explanation": "shore (n): bờ biển/bờ hồ. Shore là phần rìa của một vùng nước lớn.",
               "correctAnswer": "B"
@@ -245,8 +245,8 @@
               "id": "20",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. You should see your doctor once a year for an annual checkup.",
-                "b. The wind makes the wheels of a car turn."
+                "a. You should see your doctor once a <b>year</b> for an annual checkup.",
+                "b. The wind makes the <b>wheels</b> of a car turn."
               ],
               "explanation": "annual (adj): hàng năm. Annual có nghĩa là sự việc xảy ra mỗi năm một lần.",
               "correctAnswer": "A"

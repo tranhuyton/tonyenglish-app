@@ -145,7 +145,7 @@
               "id": "7",
               "content": "<p>1.</p>",
               "options": [
-                "Because the base of the lamp was broken, it could not stand up.",
+                "Because the <b>base</b> of the lamp was broken, it could not stand up.",
                 "I decided to leave early so that I could be late."
               ],
               "explanation": "a is correct.",
@@ -155,8 +155,8 @@
               "id": "8",
               "content": "<p>2.</p>",
               "options": [
-                "The roof was at the base of the house.",
-                "I had an operation to fix my broken nose."
+                "The roof was at the <b>base</b> of the house.",
+                "I had an <b>operation</b> to fix my broken nose."
               ],
               "explanation": "b is correct.",
               "correctAnswer": "B"
@@ -165,8 +165,8 @@
               "id": "9",
               "content": "<p>3.</p>",
               "options": [
-                "The various movies were all the same.",
-                "I like dogs, though I don't like most animals."
+                "The <b>various</b> movies were all the same.",
+                "I like dogs, <b>though</b> I don't like most animals."
               ],
               "explanation": "b is correct.",
               "correctAnswer": "B"
@@ -176,7 +176,7 @@
               "content": "<p>4.</p>",
               "options": [
                 "I will leave early in the morning to catch my plane.",
-                "My friends and I decided to throw an operation for my sister."
+                "My friends and I decided to throw an <b>operation</b> for my sister."
               ],
               "explanation": "a is correct.",
               "correctAnswer": "A"
@@ -185,8 +185,8 @@
               "id": "11",
               "content": "<p>5.</p>",
               "options": [
-                "Though I was rich, I bought a lot of cars.",
-                "I made an effort to get the job done."
+                "<b>Though</b> I was rich, I bought a lot of cars.",
+                "I made an <b>effort</b> to get the job done."
               ],
               "explanation": "b is correct.",
               "correctAnswer": "B"
@@ -195,7 +195,7 @@
               "id": "12",
               "content": "<p>6.</p>",
               "options": [
-                "He never used his brain when he faced problems!",
+                "He never used his <b>brain</b> when he faced problems!",
                 "The job appeared very quickly."
               ],
               "explanation": "a is correct.",
@@ -205,8 +205,8 @@
               "id": "13",
               "content": "<p>7.</p>",
               "options": [
-                "I entered the house through the door.",
-                "I threw the effort with all my might."
+                "I <b>entered</b> the house through the door.",
+                "I threw the <b>effort</b> with all my might."
               ],
               "explanation": "a is correct.",
               "correctAnswer": "A"
@@ -216,7 +216,7 @@
               "content": "<p>8.</p>",
               "options": [
                 "She appeared very happy on her birthday.",
-                "People use their brains to exercise."
+                "People use their <b>brains</b> to exercise."
               ],
               "explanation": "a is correct.",
               "correctAnswer": "A"
@@ -225,8 +225,8 @@
               "id": "15",
               "content": "<p>9.</p>",
               "options": [
-                "I informed him of the new rules.",
-                "I entered out of the room."
+                "I <b>informed</b> him of the new rules.",
+                "I <b>entered</b> out of the room."
               ],
               "explanation": "a is correct.",
               "correctAnswer": "A"
@@ -235,8 +235,8 @@
               "id": "16",
               "content": "<p>10.</p>",
               "options": [
-                "The rock informed me that I was too heavy.",
-                "There were various things to do at the event."
+                "The rock <b>informed</b> me that I was too heavy.",
+                "There were <b>various</b> things to do at the event."
               ],
               "explanation": "b is correct.",
               "correctAnswer": "B"

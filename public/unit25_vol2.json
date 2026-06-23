@@ -155,8 +155,8 @@
               "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. My beans yelled when I dropped them.",
-                "b. I keep all of my money in my wallet."
+                "a. My beans <b>yelled</b> when I dropped them.",
+                "b. I keep all of my money in my <b>wallet</b>."
               ],
               "explanation": "Ví là nơi để cất tiền (wallet).",
               "correctAnswer": "B"
@@ -165,8 +165,8 @@
               "id": "12",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The rude boy always said 'please' and 'thank you'.",
-                "b. The fence around the house needed to be painted."
+                "a. The <b>rude</b> boy always said 'please' and 'thank you'.",
+                "b. The <b>fence</b> around the house needed to be painted."
               ],
               "explanation": "Hàng rào (fence) cần được sơn.",
               "correctAnswer": "B"
@@ -175,8 +175,8 @@
               "id": "13",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The criminal was sent to jail.",
-                "b. I can admit to a race because I am fast."
+                "a. The <b>criminal</b> was sent to jail.",
+                "b. I can <b>admit</b> to a race because I am fast."
               ],
               "explanation": "Tội phạm (criminal) bị gửi đến nhà tù.",
               "correctAnswer": "A"
@@ -185,8 +185,8 @@
               "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The man built a cabin in the forest.",
-                "b. The cash tasted good tonight."
+                "a. The <b>man</b> built a cabin in the forest.",
+                "b. The <b>cash</b> tasted good tonight."
               ],
               "explanation": "Người đàn ông xây một túp lều (cabin) trong rừng.",
               "correctAnswer": "A"
@@ -195,8 +195,8 @@
               "id": "15",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The penalty for your birthday is a big cake.",
-                "b. The coach kept the footballs in a large bin."
+                "a. The <b>penalty</b> for your birthday is a big cake.",
+                "b. The coach kept the footballs in a large <b>bin</b>."
               ],
               "explanation": "Huấn luyện viên cất những quả bóng trong một cái thùng lớn (bin).",
               "correctAnswer": "B"
@@ -205,8 +205,8 @@
               "id": "16",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. We were nice to the rude man, but he was mean to us.",
-                "b. The wallet made his dinner taste better."
+                "a. We were <b>nice</b> to the rude man, but he was mean to us.",
+                "b. The <b>wallet</b> made his dinner taste better."
               ],
               "explanation": "Người thô lỗ (rude) thì xấu tính với chúng tôi.",
               "correctAnswer": "A"
@@ -215,8 +215,8 @@
               "id": "17",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The strong fence let all of the sheep go into the field.",
-                "b. It was loud at the party, so he had to yell for me to hear him."
+                "a. The strong <b>fence</b> let all of the sheep go into the field.",
+                "b. It was loud at the party, so he had to <b>yell</b> for me to hear him."
               ],
               "explanation": "Trời ồn nên anh ấy phải hét lên (yell).",
               "correctAnswer": "B"
@@ -225,8 +225,8 @@
               "id": "18",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. When he does something wrong, he always admits it.",
-                "b. The mean cabin told the boy to go away."
+                "a. When he does something wrong, he always <b>admits</b> it.",
+                "b. The mean <b>cabin</b> told the boy to go away."
               ],
               "explanation": "Khi làm sai, anh ta luôn thừa nhận (admits).",
               "correctAnswer": "A"
@@ -235,8 +235,8 @@
               "id": "19",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. If you cheat during the game, there will be a penalty.",
-                "b. Criminals are always nice to people."
+                "a. If you cheat during the game, there will be a <b>penalty</b>.",
+                "b. <b>Criminals</b> are always nice to people."
               ],
               "explanation": "Nếu gian lận sẽ có hình phạt (penalty).",
               "correctAnswer": "A"
@@ -245,8 +245,8 @@
               "id": "20",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. She liked to bin her toys.",
-                "b. I do not have enough cash to buy a car."
+                "a. She liked to <b>bin</b> her toys.",
+                "b. I do not have enough <b>cash</b> to buy a car."
               ],
               "explanation": "Tôi không có đủ tiền mặt (cash) để mua xe.",
               "correctAnswer": "B"

@@ -82,7 +82,7 @@
               "id": "6",
               "content": "Which sentence makes better sense?",
               "options": [
-                "If I receive a present, I give someone something.",
+                "If I receive a present, I give <b>someone</b> something.",
                 "If you steal money, you can get in trouble."
               ],
               "explanation": "Ăn cắp tiền (steal money) thì sẽ gặp rắc rối.",
@@ -93,7 +93,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "A man who is alone can contact many people.",
-                "If a woman is sad, someone should comfort her."
+                "If a woman is sad, <b>someone</b> should comfort her."
               ],
               "explanation": "Khi buồn thì cần được an ủi (comfort).",
               "correctAnswer": "B"
@@ -122,7 +122,7 @@
               "id": "10",
               "content": "Which sentence makes better sense?",
               "options": [
-                "If you earn something, you give it to someone.",
+                "If you earn <b>something</b>, you give it to someone.",
                 "Postmen deliver mail from one house to another."
               ],
               "explanation": "Người đưa thư giao thư (deliver).",
