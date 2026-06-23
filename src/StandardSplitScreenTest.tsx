@@ -543,6 +543,14 @@ const handleFinish = async () => {
     return () => clearInterval(timer);
   }, [testStarted, isReviewMode]);
 
+  // Cuộn lên đầu trang khi đổi Part
+  useEffect(() => {
+    setTimeout(() => {
+        if (leftPaneRef.current) leftPaneRef.current.scrollTop = 0;
+        if (rightPaneRef.current) rightPaneRef.current.scrollTop = 0;
+    }, 10);
+  }, [currentPartIndex]);
+
   const formatTime = (sec: number) => {
     const m = Math.floor(sec / 60).toString().padStart(2, '0');
     const s = (sec % 60).toString().padStart(2, '0');
@@ -1175,13 +1183,7 @@ const handleFinish = async () => {
               return (
                 <button 
                   key={index} 
-                  onClick={() => {
-                      setCurrentPartIndex(index);
-                      setTimeout(() => {
-                          if (leftPaneRef.current) leftPaneRef.current.scrollTop = 0;
-                          if (rightPaneRef.current) rightPaneRef.current.scrollTop = 0;
-                      }, 10);
-                  }} 
+                  onClick={() => setCurrentPartIndex(index)} 
                   className={`px-4 py-2 text-[14px] font-bold transition-all whitespace-nowrap border-b-[3px] rounded-none ${isActive ? (isReviewMode ? 'text-emerald-700 border-emerald-600' : 'text-[#0ea5e9] border-[#0ea5e9]') : 'text-slate-500 border-transparent hover:text-slate-800'}`}
                 >
                   {p.title || `Part ${index + 1}`}
