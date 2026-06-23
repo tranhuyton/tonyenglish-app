@@ -1,327 +1,263 @@
 {
+  "id": "u11_v1",
+  "title": "Unit 11: Volume 1",
   "parts": [
     {
-      "id": "part1",
+      "id": "p0",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">academy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkædəmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An academy is a special type of school.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are many courses taught at the academy that I go to.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ancient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[einʃənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ancient, it is very old.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I want to see the ancient buildings in Rome.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">board</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɔ:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A board is a flat piece of wood.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sign was made of a few wooden boards.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">century</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sentʃuri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A century is one hundred years.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our company is celebrating a century of business in London.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">clue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A clue is a fact or object that helps solve a mystery or crime.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The detective found some clues on the sidewalk.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnsərt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A concert is an event where you listen to people play music.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I enjoyed the concert last night. The band was very good.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">county</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kaunti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A county is the largest political division of a state in the US.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He wanted to represent the citizens of his county.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dictionary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dikʃəneri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dictionary is a book that tells you what words mean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I use the dictionary to learn new words.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[igzist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To exist is to be real.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Do you really think that unicorns ever existed?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flæt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Flat describes something that is level and smooth with no curved parts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My parents bought a new flat screen TV over the weekend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gentleman</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒentlmən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A gentleman is a nice man.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandfather is a kind and helpful gentleman.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hidden</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hidn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hidden means to be not easily noticed or too hard to find.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hidden camera recorded everything in the parking lot.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">maybe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[meibi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Maybe is used to show that something is possible or may be true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If I focus hard enough, maybe I can come up with the right answer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">officer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑfisər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An officer is a leader in the army.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The soldiers followed the orders of the officer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">original</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əridʒənəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is original, it is the first one of that thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This is the original painting of the Mona Lisa.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pound</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paund]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pound something is to hit it many times with a lot of force.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He pounded the nail with the hammer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">process</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑses]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A process is the steps to take to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Making a cake is a long process.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">publish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌbliʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To publish a book is to get it printed and ready to sell.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That company publishes daily newspapers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">theater</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θi:ətər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A theater is a building where you watch plays, shows, and movies.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We went to the theater to see a play.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wealth</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[welθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Wealth is a large amount of money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ One of the most important things to some people is wealth.</div></div></div></div></div></div>",
       "sections": [
         {
-          "id": "sec1_wordlist",
-          "title": "Part A: Choose the right definition for the given word.",
+          "id": "sec1",
+          "title": "Part A: Choose the right word for the given definition.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "exist",
+              "content": "to marry",
               "options": [
-                "the first one",
-                "to print a book",
-                "to be real",
-                "something to help you"
+                "collect",
+                "wed",
+                "prepare",
+                "introduce"
               ],
-              "explanation": "exist nghĩa là tồn tại, có thật (to be real).",
-              "correctAnswer": "C"
+              "explanation": "Theo bài học, 'marry' có nghĩa là kết hôn (wed).",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
-              "content": "clue",
+              "content": "a living thing",
               "options": [
-                "hint",
-                "steps",
-                "heavy",
-                "wood"
+                "conversation",
+                "truth",
+                "creature",
+                "decision"
               ],
-              "explanation": "clue nghĩa là manh mối (hint).",
-              "correctAnswer": "A"
+              "explanation": "'creature' nghĩa là sinh vật (a living thing).",
+              "correctAnswer": "C"
             },
             {
               "id": "3",
-              "content": "maybe",
+              "content": "to move a boat across the water",
               "options": [
-                "where you see shows",
-                "possible or likely to be true",
-                "where classes are held",
-                "where you hear music"
+                "spend",
+                "berry",
+                "forest",
+                "sail"
               ],
-              "explanation": "maybe nghĩa là có lẽ (possible or likely to be true).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "4",
-              "content": "hidden",
-              "options": [
-                "one hundred years",
-                "level with no curves",
-                "a nice man",
-                "not able to be seen"
-              ],
-              "explanation": "hidden nghĩa là bị giấu, bị che khuất (not able to be seen).",
+              "explanation": "'sail' nghĩa là chèo thuyền, đi thuyền (to move a boat across the water).",
               "correctAnswer": "D"
             },
             {
-              "id": "5",
-              "content": "wealth",
+              "id": "4",
+              "content": "one thing or the other",
               "options": [
-                "old",
-                "leader",
-                "money",
-                "season"
+                "asleep",
+                "compete",
+                "either",
+                "serious"
               ],
-              "explanation": "wealth nghĩa là sự giàu có, của cải (money).",
+              "explanation": "'either' nghĩa là hoặc cái này hoặc cái kia (one thing or the other).",
               "correctAnswer": "C"
             },
             {
-              "id": "6",
-              "content": "pound",
+              "id": "5",
+              "content": "any longer",
               "options": [
-                "to hit hard many times",
-                "the steps you take",
-                "metal used in money",
-                "the largest political division of a state"
+                "ground",
+                "strange",
+                "wake",
+                "anymore"
               ],
-              "explanation": "pound nghĩa là gõ mạnh, đập mạnh (to hit hard many times).",
-              "correctAnswer": "A"
+              "explanation": "'anymore' nghĩa là nữa, thêm nữa (any longer).",
+              "correctAnswer": "D"
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Part B: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "6",
+              "content": "The doll broke when it fell onto the <u>floor</u>. [ 1 ]",
+              "explanation": "Từ đồng nghĩa với 'floor' (sàn nhà, mặt đất) là 'ground'.",
+              "correctAnswer": "ground"
             },
             {
               "id": "7",
-              "content": "century",
-              "options": [
-                "first",
-                "hundred",
-                "school",
-                "man"
-              ],
-              "explanation": "century nghĩa là thế kỷ, 100 năm (hundred).",
-              "correctAnswer": "B"
+              "content": "I like to <u>use my time</u> taking long walks in the forest. [ 1 ]",
+              "explanation": "Từ đồng nghĩa với 'use my time' là 'spend'.",
+              "correctAnswer": "spend time"
             },
             {
               "id": "8",
-              "content": "officer",
-              "options": [
-                "a leader in the army",
-                "where you listen to music",
-                "a sports group",
-                "something you use to help get a job done"
-              ],
-              "explanation": "officer nghĩa là sĩ quan, nhà chức trách (a leader in the army).",
-              "correctAnswer": "A"
+              "content": "He loved to <u>travel in his boat</u> to many islands. [ 1 ]",
+              "explanation": "Từ đồng nghĩa với 'travel in his boat' là 'sail'.",
+              "correctAnswer": "sail"
             },
             {
               "id": "9",
-              "content": "theater",
-              "options": [
-                "where you see a movie",
-                "a lot of money",
-                "a hint about something",
-                "a piece of wood"
-              ],
-              "explanation": "theater nghĩa là rạp hát, rạp chiếu phim (where you see a movie).",
-              "correctAnswer": "A"
+              "content": "I <u>stop sleeping</u> when the dog barks. [ 1 ]",
+              "explanation": "Từ đồng nghĩa với 'stop sleeping' (ngừng ngủ, thức dậy) là 'wake'.",
+              "correctAnswer": "wake"
             },
             {
               "id": "10",
-              "content": "ancient",
-              "options": [
-                "to be real",
-                "possible or likely to be true",
-                "very old",
-                "to get a book ready to sell"
-              ],
-              "explanation": "ancient nghĩa là cổ đại, rất cũ (very old).",
-              "correctAnswer": "C"
+              "content": "The <u>area</u> was full of trees and plants. [ 1 ]",
+              "explanation": "Khu vực nhiều cây cối là 'forest' (rừng).",
+              "correctAnswer": "forest"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         },
         {
-          "id": "sec2_wordlist",
-          "title": "Exercise 2: Circle two words that are related in each group.",
-          "content": "",
+          "id": "sec3",
+          "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
+          "content": "<p class=\"font-bold mb-4\">WORD BANK: compete, decision, collect, strange, prepare, serious, truth, asleep, introduce, conversation</p>",
+          "questionType": "Điền từ",
           "questions": [
             {
               "id": "11",
-              "content": "a. process b. maybe c. flat d. publish",
-              "options": [
-                "process / publish",
-                "maybe / flat",
-                "process / flat",
-                "maybe / publish"
-              ],
-              "explanation": "Từ khóa ở đây là process và publish có liên quan (theo đáp án a / d).",
-              "correctAnswer": "A"
+              "content": "To [ 1 ] for the test, I had to study a long time.",
+              "explanation": "Để chuẩn bị cho bài kiểm tra, cần phải học bài lâu (prepare).",
+              "correctAnswer": "prepare"
             },
             {
               "id": "12",
-              "content": "a. board b. century c. pound d. ancient",
-              "options": [
-                "board / pound",
-                "century / ancient",
-                "board / ancient",
-                "century / pound"
-              ],
-              "explanation": "century và ancient đều liên quan đến thời gian.",
-              "correctAnswer": "B"
+              "content": "Playing with a knife can lead to [ 1 ] injury.",
+              "explanation": "Chơi với dao có thể dẫn đến vết thương nghiêm trọng (serious).",
+              "correctAnswer": "serious"
             },
             {
               "id": "13",
-              "content": "a. county b. concert c. theater d. clue",
-              "options": [
-                "county / clue",
-                "concert / theater",
-                "county / theater",
-                "concert / clue"
-              ],
-              "explanation": "concert và theater đều liên quan đến giải trí, biểu diễn nghệ thuật.",
-              "correctAnswer": "B"
+              "content": "It's [ 1 ] for her to be mean; usually she is very kind.",
+              "explanation": "Thật kỳ lạ khi cô ấy cư xử xấu tính vì bình thường cô ấy rất tốt (strange).",
+              "correctAnswer": "strange"
             },
             {
               "id": "14",
-              "content": "a. gentleman b. officer c. exist d. concert",
-              "options": [
-                "gentleman / officer",
-                "exist / concert",
-                "gentleman / concert",
-                "officer / exist"
-              ],
-              "explanation": "gentleman và officer đều chỉ người đàn ông/sĩ quan.",
-              "correctAnswer": "A"
+              "content": "Michael's parents and teacher had a [ 1 ] about his grades.",
+              "explanation": "Bố mẹ và giáo viên của Michael có một cuộc trò chuyện về điểm số của cậu ấy (conversation).",
+              "correctAnswer": "conversation"
             },
             {
               "id": "15",
-              "content": "a. ancient b. original c. process d. dictionary",
-              "options": [
-                "ancient / dictionary",
-                "original / process",
-                "ancient / original",
-                "process / dictionary"
-              ],
-              "explanation": "Theo đáp án trong sách là a / d (ancient / dictionary).",
-              "correctAnswer": "A"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec3_wordlist",
-          "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
-          "content": "This morning, I walked down the hall to the field. It was time to get ready for the big soccer game! My school was playing against a private [16]. My team had won every game this year. In the [17] of winning games, we had worked hard and had fun. If we won today, our coach said that [18] he would take us all to the [19] to see a new movie on their latest [20] screen.<br><br>Options:<br>flat<br>academy<br>theater<br>process<br>maybe",
-          "questions": [
+              "content": "I [ 1 ] books, and now I have over 500 of them.",
+              "explanation": "Tôi sưu tầm sách và bây giờ tôi có hơn 500 cuốn (collect).",
+              "correctAnswer": "collect"
+            },
             {
               "id": "16",
-              "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "academy"
+              "content": "She did not know my name, so I had to [ 1 ] myself.",
+              "explanation": "Cô ấy không biết tên tôi nên tôi phải tự giới thiệu (introduce).",
+              "correctAnswer": "introduce"
             },
             {
               "id": "17",
-              "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "process"
+              "content": "I had to make a [ 1 ] about which book I wanted to buy.",
+              "explanation": "Tôi phải đưa ra quyết định mua cuốn sách nào (decision).",
+              "correctAnswer": "decision"
             },
             {
               "id": "18",
-              "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "maybe"
+              "content": "He lies a lot, but I hope he is telling the [ 1 ].",
+              "explanation": "Anh ta nói dối nhiều, nhưng tôi hi vọng anh ta đang nói sự thật (truth).",
+              "correctAnswer": "truth"
             },
             {
               "id": "19",
-              "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "theater"
+              "content": "Many countries [ 1 ] in the Olympics every four years.",
+              "explanation": "Nhiều quốc gia thi đấu ở thế vận hội Olympics mỗi 4 năm một lần (compete).",
+              "correctAnswer": "compete"
             },
             {
               "id": "20",
-              "content": "",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "flat"
+              "content": "He was so tired that he fell [ 1 ] right away.",
+              "explanation": "Anh ấy quá mệt nên đã ngủ thiếp đi ngay lập tức (asleep).",
+              "correctAnswer": "asleep"
             }
-          ],
-          "questionType": "Điền từ"
+          ]
         }
       ]
     },
     {
-      "id": "part2",
+      "id": "p1",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Wealth of Adams County</h1>        <p style=\"margin-bottom: 1rem;\">Adams <b>Academy</b> was a good school. Boys lived there and took classes. Tom worked hard all week. On a spring Saturday, he wanted to do something fun!</p>    <p style=\"margin-bottom: 1rem;\">He asked his friend Jeff to go to the movie <b>theater</b>. \"Sorry,\" Jeff answered. \"I'm going to a <b>concert</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">So Tom asked Joe to go to the movies. But Joe's soccer team had a game.</p>    <p style=\"margin-bottom: 1rem;\">Next, Tom went down the hall to Brad's room. Brad was reading a very large old book. \"Hi, Brad,\" Tom said. \"Are you reading a <b>dictionary</b>? It looks <b>ancient</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">\"No. This is called The <b>Wealth</b> of Adams <b>County</b>. It's about <b>hidden</b> gold in Adams <b>County</b>. It's more than a <b>century</b> old. It was <b>published</b> in 1870! Look, it even has the <b>original</b> cover on it.\"</p>    <p style=\"margin-bottom: 1rem;\">Tom asked, \"Where did you get it?\"</p>    <p style=\"margin-bottom: 1rem;\">\"It's from my dad's friend. He is a nice <b>gentleman</b>, an <b>officer</b> in the army,\" answered Brad.</p>    <p style=\"margin-bottom: 1rem;\">\"The gold doesn't really <b>exist</b>, does it?\" Tom asked.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't know, but <b>maybe</b>! There are <b>clues</b> to it in this book. Let's find it!\" Looking for gold sounded like fun.</p>    <p style=\"margin-bottom: 1rem;\">The first <b>clue</b> was to find a <b>flat</b> tree underground. \"It must be in the forest,\" Tom said.</p>    <p style=\"margin-bottom: 1rem;\">Brad said, \"The <b>flat</b> tree could be a <b>board</b> under the dirt. It could cover the gold.\"</p>    <p style=\"margin-bottom: 1rem;\">Tom and Brad dug in the dirt all morning.</p>    <p style=\"margin-bottom: 1rem;\">The <b>process</b> of looking for gold made them hungry. They were ready to stop for lunch.</p>    <p style=\"margin-bottom: 1rem;\">But then Brad hit something hard. It was a <b>board</b>!</p>    <p style=\"margin-bottom: 1rem;\">Brad <b>pounded</b> on the <b>board</b> until it broke. There was a small hole under it. \"Look!\" He held up a gold coin.</p>    <p style=\"margin-bottom: 1rem;\">Tom saw a piece of paper in the hole. \"Brad, there's more. It's a map to the rest of the gold!\"</p>    <p style=\"margin-bottom: 1rem;\">Brad smiled. \"Let's go!\" And they hurried to find the <b>wealth</b> of Adams <b>County</b>.</p></div>",
-      "imageUrl": "/unit11_story.png",
+      "explanation": "<p><b>Princess Rose and the Creature</b></p><br><p>There was once a beautiful princess named Rose. Her mother, the queen, however, was not as beautiful as the princess. The queen felt bad that she was not the most beautiful woman in the kingdom <b>anymore</b>. She was tired of <b>competing</b> with her daughter. She made a <b>decision</b>. She <b>prepared</b> a drink for the princess. After the princess drank it, she fell <b>asleep</b>. Then the queen took the princess to the <b>forest</b>. She left the princess there. It was a very <b>serious</b> thing to do. \"<b>Either</b> she will be killed by animals or she will get lost in the forest,\" the queen thought.</p><p>The princess had a dream. She dreamed about a man with brown hair and brown eyes. It was the man she would wed.</p><p>The princess <b>woke</b> up. She saw a <b>strange creature</b> on the <b>ground</b>. It looked like a man, but he was hairy and green. He had horns on his head and a pig's nose.</p><p>The creature said, \"Did I scare you? I hope not. Let me <b>introduce</b> myself. I am Henry.\"</p><p>\"I am not scared. To tell you the <b>truth</b>, I think you are cute,\" said Rose.</p><p>Rose and Henry <b>spent</b> the day together. They <b>collected berries</b>, caught fish, and had lunch. They had a very good day filled with nice <b>conversations</b>.</p><p>\"Rose, I have to go home,\" said Henry. \"My ship will <b>sail</b> home soon. I can't leave you here in the forest alone. Will you come with me?\"</p><p>Rose was very happy. She gave Henry a kiss right on his pig nose. As soon as she kissed Henry, he began to change. His pig nose turned into a man's nose. His horns and green hair went away. Standing in front of her was the man Rose had dreamt about.</p><p>Rose and Henry were <b>married</b>, and they lived happily.</p>",
       "sections": [
         {
-          "id": "sec3",
-          "title": "Answer the questions based on the story.",
+          "id": "sec4",
+          "title": "Reading Comprehension: Answer the questions.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
-              "content": "Where do the boys look for the gold?",
+              "content": "What is this story about?",
               "options": [
-                "At Adams Academy",
-                "At the movie theater",
-                "In the forest",
-                "In a concert hall"
+                "A strange creature that competes with a princess",
+                "Why a queen had a conversation with a princess",
+                "How a princess met a creature in a forest",
+                "A serious decision made by a princess"
               ],
-              "explanation": "Câu chuyện kể rằng họ tìm cây phẳng dưới lòng đất và Tom nói \"It must be in the forest\".",
+              "explanation": "Câu chuyện kể về việc công chúa Rose gặp một sinh vật lạ ở trong rừng.",
               "correctAnswer": "C"
             },
             {
               "id": "22",
-              "content": "What is NOT true of The Wealth of Adams County?",
+              "content": "Which of the following is NOT true in the story?",
               "options": [
-                "It was published more than a century ago.",
-                "It was written by an army officer.",
-                "It still has its original cover.",
-                "It tells about a board in the forest floor."
+                "The queen fell asleep in the forest.",
+                "The princess had a dream.",
+                "The creature wasn't mean or scary.",
+                "Henry said he was going to sail away on a ship."
               ],
-              "explanation": "Sách có từ người bạn là sĩ quan quân đội, nhưng sách được xuất bản từ năm 1870, không có thông tin sĩ quan quân đội viết nó.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "23",
-              "content": "Why does Brad think the gold really exists?",
-              "options": [
-                "Because there are clues to it in a book",
-                "Because a gentleman told him it did",
-                "Because he was given an ancient dictionary",
-                "Because it was hidden in the spring"
-              ],
-              "explanation": "Brad nói: \"I don't know, but maybe! There are clues to it in this book.\"",
+              "explanation": "Công chúa là người đã ngủ thiếp đi trong rừng chứ không phải hoàng hậu.",
               "correctAnswer": "A"
             },
             {
-              "id": "24",
-              "content": "Where will the boys probably go at the end of the story?",
+              "id": "23",
+              "content": "What did the queen want to happen to the princess?",
               "options": [
-                "To get tools to carry the gold",
-                "To continue the process of finding gold",
-                "To watch Joe’s soccer team",
-                "To pound on more boards"
+                "A creature would wake the princess.",
+                "A creature would prepare a drink for the princess.",
+                "An animal would kill the princess if she was left on the ground.",
+                "Rose and a creature would collect either berries or fruits."
               ],
-              "explanation": "Cuối truyện, họ có thêm một bản đồ và nhanh chóng \"hurried to find the wealth of Adams County\".",
-              "correctAnswer": "B"
+              "explanation": "Hoàng hậu nghĩ rằng: 'Hoặc là nó sẽ bị thú dữ ăn thịt, hoặc là nó sẽ bị lạc trong rừng'.",
+              "correctAnswer": "C"
             },
             {
-              "id": "25",
-              "content": "Why can’t Jeff go to the movie theater?",
+              "id": "24",
+              "content": "Which of the following is true at the end of the story?",
               "options": [
-                "He has a soccer game.",
-                "He is going to a concert.",
-                "He is reading a dictionary.",
-                "He is looking for gold."
+                "Rose introduces Henry to the queen.",
+                "Rose and Henry wed.",
+                "The queen learns the truth about Rose.",
+                "The queen sails away on a ship."
               ],
-              "explanation": "Jeff trả lời Tom: \"I'm going to a concert.\"",
+              "explanation": "Cuối truyện, Rose và Henry đã kết hôn và sống hạnh phúc bên nhau.",
               "correctAnswer": "B"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Short Answer",
+          "content": "",
+          "questionType": "Đoạn văn",
+          "questions": [
+            {
+              "id": "25",
+              "content": "What did the princess dream in the forest?",
+              "explanation": "Trong đoạn văn: 'She dreamed about a man with brown hair and brown eyes. It was the man she would wed.'",
+              "correctAnswer": "She dreamed about a man with brown hair and brown eyes. It was the man she would wed."
+            }
+          ]
         }
       ]
     }
-  ],
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 11: Volume 1",
-    "category": "exercise",
-    "timeLimit": 0
-  }
+  ]
 }
