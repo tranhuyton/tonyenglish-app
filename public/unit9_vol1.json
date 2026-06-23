@@ -208,7 +208,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p><b>wave / beach</b><br/>I like to play on the [16].</p>",
+              "content": "<p style=\"margin-bottom: 0px;\"><b>wave / beach</b><br/>I like to play on the [16].</p>",
               "correctAnswer": "beach"
             },
             {
@@ -218,7 +218,7 @@
             },
             {
               "id": "18",
-              "content": "<p><b>ocean / island</b><br/>They walked across the [18] to find food.</p>",
+              "content": "<p style=\"margin-bottom: 0px;\"><b>ocean / island</b><br/>They walked across the [18] to find food.</p>",
               "correctAnswer": "island"
             },
             {
@@ -228,7 +228,7 @@
             },
             {
               "id": "20",
-              "content": "<p><b>fix / damage</b><br/>My dad knows how to [20] cars.</p>",
+              "content": "<p style=\"margin-bottom: 0px;\"><b>fix / damage</b><br/>My dad knows how to [20] cars.</p>",
               "correctAnswer": "fix"
             },
             {
@@ -238,7 +238,7 @@
             },
             {
               "id": "22",
-              "content": "<p><b>still / rock</b><br/>We have to go around that large [22].</p>",
+              "content": "<p style=\"margin-bottom: 0px;\"><b>still / rock</b><br/>We have to go around that large [22].</p>",
               "correctAnswer": "rock"
             },
             {
@@ -248,7 +248,7 @@
             },
             {
               "id": "24",
-              "content": "<p><b>step / throw</b><br/>Do you know how to [24] a football?</p>",
+              "content": "<p style=\"margin-bottom: 0px;\"><b>step / throw</b><br/>Do you know how to [24] a football?</p>",
               "correctAnswer": "throw"
             },
             {
