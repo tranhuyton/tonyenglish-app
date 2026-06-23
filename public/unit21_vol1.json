@@ -146,7 +146,7 @@
               "content": "<p>1.</p>",
               "options": [
                 "Because the <b>base</b> of the lamp was broken, it could not stand up.",
-                "I decided to leave early so that I could be late."
+                "I decided to <b>leave</b> early so that I could be late."
               ],
               "explanation": "a is correct.",
               "correctAnswer": "A"
@@ -175,7 +175,7 @@
               "id": "10",
               "content": "<p>4.</p>",
               "options": [
-                "I will leave early in the morning to catch my plane.",
+                "I will <b>leave</b> early in the morning to catch my plane.",
                 "My friends and I decided to throw an <b>operation</b> for my sister."
               ],
               "explanation": "a is correct.",
@@ -196,7 +196,7 @@
               "content": "<p>6.</p>",
               "options": [
                 "He never used his <b>brain</b> when he faced problems!",
-                "The job appeared very quickly."
+                "The job <b>appeared</b> very quickly."
               ],
               "explanation": "a is correct.",
               "correctAnswer": "A"
@@ -215,7 +215,7 @@
               "id": "14",
               "content": "<p>8.</p>",
               "options": [
-                "She appeared very happy on her birthday.",
+                "She <b>appeared</b> very happy on her birthday.",
                 "People use their <b>brains</b> to exercise."
               ],
               "explanation": "a is correct.",

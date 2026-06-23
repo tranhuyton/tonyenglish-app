@@ -152,8 +152,8 @@
               "id": "12",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. We ran far above the <b>mountain</b> peak.",
-                "b. I will need water if I'm going to hike the long trail."
+                "a. We ran far above the mountain <b>peak</b>.",
+                "b. I will need water if I'm going to <b>hike</b> the long trail."
               ],
               "explanation": "hike (đi bộ đường dài) hợp lý khi cần nước uống.",
               "correctAnswer": "B"
@@ -172,7 +172,7 @@
               "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The clouds look like they can touch the <b>mountain</b> peaks.",
+                "a. The clouds look like they can touch the mountain <b>peaks</b>.",
                 "b. I have a great deal of <b>pride</b> when I lose a contest."
               ],
               "explanation": "peak (đỉnh núi) hợp lý khi nói mây chạm đến đỉnh núi.",

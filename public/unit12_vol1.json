@@ -141,7 +141,7 @@
               "content": "Check the sentence with the bolded word that makes better sense.",
               "options": [
                 "The Earth is a very thin planet.",
-                "If something is a <b>symbol</b>, it stands for something else."
+                "If something is a symbol, it stands for something <b>else</b>."
               ],
               "explanation": "b đúng",
               "correctAnswer": "B"
@@ -170,8 +170,8 @@
               "id": "16",
               "content": "Check the sentence with the bolded word that makes better sense.",
               "options": [
-                "You <b>cannot</b> get information from a magazine.",
-                "If you compare <b>two</b> things, you say how they are different."
+                "You cannot get information from a magazine.",
+                "If you compare two things, you say how they are different."
               ],
               "explanation": "b đúng",
               "correctAnswer": "B"
@@ -180,7 +180,7 @@
               "id": "17",
               "content": "Check the sentence with the bolded word that makes better sense.",
               "options": [
-                "If you judge something, you know if it is <b>good</b> or bad.",
+                "If you judge something, you know if it is good or bad.",
                 "Neighbors are people who live far from you."
               ],
               "explanation": "a đúng",
@@ -191,7 +191,7 @@
               "content": "Check the sentence with the bolded word that makes better sense.",
               "options": [
                 "A meal has food and a drink.",
-                "A shape is something you <b>cannot</b> see."
+                "A shape is something you cannot see."
               ],
               "explanation": "a đúng",
               "correctAnswer": "A"
@@ -200,7 +200,7 @@
               "id": "19",
               "content": "Check the sentence with the bolded word that makes better sense.",
               "options": [
-                "A <b>symbol</b> is a picture of two different things.",
+                "A symbol is a picture of two different things.",
                 "You must have space to add more things to a room."
               ],
               "explanation": "b đúng",
@@ -210,7 +210,7 @@
               "id": "20",
               "content": "Check the sentence with the bolded word that makes better sense.",
               "options": [
-                "If something has low quality, it is very <b>good</b>.",
+                "If something has low quality, it is very good.",
                 "A material is used to make something <b>else</b>."
               ],
               "explanation": "b đúng",

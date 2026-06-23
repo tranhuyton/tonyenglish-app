@@ -190,7 +190,7 @@
               "id": "16",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. Eating rotten eggs satisfies me.",
+                "a. Eating rotten eggs <b>satisfies</b> me.",
                 "b. A <b>marathon</b> can last for hours."
               ],
               "explanation": "marathon là cuộc thi chạy dài.",
@@ -240,8 +240,8 @@
               "id": "21",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The <b>boy</b> wore pants on his chest.",
-                "b. She supplemented her salary by working part-time on Saturdays."
+                "a. The boy wore pants on his <b>chest</b>.",
+                "b. She <b>supplemented</b> her salary by working part-time on Saturdays."
               ],
               "explanation": "supplement là bổ sung.",
               "correctAnswer": "B"
@@ -281,7 +281,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "a. It was hard to stay on the <b>narrow</b> path.",
-                "b. The <b>boy</b> created a consequence before the test started."
+                "b. The boy created a <b>consequence</b> before the test started."
               ],
               "explanation": "narrow là hẹp.",
               "correctAnswer": "A"

@@ -150,7 +150,7 @@
               "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
-                "Be careful not to slip on the ice.",
+                "Be careful not to <b>slip</b> on the ice.",
                 "I hope my <b>yard</b> is ready to eat."
               ],
               "explanation": "slip: trượt té.",
@@ -161,7 +161,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "I made a cake with my <b>stable</b>.",
-                "The <b>man</b> robbed the store of over 200 dollars."
+                "The man robbed the store of over 200 dollars."
               ],
               "explanation": "rob: cướp.",
               "correctAnswer": "B"
@@ -170,7 +170,7 @@
               "id": "13",
               "content": "Which sentence makes better sense?",
               "options": [
-                "The <b>boy</b> carried sand in his bucket.",
+                "The boy carried sand in his <b>bucket</b>.",
                 "He used the <b>contest</b> to clean the floor."
               ],
               "explanation": "bucket: cái xô.",
@@ -181,7 +181,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "The <b>award</b> for winning the game is a new toy.",
-                "The <b>boy</b> pulled the car apart by washing it."
+                "The boy pulled the car <b>apart</b> by washing it."
               ],
               "explanation": "award: phần thưởng.",
               "correctAnswer": "A"
@@ -201,7 +201,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "The <b>stable</b> tree did not fall in the wind.",
-                "She slipped the table <b>after</b> dinner."
+                "She slipped the table after dinner."
               ],
               "explanation": "stable: ổn định, vững chắc.",
               "correctAnswer": "A"
@@ -211,7 +211,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "My dog likes to play in the <b>yard</b>.",
-                "The <b>man</b> was upset after he robbed himself."
+                "The man was upset after he robbed himself."
               ],
               "explanation": "yard: cái sân.",
               "correctAnswer": "A"

@@ -151,7 +151,7 @@
               "content": "11.",
               "options": [
                 "A <b>clever</b> person can solve a puzzle easily.",
-                "When a plane <b>arrives</b>, it leaves the ground and goes into the sky."
+                "When a plane arrives, it leaves the ground and goes into the <b>sky</b>."
               ],
               "explanation": "<b>Clever</b> (thông minh): Người thông minh có thể giải câu đố dễ dàng (Hợp lý). Câu kia sai vì máy bay <b>arrives</b> (hạ cánh) thì nó phải chạm đất chứ không phải bay lên trời.",
               "correctAnswer": "A"
@@ -200,8 +200,8 @@
               "id": "16",
               "content": "16.",
               "options": [
-                "Animals cannot <b>hunt</b> because they do not have hands.",
-                "It is a good idea to arrive early for class."
+                "<b>Animals</b> cannot hunt because they do not have hands.",
+                "It is a <b>good</b> idea to arrive early for class."
               ],
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "B"
@@ -210,8 +210,8 @@
               "id": "17",
               "content": "17.",
               "options": [
-                "People sometimes <b>attack</b> pictures to email messages.",
-                "Some people are <b>afraid</b> of spiders."
+                "<b>People</b> sometimes attack pictures to email messages.",
+                "Some <b>people</b> are afraid of spiders."
               ],
               "explanation": "<b>Afraid</b> (sợ hãi): Nhiều người sợ nhện (Hợp lý). Câu kia sai vì người ta đính kèm (attach) chứ không <b>attack</b> (tấn công) bức ảnh vào email.",
               "correctAnswer": "B"
@@ -221,7 +221,7 @@
               "content": "18.",
               "options": [
                 "A <b>moment</b> is like a second or two.",
-                "New shoes are usually not very comfortable or <b>clever</b>."
+                "New shoes are <b>usually</b> not very comfortable or clever."
               ],
               "explanation": "<b>Moment</b> (một lát, một chốc): Một khoảnh khắc giống như một hoặc hai giây (Hợp lý). Câu kia sai vì đôi giày không thể <b>clever</b> (thông minh).",
               "correctAnswer": "A"
@@ -230,7 +230,7 @@
               "id": "19",
               "content": "19.",
               "options": [
-                "Small animals do not usually <b>attack</b> big animals.",
+                "<b>Small</b> animals do not usually attack big animals.",
                 "There are twelve <b>moments</b> in a year."
               ],
               "explanation": "<b>Attack</b> (tấn công): Động vật nhỏ thường không tấn công động vật lớn (Hợp lý). Câu kia sai vì một năm có 12 tháng (months) chứ không phải 12 <b>moments</b> (khoảnh khắc).",

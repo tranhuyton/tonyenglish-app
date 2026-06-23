@@ -176,7 +176,7 @@
               "content": "<p>3.</p>",
               "options": [
                 "a. It is not smart to <b>lie</b> to your parents.",
-                "b. If a woman considers leaving, she doesn't want to go."
+                "b. If a woman <b>considers</b> leaving, she doesn't want to go."
               ],
               "explanation": "lie (nói dối): không khôn ngoan khi nói dối cha mẹ.",
               "correctAnswer": "A"
@@ -186,7 +186,7 @@
               "content": "<p>4.</p>",
               "options": [
                 "a. If a bike is <b>worth</b> $50, it costs much less.",
-                "b. When you <b>eat</b> vegetables, you are eating plants."
+                "b. When you eat vegetables, you are eating plants."
               ],
               "explanation": "vegetable (rau củ): rau củ là thực vật.",
               "correctAnswer": "B"
@@ -205,8 +205,8 @@
               "id": "16",
               "content": "<p>6.</p>",
               "options": [
-                "a. If a boy considers studying, he is thinking about doing it.",
-                "b. Many people like making new types of <b>vegetables</b>."
+                "a. If a boy <b>considers</b> studying, he is thinking about doing it.",
+                "b. Many people like making new types of vegetables."
               ],
               "explanation": "consider (cân nhắc): anh ấy đang suy nghĩ về việc đó.",
               "correctAnswer": "A"

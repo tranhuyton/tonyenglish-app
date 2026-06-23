@@ -155,8 +155,8 @@
               "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. <b>Many</b> people wear a shell before going out into the rain.",
-                "b. In the past three <b>years</b>, the city has had two floods."
+                "a. Many people wear a <b>shell</b> before going out into the rain.",
+                "b. In the past three years, the city has had two <b>floods</b>."
               ],
               "explanation": "flood (n): lũ lụt. Lũ lụt là hiện tượng nước bao phủ một khu vực vốn dĩ khô ráo.",
               "correctAnswer": "B"
@@ -166,7 +166,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "a. <b>Nowadays</b>, many students like using the Internet to do research.",
-                "b. <b>Many</b> groups have annual meetings every month."
+                "b. Many groups have <b>annual</b> meetings every month."
               ],
               "explanation": "nowadays (adv): ngày nay. Nowadays có nghĩa là ở thời điểm hiện tại.",
               "correctAnswer": "A"
@@ -185,7 +185,7 @@
               "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. <b>Churches</b> don’t let people read religious books.",
+                "a. Churches don’t let people read <b>religious</b> books.",
                 "b. Birds use their <b>feathers</b> to help them fly."
               ],
               "explanation": "feather (n): lông vũ. Lông vũ là những chiếc lông bao phủ cơ thể loài chim.",
@@ -195,7 +195,7 @@
               "id": "15",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. <b>Many</b> people enjoy watching romantic movies.",
+                "a. Many people enjoy watching <b>romantic</b> movies.",
                 "b. If you get good grades, you don’t <b>deserve</b> to graduate."
               ],
               "explanation": "romantic (adj): lãng mạn. Lãng mạn có nghĩa là những gì liên quan đến tình yêu.",
@@ -245,7 +245,7 @@
               "id": "20",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. You should see your doctor once a <b>year</b> for an annual checkup.",
+                "a. You should see your doctor once a year for an <b>annual</b> checkup.",
                 "b. The wind makes the <b>wheels</b> of a car turn."
               ],
               "explanation": "annual (adj): hàng năm. Annual có nghĩa là sự việc xảy ra mỗi năm một lần.",

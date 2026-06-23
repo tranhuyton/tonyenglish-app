@@ -150,8 +150,8 @@
               "id": "11",
               "content": "1. They've known each other for years...",
               "options": [
-                "a. and have a good friendship",
-                "b. go to a passage"
+                "a. and have a good <b>friendship</b>",
+                "b. go to a <b>passage</b>"
               ],
               "explanation": "Biết nhau nhiều năm thì có tình bạn tốt.",
               "correctAnswer": "A"
@@ -160,8 +160,8 @@
               "id": "12",
               "content": "2. I don't know where we are...",
               "options": [
-                "a. We need a guide",
-                "b. Let's perform right now"
+                "a. We need a <b>guide</b>",
+                "b. Let's <b>perform</b> right now"
               ],
               "explanation": "Không biết đang ở đâu thì cần hướng dẫn viên.",
               "correctAnswer": "A"
@@ -170,8 +170,8 @@
               "id": "13",
               "content": "3. The concert tonight...",
               "options": [
-                "a. will strike the wall",
-                "b. will be a fun event"
+                "a. will <b>strike</b> the wall",
+                "b. will be a fun <b>event</b>"
               ],
               "explanation": "Buổi hòa nhạc là một sự kiện vui vẻ.",
               "correctAnswer": "B"
@@ -180,7 +180,7 @@
               "id": "14",
               "content": "4. I gave him money because...",
               "options": [
-                "a. I support his company",
+                "a. I <b>support</b> his company",
                 "b. He didn't do any work"
               ],
               "explanation": "Cho tiền vì ủng hộ công ty anh ấy.",
@@ -191,7 +191,7 @@
               "content": "5. At the end of her speech...",
               "options": [
                 "a. don't forget to <b>cheer</b> loudly",
-                "b. fit into your clothes"
+                "b. <b>fit</b> into your clothes"
               ],
               "explanation": "Kết thúc bài phát biểu thì cổ vũ.",
               "correctAnswer": "A"
@@ -200,8 +200,8 @@
               "id": "16",
               "content": "6. You don't have to pay to get in when...",
               "options": [
-                "a. an accident is probable",
-                "b. you go to a public park"
+                "a. an accident is <b>probable</b>",
+                "b. you go to a <b>public</b> park"
               ],
               "explanation": "Công viên công cộng thì miễn phí.",
               "correctAnswer": "B"
@@ -210,8 +210,8 @@
               "id": "17",
               "content": "7. You must think hard because...",
               "options": [
-                "a. I am under pressure",
-                "b. the problem is complex"
+                "a. I am under <b>pressure</b>",
+                "b. the problem is <b>complex</b>"
               ],
               "explanation": "Phải suy nghĩ nhiều vì vấn đề phức tạp.",
               "correctAnswer": "B"
@@ -220,8 +220,8 @@
               "id": "18",
               "content": "8. Glad is...",
               "options": [
-                "a. another term for happy",
-                "b. the way people unite"
+                "a. another <b>term</b> for happy",
+                "b. the way people <b>unite</b>"
               ],
               "explanation": "Glad là một từ khác để chỉ sự vui vẻ.",
               "correctAnswer": "A"
@@ -230,7 +230,7 @@
               "id": "19",
               "content": "9. The artist made his art...",
               "options": [
-                "a. from a block of wood",
+                "a. from a <b>block</b> of wood",
                 "b. the people <b>cheered</b> for victory"
               ],
               "explanation": "Nghệ sĩ làm nghệ thuật từ một khối gỗ.",
@@ -240,7 +240,7 @@
               "id": "20",
               "content": "10. He thought the book was boring...",
               "options": [
-                "a. He was a critic of it",
+                "a. He was a <b>critic</b> of it",
                 "b. He really enjoyed it"
               ],
               "explanation": "Nếu thấy chán, anh ấy là một nhà phê bình của nó.",

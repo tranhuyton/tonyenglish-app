@@ -155,8 +155,8 @@
               "id": "11",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. <b>Many</b> people wear a shell before going out into the rain.",
-                "b. In the past three <b>years</b>, the city has had two floods."
+                "a. Many people wear a <b>shell</b> before going out into the rain.",
+                "b. In the past three years, the city has had two <b>floods</b>."
               ],
               "explanation": "A flood is an event in which water covers an area which is usually dry.",
               "correctAnswer": "B"
@@ -166,7 +166,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "a. <b>Nowadays</b>, many students like using the Internet to do research.",
-                "b. <b>Many</b> groups have annual meetings every month."
+                "b. Many groups have <b>annual</b> meetings every month."
               ],
               "explanation": "Nowadays means at the present time.",
               "correctAnswer": "A"
@@ -185,7 +185,7 @@
               "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. <b>Churches</b> don’t let people read religious books.",
+                "a. Churches don’t let people read <b>religious</b> books.",
                 "b. Birds use their <b>feathers</b> to help them fly."
               ],
               "explanation": "Feathers are the things covering birds' bodies.",
@@ -195,7 +195,7 @@
               "id": "15",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. <b>Many</b> people enjoy watching romantic movies.",
+                "a. Many people enjoy watching <b>romantic</b> movies.",
                 "b. If you get good grades, you don’t <b>deserve</b> to graduate."
               ],
               "explanation": "Romantic means it has to do with love.",
@@ -245,7 +245,7 @@
               "id": "20",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. You should see your doctor once a <b>year</b> for an annual checkup.",
+                "a. You should see your doctor once a year for an <b>annual</b> checkup.",
                 "b. The wind makes the <b>wheels</b> of a car turn."
               ],
               "explanation": "Annual means it happens once a year.",

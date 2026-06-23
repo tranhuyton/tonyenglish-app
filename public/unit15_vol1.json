@@ -190,7 +190,7 @@
               "id": "17",
               "content": "<p>2.</p>",
               "options": [
-                "a. Because he <b>left</b> work early, Carl had an opportunity to go to the concert.",
+                "a. Because he left work early, Carl had an <b>opportunity</b> to go to the concert.",
                 "b. I could feel the <b>length</b> of the air outside."
               ],
               "explanation": "opportunity is correctly used.",
@@ -211,7 +211,7 @@
               "content": "<p>4.</p>",
               "options": [
                 "a. Jeremy thought his hair was just the right <b>length</b>.",
-                "b. Michelle <b>left</b> her characteristic at my house."
+                "b. Michelle left her <b>characteristic</b> at my house."
               ],
               "explanation": "length is correctly used.",
               "correctAnswer": "A"

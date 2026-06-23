@@ -173,7 +173,7 @@
               "content": "Which sentence makes better sense?",
               "options": [
                 "a. Could you help me <b>lower</b> my seat please?",
-                "b. Be sure to remove the trash from the house."
+                "b. Be sure to <b>remove</b> the trash from the house."
               ],
               "explanation": "The correct choice is b based on the answer key.",
               "correctAnswer": "B"

@@ -15,7 +15,7 @@
               "content": "<p>1.</p>",
               "options": [
                 "a. We learned about grammar in <b>astronomy</b> class.",
-                "b. Do not interfere when I am working."
+                "b. Do not <b>interfere</b> when I am working."
               ],
               "explanation": "interfere có nghĩa là xen vào, cản trở. astronomy là thiên văn học, không học ngữ pháp.",
               "correctAnswer": "B"

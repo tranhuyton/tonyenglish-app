@@ -185,7 +185,7 @@
               "id": "14",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. The <b>man</b> built a cabin in the forest.",
+                "a. The man built a <b>cabin</b> in the forest.",
                 "b. The <b>cash</b> tasted good tonight."
               ],
               "explanation": "Người đàn ông xây một túp lều (cabin) trong rừng.",
@@ -205,7 +205,7 @@
               "id": "16",
               "content": "Which sentence makes better sense?",
               "options": [
-                "a. We were <b>nice</b> to the rude man, but he was mean to us.",
+                "a. We were nice to the <b>rude</b> man, but he was mean to us.",
                 "b. The <b>wallet</b> made his dinner taste better."
               ],
               "explanation": "Người thô lỗ (rude) thì xấu tính với chúng tôi.",

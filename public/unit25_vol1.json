@@ -155,8 +155,8 @@
               "id": "11",
               "content": "<p>1.</p>",
               "options": [
-                "a. When you mix things, you take them somewhere.",
-                "b. They make <b>toys</b> in a toy factory."
+                "a. When you <b>mix</b> things, you take them somewhere.",
+                "b. They make toys in a toy <b>factory</b>."
               ],
               "explanation": "Câu b hợp lý vì nhà máy đồ chơi (toy factory) là nơi làm đồ chơi. Câu a sai nghĩa của mix.",
               "correctAnswer": "B"
@@ -165,7 +165,7 @@
               "id": "12",
               "content": "<p>2.</p>",
               "options": [
-                "a. A feature of this computer is its <b>small</b> size.",
+                "a. A <b>feature</b> of this computer is its small size.",
                 "b. We <b>populate</b> over the ocean."
               ],
               "explanation": "Câu a hợp lý: tính năng (feature) của máy tính này là kích thước nhỏ.",
@@ -175,8 +175,8 @@
               "id": "13",
               "content": "<p>3.</p>",
               "options": [
-                "a. We put the trash outside so it could be taken away.",
-                "b. We ate chicken once, so now it is a tradition."
+                "a. We put the <b>trash</b> outside so it could be taken away.",
+                "b. We ate chicken once, so now it is a <b>tradition</b>."
               ],
               "explanation": "Câu a hợp lý: đặt rác (trash) bên ngoài để mang đi.",
               "correctAnswer": "A"
@@ -185,7 +185,7 @@
               "id": "14",
               "content": "<p>4.</p>",
               "options": [
-                "a. He went to the tip of the school.",
+                "a. He went to the <b>tip</b> of the school.",
                 "b. Doing a book report involves reading."
               ],
               "explanation": "Câu b hợp lý: làm báo cáo sách bao gồm/đòi hỏi (involves) việc đọc.",
@@ -196,7 +196,7 @@
               "content": "<p>5.</p>",
               "options": [
                 "a. The garbage truck came and produced some sunshine.",
-                "b. I associate dogs with good pets."
+                "b. I <b>associate</b> dogs with good pets."
               ],
               "explanation": "Câu b hợp lý: tôi liên tưởng (associate) chó là thú cưng tốt.",
               "correctAnswer": "B"
@@ -205,7 +205,7 @@
               "id": "16",
               "content": "<p>6.</p>",
               "options": [
-                "a. You recognize someone whom you have already met.",
+                "a. You <b>recognize</b> someone whom you have already met.",
                 "b. Blue is a <b>range</b> of color."
               ],
               "explanation": "Câu a hợp lý: bạn nhận ra (recognize) người bạn đã từng gặp.",
@@ -216,7 +216,7 @@
               "content": "<p>7.</p>",
               "options": [
                 "a. The <b>sign</b> was open all evening.",
-                "b. I have a regular schedule. It doesn't change."
+                "b. I have a <b>regular</b> schedule. It doesn't change."
               ],
               "explanation": "Câu b hợp lý: tôi có một lịch trình thường xuyên/đều đặn (regular) và không thay đổi.",
               "correctAnswer": "B"
@@ -225,8 +225,8 @@
               "id": "18",
               "content": "<p>8.</p>",
               "options": [
-                "a. The tree is very wide because it is <b>small</b>.",
-                "b. Don't forget to organize a meeting for next week."
+                "a. The tree is very <b>wide</b> because it is small.",
+                "b. Don't forget to <b>organize</b> a meeting for next week."
               ],
               "explanation": "Câu b hợp lý: đừng quên tổ chức (organize) một cuộc họp.",
               "correctAnswer": "B"
@@ -235,8 +235,8 @@
               "id": "19",
               "content": "<p>9.</p>",
               "options": [
-                "a. The clothing store had a sale on medicine.",
-                "b. Our environment has many plants and animals."
+                "a. The clothing store had a sale on <b>medicine</b>.",
+                "b. Our <b>environment</b> has many plants and animals."
               ],
               "explanation": "Câu b hợp lý: môi trường (environment) của chúng ta có nhiều thực vật và động vật.",
               "correctAnswer": "B"
@@ -245,7 +245,7 @@
               "id": "20",
               "content": "<p>10.</p>",
               "options": [
-                "a. An instance of kindness is sharing food.",
+                "a. An <b>instance</b> of kindness is sharing food.",
                 "b. He had no <b>period</b> to work."
               ],
               "explanation": "Câu a hợp lý: một ví dụ (instance) của lòng tốt là chia sẻ thức ăn.",

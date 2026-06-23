@@ -150,7 +150,7 @@
               "id": "11",
               "content": "11.",
               "options": [
-                "<b>Many</b> castles are built with thick stone walls.",
+                "Many castles are built with thick stone walls.",
                 "When you <b>command</b> somebody, you work for them."
               ],
               "explanation": "Câu này hợp lý vì lâu đài thường được xây bằng tường đá dày.",
@@ -160,7 +160,7 @@
               "id": "12",
               "content": "12.",
               "options": [
-                "All <b>children</b> bring live animals to the zoo.",
+                "All children <b>bring</b> live animals to the zoo.",
                 "Some women wear <b>jewelry</b> on their ears and hands."
               ],
               "explanation": "Câu này hợp lý vì trang sức (jewelry) được đeo trên tai và tay.",
@@ -181,7 +181,7 @@
               "content": "14.",
               "options": [
                 "It takes a long time to get to <b>remote</b> places.",
-                "<b>Weeds</b> make a house more beautiful."
+                "Weeds make a house more beautiful."
               ],
               "explanation": "Câu này hợp lý vì những nơi xa xôi (remote places) mất nhiều thời gian để đi tới.",
               "correctAnswer": "A"
@@ -201,7 +201,7 @@
               "content": "16.",
               "options": [
                 "The <b>explosion</b> made everyone sleepy.",
-                "I forgot to bring my camera when I went on vacation."
+                "I forgot to <b>bring</b> my camera when I went on vacation."
               ],
               "explanation": "Câu này hợp lý vì 'bring' (mang theo) phù hợp với ngữ cảnh đi nghỉ mát.",
               "correctAnswer": "B"
@@ -221,7 +221,7 @@
               "content": "18.",
               "options": [
                 "The scary <b>monster</b> caused much damage to the village.",
-                "<b>Students</b> visit remote places after school every day."
+                "Students visit <b>remote</b> places after school every day."
               ],
               "explanation": "Câu này hợp lý vì 'monster' (quái vật) có thể gây ra nhiều thiệt hại.",
               "correctAnswer": "A"
@@ -230,8 +230,8 @@
               "id": "19",
               "content": "19.",
               "options": [
-                "<b>Many</b> people have a castle inside their house.",
-                "If you don't keep your yard clean, <b>weeds</b> will grow."
+                "Many people have a <b>castle</b> inside their house.",
+                "If you don't keep your yard clean, weeds will grow."
               ],
               "explanation": "Câu này hợp lý vì cỏ dại (weeds) sẽ mọc nếu sân không được dọn dẹp sạch sẽ.",
               "correctAnswer": "B"
@@ -240,7 +240,7 @@
               "id": "20",
               "content": "20.",
               "options": [
-                "<b>Students</b> must counsel their teachers.",
+                "Students must <b>counsel</b> their teachers.",
                 "The <b>explosion</b> in the sky was caused by the fireworks."
               ],
               "explanation": "Câu này hợp lý vì tiếng nổ (explosion) trên bầu trời có thể do pháo hoa gây ra.",
