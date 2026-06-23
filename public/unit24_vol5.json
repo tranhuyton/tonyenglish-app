@@ -92,7 +92,7 @@
                   "answer": "employs"
                 }
               ],
-              "content": "His company gives work to about 100 people in the community. (app[6])"
+              "content": "1. His company <u>gives work to</u> about 100 people in the community.<br/>em [ 6 ]"
             },
             {
               "id": "7",
@@ -102,7 +102,7 @@
                   "answer": "expelled"
                 }
               ],
-              "content": "Joan was forced to leave from the auditorium for her hostile comments. (app[7])"
+              "content": "2. Joan was <u>forced to leave</u> from the auditorium for her hostile comments.<br/>ex [ 7 ]"
             },
             {
               "id": "8",
@@ -112,7 +112,7 @@
                   "answer": "furnished"
                 }
               ],
-              "content": "My new apartment in the city was complete with bed, sofa, and TV. (app[8])"
+              "content": "3. My new apartment in the city was <u>complete with bed, sofa, and TV</u>.<br/>fu [ 8 ]"
             },
             {
               "id": "9",
@@ -122,7 +122,7 @@
                   "answer": "hygiene"
                 }
               ],
-              "content": "The prisoner’s condition for health and cleanliness was absolutely terrible. (app[9])"
+              "content": "4. The prisoner’s condition for <u>health and cleanliness</u> was absolutely terrible.<br/>hy [ 9 ]"
             },
             {
               "id": "10",
@@ -132,7 +132,7 @@
                   "answer": "lease"
                 }
               ],
-              "content": "I’m going to rent the apartment for only six months. (app[10])"
+              "content": "5. I’m going to <u>rent</u> the apartment for only six months.<br/>le [ 10 ]"
             },
             {
               "id": "11",
@@ -142,7 +142,7 @@
                   "answer": "mend"
                 }
               ],
-              "content": "I need to fix the hole in my pants. (app[11])"
+              "content": "6. I need to <u>fix the hole in</u> my pants.<br/>me [ 11 ]"
             },
             {
               "id": "12",
@@ -152,7 +152,7 @@
                   "answer": "personnel"
                 }
               ],
-              "content": "He was lucky to find employees who are honest and hardworking. (app[12])"
+              "content": "7. He was lucky to find <u>employees</u> who are honest and hardworking.<br/>pe [ 12 ]"
             },
             {
               "id": "13",
@@ -162,7 +162,7 @@
                   "answer": "plumbing"
                 }
               ],
-              "content": "We need to have our system of pipes that brings water into our house checked. (app[13])"
+              "content": "8. We need to have our <u>system of pipes that brings water into our house</u> checked.<br/>pl [ 13 ]"
             },
             {
               "id": "14",
@@ -172,7 +172,7 @@
                   "answer": "trendy"
                 }
               ],
-              "content": "The popular and new fashion these days for men is boots. (app[14])"
+              "content": "9. The popular and <u>new fashion</u> these days for men is boots.<br/>tr [ 14 ]"
             },
             {
               "id": "15",
@@ -182,7 +182,7 @@
                   "answer": "utility"
                 }
               ],
-              "content": "Did you remember to pay the company that provides our water? (app[15])"
+              "content": "10. Did you remember to pay the <u>company that provides our water</u>?<br/>ut [ 15 ]"
             }
           ],
           "questionType": "Điền từ"

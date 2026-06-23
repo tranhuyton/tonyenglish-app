@@ -12,31 +12,31 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. He got a low score on the science test. (ex[1])",
+              "content": "1. He got a low score on the science <u>test</u>.<br/>ex [ 1 ]",
               "explanation": "exam (bài kiểm tra) tương đồng với test.",
               "correctAnswer": "exam"
             },
             {
               "id": "2",
-              "content": "2. The evening was filled with special things that made it different. (ma[2])",
+              "content": "2. The evening was filled with <u>special things that made it different</u>.<br/>ma [ 2 ]",
               "explanation": "magical (kỳ diệu) miêu tả những điều đặc biệt làm cho nó khác biệt.",
               "correctAnswer": "magical"
             },
             {
               "id": "3",
-              "content": "3. He loves to have the best things that are new to the world. (tech[3])",
+              "content": "3. He loves to have the best <u>things that are new to the world</u>.<br/>te [ 3 ]",
               "explanation": "technology (công nghệ) liên quan đến những thứ tốt nhất và mới nhất trên thế giới.",
               "correctAnswer": "technology"
             },
             {
               "id": "4",
-              "content": "4. I only read the plan for the story. (ou[4])",
+              "content": "4. I only read the <u>plan</u> for the story.<br/>ou [ 4 ]",
               "explanation": "outline (đề cương) tương đồng với plan for the story.",
               "correctAnswer": "outline"
             },
             {
               "id": "5",
-              "content": "5. The writer is good at making sentences about what someone looks like. (de[5])",
+              "content": "5. The writer is good at making <u>sentences about what someone looks like</u>.<br/>de [ 5 ]",
               "explanation": "descriptions (sự miêu tả) là việc tạo ra các câu văn về vẻ ngoài của ai đó.",
               "correctAnswer": "descriptions"
             }

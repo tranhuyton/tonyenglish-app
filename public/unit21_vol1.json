@@ -34,7 +34,7 @@
                   "answer": "hurried"
                 }
               ],
-              "content": "I went to the video store last night. I wanted to (app[1]) a DVD. I didn't know the name of the movie, so I told the (app[2]) what it was about. I told her there was a (app[3]) who could fly and nothing caused him (app[4]). She went to the shelf and brought it to me. Then I (app[5]) home to watch it.",
+              "content": "1. I went to the video store last night. I wanted to [ 1 ] a DVD. I didn't know the name of the movie, so I told the [ 2 ] what it was about. I told her there was a [ 3 ] who could fly and nothing caused him [ 4 ]. She went to the shelf and brought it to me. Then I [ 5 ] home to watch it.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             }
           ],

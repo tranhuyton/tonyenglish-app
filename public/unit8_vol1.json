@@ -12,61 +12,61 @@
           "questions": [
             {
               "id": "1",
-              "content": "She looks like someone that I know well, (fami[1])",
+              "content": "1. She looks like someone that I <u>know well</u>.<br/>fa [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "familiar"
             },
             {
               "id": "2",
-              "content": "Drinking water is something that she must do. (neces[2])",
+              "content": "2. Drinking water is something that she <u>must do</u>.<br/>ne [ 2 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "necessary"
             },
             {
               "id": "3",
-              "content": "He has an idea of how the machine works, (the[3])",
+              "content": "3. He has an <u>idea</u> of how the machine works.<br/>th [ 3 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "theory"
             },
             {
               "id": "4",
-              "content": "The reason that I am doing this is to help children, (pur[4])",
+              "content": "4. The <u>reason</u> that I am doing this is to help children.<br/>pu [ 4 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "purpose"
             },
             {
               "id": "5",
-              "content": "My teacher will make me want to get good grades, (enc[5])",
+              "content": "5. My teacher will <u>make me want to</u> get good grades.<br/>en [ 5 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "encourage"
             },
             {
               "id": "6",
-              "content": "I agree with your idea. I think it will work. (ac[6])",
+              "content": "6. I <u>agree with</u> your idea. I think it will work.<br/>ac [ 6 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "accept"
             },
             {
               "id": "7",
-              "content": "It is difficult to keep from falling when you stand on one foot, (ba[7])",
+              "content": "7. It is difficult to <u>keep from falling</u> when you stand on one foot.<br/>ba [ 7 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "balance"
             },
             {
               "id": "8",
-              "content": "Her routine of exercising after work is common for many people. (Pa[8])",
+              "content": "8. Her <u>routine</u> of exercising after work is common for many people.<br/>pa [ 8 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "pattern"
             },
             {
               "id": "9",
-              "content": "There is a big difference between day and night. (c[9])",
+              "content": "9. There is a big <u>difference</u> between day and night.<br/>co [ 9 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "contrast"
             },
             {
               "id": "10",
-              "content": "The Earth has a solitary moon, (s[10])",
+              "content": "10. The Earth has a <u>solitary</u> moon.<br/>si [ 10 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "single"
             }

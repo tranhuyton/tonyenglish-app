@@ -208,31 +208,31 @@
           "questions": [
             {
               "id": "16",
-              "content": "My school was playing against a private 1 ______________ (aca[16])",
+              "content": "1. My school was playing against a private [ 16 ]",
               "explanation": "Chống lại một trường học (academy) tư thục.",
               "correctAnswer": "academy"
             },
             {
               "id": "17",
-              "content": "In the 2_________________ (pro[17]) of winning games, we had worked hard and had fun.",
+              "content": "2. In the [ 17 ] of winning games, we had worked hard and had fun.",
               "explanation": "Quá trình (process) chiến thắng.",
               "correctAnswer": "process"
             },
             {
               "id": "18",
-              "content": "If we won today, our coach said that 3 ______________ (may[18]) he would take us all...",
+              "content": "3. If we won today, our coach said that [ 18 ] he would take us all...",
               "explanation": "Có lẽ (maybe) huấn luyện viên sẽ dẫn chúng tôi đi...",
               "correctAnswer": "maybe"
             },
             {
               "id": "19",
-              "content": "...to the 4_____________ (the[19]) to see a new movie",
+              "content": "4. ...to the [ 19 ] to see a new movie",
               "explanation": "Tới rạp hát/rạp chiếu phim (theater) để xem phim mới.",
               "correctAnswer": "theater"
             },
             {
               "id": "20",
-              "content": "...on their latest 5 _______________ (fla[20]) screen.",
+              "content": "5. ...on their latest [ 20 ] screen.",
               "explanation": "Màn hình phẳng (flat screen).",
               "correctAnswer": "flat"
             }

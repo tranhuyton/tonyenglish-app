@@ -86,7 +86,7 @@
                   "answer": "dim"
                 }
               ],
-              "content": "1. She avoided walking in [low-light] areas."
+              "content": "1. She avoided walking in <u>low-light</u> areas.<br/>di [ 6 ]"
             },
             {
               "id": "7",
@@ -96,7 +96,7 @@
                   "answer": "accustomed"
                 }
               ],
-              "content": "2. Since she's lived in hot places all her life, she's [used to] warm weather."
+              "content": "2. Since she's lived in hot places all her life, she's <u>used to</u> warm weather.<br/>ac [ 7 ]"
             },
             {
               "id": "8",
@@ -106,7 +106,7 @@
                   "answer": "leak"
                 }
               ],
-              "content": "3. The holes in the old pipes let water [pass through] onto the bathroom floor."
+              "content": "3. The holes in the old pipes let water <u>pass through</u> onto the bathroom floor.<br/>le [ 8 ]"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                   "answer": "stiff"
                 }
               ],
-              "content": "4. Her back felt [hard to move] after she slept on the floor."
+              "content": "4. Her back felt <u>hard to move</u> after she slept on the floor.<br/>st [ 9 ]"
             },
             {
               "id": "10",
@@ -126,7 +126,7 @@
                   "answer": "clan"
                 }
               ],
-              "content": "5. He was happy to go home and see the [group of family and friends]."
+              "content": "5. He was happy to go home and see the <u>group of family and friends</u>.<br/>cl [ 10 ]"
             },
             {
               "id": "11",
@@ -136,7 +136,7 @@
                   "answer": "astonished"
                 }
               ],
-              "content": "6. The very [shocked] crowd watched as the magician performed his tricks."
+              "content": "6. The very <u>shocked</u> crowd watched as the magician performed his tricks.<br/>as [ 11 ]"
             },
             {
               "id": "12",
@@ -146,7 +146,7 @@
                   "answer": "feast"
                 }
               ],
-              "content": "7. The school served a [large meal] in honor of the new principal."
+              "content": "7. The school served a <u>large meal</u> in honor of the new principal.<br/>fe [ 12 ]"
             },
             {
               "id": "13",
@@ -156,7 +156,7 @@
                   "answer": "glowing"
                 }
               ],
-              "content": "8. The only thing that I could see in the dark night was my flashlight [making light]."
+              "content": "8. The only thing that I could see in the dark night was my flashlight <u>making light</u>.<br/>gl [ 13 ]"
             },
             {
               "id": "14",
@@ -166,7 +166,7 @@
                   "answer": "tragic"
                 }
               ],
-              "content": "9. It was a very [sad event] when his parents passed away in the accident."
+              "content": "9. It was a very <u>sad event</u> when his parents passed away in the accident.<br/>tr [ 14 ]"
             },
             {
               "id": "15",
@@ -176,7 +176,7 @@
                   "answer": "instincts"
                 }
               ],
-              "content": "10. Her [natural behavior] told her to leave the room as soon as possible."
+              "content": "10. Her <u>natural behavior</u> told her to leave the room as soon as possible.<br/>in [ 15 ]"
             }
           ],
           "questionType": "Điền từ"

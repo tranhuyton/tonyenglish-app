@@ -12,61 +12,61 @@
           "questions": [
             {
               "id": "1",
-              "content": "If you don't understand the class, you should ask your (professor[1]) for help.",
+              "content": "1. If you don't understand the class, you should ask your [ 1 ] for help.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "professor"
             },
             {
               "id": "2",
-              "content": "I could (barely[2]) hear his speech because of all the noise.",
+              "content": "2. I could [ 2 ] hear his speech because of all the noise.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "barely"
             },
             {
               "id": "3",
-              "content": "I (predict[3]) that tomorrow will be a good day.",
+              "content": "3. I [ 3 ] that tomorrow will be a good day.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "predict"
             },
             {
               "id": "4",
-              "content": "There was a lot of (garbage[4]) in his closet.",
+              "content": "4. There was a lot of [ 4 ] in his closet.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "garbage"
             },
             {
               "id": "5",
-              "content": "I made a (list[5]) of things I want for my birthday.",
+              "content": "5. I made a [ 5 ] of things I want for my birthday.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "list"
             },
             {
               "id": "6",
-              "content": "I think that this TV show is (boring[6]). Let's watch something else.",
+              "content": "6. I think that this TV show is [ 6 ]. Let's watch something else.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "boring"
             },
             {
               "id": "7",
-              "content": "Have you ever heard this (band[7])? I really like its music.",
+              "content": "7. Have you ever heard this [ 7 ]? I really like its music.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "band"
             },
             {
               "id": "8",
-              "content": "Do you have time in your (schedule[8]) to come over this week?",
+              "content": "8. Do you have time in your [ 8 ] to come over this week?",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "schedule"
             },
             {
               "id": "9",
-              "content": "If I am not home when you call, just leave a (message[9]).",
+              "content": "9. If I am not home when you call, just leave a [ 9 ].",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "message"
             },
             {
               "id": "10",
-              "content": "If you wake up early, you don't need to (rush[10]) to get to school.",
+              "content": "10. If you wake up early, you don't need to [ 10 ] to get to school.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "rush"
             }

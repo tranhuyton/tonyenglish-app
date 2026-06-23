@@ -140,31 +140,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I suggest the oranges. They are delicious! (reco[11])",
+              "content": "1. I <u>suggest</u> the oranges. They are delicious!<br/>re [ 11 ]",
               "explanation": "recommend (gợi ý) tương đồng với suggest.",
               "correctAnswer": "recommend"
             },
             {
               "id": "12",
-              "content": "2. Do not disagree with your sister. (ar[12])",
+              "content": "2. Do not <u>disagree</u> with your sister.<br/>ar [ 12 ]",
               "explanation": "argue (tranh cãi) tương đồng với disagree.",
               "correctAnswer": "argue"
             },
             {
               "id": "13",
-              "content": "3. The company's things that it makes are very useful in the kitchen. (Pr[13])",
+              "content": "3. The company's <u>things that it makes</u> are very useful in the kitchen.<br/>pr [ 13 ]",
               "explanation": "products (sản phẩm) tương đồng với things that it makes.",
               "correctAnswer": "products"
             },
             {
               "id": "14",
-              "content": "4. We can talk by phone. (com[14])",
+              "content": "4. We can <u>talk</u> by phone.<br/>co [ 14 ]",
               "explanation": "communicate (giao tiếp) tương đồng với talk.",
               "correctAnswer": "communicate"
             },
             {
               "id": "15",
-              "content": "5. Why don't you present her a fair price for her house? (of[15])",
+              "content": "5. Why don't you <u>present</u> her a fair price for her house?<br/>of [ 15 ]",
               "explanation": "offer (đề nghị) tương đồng với present.",
               "correctAnswer": "offer"
             }
@@ -178,31 +178,31 @@
           "questions": [
             {
               "id": "16",
-              "content": "Today, my friend (1[16]) me so nicely. First, he gave me some beautiful (2[17]) flowers. Next, he asked me to (3[18]) any CD from the store, and he bought it for me! Later when we got home, he made me close my eyes. When I opened them, I saw a great meal on a pretty (4[19]). There was even a vase full of flowers that he had (5[20]) from earlier that day. I will never forget this wonderful day.",
+              "content": "1. Today, my friend (1[16]) me so nicely. First, he gave me some beautiful (2[17]) flowers. Next, he asked me to (3[18]) any CD from the store, and he bought it for me! Later when we got home, he made me close my eyes. When I opened them, I saw a great meal on a pretty (4[19]). There was even a vase full of flowers that he had (5[20]) from earlier that day. I will never forget this wonderful day.",
               "explanation": "treated: đối xử",
               "correctAnswer": "treated"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "2. ",
               "explanation": "fresh: tươi",
               "correctAnswer": "fresh"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "3. ",
               "explanation": "select: chọn lựa",
               "correctAnswer": "select"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "4. ",
               "explanation": "dish: cái đĩa",
               "correctAnswer": "dish"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "5. ",
               "explanation": "gathered: thu thập, hái",
               "correctAnswer": "gathered"
             }

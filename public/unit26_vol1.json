@@ -80,35 +80,35 @@
           "questions": [
             {
               "id": "6",
-              "content": "How did Clare act when you told her about the party? (re[6])",
+              "content": "1. How did Clare <u>act</u> when you told her about the party?<br/>re [ 6 ]",
               "options": [],
               "explanation": "react: phản ứng",
               "correctAnswer": "react"
             },
             {
               "id": "7",
-              "content": "In this group of people, wearing hats is common. (soc[7])",
+              "content": "2. In this <u>group of people</u>, wearing hats is common.<br/>so [ 7 ]",
               "options": [],
               "explanation": "society: xã hội, nhóm người",
               "correctAnswer": "society"
             },
             {
               "id": "8",
-              "content": "I invited Jane and Lisa to my house, but not Jane or Lisa could come. (nei[8])",
+              "content": "3. I invited Jane and Lisa to my house, but <u>not Jane or Lisa</u> could come.<br/>ne [ 8 ]",
               "options": [],
               "explanation": "neither: không phải một trong hai",
               "correctAnswer": "neither"
             },
             {
               "id": "9",
-              "content": "I've nearly finished the book. I'm on the last page. (f[9])",
+              "content": "4. I've nearly finished the book. I'm on the <u>last</u> page.<br/>fi [ 9 ]",
               "options": [],
               "explanation": "final: cuối cùng",
               "correctAnswer": "final"
             },
             {
               "id": "10",
-              "content": "I can jump higher than you. Watch me, and I will show you that I can do it. (p[10])",
+              "content": "5. I can jump higher than you. Watch me, and I will <u>show you that I can do it</u>.<br/>pr [ 10 ]",
               "options": [],
               "explanation": "prove: chứng minh",
               "correctAnswer": "prove"
@@ -123,70 +123,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "1a. Can I give you some [11]? (suggest / advice)",
+              "content": "1. Can I give you some [ 11 ]? (suggest / advice)",
               "options": [],
               "explanation": "advice là lời khuyên.",
               "correctAnswer": "advice"
             },
             {
               "id": "12",
-              "content": "1b. I [12] that you do your homework before you go out. (suggest / advice)",
+              "content": "2. I [ 12 ] that you do your homework before you go out. (suggest / advice)",
               "options": [],
               "explanation": "suggest là đề nghị, gợi ý.",
               "correctAnswer": "suggest"
             },
             {
               "id": "13",
-              "content": "2a. I got everyone's [13] with my new dress. (situated / attention)",
+              "content": "3. I got everyone's [ 13 ] with my new dress. (situated / attention)",
               "options": [],
               "explanation": "attention là sự chú ý.",
               "correctAnswer": "attention"
             },
             {
               "id": "14",
-              "content": "2b. Where is your office [14] in the building? (situated / attention)",
+              "content": "4. Where is your office [ 14 ] in the building? (situated / attention)",
               "options": [],
               "explanation": "situated là nằm ở vị trí nào đó.",
               "correctAnswer": "situated"
             },
             {
               "id": "15",
-              "content": "3a. The [15] of his work is very high. (dropped / standard)",
+              "content": "5. The [ 15 ] of his work is very high. (dropped / standard)",
               "options": [],
               "explanation": "standard là tiêu chuẩn.",
               "correctAnswer": "standard"
             },
             {
               "id": "16",
-              "content": "3b. I accidentally [16] my phone in the snow. (dropped / standard)",
+              "content": "6. I accidentally [ 16 ] my phone in the snow. (dropped / standard)",
               "options": [],
               "explanation": "dropped là đánh rơi.",
               "correctAnswer": "dropped"
             },
             {
               "id": "17",
-              "content": "4a. He [17] my attention by waving to me. (attracted / reacted)",
+              "content": "7. He [ 17 ] my attention by waving to me. (attracted / reacted)",
               "options": [],
               "explanation": "attracted là thu hút.",
               "correctAnswer": "attracted"
             },
             {
               "id": "18",
-              "content": "4b. She [18] badly to the news. (attracted / reacted)",
+              "content": "8. She [ 18 ] badly to the news. (attracted / reacted)",
               "options": [],
               "explanation": "reacted là phản ứng.",
               "correctAnswer": "reacted"
             },
             {
               "id": "19",
-              "content": "5a. How much [19] is the beach? I'm tired! (further / along)",
+              "content": "9. How much [ 19 ] is the beach? I'm tired! (further / along)",
               "options": [],
               "explanation": "further là xa hơn.",
               "correctAnswer": "further"
             },
             {
               "id": "20",
-              "content": "5b. We walked [20] the path for two hours. (further / along)",
+              "content": "10. We walked [ 20 ] the path for two hours. (further / along)",
               "options": [],
               "explanation": "along là dọc theo.",
               "correctAnswer": "along"

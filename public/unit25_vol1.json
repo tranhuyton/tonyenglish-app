@@ -80,35 +80,35 @@
           "questions": [
             {
               "id": "6",
-              "content": "Large companies can (pro[6]) many products.",
+              "content": "1. Large companies can [ 6 ] many products.",
               "options": [],
               "explanation": "produce (sản xuất). Những công ty lớn có thể sản xuất nhiều sản phẩm.",
               "correctAnswer": "produce"
             },
             {
               "id": "7",
-              "content": "I offered her a (ran[7]) of choices from one to ten.",
+              "content": "2. I offered her a [ 7 ] of choices from one to ten.",
               "options": [],
               "explanation": "range (loạt/phạm vi). Tôi cung cấp cho cô ấy một loạt lựa chọn từ một đến mười.",
               "correctAnswer": "range"
             },
             {
               "id": "8",
-              "content": "How many people (pop[8]) this area?",
+              "content": "3. How many people [ 8 ] this area?",
               "options": [],
               "explanation": "populate (cư trú/sinh sống). Có bao nhiêu người sống ở khu vực này?",
               "correctAnswer": "populate"
             },
             {
               "id": "9",
-              "content": "Give me a (sig[9]) if you need help.",
+              "content": "4. Give me a [ 9 ] if you need help.",
               "options": [],
               "explanation": "sign (dấu hiệu). Hãy cho tôi một dấu hiệu nếu bạn cần giúp đỡ.",
               "correctAnswer": "sign"
             },
             {
               "id": "10",
-              "content": "This (per[10]) will last for one hour.",
+              "content": "5. This [ 10 ] will last for one hour.",
               "options": [],
               "explanation": "period (khoảng thời gian/tiết học). Tiết học/Khoảng thời gian này sẽ kéo dài một giờ.",
               "correctAnswer": "period"

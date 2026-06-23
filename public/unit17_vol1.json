@@ -80,31 +80,31 @@
           "questions": [
             {
               "id": "6",
-              "content": "His final offer was very reasonable. (f[6])",
+              "content": "1. His final offer was very <u>reasonable</u>.<br/>fa [ 6 ]",
               "explanation": "fair = reasonable",
               "correctAnswer": "fair"
             },
             {
               "id": "7",
-              "content": "Don't throw it in the trash without using all of it. (wa[7])",
+              "content": "2. Don't <u>throw it in the trash without using all of it</u>.<br/>wa [ 7 ]",
               "explanation": "waste = throw it in the trash without using all of it",
               "correctAnswer": "waste"
             },
             {
               "id": "8",
-              "content": "The rabbit will go away if you get too close. (dis[8])",
+              "content": "3. The rabbit will <u>go away</u> if you get too close.<br/>di [ 8 ]",
               "explanation": "disappear = go away",
               "correctAnswer": "appear"
             },
             {
               "id": "9",
-              "content": "He asked if I liked new movies or old movies. (wh[9])",
+              "content": "4. He asked <u>if</u> I liked new movies or old movies.<br/>wh [ 9 ]",
               "explanation": "whether = if (choosing between two things)",
               "correctAnswer": "ether"
             },
             {
               "id": "10",
-              "content": "You must decide what to do next. (d[10])",
+              "content": "5. You must <u>decide</u> what to do next.<br/>de [ 10 ]",
               "explanation": "determine = decide",
               "correctAnswer": "etermine"
             }
@@ -118,31 +118,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "That ___________ is too high to climb. (hill[11])",
+              "content": "1. That ___________ is too high to climb. (hill[11])",
               "explanation": "hill fits the context.",
               "correctAnswer": "hill"
             },
             {
               "id": "12",
-              "content": "We must find a ___________ to the difficult problem. (solution[12])",
+              "content": "2. We must find a ___________ to the difficult problem. (solution[12])",
               "explanation": "solution fits the context.",
               "correctAnswer": "solution"
             },
             {
               "id": "13",
-              "content": "I asked you a question. What is your __________? (response[13])",
+              "content": "3. I asked you a question. What is your __________? (response[13])",
               "explanation": "response fits the context.",
               "correctAnswer": "response"
             },
             {
               "id": "14",
-              "content": "The rain formed ___________ on the road. (puddles[14])",
+              "content": "4. The rain formed ___________ on the road. (puddles[14])",
               "explanation": "puddles fits the context.",
               "correctAnswer": "puddles"
             },
             {
               "id": "15",
-              "content": "Do you __________ the thought that went into the gifts you got? (appreciate[15])",
+              "content": "5. Do you __________ the thought that went into the gifts you got? (appreciate[15])",
               "explanation": "appreciate fits the context.",
               "correctAnswer": "appreciate"
             }

@@ -140,31 +140,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "If you [11] something widely, everyone will know about it.",
+              "content": "1. If you [ 11 ] something widely, everyone will know about it.",
               "explanation": "Từ cần điền là advertise (quảng cáo).",
               "correctAnswer": "advertise"
             },
             {
               "id": "12",
-              "content": "If you have a [12] problem, you might need more help.",
+              "content": "2. If you have a [ 12 ] problem, you might need more help.",
               "explanation": "Từ cần điền là major (lớn, quan trọng).",
               "correctAnswer": "major"
             },
             {
               "id": "13",
-              "content": "I want to be in the [13] to show that I am the best.",
+              "content": "3. I want to be in the [ 13 ] to show that I am the best.",
               "explanation": "Từ cần điền là competition (cuộc thi).",
               "correctAnswer": "competition"
             },
             {
               "id": "14",
-              "content": "His skiing [14] are great! He can be a professional.",
+              "content": "4. His skiing [ 14 ] are great! He can be a professional.",
               "explanation": "Từ cần điền là skills (kỹ năng).",
               "correctAnswer": "skills"
             },
             {
               "id": "15",
-              "content": "Next month, our country will [15] for a new president.",
+              "content": "5. Next month, our country will [ 15 ] for a new president.",
               "explanation": "Từ cần điền là vote (bầu cử).",
               "correctAnswer": "vote"
             }

@@ -80,31 +80,31 @@
           "questions": [
             {
               "id": "6",
-              "content": "My new desk is made of (wo____[6]).",
+              "content": "1. My new desk is made of (wo____[6]).",
               "explanation": "desk made of wood (gỗ).",
               "correctAnswer": "wood"
             },
             {
               "id": "7",
-              "content": "Students must start class at 9:00 each morning. This is the school's (po____[7]).",
+              "content": "2. Students must start class at 9:00 each morning. This is the school's (po____[7]).",
               "explanation": "rule (quy định) -> policy.",
               "correctAnswer": "policy"
             },
             {
               "id": "8",
-              "content": "There are over 500 people on the hospital's (st____[8]).",
+              "content": "3. There are over 500 people on the hospital's (st____[8]).",
               "explanation": "people working -> staff (nhân viên).",
               "correctAnswer": "staff"
             },
             {
               "id": "9",
-              "content": "Go (to____[9]) the river, but stop before you get in the water!",
+              "content": "4. Go (to____[9]) the river, but stop before you get in the water!",
               "explanation": "hướng về phía -> toward.",
               "correctAnswer": "toward"
             },
             {
               "id": "10",
-              "content": "The president gave a (sp____[10]) last night.",
+              "content": "5. The president gave a (sp____[10]) last night.",
               "explanation": "give a speech (bài phát biểu).",
               "correctAnswer": "speech"
             }
@@ -118,31 +118,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "He gave a talk to a group of people at the meeting. (spe[11])",
+              "content": "1. He gave a <u>talk</u> to a group of people at the meeting.<br/>sp [ 11 ]",
               "explanation": "talk to a group -> speech.",
               "correctAnswer": "speech"
             },
             {
               "id": "12",
-              "content": "Did anyone make the effort to do their homework? (bo[12])",
+              "content": "2. Did anyone <u>make the effort</u> to do their homework?<br/>bo [ 12 ]",
               "explanation": "make the effort -> bother.",
               "correctAnswer": "bother"
             },
             {
               "id": "13",
-              "content": "The chair is made of the material trees are made of. (wo[13])",
+              "content": "3. The chair is made of <u>the material trees are made of</u>.<br/>wo [ 13 ]",
               "explanation": "material trees are made of -> wood.",
               "correctAnswer": "wood"
             },
             {
               "id": "14",
-              "content": "The group of workers helped him with his work. (s[14])",
+              "content": "4. The <u>group of workers</u> helped him with his work.<br/>st [ 14 ]",
               "explanation": "group of workers -> staff.",
               "correctAnswer": "staff"
             },
             {
               "id": "15",
-              "content": "He is not dead; I saw him yesterday. (a[15])",
+              "content": "5. He is <u>not dead</u>; I saw him yesterday.<br/>al [ 15 ]",
               "explanation": "not dead -> alive.",
               "correctAnswer": "alive"
             }
@@ -156,61 +156,61 @@
           "questions": [
             {
               "id": "16",
-              "content": "My teacher's name is Mrs. Smith. Yesterday, she gave a (sp____[16]) to our class.",
+              "content": "1. My teacher's name is Mrs. Smith. Yesterday, she gave a (sp____[16]) to our class.",
               "explanation": "gave a speech.",
               "correctAnswer": "speech"
             },
             {
               "id": "17",
-              "content": "She said there was a new (po____[17]) about the school diet.",
+              "content": "2. She said there was a new (po____[17]) about the school diet.",
               "explanation": "new policy (quy định).",
               "correctAnswer": "policy"
             },
             {
               "id": "18",
-              "content": "The school's (st____[18]) decided that their students didn't eat healthily.",
+              "content": "3. The school's (st____[18]) decided that their students didn't eat healthily.",
               "explanation": "school staff (nhân viên).",
               "correctAnswer": "staff"
             },
             {
               "id": "19",
-              "content": "She said milk gives our bodies stronger (bo____[19]).",
+              "content": "4. She said milk gives our bodies stronger (bo____[19]).",
               "explanation": "stronger bones (xương).",
               "correctAnswer": "bones"
             },
             {
               "id": "20",
-              "content": "She also (me____[20]) that sugar is bad for us.",
+              "content": "5. She also (me____[20]) that sugar is bad for us.",
               "explanation": "mentioned (nhắc đến).",
               "correctAnswer": "mentioned"
             },
             {
               "id": "21",
-              "content": "She said she had no (do____[21]) that we would all feel better.",
+              "content": "6. She said she had no (do____[21]) that we would all feel better.",
               "explanation": "no doubt (không nghi ngờ).",
               "correctAnswer": "doubt"
             },
             {
               "id": "22",
-              "content": "We all thought that it was an (in____[22]).",
+              "content": "7. We all thought that it was an (in____[22]).",
               "explanation": "an injustice (sự bất công).",
               "correctAnswer": "injustice"
             },
             {
               "id": "23",
-              "content": "But at the (co____[23]) of class, she told us one more thing, 'It was a joke!'",
+              "content": "8. But at the (co____[23]) of class, she told us one more thing, 'It was a joke!'",
               "explanation": "at the conclusion (cuối).",
               "correctAnswer": "conclusion"
             },
             {
               "id": "24",
-              "content": "(Ho____[24]), no one thought that it was very funny.",
+              "content": "9. (Ho____[24]), no one thought that it was very funny.",
               "explanation": "however (tuy nhiên).",
               "correctAnswer": "however"
             },
             {
               "id": "25",
-              "content": "And no students (bo____[25]) to laugh.",
+              "content": "10. And no students (bo____[25]) to laugh.",
               "explanation": "bothered to laugh (bận tâm cười).",
               "correctAnswer": "bothered"
             }

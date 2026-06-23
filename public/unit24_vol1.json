@@ -87,7 +87,7 @@
                   "explanation": "hit tương đương với strike."
                 }
               ],
-              "content": "1. The car will (hit[6]) the wall if they don't slow down.",
+              "content": "1. The car will <u>hit</u> the wall if they don't slow down.<br/>st [ 6 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -99,7 +99,7 @@
                   "explanation": "run to stay healthy tương đương với exercise."
                 }
               ],
-              "content": "2. The athletes (run to stay healthy[7]) every morning.",
+              "content": "2. The athletes <u>run to stay healthy</u> every morning.<br/>ex [ 7 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -111,7 +111,7 @@
                   "explanation": "do in public tương đương với perform."
                 }
               ],
-              "content": "3. I hope they will (do in public[8]) a funny play.",
+              "content": "3. I hope they will <u>do in public</u> a funny play.<br/>pe [ 8 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -123,7 +123,7 @@
                   "explanation": "way to get from one place to another tương đương với passage."
                 }
               ],
-              "content": "4. Is there a (way to get from one place to another[9]) in the city?",
+              "content": "4. Is there a <u>way to get from one place to another</u> in the city?<br/>pa [ 9 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -135,7 +135,7 @@
                   "explanation": "effort to make someone do something tương đương với pressure."
                 }
               ],
-              "content": "5. Her (effort to make someone do something[10]) made Brad change his mind.",
+              "content": "5. Her <u>effort to make someone do something</u> made Brad change his mind.<br/>pr [ 10 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             }
           ],

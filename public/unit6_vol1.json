@@ -12,31 +12,31 @@
           "questions": [
             {
               "id": "1",
-              "content": "Sam was happy to <u>go back to</u> his house. (spr[1])",
+              "content": "1. Sam was happy to <u>go back to</u> his house.<br/>re [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "return"
             },
             {
               "id": "2",
-              "content": "Her grandfather is a <u>smart</u> old man. (spr[2])",
+              "content": "2. Her grandfather is a <u>smart</u> old man.<br/>wi [ 2 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "wise"
             },
             {
               "id": "3",
-              "content": "William wanted an <u>animal to live with</u>. (spr[3])",
+              "content": "3. William wanted an <u>animal to live with</u>.<br/>pe [ 3 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "pet"
             },
             {
               "id": "4",
-              "content": "He studies what the <u>condition of the air</u> is like. (spr[4])",
+              "content": "4. He studies what the <u>condition of the air</u> is like.<br/>we [ 4 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "weather"
             },
             {
               "id": "5",
-              "content": "I have to <u>deal with</u> my rising credit card bill. (spr[5])",
+              "content": "5. I have to <u>deal with</u> my rising credit card bill.<br/>fa [ 5 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "face"
             }
@@ -50,61 +50,61 @@
           "questions": [
             {
               "id": "6",
-              "content": "fright / ghost\nThe (spr[6]) lives in the old house.",
+              "content": "1. fright / ghost\nThe [ 6 ] lives in the old house.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "ghost"
             },
             {
               "id": "7",
-              "content": "A scary place might cause (spr[7]).",
+              "content": "2. A scary place might cause [ 7 ].",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "fright"
             },
             {
               "id": "8",
-              "content": "dead / upset\nThe tree fell down because it was (spr[8]).",
+              "content": "3. dead / upset\nThe tree fell down because it was [ 8 ].",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "dead"
             },
             {
               "id": "9",
-              "content": "I was (spr[9]) when I got a bad grade on the test.",
+              "content": "4. I was [ 9 ] when I got a bad grade on the test.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "upset"
             },
             {
               "id": "10",
-              "content": "advantage / reached\nAfter 10 hours of driving, I finally (spr[10]) California.",
+              "content": "5. advantage / reached\nAfter 10 hours of driving, I finally [ 10 ] California.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "reached"
             },
             {
               "id": "11",
-              "content": "He is smart and has a(n) (spr[11]) in class.",
+              "content": "6. He is smart and has a(n) [ 11 ] in class.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "advantage"
             },
             {
               "id": "12",
-              "content": "escape / distance\nHe wanted to (spr[12]) from the room.",
+              "content": "7. escape / distance\nHe wanted to [ 12 ] from the room.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "escape"
             },
             {
               "id": "13",
-              "content": "He lived a long (spr[13]) from the school.",
+              "content": "8. He lived a long [ 13 ] from the school.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "distance"
             },
             {
               "id": "14",
-              "content": "community / individual\nThe man is a nice (spr[14]).",
+              "content": "9. community / individual\nThe man is a nice [ 14 ].",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "individual"
             },
             {
               "id": "15",
-              "content": "The town is a small (spr[15]).",
+              "content": "10. The town is a small [ 15 ].",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "community"
             }

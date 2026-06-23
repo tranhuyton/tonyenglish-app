@@ -11,31 +11,31 @@
           "questions": [
             {
               "id": "1",
-              "content": "The story about the police dog got to many people in town. (spr[1])",
+              "content": "1. The story about the police dog <u>got to many people</u> in town.<br/>sp [ 1 ]",
               "explanation": "spread (lan truyền) tương đồng với 'got to many people' (đến với nhiều người).",
               "correctAnswer": "spread"
             },
             {
               "id": "2",
-              "content": "I was happy to sit and listen to music all night. (con[2])",
+              "content": "2. I was <u>happy</u> to sit and listen to music all night.<br/>co [ 2 ]",
               "explanation": "content (hài lòng, vui vẻ) tương đồng với 'happy' (vui vẻ).",
               "correctAnswer": "content"
             },
             {
               "id": "3",
-              "content": "The house will move back and forth if a strong wind blows. (sh[3])",
+              "content": "3. The house will <u>move back and forth</u> if a strong wind blows.<br/>sh [ 3 ]",
               "explanation": "shake (rung lắc) tương đồng với 'move back and forth'.",
               "correctAnswer": "shake"
             },
             {
               "id": "4",
-              "content": "I waited for the monster to come out of the cave. (ex[4])",
+              "content": "4. I <u>waited for</u> the monster to come out of the cave.<br/>ex [ 4 ]",
               "explanation": "expect (chờ đợi, mong đợi) tương đồng với 'waited for'.",
               "correctAnswer": "expected"
             },
             {
               "id": "5",
-              "content": "I didn’t want to talk to my sister, so I stayed away from her. (av[5])",
+              "content": "5. I didn’t want to talk to my sister, so I <u>stayed away from</u> her.<br/>av [ 5 ]",
               "explanation": "avoid (tránh xa) tương đồng với 'stayed away from'.",
               "correctAnswer": "avoided"
             }

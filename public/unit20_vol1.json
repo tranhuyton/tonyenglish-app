@@ -80,31 +80,31 @@
           "questions": [
             {
               "id": "6",
-              "content": "Chicken, pork, and beef are all kinds of (mea[6]).",
+              "content": "1. Chicken, pork, and beef are all kinds of (mea[6]).",
               "explanation": "meat: thịt (gà, lợn, bò đều là thịt).",
               "correctAnswer": "meat"
             },
             {
               "id": "7",
-              "content": "Don't drop the glass bowl. You will (dest[7]) it.",
+              "content": "2. Don't drop the glass bowl. You will (dest[7]) it.",
               "explanation": "destroy: phá huỷ.",
               "correctAnswer": "destroy"
             },
             {
               "id": "8",
-              "content": "Restaurants often (ser[8]) tea and coffee with breakfast.",
+              "content": "3. Restaurants often (ser[8]) tea and coffee with breakfast.",
               "explanation": "serve: phục vụ.",
               "correctAnswer": "serve"
             },
             {
               "id": "9",
-              "content": "Many teachers (reg[9]) their students as smart kids.",
+              "content": "4. Many teachers (reg[9]) their students as smart kids.",
               "explanation": "regard: xem như, đánh giá.",
               "correctAnswer": "regard"
             },
             {
               "id": "10",
-              "content": "It is sad when two countries start a (w[10]) with each other.",
+              "content": "5. It is sad when two countries start a (w[10]) with each other.",
               "explanation": "war: chiến tranh.",
               "correctAnswer": "war"
             }

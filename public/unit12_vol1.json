@@ -80,31 +80,31 @@
           "questions": [
             {
               "id": "6",
-              "content": "I don't like the person who lives near me.\n(neigh[6])",
+              "content": "1. I don't like <u>the person who lives near me</u>.<br/>ne [ 6 ]",
               "explanation": "neighbor: người hàng xóm",
               "correctAnswer": "neighbor"
             },
             {
               "id": "7",
-              "content": "I read a regular publication about sports.\n(maga[7])",
+              "content": "2. I read <u>a regular publication</u> about sports.<br/>ma [ 7 ]",
               "explanation": "magazine: tạp chí",
               "correctAnswer": "magazine"
             },
             {
               "id": "8",
-              "content": "The doctor gave his expert and qualified advice.\n(profe[8])",
+              "content": "3. The doctor gave his <u>expert and qualified</u> advice.<br/>pr [ 8 ]",
               "explanation": "professional: chuyên nghiệp",
               "correctAnswer": "professional"
             },
             {
               "id": "9",
-              "content": "He looked at the differences between two books.\n(co[9])",
+              "content": "4. He <u>looked at the differences between</u> two books.<br/>co [ 9 ]",
               "explanation": "compared: so sánh",
               "correctAnswer": "compared"
             },
             {
               "id": "10",
-              "content": "She has a good way of thinking about things.\n(a[10])",
+              "content": "5. She has a good <u>way of thinking about things</u>.<br/>at [ 10 ]",
               "explanation": "attitude: thái độ",
               "correctAnswer": "attitude"
             }

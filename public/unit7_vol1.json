@@ -80,31 +80,31 @@
           "questions": [
             {
               "id": "6",
-              "content": "Sarah let Tim go to the game. (spr[6])",
+              "content": "1. Sarah <u>let</u> Tim go to the game.<br/>al [ 6 ]",
               "explanation": "let go -> allowed (từ cho trước là allow)",
               "correctAnswer": "allowed"
             },
             {
               "id": "7",
-              "content": "The child promised not to hurt our cat. (spr[7])",
+              "content": "2. The child promised not to <u>hurt</u> our cat.<br/>ha [ 7 ]",
               "explanation": "hurt -> harm (từ cho trước là harm)",
               "correctAnswer": "harm"
             },
             {
               "id": "8",
-              "content": "She was a well-known writer in our town. (spr[8])",
+              "content": "3. She was a <u>well-known</u> writer in our town.<br/>fa [ 8 ]",
               "explanation": "well-known -> famous (từ cho trước là famous)",
               "correctAnswer": "famous"
             },
             {
               "id": "9",
-              "content": "You should say it's true that you never lie. (spr[9])",
+              "content": "4. You should <u>say it's true</u> that you never lie.<br/>cl [ 9 ]",
               "explanation": "say it's true -> claim (từ cho trước là claim)",
               "correctAnswer": "claim"
             },
             {
               "id": "10",
-              "content": "The food was cut into smaller parts so we could all eat. (spr[10])",
+              "content": "5. The food was <u>cut into smaller parts</u> so we could all eat.<br/>di [ 10 ]",
               "explanation": "cut into smaller parts -> divided (từ cho trước là divide)",
               "correctAnswer": "divided"
             }

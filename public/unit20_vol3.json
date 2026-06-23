@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "The princess looked beautiful and grand in her new dress.",
+              "content": "1. The princess looked <u>beautiful and grand</u> in her new dress.<br/>ma [ 6 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "It is a needed thing to hold your breath when swimming under water.",
+              "content": "2. It is a <u>needed thing</u> to hold your breath when swimming under water.<br/>ne [ 7 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -116,7 +116,7 @@
             },
             {
               "id": "8",
-              "content": "The tribe honored their highest and best chief.",
+              "content": "3. The tribe honored their <u>highest and best</u> chief.<br/>su [ 8 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -134,7 +134,7 @@
             },
             {
               "id": "9",
-              "content": "The runner was pleased with the end of the race.",
+              "content": "4. The runner was pleased with the <u>end</u> of the race.<br/>ou [ 9 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -152,7 +152,7 @@
             },
             {
               "id": "10",
-              "content": "The answer to this problem is easy to understand.",
+              "content": "5. The answer to this problem is <u>easy to understand</u>.<br/>ev [ 10 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -170,7 +170,7 @@
             },
             {
               "id": "11",
-              "content": "My father will be unhappy if I do not clean my bedroom.",
+              "content": "6. My father will be <u>unhappy</u> if I do not clean my bedroom.<br/>di [ 11 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -188,7 +188,7 @@
             },
             {
               "id": "12",
-              "content": "The police grab criminals that try to run away.",
+              "content": "7. The police <u>grab</u> criminals that try to run away.<br/>se [ 12 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -206,7 +206,7 @@
             },
             {
               "id": "13",
-              "content": "The early news program comes on TV at the time the sun rises.",
+              "content": "8. The early news program comes on TV at the <u>time the sun rises</u>.<br/>da [ 13 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -224,7 +224,7 @@
             },
             {
               "id": "14",
-              "content": "We covered the trap with a large group of sticks and grass.",
+              "content": "9. We covered the trap with a <u>large group</u> of sticks and grass.<br/>pi [ 14 ]",
               "options": [
                 "magnificent",
                 "necessity",
@@ -242,7 +242,7 @@
             },
             {
               "id": "15",
-              "content": "The lion protected her baby animal from the hunters.",
+              "content": "10. The lion protected her <u>baby animal</u> from the hunters.<br/>cu [ 15 ]",
               "options": [
                 "magnificent",
                 "necessity",

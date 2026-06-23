@@ -348,7 +348,7 @@
                   "answer": "crescent"
                 }
               ],
-              "content": "1. The night was extremely dark because little light came from the curved shaped moon. (app[26])"
+              "content": "1. The night was extremely dark because little light came from the <u>curved shaped moon</u>.<br/>cr [ 26 ]"
             },
             {
               "id": "27",
@@ -358,7 +358,7 @@
                   "answer": "roamed"
                 }
               ],
-              "content": "2. They moved without a purpose around the mall while waiting for their friend to get off of work. (app[27])"
+              "content": "2. They <u>moved without a purpose</u> around the mall while waiting for their friend to get off of work.<br/>ro [ 27 ]"
             },
             {
               "id": "28",
@@ -368,7 +368,7 @@
                   "answer": "craters"
                 }
               ],
-              "content": "3. The moon has large holes on the surface. (app[28])"
+              "content": "3. The moon has <u>large holes</u> on the surface.<br/>cr [ 28 ]"
             },
             {
               "id": "29",
@@ -378,7 +378,7 @@
                   "answer": "breadth"
                 }
               ],
-              "content": "4. The distance from one side to the other of a baby’s hand is very small. (app[29])"
+              "content": "4. The <u>distance from one side to the other</u> of a baby’s hand is very small.<br/>br [ 29 ]"
             },
             {
               "id": "30",
@@ -388,7 +388,7 @@
                   "answer": "fragment"
                 }
               ],
-              "content": "5. Mom couldn’t fix the bowl because a small part of it was missing. (app[30])"
+              "content": "5. Mom couldn’t fix the bowl because a <u>small part</u> of it was missing.<br/>fr [ 30 ]"
             },
             {
               "id": "31",
@@ -398,7 +398,7 @@
                   "answer": "atom"
                 }
               ],
-              "content": "6. A lot of energy is stored within just one simple smallest unit of matter. (app[31])"
+              "content": "6. A lot of energy is stored within just one simple <u>smallest unit of matter</u>.<br/>at [ 31 ]"
             },
             {
               "id": "32",
@@ -408,7 +408,7 @@
                   "answer": "embedded"
                 }
               ],
-              "content": "7. The bee’s stinger was placed firmly within the skin of his right hand. (app[32])"
+              "content": "7. The bee’s stinger was <u>placed firmly within</u> the skin of his right hand.<br/>em [ 32 ]"
             },
             {
               "id": "33",
@@ -418,7 +418,7 @@
                   "answer": "solitary"
                 }
               ],
-              "content": "8. Guarding the camp was a lonely job, so he gladly accepted the young man’s company. (app[33])"
+              "content": "8. Guarding the camp was a <u>lonely</u> job, so he gladly accepted the young man’s company.<br/>so [ 33 ]"
             },
             {
               "id": "34",
@@ -428,7 +428,7 @@
                   "answer": "radiates"
                 }
               ],
-              "content": "9. When it’s low on fuel, the heater emits a small level of heat. (app[34])"
+              "content": "9. When it’s low on fuel, the heater <u>emits</u> a small level of heat.<br/>ra [ 34 ]"
             },
             {
               "id": "35",
@@ -438,7 +438,7 @@
                   "answer": "status"
                 }
               ],
-              "content": "10. He was so concerned about his position to others in school that he studied very hard. (app[35])"
+              "content": "10. He was so concerned about his <u>position to others</u> in school that he studied very hard.<br/>st [ 35 ]"
             }
           ],
           "questionType": "Điền từ"

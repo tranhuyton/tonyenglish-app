@@ -155,70 +155,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "Tom was promoted, and now he is an ____ (important sea officer that controls military ships).",
+              "content": "1. Tom was promoted, and now he is an <u>important sea officer that controls military ships</u>.<br/>ad [ 11 ]",
               "options": [],
               "explanation": "\"an important sea officer that controls military ships\" (một sĩ quan hải quân quan trọng điều khiển tàu quân sự) có nghĩa là \"admiral\" (đô đốc).",
               "correctAnswer": "admiral"
             },
             {
               "id": "12",
-              "content": "Some people thought that the meal was too ____ (sharp and unpleasant tasting).",
+              "content": "2. Some people thought that the meal was too <u>sharp and unpleasant tasting</u>.<br/>so [ 12 ]",
               "options": [],
               "explanation": "\"sharp and unpleasant tasting\" (có vị gắt và khó chịu) có nghĩa là \"sour\" (chua).",
               "correctAnswer": "sour"
             },
             {
               "id": "13",
-              "content": "The ____ (oil in lamps and stoves) is a very cheap form of heat.",
+              "content": "3. The <u>oil in lamps and stoves</u> is a very cheap form of heat.<br/>ke [ 13 ]",
               "options": [],
               "explanation": "\"oil in lamps and stoves\" (dầu dùng trong đèn và bếp) có nghĩa là \"kerosene\" (dầu hỏa).",
               "correctAnswer": "kerosene"
             },
             {
               "id": "14",
-              "content": "Why did you steal the woman's bag? Don't you have a ____ (mind that understands what is wrong)?",
+              "content": "4. Why did you steal the woman's bag? Don't you have a <u>mind that understands what is wrong</u>?<br/>co [ 14 ]",
               "options": [],
               "explanation": "\"a mind that understands what is wrong\" (tâm trí hiểu được điều gì là sai trái) là \"conscience\" (lương tâm).",
               "correctAnswer": "conscience"
             },
             {
               "id": "15",
-              "content": "Can you buy three yellow ____ (pieces of fruit that are like oranges) from the supermarket please?",
+              "content": "5. Can you buy three yellow <u>pieces of fruit that are like oranges</u> from the supermarket please?<br/>gr [ 15 ]",
               "options": [],
               "explanation": "\"pieces of fruit that are like oranges\" (những quả giống như cam) là \"grapefruits\" (quả bưởi tây).",
               "correctAnswer": "grapefruits"
             },
             {
               "id": "16",
-              "content": "I hope that the ____ (waiter on the plane) will bring some water soon.",
+              "content": "6. I hope that the <u>waiter on the plane</u> will bring some water soon.<br/>st [ 16 ]",
               "options": [],
               "explanation": "\"waiter on the plane\" (người phục vụ trên máy bay) là \"steward\" (tiếp viên).",
               "correctAnswer": "steward"
             },
             {
               "id": "17",
-              "content": "After lightning struck the tree, the forest turned into a ____ (burning blaze).",
+              "content": "7. After lightning struck the tree, the forest turned into a <u>burning blaze</u>.<br/>fi [ 17 ]",
               "options": [],
               "explanation": "\"burning blaze\" (ngọn lửa đang bốc cháy) tương ứng với tính từ \"fiery\" (bốc cháy dữ dội).",
               "correctAnswer": "fiery"
             },
             {
               "id": "18",
-              "content": "Use this ____ (thin rope) to tie the package.",
+              "content": "8. Use this <u>thin rope</u> to tie the package.<br/>st [ 18 ]",
               "options": [],
               "explanation": "\"thin rope\" (sợi dây thừng mỏng) có nghĩa là \"string\" (sợi dây).",
               "correctAnswer": "string"
             },
             {
               "id": "19",
-              "content": "I cleaned the rabbit's cage and left some ____ (dry grass) for it to eat.",
+              "content": "9. I cleaned the rabbit's cage and left some <u>dry grass</u> for it to eat.<br/>ha [ 19 ]",
               "options": [],
               "explanation": "\"dry grass\" (cỏ khô) có nghĩa là \"hay\".",
               "correctAnswer": "hay"
             },
             {
               "id": "20",
-              "content": "I threw the ball through the ____ (line in the shape of a circle).",
+              "content": "10. I threw the ball through the <u>line in the shape of a circle</u>.<br/>lo [ 20 ]",
               "options": [],
               "explanation": "\"line in the shape of a circle\" (sợi dây có hình vòng tròn) có nghĩa là \"loop\" (vòng lặp).",
               "correctAnswer": "loop"
@@ -233,35 +233,35 @@
           "questions": [
             {
               "id": "21",
-              "content": "I'm going to tie the cow to a ____ in the ground.",
+              "content": "1. I'm going to tie the cow to a [ 21 ] in the ground.",
               "options": [],
               "explanation": "\"stake\" là cái cọc. (Tôi sẽ buộc con bò vào một cái cọc trên mặt đất.)",
               "correctAnswer": "stake"
             },
             {
               "id": "22",
-              "content": "You shouldn't eat the chicken. The ____ is still pink.",
+              "content": "2. You shouldn't eat the chicken. The [ 22 ] is still pink.",
               "options": [],
               "explanation": "\"flesh\" là thịt (của động vật). (Bạn không nên ăn thịt gà này. Thịt vẫn còn màu hồng.)",
               "correctAnswer": "flesh"
             },
             {
               "id": "23",
-              "content": "New drivers are more likely to ____ their cars than experienced drivers.",
+              "content": "3. New drivers are more likely to [ 23 ] their cars than experienced drivers.",
               "options": [],
               "explanation": "\"wreck\" là phá hủy, làm hỏng. (Những người mới lái xe dễ làm hỏng xe của họ hơn những người lái xe có kinh nghiệm.)",
               "correctAnswer": "wreck"
             },
             {
               "id": "24",
-              "content": "Many people were hurt in the boating ____.",
+              "content": "4. Many people were hurt in the boating [ 24 ].",
               "options": [],
               "explanation": "\"accident\" là tai nạn. (Nhiều người bị thương trong vụ tai nạn chèo thuyền.)",
               "correctAnswer": "accident"
             },
             {
               "id": "25",
-              "content": "My brother has a very friendly and cheerful ____.",
+              "content": "5. My brother has a very friendly and cheerful [ 25 ].",
               "options": [],
               "explanation": "\"character\" là tính cách. (Anh trai tôi có tính cách rất thân thiện và vui vẻ.)",
               "correctAnswer": "character"

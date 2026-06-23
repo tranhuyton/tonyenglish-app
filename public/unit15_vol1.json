@@ -140,31 +140,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "I had to walk to the other side of the school to get to my next class. (acr[11])",
+              "content": "1. I had to walk <u>to the other side of</u> the school to get to my next class.<br/>ac [ 11 ]",
               "explanation": "across matches 'to the other side of'.",
               "correctAnswer": "across"
             },
             {
               "id": "12",
-              "content": "Brad chose not to give an answer when I asked about his weekend. (resp[12])",
+              "content": "2. Brad chose not to <u>give an answer</u> when I asked about his weekend.<br/>re [ 12 ]",
               "explanation": "respond matches 'give an answer'.",
               "correctAnswer": "respond"
             },
             {
               "id": "13",
-              "content": "Sarah ran around the park to get ready for the contest where people run against each other. (ra[13])",
+              "content": "3. Sarah ran around the park to get ready for the <u>contest where people run against each other</u>.<br/>ra [ 13 ]",
               "explanation": "race matches 'contest where people run against each other'.",
               "correctAnswer": "race"
             },
             {
               "id": "14",
-              "content": "Michael saw the accident that occurred today. (obs[14])",
+              "content": "4. Michael <u>saw</u> the accident that occurred today.<br/>ob [ 14 ]",
               "explanation": "observed matches 'saw'.",
               "correctAnswer": "observed"
             },
             {
               "id": "15",
-              "content": "Renee knew there was a chance of something bad happening when she went swimming in the ocean. (r[15])",
+              "content": "5. Renee knew there was a <u>chance of something bad happening</u> when she went swimming in the ocean.<br/>ri [ 15 ]",
               "explanation": "risk matches 'chance of something bad happening'.",
               "correctAnswer": "risk"
             }

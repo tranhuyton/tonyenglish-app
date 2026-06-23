@@ -138,7 +138,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "We had a big [11] to welcome my grandmother home from the hospital.",
+              "content": "1. We had a big [11] to welcome my grandmother home from the hospital.",
               "options": [
                 "illustrate",
                 "costume",
@@ -156,7 +156,7 @@
             },
             {
               "id": "12",
-              "content": "The man was a [12] for crossing the street without looking.",
+              "content": "2. The man was a [12] for crossing the street without looking.",
               "options": [
                 "illustrate",
                 "costume",
@@ -174,7 +174,7 @@
             },
             {
               "id": "13",
-              "content": "A friend asked me to [13] the book she wrote because I am an artist.",
+              "content": "3. A friend asked me to [13] the book she wrote because I am an artist.",
               "options": [
                 "illustrate",
                 "costume",
@@ -192,7 +192,7 @@
             },
             {
               "id": "14",
-              "content": "I sewed feathers on my [14] for the play.",
+              "content": "4. I sewed feathers on my [14] for the play.",
               "options": [
                 "illustrate",
                 "costume",
@@ -210,7 +210,7 @@
             },
             {
               "id": "15",
-              "content": "My teacher [15] my paper because I didn’t follow the directions.",
+              "content": "5. My teacher [15] my paper because I didn’t follow the directions.",
               "options": [
                 "illustrate",
                 "costume",
@@ -228,7 +228,7 @@
             },
             {
               "id": "16",
-              "content": "I like being alone in the forest because of the [16] that’s around me.",
+              "content": "6. I like being alone in the forest because of the [16] that’s around me.",
               "options": [
                 "illustrate",
                 "costume",
@@ -246,7 +246,7 @@
             },
             {
               "id": "17",
-              "content": "The boy who stole the bread [17] me not to tell.",
+              "content": "7. The boy who stole the bread [17] me not to tell.",
               "options": [
                 "illustrate",
                 "costume",
@@ -264,7 +264,7 @@
             },
             {
               "id": "18",
-              "content": "Some fish swim up a [18] to lay their eggs.",
+              "content": "8. Some fish swim up a [18] to lay their eggs.",
               "options": [
                 "illustrate",
                 "costume",
@@ -282,7 +282,7 @@
             },
             {
               "id": "19",
-              "content": "We learned about the [19] of the Statue of Liberty.",
+              "content": "9. We learned about the [19] of the Statue of Liberty.",
               "options": [
                 "illustrate",
                 "costume",
@@ -300,7 +300,7 @@
             },
             {
               "id": "20",
-              "content": "My sister [20] anyone to come in her room without asking first.",
+              "content": "10. My sister [20] anyone to come in her room without asking first.",
               "options": [
                 "illustrate",
                 "costume",
