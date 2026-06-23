@@ -689,7 +689,15 @@
               ],
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "B"
-            },
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec6_reading_sa",
+          "title": "Short Answer",
+          "content": "",
+          "questions": [
             {
               "id": "60",
               "content": "How did Argos sleep?",
@@ -697,7 +705,7 @@
               "correctAnswer": "He only rested a few eyes at a time. The others stayed awake."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Đoạn văn"
         }
       ]
     }

@@ -279,7 +279,15 @@
               ],
               "explanation": "Sự khác biệt là sự nhân hậu của Jason ('Your kindness has always made you special. It\\'s the difference...').",
               "correctAnswer": "D"
-            },
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_sa",
+          "title": "Short Answer",
+          "content": "",
+          "questions": [
             {
               "id": "25",
               "content": "What did the king have to announce?",
@@ -287,7 +295,7 @@
               "correctAnswer": "He would have to announce who would become king."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Đoạn văn"
         }
       ]
     }
