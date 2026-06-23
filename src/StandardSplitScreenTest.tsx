@@ -553,7 +553,9 @@ const handleFinish = async () => {
     const targetPartIndex = questionToPartMap[String(id)];
     if (targetPartIndex !== undefined && targetPartIndex !== currentPartIndex) {
       setCurrentPartIndex(targetPartIndex);
-      setTimeout(() => {
+      
+      let attempts = 0;
+      const checkAndScroll = () => {
         const el = document.getElementById(`q-${id}`);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -561,8 +563,13 @@ const handleFinish = async () => {
           setTimeout(() => {
               el.classList.remove('ring-4', 'ring-[#0ea5e9]/40', 'rounded-xl');
           }, 1500);
+        } else if (attempts < 15) {
+          attempts++;
+          setTimeout(checkAndScroll, 100);
         }
-      }, 150);
+      };
+      setTimeout(checkAndScroll, 100);
+      
     } else {
       const el = document.getElementById(`q-${id}`);
       if (el) {
