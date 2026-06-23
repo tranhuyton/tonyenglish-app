@@ -208,33 +208,53 @@
           "questions": [
             {
               "id": "16",
-              "content": "wave / beach\nI like to play on the (sec3[16]).\nThe big (sec3[2]) pushed the swimmer back.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "{\"1\":\"beach\",\"2\":\"wave\"}"
+              "content": "<p><b>wave / beach</b><br/>I like to play on the [16].</p>",
+              "correctAnswer": "beach"
             },
             {
               "id": "17",
-              "content": "ocean / island\nThey walked across the (sec3[17]) to find food.\nI am scared of some animals that live in the (sec3[2]).",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "{\"1\":\"island\",\"2\":\"ocean\"}"
+              "content": "<p>The big [17] pushed the swimmer back.</p>",
+              "correctAnswer": "wave"
             },
             {
               "id": "18",
-              "content": "fix / damage\nMy dad knows how to (sec3[18]) cars.\nIf you (sec3[2]) the light, we won't be able to see at night.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "{\"1\":\"fix\",\"2\":\"damage\"}"
+              "content": "<p><b>ocean / island</b><br/>They walked across the [18] to find food.</p>",
+              "correctAnswer": "island"
             },
             {
               "id": "19",
-              "content": "still / rock\nWe have to go around that large (sec3[19]).\nWe are (sec3[2]) planning to go to Florida this winter.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "{\"1\":\"rock\",\"2\":\"still\"}"
+              "content": "<p>I am scared of some animals that live in the [19].</p>",
+              "correctAnswer": "ocean"
             },
             {
               "id": "20",
-              "content": "step / throw\nDo you know how to (sec3[20]) a football?\nPlease (sec3[2]) into the house.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "{\"1\":\"throw\",\"2\":\"step\"}"
+              "content": "<p><b>fix / damage</b><br/>My dad knows how to [20] cars.</p>",
+              "correctAnswer": "fix"
+            },
+            {
+              "id": "21",
+              "content": "<p>If you [21] the light, we won't be able to see at night.</p>",
+              "correctAnswer": "damage"
+            },
+            {
+              "id": "22",
+              "content": "<p><b>still / rock</b><br/>We have to go around that large [22].</p>",
+              "correctAnswer": "rock"
+            },
+            {
+              "id": "23",
+              "content": "<p>We are [23] planning to go to Florida this winter.</p>",
+              "correctAnswer": "still"
+            },
+            {
+              "id": "24",
+              "content": "<p><b>step / throw</b><br/>Do you know how to [24] a football?</p>",
+              "correctAnswer": "throw"
+            },
+            {
+              "id": "25",
+              "content": "<p>Please [25] into the house.</p>",
+              "correctAnswer": "step"
             }
           ],
           "questionType": "Điền từ"
@@ -253,7 +273,7 @@
           "content": "",
           "questions": [
             {
-              "id": "21",
+              "id": "26",
               "content": "What is this story about?",
               "options": [
                 "A girl who wants to save starfish",
@@ -265,7 +285,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "22",
+              "id": "27",
               "content": "What causes the little girl's emotion?",
               "options": [
                 "She cannot fix the damage she finds to homes.",
@@ -277,7 +297,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "23",
+              "id": "28",
               "content": "What does the man think is NOT good about the island?",
               "options": [
                 "Watching the waves",
@@ -289,7 +309,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "24",
+              "id": "29",
               "content": "What does the girl think the man can perhaps do?",
               "options": [
                 "Identify birds",
@@ -309,7 +329,7 @@
           "content": "",
           "questions": [
             {
-              "id": "25",
+              "id": "30",
               "content": "Which starfish were safe on the beach?\n(sec4[25])",
               "explanation": "Những con sao biển có thể quay trở lại nước thì được an toàn.",
               "correctAnswer": "{\"1\":\"Some starfish went back into the water, and they were safe.\"}"
