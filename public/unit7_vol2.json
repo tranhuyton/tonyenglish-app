@@ -7,483 +7,322 @@
   },
   "basicInfo": {
     "skill": "SplitScreen (Standard)",
-    "title": "Unit 7: Volume 2"
+    "title": "Unit 7: Volume 2",
+    "category": "exercise",
+    "timeLimit": 0
   },
-  "exercises": [
+  "parts": [
     {
-      "type": "multiple_choice",
-      "title": "Circle two words that are related in each group.",
-      "questions": [
+      "title": "Word List",
+      "content": "<div class=\"flashcards-container\" style=\"display: flex; flex-direction: column; gap: 20px;\">\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">basis</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[beisis]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To do something on time’s basis is how often you do it.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandfather gets his hearing checked on a yearly basis.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">biology</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baiɑlədʒi]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Biology is the study of living things.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We learned about the human heart in biology class.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cage</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[keidʒ]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cage is something that holds an animal so it cannot leave.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We put the parrots in their cage at night.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">colleague</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑli:g]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A colleague is somebody you work with.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My colleague helped me finish the job.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">colony</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑləni]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A colony is a country controlled by another country.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The USA was at one time a colony of Great Britain.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">debate</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dibeit]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To debate is to seriously discuss something with someone.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The husband and wife debated over which TV to buy.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">depart</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipɑ:rt]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To depart is to leave some place so you can go to another place.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The plane departed for Italy at 3:00 this afternoon.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">depress</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipres]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To depress someone is to make them sad.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bad news from work depressed the man.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">factual</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæktʃuəl]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is factual, it is true.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ John learns about history from factual books.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fascinate</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæsəneit]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To fascinate someone is to make them really like something.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The kitten was fascinated by the ball of yarn.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mission</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[miʃən]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mission is an important job that is sometimes far away.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The woman’s mission was to help sick people.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nevertheless</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nevərðəles]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">You use nevertheless to show that something goes against a fact.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He is usually friendly. Nevertheless, he wasn’t this afternoon.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">occupation</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑkjəpeiʃən]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An occupation is a person’s job.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father’s occupation is a dentist.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overseas</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvərsi:z]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you go overseas, you go to a country on the other side of an ocean.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ John often goes overseas for vacations.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">persuade</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pər:sweid]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To persuade someone is to make them agree to do something.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The children persuaded their parents to buy them gifts.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">route</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ru:t]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A route is the way you go from one place to another.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw many new houses along the route to the city.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ruins</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ru:inz]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Ruins are old buildings that are not used anymore.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I visited some interesting ruins in Greece.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scholar</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skɑlər]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A scholar is a person who studies something and knows much about it.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The scholar knew much about art history.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">significant</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[signifikənt]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone or something is significant, they are important.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I read many significant novels as a literature major in university.</div>\n  </div>\n</div>\n<div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n    <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n      <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">volcano</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vɑlkeinou]</span>\n      <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n    </div>\n    <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A volcano is a mountain with a hole on top where hot liquid comes out.</div>\n    <div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the volcano erupted, smoke and heat filled the air.</div>\n  </div>\n</div></div>",
+      "sections": [
         {
-          "answer": "b, c",
-          "options": [
-            "b, c",
-            "a, d",
-            "b, d",
-            "a, b",
-            "c, d"
-          ],
-          "question": "1. a. volcano b. scholar c. colleague d. cage",
-          "explanation": "scholar và colleague là hai từ liên quan đến công việc, người làm việc."
+          "title": "Exercise 1: Circle two words that are related in each group.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "<p>1. a. volcano b. scholar c. colleague d. cage</p>",
+              "options": [
+                "b, c",
+                "a, d",
+                "b, d",
+                "a, b",
+                "c, d"
+              ],
+              "correctAnswer": "B, C",
+              "explanation": "scholar và colleague là hai từ liên quan đến công việc, người làm việc."
+            },
+            {
+              "id": "2",
+              "content": "<p>2. a. persuade b. basis c. mission d. debate</p>",
+              "options": [
+                "b, c",
+                "a, d",
+                "b, d",
+                "a, b",
+                "c, d"
+              ],
+              "correctAnswer": "A, D",
+              "explanation": "persuade và debate đều liên quan đến tranh luận và thuyết phục."
+            },
+            {
+              "id": "3",
+              "content": "<p>3. a. depress b. colony c. occupation d. overseas</p>",
+              "options": [
+                "b, c",
+                "a, d",
+                "b, d",
+                "a, b",
+                "c, d"
+              ],
+              "correctAnswer": "B, D",
+              "explanation": "colony và overseas đều liên quan đến một vùng đất, hải ngoại."
+            },
+            {
+              "id": "4",
+              "content": "<p>4. a. route b. depart c. cheer d. fascinate</p>",
+              "options": [
+                "b, c",
+                "a, d",
+                "b, d",
+                "a, b",
+                "c, d"
+              ],
+              "correctAnswer": "A,B",
+              "explanation": "route và depart đều liên quan đến di chuyển, chuyến đi."
+            },
+            {
+              "id": "5",
+              "content": "<p>5. a. ruins b. factual c. significant d. nevertheless</p>",
+              "options": [
+                "b, c",
+                "a, d",
+                "b, d",
+                "a, b",
+                "c, d"
+              ],
+              "correctAnswer": "B, C",
+              "explanation": "factual và significant đều là tính từ mô tả tầm quan trọng, thực tế."
+            }
+          ]
         },
         {
-          "answer": "a, d",
-          "options": [
-            "b, c",
-            "a, d",
-            "b, d",
-            "a, b",
-            "c, d"
-          ],
-          "question": "2. a. persuade b. basis c. mission d. debate",
-          "explanation": "persuade và debate đều liên quan đến tranh luận và thuyết phục."
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "<p>1. He had a very important job that he loved.</p>",
+              "options": [
+                "mission",
+                "colleague",
+                "route",
+                "factual"
+              ],
+              "correctAnswer": "MISSION",
+              "explanation": "important job đồng nghĩa với mission."
+            },
+            {
+              "id": "7",
+              "content": "<p>2. Linda was happy that she had good people at work.</p>",
+              "options": [
+                "colleagues",
+                "basis",
+                "ruins",
+                "debate"
+              ],
+              "correctAnswer": "COLLEAGUES",
+              "explanation": "people at work đồng nghĩa với colleagues."
+            },
+            {
+              "id": "8",
+              "content": "<p>3. Bernie had never taken that way home before.</p>",
+              "options": [
+                "route",
+                "volcano",
+                "overseas",
+                "occupation"
+              ],
+              "correctAnswer": "ROUTE",
+              "explanation": "way đồng nghĩa với route."
+            },
+            {
+              "id": "9",
+              "content": "<p>4. This is a true movie about her life.</p>",
+              "options": [
+                "factual",
+                "significant",
+                "depart",
+                "fascinate"
+              ],
+              "correctAnswer": "FACTUAL",
+              "explanation": "true đồng nghĩa với factual."
+            },
+            {
+              "id": "10",
+              "content": "<p>5. Our country used to have one other country under our control.</p>",
+              "options": [
+                "colony",
+                "cage",
+                "scholar",
+                "nevertheless"
+              ],
+              "correctAnswer": "COLONY",
+              "explanation": "country under our control đồng nghĩa với colony."
+            }
+          ]
         },
         {
-          "answer": "b, d",
-          "options": [
-            "b, c",
-            "a, d",
-            "b, d",
-            "a, b",
-            "c, d"
-          ],
-          "question": "3. a. depress b. colony c. occupation d. overseas",
-          "explanation": "colony và overseas đều liên quan đến một vùng đất, hải ngoại."
+          "title": "Exercise 3: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "<p>1.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Scholars (học giả) có thể dạy nhiều điều. Ruins là đống đổ nát, không ai sống ở đó."
+            },
+            {
+              "id": "12",
+              "content": "<p>2.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mọi người thường đi máy bay khi ra nước ngoài (overseas)."
+            },
+            {
+              "id": "13",
+              "content": "<p>3.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mọi người thấy vui khi khởi hành (depart) đi chơi."
+            },
+            {
+              "id": "14",
+              "content": "<p>4.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Thấy những điều mới mẻ thường lôi cuốn (fascinates) mọi người."
+            },
+            {
+              "id": "15",
+              "content": "<p>5.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Người ta thường đến thăm di tích (ruins) để học về quá khứ."
+            },
+            {
+              "id": "16",
+              "content": "<p>6.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Khi người ta tranh luận (debate), họ có những ý kiến khác nhau."
+            },
+            {
+              "id": "17",
+              "content": "<p>7.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người nói về chuyện buồn có thể làm bạn chán nản (depress)."
+            },
+            {
+              "id": "18",
+              "content": "<p>8.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Tôi cố gắng thuyết phục (persuade) bạn tôi gặp nhau ăn trưa."
+            },
+            {
+              "id": "19",
+              "content": "<p>9.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nếu bạn học sinh học (biology), bạn sẽ học về các động vật khác nhau."
+            },
+            {
+              "id": "20",
+              "content": "<p>10.</p>",
+              "options": [
+                "a",
+                "b"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người thích sự thật thường thích những câu chuyện có thật (factual)."
+            }
+          ]
         },
         {
-          "answer": "a, b",
-          "options": [
-            "b, c",
-            "a, d",
-            "b, d",
-            "a, b",
-            "c, d"
-          ],
-          "question": "4. a. route b. depart c. cheer d. fascinate",
-          "explanation": "route và depart đều liên quan đến di chuyển, chuyến đi."
-        },
-        {
-          "answer": "b, c",
-          "options": [
-            "b, c",
-            "a, d",
-            "b, d",
-            "a, b",
-            "c, d"
-          ],
-          "question": "5. a. ruins b. factual c. significant d. nevertheless",
-          "explanation": "factual và significant đều là tính từ mô tả tầm quan trọng, thực tế."
+          "title": "Exercise 4: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "<p>1. What is this story about?</p>",
+              "options": [
+                "A route to a new place",
+                "A scholar who finds a talking bird",
+                "How to learn about biology",
+                "Why people debate each other"
+              ],
+              "correctAnswer": "A SCHOLAR WHO FINDS A TALKING BIRD",
+              "explanation": "Câu chuyện kể về hành trình tìm kiếm một chú chim biết nói của tiến sĩ Norton. Bạn có thể thấy rõ điều này ngay từ đoạn đầu tiên: \"The man told Dr. Norton about a talking bird!\" (Người đàn ông đã kể cho tiến sĩ Norton về một con chim biết nói!) và \"His new mission was to find it.\" (Nhiệm vụ mới của ông là tìm ra nó). Cả câu chuyện sau đó đều xoay quanh việc ông lên đường, tìm kiếm và cuối cùng đã bắt được chú chim này. Do đó, đáp án đúng là \"A scholar who finds a talking bird\" (Một học giả tìm thấy một con chim biết nói)."
+            },
+            {
+              "id": "22",
+              "content": "<p>2. Why did Dr. Norton go overseas?</p>",
+              "options": [
+                "He wanted to depart from his colleagues and start a new life.",
+                "He was on a mission to find the talking bird.",
+                "He wanted to see the volcano.",
+                "He wanted to discover some old ruins."
+              ],
+              "correctAnswer": "HE WAS ON A MISSION TO FIND THE TALKING BIRD.",
+              "explanation": "Tiến sĩ Norton ra nước ngoài vì ông có nhiệm vụ tìm kiếm chú chim biết nói. Trong đoạn 1 có viết: \"Nevertheless, Dr. Norton believed the bird was real. His new mission was to find it. He wanted factual proof.\" (Tuy nhiên, tiến sĩ Norton tin rằng con chim là có thật. Nhiệm vụ mới của ông là tìm ra nó. Ông ấy muốn bằng chứng thực tế.) và đoạn 2 tiếp tục: \"The next day he departed for the colony.\" (Ngày hôm sau ông lên đường đến thuộc địa). Do đó, đáp án chính xác là \"He was on a mission to find the talking bird.\" (Ông ấy có một nhiệm vụ là tìm con chim biết nói)."
+            },
+            {
+              "id": "23",
+              "content": "<p>3. At the end of the story, we can infer that ____________.</p>",
+              "options": [
+                "Jai didn’t like Dr. Norton but nevertheless cheered his discovery",
+                "finding the volcano was also a significant discovery",
+                "the bird would be the factual proof that would persuade his colleagues",
+                "the bird had fascinated people in the colony for a longtime"
+              ],
+              "correctAnswer": "THE BIRD WOULD BE THE FACTUAL PROOF THAT WOULD PERSUADE HIS COLLEAGUES",
+              "explanation": "Ở cuối truyện, chúng ta có thể suy luận rằng chú chim chính là bằng chứng thực tế giúp ông thuyết phục các đồng nghiệp của mình. Ở đoạn 1, đồng nghiệp của ông đã không tin: \"They debated with him: no one thought a bird could talk.\" (Họ tranh luận với ông: không ai nghĩ một con chim có thể nói được) và ông cần bằng chứng: \"He wanted factual proof.\" Ở đoạn cuối cùng, khi ông bắt được chim và mang về: \"He had made a significant discovery.\" (Ông đã có một khám phá quan trọng). Điều này có nghĩa là con chim sẽ là bằng chứng rõ ràng nhất để thuyết phục họ. Vì vậy, đáp án đúng là \"the bird would be the factual proof that would persuade his colleagues\"."
+            },
+            {
+              "id": "24",
+              "content": "<p>4. According to the passage, all the following are true EXCEPT</p>",
+              "options": [
+                "Jai fed bread to the talking bird",
+                "Dr. Norton put the bird into a cage",
+                "Dr. Norton took a ship to the colony",
+                "the talking bird was in the ruins"
+              ],
+              "correctAnswer": "JAI FED BREAD TO THE TALKING BIRD",
+              "explanation": "Chi tiết Jai cho chim ăn bánh mì không được nhắc đến trong bài đọc. Các chi tiết khác đều đúng: tiến sĩ Norton nhốt chú chim vào lồng (Dr. Norton put the talking bird into a cage); ông đi tàu biển đến thuộc địa (thể hiện qua câu After a month of sailing, Dr. Norton finally reached the colony...); và chú chim ở trong đống đổ nát (thể hiện qua đoạn 4 khi ông đi ngang qua khu di tích cũ: he walked past some old ruins. He heard someone say, Hello). Do bài yêu cầu tìm câu KHÔNG ĐÚNG (EXCEPT), đáp án chính xác là \"Jai fed bread to the talking bird\"."
+            }
+          ]
         }
       ]
     },
     {
-      "type": "multiple_choice",
-      "title": "Write a word that is similar in meaning to the underlined part.",
-      "questions": [
-        {
-          "answer": "mission",
-          "options": [
-            "mission",
-            "colleague",
-            "route",
-            "factual"
-          ],
-          "question": "1. He had a very important job that he loved.",
-          "explanation": "important job đồng nghĩa với mission."
-        },
-        {
-          "answer": "colleagues",
-          "options": [
-            "colleagues",
-            "basis",
-            "ruins",
-            "debate"
-          ],
-          "question": "2. Linda was happy that she had good people at work.",
-          "explanation": "people at work đồng nghĩa với colleagues."
-        },
-        {
-          "answer": "route",
-          "options": [
-            "route",
-            "volcano",
-            "overseas",
-            "occupation"
-          ],
-          "question": "3. Bernie had never taken that way home before.",
-          "explanation": "way đồng nghĩa với route."
-        },
-        {
-          "answer": "factual",
-          "options": [
-            "factual",
-            "significant",
-            "depart",
-            "fascinate"
-          ],
-          "question": "4. This is a true movie about her life.",
-          "explanation": "true đồng nghĩa với factual."
-        },
-        {
-          "answer": "colony",
-          "options": [
-            "colony",
-            "cage",
-            "scholar",
-            "nevertheless"
-          ],
-          "question": "5. Our country used to have one other country under our control.",
-          "explanation": "country under our control đồng nghĩa với colony."
-        }
-      ]
-    },
-    {
-      "type": "multiple_choice",
-      "title": "Check the sentence with the bolded word that makes better sense.",
-      "questions": [
-        {
-          "answer": "a",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "1. a. Scholars can teach you many things that you didn’t know. b. Some people like to live in cities, while others like to live in ruins.",
-          "explanation": "Scholars (học giả) có thể dạy nhiều điều. Ruins là đống đổ nát, không ai sống ở đó."
-        },
-        {
-          "answer": "a",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "2. a. Most people fly on a plane when they go overseas. b. You should watch factual movies if you want to laugh.",
-          "explanation": "Mọi người thường đi máy bay khi ra nước ngoài (overseas)."
-        },
-        {
-          "answer": "a",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "3. a. Many people feel happy when they depart on a trip. b. Doctors never persuade people to take medicine.",
-          "explanation": "Mọi người thấy vui khi khởi hành (depart) đi chơi."
-        },
-        {
-          "answer": "b",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "4. a. If you travel overseas, you are still in the same country. b. Seeing new things fascinates most people.",
-          "explanation": "Thấy những điều mới mẻ thường lôi cuốn (fascinates) mọi người."
-        },
-        {
-          "answer": "a",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "5. a. Some people like to visit ruins to learn about the past. b. Getting something they want often depresses people.",
-          "explanation": "Người ta thường đến thăm di tích (ruins) để học về quá khứ."
-        },
-        {
-          "answer": "b",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "6. a. Some students like biology because they learn about rocks. b. When people debate about something, they have different ideas.",
-          "explanation": "Khi người ta tranh luận (debate), họ có những ý kiến khác nhau."
-        },
-        {
-          "answer": "b",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "7. a. You should see a scholar if you don’t want to do your homework. b. People who talk about sad things can depress you.",
-          "explanation": "Người nói về chuyện buồn có thể làm bạn chán nản (depress)."
-        },
-        {
-          "answer": "b",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "8. a. Some students debate to get their work done faster. b. I tried to persuade my friends to meet me for lunch today.",
-          "explanation": "Tôi cố gắng thuyết phục (persuade) bạn tôi gặp nhau ăn trưa."
-        },
-        {
-          "answer": "a",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "9. a. If you study biology, you will learn about different animals. b. People fall asleep when a movie fascinates them.",
-          "explanation": "Nếu bạn học sinh học (biology), bạn sẽ học về các động vật khác nhau."
-        },
-        {
-          "answer": "b",
-          "options": [
-            "a",
-            "b"
-          ],
-          "question": "10. a. If you depart late, you can get to school early. b. People who like to know the truth like factual stories.",
-          "explanation": "Người thích sự thật thường thích những câu chuyện có thật (factual)."
-        }
-      ]
-    },
-    {
-      "type": "reading_comprehension",
-      "title": "Answer the questions.",
-      "questions": [
-        {
-          "answer": "A scholar who finds a talking bird",
-          "options": [
-            "A route to a new place",
-            "A scholar who finds a talking bird",
-            "How to learn about biology",
-            "Why people debate each other"
-          ],
-          "question": "1. What is this story about?",
-          "explanation": "Câu chuyện kể về hành trình tìm kiếm một chú chim biết nói của tiến sĩ Norton. Bạn có thể thấy rõ điều này ngay từ đoạn đầu tiên: \"The man told Dr. Norton about a talking bird!\" (Người đàn ông đã kể cho tiến sĩ Norton về một con chim biết nói!) và \"His new mission was to find it.\" (Nhiệm vụ mới của ông là tìm ra nó). Cả câu chuyện sau đó đều xoay quanh việc ông lên đường, tìm kiếm và cuối cùng đã bắt được chú chim này. Do đó, đáp án đúng là \"A scholar who finds a talking bird\" (Một học giả tìm thấy một con chim biết nói)."
-        },
-        {
-          "answer": "He was on a mission to find the talking bird.",
-          "options": [
-            "He wanted to depart from his colleagues and start a new life.",
-            "He was on a mission to find the talking bird.",
-            "He wanted to see the volcano.",
-            "He wanted to discover some old ruins."
-          ],
-          "question": "2. Why did Dr. Norton go overseas?",
-          "explanation": "Tiến sĩ Norton ra nước ngoài vì ông có nhiệm vụ tìm kiếm chú chim biết nói. Trong đoạn 1 có viết: \"Nevertheless, Dr. Norton believed the bird was real. His new mission was to find it. He wanted factual proof.\" (Tuy nhiên, tiến sĩ Norton tin rằng con chim là có thật. Nhiệm vụ mới của ông là tìm ra nó. Ông ấy muốn bằng chứng thực tế.) và đoạn 2 tiếp tục: \"The next day he departed for the colony.\" (Ngày hôm sau ông lên đường đến thuộc địa). Do đó, đáp án chính xác là \"He was on a mission to find the talking bird.\" (Ông ấy có một nhiệm vụ là tìm con chim biết nói)."
-        },
-        {
-          "answer": "the bird would be the factual proof that would persuade his colleagues",
-          "options": [
-            "Jai didn’t like Dr. Norton but nevertheless cheered his discovery",
-            "finding the volcano was also a significant discovery",
-            "the bird would be the factual proof that would persuade his colleagues",
-            "the bird had fascinated people in the colony for a longtime"
-          ],
-          "question": "3. At the end of the story, we can infer that ____________.",
-          "explanation": "Ở cuối truyện, chúng ta có thể suy luận rằng chú chim chính là bằng chứng thực tế giúp ông thuyết phục các đồng nghiệp của mình. Ở đoạn 1, đồng nghiệp của ông đã không tin: \"They debated with him: no one thought a bird could talk.\" (Họ tranh luận với ông: không ai nghĩ một con chim có thể nói được) và ông cần bằng chứng: \"He wanted factual proof.\" Ở đoạn cuối cùng, khi ông bắt được chim và mang về: \"He had made a significant discovery.\" (Ông đã có một khám phá quan trọng). Điều này có nghĩa là con chim sẽ là bằng chứng rõ ràng nhất để thuyết phục họ. Vì vậy, đáp án đúng là \"the bird would be the factual proof that would persuade his colleagues\"."
-        },
-        {
-          "answer": "Jai fed bread to the talking bird",
-          "options": [
-            "Jai fed bread to the talking bird",
-            "Dr. Norton put the bird into a cage",
-            "Dr. Norton took a ship to the colony",
-            "the talking bird was in the ruins"
-          ],
-          "question": "4. According to the passage, all the following are true EXCEPT",
-          "explanation": "Chi tiết Jai cho chim ăn bánh mì không được nhắc đến trong bài đọc. Các chi tiết khác đều đúng: tiến sĩ Norton nhốt chú chim vào lồng (Dr. Norton put the talking bird into a cage); ông đi tàu biển đến thuộc địa (thể hiện qua câu After a month of sailing, Dr. Norton finally reached the colony...); và chú chim ở trong đống đổ nát (thể hiện qua đoạn 4 khi ông đi ngang qua khu di tích cũ: he walked past some old ruins. He heard someone say, Hello). Do bài yêu cầu tìm câu KHÔNG ĐÚNG (EXCEPT), đáp án chính xác là \"Jai fed bread to the talking bird\"."
-        }
-      ]
-    }
-  ],
-  "vocabulary": [
-    {
-      "type": "n.",
-      "word": "basis",
-      "example": "My grandfather gets his hearing checked on a yearly basis.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/basis.mp3",
-      "image_url": "",
-      "definition": "To do something on time’s basis is how often you do it.",
-      "pronunciation": "[beisis]"
-    },
-    {
-      "type": "n.",
-      "word": "biology",
-      "example": "We learned about the human heart in biology class.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/biology.mp3",
-      "image_url": "",
-      "definition": "Biology is the study of living things.",
-      "pronunciation": "[baiɑlədʒi]"
-    },
-    {
-      "type": "n.",
-      "word": "cage",
-      "example": "We put the parrots in their cage at night.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/cage.mp3",
-      "image_url": "",
-      "definition": "A cage is something that holds an animal so it cannot leave.",
-      "pronunciation": "[keidʒ]"
-    },
-    {
-      "type": "n.",
-      "word": "colleague",
-      "example": "My colleague helped me finish the job.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/colleague.mp3",
-      "image_url": "",
-      "definition": "A colleague is somebody you work with.",
-      "pronunciation": "[kɑli:g]"
-    },
-    {
-      "type": "n.",
-      "word": "colony",
-      "example": "The USA was at one time a colony of Great Britain.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/colony.mp3",
-      "image_url": "",
-      "definition": "A colony is a country controlled by another country.",
-      "pronunciation": "[kɑləni]"
-    },
-    {
-      "type": "v.",
-      "word": "debate",
-      "example": "The husband and wife debated over which TV to buy.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/debate.mp3",
-      "image_url": "",
-      "definition": "To debate is to seriously discuss something with someone.",
-      "pronunciation": "[dibeit]"
-    },
-    {
-      "type": "v.",
-      "word": "depart",
-      "example": "The plane departed for Italy at 3:00 this afternoon.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/depart.mp3",
-      "image_url": "",
-      "definition": "To depart is to leave some place so you can go to another place.",
-      "pronunciation": "[dipɑ:rt]"
-    },
-    {
-      "type": "v.",
-      "word": "depress",
-      "example": "The bad news from work depressed the man.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/depress.mp3",
-      "image_url": "",
-      "definition": "To depress someone is to make them sad.",
-      "pronunciation": "[dipres]"
-    },
-    {
-      "type": "adj.",
-      "word": "factual",
-      "example": "John learns about history from factual books.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/factual.mp3",
-      "image_url": "",
-      "definition": "When something is factual, it is true.",
-      "pronunciation": "[fæktʃuəl]"
-    },
-    {
-      "type": "v.",
-      "word": "fascinate",
-      "example": "The kitten was fascinated by the ball of yarn.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/fascinate.mp3",
-      "image_url": "",
-      "definition": "To fascinate someone is to make them really like something.",
-      "pronunciation": "[fæsəneit]"
-    },
-    {
-      "type": "n.",
-      "word": "mission",
-      "example": "The woman’s mission was to help sick people.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/mission.mp3",
-      "image_url": "",
-      "definition": "A mission is an important job that is sometimes far away.",
-      "pronunciation": "[miʃən]"
-    },
-    {
-      "type": "adv.",
-      "word": "nevertheless",
-      "example": "He is usually friendly. Nevertheless, he wasn’t this afternoon.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/nevertheless.mp3",
-      "image_url": "",
-      "definition": "You use nevertheless to show that something goes against a fact.",
-      "pronunciation": "[nevərðəles]"
-    },
-    {
-      "type": "n.",
-      "word": "occupation",
-      "example": "My father’s occupation is a dentist.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/occupation.mp3",
-      "image_url": "",
-      "definition": "An occupation is a person’s job.",
-      "pronunciation": "[ɑkjəpeiʃən]"
-    },
-    {
-      "type": "adv.",
-      "word": "overseas",
-      "example": "John often goes overseas for vacations.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/overseas.mp3",
-      "image_url": "",
-      "definition": "If you go overseas, you go to a country on the other side of an ocean.",
-      "pronunciation": "[ouvərsi:z]"
-    },
-    {
-      "type": "v.",
-      "word": "persuade",
-      "example": "The children persuaded their parents to buy them gifts.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/persuade.mp3",
-      "image_url": "",
-      "definition": "To persuade someone is to make them agree to do something.",
-      "pronunciation": "[pər:sweid]"
-    },
-    {
-      "type": "n.",
-      "word": "route",
-      "example": "I saw many new houses along the route to the city.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/route.mp3",
-      "image_url": "",
-      "definition": "A route is the way you go from one place to another.",
-      "pronunciation": "[ru:t]"
-    },
-    {
-      "type": "n.",
-      "word": "ruins",
-      "example": "I visited some interesting ruins in Greece.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/ruins.mp3",
-      "image_url": "",
-      "definition": "Ruins are old buildings that are not used anymore.",
-      "pronunciation": "[ru:inz]"
-    },
-    {
-      "type": "n.",
-      "word": "scholar",
-      "example": "The scholar knew much about art history.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/scholar.mp3",
-      "image_url": "",
-      "definition": "A scholar is a person who studies something and knows much about it.",
-      "pronunciation": "[skɑlər]"
-    },
-    {
-      "type": "adj.",
-      "word": "significant",
-      "example": "I read many significant novels as a literature major in university.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/significant.mp3",
-      "image_url": "",
-      "definition": "When someone or something is significant, they are important.",
-      "pronunciation": "[signifikənt]"
-    },
-    {
-      "type": "n.",
-      "word": "volcano",
-      "example": "When the volcano erupted, smoke and heat filled the air.",
-      "meaning": "",
-      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/volcano.mp3",
-      "image_url": "",
-      "definition": "A volcano is a mountain with a hole on top where hot liquid comes out.",
-      "pronunciation": "[vɑlkeinou]"
+      "title": "A Beautiful Bird",
+      "content": "",
+      "sections": []
     }
   ]
 }

@@ -50,63 +50,103 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"font-bold mb-1 mt-4\">1. fright / ghost</p><p class=\"mb-1\">The [ 6 ] lives in the old house.</p><p class=\"mb-0\">A scary place might cause [ 7 ].</p><p class=\"font-bold mb-1 mt-4\">2. dead / upset</p><p class=\"mb-1\">The tree fell down because it was [ 8 ].</p><p class=\"mb-0\">I was [ 9 ] when I got a bad grade on the test.</p><p class=\"font-bold mb-1 mt-4\">3. advantage / reached</p><p class=\"mb-1\">After 10 hours of driving, I finally [ 10 ] California.</p><p class=\"mb-0\">He is smart and has a(n) [ 11 ] in class.</p><p class=\"font-bold mb-1 mt-4\">4. escape / distance</p><p class=\"mb-1\">He wanted to [ 12 ] from the room.</p><p class=\"mb-0\">He lived a long [ 13 ] from the school.</p><p class=\"font-bold mb-1 mt-4\">5. community / individual</p><p class=\"mb-1\">The man is a nice [ 14 ].</p><p class=\"mb-0\">The town is a small [ 15 ].</p>",
+              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. fright / ghost</p>The [ 6 ] lives in the old house.</p>A scary place might cause [ 7 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. dead / upset</p>The tree fell down because it was [ 8 ].</p>I was [ 9 ] when I got a bad grade on the test.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. advantage / reached</p>After 10 hours of driving, I finally [ 10 ] California.</p>He is smart and has a(n) [ 11 ] in class.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. escape / distance</p>He wanted to [ 12 ] from the room.</p>He lived a long [ 13 ] from the school.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. community / individual</p>The man is a nice [ 14 ].</p>The town is a small [ 15 ].</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "ghost"
+              "correctAnswer": "ghost",
+              "options": [
+                "fright",
+                "ghost"
+              ]
             },
             {
               "id": "7",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "fright"
+              "correctAnswer": "fright",
+              "options": [
+                "fright",
+                "ghost"
+              ]
             },
             {
               "id": "8",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "dead"
+              "correctAnswer": "dead",
+              "options": [
+                "dead",
+                "upset"
+              ]
             },
             {
               "id": "9",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "upset"
+              "correctAnswer": "upset",
+              "options": [
+                "dead",
+                "upset"
+              ]
             },
             {
               "id": "10",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "reached"
+              "correctAnswer": "reached",
+              "options": [
+                "advantage",
+                "reached"
+              ]
             },
             {
               "id": "11",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "advantage"
+              "correctAnswer": "advantage",
+              "options": [
+                "advantage",
+                "reached"
+              ]
             },
             {
               "id": "12",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "escape"
+              "correctAnswer": "escape",
+              "options": [
+                "escape",
+                "distance"
+              ]
             },
             {
               "id": "13",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "distance"
+              "correctAnswer": "distance",
+              "options": [
+                "escape",
+                "distance"
+              ]
             },
             {
               "id": "14",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "individual"
+              "correctAnswer": "individual",
+              "options": [
+                "community",
+                "individual"
+              ]
             },
             {
               "id": "15",
               "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "community"
+              "correctAnswer": "community",
+              "options": [
+                "community",
+                "individual"
+              ]
             }
           ],
           "questionType": "Điền từ"

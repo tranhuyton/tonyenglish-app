@@ -208,53 +208,93 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"font-bold mb-1 mt-4\">1. beach / wave</p><p class=\"mb-1\"><p style=\"margin-bottom: 0px;\">1. <b>wave / beach</b><br/>I like to play on the [ 16 ].</p></p><p class=\"mb-0\"><p>2. The big [ 17 ] pushed the swimmer back.</p></p><p class=\"font-bold mb-1 mt-4\">2. island / ocean</p><p class=\"mb-1\"><p style=\"margin-bottom: 0px;\">3. <b>ocean / island</b><br/>They walked across the [ 18 ] to find food.</p></p><p class=\"mb-0\"><p>4. I am scared of some animals that live in the [ 19 ].</p></p><p class=\"font-bold mb-1 mt-4\">3. fix / damage</p><p class=\"mb-1\"><p style=\"margin-bottom: 0px;\">5. <b>fix / damage</b><br/>My dad knows how to [ 20 ] cars.</p></p><p class=\"mb-0\"><p>6. If you [ 21 ] the light, we won't be able to see at night.</p></p><p class=\"font-bold mb-1 mt-4\">4. rock / still</p><p class=\"mb-1\"><p style=\"margin-bottom: 0px;\">7. <b>still / rock</b><br/>We have to go around that large [ 22 ].</p></p><p class=\"mb-0\"><p>8. We are [ 23 ] planning to go to Florida this winter.</p></p><p class=\"font-bold mb-1 mt-4\">5. throw / step</p><p class=\"mb-1\"><p style=\"margin-bottom: 0px;\">9. <b>step / throw</b><br/>Do you know how to [ 24 ] a football?</p></p><p class=\"mb-0\"><p>10. Please [ 25 ] into the house.</p></p>",
-              "correctAnswer": "beach"
+              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. beach / wave</p><p>I like to play on the [ 16 ].</p><p>The big [ 17 ] pushed the swimmer back.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. island / ocean</p><p>They walked across the [ 18 ] to find food.</p><p>I am scared of some animals that live in the [ 19 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. fix / damage</p><p>My dad knows how to [ 20 ] cars.</p><p>If you [ 21 ] the light, we won't be able to see at night.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. rock / still</p><p>We have to go around that large [ 22 ].</p><p>We are [ 23 ] planning to go to Florida this winter.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. throw / step</p><p>Do you know how to [ 24 ] a football?</p><p>Please [ 25 ] into the house.</p>",
+              "correctAnswer": "beach",
+              "options": [
+                "beach",
+                "wave"
+              ]
             },
             {
               "id": "17",
               "content": "",
-              "correctAnswer": "wave"
+              "correctAnswer": "wave",
+              "options": [
+                "beach",
+                "wave"
+              ]
             },
             {
               "id": "18",
               "content": "",
-              "correctAnswer": "island"
+              "correctAnswer": "island",
+              "options": [
+                "island",
+                "ocean"
+              ]
             },
             {
               "id": "19",
               "content": "",
-              "correctAnswer": "ocean"
+              "correctAnswer": "ocean",
+              "options": [
+                "island",
+                "ocean"
+              ]
             },
             {
               "id": "20",
               "content": "",
-              "correctAnswer": "fix"
+              "correctAnswer": "fix",
+              "options": [
+                "fix",
+                "damage"
+              ]
             },
             {
               "id": "21",
               "content": "",
-              "correctAnswer": "damage"
+              "correctAnswer": "damage",
+              "options": [
+                "fix",
+                "damage"
+              ]
             },
             {
               "id": "22",
               "content": "",
-              "correctAnswer": "rock"
+              "correctAnswer": "rock",
+              "options": [
+                "rock",
+                "still"
+              ]
             },
             {
               "id": "23",
               "content": "",
-              "correctAnswer": "still"
+              "correctAnswer": "still",
+              "options": [
+                "rock",
+                "still"
+              ]
             },
             {
               "id": "24",
               "content": "",
-              "correctAnswer": "throw"
+              "correctAnswer": "throw",
+              "options": [
+                "throw",
+                "step"
+              ]
             },
             {
               "id": "25",
               "content": "",
-              "correctAnswer": "step"
+              "correctAnswer": "step",
+              "options": [
+                "throw",
+                "step"
+              ]
             }
           ],
           "questionType": "Điền từ"

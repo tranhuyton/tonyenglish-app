@@ -211,63 +211,103 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"font-bold mb-1 mt-4\">1. cell / structure</p><p class=\"mb-1\">The bad guy sat on the floor of his [ 16 ].</p><p class=\"mb-0\">Dad says the old [ 17 ] is not safe.</p><p class=\"font-bold mb-1 mt-4\">2. lord / owe</p><p class=\"mb-1\">The [ 18 ] ruled over 100 people in the town.</p><p class=\"mb-0\">I still [ 19 ] the bank money for my university loan.</p><p class=\"font-bold mb-1 mt-4\">3. position / spot</p><p class=\"mb-1\">Won't your legs hurt if you stay in that [ 20 ] for long?</p><p class=\"mb-0\">This is our favorite picnic [ 21 ].</p><p class=\"font-bold mb-1 mt-4\">4. whole / hole</p><p class=\"mb-1\">The [ 22 ] class was excited.</p><p class=\"mb-0\">I dug a [ 23 ] to put a tree in.</p><p class=\"font-bold mb-1 mt-4\">5. feed / crop</p><p class=\"mb-1\">Do not [ 24 ] any of the animals at the zoo.</p><p class=\"mb-0\">The farmer grew a [ 25 ] of potatoes.</p>",
+              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. cell / structure</p>The bad guy sat on the floor of his [ 16 ].</p>Dad says the old [ 17 ] is not safe.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. lord / owe</p>The [ 18 ] ruled over 100 people in the town.</p>I still [ 19 ] the bank money for my university loan.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. position / spot</p>Won't your legs hurt if you stay in that [ 20 ] for long?</p>This is our favorite picnic [ 21 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. whole / hole</p>The [ 22 ] class was excited.</p>I dug a [ 23 ] to put a tree in.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. feed / crop</p>Do not [ 24 ] any of the animals at the zoo.</p>The farmer grew a [ 25 ] of potatoes.</p>",
               "explanation": "cell (phòng giam).",
-              "correctAnswer": "cell"
+              "correctAnswer": "cell",
+              "options": [
+                "cell",
+                "structure"
+              ]
             },
             {
               "id": "17",
               "content": "",
               "explanation": "structure (công trình).",
-              "correctAnswer": "structure"
+              "correctAnswer": "structure",
+              "options": [
+                "cell",
+                "structure"
+              ]
             },
             {
               "id": "18",
               "content": "",
               "explanation": "lord (lãnh chúa).",
-              "correctAnswer": "lord"
+              "correctAnswer": "lord",
+              "options": [
+                "lord",
+                "owe"
+              ]
             },
             {
               "id": "19",
               "content": "",
               "explanation": "owe (nợ).",
-              "correctAnswer": "owe"
+              "correctAnswer": "owe",
+              "options": [
+                "lord",
+                "owe"
+              ]
             },
             {
               "id": "20",
               "content": "",
               "explanation": "position (vị trí/tư thế).",
-              "correctAnswer": "position"
+              "correctAnswer": "position",
+              "options": [
+                "position",
+                "spot"
+              ]
             },
             {
               "id": "21",
               "content": "",
               "explanation": "spot (địa điểm).",
-              "correctAnswer": "spot"
+              "correctAnswer": "spot",
+              "options": [
+                "position",
+                "spot"
+              ]
             },
             {
               "id": "22",
               "content": "",
               "explanation": "whole (toàn bộ).",
-              "correctAnswer": "whole"
+              "correctAnswer": "whole",
+              "options": [
+                "whole",
+                "hole"
+              ]
             },
             {
               "id": "23",
               "content": "",
               "explanation": "hole (cái hố).",
-              "correctAnswer": "hole"
+              "correctAnswer": "hole",
+              "options": [
+                "whole",
+                "hole"
+              ]
             },
             {
               "id": "24",
               "content": "",
               "explanation": "feed (cho ăn).",
-              "correctAnswer": "feed"
+              "correctAnswer": "feed",
+              "options": [
+                "feed",
+                "crop"
+              ]
             },
             {
               "id": "25",
               "content": "",
               "explanation": "crop (vụ mùa).",
-              "correctAnswer": "crop"
+              "correctAnswer": "crop",
+              "options": [
+                "feed",
+                "crop"
+              ]
             }
           ],
           "questionType": "Điền từ"

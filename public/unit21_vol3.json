@@ -198,7 +198,11 @@
                   "answer": "astonished"
                 }
               ],
-              "content": "<p class=\"font-bold mb-1 mt-4\">1. fable / astonished</p><p class=\"mb-1\">The [fable] was about a young boy with magic powers. At first nobody believed him, but everyone was [astonished] when he made a cat disappear.</p><p class=\"mb-0\">instincts / banged\nAfter hearing the bad news, she [banged] her fist on the table in anger. Things would go wrong, her [instincts] told her.</p><p class=\"font-bold mb-1 mt-4\">2. accustomed / feast</p><p class=\"mb-1\">Though the food was good, he felt sick after the [feast]. He just wasn't [accustomed] to eating so much at one time.</p><p class=\"mb-0\">joint / physician\nThe [physician] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [joint].</p><p class=\"font-bold mb-1 mt-4\">3. affirm / emphasis</p><p class=\"mb-1\">The university placed a special [emphasis] on student safety. They wanted to [affirm] that they were interested in protecting students.</p><p class=\"mb-0\">stiff / hollow\nHe wanted to find out where his sister went after school, so he hid in a [hollow] tree in the schoolyard. However, when he came out, he felt [stiff] all over.</p><p class=\"font-bold mb-1 mt-4\">4. clan / tunes</p><p class=\"mb-1\">The entire [clan] was excited about her wedding. While they drove to the church, they sang happy [tunes].</p><p class=\"mb-0\">dim / stroked\nIn the [dim] light, it was hard to find the earring she'd dropped on the floor. She [stroked] the ground until she finally felt it.</p><p class=\"font-bold mb-1 mt-4\">5. tragic / sacrifices</p><p class=\"mb-1\">The boy suffered from a [tragic] illness. Still, his family made [sacrifices] to make sure he was always comfortable.</p><p class=\"mb-0\">leak / glowing\nHe shut the door to make sure that no light could [leak] into the room. However, he could still see the moon [glowing] outside of his window.</p>"
+              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. fable / astonished</p>The [fable] was about a young boy with magic powers. At first nobody believed him, but everyone was [astonished] when he made a cat disappear.</p>instincts / banged\nAfter hearing the bad news, she [banged] her fist on the table in anger. Things would go wrong, her [instincts] told her.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. accustomed / feast</p>Though the food was good, he felt sick after the [feast]. He just wasn't [accustomed] to eating so much at one time.</p>joint / physician\nThe [physician] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [joint].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. affirm / emphasis</p>The university placed a special [emphasis] on student safety. They wanted to [affirm] that they were interested in protecting students.</p>stiff / hollow\nHe wanted to find out where his sister went after school, so he hid in a [hollow] tree in the schoolyard. However, when he came out, he felt [stiff] all over.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. clan / tunes</p>The entire [clan] was excited about her wedding. While they drove to the church, they sang happy [tunes].</p>dim / stroked\nIn the [dim] light, it was hard to find the earring she'd dropped on the floor. She [stroked] the ground until she finally felt it.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. tragic / sacrifices</p>The boy suffered from a [tragic] illness. Still, his family made [sacrifices] to make sure he was always comfortable.</p>leak / glowing\nHe shut the door to make sure that no light could [leak] into the room. However, he could still see the moon [glowing] outside of his window.</p>",
+              "options": [
+                "fable",
+                "astonished"
+              ]
             },
             {
               "id": "17",
@@ -212,7 +216,11 @@
                   "answer": "instincts"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "fable",
+                "astonished"
+              ]
             },
             {
               "id": "18",
@@ -226,7 +234,11 @@
                   "answer": "accustomed"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "accustomed",
+                "feast"
+              ]
             },
             {
               "id": "19",
@@ -240,7 +252,11 @@
                   "answer": "joint"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "accustomed",
+                "feast"
+              ]
             },
             {
               "id": "20",
@@ -254,7 +270,11 @@
                   "answer": "affirm"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "affirm",
+                "emphasis"
+              ]
             },
             {
               "id": "21",
@@ -268,7 +288,11 @@
                   "answer": "stiff"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "affirm",
+                "emphasis"
+              ]
             },
             {
               "id": "22",
@@ -282,7 +306,11 @@
                   "answer": "tunes"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "clan",
+                "tunes"
+              ]
             },
             {
               "id": "23",
@@ -296,7 +324,11 @@
                   "answer": "stroked"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "clan",
+                "tunes"
+              ]
             },
             {
               "id": "24",
@@ -310,7 +342,11 @@
                   "answer": "sacrifices"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "tragic",
+                "sacrifices"
+              ]
             },
             {
               "id": "25",
@@ -324,7 +360,11 @@
                   "answer": "glowing"
                 }
               ],
-              "content": ""
+              "content": "",
+              "options": [
+                "tragic",
+                "sacrifices"
+              ]
             }
           ],
           "questionType": "Điền từ"
