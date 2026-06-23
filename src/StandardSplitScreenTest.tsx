@@ -646,7 +646,8 @@ const handleFinish = async () => {
   const getCleanQuestionText = (htmlContent: string) => {
     let txt = cleanHtmlContent(String(htmlContent || '')).trim();
     txt = txt.replace(/^<p[^>]*>/i, '').replace(/<\/p>$/i, '').trim();
-    txt = txt.replace(/^(<[^>]+>)*(Câu\s*\d+|\d+[\-\d]*)\s*[\.\):]?\s*(<\/[^>]+>)*\s*/i, '').trim();
+    const stripped = txt.replace(/^(<[^>]+>)*(Câu\s*\d+|\d+[\-\d]*)\s*[\.\):]?\s*(<\/[^>]+>)*\s*/i, '').trim();
+    if (stripped.length > 0) txt = stripped;
     return txt;
   };
 

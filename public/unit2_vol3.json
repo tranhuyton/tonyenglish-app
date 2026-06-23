@@ -153,7 +153,7 @@
                 "discourage",
                 "lodge",
                 "venture",
-                "hut"
+                "<b>hut</b>"
               ],
               "explanation": "Lodge và hut đều chỉ các loại nhà gỗ, lều nhỏ.",
               "correctAnswer": "B, D"
@@ -162,9 +162,9 @@
               "id": "12",
               "content": "2.",
               "options": [
-                "shepherd",
-                "caretaker",
-                "repay",
+                "<b>shepherd</b>",
+                "<b>caretaker</b>",
+                "<b>repay</b>",
                 "wheat"
               ],
               "explanation": "Shepherd và caretaker đều chỉ người chăm sóc, trông nom.",
@@ -175,9 +175,9 @@
               "content": "3.",
               "options": [
                 "offense",
-                "fake",
-                "hatred",
-                "deceive"
+                "<b>fake</b>",
+                "<b>hatred</b>",
+                "<b>deceive</b>"
               ],
               "explanation": "Fake (giả) và deceive (lừa dối) có ý nghĩa liên quan đến sự dối trá.",
               "correctAnswer": "B, D"
@@ -186,8 +186,8 @@
               "id": "14",
               "content": "4.",
               "options": [
-                "acquire",
-                "awkward",
+                "<b>acquire</b>",
+                "<b>awkward</b>",
                 "newcomer",
                 "ridiculous"
               ],
@@ -198,7 +198,7 @@
               "id": "15",
               "content": "5.",
               "options": [
-                "overlook",
+                "<b>overlook</b>",
                 "inferior",
                 "neglect",
                 "satisfactory"

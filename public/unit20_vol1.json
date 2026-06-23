@@ -155,8 +155,8 @@
               "id": "11",
               "content": "<p>1.</p>",
               "options": [
-                "a. A basic tool has many parts.",
-                "b. If a toy is worth $1, it costs $1."
+                "a. A <b>basic</b> tool has many parts.",
+                "b. If a toy is <b>worth</b> $1, it costs $1."
               ],
               "explanation": "worth (trị giá) $1 nghĩa là giá của nó là $1.",
               "correctAnswer": "B"
@@ -165,8 +165,8 @@
               "id": "12",
               "content": "<p>2.</p>",
               "options": [
-                "a. Anyone can pet a real dog.",
-                "b. If a man has extra socks, he does not have enough."
+                "a. Anyone can pet a <b>real</b> dog.",
+                "b. If a man has <b>extra</b> socks, he does not have enough."
               ],
               "explanation": "real (thật): ai cũng có thể vuốt ve một con chó thật.",
               "correctAnswer": "A"
@@ -175,7 +175,7 @@
               "id": "13",
               "content": "<p>3.</p>",
               "options": [
-                "a. It is not smart to lie to your parents.",
+                "a. It is not smart to <b>lie</b> to your parents.",
                 "b. If a woman considers leaving, she doesn't want to go."
               ],
               "explanation": "lie (nói dối): không khôn ngoan khi nói dối cha mẹ.",
@@ -185,7 +185,7 @@
               "id": "14",
               "content": "<p>4.</p>",
               "options": [
-                "a. If a bike is worth $50, it costs much less.",
+                "a. If a bike is <b>worth</b> $50, it costs much less.",
                 "b. When you eat vegetables, you are eating plants."
               ],
               "explanation": "vegetable (rau củ): rau củ là thực vật.",
@@ -196,7 +196,7 @@
               "content": "<p>5.</p>",
               "options": [
                 "a. When a teacher advises her students, she asks them what they want to do.",
-                "b. Some people entertain others by telling funny stories."
+                "b. Some people <b>entertain</b> others by telling funny stories."
               ],
               "explanation": "entertain (giải trí): kể chuyện cười để giải trí người khác.",
               "correctAnswer": "B"
@@ -215,8 +215,8 @@
               "id": "17",
               "content": "<p>7.</p>",
               "options": [
-                "a. A basic answer is a simple one.",
-                "b. A bit of food is a lot of it."
+                "a. A <b>basic</b> answer is a simple one.",
+                "b. A <b>bit</b> of food is a lot of it."
               ],
               "explanation": "basic (cơ bản): câu trả lời đơn giản.",
               "correctAnswer": "A"
@@ -225,8 +225,8 @@
               "id": "18",
               "content": "<p>8.</p>",
               "options": [
-                "a. If a girl brings extra paper, she has more than she needs.",
-                "b. People entertain others to make them sad."
+                "a. If a girl brings <b>extra</b> paper, she has more than she needs.",
+                "b. People <b>entertain</b> others to make them sad."
               ],
               "explanation": "extra (thêm): mang nhiều hơn số cần thiết.",
               "correctAnswer": "A"
@@ -235,8 +235,8 @@
               "id": "19",
               "content": "<p>9.</p>",
               "options": [
-                "a. People believe others who lie often.",
-                "b. When you advise your friend, you tell him what to do."
+                "a. People believe others who <b>lie</b> often.",
+                "b. When you <b>advise</b> your friend, you tell him what to do."
               ],
               "explanation": "advise (khuyên bảo): bảo họ nên làm gì.",
               "correctAnswer": "B"
@@ -245,8 +245,8 @@
               "id": "20",
               "content": "<p>10.</p>",
               "options": [
-                "a. A real story never happened.",
-                "b. A bit of paper is a small piece."
+                "a. A <b>real</b> story never happened.",
+                "b. A <b>bit</b> of paper is a small piece."
               ],
               "explanation": "bit (một mẩu/chút): một mảnh giấy nhỏ.",
               "correctAnswer": "B"

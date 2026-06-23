@@ -166,7 +166,7 @@
               "content": "<p>2.</p>",
               "options": [
                 "a. A feature of this computer is its small size.",
-                "b. We populate over the ocean."
+                "b. We <b>populate</b> over the ocean."
               ],
               "explanation": "Câu a hợp lý: tính năng (feature) của máy tính này là kích thước nhỏ.",
               "correctAnswer": "A"
@@ -206,7 +206,7 @@
               "content": "<p>6.</p>",
               "options": [
                 "a. You recognize someone whom you have already met.",
-                "b. Blue is a range of color."
+                "b. Blue is a <b>range</b> of color."
               ],
               "explanation": "Câu a hợp lý: bạn nhận ra (recognize) người bạn đã từng gặp.",
               "correctAnswer": "A"
@@ -215,7 +215,7 @@
               "id": "17",
               "content": "<p>7.</p>",
               "options": [
-                "a. The sign was open all evening.",
+                "a. The <b>sign</b> was open all evening.",
                 "b. I have a regular schedule. It doesn't change."
               ],
               "explanation": "Câu b hợp lý: tôi có một lịch trình thường xuyên/đều đặn (regular) và không thay đổi.",
@@ -246,7 +246,7 @@
               "content": "<p>10.</p>",
               "options": [
                 "a. An instance of kindness is sharing food.",
-                "b. He had no period to work."
+                "b. He had no <b>period</b> to work."
               ],
               "explanation": "Câu a hợp lý: một ví dụ (instance) của lòng tốt là chia sẻ thức ăn.",
               "correctAnswer": "A"
