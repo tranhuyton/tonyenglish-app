@@ -143,15 +143,15 @@
         },
         {
           "id": "u1_wl_ex3",
-          "title": "Exercise 2: Which sentence makes better sense?",
+          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
           "content": "",
           "questions": [
             {
               "id": "11",
               "content": "<p>1.</p>",
               "options": [
-                "a. It is hard to seek for things when it is sunny.",
-                "b. A landscape may have snow during the winter."
+                "a. It is hard to <b>seek</b> for things when it is sunny.",
+                "b. A <b>landscape</b> may have snow during the winter."
               ],
               "explanation": "landscape là cảnh quan. Một cảnh quan có thể có tuyết vào mùa đông.",
               "correctAnswer": "B"
@@ -160,8 +160,8 @@
               "id": "12",
               "content": "<p>2.</p>",
               "options": [
-                "a. Most children are eager to get gifts.",
-                "b. Good friends are awful to have around."
+                "a. Most children are <b>eager</b> to get gifts.",
+                "b. Good friends are <b>awful</b> to have around."
               ],
               "explanation": "eager là háo hức. Hầu hết trẻ em đều háo hức nhận quà.",
               "correctAnswer": "A"
@@ -170,8 +170,8 @@
               "id": "13",
               "content": "<p>3.</p>",
               "options": [
-                "a. The lungs help move blood through the body.",
-                "b. People may feel anxious when they give a speech."
+                "a. The <b>lungs</b> help move blood through the body.",
+                "b. People may feel <b>anxious</b> when they give a speech."
               ],
               "explanation": "anxious là lo lắng. Mọi người có thể cảm thấy lo lắng khi phát biểu.",
               "correctAnswer": "B"
@@ -180,8 +180,8 @@
               "id": "14",
               "content": "<p>4.</p>",
               "options": [
-                "a. It isn't polite to take things without asking first.",
-                "b. You should help spill the dishes after dinner."
+                "a. It isn't <b>polite</b> to take things without asking first.",
+                "b. You should help <b>spill</b> the dishes after dinner."
               ],
               "explanation": "polite là lịch sự. Không xin phép trước khi lấy đồ là không lịch sự.",
               "correctAnswer": "A"
@@ -190,8 +190,8 @@
               "id": "15",
               "content": "<p>5.</p>",
               "options": [
-                "a. If you work at a fast pace, things will get done quickly.",
-                "b. It is important to lift your notes before a test."
+                "a. If you work at a fast <b>pace</b>, things will get done quickly.",
+                "b. It is important to <b>lift</b> your notes before a test."
               ],
               "explanation": "pace là tốc độ. Làm việc với tốc độ nhanh sẽ giúp mọi việc hoàn thành nhanh chóng.",
               "correctAnswer": "A"
@@ -200,8 +200,8 @@
               "id": "16",
               "content": "<p>6.</p>",
               "options": [
-                "a. People are eager to leave when they don't want to go anywhere.",
-                "b. You should get help when lifting heavy boxes."
+                "a. People are <b>eager</b> to leave when they don't want to go anywhere.",
+                "b. You should get help when <b>lifting</b> heavy boxes."
               ],
               "explanation": "lifting là nhấc lên. Bạn nên nhờ người giúp khi nhấc những chiếc hộp nặng.",
               "correctAnswer": "B"
@@ -210,8 +210,8 @@
               "id": "17",
               "content": "<p>7.</p>",
               "options": [
-                "a. Some people live in the landscape while others live in the city.",
-                "b. Everyone has awful days where nothing goes right."
+                "a. Some people live in the <b>landscape</b> while others live in the city.",
+                "b. Everyone has <b>awful</b> days where nothing goes right."
               ],
               "explanation": "awful là tồi tệ. Ai cũng có những ngày tồi tệ khi mọi việc đều không suôn sẻ.",
               "correctAnswer": "B"
@@ -220,8 +220,8 @@
               "id": "18",
               "content": "<p>8.</p>",
               "options": [
-                "a. It is good to seek advice when you have a problem.",
-                "b. Students feel anxious when they get good grades."
+                "a. It is good to <b>seek</b> advice when you have a problem.",
+                "b. Students feel <b>anxious</b> when they get good grades."
               ],
               "explanation": "seek là tìm kiếm. Tìm kiếm lời khuyên khi gặp vấn đề là điều tốt.",
               "correctAnswer": "A"
@@ -230,8 +230,8 @@
               "id": "19",
               "content": "<p>9.</p>",
               "options": [
-                "a. When you breathe, air goes into your lungs.",
-                "b. Some students pace to school every day."
+                "a. When you breathe, air goes into your <b>lungs</b>.",
+                "b. Some students <b>pace</b> to school every day."
               ],
               "explanation": "lungs là phổi. Khi bạn hít thở, không khí sẽ đi vào phổi.",
               "correctAnswer": "A"
@@ -240,8 +240,8 @@
               "id": "20",
               "content": "<p>10.</p>",
               "options": [
-                "a. Polite people do not say 'please' or 'thank you.'",
-                "b. When you spill something, you should clean it up right away."
+                "a. <b>Polite</b> people do not say 'please' or 'thank you.'",
+                "b. When you <b>spill</b> something, you should clean it up right away."
               ],
               "explanation": "spill là làm đổ. Khi bạn làm đổ thứ gì đó, bạn nên dọn dẹp ngay.",
               "correctAnswer": "B"
