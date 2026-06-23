@@ -208,31 +208,31 @@
           "questions": [
             {
               "id": "16",
-              "content": "My day at school was not strange. (nor[1])",
+              "content": "My day at school was not strange. (nor[16])",
               "explanation": "normal có nghĩa tương tự 'not strange'.",
               "correctAnswer": "normal"
             },
             {
               "id": "17",
-              "content": "The bird was from nature. (wi[2])",
+              "content": "The bird was from nature. (wi[17])",
               "explanation": "wild có nghĩa tương tự 'from nature'.",
               "correctAnswer": "wild"
             },
             {
               "id": "18",
-              "content": "Sorry I can’t come; I’m feeling discomfort in my body. (h[3])",
+              "content": "Sorry I can’t come; I’m feeling discomfort in my body. (h[18])",
               "explanation": "hurt có nghĩa tương tự 'discomfort in my body'.",
               "correctAnswer": "hurt"
             },
             {
               "id": "19",
-              "content": "He’s going to rest instead of going to the movie. (r[4])",
+              "content": "He’s going to rest instead of going to the movie. (r[19])",
               "explanation": "relax có nghĩa tương tự 'rest'.",
               "correctAnswer": "relax"
             },
             {
               "id": "20",
-              "content": "The man walked through a large area of land. (f[5])",
+              "content": "The man walked through a large area of land. (f[20])",
               "explanation": "field có nghĩa tương tự 'large area of land'.",
               "correctAnswer": "field"
             }

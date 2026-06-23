@@ -208,31 +208,31 @@
           "questions": [
             {
               "id": "16",
-              "content": "wave / beach\nI like to play on the (sec3[1]).\nThe big (sec3[2]) pushed the swimmer back.",
+              "content": "wave / beach\nI like to play on the (sec3[16]).\nThe big (sec3[2]) pushed the swimmer back.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "{\"1\":\"beach\",\"2\":\"wave\"}"
             },
             {
               "id": "17",
-              "content": "ocean / island\nThey walked across the (sec3[1]) to find food.\nI am scared of some animals that live in the (sec3[2]).",
+              "content": "ocean / island\nThey walked across the (sec3[17]) to find food.\nI am scared of some animals that live in the (sec3[2]).",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "{\"1\":\"island\",\"2\":\"ocean\"}"
             },
             {
               "id": "18",
-              "content": "fix / damage\nMy dad knows how to (sec3[1]) cars.\nIf you (sec3[2]) the light, we won't be able to see at night.",
+              "content": "fix / damage\nMy dad knows how to (sec3[18]) cars.\nIf you (sec3[2]) the light, we won't be able to see at night.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "{\"1\":\"fix\",\"2\":\"damage\"}"
             },
             {
               "id": "19",
-              "content": "still / rock\nWe have to go around that large (sec3[1]).\nWe are (sec3[2]) planning to go to Florida this winter.",
+              "content": "still / rock\nWe have to go around that large (sec3[19]).\nWe are (sec3[2]) planning to go to Florida this winter.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "{\"1\":\"rock\",\"2\":\"still\"}"
             },
             {
               "id": "20",
-              "content": "step / throw\nDo you know how to (sec3[1]) a football?\nPlease (sec3[2]) into the house.",
+              "content": "step / throw\nDo you know how to (sec3[20]) a football?\nPlease (sec3[2]) into the house.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "{\"1\":\"throw\",\"2\":\"step\"}"
             }
@@ -310,7 +310,7 @@
           "questions": [
             {
               "id": "25",
-              "content": "Which starfish were safe on the beach?\n(sec4[1])",
+              "content": "Which starfish were safe on the beach?\n(sec4[25])",
               "explanation": "Những con sao biển có thể quay trở lại nước thì được an toàn.",
               "correctAnswer": "{\"1\":\"Some starfish went back into the water, and they were safe.\"}"
             }

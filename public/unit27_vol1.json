@@ -198,35 +198,35 @@
           "questions": [
             {
               "id": "16",
-              "content": "I have a (gift[1]) for you. Do you think that my car has much (value[2]).",
+              "content": "I have a (gift[16]) for you. Do you think that my car has much (value[2]).",
               "options": [],
               "explanation": "gift (món quà), value (giá trị)",
               "correctAnswer": "gift|value"
             },
             {
               "id": "17",
-              "content": "It is hot in the (desert[1]). I like to watch the ocean at the (coast[2]).",
+              "content": "It is hot in the (desert[17]). I like to watch the ocean at the (coast[2]).",
               "options": [],
               "explanation": "desert (sa mạc), coast (bờ biển)",
               "correctAnswer": "desert|coast"
             },
             {
               "id": "18",
-              "content": "Having dinner will make my (hunger[1]) go away. Be careful around those dogs; they might (bite[2]) you.",
+              "content": "Having dinner will make my (hunger[18]) go away. Be careful around those dogs; they might (bite[2]) you.",
               "options": [],
               "explanation": "hunger (cơn đói), bite (cắn)",
               "correctAnswer": "hunger|bite"
             },
             {
               "id": "19",
-              "content": "I would like to take a (tour[1]) of the capital city sometime. I went on a (journey[2]) around the world last year.",
+              "content": "I would like to take a (tour[19]) of the capital city sometime. I went on a (journey[2]) around the world last year.",
               "options": [],
               "explanation": "tour (chuyến tham quan), journey (chuyến hành trình)",
               "correctAnswer": "tour|journey"
             },
             {
               "id": "20",
-              "content": "I think this dress is (quite[1]) pretty. (Examine[2]) your paper to check for mistakes.",
+              "content": "I think this dress is (quite[20]) pretty. (Examine[2]) your paper to check for mistakes.",
               "options": [],
               "explanation": "quite (khá), examine (kiểm tra)",
               "correctAnswer": "quite|Examine"

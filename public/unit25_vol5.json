@@ -96,7 +96,7 @@
                   "answer": "fatigue"
                 }
               ],
-              "content": "The path leading out of the (app[1]) was very steep. When they reached the top, they had to rest because of their (app[2])."
+              "content": "The path leading out of the (app[6]) was very steep. When they reached the top, they had to rest because of their (app[2])."
             },
             {
               "id": "7",
@@ -110,7 +110,7 @@
                   "answer": "primitive"
                 }
               ],
-              "content": "He had a(n) (app[1]) about ancient cultures. He thought that all their customs and ideas were (app[2])."
+              "content": "He had a(n) (app[7]) about ancient cultures. He thought that all their customs and ideas were (app[2])."
             },
             {
               "id": "8",
@@ -124,7 +124,7 @@
                   "answer": "aesthetic"
                 }
               ],
-              "content": "The (app[1]) led travelers to the top of the mountain. I was astonished by the (app[2]) view."
+              "content": "The (app[8]) led travelers to the top of the mountain. I was astonished by the (app[2]) view."
             },
             {
               "id": "9",
@@ -138,7 +138,7 @@
                   "answer": "twig"
                 }
               ],
-              "content": "A line of (app[1]) stretched from the mound across the forest floor. They were all going to eat a (app[2]) that had fallen off a tree."
+              "content": "A line of (app[9]) stretched from the mound across the forest floor. They were all going to eat a (app[2]) that had fallen off a tree."
             },
             {
               "id": "10",
@@ -152,7 +152,7 @@
                   "answer": "welfare"
                 }
               ],
-              "content": "People thought that the water from the (app[1]) cured illnesses. They drank it because they hoped it would beneficial to their (app[2])."
+              "content": "People thought that the water from the (app[10]) cured illnesses. They drank it because they hoped it would beneficial to their (app[2])."
             }
           ],
           "questionType": "Điền từ"
@@ -298,7 +298,7 @@
                   "answer": "twigs"
                 }
               ],
-              "content": "The kids gathered short, thing branches for their school art project. (app[1])"
+              "content": "The kids gathered short, thing branches for their school art project. (app[21])"
             },
             {
               "id": "22",
@@ -308,7 +308,7 @@
                   "answer": "sticky"
                 }
               ],
-              "content": "The glue was covered with a substance that made things stick to it. (app[1])"
+              "content": "The glue was covered with a substance that made things stick to it. (app[22])"
             },
             {
               "id": "23",
@@ -318,7 +318,7 @@
                   "answer": "primitive"
                 }
               ],
-              "content": "Early rocket development was simple and basic compared to what we have in the 21st century. (app[1])"
+              "content": "Early rocket development was simple and basic compared to what we have in the 21st century. (app[23])"
             },
             {
               "id": "24",
@@ -328,7 +328,7 @@
                   "answer": "primates"
                 }
               ],
-              "content": "Monkeys, apes, and humans are some of the few animals with opposable thumbs. (app[1])"
+              "content": "Monkeys, apes, and humans are some of the few animals with opposable thumbs. (app[24])"
             },
             {
               "id": "25",
@@ -338,7 +338,7 @@
                   "answer": "fatigue"
                 }
               ],
-              "content": "After walking 12 kilometers, I was filled with a sense of extreme tiredness. (app[1])"
+              "content": "After walking 12 kilometers, I was filled with a sense of extreme tiredness. (app[25])"
             }
           ],
           "questionType": "Điền từ"

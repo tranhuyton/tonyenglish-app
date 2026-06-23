@@ -29,7 +29,7 @@
                   "answer": "remove"
                 }
               ],
-              "content": "Please take away your feet from the table. rem[1]",
+              "content": "Please take away your feet from the table. rem[2]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -40,7 +40,7 @@
                   "answer": "average"
                 }
               ],
-              "content": "This is a(an) very normal morning. Nothing bad has happened. ave[1]",
+              "content": "This is a(an) very normal morning. Nothing bad has happened. ave[3]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -51,7 +51,7 @@
                   "answer": "sounded"
                 }
               ],
-              "content": "The bell rattled, so we changed classes. so[1]",
+              "content": "The bell rattled, so we changed classes. so[4]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -62,7 +62,7 @@
                   "answer": "advance"
                 }
               ],
-              "content": "William wanted to go forward, but a wall stopped him. adv[1]",
+              "content": "William wanted to go forward, but a wall stopped him. adv[5]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -73,7 +73,7 @@
                   "answer": "member"
                 }
               ],
-              "content": "Clara is a person in a group of the running club. me[1]",
+              "content": "Clara is a person in a group of the running club. me[6]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -84,7 +84,7 @@
                   "answer": "athlete"
                 }
               ],
-              "content": "jesse is a very good sports player. at[1]",
+              "content": "jesse is a very good sports player. at[7]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -95,7 +95,7 @@
                   "answer": "course"
                 }
               ],
-              "content": "What is your favorite class? c[1]",
+              "content": "What is your favorite class? c[8]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -106,7 +106,7 @@
                   "answer": "passenger"
                 }
               ],
-              "content": "He was a person taking a ride on the ship. pa[1]",
+              "content": "He was a person taking a ride on the ship. pa[9]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -117,7 +117,7 @@
                   "answer": "personality"
                 }
               ],
-              "content": "What kind of character does Ted have? P[1]",
+              "content": "What kind of character does Ted have? P[10]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             }
           ],
