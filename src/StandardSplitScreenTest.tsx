@@ -1053,13 +1053,26 @@ const handleFinish = async () => {
             </span>
           </div>
 
-          <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-4">
-             {globalAudio && (
-                <div className={`${(basicInfo?.category === 'exercise' || isReviewMode) ? 'flex' : 'hidden'} items-center`}>
-                   <CustomAudioPlayer ref={globalAudioRef} src={globalAudio} className="w-[300px] lg:w-[400px]" />
-                </div>
-             )}
-          </div>
+          {isReviewMode && (
+            <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-4">
+               <button 
+                  onClick={() => {
+                    const tutorContext = {
+                      overall: scoreResult.score + '/' + scoreResult.total,
+                      transcript: `Bài test: ${basicInfo.title}. Điểm số của em là: ${scoreResult.score}/${scoreResult.total}.`,
+                      feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
+                    };
+                    sessionStorage.setItem('tony_live_mode', 'TUTOR');
+                    sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+                    sessionStorage.setItem('tony_auto_start', 'true');
+                    window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+                  }}
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-1.5 rounded-full text-[13px] font-bold transition uppercase tracking-wider shadow flex items-center gap-2"
+               >
+                  📞 Gọi Gia Sư AI (Tổng kết)
+               </button>
+            </div>
+          )}
 
           <div className="flex items-center gap-6">
             {/* LABEL AND TIMER (TOP RIGHT) */}
@@ -1235,6 +1248,10 @@ const handleFinish = async () => {
                         
                         {part?.imageUrl && (
                             <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />
+                        )}
+                        
+                        {(isReviewMode || basicInfo?.category === 'exercise') && pIdx === 0 && globalAudio && (
+                            <CustomAudioPlayer ref={globalAudioRef} src={globalAudio} className="mb-6 w-full" />
                         )}
                         
                         {part?.content && (
@@ -2462,7 +2479,10 @@ const handleFinish = async () => {
 
   return (
       <React.Fragment>
-
+        {/* Audio: ẩn khi test (play background) */}
+        {!isReviewMode && basicInfo?.category === 'test' && isListening && globalAudio && (
+            <audio ref={globalAudioRef} src={globalAudio} preload="auto" className="hidden" />
+        )}
       {!testStarted ? (
         <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#f8fafc] font-sans p-4">
           <div className="bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-slate-200 w-full max-w-xl text-center animate-in zoom-in-95 duration-300">
