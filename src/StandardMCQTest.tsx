@@ -1059,26 +1059,7 @@ const handleFinish = async () => {
             </span>
           </div>
 
-          {isReviewMode && (
-            <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-4">
-               <button 
-                  onClick={() => {
-                    const tutorContext = {
-                      overall: scoreResult.score + '/' + scoreResult.total,
-                      transcript: `Bài test: ${basicInfo.title}. Điểm số của em là: ${scoreResult.score}/${scoreResult.total}.`,
-                      feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
-                    };
-                    sessionStorage.setItem('tony_live_mode', 'TUTOR');
-                    sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
-                    sessionStorage.setItem('tony_auto_start', 'true');
-                    window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-                  }}
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-1.5 rounded-full text-[13px] font-bold transition uppercase tracking-wider shadow flex items-center gap-2"
-               >
-                  📞 Gọi Gia Sư AI (Tổng kết)
-               </button>
-            </div>
-          )}
+          {/* Nút Gọi Gia Sư AI đã bị gỡ theo yêu cầu */}
 
           <div className="flex items-center gap-6">
             {/* LABEL AND TIMER (TOP RIGHT) */}
@@ -1221,24 +1202,7 @@ const handleFinish = async () => {
                            {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
                        </div>
                        
-                       <div className="mt-4 md:hidden">
-                          <button 
-                              onClick={() => {
-                                const tutorContext = {
-                                  overall: scoreResult.score + '/' + scoreResult.total,
-                                  transcript: `Bài test: ${basicInfo.title}. Điểm số của em là: ${scoreResult.score}/${scoreResult.total}.`,
-                                  feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
-                                };
-                                sessionStorage.setItem('tony_live_mode', 'TUTOR');
-                                sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
-                                sessionStorage.setItem('tony_auto_start', 'true');
-                                window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-                              }}
-                              className="bg-emerald-600 text-white px-5 py-2 rounded-full text-[13px] font-bold shadow flex items-center justify-center gap-2 mx-auto"
-                          >
-                              📞 Gọi Gia Sư AI
-                          </button>
-                       </div>
+                       {/* Removed AI Tutor button */}
                     </div>
                   )}
 
@@ -1264,15 +1228,17 @@ const handleFinish = async () => {
                         )}
 
                         {isReviewMode && part?.explanation && (
-                            <div className="mb-8 p-6 bg-amber-50 rounded-2xl border border-amber-200 shadow-sm">
-                                <h4 className="font-bold text-amber-800 text-[16px] mb-3 flex items-center gap-2">
-                                    <Volume2 className="w-5 h-5 text-amber-600" /> Audio Transcript / Giải thích Part
-                                </h4>
+                            <>
                                 {pIdx === 0 && globalAudio && (
-                                    <CustomAudioPlayer ref={globalAudioRef} src={globalAudio} className="mb-6 w-full max-w-xl bg-white border-amber-200" />
+                                    <CustomAudioPlayer ref={globalAudioRef} src={globalAudio} className="mb-4 w-full" />
                                 )}
-                                <div className="text-[15px] text-amber-900 leading-[1.9] font-serif whitespace-pre-wrap html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.explanation) }} />
-                            </div>
+                                <div className="mb-8 p-6 bg-amber-50 rounded-2xl border border-amber-200 shadow-sm">
+                                    <h4 className="font-bold text-amber-800 text-[16px] mb-3 flex items-center gap-2">
+                                        <Volume2 className="w-5 h-5 text-amber-600" /> Audio Transcript / Giải thích Part
+                                    </h4>
+                                    <div className="text-[15px] text-amber-900 leading-[1.9] font-serif whitespace-pre-wrap html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.explanation) }} />
+                                </div>
+                            </>
                         )}
                         
                         {part?.sections?.map((sec: any, sIdx: number) => {
@@ -1364,7 +1330,7 @@ const handleFinish = async () => {
                            )}
                            
                            {!isReviewMode && basicInfo?.category === 'exercise' && pIdx === 0 && globalAudio && (
-                               <CustomAudioPlayer ref={globalAudioRef} src={globalAudio} className="mb-6 w-full max-w-xl" />
+                               <CustomAudioPlayer ref={globalAudioRef} src={globalAudio} className="mb-6 w-full" />
                            )}
                            
                            {/* part.content is displayed in the left pane during review mode (or reading test) */}
@@ -2310,23 +2276,6 @@ const handleFinish = async () => {
                       <p className="text-5xl font-black mb-4">
                           {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
                       </p>
-                      
-                      <button 
-                          onClick={() => {
-                            const tutorContext = {
-                              overall: scoreResult.score + '/' + scoreResult.total,
-                              transcript: `Bài test: ${basicInfo.title}. Điểm số của em là: ${scoreResult.score}/${scoreResult.total}.`,
-                              feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
-                            };
-                            sessionStorage.setItem('tony_live_mode', 'TUTOR');
-                            sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
-                            sessionStorage.setItem('tony_auto_start', 'true');
-                            window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-                          }}
-                          className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-full text-[13px] font-bold transition uppercase tracking-wider shadow flex items-center justify-center gap-2 w-full"
-                      >
-                          📞 Gọi Gia Sư AI
-                      </button>
                     </div>
                   ) : basicInfo?.category === 'exercise' ? (
                     <div className="bg-emerald-50 text-emerald-600 px-6 py-2.5 rounded-lg font-black text-[18px] mb-4 border border-emerald-200 flex items-center justify-center gap-2 w-full shadow-sm tracking-widest uppercase">
