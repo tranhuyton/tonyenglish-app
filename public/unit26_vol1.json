@@ -123,70 +123,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Can I give you some [ 11 ]? (suggest / advice)",
+              "content": "<p class=\"font-bold mb-1 mt-4\">1. advice / suggest</p><p class=\"mb-1\">Can I give you some [ 11 ]? (suggest / advice)</p><p class=\"mb-0\">I [ 12 ] that you do your homework before you go out. (suggest / advice)</p><p class=\"font-bold mb-1 mt-4\">2. attention / situated</p><p class=\"mb-1\">I got everyone's [ 13 ] with my new dress. (situated / attention)</p><p class=\"mb-0\">Where is your office [ 14 ] in the building? (situated / attention)</p><p class=\"font-bold mb-1 mt-4\">3. standard / dropped</p><p class=\"mb-1\">The [ 15 ] of his work is very high. (dropped / standard)</p><p class=\"mb-0\">I accidentally [ 16 ] my phone in the snow. (dropped / standard)</p><p class=\"font-bold mb-1 mt-4\">4. attracted / reacted</p><p class=\"mb-1\">He [ 17 ] my attention by waving to me. (attracted / reacted)</p><p class=\"mb-0\">She [ 18 ] badly to the news. (attracted / reacted)</p><p class=\"font-bold mb-1 mt-4\">5. further / along</p><p class=\"mb-1\">How much [ 19 ] is the beach? I'm tired! (further / along)</p><p class=\"mb-0\">We walked [ 20 ] the path for two hours. (further / along)</p>",
               "options": [],
               "explanation": "advice là lời khuyên.",
               "correctAnswer": "advice"
             },
             {
               "id": "12",
-              "content": "2. I [ 12 ] that you do your homework before you go out. (suggest / advice)",
+              "content": "",
               "options": [],
               "explanation": "suggest là đề nghị, gợi ý.",
               "correctAnswer": "suggest"
             },
             {
               "id": "13",
-              "content": "3. I got everyone's [ 13 ] with my new dress. (situated / attention)",
+              "content": "",
               "options": [],
               "explanation": "attention là sự chú ý.",
               "correctAnswer": "attention"
             },
             {
               "id": "14",
-              "content": "4. Where is your office [ 14 ] in the building? (situated / attention)",
+              "content": "",
               "options": [],
               "explanation": "situated là nằm ở vị trí nào đó.",
               "correctAnswer": "situated"
             },
             {
               "id": "15",
-              "content": "5. The [ 15 ] of his work is very high. (dropped / standard)",
+              "content": "",
               "options": [],
               "explanation": "standard là tiêu chuẩn.",
               "correctAnswer": "standard"
             },
             {
               "id": "16",
-              "content": "6. I accidentally [ 16 ] my phone in the snow. (dropped / standard)",
+              "content": "",
               "options": [],
               "explanation": "dropped là đánh rơi.",
               "correctAnswer": "dropped"
             },
             {
               "id": "17",
-              "content": "7. He [ 17 ] my attention by waving to me. (attracted / reacted)",
+              "content": "",
               "options": [],
               "explanation": "attracted là thu hút.",
               "correctAnswer": "attracted"
             },
             {
               "id": "18",
-              "content": "8. She [ 18 ] badly to the news. (attracted / reacted)",
+              "content": "",
               "options": [],
               "explanation": "reacted là phản ứng.",
               "correctAnswer": "reacted"
             },
             {
               "id": "19",
-              "content": "9. How much [ 19 ] is the beach? I'm tired! (further / along)",
+              "content": "",
               "options": [],
               "explanation": "further là xa hơn.",
               "correctAnswer": "further"
             },
             {
               "id": "20",
-              "content": "10. We walked [ 20 ] the path for two hours. (further / along)",
+              "content": "",
               "options": [],
               "explanation": "along là dọc theo.",
               "correctAnswer": "along"

@@ -176,61 +176,61 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. The bad guy sat on the floor of his [ 16 ].",
+              "content": "<p class=\"font-bold mb-1 mt-4\">1. cell / structure</p><p class=\"mb-1\">The bad guy sat on the floor of his [ 16 ].</p><p class=\"mb-0\">Dad says the old [ 17 ] is not safe.</p><p class=\"font-bold mb-1 mt-4\">2. lord / owe</p><p class=\"mb-1\">The [ 18 ] ruled over 100 people in the town.</p><p class=\"mb-0\">I still [ 19 ] the bank money for my university loan.</p><p class=\"font-bold mb-1 mt-4\">3. position / spot</p><p class=\"mb-1\">Won't your legs hurt if you stay in that [ 20 ] for long?</p><p class=\"mb-0\">This is our favorite picnic [ 21 ].</p><p class=\"font-bold mb-1 mt-4\">4. whole / hole</p><p class=\"mb-1\">The [ 22 ] class was excited.</p><p class=\"mb-0\">I dug a [ 23 ] to put a tree in.</p><p class=\"font-bold mb-1 mt-4\">5. feed / crop</p><p class=\"mb-1\">Do not [ 24 ] any of the animals at the zoo.</p><p class=\"mb-0\">The farmer grew a [ 25 ] of potatoes.</p>",
               "explanation": "cell (phòng giam).",
               "correctAnswer": "cell"
             },
             {
               "id": "17",
-              "content": "2. Dad says the old [ 17 ] is not safe.",
+              "content": "",
               "explanation": "structure (công trình).",
               "correctAnswer": "structure"
             },
             {
               "id": "18",
-              "content": "3. The [ 18 ] ruled over 100 people in the town.",
+              "content": "",
               "explanation": "lord (lãnh chúa).",
               "correctAnswer": "lord"
             },
             {
               "id": "19",
-              "content": "4. I still [ 19 ] the bank money for my university loan.",
+              "content": "",
               "explanation": "owe (nợ).",
               "correctAnswer": "owe"
             },
             {
               "id": "20",
-              "content": "5. Won't your legs hurt if you stay in that [ 20 ] for long?",
+              "content": "",
               "explanation": "position (vị trí/tư thế).",
               "correctAnswer": "position"
             },
             {
               "id": "21",
-              "content": "6. This is our favorite picnic [ 21 ].",
+              "content": "",
               "explanation": "spot (địa điểm).",
               "correctAnswer": "spot"
             },
             {
               "id": "22",
-              "content": "7. The [ 22 ] class was excited.",
+              "content": "",
               "explanation": "whole (toàn bộ).",
               "correctAnswer": "whole"
             },
             {
               "id": "23",
-              "content": "8. I dug a [ 23 ] to put a tree in.",
+              "content": "",
               "explanation": "hole (cái hố).",
               "correctAnswer": "hole"
             },
             {
               "id": "24",
-              "content": "9. Do not [ 24 ] any of the animals at the zoo.",
+              "content": "",
               "explanation": "feed (cho ăn).",
               "correctAnswer": "feed"
             },
             {
               "id": "25",
-              "content": "10. The farmer grew a [ 25 ] of potatoes.",
+              "content": "",
               "explanation": "crop (vụ mùa).",
               "correctAnswer": "crop"
             }
