@@ -344,121 +344,181 @@
               "id": "26",
               "content": "1. Before the storm, it was very windy and [ 26 ] outside.",
               "options": [
-                "overcast",
+                "ranger",
+                "sober",
                 "intact",
+                "sideways",
                 "aerial",
-                "poignant"
+                "accumulated",
+                "rubble",
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "overcast fits the context of a storm.",
-              "correctAnswer": "A"
+              "correctAnswer": "overcast"
             },
             {
               "id": "27",
               "content": "2. When it began to snow, it quickly [ 27 ] on the roof.",
               "options": [
+                "ranger",
+                "sober",
+                "intact",
+                "sideways",
+                "aerial",
                 "accumulated",
-                "sobbed",
-                "secluded",
-                "discharged"
+                "rubble",
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "accumulated means to collect a lot of it over time.",
-              "correctAnswer": "A"
+              "correctAnswer": "accumulated"
             },
             {
               "id": "28",
               "content": "3. The old wall fell over [ 28 ] and broke to pieces.",
               "options": [
-                "sideways",
+                "ranger",
+                "sober",
                 "intact",
+                "sideways",
                 "aerial",
-                "poignant"
+                "accumulated",
+                "rubble",
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "sideways means moving to or from the side.",
-              "correctAnswer": "A"
+              "correctAnswer": "sideways"
             },
             {
               "id": "29",
               "content": "4. Afterwards, nothing was left but some [ 29 ].",
               "options": [
+                "ranger",
+                "sober",
+                "intact",
+                "sideways",
+                "aerial",
+                "accumulated",
                 "rubble",
-                "omen",
-                "consistency",
-                "apparatus"
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "rubble means piles of broken stone and wood.",
-              "correctAnswer": "A"
+              "correctAnswer": "rubble"
             },
             {
               "id": "30",
               "content": "5. The photograph, though old, was still [ 30 ].",
               "options": [
+                "ranger",
+                "sober",
                 "intact",
-                "overcast",
+                "sideways",
                 "aerial",
-                "mortal"
+                "accumulated",
+                "rubble",
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "intact means complete and not damaged.",
-              "correctAnswer": "A"
+              "correctAnswer": "intact"
             },
             {
               "id": "31",
               "content": "6. It showed my father in his forest [ 31 ] uniform.",
               "options": [
                 "ranger",
+                "sober",
+                "intact",
+                "sideways",
+                "aerial",
+                "accumulated",
                 "rubble",
-                "speck",
-                "convection"
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "ranger is a person who protects the forest or parks.",
-              "correctAnswer": "A"
+              "correctAnswer": "ranger"
             },
             {
               "id": "32",
               "content": "7. After the [ 32 ], much of the town was destroyed by snow.",
               "options": [
+                "ranger",
+                "sober",
+                "intact",
+                "sideways",
+                "aerial",
+                "accumulated",
+                "rubble",
+                "mortal",
                 "avalanche",
-                "upbringing",
-                "convection",
-                "consistency"
+                "overcast"
               ],
               "explanation": "avalanche is a large amount of snow falling off a mountain.",
-              "correctAnswer": "A"
+              "correctAnswer": "avalanche"
             },
             {
               "id": "33",
               "content": "8. [ 33 ] photographs showed that only a few houses remained.",
               "options": [
-                "aerial",
-                "poignant",
+                "ranger",
                 "sober",
-                "mortal"
+                "intact",
+                "sideways",
+                "aerial",
+                "accumulated",
+                "rubble",
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "aerial means relating to being in the air or flying.",
-              "correctAnswer": "A"
+              "correctAnswer": "aerial"
             },
             {
               "id": "34",
               "content": "9. It was a very [ 34 ] moment for him when his wife passed away.",
               "options": [
+                "ranger",
                 "sober",
                 "intact",
+                "sideways",
                 "aerial",
-                "sideways"
+                "accumulated",
+                "rubble",
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "sober means serious and calm, fitting a sad moment.",
-              "correctAnswer": "A"
+              "correctAnswer": "sober"
             },
             {
               "id": "35",
               "content": "10. He truly realized that people are [ 35 ].",
               "options": [
-                "mortal",
-                "overcast",
+                "ranger",
+                "sober",
+                "intact",
+                "sideways",
                 "aerial",
-                "intact"
+                "accumulated",
+                "rubble",
+                "mortal",
+                "avalanche",
+                "overcast"
               ],
               "explanation": "mortal means cannot live forever.",
-              "correctAnswer": "A"
+              "correctAnswer": "mortal"
             }
           ],
           "questionType": "Kéo thả"

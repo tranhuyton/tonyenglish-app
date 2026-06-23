@@ -82,61 +82,66 @@
               "id": "6",
               "content": "Inside them were the [ 6 ] of old kings.",
               "options": [
-                "graves",
-                "clay",
                 "cloth",
+                "graves",
+                "flood",
+                "clay",
                 "fertile"
               ],
               "explanation": "graves: the place where a dead person is buried.",
-              "correctAnswer": "A"
+              "correctAnswer": "graves"
             },
             {
               "id": "7",
               "content": "He also visited a village near the river and learned about a recent [ 7 ].",
               "options": [
-                "flood",
+                "cloth",
                 "graves",
+                "flood",
                 "clay",
-                "cloth"
+                "fertile"
               ],
               "explanation": "flood: an event in which water covers an area which is usually dry.",
-              "correctAnswer": "A"
+              "correctAnswer": "flood"
             },
             {
               "id": "8",
               "content": "People grew many crops on this [ 8 ] land.",
               "options": [
-                "fertile",
-                "flood",
+                "cloth",
                 "graves",
-                "clay"
+                "flood",
+                "clay",
+                "fertile"
               ],
               "explanation": "fertile: able to produce good crops and plants.",
-              "correctAnswer": "A"
+              "correctAnswer": "fertile"
             },
             {
               "id": "9",
               "content": "They used [ 9 ] pots to carry water from the river into their homes.",
               "options": [
-                "clay",
-                "fertile",
+                "cloth",
+                "graves",
                 "flood",
-                "graves"
+                "clay",
+                "fertile"
               ],
               "explanation": "clay: a type of heavy, wet soil used to make pots.",
-              "correctAnswer": "A"
+              "correctAnswer": "clay"
             },
             {
               "id": "10",
               "content": "One friendly man gave Jimmy a white [ 10 ] to cover his head from the hot sun.",
               "options": [
                 "cloth",
+                "graves",
+                "flood",
                 "clay",
-                "fertile",
-                "flood"
+                "fertile"
               ],
               "explanation": "cloth: material used to make clothes.",
-              "correctAnswer": "A"
+              "correctAnswer": "cloth"
             }
           ],
           "questionType": "Kéo thả"

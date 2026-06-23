@@ -250,66 +250,66 @@
               "id": "21",
               "content": "(1)[ 21 ]",
               "options": [
-                "jewel",
-                "participate",
-                "permission",
                 "underground",
+                "participate",
+                "jewel",
+                "permission",
                 "awake"
               ],
               "explanation": "underground phù hợp ngữ cảnh.",
-              "correctAnswer": "D"
+              "correctAnswer": "underground"
             },
             {
               "id": "22",
               "content": "(2)[ 22 ]",
               "options": [
-                "jewel",
-                "participate",
-                "permission",
                 "underground",
+                "participate",
+                "jewel",
+                "permission",
                 "awake"
               ],
               "explanation": "participate phù hợp ngữ cảnh.",
-              "correctAnswer": "B"
+              "correctAnswer": "participate"
             },
             {
               "id": "23",
               "content": "(3)[ 23 ]",
               "options": [
-                "jewel",
-                "participate",
-                "permission",
                 "underground",
+                "participate",
+                "jewel",
+                "permission",
                 "awake"
               ],
               "explanation": "permission phù hợp ngữ cảnh.",
-              "correctAnswer": "C"
+              "correctAnswer": "permission"
             },
             {
               "id": "24",
               "content": "(4)[ 24 ]",
               "options": [
-                "jewel",
-                "participate",
-                "permission",
                 "underground",
+                "participate",
+                "jewel",
+                "permission",
                 "awake"
               ],
               "explanation": "awake phù hợp ngữ cảnh.",
-              "correctAnswer": "E"
+              "correctAnswer": "awake"
             },
             {
               "id": "25",
               "content": "(5)[ 25 ]",
               "options": [
-                "jewel",
-                "participate",
-                "permission",
                 "underground",
+                "participate",
+                "jewel",
+                "permission",
                 "awake"
               ],
               "explanation": "jewel phù hợp ngữ cảnh.",
-              "correctAnswer": "A"
+              "correctAnswer": "jewel"
             }
           ],
           "questionType": "Kéo thả"

@@ -180,31 +180,66 @@
               "id": "16",
               "content": "1. Today, my friend [ 16 ] me so nicely. First, he gave me some beautiful [ 16 ] flowers. Next, he asked me to [ 16 ] any CD from the store, and he bought it for me! Later when we got home, he made me close my eyes. When I opened them, I saw a great meal on a pretty [ 16 ]. There was even a vase full of flowers that he had [ 16 ] from earlier that day. I will never forget this wonderful day.",
               "explanation": "treated: đối xử",
-              "correctAnswer": "treated"
+              "correctAnswer": "treated",
+              "options": [
+                "select",
+                "treated",
+                "dish",
+                "fresh",
+                "gathered"
+              ]
             },
             {
               "id": "17",
               "content": "2. [ 17 ]",
               "explanation": "fresh: tươi",
-              "correctAnswer": "fresh"
+              "correctAnswer": "fresh",
+              "options": [
+                "select",
+                "treated",
+                "dish",
+                "fresh",
+                "gathered"
+              ]
             },
             {
               "id": "18",
               "content": "3. [ 18 ]",
               "explanation": "select: chọn lựa",
-              "correctAnswer": "select"
+              "correctAnswer": "select",
+              "options": [
+                "select",
+                "treated",
+                "dish",
+                "fresh",
+                "gathered"
+              ]
             },
             {
               "id": "19",
               "content": "4. [ 19 ]",
               "explanation": "dish: cái đĩa",
-              "correctAnswer": "dish"
+              "correctAnswer": "dish",
+              "options": [
+                "select",
+                "treated",
+                "dish",
+                "fresh",
+                "gathered"
+              ]
             },
             {
               "id": "20",
               "content": "5. [ 20 ]",
               "explanation": "gathered: thu thập, hái",
-              "correctAnswer": "gathered"
+              "correctAnswer": "gathered",
+              "options": [
+                "select",
+                "treated",
+                "dish",
+                "fresh",
+                "gathered"
+              ]
             }
           ],
           "questionType": "Kéo thả"

@@ -96,7 +96,8 @@
                   "answer": "mechanisms"
                 }
               ],
-              "content": "1. I learned about all the different things the factory [ 6 ]. They make big machinery as well as tiny parts and [ 2 ]."
+              "content": "1. I learned about all the different things the factory [ 6 ]. They make big machinery as well as tiny parts and [ 2 ].",
+              "options": []
             },
             {
               "id": "7",
@@ -110,7 +111,8 @@
                   "answer": "cholesterol"
                 }
               ],
-              "content": "2. The students asked the school’s [ 7 ] to buy a better kind of meat. The meat served there is too high in fat and [ 2 ]."
+              "content": "2. The students asked the school’s [ 7 ] to buy a better kind of meat. The meat served there is too high in fat and [ 2 ].",
+              "options": []
             },
             {
               "id": "8",
@@ -124,7 +126,8 @@
                   "answer": "explicit"
                 }
               ],
-              "content": "3. I can’t stand companies that are [ 8 ]. Customers have to make sure they get [ 2 ] information about all details."
+              "content": "3. I can’t stand companies that are [ 8 ]. Customers have to make sure they get [ 2 ] information about all details.",
+              "options": []
             },
             {
               "id": "9",
@@ -138,7 +141,8 @@
                   "answer": "prone"
                 }
               ],
-              "content": "4. Citizens formed a [ 9 ] because the city’s air was making people ill. Elderly people and infants were the most [ 2 ] to becoming sick."
+              "content": "4. Citizens formed a [ 9 ] because the city’s air was making people ill. Elderly people and infants were the most [ 2 ] to becoming sick.",
+              "options": []
             },
             {
               "id": "10",
@@ -152,7 +156,8 @@
                   "answer": "straightforward"
                 }
               ],
-              "content": "5. To solve our problem, we’ll first need a strong [ 10 ]. Our ideas need to be intelligent and [ 2 ]."
+              "content": "5. To solve our problem, we’ll first need a strong [ 10 ]. Our ideas need to be intelligent and [ 2 ].",
+              "options": []
             }
           ],
           "questionType": "Kéo thả"

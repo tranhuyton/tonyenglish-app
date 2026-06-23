@@ -14,61 +14,181 @@
               "id": "1",
               "content": "1. If you don't understand the class, you should ask your [ 1 ] for help.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "professor"
+              "correctAnswer": "professor",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "2",
               "content": "2. I could [ 2 ] hear his speech because of all the noise.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "barely"
+              "correctAnswer": "barely",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "3",
               "content": "3. I [ 3 ] that tomorrow will be a good day.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "predict"
+              "correctAnswer": "predict",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "4",
               "content": "4. There was a lot of [ 4 ] in his closet.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "garbage"
+              "correctAnswer": "garbage",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "5",
               "content": "5. I made a [ 5 ] of things I want for my birthday.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "list"
+              "correctAnswer": "list",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "6",
               "content": "6. I think that this TV show is [ 6 ]. Let's watch something else.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "boring"
+              "correctAnswer": "boring",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "7",
               "content": "7. Have you ever heard this [ 7 ]? I really like its music.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "band"
+              "correctAnswer": "band",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "8",
               "content": "8. Do you have time in your [ 8 ] to come over this week?",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "schedule"
+              "correctAnswer": "schedule",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "9",
               "content": "9. If I am not home when you call, just leave a [ 9 ].",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "message"
+              "correctAnswer": "message",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             },
             {
               "id": "10",
               "content": "10. If you wake up early, you don't need to [ 10 ] to get to school.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "rush"
+              "correctAnswer": "rush",
+              "options": [
+                "predict",
+                "professor",
+                "boring",
+                "message",
+                "band",
+                "schedule",
+                "list",
+                "rush",
+                "barely",
+                "garbage"
+              ]
             }
           ],
           "questionType": "Kéo thả"

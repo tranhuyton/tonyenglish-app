@@ -234,35 +234,65 @@
             {
               "id": "21",
               "content": "1. I'm going to tie the cow to a [ 21 ] in the ground.",
-              "options": [],
+              "options": [
+                "accident",
+                "stake",
+                "wreck",
+                "flesh",
+                "character"
+              ],
               "explanation": "\"stake\" là cái cọc. (Tôi sẽ buộc con bò vào một cái cọc trên mặt đất.)",
               "correctAnswer": "stake"
             },
             {
               "id": "22",
               "content": "2. You shouldn't eat the chicken. The [ 22 ] is still pink.",
-              "options": [],
+              "options": [
+                "accident",
+                "stake",
+                "wreck",
+                "flesh",
+                "character"
+              ],
               "explanation": "\"flesh\" là thịt (của động vật). (Bạn không nên ăn thịt gà này. Thịt vẫn còn màu hồng.)",
               "correctAnswer": "flesh"
             },
             {
               "id": "23",
               "content": "3. New drivers are more likely to [ 23 ] their cars than experienced drivers.",
-              "options": [],
+              "options": [
+                "accident",
+                "stake",
+                "wreck",
+                "flesh",
+                "character"
+              ],
               "explanation": "\"wreck\" là phá hủy, làm hỏng. (Những người mới lái xe dễ làm hỏng xe của họ hơn những người lái xe có kinh nghiệm.)",
               "correctAnswer": "wreck"
             },
             {
               "id": "24",
               "content": "4. Many people were hurt in the boating [ 24 ].",
-              "options": [],
+              "options": [
+                "accident",
+                "stake",
+                "wreck",
+                "flesh",
+                "character"
+              ],
               "explanation": "\"accident\" là tai nạn. (Nhiều người bị thương trong vụ tai nạn chèo thuyền.)",
               "correctAnswer": "accident"
             },
             {
               "id": "25",
               "content": "5. My brother has a very friendly and cheerful [ 25 ].",
-              "options": [],
+              "options": [
+                "accident",
+                "stake",
+                "wreck",
+                "flesh",
+                "character"
+              ],
               "explanation": "\"character\" là tính cách. (Anh trai tôi có tính cách rất thân thiện và vui vẻ.)",
               "correctAnswer": "character"
             }

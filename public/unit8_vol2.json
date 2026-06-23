@@ -14,121 +14,181 @@
               "id": "1",
               "content": "1. This river will take us through the[ 1 ] .",
               "options": [
-                "valley",
-                "bush",
+                "destination",
                 "edge",
-                "resort"
+                "bush",
+                "resort",
+                "capable",
+                "concentrate",
+                "path",
+                "valley",
+                "convey",
+                "broad"
               ],
               "explanation": "valley: a low area of land between two mountains or hills.",
-              "correctAnswer": "A"
+              "correctAnswer": "valley"
             },
             {
               "id": "2",
               "content": "2. The doctor must[ 2 ]during surgery to keep the patient alive.",
               "options": [
-                "convey",
+                "destination",
+                "edge",
+                "bush",
+                "resort",
+                "capable",
                 "concentrate",
-                "broad",
-                "capable"
+                "path",
+                "valley",
+                "convey",
+                "broad"
               ],
               "explanation": "concentrate: to give your full attention.",
-              "correctAnswer": "B"
+              "correctAnswer": "concentrate"
             },
             {
               "id": "3",
               "content": "3. The sign was so[ 3 ] we couldn’t see around it.",
               "options": [
-                "broad",
-                "capable",
+                "destination",
+                "edge",
+                "bush",
                 "resort",
-                "edge"
+                "capable",
+                "concentrate",
+                "path",
+                "valley",
+                "convey",
+                "broad"
               ],
               "explanation": "broad: wide.",
-              "correctAnswer": "A"
+              "correctAnswer": "broad"
             },
             {
               "id": "4",
               "content": "4. People can[ 4 ] their happiness by smiling.",
               "options": [
-                "path",
-                "convey",
+                "destination",
+                "edge",
+                "bush",
+                "resort",
+                "capable",
                 "concentrate",
-                "bush"
+                "path",
+                "valley",
+                "convey",
+                "broad"
               ],
               "explanation": "convey: to communicate or make ideas known.",
-              "correctAnswer": "B"
+              "correctAnswer": "convey"
             },
             {
               "id": "5",
               "content": "5. What is the[ 5 ] of this train?",
               "options": [
                 "destination",
-                "valley",
                 "edge",
-                "resort"
+                "bush",
+                "resort",
+                "capable",
+                "concentrate",
+                "path",
+                "valley",
+                "convey",
+                "broad"
               ],
               "explanation": "destination: the place where someone or something is going to.",
-              "correctAnswer": "A"
+              "correctAnswer": "destination"
             },
             {
               "id": "6",
               "content": "6. We walked to the[ 6 ] of the cliff and looked down.",
               "options": [
-                "path",
-                "bush",
+                "destination",
                 "edge",
-                "valley"
+                "bush",
+                "resort",
+                "capable",
+                "concentrate",
+                "path",
+                "valley",
+                "convey",
+                "broad"
               ],
               "explanation": "edge: the part of it that is farthest from the center.",
-              "correctAnswer": "C"
+              "correctAnswer": "edge"
             },
             {
               "id": "7",
               "content": "7. The hikers walked along the[ 7 ] in the forest.",
               "options": [
-                "bush",
-                "path",
                 "destination",
+                "edge",
+                "bush",
+                "resort",
+                "capable",
+                "concentrate",
+                "path",
+                "valley",
+                "convey",
                 "broad"
               ],
               "explanation": "path: a way from one place to another that people can walk along.",
-              "correctAnswer": "B"
+              "correctAnswer": "path"
             },
             {
               "id": "8",
               "content": "8. I planted a [ 8 ] in my yard last weekend.",
               "options": [
+                "destination",
+                "edge",
                 "bush",
-                "valley",
+                "resort",
                 "capable",
-                "concentrate"
+                "concentrate",
+                "path",
+                "valley",
+                "convey",
+                "broad"
               ],
               "explanation": "bush: a plant with many thin branches.",
-              "correctAnswer": "A"
+              "correctAnswer": "bush"
             },
             {
               "id": "9",
               "content": "9. She is[ 9 ] of running faster than any boy in her class.",
               "options": [
+                "destination",
+                "edge",
+                "bush",
+                "resort",
                 "capable",
-                "broad",
+                "concentrate",
+                "path",
+                "valley",
                 "convey",
-                "resort"
+                "broad"
               ],
               "explanation": "capable: able to do something.",
-              "correctAnswer": "A"
+              "correctAnswer": "capable"
             },
             {
               "id": "10",
               "content": "10. If the boys can’t agree, they will[ 10 ] to fighting.",
               "options": [
+                "destination",
+                "edge",
+                "bush",
                 "resort",
-                "convey",
+                "capable",
                 "concentrate",
-                "destination"
+                "path",
+                "valley",
+                "convey",
+                "broad"
               ],
               "explanation": "resort to: to depend on it in order to solve a problem.",
-              "correctAnswer": "A"
+              "correctAnswer": "resort"
             }
           ],
           "questionType": "Kéo thả"

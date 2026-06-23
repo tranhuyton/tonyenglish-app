@@ -88,181 +88,181 @@
               "id": "6",
               "content": "1. When the food is ready, its temperature should be 140 degrees [ 6 ].",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "Fahrenheit",
-              "correctAnswer": "A"
+              "correctAnswer": "Fahrenheit"
             },
             {
               "id": "7",
               "content": "2. You can use that [ 7 ] to determine when it is hot enough.",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "thermometer",
-              "correctAnswer": "B"
+              "correctAnswer": "thermometer"
             },
             {
               "id": "8",
               "content": "3. There are not many forests in the Australian [ 8 ].",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "outback",
-              "correctAnswer": "C"
+              "correctAnswer": "outback"
             },
             {
               "id": "9",
               "content": "4. But there might be a [ 9 ] wherever there is enough water.",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "grove",
-              "correctAnswer": "D"
+              "correctAnswer": "grove"
             },
             {
               "id": "10",
               "content": "5. She didn’t have much time to get to the house to [ 10 ] her promise.",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "fulfill",
-              "correctAnswer": "E"
+              "correctAnswer": "fulfill"
             },
             {
               "id": "11",
               "content": "6. Therefore, she took a(n) [ 11 ] that would get her there in no time.",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "shortcut",
-              "correctAnswer": "F"
+              "correctAnswer": "shortcut"
             },
             {
               "id": "12",
               "content": "7. The need to create more jobs [ 12 ] the need to spend more money.",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "outweighed",
-              "correctAnswer": "G"
+              "correctAnswer": "outweighed"
             },
             {
               "id": "13",
               "content": "8. But in other years it was [ 13 ].",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "vice versa",
-              "correctAnswer": "H"
+              "correctAnswer": "vice versa"
             },
             {
               "id": "14",
               "content": "9. According to legend, gold was made from the cave’s [ 14 ].",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "ore",
-              "correctAnswer": "I"
+              "correctAnswer": "ore"
             },
             {
               "id": "15",
               "content": "10. However, today its [ 15 ] have been forgotten.",
               "options": [
-                "Fahrenheit",
-                "thermometer",
+                "fulfill",
+                "whereabouts",
                 "outback",
                 "grove",
-                "fulfill",
-                "shortcut",
-                "outweighed",
-                "vice versa",
+                "Fahrenheit",
                 "ore",
-                "whereabouts"
+                "vice versa",
+                "thermometer",
+                "shortcut",
+                "outweighed"
               ],
               "explanation": "whereabouts",
-              "correctAnswer": "J"
+              "correctAnswer": "whereabouts"
             }
           ],
           "questionType": "Kéo thả"

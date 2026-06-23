@@ -148,121 +148,181 @@
               "id": "11",
               "content": "1. One ingredient in the recipe is a small amount of [ 11 ]",
               "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
                 "seasoning",
                 "hymns",
-                "procession",
-                "fragrant"
+                "prey",
+                "earls",
+                "hereditary"
               ],
               "explanation": "seasoning is an ingredient.",
-              "correctAnswer": "A"
+              "correctAnswer": "seasoning"
             },
             {
               "id": "12",
               "content": "2. Then you need to pour in a pint of [ 12 ]",
               "options": [
+                "fragrant",
+                "archer",
+                "procession",
                 "vinegar",
-                "hereditary",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
                 "earls",
-                "prey"
+                "hereditary"
               ],
               "explanation": "vinegar is a liquid you pour.",
-              "correctAnswer": "A"
+              "correctAnswer": "vinegar"
             },
             {
               "id": "13",
               "content": "3. She can play many instruments and sing many [ 13 ]",
               "options": [
-                "hymns",
+                "fragrant",
                 "archer",
+                "procession",
+                "vinegar",
                 "tyrant",
-                "procession"
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
               ],
               "explanation": "hymns are songs you sing.",
-              "correctAnswer": "A"
+              "correctAnswer": "hymns"
             },
             {
               "id": "14",
               "content": "4. Her mother is a good musician, too. Her talent must be [ 14 ]",
               "options": [
-                "hereditary",
                 "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
                 "seasoning",
-                "vinegar"
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
               ],
               "explanation": "passed from mother to child means it is hereditary.",
-              "correctAnswer": "A"
+              "correctAnswer": "hereditary"
             },
             {
               "id": "15",
               "content": "5. The hunter was a very talented [ 15 ]",
               "options": [
+                "fragrant",
                 "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
                 "prey",
                 "earls",
-                "hymns"
+                "hereditary"
               ],
               "explanation": "an archer is someone who hunts with a bow.",
-              "correctAnswer": "A"
+              "correctAnswer": "archer"
             },
             {
               "id": "16",
               "content": "6. He only needed one arrow to shoot his [ 16 ]",
               "options": [
-                "prey",
+                "fragrant",
+                "archer",
                 "procession",
+                "vinegar",
                 "tyrant",
-                "seasoning"
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
               ],
               "explanation": "prey is hunted and shot.",
-              "correctAnswer": "A"
+              "correctAnswer": "prey"
             },
             {
               "id": "17",
               "content": "7. Everyone lined up to take part in the [ 17 ]",
               "options": [
-                "procession",
                 "fragrant",
-                "hereditary",
-                "archer"
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
               ],
               "explanation": "people line up in a procession.",
-              "correctAnswer": "A"
+              "correctAnswer": "procession"
             },
             {
               "id": "18",
               "content": "8. We marched to honor the king and the noble [ 18 ]",
               "options": [
-                "earls",
+                "fragrant",
+                "archer",
+                "procession",
                 "vinegar",
+                "tyrant",
                 "seasoning",
-                "tyrant"
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
               ],
               "explanation": "earls are noblemen.",
-              "correctAnswer": "A"
+              "correctAnswer": "earls"
             },
             {
               "id": "19",
               "content": "9. When it came to keeping the house clean, his mother was a [ 19 ]",
               "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
                 "tyrant",
-                "prey",
+                "seasoning",
                 "hymns",
-                "procession"
+                "prey",
+                "earls",
+                "hereditary"
               ],
               "explanation": "a tyrant acts strictly and harshly.",
-              "correctAnswer": "A"
+              "correctAnswer": "tyrant"
             },
             {
               "id": "20",
               "content": "10. She punished him if his room did not smell very [ 20 ]",
               "options": [
                 "fragrant",
-                "hereditary",
                 "archer",
-                "earls"
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
               ],
               "explanation": "fragrant means smelling pleasant.",
-              "correctAnswer": "A"
+              "correctAnswer": "fragrant"
             }
           ],
           "questionType": "Kéo thả"

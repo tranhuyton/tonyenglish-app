@@ -143,65 +143,65 @@
               "content": "There are [ 11 ] rules about what people may wear at fancy parties.",
               "options": [
                 "strict",
-                "ensure",
+                "shut",
                 "grand",
                 "accuse",
-                "shut"
+                "ensure"
               ],
               "explanation": "Có những quy định nghiêm ngặt về trang phục mọi người được mặc tại các bữa tiệc sang trọng. 'strict' (nghiêm ngặt) bổ nghĩa cho 'rules'.",
-              "correctAnswer": "A"
+              "correctAnswer": "strict"
             },
             {
               "id": "12",
               "content": "Instead of normal things, people must [ 12 ] that they wear...",
               "options": [
                 "strict",
-                "ensure",
+                "shut",
                 "grand",
                 "accuse",
-                "shut"
+                "ensure"
               ],
               "explanation": "Thay vì những thứ bình thường, mọi người phải đảm bảo rằng họ mặc... 'ensure' (đảm bảo) kết hợp với mệnh đề 'that...'.",
-              "correctAnswer": "B"
+              "correctAnswer": "ensure"
             },
             {
               "id": "13",
               "content": "...that they wear [ 13 ] clothing.",
               "options": [
                 "strict",
-                "ensure",
+                "shut",
                 "grand",
                 "accuse",
-                "shut"
+                "ensure"
               ],
               "explanation": "...rằng họ mặc trang phục lộng lẫy. 'grand' (lộng lẫy, sang trọng) phù hợp với bối cảnh bữa tiệc sang trọng.",
-              "correctAnswer": "C"
+              "correctAnswer": "grand"
             },
             {
               "id": "14",
               "content": "If a man wears the wrong clothes, people will [ 14 ] him of ruining the evening.",
               "options": [
                 "strict",
-                "ensure",
+                "shut",
                 "grand",
                 "accuse",
-                "shut"
+                "ensure"
               ],
               "explanation": "Nếu một người đàn ông mặc sai trang phục, mọi người sẽ buộc tội anh ta làm hỏng buổi tối. Cấu trúc 'accuse someone of something' (buộc tội ai về việc gì).",
-              "correctAnswer": "D"
+              "correctAnswer": "accuse"
             },
             {
               "id": "15",
               "content": "They will make him leave and [ 15 ] the door behind him.",
               "options": [
                 "strict",
-                "ensure",
+                "shut",
                 "grand",
                 "accuse",
-                "shut"
+                "ensure"
               ],
               "explanation": "Họ sẽ yêu cầu anh ta rời đi và đóng cửa lại sau lưng. 'shut' (đóng) đi với tân ngữ 'the door'.",
-              "correctAnswer": "E"
+              "correctAnswer": "shut"
             }
           ],
           "questionType": "Kéo thả"

@@ -148,121 +148,181 @@
               "id": "11",
               "content": "1. He enjoyed watching the [ 11 ] movement of the branch in the wind.",
               "options": [
-                "intermittent",
-                "fro",
                 "phoenix",
-                "vibrant"
+                "vibrant",
+                "adverse",
+                "pollen",
+                "mentor",
+                "dependency",
+                "intermittent",
+                "texture",
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "intermittent (adj): happening in a way that is not constant.",
-              "correctAnswer": "A"
+              "correctAnswer": "intermittent"
             },
             {
               "id": "12",
               "content": "2. As the branch moved to and [ 12 ], he felt calmed.",
               "options": [
-                "intermittent",
-                "fro",
+                "phoenix",
+                "vibrant",
+                "adverse",
+                "pollen",
+                "mentor",
                 "dependency",
-                "texture"
+                "intermittent",
+                "texture",
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "fro (adv): backward and forward or side to side.",
-              "correctAnswer": "B"
+              "correctAnswer": "fro"
             },
             {
               "id": "13",
               "content": "3. Her favorite magical creature was the [ 13 ].",
               "options": [
-                "mentor",
-                "pollen",
                 "phoenix",
-                "texture"
+                "vibrant",
+                "adverse",
+                "pollen",
+                "mentor",
+                "dependency",
+                "intermittent",
+                "texture",
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "phoenix (n): an imaginary bird that burned to ashes and was reborn.",
-              "correctAnswer": "C"
+              "correctAnswer": "phoenix"
             },
             {
               "id": "14",
               "content": "4. The bird’s feathers were always a(n) [ 14 ] mix of red and orange.",
               "options": [
-                "adverse",
+                "phoenix",
                 "vibrant",
+                "adverse",
+                "pollen",
+                "mentor",
+                "dependency",
                 "intermittent",
-                "fro"
+                "texture",
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "vibrant (adj): bright and full of color.",
-              "correctAnswer": "B"
+              "correctAnswer": "vibrant"
             },
             {
               "id": "15",
               "content": "5. Actually, those flowers have a(n) [ 15 ] effect on my mother’s health.",
               "options": [
-                "dependency",
-                "photosynthesis",
+                "phoenix",
+                "vibrant",
                 "adverse",
-                "vibrant"
+                "pollen",
+                "mentor",
+                "dependency",
+                "intermittent",
+                "texture",
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "adverse (adj): harmful.",
-              "correctAnswer": "C"
+              "correctAnswer": "adverse"
             },
             {
               "id": "16",
               "content": "6. The [ 16 ] in it makes her sneeze.",
               "options": [
-                "pollen",
-                "texture",
                 "phoenix",
-                "mentor"
+                "vibrant",
+                "adverse",
+                "pollen",
+                "mentor",
+                "dependency",
+                "intermittent",
+                "texture",
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "pollen (n): the tiny yellow powder made in the flowers of plants.",
-              "correctAnswer": "A"
+              "correctAnswer": "pollen"
             },
             {
               "id": "17",
               "content": "7. Mr. Roth had been a valuable [ 17 ] for so many years.",
               "options": [
+                "phoenix",
+                "vibrant",
+                "adverse",
+                "pollen",
                 "mentor",
                 "dependency",
-                "phoenix",
-                "texture"
+                "intermittent",
+                "texture",
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "mentor (n): a person with experience or knowledge who advises someone.",
-              "correctAnswer": "A"
+              "correctAnswer": "mentor"
             },
             {
               "id": "18",
               "content": "8. You could feel the knowledge from the [ 18 ] of his wrinkled hands.",
               "options": [
-                "pollen",
-                "texture",
+                "phoenix",
+                "vibrant",
                 "adverse",
+                "pollen",
+                "mentor",
+                "dependency",
+                "intermittent",
+                "texture",
+                "fro",
                 "photosynthesis"
               ],
               "explanation": "texture (n): the quality of something that can be known by its touch.",
-              "correctAnswer": "B"
+              "correctAnswer": "texture"
             },
             {
               "id": "19",
               "content": "9. Plants have a(n) [ 19 ] on sunlight.",
               "options": [
-                "dependency",
                 "phoenix",
+                "vibrant",
+                "adverse",
+                "pollen",
                 "mentor",
-                "fro"
+                "dependency",
+                "intermittent",
+                "texture",
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "dependency (n): a strong need for someone or something.",
-              "correctAnswer": "A"
+              "correctAnswer": "dependency"
             },
             {
               "id": "20",
               "content": "10. It’s a necessary ingredient for the process of [ 20 ] .",
               "options": [
-                "photosynthesis",
+                "phoenix",
+                "vibrant",
+                "adverse",
                 "pollen",
+                "mentor",
+                "dependency",
+                "intermittent",
                 "texture",
-                "vibrant"
+                "fro",
+                "photosynthesis"
               ],
               "explanation": "photosynthesis (n): the process in which plants change sunlight and air.",
-              "correctAnswer": "A"
+              "correctAnswer": "photosynthesis"
             }
           ],
           "questionType": "Kéo thả"

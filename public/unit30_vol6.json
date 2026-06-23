@@ -284,25 +284,37 @@
               "id": "21",
               "content": "1. They had three minutes to find their way out of the [ 21 ].",
               "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
                 "maze",
-                "delta",
                 "reservoir",
-                "streak"
+                "expired",
+                "crickets",
+                "courteous"
               ],
               "explanation": "maze (n): a system of paths that is complicated and easy to get lost in.",
-              "correctAnswer": "A"
+              "correctAnswer": "maze"
             },
             {
               "id": "22",
               "content": "2. They had to get out before the time [ 22 ].",
               "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
                 "expired",
-                "pecked",
-                "haunted",
+                "crickets",
                 "courteous"
               ],
               "explanation": "expire (v): to no longer be effective because its use has come to an end.",
-              "correctAnswer": "A"
+              "correctAnswer": "expired"
             },
             {
               "id": "23",
@@ -310,95 +322,143 @@
               "options": [
                 "granite",
                 "moss",
-                "charcoal",
-                "pebbles"
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
               ],
               "explanation": "granite (n): a very hard type of rock.",
-              "correctAnswer": "A"
+              "correctAnswer": "granite"
             },
             {
               "id": "24",
               "content": "4. The tiles had lovely designs on them and also pieces of [ 24 ].",
               "options": [
+                "granite",
+                "moss",
                 "amber",
-                "detergent",
-                "gravel",
-                "euphemism"
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
               ],
               "explanation": "amber (n): a hard, yellowish material that comes from trees.",
-              "correctAnswer": "A"
+              "correctAnswer": "amber"
             },
             {
               "id": "25",
               "content": "5. Gene squeezed the bottle and got a [ 25 ] of ketchup on his shirt.",
               "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
                 "streak",
-                "pebble",
-                "cricket",
-                "credentials"
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
               ],
               "explanation": "streak (n): a long, thin mark that is easy to see.",
-              "correctAnswer": "A"
+              "correctAnswer": "streak"
             },
             {
               "id": "26",
               "content": "6. The [ 26 ] host was nice enough to get him a new shirt.",
               "options": [
-                "courteous",
-                "liberal",
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
                 "expired",
-                "haunted"
+                "crickets",
+                "courteous"
               ],
               "explanation": "courteous (adj): polite and respectful.",
-              "correctAnswer": "A"
+              "correctAnswer": "courteous"
             },
             {
               "id": "27",
               "content": "7. There was a pile of [ 27 ] near the water.",
               "options": [
+                "granite",
+                "moss",
+                "amber",
                 "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
                 "crickets",
-                "columnist",
-                "maze"
+                "courteous"
               ],
               "explanation": "pebble (n): a small, round stone.",
-              "correctAnswer": "A"
+              "correctAnswer": "pebbles"
             },
             {
               "id": "28",
               "content": "8. They had been washed up from the bottom of the [ 28 ].",
               "options": [
-                "reservoir",
-                "delta",
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
                 "streak",
-                "credentials"
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
               ],
               "explanation": "reservoir (n): a place for storing water.",
-              "correctAnswer": "A"
+              "correctAnswer": "reservoir"
             },
             {
               "id": "29",
               "content": "9. We walked down the road and passed many trees covered in [ 29 ].",
               "options": [
-                "moss",
                 "granite",
-                "gravel",
-                "detergent"
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
               ],
               "explanation": "moss (n): a small green or yellow plant that grows on wet dirt, rocks, or tree trunks.",
-              "correctAnswer": "A"
+              "correctAnswer": "moss"
             },
             {
               "id": "30",
               "content": "10. It was dark already, and all that could be heard were the [ 30 ].",
               "options": [
-                "crickets",
+                "granite",
+                "moss",
+                "amber",
                 "pebbles",
-                "charcoal",
-                "amber"
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
               ],
               "explanation": "cricket (n): an insect that makes loud noises, usually at night.",
-              "correctAnswer": "A"
+              "correctAnswer": "crickets"
             }
           ],
           "questionType": "Kéo thả"

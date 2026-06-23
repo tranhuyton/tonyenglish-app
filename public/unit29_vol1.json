@@ -142,31 +142,66 @@
               "id": "11",
               "content": "1. If you [ 11 ] something widely, everyone will know about it.",
               "explanation": "Từ cần điền là advertise (quảng cáo).",
-              "correctAnswer": "advertise"
+              "correctAnswer": "advertise",
+              "options": [
+                "vote",
+                "advertise",
+                "major",
+                "skills",
+                "competition"
+              ]
             },
             {
               "id": "12",
               "content": "2. If you have a [ 12 ] problem, you might need more help.",
               "explanation": "Từ cần điền là major (lớn, quan trọng).",
-              "correctAnswer": "major"
+              "correctAnswer": "major",
+              "options": [
+                "vote",
+                "advertise",
+                "major",
+                "skills",
+                "competition"
+              ]
             },
             {
               "id": "13",
               "content": "3. I want to be in the [ 13 ] to show that I am the best.",
               "explanation": "Từ cần điền là competition (cuộc thi).",
-              "correctAnswer": "competition"
+              "correctAnswer": "competition",
+              "options": [
+                "vote",
+                "advertise",
+                "major",
+                "skills",
+                "competition"
+              ]
             },
             {
               "id": "14",
               "content": "4. His skiing [ 14 ] are great! He can be a professional.",
               "explanation": "Từ cần điền là skills (kỹ năng).",
-              "correctAnswer": "skills"
+              "correctAnswer": "skills",
+              "options": [
+                "vote",
+                "advertise",
+                "major",
+                "skills",
+                "competition"
+              ]
             },
             {
               "id": "15",
               "content": "5. Next month, our country will [ 15 ] for a new president.",
               "explanation": "Từ cần điền là vote (bầu cử).",
-              "correctAnswer": "vote"
+              "correctAnswer": "vote",
+              "options": [
+                "vote",
+                "advertise",
+                "major",
+                "skills",
+                "competition"
+              ]
             }
           ],
           "questionType": "Kéo thả"

@@ -96,7 +96,8 @@
                   "answer": "fatigue"
                 }
               ],
-              "content": "1. The path leading out of the [ 6 ] was very steep. When they reached the top, they had to rest because of their [ 6 ]."
+              "content": "1. The path leading out of the [ 6 ] was very steep. When they reached the top, they had to rest because of their [ 6 ].",
+              "options": []
             },
             {
               "id": "7",
@@ -110,7 +111,8 @@
                   "answer": "primitive"
                 }
               ],
-              "content": "2. He had a(n) [ 7 ] about ancient cultures. He thought that all their customs and ideas were [ 7 ]."
+              "content": "2. He had a(n) [ 7 ] about ancient cultures. He thought that all their customs and ideas were [ 7 ].",
+              "options": []
             },
             {
               "id": "8",
@@ -124,7 +126,8 @@
                   "answer": "aesthetic"
                 }
               ],
-              "content": "3. The [ 8 ] led travelers to the top of the mountain. I was astonished by the [ 8 ] view."
+              "content": "3. The [ 8 ] led travelers to the top of the mountain. I was astonished by the [ 8 ] view.",
+              "options": []
             },
             {
               "id": "9",
@@ -138,7 +141,8 @@
                   "answer": "twig"
                 }
               ],
-              "content": "4. A line of [ 9 ] stretched from the mound across the forest floor. They were all going to eat a [ 9 ] that had fallen off a tree."
+              "content": "4. A line of [ 9 ] stretched from the mound across the forest floor. They were all going to eat a [ 9 ] that had fallen off a tree.",
+              "options": []
             },
             {
               "id": "10",
@@ -152,7 +156,8 @@
                   "answer": "welfare"
                 }
               ],
-              "content": "5. People thought that the water from the [ 10 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 10 ]."
+              "content": "5. People thought that the water from the [ 10 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 10 ].",
+              "options": []
             }
           ],
           "questionType": "Kéo thả"

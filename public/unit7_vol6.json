@@ -285,120 +285,180 @@
               "content": "1. The [ 21 ] of the medical book is broad.",
               "options": [
                 "scope",
+                "therapeutic",
+                "deceased",
+                "decipher",
+                "deception",
+                "strife",
                 "botany",
                 "dusk",
-                "strife"
+                "sinister",
+                "pneumonia"
               ],
               "explanation": "scope (n): how many people or things it relates to.",
-              "correctAnswer": "A"
+              "correctAnswer": "scope"
             },
             {
               "id": "22",
               "content": "2. It deals with all illnesses from colds to [ 22 ].",
               "options": [
-                "pneumonia",
-                "botany",
+                "scope",
+                "therapeutic",
+                "deceased",
+                "decipher",
                 "deception",
-                "deceased"
+                "strife",
+                "botany",
+                "dusk",
+                "sinister",
+                "pneumonia"
               ],
               "explanation": "pneumonia (n): a dangerous illness causing the lungs to fill with liquid.",
-              "correctAnswer": "A"
+              "correctAnswer": "pneumonia"
             },
             {
               "id": "23",
               "content": "3. Marcia found the sound of the river [ 23 ].",
               "options": [
+                "scope",
                 "therapeutic",
-                "sinister",
                 "deceased",
+                "decipher",
+                "deception",
+                "strife",
+                "botany",
+                "dusk",
+                "sinister",
                 "pneumonia"
               ],
               "explanation": "therapeutic (adj): helps to cure a disease or makes you healthier.",
-              "correctAnswer": "A"
+              "correctAnswer": "therapeutic"
             },
             {
               "id": "24",
               "content": "4. She went there every day at [ 24 ] to relieve her stress.",
               "options": [
-                "dusk",
+                "scope",
+                "therapeutic",
+                "deceased",
+                "decipher",
+                "deception",
                 "strife",
                 "botany",
-                "scope"
+                "dusk",
+                "sinister",
+                "pneumonia"
               ],
               "explanation": "dusk (n): the time in the evening when it begins to get dark.",
-              "correctAnswer": "A"
+              "correctAnswer": "dusk"
             },
             {
               "id": "25",
               "content": "5. The criminal fooled everyone with his [ 25 ].",
               "options": [
-                "deception",
-                "pneumonia",
+                "scope",
+                "therapeutic",
                 "deceased",
-                "decipher"
+                "decipher",
+                "deception",
+                "strife",
+                "botany",
+                "dusk",
+                "sinister",
+                "pneumonia"
               ],
               "explanation": "deception (n): the act of lying or tricking someone.",
-              "correctAnswer": "A"
+              "correctAnswer": "deception"
             },
             {
               "id": "26",
               "content": "6. If only someone had stopped him from doing his [ 26 ] crimes.",
               "options": [
-                "sinister",
+                "scope",
                 "therapeutic",
                 "deceased",
-                "botany"
+                "decipher",
+                "deception",
+                "strife",
+                "botany",
+                "dusk",
+                "sinister",
+                "pneumonia"
               ],
               "explanation": "sinister (adj): evil.",
-              "correctAnswer": "A"
+              "correctAnswer": "sinister"
             },
             {
               "id": "27",
               "content": "7. Solomon’s grandmother was [ 27 ].",
               "options": [
-                "deceased",
-                "sinister",
+                "scope",
                 "therapeutic",
-                "dusk"
+                "deceased",
+                "decipher",
+                "deception",
+                "strife",
+                "botany",
+                "dusk",
+                "sinister",
+                "pneumonia"
               ],
               "explanation": "deceased (adj): dead.",
-              "correctAnswer": "A"
+              "correctAnswer": "deceased"
             },
             {
               "id": "28",
               "content": "8. Before she died, she taught him a lot about gardening and [ 28 ].",
               "options": [
-                "botany",
-                "pneumonia",
+                "scope",
+                "therapeutic",
+                "deceased",
+                "decipher",
+                "deception",
                 "strife",
-                "scope"
+                "botany",
+                "dusk",
+                "sinister",
+                "pneumonia"
               ],
               "explanation": "botany (n): the study of plants.",
-              "correctAnswer": "A"
+              "correctAnswer": "botany"
             },
             {
               "id": "29",
               "content": "9. After the war, there was much [ 29 ] about land.",
               "options": [
-                "strife",
-                "dusk",
+                "scope",
+                "therapeutic",
                 "deceased",
-                "decipher"
+                "decipher",
+                "deception",
+                "strife",
+                "botany",
+                "dusk",
+                "sinister",
+                "pneumonia"
               ],
               "explanation": "strife (n): disagreement or fighting between people or groups.",
-              "correctAnswer": "A"
+              "correctAnswer": "strife"
             },
             {
               "id": "30",
               "content": "10. It was difficult for the people to [ 30 ] the new laws about ownership.",
               "options": [
+                "scope",
+                "therapeutic",
+                "deceased",
                 "decipher",
                 "deception",
+                "strife",
+                "botany",
+                "dusk",
                 "sinister",
                 "pneumonia"
               ],
               "explanation": "decipher (v): figure out what it says.",
-              "correctAnswer": "A"
+              "correctAnswer": "decipher"
             }
           ],
           "questionType": "Kéo thả"

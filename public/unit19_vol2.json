@@ -140,61 +140,181 @@
               "id": "11",
               "content": "1. We had a big [ 11 ] to welcome my grandmother home from the hospital.",
               "explanation": "reception (tiệc tiếp đón) để chào đón bà.",
-              "correctAnswer": "reception"
+              "correctAnswer": "reception",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "12",
               "content": "2. The man was a [ 12 ] for crossing the street without looking.",
               "explanation": "fool (kẻ ngốc) vì băng qua đường không nhìn.",
-              "correctAnswer": "fool"
+              "correctAnswer": "fool",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "13",
               "content": "3. A friend asked me to [ 13 ] the book she wrote because I am an artist.",
               "explanation": "illustrate (minh họa) sách vì là họa sĩ.",
-              "correctAnswer": "illustrate"
+              "correctAnswer": "illustrate",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "14",
               "content": "4. I sewed feathers on my [ 14 ] for the play.",
               "explanation": "costume (trang phục) cho vở kịch.",
-              "correctAnswer": "costume"
+              "correctAnswer": "costume",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "15",
               "content": "5. My teacher [ 15 ] my paper because I didn’t follow the directions.",
               "explanation": "rejected (từ chối) bài tập vì không làm theo hướng dẫn.",
-              "correctAnswer": "rejected"
+              "correctAnswer": "rejected",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "16",
               "content": "6. I like being alone in the forest because of the [ 16 ] that’s around me.",
               "explanation": "silence (sự yên lặng) trong rừng.",
-              "correctAnswer": "silence"
+              "correctAnswer": "silence",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "17",
               "content": "7. The boy who stole the bread [ 17 ] me not to tell.",
               "explanation": "begged (van xin) đừng kể ra.",
-              "correctAnswer": "begged"
+              "correctAnswer": "begged",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "18",
               "content": "8. Some fish swim up a [ 18 ] to lay their eggs.",
               "explanation": "stream (suối).",
-              "correctAnswer": "stream"
+              "correctAnswer": "stream",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "19",
               "content": "9. We learned about the [ 19 ] of the Statue of Liberty.",
               "explanation": "origin (nguồn gốc) của tượng Nữ thần Tự do.",
-              "correctAnswer": "origin"
+              "correctAnswer": "origin",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             },
             {
               "id": "20",
               "content": "10. My sister [ 20 ] anyone to come in her room without asking first.",
               "explanation": "forbids (cấm) vào phòng không hỏi trước.",
-              "correctAnswer": "forbids"
+              "correctAnswer": "forbids",
+              "options": [
+                "origin",
+                "begged",
+                "costume",
+                "silence",
+                "forbids",
+                "fool",
+                "illustrate",
+                "stream",
+                "rejected",
+                "reception"
+              ]
             }
           ],
           "questionType": "Kéo thả"

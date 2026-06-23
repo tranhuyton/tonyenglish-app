@@ -120,31 +120,66 @@
               "id": "11",
               "content": "1. That [ 11 ] is too high to climb.",
               "explanation": "hill fits the context.",
-              "correctAnswer": "hill"
+              "correctAnswer": "hill",
+              "options": [
+                "response",
+                "solution",
+                "hill",
+                "appreciate",
+                "puddles"
+              ]
             },
             {
               "id": "12",
               "content": "2. We must find a [ 12 ] to the difficult problem.",
               "explanation": "solution fits the context.",
-              "correctAnswer": "solution"
+              "correctAnswer": "solution",
+              "options": [
+                "response",
+                "solution",
+                "hill",
+                "appreciate",
+                "puddles"
+              ]
             },
             {
               "id": "13",
               "content": "3. I asked you a question. What is your [ 13 ]?",
               "explanation": "response fits the context.",
-              "correctAnswer": "response"
+              "correctAnswer": "response",
+              "options": [
+                "response",
+                "solution",
+                "hill",
+                "appreciate",
+                "puddles"
+              ]
             },
             {
               "id": "14",
               "content": "4. The rain formed [ 14 ] on the road.",
               "explanation": "puddles fits the context.",
-              "correctAnswer": "puddles"
+              "correctAnswer": "puddles",
+              "options": [
+                "response",
+                "solution",
+                "hill",
+                "appreciate",
+                "puddles"
+              ]
             },
             {
               "id": "15",
               "content": "5. Do you [ 15 ] the thought that went into the gifts you got?",
               "explanation": "appreciate fits the context.",
-              "correctAnswer": "appreciate"
+              "correctAnswer": "appreciate",
+              "options": [
+                "response",
+                "solution",
+                "hill",
+                "appreciate",
+                "puddles"
+              ]
             }
           ],
           "questionType": "Kéo thả"

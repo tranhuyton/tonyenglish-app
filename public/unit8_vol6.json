@@ -216,121 +216,181 @@
               "id": "16",
               "content": "1. The club was very [ 16 ] and didn’t have many members.",
               "options": [
+                "tram",
+                "premium",
+                "suppress",
                 "exclusive",
-                "congested",
                 "obsessed",
-                "tram"
+                "courier",
+                "warp",
+                "socialize",
+                "congested",
+                "etiquette"
               ],
               "explanation": "exclusive (adj): only for rich people, selective.",
-              "correctAnswer": "A"
+              "correctAnswer": "exclusive"
             },
             {
               "id": "17",
               "content": "2. The members had to pay a [ 17 ] just to join.",
               "options": [
+                "tram",
                 "premium",
-                "etiquette",
+                "suppress",
+                "exclusive",
+                "obsessed",
                 "courier",
-                "tram"
+                "warp",
+                "socialize",
+                "congested",
+                "etiquette"
               ],
               "explanation": "premium (n): a payment higher than average.",
-              "correctAnswer": "A"
+              "correctAnswer": "premium"
             },
             {
               "id": "18",
               "content": "3. My mother is [ 18 ] with making sure we impress our guests.",
               "options": [
-                "obsessed",
+                "tram",
+                "premium",
+                "suppress",
                 "exclusive",
+                "obsessed",
+                "courier",
+                "warp",
+                "socialize",
                 "congested",
-                "socialize"
+                "etiquette"
               ],
               "explanation": "obsess (v): to think about all the time.",
-              "correctAnswer": "A"
+              "correctAnswer": "obsessed"
             },
             {
               "id": "19",
               "content": "4. For example, she makes sure our [ 19 ] is perfect.",
               "options": [
-                "etiquette",
+                "tram",
                 "premium",
+                "suppress",
+                "exclusive",
+                "obsessed",
                 "courier",
-                "tram"
+                "warp",
+                "socialize",
+                "congested",
+                "etiquette"
               ],
               "explanation": "etiquette (n): the group of rules about how to be polite.",
-              "correctAnswer": "A"
+              "correctAnswer": "etiquette"
             },
             {
               "id": "20",
               "content": "5. I stepped onto the [ 20 ] and couldn’t find a seat right away.",
               "options": [
                 "tram",
-                "courier",
                 "premium",
+                "suppress",
+                "exclusive",
+                "obsessed",
+                "courier",
+                "warp",
+                "socialize",
+                "congested",
                 "etiquette"
               ],
               "explanation": "tram (n): a vehicle like a streetcar.",
-              "correctAnswer": "A"
+              "correctAnswer": "tram"
             },
             {
               "id": "21",
               "content": "6. Finally, I made my way through the [ 21 ] aisle and sat down.",
               "options": [
-                "congested",
+                "tram",
+                "premium",
+                "suppress",
                 "exclusive",
                 "obsessed",
-                "socialize"
+                "courier",
+                "warp",
+                "socialize",
+                "congested",
+                "etiquette"
               ],
               "explanation": "congested (adj): full or blocked.",
-              "correctAnswer": "A"
+              "correctAnswer": "congested"
             },
             {
               "id": "22",
               "content": "7. Hannah worked as a [ 22 ] for an advertising company.",
               "options": [
-                "courier",
                 "tram",
                 "premium",
+                "suppress",
+                "exclusive",
+                "obsessed",
+                "courier",
+                "warp",
+                "socialize",
+                "congested",
                 "etiquette"
               ],
               "explanation": "courier (n): someone who delivers mail or packages.",
-              "correctAnswer": "A"
+              "correctAnswer": "courier"
             },
             {
               "id": "23",
               "content": "8. Between making deliveries, she liked to [ 23 ] with the employees.",
               "options": [
-                "socialize",
-                "warp",
+                "tram",
+                "premium",
                 "suppress",
-                "obsessed"
+                "exclusive",
+                "obsessed",
+                "courier",
+                "warp",
+                "socialize",
+                "congested",
+                "etiquette"
               ],
               "explanation": "socialize (v): to have a good time with people.",
-              "correctAnswer": "A"
+              "correctAnswer": "socialize"
             },
             {
               "id": "24",
               "content": "9. The glue couldn’t [ 24 ] the water from leaking from the pipes.",
               "options": [
+                "tram",
+                "premium",
                 "suppress",
+                "exclusive",
+                "obsessed",
+                "courier",
                 "warp",
                 "socialize",
-                "obsessed"
+                "congested",
+                "etiquette"
               ],
               "explanation": "suppress (v): to prevent from happening.",
-              "correctAnswer": "A"
+              "correctAnswer": "suppress"
             },
             {
               "id": "25",
               "content": "10. Since I didn’t clean it up right away, it caused the wooden floor to [ 25 ].",
               "options": [
-                "warp",
+                "tram",
+                "premium",
                 "suppress",
+                "exclusive",
+                "obsessed",
+                "courier",
+                "warp",
                 "socialize",
-                "obsessed"
+                "congested",
+                "etiquette"
               ],
               "explanation": "warp (v): to become bent into the wrong shape.",
-              "correctAnswer": "A"
+              "correctAnswer": "warp"
             }
           ],
           "questionType": "Kéo thả"

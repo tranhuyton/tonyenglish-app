@@ -143,65 +143,65 @@
               "content": "There are [ 11 ] rules about what people may wear at fancy parties.",
               "options": [
                 "strict",
+                "shut",
                 "ensure",
                 "grand",
-                "accuse",
-                "shut"
+                "accuse"
               ],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "strict"
             },
             {
               "id": "12",
               "content": "Instead of normal things, people must [ 12 ] that they wear...",
               "options": [
                 "strict",
+                "shut",
                 "ensure",
                 "grand",
-                "accuse",
-                "shut"
+                "accuse"
               ],
               "explanation": "",
-              "correctAnswer": "B"
+              "correctAnswer": "ensure"
             },
             {
               "id": "13",
               "content": "...that they wear [ 13 ] clothing.",
               "options": [
                 "strict",
+                "shut",
                 "ensure",
                 "grand",
-                "accuse",
-                "shut"
+                "accuse"
               ],
               "explanation": "",
-              "correctAnswer": "C"
+              "correctAnswer": "grand"
             },
             {
               "id": "14",
               "content": "If a man wears the wrong clothes, people will [ 14 ] him of ruining the evening.",
               "options": [
                 "strict",
+                "shut",
                 "ensure",
                 "grand",
-                "accuse",
-                "shut"
+                "accuse"
               ],
               "explanation": "",
-              "correctAnswer": "D"
+              "correctAnswer": "accuse"
             },
             {
               "id": "15",
               "content": "They will make him leave and [ 15 ] the door behind him.",
               "options": [
                 "strict",
+                "shut",
                 "ensure",
                 "grand",
-                "accuse",
-                "shut"
+                "accuse"
               ],
               "explanation": "",
-              "correctAnswer": "E"
+              "correctAnswer": "shut"
             }
           ],
           "questionType": "Kéo thả"

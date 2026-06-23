@@ -88,121 +88,181 @@
               "id": "6",
               "content": "1. The doctors thought that too much sugar caused the [ 6 ].",
               "options": [
-                "seizure",
                 "utensil",
+                "seizure",
+                "psychiatry",
+                "definitive",
+                "reflexes",
+                "lunar",
                 "novelty",
+                "pertain",
+                "personalized",
                 "constellation"
               ],
               "explanation": "seizure (n): sudden illness in which the body loses control and shakes.",
-              "correctAnswer": "A"
+              "correctAnswer": "seizure"
             },
             {
               "id": "7",
               "content": "2. However, their findings weren’t [ 7 ].",
               "options": [
+                "utensil",
+                "seizure",
+                "psychiatry",
                 "definitive",
+                "reflexes",
                 "lunar",
-                "outmoded",
-                "personalized"
+                "novelty",
+                "pertain",
+                "personalized",
+                "constellation"
               ],
               "explanation": "definitive (adj): the most official.",
-              "correctAnswer": "A"
+              "correctAnswer": "definitive"
             },
             {
               "id": "8",
               "content": "3. A star burning at night as brightly as the moon was quite a(n) [ 8 ].",
               "options": [
-                "novelty",
+                "utensil",
+                "seizure",
                 "psychiatry",
-                "session",
-                "advent"
+                "definitive",
+                "reflexes",
+                "lunar",
+                "novelty",
+                "pertain",
+                "personalized",
+                "constellation"
               ],
               "explanation": "novelty (n): something that is new, original, or strange.",
-              "correctAnswer": "A"
+              "correctAnswer": "novelty"
             },
             {
               "id": "9",
               "content": "4. In fact, the [ 9 ] glow was actually not as bright.",
               "options": [
+                "utensil",
+                "seizure",
+                "psychiatry",
+                "definitive",
+                "reflexes",
                 "lunar",
-                "primal",
-                "psychiatric",
-                "definitive"
+                "novelty",
+                "pertain",
+                "personalized",
+                "constellation"
               ],
               "explanation": "lunar (adj): related to the moon.",
-              "correctAnswer": "A"
+              "correctAnswer": "lunar"
             },
             {
               "id": "10",
               "content": "5. Those seven stars form the [ 10 ] known as the Big Dipper.",
               "options": [
-                "constellation",
-                "Almighty",
-                "reflex",
-                "airway"
+                "utensil",
+                "seizure",
+                "psychiatry",
+                "definitive",
+                "reflexes",
+                "lunar",
+                "novelty",
+                "pertain",
+                "personalized",
+                "constellation"
               ],
               "explanation": "constellation (n): a group of stars with a recognizable shape.",
-              "correctAnswer": "A"
+              "correctAnswer": "constellation"
             },
             {
               "id": "11",
               "content": "6. A dipper is a(n) [ 11 ] shaped like a spoon used for getting water.",
               "options": [
                 "utensil",
+                "seizure",
+                "psychiatry",
+                "definitive",
+                "reflexes",
+                "lunar",
                 "novelty",
-                "session",
-                "reflex"
+                "pertain",
+                "personalized",
+                "constellation"
               ],
               "explanation": "utensil (n): a common tool or container.",
-              "correctAnswer": "A"
+              "correctAnswer": "utensil"
             },
             {
               "id": "12",
               "content": "7. There are many methods used in [ 12 ] to help cure mental illnesses.",
               "options": [
+                "utensil",
+                "seizure",
                 "psychiatry",
-                "constellation",
-                "advent",
-                "novelty"
+                "definitive",
+                "reflexes",
+                "lunar",
+                "novelty",
+                "pertain",
+                "personalized",
+                "constellation"
               ],
               "explanation": "psychiatry (n): the study and treatment of mental illness.",
-              "correctAnswer": "A"
+              "correctAnswer": "psychiatry"
             },
             {
               "id": "13",
               "content": "8. They are all [ 13 ] to the specific needs of the patient.",
               "options": [
-                "personalized",
-                "outmoded",
+                "utensil",
+                "seizure",
+                "psychiatry",
                 "definitive",
-                "lunar"
+                "reflexes",
+                "lunar",
+                "novelty",
+                "pertain",
+                "personalized",
+                "constellation"
               ],
               "explanation": "personalized (v): to design something to meet a person’s unique needs.",
-              "correctAnswer": "A"
+              "correctAnswer": "personalized"
             },
             {
               "id": "14",
               "content": "9. The body’s [ 14 ] are too quick to be controlled by the brain.",
               "options": [
+                "utensil",
+                "seizure",
+                "psychiatry",
+                "definitive",
                 "reflexes",
-                "seizures",
-                "airways",
-                "sessions"
+                "lunar",
+                "novelty",
+                "pertain",
+                "personalized",
+                "constellation"
               ],
               "explanation": "reflex (n): an unconscious action in which a body part responds to an event.",
-              "correctAnswer": "A"
+              "correctAnswer": "reflexes"
             },
             {
               "id": "15",
               "content": "10. These actions [ 15 ] to the nerves and spine rather than the brain.",
               "options": [
+                "utensil",
+                "seizure",
+                "psychiatry",
+                "definitive",
+                "reflexes",
+                "lunar",
+                "novelty",
                 "pertain",
-                "invoke",
-                "equate",
-                "inhale"
+                "personalized",
+                "constellation"
               ],
               "explanation": "pertain (v): to be related or connected to something.",
-              "correctAnswer": "A"
+              "correctAnswer": "pertain"
             }
           ],
           "questionType": "Kéo thả"

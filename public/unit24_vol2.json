@@ -72,66 +72,66 @@
               "id": "6",
               "content": "Franklin felt pain in his stomach. The doctor [ 6 ] him to find the cause.",
               "options": [
-                "inspected",
-                "chew",
-                "nutrients",
+                "surgery",
                 "overcome",
-                "surgery"
+                "inspected",
+                "nutrients",
+                "chew"
               ],
               "explanation": "inspected (kiểm tra)",
-              "correctAnswer": "A"
+              "correctAnswer": "inspected"
             },
             {
               "id": "7",
               "content": "His doctor said Franklin needed to [ 7 ] his food more slowly.",
               "options": [
-                "inspected",
-                "chew",
-                "nutrients",
+                "surgery",
                 "overcome",
-                "surgery"
+                "inspected",
+                "nutrients",
+                "chew"
               ],
               "explanation": "chew (nhai)",
-              "correctAnswer": "B"
+              "correctAnswer": "chew"
             },
             {
               "id": "8",
               "content": "If he did, he could get all the [ 8 ] he needed.",
               "options": [
-                "inspected",
-                "chew",
-                "nutrients",
+                "surgery",
                 "overcome",
-                "surgery"
+                "inspected",
+                "nutrients",
+                "chew"
               ],
               "explanation": "nutrients (chất dinh dưỡng)",
-              "correctAnswer": "C"
+              "correctAnswer": "nutrients"
             },
             {
               "id": "9",
               "content": "It would also help him [ 9 ] his pain.",
               "options": [
-                "inspected",
-                "chew",
-                "nutrients",
+                "surgery",
                 "overcome",
-                "surgery"
+                "inspected",
+                "nutrients",
+                "chew"
               ],
               "explanation": "overcome (vượt qua)",
-              "correctAnswer": "D"
+              "correctAnswer": "overcome"
             },
             {
               "id": "10",
               "content": "If Franklin didn't listen, the doctor would have to perform [ 10 ].",
               "options": [
-                "inspected",
-                "chew",
-                "nutrients",
+                "surgery",
                 "overcome",
-                "surgery"
+                "inspected",
+                "nutrients",
+                "chew"
               ],
               "explanation": "surgery (phẫu thuật)",
-              "correctAnswer": "E"
+              "correctAnswer": "surgery"
             }
           ],
           "questionType": "Kéo thả"

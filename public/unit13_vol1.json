@@ -82,31 +82,66 @@
               "id": "6",
               "content": "1. I left my coat in the [ 6 ] by the window.",
               "explanation": "spot (vị trí, chỗ).",
-              "correctAnswer": "spot"
+              "correctAnswer": "spot",
+              "options": [
+                "feed",
+                "cell",
+                "whole",
+                "spot",
+                "correct"
+              ]
             },
             {
               "id": "7",
               "content": "2. The poor man had no money to [ 7 ] his family.",
               "explanation": "feed (cho ăn).",
-              "correctAnswer": "feed"
+              "correctAnswer": "feed",
+              "options": [
+                "feed",
+                "cell",
+                "whole",
+                "spot",
+                "correct"
+              ]
             },
             {
               "id": "8",
               "content": "3. The robber was locked in a [ 8 ] for a year.",
               "explanation": "cell (phòng giam).",
-              "correctAnswer": "cell"
+              "correctAnswer": "cell",
+              "options": [
+                "feed",
+                "cell",
+                "whole",
+                "spot",
+                "correct"
+              ]
             },
             {
               "id": "9",
               "content": "4. Did you read the [ 9 ] book or just part of it?",
               "explanation": "whole (toàn bộ).",
-              "correctAnswer": "whole"
+              "correctAnswer": "whole",
+              "options": [
+                "feed",
+                "cell",
+                "whole",
+                "spot",
+                "correct"
+              ]
             },
             {
               "id": "10",
               "content": "5. If I get the answers [ 10 ], I will pass the test.",
               "explanation": "correct (chính xác).",
-              "correctAnswer": "correct"
+              "correctAnswer": "correct",
+              "options": [
+                "feed",
+                "cell",
+                "whole",
+                "spot",
+                "correct"
+              ]
             }
           ],
           "questionType": "Kéo thả"

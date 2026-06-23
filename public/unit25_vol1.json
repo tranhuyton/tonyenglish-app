@@ -81,35 +81,65 @@
             {
               "id": "6",
               "content": "1. Large companies can [ 6 ] many products.",
-              "options": [],
+              "options": [
+                "period",
+                "sign",
+                "range",
+                "populate",
+                "produce"
+              ],
               "explanation": "produce (sản xuất). Những công ty lớn có thể sản xuất nhiều sản phẩm.",
               "correctAnswer": "produce"
             },
             {
               "id": "7",
               "content": "2. I offered her a [ 7 ] of choices from one to ten.",
-              "options": [],
+              "options": [
+                "period",
+                "sign",
+                "range",
+                "populate",
+                "produce"
+              ],
               "explanation": "range (loạt/phạm vi). Tôi cung cấp cho cô ấy một loạt lựa chọn từ một đến mười.",
               "correctAnswer": "range"
             },
             {
               "id": "8",
               "content": "3. How many people [ 8 ] this area?",
-              "options": [],
+              "options": [
+                "period",
+                "sign",
+                "range",
+                "populate",
+                "produce"
+              ],
               "explanation": "populate (cư trú/sinh sống). Có bao nhiêu người sống ở khu vực này?",
               "correctAnswer": "populate"
             },
             {
               "id": "9",
               "content": "4. Give me a [ 9 ] if you need help.",
-              "options": [],
+              "options": [
+                "period",
+                "sign",
+                "range",
+                "populate",
+                "produce"
+              ],
               "explanation": "sign (dấu hiệu). Hãy cho tôi một dấu hiệu nếu bạn cần giúp đỡ.",
               "correctAnswer": "sign"
             },
             {
               "id": "10",
               "content": "5. This [ 10 ] will last for one hour.",
-              "options": [],
+              "options": [
+                "period",
+                "sign",
+                "range",
+                "populate",
+                "produce"
+              ],
               "explanation": "period (khoảng thời gian/tiết học). Tiết học/Khoảng thời gian này sẽ kéo dài một giờ.",
               "correctAnswer": "period"
             }

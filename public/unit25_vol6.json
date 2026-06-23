@@ -88,109 +88,163 @@
               "id": "6",
               "content": "1. Stella was amazed by the performance of the [ 6 ].",
               "options": [
+                "metropolitan",
                 "industrious",
                 "statutes",
+                "rehearsed",
                 "communal",
+                "Mandarin",
+                "inventive",
+                "fluid",
+                "judicial",
                 "acrobats"
               ],
               "explanation": "acrobats",
-              "correctAnswer": "D"
+              "correctAnswer": "acrobats"
             },
             {
               "id": "7",
               "content": "2. She thought their [ 7 ] movements were beautiful.",
               "options": [
-                "fluid",
+                "metropolitan",
+                "industrious",
+                "statutes",
                 "rehearsed",
+                "communal",
+                "Mandarin",
                 "inventive",
-                "metropolitan"
+                "fluid",
+                "judicial",
+                "acrobats"
               ],
               "explanation": "fluid",
-              "correctAnswer": "A"
+              "correctAnswer": "fluid"
             },
             {
               "id": "8",
               "content": "3. Dave had four siblings, so he was used to [ 8 ] living.",
               "options": [
+                "metropolitan",
+                "industrious",
+                "statutes",
+                "rehearsed",
                 "communal",
                 "Mandarin",
+                "inventive",
+                "fluid",
                 "judicial",
-                "statutes"
+                "acrobats"
               ],
               "explanation": "communal",
-              "correctAnswer": "A"
+              "correctAnswer": "communal"
             },
             {
               "id": "9",
               "content": "4. They shared almost everything and were [ 9 ] about finding new uses for old things.",
               "options": [
-                "inventive",
-                "industrious",
                 "metropolitan",
-                "fluid"
+                "industrious",
+                "statutes",
+                "rehearsed",
+                "communal",
+                "Mandarin",
+                "inventive",
+                "fluid",
+                "judicial",
+                "acrobats"
               ],
               "explanation": "inventive",
-              "correctAnswer": "A"
+              "correctAnswer": "inventive"
             },
             {
               "id": "10",
               "content": "5. The [ 10 ] system has many roles.",
               "options": [
-                "judicial",
-                "Mandarin",
+                "metropolitan",
+                "industrious",
+                "statutes",
+                "rehearsed",
                 "communal",
+                "Mandarin",
+                "inventive",
+                "fluid",
+                "judicial",
                 "acrobats"
               ],
               "explanation": "judicial",
-              "correctAnswer": "A"
+              "correctAnswer": "judicial"
             },
             {
               "id": "11",
               "content": "6. It interprets laws and [ 11 ] and judges whether they are fair.",
               "options": [
+                "metropolitan",
+                "industrious",
                 "statutes",
-                "acrobats",
                 "rehearsed",
-                "industrious"
+                "communal",
+                "Mandarin",
+                "inventive",
+                "fluid",
+                "judicial",
+                "acrobats"
               ],
               "explanation": "statutes",
-              "correctAnswer": "A"
+              "correctAnswer": "statutes"
             },
             {
               "id": "12",
               "content": "7. The students [ 12 ] for the play every day after school.",
               "options": [
+                "metropolitan",
+                "industrious",
+                "statutes",
                 "rehearsed",
-                "fluid",
+                "communal",
+                "Mandarin",
                 "inventive",
-                "communal"
+                "fluid",
+                "judicial",
+                "acrobats"
               ],
               "explanation": "rehearsed",
-              "correctAnswer": "A"
+              "correctAnswer": "rehearsed"
             },
             {
               "id": "13",
               "content": "8. They were very [ 13 ] and often stayed after dark.",
               "options": [
-                "industrious",
                 "metropolitan",
+                "industrious",
+                "statutes",
+                "rehearsed",
+                "communal",
+                "Mandarin",
+                "inventive",
+                "fluid",
                 "judicial",
-                "fluid"
+                "acrobats"
               ],
               "explanation": "industrious",
-              "correctAnswer": "A"
+              "correctAnswer": "industrious"
             },
             {
               "id": "14",
               "content": "9. [ 14 ] is spoken throughout northern and southwestern China.",
               "options": [
+                "metropolitan",
+                "industrious",
+                "statutes",
+                "rehearsed",
+                "communal",
                 "Mandarin",
-                "Communal",
-                "Acrobats",
-                "Statutes"
+                "inventive",
+                "fluid",
+                "judicial",
+                "acrobats"
               ],
               "explanation": "Mandarin",
-              "correctAnswer": "A"
+              "correctAnswer": "Mandarin"
             },
             {
               "id": "15",
@@ -198,11 +252,17 @@
               "options": [
                 "metropolitan",
                 "industrious",
+                "statutes",
+                "rehearsed",
+                "communal",
+                "Mandarin",
                 "inventive",
-                "judicial"
+                "fluid",
+                "judicial",
+                "acrobats"
               ],
               "explanation": "metropolitan",
-              "correctAnswer": "A"
+              "correctAnswer": "metropolitan"
             }
           ],
           "questionType": "Kéo thả"

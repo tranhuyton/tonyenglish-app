@@ -82,66 +82,66 @@
               "id": "6",
               "content": "I love sports, and I want to [ 6 ] children to play sports, too.",
               "options": [
+                "neat",
                 "mere",
                 "penalty",
-                "inspire",
                 "bowl",
-                "neat"
+                "inspire"
               ],
               "explanation": "inspire (truyền cảm hứng) cho trẻ em chơi thể thao.",
-              "correctAnswer": "C"
+              "correctAnswer": "inspire"
             },
             {
               "id": "7",
               "content": "Mia's [ 7 ] for not stopping at a red light was $50.",
               "options": [
+                "neat",
                 "mere",
                 "penalty",
-                "inspire",
                 "bowl",
-                "neat"
+                "inspire"
               ],
               "explanation": "penalty (hình phạt) vì vượt đèn đỏ là 50 đô la.",
-              "correctAnswer": "B"
+              "correctAnswer": "penalty"
             },
             {
               "id": "8",
               "content": "After he took a shower and got dressed, my brother looked very [ 8 ].",
               "options": [
+                "neat",
                 "mere",
                 "penalty",
-                "inspire",
                 "bowl",
-                "neat"
+                "inspire"
               ],
               "explanation": "neat (gọn gàng, sạch sẽ) sau khi tắm và mặc đồ.",
-              "correctAnswer": "E"
+              "correctAnswer": "neat"
             },
             {
               "id": "9",
               "content": "The cat ate his food out of a black [ 9 ].",
               "options": [
+                "neat",
                 "mere",
                 "penalty",
-                "inspire",
                 "bowl",
-                "neat"
+                "inspire"
               ],
               "explanation": "bowl (cái bát) màu đen để đựng thức ăn.",
-              "correctAnswer": "D"
+              "correctAnswer": "bowl"
             },
             {
               "id": "10",
               "content": "He was only given a [ 10 ] five dollars for his hard work.",
               "options": [
+                "neat",
                 "mere",
                 "penalty",
-                "inspire",
                 "bowl",
-                "neat"
+                "inspire"
               ],
               "explanation": "mere (vỏn vẹn) năm đô la.",
-              "correctAnswer": "A"
+              "correctAnswer": "mere"
             }
           ],
           "questionType": "Kéo thả"

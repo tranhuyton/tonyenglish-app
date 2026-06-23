@@ -83,60 +83,65 @@
               "content": "Inside them were the [ 6 ] of old kings.",
               "options": [
                 "graves",
-                "clay",
                 "cloth",
+                "flood",
+                "clay",
                 "fertile"
               ],
               "explanation": "graves (n): ngôi mộ (nơi chôn cất người chết).",
-              "correctAnswer": "A"
+              "correctAnswer": "graves"
             },
             {
               "id": "7",
               "content": "He also visited a village near the river and learned about a recent [ 7 ].",
               "options": [
-                "flood",
                 "graves",
+                "cloth",
+                "flood",
                 "clay",
-                "cloth"
+                "fertile"
               ],
               "explanation": "flood (n): lũ lụt (sự kiện nước bao phủ một khu vực thường khô ráo).",
-              "correctAnswer": "A"
+              "correctAnswer": "flood"
             },
             {
               "id": "8",
               "content": "People grew many crops on this [ 8 ] land.",
               "options": [
-                "fertile",
-                "flood",
                 "graves",
-                "clay"
+                "cloth",
+                "flood",
+                "clay",
+                "fertile"
               ],
               "explanation": "fertile (adj): màu mỡ (có khả năng sản sinh ra cây trồng và thực vật tốt).",
-              "correctAnswer": "A"
+              "correctAnswer": "fertile"
             },
             {
               "id": "9",
               "content": "They used [ 9 ] pots to carry water from the river into their homes.",
               "options": [
-                "clay",
-                "fertile",
+                "graves",
+                "cloth",
                 "flood",
-                "graves"
+                "clay",
+                "fertile"
               ],
               "explanation": "clay (n): đất sét (một loại đất nặng, ướt được dùng để làm chậu).",
-              "correctAnswer": "A"
+              "correctAnswer": "clay"
             },
             {
               "id": "10",
               "content": "One friendly man gave Jimmy a white [ 10 ] to cover his head from the hot sun.",
               "options": [
+                "graves",
                 "cloth",
+                "flood",
                 "clay",
-                "fertile",
-                "flood"
+                "fertile"
               ],
               "explanation": "cloth (n): vải (vật liệu dùng để may quần áo).",
-              "correctAnswer": "A"
+              "correctAnswer": "cloth"
             }
           ],
           "questionType": "Kéo thả"

@@ -122,61 +122,181 @@
               "id": "11",
               "content": "1. To [ 11 ] for the test, I had to study a long time.",
               "explanation": "Để chuẩn bị cho bài kiểm tra, cần phải học bài lâu (prepare).",
-              "correctAnswer": "prepare"
+              "correctAnswer": "prepare",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "12",
               "content": "2. Playing with a knife can lead to [ 12 ] injury.",
               "explanation": "Chơi với dao có thể dẫn đến vết thương nghiêm trọng (serious).",
-              "correctAnswer": "serious"
+              "correctAnswer": "serious",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "13",
               "content": "3. It's [ 13 ] for her to be mean; usually she is very kind.",
               "explanation": "Thật kỳ lạ khi cô ấy cư xử xấu tính vì bình thường cô ấy rất tốt (strange).",
-              "correctAnswer": "strange"
+              "correctAnswer": "strange",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "14",
               "content": "4. Michael's parents and teacher had a [ 14 ] about his grades.",
               "explanation": "Bố mẹ và giáo viên của Michael có một cuộc trò chuyện về điểm số của cậu ấy (conversation).",
-              "correctAnswer": "conversation"
+              "correctAnswer": "conversation",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "15",
               "content": "5. I [ 15 ] books, and now I have over 500 of them.",
               "explanation": "Tôi sưu tầm sách và bây giờ tôi có hơn 500 cuốn (collect).",
-              "correctAnswer": "collect"
+              "correctAnswer": "collect",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "16",
               "content": "6. She did not know my name, so I had to [ 16 ] myself.",
               "explanation": "Cô ấy không biết tên tôi nên tôi phải tự giới thiệu (introduce).",
-              "correctAnswer": "introduce"
+              "correctAnswer": "introduce",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "17",
               "content": "7. I had to make a [ 17 ] about which book I wanted to buy.",
               "explanation": "Tôi phải đưa ra quyết định mua cuốn sách nào (decision).",
-              "correctAnswer": "decision"
+              "correctAnswer": "decision",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "18",
               "content": "8. He lies a lot, but I hope he is telling the [ 18 ].",
               "explanation": "Anh ta nói dối nhiều, nhưng tôi hi vọng anh ta đang nói sự thật (truth).",
-              "correctAnswer": "truth"
+              "correctAnswer": "truth",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "19",
               "content": "9. Many countries [ 19 ] in the Olympics every four years.",
               "explanation": "Nhiều quốc gia thi đấu ở thế vận hội Olympics mỗi 4 năm một lần (compete).",
-              "correctAnswer": "compete"
+              "correctAnswer": "compete",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             },
             {
               "id": "20",
               "content": "10. He was so tired that he fell [ 20 ] right away.",
               "explanation": "Anh ấy quá mệt nên đã ngủ thiếp đi ngay lập tức (asleep).",
-              "correctAnswer": "asleep"
+              "correctAnswer": "asleep",
+              "options": [
+                "truth",
+                "collect",
+                "serious",
+                "conversation",
+                "prepare",
+                "asleep",
+                "strange",
+                "decision",
+                "compete",
+                "introduce"
+              ]
             }
           ]
         }

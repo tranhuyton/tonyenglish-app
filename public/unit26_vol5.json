@@ -89,120 +89,180 @@
               "content": "1. I’m going on a trip halfway across the [ 6 ].",
               "options": [
                 "globe",
+                "inward",
+                "relevant",
                 "behalf",
                 "rite",
-                "overview"
+                "loaf",
+                "overview",
+                "oracles",
+                "orbit",
+                "provided"
               ],
               "explanation": "globe (địa cầu). Chuyến đi vòng quanh nửa vòng trái đất.",
-              "correctAnswer": "A"
+              "correctAnswer": "globe"
             },
             {
               "id": "7",
               "content": "2. While I’m gone, Sarah will turn in my homework on my [ 7 ].",
               "options": [
                 "globe",
+                "inward",
+                "relevant",
                 "behalf",
                 "rite",
-                "overview"
+                "loaf",
+                "overview",
+                "oracles",
+                "orbit",
+                "provided"
               ],
               "explanation": "on my behalf (thay mặt tôi). Sarah sẽ nộp bài tập thay tôi.",
-              "correctAnswer": "B"
+              "correctAnswer": "behalf"
             },
             {
               "id": "8",
               "content": "3. On our vacation to Africa, we got to witness an old Egyptian [ 8 ].",
               "options": [
                 "globe",
+                "inward",
+                "relevant",
                 "behalf",
                 "rite",
-                "overview"
+                "loaf",
+                "overview",
+                "oracles",
+                "orbit",
+                "provided"
               ],
               "explanation": "rite (nghi lễ). Chứng kiến một nghi lễ Ai Cập cổ đại.",
-              "correctAnswer": "C"
+              "correctAnswer": "rite"
             },
             {
               "id": "9",
               "content": "4. We weren’t told all the details of it, but we were given a brief [ 9 ].",
               "options": [
                 "globe",
+                "inward",
+                "relevant",
                 "behalf",
                 "rite",
-                "overview"
+                "loaf",
+                "overview",
+                "oracles",
+                "orbit",
+                "provided"
               ],
               "explanation": "overview (tổng quan). Được cung cấp một bản tóm tắt ngắn gọn.",
-              "correctAnswer": "D"
+              "correctAnswer": "overview"
             },
             {
               "id": "10",
               "content": "5. He [ 10 ] slices of bread for the children’s sandwiches.",
               "options": [
-                "provided",
-                "loaf",
+                "globe",
                 "inward",
-                "relevant"
+                "relevant",
+                "behalf",
+                "rite",
+                "loaf",
+                "overview",
+                "oracles",
+                "orbit",
+                "provided"
               ],
               "explanation": "provided (cung cấp). Anh ấy cung cấp những lát bánh mì.",
-              "correctAnswer": "A"
+              "correctAnswer": "provided"
             },
             {
               "id": "11",
               "content": "6. He can make several by baking a single [ 11 ] of bread.",
               "options": [
-                "provided",
-                "loaf",
+                "globe",
                 "inward",
-                "relevant"
+                "relevant",
+                "behalf",
+                "rite",
+                "loaf",
+                "overview",
+                "oracles",
+                "orbit",
+                "provided"
               ],
               "explanation": "loaf (ổ bánh mì). Bằng cách nướng một ổ bánh mì.",
-              "correctAnswer": "B"
+              "correctAnswer": "loaf"
             },
             {
               "id": "12",
               "content": "7. Sometimes, I choose to keep my thoughts and feelings [ 12 ].",
               "options": [
-                "provided",
-                "loaf",
+                "globe",
                 "inward",
-                "relevant"
+                "relevant",
+                "behalf",
+                "rite",
+                "loaf",
+                "overview",
+                "oracles",
+                "orbit",
+                "provided"
               ],
               "explanation": "inward (bên trong). Giữ kín suy nghĩ và cảm xúc bên trong.",
-              "correctAnswer": "C"
+              "correctAnswer": "inward"
             },
             {
               "id": "13",
               "content": "8. Though I’m quiet about them, they are still [ 13 ].",
               "options": [
-                "provided",
-                "loaf",
+                "globe",
                 "inward",
-                "relevant"
+                "relevant",
+                "behalf",
+                "rite",
+                "loaf",
+                "overview",
+                "oracles",
+                "orbit",
+                "provided"
               ],
               "explanation": "relevant (có liên quan/quan trọng). Dù im lặng, chúng vẫn rất quan trọng.",
-              "correctAnswer": "D"
+              "correctAnswer": "relevant"
             },
             {
               "id": "14",
               "content": "9. In the past, people asked [ 14 ] how the gods moved the planets.",
               "options": [
+                "globe",
+                "inward",
+                "relevant",
+                "behalf",
+                "rite",
+                "loaf",
+                "overview",
                 "oracles",
                 "orbit",
-                "globe",
-                "rite"
+                "provided"
               ],
               "explanation": "oracles (nhà tiên tri). Người xưa thường hỏi các nhà tiên tri.",
-              "correctAnswer": "A"
+              "correctAnswer": "oracles"
             },
             {
               "id": "15",
               "content": "10. Today, science explains how the planets [ 15 ] the sun.",
               "options": [
+                "globe",
+                "inward",
+                "relevant",
+                "behalf",
+                "rite",
+                "loaf",
+                "overview",
                 "oracles",
                 "orbit",
-                "globe",
-                "rite"
+                "provided"
               ],
               "explanation": "orbit (quay quanh quỹ đạo). Khoa học giải thích cách các hành tinh quay quanh mặt trời.",
-              "correctAnswer": "B"
+              "correctAnswer": "orbit"
             }
           ],
           "questionType": "Kéo thả"
