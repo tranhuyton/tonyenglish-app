@@ -120,8 +120,8 @@
               "id": "11",
               "content": "",
               "options": [
-                "When you are alone, you are with another person.",
-                "You can read articles in a newspaper."
+                "When you are <b>alone</b>, you are with another person.",
+                "You can read <b>articles</b> in a newspaper."
               ],
               "explanation": "b đúng",
               "correctAnswer": "B"
@@ -130,8 +130,8 @@
               "id": "12",
               "content": "",
               "options": [
-                "If you make a profit, you have more money than you did before.",
-                "If you have professional training, you can't do a difficult job."
+                "If you make a <b>profit</b>, you have more money than you did before.",
+                "If you have <b>professional</b> training, you can't do a difficult job."
               ],
               "explanation": "a đúng",
               "correctAnswer": "A"
@@ -140,8 +140,8 @@
               "id": "13",
               "content": "",
               "options": [
-                "The Earth is a very thin planet.",
-                "If something is a symbol, it stands for something <b>else</b>."
+                "The Earth is a very thin <b>planet</b>.",
+                "If something is a <b>symbol</b>, it stands for something else."
               ],
               "explanation": "b đúng",
               "correctAnswer": "B"
@@ -150,8 +150,8 @@
               "id": "14",
               "content": "",
               "options": [
-                "You can use stairs to go up inside a building.",
-                "Since she is a lawyer, people call my wife an artist."
+                "You can use <b>stairs</b> to go up inside a building.",
+                "Since she is a <b>lawyer</b>, people call my wife an artist."
               ],
               "explanation": "a đúng",
               "correctAnswer": "A"
@@ -160,8 +160,8 @@
               "id": "15",
               "content": "",
               "options": [
-                "There are many apartments in one building.",
-                "Your attitude is the way you look."
+                "There are many <b>apartments</b> in one building.",
+                "Your <b>attitude</b> is the way you look."
               ],
               "explanation": "a đúng",
               "correctAnswer": "A"
@@ -170,8 +170,8 @@
               "id": "16",
               "content": "",
               "options": [
-                "You cannot get information from a magazine.",
-                "If you compare two things, you say how they are different."
+                "You cannot get information from a <b>magazine</b>.",
+                "If you <b>compare</b> two things, you say how they are different."
               ],
               "explanation": "b đúng",
               "correctAnswer": "B"
@@ -180,8 +180,8 @@
               "id": "17",
               "content": "",
               "options": [
-                "If you judge something, you know if it is good or bad.",
-                "Neighbors are people who live far from you."
+                "If you <b>judge</b> something, you know if it is good or bad.",
+                "<b>Neighbors</b> are people who live far from you."
               ],
               "explanation": "a đúng",
               "correctAnswer": "A"
@@ -190,8 +190,8 @@
               "id": "18",
               "content": "",
               "options": [
-                "A meal has food and a drink.",
-                "A shape is something you cannot see."
+                "A <b>meal</b> has food and a drink.",
+                "A <b>shape</b> is something you cannot see."
               ],
               "explanation": "a đúng",
               "correctAnswer": "A"
@@ -200,8 +200,8 @@
               "id": "19",
               "content": "",
               "options": [
-                "A symbol is a picture of two different things.",
-                "You must have space to add more things to a room."
+                "A <b>symbol</b> is a picture of two different things.",
+                "You must have <b>space</b> to add more things to a room."
               ],
               "explanation": "b đúng",
               "correctAnswer": "B"
@@ -210,8 +210,8 @@
               "id": "20",
               "content": "",
               "options": [
-                "If something has low quality, it is very good.",
-                "A material is used to make something <b>else</b>."
+                "If something has low <b>quality</b>, it is very good.",
+                "A <b>material</b> is used to make something else."
               ],
               "explanation": "b đúng",
               "correctAnswer": "B"

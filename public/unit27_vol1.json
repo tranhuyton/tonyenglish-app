@@ -198,38 +198,103 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. I have a [ 16 ] for you. Do you think that my car has much [ 16 ].",
-              "options": [],
+              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. value / gift</p><p>I have a [ 16 ] for you.</p><p>Do you think that my car has much [ 17 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. coast / desert</p><p>It is hot in the [ 18 ].</p><p>I like to watch the ocean at the [ 19 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. bite / hunger</p><p>Having dinner will make my [ 20 ] go away.</p><p>Be careful around those dogs; they might [ 21 ] you.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. tour / journey</p><p>I would like to take a [ 22 ] of the capital city sometime.</p><p>I went on a [ 23 ] around the world last year.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. examine / quite</p><p>I think this dress is [ 24 ] pretty.</p><p>[ 25 ] your paper to check for mistakes.</p>",
+              "options": [
+                "value",
+                "gift"
+              ],
               "explanation": "gift (món quà), value (giá trị)",
-              "correctAnswer": "gift|value"
+              "correctAnswer": "gift"
             },
             {
               "id": "17",
-              "content": "2. It is hot in the [ 17 ]. I like to watch the ocean at the [ 17 ].",
-              "options": [],
-              "explanation": "desert (sa mạc), coast (bờ biển)",
-              "correctAnswer": "desert|coast"
+              "content": "",
+              "options": [
+                "value",
+                "gift"
+              ],
+              "explanation": "gift (món quà), value (giá trị)",
+              "correctAnswer": "value"
             },
             {
               "id": "18",
-              "content": "3. Having dinner will make my [ 18 ] go away. Be careful around those dogs; they might [ 18 ] you.",
-              "options": [],
-              "explanation": "hunger (cơn đói), bite (cắn)",
-              "correctAnswer": "hunger|bite"
+              "content": "",
+              "options": [
+                "coast",
+                "desert"
+              ],
+              "explanation": "desert (sa mạc), coast (bờ biển)",
+              "correctAnswer": "desert"
             },
             {
               "id": "19",
-              "content": "4. I would like to take a [ 19 ] of the capital city sometime. I went on a [ 19 ] around the world last year.",
-              "options": [],
-              "explanation": "tour (chuyến tham quan), journey (chuyến hành trình)",
-              "correctAnswer": "tour|journey"
+              "content": "",
+              "options": [
+                "coast",
+                "desert"
+              ],
+              "explanation": "desert (sa mạc), coast (bờ biển)",
+              "correctAnswer": "coast"
             },
             {
               "id": "20",
-              "content": "5. I think this dress is [ 20 ] pretty. [ 20 ] your paper to check for mistakes.",
-              "options": [],
+              "content": "",
+              "options": [
+                "bite",
+                "hunger"
+              ],
+              "explanation": "hunger (cơn đói), bite (cắn)",
+              "correctAnswer": "hunger"
+            },
+            {
+              "id": "21",
+              "content": "",
+              "options": [
+                "bite",
+                "hunger"
+              ],
+              "explanation": "hunger (cơn đói), bite (cắn)",
+              "correctAnswer": "bite"
+            },
+            {
+              "id": "22",
+              "content": "",
+              "options": [
+                "tour",
+                "journey"
+              ],
+              "explanation": "tour (chuyến tham quan), journey (chuyến hành trình)",
+              "correctAnswer": "tour"
+            },
+            {
+              "id": "23",
+              "content": "",
+              "options": [
+                "tour",
+                "journey"
+              ],
+              "explanation": "tour (chuyến tham quan), journey (chuyến hành trình)",
+              "correctAnswer": "journey"
+            },
+            {
+              "id": "24",
+              "content": "",
+              "options": [
+                "examine",
+                "quite"
+              ],
               "explanation": "quite (khá), examine (kiểm tra)",
-              "correctAnswer": "quite|Examine"
+              "correctAnswer": "quite"
+            },
+            {
+              "id": "25",
+              "content": "",
+              "options": [
+                "examine",
+                "quite"
+              ],
+              "explanation": "quite (khá), examine (kiểm tra)",
+              "correctAnswer": "Examine"
             }
           ],
           "questionType": "Điền từ"
