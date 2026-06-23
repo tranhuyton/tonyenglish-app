@@ -86,78 +86,93 @@
           "questions": [
             {
               "id": "6",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "manufactures"
-                },
-                {
-                  "id": "2",
-                  "answer": "mechanisms"
-                }
+              "content": "1. I learned about all the different things the factory [ 6 ]. They make big machinery as well as tiny parts and [ 6 ].",
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
               ],
-              "content": "1. I learned about all the different things the factory [ 6 ]. They make big machinery as well as tiny parts and [ 2 ].",
-              "options": []
+              "correctAnswer": "manufactures|mechanisms",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             },
             {
               "id": "7",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "administration"
-                },
-                {
-                  "id": "2",
-                  "answer": "cholesterol"
-                }
-              ],
               "content": "2. The students asked the school’s [ 7 ] to buy a better kind of meat. The meat served there is too high in fat and [ 2 ].",
-              "options": []
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "correctAnswer": "administration|cholesterol",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             },
             {
               "id": "8",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "deceptive"
-                },
-                {
-                  "id": "2",
-                  "answer": "explicit"
-                }
-              ],
               "content": "3. I can’t stand companies that are [ 8 ]. Customers have to make sure they get [ 2 ] information about all details.",
-              "options": []
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "correctAnswer": "deceptive|explicit",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             },
             {
               "id": "9",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "coalition"
-                },
-                {
-                  "id": "2",
-                  "answer": "prone"
-                }
-              ],
               "content": "4. Citizens formed a [ 9 ] because the city’s air was making people ill. Elderly people and infants were the most [ 2 ] to becoming sick.",
-              "options": []
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "correctAnswer": "coalition|prone",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             },
             {
               "id": "10",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "framework"
-                },
-                {
-                  "id": "2",
-                  "answer": "straightforward"
-                }
-              ],
               "content": "5. To solve our problem, we’ll first need a strong [ 10 ]. Our ideas need to be intelligent and [ 2 ].",
-              "options": []
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "correctAnswer": "framework|straightforward",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             }
           ],
           "questionType": "Kéo thả"

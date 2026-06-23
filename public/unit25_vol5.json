@@ -86,78 +86,93 @@
           "questions": [
             {
               "id": "6",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "canyon"
-                },
-                {
-                  "id": "2",
-                  "answer": "fatigue"
-                }
-              ],
               "content": "1. The path leading out of the [ 6 ] was very steep. When they reached the top, they had to rest because of their [ 6 ].",
-              "options": []
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "correctAnswer": "canyon|fatigue",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             },
             {
               "id": "7",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "stereotype"
-                },
-                {
-                  "id": "2",
-                  "answer": "primitive"
-                }
-              ],
               "content": "2. He had a(n) [ 7 ] about ancient cultures. He thought that all their customs and ideas were [ 7 ].",
-              "options": []
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "correctAnswer": "stereotype|primitive",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             },
             {
               "id": "8",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "trail"
-                },
-                {
-                  "id": "2",
-                  "answer": "aesthetic"
-                }
-              ],
               "content": "3. The [ 8 ] led travelers to the top of the mountain. I was astonished by the [ 8 ] view.",
-              "options": []
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "correctAnswer": "trail|aesthetic",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             },
             {
               "id": "9",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "termites"
-                },
-                {
-                  "id": "2",
-                  "answer": "twig"
-                }
-              ],
               "content": "4. A line of [ 9 ] stretched from the mound across the forest floor. They were all going to eat a [ 9 ] that had fallen off a tree.",
-              "options": []
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "correctAnswer": "termites|twig",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             },
             {
               "id": "10",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "creek"
-                },
-                {
-                  "id": "2",
-                  "answer": "welfare"
-                }
-              ],
               "content": "5. People thought that the water from the [ 10 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 10 ].",
-              "options": []
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "correctAnswer": "creek|welfare",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh."
             }
           ],
           "questionType": "Kéo thả"

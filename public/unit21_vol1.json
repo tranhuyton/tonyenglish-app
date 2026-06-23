@@ -12,31 +12,68 @@
           "questions": [
             {
               "id": "1",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "locate"
-                },
-                {
-                  "id": "2",
-                  "answer": "clerk"
-                },
-                {
-                  "id": "3",
-                  "answer": "hero"
-                },
-                {
-                  "id": "4",
-                  "answer": "pain"
-                },
-                {
-                  "id": "5",
-                  "answer": "hurried"
-                }
-              ],
               "content": "1. I went to the video store last night. I wanted to [ 1 ] a DVD. I didn't know the name of the movie, so I told the [ 2 ] what it was about. I told her there was a [ 3 ] who could fly and nothing caused him [ 4 ]. She went to the shelf and brought it to me. Then I [ 5 ] home to watch it.",
-              "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "options": []
+              "correctAnswer": "locate",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "options": [
+                "clerk",
+                "locate",
+                "hero",
+                "hurried",
+                "pain"
+              ]
+            },
+            {
+              "id": "2",
+              "content": "",
+              "correctAnswer": "clerk",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "options": [
+                "clerk",
+                "locate",
+                "hero",
+                "hurried",
+                "pain"
+              ]
+            },
+            {
+              "id": "3",
+              "content": "",
+              "correctAnswer": "hero",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "options": [
+                "clerk",
+                "locate",
+                "hero",
+                "hurried",
+                "pain"
+              ]
+            },
+            {
+              "id": "4",
+              "content": "",
+              "correctAnswer": "pain",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "options": [
+                "clerk",
+                "locate",
+                "hero",
+                "hurried",
+                "pain"
+              ]
+            },
+            {
+              "id": "5",
+              "content": "",
+              "correctAnswer": "hurried",
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "options": [
+                "clerk",
+                "locate",
+                "hero",
+                "hurried",
+                "pain"
+              ]
             }
           ],
           "questionType": "Kéo thả"
