@@ -12,61 +12,61 @@
           "questions": [
             {
               "id": "1",
-              "content": "It is very important that you call your mother soon. [ 1 ]",
+              "content": "It is <u>very important</u> that you call your mother soon. essen [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "essential"
             },
             {
               "id": "2",
-              "content": "The good thing about being old is that you know many things. [ 1 ]",
+              "content": "The <u>good thing</u> about being old is that you know many things. bene [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "benefit"
             },
             {
               "id": "3",
-              "content": "I have problems with my science homework. [ 1 ]",
+              "content": "I have <u>problems</u> with my science homework. tro [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "trouble"
             },
             {
               "id": "4",
-              "content": "I am sure that she will come to his party. [ 1 ]",
+              "content": "I am <u>sure</u> that she will come to his party. cer [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "certain"
             },
             {
               "id": "5",
-              "content": "The job of the stove is to cook. [ 1 ]",
+              "content": "The <u>job</u> of the stove is to cook. fun [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "function"
             },
             {
               "id": "6",
-              "content": "That is the place where they met. [ 1 ]",
+              "content": "That is the <u>place</u> where they met. si [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "site"
             },
             {
               "id": "7",
-              "content": "I saw his picture on TV. [ 1 ]",
+              "content": "I saw his <u>picture</u> on TV. i [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "image"
             },
             {
               "id": "8",
-              "content": "The twins don't like to be apart. [ 1 ]",
+              "content": "The twins don't like to be <u>apart</u>. s [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "separate"
             },
             {
               "id": "9",
-              "content": "I like to stay at home on the weekends. [ 1 ]",
+              "content": "I like to <u>stay</u> at home on the weekends. r [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "remain"
             },
             {
               "id": "10",
-              "content": "His part that comes out of his rear was shaking because he was happy. [ 1 ]",
+              "content": "His <u>part that comes out of his rear</u> was shaking because he was happy. t [ 1 ]",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "tail"
             }
