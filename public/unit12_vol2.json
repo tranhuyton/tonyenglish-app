@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "",
+              "content": "<p>1.</p>",
               "options": [
                 "a. debt / b. fund",
                 "a. debt / c. bean",
@@ -92,7 +92,7 @@
             },
             {
               "id": "7",
-              "content": "",
+              "content": "<p>2.</p>",
               "options": [
                 "a. fault / b. abuse",
                 "b. abuse / c. monitor",
@@ -104,7 +104,7 @@
             },
             {
               "id": "8",
-              "content": "",
+              "content": "<p>3.</p>",
               "options": [
                 "a. afford / b. bake",
                 "b. bake / d. ingredient",
@@ -116,7 +116,7 @@
             },
             {
               "id": "9",
-              "content": "",
+              "content": "<p>4.</p>",
               "options": [
                 "a. fault / b. decrease",
                 "b. decrease / c. quantity",
@@ -128,7 +128,7 @@
             },
             {
               "id": "10",
-              "content": "",
+              "content": "<p>5.</p>",
               "options": [
                 "a. debt / b. monitor",
                 "b. monitor / c. afford",

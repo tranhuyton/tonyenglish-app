@@ -178,7 +178,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "",
+              "content": "<p>1.</p>",
               "options": [
                 "a. Being tall is a characteristic of many trees.",
                 "b. I was fortunate because I received some useless gifts."
@@ -188,7 +188,7 @@
             },
             {
               "id": "17",
-              "content": "",
+              "content": "<p>2.</p>",
               "options": [
                 "a. Because he left work early, Carl had an opportunity to go to the concert.",
                 "b. I could feel the length of the air outside."
@@ -198,7 +198,7 @@
             },
             {
               "id": "18",
-              "content": "",
+              "content": "<p>3.</p>",
               "options": [
                 "a. Angela felt fear when she got a good grade on her test.",
                 "b. Our team won. We were fortunate."
@@ -208,7 +208,7 @@
             },
             {
               "id": "19",
-              "content": "",
+              "content": "<p>4.</p>",
               "options": [
                 "a. Jeremy thought his hair was just the right length.",
                 "b. Michelle left her characteristic at my house."
@@ -218,7 +218,7 @@
             },
             {
               "id": "20",
-              "content": "",
+              "content": "<p>5.</p>",
               "options": [
                 "a. Theresa found an opportunity on the ground outside.",
                 "b. Billy feels fear when he has to talk in front of people."
