@@ -282,7 +282,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. The ________ of the medical book is broad.",
+              "content": "1. The [ 21 ] of the medical book is broad.",
               "options": [
                 "scope",
                 "botany",
@@ -294,7 +294,7 @@
             },
             {
               "id": "22",
-              "content": "2. It deals with all illnesses from colds to ________.",
+              "content": "2. It deals with all illnesses from colds to [ 22 ].",
               "options": [
                 "pneumonia",
                 "botany",
@@ -306,7 +306,7 @@
             },
             {
               "id": "23",
-              "content": "3. Marcia found the sound of the river ________.",
+              "content": "3. Marcia found the sound of the river [ 23 ].",
               "options": [
                 "therapeutic",
                 "sinister",
@@ -318,7 +318,7 @@
             },
             {
               "id": "24",
-              "content": "4. She went there every day at ________ to relieve her stress.",
+              "content": "4. She went there every day at [ 24 ] to relieve her stress.",
               "options": [
                 "dusk",
                 "strife",
@@ -330,7 +330,7 @@
             },
             {
               "id": "25",
-              "content": "5. The criminal fooled everyone with his ________.",
+              "content": "5. The criminal fooled everyone with his [ 25 ].",
               "options": [
                 "deception",
                 "pneumonia",
@@ -342,7 +342,7 @@
             },
             {
               "id": "26",
-              "content": "6. If only someone had stopped him from doing his ________ crimes.",
+              "content": "6. If only someone had stopped him from doing his [ 26 ] crimes.",
               "options": [
                 "sinister",
                 "therapeutic",
@@ -354,7 +354,7 @@
             },
             {
               "id": "27",
-              "content": "7. Solomon’s grandmother was ________.",
+              "content": "7. Solomon’s grandmother was [ 27 ].",
               "options": [
                 "deceased",
                 "sinister",
@@ -366,7 +366,7 @@
             },
             {
               "id": "28",
-              "content": "8. Before she died, she taught him a lot about gardening and ________.",
+              "content": "8. Before she died, she taught him a lot about gardening and [ 28 ].",
               "options": [
                 "botany",
                 "pneumonia",
@@ -378,7 +378,7 @@
             },
             {
               "id": "29",
-              "content": "9. After the war, there was much ________ about land.",
+              "content": "9. After the war, there was much [ 29 ] about land.",
               "options": [
                 "strife",
                 "dusk",
@@ -390,7 +390,7 @@
             },
             {
               "id": "30",
-              "content": "10. It was difficult for the people to ________ the new laws about ownership.",
+              "content": "10. It was difficult for the people to [ 30 ] the new laws about ownership.",
               "options": [
                 "decipher",
                 "deception",
@@ -401,7 +401,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         }
       ]
     },

@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. He enjoyed watching the ______________ movement of the branch in the wind.",
+              "content": "1. He enjoyed watching the [ 11 ] movement of the branch in the wind.",
               "options": [
                 "intermittent",
                 "fro",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "2. As the branch moved to and ______________, he felt calmed.",
+              "content": "2. As the branch moved to and [ 12 ], he felt calmed.",
               "options": [
                 "intermittent",
                 "fro",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "3. Her favorite magical creature was the _____________.",
+              "content": "3. Her favorite magical creature was the [ 13 ].",
               "options": [
                 "mentor",
                 "pollen",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "4. The bird’s feathers were always a(n) ______________ mix of red and orange.",
+              "content": "4. The bird’s feathers were always a(n) [ 14 ] mix of red and orange.",
               "options": [
                 "adverse",
                 "vibrant",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "5. Actually, those flowers have a(n) ______________ effect on my mother’s health.",
+              "content": "5. Actually, those flowers have a(n) [ 15 ] effect on my mother’s health.",
               "options": [
                 "dependency",
                 "photosynthesis",
@@ -206,7 +206,7 @@
             },
             {
               "id": "16",
-              "content": "6. The ______________ in it makes her sneeze.",
+              "content": "6. The [ 16 ] in it makes her sneeze.",
               "options": [
                 "pollen",
                 "texture",
@@ -218,7 +218,7 @@
             },
             {
               "id": "17",
-              "content": "7. Mr. Roth had been a valuable ______________ for so many years.",
+              "content": "7. Mr. Roth had been a valuable [ 17 ] for so many years.",
               "options": [
                 "mentor",
                 "dependency",
@@ -230,7 +230,7 @@
             },
             {
               "id": "18",
-              "content": "8. You could feel the knowledge from the ______________ of his wrinkled hands.",
+              "content": "8. You could feel the knowledge from the [ 18 ] of his wrinkled hands.",
               "options": [
                 "pollen",
                 "texture",
@@ -242,7 +242,7 @@
             },
             {
               "id": "19",
-              "content": "9. Plants have a(n) ______________ on sunlight.",
+              "content": "9. Plants have a(n) [ 19 ] on sunlight.",
               "options": [
                 "dependency",
                 "phoenix",
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "10. It’s a necessary ingredient for the process of ______________ .",
+              "content": "10. It’s a necessary ingredient for the process of [ 20 ] .",
               "options": [
                 "photosynthesis",
                 "pollen",
@@ -265,7 +265,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

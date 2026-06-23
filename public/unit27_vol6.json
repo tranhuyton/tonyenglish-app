@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. One ingredient in the recipe is a small amount of _____",
+              "content": "1. One ingredient in the recipe is a small amount of [ 11 ]",
               "options": [
                 "seasoning",
                 "hymns",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "2. Then you need to pour in a pint of _____",
+              "content": "2. Then you need to pour in a pint of [ 12 ]",
               "options": [
                 "vinegar",
                 "hereditary",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "3. She can play many instruments and sing many _____",
+              "content": "3. She can play many instruments and sing many [ 13 ]",
               "options": [
                 "hymns",
                 "archer",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "4. Her mother is a good musician, too. Her talent must be _____",
+              "content": "4. Her mother is a good musician, too. Her talent must be [ 14 ]",
               "options": [
                 "hereditary",
                 "fragrant",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "5. The hunter was a very talented _____",
+              "content": "5. The hunter was a very talented [ 15 ]",
               "options": [
                 "archer",
                 "prey",
@@ -206,7 +206,7 @@
             },
             {
               "id": "16",
-              "content": "6. He only needed one arrow to shoot his _____",
+              "content": "6. He only needed one arrow to shoot his [ 16 ]",
               "options": [
                 "prey",
                 "procession",
@@ -218,7 +218,7 @@
             },
             {
               "id": "17",
-              "content": "7. Everyone lined up to take part in the _____",
+              "content": "7. Everyone lined up to take part in the [ 17 ]",
               "options": [
                 "procession",
                 "fragrant",
@@ -230,7 +230,7 @@
             },
             {
               "id": "18",
-              "content": "8. We marched to honor the king and the noble _____",
+              "content": "8. We marched to honor the king and the noble [ 18 ]",
               "options": [
                 "earls",
                 "vinegar",
@@ -242,7 +242,7 @@
             },
             {
               "id": "19",
-              "content": "9. When it came to keeping the house clean, his mother was a _____",
+              "content": "9. When it came to keeping the house clean, his mother was a [ 19 ]",
               "options": [
                 "tyrant",
                 "prey",
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "10. She punished him if his room did not smell very _____",
+              "content": "10. She punished him if his room did not smell very [ 20 ]",
               "options": [
                 "fragrant",
                 "hereditary",
@@ -265,7 +265,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

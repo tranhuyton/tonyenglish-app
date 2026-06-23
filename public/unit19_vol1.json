@@ -80,36 +80,36 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. My new desk is made of (wo____[6]).",
+              "content": "1. My new desk is made of [ 6 ] .",
               "explanation": "desk made of wood (gỗ).",
               "correctAnswer": "wood"
             },
             {
               "id": "7",
-              "content": "2. Students must start class at 9:00 each morning. This is the school's (po____[7]).",
+              "content": "2. Students must start class at 9:00 each morning. This is the school's [ 7 ] .",
               "explanation": "rule (quy định) -> policy.",
               "correctAnswer": "policy"
             },
             {
               "id": "8",
-              "content": "3. There are over 500 people on the hospital's (st____[8]).",
+              "content": "3. There are over 500 people on the hospital's [ 8 ] .",
               "explanation": "people working -> staff (nhân viên).",
               "correctAnswer": "staff"
             },
             {
               "id": "9",
-              "content": "4. Go (to____[9]) the river, but stop before you get in the water!",
+              "content": "4. Go [ 9 ] the river, but stop before you get in the water!",
               "explanation": "hướng về phía -> toward.",
               "correctAnswer": "toward"
             },
             {
               "id": "10",
-              "content": "5. The president gave a (sp____[10]) last night.",
+              "content": "5. The president gave a [ 10 ] last night.",
               "explanation": "give a speech (bài phát biểu).",
               "correctAnswer": "speech"
             }
           ],
-          "questionType": "Điền từ"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",
@@ -156,66 +156,66 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. My teacher's name is Mrs. Smith. Yesterday, she gave a (sp____[16]) to our class.",
+              "content": "1. My teacher's name is Mrs. Smith. Yesterday, she gave a [ 16 ] to our class.",
               "explanation": "gave a speech.",
               "correctAnswer": "speech"
             },
             {
               "id": "17",
-              "content": "2. She said there was a new (po____[17]) about the school diet.",
+              "content": "2. She said there was a new [ 17 ] about the school diet.",
               "explanation": "new policy (quy định).",
               "correctAnswer": "policy"
             },
             {
               "id": "18",
-              "content": "3. The school's (st____[18]) decided that their students didn't eat healthily.",
+              "content": "3. The school's [ 18 ] decided that their students didn't eat healthily.",
               "explanation": "school staff (nhân viên).",
               "correctAnswer": "staff"
             },
             {
               "id": "19",
-              "content": "4. She said milk gives our bodies stronger (bo____[19]).",
+              "content": "4. She said milk gives our bodies stronger [ 19 ] .",
               "explanation": "stronger bones (xương).",
               "correctAnswer": "bones"
             },
             {
               "id": "20",
-              "content": "5. She also (me____[20]) that sugar is bad for us.",
+              "content": "5. She also [ 20 ] that sugar is bad for us.",
               "explanation": "mentioned (nhắc đến).",
               "correctAnswer": "mentioned"
             },
             {
               "id": "21",
-              "content": "6. She said she had no (do____[21]) that we would all feel better.",
+              "content": "6. She said she had no [ 21 ] that we would all feel better.",
               "explanation": "no doubt (không nghi ngờ).",
               "correctAnswer": "doubt"
             },
             {
               "id": "22",
-              "content": "7. We all thought that it was an (in____[22]).",
+              "content": "7. We all thought that it was an [ 22 ] .",
               "explanation": "an injustice (sự bất công).",
               "correctAnswer": "injustice"
             },
             {
               "id": "23",
-              "content": "8. But at the (co____[23]) of class, she told us one more thing, 'It was a joke!'",
+              "content": "8. But at the [ 23 ] of class, she told us one more thing, 'It was a joke!'",
               "explanation": "at the conclusion (cuối).",
               "correctAnswer": "conclusion"
             },
             {
               "id": "24",
-              "content": "9. (Ho____[24]), no one thought that it was very funny.",
+              "content": "9. [ 24 ] , no one thought that it was very funny.",
               "explanation": "however (tuy nhiên).",
               "correctAnswer": "however"
             },
             {
               "id": "25",
-              "content": "10. And no students (bo____[25]) to laugh.",
+              "content": "10. And no students [ 25 ] to laugh.",
               "explanation": "bothered to laugh (bận tâm cười).",
               "correctAnswer": "bothered"
             }
           ],
-          "questionType": "Điền từ"
+          "questionType": "Kéo thả"
         }
       ]
     },

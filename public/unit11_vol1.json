@@ -116,7 +116,7 @@
           "id": "sec3",
           "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
           "content": "<p class=\"font-bold mb-4\">WORD BANK: compete, decision, collect, strange, prepare, serious, truth, asleep, introduce, conversation</p>",
-          "questionType": "Điền từ",
+          "questionType": "Kéo thả",
           "questions": [
             {
               "id": "11",

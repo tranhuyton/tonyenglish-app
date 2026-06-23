@@ -282,7 +282,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. They had three minutes to find their way out of the ______________.",
+              "content": "1. They had three minutes to find their way out of the [ 21 ].",
               "options": [
                 "maze",
                 "delta",
@@ -294,7 +294,7 @@
             },
             {
               "id": "22",
-              "content": "2. They had to get out before the time ______________.",
+              "content": "2. They had to get out before the time [ 22 ].",
               "options": [
                 "expired",
                 "pecked",
@@ -306,7 +306,7 @@
             },
             {
               "id": "23",
-              "content": "3. Jessica had the carpet in her house replaced with ______________ tiles.",
+              "content": "3. Jessica had the carpet in her house replaced with [ 23 ] tiles.",
               "options": [
                 "granite",
                 "moss",
@@ -318,7 +318,7 @@
             },
             {
               "id": "24",
-              "content": "4. The tiles had lovely designs on them and also pieces of ______________.",
+              "content": "4. The tiles had lovely designs on them and also pieces of [ 24 ].",
               "options": [
                 "amber",
                 "detergent",
@@ -330,7 +330,7 @@
             },
             {
               "id": "25",
-              "content": "5. Gene squeezed the bottle and got a ______________ of ketchup on his shirt.",
+              "content": "5. Gene squeezed the bottle and got a [ 25 ] of ketchup on his shirt.",
               "options": [
                 "streak",
                 "pebble",
@@ -342,7 +342,7 @@
             },
             {
               "id": "26",
-              "content": "6. The ______________ host was nice enough to get him a new shirt.",
+              "content": "6. The [ 26 ] host was nice enough to get him a new shirt.",
               "options": [
                 "courteous",
                 "liberal",
@@ -354,7 +354,7 @@
             },
             {
               "id": "27",
-              "content": "7. There was a pile of ______________ near the water.",
+              "content": "7. There was a pile of [ 27 ] near the water.",
               "options": [
                 "pebbles",
                 "crickets",
@@ -366,7 +366,7 @@
             },
             {
               "id": "28",
-              "content": "8. They had been washed up from the bottom of the _____________.",
+              "content": "8. They had been washed up from the bottom of the [ 28 ].",
               "options": [
                 "reservoir",
                 "delta",
@@ -378,7 +378,7 @@
             },
             {
               "id": "29",
-              "content": "9. We walked down the road and passed many trees covered in _____________.",
+              "content": "9. We walked down the road and passed many trees covered in [ 29 ].",
               "options": [
                 "moss",
                 "granite",
@@ -390,7 +390,7 @@
             },
             {
               "id": "30",
-              "content": "10. It was dark already, and all that could be heard were the ______________.",
+              "content": "10. It was dark already, and all that could be heard were the [ 30 ].",
               "options": [
                 "crickets",
                 "pebbles",
@@ -401,7 +401,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         }
       ]
     },

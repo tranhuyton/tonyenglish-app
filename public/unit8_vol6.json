@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. The club was very _____ and didn’t have many members.",
+              "content": "1. The club was very [ 16 ] and didn’t have many members.",
               "options": [
                 "exclusive",
                 "congested",
@@ -226,7 +226,7 @@
             },
             {
               "id": "17",
-              "content": "2. The members had to pay a _____ just to join.",
+              "content": "2. The members had to pay a [ 17 ] just to join.",
               "options": [
                 "premium",
                 "etiquette",
@@ -238,7 +238,7 @@
             },
             {
               "id": "18",
-              "content": "3. My mother is _____ with making sure we impress our guests.",
+              "content": "3. My mother is [ 18 ] with making sure we impress our guests.",
               "options": [
                 "obsessed",
                 "exclusive",
@@ -250,7 +250,7 @@
             },
             {
               "id": "19",
-              "content": "4. For example, she makes sure our _____ is perfect.",
+              "content": "4. For example, she makes sure our [ 19 ] is perfect.",
               "options": [
                 "etiquette",
                 "premium",
@@ -262,7 +262,7 @@
             },
             {
               "id": "20",
-              "content": "5. I stepped onto the _____ and couldn’t find a seat right away.",
+              "content": "5. I stepped onto the [ 20 ] and couldn’t find a seat right away.",
               "options": [
                 "tram",
                 "courier",
@@ -274,7 +274,7 @@
             },
             {
               "id": "21",
-              "content": "6. Finally, I made my way through the _____ aisle and sat down.",
+              "content": "6. Finally, I made my way through the [ 21 ] aisle and sat down.",
               "options": [
                 "congested",
                 "exclusive",
@@ -286,7 +286,7 @@
             },
             {
               "id": "22",
-              "content": "7. Hannah worked as a _____ for an advertising company.",
+              "content": "7. Hannah worked as a [ 22 ] for an advertising company.",
               "options": [
                 "courier",
                 "tram",
@@ -298,7 +298,7 @@
             },
             {
               "id": "23",
-              "content": "8. Between making deliveries, she liked to _____ with the employees.",
+              "content": "8. Between making deliveries, she liked to [ 23 ] with the employees.",
               "options": [
                 "socialize",
                 "warp",
@@ -310,7 +310,7 @@
             },
             {
               "id": "24",
-              "content": "9. The glue couldn’t _____ the water from leaking from the pipes.",
+              "content": "9. The glue couldn’t [ 24 ] the water from leaking from the pipes.",
               "options": [
                 "suppress",
                 "warp",
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "10. Since I didn’t clean it up right away, it caused the wooden floor to _____.",
+              "content": "10. Since I didn’t clean it up right away, it caused the wooden floor to [ 25 ].",
               "options": [
                 "warp",
                 "suppress",
@@ -333,7 +333,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec4_wordlist",

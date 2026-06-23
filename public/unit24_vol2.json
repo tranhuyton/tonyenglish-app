@@ -70,7 +70,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "Franklin felt pain in his stomach. The doctor _____ him to find the cause.",
+              "content": "Franklin felt pain in his stomach. The doctor [ 6 ] him to find the cause.",
               "options": [
                 "inspected",
                 "chew",
@@ -83,7 +83,7 @@
             },
             {
               "id": "7",
-              "content": "His doctor said Franklin needed to _____ his food more slowly.",
+              "content": "His doctor said Franklin needed to [ 7 ] his food more slowly.",
               "options": [
                 "inspected",
                 "chew",
@@ -96,7 +96,7 @@
             },
             {
               "id": "8",
-              "content": "If he did, he could get all the _____ he needed.",
+              "content": "If he did, he could get all the [ 8 ] he needed.",
               "options": [
                 "inspected",
                 "chew",
@@ -109,7 +109,7 @@
             },
             {
               "id": "9",
-              "content": "It would also help him _____ his pain.",
+              "content": "It would also help him [ 9 ] his pain.",
               "options": [
                 "inspected",
                 "chew",
@@ -122,7 +122,7 @@
             },
             {
               "id": "10",
-              "content": "If Franklin didn't listen, the doctor would have to perform _____.",
+              "content": "If Franklin didn't listen, the doctor would have to perform [ 10 ].",
               "options": [
                 "inspected",
                 "chew",
@@ -134,7 +134,7 @@
               "correctAnswer": "E"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

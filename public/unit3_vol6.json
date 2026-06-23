@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Beth’s ______________ had made her face lose a lot of its color.",
+              "content": "1. Beth’s [ 16 ] had made her face lose a lot of its color.",
               "options": [
                 "anemia",
                 "vanity",
@@ -226,7 +226,7 @@
             },
             {
               "id": "17",
-              "content": "2. She decided to use some ______________ to make her cheeks look less pale.",
+              "content": "2. She decided to use some [ 17 ] to make her cheeks look less pale.",
               "options": [
                 "rouge",
                 "pad",
@@ -238,7 +238,7 @@
             },
             {
               "id": "18",
-              "content": "3. All the girls had to own that style of purse with the yellow ______________.",
+              "content": "3. All the girls had to own that style of purse with the yellow [ 18 ].",
               "options": [
                 "hallmark",
                 "craze",
@@ -250,7 +250,7 @@
             },
             {
               "id": "19",
-              "content": "4. But Pam knew that it was just another ______________.",
+              "content": "4. But Pam knew that it was just another [ 19 ].",
               "options": [
                 "craze",
                 "tangle",
@@ -262,7 +262,7 @@
             },
             {
               "id": "20",
-              "content": "5. John was not like the other members of the ______________.",
+              "content": "5. John was not like the other members of the [ 20 ].",
               "options": [
                 "aristocracy",
                 "anemia",
@@ -274,7 +274,7 @@
             },
             {
               "id": "21",
-              "content": "6. Though he had an ______________ of money, he gave it to help people.",
+              "content": "6. Though he had an [ 21 ] of money, he gave it to help people.",
               "options": [
                 "excess",
                 "attire",
@@ -286,7 +286,7 @@
             },
             {
               "id": "22",
-              "content": "7. Will had to ______________ with other students for the respect of the teacher.",
+              "content": "7. Will had to [ 22 ] with other students for the respect of the teacher.",
               "options": [
                 "vie",
                 "enlarge",
@@ -298,7 +298,7 @@
             },
             {
               "id": "23",
-              "content": "8. However, once he became a ______________ student, he stopped studying.",
+              "content": "8. However, once he became a [ 23 ] student, he stopped studying.",
               "options": [
                 "reputable",
                 "absurd",
@@ -310,7 +310,7 @@
             },
             {
               "id": "24",
-              "content": "9. Some people thought the musician’s lipstick made him look ______________.",
+              "content": "9. Some people thought the musician’s lipstick made him look [ 24 ].",
               "options": [
                 "feminine",
                 "predominant",
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "10. But others felt that this ______________ is what made him so popular.",
+              "content": "10. But others felt that this [ 25 ] is what made him so popular.",
               "options": [
                 "hallmark",
                 "craze",
@@ -333,7 +333,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec4_wordlist",

@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "I love sports, and I want to ______ children to play sports, too.",
+              "content": "I love sports, and I want to [ 6 ] children to play sports, too.",
               "options": [
                 "mere",
                 "penalty",
@@ -93,7 +93,7 @@
             },
             {
               "id": "7",
-              "content": "Mia's ______ for not stopping at a red light was $50.",
+              "content": "Mia's [ 7 ] for not stopping at a red light was $50.",
               "options": [
                 "mere",
                 "penalty",
@@ -106,7 +106,7 @@
             },
             {
               "id": "8",
-              "content": "After he took a shower and got dressed, my brother looked very ______.",
+              "content": "After he took a shower and got dressed, my brother looked very [ 8 ].",
               "options": [
                 "mere",
                 "penalty",
@@ -119,7 +119,7 @@
             },
             {
               "id": "9",
-              "content": "The cat ate his food out of a black ______.",
+              "content": "The cat ate his food out of a black [ 9 ].",
               "options": [
                 "mere",
                 "penalty",
@@ -132,7 +132,7 @@
             },
             {
               "id": "10",
-              "content": "He was only given a ______ five dollars for his hard work.",
+              "content": "He was only given a [ 10 ] five dollars for his hard work.",
               "options": [
                 "mere",
                 "penalty",
@@ -144,7 +144,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

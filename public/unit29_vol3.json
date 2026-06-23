@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "Inside them were the _______ of old kings.",
+              "content": "Inside them were the [ 6 ] of old kings.",
               "options": [
                 "graves",
                 "clay",
@@ -92,7 +92,7 @@
             },
             {
               "id": "7",
-              "content": "He also visited a village near the river and learned about a recent _______.",
+              "content": "He also visited a village near the river and learned about a recent [ 7 ].",
               "options": [
                 "flood",
                 "graves",
@@ -104,7 +104,7 @@
             },
             {
               "id": "8",
-              "content": "People grew many crops on this _______ land.",
+              "content": "People grew many crops on this [ 8 ] land.",
               "options": [
                 "fertile",
                 "flood",
@@ -116,7 +116,7 @@
             },
             {
               "id": "9",
-              "content": "They used _______ pots to carry water from the river into their homes.",
+              "content": "They used [ 9 ] pots to carry water from the river into their homes.",
               "options": [
                 "clay",
                 "fertile",
@@ -128,7 +128,7 @@
             },
             {
               "id": "10",
-              "content": "One friendly man gave Jimmy a white _______ to cover his head from the hot sun.",
+              "content": "One friendly man gave Jimmy a white [ 10 ] to cover his head from the hot sun.",
               "options": [
                 "cloth",
                 "clay",
@@ -139,7 +139,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

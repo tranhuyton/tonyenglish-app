@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. This river will take us through the_________________ .",
+              "content": "1. This river will take us through the[ 1 ] .",
               "options": [
                 "valley",
                 "bush",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. The doctor must_________________during surgery to keep the patient alive.",
+              "content": "2. The doctor must[ 2 ]during surgery to keep the patient alive.",
               "options": [
                 "convey",
                 "concentrate",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. The sign was so_________________ we couldn’t see around it.",
+              "content": "3. The sign was so[ 3 ] we couldn’t see around it.",
               "options": [
                 "broad",
                 "capable",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. People can_________________ their happiness by smiling.",
+              "content": "4. People can[ 4 ] their happiness by smiling.",
               "options": [
                 "path",
                 "convey",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. What is the_________________ of this train?",
+              "content": "5. What is the[ 5 ] of this train?",
               "options": [
                 "destination",
                 "valley",
@@ -72,7 +72,7 @@
             },
             {
               "id": "6",
-              "content": "6. We walked to the_________________ of the cliff and looked down.",
+              "content": "6. We walked to the[ 6 ] of the cliff and looked down.",
               "options": [
                 "path",
                 "bush",
@@ -84,7 +84,7 @@
             },
             {
               "id": "7",
-              "content": "7. The hikers walked along the_________________ in the forest.",
+              "content": "7. The hikers walked along the[ 7 ] in the forest.",
               "options": [
                 "bush",
                 "path",
@@ -96,7 +96,7 @@
             },
             {
               "id": "8",
-              "content": "8. I planted a _________________ in my yard last weekend.",
+              "content": "8. I planted a [ 8 ] in my yard last weekend.",
               "options": [
                 "bush",
                 "valley",
@@ -108,7 +108,7 @@
             },
             {
               "id": "9",
-              "content": "9. She is_________________ of running faster than any boy in her class.",
+              "content": "9. She is[ 9 ] of running faster than any boy in her class.",
               "options": [
                 "capable",
                 "broad",
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "10. If the boys can’t agree, they will__________________ to fighting.",
+              "content": "10. If the boys can’t agree, they will[ 10 ] to fighting.",
               "options": [
                 "resort",
                 "convey",
@@ -131,7 +131,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec1_wordlist_ex2",

@@ -140,7 +140,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "There are _________ rules about what people may wear at fancy parties.",
+              "content": "There are [ 11 ] rules about what people may wear at fancy parties.",
               "options": [
                 "strict",
                 "ensure",
@@ -153,7 +153,7 @@
             },
             {
               "id": "12",
-              "content": "Instead of normal things, people must _________ that they wear...",
+              "content": "Instead of normal things, people must [ 12 ] that they wear...",
               "options": [
                 "strict",
                 "ensure",
@@ -166,7 +166,7 @@
             },
             {
               "id": "13",
-              "content": "...that they wear _________ clothing.",
+              "content": "...that they wear [ 13 ] clothing.",
               "options": [
                 "strict",
                 "ensure",
@@ -179,7 +179,7 @@
             },
             {
               "id": "14",
-              "content": "If a man wears the wrong clothes, people will _________ him of ruining the evening.",
+              "content": "If a man wears the wrong clothes, people will [ 14 ] him of ruining the evening.",
               "options": [
                 "strict",
                 "ensure",
@@ -192,7 +192,7 @@
             },
             {
               "id": "15",
-              "content": "They will make him leave and _________ the door behind him.",
+              "content": "They will make him leave and [ 15 ] the door behind him.",
               "options": [
                 "strict",
                 "ensure",
@@ -204,7 +204,7 @@
               "correctAnswer": "E"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

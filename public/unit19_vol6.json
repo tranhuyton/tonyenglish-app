@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. The doctors thought that too much sugar caused the ________.",
+              "content": "1. The doctors thought that too much sugar caused the [ 6 ].",
               "options": [
                 "seizure",
                 "utensil",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "2. However, their findings weren’t ________.",
+              "content": "2. However, their findings weren’t [ 7 ].",
               "options": [
                 "definitive",
                 "lunar",
@@ -110,7 +110,7 @@
             },
             {
               "id": "8",
-              "content": "3. A star burning at night as brightly as the moon was quite a(n) ________.",
+              "content": "3. A star burning at night as brightly as the moon was quite a(n) [ 8 ].",
               "options": [
                 "novelty",
                 "psychiatry",
@@ -122,7 +122,7 @@
             },
             {
               "id": "9",
-              "content": "4. In fact, the ________ glow was actually not as bright.",
+              "content": "4. In fact, the [ 9 ] glow was actually not as bright.",
               "options": [
                 "lunar",
                 "primal",
@@ -134,7 +134,7 @@
             },
             {
               "id": "10",
-              "content": "5. Those seven stars form the ________ known as the Big Dipper.",
+              "content": "5. Those seven stars form the [ 10 ] known as the Big Dipper.",
               "options": [
                 "constellation",
                 "Almighty",
@@ -146,7 +146,7 @@
             },
             {
               "id": "11",
-              "content": "6. A dipper is a(n) ________ shaped like a spoon used for getting water.",
+              "content": "6. A dipper is a(n) [ 11 ] shaped like a spoon used for getting water.",
               "options": [
                 "utensil",
                 "novelty",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "7. There are many methods used in ________ to help cure mental illnesses.",
+              "content": "7. There are many methods used in [ 12 ] to help cure mental illnesses.",
               "options": [
                 "psychiatry",
                 "constellation",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "8. They are all ________ to the specific needs of the patient.",
+              "content": "8. They are all [ 13 ] to the specific needs of the patient.",
               "options": [
                 "personalized",
                 "outmoded",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "9. The body’s ________ are too quick to be controlled by the brain.",
+              "content": "9. The body’s [ 14 ] are too quick to be controlled by the brain.",
               "options": [
                 "reflexes",
                 "seizures",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "10. These actions ________ to the nerves and spine rather than the brain.",
+              "content": "10. These actions [ 15 ] to the nerves and spine rather than the brain.",
               "options": [
                 "pertain",
                 "invoke",
@@ -205,7 +205,7 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",
