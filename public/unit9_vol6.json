@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. microbe",
+              "content": "microbe",
               "options": [
                 "germ",
                 "type",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. respiration",
+              "content": "respiration",
               "options": [
                 "living",
                 "sleeping",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. artery",
+              "content": "artery",
               "options": [
                 "vein",
                 "area",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. pest",
+              "content": "pest",
               "options": [
                 "bug",
                 "food",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. induce",
+              "content": "induce",
               "options": [
                 "take out",
                 "cause",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. invalid",
+              "content": "invalid",
               "options": [
                 "hurt",
                 "unproven",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. rupture",
+              "content": "rupture",
               "options": [
                 "burst",
                 "reach",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. forage",
+              "content": "forage",
               "options": [
                 "plant",
                 "cook",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. stun",
+              "content": "stun",
               "options": [
                 "shock",
                 "injure",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. susceptible",
+              "content": "susceptible",
               "options": [
                 "helpful",
                 "at risk",
@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. The old house was <u>full of insects that cause harm.</u> [ 11 ]",
+              "content": "<p class=\"mb-4\">The old house was <u>full of insects that cause harm.</u> [ 11 ]</p><p class=\"mb-4\">My brother-in-law always tries to enlarge small problems so that they seem <u>much greater than they really</u> are. [ 12 ]</p><p class=\"mb-4\">Mr. Robinson owned <u>a violent dog</u> that terrified all the children in the neighborhood. [ 13 ]</p><p class=\"mb-4\">If you eat spicy food at night, it will lead to heartburn. [ 14 ]</p><p class=\"mb-4\">His <u>tubes that carry blood are clogged.</u> [ 15 ]</p>",
               "options": [],
               "explanation": "pests: animals or insects that hurt plants or food.",
               "correctAnswer": "pests"
             },
             {
               "id": "12",
-              "content": "2. My brother-in-law always tries to enlarge small problems so that they seem <u>much greater than they really</u> are. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "magnify: to make something look bigger than it really is.",
               "correctAnswer": "magnify"
             },
             {
               "id": "13",
-              "content": "3. Mr. Robinson owned <u>a violent dog</u> that terrified all the children in the neighborhood. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "savage: very violent or cruel.",
               "correctAnswer": "savage"
             },
             {
               "id": "14",
-              "content": "4. If you eat spicy food at night, it will lead to heartburn. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "induce: to make something happen.",
               "correctAnswer": "induce"
             },
             {
               "id": "15",
-              "content": "5. His <u>tubes that carry blood are clogged.</u> [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "arteries: tubes that take blood from the heart to the rest of the body.",
               "correctAnswer": "arteries"
@@ -189,7 +189,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. impede",
+              "content": "impede",
               "options": [
                 "allow",
                 "start",
@@ -201,7 +201,7 @@
             },
             {
               "id": "17",
-              "content": "2. elusive",
+              "content": "elusive",
               "options": [
                 "available",
                 "under",
@@ -213,7 +213,7 @@
             },
             {
               "id": "18",
-              "content": "3. paralysis",
+              "content": "paralysis",
               "options": [
                 "illness",
                 "mobility",
@@ -225,7 +225,7 @@
             },
             {
               "id": "19",
-              "content": "4. mainstream",
+              "content": "mainstream",
               "options": [
                 "uncommon",
                 "untested",
@@ -237,7 +237,7 @@
             },
             {
               "id": "20",
-              "content": "5. negligible",
+              "content": "negligible",
               "options": [
                 "cared for",
                 "reasonable",
@@ -249,7 +249,7 @@
             },
             {
               "id": "21",
-              "content": "6. magnify",
+              "content": "magnify",
               "options": [
                 "release",
                 "check",
@@ -261,7 +261,7 @@
             },
             {
               "id": "22",
-              "content": "7. prevail",
+              "content": "prevail",
               "options": [
                 "conquer",
                 "fail",
@@ -273,7 +273,7 @@
             },
             {
               "id": "23",
-              "content": "8. deterioration",
+              "content": "deterioration",
               "options": [
                 "improvement",
                 "back-up",
@@ -285,7 +285,7 @@
             },
             {
               "id": "24",
-              "content": "9. savage",
+              "content": "savage",
               "options": [
                 "hungry",
                 "cruel",
@@ -297,7 +297,7 @@
             },
             {
               "id": "25",
-              "content": "10. inseparable",
+              "content": "inseparable",
               "options": [
                 "protective",
                 "dividable",
@@ -317,7 +317,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. The movie’s unusual topic might ___________ its popularity.",
+              "content": "The movie’s unusual topic might ___________ its popularity.",
               "options": [
                 "impede",
                 "mainstream",
@@ -329,7 +329,7 @@
             },
             {
               "id": "27",
-              "content": "2. Most ___________ movies don’t deal with strange themes.",
+              "content": "Most ___________ movies don’t deal with strange themes.",
               "options": [
                 "stunned",
                 "mainstream",
@@ -341,7 +341,7 @@
             },
             {
               "id": "28",
-              "content": "3. The ___________ fox finally came out of its den.",
+              "content": "The ___________ fox finally came out of its den.",
               "options": [
                 "elusive",
                 "pests",
@@ -353,7 +353,7 @@
             },
             {
               "id": "29",
-              "content": "4. It planned to ___________ for food before winter.",
+              "content": "It planned to ___________ for food before winter.",
               "options": [
                 "impede",
                 "forage",
@@ -365,7 +365,7 @@
             },
             {
               "id": "30",
-              "content": "5. Rats are ___________ that are found all over the world.",
+              "content": "Rats are ___________ that are found all over the world.",
               "options": [
                 "microbes",
                 "pests",
@@ -377,7 +377,7 @@
             },
             {
               "id": "31",
-              "content": "6. They carry ___________ that can make people very sick.",
+              "content": "They carry ___________ that can make people very sick.",
               "options": [
                 "microbes",
                 "paralysis",
@@ -389,7 +389,7 @@
             },
             {
               "id": "32",
-              "content": "7. Mr. Garson was ___________ by the bright light.",
+              "content": "Mr. Garson was ___________ by the bright light.",
               "options": [
                 "stunned",
                 "susceptible",
@@ -401,7 +401,7 @@
             },
             {
               "id": "33",
-              "content": "8. His shock caused a momentary ___________ that kept him from moving.",
+              "content": "His shock caused a momentary ___________ that kept him from moving.",
               "options": [
                 "deterioration",
                 "paralysis",
@@ -413,7 +413,7 @@
             },
             {
               "id": "34",
-              "content": "9. Mrs. Draper’s old age made her ___________ to some illnesses.",
+              "content": "Mrs. Draper’s old age made her ___________ to some illnesses.",
               "options": [
                 "susceptible",
                 "negligible",
@@ -425,7 +425,7 @@
             },
             {
               "id": "35",
-              "content": "10. Doctors told her that the ___________ of her health could be avoided.",
+              "content": "Doctors told her that the ___________ of her health could be avoided.",
               "options": [
                 "respiration",
                 "paralysis",
@@ -453,7 +453,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The elusive mamushi attacks humans if it is bothered by pests in houses.",
+              "content": "The elusive mamushi attacks humans if it is bothered by pests in houses.",
               "options": [
                 "F",
                 "T"
@@ -463,7 +463,7 @@
             },
             {
               "id": "37",
-              "content": "2. The consequences of a mamushi bite are negligible.",
+              "content": "The consequences of a mamushi bite are negligible.",
               "options": [
                 "F",
                 "T"
@@ -473,7 +473,7 @@
             },
             {
               "id": "38",
-              "content": "3. Mother tigers are inseparable from their babies.",
+              "content": "Mother tigers are inseparable from their babies.",
               "options": [
                 "F",
                 "T"
@@ -483,7 +483,7 @@
             },
             {
               "id": "39",
-              "content": "4. When tigers attack, they try to rupture an important artery.",
+              "content": "When tigers attack, they try to rupture an important artery.",
               "options": [
                 "F",
                 "T"
@@ -493,7 +493,7 @@
             },
             {
               "id": "40",
-              "content": "5. Scientists think that the mainstream idea that human bites are the most dangerous is invalid.",
+              "content": "Scientists think that the mainstream idea that human bites are the most dangerous is invalid.",
               "options": [
                 "F",
                 "T"
@@ -511,7 +511,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. What group of people is at risk for mamushi bites?",
+              "content": "What group of people is at risk for mamushi bites?",
               "options": [
                 "People who forage in fields for food",
                 "People who work in factories",
@@ -523,7 +523,7 @@
             },
             {
               "id": "42",
-              "content": "2. What are the effects of a mamushi bite?",
+              "content": "What are the effects of a mamushi bite?",
               "options": [
                 "It can impede respiration and induce paralysis",
                 "It causes minor bleeding",
@@ -535,7 +535,7 @@
             },
             {
               "id": "43",
-              "content": "3. When does a tiger's savage nature prevail?",
+              "content": "When does a tiger's savage nature prevail?",
               "options": [
                 "If her babies are threatened",
                 "When it is hungry",
@@ -547,7 +547,7 @@
             },
             {
               "id": "44",
-              "content": "4. What did scientists find when they magnified human saliva?",
+              "content": "What did scientists find when they magnified human saliva?",
               "options": [
                 "Over three hundred different microbes",
                 "Only a few harmless bacteria",
@@ -559,7 +559,7 @@
             },
             {
               "id": "45",
-              "content": "5. Why do human bites often become infected?",
+              "content": "Why do human bites often become infected?",
               "options": [
                 "People don't realize how dangerous they are",
                 "They are naturally dirty",

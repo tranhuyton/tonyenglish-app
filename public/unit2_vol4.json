@@ -155,70 +155,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Tom was promoted, and now he is an <u>important sea officer that controls military ships</u>.<br/>ad [ 11 ]",
+              "content": "<p class=\"mb-4\">Tom was promoted, and now he is an <u>important sea officer that controls military ships</u>.<br/>ad [ 11 ]</p><p class=\"mb-4\">Some people thought that the meal was too <u>sharp and unpleasant tasting</u>.<br/>so [ 12 ]</p><p class=\"mb-4\">The <u>oil in lamps and stoves</u> is a very cheap form of heat.<br/>ke [ 13 ]</p><p class=\"mb-4\">Why did you steal the woman's bag? Don't you have a <u>mind that understands what is wrong</u>?<br/>co [ 14 ]</p><p class=\"mb-4\">Can you buy three yellow <u>pieces of fruit that are like oranges</u> from the supermarket please?<br/>gr [ 15 ]</p><p class=\"mb-4\">I hope that the <u>waiter on the plane</u> will bring some water soon.<br/>st [ 16 ]</p><p class=\"mb-4\">After lightning struck the tree, the forest turned into a <u>burning blaze</u>.<br/>fi [ 17 ]</p><p class=\"mb-4\">Use this <u>thin rope</u> to tie the package.<br/>st [ 18 ]</p><p class=\"mb-4\">I cleaned the rabbit's cage and left some <u>dry grass</u> for it to eat.<br/>ha [ 19 ]</p><p class=\"mb-4\">I threw the ball through the <u>line in the shape of a circle</u>.<br/>lo [ 20 ]</p>",
               "options": [],
               "explanation": "\"an important sea officer that controls military ships\" (một sĩ quan hải quân quan trọng điều khiển tàu quân sự) có nghĩa là \"admiral\" (đô đốc).",
               "correctAnswer": "admiral"
             },
             {
               "id": "12",
-              "content": "2. Some people thought that the meal was too <u>sharp and unpleasant tasting</u>.<br/>so [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "\"sharp and unpleasant tasting\" (có vị gắt và khó chịu) có nghĩa là \"sour\" (chua).",
               "correctAnswer": "sour"
             },
             {
               "id": "13",
-              "content": "3. The <u>oil in lamps and stoves</u> is a very cheap form of heat.<br/>ke [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "\"oil in lamps and stoves\" (dầu dùng trong đèn và bếp) có nghĩa là \"kerosene\" (dầu hỏa).",
               "correctAnswer": "kerosene"
             },
             {
               "id": "14",
-              "content": "4. Why did you steal the woman's bag? Don't you have a <u>mind that understands what is wrong</u>?<br/>co [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "\"a mind that understands what is wrong\" (tâm trí hiểu được điều gì là sai trái) là \"conscience\" (lương tâm).",
               "correctAnswer": "conscience"
             },
             {
               "id": "15",
-              "content": "5. Can you buy three yellow <u>pieces of fruit that are like oranges</u> from the supermarket please?<br/>gr [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "\"pieces of fruit that are like oranges\" (những quả giống như cam) là \"grapefruits\" (quả bưởi tây).",
               "correctAnswer": "grapefruits"
             },
             {
               "id": "16",
-              "content": "6. I hope that the <u>waiter on the plane</u> will bring some water soon.<br/>st [ 16 ]",
+              "content": "",
               "options": [],
               "explanation": "\"waiter on the plane\" (người phục vụ trên máy bay) là \"steward\" (tiếp viên).",
               "correctAnswer": "steward"
             },
             {
               "id": "17",
-              "content": "7. After lightning struck the tree, the forest turned into a <u>burning blaze</u>.<br/>fi [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "\"burning blaze\" (ngọn lửa đang bốc cháy) tương ứng với tính từ \"fiery\" (bốc cháy dữ dội).",
               "correctAnswer": "fiery"
             },
             {
               "id": "18",
-              "content": "8. Use this <u>thin rope</u> to tie the package.<br/>st [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "\"thin rope\" (sợi dây thừng mỏng) có nghĩa là \"string\" (sợi dây).",
               "correctAnswer": "string"
             },
             {
               "id": "19",
-              "content": "9. I cleaned the rabbit's cage and left some <u>dry grass</u> for it to eat.<br/>ha [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "\"dry grass\" (cỏ khô) có nghĩa là \"hay\".",
               "correctAnswer": "hay"
             },
             {
               "id": "20",
-              "content": "10. I threw the ball through the <u>line in the shape of a circle</u>.<br/>lo [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "\"line in the shape of a circle\" (sợi dây có hình vòng tròn) có nghĩa là \"loop\" (vòng lặp).",
               "correctAnswer": "loop"
@@ -233,7 +233,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. I'm going to tie the cow to a [ 21 ] in the ground.",
+              "content": "I'm going to tie the cow to a [ 21 ] in the ground.",
               "options": [
                 "accident",
                 "stake",
@@ -246,7 +246,7 @@
             },
             {
               "id": "22",
-              "content": "2. You shouldn't eat the chicken. The [ 22 ] is still pink.",
+              "content": "You shouldn't eat the chicken. The [ 22 ] is still pink.",
               "options": [
                 "accident",
                 "stake",
@@ -259,7 +259,7 @@
             },
             {
               "id": "23",
-              "content": "3. New drivers are more likely to [ 23 ] their cars than experienced drivers.",
+              "content": "New drivers are more likely to [ 23 ] their cars than experienced drivers.",
               "options": [
                 "accident",
                 "stake",
@@ -272,7 +272,7 @@
             },
             {
               "id": "24",
-              "content": "4. Many people were hurt in the boating [ 24 ].",
+              "content": "Many people were hurt in the boating [ 24 ].",
               "options": [
                 "accident",
                 "stake",
@@ -285,7 +285,7 @@
             },
             {
               "id": "25",
-              "content": "5. My brother has a very friendly and cheerful [ 25 ].",
+              "content": "My brother has a very friendly and cheerful [ 25 ].",
               "options": [
                 "accident",
                 "stake",

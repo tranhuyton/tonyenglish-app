@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. veteran",
+              "content": "veteran",
               "options": [
                 "wet",
                 "amateur",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. harmonize",
+              "content": "harmonize",
               "options": [
                 "exaggerate",
                 "disagree",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. misguided",
+              "content": "misguided",
               "options": [
                 "lost",
                 "lengthy",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. villain",
+              "content": "villain",
               "options": [
                 "supporter",
                 "thief",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. scorn",
+              "content": "scorn",
               "options": [
                 "respect",
                 "weird",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. Stella was amazed by the performance of the [ 6 ].",
+              "content": "Stella was amazed by the performance of the [ 6 ].",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -104,7 +104,7 @@
             },
             {
               "id": "7",
-              "content": "2. She thought their [ 7 ] movements were beautiful.",
+              "content": "She thought their [ 7 ] movements were beautiful.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -122,7 +122,7 @@
             },
             {
               "id": "8",
-              "content": "3. Dave had four siblings, so he was used to [ 8 ] living.",
+              "content": "Dave had four siblings, so he was used to [ 8 ] living.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -140,7 +140,7 @@
             },
             {
               "id": "9",
-              "content": "4. They shared almost everything and were [ 9 ] about finding new uses for old things.",
+              "content": "They shared almost everything and were [ 9 ] about finding new uses for old things.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -158,7 +158,7 @@
             },
             {
               "id": "10",
-              "content": "5. The [ 10 ] system has many roles.",
+              "content": "The [ 10 ] system has many roles.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -176,7 +176,7 @@
             },
             {
               "id": "11",
-              "content": "6. It interprets laws and [ 11 ] and judges whether they are fair.",
+              "content": "It interprets laws and [ 11 ] and judges whether they are fair.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -194,7 +194,7 @@
             },
             {
               "id": "12",
-              "content": "7. The students [ 12 ] for the play every day after school.",
+              "content": "The students [ 12 ] for the play every day after school.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -212,7 +212,7 @@
             },
             {
               "id": "13",
-              "content": "8. They were very [ 13 ] and often stayed after dark.",
+              "content": "They were very [ 13 ] and often stayed after dark.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -230,7 +230,7 @@
             },
             {
               "id": "14",
-              "content": "9. [ 14 ] is spoken throughout northern and southwestern China.",
+              "content": "[ 14 ] is spoken throughout northern and southwestern China.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -248,7 +248,7 @@
             },
             {
               "id": "15",
-              "content": "10. However, other languages are also popular in [ 15 ] areas.",
+              "content": "However, other languages are also popular in [ 15 ] areas.",
               "options": [
                 "metropolitan",
                 "industrious",
@@ -274,7 +274,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. The animal rights <i>advocacy</i> group worked to protect animals.",
+              "content": "The animal rights <i>advocacy</i> group worked to protect animals.",
               "options": [
                 "I",
                 "C"
@@ -284,7 +284,7 @@
             },
             {
               "id": "17",
-              "content": "2. He was well-liked by people in his class. A lot of people <i>scorned</i> him.",
+              "content": "He was well-liked by people in his class. A lot of people <i>scorned</i> him.",
               "options": [
                 "I",
                 "C"
@@ -294,7 +294,7 @@
             },
             {
               "id": "18",
-              "content": "3. Going on a rollercoaster is a wild <i>sensory</i> experience.",
+              "content": "Going on a rollercoaster is a wild <i>sensory</i> experience.",
               "options": [
                 "I",
                 "C"
@@ -304,7 +304,7 @@
             },
             {
               "id": "19",
-              "content": "4. Items like sunscreen, towel and bathing suit are <i>staple</i> items needed for the beach.",
+              "content": "Items like sunscreen, towel and bathing suit are <i>staple</i> items needed for the beach.",
               "options": [
                 "I",
                 "C"
@@ -314,7 +314,7 @@
             },
             {
               "id": "20",
-              "content": "5. The hotel had a <i>communal</i> kitchen that the guests were free to use.",
+              "content": "The hotel had a <i>communal</i> kitchen that the guests were free to use.",
               "options": [
                 "I",
                 "C"
@@ -324,7 +324,7 @@
             },
             {
               "id": "21",
-              "content": "6. The <i>acrobat</i> had studied biology for many years before he became successful.",
+              "content": "The <i>acrobat</i> had studied biology for many years before he became successful.",
               "options": [
                 "I",
                 "C"
@@ -334,7 +334,7 @@
             },
             {
               "id": "22",
-              "content": "7. The audience <i>rehearsed</i> the play for the actors.",
+              "content": "The audience <i>rehearsed</i> the play for the actors.",
               "options": [
                 "I",
                 "C"
@@ -344,7 +344,7 @@
             },
             {
               "id": "23",
-              "content": "8. Chris’s actions were <i>misguided</i>. He should have found out the facts first.",
+              "content": "Chris’s actions were <i>misguided</i>. He should have found out the facts first.",
               "options": [
                 "I",
                 "C"
@@ -354,7 +354,7 @@
             },
             {
               "id": "24",
-              "content": "9. The people of the small town were very <i>metropolitan</i>.",
+              "content": "The people of the small town were very <i>metropolitan</i>.",
               "options": [
                 "I",
                 "C"
@@ -364,7 +364,7 @@
             },
             {
               "id": "25",
-              "content": "10. <i>Mandarin</i> Chinese is said to be one of the hardest languages to learn.",
+              "content": "<i>Mandarin</i> Chinese is said to be one of the hardest languages to learn.",
               "options": [
                 "I",
                 "C"
@@ -374,7 +374,7 @@
             },
             {
               "id": "26",
-              "content": "11. Kayla watched the <i>fluid</i> motions of the graceful bird.",
+              "content": "Kayla watched the <i>fluid</i> motions of the graceful bird.",
               "options": [
                 "I",
                 "C"
@@ -384,7 +384,7 @@
             },
             {
               "id": "27",
-              "content": "12. The <i>statute</i> was placed in front of the new police station.",
+              "content": "The <i>statute</i> was placed in front of the new police station.",
               "options": [
                 "I",
                 "C"
@@ -394,7 +394,7 @@
             },
             {
               "id": "28",
-              "content": "13. The singers <i>harmonized</i> during the last part of the song. It sounded lovely.",
+              "content": "The singers <i>harmonized</i> during the last part of the song. It sounded lovely.",
               "options": [
                 "I",
                 "C"
@@ -404,7 +404,7 @@
             },
             {
               "id": "29",
-              "content": "14. After his shoelaces tore, the <i>inventive</i> boy used floss to tie his shoes together.",
+              "content": "After his shoelaces tore, the <i>inventive</i> boy used floss to tie his shoes together.",
               "options": [
                 "I",
                 "C"
@@ -414,7 +414,7 @@
             },
             {
               "id": "30",
-              "content": "15. Mrs. Campbell’s son was lazy and <i>industrious</i>.",
+              "content": "Mrs. Campbell’s son was lazy and <i>industrious</i>.",
               "options": [
                 "I",
                 "C"
@@ -424,7 +424,7 @@
             },
             {
               "id": "31",
-              "content": "16. I’m interested in getting a job as a <i>judicial</i> officer, like my father the judge.",
+              "content": "I’m interested in getting a job as a <i>judicial</i> officer, like my father the judge.",
               "options": [
                 "I",
                 "C"
@@ -434,7 +434,7 @@
             },
             {
               "id": "32",
-              "content": "17. Some insects <i>mimic</i> the appearance of poisonous bugs to keep predators away.",
+              "content": "Some insects <i>mimic</i> the appearance of poisonous bugs to keep predators away.",
               "options": [
                 "I",
                 "C"
@@ -444,7 +444,7 @@
             },
             {
               "id": "33",
-              "content": "18. The <i>veteran</i> gave my pet dog medicine to feel better.",
+              "content": "The <i>veteran</i> gave my pet dog medicine to feel better.",
               "options": [
                 "I",
                 "C"
@@ -454,7 +454,7 @@
             },
             {
               "id": "34",
-              "content": "19. Long <i>vines</i> grew around the side of the house and covered up the front wall.",
+              "content": "Long <i>vines</i> grew around the side of the house and covered up the front wall.",
               "options": [
                 "I",
                 "C"
@@ -464,7 +464,7 @@
             },
             {
               "id": "35",
-              "content": "20. The <i>villain</i> helped the family escape their house when it caught fire.",
+              "content": "The <i>villain</i> helped the family escape their house when it caught fire.",
               "options": [
                 "I",
                 "C"
@@ -490,7 +490,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The Chinese farmers became great acrobats while planting staple crops like rice.",
+              "content": "The Chinese farmers became great acrobats while planting staple crops like rice.",
               "options": [
                 "F",
                 "T"
@@ -500,7 +500,7 @@
             },
             {
               "id": "37",
-              "content": "2. The version of the lion dance in Mandarin-speaking areas involves performers mimicking the movements of the lion.",
+              "content": "The version of the lion dance in Mandarin-speaking areas involves performers mimicking the movements of the lion.",
               "options": [
                 "F",
                 "T"
@@ -510,7 +510,7 @@
             },
             {
               "id": "38",
-              "content": "3. Chinese acrobats gain their fluid motions by rehearsing often.",
+              "content": "Chinese acrobats gain their fluid motions by rehearsing often.",
               "options": [
                 "F",
                 "T"
@@ -520,7 +520,7 @@
             },
             {
               "id": "39",
-              "content": "4. The art form of Hundred Plays harmonizes the sensory and mental aspects of acrobatics.",
+              "content": "The art form of Hundred Plays harmonizes the sensory and mental aspects of acrobatics.",
               "options": [
                 "F",
                 "T"
@@ -530,7 +530,7 @@
             },
             {
               "id": "40",
-              "content": "5. Advocacy groups worked to get a statute that would protect acrobats from being scorned.",
+              "content": "Advocacy groups worked to get a statute that would protect acrobats from being scorned.",
               "options": [
                 "F",
                 "T"
@@ -548,7 +548,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. According to the passage, what were the early Chinese farmers like?",
+              "content": "According to the passage, what were the early Chinese farmers like?",
               "options": [
                 "They were inventive and industrious.",
                 "They were poor and lazy.",
@@ -560,7 +560,7 @@
             },
             {
               "id": "42",
-              "content": "2. How are new acrobats trained?",
+              "content": "How are new acrobats trained?",
               "options": [
                 "A veteran performer teaches the young people in the village.",
                 "They read a book.",
@@ -572,7 +572,7 @@
             },
             {
               "id": "43",
-              "content": "3. What were the misguided judgments about acrobats in the past?",
+              "content": "What were the misguided judgments about acrobats in the past?",
               "options": [
                 "People thought that acrobats were villains and just wanted to trick rich people.",
                 "People thought they were heroes.",
@@ -584,7 +584,7 @@
             },
             {
               "id": "44",
-              "content": "4. What unusual object was used by early acrobats to do tricks high above the ground?",
+              "content": "What unusual object was used by early acrobats to do tricks high above the ground?",
               "options": [
                 "Vines",
                 "Ropes",
@@ -596,7 +596,7 @@
             },
             {
               "id": "45",
-              "content": "5. How did the location and audience of a Hundred Play change after acrobats gained respect?",
+              "content": "How did the location and audience of a Hundred Play change after acrobats gained respect?",
               "options": [
                 "They performed in metropolitan areas for judicial officers and important people.",
                 "They only performed in villages.",

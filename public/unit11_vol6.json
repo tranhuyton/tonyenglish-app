@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Who is a person with the power to authorize a war?",
+              "content": "Who is a person with the power to authorize a war?",
               "options": [
                 "A president",
                 "A teacher",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. Which of the following might give you euphoria?",
+              "content": "Which of the following might give you euphoria?",
               "options": [
                 "Winning a great prize",
                 "Falling off your bike",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. What best describes a sage?",
+              "content": "What best describes a sage?",
               "options": [
                 "Intelligent",
                 "Alert",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. Which of the following is a valuable commodity?",
+              "content": "Which of the following is a valuable commodity?",
               "options": [
                 "Oil",
                 "Mountains",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. What might cause unrest at a school?",
+              "content": "What might cause unrest at a school?",
               "options": [
                 "Students having daily tests",
                 "Students receiving lunch for free",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. authorize",
+              "content": "authorize",
               "options": [
                 "reject",
                 "make easy",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "2. conquest",
+              "content": "conquest",
               "options": [
                 "liberation",
                 "combination",
@@ -110,7 +110,7 @@
             },
             {
               "id": "8",
-              "content": "3. disclose",
+              "content": "disclose",
               "options": [
                 "conceal",
                 "support",
@@ -122,7 +122,7 @@
             },
             {
               "id": "9",
-              "content": "4. euphoria",
+              "content": "euphoria",
               "options": [
                 "depression",
                 "measurement",
@@ -134,7 +134,7 @@
             },
             {
               "id": "10",
-              "content": "5. unrest",
+              "content": "unrest",
               "options": [
                 "peace",
                 "no planning",
@@ -146,7 +146,7 @@
             },
             {
               "id": "11",
-              "content": "6. sage",
+              "content": "sage",
               "options": [
                 "fool",
                 "stubborn",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "7. civilian",
+              "content": "civilian",
               "options": [
                 "soldier",
                 "traditionalist",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "8. festive",
+              "content": "festive",
               "options": [
                 "unhappy",
                 "honest",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "9. enroll",
+              "content": "enroll",
               "options": [
                 "quit",
                 "imply",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "10. advocate",
+              "content": "advocate",
               "options": [
                 "oppose",
                 "fallen",
@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. lentil",
+              "content": "lentil",
               "options": [
                 "bean",
                 "prize",
@@ -226,7 +226,7 @@
             },
             {
               "id": "17",
-              "content": "2. envious",
+              "content": "envious",
               "options": [
                 "jealous",
                 "awkward",
@@ -238,7 +238,7 @@
             },
             {
               "id": "18",
-              "content": "3. commodity",
+              "content": "commodity",
               "options": [
                 "product",
                 "inactivity",
@@ -250,7 +250,7 @@
             },
             {
               "id": "19",
-              "content": "4. dynamics",
+              "content": "dynamics",
               "options": [
                 "aspects",
                 "angry speech",
@@ -262,7 +262,7 @@
             },
             {
               "id": "20",
-              "content": "5. prophecy",
+              "content": "prophecy",
               "options": [
                 "prediction",
                 "comes before",
@@ -274,7 +274,7 @@
             },
             {
               "id": "21",
-              "content": "6. morale",
+              "content": "morale",
               "options": [
                 "confidence",
                 "goodness",
@@ -286,7 +286,7 @@
             },
             {
               "id": "22",
-              "content": "7. marshal",
+              "content": "marshal",
               "options": [
                 "assemble",
                 "promise",
@@ -298,7 +298,7 @@
             },
             {
               "id": "23",
-              "content": "8. jolly",
+              "content": "jolly",
               "options": [
                 "merry",
                 "inspiring",
@@ -310,7 +310,7 @@
             },
             {
               "id": "24",
-              "content": "9. senate",
+              "content": "senate",
               "options": [
                 "government",
                 "nice feeling",
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "10. sentiment",
+              "content": "sentiment",
               "options": [
                 "opinion",
                 "confidence",
@@ -342,7 +342,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. Janice’s dad was a part of the <i>senate</i>. He fixed cars all day.",
+              "content": "Janice’s dad was a part of the <i>senate</i>. He fixed cars all day.",
               "options": [
                 "I",
                 "C"
@@ -352,7 +352,7 @@
             },
             {
               "id": "27",
-              "content": "2. Damon read about the Roman <i>conquest</i> of northern Africa. He was amazed by all the places that the Romans took over.",
+              "content": "Damon read about the Roman <i>conquest</i> of northern Africa. He was amazed by all the places that the Romans took over.",
               "options": [
                 "C",
                 "I"
@@ -362,7 +362,7 @@
             },
             {
               "id": "28",
-              "content": "3. The teacher understood the <i>dynamics</i> between instructors and students in the classroom.",
+              "content": "The teacher understood the <i>dynamics</i> between instructors and students in the classroom.",
               "options": [
                 "C",
                 "I"
@@ -372,7 +372,7 @@
             },
             {
               "id": "29",
-              "content": "4. Mariah <i>enrolled</i> the clothes and put them in her drawer.",
+              "content": "Mariah <i>enrolled</i> the clothes and put them in her drawer.",
               "options": [
                 "I",
                 "C"
@@ -382,7 +382,7 @@
             },
             {
               "id": "30",
-              "content": "5. Sheldon was a vegetarian. He <i>advocated</i> for people not to eat meat.",
+              "content": "Sheldon was a vegetarian. He <i>advocated</i> for people not to eat meat.",
               "options": [
                 "C",
                 "I"
@@ -408,7 +408,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. People were envious of King Croesus because he understood the dynamics of war better than anybody else.",
+              "content": "People were envious of King Croesus because he understood the dynamics of war better than anybody else.",
               "options": [
                 "F",
                 "T"
@@ -418,7 +418,7 @@
             },
             {
               "id": "32",
-              "content": "2. The messenger disclosed that the Persians were in a state of unrest.",
+              "content": "The messenger disclosed that the Persians were in a state of unrest.",
               "options": [
                 "T",
                 "F"
@@ -428,7 +428,7 @@
             },
             {
               "id": "33",
-              "content": "3. The sage man from the senate was the only one that shared the king’s sentiment.",
+              "content": "The sage man from the senate was the only one that shared the king’s sentiment.",
               "options": [
                 "F",
                 "T"
@@ -438,7 +438,7 @@
             },
             {
               "id": "34",
-              "content": "4. The messenger gave the Oracle jugs of wine and baskets of lentils to make her happy.",
+              "content": "The messenger gave the Oracle jugs of wine and baskets of lentils to make her happy.",
               "options": [
                 "T",
                 "F"
@@ -448,7 +448,7 @@
             },
             {
               "id": "35",
-              "content": "5. The Oracle’s prophecy was that the Lydian conquest of Persia would be successful.",
+              "content": "The Oracle’s prophecy was that the Lydian conquest of Persia would be successful.",
               "options": [
                 "F",
                 "T"
@@ -466,7 +466,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Why did King Croesus advocate war against the Persians?",
+              "content": "Why did King Croesus advocate war against the Persians?",
               "options": [
                 "King Croesus advocated war with the Persians because the Persians were politically weak.",
                 "He wanted to take their gold.",
@@ -478,7 +478,7 @@
             },
             {
               "id": "37",
-              "content": "2. Why was the messenger in a festive and jolly mood when he returned from seeing the Oracle?",
+              "content": "Why was the messenger in a festive and jolly mood when he returned from seeing the Oracle?",
               "options": [
                 "The messenger was in a festive and jolly mood because he thought the Oracle’s prophecy was good for the Lydians.",
                 "Because he drank all the wine.",
@@ -490,7 +490,7 @@
             },
             {
               "id": "38",
-              "content": "3. How did King Croesus feel after he heard the Oracle’s prophecy?",
+              "content": "How did King Croesus feel after he heard the Oracle’s prophecy?",
               "options": [
                 "King Croesus was filled with euphoria after he heard the Oracle’s prophecy.",
                 "He was very angry.",
@@ -502,7 +502,7 @@
             },
             {
               "id": "39",
-              "content": "4. How did the civilians who enrolled and were marshaled in the Lydian army feel about the war?",
+              "content": "How did the civilians who enrolled and were marshaled in the Lydian army feel about the war?",
               "options": [
                 "The civilians who enrolled and were marshaled in the army had high morale because they thought they would win.",
                 "They had low morale and wanted to quit.",
@@ -514,7 +514,7 @@
             },
             {
               "id": "40",
-              "content": "5. What did King Croesus learn from the experience?",
+              "content": "What did King Croesus learn from the experience?",
               "options": [
                 "King Croesus learned that he should have considered advice more carefully.",
                 "He learned how to fight better.",

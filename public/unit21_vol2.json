@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. permission",
+              "content": "permission",
               "options": [
                 "to not be scared",
                 "the act of allowing the doing of something",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. scale",
+              "content": "scale",
               "options": [
                 "size",
                 "below the earth",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. courage",
+              "content": "courage",
               "options": [
                 "to be alert",
                 "the act of allowing the doing of something",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. satellite",
+              "content": "satellite",
               "options": [
                 "to not do something",
                 "something sent into space",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. pour",
+              "content": "pour",
               "options": [
                 "a chemical in the earth",
                 "a tool for looking",
@@ -72,7 +72,7 @@
             },
             {
               "id": "6",
-              "content": "6. raw",
+              "content": "raw",
               "options": [
                 "a tool for looking",
                 "natural",
@@ -84,7 +84,7 @@
             },
             {
               "id": "7",
-              "content": "7. telescope",
+              "content": "telescope",
               "options": [
                 "a tube for water",
                 "a spirit",
@@ -96,7 +96,7 @@
             },
             {
               "id": "8",
-              "content": "8. awake",
+              "content": "awake",
               "options": [
                 "to not do something",
                 "not asleep",
@@ -108,7 +108,7 @@
             },
             {
               "id": "9",
-              "content": "9. gravity",
+              "content": "gravity",
               "options": [
                 "a chart of numbers",
                 "a spirit",
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "10. presence",
+              "content": "presence",
               "options": [
                 "a man in space",
                 "a worker in a mine",
@@ -140,7 +140,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. The movie had ____________ flying in heaven and singing beautiful songs.",
+              "content": "The movie had ____________ flying in heaven and singing beautiful songs.",
               "options": [
                 "angels",
                 "astronauts"
@@ -150,7 +150,7 @@
             },
             {
               "id": "12",
-              "content": "2. I watched a TV show about how people trained to become ____________ .",
+              "content": "I watched a TV show about how people trained to become ____________ .",
               "options": [
                 "angels",
                 "astronauts"
@@ -160,7 +160,7 @@
             },
             {
               "id": "13",
-              "content": "3. Russia was the first country to send a ____________ into space.",
+              "content": "Russia was the first country to send a ____________ into space.",
               "options": [
                 "satellite",
                 "participate"
@@ -170,7 +170,7 @@
             },
             {
               "id": "14",
-              "content": "4. The teacher asked all of us to ____________ in writing the story.",
+              "content": "The teacher asked all of us to ____________ in writing the story.",
               "options": [
                 "satellite",
                 "participate"
@@ -180,7 +180,7 @@
             },
             {
               "id": "15",
-              "content": "5. My mother gave me ____________ to attend the party.",
+              "content": "My mother gave me ____________ to attend the party.",
               "options": [
                 "permission",
                 "grants"
@@ -190,7 +190,7 @@
             },
             {
               "id": "16",
-              "content": "6. The man at the door ____________ people permission to enter the building.",
+              "content": "The man at the door ____________ people permission to enter the building.",
               "options": [
                 "permission",
                 "grants"
@@ -200,7 +200,7 @@
             },
             {
               "id": "17",
-              "content": "7. We are studying ____________ that we use in everyday life.",
+              "content": "We are studying ____________ that we use in everyday life.",
               "options": [
                 "minerals",
                 "jewels"
@@ -210,7 +210,7 @@
             },
             {
               "id": "18",
-              "content": "8. The woman keeps her ____________ in a safe place.",
+              "content": "The woman keeps her ____________ in a safe place.",
               "options": [
                 "minerals",
                 "jewels"
@@ -220,7 +220,7 @@
             },
             {
               "id": "19",
-              "content": "9. The water ____________ broke, and now the street is flooded.",
+              "content": "The water ____________ broke, and now the street is flooded.",
               "options": [
                 "telescope",
                 "pipe"
@@ -230,7 +230,7 @@
             },
             {
               "id": "20",
-              "content": "10. Thomas got a ____________ from his grandfather on his birthday.",
+              "content": "Thomas got a ____________ from his grandfather on his birthday.",
               "options": [
                 "telescope",
                 "pipe"
@@ -329,7 +329,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "Why satellites are useful",
                 "How a man escaped gravity",
@@ -341,7 +341,7 @@
             },
             {
               "id": "27",
-              "content": "2. Why did Jeremy stop going underground?",
+              "content": "Why did Jeremy stop going underground?",
               "options": [
                 "It kept him awake all night long.",
                 "He could not find any jewels or minerals.",
@@ -353,7 +353,7 @@
             },
             {
               "id": "28",
-              "content": "3. In the second paragraph, we can infer that Jeremy_____________ .",
+              "content": "In the second paragraph, we can infer that Jeremy_____________ .",
               "options": [
                 "did not know how to float",
                 "could not see the angel",
@@ -365,7 +365,7 @@
             },
             {
               "id": "29",
-              "content": "4. According to the passage, all the following are true EXCEPT_____________ .",
+              "content": "According to the passage, all the following are true EXCEPT_____________ .",
               "options": [
                 "Jeremy was granted permission to leave the mine",
                 "Jeremy used a telescope to watch the stars",
@@ -377,7 +377,7 @@
             },
             {
               "id": "30",
-              "content": "5. What did Jeremy participate in after finishing astronaut school?",
+              "content": "What did Jeremy participate in after finishing astronaut school?",
               "options": [
                 "He participated in a mission to outer space.",
                 "He gathered raw minerals and jewels.",

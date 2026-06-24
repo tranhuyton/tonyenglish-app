@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. If you don't understand the class, you should ask your [ 1 ] for help.",
+              "content": "If you don't understand the class, you should ask your [ 1 ] for help.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "professor",
               "options": [
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. I could [ 2 ] hear his speech because of all the noise.",
+              "content": "I could [ 2 ] hear his speech because of all the noise.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "barely",
               "options": [
@@ -48,7 +48,7 @@
             },
             {
               "id": "3",
-              "content": "3. I [ 3 ] that tomorrow will be a good day.",
+              "content": "I [ 3 ] that tomorrow will be a good day.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "predict",
               "options": [
@@ -66,7 +66,7 @@
             },
             {
               "id": "4",
-              "content": "4. There was a lot of [ 4 ] in his closet.",
+              "content": "There was a lot of [ 4 ] in his closet.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "garbage",
               "options": [
@@ -84,7 +84,7 @@
             },
             {
               "id": "5",
-              "content": "5. I made a [ 5 ] of things I want for my birthday.",
+              "content": "I made a [ 5 ] of things I want for my birthday.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "list",
               "options": [
@@ -102,7 +102,7 @@
             },
             {
               "id": "6",
-              "content": "6. I think that this TV show is [ 6 ]. Let's watch something else.",
+              "content": "I think that this TV show is [ 6 ]. Let's watch something else.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "boring",
               "options": [
@@ -120,7 +120,7 @@
             },
             {
               "id": "7",
-              "content": "7. Have you ever heard this [ 7 ]? I really like its music.",
+              "content": "Have you ever heard this [ 7 ]? I really like its music.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "band",
               "options": [
@@ -138,7 +138,7 @@
             },
             {
               "id": "8",
-              "content": "8. Do you have time in your [ 8 ] to come over this week?",
+              "content": "Do you have time in your [ 8 ] to come over this week?",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "schedule",
               "options": [
@@ -156,7 +156,7 @@
             },
             {
               "id": "9",
-              "content": "9. If I am not home when you call, just leave a [ 9 ].",
+              "content": "If I am not home when you call, just leave a [ 9 ].",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "message",
               "options": [
@@ -174,7 +174,7 @@
             },
             {
               "id": "10",
-              "content": "10. If you wake up early, you don't need to [ 10 ] to get to school.",
+              "content": "If you wake up early, you don't need to [ 10 ] to get to school.",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "rush",
               "options": [
@@ -200,7 +200,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p>11. a. cancel b. see c. notice d. own</p>",
+              "content": "<p class=\"mb-4\">a. cancel b. see c. notice d. own</p>",
               "options": [
                 "cancel and see",
                 "notice and own",
@@ -212,7 +212,7 @@
             },
             {
               "id": "12",
-              "content": "<p>12. a. band b. boring c. instrument d. predict</p>",
+              "content": "<p class=\"mb-4\">a. band b. boring c. instrument d. predict</p>",
               "options": [
                 "band and instrument",
                 "instrument and predict",
@@ -224,7 +224,7 @@
             },
             {
               "id": "13",
-              "content": "<p>13. a. magic b. rush c. tour d. trip</p>",
+              "content": "<p class=\"mb-4\">a. magic b. rush c. tour d. trip</p>",
               "options": [
                 "magic and rush",
                 "tour and trip",
@@ -236,7 +236,7 @@
             },
             {
               "id": "14",
-              "content": "<p>14. a. bite b. within c. hunger d. share</p>",
+              "content": "<p class=\"mb-4\">a. bite b. within c. hunger d. share</p>",
               "options": [
                 "bite and hunger",
                 "hunger and share",
@@ -248,7 +248,7 @@
             },
             {
               "id": "15",
-              "content": "<p>15. a. schedule b. message c. stage d. list</p>",
+              "content": "<p class=\"mb-4\">a. schedule b. message c. stage d. list</p>",
               "options": [
                 "schedule and message",
                 "stage and list",

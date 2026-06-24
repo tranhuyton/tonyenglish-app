@@ -19,7 +19,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. If you know how to __________ a computer, you can get access to __________.",
+              "content": "If you know how to __________ a computer, you can get access to __________.",
               "options": [
                 "cyberspace / operate",
                 "operate / cyberspace"
@@ -29,7 +29,7 @@
             },
             {
               "id": "2",
-              "content": "2. A __________ study shows that __________ hunger is a very big problem.",
+              "content": "A __________ study shows that __________ hunger is a very big problem.",
               "options": [
                 "recent / global",
                 "global / recent"
@@ -39,7 +39,7 @@
             },
             {
               "id": "3",
-              "content": "3. My mom is completely __________ about computers. She thinks that email and chat rooms are __________ ways to spend one's time.",
+              "content": "My mom is completely __________ about computers. She thinks that email and chat rooms are __________ ways to spend one's time.",
               "options": [
                 "ignorant / weird",
                 "weird / ignorant"
@@ -49,7 +49,7 @@
             },
             {
               "id": "4",
-              "content": "4. Joe has the ability to write great __________. His writing is so good that he never has to __________ his work.",
+              "content": "Joe has the ability to write great __________. His writing is so good that he never has to __________ his work.",
               "options": [
                 "edit / essays",
                 "essays / edit"
@@ -59,7 +59,7 @@
             },
             {
               "id": "5",
-              "content": "5. The report is due at the end of the __________. You should look in the __________ to see if this book will help you with the report.",
+              "content": "The report is due at the end of the __________. You should look in the __________ to see if this book will help you with the report.",
               "options": [
                 "semester / index",
                 "index / semester"
@@ -69,7 +69,7 @@
             },
             {
               "id": "6",
-              "content": "6. Our teacher __________ while she was giving us a __________ about health!",
+              "content": "Our teacher __________ while she was giving us a __________ about health!",
               "options": [
                 "lecture / fainted",
                 "fainted / lecture"
@@ -79,7 +79,7 @@
             },
             {
               "id": "7",
-              "content": "7. Jennifer's notes are very neat! They are __________, and she has __________ the most important parts with a green pen.",
+              "content": "Jennifer's notes are very neat! They are __________, and she has __________ the most important parts with a green pen.",
               "options": [
                 "typewritten / highlighted",
                 "highlighted / typewritten"
@@ -89,7 +89,7 @@
             },
             {
               "id": "8",
-              "content": "8. I made a __________ to go to the __________ more often to improve my health.",
+              "content": "I made a __________ to go to the __________ more often to improve my health.",
               "options": [
                 "gymnasium / resolution",
                 "resolution / gymnasium"
@@ -99,7 +99,7 @@
             },
             {
               "id": "9",
-              "content": "9. The __________ of the story is that you should think __________ before saying anything that might hurt someone.",
+              "content": "The __________ of the story is that you should think __________ before saying anything that might hurt someone.",
               "options": [
                 "awhile / moral",
                 "moral / awhile"
@@ -109,7 +109,7 @@
             },
             {
               "id": "10",
-              "content": "10. We __________ the company, and our suggestions are written in this __________ document.",
+              "content": "We __________ the company, and our suggestions are written in this __________ document.",
               "options": [
                 "private / evaluated",
                 "evaluated / private"
@@ -127,7 +127,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. The team evaluated _____.",
+              "content": "The team evaluated _____.",
               "options": [
                 "to eat less chocolate",
                 "ate soup with a knife",
@@ -139,7 +139,7 @@
             },
             {
               "id": "12",
-              "content": "2. The moral of the story is _____.",
+              "content": "The moral of the story is _____.",
               "options": [
                 "to be nicer to people",
                 "this large machine",
@@ -151,7 +151,7 @@
             },
             {
               "id": "13",
-              "content": "3. The global economic problems _____.",
+              "content": "The global economic problems _____.",
               "options": [
                 "ate soup with a knife",
                 "are getting worse",
@@ -163,7 +163,7 @@
             },
             {
               "id": "14",
-              "content": "4. Joe operates _____.",
+              "content": "Joe operates _____.",
               "options": [
                 "ate soup with a knife",
                 "is halfway through the school year",
@@ -175,7 +175,7 @@
             },
             {
               "id": "15",
-              "content": "5. We went to a lecture _____.",
+              "content": "We went to a lecture _____.",
               "options": [
                 "this large machine",
                 "aren't as important as real friends",
@@ -187,7 +187,7 @@
             },
             {
               "id": "16",
-              "content": "6. The friends you meet in cyberspace _____.",
+              "content": "The friends you meet in cyberspace _____.",
               "options": [
                 "are getting worse",
                 "to eat less chocolate",
@@ -199,7 +199,7 @@
             },
             {
               "id": "17",
-              "content": "7. The weird kid at school _____.",
+              "content": "The weird kid at school _____.",
               "options": [
                 "with a yellow pen",
                 "are getting worse",
@@ -211,7 +211,7 @@
             },
             {
               "id": "18",
-              "content": "8. You should highlight these words _____.",
+              "content": "You should highlight these words _____.",
               "options": [
                 "ate soup with a knife",
                 "with a yellow pen",
@@ -223,7 +223,7 @@
             },
             {
               "id": "19",
-              "content": "9. I made a resolution _____.",
+              "content": "I made a resolution _____.",
               "options": [
                 "with a yellow pen",
                 "to eat less chocolate",
@@ -235,7 +235,7 @@
             },
             {
               "id": "20",
-              "content": "10. The end of the first semester _____.",
+              "content": "The end of the first semester _____.",
               "options": [
                 "is halfway through the school year",
                 "the success of the project",
@@ -255,7 +255,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. I wanted to get fit, _____.",
+              "content": "I wanted to get fit, _____.",
               "options": [
                 "so I went to the gymnasium",
                 "because he's ignorant about math",
@@ -267,7 +267,7 @@
             },
             {
               "id": "22",
-              "content": "2. Geology is my favorite subject, _____.",
+              "content": "Geology is my favorite subject, _____.",
               "options": [
                 "so I wrote an essay about rocks",
                 "so you should find a more recent one",
@@ -279,7 +279,7 @@
             },
             {
               "id": "23",
-              "content": "3. My paper was full of mistakes, _____.",
+              "content": "My paper was full of mistakes, _____.",
               "options": [
                 "so I went to the gymnasium",
                 "so you should find a more recent one",
@@ -291,7 +291,7 @@
             },
             {
               "id": "24",
-              "content": "4. My brother couldn't help me with my math homework _____.",
+              "content": "My brother couldn't help me with my math homework _____.",
               "options": [
                 "so I went to the gymnasium",
                 "because he's ignorant about math",
@@ -303,7 +303,7 @@
             },
             {
               "id": "25",
-              "content": "5. In the first aid class, we learned what to do _____.",
+              "content": "In the first aid class, we learned what to do _____.",
               "options": [
                 "it's private",
                 "so you should find a more recent one",
@@ -315,7 +315,7 @@
             },
             {
               "id": "26",
-              "content": "6. I wanted to find some information about volcanoes, _____.",
+              "content": "I wanted to find some information about volcanoes, _____.",
               "options": [
                 "but he helped me edit it",
                 "so I looked under 'V' in the index",
@@ -327,7 +327,7 @@
             },
             {
               "id": "27",
-              "content": "7. That copy of the text book is too old, _____.",
+              "content": "That copy of the text book is too old, _____.",
               "options": [
                 "but he helped me edit it",
                 "because my essay has to be typewritten",
@@ -339,7 +339,7 @@
             },
             {
               "id": "28",
-              "content": "8. I need a computer _____.",
+              "content": "I need a computer _____.",
               "options": [
                 "because he's ignorant about math",
                 "because my essay has to be typewritten",
@@ -351,7 +351,7 @@
             },
             {
               "id": "29",
-              "content": "9. I'll get some tea if _____.",
+              "content": "I'll get some tea if _____.",
               "options": [
                 "it's private",
                 "so I wrote an essay about rocks",
@@ -363,7 +363,7 @@
             },
             {
               "id": "30",
-              "content": "10. You mustn't tell anyone this information; _____.",
+              "content": "You mustn't tell anyone this information; _____.",
               "options": [
                 "so you should find a more recent one",
                 "it's private",
@@ -391,7 +391,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. The computers were turned off because there was a recent problem.",
+              "content": "The computers were turned off because there was a recent problem.",
               "options": [
                 "True",
                 "False",
@@ -402,7 +402,7 @@
             },
             {
               "id": "32",
-              "content": "2. The private study rooms were upstairs.",
+              "content": "The private study rooms were upstairs.",
               "options": [
                 "True",
                 "False",
@@ -413,7 +413,7 @@
             },
             {
               "id": "33",
-              "content": "3. The computers in the private study rooms weren't operating correctly.",
+              "content": "The computers in the private study rooms weren't operating correctly.",
               "options": [
                 "True",
                 "False",
@@ -424,7 +424,7 @@
             },
             {
               "id": "34",
-              "content": "4. In his project, the student had to evaluate the government's response to global warming.",
+              "content": "In his project, the student had to evaluate the government's response to global warming.",
               "options": [
                 "True",
                 "False",
@@ -435,7 +435,7 @@
             },
             {
               "id": "35",
-              "content": "5. The geography test was worth fifty percent of the final grade.",
+              "content": "The geography test was worth fifty percent of the final grade.",
               "options": [
                 "True",
                 "False",
@@ -446,7 +446,7 @@
             },
             {
               "id": "36",
-              "content": "6. The student failed the test because he was completely ignorant about the subject.",
+              "content": "The student failed the test because he was completely ignorant about the subject.",
               "options": [
                 "True",
                 "False",
@@ -465,7 +465,7 @@
           "questions": [
             {
               "id": "37",
-              "content": "1. How did the teacher want the project to be written?",
+              "content": "How did the teacher want the project to be written?",
               "options": [
                 "In first person",
                 "Handwritten",
@@ -477,7 +477,7 @@
             },
             {
               "id": "38",
-              "content": "2. What was the project about?",
+              "content": "What was the project about?",
               "options": [
                 "Global warming",
                 "Economics",
@@ -489,7 +489,7 @@
             },
             {
               "id": "39",
-              "content": "3. What did the student NOT have to do in order to use the magic computer?",
+              "content": "What did the student NOT have to do in order to use the magic computer?",
               "options": [
                 "Type in the essay title",
                 "Edit his paper",
@@ -501,7 +501,7 @@
             },
             {
               "id": "40",
-              "content": "4. Where did the student spend his free time?",
+              "content": "Where did the student spend his free time?",
               "options": [
                 "In lectures",
                 "In the gymnasium",

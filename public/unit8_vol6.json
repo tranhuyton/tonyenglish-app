@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. congested",
+              "content": "congested",
               "options": [
                 "normal",
                 "crowded",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. exclusive",
+              "content": "exclusive",
               "options": [
                 "limited",
                 "ancient",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. unsettle",
+              "content": "unsettle",
               "options": [
                 "bring",
                 "intend",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. garment",
+              "content": "garment",
               "options": [
                 "clothing",
                 "equipment",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. propel",
+              "content": "propel",
               "options": [
                 "avoid",
                 "push",
@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. The meeting of the citizens’ group was <u>prevented from happening</u> by the police. [ 6 ]",
+              "content": "<p class=\"mb-4\">The meeting of the citizens’ group was <u>prevented from happening</u> by the police. [ 6 ]</p><p class=\"mb-4\">The warm weather <u>had changed the ice sculptures into strange shapes.</u> [ 7 ]</p><p class=\"mb-4\">Dad says drinking milk before going to bed helps with a disorder that <u>makes it hard to sleep.</u> [ 8 ]</p><p class=\"mb-4\">After I saw the scary movie, walking home in <u>the darkness upset</u> me. [ 9 ]</p><p class=\"mb-4\">After school, <u>I’m likely to go</u> visit my friend at her house. [ 10 ]</p><p class=\"mb-4\">Dylan believed it to be his <u>special right to be treated as superior to</u> all the others. [ 11 ]</p><p class=\"mb-4\">A gust of wind blew her scarf <u>over the edge of the boat</u> while she was sailing. [ 12 ]</p><p class=\"mb-4\">He didn’t know what the proper set of <u>rules about being polite</u> was for returning a gift. [ 13 ]</p><p class=\"mb-4\">The train was full <u>of clothes</u> that were to be sold overseas. [ 14 ]</p><p class=\"mb-4\">The wax candle twisted and formed a different shape <u>because it was left in the sun.</u> [ 15 ]</p>",
               "options": [],
               "explanation": "suppress (v): to prevent from happening.",
               "correctAnswer": "suppressed"
             },
             {
               "id": "7",
-              "content": "2. The warm weather <u>had changed the ice sculptures into strange shapes.</u> [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "deform (v): to change from its correct or original shape.",
               "correctAnswer": "deformed"
             },
             {
               "id": "8",
-              "content": "3. Dad says drinking milk before going to bed helps with a disorder that <u>makes it hard to sleep.</u> [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "insomnia (n): a condition with difficulty sleeping.",
               "correctAnswer": "insomnia"
             },
             {
               "id": "9",
-              "content": "4. After I saw the scary movie, walking home in <u>the darkness upset</u> me. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "unsettle (v): to make anxious or upset.",
               "correctAnswer": "unsettled"
             },
             {
               "id": "10",
-              "content": "5. After school, <u>I’m likely to go</u> visit my friend at her house. [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "liable (adj): very likely to happen.",
               "correctAnswer": "liable"
             },
             {
               "id": "11",
-              "content": "6. Dylan believed it to be his <u>special right to be treated as superior to</u> all the others. [ 11 ]",
+              "content": "",
               "options": [],
               "explanation": "privilege (n): a special right given to a person or group.",
               "correctAnswer": "privilege"
             },
             {
               "id": "12",
-              "content": "7. A gust of wind blew her scarf <u>over the edge of the boat</u> while she was sailing. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "overboard (adv): over the side of a boat.",
               "correctAnswer": "overboard"
             },
             {
               "id": "13",
-              "content": "8. He didn’t know what the proper set of <u>rules about being polite</u> was for returning a gift. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "etiquette (n): the rules about how to be polite.",
               "correctAnswer": "etiquette"
             },
             {
               "id": "14",
-              "content": "9. The train was full <u>of clothes</u> that were to be sold overseas. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "garments (n): pieces of clothing.",
               "correctAnswer": "garments"
             },
             {
               "id": "15",
-              "content": "10. The wax candle twisted and formed a different shape <u>because it was left in the sun.</u> [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "warp (v): to become bent into the wrong shape.",
               "correctAnswer": "warped"
@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. The club was very [ 16 ] and didn’t have many members.",
+              "content": "The club was very [ 16 ] and didn’t have many members.",
               "options": [
                 "tram",
                 "premium",
@@ -182,7 +182,7 @@
             },
             {
               "id": "17",
-              "content": "2. The members had to pay a [ 17 ] just to join.",
+              "content": "The members had to pay a [ 17 ] just to join.",
               "options": [
                 "tram",
                 "premium",
@@ -200,7 +200,7 @@
             },
             {
               "id": "18",
-              "content": "3. My mother is [ 18 ] with making sure we impress our guests.",
+              "content": "My mother is [ 18 ] with making sure we impress our guests.",
               "options": [
                 "tram",
                 "premium",
@@ -218,7 +218,7 @@
             },
             {
               "id": "19",
-              "content": "4. For example, she makes sure our [ 19 ] is perfect.",
+              "content": "For example, she makes sure our [ 19 ] is perfect.",
               "options": [
                 "tram",
                 "premium",
@@ -236,7 +236,7 @@
             },
             {
               "id": "20",
-              "content": "5. I stepped onto the [ 20 ] and couldn’t find a seat right away.",
+              "content": "I stepped onto the [ 20 ] and couldn’t find a seat right away.",
               "options": [
                 "tram",
                 "premium",
@@ -254,7 +254,7 @@
             },
             {
               "id": "21",
-              "content": "6. Finally, I made my way through the [ 21 ] aisle and sat down.",
+              "content": "Finally, I made my way through the [ 21 ] aisle and sat down.",
               "options": [
                 "tram",
                 "premium",
@@ -272,7 +272,7 @@
             },
             {
               "id": "22",
-              "content": "7. Hannah worked as a [ 22 ] for an advertising company.",
+              "content": "Hannah worked as a [ 22 ] for an advertising company.",
               "options": [
                 "tram",
                 "premium",
@@ -290,7 +290,7 @@
             },
             {
               "id": "23",
-              "content": "8. Between making deliveries, she liked to [ 23 ] with the employees.",
+              "content": "Between making deliveries, she liked to [ 23 ] with the employees.",
               "options": [
                 "tram",
                 "premium",
@@ -308,7 +308,7 @@
             },
             {
               "id": "24",
-              "content": "9. The glue couldn’t [ 24 ] the water from leaking from the pipes.",
+              "content": "The glue couldn’t [ 24 ] the water from leaking from the pipes.",
               "options": [
                 "tram",
                 "premium",
@@ -326,7 +326,7 @@
             },
             {
               "id": "25",
-              "content": "10. Since I didn’t clean it up right away, it caused the wooden floor to [ 25 ].",
+              "content": "Since I didn’t clean it up right away, it caused the wooden floor to [ 25 ].",
               "options": [
                 "tram",
                 "premium",
@@ -352,7 +352,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. Allie could always count on her <i>intuitive</i> powers to know where her cat was.",
+              "content": "Allie could always count on her <i>intuitive</i> powers to know where her cat was.",
               "options": [
                 "I",
                 "C"
@@ -362,7 +362,7 @@
             },
             {
               "id": "27",
-              "content": "2. The weatherman said it was <i>liable</i> to rain over the entire weekend, so we decided to go for a picnic on Saturday.",
+              "content": "The weatherman said it was <i>liable</i> to rain over the entire weekend, so we decided to go for a picnic on Saturday.",
               "options": [
                 "I",
                 "C"
@@ -372,7 +372,7 @@
             },
             {
               "id": "28",
-              "content": "3. Jared couldn’t stop <i>obsessing</i> about his grade. When his teacher returned his test, he forgot about it immediately.",
+              "content": "Jared couldn’t stop <i>obsessing</i> about his grade. When his teacher returned his test, he forgot about it immediately.",
               "options": [
                 "I",
                 "C"
@@ -382,7 +382,7 @@
             },
             {
               "id": "29",
-              "content": "4. Maxine suffers from <i>insomnia</i>. She has seen several doctors, but none have helped her get any more sleep.",
+              "content": "Maxine suffers from <i>insomnia</i>. She has seen several doctors, but none have helped her get any more sleep.",
               "options": [
                 "I",
                 "C"
@@ -392,7 +392,7 @@
             },
             {
               "id": "30",
-              "content": "5. Walter didn’t know what to wear to the concert. All of his best <i>garments</i> needed to be washed.",
+              "content": "Walter didn’t know what to wear to the concert. All of his best <i>garments</i> needed to be washed.",
               "options": [
                 "I",
                 "C"
@@ -418,7 +418,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Kevin took a taxi to the ship.",
+              "content": "Kevin took a taxi to the ship.",
               "options": [
                 "F",
                 "T"
@@ -428,7 +428,7 @@
             },
             {
               "id": "32",
-              "content": "2. In order to get the privilege to be in the exclusive section, one had to wear fancy garments.",
+              "content": "In order to get the privilege to be in the exclusive section, one had to wear fancy garments.",
               "options": [
                 "F",
                 "T"
@@ -438,7 +438,7 @@
             },
             {
               "id": "33",
-              "content": "3. Kevin didn’t socialize with the people in the exclusive section because it was too congested.",
+              "content": "Kevin didn’t socialize with the people in the exclusive section because it was too congested.",
               "options": [
                 "F",
                 "T"
@@ -448,7 +448,7 @@
             },
             {
               "id": "34",
-              "content": "4. Kevin could not sleep because he had insomnia.",
+              "content": "Kevin could not sleep because he had insomnia.",
               "options": [
                 "F",
                 "T"
@@ -458,7 +458,7 @@
             },
             {
               "id": "35",
-              "content": "5. If Kevin hadn’t seen the iceberg, the ship was liable to have crashed into it.",
+              "content": "If Kevin hadn’t seen the iceberg, the ship was liable to have crashed into it.",
               "options": [
                 "F",
                 "T"
@@ -476,7 +476,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Describe Kevin’s room next to the freight section.",
+              "content": "Describe Kevin’s room next to the freight section.",
               "options": [
                 "His room smelled bad, and the floorboards were warped and deformed in some areas.",
                 "It was exclusive with fancy garments.",
@@ -488,7 +488,7 @@
             },
             {
               "id": "37",
-              "content": "2. While he was on the ship, what could Kevin hear humming?",
+              "content": "While he was on the ship, what could Kevin hear humming?",
               "options": [
                 "Kevin could hear the humming of the motors as he was on the ship.",
                 "He heard people socializing.",
@@ -500,7 +500,7 @@
             },
             {
               "id": "38",
-              "content": "3. What did Kevin see when he looked overboard the first time?",
+              "content": "What did Kevin see when he looked overboard the first time?",
               "options": [
                 "Kevin didn’t see anything when he looked overboard the first time.",
                 "He saw an iceberg.",
@@ -512,7 +512,7 @@
             },
             {
               "id": "39",
-              "content": "4. What did the captain do when he heard the news about the iceberg?",
+              "content": "What did the captain do when he heard the news about the iceberg?",
               "options": [
                 "The captain instructed the crew to change the ship’s direction.",
                 "He ignored Kevin.",
@@ -524,7 +524,7 @@
             },
             {
               "id": "40",
-              "content": "5. What did Kevin learn at the end of the story?",
+              "content": "What did Kevin learn at the end of the story?",
               "options": [
                 "Kevin learned to always trust his intuitive sense.",
                 "He learned proper etiquette.",

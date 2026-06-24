@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. stroke",
+              "content": "stroke",
               "options": [
                 "to surprise",
                 "to move a hand",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. sacrifice",
+              "content": "sacrifice",
               "options": [
                 "to give up",
                 "to allow",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. joint",
+              "content": "joint",
               "options": [
                 "very sad",
                 "a large meal",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. emphasis",
+              "content": "emphasis",
               "options": [
                 "family",
                 "a song",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. hollow",
+              "content": "hollow",
               "options": [
                 "natural",
                 "cannot move",
@@ -86,7 +86,8 @@
                   "answer": "dim"
                 }
               ],
-              "content": "1. She avoided walking in <u>low-light</u> areas.<br/>di [ 6 ]"
+              "content": "<p class=\"mb-4\">She avoided walking in <u>low-light</u> areas.<br/>di [ 6 ]</p><p class=\"mb-4\">Since she's lived in hot places all her life, she's <u>used to</u> warm weather.<br/>ac [ 7 ]</p><p class=\"mb-4\">The holes in the old pipes let water <u>pass through</u> onto the bathroom floor.<br/>le [ 8 ]</p><p class=\"mb-4\">Her back felt <u>hard to move</u> after she slept on the floor.<br/>st [ 9 ]</p><p class=\"mb-4\">He was happy to go home and see the <u>group of family and friends</u>.<br/>cl [ 10 ]</p><p class=\"mb-4\">The very <u>shocked</u> crowd watched as the magician performed his tricks.<br/>as [ 11 ]</p><p class=\"mb-4\">The school served a <u>large meal</u> in honor of the new principal.<br/>fe [ 12 ]</p><p class=\"mb-4\">The only thing that I could see in the dark night was my flashlight <u>making light</u>.<br/>gl [ 13 ]</p><p class=\"mb-4\">It was a very <u>sad event</u> when his parents passed away in the accident.<br/>tr [ 14 ]</p><p class=\"mb-4\">Her <u>natural behavior</u> told her to leave the room as soon as possible.<br/>in [ 15 ]</p>",
+              "correctAnswer": "DIM"
             },
             {
               "id": "7",
@@ -96,7 +97,8 @@
                   "answer": "accustomed"
                 }
               ],
-              "content": "2. Since she's lived in hot places all her life, she's <u>used to</u> warm weather.<br/>ac [ 7 ]"
+              "content": "",
+              "correctAnswer": "ACCUSTOMED"
             },
             {
               "id": "8",
@@ -106,7 +108,8 @@
                   "answer": "leak"
                 }
               ],
-              "content": "3. The holes in the old pipes let water <u>pass through</u> onto the bathroom floor.<br/>le [ 8 ]"
+              "content": "",
+              "correctAnswer": "LEAK"
             },
             {
               "id": "9",
@@ -116,7 +119,8 @@
                   "answer": "stiff"
                 }
               ],
-              "content": "4. Her back felt <u>hard to move</u> after she slept on the floor.<br/>st [ 9 ]"
+              "content": "",
+              "correctAnswer": "STIFF"
             },
             {
               "id": "10",
@@ -126,7 +130,8 @@
                   "answer": "clan"
                 }
               ],
-              "content": "5. He was happy to go home and see the <u>group of family and friends</u>.<br/>cl [ 10 ]"
+              "content": "",
+              "correctAnswer": "CLAN"
             },
             {
               "id": "11",
@@ -136,7 +141,8 @@
                   "answer": "astonished"
                 }
               ],
-              "content": "6. The very <u>shocked</u> crowd watched as the magician performed his tricks.<br/>as [ 11 ]"
+              "content": "",
+              "correctAnswer": "ASTONISHED"
             },
             {
               "id": "12",
@@ -146,7 +152,8 @@
                   "answer": "feast"
                 }
               ],
-              "content": "7. The school served a <u>large meal</u> in honor of the new principal.<br/>fe [ 12 ]"
+              "content": "",
+              "correctAnswer": "FEAST"
             },
             {
               "id": "13",
@@ -156,7 +163,8 @@
                   "answer": "glowing"
                 }
               ],
-              "content": "8. The only thing that I could see in the dark night was my flashlight <u>making light</u>.<br/>gl [ 13 ]"
+              "content": "",
+              "correctAnswer": "GLOW"
             },
             {
               "id": "14",
@@ -166,7 +174,8 @@
                   "answer": "tragic"
                 }
               ],
-              "content": "9. It was a very <u>sad event</u> when his parents passed away in the accident.<br/>tr [ 14 ]"
+              "content": "",
+              "correctAnswer": "TRAGEDY"
             },
             {
               "id": "15",
@@ -176,7 +185,8 @@
                   "answer": "instincts"
                 }
               ],
-              "content": "10. Her <u>natural behavior</u> told her to leave the room as soon as possible.<br/>in [ 15 ]"
+              "content": "",
+              "correctAnswer": "INSTINCT"
             }
           ],
           "questionType": "Điền từ"
@@ -198,7 +208,7 @@
                   "answer": "astonished"
                 }
               ],
-              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. fable / astonished</p>The [fable] was about a young boy with magic powers. At first nobody believed him, but everyone was [astonished] when he made a cat disappear.</p>instincts / banged\nAfter hearing the bad news, she [banged] her fist on the table in anger. Things would go wrong, her [instincts] told her.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. accustomed / feast</p>Though the food was good, he felt sick after the [feast]. He just wasn't [accustomed] to eating so much at one time.</p>joint / physician\nThe [physician] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [joint].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. affirm / emphasis</p>The university placed a special [emphasis] on student safety. They wanted to [affirm] that they were interested in protecting students.</p>stiff / hollow\nHe wanted to find out where his sister went after school, so he hid in a [hollow] tree in the schoolyard. However, when he came out, he felt [stiff] all over.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. clan / tunes</p>The entire [clan] was excited about her wedding. While they drove to the church, they sang happy [tunes].</p>dim / stroked\nIn the [dim] light, it was hard to find the earring she'd dropped on the floor. She [stroked] the ground until she finally felt it.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. tragic / sacrifices</p>The boy suffered from a [tragic] illness. Still, his family made [sacrifices] to make sure he was always comfortable.</p>leak / glowing\nHe shut the door to make sure that no light could [leak] into the room. However, he could still see the moon [glowing] outside of his window.</p>",
+              "content": "<p class=\"mb-4\">fable / astonished</p>The [fable] was about a young boy with magic powers. At first nobody believed him, but everyone was [astonished] when he made a cat disappear.</p>instincts / banged\nAfter hearing the bad news, she [banged] her fist on the table in anger. Things would go wrong, her [instincts] told her.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. accustomed / feast</p>Though the food was good, he felt sick after the [feast]. He just wasn't [accustomed] to eating so much at one time.</p>joint / physician\nThe [physician] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [joint].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. affirm / emphasis</p>The university placed a special [emphasis] on student safety. They wanted to [affirm] that they were interested in protecting students.</p>stiff / hollow\nHe wanted to find out where his sister went after school, so he hid in a [hollow] tree in the schoolyard. However, when he came out, he felt [stiff] all over.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. clan / tunes</p>The entire [clan] was excited about her wedding. While they drove to the church, they sang happy [tunes].</p>dim / stroked\nIn the [dim] light, it was hard to find the earring she'd dropped on the floor. She [stroked] the ground until she finally felt it.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. tragic / sacrifices</p>The boy suffered from a [tragic] illness. Still, his family made [sacrifices] to make sure he was always comfortable.</p>leak / glowing\nHe shut the door to make sure that no light could [leak] into the room. However, he could still see the moon [glowing] outside of his window.</p>",
               "options": [
                 "fable",
                 "astonished"
@@ -384,7 +394,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. The physician told the old man there was nothing he could do.",
+              "content": "The physician told the old man there was nothing he could do.",
               "options": [
                 "T",
                 "F"
@@ -394,7 +404,7 @@
             },
             {
               "id": "27",
-              "content": "2. The old man waited in the hollow tree even though it leaked a little.",
+              "content": "The old man waited in the hollow tree even though it leaked a little.",
               "options": [
                 "T",
                 "F"
@@ -404,7 +414,7 @@
             },
             {
               "id": "28",
-              "content": "3. The old man's joints were stiff from walking in the forest.",
+              "content": "The old man's joints were stiff from walking in the forest.",
               "options": [
                 "T",
                 "F"
@@ -414,7 +424,7 @@
             },
             {
               "id": "29",
-              "content": "4. The old man's instincts told him to return home immediately.",
+              "content": "The old man's instincts told him to return home immediately.",
               "options": [
                 "T",
                 "F"
@@ -424,7 +434,7 @@
             },
             {
               "id": "30",
-              "content": "5. The man danced for the clan of monsters.",
+              "content": "The man danced for the clan of monsters.",
               "options": [
                 "T",
                 "F"
@@ -434,7 +444,7 @@
             },
             {
               "id": "31",
-              "content": "6. The monsters took away the man's tragic bump.",
+              "content": "The monsters took away the man's tragic bump.",
               "options": [
                 "T",
                 "F"
@@ -452,7 +462,7 @@
           "questions": [
             {
               "id": "32",
-              "content": "1. What advice did the doctor give the old man?",
+              "content": "What advice did the doctor give the old man?",
               "options": [
                 "To bang",
                 "To make",
@@ -464,7 +474,7 @@
             },
             {
               "id": "33",
-              "content": "2. Why did the man have to wait inside a hollow tree?",
+              "content": "Why did the man have to wait inside a hollow tree?",
               "options": [
                 "The light became dim.",
                 "It began to rain.",
@@ -476,7 +486,7 @@
             },
             {
               "id": "34",
-              "content": "3. Why did the old man come out from behind the tree?",
+              "content": "Why did the old man come out from behind the tree?",
               "options": [
                 "To run away",
                 "To eat",
@@ -488,7 +498,7 @@
             },
             {
               "id": "35",
-              "content": "4. Why does the old man stroke his face at the end of the story?",
+              "content": "Why does the old man stroke his face at the end of the story?",
               "options": [
                 "To astonish the monsters",
                 "To make sure the bump is gone",

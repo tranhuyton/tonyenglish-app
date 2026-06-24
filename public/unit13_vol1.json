@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. I left my coat in the [ 6 ] by the window.",
+              "content": "I left my coat in the [ 6 ] by the window.",
               "explanation": "spot (vị trí, chỗ).",
               "correctAnswer": "spot",
               "options": [
@@ -93,7 +93,7 @@
             },
             {
               "id": "7",
-              "content": "2. The poor man had no money to [ 7 ] his family.",
+              "content": "The poor man had no money to [ 7 ] his family.",
               "explanation": "feed (cho ăn).",
               "correctAnswer": "feed",
               "options": [
@@ -106,7 +106,7 @@
             },
             {
               "id": "8",
-              "content": "3. The robber was locked in a [ 8 ] for a year.",
+              "content": "The robber was locked in a [ 8 ] for a year.",
               "explanation": "cell (phòng giam).",
               "correctAnswer": "cell",
               "options": [
@@ -119,7 +119,7 @@
             },
             {
               "id": "9",
-              "content": "4. Did you read the [ 9 ] book or just part of it?",
+              "content": "Did you read the [ 9 ] book or just part of it?",
               "explanation": "whole (toàn bộ).",
               "correctAnswer": "whole",
               "options": [
@@ -132,7 +132,7 @@
             },
             {
               "id": "10",
-              "content": "5. If I get the answers [ 10 ], I will pass the test.",
+              "content": "If I get the answers [ 10 ], I will pass the test.",
               "explanation": "correct (chính xác).",
               "correctAnswer": "correct",
               "options": [
@@ -211,7 +211,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. cell / structure</p>The bad guy sat on the floor of his [ 16 ].</p>Dad says the old [ 17 ] is not safe.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. lord / owe</p>The [ 18 ] ruled over 100 people in the town.</p>I still [ 19 ] the bank money for my university loan.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. position / spot</p>Won't your legs hurt if you stay in that [ 20 ] for long?</p>This is our favorite picnic [ 21 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. whole / hole</p>The [ 22 ] class was excited.</p>I dug a [ 23 ] to put a tree in.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. feed / crop</p>Do not [ 24 ] any of the animals at the zoo.</p>The farmer grew a [ 25 ] of potatoes.</p>",
+              "content": "<p class=\"mb-4\">cell / structure</p>The bad guy sat on the floor of his [ 16 ].</p>Dad says the old [ 17 ] is not safe.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. lord / owe</p>The [ 18 ] ruled over 100 people in the town.</p>I still [ 19 ] the bank money for my university loan.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. position / spot</p>Won't your legs hurt if you stay in that [ 20 ] for long?</p>This is our favorite picnic [ 21 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. whole / hole</p>The [ 22 ] class was excited.</p>I dug a [ 23 ] to put a tree in.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. feed / crop</p>Do not [ 24 ] any of the animals at the zoo.</p>The farmer grew a [ 25 ] of potatoes.</p>",
               "explanation": "cell (phòng giam).",
               "correctAnswer": "cell",
               "options": [

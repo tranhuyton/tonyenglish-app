@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. to tell or explain meaning",
+              "content": "to tell or explain meaning",
               "options": [
                 "adopt",
                 "exclaim",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. a person without sense",
+              "content": "a person without sense",
               "options": [
                 "fool",
                 "nest",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. clothes that people wear for a particular occasion",
+              "content": "clothes that people wear for a particular occasion",
               "options": [
                 "motive",
                 "neat",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. to reach or put out",
+              "content": "to reach or put out",
               "options": [
                 "beg",
                 "extend",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. in a kind way",
+              "content": "in a kind way",
               "options": [
                 "beyond",
                 "illustrate",
@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. When I found the lost cat,________________ .",
+              "content": "When I found the lost cat,________________ .",
               "options": [
                 "I asked my mom if we could adopt it",
                 "I extended my hurt foot"
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "2. When I visit other countries,________________ .",
+              "content": "When I visit other countries,________________ .",
               "options": [
                 "I usually tell them how much better my country is than theirs",
                 "someone has to interpret what I say"
@@ -100,7 +100,7 @@
             },
             {
               "id": "8",
-              "content": "3. Not having enough money.",
+              "content": "Not having enough money.",
               "options": [
                 "can put you beyond the forest",
                 "can indeed be a big problem"
@@ -110,7 +110,7 @@
             },
             {
               "id": "9",
-              "content": "4. At the start of class,________________",
+              "content": "At the start of class,________________",
               "options": [
                 "the teacher kindly asked for us to stop talking",
                 "the teacher exclaimed the lesson"
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "5. The woman wanted to go to Africa.",
+              "content": "The woman wanted to go to Africa.",
               "options": [
                 "The tone of her voice was angry",
                 "Her motive was to help people"
@@ -138,7 +138,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. We had a big [ 11 ] to welcome my grandmother home from the hospital.",
+              "content": "We had a big [ 11 ] to welcome my grandmother home from the hospital.",
               "explanation": "reception (tiệc tiếp đón) để chào đón bà.",
               "correctAnswer": "reception",
               "options": [
@@ -156,7 +156,7 @@
             },
             {
               "id": "12",
-              "content": "2. The man was a [ 12 ] for crossing the street without looking.",
+              "content": "The man was a [ 12 ] for crossing the street without looking.",
               "explanation": "fool (kẻ ngốc) vì băng qua đường không nhìn.",
               "correctAnswer": "fool",
               "options": [
@@ -174,7 +174,7 @@
             },
             {
               "id": "13",
-              "content": "3. A friend asked me to [ 13 ] the book she wrote because I am an artist.",
+              "content": "A friend asked me to [ 13 ] the book she wrote because I am an artist.",
               "explanation": "illustrate (minh họa) sách vì là họa sĩ.",
               "correctAnswer": "illustrate",
               "options": [
@@ -192,7 +192,7 @@
             },
             {
               "id": "14",
-              "content": "4. I sewed feathers on my [ 14 ] for the play.",
+              "content": "I sewed feathers on my [ 14 ] for the play.",
               "explanation": "costume (trang phục) cho vở kịch.",
               "correctAnswer": "costume",
               "options": [
@@ -210,7 +210,7 @@
             },
             {
               "id": "15",
-              "content": "5. My teacher [ 15 ] my paper because I didn’t follow the directions.",
+              "content": "My teacher [ 15 ] my paper because I didn’t follow the directions.",
               "explanation": "rejected (từ chối) bài tập vì không làm theo hướng dẫn.",
               "correctAnswer": "rejected",
               "options": [
@@ -228,7 +228,7 @@
             },
             {
               "id": "16",
-              "content": "6. I like being alone in the forest because of the [ 16 ] that’s around me.",
+              "content": "I like being alone in the forest because of the [ 16 ] that’s around me.",
               "explanation": "silence (sự yên lặng) trong rừng.",
               "correctAnswer": "silence",
               "options": [
@@ -246,7 +246,7 @@
             },
             {
               "id": "17",
-              "content": "7. The boy who stole the bread [ 17 ] me not to tell.",
+              "content": "The boy who stole the bread [ 17 ] me not to tell.",
               "explanation": "begged (van xin) đừng kể ra.",
               "correctAnswer": "begged",
               "options": [
@@ -264,7 +264,7 @@
             },
             {
               "id": "18",
-              "content": "8. Some fish swim up a [ 18 ] to lay their eggs.",
+              "content": "Some fish swim up a [ 18 ] to lay their eggs.",
               "explanation": "stream (suối).",
               "correctAnswer": "stream",
               "options": [
@@ -282,7 +282,7 @@
             },
             {
               "id": "19",
-              "content": "9. We learned about the [ 19 ] of the Statue of Liberty.",
+              "content": "We learned about the [ 19 ] of the Statue of Liberty.",
               "explanation": "origin (nguồn gốc) của tượng Nữ thần Tự do.",
               "correctAnswer": "origin",
               "options": [
@@ -300,7 +300,7 @@
             },
             {
               "id": "20",
-              "content": "10. My sister [ 20 ] anyone to come in her room without asking first.",
+              "content": "My sister [ 20 ] anyone to come in her room without asking first.",
               "explanation": "forbids (cấm) vào phòng không hỏi trước.",
               "correctAnswer": "forbids",
               "options": [
@@ -334,7 +334,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "A reception for an old woman",
                 "A girl who liked to find nests in the trees",
@@ -346,7 +346,7 @@
             },
             {
               "id": "22",
-              "content": "2. What are the people trying to do to the green girl?",
+              "content": "What are the people trying to do to the green girl?",
               "options": [
                 "Beg her to jump into the stream",
                 "Make her leave",
@@ -358,7 +358,7 @@
             },
             {
               "id": "23",
-              "content": "3. What is true of the green girl in the story?",
+              "content": "What is true of the green girl in the story?",
               "options": [
                 "She was good at drawing illustrating about what she meant.",
                 "She was indeed there to bring bad luck.",
@@ -370,7 +370,7 @@
             },
             {
               "id": "24",
-              "content": "4. Why did Mrs. May extend her hand to the green girl?",
+              "content": "Why did Mrs. May extend her hand to the green girl?",
               "options": [
                 "To tell the girl that she was a fool",
                 "To show that she indeed had good motives",

@@ -92,7 +92,7 @@
                   "answer": "employs"
                 }
               ],
-              "content": "1. His company <u>gives work to</u> about 100 people in the community.<br/>em [ 6 ]"
+              "content": "<p class=\"mb-4\">His company <u>gives work to</u> about 100 people in the community.<br/>em [ 6 ]</p><p class=\"mb-4\">Joan was <u>forced to leave</u> from the auditorium for her hostile comments.<br/>ex [ 7 ]</p><p class=\"mb-4\">My new apartment in the city was <u>complete with bed, sofa, and TV</u>.<br/>fu [ 8 ]</p><p class=\"mb-4\">The prisoner’s condition for <u>health and cleanliness</u> was absolutely terrible.<br/>hy [ 9 ]</p><p class=\"mb-4\">I’m going to <u>rent</u> the apartment for only six months.<br/>le [ 10 ]</p><p class=\"mb-4\">I need to <u>fix the hole in</u> my pants.<br/>me [ 11 ]</p><p class=\"mb-4\">He was lucky to find <u>employees</u> who are honest and hardworking.<br/>pe [ 12 ]</p><p class=\"mb-4\">We need to have our <u>system of pipes that brings water into our house</u> checked.<br/>pl [ 13 ]</p><p class=\"mb-4\">The popular and <u>new fashion</u> these days for men is boots.<br/>tr [ 14 ]</p><p class=\"mb-4\">Did you remember to pay the <u>company that provides our water</u>?<br/>ut [ 15 ]</p>"
             },
             {
               "id": "7",
@@ -102,7 +102,7 @@
                   "answer": "expelled"
                 }
               ],
-              "content": "2. Joan was <u>forced to leave</u> from the auditorium for her hostile comments.<br/>ex [ 7 ]"
+              "content": ""
             },
             {
               "id": "8",
@@ -112,7 +112,7 @@
                   "answer": "furnished"
                 }
               ],
-              "content": "3. My new apartment in the city was <u>complete with bed, sofa, and TV</u>.<br/>fu [ 8 ]"
+              "content": ""
             },
             {
               "id": "9",
@@ -122,7 +122,7 @@
                   "answer": "hygiene"
                 }
               ],
-              "content": "4. The prisoner’s condition for <u>health and cleanliness</u> was absolutely terrible.<br/>hy [ 9 ]"
+              "content": ""
             },
             {
               "id": "10",
@@ -132,7 +132,7 @@
                   "answer": "lease"
                 }
               ],
-              "content": "5. I’m going to <u>rent</u> the apartment for only six months.<br/>le [ 10 ]"
+              "content": ""
             },
             {
               "id": "11",
@@ -142,7 +142,7 @@
                   "answer": "mend"
                 }
               ],
-              "content": "6. I need to <u>fix the hole in</u> my pants.<br/>me [ 11 ]"
+              "content": ""
             },
             {
               "id": "12",
@@ -152,7 +152,7 @@
                   "answer": "personnel"
                 }
               ],
-              "content": "7. He was lucky to find <u>employees</u> who are honest and hardworking.<br/>pe [ 12 ]"
+              "content": ""
             },
             {
               "id": "13",
@@ -162,7 +162,7 @@
                   "answer": "plumbing"
                 }
               ],
-              "content": "8. We need to have our <u>system of pipes that brings water into our house</u> checked.<br/>pl [ 13 ]"
+              "content": ""
             },
             {
               "id": "14",
@@ -172,7 +172,7 @@
                   "answer": "trendy"
                 }
               ],
-              "content": "9. The popular and <u>new fashion</u> these days for men is boots.<br/>tr [ 14 ]"
+              "content": ""
             },
             {
               "id": "15",
@@ -182,7 +182,7 @@
                   "answer": "utility"
                 }
               ],
-              "content": "10. Did you remember to pay the <u>company that provides our water</u>?<br/>ut [ 15 ]"
+              "content": ""
             }
           ],
           "questionType": "Điền từ"

@@ -12,31 +12,31 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. He got a low score on the science <u>test</u>.<br/>ex [ 1 ]",
+              "content": "<p class=\"mb-4\">He got a low score on the science <u>test</u>.<br/>ex [ 1 ]</p><p class=\"mb-4\">The evening was filled with <u>special things that made it different</u>.<br/>ma [ 2 ]</p><p class=\"mb-4\">He loves to have the best <u>things that are new to the world</u>.<br/>te [ 3 ]</p><p class=\"mb-4\">I only read the <u>plan</u> for the story.<br/>ou [ 4 ]</p><p class=\"mb-4\">The writer is good at making <u>sentences about what someone looks like</u>.<br/>de [ 5 ]</p>",
               "explanation": "exam (bài kiểm tra) tương đồng với test.",
               "correctAnswer": "exam"
             },
             {
               "id": "2",
-              "content": "2. The evening was filled with <u>special things that made it different</u>.<br/>ma [ 2 ]",
+              "content": "",
               "explanation": "magical (kỳ diệu) miêu tả những điều đặc biệt làm cho nó khác biệt.",
               "correctAnswer": "magical"
             },
             {
               "id": "3",
-              "content": "3. He loves to have the best <u>things that are new to the world</u>.<br/>te [ 3 ]",
+              "content": "",
               "explanation": "technology (công nghệ) liên quan đến những thứ tốt nhất và mới nhất trên thế giới.",
               "correctAnswer": "technology"
             },
             {
               "id": "4",
-              "content": "4. I only read the <u>plan</u> for the story.<br/>ou [ 4 ]",
+              "content": "",
               "explanation": "outline (đề cương) tương đồng với plan for the story.",
               "correctAnswer": "outline"
             },
             {
               "id": "5",
-              "content": "5. The writer is good at making <u>sentences about what someone looks like</u>.<br/>de [ 5 ]",
+              "content": "",
               "explanation": "descriptions (sự miêu tả) là việc tạo ra các câu văn về vẻ ngoài của ai đó.",
               "correctAnswer": "descriptions"
             }
@@ -50,7 +50,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. Have you been to the local cinema?",
+              "content": "Have you been to the local cinema?",
               "options": [
                 "Yes, I went there yesterday.",
                 "No, it is in the other city."
@@ -60,7 +60,7 @@
             },
             {
               "id": "7",
-              "content": "2. Will you go to the store?",
+              "content": "Will you go to the store?",
               "options": [
                 "No, I saw it yesterday.",
                 "Yes, I need a new hat."
@@ -70,7 +70,7 @@
             },
             {
               "id": "8",
-              "content": "3. Do you like the new coach?",
+              "content": "Do you like the new coach?",
               "options": [
                 "Yes, he’s very nice.",
                 "No, it is too expensive."
@@ -80,7 +80,7 @@
             },
             {
               "id": "9",
-              "content": "4. What was your favorite scene?",
+              "content": "What was your favorite scene?",
               "options": [
                 "I didn’t like any of them.",
                 "I bought it last week."
@@ -90,7 +90,7 @@
             },
             {
               "id": "10",
-              "content": "5. Did you buy the novel?",
+              "content": "Did you buy the novel?",
               "options": [
                 "Yes, he was very nice.",
                 "No, someone gave it to me."
@@ -108,7 +108,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I like to read, __________.",
+              "content": "I like to read, __________.",
               "options": [
                 "so I buy many novels",
                 "so I am a poet"
@@ -118,7 +118,7 @@
             },
             {
               "id": "12",
-              "content": "2. He doesn’t always use the best judgment, __________.",
+              "content": "He doesn’t always use the best judgment, __________.",
               "options": [
                 "she suffers a lot",
                 "so he makes some silly mistakes"
@@ -128,7 +128,7 @@
             },
             {
               "id": "13",
-              "content": "3. He has many computers. __________.",
+              "content": "He has many computers. __________.",
               "options": [
                 "They are on sheets",
                 "He loves technology"
@@ -138,7 +138,7 @@
             },
             {
               "id": "14",
-              "content": "4. I don’t play on the soccer team __________.",
+              "content": "I don’t play on the soccer team __________.",
               "options": [
                 "because I don’t like the coach",
                 "because the outline is too long"
@@ -148,7 +148,7 @@
             },
             {
               "id": "15",
-              "content": "5. She likes her teacher. __________.",
+              "content": "She likes her teacher. __________.",
               "options": [
                 "He uses helpful examples",
                 "He writes a lot of mail in class"
@@ -158,7 +158,7 @@
             },
             {
               "id": "16",
-              "content": "6. The movie was too boring. __________.",
+              "content": "The movie was too boring. __________.",
               "options": [
                 "They shouldn’t have printed it",
                 "It needed more exciting scenes"
@@ -168,7 +168,7 @@
             },
             {
               "id": "17",
-              "content": "7. My dog won’t bite you. _________.",
+              "content": "My dog won’t bite you. _________.",
               "options": [
                 "I can control it",
                 "He is doing an exam"
@@ -178,7 +178,7 @@
             },
             {
               "id": "18",
-              "content": "8. I need to buy some food, so _________.",
+              "content": "I need to buy some food, so _________.",
               "options": [
                 "I’m going to the store",
                 "I am over the limit"
@@ -188,7 +188,7 @@
             },
             {
               "id": "19",
-              "content": "9. She doesn’t like that book because _________.",
+              "content": "She doesn’t like that book because _________.",
               "options": [
                 "she has a local book",
                 "the examples are not clear enough"
@@ -198,7 +198,7 @@
             },
             {
               "id": "20",
-              "content": "10. When he travels, __________.",
+              "content": "When he travels, __________.",
               "options": [
                 "he always takes a direct flight",
                 "he gives a description of airplanes"
@@ -224,7 +224,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "A girl who gets a novel about technology in the mail",
                 "A basketball coach who tells jokes to people",
@@ -236,7 +236,7 @@
             },
             {
               "id": "22",
-              "content": "2. Why does Sarah love to read?",
+              "content": "Why does Sarah love to read?",
               "options": [
                 "It gives her control over other people.",
                 "She likes the phrases and descriptions in books.",
@@ -248,7 +248,7 @@
             },
             {
               "id": "23",
-              "content": "3. What does Sarah learn in the end?",
+              "content": "What does Sarah learn in the end?",
               "options": [
                 "She should make other people suffer.",
                 "Simple stories are the best.",
@@ -260,7 +260,7 @@
             },
             {
               "id": "24",
-              "content": "4. What is true about the magical book?",
+              "content": "What is true about the magical book?",
               "options": [
                 "It is printed on sheets of gold.",
                 "Its outline is hard to understand.",
@@ -272,7 +272,7 @@
             },
             {
               "id": "25",
-              "content": "5. Why is Sarah on the basketball team?",
+              "content": "Why is Sarah on the basketball team?",
               "options": [
                 "Her parents made her join the basketball team.",
                 "She loves to play basketball.",

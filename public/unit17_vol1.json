@@ -80,31 +80,31 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. His final offer was very <u>reasonable</u>.<br/>fa [ 6 ]",
+              "content": "<p class=\"mb-4\">His final offer was very <u>reasonable</u>.<br/>fa [ 6 ]</p><p class=\"mb-4\">Don't <u>throw it in the trash without using all of it</u>.<br/>wa [ 7 ]</p><p class=\"mb-4\">The rabbit will <u>go away</u> if you get too close.<br/>di [ 8 ]</p><p class=\"mb-4\">He asked <u>if</u> I liked new movies or old movies.<br/>wh [ 9 ]</p><p class=\"mb-4\">You must <u>decide</u> what to do next.<br/>de [ 10 ]</p>",
               "explanation": "fair = reasonable",
               "correctAnswer": "fair"
             },
             {
               "id": "7",
-              "content": "2. Don't <u>throw it in the trash without using all of it</u>.<br/>wa [ 7 ]",
+              "content": "",
               "explanation": "waste = throw it in the trash without using all of it",
               "correctAnswer": "waste"
             },
             {
               "id": "8",
-              "content": "3. The rabbit will <u>go away</u> if you get too close.<br/>di [ 8 ]",
+              "content": "",
               "explanation": "disappear = go away",
               "correctAnswer": "appear"
             },
             {
               "id": "9",
-              "content": "4. He asked <u>if</u> I liked new movies or old movies.<br/>wh [ 9 ]",
+              "content": "",
               "explanation": "whether = if (choosing between two things)",
               "correctAnswer": "ether"
             },
             {
               "id": "10",
-              "content": "5. You must <u>decide</u> what to do next.<br/>de [ 10 ]",
+              "content": "",
               "explanation": "determine = decide",
               "correctAnswer": "etermine"
             }
@@ -118,7 +118,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. That [ 11 ] is too high to climb.",
+              "content": "That [ 11 ] is too high to climb.",
               "explanation": "hill fits the context.",
               "correctAnswer": "hill",
               "options": [
@@ -131,7 +131,7 @@
             },
             {
               "id": "12",
-              "content": "2. We must find a [ 12 ] to the difficult problem.",
+              "content": "We must find a [ 12 ] to the difficult problem.",
               "explanation": "solution fits the context.",
               "correctAnswer": "solution",
               "options": [
@@ -144,7 +144,7 @@
             },
             {
               "id": "13",
-              "content": "3. I asked you a question. What is your [ 13 ]?",
+              "content": "I asked you a question. What is your [ 13 ]?",
               "explanation": "response fits the context.",
               "correctAnswer": "response",
               "options": [
@@ -157,7 +157,7 @@
             },
             {
               "id": "14",
-              "content": "4. The rain formed [ 14 ] on the road.",
+              "content": "The rain formed [ 14 ] on the road.",
               "explanation": "puddles fits the context.",
               "correctAnswer": "puddles",
               "options": [
@@ -170,7 +170,7 @@
             },
             {
               "id": "15",
-              "content": "5. Do you [ 15 ] the thought that went into the gifts you got?",
+              "content": "Do you [ 15 ] the thought that went into the gifts you got?",
               "explanation": "appreciate fits the context.",
               "correctAnswer": "appreciate",
               "options": [

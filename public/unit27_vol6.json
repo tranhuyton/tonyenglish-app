@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. If you invert a bottle, you",
+              "content": "If you invert a bottle, you",
               "options": [
                 "drink from it",
                 "wash it with soap",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. Which of the following would most likely require the use of a funnel?",
+              "content": "Which of the following would most likely require the use of a funnel?",
               "options": [
                 "Snow",
                 "Books",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. What is a wolf's prey?",
+              "content": "What is a wolf's prey?",
               "options": [
                 "Its pups",
                 "Its den",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. Which is hereditary?",
+              "content": "Which is hereditary?",
               "options": [
                 "Place of birth",
                 "Eye color",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. If something is fragrant, you",
+              "content": "If something is fragrant, you",
               "options": [
                 "like to smell it",
                 "want to eat it",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. Who uses seasoning at work?",
+              "content": "Who uses seasoning at work?",
               "options": [
                 "A teacher",
                 "A chef",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. Which of the following describes a kind of deputy?",
+              "content": "Which of the following describes a kind of deputy?",
               "options": [
                 "A supervisor",
                 "A CEO",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. What is made from sodium?",
+              "content": "What is made from sodium?",
               "options": [
                 "Furniture",
                 "Salts",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. Where would you most likely hear a hymn?",
+              "content": "Where would you most likely hear a hymn?",
               "options": [
                 "At work",
                 "Underwater",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. If your brother is sarcastic, he",
+              "content": "If your brother is sarcastic, he",
               "options": [
                 "wants to hit you",
                 "insults you",
@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. One ingredient in the recipe is a small amount of [ 11 ]",
+              "content": "One ingredient in the recipe is a small amount of [ 11 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -164,7 +164,7 @@
             },
             {
               "id": "12",
-              "content": "2. Then you need to pour in a pint of [ 12 ]",
+              "content": "Then you need to pour in a pint of [ 12 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -182,7 +182,7 @@
             },
             {
               "id": "13",
-              "content": "3. She can play many instruments and sing many [ 13 ]",
+              "content": "She can play many instruments and sing many [ 13 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -200,7 +200,7 @@
             },
             {
               "id": "14",
-              "content": "4. Her mother is a good musician, too. Her talent must be [ 14 ]",
+              "content": "Her mother is a good musician, too. Her talent must be [ 14 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -218,7 +218,7 @@
             },
             {
               "id": "15",
-              "content": "5. The hunter was a very talented [ 15 ]",
+              "content": "The hunter was a very talented [ 15 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -236,7 +236,7 @@
             },
             {
               "id": "16",
-              "content": "6. He only needed one arrow to shoot his [ 16 ]",
+              "content": "He only needed one arrow to shoot his [ 16 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -254,7 +254,7 @@
             },
             {
               "id": "17",
-              "content": "7. Everyone lined up to take part in the [ 17 ]",
+              "content": "Everyone lined up to take part in the [ 17 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -272,7 +272,7 @@
             },
             {
               "id": "18",
-              "content": "8. We marched to honor the king and the noble [ 18 ]",
+              "content": "We marched to honor the king and the noble [ 18 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -290,7 +290,7 @@
             },
             {
               "id": "19",
-              "content": "9. When it came to keeping the house clean, his mother was a [ 19 ]",
+              "content": "When it came to keeping the house clean, his mother was a [ 19 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -308,7 +308,7 @@
             },
             {
               "id": "20",
-              "content": "10. She punished him if his room did not smell very [ 20 ]",
+              "content": "She punished him if his room did not smell very [ 20 ]",
               "options": [
                 "fragrant",
                 "archer",
@@ -334,70 +334,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. He liked to pour the <u><u>strong tasting liquid made from sour wine</u></u> directly on his salad. [ 21 ]",
+              "content": "<p class=\"mb-4\">He liked to pour the <u><u>strong tasting liquid made from sour wine</u></u> directly on his salad. [ 21 ]</p><p class=\"mb-4\">To better explain the procedure, he used a <u>great <u>way to show that things are similar</u>.</u> [ 22 ]</p><p class=\"mb-4\">We were in awe of the performance of the <u>skilled <u>person who uses a bow and arrows</u>.</u> [ 23 ]</p><p class=\"mb-4\">The war was a means to overthrow the <u><u>cruel and unfair government</u>.</u> [ 24 ]</p><p class=\"mb-4\">I have a feeling that the robbery was <u>a <u>secret plan to do something illegal</u></u> by the owners. [ 25 ]</p><p class=\"mb-4\">At the library, we learned how to <u>trace our <u>line of people from which we descended</u>.</u> [ 26 ]</p><p class=\"mb-4\">The people were convinced that the strange visitor was <u>a <u>person chosen by God</u>.</u> [ 27 ]</p><p class=\"mb-4\">The father acted like <u>a <u>person who treated people in a cruel and unfair way</u>.</u> [ 28 ]</p><p class=\"mb-4\">The <u>British <u>nobleman</u> was</u> a very kind and respected man. [ 29 ]</p><p class=\"mb-4\">The new mayor's first priority was to select <u>a <u>second most important person</u>.</u> [ 30 ]</p>",
               "options": [],
               "explanation": "vinegar: a strong tasting liquid made from sour wine.",
               "correctAnswer": "vinegar"
             },
             {
               "id": "22",
-              "content": "2. To better explain the procedure, he used a <u>great <u>way to show that things are similar</u>.</u> [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "analogy: a connection made to show that things are similar.",
               "correctAnswer": "analogy"
             },
             {
               "id": "23",
-              "content": "3. We were in awe of the performance of the <u>skilled <u>person who uses a bow and arrows</u>.</u> [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "archer: a person who uses a bow and arrows.",
               "correctAnswer": "archer"
             },
             {
               "id": "24",
-              "content": "4. The war was a means to overthrow the <u><u>cruel and unfair government</u>.</u> [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "tyranny: a cruel and unfair government.",
               "correctAnswer": "tyranny"
             },
             {
               "id": "25",
-              "content": "5. I have a feeling that the robbery was <u>a <u>secret plan to do something illegal</u></u> by the owners. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "conspiracy: a secret plan to do something illegal.",
               "correctAnswer": "conspiracy"
             },
             {
               "id": "26",
-              "content": "6. At the library, we learned how to <u>trace our <u>line of people from which we descended</u>.</u> [ 26 ]",
+              "content": "",
               "options": [],
               "explanation": "ancestry: the series of people from whom a person descended.",
               "correctAnswer": "ancestry"
             },
             {
               "id": "27",
-              "content": "7. The people were convinced that the strange visitor was <u>a <u>person chosen by God</u>.</u> [ 27 ]",
+              "content": "",
               "options": [],
               "explanation": "prophet: a person chosen by God.",
               "correctAnswer": "prophet"
             },
             {
               "id": "28",
-              "content": "8. The father acted like <u>a <u>person who treated people in a cruel and unfair way</u>.</u> [ 28 ]",
+              "content": "",
               "options": [],
               "explanation": "tyrant: a person who treats people in a cruel, harsh, and unfair way.",
               "correctAnswer": "tyrant"
             },
             {
               "id": "29",
-              "content": "9. The <u>British <u>nobleman</u> was</u> a very kind and respected man. [ 29 ]",
+              "content": "",
               "options": [],
               "explanation": "earl: a nobleman from Britain.",
               "correctAnswer": "earl"
             },
             {
               "id": "30",
-              "content": "10. The new mayor's first priority was to select <u>a <u>second most important person</u>.</u> [ 30 ]",
+              "content": "",
               "options": [],
               "explanation": "deputy: the second-highest-ranking person.",
               "correctAnswer": "deputy"
@@ -412,7 +412,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. The <i>sarcastic</i> teacher was always sure to speak clearly and honestly with his students.",
+              "content": "The <i>sarcastic</i> teacher was always sure to speak clearly and honestly with his students.",
               "options": [
                 "I",
                 "C"
@@ -422,7 +422,7 @@
             },
             {
               "id": "32",
-              "content": "2. The <i>tyranny</i> at the church made people feel welcome.",
+              "content": "The <i>tyranny</i> at the church made people feel welcome.",
               "options": [
                 "I",
                 "C"
@@ -432,7 +432,7 @@
             },
             {
               "id": "33",
-              "content": "3. The mechanic used a <i>funnel</i> to pour the gas into the tank.",
+              "content": "The mechanic used a <i>funnel</i> to pour the gas into the tank.",
               "options": [
                 "I",
                 "C"
@@ -442,7 +442,7 @@
             },
             {
               "id": "34",
-              "content": "4. Because of the <i>analogy</i>, many people were injured.",
+              "content": "Because of the <i>analogy</i>, many people were injured.",
               "options": [
                 "I",
                 "C"
@@ -452,7 +452,7 @@
             },
             {
               "id": "35",
-              "content": "5. I think the addition of more <i>sodium</i> to the recipe made the bread too salty.",
+              "content": "I think the addition of more <i>sodium</i> to the recipe made the bread too salty.",
               "options": [
                 "I",
                 "C"
@@ -478,7 +478,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The Earl of Hampton was an expert archer who was in the forest hunting prey.",
+              "content": "The Earl of Hampton was an expert archer who was in the forest hunting prey.",
               "options": [
                 "T",
                 "F"
@@ -488,7 +488,7 @@
             },
             {
               "id": "37",
-              "content": "2. The prophet used a funnel to put vinegar, garlic, some seasoning, and sodium in a bottle.",
+              "content": "The prophet used a funnel to put vinegar, garlic, some seasoning, and sodium in a bottle.",
               "options": [
                 "T",
                 "F"
@@ -498,7 +498,7 @@
             },
             {
               "id": "38",
-              "content": "3. The evil tyrant and his men marched in a procession through the town.",
+              "content": "The evil tyrant and his men marched in a procession through the town.",
               "options": [
                 "T",
                 "F"
@@ -508,7 +508,7 @@
             },
             {
               "id": "39",
-              "content": "4. The prophet, who sang a hymn, was involved in a conspiracy to take over Hampton.",
+              "content": "The prophet, who sang a hymn, was involved in a conspiracy to take over Hampton.",
               "options": [
                 "T",
                 "F"
@@ -518,7 +518,7 @@
             },
             {
               "id": "40",
-              "content": "5. Michael’s strength really came from the fragrant potion.",
+              "content": "Michael’s strength really came from the fragrant potion.",
               "options": [
                 "T",
                 "F"
@@ -536,7 +536,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. What suggests that Michael’s skills were hereditary?",
+              "content": "What suggests that Michael’s skills were hereditary?",
               "options": [
                 "All the people in his ancestry were famous warriors.",
                 "He was known as the Earl of Shining.",
@@ -548,7 +548,7 @@
             },
             {
               "id": "42",
-              "content": "2. What analogy did an enemy deputy officer use to describe Michael?",
+              "content": "What analogy did an enemy deputy officer use to describe Michael?",
               "options": [
                 "\"He looks as strong as an ox!\"",
                 "\"He is too old to fight!\"",
@@ -560,7 +560,7 @@
             },
             {
               "id": "43",
-              "content": "3. What did Michael say in a sarcastic tone before he inverted the bottle?",
+              "content": "What did Michael say in a sarcastic tone before he inverted the bottle?",
               "options": [
                 "\"Wow, this is fragrant.\"",
                 "\"I'm too old to fight!\"",
@@ -572,7 +572,7 @@
             },
             {
               "id": "44",
-              "content": "4. What did Michael say after the prophet said the village needed him to stop the tyranny?",
+              "content": "What did Michael say after the prophet said the village needed him to stop the tyranny?",
               "options": [
                 "\"I'm too old to fight! I'm not confident that I can do it.\"",
                 "\"I'll try my best.\"",
@@ -584,7 +584,7 @@
             },
             {
               "id": "45",
-              "content": "5. What did Michael realize after his final encounter with the prophet?",
+              "content": "What did Michael realize after his final encounter with the prophet?",
               "options": [
                 "Michael realized he really was still great. He just needed to believe in himself.",
                 "Michael realized the potion was fragrant.",

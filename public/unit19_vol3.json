@@ -138,7 +138,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. We had a big [ 11 ] to welcome my grandmother home from the hospital.",
+              "content": "We had a big [ 11 ] to welcome my grandmother home from the hospital.",
               "options": [
                 "begged",
                 "fool",
@@ -156,7 +156,7 @@
             },
             {
               "id": "12",
-              "content": "2. The man was a [ 12 ] for crossing the street without looking.",
+              "content": "The man was a [ 12 ] for crossing the street without looking.",
               "options": [
                 "begged",
                 "fool",
@@ -174,7 +174,7 @@
             },
             {
               "id": "13",
-              "content": "3. A friend asked me to [ 13 ] the book she wrote because I am an artist.",
+              "content": "A friend asked me to [ 13 ] the book she wrote because I am an artist.",
               "options": [
                 "begged",
                 "fool",
@@ -192,7 +192,7 @@
             },
             {
               "id": "14",
-              "content": "4. I sewed feathers on my [ 14 ] for the play.",
+              "content": "I sewed feathers on my [ 14 ] for the play.",
               "options": [
                 "begged",
                 "fool",
@@ -210,7 +210,7 @@
             },
             {
               "id": "15",
-              "content": "5. My teacher [ 15 ] my paper because I didn’t follow the directions.",
+              "content": "My teacher [ 15 ] my paper because I didn’t follow the directions.",
               "options": [
                 "begged",
                 "fool",
@@ -228,7 +228,7 @@
             },
             {
               "id": "16",
-              "content": "6. I like being alone in the forest because of the [ 16 ] that’s around me.",
+              "content": "I like being alone in the forest because of the [ 16 ] that’s around me.",
               "options": [
                 "begged",
                 "fool",
@@ -246,7 +246,7 @@
             },
             {
               "id": "17",
-              "content": "7. The boy who stole the bread [ 17 ] me not to tell.",
+              "content": "The boy who stole the bread [ 17 ] me not to tell.",
               "options": [
                 "begged",
                 "fool",
@@ -264,7 +264,7 @@
             },
             {
               "id": "18",
-              "content": "8. Some fish swim up a [ 18 ] to lay their eggs.",
+              "content": "Some fish swim up a [ 18 ] to lay their eggs.",
               "options": [
                 "begged",
                 "fool",
@@ -282,7 +282,7 @@
             },
             {
               "id": "19",
-              "content": "9. We learned about the [ 19 ] of the Statue of Liberty.",
+              "content": "We learned about the [ 19 ] of the Statue of Liberty.",
               "options": [
                 "begged",
                 "fool",
@@ -300,7 +300,7 @@
             },
             {
               "id": "20",
-              "content": "10. My sister [ 20 ] anyone to come in her room without asking first.",
+              "content": "My sister [ 20 ] anyone to come in her room without asking first.",
               "options": [
                 "begged",
                 "fool",

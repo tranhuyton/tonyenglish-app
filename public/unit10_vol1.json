@@ -12,61 +12,61 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. It is <u>very important</u> that you call your mother soon.<br/>es [ 1 ]",
+              "content": "<p class=\"mb-4\">It is <u>very important</u> that you call your mother soon.<br/>es [ 1 ]</p><p class=\"mb-4\">The <u>good thing</u> about being old is that you know many things.<br/>be [ 2 ]</p><p class=\"mb-4\">I have <u>problems</u> with my science homework.<br/>tr [ 3 ]</p><p class=\"mb-4\">I am <u>sure</u> that she will come to his party.<br/>ce [ 4 ]</p><p class=\"mb-4\">The <u>job</u> of the stove is to cook.<br/>fu [ 5 ]</p><p class=\"mb-4\">That is the <u>place</u> where they met.<br/>si [ 6 ]</p><p class=\"mb-4\">I saw his <u>picture</u> on TV.<br/>im [ 7 ]</p><p class=\"mb-4\">The twins don't like to be <u>apart</u>.<br/>se [ 8 ]</p><p class=\"mb-4\">I like to <u>stay</u> at home on the weekends.<br/>re [ 9 ]</p><p class=\"mb-4\">His <u>part that comes out of his rear</u> was shaking because he was happy.<br/>ta [ 10 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "essential"
             },
             {
               "id": "2",
-              "content": "2. The <u>good thing</u> about being old is that you know many things.<br/>be [ 2 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "benefit"
             },
             {
               "id": "3",
-              "content": "3. I have <u>problems</u> with my science homework.<br/>tr [ 3 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "trouble"
             },
             {
               "id": "4",
-              "content": "4. I am <u>sure</u> that she will come to his party.<br/>ce [ 4 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "certain"
             },
             {
               "id": "5",
-              "content": "5. The <u>job</u> of the stove is to cook.<br/>fu [ 5 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "function"
             },
             {
               "id": "6",
-              "content": "6. That is the <u>place</u> where they met.<br/>si [ 6 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "site"
             },
             {
               "id": "7",
-              "content": "7. I saw his <u>picture</u> on TV.<br/>im [ 7 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "image"
             },
             {
               "id": "8",
-              "content": "8. The twins don't like to be <u>apart</u>.<br/>se [ 8 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "separate"
             },
             {
               "id": "9",
-              "content": "9. I like to <u>stay</u> at home on the weekends.<br/>re [ 9 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "remain"
             },
             {
               "id": "10",
-              "content": "10. His <u>part that comes out of his rear</u> was shaking because he was happy.<br/>ta [ 10 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "tail"
             }

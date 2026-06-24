@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p>1.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "Learning Spanish was a <b>gradual</b> process for me.",
                 "The boy <b>retired</b> his mother."
@@ -22,7 +22,7 @@
             },
             {
               "id": "2",
-              "content": "<p>2.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "The bottle fell and broke in an <b>instant</b>.",
                 "I <b>accomplish</b> sleeping before I go to bed."
@@ -32,7 +32,7 @@
             },
             {
               "id": "3",
-              "content": "<p>3.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "Four is the <b>approximate</b> number of forty.",
                 "The old man <b>retired</b> from his job."
@@ -42,7 +42,7 @@
             },
             {
               "id": "4",
-              "content": "<p>4.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "It is not always easy to <b>accomplish</b> hard goals.",
                 "The racecar won by going at a <b>gradual</b> speed."
@@ -52,7 +52,7 @@
             },
             {
               "id": "5",
-              "content": "<p>5.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "Peanuts are an <b>instant</b> to grow and eat.",
                 "His <b>approximate</b> height is two meters."
@@ -70,7 +70,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. My new friend is an [ 1 ] who came from Italy. He goes to the same [ 2 ] school that I do. He does not know many English words. Having to learn new words is a hard [ 3 ] for him to get past. When he says things wrong, he feels like a [ 4 ]. I tell him not to worry. Soon he will know English very well. When I help him learn, he is happy and gives me [ 5 ] for my good deed.",
+              "content": "My new friend is an [ 1 ] who came from Italy. He goes to the same [ 2 ] school that I do. He does not know many English words. Having to learn new words is a hard [ 3 ] for him to get past. When he says things wrong, he feels like a [ 4 ]. I tell him not to worry. Soon he will know English very well. When I help him learn, he is happy and gives me [ 5 ] for my good deed.",
               "correctAnswer": "immigrant",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
               "options": [

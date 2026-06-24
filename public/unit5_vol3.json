@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Mary ____________ the creature that came into her yard and ____________ her dog.",
+              "content": "Mary ____________ the creature that came into her yard and ____________ her dog.",
               "options": [
                 "cursed / scared",
                 "scared / cursed",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. I don't like to walk in the ____________. I always think about the ____________ that are under the ground there.",
+              "content": "I don't like to walk in the ____________. I always think about the ____________ that are under the ground there.",
               "options": [
                 "cemetery / skeletons",
                 "skeletons / cemetery",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. My mother bought me a ____________ new coat. My favorite part is the warm ____________.",
+              "content": "My mother bought me a ____________ new coat. My favorite part is the warm ____________.",
               "options": [
                 "fancy / hood",
                 "hood / fancy",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. When my friend stayed at my house, we sat with a ____________. Instead of sleeping, we sat and told ____________ for an hour!",
+              "content": "When my friend stayed at my house, we sat with a ____________. Instead of sleeping, we sat and told ____________ for an hour!",
               "options": [
                 "flashlight / riddles",
                 "riddles / flashlight",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. Judy wanted to find a ____________ that was scary. Finally, she decided to dress like a ____________ witch.",
+              "content": "Judy wanted to find a ____________ that was scary. Finally, she decided to dress like a ____________ witch.",
               "options": [
                 "disguise / wicked",
                 "wicked / disguise",
@@ -72,7 +72,7 @@
             },
             {
               "id": "6",
-              "content": "6. We planted a vegetable garden to help ____________ our family. But many of the plants ____________ before we could eat them.",
+              "content": "We planted a vegetable garden to help ____________ our family. But many of the plants ____________ before we could eat them.",
               "options": [
                 "nourish / rotted",
                 "rotted / nourish",
@@ -84,7 +84,7 @@
             },
             {
               "id": "7",
-              "content": "7. The poor family was ____________ after all of their food ____________.",
+              "content": "The poor family was ____________ after all of their food ____________.",
               "options": [
                 "starving / spoiled",
                 "spoiled / starving",
@@ -96,7 +96,7 @@
             },
             {
               "id": "8",
-              "content": "8. Tim loves being an ____________ of that town. Shortly after he moved there, he made many friends.",
+              "content": "Tim loves being an ____________ of that town. Shortly after he moved there, he made many friends.",
               "options": [
                 "inhabitant / shortly",
                 "shortly / inhabitant",
@@ -108,7 +108,7 @@
             },
             {
               "id": "9",
-              "content": "9. I entered a contest that was in my favorite ____________. Imagine the ____________ when I won!",
+              "content": "I entered a contest that was in my favorite ____________. Imagine the ____________ when I won!",
               "options": [
                 "publication / thrill",
                 "thrill / publication",
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "10. Christie ____________ me with her city's library. Since then, I have read every book they have about ____________.",
+              "content": "Christie ____________ me with her city's library. Since then, I have read every book they have about ____________.",
               "options": [
                 "acquainted / pirates",
                 "pirates / acquainted",
@@ -140,7 +140,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Which of the following best describes an evil person?",
+              "content": "Which of the following best describes an evil person?",
               "options": [
                 "Shortly",
                 "Curse",
@@ -152,7 +152,7 @@
             },
             {
               "id": "12",
-              "content": "2. Which one is a feeling?",
+              "content": "Which one is a feeling?",
               "options": [
                 "A thrill",
                 "A hood",
@@ -164,7 +164,7 @@
             },
             {
               "id": "13",
-              "content": "3. Which one can you wear?",
+              "content": "Which one can you wear?",
               "options": [
                 "A cemetery",
                 "A disguise",
@@ -176,7 +176,7 @@
             },
             {
               "id": "14",
-              "content": "4. Which of the following is most related to death?",
+              "content": "Which of the following is most related to death?",
               "options": [
                 "Spoil",
                 "Acquaint",
@@ -188,7 +188,7 @@
             },
             {
               "id": "15",
-              "content": "5. Which of the following is most commonly related to the ocean?",
+              "content": "Which of the following is most commonly related to the ocean?",
               "options": [
                 "Rot",
                 "Scare",
@@ -208,70 +208,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Mom says we need to hurry because the game will start <u>very soon</u>. [ 16 ]",
+              "content": "<p class=\"mb-4\">Mom says we need to hurry because the game will start <u>very soon</u>. [ 16 ]</p><p class=\"mb-4\">It's a good idea to <u>get to know</u> with co-workers. [ 17 ]</p><p class=\"mb-4\">My little brother bothered me all day by asking me to solve his <u>difficult questions</u>. [ 18 ]</p><p class=\"mb-4\">A reporter at that <u>newspaper</u> won a prize. [ 19 ]</p><p class=\"mb-4\">I am an <u>individual who lives in</u> the central part of town. [ 20 ]</p><p class=\"mb-4\">He was crying because he was <u>caused to feel fright</u>. [ 21 ]</p><p class=\"mb-4\">I want to buy that <u>really nice</u> dress I saw in the store. [ 22 ]</p><p class=\"mb-4\">I need a <u>light I can carry</u> to see in the dark cabin. [ 23 ]</p><p class=\"mb-4\">The children were afraid that the witch would <u>hope bad things would happen</u> to them. [ 24 ]</p><p class=\"mb-4\">The <u>part of your coat that covers your head</u> keeps your head nice and warm. [ 25 ]</p>",
               "options": [],
               "explanation": "very soon đồng nghĩa với shortly.",
               "correctAnswer": "SHORTLY"
             },
             {
               "id": "17",
-              "content": "2. It's a good idea to <u>get to know</u> with co-workers. [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "get to know đồng nghĩa với acquaint.",
               "correctAnswer": "ACQUAINT"
             },
             {
               "id": "18",
-              "content": "3. My little brother bothered me all day by asking me to solve his <u>difficult questions</u>. [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "difficult questions đồng nghĩa với riddles.",
               "correctAnswer": "RIDDLES"
             },
             {
               "id": "19",
-              "content": "4. A reporter at that <u>newspaper</u> won a prize. [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "newspaper là một dạng publication (ấn phẩm).",
               "correctAnswer": "PUBLICATION"
             },
             {
               "id": "20",
-              "content": "5. I am an <u>individual who lives in</u> the central part of town. [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "individual who lives in đồng nghĩa với inhabitant.",
               "correctAnswer": "INHABITANT"
             },
             {
               "id": "21",
-              "content": "6. He was crying because he was <u>caused to feel fright</u>. [ 21 ]",
+              "content": "",
               "options": [],
               "explanation": "caused to feel fright đồng nghĩa với scared.",
               "correctAnswer": "SCARED"
             },
             {
               "id": "22",
-              "content": "7. I want to buy that <u>really nice</u> dress I saw in the store. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "really nice đồng nghĩa với fancy.",
               "correctAnswer": "FANCY"
             },
             {
               "id": "23",
-              "content": "8. I need a <u>light I can carry</u> to see in the dark cabin. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "light I can carry đồng nghĩa với flashlight.",
               "correctAnswer": "FLASHLIGHT"
             },
             {
               "id": "24",
-              "content": "9. The children were afraid that the witch would <u>hope bad things would happen</u> to them. [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "hope bad things would happen đồng nghĩa với curse.",
               "correctAnswer": "CURSE"
             },
             {
               "id": "25",
-              "content": "10. The <u>part of your coat that covers your head</u> keeps your head nice and warm. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "part of your coat that covers your head đồng nghĩa với hood.",
               "correctAnswer": "HOOD"

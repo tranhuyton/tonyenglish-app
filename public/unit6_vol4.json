@@ -19,7 +19,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. a set of clothes",
+              "content": "a set of clothes",
               "options": [
                 "spirit",
                 "suit",
@@ -31,7 +31,7 @@
             },
             {
               "id": "2",
-              "content": "2. common people",
+              "content": "common people",
               "options": [
                 "folk",
                 "pleasure",
@@ -43,7 +43,7 @@
             },
             {
               "id": "3",
-              "content": "3. to get smaller",
+              "content": "to get smaller",
               "options": [
                 "melt",
                 "pop",
@@ -55,7 +55,7 @@
             },
             {
               "id": "4",
-              "content": "4. a large cloth worn on the back",
+              "content": "a large cloth worn on the back",
               "options": [
                 "patch",
                 "cape",
@@ -67,7 +67,7 @@
             },
             {
               "id": "5",
-              "content": "5. happening at the same rate everywhere",
+              "content": "happening at the same rate everywhere",
               "options": [
                 "evenly",
                 "alas",
@@ -87,7 +87,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. melt",
+              "content": "melt",
               "options": [
                 "to get smaller",
                 "to turn to liquid",
@@ -99,7 +99,7 @@
             },
             {
               "id": "7",
-              "content": "2. spark",
+              "content": "spark",
               "options": [
                 "a flash of fire",
                 "a set of clothes",
@@ -111,7 +111,7 @@
             },
             {
               "id": "8",
-              "content": "3. rail",
+              "content": "rail",
               "options": [
                 "a horizontal bar",
                 "a common person",
@@ -123,7 +123,7 @@
             },
             {
               "id": "9",
-              "content": "4. absolute",
+              "content": "absolute",
               "options": [
                 "said when bad things happen",
                 "careful",
@@ -135,7 +135,7 @@
             },
             {
               "id": "10",
-              "content": "5. pleasure",
+              "content": "pleasure",
               "options": [
                 "to make a noise",
                 "to get smaller",
@@ -155,7 +155,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Mom made chocolate pudding",
+              "content": "Mom made chocolate pudding",
               "options": [
                 "out of the computer.",
                 "flour, eggs and sugar.",
@@ -167,7 +167,7 @@
             },
             {
               "id": "12",
-              "content": "2. He is very attentive",
+              "content": "He is very attentive",
               "options": [
                 "to meet you.",
                 "during science class.",
@@ -179,7 +179,7 @@
             },
             {
               "id": "13",
-              "content": "3. People wore capes more often",
+              "content": "People wore capes more often",
               "options": [
                 "to meet you.",
                 "two hundred years ago.",
@@ -191,7 +191,7 @@
             },
             {
               "id": "14",
-              "content": "4. His strong spirit",
+              "content": "His strong spirit",
               "options": [
                 "out of the computer.",
                 "to manage the team of employees.",
@@ -203,7 +203,7 @@
             },
             {
               "id": "15",
-              "content": "5. I can’t envision you",
+              "content": "I can’t envision you",
               "options": [
                 "out of the computer.",
                 "for dessert last night.",
@@ -215,7 +215,7 @@
             },
             {
               "id": "16",
-              "content": "6. It was a pleasure",
+              "content": "It was a pleasure",
               "options": [
                 "two hundred years ago.",
                 "for dessert last night.",
@@ -227,7 +227,7 @@
             },
             {
               "id": "17",
-              "content": "7. His role at work is",
+              "content": "His role at work is",
               "options": [
                 "out of the computer.",
                 "flour, eggs and sugar.",
@@ -239,7 +239,7 @@
             },
             {
               "id": "18",
-              "content": "8. The cat is sitting on the rail",
+              "content": "The cat is sitting on the rail",
               "options": [
                 "as a politician.",
                 "during science class.",
@@ -251,7 +251,7 @@
             },
             {
               "id": "19",
-              "content": "9. For this recipe, I will need",
+              "content": "For this recipe, I will need",
               "options": [
                 "flour, eggs and sugar.",
                 "of the fence.",
@@ -263,7 +263,7 @@
             },
             {
               "id": "20",
-              "content": "10. There were sparks flying",
+              "content": "There were sparks flying",
               "options": [
                 "out of the computer.",
                 "to manage the team of employees.",
@@ -283,7 +283,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. If you wash this silk shirt in hot water,",
+              "content": "If you wash this silk shirt in hot water,",
               "options": [
                 "it will melt.",
                 "it will shrink.",
@@ -295,7 +295,7 @@
             },
             {
               "id": "22",
-              "content": "2. Tony didn’t practice the presentation,",
+              "content": "Tony didn’t practice the presentation,",
               "options": [
                 "when I heard the pop.",
                 "so it was an absolute disaster.",
@@ -307,7 +307,7 @@
             },
             {
               "id": "23",
-              "content": "3. I studied hard for the test,",
+              "content": "I studied hard for the test,",
               "options": [
                 "it will shrink.",
                 "when folks meet with their families.",
@@ -319,7 +319,7 @@
             },
             {
               "id": "24",
-              "content": "4. Dan was very unlucky",
+              "content": "Dan was very unlucky",
               "options": [
                 "because he fell in a patch of rocks.",
                 "so I usually wear a suit.",
@@ -331,7 +331,7 @@
             },
             {
               "id": "25",
-              "content": "5. Christmas is an important holiday",
+              "content": "Christmas is an important holiday",
               "options": [
                 "the soldiers spread out evenly.",
                 "when I heard the pop.",
@@ -343,7 +343,7 @@
             },
             {
               "id": "26",
-              "content": "6. If you put the butter near the fire,",
+              "content": "If you put the butter near the fire,",
               "options": [
                 "the soldiers spread out evenly.",
                 "but alas, I still didn’t do very well.",
@@ -355,7 +355,7 @@
             },
             {
               "id": "27",
-              "content": "7. This pan was so dirty",
+              "content": "This pan was so dirty",
               "options": [
                 "the soldiers spread out evenly.",
                 "but alas, I still didn’t do very well.",
@@ -367,7 +367,7 @@
             },
             {
               "id": "28",
-              "content": "8. To protect the kingdom,",
+              "content": "To protect the kingdom,",
               "options": [
                 "it will shrink.",
                 "the soldiers spread out evenly.",
@@ -379,7 +379,7 @@
             },
             {
               "id": "29",
-              "content": "9. I knew the television had broken",
+              "content": "I knew the television had broken",
               "options": [
                 "because he fell in a patch of rocks.",
                 "it will melt.",
@@ -391,7 +391,7 @@
             },
             {
               "id": "30",
-              "content": "10. At work, we have to dress well,",
+              "content": "At work, we have to dress well,",
               "options": [
                 "that I had to soak it overnight.",
                 "but alas, I still didn’t do very well.",
@@ -419,7 +419,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Tom Muggins likes playing tricks on folks.",
+              "content": "Tom Muggins likes playing tricks on folks.",
               "options": [
                 "T",
                 "F"
@@ -429,7 +429,7 @@
             },
             {
               "id": "32",
-              "content": "2. Jack Frost was sitting on the rail of a fence.",
+              "content": "Jack Frost was sitting on the rail of a fence.",
               "options": [
                 "T",
                 "F"
@@ -439,7 +439,7 @@
             },
             {
               "id": "33",
-              "content": "3. Jack Frost’s role is to cover everything with fire.",
+              "content": "Jack Frost’s role is to cover everything with fire.",
               "options": [
                 "T",
                 "F"
@@ -449,7 +449,7 @@
             },
             {
               "id": "34",
-              "content": "4. Tom wished that he had been more attentive.",
+              "content": "Tom wished that he had been more attentive.",
               "options": [
                 "T",
                 "F"
@@ -459,7 +459,7 @@
             },
             {
               "id": "35",
-              "content": "5. Tom said “Alas!” because he knew he wouldn’t have any cake.",
+              "content": "Tom said “Alas!” because he knew he wouldn’t have any cake.",
               "options": [
                 "T",
                 "F"
@@ -469,7 +469,7 @@
             },
             {
               "id": "36",
-              "content": "6. When Jack Frost set fire to the food, the eggs started to melt.",
+              "content": "When Jack Frost set fire to the food, the eggs started to melt.",
               "options": [
                 "T",
                 "F"
@@ -487,7 +487,7 @@
           "questions": [
             {
               "id": "37",
-              "content": "1. What was Tom wearing?",
+              "content": "What was Tom wearing?",
               "options": [
                 "A nice suit",
                 "A white cape",
@@ -499,7 +499,7 @@
             },
             {
               "id": "38",
-              "content": "2. Which of the following was NOT an ingredient of the wonderful pudding?",
+              "content": "Which of the following was NOT an ingredient of the wonderful pudding?",
               "options": [
                 "Flour",
                 "Sugar",
@@ -511,7 +511,7 @@
             },
             {
               "id": "39",
-              "content": "3. What shrank when it got soaked in the river?",
+              "content": "What shrank when it got soaked in the river?",
               "options": [
                 "The eggs",
                 "A stick of butter",
@@ -523,7 +523,7 @@
             },
             {
               "id": "40",
-              "content": "4. What happened when there was a pop sound?",
+              "content": "What happened when there was a pop sound?",
               "options": [
                 "Tom fell into the river.",
                 "The food caught fire.",

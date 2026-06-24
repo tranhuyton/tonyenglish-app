@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. to make mad",
+              "content": "to make mad",
               "options": [
                 "dive",
                 "anger",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. to get something and give something",
+              "content": "to get something and give something",
               "options": [
                 "lovely",
                 "palace",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. very short",
+              "content": "very short",
               "options": [
                 "brief",
                 "forever",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. a woman who is getting married",
+              "content": "a woman who is getting married",
               "options": [
                 "guy",
                 "disappoint",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. a time of being young",
+              "content": "a time of being young",
               "options": [
                 "chase",
                 "favor",
@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. When my sister lost my best sweater, ________________.",
+              "content": "When my sister lost my best sweater, ________________.",
               "options": [
                 "it angered me",
                 "I was in a good mood"
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "2. I don’t have much time, so ________________.",
+              "content": "I don’t have much time, so ________________.",
               "options": [
                 "keep your story brief",
                 "you can talk forever"
@@ -100,7 +100,7 @@
             },
             {
               "id": "8",
-              "content": "3. I am learning how to play the guitar, so ________________.",
+              "content": "I am learning how to play the guitar, so ________________.",
               "options": [
                 "let’s get some coffee",
                 "I’ll be able to play you a song soon"
@@ -110,7 +110,7 @@
             },
             {
               "id": "9",
-              "content": "4. She needed help, so ________________.",
+              "content": "She needed help, so ________________.",
               "options": [
                 "she asked me for a favor",
                 "she chased my dog"
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "5. I wanted to go to the movies, but ________________.",
+              "content": "I wanted to go to the movies, but ________________.",
               "options": [
                 "Jack protested that he wanted to go to the mall",
                 "she exchanged phone numbers with me"
@@ -138,7 +138,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Mary’s mother lets her stay up late.",
+              "content": "Mary’s mother lets her stay up late.",
               "options": [
                 "permits",
                 "protests",
@@ -150,7 +150,7 @@
             },
             {
               "id": "12",
-              "content": "2. My friend asked me for some help.",
+              "content": "My friend asked me for some help.",
               "options": [
                 "fee",
                 "palace",
@@ -162,7 +162,7 @@
             },
             {
               "id": "13",
-              "content": "3. The police try to catch the man who took the money.",
+              "content": "The police try to catch the man who took the money.",
               "options": [
                 "anger",
                 "chase",
@@ -174,7 +174,7 @@
             },
             {
               "id": "14",
-              "content": "4. We saw a royal home while we were in France.",
+              "content": "We saw a royal home while we were in France.",
               "options": [
                 "palace",
                 "sculpture",
@@ -186,7 +186,7 @@
             },
             {
               "id": "15",
-              "content": "5. I will argue his choice for principal.",
+              "content": "I will argue his choice for principal.",
               "options": [
                 "permit",
                 "disappoint",
@@ -198,7 +198,7 @@
             },
             {
               "id": "16",
-              "content": "6. My friend was made unhappy by her bad grades.",
+              "content": "My friend was made unhappy by her bad grades.",
               "options": [
                 "angered",
                 "disappointed",
@@ -210,7 +210,7 @@
             },
             {
               "id": "17",
-              "content": "7. That man walks his dog past our house every night.",
+              "content": "That man walks his dog past our house every night.",
               "options": [
                 "bride",
                 "guy",
@@ -222,7 +222,7 @@
             },
             {
               "id": "18",
-              "content": "8. I don’t want to live for all time.",
+              "content": "I don’t want to live for all time.",
               "options": [
                 "abroad",
                 "brief",
@@ -234,7 +234,7 @@
             },
             {
               "id": "19",
-              "content": "9. What was the cost you had to pay to see the concert?",
+              "content": "What was the cost you had to pay to see the concert?",
               "options": [
                 "favor",
                 "fee",
@@ -246,7 +246,7 @@
             },
             {
               "id": "20",
-              "content": "10. My dream is to go to a different country for a year.",
+              "content": "My dream is to go to a different country for a year.",
               "options": [
                 "abroad",
                 "forever",
@@ -274,7 +274,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "A guy who angers a cruel witch",
                 "How people are not always what they seem to be",
@@ -286,7 +286,7 @@
             },
             {
               "id": "22",
-              "content": "2. The frog asked the lovely princess to_____________ .",
+              "content": "The frog asked the lovely princess to_____________ .",
               "options": [
                 "be in a better mood",
                 "kiss him in the morning",
@@ -298,7 +298,7 @@
             },
             {
               "id": "23",
-              "content": "3. What can be assumed from the passage?",
+              "content": "What can be assumed from the passage?",
               "options": [
                 "The princess was humiliated when the prince didn’t take her back to his kingdom.",
                 "The prince and princess were only happy for a brief time.",
@@ -310,7 +310,7 @@
             },
             {
               "id": "24",
-              "content": "4. According to the passage, all of the following are true EXCEPT____________",
+              "content": "According to the passage, all of the following are true EXCEPT____________",
               "options": [
                 "the king made the princess keep her promise",
                 "the princess asked the prince if she could be his bride and stay with him forever",
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "5. Why did the princess think she would not have to keep her promise?",
+              "content": "Why did the princess think she would not have to keep her promise?",
               "options": [
                 "She thought the frog would die if he leaves the pool.",
                 "She didn't have enough gold to pay the fee.",

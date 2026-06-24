@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. radiate",
+              "content": "radiate",
               "options": [
                 "measure",
                 "release",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. breadth",
+              "content": "breadth",
               "options": [
                 "path",
                 "death",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. spectrum",
+              "content": "spectrum",
               "options": [
                 "colors",
                 "amounts",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. comet",
+              "content": "comet",
               "options": [
                 "arrival",
                 "meteor",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. atom",
+              "content": "atom",
               "options": [
                 "particle",
                 "catch",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. status",
+              "content": "status",
               "options": [
                 "land",
                 "rock",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. astronomical",
+              "content": "astronomical",
               "options": [
                 "historical",
                 "pleasant",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. embed",
+              "content": "embed",
               "options": [
                 "sleep",
                 "soften",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. sphere",
+              "content": "sphere",
               "options": [
                 "tide",
                 "voice",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. debris",
+              "content": "debris",
               "options": [
                 "pieces",
                 "troops",
@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. crater",
+              "content": "crater",
               "options": [
                 "basket",
                 "habit",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "2. gloom",
+              "content": "gloom",
               "options": [
                 "plan",
                 "book",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "3. solitary",
+              "content": "solitary",
               "options": [
                 "chain",
                 "group",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "4. gigantic",
+              "content": "gigantic",
               "options": [
                 "wild",
                 "tiny",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "5. roam",
+              "content": "roam",
               "options": [
                 "buy",
                 "break",
@@ -206,7 +206,7 @@
             },
             {
               "id": "16",
-              "content": "6. fragment",
+              "content": "fragment",
               "options": [
                 "whole",
                 "child",
@@ -218,7 +218,7 @@
             },
             {
               "id": "17",
-              "content": "7. despair",
+              "content": "despair",
               "options": [
                 "burn",
                 "hope",
@@ -230,7 +230,7 @@
             },
             {
               "id": "18",
-              "content": "8. galaxy",
+              "content": "galaxy",
               "options": [
                 "delivery",
                 "marriage",
@@ -242,7 +242,7 @@
             },
             {
               "id": "19",
-              "content": "9. crescent",
+              "content": "crescent",
               "options": [
                 "circle",
                 "closet",
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "10. circumference",
+              "content": "circumference",
               "options": [
                 "feeling",
                 "detail",
@@ -274,7 +274,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. What is something that is astronomical?",
+              "content": "What is something that is astronomical?",
               "options": [
                 "A planet",
                 "A book",
@@ -286,7 +286,7 @@
             },
             {
               "id": "22",
-              "content": "2. What is something you’d find in a galaxy?",
+              "content": "What is something you’d find in a galaxy?",
               "options": [
                 "A pear",
                 "A broom",
@@ -298,7 +298,7 @@
             },
             {
               "id": "23",
-              "content": "3. Which would help you see through the gloom of a day?",
+              "content": "Which would help you see through the gloom of a day?",
               "options": [
                 "Glasses",
                 "A telescope",
@@ -310,7 +310,7 @@
             },
             {
               "id": "24",
-              "content": "4. Which of the following is a sphere?",
+              "content": "Which of the following is a sphere?",
               "options": [
                 "A globe",
                 "A bat",
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "5. What describes someone whose waist has a large circumference?",
+              "content": "What describes someone whose waist has a large circumference?",
               "options": [
                 "Tall",
                 "Fat",
@@ -348,7 +348,7 @@
                   "answer": "crescent"
                 }
               ],
-              "content": "1. The night was extremely dark because little light came from the <u>curved shaped moon</u>.<br/>cr [ 26 ]"
+              "content": "<p class=\"mb-4\">The night was extremely dark because little light came from the <u>curved shaped moon</u>.<br/>cr [ 26 ]</p><p class=\"mb-4\">They <u>moved without a purpose</u> around the mall while waiting for their friend to get off of work.<br/>ro [ 27 ]</p><p class=\"mb-4\">The moon has <u>large holes</u> on the surface.<br/>cr [ 28 ]</p><p class=\"mb-4\">The <u>distance from one side to the other</u> of a baby’s hand is very small.<br/>br [ 29 ]</p><p class=\"mb-4\">Mom couldn’t fix the bowl because a <u>small part</u> of it was missing.<br/>fr [ 30 ]</p><p class=\"mb-4\">A lot of energy is stored within just one simple <u>smallest unit of matter</u>.<br/>at [ 31 ]</p><p class=\"mb-4\">The bee’s stinger was <u>placed firmly within</u> the skin of his right hand.<br/>em [ 32 ]</p><p class=\"mb-4\">Guarding the camp was a <u>lonely</u> job, so he gladly accepted the young man’s company.<br/>so [ 33 ]</p><p class=\"mb-4\">When it’s low on fuel, the heater <u>emits</u> a small level of heat.<br/>ra [ 34 ]</p><p class=\"mb-4\">He was so concerned about his <u>position to others</u> in school that he studied very hard.<br/>st [ 35 ]</p>"
             },
             {
               "id": "27",
@@ -358,7 +358,7 @@
                   "answer": "roamed"
                 }
               ],
-              "content": "2. They <u>moved without a purpose</u> around the mall while waiting for their friend to get off of work.<br/>ro [ 27 ]"
+              "content": ""
             },
             {
               "id": "28",
@@ -368,7 +368,7 @@
                   "answer": "craters"
                 }
               ],
-              "content": "3. The moon has <u>large holes</u> on the surface.<br/>cr [ 28 ]"
+              "content": ""
             },
             {
               "id": "29",
@@ -378,7 +378,7 @@
                   "answer": "breadth"
                 }
               ],
-              "content": "4. The <u>distance from one side to the other</u> of a baby’s hand is very small.<br/>br [ 29 ]"
+              "content": ""
             },
             {
               "id": "30",
@@ -388,7 +388,7 @@
                   "answer": "fragment"
                 }
               ],
-              "content": "5. Mom couldn’t fix the bowl because a <u>small part</u> of it was missing.<br/>fr [ 30 ]"
+              "content": ""
             },
             {
               "id": "31",
@@ -398,7 +398,7 @@
                   "answer": "atom"
                 }
               ],
-              "content": "6. A lot of energy is stored within just one simple <u>smallest unit of matter</u>.<br/>at [ 31 ]"
+              "content": ""
             },
             {
               "id": "32",
@@ -408,7 +408,7 @@
                   "answer": "embedded"
                 }
               ],
-              "content": "7. The bee’s stinger was <u>placed firmly within</u> the skin of his right hand.<br/>em [ 32 ]"
+              "content": ""
             },
             {
               "id": "33",
@@ -418,7 +418,7 @@
                   "answer": "solitary"
                 }
               ],
-              "content": "8. Guarding the camp was a <u>lonely</u> job, so he gladly accepted the young man’s company.<br/>so [ 33 ]"
+              "content": ""
             },
             {
               "id": "34",
@@ -428,7 +428,7 @@
                   "answer": "radiates"
                 }
               ],
-              "content": "9. When it’s low on fuel, the heater <u>emits</u> a small level of heat.<br/>ra [ 34 ]"
+              "content": ""
             },
             {
               "id": "35",
@@ -438,7 +438,7 @@
                   "answer": "status"
                 }
               ],
-              "content": "10. He was so concerned about his <u>position to others</u> in school that he studied very hard.<br/>st [ 35 ]"
+              "content": ""
             }
           ],
           "questionType": "Điền từ"
@@ -458,7 +458,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The little rock drifted through the debris of broken atoms.",
+              "content": "The little rock drifted through the debris of broken atoms.",
               "options": [
                 "T",
                 "F"
@@ -468,7 +468,7 @@
             },
             {
               "id": "37",
-              "content": "2. The gigantic planet was in the shape of a sphere.",
+              "content": "The gigantic planet was in the shape of a sphere.",
               "options": [
                 "T",
                 "F"
@@ -478,7 +478,7 @@
             },
             {
               "id": "38",
-              "content": "3. The ice embedded in the little rock bubbled with all the colors of the spectrum.",
+              "content": "The ice embedded in the little rock bubbled with all the colors of the spectrum.",
               "options": [
                 "T",
                 "F"
@@ -488,7 +488,7 @@
             },
             {
               "id": "39",
-              "content": "4. The star radiated its light hotter and brighter than ever before.",
+              "content": "The star radiated its light hotter and brighter than ever before.",
               "options": [
                 "T",
                 "F"
@@ -498,7 +498,7 @@
             },
             {
               "id": "40",
-              "content": "5. The little rock wished it had a higher status in the galaxy.",
+              "content": "The little rock wished it had a higher status in the galaxy.",
               "options": [
                 "T",
                 "F"
@@ -516,7 +516,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. While roaming through the gloom of the galaxy, how did the little rock feel?",
+              "content": "While roaming through the gloom of the galaxy, how did the little rock feel?",
               "options": [
                 "It felt happy and excited.",
                 "It felt angry and frustrated.",
@@ -528,7 +528,7 @@
             },
             {
               "id": "42",
-              "content": "2. What objects had craters and was in the shape of a shiny crescent?",
+              "content": "What objects had craters and was in the shape of a shiny crescent?",
               "options": [
                 "The planets",
                 "The moons",
@@ -540,7 +540,7 @@
             },
             {
               "id": "43",
-              "content": "3. How much larger was the circumference of the planet compared to the breadth of the rock?",
+              "content": "How much larger was the circumference of the planet compared to the breadth of the rock?",
               "options": [
                 "Thousands of times larger.",
                 "Hundreds of times larger.",
@@ -552,7 +552,7 @@
             },
             {
               "id": "44",
-              "content": "4. Why was the little fragment of rock filled with despair?",
+              "content": "Why was the little fragment of rock filled with despair?",
               "options": [
                 "Because it was lost in space.",
                 "Because it was running out of energy.",
@@ -564,7 +564,7 @@
             },
             {
               "id": "45",
-              "content": "5. What did the comet’s new tail look like?",
+              "content": "What did the comet’s new tail look like?",
               "options": [
                 "It looked like a stream of fire.",
                 "It looked like a galactic cape.",

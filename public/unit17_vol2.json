@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p>6.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. It is a good idea to <b>bet</b> your money on silly things.",
                 "b. You should go to a <b>mechanic</b> if you have a problem with your car."
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "<p>7.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. Drivers use <b>signals</b> to make their cars go faster.",
                 "b. You should <b>attach</b> a stamp to a letter before you mail it."
@@ -100,7 +100,7 @@
             },
             {
               "id": "8",
-              "content": "<p>8.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. If you and your date <b>differ</b> too much, you might not like each other.",
                 "b. When you <b>confirm</b> the results of the test, you make them better."
@@ -110,7 +110,7 @@
             },
             {
               "id": "9",
-              "content": "<p>9.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. It is O.K. to wear sandals to a <b>formal</b> party.",
                 "b. Teachers often <b>criticize</b> lazy students."
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "<p>10.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. People must pay attention to <b>signals</b> when they are driving.",
                 "b. When you visit a <b>mechanic</b> they will sell you a new car."
@@ -130,7 +130,7 @@
             },
             {
               "id": "11",
-              "content": "<p>11.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. You should wear nice clothing if you go to a <b>formal</b> event.",
                 "b. Good friends like to <b>criticize</b> each other."
@@ -140,7 +140,7 @@
             },
             {
               "id": "12",
-              "content": "<p>12.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. Husbands and wives who <b>differ</b> are often very busy people.",
                 "b. If you <b>commute</b> to work, you have to travel a certain distance."
@@ -150,7 +150,7 @@
             },
             {
               "id": "13",
-              "content": "<p>13.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. It is a good idea to <b>confirm</b> your plans before you travel.",
                 "b. If you <b>attach</b> a large sign to your door, no one will see it."
@@ -160,7 +160,7 @@
             },
             {
               "id": "14",
-              "content": "<p>14.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. If your <b>aim</b> is to learn how to swim, you must get in the water.",
                 "b. Everyone <b>commutes</b> in math class."
@@ -170,7 +170,7 @@
             },
             {
               "id": "15",
-              "content": "<p>15.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. People who have an <b>aim</b> to succeed are very lazy.",
                 "b. When you <b>bet</b> money, you might lose it."

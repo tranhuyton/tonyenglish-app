@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What would you find at an aquarium?",
+              "content": "What would you find at an aquarium?",
               "options": [
                 "A blanket",
                 "A squid",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. What can you do to improve your grades?",
+              "content": "What can you do to improve your grades?",
               "options": [
                 "Copy them",
                 "Study more",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. What is the ultimate result of going to college?",
+              "content": "What is the ultimate result of going to college?",
               "options": [
                 "Signing up for classes",
                 "Taking many tests",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. What happens if you insulate a house in the winter?",
+              "content": "What happens if you insulate a house in the winter?",
               "options": [
                 "Cold air stays outside.",
                 "Fires cannot be lit.",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. Who would most likely publish an autobiography?",
+              "content": "Who would most likely publish an autobiography?",
               "options": [
                 "An important person",
                 "A five-year-old",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. recipient",
+              "content": "recipient",
               "options": [
                 "an attempt",
                 "a giver",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "2. misplace",
+              "content": "misplace",
               "options": [
                 "to try",
                 "to help",
@@ -110,7 +110,7 @@
             },
             {
               "id": "8",
-              "content": "3. naughty",
+              "content": "naughty",
               "options": [
                 "wanting more",
                 "over",
@@ -122,7 +122,7 @@
             },
             {
               "id": "9",
-              "content": "4. longevity",
+              "content": "longevity",
               "options": [
                 "short life",
                 "plans",
@@ -134,7 +134,7 @@
             },
             {
               "id": "10",
-              "content": "5. thrive",
+              "content": "thrive",
               "options": [
                 "to create",
                 "to do bad",
@@ -146,7 +146,7 @@
             },
             {
               "id": "11",
-              "content": "6. gracious",
+              "content": "gracious",
               "options": [
                 "mean",
                 "silly",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "7. norm",
+              "content": "norm",
               "options": [
                 "abnormal",
                 "common",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "8. intrigue",
+              "content": "intrigue",
               "options": [
                 "to excite",
                 "to bore",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "9. arbitrary",
+              "content": "arbitrary",
               "options": [
                 "accidental",
                 "solar",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "10. probe",
+              "content": "probe",
               "options": [
                 "to touch",
                 "to open",
@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Make sure to misplace your money so that you will always have it.",
+              "content": "Make sure to misplace your money so that you will always have it.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +224,7 @@
             },
             {
               "id": "17",
-              "content": "2. The orangutans at the zoo swung so gracefully from the trees.",
+              "content": "The orangutans at the zoo swung so gracefully from the trees.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "3. The tigers in the aquarium loved to run and play.",
+              "content": "The tigers in the aquarium loved to run and play.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "4. The greedy man loved philanthropy. He never offered to help anybody.",
+              "content": "The greedy man loved philanthropy. He never offered to help anybody.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "5. The box broke when he overloaded it with books.",
+              "content": "The box broke when he overloaded it with books.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +264,7 @@
             },
             {
               "id": "21",
-              "content": "6. The mechanics of computers intrigue me.",
+              "content": "The mechanics of computers intrigue me.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +274,7 @@
             },
             {
               "id": "22",
-              "content": "7. The longevity of the rat was fifty centimeters.",
+              "content": "The longevity of the rat was fifty centimeters.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +284,7 @@
             },
             {
               "id": "23",
-              "content": "8. Plants will thrive if they are not given any water.",
+              "content": "Plants will thrive if they are not given any water.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +294,7 @@
             },
             {
               "id": "24",
-              "content": "9. The naughty girl always obeyed her mother.",
+              "content": "The naughty girl always obeyed her mother.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +304,7 @@
             },
             {
               "id": "25",
-              "content": "10. The ultimate result of the game was a win for the home team.",
+              "content": "The ultimate result of the game was a win for the home team.",
               "options": [
                 "C",
                 "I"
@@ -314,7 +314,7 @@
             },
             {
               "id": "26",
-              "content": "11. Some people play the lottery in hopes that they will improve their lives.",
+              "content": "Some people play the lottery in hopes that they will improve their lives.",
               "options": [
                 "C",
                 "I"
@@ -324,7 +324,7 @@
             },
             {
               "id": "27",
-              "content": "12. Paying for gasoline before pumping it is a norm.",
+              "content": "Paying for gasoline before pumping it is a norm.",
               "options": [
                 "C",
                 "I"
@@ -334,7 +334,7 @@
             },
             {
               "id": "28",
-              "content": "13. I probed the audience because I didn’t want to hear what they had to say.",
+              "content": "I probed the audience because I didn’t want to hear what they had to say.",
               "options": [
                 "C",
                 "I"
@@ -344,7 +344,7 @@
             },
             {
               "id": "29",
-              "content": "14. Waiting your turn in line is a social convention.",
+              "content": "Waiting your turn in line is a social convention.",
               "options": [
                 "C",
                 "I"
@@ -354,7 +354,7 @@
             },
             {
               "id": "30",
-              "content": "15. My dog is a great reptile.",
+              "content": "My dog is a great reptile.",
               "options": [
                 "C",
                 "I"
@@ -364,7 +364,7 @@
             },
             {
               "id": "31",
-              "content": "16. I insulated my room with blankets to keep the loud noises out.",
+              "content": "I insulated my room with blankets to keep the loud noises out.",
               "options": [
                 "C",
                 "I"
@@ -374,7 +374,7 @@
             },
             {
               "id": "32",
-              "content": "17. She was the recipient of the grand prize.",
+              "content": "She was the recipient of the grand prize.",
               "options": [
                 "C",
                 "I"
@@ -384,7 +384,7 @@
             },
             {
               "id": "33",
-              "content": "18. Someday, I will write my father’s autobiography.",
+              "content": "Someday, I will write my father’s autobiography.",
               "options": [
                 "C",
                 "I"
@@ -394,7 +394,7 @@
             },
             {
               "id": "34",
-              "content": "19. I don’t want to play with you anymore. You make up arbitrary rules as we play.",
+              "content": "I don’t want to play with you anymore. You make up arbitrary rules as we play.",
               "options": [
                 "C",
                 "I"
@@ -404,7 +404,7 @@
             },
             {
               "id": "35",
-              "content": "20. The store clerk was so gracious. He helped me find everything I was looking for.",
+              "content": "The store clerk was so gracious. He helped me find everything I was looking for.",
               "options": [
                 "C",
                 "I"
@@ -430,7 +430,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Joe was the recipient of a check because he won the lottery.",
+              "content": "Joe was the recipient of a check because he won the lottery.",
               "options": [
                 "True",
                 "False",
@@ -441,7 +441,7 @@
             },
             {
               "id": "37",
-              "content": "2. He wanted to buy new glass walls for the aquarium because the old ones were cracked.",
+              "content": "He wanted to buy new glass walls for the aquarium because the old ones were cracked.",
               "options": [
                 "True",
                 "False",
@@ -452,7 +452,7 @@
             },
             {
               "id": "38",
-              "content": "3. If Joe wrote an autobiography, he would write about the norms of the overloaded aquarium.",
+              "content": "If Joe wrote an autobiography, he would write about the norms of the overloaded aquarium.",
               "options": [
                 "True",
                 "False",
@@ -463,7 +463,7 @@
             },
             {
               "id": "39",
-              "content": "4. Joe made a photocopy of the check in case he misplaced the original one.",
+              "content": "Joe made a photocopy of the check in case he misplaced the original one.",
               "options": [
                 "True",
                 "False",
@@ -474,7 +474,7 @@
             },
             {
               "id": "40",
-              "content": "5. When Joe opened the door, he saw one of the naughty neighborhood children.",
+              "content": "When Joe opened the door, he saw one of the naughty neighborhood children.",
               "options": [
                 "True",
                 "False",
@@ -493,7 +493,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. What did Joe think the naughty children were doing to him?",
+              "content": "What did Joe think the naughty children were doing to him?",
               "options": [
                 "Joe thought the naughty neighborhood children were playing a trick on him.",
                 "Joe thought they were selling cookies.",
@@ -505,7 +505,7 @@
             },
             {
               "id": "42",
-              "content": "2. Why did Joe take out stationery?",
+              "content": "Why did Joe take out stationery?",
               "options": [
                 "He took out some stationery to write a letter to the zoo.",
                 "He took out some stationery to write a book.",
@@ -517,7 +517,7 @@
             },
             {
               "id": "43",
-              "content": "3. What did Joe improve to help the orangutans increase their longevity?",
+              "content": "What did Joe improve to help the orangutans increase their longevity?",
               "options": [
                 "He bought healthy food for them.",
                 "He bought new toys for them.",
@@ -529,7 +529,7 @@
             },
             {
               "id": "44",
-              "content": "4. What was the purpose of the zookeeper wanting to probe Joe with questions?",
+              "content": "What was the purpose of the zookeeper wanting to probe Joe with questions?",
               "options": [
                 "He probed Joe to learn why he spent his money on the zoo instead of on himself.",
                 "He probed Joe to see if he was rich.",
@@ -541,7 +541,7 @@
             },
             {
               "id": "45",
-              "content": "5. If Joe were to write an autobiography, how would he describe this day?",
+              "content": "If Joe were to write an autobiography, how would he describe this day?",
               "options": [
                 "He would describe this day as the happiest day of his life.",
                 "He would describe this day as a normal day.",

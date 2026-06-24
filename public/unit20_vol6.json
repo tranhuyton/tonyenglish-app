@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. reverse",
+              "content": "reverse",
               "options": [
                 "spell",
                 "train",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. adverse",
+              "content": "adverse",
               "options": [
                 "written",
                 "harmful",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. intermediate",
+              "content": "intermediate",
               "options": [
                 "amazing",
                 "safe",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. regain",
+              "content": "regain",
               "options": [
                 "reclaim",
                 "book",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. mentor",
+              "content": "mentor",
               "options": [
                 "flavor",
                 "terror",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. inclusion",
+              "content": "inclusion",
               "options": [
                 "energy",
                 "moment",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. adhesive",
+              "content": "adhesive",
               "options": [
                 "paste",
                 "floor",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. vibrant",
+              "content": "vibrant",
               "options": [
                 "dangerous",
                 "messy",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. dependency",
+              "content": "dependency",
               "options": [
                 "expanse",
                 "need",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. swarm",
+              "content": "swarm",
               "options": [
                 "heat",
                 "group",
@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. He enjoyed watching the [ 11 ] movement of the branch in the wind.",
+              "content": "He enjoyed watching the [ 11 ] movement of the branch in the wind.",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -164,7 +164,7 @@
             },
             {
               "id": "12",
-              "content": "2. As the branch moved to and [ 12 ], he felt calmed.",
+              "content": "As the branch moved to and [ 12 ], he felt calmed.",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -182,7 +182,7 @@
             },
             {
               "id": "13",
-              "content": "3. Her favorite magical creature was the [ 13 ].",
+              "content": "Her favorite magical creature was the [ 13 ].",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -200,7 +200,7 @@
             },
             {
               "id": "14",
-              "content": "4. The bird’s feathers were always a(n) [ 14 ] mix of red and orange.",
+              "content": "The bird’s feathers were always a(n) [ 14 ] mix of red and orange.",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -218,7 +218,7 @@
             },
             {
               "id": "15",
-              "content": "5. Actually, those flowers have a(n) [ 15 ] effect on my mother’s health.",
+              "content": "Actually, those flowers have a(n) [ 15 ] effect on my mother’s health.",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -236,7 +236,7 @@
             },
             {
               "id": "16",
-              "content": "6. The [ 16 ] in it makes her sneeze.",
+              "content": "The [ 16 ] in it makes her sneeze.",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -254,7 +254,7 @@
             },
             {
               "id": "17",
-              "content": "7. Mr. Roth had been a valuable [ 17 ] for so many years.",
+              "content": "Mr. Roth had been a valuable [ 17 ] for so many years.",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -272,7 +272,7 @@
             },
             {
               "id": "18",
-              "content": "8. You could feel the knowledge from the [ 18 ] of his wrinkled hands.",
+              "content": "You could feel the knowledge from the [ 18 ] of his wrinkled hands.",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -290,7 +290,7 @@
             },
             {
               "id": "19",
-              "content": "9. Plants have a(n) [ 19 ] on sunlight.",
+              "content": "Plants have a(n) [ 19 ] on sunlight.",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -308,7 +308,7 @@
             },
             {
               "id": "20",
-              "content": "10. It’s a necessary ingredient for the process of [ 20 ] .",
+              "content": "It’s a necessary ingredient for the process of [ 20 ] .",
               "options": [
                 "phoenix",
                 "vibrant",
@@ -334,7 +334,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. inclusion",
+              "content": "inclusion",
               "options": [
                 "exclusion",
                 "inside",
@@ -346,7 +346,7 @@
             },
             {
               "id": "22",
-              "content": "2. regain",
+              "content": "regain",
               "options": [
                 "snow",
                 "break",
@@ -358,7 +358,7 @@
             },
             {
               "id": "23",
-              "content": "3. eternal",
+              "content": "eternal",
               "options": [
                 "great",
                 "true",
@@ -370,7 +370,7 @@
             },
             {
               "id": "24",
-              "content": "4. dump",
+              "content": "dump",
               "options": [
                 "gather",
                 "explain",
@@ -382,7 +382,7 @@
             },
             {
               "id": "25",
-              "content": "5. fluctuate",
+              "content": "fluctuate",
               "options": [
                 "heal",
                 "remain",
@@ -402,7 +402,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. The branches moved to and <i>fro</i> in the breeze.",
+              "content": "The branches moved to and <i>fro</i> in the breeze.",
               "options": [
                 "C",
                 "I"
@@ -412,7 +412,7 @@
             },
             {
               "id": "27",
-              "content": "2. Honeybees collect <i>pollen</i> from flowers.",
+              "content": "Honeybees collect <i>pollen</i> from flowers.",
               "options": [
                 "C",
                 "I"
@@ -422,7 +422,7 @@
             },
             {
               "id": "28",
-              "content": "3. The meeting was <i>eternal</i>. It lasted only ten minutes.",
+              "content": "The meeting was <i>eternal</i>. It lasted only ten minutes.",
               "options": [
                 "C",
                 "I"
@@ -432,7 +432,7 @@
             },
             {
               "id": "29",
-              "content": "4. The <i>adhesive</i> on this tape doesn’t work anymore. It won’t stick.",
+              "content": "The <i>adhesive</i> on this tape doesn’t work anymore. It won’t stick.",
               "options": [
                 "C",
                 "I"
@@ -442,7 +442,7 @@
             },
             {
               "id": "30",
-              "content": "5. In order to get into the sports arena, we had to pay a <i>phoenix</i>.",
+              "content": "In order to get into the sports arena, we had to pay a <i>phoenix</i>.",
               "options": [
                 "C",
                 "I"
@@ -452,7 +452,7 @@
             },
             {
               "id": "31",
-              "content": "6. This past week the weather has <i>fluctuated</i> a lot. It’s been warm and sunny every day.",
+              "content": "This past week the weather has <i>fluctuated</i> a lot. It’s been warm and sunny every day.",
               "options": [
                 "C",
                 "I"
@@ -462,7 +462,7 @@
             },
             {
               "id": "32",
-              "content": "7. Don’t touch my knee. It <i>tickles</i> when anything touches me there.",
+              "content": "Don’t touch my knee. It <i>tickles</i> when anything touches me there.",
               "options": [
                 "C",
                 "I"
@@ -472,7 +472,7 @@
             },
             {
               "id": "33",
-              "content": "8. She <i>dumped</i> the dirty water out back in the garden.",
+              "content": "She <i>dumped</i> the dirty water out back in the garden.",
               "options": [
                 "C",
                 "I"
@@ -482,7 +482,7 @@
             },
             {
               "id": "34",
-              "content": "9. My level of Spanish is only at the <i>intermediate</i> stage.",
+              "content": "My level of Spanish is only at the <i>intermediate</i> stage.",
               "options": [
                 "C",
                 "I"
@@ -492,7 +492,7 @@
             },
             {
               "id": "35",
-              "content": "10. The <i>texture</i> of his workload was incredible.",
+              "content": "The <i>texture</i> of his workload was incredible.",
               "options": [
                 "C",
                 "I"
@@ -518,7 +518,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The bees had an important dependency on pollen.",
+              "content": "The bees had an important dependency on pollen.",
               "options": [
                 "T",
                 "F"
@@ -528,7 +528,7 @@
             },
             {
               "id": "37",
-              "content": "2. The texture of the petals in the vibrant flower tickled.",
+              "content": "The texture of the petals in the vibrant flower tickled.",
               "options": [
                 "T",
                 "F"
@@ -538,7 +538,7 @@
             },
             {
               "id": "38",
-              "content": "3. The little bee was blown to and fro and reversed in his direction.",
+              "content": "The little bee was blown to and fro and reversed in his direction.",
               "options": [
                 "T",
                 "F"
@@ -548,7 +548,7 @@
             },
             {
               "id": "39",
-              "content": "4. Because the pollen acted like an adhesive, the little bee couldn’t dump it.",
+              "content": "Because the pollen acted like an adhesive, the little bee couldn’t dump it.",
               "options": [
                 "T",
                 "F"
@@ -558,7 +558,7 @@
             },
             {
               "id": "40",
-              "content": "5. After his mentor helped him regain his strength, the little bee lost his ambitions and fell to the ground like a phoenix.",
+              "content": "After his mentor helped him regain his strength, the little bee lost his ambitions and fell to the ground like a phoenix.",
               "options": [
                 "T",
                 "F"
@@ -576,7 +576,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. After the intermediate exams, what did the bee know about photosynthesis?",
+              "content": "After the intermediate exams, what did the bee know about photosynthesis?",
               "options": [
                 "He understood how flowers used photosynthesis to make food.",
                 "He knew how to use photosynthesis to fly.",
@@ -588,7 +588,7 @@
             },
             {
               "id": "42",
-              "content": "2. What did his inclusion in the swarms finally allow the little bee to do?",
+              "content": "What did his inclusion in the swarms finally allow the little bee to do?",
               "options": [
                 "Finally, he was allowed to leave the hive.",
                 "He was allowed to eat all the honey.",
@@ -600,7 +600,7 @@
             },
             {
               "id": "43",
-              "content": "3. What was the bees’ eternal task?",
+              "content": "What was the bees’ eternal task?",
               "options": [
                 "From the beginning of time, bees' eternal task was to gather pollen and make honey with it.",
                 "Their task was to protect the queen at all costs.",
@@ -612,7 +612,7 @@
             },
             {
               "id": "44",
-              "content": "4. How did the excess pollen have an adverse effect on the bee’s flight?",
+              "content": "How did the excess pollen have an adverse effect on the bee’s flight?",
               "options": [
                 "He had no control over his flight.",
                 "He flew much faster than before.",
@@ -624,7 +624,7 @@
             },
             {
               "id": "45",
-              "content": "5. What was intermittent and fluctuated in the bees’ power?",
+              "content": "What was intermittent and fluctuated in the bees’ power?",
               "options": [
                 "The wind was intermittent and fluctuated in power.",
                 "His wings were intermittent and fluctuated in power.",

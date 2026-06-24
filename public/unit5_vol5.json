@@ -274,70 +274,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "Because she took the test with such <u>speed</u>, she made several silly mistakes. [ 21 ]",
+              "content": "<p class=\"mb-4\">Because she took the test with such <u>speed</u>, she made several silly mistakes. [ 21 ]</p><p class=\"mb-4\">Her anniversary had a <u>quality that made it important</u> because it was also her birthday. [ 22 ]</p><p class=\"mb-4\">Though the <u>smallest basic units</u> in ice and steam are similar, their shapes are different. [ 23 ]</p><p class=\"mb-4\">They <u>began</u> the ceremony at 9:00 in the evening. [ 24 ]</p><p class=\"mb-4\">The <u>closeness in space</u> of her office is only a short distance from mine. [ 25 ]</p><p class=\"mb-4\">He could sleep late that day or get up early and start his work. He chose the <u>second choice</u>. [ 26 ]</p><p class=\"mb-4\">The noises on the computer sounded like they were <u>made to sound like real ones</u>. [ 27 ]</p><p class=\"mb-4\">Please <u>judge the quality</u> of his proposal before we decide to meet with him. [ 28 ]</p><p class=\"mb-4\">The best <u>cure</u> for a slightly injured foot is putting ice on it. [ 29 ]</p><p class=\"mb-4\">Most of the advertisements on TV are <u>related to the development of drugs</u> commercials. [ 30 ]</p>",
               "options": [],
               "explanation": "speed (tốc độ) tương đương với haste (sự vội vã).",
               "correctAnswer": "haste"
             },
             {
               "id": "22",
-              "content": "Her anniversary had a <u>quality that made it important</u> because it was also her birthday. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "quality that made it important tương đương significance (ý nghĩa quan trọng).",
               "correctAnswer": "significance"
             },
             {
               "id": "23",
-              "content": "Though the <u>smallest basic units</u> in ice and steam are similar, their shapes are different. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "smallest basic units tương đương molecules (phân tử).",
               "correctAnswer": "molecules"
             },
             {
               "id": "24",
-              "content": "They <u>began</u> the ceremony at 9:00 in the evening. [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "began (bắt đầu) tương đương commenced.",
               "correctAnswer": "commenced"
             },
             {
               "id": "25",
-              "content": "The <u>closeness in space</u> of her office is only a short distance from mine. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "closeness in space tương đương proximity (sự gần gũi).",
               "correctAnswer": "proximity"
             },
             {
               "id": "26",
-              "content": "He could sleep late that day or get up early and start his work. He chose the <u>second choice</u>. [ 26 ]",
+              "content": "",
               "options": [],
               "explanation": "second choice (sự lựa chọn thứ hai) tương đương latter.",
               "correctAnswer": "latter"
             },
             {
               "id": "27",
-              "content": "The noises on the computer sounded like they were <u>made to sound like real ones</u>. [ 27 ]",
+              "content": "",
               "options": [],
               "explanation": "made to sound like real ones (làm giả giống thật) tương đương synthetic (nhân tạo).",
               "correctAnswer": "synthetic"
             },
             {
               "id": "28",
-              "content": "Please <u>judge the quality</u> of his proposal before we decide to meet with him. [ 28 ]",
+              "content": "",
               "options": [],
               "explanation": "judge the quality (đánh giá chất lượng) tương đương assess.",
               "correctAnswer": "assess"
             },
             {
               "id": "29",
-              "content": "The best <u>cure</u> for a slightly injured foot is putting ice on it. [ 29 ]",
+              "content": "",
               "options": [],
               "explanation": "cure (cách chữa trị) tương đương remedy.",
               "correctAnswer": "remedy"
             },
             {
               "id": "30",
-              "content": "Most of the advertisements on TV are <u>related to the development of drugs</u> commercials. [ 30 ]",
+              "content": "",
               "options": [],
               "explanation": "related to the development of drugs tương đương pharmaceutical.",
               "correctAnswer": "pharmaceutical"

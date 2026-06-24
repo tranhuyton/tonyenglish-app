@@ -12,35 +12,35 @@
           "questions": [
             {
               "id": "1",
-              "content": "I need your help to move the <u>tables and chairs</u>. [ 1 ]",
+              "content": "<p class=\"mb-4\">I need your help to move the <u>tables and chairs</u>. [ 1 ]</p><p class=\"mb-4\">This problem will test your <u>ability to understand</u>. [ 2 ]</p><p class=\"mb-4\">I don’t like to be in dark rooms with <u>covers over the windows</u>. [ 3 ]</p><p class=\"mb-4\">Tom and Rob are the <u>best</u> roommates. [ 4 ]</p><p class=\"mb-4\">I need to <u>get a ticket</u> before I can board the train. [ 5 ]</p>",
               "options": [],
               "explanation": "furniture (n): đồ nội thất (bàn, ghế, v.v.).",
               "correctAnswer": "furniture"
             },
             {
               "id": "2",
-              "content": "This problem will test your <u>ability to understand</u>. [ 2 ]",
+              "content": "",
               "options": [],
               "explanation": "intelligence (n): sự thông minh (khả năng học hỏi và hiểu biết).",
               "correctAnswer": "intelligence"
             },
             {
               "id": "3",
-              "content": "I don’t like to be in dark rooms with <u>covers over the windows</u>. [ 3 ]",
+              "content": "",
               "options": [],
               "explanation": "curtains (n): rèm cửa (vải treo trên cửa sổ).",
               "correctAnswer": "curtains"
             },
             {
               "id": "4",
-              "content": "Tom and Rob are the <u>best</u> roommates. [ 4 ]",
+              "content": "",
               "options": [],
               "explanation": "ideal (adj): lý tưởng (tốt nhất có thể).",
               "correctAnswer": "ideal"
             },
             {
               "id": "5",
-              "content": "I need to <u>get a ticket</u> before I can board the train. [ 5 ]",
+              "content": "",
               "options": [],
               "explanation": "obtain (v): đạt được, thu được (có được thứ bạn muốn hoặc cần).",
               "correctAnswer": "obtain"

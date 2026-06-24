@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. credible",
+              "content": "credible",
               "options": [
                 "unbelievable",
                 "incorrect",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. deceased",
+              "content": "deceased",
               "options": [
                 "healed",
                 "affected",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. ornate",
+              "content": "ornate",
               "options": [
                 "unworthy",
                 "simple",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. therapeutic",
+              "content": "therapeutic",
               "options": [
                 "valued",
                 "sickening",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. dusk",
+              "content": "dusk",
               "options": [
                 "moon",
                 "sunrise",
@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. The journalist checked all her sources to make sure they <u>were believable.</u> [ 6 ]",
+              "content": "<p class=\"mb-4\">The journalist checked all her sources to make sure they <u>were believable.</u> [ 6 ]</p><p class=\"mb-4\">The hospital had a separate <u>section for very mentally ill</u> people. [ 7 ]</p><p class=\"mb-4\">The child’s handwriting was almost impossible to <u>figure out.</u> [ 8 ]</p><p class=\"mb-4\">The priest stood behind <u>a(n) table used in religious</u> ceremonies. [ 9 ]</p><p class=\"mb-4\">Her new <u>sweater was colorful and</u> decorated. [ 10 ]</p><p class=\"mb-4\">My dad <u>crushes food</u> for my baby brother because he doesn’t have teeth yet. [ 11 ]</p><p class=\"mb-4\">People with <u>an ailment affecting the joints</u> are often unable to do physical activities. [ 12 ]</p><p class=\"mb-4\"><u>Some people think</u> I have future seeing powers, but in reality I’m just very observant. [ 13 ]</p><p class=\"mb-4\">Cows release <u>so much waste material that</u> some scientists believe they harm the environment. [ 14 ]</p><p class=\"mb-4\">He didn’t like attending the opera, but he did it <u>to satisfy his mother.</u> [ 15 ]</p>",
               "options": [],
               "explanation": "credible (adj): can be believed or trusted.",
               "correctAnswer": "credible"
             },
             {
               "id": "7",
-              "content": "2. The hospital had a separate <u>section for very mentally ill</u> people. [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "psychotic (adj): having a very serious mental illness.",
               "correctAnswer": "psychotic"
             },
             {
               "id": "8",
-              "content": "3. The child’s handwriting was almost impossible to <u>figure out.</u> [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "decipher (v): figure out what it says.",
               "correctAnswer": "decipher"
             },
             {
               "id": "9",
-              "content": "4. The priest stood behind <u>a(n) table used in religious</u> ceremonies. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "altar (n): a table used in churches.",
               "correctAnswer": "altar"
             },
             {
               "id": "10",
-              "content": "5. Her new <u>sweater was colorful and</u> decorated. [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "ornate (adj): decorated with a lot of fancy things.",
               "correctAnswer": "ornate"
             },
             {
               "id": "11",
-              "content": "6. My dad <u>crushes food</u> for my baby brother because he doesn’t have teeth yet. [ 11 ]",
+              "content": "",
               "options": [],
               "explanation": "mash (v): crush it so that it is soft.",
               "correctAnswer": "mashes"
             },
             {
               "id": "12",
-              "content": "7. People with <u>an ailment affecting the joints</u> are often unable to do physical activities. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "arthritis (n): an illness causing pain and swelling in a person’s joints.",
               "correctAnswer": "arthritis"
             },
             {
               "id": "13",
-              "content": "8. <u>Some people think</u> I have future seeing powers, but in reality I’m just very observant. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "psychic (adj): knowing what will happen or what people think.",
               "correctAnswer": "psychic"
             },
             {
               "id": "14",
-              "content": "9. Cows release <u>so much waste material that</u> some scientists believe they harm the environment. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "dung (n): solid waste material produced by animals.",
               "correctAnswer": "dung"
             },
             {
               "id": "15",
-              "content": "10. He didn’t like attending the opera, but he did it <u>to satisfy his mother.</u> [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "gratify (v): to please someone.",
               "correctAnswer": "gratify"
@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. hone",
+              "content": "hone",
               "options": [
                 "game",
                 "place",
@@ -176,7 +176,7 @@
             },
             {
               "id": "17",
-              "content": "2. gratify",
+              "content": "gratify",
               "options": [
                 "admire",
                 "please",
@@ -188,7 +188,7 @@
             },
             {
               "id": "18",
-              "content": "3. mash",
+              "content": "mash",
               "options": [
                 "crush",
                 "death",
@@ -200,7 +200,7 @@
             },
             {
               "id": "19",
-              "content": "4. strife",
+              "content": "strife",
               "options": [
                 "hurt",
                 "curse",
@@ -212,7 +212,7 @@
             },
             {
               "id": "20",
-              "content": "5. sinister",
+              "content": "sinister",
               "options": [
                 "evil",
                 "futuristic",
@@ -232,7 +232,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. The [ 21 ] of the medical book is broad.",
+              "content": "The [ 21 ] of the medical book is broad.",
               "options": [
                 "scope",
                 "therapeutic",
@@ -250,7 +250,7 @@
             },
             {
               "id": "22",
-              "content": "2. It deals with all illnesses from colds to [ 22 ].",
+              "content": "It deals with all illnesses from colds to [ 22 ].",
               "options": [
                 "scope",
                 "therapeutic",
@@ -268,7 +268,7 @@
             },
             {
               "id": "23",
-              "content": "3. Marcia found the sound of the river [ 23 ].",
+              "content": "Marcia found the sound of the river [ 23 ].",
               "options": [
                 "scope",
                 "therapeutic",
@@ -286,7 +286,7 @@
             },
             {
               "id": "24",
-              "content": "4. She went there every day at [ 24 ] to relieve her stress.",
+              "content": "She went there every day at [ 24 ] to relieve her stress.",
               "options": [
                 "scope",
                 "therapeutic",
@@ -304,7 +304,7 @@
             },
             {
               "id": "25",
-              "content": "5. The criminal fooled everyone with his [ 25 ].",
+              "content": "The criminal fooled everyone with his [ 25 ].",
               "options": [
                 "scope",
                 "therapeutic",
@@ -322,7 +322,7 @@
             },
             {
               "id": "26",
-              "content": "6. If only someone had stopped him from doing his [ 26 ] crimes.",
+              "content": "If only someone had stopped him from doing his [ 26 ] crimes.",
               "options": [
                 "scope",
                 "therapeutic",
@@ -340,7 +340,7 @@
             },
             {
               "id": "27",
-              "content": "7. Solomon’s grandmother was [ 27 ].",
+              "content": "Solomon’s grandmother was [ 27 ].",
               "options": [
                 "scope",
                 "therapeutic",
@@ -358,7 +358,7 @@
             },
             {
               "id": "28",
-              "content": "8. Before she died, she taught him a lot about gardening and [ 28 ].",
+              "content": "Before she died, she taught him a lot about gardening and [ 28 ].",
               "options": [
                 "scope",
                 "therapeutic",
@@ -376,7 +376,7 @@
             },
             {
               "id": "29",
-              "content": "9. After the war, there was much [ 29 ] about land.",
+              "content": "After the war, there was much [ 29 ] about land.",
               "options": [
                 "scope",
                 "therapeutic",
@@ -394,7 +394,7 @@
             },
             {
               "id": "30",
-              "content": "10. It was difficult for the people to [ 30 ] the new laws about ownership.",
+              "content": "It was difficult for the people to [ 30 ] the new laws about ownership.",
               "options": [
                 "scope",
                 "therapeutic",
@@ -428,7 +428,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. The Greek Magical Papyri was hard to decipher because it was too large in scope.",
+              "content": "The Greek Magical Papyri was hard to decipher because it was too large in scope.",
               "options": [
                 "F",
                 "T"
@@ -438,7 +438,7 @@
             },
             {
               "id": "32",
-              "content": "2. The book is about botany.",
+              "content": "The book is about botany.",
               "options": [
                 "F",
                 "T"
@@ -448,7 +448,7 @@
             },
             {
               "id": "33",
-              "content": "3. The book gave advice for using crocodile dung to heal.",
+              "content": "The book gave advice for using crocodile dung to heal.",
               "options": [
                 "T",
                 "F"
@@ -458,7 +458,7 @@
             },
             {
               "id": "34",
-              "content": "4. A spell is spoken at dusk to become more credible.",
+              "content": "A spell is spoken at dusk to become more credible.",
               "options": [
                 "F",
                 "T"
@@ -468,7 +468,7 @@
             },
             {
               "id": "35",
-              "content": "5. The book had instructions for honing one’s psychic powers.",
+              "content": "The book had instructions for honing one’s psychic powers.",
               "options": [
                 "T",
                 "F"
@@ -486,7 +486,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. What illnesses does the book have advice for healing?",
+              "content": "What illnesses does the book have advice for healing?",
               "options": [
                 "The book gives advice for curing arthritis, pneumonia, and psychotic people.",
                 "It gives advice for treating the common cold.",
@@ -498,7 +498,7 @@
             },
             {
               "id": "37",
-              "content": "2. What kind of plants does the book recommend using?",
+              "content": "What kind of plants does the book recommend using?",
               "options": [
                 "The book recommends using plants like herbs believed to be therapeutic.",
                 "It recommends using poisonous plants.",
@@ -510,7 +510,7 @@
             },
             {
               "id": "38",
-              "content": "3. What should someone do if they want to cure arthritis?",
+              "content": "What should someone do if they want to cure arthritis?",
               "options": [
                 "Build an ornate altar, place mashed herbs on it, and say a spell at dusk.",
                 "They should sleep more and drink plenty of water.",
@@ -522,7 +522,7 @@
             },
             {
               "id": "39",
-              "content": "4. What does the sinister part of the book focus on?",
+              "content": "What does the sinister part of the book focus on?",
               "options": [
                 "Causing strife and deception.",
                 "Teaching how to use tea leaves.",
@@ -534,7 +534,7 @@
             },
             {
               "id": "40",
-              "content": "5. What could someone ask a magician to do if their farm animals died?",
+              "content": "What could someone ask a magician to do if their farm animals died?",
               "options": [
                 "Perform magic that makes the deceased come back to life.",
                 "Perform magic to give someone warts.",

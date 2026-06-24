@@ -18,70 +18,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. I’m glad our teacher is so <u>accepting of others</u> as they are. [ 1 ]",
+              "content": "<p class=\"mb-4\">I’m glad our teacher is so <u>accepting of others</u> as they are. [ 1 ]</p><p class=\"mb-4\">Chewing gum creates a lot of <u>watery liquid used</u> for digestion and chewing food. [ 2 ]</p><p class=\"mb-4\">She had <u>to use physical strength to stop the big</u> dog so that it did not try to attack us. [ 3 ]</p><p class=\"mb-4\">Let’s see who can <u>run fast over a short distance</u> to the car in the shortest amount of time. [ 4 ]</p><p class=\"mb-4\">Lots of people try <u>to imitate the sports</u> star. [ 5 ]</p><p class=\"mb-4\">The ache is coming deep from within her <u>organs within the</u> body. [ 6 ]</p><p class=\"mb-4\">Please take a <u>slightly wet</u> towel and wipe the surface of the table to clean it. [ 7 ]</p><p class=\"mb-4\">She wore a ring on <u>her finger between her thumb and middle finger.</u> [ 8 ]</p><p class=\"mb-4\">A lack of money might <u>limit the development</u> of the project. [ 9 ]</p><p class=\"mb-4\">His answer is always an <u>informal way of saying no.</u> [ 10 ]</p>",
               "options": [],
               "explanation": "tolerant (adj): accepting others.",
               "correctAnswer": "tolerant"
             },
             {
               "id": "2",
-              "content": "2. Chewing gum creates a lot of <u>watery liquid used</u> for digestion and chewing food. [ 2 ]",
+              "content": "",
               "options": [],
               "explanation": "saliva (n): watery liquid in the mouth.",
               "correctAnswer": "saliva"
             },
             {
               "id": "3",
-              "content": "3. She had <u>to use physical strength to stop the big</u> dog so that it did not try to attack us. [ 3 ]",
+              "content": "",
               "options": [],
               "explanation": "restrain (v): to use physical strength to stop someone or something.",
               "correctAnswer": "restrain"
             },
             {
               "id": "4",
-              "content": "4. Let’s see who can <u>run fast over a short distance</u> to the car in the shortest amount of time. [ 4 ]",
+              "content": "",
               "options": [],
               "explanation": "sprint (v): to run very fast over a short distance.",
               "correctAnswer": "sprint"
             },
             {
               "id": "5",
-              "content": "5. Lots of people try <u>to imitate the sports</u> star. [ 5 ]",
+              "content": "",
               "options": [],
               "explanation": "emulate (v): to imitate someone because they are admired.",
               "correctAnswer": "emulate"
             },
             {
               "id": "6",
-              "content": "6. The ache is coming deep from within her <u>organs within the</u> body. [ 6 ]",
+              "content": "",
               "options": [],
               "explanation": "guts (n): organs inside a person or animal.",
               "correctAnswer": "guts"
             },
             {
               "id": "7",
-              "content": "7. Please take a <u>slightly wet</u> towel and wipe the surface of the table to clean it. [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "moist (adj): slightly wet.",
               "correctAnswer": "moist"
             },
             {
               "id": "8",
-              "content": "8. She wore a ring on <u>her finger between her thumb and middle finger.</u> [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "forefinger (n): the finger between thumb and middle finger.",
               "correctAnswer": "forefinger"
             },
             {
               "id": "9",
-              "content": "9. A lack of money might <u>limit the development</u> of the project. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "constrain (v): to limit development.",
               "correctAnswer": "constrain"
             },
             {
               "id": "10",
-              "content": "10. His answer is always an <u>informal way of saying no.</u> [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "nope (adv): informal way of saying no.",
               "correctAnswer": "nope"
@@ -96,7 +96,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. prod",
+              "content": "prod",
               "options": [
                 "eat",
                 "push",
@@ -108,7 +108,7 @@
             },
             {
               "id": "12",
-              "content": "2. nope",
+              "content": "nope",
               "options": [
                 "no",
                 "free",
@@ -120,7 +120,7 @@
             },
             {
               "id": "13",
-              "content": "3. sprint",
+              "content": "sprint",
               "options": [
                 "crave",
                 "drive",
@@ -132,7 +132,7 @@
             },
             {
               "id": "14",
-              "content": "4. emulate",
+              "content": "emulate",
               "options": [
                 "annoy",
                 "proceed",
@@ -144,7 +144,7 @@
             },
             {
               "id": "15",
-              "content": "5. vampire",
+              "content": "vampire",
               "options": [
                 "car",
                 "monster",
@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. After walking through the desert, the thirsty man had no <i>saliva</i> left in his mouth.",
+              "content": "After walking through the desert, the thirsty man had no <i>saliva</i> left in his mouth.",
               "options": [
                 "C",
                 "I"
@@ -174,7 +174,7 @@
             },
             {
               "id": "17",
-              "content": "2. We’ve been waiting at the <i>depot</i> for two hours for the train to arrive!",
+              "content": "We’ve been waiting at the <i>depot</i> for two hours for the train to arrive!",
               "options": [
                 "C",
                 "I"
@@ -184,7 +184,7 @@
             },
             {
               "id": "18",
-              "content": "3. The joke was so funny that it made him <i>yawn</i>.",
+              "content": "The joke was so funny that it made him <i>yawn</i>.",
               "options": [
                 "C",
                 "I"
@@ -194,7 +194,7 @@
             },
             {
               "id": "19",
-              "content": "4. The <i>tolerant</i> coach didn’t think that girls were good enough to play on the team.",
+              "content": "The <i>tolerant</i> coach didn’t think that girls were good enough to play on the team.",
               "options": [
                 "C",
                 "I"
@@ -204,7 +204,7 @@
             },
             {
               "id": "20",
-              "content": "5. He <i>spit</i> on the ground to show his disgust for the situation.",
+              "content": "He <i>spit</i> on the ground to show his disgust for the situation.",
               "options": [
                 "C",
                 "I"
@@ -214,7 +214,7 @@
             },
             {
               "id": "21",
-              "content": "6. I hope I don’t have to <i>constrain</i> another essay at school tomorrow.",
+              "content": "I hope I don’t have to <i>constrain</i> another essay at school tomorrow.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +224,7 @@
             },
             {
               "id": "22",
-              "content": "7. The boy’s dream was to <i>restrain</i> as well as his father someday.",
+              "content": "The boy’s dream was to <i>restrain</i> as well as his father someday.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +234,7 @@
             },
             {
               "id": "23",
-              "content": "8. He is usually a very calm person. His anger today was just an <i>inherent</i> act.",
+              "content": "He is usually a very calm person. His anger today was just an <i>inherent</i> act.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +244,7 @@
             },
             {
               "id": "24",
-              "content": "9. The evil man expected a large <i>ransom</i> before he would return the child to her mother.",
+              "content": "The evil man expected a large <i>ransom</i> before he would return the child to her mother.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +254,7 @@
             },
             {
               "id": "25",
-              "content": "10. The rotten meal gave me a terrible pain in my <i>guts</i>.",
+              "content": "The rotten meal gave me a terrible pain in my <i>guts</i>.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +264,7 @@
             },
             {
               "id": "26",
-              "content": "11. I <i>intimidated</i> my homework, so I could go outside and play baseball.",
+              "content": "I <i>intimidated</i> my homework, so I could go outside and play baseball.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +274,7 @@
             },
             {
               "id": "27",
-              "content": "12. No one was impressed with Bobby’s <i>stunt</i> to get attention.",
+              "content": "No one was impressed with Bobby’s <i>stunt</i> to get attention.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +284,7 @@
             },
             {
               "id": "28",
-              "content": "13. Using his <i>forefinger</i>, he pointed to a plane in the sky.",
+              "content": "Using his <i>forefinger</i>, he pointed to a plane in the sky.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +294,7 @@
             },
             {
               "id": "29",
-              "content": "14. Take plenty of water with you before you begin the journey across the <i>moist</i> desert.",
+              "content": "Take plenty of water with you before you begin the journey across the <i>moist</i> desert.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +304,7 @@
             },
             {
               "id": "30",
-              "content": "15. The <i>janitor</i> had to fix the heater before people could enter the building.",
+              "content": "The <i>janitor</i> had to fix the heater before people could enter the building.",
               "options": [
                 "C",
                 "I"
@@ -330,7 +330,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Anne was constrained by her inherent fears.",
+              "content": "Anne was constrained by her inherent fears.",
               "options": [
                 "T",
                 "F"
@@ -340,7 +340,7 @@
             },
             {
               "id": "32",
-              "content": "2. The vampire restrained her arms and legs and carried her to his house.",
+              "content": "The vampire restrained her arms and legs and carried her to his house.",
               "options": [
                 "T",
                 "F"
@@ -350,7 +350,7 @@
             },
             {
               "id": "33",
-              "content": "3. Anne’s guts began to hurt because she was intimidated by her classmates.",
+              "content": "Anne’s guts began to hurt because she was intimidated by her classmates.",
               "options": [
                 "T",
                 "F"
@@ -360,7 +360,7 @@
             },
             {
               "id": "34",
-              "content": "4. The dirty man spit when he talked.",
+              "content": "The dirty man spit when he talked.",
               "options": [
                 "T",
                 "F"
@@ -370,7 +370,7 @@
             },
             {
               "id": "35",
-              "content": "5. At the end, the kids were tolerant of Anne and decided to emulate her bravery.",
+              "content": "At the end, the kids were tolerant of Anne and decided to emulate her bravery.",
               "options": [
                 "T",
                 "F"
@@ -388,7 +388,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. What would the kids do in the janitor’s closet?",
+              "content": "What would the kids do in the janitor’s closet?",
               "options": [
                 "They would hide behind the door of the school janitor’s closet, and then jump out to scare her.",
                 "They would clean it.",
@@ -400,7 +400,7 @@
             },
             {
               "id": "37",
-              "content": "2. What happened after the man yawned?",
+              "content": "What happened after the man yawned?",
               "options": [
                 "Anne waited quietly until he fell asleep.",
                 "Anne yelled for help.",
@@ -412,7 +412,7 @@
             },
             {
               "id": "38",
-              "content": "3. After the man prodded Anne with his forefinger, what did he say about the ransom?",
+              "content": "After the man prodded Anne with his forefinger, what did he say about the ransom?",
               "options": [
                 "“You’ll stay right here until I get a ransom from your parents. Then I’ll be rich!”",
                 "“I don't need a ransom.”",
@@ -424,7 +424,7 @@
             },
             {
               "id": "39",
-              "content": "4. What did Anne do after she sprinted to the bus depot?",
+              "content": "What did Anne do after she sprinted to the bus depot?",
               "options": [
                 "She boarded a bus to the police station. She told the police what happened, and they arrested the kidnapper.",
                 "She went home.",
@@ -436,7 +436,7 @@
             },
             {
               "id": "40",
-              "content": "5. To what question did Anne respond by saying “ nope” ?",
+              "content": "To what question did Anne respond by saying “ nope” ?",
               "options": [
                 "“Weren’t you too scared to escape?”",
                 "“Did you pay the ransom?”",

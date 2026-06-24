@@ -12,61 +12,61 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. She looks like someone that I <u>know well</u>.<br/>fa [ 1 ]",
+              "content": "<p class=\"mb-4\">She looks like someone that I <u>know well</u>.<br/>fa [ 1 ]</p><p class=\"mb-4\">Drinking water is something that she <u>must do</u>.<br/>ne [ 2 ]</p><p class=\"mb-4\">He has an <u>idea</u> of how the machine works.<br/>th [ 3 ]</p><p class=\"mb-4\">The <u>reason</u> that I am doing this is to help children.<br/>pu [ 4 ]</p><p class=\"mb-4\">My teacher will <u>make me want to</u> get good grades.<br/>en [ 5 ]</p><p class=\"mb-4\">I <u>agree with</u> your idea. I think it will work.<br/>ac [ 6 ]</p><p class=\"mb-4\">It is difficult to <u>keep from falling</u> when you stand on one foot.<br/>ba [ 7 ]</p><p class=\"mb-4\">Her <u>routine</u> of exercising after work is common for many people.<br/>pa [ 8 ]</p><p class=\"mb-4\">There is a big <u>difference</u> between day and night.<br/>co [ 9 ]</p><p class=\"mb-4\">The Earth has a <u>solitary</u> moon.<br/>si [ 10 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "familiar"
             },
             {
               "id": "2",
-              "content": "2. Drinking water is something that she <u>must do</u>.<br/>ne [ 2 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "necessary"
             },
             {
               "id": "3",
-              "content": "3. He has an <u>idea</u> of how the machine works.<br/>th [ 3 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "theory"
             },
             {
               "id": "4",
-              "content": "4. The <u>reason</u> that I am doing this is to help children.<br/>pu [ 4 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "purpose"
             },
             {
               "id": "5",
-              "content": "5. My teacher will <u>make me want to</u> get good grades.<br/>en [ 5 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "encourage"
             },
             {
               "id": "6",
-              "content": "6. I <u>agree with</u> your idea. I think it will work.<br/>ac [ 6 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "accept"
             },
             {
               "id": "7",
-              "content": "7. It is difficult to <u>keep from falling</u> when you stand on one foot.<br/>ba [ 7 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "balance"
             },
             {
               "id": "8",
-              "content": "8. Her <u>routine</u> of exercising after work is common for many people.<br/>pa [ 8 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "pattern"
             },
             {
               "id": "9",
-              "content": "9. There is a big <u>difference</u> between day and night.<br/>co [ 9 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "contrast"
             },
             {
               "id": "10",
-              "content": "10. The Earth has a <u>solitary</u> moon.<br/>si [ 10 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "single"
             }

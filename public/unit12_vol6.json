@@ -18,70 +18,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. The <u>large pile of dirt</u> covered most of the backyard. [ 1 ]",
+              "content": "<p class=\"mb-4\">The <u>large pile of dirt</u> covered most of the backyard. [ 1 ]</p><p class=\"mb-4\">Please call for <u>the most important male servant.</u> [ 2 ]</p><p class=\"mb-4\">I don’t think we have enough <u>wood used for building furniture</u> to complete the project. [ 3 ]</p><p class=\"mb-4\">The playful puppy made the baby <u>smile broadly.</u> [ 4 ]</p><p class=\"mb-4\">We’ll have to install a new <u>device that attaches to a tube to control the flow of liquid.</u> [ 5 ]</p><p class=\"mb-4\">I got a small muscle <u>pain in my leg after having a long workout at the</u> gym. [ 6 ]</p><p class=\"mb-4\">To reach the TV, the young girl stood on the <u>seat with legs but no arm support.</u> [ 7 ]</p><p class=\"mb-4\">A high examination score is <u>a proof of the existence of good studying</u> skills. [ 8 ]</p><p class=\"mb-4\">The man became worried <u>when his arm was without feeling.</u> [ 9 ]</p><p class=\"mb-4\">He was hired to repair the house that had become <u>old and in bad condition.</u> [ 10 ]</p>",
               "options": [],
               "explanation": "mound (n): a large pile of something.",
               "correctAnswer": "mound"
             },
             {
               "id": "2",
-              "content": "2. Please call for <u>the most important male servant.</u> [ 2 ]",
+              "content": "",
               "options": [],
               "explanation": "butler (n): the most important male servant in a wealthy house.",
               "correctAnswer": "butler"
             },
             {
               "id": "3",
-              "content": "3. I don’t think we have enough <u>wood used for building furniture</u> to complete the project. [ 3 ]",
+              "content": "",
               "options": [],
               "explanation": "timber (n): wood that is used for building houses and making furniture.",
               "correctAnswer": "timber"
             },
             {
               "id": "4",
-              "content": "4. The playful puppy made the baby <u>smile broadly.</u> [ 4 ]",
+              "content": "",
               "options": [],
               "explanation": "grin (v): to smile broadly.",
               "correctAnswer": "grin"
             },
             {
               "id": "5",
-              "content": "5. We’ll have to install a new <u>device that attaches to a tube to control the flow of liquid.</u> [ 5 ]",
+              "content": "",
               "options": [],
               "explanation": "valve (n): a device attached to a pipe that controls the flow of liquid or air.",
               "correctAnswer": "valve"
             },
             {
               "id": "6",
-              "content": "6. I got a small muscle <u>pain in my leg after having a long workout at the</u> gym. [ 6 ]",
+              "content": "",
               "options": [],
               "explanation": "cramp (n): a strong pain caused by a muscle after a lot of physical use.",
               "correctAnswer": "cramp"
             },
             {
               "id": "7",
-              "content": "7. To reach the TV, the young girl stood on the <u>seat with legs but no arm support.</u> [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "stool (n): a seat with legs but no support for a person’s arms and back.",
               "correctAnswer": "stool"
             },
             {
               "id": "8",
-              "content": "8. A high examination score is <u>a proof of the existence of good studying</u> skills. [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "testament (n): a testament to something shows that it exists or is true.",
               "correctAnswer": "testament"
             },
             {
               "id": "9",
-              "content": "9. The man became worried <u>when his arm was without feeling.</u> [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "numb (adj): when a body part does not have any feeling.",
               "correctAnswer": "numb"
             },
             {
               "id": "10",
-              "content": "10. He was hired to repair the house that had become <u>old and in bad condition.</u> [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "dilapidated (adj): old and in bad condition.",
               "correctAnswer": "dilapidated"
@@ -96,7 +96,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. The scientist’s theory was full of <i>flaws</i>. There was no way it could work.",
+              "content": "The scientist’s theory was full of <i>flaws</i>. There was no way it could work.",
               "options": [
                 "I",
                 "C"
@@ -106,7 +106,7 @@
             },
             {
               "id": "12",
-              "content": "2. The <i>butler</i> catered to the old man’s every need.",
+              "content": "The <i>butler</i> catered to the old man’s every need.",
               "options": [
                 "I",
                 "C"
@@ -116,7 +116,7 @@
             },
             {
               "id": "13",
-              "content": "3. I hope we do not have to say <i>farewells</i> to the bus to school.",
+              "content": "I hope we do not have to say <i>farewells</i> to the bus to school.",
               "options": [
                 "I",
                 "C"
@@ -126,7 +126,7 @@
             },
             {
               "id": "14",
-              "content": "4. The teacher was proud of the <i>filth</i> her students achieved in class.",
+              "content": "The teacher was proud of the <i>filth</i> her students achieved in class.",
               "options": [
                 "I",
                 "C"
@@ -136,7 +136,7 @@
             },
             {
               "id": "15",
-              "content": "5. After the initial pain of dropping the hammer on my toe, it went <i>numb</i>.",
+              "content": "After the initial pain of dropping the hammer on my toe, it went <i>numb</i>.",
               "options": [
                 "I",
                 "C"
@@ -146,7 +146,7 @@
             },
             {
               "id": "16",
-              "content": "6. He was not looking forward to cleaning the huge <i>mound</i> of dirty dishes in the sink.",
+              "content": "He was not looking forward to cleaning the huge <i>mound</i> of dirty dishes in the sink.",
               "options": [
                 "I",
                 "C"
@@ -156,7 +156,7 @@
             },
             {
               "id": "17",
-              "content": "7. The scared child felt <i>bliss</i> and cried for his mother.",
+              "content": "The scared child felt <i>bliss</i> and cried for his mother.",
               "options": [
                 "I",
                 "C"
@@ -166,7 +166,7 @@
             },
             {
               "id": "18",
-              "content": "8. Huge stained-glass windows <i>adorn</i> the new church.",
+              "content": "Huge stained-glass windows <i>adorn</i> the new church.",
               "options": [
                 "I",
                 "C"
@@ -176,7 +176,7 @@
             },
             {
               "id": "19",
-              "content": "9. Fossil evidence is a <i>testament</i> to the immense size of dinosaurs.",
+              "content": "Fossil evidence is a <i>testament</i> to the immense size of dinosaurs.",
               "options": [
                 "I",
                 "C"
@@ -186,7 +186,7 @@
             },
             {
               "id": "20",
-              "content": "10. The <i>reckless</i> climber took every precaution to insure a safe climb.",
+              "content": "The <i>reckless</i> climber took every precaution to insure a safe climb.",
               "options": [
                 "I",
                 "C"
@@ -212,7 +212,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. The dilapidated mansion was covered in filth.",
+              "content": "The dilapidated mansion was covered in filth.",
               "options": [
                 "F",
                 "T"
@@ -222,7 +222,7 @@
             },
             {
               "id": "22",
-              "content": "2. Gordon’s muscles were a testament to his flaws.",
+              "content": "Gordon’s muscles were a testament to his flaws.",
               "options": [
                 "F",
                 "T"
@@ -232,7 +232,7 @@
             },
             {
               "id": "23",
-              "content": "3. Gordon was never reckless even when tasks were boring.",
+              "content": "Gordon was never reckless even when tasks were boring.",
               "options": [
                 "F",
                 "T"
@@ -242,7 +242,7 @@
             },
             {
               "id": "24",
-              "content": "4. The mound of dirt evoked unhappy feelings in Gordon.",
+              "content": "The mound of dirt evoked unhappy feelings in Gordon.",
               "options": [
                 "F",
                 "T"
@@ -252,7 +252,7 @@
             },
             {
               "id": "25",
-              "content": "5. Gordon tightened the valve under the kitchen faucet and bought timber to build stools.",
+              "content": "Gordon tightened the valve under the kitchen faucet and bought timber to build stools.",
               "options": [
                 "F",
                 "T"
@@ -270,7 +270,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. Why did Greta hire a butler to do the housekeeping and repairs?",
+              "content": "Why did Greta hire a butler to do the housekeeping and repairs?",
               "options": [
                 "She didn't know how to do them.",
                 "Greta was too old to do housekeeping and repairs herself.",
@@ -282,7 +282,7 @@
             },
             {
               "id": "27",
-              "content": "2. Why did Gordon’s shoulders get cramps and his fingers become numb?",
+              "content": "Why did Gordon’s shoulders get cramps and his fingers become numb?",
               "options": [
                 "He fell down the stairs.",
                 "He carried heavy slate statues.",
@@ -294,7 +294,7 @@
             },
             {
               "id": "28",
-              "content": "3. What was written on the banner that adorned the slate statue?",
+              "content": "What was written on the banner that adorned the slate statue?",
               "options": [
                 "\"Welcome home.\"",
                 "\"Happy birthday.\"",
@@ -306,7 +306,7 @@
             },
             {
               "id": "29",
-              "content": "4. What did Gordon say when he grinned and felt bliss?",
+              "content": "What did Gordon say when he grinned and felt bliss?",
               "options": [
                 "\"This statue has a flaw!\"",
                 "\"My hard work really paid off!\"",
@@ -318,7 +318,7 @@
             },
             {
               "id": "30",
-              "content": "5. What happened after Greta and Gordon said their farewells?",
+              "content": "What happened after Greta and Gordon said their farewells?",
               "options": [
                 "Gordon got a cramp in his leg.",
                 "Gordon cleaned the filth.",

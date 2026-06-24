@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. a strong feeling of not liking someone or something",
+              "content": "a strong feeling of not liking someone or something",
               "options": [
                 "deceive",
                 "repay",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. not as good as",
+              "content": "not as good as",
               "options": [
                 "inferior",
                 "hatred",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. to get something",
+              "content": "to get something",
               "options": [
                 "overlook",
                 "discourage",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. to go to a dangerous place",
+              "content": "to go to a dangerous place",
               "options": [
                 "wheat",
                 "venture",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. a plant that makes grain",
+              "content": "a plant that makes grain",
               "options": [
                 "fake",
                 "wheat",
@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. satisfactory",
+              "content": "satisfactory",
               "options": [
                 "to pretend",
                 "to care for",
@@ -92,7 +92,7 @@
             },
             {
               "id": "7",
-              "content": "2. newcomer",
+              "content": "newcomer",
               "options": [
                 "not comfortable",
                 "someone new to a place",
@@ -104,7 +104,7 @@
             },
             {
               "id": "8",
-              "content": "3. repay",
+              "content": "repay",
               "options": [
                 "to give back",
                 "to not pay attention to",
@@ -116,7 +116,7 @@
             },
             {
               "id": "9",
-              "content": "4. fake",
+              "content": "fake",
               "options": [
                 "to fail to notice",
                 "not real",
@@ -128,7 +128,7 @@
             },
             {
               "id": "10",
-              "content": "5. discouraged",
+              "content": "discouraged",
               "options": [
                 "high place",
                 "to dislike a lot",
@@ -148,7 +148,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p>11. a. discourage b. lodge c. venture d. hut</p>",
+              "content": "<p class=\"mb-4\">a. discourage b. lodge c. venture d. hut</p>",
               "options": [
                 "lodge and hut",
                 "venture and hut",
@@ -160,7 +160,7 @@
             },
             {
               "id": "12",
-              "content": "<p>12. a. shepherd b. caretaker c. repay d. wheat</p>",
+              "content": "<p class=\"mb-4\">a. shepherd b. caretaker c. repay d. wheat</p>",
               "options": [
                 "shepherd and caretaker",
                 "repay and wheat",
@@ -172,7 +172,7 @@
             },
             {
               "id": "13",
-              "content": "<p>13. a. offense b. fake c. hatred d. deceive</p>",
+              "content": "<p class=\"mb-4\">a. offense b. fake c. hatred d. deceive</p>",
               "options": [
                 "fake and deceive",
                 "hatred and deceive",
@@ -184,7 +184,7 @@
             },
             {
               "id": "14",
-              "content": "<p>14. a. acquire b. awkward c. newcomer d. ridiculous</p>",
+              "content": "<p class=\"mb-4\">a. acquire b. awkward c. newcomer d. ridiculous</p>",
               "options": [
                 "awkward and ridiculous",
                 "newcomer and ridiculous",
@@ -196,7 +196,7 @@
             },
             {
               "id": "15",
-              "content": "<p>15. a. overlook b. inferior c. neglect d. satisfactory</p>",
+              "content": "<p class=\"mb-4\">a. overlook b. inferior c. neglect d. satisfactory</p>",
               "options": [
                 "overlook and neglect",
                 "neglect and satisfactory",
@@ -216,7 +216,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. The girl didn't like the ________, so she played a joke on them. She put ________ bugs in their drinks. (fake / newcomers)",
+              "content": "The girl didn't like the ________, so she played a joke on them. She put ________ bugs in their drinks. (fake / newcomers)",
               "options": [
                 "newcomers / fake",
                 "fake / newcomers"
@@ -226,7 +226,7 @@
             },
             {
               "id": "17",
-              "content": "2. Dave hoped to ________ a new house. The ________ where he lived was too old. (acquire / lodge)",
+              "content": "Dave hoped to ________ a new house. The ________ where he lived was too old. (acquire / lodge)",
               "options": [
                 "acquire / lodge",
                 "lodge / acquire"
@@ -236,7 +236,7 @@
             },
             {
               "id": "18",
-              "content": "3. She was eager to ________ the boy that had helped her repair her bike. While others had simply ________ her, he was happy to help. (repay / neglected)",
+              "content": "She was eager to ________ the boy that had helped her repair her bike. While others had simply ________ her, he was happy to help. (repay / neglected)",
               "options": [
                 "repay / neglected",
                 "neglected / repay"
@@ -246,7 +246,7 @@
             },
             {
               "id": "19",
-              "content": "4. Going to jail ________ the man from any ________ in the future. (offenses / discouraged)",
+              "content": "Going to jail ________ the man from any ________ in the future. (offenses / discouraged)",
               "options": [
                 "discouraged / offenses",
                 "offenses / discouraged"
@@ -256,7 +256,7 @@
             },
             {
               "id": "20",
-              "content": "5. In the middle of the storm, the ________ looked for his lost sheep by ________ up the mountain. (shepherd / venturing)",
+              "content": "In the middle of the storm, the ________ looked for his lost sheep by ________ up the mountain. (shepherd / venturing)",
               "options": [
                 "shepherd / venturing",
                 "venturing / shepherd"
@@ -266,7 +266,7 @@
             },
             {
               "id": "21",
-              "content": "6. My little brother tried to ________ us by dressing in Dad's clothes, but he just looked ________. (deceive / ridiculous)",
+              "content": "My little brother tried to ________ us by dressing in Dad's clothes, but he just looked ________. (deceive / ridiculous)",
               "options": [
                 "deceive / ridiculous",
                 "ridiculous / deceive"
@@ -276,7 +276,7 @@
             },
             {
               "id": "22",
-              "content": "7. The farmer built his ________ close to the ________ field so he could constantly watch it. (wheat / hut)",
+              "content": "The farmer built his ________ close to the ________ field so he could constantly watch it. (wheat / hut)",
               "options": [
                 "hut / wheat",
                 "wheat / hut"
@@ -286,7 +286,7 @@
             },
             {
               "id": "23",
-              "content": "8. After the ________ started a small fire in the kitchen, he felt very ________. (awkward / caretaker)",
+              "content": "After the ________ started a small fire in the kitchen, he felt very ________. (awkward / caretaker)",
               "options": [
                 "caretaker / awkward",
                 "awkward / caretaker"
@@ -296,7 +296,7 @@
             },
             {
               "id": "24",
-              "content": "9. Most shoppers tend to ________ any products that they think are ________ to similar things. (overlook / inferior)",
+              "content": "Most shoppers tend to ________ any products that they think are ________ to similar things. (overlook / inferior)",
               "options": [
                 "overlook / inferior",
                 "inferior / overlook"
@@ -306,7 +306,7 @@
             },
             {
               "id": "25",
-              "content": "10. She had a ________ for food with tomatoes, but everything else on the menu was ________. (hatred / satisfactory)",
+              "content": "She had a ________ for food with tomatoes, but everything else on the menu was ________. (hatred / satisfactory)",
               "options": [
                 "hatred / satisfactory",
                 "satisfactory / hatred"

@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. We cannot go on our ___________ because there are too many passengers on the small ___________. (voyage / vessel)",
+              "content": "We cannot go on our ___________ because there are too many passengers on the small ___________. (voyage / vessel)",
               "options": [
                 "voyage",
                 "vessel",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. The ship entered the ___________, and boxes of supplies were put ___________. (aboard / port)",
+              "content": "The ship entered the ___________, and boxes of supplies were put ___________. (aboard / port)",
               "options": [
                 "port",
                 "aboard",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. The criminal’s shirt was soaked with ___________ because he had been running from the ___________. (sheriff / sweat)",
+              "content": "The criminal’s shirt was soaked with ___________ because he had been running from the ___________. (sheriff / sweat)",
               "options": [
                 "sweat",
                 "sheriff",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. The ___________ flew his private jet across the world to visit a new ___________ that was said to bring people luck. (millionaire / fountain)",
+              "content": "The ___________ flew his private jet across the world to visit a new ___________ that was said to bring people luck. (millionaire / fountain)",
               "options": [
                 "millionaire",
                 "fountain",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. Churches ___________ many people that want a safe, quiet place to ___________. (worship / harbor)",
+              "content": "Churches ___________ many people that want a safe, quiet place to ___________. (worship / harbor)",
               "options": [
                 "harbor",
                 "worship",
@@ -72,7 +72,7 @@
             },
             {
               "id": "6",
-              "content": "6. Criminals ___________ a prison, and the guards ___________ the rules. (enforce / inhabit)",
+              "content": "Criminals ___________ a prison, and the guards ___________ the rules. (enforce / inhabit)",
               "options": [
                 "inhabit",
                 "enforce",
@@ -84,7 +84,7 @@
             },
             {
               "id": "7",
-              "content": "7. The criminal pulled the ___________ of the gun, but it had no ___________. (bullets / trigger)",
+              "content": "The criminal pulled the ___________ of the gun, but it had no ___________. (bullets / trigger)",
               "options": [
                 "trigger",
                 "bullets",
@@ -96,7 +96,7 @@
             },
             {
               "id": "8",
-              "content": "8. To ___________ the new soldiers, the officer had them ___________ together for an hour. (unify / march)",
+              "content": "To ___________ the new soldiers, the officer had them ___________ together for an hour. (unify / march)",
               "options": [
                 "unify",
                 "march",
@@ -108,7 +108,7 @@
             },
             {
               "id": "9",
-              "content": "9. I’m going to ___________ my friends when I show up to the costume party dressed as a ___________. (startle / devil)",
+              "content": "I’m going to ___________ my friends when I show up to the costume party dressed as a ___________. (startle / devil)",
               "options": [
                 "startle",
                 "devil",
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "10. The boy will be quite ___________ if you let his kite ___________ away. (bitter / drift)",
+              "content": "The boy will be quite ___________ if you let his kite ___________ away. (bitter / drift)",
               "options": [
                 "bitter",
                 "drift",
@@ -140,70 +140,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I will go on a <u>long journey</u> to Japan this spring. [ 11 ]",
+              "content": "<p class=\"mb-4\">I will go on a <u>long journey</u> to Japan this spring. [ 11 ]</p><p class=\"mb-4\">I was <u>on a plane</u> headed to South America. [ 12 ]</p><p class=\"mb-4\">The <u>part of a gun that you pull to make it fire</u> broke off the old gun. [ 13 ]</p><p class=\"mb-4\">The <u>police officer in charge of a large area</u> arrested the criminal who robbed the bank. [ 14 ]</p><p class=\"mb-4\">There is a beautiful <u>water source</u> at the shopping mall. [ 15 ]</p><p class=\"mb-4\">My brother likes to hide in the closet and <u>suddenly scare</u> me. [ 16 ]</p><p class=\"mb-4\">The president wants to <u>bring together</u> the people of her country. [ 17 ]</p><p class=\"mb-4\">We sailed the boat into the <u>area where the boats are supposed to land</u>. [ 18 ]</p><p class=\"mb-4\">I hope a bear doesn’t <u>live in</u> this cave! [ 19 ]</p><p class=\"mb-4\">The <u>evil spirit</u> made me commit the horrible crime. [ 20 ]</p>",
               "options": [],
               "explanation": "voyage mang nghĩa chuyến đi dài ngày.",
               "correctAnswer": "VOYAGE"
             },
             {
               "id": "12",
-              "content": "2. I was <u>on a plane</u> headed to South America. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "aboard nghĩa là ở trên tàu, máy bay.",
               "correctAnswer": "ABOARD"
             },
             {
               "id": "13",
-              "content": "3. The <u>part of a gun that you pull to make it fire</u> broke off the old gun. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "trigger là cò súng.",
               "correctAnswer": "TRIGGER"
             },
             {
               "id": "14",
-              "content": "4. The <u>police officer in charge of a large area</u> arrested the criminal who robbed the bank. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "sheriff là cảnh sát trưởng.",
               "correctAnswer": "SHERIFF"
             },
             {
               "id": "15",
-              "content": "5. There is a beautiful <u>water source</u> at the shopping mall. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "fountain là đài phun nước.",
               "correctAnswer": "FOUNTAIN"
             },
             {
               "id": "16",
-              "content": "6. My brother likes to hide in the closet and <u>suddenly scare</u> me. [ 16 ]",
+              "content": "",
               "options": [],
               "explanation": "startle là làm giật mình.",
               "correctAnswer": "STARTLE"
             },
             {
               "id": "17",
-              "content": "7. The president wants to <u>bring together</u> the people of her country. [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "unify là thống nhất, gắn kết.",
               "correctAnswer": "UNIFY"
             },
             {
               "id": "18",
-              "content": "8. We sailed the boat into the <u>area where the boats are supposed to land</u>. [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "harbor là bến cảng.",
               "correctAnswer": "HARBOR"
             },
             {
               "id": "19",
-              "content": "9. I hope a bear doesn’t <u>live in</u> this cave! [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "inhabit là sinh sống, cư ngụ.",
               "correctAnswer": "INHABIT"
             },
             {
               "id": "20",
-              "content": "10. The <u>evil spirit</u> made me commit the horrible crime. [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "devil là ác quỷ, tà linh.",
               "correctAnswer": "DEVIL"
@@ -218,7 +218,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. Which of the following can afford very expensive things?",
+              "content": "Which of the following can afford very expensive things?",
               "options": [
                 "A sheriff",
                 "A trigger",
@@ -230,7 +230,7 @@
             },
             {
               "id": "22",
-              "content": "2. How would a person feel if they were upset about a situation?",
+              "content": "How would a person feel if they were upset about a situation?",
               "options": [
                 "Bitter",
                 "Aboard",
@@ -242,7 +242,7 @@
             },
             {
               "id": "23",
-              "content": "3. Where can many sailors be found?",
+              "content": "Where can many sailors be found?",
               "options": [
                 "With a bullet",
                 "On a vessel",
@@ -254,7 +254,7 @@
             },
             {
               "id": "24",
-              "content": "4. What does a toy boat do on water?",
+              "content": "What does a toy boat do on water?",
               "options": [
                 "Worship",
                 "Drift",
@@ -266,7 +266,7 @@
             },
             {
               "id": "25",
-              "content": "5. What do people do in the army?",
+              "content": "What do people do in the army?",
               "options": [
                 "Harbor",
                 "Voyage",

@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. a part of something",
+              "content": "a part of something",
               "options": [
                 "a. greenhouse",
                 "b. secretary",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. easy to see",
+              "content": "easy to see",
               "options": [
                 "a. blind",
                 "b. talent",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. to make something",
+              "content": "to make something",
               "options": [
                 "a. compose",
                 "b. commit",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. to find an answer",
+              "content": "to find an answer",
               "options": [
                 "a. ignore",
                 "b. exhaust",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. a kind of science",
+              "content": "a kind of science",
               "options": [
                 "a. physics",
                 "b. thesis",
@@ -72,7 +72,7 @@
             },
             {
               "id": "6",
-              "content": "6. the act of seeing",
+              "content": "the act of seeing",
               "options": [
                 "a. dormitory",
                 "b. vision",
@@ -84,7 +84,7 @@
             },
             {
               "id": "7",
-              "content": "7. unable to see",
+              "content": "unable to see",
               "options": [
                 "a. severe",
                 "b. apparent",
@@ -96,7 +96,7 @@
             },
             {
               "id": "8",
-              "content": "8. a building used to grow plants",
+              "content": "a building used to grow plants",
               "options": [
                 "a. thesis",
                 "b. greenhouse",
@@ -108,7 +108,7 @@
             },
             {
               "id": "9",
-              "content": "9. a school building",
+              "content": "a school building",
               "options": [
                 "a. secretary",
                 "b. talent",
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "10. to talk",
+              "content": "to talk",
               "options": [
                 "a. chat",
                 "b. compose",
@@ -148,7 +148,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "a. A nurse reminding a student about her history paper",
                 "b. How to calculate an answer",
@@ -160,7 +160,7 @@
             },
             {
               "id": "12",
-              "content": "2. According to the passage, why did Sue stay up late the night before?",
+              "content": "According to the passage, why did Sue stay up late the night before?",
               "options": [
                 "a. She was washing her uniform.",
                 "b. She was ignoring her parents on purpose.",
@@ -172,7 +172,7 @@
             },
             {
               "id": "13",
-              "content": "3. What did the nurse bring into the room?",
+              "content": "What did the nurse bring into the room?",
               "options": [
                 "a. A glass of juice",
                 "b. The secretary",
@@ -184,7 +184,7 @@
             },
             {
               "id": "14",
-              "content": "4. According to the passage, what was obvious to the nurse after seeing Sue?",
+              "content": "According to the passage, what was obvious to the nurse after seeing Sue?",
               "options": [
                 "a. Sue had committed herself to learning.",
                 "b. Sue had exhausted herself.",
@@ -196,7 +196,7 @@
             },
             {
               "id": "15",
-              "content": "5. As they chatted, what did the nurse say would cause Sue severe sickness?",
+              "content": "As they chatted, what did the nurse say would cause Sue severe sickness?",
               "options": [
                 "a. Working so hard",
                 "b. Eating too much pizza",

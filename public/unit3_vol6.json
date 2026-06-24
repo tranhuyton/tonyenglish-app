@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. vanity",
+              "content": "vanity",
               "options": [
                 "truck",
                 "pride",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. aristocrat",
+              "content": "aristocrat",
               "options": [
                 "noble",
                 "painting",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. pad",
+              "content": "pad",
               "options": [
                 "pocket",
                 "cushion",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. vulgar",
+              "content": "vulgar",
               "options": [
                 "young",
                 "faint",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. predominant",
+              "content": "predominant",
               "options": [
                 "mysterious",
                 "gradual",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. attire",
+              "content": "attire",
               "options": [
                 "clothing",
                 "wheel",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. tangle",
+              "content": "tangle",
               "options": [
                 "knot",
                 "tint",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. enlarge",
+              "content": "enlarge",
               "options": [
                 "fight",
                 "rent",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. absurd",
+              "content": "absurd",
               "options": [
                 "hungry",
                 "round",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. signify",
+              "content": "signify",
               "options": [
                 "scribble",
                 "symbolize",
@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I broke <u>the long piece of fabric that goes over my</u> shoulder on my purse. [ 11 ]",
+              "content": "<p class=\"mb-4\">I broke <u>the long piece of fabric that goes over my</u> shoulder on my purse. [ 11 ]</p><p class=\"mb-4\">Matt’s female appearances made everyone take notice of him immediately. [ 12 ]</p><p class=\"mb-4\">You must <u>wear proper clothing</u> if you plan on attending the formal dance. [ 13 ]</p><p class=\"mb-4\">He works for a well-respected firm downtown. [ 14 ]</p><p class=\"mb-4\"><u>The soft materials in his helmet will protect him</u> if he should fall and strike his head on an object. [ 15 ]</p>",
               "options": [],
               "explanation": "strap: a thin long piece of fabric used to fasten or carry.",
               "correctAnswer": "strap"
             },
             {
               "id": "12",
-              "content": "2. Matt’s female appearances made everyone take notice of him immediately. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "feminine: having qualities that are commonly related to women.",
               "correctAnswer": "feminine"
             },
             {
               "id": "13",
-              "content": "3. You must <u>wear proper clothing</u> if you plan on attending the formal dance. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "attire: nice or special clothing.",
               "correctAnswer": "attire"
             },
             {
               "id": "14",
-              "content": "4. He works for a well-respected firm downtown. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "reputable: having a good reputation.",
               "correctAnswer": "reputable"
             },
             {
               "id": "15",
-              "content": "5. <u>The soft materials in his helmet will protect him</u> if he should fall and strike his head on an object. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "pad: a thick piece of soft material used to protect things.",
               "correctAnswer": "pads"
@@ -189,7 +189,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Beth’s [ 16 ] had made her face lose a lot of its color.",
+              "content": "Beth’s [ 16 ] had made her face lose a lot of its color.",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -207,7 +207,7 @@
             },
             {
               "id": "17",
-              "content": "2. She decided to use some [ 17 ] to make her cheeks look less pale.",
+              "content": "She decided to use some [ 17 ] to make her cheeks look less pale.",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -225,7 +225,7 @@
             },
             {
               "id": "18",
-              "content": "3. All the girls had to own that style of purse with the yellow [ 18 ].",
+              "content": "All the girls had to own that style of purse with the yellow [ 18 ].",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -243,7 +243,7 @@
             },
             {
               "id": "19",
-              "content": "4. But Pam knew that it was just another [ 19 ].",
+              "content": "But Pam knew that it was just another [ 19 ].",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -261,7 +261,7 @@
             },
             {
               "id": "20",
-              "content": "5. John was not like the other members of the [ 20 ].",
+              "content": "John was not like the other members of the [ 20 ].",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -279,7 +279,7 @@
             },
             {
               "id": "21",
-              "content": "6. Though he had an [ 21 ] of money, he gave it to help people.",
+              "content": "Though he had an [ 21 ] of money, he gave it to help people.",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -297,7 +297,7 @@
             },
             {
               "id": "22",
-              "content": "7. Will had to [ 22 ] with other students for the respect of the teacher.",
+              "content": "Will had to [ 22 ] with other students for the respect of the teacher.",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -315,7 +315,7 @@
             },
             {
               "id": "23",
-              "content": "8. However, once he became a [ 23 ] student, he stopped studying.",
+              "content": "However, once he became a [ 23 ] student, he stopped studying.",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -333,7 +333,7 @@
             },
             {
               "id": "24",
-              "content": "9. Some people thought the musician’s lipstick made him look [ 24 ].",
+              "content": "Some people thought the musician’s lipstick made him look [ 24 ].",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -351,7 +351,7 @@
             },
             {
               "id": "25",
-              "content": "10. But others felt that this [ 25 ] is what made him so popular.",
+              "content": "But others felt that this [ 25 ] is what made him so popular.",
               "options": [
                 "reputable",
                 "aristocracy",
@@ -377,7 +377,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. We all felt that the new office rules were completely <i>absurd</i>.",
+              "content": "We all felt that the new office rules were completely <i>absurd</i>.",
               "options": [
                 "I",
                 "C"
@@ -387,7 +387,7 @@
             },
             {
               "id": "27",
-              "content": "2. The bushes were <i>tangled</i> with vine.",
+              "content": "The bushes were <i>tangled</i> with vine.",
               "options": [
                 "I",
                 "C"
@@ -397,7 +397,7 @@
             },
             {
               "id": "28",
-              "content": "3. Losing your memory as you get older is called <i>anemia</i>.",
+              "content": "Losing your memory as you get older is called <i>anemia</i>.",
               "options": [
                 "I",
                 "C"
@@ -407,7 +407,7 @@
             },
             {
               "id": "29",
-              "content": "4. A strong smell is the <i>hallmark</i> of a good cheese.",
+              "content": "A strong smell is the <i>hallmark</i> of a good cheese.",
               "options": [
                 "I",
                 "C"
@@ -417,7 +417,7 @@
             },
             {
               "id": "30",
-              "content": "5. It was easy to get lost in the big house. Its many hallways made it seem like a <i>craze</i>.",
+              "content": "It was easy to get lost in the big house. Its many hallways made it seem like a <i>craze</i>.",
               "options": [
                 "I",
                 "C"
@@ -427,7 +427,7 @@
             },
             {
               "id": "31",
-              "content": "6. The local <i>vanity</i> asked people to give old clothing and money.",
+              "content": "The local <i>vanity</i> asked people to give old clothing and money.",
               "options": [
                 "I",
                 "C"
@@ -437,7 +437,7 @@
             },
             {
               "id": "32",
-              "content": "7. After putting on too much <i>rouge</i>, she looked like a clown.",
+              "content": "After putting on too much <i>rouge</i>, she looked like a clown.",
               "options": [
                 "I",
                 "C"
@@ -447,7 +447,7 @@
             },
             {
               "id": "33",
-              "content": "8. Everyone may attend <i>excess</i> those who have not finished their assignment.",
+              "content": "Everyone may attend <i>excess</i> those who have not finished their assignment.",
               "options": [
                 "I",
                 "C"
@@ -457,7 +457,7 @@
             },
             {
               "id": "34",
-              "content": "9. Talking to people with food in your mouth is not only gross. It is also quite <i>vulgar</i>.",
+              "content": "Talking to people with food in your mouth is not only gross. It is also quite <i>vulgar</i>.",
               "options": [
                 "I",
                 "C"
@@ -467,7 +467,7 @@
             },
             {
               "id": "35",
-              "content": "10. Because he was an <i>aristocrat</i>, he had to wash dishes in order to make enough money.",
+              "content": "Because he was an <i>aristocrat</i>, he had to wash dishes in order to make enough money.",
               "options": [
                 "I",
                 "C"
@@ -493,7 +493,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Ladies used pads to enlarge their hips and shoulders.",
+              "content": "Ladies used pads to enlarge their hips and shoulders.",
               "options": [
                 "F",
                 "T"
@@ -503,7 +503,7 @@
             },
             {
               "id": "37",
-              "content": "2. Only the ladies wore lipstick and rouge.",
+              "content": "Only the ladies wore lipstick and rouge.",
               "options": [
                 "F",
                 "T"
@@ -513,7 +513,7 @@
             },
             {
               "id": "38",
-              "content": "3. The aristocracy’s vanity would seem vulgar today.",
+              "content": "The aristocracy’s vanity would seem vulgar today.",
               "options": [
                 "F",
                 "T"
@@ -523,7 +523,7 @@
             },
             {
               "id": "39",
-              "content": "4. Women’s hair was a tangle of wigs, straps, flowers, and stuffed birds.",
+              "content": "Women’s hair was a tangle of wigs, straps, flowers, and stuffed birds.",
               "options": [
                 "F",
                 "T"
@@ -533,7 +533,7 @@
             },
             {
               "id": "40",
-              "content": "5. Men’s fashion was absurd and feminine.",
+              "content": "Men’s fashion was absurd and feminine.",
               "options": [
                 "F",
                 "T"
@@ -551,7 +551,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. What was the predominant style in women’s attire?",
+              "content": "What was the predominant style in women’s attire?",
               "options": [
                 "Enormous dresses.",
                 "Bright red socks.",
@@ -563,7 +563,7 @@
             },
             {
               "id": "42",
-              "content": "2. What did the clothing of an aristocrat signify?",
+              "content": "What did the clothing of an aristocrat signify?",
               "options": [
                 "His wealth and status.",
                 "His health.",
@@ -575,7 +575,7 @@
             },
             {
               "id": "43",
-              "content": "3. What craze was done in such excess that women had to look like they had anemia?",
+              "content": "What craze was done in such excess that women had to look like they had anemia?",
               "options": [
                 "Pale skin.",
                 "Red cheeks.",
@@ -587,7 +587,7 @@
             },
             {
               "id": "44",
-              "content": "4. What was the hallmark of women’s fashion?",
+              "content": "What was the hallmark of women’s fashion?",
               "options": [
                 "Hairstyles.",
                 "Shoes.",
@@ -599,7 +599,7 @@
             },
             {
               "id": "45",
-              "content": "5. When reputable men vied with each other, what were they trying to see?",
+              "content": "When reputable men vied with each other, what were they trying to see?",
               "options": [
                 "Who wore the more expensive clothes.",
                 "Who was the strongest.",

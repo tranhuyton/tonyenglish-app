@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. anticipate",
+              "content": "anticipate",
               "options": [
                 "to win",
                 "to wait for",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. kit",
+              "content": "kit",
               "options": [
                 "something that makes you sick",
                 "set of things needed to do something",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. steel",
+              "content": "steel",
               "options": [
                 "a large bar",
                 "a small towel",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. contrary",
+              "content": "contrary",
               "options": [
                 "careful",
                 "the opposite",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. toss",
+              "content": "toss",
               "options": [
                 "to throw",
                 "small amount",
@@ -72,7 +72,7 @@
             },
             {
               "id": "6",
-              "content": "6. triumph",
+              "content": "triumph",
               "options": [
                 "to win",
                 "the opposite",
@@ -84,7 +84,7 @@
             },
             {
               "id": "7",
-              "content": "7. scatter",
+              "content": "scatter",
               "options": [
                 "careful",
                 "metal",
@@ -96,7 +96,7 @@
             },
             {
               "id": "8",
-              "content": "8. casual",
+              "content": "casual",
               "options": [
                 "a large bar",
                 "not fancy",
@@ -108,7 +108,7 @@
             },
             {
               "id": "9",
-              "content": "9. rag",
+              "content": "rag",
               "options": [
                 "careful",
                 "a small towel",
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "10. beam",
+              "content": "beam",
               "options": [
                 "to throw",
                 "metal",
@@ -140,7 +140,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. a round container",
+              "content": "a round container",
               "options": [
                 "scent",
                 "kit",
@@ -152,7 +152,7 @@
             },
             {
               "id": "12",
-              "content": "2. on purpose",
+              "content": "on purpose",
               "options": [
                 "deliberate",
                 "casual",
@@ -164,7 +164,7 @@
             },
             {
               "id": "13",
-              "content": "3. something that makes you sick",
+              "content": "something that makes you sick",
               "options": [
                 "puff",
                 "rag",
@@ -176,7 +176,7 @@
             },
             {
               "id": "14",
-              "content": "4. to lock something in place",
+              "content": "to lock something in place",
               "options": [
                 "anticipate",
                 "fasten",
@@ -188,7 +188,7 @@
             },
             {
               "id": "15",
-              "content": "5. to mix in a liquid and disappear",
+              "content": "to mix in a liquid and disappear",
               "options": [
                 "caution",
                 "toss",
@@ -208,70 +208,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. When the house burned, <u>a large heavy bar</u> fell from the ceiling. [ 16 ]",
+              "content": "<p class=\"mb-4\">When the house burned, <u>a large heavy bar</u> fell from the ceiling. [ 16 ]</p><p class=\"mb-4\">Joshua smiled in <u>great emotion and feeling after</u> he got a good grade on his science test. [ 17 ]</p><p class=\"mb-4\">She walked on the ice <u>with care</u> so she wouldn't fall. [ 18 ]</p><p class=\"mb-4\">It was scary when the car <u>blew up</u>, but luckily no one was hurt. [ 19 ]</p><p class=\"mb-4\">I used <u>a small towel</u> from the sink to clean up the milk I spilled. [ 20 ]</p><p class=\"mb-4\">The basketball player was <u>fast</u> and stole the ball. [ 21 ]</p><p class=\"mb-4\">You can wear <u>relaxed and simple</u> clothes to the school. [ 22 ]</p><p class=\"mb-4\">I really like the <u>smell</u> of this candle. [ 23 ]</p><p class=\"mb-4\">My cat made her food <u>go in many places</u>. [ 24 ]</p><p class=\"mb-4\">When we lit the fire, <u>a little smoke</u> came out of the chimney. [ 25 ]</p>",
               "options": [],
               "explanation": "a large heavy bar = beam (cái xà)",
               "correctAnswer": "A. BEAM"
             },
             {
               "id": "17",
-              "content": "2. Joshua smiled in <u>great emotion and feeling after</u> he got a good grade on his science test. [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "great emotion and feeling (after winning) = triumph (sự chiến thắng)",
               "correctAnswer": "A. TRIUMPH"
             },
             {
               "id": "18",
-              "content": "3. She walked on the ice <u>with care</u> so she wouldn't fall. [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "with care = caution (sự cẩn thận)",
               "correctAnswer": "B. CAUTION"
             },
             {
               "id": "19",
-              "content": "4. It was scary when the car <u>blew up</u>, but luckily no one was hurt. [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "blew up = exploded (nổ tung)",
               "correctAnswer": "D. EXPLODED"
             },
             {
               "id": "20",
-              "content": "5. I used <u>a small towel</u> from the sink to clean up the milk I spilled. [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "a small towel = rag (giẻ lau)",
               "correctAnswer": "A. RAG"
             },
             {
               "id": "21",
-              "content": "6. The basketball player was <u>fast</u> and stole the ball. [ 21 ]",
+              "content": "",
               "options": [],
               "explanation": "fast = swift (nhanh chóng)",
               "correctAnswer": "B. SWIFT"
             },
             {
               "id": "22",
-              "content": "7. You can wear <u>relaxed and simple</u> clothes to the school. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "relaxed and simple = casual (đơn giản, bình thường)",
               "correctAnswer": "B. CASUAL"
             },
             {
               "id": "23",
-              "content": "8. I really like the <u>smell</u> of this candle. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "smell = scent (mùi hương)",
               "correctAnswer": "A. SCENT"
             },
             {
               "id": "24",
-              "content": "9. My cat made her food <u>go in many places</u>. [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "go in many places = scattered (phân tán, rải rác)",
               "correctAnswer": "A. SCATTERED"
             },
             {
               "id": "25",
-              "content": "10. When we lit the fire, <u>a little smoke</u> came out of the chimney. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "a little smoke = puff (luồng khói)",
               "correctAnswer": "A. PUFF"
@@ -306,7 +306,7 @@
             },
             {
               "id": "27",
-              "content": "1. Why did Uncle John toss a rag to Sam?",
+              "content": "Why did Uncle John toss a rag to Sam?",
               "options": [
                 "To clean the floor",
                 "To dissolve the sugar",
@@ -318,7 +318,7 @@
             },
             {
               "id": "28",
-              "content": "2. What did Sam anticipate?",
+              "content": "What did Sam anticipate?",
               "options": [
                 "Going to the shop",
                 "Getting an ice cream cone",
@@ -330,7 +330,7 @@
             },
             {
               "id": "29",
-              "content": "3. What did the machine do?",
+              "content": "What did the machine do?",
               "options": [
                 "Break the barrel",
                 "Give a bad scent",
@@ -342,7 +342,7 @@
             },
             {
               "id": "30",
-              "content": "4. What did Uncle John say about the machine?",
+              "content": "What did Uncle John say about the machine?",
               "options": [
                 "It's easy to use.",
                 "It was swift.",

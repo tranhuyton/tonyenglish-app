@@ -140,70 +140,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "The mother <u>comforted</u> her crying child. [ 11 ]",
+              "content": "<p class=\"mb-4\">The mother <u>comforted</u> her crying child. [ 11 ]</p><p class=\"mb-4\">Every Sunday, the family watched a television <u>show</u> about animals. [ 12 ]</p><p class=\"mb-4\">I couldn’t find my coat in the <u>small room</u>. [ 13 ]</p><p class=\"mb-4\">John left his paper <u>lower than</u> his school books. [ 14 ]</p><p class=\"mb-4\">The <u>person who makes laws</u> sat behind a large desk. [ 15 ]</p><p class=\"mb-4\">In order to get over the wall, the cat had to make a <u>very large</u> jump. [ 16 ]</p><p class=\"mb-4\">Harold slowed the car down as he drove over the <u>small raised part</u>. [ 17 ]</p><p class=\"mb-4\">There is very little rain in my <u>part of the state</u>. [ 18 ]</p><p class=\"mb-4\">Because he committed such a horrible crime, he was <u>killed by the legal system</u>. [ 19 ]</p><p class=\"mb-4\">The cook <u>cut into pieces</u> the vegetables for his soup. [ 20 ]</p>",
               "options": [],
               "explanation": "comforted có nghĩa là an ủi, tương đương với consoled.",
               "correctAnswer": "CONSOLED"
             },
             {
               "id": "12",
-              "content": "Every Sunday, the family watched a television <u>show</u> about animals. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "show ở đây chỉ chương trình phát sóng, tương đương với broadcast.",
               "correctAnswer": "BROADCAST"
             },
             {
               "id": "13",
-              "content": "I couldn’t find my coat in the <u>small room</u>. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "small room để đồ đạc quần áo là closet (tủ đồ, phòng để đồ).",
               "correctAnswer": "CLOSET"
             },
             {
               "id": "14",
-              "content": "John left his paper <u>lower than</u> his school books. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "lower than có nghĩa là bên dưới, tương đương underneath.",
               "correctAnswer": "UNDERNEATH"
             },
             {
               "id": "15",
-              "content": "The <u>person who makes laws</u> sat behind a large desk. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "Người làm luật là senator (thượng nghị sĩ).",
               "correctAnswer": "SENATOR"
             },
             {
               "id": "16",
-              "content": "In order to get over the wall, the cat had to make a <u>very large</u> jump. [ 16 ]",
+              "content": "",
               "options": [],
               "explanation": "very large có nghĩa là to lớn, tương đương với tremendous.",
               "correctAnswer": "TREMENDOUS"
             },
             {
               "id": "17",
-              "content": "Harold slowed the car down as he drove over the <u>small raised part</u>. [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "small raised part là phần nhô lên, tương đương với bump (chỗ xóc/u sưng).",
               "correctAnswer": "BUMP"
             },
             {
               "id": "18",
-              "content": "There is very little rain in my <u>part of the state</u>. [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "part of the state là một khu vực, quận, tương đương với district.",
               "correctAnswer": "DISTRICT"
             },
             {
               "id": "19",
-              "content": "Because he committed such a horrible crime, he was <u>killed by the legal system</u>. [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "killed by the legal system có nghĩa là bị xử tử (executed).",
               "correctAnswer": "EXECUTED"
             },
             {
               "id": "20",
-              "content": "The cook <u>cut into pieces</u> the vegetables for his soup. [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "cut into pieces có nghĩa là chặt, băm nhỏ (chopped).",
               "correctAnswer": "CHOPPED"

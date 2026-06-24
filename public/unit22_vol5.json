@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What is something you want to eliminate?",
+              "content": "What is something you want to eliminate?",
               "options": [
                 "A problem",
                 "A present",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. What would collect nectar?",
+              "content": "What would collect nectar?",
               "options": [
                 "A tree",
                 "A bee",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. If you have good ethics, you_______.",
+              "content": "If you have good ethics, you_______.",
               "options": [
                 "dislike school",
                 "know right from wrong",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. Which is most closely related to something administrative?",
+              "content": "Which is most closely related to something administrative?",
               "options": [
                 "Loss",
                 "Fatigue",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. What might cause erosion?",
+              "content": "What might cause erosion?",
               "options": [
                 "A strong wind",
                 "A fast car",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. I learned about all the different things the factory [ 6 ]. They make big machinery as well as tiny parts and [ 6 ].",
+              "content": "I learned about all the different things the factory [ 6 ]. They make big machinery as well as tiny parts and [ 6 ].",
               "options": [
                 "straightforward",
                 "framework",
@@ -104,7 +104,7 @@
             },
             {
               "id": "7",
-              "content": "2. The students asked the school’s [ 7 ] to buy a better kind of meat. The meat served there is too high in fat and [ 2 ].",
+              "content": "The students asked the school’s [ 7 ] to buy a better kind of meat. The meat served there is too high in fat and [ 2 ].",
               "options": [
                 "straightforward",
                 "framework",
@@ -122,7 +122,7 @@
             },
             {
               "id": "8",
-              "content": "3. I can’t stand companies that are [ 8 ]. Customers have to make sure they get [ 2 ] information about all details.",
+              "content": "I can’t stand companies that are [ 8 ]. Customers have to make sure they get [ 2 ] information about all details.",
               "options": [
                 "straightforward",
                 "framework",
@@ -140,7 +140,7 @@
             },
             {
               "id": "9",
-              "content": "4. Citizens formed a [ 9 ] because the city’s air was making people ill. Elderly people and infants were the most [ 2 ] to becoming sick.",
+              "content": "Citizens formed a [ 9 ] because the city’s air was making people ill. Elderly people and infants were the most [ 2 ] to becoming sick.",
               "options": [
                 "straightforward",
                 "framework",
@@ -158,7 +158,7 @@
             },
             {
               "id": "10",
-              "content": "5. To solve our problem, we’ll first need a strong [ 10 ]. Our ideas need to be intelligent and [ 2 ].",
+              "content": "To solve our problem, we’ll first need a strong [ 10 ]. Our ideas need to be intelligent and [ 2 ].",
               "options": [
                 "straightforward",
                 "framework",
@@ -184,7 +184,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Smoking makes people more prone to breathing problems.",
+              "content": "Smoking makes people more prone to breathing problems.",
               "options": [
                 "C",
                 "I"
@@ -194,7 +194,7 @@
             },
             {
               "id": "12",
-              "content": "2. We toured the factory that manufactures cheese.",
+              "content": "We toured the factory that manufactures cheese.",
               "options": [
                 "C",
                 "I"
@@ -204,7 +204,7 @@
             },
             {
               "id": "13",
-              "content": "3. The deceptive man was very open and honest about his plans.",
+              "content": "The deceptive man was very open and honest about his plans.",
               "options": [
                 "C",
                 "I"
@@ -214,7 +214,7 @@
             },
             {
               "id": "14",
-              "content": "4. Eating a lot of fast food raises people’s cholesterol levels.",
+              "content": "Eating a lot of fast food raises people’s cholesterol levels.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +224,7 @@
             },
             {
               "id": "15",
-              "content": "5. The straightforward instructions were impossible to understand.",
+              "content": "The straightforward instructions were impossible to understand.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +234,7 @@
             },
             {
               "id": "16",
-              "content": "6. The group decided on a framework for the new project.",
+              "content": "The group decided on a framework for the new project.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +244,7 @@
             },
             {
               "id": "17",
-              "content": "7. Businesses try to minimize the amount of money they can make.",
+              "content": "Businesses try to minimize the amount of money they can make.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +254,7 @@
             },
             {
               "id": "18",
-              "content": "8. He had a notion that the speaker was not really an expert on the subject.",
+              "content": "He had a notion that the speaker was not really an expert on the subject.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +264,7 @@
             },
             {
               "id": "19",
-              "content": "9. The maid used a kind of acid to dissolve the stains on the floor.",
+              "content": "The maid used a kind of acid to dissolve the stains on the floor.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +274,7 @@
             },
             {
               "id": "20",
-              "content": "10. It is important for a judge to have good ethics.",
+              "content": "It is important for a judge to have good ethics.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +284,7 @@
             },
             {
               "id": "21",
-              "content": "11. Some factories produce energy by burning coalitions.",
+              "content": "Some factories produce energy by burning coalitions.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +294,7 @@
             },
             {
               "id": "22",
-              "content": "12. The lawyer hoped that the witness would tell an explicit version of the story.",
+              "content": "The lawyer hoped that the witness would tell an explicit version of the story.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +304,7 @@
             },
             {
               "id": "23",
-              "content": "13. My father works in construction while my mom has an administrative job.",
+              "content": "My father works in construction while my mom has an administrative job.",
               "options": [
                 "C",
                 "I"
@@ -314,7 +314,7 @@
             },
             {
               "id": "24",
-              "content": "14. Be sure to eliminate all the ingredients to make a great cake.",
+              "content": "Be sure to eliminate all the ingredients to make a great cake.",
               "options": [
                 "C",
                 "I"
@@ -324,7 +324,7 @@
             },
             {
               "id": "25",
-              "content": "15. Jim receives shots to treat his diabetes. They reduce the sugar in his blood.",
+              "content": "Jim receives shots to treat his diabetes. They reduce the sugar in his blood.",
               "options": [
                 "C",
                 "I"
@@ -334,7 +334,7 @@
             },
             {
               "id": "26",
-              "content": "16. All of the prisoners formed an administration where they played games.",
+              "content": "All of the prisoners formed an administration where they played games.",
               "options": [
                 "C",
                 "I"
@@ -344,7 +344,7 @@
             },
             {
               "id": "27",
-              "content": "17. Dry weather, followed by sudden floods, caused the erosion in the valley.",
+              "content": "Dry weather, followed by sudden floods, caused the erosion in the valley.",
               "options": [
                 "C",
                 "I"
@@ -354,7 +354,7 @@
             },
             {
               "id": "28",
-              "content": "18. The biotechnology company only made things from nonliving rocks and sand.",
+              "content": "The biotechnology company only made things from nonliving rocks and sand.",
               "options": [
                 "C",
                 "I"
@@ -364,7 +364,7 @@
             },
             {
               "id": "29",
-              "content": "19. The cutting mechanism on the lawnmower is broken.",
+              "content": "The cutting mechanism on the lawnmower is broken.",
               "options": [
                 "C",
                 "I"
@@ -374,7 +374,7 @@
             },
             {
               "id": "30",
-              "content": "20. This nectar produces the best flowers.",
+              "content": "This nectar produces the best flowers.",
               "options": [
                 "C",
                 "I"
@@ -400,7 +400,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Bioco was a biotechnology company that manufactured diabetes and high cholesterol.",
+              "content": "Bioco was a biotechnology company that manufactured diabetes and high cholesterol.",
               "options": [
                 "T",
                 "F"
@@ -410,7 +410,7 @@
             },
             {
               "id": "32",
-              "content": "2. Jack used a mechanism to get nectar from flowers.",
+              "content": "Jack used a mechanism to get nectar from flowers.",
               "options": [
                 "T",
                 "F"
@@ -420,7 +420,7 @@
             },
             {
               "id": "33",
-              "content": "3. The new framework involved an explicit plan to fix the smog and acid problems.",
+              "content": "The new framework involved an explicit plan to fix the smog and acid problems.",
               "options": [
                 "T",
                 "F"
@@ -430,7 +430,7 @@
             },
             {
               "id": "34",
-              "content": "4. The waste acid caused erosion and made fish prone to illness.",
+              "content": "The waste acid caused erosion and made fish prone to illness.",
               "options": [
                 "T",
                 "F"
@@ -440,7 +440,7 @@
             },
             {
               "id": "35",
-              "content": "5. After the company minimized Jack’s ethics, the motto became apt.",
+              "content": "After the company minimized Jack’s ethics, the motto became apt.",
               "options": [
                 "T",
                 "F"
@@ -458,7 +458,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. What was Bioco’s deceptive motto?",
+              "content": "What was Bioco’s deceptive motto?",
               "options": [
                 "\"Make the Earth a better place.\"",
                 "\"Caring for your health.\"",
@@ -470,7 +470,7 @@
             },
             {
               "id": "37",
-              "content": "2. What did Jack stand up to do in the cafeteria?",
+              "content": "What did Jack stand up to do in the cafeteria?",
               "options": [
                 "Jack stood up to leave.",
                 "Jack stood up to fight his boss.",
@@ -482,7 +482,7 @@
             },
             {
               "id": "38",
-              "content": "3. What was Jack’s notion about fixing things?",
+              "content": "What was Jack’s notion about fixing things?",
               "options": [
                 "He wanted to break the mechanism.",
                 "We can fix things if we all work together.",
@@ -494,7 +494,7 @@
             },
             {
               "id": "39",
-              "content": "4. What did the coalition of workers threaten to do if the administration didn’t eliminate the problems?",
+              "content": "What did the coalition of workers threaten to do if the administration didn’t eliminate the problems?",
               "options": [
                 "The workers threatened to strike.",
                 "The workers threatened to sue the company.",
@@ -506,7 +506,7 @@
             },
             {
               "id": "40",
-              "content": "5. What did the boss in the offices say after the workers were straightforward with him?",
+              "content": "What did the boss in the offices say after the workers were straightforward with him?",
               "options": [
                 "He fired all of them.",
                 "He ignored their demands.",

@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. hectare",
+              "content": "hectare",
               "options": [
                 "violence",
                 "10,000m2",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. terrace",
+              "content": "terrace",
               "options": [
                 "festival",
                 "temper",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. casualty",
+              "content": "casualty",
               "options": [
                 "victim",
                 "effect",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. allege",
+              "content": "allege",
               "options": [
                 "reverse",
                 "accuse",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. renovate",
+              "content": "renovate",
               "options": [
                 "refer",
                 "apply",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. outnumber",
+              "content": "outnumber",
               "options": [
                 "count",
                 "share",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. adjoining",
+              "content": "adjoining",
               "options": [
                 "talking",
                 "reflective",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. revise",
+              "content": "revise",
               "options": [
                 "cover",
                 "detest",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. arch",
+              "content": "arch",
               "options": [
                 "color",
                 "feeling",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. petition",
+              "content": "petition",
               "options": [
                 "request",
                 "license",
@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. pasture",
+              "content": "pasture",
               "options": [
                 "marsh",
                 "scream",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "2. foul",
+              "content": "foul",
               "options": [
                 "meaningful",
                 "dangerous",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "3. slab",
+              "content": "slab",
               "options": [
                 "office",
                 "freedom",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "4. assemble",
+              "content": "assemble",
               "options": [
                 "believe",
                 "scatter",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "5. overjoyed",
+              "content": "overjoyed",
               "options": [
                 "stinky",
                 "hidden",
@@ -206,7 +206,7 @@
             },
             {
               "id": "16",
-              "content": "6. turf",
+              "content": "turf",
               "options": [
                 "ocean",
                 "name",
@@ -218,7 +218,7 @@
             },
             {
               "id": "17",
-              "content": "7. erect",
+              "content": "erect",
               "options": [
                 "approve",
                 "destroy",
@@ -230,7 +230,7 @@
             },
             {
               "id": "18",
-              "content": "8. heighten",
+              "content": "heighten",
               "options": [
                 "balance",
                 "pretend",
@@ -242,7 +242,7 @@
             },
             {
               "id": "19",
-              "content": "9. mansion",
+              "content": "mansion",
               "options": [
                 "pencil",
                 "shack",
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "10. hospitality",
+              "content": "hospitality",
               "options": [
                 "medicine",
                 "style",
@@ -274,7 +274,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. Once the weather was <i>renovated</i>, the day was warm and sunny. Now, we were all able to go on a picnic in the park.",
+              "content": "Once the weather was <i>renovated</i>, the day was warm and sunny. Now, we were all able to go on a picnic in the park.",
               "options": [
                 "I",
                 "C"
@@ -284,7 +284,7 @@
             },
             {
               "id": "22",
-              "content": "2. The scientists worked all day in the <i>slab</i>. They were inventing a new plastic that would not melt under the extreme heat of the sun.",
+              "content": "The scientists worked all day in the <i>slab</i>. They were inventing a new plastic that would not melt under the extreme heat of the sun.",
               "options": [
                 "I",
                 "C"
@@ -294,7 +294,7 @@
             },
             {
               "id": "23",
-              "content": "3. The amount of cows <i>outnumbered</i> the pigs. There were more pigs than cows.",
+              "content": "The amount of cows <i>outnumbered</i> the pigs. There were more pigs than cows.",
               "options": [
                 "I",
                 "C"
@@ -304,7 +304,7 @@
             },
             {
               "id": "24",
-              "content": "4. Why don’t you connect those two large blue <i>arches</i>, so that you can form a giant square?",
+              "content": "Why don’t you connect those two large blue <i>arches</i>, so that you can form a giant square?",
               "options": [
                 "I",
                 "C"
@@ -314,7 +314,7 @@
             },
             {
               "id": "25",
-              "content": "5. The worse <i>casualty</i> from the earthquake was a woman who broke a leg.",
+              "content": "The worse <i>casualty</i> from the earthquake was a woman who broke a leg.",
               "options": [
                 "I",
                 "C"
@@ -324,7 +324,7 @@
             },
             {
               "id": "26",
-              "content": "6. The two enemies <i>erected</i> a wall between their properties. They had hoped that it would reduce any future arguments.",
+              "content": "The two enemies <i>erected</i> a wall between their properties. They had hoped that it would reduce any future arguments.",
               "options": [
                 "I",
                 "C"
@@ -334,7 +334,7 @@
             },
             {
               "id": "27",
-              "content": "7. Whenever Doug was in a <i>foul</i> mood, everyone enjoyed being around him.",
+              "content": "Whenever Doug was in a <i>foul</i> mood, everyone enjoyed being around him.",
               "options": [
                 "I",
                 "C"
@@ -344,7 +344,7 @@
             },
             {
               "id": "28",
-              "content": "8. The glass was filled with a <i>hectare</i> of water.",
+              "content": "The glass was filled with a <i>hectare</i> of water.",
               "options": [
                 "I",
                 "C"
@@ -354,7 +354,7 @@
             },
             {
               "id": "29",
-              "content": "9. This is the kitchen, and the <i>adjoining</i> room is the dining room.",
+              "content": "This is the kitchen, and the <i>adjoining</i> room is the dining room.",
               "options": [
                 "I",
                 "C"
@@ -364,7 +364,7 @@
             },
             {
               "id": "30",
-              "content": "10. The visit lacked in <i>hospitality</i>. There was nothing to eat and nowhere to sit.",
+              "content": "The visit lacked in <i>hospitality</i>. There was nothing to eat and nowhere to sit.",
               "options": [
                 "I",
                 "C"
@@ -374,7 +374,7 @@
             },
             {
               "id": "31",
-              "content": "11. You can stay in the house tonight, but your dog has to sleep outside in the <i>mansion</i>.",
+              "content": "You can stay in the house tonight, but your dog has to sleep outside in the <i>mansion</i>.",
               "options": [
                 "I",
                 "C"
@@ -384,7 +384,7 @@
             },
             {
               "id": "32",
-              "content": "12. William <i>alleged</i> all the way home. As a result, he was out of breath and sweaty by the time he got there.",
+              "content": "William <i>alleged</i> all the way home. As a result, he was out of breath and sweaty by the time he got there.",
               "options": [
                 "I",
                 "C"
@@ -394,7 +394,7 @@
             },
             {
               "id": "33",
-              "content": "13. The grandmother was <i>overjoyed</i> to see her grandchildren. She couldn’t stop smiling when she saw their lovely faces.",
+              "content": "The grandmother was <i>overjoyed</i> to see her grandchildren. She couldn’t stop smiling when she saw their lovely faces.",
               "options": [
                 "I",
                 "C"
@@ -404,7 +404,7 @@
             },
             {
               "id": "34",
-              "content": "14. This room here is the <i>pasture</i>. It’s where we keep all our old furniture.",
+              "content": "This room here is the <i>pasture</i>. It’s where we keep all our old furniture.",
               "options": [
                 "I",
                 "C"
@@ -414,7 +414,7 @@
             },
             {
               "id": "35",
-              "content": "15. The manager read his employees’ <i>petition</i>. They wanted a longer lunch break.",
+              "content": "The manager read his employees’ <i>petition</i>. They wanted a longer lunch break.",
               "options": [
                 "I",
                 "C"
@@ -440,7 +440,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The farmers that assembled outnumbered the lord’s servants.",
+              "content": "The farmers that assembled outnumbered the lord’s servants.",
               "options": [
                 "F",
                 "T"
@@ -450,7 +450,7 @@
             },
             {
               "id": "37",
-              "content": "2. Despite the lord’s hospitality, the farmers appeared to be overjoyed.",
+              "content": "Despite the lord’s hospitality, the farmers appeared to be overjoyed.",
               "options": [
                 "F",
                 "T"
@@ -460,7 +460,7 @@
             },
             {
               "id": "38",
-              "content": "3. The lord built an arch for the gate out of slabs of stone.",
+              "content": "The lord built an arch for the gate out of slabs of stone.",
               "options": [
                 "F",
                 "T"
@@ -470,7 +470,7 @@
             },
             {
               "id": "39",
-              "content": "4. When the lord said it was too late to revise his plans, it heightened the farmers’ foul mood.",
+              "content": "When the lord said it was too late to revise his plans, it heightened the farmers’ foul mood.",
               "options": [
                 "F",
                 "T"
@@ -480,7 +480,7 @@
             },
             {
               "id": "40",
-              "content": "5. The pastures were owned by the lord.",
+              "content": "The pastures were owned by the lord.",
               "options": [
                 "F",
                 "T"
@@ -498,7 +498,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. What did the farmers’ petition allege?",
+              "content": "What did the farmers’ petition allege?",
               "options": [
                 "It alleged that the shadow cast by the mansion was harming their pastures.",
                 "It alleged that the lord stole their cows.",
@@ -510,7 +510,7 @@
             },
             {
               "id": "42",
-              "content": "2. While renovating, what did the lord erect around his mansion?",
+              "content": "While renovating, what did the lord erect around his mansion?",
               "options": [
                 "He erected a great wall.",
                 "He erected a new farm.",
@@ -522,7 +522,7 @@
             },
             {
               "id": "43",
-              "content": "3. What happened to the pastures adjoining the burning mansion?",
+              "content": "What happened to the pastures adjoining the burning mansion?",
               "options": [
                 "The pastures adjoining the burning mansion also burned.",
                 "They were sold.",
@@ -534,7 +534,7 @@
             },
             {
               "id": "44",
-              "content": "4. Why were there no casualties in the fire at the mansion?",
+              "content": "Why were there no casualties in the fire at the mansion?",
               "options": [
                 "There were no casualties in the fire at the mansion because everyone got out of the house.",
                 "They sued him for the loss of their pastures.",
@@ -546,7 +546,7 @@
             },
             {
               "id": "45",
-              "content": "5. While he was sitting on the terrace, who knocked on the mansion door?",
+              "content": "While he was sitting on the terrace, who knocked on the mansion door?",
               "options": [
                 "While he was sitting on the terrace, some farmers knocked at his door.",
                 "The lord's servants.",

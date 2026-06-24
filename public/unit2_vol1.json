@@ -224,7 +224,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "16. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "A girl's terrible experiment",
                 "A secret that two girls have",
@@ -236,7 +236,7 @@
             },
             {
               "id": "17",
-              "content": "17. What scares Mia when she approaches the door?",
+              "content": "What scares Mia when she approaches the door?",
               "options": [
                 "The room is very dark.",
                 "She hears a person shout.",
@@ -248,7 +248,7 @@
             },
             {
               "id": "18",
-              "content": "18. What is true of Mia in the story?",
+              "content": "What is true of Mia in the story?",
               "options": [
                 "A monster kills her friend.",
                 "She does not like adventures.",
@@ -260,7 +260,7 @@
             },
             {
               "id": "19",
-              "content": "19. What project was Mia's father working on?",
+              "content": "What project was Mia's father working on?",
               "options": [
                 "A doll to give to Mia for her birthday",
                 "A way to keep the door closed",
@@ -272,7 +272,7 @@
             },
             {
               "id": "20",
-              "content": "20. When did Mia and Liz go into the laboratory?",
+              "content": "When did Mia and Liz go into the laboratory?",
               "options": [
                 "At night when her father left for dinner",
                 "In the morning before school",

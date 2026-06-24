@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What animal can survive ashore?",
+              "content": "What animal can survive ashore?",
               "options": [
                 "A dolphin",
                 "An alligator",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. How can someone devoid of any happiness be described?",
+              "content": "How can someone devoid of any happiness be described?",
               "options": [
                 "Lazy",
                 "Content",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. How do turtles elude predators?",
+              "content": "How do turtles elude predators?",
               "options": [
                 "They walk fast",
                 "They hide in their shells",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. What is something that people can plunge into?",
+              "content": "What is something that people can plunge into?",
               "options": [
                 "A school",
                 "A car",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. Which of the following is NOT used to obstruct sunlight?",
+              "content": "Which of the following is NOT used to obstruct sunlight?",
               "options": [
                 "Sunglasses",
                 "Curtains",
@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. <u>Human undeveloped babies grow inside the mother</u> for up to nine months. [ 6 ]",
+              "content": "<p class=\"mb-4\"><u>Human undeveloped babies grow inside the mother</u> for up to nine months. [ 6 ]</p><p class=\"mb-4\">The concert was made well-known over the radio. [ 7 ]</p><p class=\"mb-4\">Ms. Hiller had <u>a spare amount of clothes,</u> so she gave them to charity. [ 8 ]</p><p class=\"mb-4\">The philosopher <u>developed an idea about what</u> happens to good people. [ 9 ]</p><p class=\"mb-4\">The principal called Alex’s house to make certain he was sick at home. [ 10 ]</p><p class=\"mb-4\">Margaret collected shells that had come <u>from the water to land</u> on the beach. [ 11 ]</p><p class=\"mb-4\">Elliot <u>moved down into the water as</u> soon as he arrived at the beach. [ 12 ]</p><p class=\"mb-4\">Oscar hid behind a tree <u>to not get caught by the</u> bully who was chasing him. [ 13 ]</p><p class=\"mb-4\">The <u>beads in the box were all the same.</u> [ 14 ]</p><p class=\"mb-4\">The <u>amount of hair he had on his head</u> was a small amount. [ 15 ]</p>",
               "options": [],
               "explanation": "embryo (n): a human or animal that is still growing inside its mother.",
               "correctAnswer": "embryos"
             },
             {
               "id": "7",
-              "content": "2. The concert was made well-known over the radio. [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "publicize (v): to make something get a lot of attention.",
               "correctAnswer": "publicized"
             },
             {
               "id": "8",
-              "content": "3. Ms. Hiller had <u>a spare amount of clothes,</u> so she gave them to charity. [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "surplus (n): an extra amount of something.",
               "correctAnswer": "surplus"
             },
             {
               "id": "9",
-              "content": "4. The philosopher <u>developed an idea about what</u> happens to good people. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "theorize (v): to develop ideas about something.",
               "correctAnswer": "theorized"
             },
             {
               "id": "10",
-              "content": "5. The principal called Alex’s house to make certain he was sick at home. [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "verify (v): to find out if something is true.",
               "correctAnswer": "verify"
             },
             {
               "id": "11",
-              "content": "6. Margaret collected shells that had come <u>from the water to land</u> on the beach. [ 11 ]",
+              "content": "",
               "options": [],
               "explanation": "ashore (adv): from water to the land.",
               "correctAnswer": "ashore"
             },
             {
               "id": "12",
-              "content": "7. Elliot <u>moved down into the water as</u> soon as he arrived at the beach. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "plunge (v): to move down into something very quickly.",
               "correctAnswer": "plunged"
             },
             {
               "id": "13",
-              "content": "8. Oscar hid behind a tree <u>to not get caught by the</u> bully who was chasing him. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "elude (v): to avoid being caught by something.",
               "correctAnswer": "elude"
             },
             {
               "id": "14",
-              "content": "9. The <u>beads in the box were all the same.</u> [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "homogeneous (adj): made up of things which are all the same.",
               "correctAnswer": "homogenous"
             },
             {
               "id": "15",
-              "content": "10. The <u>amount of hair he had on his head</u> was a small amount. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "sparse (adj): not very much of it in a big area.",
               "correctAnswer": "sparse"
@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. prolong",
+              "content": "prolong",
               "options": [
                 "show",
                 "ensure",
@@ -176,7 +176,7 @@
             },
             {
               "id": "17",
-              "content": "2. fictitious",
+              "content": "fictitious",
               "options": [
                 "invented",
                 "realistic",
@@ -188,7 +188,7 @@
             },
             {
               "id": "18",
-              "content": "3. contradict",
+              "content": "contradict",
               "options": [
                 "move away",
                 "disagree",
@@ -200,7 +200,7 @@
             },
             {
               "id": "19",
-              "content": "4. homogeneous",
+              "content": "homogeneous",
               "options": [
                 "same",
                 "weak",
@@ -212,7 +212,7 @@
             },
             {
               "id": "20",
-              "content": "5. vigorous",
+              "content": "vigorous",
               "options": [
                 "untamed",
                 "skilled",
@@ -232,7 +232,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. I <i>obstructed</i> my brother from coming in by locking the door.",
+              "content": "I <i>obstructed</i> my brother from coming in by locking the door.",
               "options": [
                 "C",
                 "I"
@@ -242,7 +242,7 @@
             },
             {
               "id": "22",
-              "content": "2. I ate a light snack to <i>fend</i> off my hunger.",
+              "content": "I ate a light snack to <i>fend</i> off my hunger.",
               "options": [
                 "C",
                 "I"
@@ -252,7 +252,7 @@
             },
             {
               "id": "23",
-              "content": "3. The river <i>diverged</i> into three different channels.",
+              "content": "The river <i>diverged</i> into three different channels.",
               "options": [
                 "C",
                 "I"
@@ -262,7 +262,7 @@
             },
             {
               "id": "24",
-              "content": "4. Sheila <i>publicized</i> her party over the Internet. She didn’t want a lot of people to know about it.",
+              "content": "Sheila <i>publicized</i> her party over the Internet. She didn’t want a lot of people to know about it.",
               "options": [
                 "C",
                 "I"
@@ -272,7 +272,7 @@
             },
             {
               "id": "25",
-              "content": "5. I viewed this morning’s <i>gazette</i> to find out about today’s weather.",
+              "content": "I viewed this morning’s <i>gazette</i> to find out about today’s weather.",
               "options": [
                 "C",
                 "I"
@@ -282,7 +282,7 @@
             },
             {
               "id": "26",
-              "content": "6. Jason always <i>contradicted</i> what his friend said. They agreed about everything.",
+              "content": "Jason always <i>contradicted</i> what his friend said. They agreed about everything.",
               "options": [
                 "C",
                 "I"
@@ -292,7 +292,7 @@
             },
             {
               "id": "27",
-              "content": "7. Andrew <i>verified</i> that his friends were coming to his house, so his mom could make enough food for dinner.",
+              "content": "Andrew <i>verified</i> that his friends were coming to his house, so his mom could make enough food for dinner.",
               "options": [
                 "C",
                 "I"
@@ -302,7 +302,7 @@
             },
             {
               "id": "28",
-              "content": "8. Did you remember to take the hot pan off of the <i>counterpart</i>?",
+              "content": "Did you remember to take the hot pan off of the <i>counterpart</i>?",
               "options": [
                 "C",
                 "I"
@@ -312,7 +312,7 @@
             },
             {
               "id": "29",
-              "content": "9. Class was <i>prolonged</i> because Shelly had a lot of questions. By the time she was done, school had been over for ten minutes.",
+              "content": "Class was <i>prolonged</i> because Shelly had a lot of questions. By the time she was done, school had been over for ten minutes.",
               "options": [
                 "C",
                 "I"
@@ -322,7 +322,7 @@
             },
             {
               "id": "30",
-              "content": "10. Greg didn’t like <i>vigorous</i> exercise, so he played many different sports.",
+              "content": "Greg didn’t like <i>vigorous</i> exercise, so he played many different sports.",
               "options": [
                 "C",
                 "I"
@@ -348,7 +348,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. People thought that the story publicized in the gazette about the komodo dragons was fictitious.",
+              "content": "People thought that the story publicized in the gazette about the komodo dragons was fictitious.",
               "options": [
                 "F",
                 "T"
@@ -358,7 +358,7 @@
             },
             {
               "id": "32",
-              "content": "2. Female komodo dragons can have babies without their male counterparts.",
+              "content": "Female komodo dragons can have babies without their male counterparts.",
               "options": [
                 "F",
                 "T"
@@ -368,7 +368,7 @@
             },
             {
               "id": "33",
-              "content": "3. Scientists verified that baby komodo dragons have homogeneous genes if they don’t have fathers, which leads to genetic problems.",
+              "content": "Scientists verified that baby komodo dragons have homogeneous genes if they don’t have fathers, which leads to genetic problems.",
               "options": [
                 "F",
                 "T"
@@ -378,7 +378,7 @@
             },
             {
               "id": "34",
-              "content": "4. Scientists theorize that the special ability of komodo dragons help them elude predators.",
+              "content": "Scientists theorize that the special ability of komodo dragons help them elude predators.",
               "options": [
                 "F",
                 "T"
@@ -388,7 +388,7 @@
             },
             {
               "id": "35",
-              "content": "5. A female komodo dragon can increase a sparse population so that there are surplus lizards on one island.",
+              "content": "A female komodo dragon can increase a sparse population so that there are surplus lizards on one island.",
               "options": [
                 "F",
                 "T"
@@ -406,7 +406,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. How do komodo dragons contradict what scientists know about reproduction?",
+              "content": "How do komodo dragons contradict what scientists know about reproduction?",
               "options": [
                 "They can reproduce without a father.",
                 "They lay eggs in the water.",
@@ -418,7 +418,7 @@
             },
             {
               "id": "37",
-              "content": "2. Why is it possible for a komodo dragon to come ashore at a different island?",
+              "content": "Why is it possible for a komodo dragon to come ashore at a different island?",
               "options": [
                 "Because they are vigorous swimmers and can plunge into the water.",
                 "Because they can fly.",
@@ -430,7 +430,7 @@
             },
             {
               "id": "38",
-              "content": "3. How can a female komodo dragon prolong the survival of the species in case of a disaster?",
+              "content": "How can a female komodo dragon prolong the survival of the species in case of a disaster?",
               "options": [
                 "She can reproduce by herself.",
                 "She can fight the disaster.",
@@ -442,7 +442,7 @@
             },
             {
               "id": "39",
-              "content": "4. According to the passage, what happens to the genes of the population overtime?",
+              "content": "According to the passage, what happens to the genes of the population overtime?",
               "options": [
                 "Over time, the genes diverge.",
                 "They stay the same.",
@@ -454,7 +454,7 @@
             },
             {
               "id": "40",
-              "content": "5. What will happen to the komodo babies if the genes are homogeneous?",
+              "content": "What will happen to the komodo babies if the genes are homogeneous?",
               "options": [
                 "The babies will be weaker and have genetic problems.",
                 "They will be stronger.",

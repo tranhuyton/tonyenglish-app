@@ -322,70 +322,70 @@
           "questions": [
             {
               "id": "26",
-              "content": "Getting to play with her friends was <u>something to make her want</u> to clean her room. [ 26 ]",
+              "content": "<p class=\"mb-4\">Getting to play with her friends was <u>something to make her want</u> to clean her room. [ 26 ]</p><p class=\"mb-4\">The <u>act of selling something</u> took place right before the shop closed. [ 27 ]</p><p class=\"mb-4\">By the end of the meeting, they had <u>made into law</u> the repair of the highways. [ 28 ]</p><p class=\"mb-4\">She <u>illegally persuaded</u> the guard, so he would let her into the secret meeting. [ 29 ]</p><p class=\"mb-4\">It was a good year for the banks, but it was a bad year for <u>places that sell things to the public</u>. [ 30 ]</p><p class=\"mb-4\">The <u>person who controls the company</u> is a very efficient manager. [ 31 ]</p><p class=\"mb-4\">The papers that she needed were at the <u>building where the bosses worked</u>. [ 32 ]</p><p class=\"mb-4\">The <u>law-breaking</u> company was stealing money from many of its investors. [ 33 ]</p><p class=\"mb-4\">Shawn is working for a <u>law-following</u> organization in a bad part of town. [ 34 ]</p><p class=\"mb-4\">The <u>money made by our company</u> was even better than last year’s. [ 35 ]</p>",
               "options": [],
               "explanation": "something to make her want (điều khiến cô ấy muốn) tương đương incentive (động lực).",
               "correctAnswer": "incentive"
             },
             {
               "id": "27",
-              "content": "The <u>act of selling something</u> took place right before the shop closed. [ 27 ]",
+              "content": "",
               "options": [],
               "explanation": "act of selling something (hành động bán cái gì đó) tương đương transaction.",
               "correctAnswer": "transaction"
             },
             {
               "id": "28",
-              "content": "By the end of the meeting, they had <u>made into law</u> the repair of the highways. [ 28 ]",
+              "content": "",
               "options": [],
               "explanation": "made into law (đưa vào luật) tương đương legislated.",
               "correctAnswer": "legislated"
             },
             {
               "id": "29",
-              "content": "She <u>illegally persuaded</u> the guard, so he would let her into the secret meeting. [ 29 ]",
+              "content": "",
               "options": [],
               "explanation": "illegally persuaded (thuyết phục bất hợp pháp bằng tiền) tương đương bribed.",
               "correctAnswer": "bribed"
             },
             {
               "id": "30",
-              "content": "It was a good year for the banks, but it was a bad year for <u>places that sell things to the public</u>. [ 30 ]",
+              "content": "",
               "options": [],
               "explanation": "places that sell things to the public (nơi bán hàng cho công chúng) tương đương retail.",
               "correctAnswer": "retail"
             },
             {
               "id": "31",
-              "content": "The <u>person who controls the company</u> is a very efficient manager. [ 31 ]",
+              "content": "",
               "options": [],
               "explanation": "person who controls the company (người điều hành công ty) tương đương administrator.",
               "correctAnswer": "administrator"
             },
             {
               "id": "32",
-              "content": "The papers that she needed were at the <u>building where the bosses worked</u>. [ 32 ]",
+              "content": "",
               "options": [],
               "explanation": "building where the bosses worked tương đương headquarters.",
               "correctAnswer": "headquarters"
             },
             {
               "id": "33",
-              "content": "The <u>law-breaking</u> company was stealing money from many of its investors. [ 33 ]",
+              "content": "",
               "options": [],
               "explanation": "law-breaking (phạm luật, đồi bại) tương đương corrupt.",
               "correctAnswer": "corrupt"
             },
             {
               "id": "34",
-              "content": "Shawn is working for a <u>law-following</u> organization in a bad part of town. [ 34 ]",
+              "content": "",
               "options": [],
               "explanation": "law-following (tuân thủ luật pháp) tương đương legitimate.",
               "correctAnswer": "legitimate"
             },
             {
               "id": "35",
-              "content": "The <u>money made by our company</u> was even better than last year’s. [ 35 ]",
+              "content": "",
               "options": [],
               "explanation": "money made by our company (tiền công ty kiếm được) tương đương revenue.",
               "correctAnswer": "revenue"

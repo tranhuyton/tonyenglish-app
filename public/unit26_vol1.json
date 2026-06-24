@@ -80,35 +80,35 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. How did Clare <u>act</u> when you told her about the party?<br/>re [ 6 ]",
+              "content": "<p class=\"mb-4\">How did Clare <u>act</u> when you told her about the party?<br/>re [ 6 ]</p><p class=\"mb-4\">In this <u>group of people</u>, wearing hats is common.<br/>so [ 7 ]</p><p class=\"mb-4\">I invited Jane and Lisa to my house, but <u>not Jane or Lisa</u> could come.<br/>ne [ 8 ]</p><p class=\"mb-4\">I've nearly finished the book. I'm on the <u>last</u> page.<br/>fi [ 9 ]</p><p class=\"mb-4\">I can jump higher than you. Watch me, and I will <u>show you that I can do it</u>.<br/>pr [ 10 ]</p>",
               "options": [],
               "explanation": "react: phản ứng",
               "correctAnswer": "react"
             },
             {
               "id": "7",
-              "content": "2. In this <u>group of people</u>, wearing hats is common.<br/>so [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "society: xã hội, nhóm người",
               "correctAnswer": "society"
             },
             {
               "id": "8",
-              "content": "3. I invited Jane and Lisa to my house, but <u>not Jane or Lisa</u> could come.<br/>ne [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "neither: không phải một trong hai",
               "correctAnswer": "neither"
             },
             {
               "id": "9",
-              "content": "4. I've nearly finished the book. I'm on the <u>last</u> page.<br/>fi [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "final: cuối cùng",
               "correctAnswer": "final"
             },
             {
               "id": "10",
-              "content": "5. I can jump higher than you. Watch me, and I will <u>show you that I can do it</u>.<br/>pr [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "prove: chứng minh",
               "correctAnswer": "prove"
@@ -123,7 +123,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. advice / suggest</p>Can I give you some [ 11 ]? (suggest / advice)</p>I [ 12 ] that you do your homework before you go out. (suggest / advice)</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. attention / situated</p>I got everyone's [ 13 ] with my new dress. (situated / attention)</p>Where is your office [ 14 ] in the building? (situated / attention)</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. standard / dropped</p>The [ 15 ] of his work is very high. (dropped / standard)</p>I accidentally [ 16 ] my phone in the snow. (dropped / standard)</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. attracted / reacted</p>He [ 17 ] my attention by waving to me. (attracted / reacted)</p>She [ 18 ] badly to the news. (attracted / reacted)</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. further / along</p>How much [ 19 ] is the beach? I'm tired! (further / along)</p>We walked [ 20 ] the path for two hours. (further / along)</p>",
+              "content": "<p class=\"mb-4\">advice / suggest</p>Can I give you some [ 11 ]? (suggest / advice)</p>I [ 12 ] that you do your homework before you go out. (suggest / advice)</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. attention / situated</p>I got everyone's [ 13 ] with my new dress. (situated / attention)</p>Where is your office [ 14 ] in the building? (situated / attention)</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. standard / dropped</p>The [ 15 ] of his work is very high. (dropped / standard)</p>I accidentally [ 16 ] my phone in the snow. (dropped / standard)</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. attracted / reacted</p>He [ 17 ] my attention by waving to me. (attracted / reacted)</p>She [ 18 ] badly to the news. (attracted / reacted)</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. further / along</p>How much [ 19 ] is the beach? I'm tired! (further / along)</p>We walked [ 20 ] the path for two hours. (further / along)</p>",
               "options": [
                 "advice",
                 "suggest"

@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. An overdose of something is __________.",
+              "content": "An overdose of something is __________.",
               "options": [
                 "expensive",
                 "too much",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. What might cause someone to gasp?",
+              "content": "What might cause someone to gasp?",
               "options": [
                 "Falling asleep",
                 "Getting a surprise party",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. What is something that can be sipped?",
+              "content": "What is something that can be sipped?",
               "options": [
                 "A plate of rice",
                 "A bowl of fruit",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. If you knew that a snake was benign, you would probably feel like this:",
+              "content": "If you knew that a snake was benign, you would probably feel like this:",
               "options": [
                 "Fine",
                 "Scared",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. She felt apologetic about __________.",
+              "content": "She felt apologetic about __________.",
               "options": [
                 "calling her friend back",
                 "walking home alone",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. If people are negotiating, what are they doing?",
+              "content": "If people are negotiating, what are they doing?",
               "options": [
                 "Deciding on something",
                 "Arguing about a silly topic",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. What does charred meat look like?",
+              "content": "What does charred meat look like?",
               "options": [
                 "It is raw and not cooked enough.",
                 "It is cooked perfectly.",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. If someone does something with reluctance, how do they feel?",
+              "content": "If someone does something with reluctance, how do they feel?",
               "options": [
                 "Excited",
                 "Unwilling",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. What might ensue after someone has misplaced a lot of money?",
+              "content": "What might ensue after someone has misplaced a lot of money?",
               "options": [
                 "A worried search",
                 "A visit from the doctor",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. What might cause a teacher distress?",
+              "content": "What might cause a teacher distress?",
               "options": [
                 "All the students doing their homework",
                 "Her students always arriving on time",
@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. reluctance",
+              "content": "reluctance",
               "options": [
                 "loneliness",
                 "hesitance",
@@ -157,7 +157,7 @@
             },
             {
               "id": "12",
-              "content": "2. apologetic",
+              "content": "apologetic",
               "options": [
                 "unsure",
                 "lucky",
@@ -168,7 +168,7 @@
             },
             {
               "id": "13",
-              "content": "3. char",
+              "content": "char",
               "options": [
                 "burn",
                 "cook",
@@ -179,7 +179,7 @@
             },
             {
               "id": "14",
-              "content": "4. relay",
+              "content": "relay",
               "options": [
                 "plate",
                 "race",
@@ -190,7 +190,7 @@
             },
             {
               "id": "15",
-              "content": "5. persuasion",
+              "content": "persuasion",
               "options": [
                 "talent",
                 "influence",
@@ -201,7 +201,7 @@
             },
             {
               "id": "16",
-              "content": "6. restate",
+              "content": "restate",
               "options": [
                 "decide",
                 "discuss",
@@ -213,7 +213,7 @@
             },
             {
               "id": "17",
-              "content": "7. gasp",
+              "content": "gasp",
               "options": [
                 "breathe",
                 "announce",
@@ -225,7 +225,7 @@
             },
             {
               "id": "18",
-              "content": "8. negotiate",
+              "content": "negotiate",
               "options": [
                 "decide",
                 "discuss",
@@ -237,7 +237,7 @@
             },
             {
               "id": "19",
-              "content": "9. sesame",
+              "content": "sesame",
               "options": [
                 "container",
                 "food",
@@ -249,7 +249,7 @@
             },
             {
               "id": "20",
-              "content": "10. verge",
+              "content": "verge",
               "options": [
                 "edge",
                 "done",
@@ -269,7 +269,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. benign",
+              "content": "benign",
               "options": [
                 "quick",
                 "painful",
@@ -281,7 +281,7 @@
             },
             {
               "id": "22",
-              "content": "2. dogged",
+              "content": "dogged",
               "options": [
                 "working",
                 "arrival",
@@ -293,7 +293,7 @@
             },
             {
               "id": "23",
-              "content": "3. clarify",
+              "content": "clarify",
               "options": [
                 "confuse",
                 "clean",
@@ -305,7 +305,7 @@
             },
             {
               "id": "24",
-              "content": "4. waver",
+              "content": "waver",
               "options": [
                 "river",
                 "determine",
@@ -317,7 +317,7 @@
             },
             {
               "id": "25",
-              "content": "5. distress",
+              "content": "distress",
               "options": [
                 "thoughtful",
                 "reasonable",
@@ -329,7 +329,7 @@
             },
             {
               "id": "26",
-              "content": "6. sip",
+              "content": "sip",
               "options": [
                 "gulp",
                 "laugh",
@@ -341,7 +341,7 @@
             },
             {
               "id": "27",
-              "content": "7. alternate",
+              "content": "alternate",
               "options": [
                 "divide",
                 "move",
@@ -353,7 +353,7 @@
             },
             {
               "id": "28",
-              "content": "8. overdose",
+              "content": "overdose",
               "options": [
                 "lack",
                 "mixture",
@@ -365,7 +365,7 @@
             },
             {
               "id": "29",
-              "content": "9. wary",
+              "content": "wary",
               "options": [
                 "tired",
                 "mad",
@@ -377,7 +377,7 @@
             },
             {
               "id": "30",
-              "content": "10. ensue",
+              "content": "ensue",
               "options": [
                 "come before",
                 "safe",
@@ -405,7 +405,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Becky was having charred sesame chicken for lunch.",
+              "content": "Becky was having charred sesame chicken for lunch.",
               "options": [
                 "F",
                 "T"
@@ -415,7 +415,7 @@
             },
             {
               "id": "32",
-              "content": "2. The argument ensued because Becky wavered about whether to run the relay.",
+              "content": "The argument ensued because Becky wavered about whether to run the relay.",
               "options": [
                 "F",
                 "T"
@@ -425,7 +425,7 @@
             },
             {
               "id": "33",
-              "content": "3. After Russell and Becky negotiated the bet, they decided that whoever lost would carry the winner's books for a year.",
+              "content": "After Russell and Becky negotiated the bet, they decided that whoever lost would carry the winner's books for a year.",
               "options": [
                 "F",
                 "T"
@@ -435,7 +435,7 @@
             },
             {
               "id": "34",
-              "content": "4. Russell was wary about eating the pepper even if it looked benign.",
+              "content": "Russell was wary about eating the pepper even if it looked benign.",
               "options": [
                 "F",
                 "T"
@@ -445,7 +445,7 @@
             },
             {
               "id": "35",
-              "content": "5. Becky was apologetic because of her choice to take the first bite of the pepper.",
+              "content": "Becky was apologetic because of her choice to take the first bite of the pepper.",
               "options": [
                 "F",
                 "T"
@@ -463,7 +463,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Why did Becky take the bet in spite of her reluctance?",
+              "content": "Why did Becky take the bet in spite of her reluctance?",
               "options": [
                 "Becky took the bet because of Russell's dogged persuasion.",
                 "She wanted to win.",
@@ -475,7 +475,7 @@
             },
             {
               "id": "37",
-              "content": "2. Why did Russell have to restate the terms of the bet?",
+              "content": "Why did Russell have to restate the terms of the bet?",
               "options": [
                 "Russell had to restate the terms to clarify for Becky.",
                 "He forgot what he said.",
@@ -487,7 +487,7 @@
             },
             {
               "id": "38",
-              "content": "3. How did Becky know that Russell was in distress and had an overdose of spice after he ate the pepper?",
+              "content": "How did Becky know that Russell was in distress and had an overdose of spice after he ate the pepper?",
               "options": [
                 "He gasped, alternated between pained and brave, and was on the verge of tears.",
                 "He said he was fine.",
@@ -499,7 +499,7 @@
             },
             {
               "id": "39",
-              "content": "4. Who warned Becky about chilies?",
+              "content": "Who warned Becky about chilies?",
               "options": [
                 "Becky's stepmother warned her to be careful with chilies.",
                 "Russell.",
@@ -511,7 +511,7 @@
             },
             {
               "id": "40",
-              "content": "5. What did Russell do after he ate the chili?",
+              "content": "What did Russell do after he ate the chili?",
               "options": [
                 "Russell sipped from the beverage.",
                 "He ate another one.",

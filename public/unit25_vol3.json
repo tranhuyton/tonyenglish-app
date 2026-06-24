@@ -159,9 +159,7 @@
               "content": "The sun's rays don't ever shine on Greenland.",
               "options": [
                 "True",
-                "False",
-                "Not Given",
-                "None of the above"
+                "False"
               ],
               "explanation": "Sai (F). Dựa vào bài đọc, The sun's rays don't shine there for three whole months. Tức là mặt trời chỉ không chiếu sáng trong 3 tháng, chứ không phải là không bao giờ chiếu sáng (don't ever shine).",
               "correctAnswer": "B"
@@ -171,9 +169,7 @@
               "content": "Erik the Red wanted to start a dynasty in his name in Iceland.",
               "options": [
                 "True",
-                "False",
-                "Not Given",
-                "None of the above"
+                "False"
               ],
               "explanation": "Sai (F). Dựa vào bài đọc, Erik muốn bắt đầu một vương triều mang tên mình ở vùng đất mới là Greenland, chứ không phải ở Iceland.",
               "correctAnswer": "B"
@@ -183,9 +179,7 @@
               "content": "Erik the Red's consequent punishment for killing his neighbor was to leave Iceland for Denmark.",
               "options": [
                 "True",
-                "False",
-                "Not Given",
-                "None of the above"
+                "False"
               ],
               "explanation": "Sai (F). Bài đọc cho biết His consequent punishment was to leave Iceland (Hình phạt của ông là phải rời khỏi Iceland), nhưng không hề nhắc đến việc phải đi tới Đan Mạch (Denmark).",
               "correctAnswer": "B"
@@ -195,9 +189,7 @@
               "content": "Erik's lieutenant thought about resigning.",
               "options": [
                 "True",
-                "False",
-                "Not Given",
-                "None of the above"
+                "False"
               ],
               "explanation": "Đúng (T). Bài đọc có nhắc đến việc viên trung úy của Erik muốn từ chức: Erik's lieutenant wanted to resign from his position.",
               "correctAnswer": "A"
@@ -207,9 +199,7 @@
               "content": "The ice around Greenland protected it from being invaded by navies.",
               "options": [
                 "True",
-                "False",
-                "Not Given",
-                "None of the above"
+                "False"
               ],
               "explanation": "Đúng (T). Erik nhận ra băng giá có thể ngăn cản kẻ thù: Not even the best navy could invade the new land.",
               "correctAnswer": "A"
@@ -219,15 +209,13 @@
               "content": "Greenland's name was derived from Erik's favorite color.",
               "options": [
                 "True",
-                "False",
-                "Not Given",
-                "None of the above"
+                "False"
               ],
               "explanation": "Sai (F). Erik đặt tên Greenland không phải vì màu sắc yêu thích, mà để đánh lừa và thuyết phục mọi người đến đây sinh sống (In the end, Greenland got its name all because of a trick).",
               "correctAnswer": "B"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec4",

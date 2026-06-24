@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What is something that is archaic?",
+              "content": "What is something that is archaic?",
               "options": [
                 "A computer",
                 "An Egyptian pyramid",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. Which of these things is often made of brass?",
+              "content": "Which of these things is often made of brass?",
               "options": [
                 "A saxophone",
                 "A coat",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. Which of these is a component in a radio?",
+              "content": "Which of these is a component in a radio?",
               "options": [
                 "Music",
                 "Wires",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. Which of these things could be seen during the medieval ages?",
+              "content": "Which of these things could be seen during the medieval ages?",
               "options": [
                 "Telephones",
                 "Skateboards",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. If you are on a small peninsula, you will be quite near to ______",
+              "content": "If you are on a small peninsula, you will be quite near to ______",
               "options": [
                 "the mountains",
                 "a forest",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. weave",
+              "content": "weave",
               "options": [
                 "to sew",
                 "to create",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "2. managerial",
+              "content": "managerial",
               "options": [
                 "entry-level",
                 "legislative",
@@ -110,7 +110,7 @@
             },
             {
               "id": "8",
-              "content": "3. prestige",
+              "content": "prestige",
               "options": [
                 "fame",
                 "honor",
@@ -122,7 +122,7 @@
             },
             {
               "id": "9",
-              "content": "4. drawback",
+              "content": "drawback",
               "options": [
                 "artist",
                 "benefit",
@@ -134,7 +134,7 @@
             },
             {
               "id": "10",
-              "content": "5. obsolete",
+              "content": "obsolete",
               "options": [
                 "old",
                 "innovative",
@@ -154,7 +154,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. benevolent",
+              "content": "benevolent",
               "options": [
                 "crazy",
                 "kind",
@@ -166,7 +166,7 @@
             },
             {
               "id": "12",
-              "content": "2. diminish",
+              "content": "diminish",
               "options": [
                 "buy",
                 "decide",
@@ -178,7 +178,7 @@
             },
             {
               "id": "13",
-              "content": "3. radical",
+              "content": "radical",
               "options": [
                 "new",
                 "closure",
@@ -190,7 +190,7 @@
             },
             {
               "id": "14",
-              "content": "4. spectacular",
+              "content": "spectacular",
               "options": [
                 "unusual",
                 "sad",
@@ -202,7 +202,7 @@
             },
             {
               "id": "15",
-              "content": "5. fad",
+              "content": "fad",
               "options": [
                 "trend",
                 "annoyance",
@@ -222,7 +222,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Knights in armor and their squires were common sites in medieval times.",
+              "content": "Knights in armor and their squires were common sites in medieval times.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -234,7 +234,7 @@
             },
             {
               "id": "17",
-              "content": "2. Our new boss hasn't made any changes to the company. He has very radical ideas.",
+              "content": "Our new boss hasn't made any changes to the company. He has very radical ideas.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -246,7 +246,7 @@
             },
             {
               "id": "18",
-              "content": "3. I don't want to impose on my father to help me with my homework. He's very busy.",
+              "content": "I don't want to impose on my father to help me with my homework. He's very busy.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -258,7 +258,7 @@
             },
             {
               "id": "19",
-              "content": "4. He refuted me because I didn't wash the plates after dinner.",
+              "content": "He refuted me because I didn't wash the plates after dinner.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -270,7 +270,7 @@
             },
             {
               "id": "20",
-              "content": "5. In capitalism, people can own just about any product or object they want.",
+              "content": "In capitalism, people can own just about any product or object they want.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -290,7 +290,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. Our hotel was situated on a piece of land that was surrounded by the sea on three sides.",
+              "content": "Our hotel was situated on a piece of land that was surrounded by the sea on three sides.",
               "options": [
                 "peninsula",
                 "drawbacks",
@@ -302,7 +302,7 @@
             },
             {
               "id": "22",
-              "content": "2. Doctors say the exercise can reduce the chances of getting ill.",
+              "content": "Doctors say the exercise can reduce the chances of getting ill.",
               "options": [
                 "diminish",
                 "impose",
@@ -314,7 +314,7 @@
             },
             {
               "id": "23",
-              "content": "3. Children's reliance on their parents decreases as they get older.",
+              "content": "Children's reliance on their parents decreases as they get older.",
               "options": [
                 "dependence",
                 "proportion",
@@ -326,7 +326,7 @@
             },
             {
               "id": "24",
-              "content": "4. There are a number of disadvantages to taking up this new technology.",
+              "content": "There are a number of disadvantages to taking up this new technology.",
               "options": [
                 "drawbacks",
                 "components",
@@ -338,7 +338,7 @@
             },
             {
               "id": "25",
-              "content": "5. A large amount of students from my school want to go to university.",
+              "content": "A large amount of students from my school want to go to university.",
               "options": [
                 "fad",
                 "proportion",
@@ -350,7 +350,7 @@
             },
             {
               "id": "26",
-              "content": "6. I need to buy some new parts for my computer to make it work properly.",
+              "content": "I need to buy some new parts for my computer to make it work properly.",
               "options": [
                 "drawbacks",
                 "components",
@@ -362,7 +362,7 @@
             },
             {
               "id": "27",
-              "content": "7. I'm sorry to interrupt and intrude on you, but I need some help with my car.",
+              "content": "I'm sorry to interrupt and intrude on you, but I need some help with my car.",
               "options": [
                 "refute",
                 "weave",
@@ -374,7 +374,7 @@
             },
             {
               "id": "28",
-              "content": "8. The newspaper editor disproved the claim that the stories in the paper were untrue.",
+              "content": "The newspaper editor disproved the claim that the stories in the paper were untrue.",
               "options": [
                 "refuted",
                 "diminished",
@@ -386,7 +386,7 @@
             },
             {
               "id": "29",
-              "content": "9. The show at the theater was very impressive.",
+              "content": "The show at the theater was very impressive.",
               "options": [
                 "spectacular",
                 "archaic",
@@ -398,7 +398,7 @@
             },
             {
               "id": "30",
-              "content": "10. The kind and generous women gave lots of money to help the poor.",
+              "content": "The kind and generous women gave lots of money to help the poor.",
               "options": [
                 "benevolent",
                 "hostile",
@@ -426,7 +426,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. The mayor of Netherton wanted Joseph to impose his radical fad on the town.",
+              "content": "The mayor of Netherton wanted Joseph to impose his radical fad on the town.",
               "options": [
                 "True",
                 "False",
@@ -438,7 +438,7 @@
             },
             {
               "id": "32",
-              "content": "2. Joseph thought the mayor of Netherton's ideas were medieval and archaic.",
+              "content": "Joseph thought the mayor of Netherton's ideas were medieval and archaic.",
               "options": [
                 "True",
                 "False",
@@ -450,7 +450,7 @@
             },
             {
               "id": "33",
-              "content": "3. The mayor of Wilton refuted the fact that the machine had drawbacks.",
+              "content": "The mayor of Wilton refuted the fact that the machine had drawbacks.",
               "options": [
                 "True",
                 "False",
@@ -462,7 +462,7 @@
             },
             {
               "id": "34",
-              "content": "4. In Wilton, the people who used to weave got managerial positions at the factories.",
+              "content": "In Wilton, the people who used to weave got managerial positions at the factories.",
               "options": [
                 "True",
                 "False",
@@ -474,7 +474,7 @@
             },
             {
               "id": "35",
-              "content": "5. In the end, capitalism brought prestige to both cities.",
+              "content": "In the end, capitalism brought prestige to both cities.",
               "options": [
                 "True",
                 "False",
@@ -494,7 +494,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. What job did a large proportion of the people on the peninsula do?",
+              "content": "What job did a large proportion of the people on the peninsula do?",
               "options": [
                 "They worked in farming.",
                 "They worked in weaving.",
@@ -506,7 +506,7 @@
             },
             {
               "id": "37",
-              "content": "2. According to Joseph, what will soon be obsolete?",
+              "content": "According to Joseph, what will soon be obsolete?",
               "options": [
                 "Capitalism",
                 "Brass components",
@@ -518,7 +518,7 @@
             },
             {
               "id": "38",
-              "content": "3. What did the benevolent mayor of Netherton realize about the people's dependence on weaving?",
+              "content": "What did the benevolent mayor of Netherton realize about the people's dependence on weaving?",
               "options": [
                 "If he bought the machine, the people would lose their jobs.",
                 "They needed more thread.",
@@ -530,7 +530,7 @@
             },
             {
               "id": "39",
-              "content": "4. What did the mayor of Wilton realize about the spectacular machine with components made of brass?",
+              "content": "What did the mayor of Wilton realize about the spectacular machine with components made of brass?",
               "options": [
                 "It was too expensive.",
                 "It would break easily.",
@@ -542,7 +542,7 @@
             },
             {
               "id": "40",
-              "content": "5. Why did income diminish in Netherton after machines were introduced in Wilton?",
+              "content": "Why did income diminish in Netherton after machines were introduced in Wilton?",
               "options": [
                 "Because they ran out of thread.",
                 "Nobody bought the cloth from Netherton anymore.",

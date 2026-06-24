@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. far away",
+              "content": "far away",
               "options": [
                 "compact",
                 "leisure",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. a sweet thing to eat",
+              "content": "a sweet thing to eat",
               "options": [
                 "dessert",
                 "wool",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. a small magical creature",
+              "content": "a small magical creature",
               "options": [
                 "pulse",
                 "pillow",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. an event that covers the sun",
+              "content": "an event that covers the sun",
               "options": [
                 "whistle",
                 "decay",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. to make someone feel less tired",
+              "content": "to make someone feel less tired",
               "options": [
                 "spice",
                 "refresh",
@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. whistle",
+              "content": "whistle",
               "options": [
                 "a flavor",
                 "to make noise with one's lips",
@@ -92,7 +92,7 @@
             },
             {
               "id": "7",
-              "content": "2. compact",
+              "content": "compact",
               "options": [
                 "far",
                 "not at work",
@@ -104,7 +104,7 @@
             },
             {
               "id": "8",
-              "content": "3. wool",
+              "content": "wool",
               "options": [
                 "sheep's hair",
                 "magic creature",
@@ -116,7 +116,7 @@
             },
             {
               "id": "9",
-              "content": "4. grace",
+              "content": "grace",
               "options": [
                 "to chase after",
                 "to get old and rot",
@@ -128,7 +128,7 @@
             },
             {
               "id": "10",
-              "content": "5. dip",
+              "content": "dip",
               "options": [
                 "to blow out air",
                 "something soft for your head",
@@ -140,7 +140,7 @@
             },
             {
               "id": "11",
-              "content": "6. spice",
+              "content": "spice",
               "options": [
                 "a flavor added to food or drink",
                 "something with a round shape",
@@ -152,7 +152,7 @@
             },
             {
               "id": "12",
-              "content": "7. leisure",
+              "content": "leisure",
               "options": [
                 "time when you do not have to work",
                 "to become naturally destroyed",
@@ -164,7 +164,7 @@
             },
             {
               "id": "13",
-              "content": "8. curl",
+              "content": "curl",
               "options": [
                 "to get old and fall apart",
                 "something with a curve",
@@ -176,7 +176,7 @@
             },
             {
               "id": "14",
-              "content": "9. pillow",
+              "content": "pillow",
               "options": [
                 "something you sleep on",
                 "the quality of moving well",
@@ -188,7 +188,7 @@
             },
             {
               "id": "15",
-              "content": "10. pulse",
+              "content": "pulse",
               "options": [
                 "not at work",
                 "a magic creature",
@@ -208,7 +208,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Some scientists think that in the ________ future, we are going to use all of our fuel. One way to use less fuel is to drive a ________ car.",
+              "content": "Some scientists think that in the ________ future, we are going to use all of our fuel. One way to use less fuel is to drive a ________ car.",
               "options": [
                 "distant / compact",
                 "compact / distant",
@@ -220,7 +220,7 @@
             },
             {
               "id": "17",
-              "content": "2. Watching the ________ was very exciting. Afterwards, I could feel my ________ going very fast.",
+              "content": "Watching the ________ was very exciting. Afterwards, I could feel my ________ going very fast.",
               "options": [
                 "eclipse / pulse",
                 "pulse / eclipse",
@@ -232,7 +232,7 @@
             },
             {
               "id": "18",
-              "content": "3. Early members of ________ walked slowly and strangely. However, people learned how to move with ________ over the years.",
+              "content": "Early members of ________ walked slowly and strangely. However, people learned how to move with ________ over the years.",
               "options": [
                 "grace / mankind",
                 "mankind / grace",
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "4. My favorite ________ is cinnamon. I put it in all of my favorite ________.",
+              "content": "My favorite ________ is cinnamon. I put it in all of my favorite ________.",
               "options": [
                 "spice / desserts",
                 "desserts / spice",
@@ -256,7 +256,7 @@
             },
             {
               "id": "20",
-              "content": "5. In the fall, the flowers do not ________. I clean them up when they start to ________.",
+              "content": "In the fall, the flowers do not ________. I clean them up when they start to ________.",
               "options": [
                 "decay / bloom",
                 "bloom / decay",
@@ -268,7 +268,7 @@
             },
             {
               "id": "21",
-              "content": "6. She ________ a song while she took a shower to ________ herself.",
+              "content": "She ________ a song while she took a shower to ________ herself.",
               "options": [
                 "refresh / whistled",
                 "whistled / refresh",
@@ -280,7 +280,7 @@
             },
             {
               "id": "22",
-              "content": "7. When my father was a boy, he learned all about a sheep's ________. For example, he learned that it forms ________.",
+              "content": "When my father was a boy, he learned all about a sheep's ________. For example, he learned that it forms ________.",
               "options": [
                 "wool / curls",
                 "curls / wool",
@@ -292,7 +292,7 @@
             },
             {
               "id": "23",
-              "content": "8. Jennifer likes to paint in her ________ time. The most recent picture she painted was of a ________.",
+              "content": "Jennifer likes to paint in her ________ time. The most recent picture she painted was of a ________.",
               "options": [
                 "leisure / fairy",
                 "fairy / leisure",
@@ -304,7 +304,7 @@
             },
             {
               "id": "24",
-              "content": "9. Kelly ________ her feet into the pool but decided not to get in because she was ________ a lot. She was afraid she might get others sick if she got in.",
+              "content": "Kelly ________ her feet into the pool but decided not to get in because she was ________ a lot. She was afraid she might get others sick if she got in.",
               "options": [
                 "sneezing / dipped",
                 "dipped / sneezing",
@@ -316,7 +316,7 @@
             },
             {
               "id": "25",
-              "content": "10. The baby has a ________ for soft things. One of the things that he loves the most is his ________.",
+              "content": "The baby has a ________ for soft things. One of the things that he loves the most is his ________.",
               "options": [
                 "pillow / passion",
                 "passion / pillow",
@@ -344,7 +344,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. Why did Tina suddenly wake up?",
+              "content": "Why did Tina suddenly wake up?",
               "options": [
                 "She felt refreshed.",
                 "She heard someone sneeze.",
@@ -356,7 +356,7 @@
             },
             {
               "id": "27",
-              "content": "2. All of the following describe Tina EXCEPT ____.",
+              "content": "All of the following describe Tina EXCEPT ____.",
               "options": [
                 "she had curls in her hair",
                 "she moved with grace",
@@ -368,7 +368,7 @@
             },
             {
               "id": "28",
-              "content": "3. What does Wilma do with the flowers?",
+              "content": "What does Wilma do with the flowers?",
               "options": [
                 "She makes dessert with them.",
                 "She cuts them.",
@@ -380,7 +380,7 @@
             },
             {
               "id": "29",
-              "content": "4. Where did Tina live before she met Wilma?",
+              "content": "Where did Tina live before she met Wilma?",
               "options": [
                 "In Wilma's garden",
                 "In a tiny house",

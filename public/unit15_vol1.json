@@ -140,31 +140,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I had to walk <u>to the other side of</u> the school to get to my next class.<br/>ac [ 11 ]",
+              "content": "<p class=\"mb-4\">I had to walk <u>to the other side of</u> the school to get to my next class.<br/>ac [ 11 ]</p><p class=\"mb-4\">Brad chose not to <u>give an answer</u> when I asked about his weekend.<br/>re [ 12 ]</p><p class=\"mb-4\">Sarah ran around the park to get ready for the <u>contest where people run against each other</u>.<br/>ra [ 13 ]</p><p class=\"mb-4\">Michael <u>saw</u> the accident that occurred today.<br/>ob [ 14 ]</p><p class=\"mb-4\">Renee knew there was a <u>chance of something bad happening</u> when she went swimming in the ocean.<br/>ri [ 15 ]</p>",
               "explanation": "across matches 'to the other side of'.",
               "correctAnswer": "across"
             },
             {
               "id": "12",
-              "content": "2. Brad chose not to <u>give an answer</u> when I asked about his weekend.<br/>re [ 12 ]",
+              "content": "",
               "explanation": "respond matches 'give an answer'.",
               "correctAnswer": "respond"
             },
             {
               "id": "13",
-              "content": "3. Sarah ran around the park to get ready for the <u>contest where people run against each other</u>.<br/>ra [ 13 ]",
+              "content": "",
               "explanation": "race matches 'contest where people run against each other'.",
               "correctAnswer": "race"
             },
             {
               "id": "14",
-              "content": "4. Michael <u>saw</u> the accident that occurred today.<br/>ob [ 14 ]",
+              "content": "",
               "explanation": "observed matches 'saw'.",
               "correctAnswer": "observed"
             },
             {
               "id": "15",
-              "content": "5. Renee knew there was a <u>chance of something bad happening</u> when she went swimming in the ocean.<br/>ri [ 15 ]",
+              "content": "",
               "explanation": "risk matches 'chance of something bad happening'.",
               "correctAnswer": "risk"
             }
@@ -178,7 +178,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p>1.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. Being tall is a <b>characteristic</b> of many trees.",
                 "b. I was <b>fortunate</b> because I received some useless gifts."
@@ -188,7 +188,7 @@
             },
             {
               "id": "17",
-              "content": "<p>2.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. Because he left work early, Carl had an <b>opportunity</b> to go to the concert.",
                 "b. I could feel the <b>length</b> of the air outside."
@@ -198,7 +198,7 @@
             },
             {
               "id": "18",
-              "content": "<p>3.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. Angela felt <b>fear</b> when she got a good grade on her test.",
                 "b. Our team won. We were <b>fortunate</b>."
@@ -208,7 +208,7 @@
             },
             {
               "id": "19",
-              "content": "<p>4.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. Jeremy thought his hair was just the right <b>length</b>.",
                 "b. Michelle left her <b>characteristic</b> at my house."
@@ -218,7 +218,7 @@
             },
             {
               "id": "20",
-              "content": "<p>5.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. Theresa found an <b>opportunity</b> on the ground outside.",
                 "b. Billy feels <b>fear</b> when he has to talk in front of people."

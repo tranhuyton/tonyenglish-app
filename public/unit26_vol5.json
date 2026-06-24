@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What recurs when watching a funny movie?",
+              "content": "What recurs when watching a funny movie?",
               "options": [
                 "Boredom",
                 "Laughter",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. What orbits the Earth?",
+              "content": "What orbits the Earth?",
               "options": [
                 "The moon",
                 "A car",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. Why do birds flap their wings?",
+              "content": "Why do birds flap their wings?",
               "options": [
                 "To eat",
                 "To fly",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. What is supernatural?",
+              "content": "What is supernatural?",
               "options": [
                 "A frog",
                 "A school",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. If you give an overview of a movie, you...",
+              "content": "If you give an overview of a movie, you...",
               "options": [
                 "describe the important parts",
                 "watch it again",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. I’m going on a trip halfway across the [ 6 ].",
+              "content": "I’m going on a trip halfway across the [ 6 ].",
               "options": [
                 "globe",
                 "inward",
@@ -104,7 +104,7 @@
             },
             {
               "id": "7",
-              "content": "2. While I’m gone, Sarah will turn in my homework on my [ 7 ].",
+              "content": "While I’m gone, Sarah will turn in my homework on my [ 7 ].",
               "options": [
                 "globe",
                 "inward",
@@ -122,7 +122,7 @@
             },
             {
               "id": "8",
-              "content": "3. On our vacation to Africa, we got to witness an old Egyptian [ 8 ].",
+              "content": "On our vacation to Africa, we got to witness an old Egyptian [ 8 ].",
               "options": [
                 "globe",
                 "inward",
@@ -140,7 +140,7 @@
             },
             {
               "id": "9",
-              "content": "4. We weren’t told all the details of it, but we were given a brief [ 9 ].",
+              "content": "We weren’t told all the details of it, but we were given a brief [ 9 ].",
               "options": [
                 "globe",
                 "inward",
@@ -158,7 +158,7 @@
             },
             {
               "id": "10",
-              "content": "5. He [ 10 ] slices of bread for the children’s sandwiches.",
+              "content": "He [ 10 ] slices of bread for the children’s sandwiches.",
               "options": [
                 "globe",
                 "inward",
@@ -176,7 +176,7 @@
             },
             {
               "id": "11",
-              "content": "6. He can make several by baking a single [ 11 ] of bread.",
+              "content": "He can make several by baking a single [ 11 ] of bread.",
               "options": [
                 "globe",
                 "inward",
@@ -194,7 +194,7 @@
             },
             {
               "id": "12",
-              "content": "7. Sometimes, I choose to keep my thoughts and feelings [ 12 ].",
+              "content": "Sometimes, I choose to keep my thoughts and feelings [ 12 ].",
               "options": [
                 "globe",
                 "inward",
@@ -212,7 +212,7 @@
             },
             {
               "id": "13",
-              "content": "8. Though I’m quiet about them, they are still [ 13 ].",
+              "content": "Though I’m quiet about them, they are still [ 13 ].",
               "options": [
                 "globe",
                 "inward",
@@ -230,7 +230,7 @@
             },
             {
               "id": "14",
-              "content": "9. In the past, people asked [ 14 ] how the gods moved the planets.",
+              "content": "In the past, people asked [ 14 ] how the gods moved the planets.",
               "options": [
                 "globe",
                 "inward",
@@ -248,7 +248,7 @@
             },
             {
               "id": "15",
-              "content": "10. Today, science explains how the planets [ 15 ] the sun.",
+              "content": "Today, science explains how the planets [ 15 ] the sun.",
               "options": [
                 "globe",
                 "inward",
@@ -274,7 +274,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. relevant",
+              "content": "relevant",
               "options": [
                 "important",
                 "beautiful",
@@ -286,7 +286,7 @@
             },
             {
               "id": "17",
-              "content": "2. horizontal",
+              "content": "horizontal",
               "options": [
                 "heavy",
                 "flat",
@@ -298,7 +298,7 @@
             },
             {
               "id": "18",
-              "content": "3. a rite",
+              "content": "a rite",
               "options": [
                 "a story",
                 "a belief",
@@ -310,7 +310,7 @@
             },
             {
               "id": "19",
-              "content": "4. stall",
+              "content": "stall",
               "options": [
                 "to stop",
                 "to fade",
@@ -322,7 +322,7 @@
             },
             {
               "id": "20",
-              "content": "5. inventory",
+              "content": "inventory",
               "options": [
                 "a brand",
                 "a trait",
@@ -342,7 +342,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. My earlier report was just a short account of the long, difficult book.",
+              "content": "My earlier report was just a short account of the long, difficult book.",
               "options": [
                 "previous",
                 "oracle",
@@ -354,7 +354,7 @@
             },
             {
               "id": "22",
-              "content": "2. In ancient Greece, the person who gives advice often gave information about the future.",
+              "content": "In ancient Greece, the person who gives advice often gave information about the future.",
               "options": [
                 "previous",
                 "oracle",
@@ -366,7 +366,7 @@
             },
             {
               "id": "23",
-              "content": "3. The top of the fence was perfectly flat and level with the ground.",
+              "content": "The top of the fence was perfectly flat and level with the ground.",
               "options": [
                 "previous",
                 "oracle",
@@ -378,7 +378,7 @@
             },
             {
               "id": "24",
-              "content": "4. I know about the piece because I saw the viewing before it was available to the public.",
+              "content": "I know about the piece because I saw the viewing before it was available to the public.",
               "options": [
                 "previous",
                 "oracle",
@@ -390,7 +390,7 @@
             },
             {
               "id": "25",
-              "content": "5. The baker made an extra piece of bread for the homeless man in the alley.",
+              "content": "The baker made an extra piece of bread for the homeless man in the alley.",
               "options": [
                 "loaf",
                 "inward",
@@ -402,7 +402,7 @@
             },
             {
               "id": "26",
-              "content": "6. She is embarrassed of some of her not expressed or shown thoughts.",
+              "content": "She is embarrassed of some of her not expressed or shown thoughts.",
               "options": [
                 "loaf",
                 "inward",
@@ -414,7 +414,7 @@
             },
             {
               "id": "27",
-              "content": "7. The fisherman liked to make a low, continuous noise while he waited for a bite.",
+              "content": "The fisherman liked to make a low, continuous noise while he waited for a bite.",
               "options": [
                 "loaf",
                 "inward",
@@ -426,7 +426,7 @@
             },
             {
               "id": "28",
-              "content": "8. The travelers were given a place to stay, but they had to supply their own food.",
+              "content": "The travelers were given a place to stay, but they had to supply their own food.",
               "options": [
                 "loaf",
                 "inward",
@@ -438,7 +438,7 @@
             },
             {
               "id": "29",
-              "content": "9. The company had to stop the process of the production of the dangerous toy.",
+              "content": "The company had to stop the process of the production of the dangerous toy.",
               "options": [
                 "stall",
                 "glacier",
@@ -450,7 +450,7 @@
             },
             {
               "id": "30",
-              "content": "10. We saw a cute polar bear jump into the water from the edge of the large mass of ice.",
+              "content": "We saw a cute polar bear jump into the water from the edge of the large mass of ice.",
               "options": [
                 "stall",
                 "glacier",
@@ -478,7 +478,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Cosmo was scared that his recurring dreams of the previous nights were a preview of what would happen.",
+              "content": "Cosmo was scared that his recurring dreams of the previous nights were a preview of what would happen.",
               "options": [
                 "True",
                 "False",
@@ -489,7 +489,7 @@
             },
             {
               "id": "32",
-              "content": "2. Supernatural boys of Cosmo’s age participated in an important rite.",
+              "content": "Supernatural boys of Cosmo’s age participated in an important rite.",
               "options": [
                 "True",
                 "False",
@@ -500,7 +500,7 @@
             },
             {
               "id": "33",
-              "content": "3. In Dano’s summary, he told Cosmo to keep his body horizontal against the winds of the Indian Ocean.",
+              "content": "In Dano’s summary, he told Cosmo to keep his body horizontal against the winds of the Indian Ocean.",
               "options": [
                 "True",
                 "False",
@@ -511,7 +511,7 @@
             },
             {
               "id": "34",
-              "content": "4. Dano flapped the wings he was provided with and orbited the globe.",
+              "content": "Dano flapped the wings he was provided with and orbited the globe.",
               "options": [
                 "True",
                 "False",
@@ -522,7 +522,7 @@
             },
             {
               "id": "35",
-              "content": "5. Cosmo sang a tune while he flew and enjoyed the view.",
+              "content": "Cosmo sang a tune while he flew and enjoyed the view.",
               "options": [
                 "True",
                 "False",
@@ -541,7 +541,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. What inward thoughts were no longer relevant to Cosmo after he started having fun?",
+              "content": "What inward thoughts were no longer relevant to Cosmo after he started having fun?",
               "options": [
                 "His inward thoughts about falling.",
                 "His inward thoughts about his family.",
@@ -553,7 +553,7 @@
             },
             {
               "id": "37",
-              "content": "2. What did Dano tell Cosmo that the tops of the Himalaya Mountains will look like?",
+              "content": "What did Dano tell Cosmo that the tops of the Himalaya Mountains will look like?",
               "options": [
                 "They will look like loaves of bread.",
                 "They will look like pieces of blue string.",
@@ -565,7 +565,7 @@
             },
             {
               "id": "38",
-              "content": "3. What did Cosmo say after he thanked the oracle for the overview?",
+              "content": "What did Cosmo say after he thanked the oracle for the overview?",
               "options": [
                 "\"I'll do my best.\"",
                 "\"I'll fly slowly.\"",
@@ -577,7 +577,7 @@
             },
             {
               "id": "39",
-              "content": "4. The oracle told Cosmo that the rivers of the world will look like what?",
+              "content": "The oracle told Cosmo that the rivers of the world will look like what?",
               "options": [
                 "Pieces of blue string.",
                 "Long green snakes.",
@@ -589,7 +589,7 @@
             },
             {
               "id": "40",
-              "content": "5. What did the chief declare on behalf of the tribe?",
+              "content": "What did the chief declare on behalf of the tribe?",
               "options": [
                 "He declared Cosmo a man.",
                 "He declared Cosmo a warrior.",

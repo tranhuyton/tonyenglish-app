@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. federation",
+              "content": "federation",
               "options": [
                 "motion",
                 "union",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. render",
+              "content": "render",
               "options": [
                 "stop",
                 "tear",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. smallpox",
+              "content": "smallpox",
               "options": [
                 "disease",
                 "match",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. curb",
+              "content": "curb",
               "options": [
                 "drain",
                 "excuse",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. diagnose",
+              "content": "diagnose",
               "options": [
                 "smell",
                 "continue",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. certify",
+              "content": "certify",
               "options": [
                 "apply",
                 "reduce",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. rash",
+              "content": "rash",
               "options": [
                 "pants",
                 "bumps",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. needy",
+              "content": "needy",
               "options": [
                 "poor",
                 "sweet",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. onset",
+              "content": "onset",
               "options": [
                 "fork",
                 "show",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. collaborate",
+              "content": "collaborate",
               "options": [
                 "cooperate",
                 "estimate",
@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. enact",
+              "content": "enact",
               "options": [
                 "open",
                 "travel",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "2. intolerable",
+              "content": "intolerable",
               "options": [
                 "chewable",
                 "washable",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "3. pledge",
+              "content": "pledge",
               "options": [
                 "lie",
                 "write",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "4. counteract",
+              "content": "counteract",
               "options": [
                 "pretend",
                 "arrange",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "5. vow",
+              "content": "vow",
               "options": [
                 "command",
                 "gather",
@@ -206,7 +206,7 @@
             },
             {
               "id": "16",
-              "content": "6. prohibit",
+              "content": "prohibit",
               "options": [
                 "examine",
                 "undo",
@@ -218,7 +218,7 @@
             },
             {
               "id": "17",
-              "content": "7. transmit",
+              "content": "transmit",
               "options": [
                 "ride",
                 "hold",
@@ -230,7 +230,7 @@
             },
             {
               "id": "18",
-              "content": "8. gross",
+              "content": "gross",
               "options": [
                 "little",
                 "similar",
@@ -242,7 +242,7 @@
             },
             {
               "id": "19",
-              "content": "9. compile",
+              "content": "compile",
               "options": [
                 "tower",
                 "scatter",
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "10. humane",
+              "content": "humane",
               "options": [
                 "hairy",
                 "kind",
@@ -274,70 +274,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. The new law will <u>make the schools</u> less effective at teaching certain subjects. [ 21 ]",
+              "content": "<p class=\"mb-4\">The new law will <u>make the schools</u> less effective at teaching certain subjects. [ 21 ]</p><p class=\"mb-4\">Some countries have a larger population <u>of poor</u> citizens than other countries do. [ 22 ]</p><p class=\"mb-4\">The teachers <u>collected the names of</u> all the students who passed the test in her book. [ 23 ]</p><p class=\"mb-4\">If you touch that plant, you might get a sore <u>and infected area of skin</u> that itches badly. [ 24 ]</p><p class=\"mb-4\">The doctor <u>identified her illness</u> as being only a mild stomach flu. [ 25 ]</p><p class=\"mb-4\">I don’t like those kinds of movies because they have scenes that are really <u>disgusting.</u> [ 26 ]</p><p class=\"mb-4\">Many diseases are <u>passed from one person to another</u> when they shake hands. [ 27 ]</p><p class=\"mb-4\">The companies agreed that it would be cheaper to ship the fruit if they formed a group. [ 28 ]</p><p class=\"mb-4\">Her treatment of the patients was <u>good and kind,</u> and they seemed to heal much faster. [ 29 ]</p><p class=\"mb-4\">The two artists decided to <u>work together on their</u> next series of sculptures. [ 30 ]</p>",
               "options": [],
               "explanation": "render: make become something else.",
               "correctAnswer": "render"
             },
             {
               "id": "22",
-              "content": "2. Some countries have a larger population <u>of poor</u> citizens than other countries do. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "needy: very poor.",
               "correctAnswer": "needy"
             },
             {
               "id": "23",
-              "content": "3. The teachers <u>collected the names of</u> all the students who passed the test in her book. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "compile: collect a variety of things into a group.",
               "correctAnswer": "compiled"
             },
             {
               "id": "24",
-              "content": "4. If you touch that plant, you might get a sore <u>and infected area of skin</u> that itches badly. [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "rash: an infected area of the skin.",
               "correctAnswer": "rash"
             },
             {
               "id": "25",
-              "content": "5. The doctor <u>identified her illness</u> as being only a mild stomach flu. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "diagnose: identify the medical condition.",
               "correctAnswer": "diagnosed"
             },
             {
               "id": "26",
-              "content": "6. I don’t like those kinds of movies because they have scenes that are really <u>disgusting.</u> [ 26 ]",
+              "content": "",
               "options": [],
               "explanation": "gross: disgusting.",
               "correctAnswer": "gross"
             },
             {
               "id": "27",
-              "content": "7. Many diseases are <u>passed from one person to another</u> when they shake hands. [ 27 ]",
+              "content": "",
               "options": [],
               "explanation": "transmit: pass it from one person or place to another.",
               "correctAnswer": "transmitted"
             },
             {
               "id": "28",
-              "content": "8. The companies agreed that it would be cheaper to ship the fruit if they formed a group. [ 28 ]",
+              "content": "",
               "options": [],
               "explanation": "federation: a group of states or businesses working for a common cause.",
               "correctAnswer": "federation"
             },
             {
               "id": "29",
-              "content": "9. Her treatment of the patients was <u>good and kind,</u> and they seemed to heal much faster. [ 29 ]",
+              "content": "",
               "options": [],
               "explanation": "humane: good and kind.",
               "correctAnswer": "humane"
             },
             {
               "id": "30",
-              "content": "10. The two artists decided to <u>work together on their</u> next series of sculptures. [ 30 ]",
+              "content": "",
               "options": [],
               "explanation": "collaborate: work together on something.",
               "correctAnswer": "collaborate"
@@ -360,7 +360,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. In the 1800s, more than 20 million people were diagnosed with smallpox each year.",
+              "content": "In the 1800s, more than 20 million people were diagnosed with smallpox each year.",
               "options": [
                 "F",
                 "T"
@@ -370,7 +370,7 @@
             },
             {
               "id": "32",
-              "content": "2. Smallpox rendered people bald and caused an intolerable rash that left gross scars.",
+              "content": "Smallpox rendered people bald and caused an intolerable rash that left gross scars.",
               "options": [
                 "F",
                 "T"
@@ -380,7 +380,7 @@
             },
             {
               "id": "33",
-              "content": "3. Laws were enacted to prohibit sick people from mixing with healthy people.",
+              "content": "Laws were enacted to prohibit sick people from mixing with healthy people.",
               "options": [
                 "F",
                 "T"
@@ -390,7 +390,7 @@
             },
             {
               "id": "34",
-              "content": "4. The wealthier countries pledged to give North America a vaccine to counteract smallpox.",
+              "content": "The wealthier countries pledged to give North America a vaccine to counteract smallpox.",
               "options": [
                 "F",
                 "T"
@@ -400,7 +400,7 @@
             },
             {
               "id": "35",
-              "content": "5. The humane efforts of people everywhere helped to successfully stop smallpox.",
+              "content": "The humane efforts of people everywhere helped to successfully stop smallpox.",
               "options": [
                 "F",
                 "T"
@@ -418,7 +418,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. What did people suffer from at the onset of smallpox?",
+              "content": "What did people suffer from at the onset of smallpox?",
               "options": [
                 "High fevers, headaches, vomiting, and aching muscles.",
                 "A loss of hair and hearing.",
@@ -430,7 +430,7 @@
             },
             {
               "id": "37",
-              "content": "2. What did the federation of countries collaborate in order to do?",
+              "content": "What did the federation of countries collaborate in order to do?",
               "options": [
                 "Completely destroy smallpox.",
                 "Compile a new vaccine.",
@@ -442,7 +442,7 @@
             },
             {
               "id": "38",
-              "content": "3. Why couldn’t the needy peoples’ countries curb the spread of smallpox?",
+              "content": "Why couldn’t the needy peoples’ countries curb the spread of smallpox?",
               "options": [
                 "Their countries could not afford the vaccine nor supply enough doctors.",
                 "They didn't believe in the vaccine.",
@@ -454,7 +454,7 @@
             },
             {
               "id": "39",
-              "content": "4. What did doctors do to help reduce the spread of smallpox?",
+              "content": "What did doctors do to help reduce the spread of smallpox?",
               "options": [
                 "Doctors enacted laws that prohibited people with smallpox from mixing with those that did not.",
                 "They built a giant wall.",
@@ -466,7 +466,7 @@
             },
             {
               "id": "40",
-              "content": "5. Who certified that smallpox had been stopped in December of 1979?",
+              "content": "Who certified that smallpox had been stopped in December of 1979?",
               "options": [
                 "A group of scientists.",
                 "The federation.",

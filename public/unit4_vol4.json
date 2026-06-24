@@ -19,7 +19,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What does a sad movie cause people to do?",
+              "content": "What does a sad movie cause people to do?",
               "options": [
                 "To weep",
                 "To except",
@@ -31,7 +31,7 @@
             },
             {
               "id": "2",
-              "content": "2. Where would a bird build a home?",
+              "content": "Where would a bird build a home?",
               "options": [
                 "On a rim",
                 "In a pit",
@@ -43,7 +43,7 @@
             },
             {
               "id": "3",
-              "content": "3. Which word best describes a wet towel?",
+              "content": "Which word best describes a wet towel?",
               "options": [
                 "Immoral",
                 "Damp",
@@ -55,7 +55,7 @@
             },
             {
               "id": "4",
-              "content": "4. What does it mean to fly?",
+              "content": "What does it mean to fly?",
               "options": [
                 "To soar",
                 "To moan",
@@ -67,7 +67,7 @@
             },
             {
               "id": "5",
-              "content": "5. Which word would best describe a smooth, wet stone?",
+              "content": "Which word would best describe a smooth, wet stone?",
               "options": [
                 "Ivy",
                 "Utterly",
@@ -79,7 +79,7 @@
             },
             {
               "id": "6",
-              "content": "6. Which word describes something that would have a rim?",
+              "content": "Which word describes something that would have a rim?",
               "options": [
                 "A thought",
                 "A cup",
@@ -91,7 +91,7 @@
             },
             {
               "id": "7",
-              "content": "7. Which word describes something that has a beak?",
+              "content": "Which word describes something that has a beak?",
               "options": [
                 "A bird",
                 "A boat",
@@ -103,7 +103,7 @@
             },
             {
               "id": "8",
-              "content": "8. What is typical about fish?",
+              "content": "What is typical about fish?",
               "options": [
                 "They can swim.",
                 "One type can sing.",
@@ -115,7 +115,7 @@
             },
             {
               "id": "9",
-              "content": "9. Which of these people would most likely be moaning?",
+              "content": "Which of these people would most likely be moaning?",
               "options": [
                 "A doctor",
                 "A happy boy",
@@ -127,7 +127,7 @@
             },
             {
               "id": "10",
-              "content": "10. Which person has been proven to have committed an immoral act?",
+              "content": "Which person has been proven to have committed an immoral act?",
               "options": [
                 "A teacher",
                 "A criminal",
@@ -147,7 +147,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. All of the people in the movie will ___________ if they remain ___________ of the monster.",
+              "content": "All of the people in the movie will ___________ if they remain ___________ of the monster.",
               "options": [
                 "oblivious / perish",
                 "perish / oblivious"
@@ -157,7 +157,7 @@
             },
             {
               "id": "12",
-              "content": "2. When the owl wants to make a ___________, it is ___________ of using an empty barn.",
+              "content": "When the owl wants to make a ___________, it is ___________ of using an empty barn.",
               "options": [
                 "roost / fond",
                 "fond / roost"
@@ -167,7 +167,7 @@
             },
             {
               "id": "13",
-              "content": "3. He grabbed the can by its ___________, then tossed it far down into the ___________.",
+              "content": "He grabbed the can by its ___________, then tossed it far down into the ___________.",
               "options": [
                 "rim / pit",
                 "pit / rim"
@@ -177,7 +177,7 @@
             },
             {
               "id": "14",
-              "content": "4. The eagle ___________ into the clouds when it goes on a long ___________.",
+              "content": "The eagle ___________ into the clouds when it goes on a long ___________.",
               "options": [
                 "soars / flight",
                 "flight / soars"
@@ -187,7 +187,7 @@
             },
             {
               "id": "15",
-              "content": "5. Every time the sick woman would ___________ in pain, her daughter would ___________.",
+              "content": "Every time the sick woman would ___________ in pain, her daughter would ___________.",
               "options": [
                 "moan / weep",
                 "weep / moan"
@@ -197,7 +197,7 @@
             },
             {
               "id": "16",
-              "content": "6. It is not ___________ for a policeman to do ___________ things like stealing.",
+              "content": "It is not ___________ for a policeman to do ___________ things like stealing.",
               "options": [
                 "typical / immoral",
                 "immoral / typical"
@@ -207,7 +207,7 @@
             },
             {
               "id": "17",
-              "content": "7. Every part of the bird was beautiful, ___________ for its short, ugly ___________.",
+              "content": "Every part of the bird was beautiful, ___________ for its short, ugly ___________.",
               "options": [
                 "except / beak",
                 "beak / except"
@@ -217,7 +217,7 @@
             },
             {
               "id": "18",
-              "content": "8. Because his assistant is teaching them ___________ plays, the coach will ___________ of the time wasted.",
+              "content": "Because his assistant is teaching them ___________ plays, the coach will ___________ of the time wasted.",
               "options": [
                 "trivial / disapprove",
                 "disapprove / trivial"
@@ -227,7 +227,7 @@
             },
             {
               "id": "19",
-              "content": "9. Because it ___________ covered the fence, the gardener had to remove all of the ___________.",
+              "content": "Because it ___________ covered the fence, the gardener had to remove all of the ___________.",
               "options": [
                 "utterly / ivy",
                 "ivy / utterly"
@@ -237,7 +237,7 @@
             },
             {
               "id": "20",
-              "content": "10. The ground became dangerous and ___________ because everyone placed their ___________ towels there.",
+              "content": "The ground became dangerous and ___________ because everyone placed their ___________ towels there.",
               "options": [
                 "slippery / damp",
                 "damp / slippery"
@@ -263,7 +263,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. Fox used the rim of a bottle to dig a deep pit.",
+              "content": "Fox used the rim of a bottle to dig a deep pit.",
               "options": [
                 "True",
                 "False",
@@ -274,7 +274,7 @@
             },
             {
               "id": "22",
-              "content": "2. Fox had a roost near the pit.",
+              "content": "Fox had a roost near the pit.",
               "options": [
                 "True",
                 "False",
@@ -285,7 +285,7 @@
             },
             {
               "id": "23",
-              "content": "3. The damp ivy was too slippery for Fox to climb out.",
+              "content": "The damp ivy was too slippery for Fox to climb out.",
               "options": [
                 "True",
                 "False",
@@ -296,7 +296,7 @@
             },
             {
               "id": "24",
-              "content": "4. Immoral and mean behavior was typical with Fox.",
+              "content": "Immoral and mean behavior was typical with Fox.",
               "options": [
                 "True",
                 "False",
@@ -307,7 +307,7 @@
             },
             {
               "id": "25",
-              "content": "5. Fox was oblivious to the hidden pit.",
+              "content": "Fox was oblivious to the hidden pit.",
               "options": [
                 "True",
                 "False",
@@ -318,7 +318,7 @@
             },
             {
               "id": "26",
-              "content": "6. Eagle flew into the pit to save Fox.",
+              "content": "Eagle flew into the pit to save Fox.",
               "options": [
                 "True",
                 "False",
@@ -337,7 +337,7 @@
           "questions": [
             {
               "id": "27",
-              "content": "1. How did Rabbit fall into the pit?",
+              "content": "How did Rabbit fall into the pit?",
               "options": [
                 "Rabbit ran into the pit.",
                 "Fox pushed him into the pit.",
@@ -349,7 +349,7 @@
             },
             {
               "id": "28",
-              "content": "2. Why did Fox thank Eagle?",
+              "content": "Why did Fox thank Eagle?",
               "options": [
                 "She gave him money.",
                 "She became fond of Fox.",
@@ -361,7 +361,7 @@
             },
             {
               "id": "29",
-              "content": "3. Why did Fox moan and weep?",
+              "content": "Why did Fox moan and weep?",
               "options": [
                 "The animals taught him a lesson.",
                 "He saw Eagle in her roost.",
@@ -373,7 +373,7 @@
             },
             {
               "id": "30",
-              "content": "4. What happened after Eagle's flight to the bottom of the pit?",
+              "content": "What happened after Eagle's flight to the bottom of the pit?",
               "options": [
                 "She disapproved of Fox.",
                 "She got stuck in the pit.",

@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Which of the following mean that something is not important?",
+              "content": "Which of the following mean that something is not important?",
               "options": [
                 "a. Superstition",
                 "b. Dismiss",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. What is the power that causes things to happen?",
+              "content": "What is the power that causes things to happen?",
               "options": [
                 "a. Affection",
                 "b. To originate",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. What is the hot liquid from a volcano called?",
+              "content": "What is the hot liquid from a volcano called?",
               "options": [
                 "a. Shallow",
                 "b. Ash",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. What is something that a volcano does?",
+              "content": "What is something that a volcano does?",
               "options": [
                 "a. Fate",
                 "b. Erupt",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. What is it called to have belief in something magical?",
+              "content": "What is it called to have belief in something magical?",
               "options": [
                 "a. Superstition",
                 "b. Vibrate",
@@ -80,70 +80,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. John was very *unhappy* when he lost his favorite book.",
+              "content": "John was very *unhappy* when he lost his favorite book.",
               "options": [],
               "explanation": "unhappy = miserable",
               "correctAnswer": "miserable"
             },
             {
               "id": "7",
-              "content": "2. Manny found a job with a local news *company that deals with other businesses*.",
+              "content": "Manny found a job with a local news *company that deals with other businesses*.",
               "options": [],
               "explanation": "company that deals with other businesses = agency",
               "correctAnswer": "agency"
             },
             {
               "id": "8",
-              "content": "3. The river in front of her house is *not deep*.",
+              "content": "The river in front of her house is *not deep*.",
               "options": [],
               "explanation": "not deep = shallow",
               "correctAnswer": "shallow"
             },
             {
               "id": "9",
-              "content": "4. I don’t like to *keep in one place* my dog; I want him to run around.",
+              "content": "I don’t like to *keep in one place* my dog; I want him to run around.",
               "options": [],
               "explanation": "keep in one place = confine",
               "correctAnswer": "confine"
             },
             {
               "id": "10",
-              "content": "5. The house burned down, and there was only *grey powder* left.",
+              "content": "The house burned down, and there was only *grey powder* left.",
               "options": [],
               "explanation": "grey powder = ash",
               "correctAnswer": "ash"
             },
             {
               "id": "11",
-              "content": "6. She has to *control where to go* when she travels with her father.",
+              "content": "She has to *control where to go* when she travels with her father.",
               "options": [],
               "explanation": "control where to go = navigate",
               "correctAnswer": "navigate"
             },
             {
               "id": "12",
-              "content": "7. My plan to become a farmer *started* when I was a child.",
+              "content": "My plan to become a farmer *started* when I was a child.",
               "options": [],
               "explanation": "started = originated",
               "correctAnswer": "originated"
             },
             {
               "id": "13",
-              "content": "8. He has a *feeling of love* for his grandfather.",
+              "content": "He has a *feeling of love* for his grandfather.",
               "options": [],
               "explanation": "feeling of love = affection",
               "correctAnswer": "affection"
             },
             {
               "id": "14",
-              "content": "9. The people left the town when the ground started *shaking*.",
+              "content": "The people left the town when the ground started *shaking*.",
               "options": [],
               "explanation": "shaking = vibrating",
               "correctAnswer": "vibrating"
             },
             {
               "id": "15",
-              "content": "10. I had a *feeling of sadness* for her when her dog died.",
+              "content": "I had a *feeling of sadness* for her when her dog died.",
               "options": [],
               "explanation": "feeling of sadness = sympathy",
               "correctAnswer": "sympathy"
@@ -158,7 +158,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. originated / superstition\nThe ________ from Europe and was brought to North America.",
+              "content": "originated / superstition\nThe ________ from Europe and was brought to North America.",
               "options": [],
               "explanation": "superstition",
               "correctAnswer": "superstition"
@@ -172,7 +172,7 @@
             },
             {
               "id": "18",
-              "content": "2. agency / dismissed\nThe ________ quickly",
+              "content": "agency / dismissed\nThe ________ quickly",
               "options": [],
               "explanation": "agency",
               "correctAnswer": "agency"
@@ -186,7 +186,7 @@
             },
             {
               "id": "20",
-              "content": "3. slope / lava\nTheir house is built on a ________ .",
+              "content": "slope / lava\nTheir house is built on a ________ .",
               "options": [],
               "explanation": "slope",
               "correctAnswer": "slope"
@@ -200,7 +200,7 @@
             },
             {
               "id": "22",
-              "content": "4. vibrate / fate\nWhen he learned of his ________ , he was frightened.",
+              "content": "vibrate / fate\nWhen he learned of his ________ , he was frightened.",
               "options": [],
               "explanation": "fate",
               "correctAnswer": "fate"
@@ -214,7 +214,7 @@
             },
             {
               "id": "24",
-              "content": "5. sympathy / confine\nPlease ________ your",
+              "content": "sympathy / confine\nPlease ________ your",
               "options": [],
               "explanation": "confine",
               "correctAnswer": "confine"
@@ -228,7 +228,7 @@
             },
             {
               "id": "26",
-              "content": "6. ash / erupted\nA gray cloud of ________",
+              "content": "ash / erupted\nA gray cloud of ________",
               "options": [],
               "explanation": "ash",
               "correctAnswer": "ash"
@@ -242,7 +242,7 @@
             },
             {
               "id": "28",
-              "content": "7. retrieve / miserable\nI felt ________ all evening.",
+              "content": "retrieve / miserable\nI felt ________ all evening.",
               "options": [],
               "explanation": "miserable",
               "correctAnswer": "miserable"
@@ -256,7 +256,7 @@
             },
             {
               "id": "30",
-              "content": "8. wander / affection\nI have great ________ for those who do exciting things.",
+              "content": "wander / affection\nI have great ________ for those who do exciting things.",
               "options": [],
               "explanation": "affection",
               "correctAnswer": "affection"
@@ -270,7 +270,7 @@
             },
             {
               "id": "32",
-              "content": "9. remainder / shallow\nWe sent the youngsters home while the ________ of the group crossed the",
+              "content": "remainder / shallow\nWe sent the youngsters home while the ________ of the group crossed the",
               "options": [],
               "explanation": "remainder",
               "correctAnswer": "remainder"
@@ -284,7 +284,7 @@
             },
             {
               "id": "34",
-              "content": "10. spanned / navigate\nIt was a difficult trip, but we managed to ________ our way through the wilderness",
+              "content": "spanned / navigate\nIt was a difficult trip, but we managed to ________ our way through the wilderness",
               "options": [],
               "explanation": "navigate",
               "correctAnswer": "navigate"
@@ -314,7 +314,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The trip to find the magic cup was very easy.",
+              "content": "The trip to find the magic cup was very easy.",
               "options": [
                 "T",
                 "F"
@@ -324,7 +324,7 @@
             },
             {
               "id": "37",
-              "content": "2. The boys dismissed their mother’s advice before they left for the trip.",
+              "content": "The boys dismissed their mother’s advice before they left for the trip.",
               "options": [
                 "T",
                 "F"
@@ -334,7 +334,7 @@
             },
             {
               "id": "38",
-              "content": "3. The boys were confined to a hilltop by the lava after the volcano erupted.",
+              "content": "The boys were confined to a hilltop by the lava after the volcano erupted.",
               "options": [
                 "T",
                 "F"
@@ -344,7 +344,7 @@
             },
             {
               "id": "39",
-              "content": "4. A superstition said that anyone who retrieved the cup would become the leader of the agency.",
+              "content": "A superstition said that anyone who retrieved the cup would become the leader of the agency.",
               "options": [
                 "T",
                 "F"
@@ -354,7 +354,7 @@
             },
             {
               "id": "40",
-              "content": "5. The boys had more affection and sympathy for each other after the trip.",
+              "content": "The boys had more affection and sympathy for each other after the trip.",
               "options": [
                 "T",
                 "F"
@@ -364,7 +364,7 @@
             },
             {
               "id": "41",
-              "content": "6. After the volcano erupted, there was ash in the sky and lava on the ground.",
+              "content": "After the volcano erupted, there was ash in the sky and lava on the ground.",
               "options": [
                 "T",
                 "F"
@@ -382,7 +382,7 @@
           "questions": [
             {
               "id": "42",
-              "content": "1. Why didn’t the boys travel together?",
+              "content": "Why didn’t the boys travel together?",
               "options": [
                 "a. Their trips originated from different places.",
                 "b. They were both miserable.",
@@ -394,7 +394,7 @@
             },
             {
               "id": "43",
-              "content": "2. Why were the boys always fighting??",
+              "content": "Why were the boys always fighting??",
               "options": [
                 "a. The cup had special powers.",
                 "b. They had very little food to eat.",
@@ -406,7 +406,7 @@
             },
             {
               "id": "44",
-              "content": "3. Why did fate bring the boys together?",
+              "content": "Why did fate bring the boys together?",
               "options": [
                 "a. To show that stories about the tree weren’t true",
                 "b. So they could complete the remainder of the trip together",
@@ -418,7 +418,7 @@
             },
             {
               "id": "45",
-              "content": "4. What was surprising about the cup?",
+              "content": "What was surprising about the cup?",
               "options": [
                 "a. It was only an ordinary cup.",
                 "b. It did not really exist,",

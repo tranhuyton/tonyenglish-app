@@ -18,70 +18,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. He chose to make his sculpture out of <u>a smooth paste that hardens when it dries.</u> [ 1 ]",
+              "content": "<p class=\"mb-4\">He chose to make his sculpture out of <u>a smooth paste that hardens when it dries.</u> [ 1 ]</p><p class=\"mb-4\">Our <u>violent and cruel</u> boss forced us to work twelve hours in a row without a break. [ 2 ]</p><p class=\"mb-4\">The race was close, so it was difficult to determine an <u>open and direct</u> winner. [ 3 ]</p><p class=\"mb-4\">This is the perfect <u>small area where something happens</u> for a picnic. [ 4 ]</p><p class=\"mb-4\">Truck drivers often stay <u>awake for many hours</u> to make their difficult and tiring drives. [ 5 ]</p><p class=\"mb-4\">The salesperson’s claim <u>seemed quite dishonest,</u> unsafe, and unreliable. [ 6 ]</p><p class=\"mb-4\">Mike was thrilled to pass the driving test and gain his driver’s license. [ 7 ]</p><p class=\"mb-4\">Physics on the moon are much <u>different than Earth-related</u> physics. [ 8 ]</p><p class=\"mb-4\">The prisoners <u>were unable to imagine and believe a</u> plot for escaping the jail. [ 9 ]</p><p class=\"mb-4\">To plant these seeds, I will first need to buy <u>a tool used for digging.</u> [ 10 ]</p>",
               "options": [],
               "explanation": "plaster (n): a smooth paste that gets hard when it dries.",
               "correctAnswer": "plaster"
             },
             {
               "id": "2",
-              "content": "2. Our <u>violent and cruel</u> boss forced us to work twelve hours in a row without a break. [ 2 ]",
+              "content": "",
               "options": [],
               "explanation": "vicious (adj): violent and cruel.",
               "correctAnswer": "vicious"
             },
             {
               "id": "3",
-              "content": "3. The race was close, so it was difficult to determine an <u>open and direct</u> winner. [ 3 ]",
+              "content": "",
               "options": [],
               "explanation": "outright (adj): open and direct.",
               "correctAnswer": "outright"
             },
             {
               "id": "4",
-              "content": "4. This is the perfect <u>small area where something happens</u> for a picnic. [ 4 ]",
+              "content": "",
               "options": [],
               "explanation": "locale (n): a small area or place where something specific happens.",
               "correctAnswer": "locale"
             },
             {
               "id": "5",
-              "content": "5. Truck drivers often stay <u>awake for many hours</u> to make their difficult and tiring drives. [ 5 ]",
+              "content": "",
               "options": [],
               "explanation": "arduous (adj): demands great effort or labor.",
               "correctAnswer": "arduous"
             },
             {
               "id": "6",
-              "content": "6. The salesperson’s claim <u>seemed quite dishonest,</u> unsafe, and unreliable. [ 6 ]",
+              "content": "",
               "options": [],
               "explanation": "dubious (adj): not considered honest.",
               "correctAnswer": "dubious"
             },
             {
               "id": "7",
-              "content": "7. Mike was thrilled to pass the driving test and gain his driver’s license. [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "attain (v): to gain or achieve it, often after a lot of effort.",
               "correctAnswer": "attain"
             },
             {
               "id": "8",
-              "content": "8. Physics on the moon are much <u>different than Earth-related</u> physics. [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "terrestrial (adj): relates to Earth.",
               "correctAnswer": "terrestrial"
             },
             {
               "id": "9",
-              "content": "9. The prisoners <u>were unable to imagine and believe a</u> plot for escaping the jail. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "conceive (v): to be able to imagine or believe it.",
               "correctAnswer": "conceive"
             },
             {
               "id": "10",
-              "content": "10. To plant these seeds, I will first need to buy <u>a tool used for digging.</u> [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "shovel (n): a tool with a long handle that is used for digging.",
               "correctAnswer": "shovel"
@@ -96,7 +96,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. What might a person with a large ego say?",
+              "content": "What might a person with a large ego say?",
               "options": [
                 "a. “ I am the best.”",
                 "b. “ I can’t do it.”",
@@ -108,7 +108,7 @@
             },
             {
               "id": "12",
-              "content": "2. Which is likely to be jagged?",
+              "content": "Which is likely to be jagged?",
               "options": [
                 "a. A doll",
                 "b. A cliff",
@@ -120,7 +120,7 @@
             },
             {
               "id": "13",
-              "content": "3. Which is likely to be excavated?",
+              "content": "Which is likely to be excavated?",
               "options": [
                 "a. Water",
                 "b. A sofa",
@@ -132,7 +132,7 @@
             },
             {
               "id": "14",
-              "content": "4. What is part of the skeletal system?",
+              "content": "What is part of the skeletal system?",
               "options": [
                 "a. The skin",
                 "b. The tongue",
@@ -144,7 +144,7 @@
             },
             {
               "id": "15",
-              "content": "5. What is an example of an endeavor?",
+              "content": "What is an example of an endeavor?",
               "options": [
                 "a. Waking up",
                 "b. Inventing a new machine",
@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. The alarm clock was set to <i>endeavor</i> every morning at seven A.M.",
+              "content": "The alarm clock was set to <i>endeavor</i> every morning at seven A.M.",
               "options": [
                 "I",
                 "C"
@@ -174,7 +174,7 @@
             },
             {
               "id": "17",
-              "content": "2. Experts <i>excavated</i> the site in hopes of finding an ancient city buried underneath.",
+              "content": "Experts <i>excavated</i> the site in hopes of finding an ancient city buried underneath.",
               "options": [
                 "I",
                 "C"
@@ -184,7 +184,7 @@
             },
             {
               "id": "18",
-              "content": "3. Everyone loved to hug and kiss the <i>vicious</i> baby.",
+              "content": "Everyone loved to hug and kiss the <i>vicious</i> baby.",
               "options": [
                 "I",
                 "C"
@@ -194,7 +194,7 @@
             },
             {
               "id": "19",
-              "content": "4. The elephant is one of the largest <i>terrestrial</i> animals still in existence.",
+              "content": "The elephant is one of the largest <i>terrestrial</i> animals still in existence.",
               "options": [
                 "I",
                 "C"
@@ -204,7 +204,7 @@
             },
             {
               "id": "20",
-              "content": "5. The <i>dubious</i> chocolate ice cream is a favorite treat at the restaurant.",
+              "content": "The <i>dubious</i> chocolate ice cream is a favorite treat at the restaurant.",
               "options": [
                 "I",
                 "C"
@@ -214,7 +214,7 @@
             },
             {
               "id": "21",
-              "content": "6. The concerned owner built a fence along the <i>periphery</i> of the parking lot.",
+              "content": "The concerned owner built a fence along the <i>periphery</i> of the parking lot.",
               "options": [
                 "I",
                 "C"
@@ -224,7 +224,7 @@
             },
             {
               "id": "22",
-              "content": "7. Preparing for the difficult test was an <i>arduous</i> task for the nervous students.",
+              "content": "Preparing for the difficult test was an <i>arduous</i> task for the nervous students.",
               "options": [
                 "I",
                 "C"
@@ -234,7 +234,7 @@
             },
             {
               "id": "23",
-              "content": "8. You’ll need a <i>shovel</i> if you plan on getting on top of the roof.",
+              "content": "You’ll need a <i>shovel</i> if you plan on getting on top of the roof.",
               "options": [
                 "I",
                 "C"
@@ -244,7 +244,7 @@
             },
             {
               "id": "24",
-              "content": "9. The delicate flower was a <i>jagged</i> addition to the arrangement.",
+              "content": "The delicate flower was a <i>jagged</i> addition to the arrangement.",
               "options": [
                 "I",
                 "C"
@@ -254,7 +254,7 @@
             },
             {
               "id": "25",
-              "content": "10. Children cheered as the circus clown <i>attained</i> balloons into different shapes.",
+              "content": "Children cheered as the circus clown <i>attained</i> balloons into different shapes.",
               "options": [
                 "I",
                 "C"
@@ -264,7 +264,7 @@
             },
             {
               "id": "26",
-              "content": "11. He filled the ugly holes in the ceiling with <i>plaster</i>.",
+              "content": "He filled the ugly holes in the ceiling with <i>plaster</i>.",
               "options": [
                 "I",
                 "C"
@@ -274,7 +274,7 @@
             },
             {
               "id": "27",
-              "content": "12. At the factory, the workers made screws by pouring liquid metal into a <i>mold</i>.",
+              "content": "At the factory, the workers made screws by pouring liquid metal into a <i>mold</i>.",
               "options": [
                 "I",
                 "C"
@@ -284,7 +284,7 @@
             },
             {
               "id": "28",
-              "content": "13. I hope she is able to <i>engrave</i> all of her homework before school tomorrow.",
+              "content": "I hope she is able to <i>engrave</i> all of her homework before school tomorrow.",
               "options": [
                 "I",
                 "C"
@@ -294,7 +294,7 @@
             },
             {
               "id": "29",
-              "content": "14. I cannot <i>conceive</i> the reason why he would act in such a mean way.",
+              "content": "I cannot <i>conceive</i> the reason why he would act in such a mean way.",
               "options": [
                 "I",
                 "C"
@@ -304,7 +304,7 @@
             },
             {
               "id": "30",
-              "content": "15. The small fights and arguments eventually led to an <i>outright</i> war.",
+              "content": "The small fights and arguments eventually led to an <i>outright</i> war.",
               "options": [
                 "I",
                 "C"
@@ -314,7 +314,7 @@
             },
             {
               "id": "31",
-              "content": "16. When the glass vase fell to the floor, we heard an <i>elastic</i> sound.",
+              "content": "When the glass vase fell to the floor, we heard an <i>elastic</i> sound.",
               "options": [
                 "I",
                 "C"
@@ -324,7 +324,7 @@
             },
             {
               "id": "32",
-              "content": "17. She bought a cute new <i>ego</i> from the pet store today.",
+              "content": "She bought a cute new <i>ego</i> from the pet store today.",
               "options": [
                 "I",
                 "C"
@@ -334,7 +334,7 @@
             },
             {
               "id": "33",
-              "content": "18. We need to choose a <i>locale</i> for Brian’s birthday party.",
+              "content": "We need to choose a <i>locale</i> for Brian’s birthday party.",
               "options": [
                 "I",
                 "C"
@@ -344,7 +344,7 @@
             },
             {
               "id": "34",
-              "content": "19. Derrick bought a <i>skeletal</i> from that new clothing store downtown.",
+              "content": "Derrick bought a <i>skeletal</i> from that new clothing store downtown.",
               "options": [
                 "I",
                 "C"
@@ -354,7 +354,7 @@
             },
             {
               "id": "35",
-              "content": "20. Although they were rivals, the stores were able to <i>coexist</i> in the same neighborhood.",
+              "content": "Although they were rivals, the stores were able to <i>coexist</i> in the same neighborhood.",
               "options": [
                 "I",
                 "C"
@@ -380,7 +380,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Tim and Dean were outright enemies who got into vicious arguments.",
+              "content": "Tim and Dean were outright enemies who got into vicious arguments.",
               "options": [
                 "F",
                 "T"
@@ -390,7 +390,7 @@
             },
             {
               "id": "37",
-              "content": "2. Tim and Dean removed the jagged bones and used elastic to attain them.",
+              "content": "Tim and Dean removed the jagged bones and used elastic to attain them.",
               "options": [
                 "F",
                 "T"
@@ -400,7 +400,7 @@
             },
             {
               "id": "38",
-              "content": "3. Tim couldn’t conceive a plan to remove the bones because the endeavor would be too arduous.",
+              "content": "Tim couldn’t conceive a plan to remove the bones because the endeavor would be too arduous.",
               "options": [
                 "F",
                 "T"
@@ -410,7 +410,7 @@
             },
             {
               "id": "39",
-              "content": "4. Dean thought that Tim’s ego might be dubious.",
+              "content": "Dean thought that Tim’s ego might be dubious.",
               "options": [
                 "F",
                 "T"
@@ -420,7 +420,7 @@
             },
             {
               "id": "40",
-              "content": "5. When Tim excavated the land, he uncovered many engraved bones.",
+              "content": "When Tim excavated the land, he uncovered many engraved bones.",
               "options": [
                 "F",
                 "T"
@@ -438,7 +438,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. Why couldn’t Tim and Dean coexist peacefully?",
+              "content": "Why couldn’t Tim and Dean coexist peacefully?",
               "options": [
                 "Their egos were too large.",
                 "They wanted to attain different goals.",
@@ -450,7 +450,7 @@
             },
             {
               "id": "42",
-              "content": "2. What did Tim use his shovel to do?",
+              "content": "What did Tim use his shovel to do?",
               "options": [
                 "Tim used his shovel to carefully excavate the land around the bone.",
                 "Tim used his shovel to hit Dean.",
@@ -462,7 +462,7 @@
             },
             {
               "id": "43",
-              "content": "3. What was Tim doing on the periphery of the city?",
+              "content": "What was Tim doing on the periphery of the city?",
               "options": [
                 "Tim was searching for fossils.",
                 "Tim was looking for a new locale.",
@@ -474,7 +474,7 @@
             },
             {
               "id": "44",
-              "content": "4. What did the fossil hunters do to the plaster mold before they gave it to the curator?",
+              "content": "What did the fossil hunters do to the plaster mold before they gave it to the curator?",
               "options": [
                 "They engraved their initials into it.",
                 "They painted it red.",
@@ -486,7 +486,7 @@
             },
             {
               "id": "45",
-              "content": "5. What did Dean say before he went to the locale of the terrestrial animal’s skeletal remains?",
+              "content": "What did Dean say before he went to the locale of the terrestrial animal’s skeletal remains?",
               "options": [
                 "“If you’re serious about the skeleton, I’ll help.”",
                 "“I don't believe you.”",

@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Who is someone that would most likely be hospitable?",
+              "content": "Who is someone that would most likely be hospitable?",
               "options": [
                 "An enemy",
                 "A host",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. At what temperature centigrade does water freeze?",
+              "content": "At what temperature centigrade does water freeze?",
               "options": [
                 "0 degrees",
                 "32 degrees",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. If the mist from fog condensed, what would happen to the ground?",
+              "content": "If the mist from fog condensed, what would happen to the ground?",
               "options": [
                 "It would be wet.",
                 "It would be dry.",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. If you are going on a trip, which is something you should do beforehand?",
+              "content": "If you are going on a trip, which is something you should do beforehand?",
               "options": [
                 "Exercise",
                 "Take a walk",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. Who of the following would most likely perform a concerto?",
+              "content": "Who of the following would most likely perform a concerto?",
               "options": [
                 "A musician",
                 "A pilot",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. monastery",
+              "content": "monastery",
               "options": [
                 "stairs",
                 "currency",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "2. winding",
+              "content": "winding",
               "options": [
                 "spiral",
                 "stormy",
@@ -110,7 +110,7 @@
             },
             {
               "id": "8",
-              "content": "3. cove",
+              "content": "cove",
               "options": [
                 "tomb",
                 "oven",
@@ -122,7 +122,7 @@
             },
             {
               "id": "9",
-              "content": "4. freeway",
+              "content": "freeway",
               "options": [
                 "road",
                 "term",
@@ -134,7 +134,7 @@
             },
             {
               "id": "10",
-              "content": "5. manor",
+              "content": "manor",
               "options": [
                 "polite",
                 "hut",
@@ -146,7 +146,7 @@
             },
             {
               "id": "11",
-              "content": "6. parcel",
+              "content": "parcel",
               "options": [
                 "landscape",
                 "package",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "7. nursery",
+              "content": "nursery",
               "options": [
                 "auditorium",
                 "battery",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "8. vivacious",
+              "content": "vivacious",
               "options": [
                 "angry",
                 "nurse's lounge",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "9. exterior",
+              "content": "exterior",
               "options": [
                 "priest",
                 "hospital",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "10. zip",
+              "content": "zip",
               "options": [
                 "close",
                 "quiet",
@@ -214,70 +214,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. They didn't want to get covered with sand, so they relaxed on an <i><u>extended</u></i> blanket. [ 16 ]",
+              "content": "<p class=\"mb-4\">They didn't want to get covered with sand, so they relaxed on an <i><u>extended</u></i> blanket. [ 16 ]</p><p class=\"mb-4\">The boys were <i><u>talking quickly</u></i> about what they were going to do that weekend. [ 17 ]</p><p class=\"mb-4\">It's easy to go past the exit when you're driving on the <i>road <u>where cars drive</u> fast</i>. [ 18 ]</p><p class=\"mb-4\">This building used to be a <i>house <u>where monks</u> lived</i>, but now it's used as a museum. [ 19 ]</p><p class=\"mb-4\">The <i><u>twisting</u></i> path that went through the mountains was beautiful to hike in the spring. [ 20 ]</p><p class=\"mb-4\">The photograph showed *<u>one side of the man's face</u>*. [ 21 ]</p><p class=\"mb-4\">Their chances of escaping the room became <i><u>worse</u></i> as the water level continued to rise. [ 22 ]</p><p class=\"mb-4\">The <i><u>outside surface</u></i> of the car looked bad, but the inside still looked new. [ 23 ]</p><p class=\"mb-4\">Lisa is a very <i><u>loud and happy</u></i> person. [ 24 ]</p><p class=\"mb-4\">I'll remember her forever. I had never before met such a *<u>cheerful, talkative</u>* person. [ 25 ]</p>",
               "options": [],
               "explanation": "outstretched means extended.",
               "correctAnswer": "outstretched"
             },
             {
               "id": "17",
-              "content": "2. The boys were <i><u>talking quickly</u></i> about what they were going to do that weekend. [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "chattering means talking quickly.",
               "correctAnswer": "chattering"
             },
             {
               "id": "18",
-              "content": "3. It's easy to go past the exit when you're driving on the <i>road <u>where cars drive</u> fast</i>. [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "freeway is a road where cars drive fast.",
               "correctAnswer": "freeway"
             },
             {
               "id": "19",
-              "content": "4. This building used to be a <i>house <u>where monks</u> lived</i>, but now it's used as a museum. [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "monastery is a building where monks live.",
               "correctAnswer": "monastery"
             },
             {
               "id": "20",
-              "content": "5. The <i><u>twisting</u></i> path that went through the mountains was beautiful to hike in the spring. [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "winding means twisting.",
               "correctAnswer": "winding"
             },
             {
               "id": "21",
-              "content": "6. The photograph showed *<u>one side of the man's face</u>*. [ 21 ]",
+              "content": "",
               "options": [],
               "explanation": "profile means an outline of a face, usually from the side.",
               "correctAnswer": "profile"
             },
             {
               "id": "22",
-              "content": "7. Their chances of escaping the room became <i><u>worse</u></i> as the water level continued to rise. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "deteriorated means became worse.",
               "correctAnswer": "deteriorated"
             },
             {
               "id": "23",
-              "content": "8. The <i><u>outside surface</u></i> of the car looked bad, but the inside still looked new. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "exterior is the outside surface.",
               "correctAnswer": "exterior"
             },
             {
               "id": "24",
-              "content": "9. Lisa is a very <i><u>loud and happy</u></i> person. [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "hearty means loud and happy.",
               "correctAnswer": "hearty"
             },
             {
               "id": "25",
-              "content": "10. I'll remember her forever. I had never before met such a *<u>cheerful, talkative</u>* person. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "vivacious means talkative and cheerful.",
               "correctAnswer": "vivacious"
@@ -300,7 +300,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. The nurse was usually a vivacious woman who constantly chattered.",
+              "content": "The nurse was usually a vivacious woman who constantly chattered.",
               "options": [
                 "F",
                 "T"
@@ -310,7 +310,7 @@
             },
             {
               "id": "27",
-              "content": "2. The nursery was far from the freeway that was near Rabbit Cove.",
+              "content": "The nursery was far from the freeway that was near Rabbit Cove.",
               "options": [
                 "F",
                 "T"
@@ -320,7 +320,7 @@
             },
             {
               "id": "28",
-              "content": "3. When it started to deteriorate, the nurse zipped up the jacket she had brought beforehand.",
+              "content": "When it started to deteriorate, the nurse zipped up the jacket she had brought beforehand.",
               "options": [
                 "F",
                 "T"
@@ -330,7 +330,7 @@
             },
             {
               "id": "29",
-              "content": "4. The temperature was close to zero degrees centigrade.",
+              "content": "The temperature was close to zero degrees centigrade.",
               "options": [
                 "F",
                 "T"
@@ -340,7 +340,7 @@
             },
             {
               "id": "30",
-              "content": "5. When the nurse heard a concerto playing in another room, she became hospitable.",
+              "content": "When the nurse heard a concerto playing in another room, she became hospitable.",
               "options": [
                 "F",
                 "T"
@@ -358,7 +358,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Where did the dark and winding trail lead?",
+              "content": "Where did the dark and winding trail lead?",
               "options": [
                 "The dark and winding trail went to the monastery.",
                 "It went to the freeway.",
@@ -370,7 +370,7 @@
             },
             {
               "id": "32",
-              "content": "2. Who took the nurse's outstretched hand and welcomed her with a hearty voice?",
+              "content": "Who took the nurse's outstretched hand and welcomed her with a hearty voice?",
               "options": [
                 "The monk took the nurse's outstretched hand and welcomed her with a hearty voice.",
                 "The mother took her hand.",
@@ -382,7 +382,7 @@
             },
             {
               "id": "33",
-              "content": "3. How did the nurse feel when she saw the profile of a man coming to answer the door?",
+              "content": "How did the nurse feel when she saw the profile of a man coming to answer the door?",
               "options": [
                 "When she saw the profile of a man coming to answer the door, the nurse was filled with fear.",
                 "She felt happy.",
@@ -394,7 +394,7 @@
             },
             {
               "id": "34",
-              "content": "4. What had condensed on the exterior of the monastery's windows?",
+              "content": "What had condensed on the exterior of the monastery's windows?",
               "options": [
                 "Rain had condensed on the exterior of the monastery's windows.",
                 "Snow had condensed.",
@@ -406,7 +406,7 @@
             },
             {
               "id": "35",
-              "content": "5. What was in the parcel that the nurse took back to the manor?",
+              "content": "What was in the parcel that the nurse took back to the manor?",
               "options": [
                 "Medicine was in the parcel that the nurse took back to the manor.",
                 "Food was in the parcel.",

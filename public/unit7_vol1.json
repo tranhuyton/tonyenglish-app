@@ -80,31 +80,31 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. Sarah <u>let</u> Tim go to the game.<br/>al [ 6 ]",
+              "content": "<p class=\"mb-4\">Sarah <u>let</u> Tim go to the game.<br/>al [ 6 ]</p><p class=\"mb-4\">The child promised not to <u>hurt</u> our cat.<br/>ha [ 7 ]</p><p class=\"mb-4\">She was a <u>well-known</u> writer in our town.<br/>fa [ 8 ]</p><p class=\"mb-4\">You should <u>say it's true</u> that you never lie.<br/>cl [ 9 ]</p><p class=\"mb-4\">The food was <u>cut into smaller parts</u> so we could all eat.<br/>di [ 10 ]</p>",
               "explanation": "let go -> allowed (từ cho trước là allow)",
               "correctAnswer": "allowed"
             },
             {
               "id": "7",
-              "content": "2. The child promised not to <u>hurt</u> our cat.<br/>ha [ 7 ]",
+              "content": "",
               "explanation": "hurt -> harm (từ cho trước là harm)",
               "correctAnswer": "harm"
             },
             {
               "id": "8",
-              "content": "3. She was a <u>well-known</u> writer in our town.<br/>fa [ 8 ]",
+              "content": "",
               "explanation": "well-known -> famous (từ cho trước là famous)",
               "correctAnswer": "famous"
             },
             {
               "id": "9",
-              "content": "4. You should <u>say it's true</u> that you never lie.<br/>cl [ 9 ]",
+              "content": "",
               "explanation": "say it's true -> claim (từ cho trước là claim)",
               "correctAnswer": "claim"
             },
             {
               "id": "10",
-              "content": "5. The food was <u>cut into smaller parts</u> so we could all eat.<br/>di [ 10 ]",
+              "content": "",
               "explanation": "cut into smaller parts -> divided (từ cho trước là divide)",
               "correctAnswer": "divided"
             }

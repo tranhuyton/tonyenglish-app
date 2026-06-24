@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. empty",
+              "content": "empty",
               "options": [
                 "a. in your mind",
                 "b. not containing anything",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. depend",
+              "content": "depend",
               "options": [
                 "a. to move forward",
                 "b. to jump",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. price",
+              "content": "price",
               "options": [
                 "a. a sweet candy",
                 "b. how much something costs",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. select",
+              "content": "select",
               "options": [
                 "a. to change",
                 "b. to keep doing something",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. item",
+              "content": "item",
               "options": [
                 "a. a path",
                 "b. someone who keeps the law",
@@ -72,7 +72,7 @@
             },
             {
               "id": "6",
-              "content": "6. tool",
+              "content": "tool",
               "options": [
                 "a. something you study",
                 "b. a group of players",
@@ -84,7 +84,7 @@
             },
             {
               "id": "7",
-              "content": "7. crowd",
+              "content": "crowd",
               "options": [
                 "a. a group of people",
                 "b. a flat piece of wood",
@@ -96,7 +96,7 @@
             },
             {
               "id": "8",
-              "content": "8. dish",
+              "content": "dish",
               "options": [
                 "a. something no one knows",
                 "b. an answer",
@@ -108,7 +108,7 @@
             },
             {
               "id": "9",
-              "content": "9. communicate",
+              "content": "communicate",
               "options": [
                 "a. to shut",
                 "b. to go to where you can't be seen",
@@ -120,7 +120,7 @@
             },
             {
               "id": "10",
-              "content": "10. exact",
+              "content": "exact",
               "options": [
                 "a. not on the top",
                 "b. not light",
@@ -140,31 +140,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I <u>suggest</u> the oranges. They are delicious!<br/>re [ 11 ]",
+              "content": "<p class=\"mb-4\">I <u>suggest</u> the oranges. They are delicious!<br/>re [ 11 ]</p><p class=\"mb-4\">Do not <u>disagree</u> with your sister.<br/>ar [ 12 ]</p><p class=\"mb-4\">The company's <u>things that it makes</u> are very useful in the kitchen.<br/>pr [ 13 ]</p><p class=\"mb-4\">We can <u>talk</u> by phone.<br/>co [ 14 ]</p><p class=\"mb-4\">Why don't you <u>present</u> her a fair price for her house?<br/>of [ 15 ]</p>",
               "explanation": "recommend (gợi ý) tương đồng với suggest.",
               "correctAnswer": "recommend"
             },
             {
               "id": "12",
-              "content": "2. Do not <u>disagree</u> with your sister.<br/>ar [ 12 ]",
+              "content": "",
               "explanation": "argue (tranh cãi) tương đồng với disagree.",
               "correctAnswer": "argue"
             },
             {
               "id": "13",
-              "content": "3. The company's <u>things that it makes</u> are very useful in the kitchen.<br/>pr [ 13 ]",
+              "content": "",
               "explanation": "products (sản phẩm) tương đồng với things that it makes.",
               "correctAnswer": "products"
             },
             {
               "id": "14",
-              "content": "4. We can <u>talk</u> by phone.<br/>co [ 14 ]",
+              "content": "",
               "explanation": "communicate (giao tiếp) tương đồng với talk.",
               "correctAnswer": "communicate"
             },
             {
               "id": "15",
-              "content": "5. Why don't you <u>present</u> her a fair price for her house?<br/>of [ 15 ]",
+              "content": "",
               "explanation": "offer (đề nghị) tương đồng với present.",
               "correctAnswer": "offer"
             }
@@ -178,7 +178,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Today, my friend [ 16 ] me so nicely. First, he gave me some beautiful [ 17 ] flowers. Next, he asked me to [ 18 ] any CD from the store, and he bought it for me! Later when we got home, he made me close my eyes. When I opened them, I saw a great meal on a pretty [ 19 ]. There was even a vase full of flowers that he had [ 20 ] from earlier that day. I will never forget this wonderful day.",
+              "content": "Today, my friend [ 16 ] me so nicely. First, he gave me some beautiful [ 17 ] flowers. Next, he asked me to [ 18 ] any CD from the store, and he bought it for me! Later when we got home, he made me close my eyes. When I opened them, I saw a great meal on a pretty [ 19 ]. There was even a vase full of flowers that he had [ 20 ] from earlier that day. I will never forget this wonderful day.",
               "explanation": "treated: đối xử",
               "correctAnswer": "treated",
               "options": [
@@ -259,7 +259,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. What is the story about?",
+              "content": "What is the story about?",
               "options": [
                 "a. A chicken finding a friend to depend on",
                 "b. A chicken making bread out of wheat",
@@ -271,7 +271,7 @@
             },
             {
               "id": "22",
-              "content": "2. What did the cat do when the chicken asked him to help make the bread?",
+              "content": "What did the cat do when the chicken asked him to help make the bread?",
               "options": [
                 "a. He did not communicate with her.",
                 "b. He argued with the little red chicken.",
@@ -283,7 +283,7 @@
             },
             {
               "id": "23",
-              "content": "3. How did the cat find the chicken's store?",
+              "content": "How did the cat find the chicken's store?",
               "options": [
                 "a. He saw tools being sold outside of the store.",
                 "b. He saw a stone with the store's name.",
@@ -295,7 +295,7 @@
             },
             {
               "id": "24",
-              "content": "4. What did the cat do when he saw the fresh bread?",
+              "content": "What did the cat do when he saw the fresh bread?",
               "options": [
                 "a. He selected the product for himself.",
                 "b. He tried to buy some of it for a price.",
@@ -307,7 +307,7 @@
             },
             {
               "id": "25",
-              "content": "5. What did the little red chicken recommend the cat to do to have some bread?",
+              "content": "What did the little red chicken recommend the cat to do to have some bread?",
               "options": [
                 "a. Use a tool to plant your own wheat.",
                 "b. Ask another friend in the crowd.",

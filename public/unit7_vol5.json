@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. The climate where I live is very _____________.",
+              "content": "The climate where I live is very _____________.",
               "options": [
                 "temperate",
                 "Celsius",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. It never drops below 10 degrees _____________.",
+              "content": "It never drops below 10 degrees _____________.",
               "options": [
                 "aquatic",
                 "Celsius",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. I learned about a tiny animal called a _____________.",
+              "content": "I learned about a tiny animal called a _____________.",
               "options": [
                 "biosphere",
                 "vulnerable",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. Some live on land, and others are _____________.",
+              "content": "Some live on land, and others are _____________.",
               "options": [
                 "aquatic",
                 "bizarre",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. The strange old man's behavior is quite _____________.",
+              "content": "The strange old man's behavior is quite _____________.",
               "options": [
                 "prominent",
                 "bizarre",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. The plastic chicken he takes with him everywhere is his only _____________.",
+              "content": "The plastic chicken he takes with him everywhere is his only _____________.",
               "options": [
                 "companion",
                 "parasite",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. Jim loves every type of plant and animal in the _____________.",
+              "content": "Jim loves every type of plant and animal in the _____________.",
               "options": [
                 "Celsius",
                 "biosphere",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. Therefore, he is going to college to study _____________.",
+              "content": "Therefore, he is going to college to study _____________.",
               "options": [
                 "ecology",
                 "parasite",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. Without his shield, the sword fighter was _____________.",
+              "content": "Without his shield, the sword fighter was _____________.",
               "options": [
                 "infinite",
                 "vulnerable",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. Defeating his enemy without protection was an amazing _____________.",
+              "content": "Defeating his enemy without protection was an amazing _____________.",
               "options": [
                 "feat",
                 "biosphere",
@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Dogs do not have the <u>ability to bear the pain</u> to high pitched noises. [ 11 ]",
+              "content": "<p class=\"mb-4\">Dogs do not have the <u>ability to bear the pain</u> to high pitched noises. [ 11 ]</p><p class=\"mb-4\">The <u>boring and repeating</u> sounds from a ticking clock can make some people annoyed. [ 12 ]</p><p class=\"mb-4\">My sister is a <u>well-known and important</u> musician. [ 13 ]</p><p class=\"mb-4\">I used my microscope to see the cell's <u>central part</u>. [ 14 ]</p><p class=\"mb-4\">The <u>rough</u> fur of the gorilla is a defining trait. [ 15 ]</p>",
               "options": [],
               "explanation": "ability to bear the pain tương đương với sự chịu đựng (tolerance).",
               "correctAnswer": "tolerance"
             },
             {
               "id": "12",
-              "content": "2. The <u>boring and repeating</u> sounds from a ticking clock can make some people annoyed. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "boring and repeating tương đương với repetitive (lặp đi lặp lại).",
               "correctAnswer": "repetitive"
             },
             {
               "id": "13",
-              "content": "3. My sister is a <u>well-known and important</u> musician. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "well-known and important tương đương với prominent (nổi bật/xuất chúng).",
               "correctAnswer": "prominent"
             },
             {
               "id": "14",
-              "content": "4. I used my microscope to see the cell's <u>central part</u>. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "central part of a cell là nucleus (nhân tế bào).",
               "correctAnswer": "nucleus"
             },
             {
               "id": "15",
-              "content": "5. The <u>rough</u> fur of the gorilla is a defining trait. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "rough tương đương với coarse (thô ráp).",
               "correctAnswer": "coarse"
@@ -189,7 +189,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. The reproductive process in rabbits explains how they hunt for food.",
+              "content": "The reproductive process in rabbits explains how they hunt for food.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -201,7 +201,7 @@
             },
             {
               "id": "17",
-              "content": "2. In Biology class, we learned about the different parts of a cell's nucleus.",
+              "content": "In Biology class, we learned about the different parts of a cell's nucleus.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -213,7 +213,7 @@
             },
             {
               "id": "18",
-              "content": "3. It is hard for some people to remain silent for the duration of a long movie.",
+              "content": "It is hard for some people to remain silent for the duration of a long movie.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -225,7 +225,7 @@
             },
             {
               "id": "19",
-              "content": "4. I could listen to my favorite song all day. I have tolerance for great music.",
+              "content": "I could listen to my favorite song all day. I have tolerance for great music.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -237,7 +237,7 @@
             },
             {
               "id": "20",
-              "content": "5. I will have to undergo through the tunnel to get home.",
+              "content": "I will have to undergo through the tunnel to get home.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -249,7 +249,7 @@
             },
             {
               "id": "21",
-              "content": "6. This blanket is not very comfortable. It would be better if it was not so coarse.",
+              "content": "This blanket is not very comfortable. It would be better if it was not so coarse.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -261,7 +261,7 @@
             },
             {
               "id": "22",
-              "content": "7. She has exactly twenty jelly beans, which is an infinite amount.",
+              "content": "She has exactly twenty jelly beans, which is an infinite amount.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -273,7 +273,7 @@
             },
             {
               "id": "23",
-              "content": "8. The boy became a prominent figure in town after he saved the woman's life.",
+              "content": "The boy became a prominent figure in town after he saved the woman's life.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -285,7 +285,7 @@
             },
             {
               "id": "24",
-              "content": "9. Her new car is bizarre. It has five wheels and no doors!",
+              "content": "Her new car is bizarre. It has five wheels and no doors!",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -297,7 +297,7 @@
             },
             {
               "id": "25",
-              "content": "10. There is no life on Venus, so researchers study its ecology instead.",
+              "content": "There is no life on Venus, so researchers study its ecology instead.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -309,7 +309,7 @@
             },
             {
               "id": "26",
-              "content": "11. The vulnerable lion roared and scared away the zebras.",
+              "content": "The vulnerable lion roared and scared away the zebras.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -321,7 +321,7 @@
             },
             {
               "id": "27",
-              "content": "12. Fish must live in aquatic environments.",
+              "content": "Fish must live in aquatic environments.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -333,7 +333,7 @@
             },
             {
               "id": "28",
-              "content": "13. The circus performers were capable of many wonderful feats.",
+              "content": "The circus performers were capable of many wonderful feats.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -345,7 +345,7 @@
             },
             {
               "id": "29",
-              "content": "14. The repetitive sound of ocean waves helps me to fall asleep.",
+              "content": "The repetitive sound of ocean waves helps me to fall asleep.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -357,7 +357,7 @@
             },
             {
               "id": "30",
-              "content": "15. The cake digested the delicious cookies.",
+              "content": "The cake digested the delicious cookies.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -369,7 +369,7 @@
             },
             {
               "id": "31",
-              "content": "16. The temperate nights were almost too cold to bear.",
+              "content": "The temperate nights were almost too cold to bear.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -381,7 +381,7 @@
             },
             {
               "id": "32",
-              "content": "17. Parasites are independent forms of life.",
+              "content": "Parasites are independent forms of life.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -393,7 +393,7 @@
             },
             {
               "id": "33",
-              "content": "18. I don't want to go alone. I wish I had a companion.",
+              "content": "I don't want to go alone. I wish I had a companion.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -405,7 +405,7 @@
             },
             {
               "id": "34",
-              "content": "19. Will you please Celsius the temperature outside?",
+              "content": "Will you please Celsius the temperature outside?",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -417,7 +417,7 @@
             },
             {
               "id": "35",
-              "content": "20. The drawing of the earth showed the different elements of the biosphere.",
+              "content": "The drawing of the earth showed the different elements of the biosphere.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -445,7 +445,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Protists have a high tolerance for temperate conditions.",
+              "content": "Protists have a high tolerance for temperate conditions.",
               "options": [
                 "True",
                 "False",
@@ -457,7 +457,7 @@
             },
             {
               "id": "37",
-              "content": "2. Things in an aquatic protist's world can be absolutely bizarre.",
+              "content": "Things in an aquatic protist's world can be absolutely bizarre.",
               "options": [
                 "True",
                 "False",
@@ -469,7 +469,7 @@
             },
             {
               "id": "38",
-              "content": "3. A protist splits its companion's nucleus in fission.",
+              "content": "A protist splits its companion's nucleus in fission.",
               "options": [
                 "True",
                 "False",
@@ -481,7 +481,7 @@
             },
             {
               "id": "39",
-              "content": "4. Coarse cilia move in a repetitive motion for the duration of a protist's swim.",
+              "content": "Coarse cilia move in a repetitive motion for the duration of a protist's swim.",
               "options": [
                 "True",
                 "False",
@@ -493,7 +493,7 @@
             },
             {
               "id": "40",
-              "content": "5. An infinite number of new protists can be created by the impressive feat of fission.",
+              "content": "An infinite number of new protists can be created by the impressive feat of fission.",
               "options": [
                 "True",
                 "False",
@@ -513,7 +513,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. What temperature, in degrees Celsius, could the protist be comfortable in?",
+              "content": "What temperature, in degrees Celsius, could the protist be comfortable in?",
               "options": [
                 "10 degrees Celsius",
                 "100 degrees Celsius",
@@ -525,7 +525,7 @@
             },
             {
               "id": "42",
-              "content": "2. What do scientists who study ecology know about protists?",
+              "content": "What do scientists who study ecology know about protists?",
               "options": [
                 "They are bizarre.",
                 "They are the first life form on Earth.",
@@ -537,7 +537,7 @@
             },
             {
               "id": "43",
-              "content": "3. What prominent thing does a protist release into the biosphere?",
+              "content": "What prominent thing does a protist release into the biosphere?",
               "options": [
                 "Oxygen gas",
                 "Hydrogen gas",
@@ -549,7 +549,7 @@
             },
             {
               "id": "44",
-              "content": "4. How does a protist catch vulnerable parasites to digest?",
+              "content": "How does a protist catch vulnerable parasites to digest?",
               "options": [
                 "It traps them in its cilia.",
                 "It freezes them.",
@@ -561,7 +561,7 @@
             },
             {
               "id": "45",
-              "content": "5. What unique reproductive process does a protist undergo?",
+              "content": "What unique reproductive process does a protist undergo?",
               "options": [
                 "Mating with a companion",
                 "Fission",

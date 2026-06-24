@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. something you keep flowers in",
+              "content": "something you keep flowers in",
               "options": [
                 "a. vase",
                 "b. stack",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. to say something is better than it really is",
+              "content": "to say something is better than it really is",
               "options": [
                 "a. exaggerate",
                 "b. drag",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. a rich and important person",
+              "content": "a rich and important person",
               "options": [
                 "a. ambassador",
                 "b. noble",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. having light, yellow-colored hair",
+              "content": "having light, yellow-colored hair",
               "options": [
                 "a. suspicious",
                 "b. blonde",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. not trusting of someone",
+              "content": "not trusting of someone",
               "options": [
                 "a. suspicious",
                 "b. meanwhile",
@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. heritage",
+              "content": "heritage",
               "options": [
                 "a. features of a society",
                 "b. to put into something else",
@@ -92,7 +92,7 @@
             },
             {
               "id": "7",
-              "content": "2. spectacle",
+              "content": "spectacle",
               "options": [
                 "a. an amazing sight",
                 "b. to take something",
@@ -104,7 +104,7 @@
             },
             {
               "id": "8",
-              "content": "3. drag",
+              "content": "drag",
               "options": [
                 "a. to attack",
                 "b. very important",
@@ -116,7 +116,7 @@
             },
             {
               "id": "9",
-              "content": "4. sin",
+              "content": "sin",
               "options": [
                 "a. something wrong for religious reasons",
                 "b. the traditions of a country",
@@ -128,7 +128,7 @@
             },
             {
               "id": "10",
-              "content": "5. tin",
+              "content": "tin",
               "options": [
                 "a. a color of hair",
                 "b. to say mean things",
@@ -156,7 +156,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Atahualpa didn't want to fight the Spaniards.",
+              "content": "Atahualpa didn't want to fight the Spaniards.",
               "options": [
                 "T",
                 "F"
@@ -166,7 +166,7 @@
             },
             {
               "id": "12",
-              "content": "2. The Incas had blonde hair.",
+              "content": "The Incas had blonde hair.",
               "options": [
                 "T",
                 "F"
@@ -176,7 +176,7 @@
             },
             {
               "id": "13",
-              "content": "3. Atahualpa offered Pizarro a room filled with stacks of precious gold.",
+              "content": "Atahualpa offered Pizarro a room filled with stacks of precious gold.",
               "options": [
                 "T",
                 "F"
@@ -186,7 +186,7 @@
             },
             {
               "id": "14",
-              "content": "4. The Spanish conquered parts of South America.",
+              "content": "The Spanish conquered parts of South America.",
               "options": [
                 "T",
                 "F"
@@ -196,7 +196,7 @@
             },
             {
               "id": "15",
-              "content": "5. Pizarro thought that Atahualpa had insulted his heritage and that his men held prejudices against the Incas.",
+              "content": "Pizarro thought that Atahualpa had insulted his heritage and that his men held prejudices against the Incas.",
               "options": [
                 "T",
                 "F"
@@ -206,7 +206,7 @@
             },
             {
               "id": "16",
-              "content": "6. Pizarro agreed that Atahualpa was both a god and a king.",
+              "content": "Pizarro agreed that Atahualpa was both a god and a king.",
               "options": [
                 "T",
                 "F"
@@ -224,7 +224,7 @@
           "questions": [
             {
               "id": "17",
-              "content": "1. Which of the following did NOT appear in the room with gold?",
+              "content": "Which of the following did NOT appear in the room with gold?",
               "options": [
                 "a. Pieces of tin",
                 "b. Necklaces",
@@ -236,7 +236,7 @@
             },
             {
               "id": "18",
-              "content": "2. Which adjective describes Pizarro?",
+              "content": "Which adjective describes Pizarro?",
               "options": [
                 "a. Noble",
                 "b. Gentle",
@@ -248,7 +248,7 @@
             },
             {
               "id": "19",
-              "content": "3. What do the rumors say?",
+              "content": "What do the rumors say?",
               "options": [
                 "a. Pizarro defeated the Incas easily",
                 "b. There is a lot of gold in the Peruvian jungle",
@@ -260,7 +260,7 @@
             },
             {
               "id": "20",
-              "content": "4. Who went to the room of gold with Pizarro?",
+              "content": "Who went to the room of gold with Pizarro?",
               "options": [
                 "a. The King of Spain",
                 "b. Spanish ambassadors",

@@ -218,7 +218,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "16. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "Why a smart boy fails a class",
                 "A boy's trip into the universe",
@@ -230,7 +230,7 @@
             },
             {
               "id": "17",
-              "content": "17. What is Lee unable to comprehend?",
+              "content": "What is Lee unable to comprehend?",
               "options": [
                 "How to make a model of a planet",
                 "Why there are maps among the books",
@@ -242,7 +242,7 @@
             },
             {
               "id": "18",
-              "content": "18. What can you suppose is true of the group's report?",
+              "content": "What can you suppose is true of the group's report?",
               "options": [
                 "It has three sentences.",
                 "It must describe clouds.",
@@ -254,7 +254,7 @@
             },
             {
               "id": "19",
-              "content": "19. What did the alien want to do to help Lee?",
+              "content": "What did the alien want to do to help Lee?",
               "options": [
                 "Get several books from the library",
                 "Hear the best report ever",
@@ -266,7 +266,7 @@
             },
             {
               "id": "20",
-              "content": "20. What planet did Lee see on his trip?",
+              "content": "What planet did Lee see on his trip?",
               "options": [
                 "The Sun",
                 "The Moon",
@@ -278,7 +278,7 @@
             },
             {
               "id": "21",
-              "content": "21. What planet did Lee see on his trip?",
+              "content": "What planet did Lee see on his trip?",
               "options": [
                 "Mars",
                 "Venus",

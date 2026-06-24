@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. Large companies can [ 6 ] many products.",
+              "content": "Large companies can [ 6 ] many products.",
               "options": [
                 "period",
                 "sign",
@@ -93,7 +93,7 @@
             },
             {
               "id": "7",
-              "content": "2. I offered her a [ 7 ] of choices from one to ten.",
+              "content": "I offered her a [ 7 ] of choices from one to ten.",
               "options": [
                 "period",
                 "sign",
@@ -106,7 +106,7 @@
             },
             {
               "id": "8",
-              "content": "3. How many people [ 8 ] this area?",
+              "content": "How many people [ 8 ] this area?",
               "options": [
                 "period",
                 "sign",
@@ -119,7 +119,7 @@
             },
             {
               "id": "9",
-              "content": "4. Give me a [ 9 ] if you need help.",
+              "content": "Give me a [ 9 ] if you need help.",
               "options": [
                 "period",
                 "sign",
@@ -132,7 +132,7 @@
             },
             {
               "id": "10",
-              "content": "5. This [ 10 ] will last for one hour.",
+              "content": "This [ 10 ] will last for one hour.",
               "options": [
                 "period",
                 "sign",
@@ -153,7 +153,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p>1.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. When you <b>mix</b> things, you take them somewhere.",
                 "b. They make toys in a toy <b>factory</b>."
@@ -163,7 +163,7 @@
             },
             {
               "id": "12",
-              "content": "<p>2.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. A <b>feature</b> of this computer is its small size.",
                 "b. We <b>populate</b> over the ocean."
@@ -173,7 +173,7 @@
             },
             {
               "id": "13",
-              "content": "<p>3.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. We put the <b>trash</b> outside so it could be taken away.",
                 "b. We ate chicken once, so now it is a <b>tradition</b>."
@@ -183,7 +183,7 @@
             },
             {
               "id": "14",
-              "content": "<p>4.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. He went to the <b>tip</b> of the school.",
                 "b. Doing a book report <b>involves</b> reading."
@@ -193,7 +193,7 @@
             },
             {
               "id": "15",
-              "content": "<p>5.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. The garbage truck came and <b>produced</b> some sunshine.",
                 "b. I <b>associate</b> dogs with good pets."
@@ -203,7 +203,7 @@
             },
             {
               "id": "16",
-              "content": "<p>6.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. You <b>recognize</b> someone whom you have already met.",
                 "b. Blue is a <b>range</b> of color."
@@ -213,7 +213,7 @@
             },
             {
               "id": "17",
-              "content": "<p>7.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. The <b>sign</b> was open all evening.",
                 "b. I have a <b>regular</b> schedule. It doesn't change."
@@ -223,7 +223,7 @@
             },
             {
               "id": "18",
-              "content": "<p>8.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. The tree is very <b>wide</b> because it is small.",
                 "b. Don't forget to <b>organize</b> a meeting for next week."
@@ -233,7 +233,7 @@
             },
             {
               "id": "19",
-              "content": "<p>9.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. The clothing store had a sale on <b>medicine</b>.",
                 "b. Our <b>environment</b> has many plants and animals."
@@ -243,7 +243,7 @@
             },
             {
               "id": "20",
-              "content": "<p>10.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a. An <b>instance</b> of kindness is sharing food.",
                 "b. He had no <b>period</b> to work."

@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. a person of the highest rank",
+              "content": "a person of the highest rank",
               "options": [
                 "brave",
                 "obey",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "2. barely or almost unable to do",
+              "content": "barely or almost unable to do",
               "options": [
                 "hardly",
                 "unless",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "3. to wrap around itself or another thing",
+              "content": "to wrap around itself or another thing",
               "options": [
                 "steady",
                 "arrow",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "4. to plan to do",
+              "content": "to plan to do",
               "options": [
                 "laughter",
                 "intend",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "5. space used to go into an area",
+              "content": "space used to go into an area",
               "options": [
                 "enemy",
                 "entrance",
@@ -88,7 +88,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "How an enemy made an attack against shields",
                 "Why logs were rolled down on soldiers",
@@ -100,7 +100,7 @@
             },
             {
               "id": "7",
-              "content": "2. Why was the smaller army not afraid of the larger one?",
+              "content": "Why was the smaller army not afraid of the larger one?",
               "options": [
                 "The larger army didn't have any weapons.",
                 "The smaller army had better weapons and skills.",
@@ -112,7 +112,7 @@
             },
             {
               "id": "8",
-              "content": "3. The brave men knew they would lose______",
+              "content": "The brave men knew they would lose______",
               "options": [
                 "because they heard the soldiers' laughter",
                 "unless they secured the narrow entrance",
@@ -124,7 +124,7 @@
             },
             {
               "id": "9",
-              "content": "4. According to the passage, all the following are true about the Persian army EXCEPT_____________.",
+              "content": "According to the passage, all the following are true about the Persian army EXCEPT_____________.",
               "options": [
                 "their long lines of soldiers twisted around the hills",
                 "they used bows and arrows",

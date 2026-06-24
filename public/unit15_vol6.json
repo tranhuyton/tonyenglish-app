@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What can start an epidemic?",
+              "content": "What can start an epidemic?",
               "options": [
                 "A kingdom",
                 "A virus",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. What is found inside intestines?",
+              "content": "What is found inside intestines?",
               "options": [
                 "Books",
                 "Students",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. If you replenish an empty refrigerator, you",
+              "content": "If you replenish an empty refrigerator, you",
               "options": [
                 "turn the temperature down",
                 "fill it with food",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. What is a hazard on a street?",
+              "content": "What is a hazard on a street?",
               "options": [
                 "A stop sign",
                 "A hole in the ground",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. What can contaminate the air?",
+              "content": "What can contaminate the air?",
               "options": [
                 "A poison",
                 "A flower",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. Which of the following is the most serious to have a deficiency of?",
+              "content": "Which of the following is the most serious to have a deficiency of?",
               "options": [
                 "Children",
                 "Addresses",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. What process is metabolic?",
+              "content": "What process is metabolic?",
               "options": [
                 "Sitting quietly",
                 "Learning to spell",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. What is paramount when swimming underwater?",
+              "content": "What is paramount when swimming underwater?",
               "options": [
                 "Not getting wet",
                 "Holding your breath",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. What needs to be sterile?",
+              "content": "What needs to be sterile?",
               "options": [
                 "A hospital room",
                 "An ocean",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. What does a practitioner do?",
+              "content": "What does a practitioner do?",
               "options": [
                 "Make furniture",
                 "Fight crime",
@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. voluntary",
+              "content": "voluntary",
               "options": [
                 "heavy",
                 "required",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "2. imperative",
+              "content": "imperative",
               "options": [
                 "unimportant",
                 "faulty",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "3. compassionate",
+              "content": "compassionate",
               "options": [
                 "likely",
                 "distant",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "4. sterile",
+              "content": "sterile",
               "options": [
                 "not fair",
                 "not clean",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "5. overcrowded",
+              "content": "overcrowded",
               "options": [
                 "empty",
                 "costly",
@@ -214,70 +214,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. They need to <u>improve and make more efficient</u> the medical devices in the hospital. [ 16 ]",
+              "content": "<p class=\"mb-4\">They need to <u>improve and make more efficient</u> the medical devices in the hospital. [ 16 ]</p><p class=\"mb-4\">To save the boy, rushing into the burning house is <u>extremely important and must be done</u>. [ 17 ]</p><p class=\"mb-4\">Handing out rain jackets was a <u>necessary act of giving</u>. [ 18 ]</p><p class=\"mb-4\">Sometimes, cold weather can be <u>made visible or obvious</u> in the most unlikely places. [ 19 ]</p><p class=\"mb-4\">The theory seems <u>capable of doing what it needs to do</u> to me. [ 20 ]</p><p class=\"mb-4\">You must act in a way that is <u>right according to the rules</u> of the game. [ 21 ]</p><p class=\"mb-4\">Joining the choir will be an action that is <u>done by choice</u>. [ 22 ]</p><p class=\"mb-4\">The amusement park was no fun because it was <u>occupied by too many people</u>. [ 23 ]</p><p class=\"mb-4\">Who is going to <u>take responsibility for organizing</u> the protest? [ 24 ]</p><p class=\"mb-4\">The criminal was certainly not <u>feeling pity or sympathy</u> for suffering people. [ 25 ]</p>",
               "options": [],
               "explanation": "upgrade",
               "correctAnswer": "upgrade"
             },
             {
               "id": "17",
-              "content": "2. To save the boy, rushing into the burning house is <u>extremely important and must be done</u>. [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "imperative",
               "correctAnswer": "imperative"
             },
             {
               "id": "18",
-              "content": "3. Handing out rain jackets was a <u>necessary act of giving</u>. [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "provision",
               "correctAnswer": "provision"
             },
             {
               "id": "19",
-              "content": "4. Sometimes, cold weather can be <u>made visible or obvious</u> in the most unlikely places. [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "manifest",
               "correctAnswer": "manifest"
             },
             {
               "id": "20",
-              "content": "5. The theory seems <u>capable of doing what it needs to do</u> to me. [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "viable",
               "correctAnswer": "viable"
             },
             {
               "id": "21",
-              "content": "6. You must act in a way that is <u>right according to the rules</u> of the game. [ 21 ]",
+              "content": "",
               "options": [],
               "explanation": "adhere",
               "correctAnswer": "adhere"
             },
             {
               "id": "22",
-              "content": "7. Joining the choir will be an action that is <u>done by choice</u>. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "voluntary",
               "correctAnswer": "voluntary"
             },
             {
               "id": "23",
-              "content": "8. The amusement park was no fun because it was <u>occupied by too many people</u>. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "overcrowded",
               "correctAnswer": "overcrowded"
             },
             {
               "id": "24",
-              "content": "9. Who is going to <u>take responsibility for organizing</u> the protest? [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "administer",
               "correctAnswer": "administer"
             },
             {
               "id": "25",
-              "content": "10. The criminal was certainly not <u>feeling pity or sympathy</u> for suffering people. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "compassionate",
               "correctAnswer": "compassionate"
@@ -300,7 +300,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. The health hazard was a lack of sterile drinking water in overcrowded urban cities.",
+              "content": "The health hazard was a lack of sterile drinking water in overcrowded urban cities.",
               "options": [
                 "T",
                 "F"
@@ -310,7 +310,7 @@
             },
             {
               "id": "27",
-              "content": "2. A deficiency of contaminated water caused metabolic processes to stop working correctly.",
+              "content": "A deficiency of contaminated water caused metabolic processes to stop working correctly.",
               "options": [
                 "T",
                 "F"
@@ -320,7 +320,7 @@
             },
             {
               "id": "28",
-              "content": "3. It was imperative that people received viable treatment quickly.",
+              "content": "It was imperative that people received viable treatment quickly.",
               "options": [
                 "T",
                 "F"
@@ -330,7 +330,7 @@
             },
             {
               "id": "29",
-              "content": "4. The government used to filter water is being upgraded.",
+              "content": "The government used to filter water is being upgraded.",
               "options": [
                 "T",
                 "F"
@@ -340,7 +340,7 @@
             },
             {
               "id": "30",
-              "content": "5. The government now administers water supply plants to make sure they adhere to guidelines.",
+              "content": "The government now administers water supply plants to make sure they adhere to guidelines.",
               "options": [
                 "T",
                 "F"
@@ -358,7 +358,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. What paramount need did other countries recognize?",
+              "content": "What paramount need did other countries recognize?",
               "options": [
                 "Countries recognized the paramount need to contain the outbreak.",
                 "Countries recognized the need to build a new hospital.",
@@ -370,7 +370,7 @@
             },
             {
               "id": "32",
-              "content": "2. When did the cholera epidemic manifest itself in Zimbabwe?",
+              "content": "When did the cholera epidemic manifest itself in Zimbabwe?",
               "options": [
                 "in August of 2008",
                 "in January of 2009",
@@ -382,7 +382,7 @@
             },
             {
               "id": "33",
-              "content": "3. Where did the voluntary practitioners come from?",
+              "content": "Where did the voluntary practitioners come from?",
               "options": [
                 "Britain, France, the United States, and other countries.",
                 "Only from Britain.",
@@ -394,7 +394,7 @@
             },
             {
               "id": "34",
-              "content": "4. What were infected people unable to replenish in their intestines?",
+              "content": "What were infected people unable to replenish in their intestines?",
               "options": [
                 "Infected people were unable to replenish lost nutrients.",
                 "Infected people were unable to replenish blood.",
@@ -406,7 +406,7 @@
             },
             {
               "id": "35",
-              "content": "5. What provisions did the compassionate doctors provide?",
+              "content": "What provisions did the compassionate doctors provide?",
               "options": [
                 "The doctors provided sterile drinking water and medication.",
                 "The doctors provided beds and blankets.",

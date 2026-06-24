@@ -282,70 +282,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "We went to the track to watch the <u>racing dogs</u> run. [ 21 ]",
+              "content": "<p class=\"mb-4\">We went to the track to watch the <u>racing dogs</u> run. [ 21 ]</p><p class=\"mb-4\">The <u>outer part of a loaf of bread</u> was a dark brown and smelled like wheat and honey. [ 22 ]</p><p class=\"mb-4\">The baseball player was yelled at by an angry <u>person who watches a sports event</u>. [ 23 ]</p><p class=\"mb-4\">People who celebrate Christmas hang colorful <u>attractive objects</u> on their trees. [ 24 ]</p><p class=\"mb-4\">What are the <u>factors on which you judge</u> for becoming a member in your club? [ 25 ]</p><p class=\"mb-4\">The church was made into a <u>place people can go to be safe</u> after the hurricane. [ 26 ]</p><p class=\"mb-4\">Concentration is an important <u>mental ability</u> to have when studying for a test. [ 27 ]</p><p class=\"mb-4\">The messy girl kept her clothes in a <u>pile</u> on the floor. [ 28 ]</p><p class=\"mb-4\">The boy sat by the <u>small stream</u> and tossed stones into it. [ 29 ]</p><p class=\"mb-4\">Buying the house will <u>give the rights to me</u> to redecorate it any way I want. [ 30 ]</p>",
               "options": [],
               "explanation": "Cụm từ in nghiêng racing dogs nhắc đến những chú chó được dùng trong các cuộc đua hoặc đi săn. Từ vựng có ý nghĩa tương ứng chính xác là hounds (những chú chó săn). Vậy đáp án là A nha.",
               "correctAnswer": "hounds"
             },
             {
               "id": "22",
-              "content": "The <u>outer part of a loaf of bread</u> was a dark brown and smelled like wheat and honey. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "Cụm từ in nghiêng diễn tả phần vỏ cứng bên ngoài của một ổ bánh mì. Từ vựng chỉ khái niệm này chính là crust. Các từ còn lại hoàn toàn không phù hợp, nên mình chọn A nhé.",
               "correctAnswer": "crust"
             },
             {
               "id": "23",
-              "content": "The baseball player was yelled at by an angry <u>person who watches a sports event</u>. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "Người theo dõi một sự kiện thể thao được gọi là khán giả. Từ vựng tiếng Anh tương ứng với khái niệm này là spectator. Do đó, đáp án chuẩn xác nhất là B nha.",
               "correctAnswer": "spectator"
             },
             {
               "id": "24",
-              "content": "People who celebrate Christmas hang colorful <u>attractive objects</u> on their trees. [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "Những đồ vật nhỏ, đẹp mắt dùng để trang trí cây thông Noel được miêu tả là attractive objects. Từ mang ý nghĩa đồ trang trí chính là ornaments. Mình chọn đáp án C nhé.",
               "correctAnswer": "ornaments"
             },
             {
               "id": "25",
-              "content": "What are the <u>factors on which you judge</u> for becoming a member in your club? [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "Những yếu tố được sử dụng làm thước đo để bạn đưa ra quyết định hay đánh giá được gọi là tiêu chí. Trong tiếng Anh, từ này là criteria. Vậy đáp án chính xác là A nha.",
               "correctAnswer": "criteria"
             },
             {
               "id": "26",
-              "content": "The church was made into a <u>place people can go to be safe</u> after the hurricane. [ 26 ]",
+              "content": "",
               "options": [],
               "explanation": "Nơi mà mọi người có thể tìm đến để được an toàn sau cơn bão là một nơi trú ẩn. Từ mang ý nghĩa nơi trú ẩn an toàn chính là sanctuary. Mình chọn đáp án B nhé.",
               "correctAnswer": "sanctuary"
             },
             {
               "id": "27",
-              "content": "Concentration is an important <u>mental ability</u> to have when studying for a test. [ 27 ]",
+              "content": "",
               "options": [],
               "explanation": "Năng lực về mặt tinh thần hoặc trí tuệ để tập trung khi học bài được diễn đạt bằng cụm từ mental ability. Từ vựng có nghĩa tương đương là faculty. Vậy mình chọn đáp án A nha.",
               "correctAnswer": "faculty"
             },
             {
               "id": "28",
-              "content": "The messy girl kept her clothes in a <u>pile</u> on the floor. [ 28 ]",
+              "content": "",
               "options": [],
               "explanation": "Cụm từ in nghiêng pile có nghĩa là một đống đồ vật lộn xộn. Từ vựng mang ý nghĩa tương tự để chỉ một đống là heap. Đây là đáp án chính xác nhất, chọn B nhé.",
               "correctAnswer": "heap"
             },
             {
               "id": "29",
-              "content": "The boy sat by the <u>small stream</u> and tossed stones into it. [ 29 ]",
+              "content": "",
               "options": [],
               "explanation": "Dòng suối nhỏ chảy qua được diễn tả bằng cụm từ small stream. Từ vựng tương ứng với khái niệm này là brook. Các từ khác không có nghĩa liên quan, nên mình chọn A nha.",
               "correctAnswer": "brook"
             },
             {
               "id": "30",
-              "content": "Buying the house will <u>give the rights to me</u> to redecorate it any way I want. [ 30 ]",
+              "content": "",
               "options": [],
               "explanation": "Việc mua lại căn nhà sẽ trao cho người mua quyền lợi được trang trí lại nó. Cụm từ give the rights to me mang ý nghĩa trao quyền, hoàn toàn tương đương với động từ entitle. Mình chọn đáp án C nhé.",
               "correctAnswer": "entitle"

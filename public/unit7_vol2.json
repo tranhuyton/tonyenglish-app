@@ -23,7 +23,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p>1. a. volcano b. scholar c. colleague d. cage</p>",
+              "content": "<p class=\"mb-4\">a. volcano b. scholar c. colleague d. cage</p>",
               "options": [
                 "volcano and scholar",
                 "colleague and cage",
@@ -35,7 +35,7 @@
             },
             {
               "id": "2",
-              "content": "<p>2. a. persuade b. basis c. mission d. debate</p>",
+              "content": "<p class=\"mb-4\">a. persuade b. basis c. mission d. debate</p>",
               "options": [
                 "persuade and basis",
                 "mission and debate",
@@ -47,7 +47,7 @@
             },
             {
               "id": "3",
-              "content": "<p>3. a. depress b. colony c. occupation d. overseas</p>",
+              "content": "<p class=\"mb-4\">a. depress b. colony c. occupation d. overseas</p>",
               "options": [
                 "colony and overseas",
                 "occupation and overseas",
@@ -59,7 +59,7 @@
             },
             {
               "id": "4",
-              "content": "<p>4. a. route b. depart c. cheer d. fascinate</p>",
+              "content": "<p class=\"mb-4\">a. route b. depart c. cheer d. fascinate</p>",
               "options": [
                 "route and depart",
                 "cheer and fascinate",
@@ -71,7 +71,7 @@
             },
             {
               "id": "5",
-              "content": "<p>5. a. ruins b. factual c. significant d. nevertheless</p>",
+              "content": "<p class=\"mb-4\">a. ruins b. factual c. significant d. nevertheless</p>",
               "options": [
                 "ruins and factual",
                 "significant and nevertheless",
@@ -90,35 +90,35 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p>1. He had a very <u>important job</u> that he loved.</p> [ 6 ]",
+              "content": "<p class=\"mb-4\">He had a very <u>important job</u> that he loved.</p> [ 6 ]<p>2. Linda was happy that she had good <u>people at</u> work.</p> [ 7 ]<p>3. Bernie had never taken that <u>way</u> home before.</p> [ 8 ]<p>4. This is a <u>true</u> movie about her life.</p> [ 9 ]<p>5. Our country used to have one other <u>country under our</u> control.</p> [ 10 ]",
               "options": [],
               "correctAnswer": "MISSION",
               "explanation": "important job đồng nghĩa với mission."
             },
             {
               "id": "7",
-              "content": "<p>2. Linda was happy that she had good <u>people at</u> work.</p> [ 7 ]",
+              "content": "",
               "options": [],
               "correctAnswer": "COLLEAGUES",
               "explanation": "people at work đồng nghĩa với colleagues."
             },
             {
               "id": "8",
-              "content": "<p>3. Bernie had never taken that <u>way</u> home before.</p> [ 8 ]",
+              "content": "",
               "options": [],
               "correctAnswer": "ROUTE",
               "explanation": "way đồng nghĩa với route."
             },
             {
               "id": "9",
-              "content": "<p>4. This is a <u>true</u> movie about her life.</p> [ 9 ]",
+              "content": "",
               "options": [],
               "correctAnswer": "FACTUAL",
               "explanation": "true đồng nghĩa với factual."
             },
             {
               "id": "10",
-              "content": "<p>5. Our country used to have one other <u>country under our</u> control.</p> [ 10 ]",
+              "content": "",
               "options": [],
               "correctAnswer": "COLONY",
               "explanation": "country under our control đồng nghĩa với colony."
@@ -132,7 +132,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p>1.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -142,7 +142,7 @@
             },
             {
               "id": "12",
-              "content": "<p>2.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -152,7 +152,7 @@
             },
             {
               "id": "13",
-              "content": "<p>3.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -162,7 +162,7 @@
             },
             {
               "id": "14",
-              "content": "<p>4.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -172,7 +172,7 @@
             },
             {
               "id": "15",
-              "content": "<p>5.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -182,7 +182,7 @@
             },
             {
               "id": "16",
-              "content": "<p>6.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -192,7 +192,7 @@
             },
             {
               "id": "17",
-              "content": "<p>7.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -202,7 +202,7 @@
             },
             {
               "id": "18",
-              "content": "<p>8.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -212,7 +212,7 @@
             },
             {
               "id": "19",
-              "content": "<p>9.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -222,7 +222,7 @@
             },
             {
               "id": "20",
-              "content": "<p>10.</p>",
+              "content": "<p class=\"mb-4\"></p>",
               "options": [
                 "a",
                 "b"
@@ -239,7 +239,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "<p>1. What is this story about?</p>",
+              "content": "<p class=\"mb-4\">What is this story about?</p>",
               "options": [
                 "A route to a new place",
                 "A scholar who finds a talking bird",
@@ -251,7 +251,7 @@
             },
             {
               "id": "22",
-              "content": "<p>2. Why did Dr. Norton go overseas?</p>",
+              "content": "<p class=\"mb-4\">Why did Dr. Norton go overseas?</p>",
               "options": [
                 "He wanted to depart from his colleagues and start a new life.",
                 "He was on a mission to find the talking bird.",
@@ -263,7 +263,7 @@
             },
             {
               "id": "23",
-              "content": "<p>3. At the end of the story, we can infer that ____________.</p>",
+              "content": "<p class=\"mb-4\">At the end of the story, we can infer that ____________.</p>",
               "options": [
                 "Jai didn’t like Dr. Norton but nevertheless cheered his discovery",
                 "finding the volcano was also a significant discovery",
@@ -275,7 +275,7 @@
             },
             {
               "id": "24",
-              "content": "<p>4. According to the passage, all the following are true EXCEPT</p>",
+              "content": "<p class=\"mb-4\">According to the passage, all the following are true EXCEPT</p>",
               "options": [
                 "Jai fed bread to the talking bird",
                 "Dr. Norton put the bird into a cage",

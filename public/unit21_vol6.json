@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What might be abolished?",
+              "content": "What might be abolished?",
               "options": [
                 "A rule",
                 "A toy",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. Who tackles crime?",
+              "content": "Who tackles crime?",
               "options": [
                 "Bankers",
                 "Criminals",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. Who is infamous?",
+              "content": "Who is infamous?",
               "options": [
                 "A trusting friend",
                 "An evil king",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. If a behavior is pathological, it _____",
+              "content": "If a behavior is pathological, it _____",
               "options": [
                 "is envied",
                 "cannot be controlled",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. Who might be lame?",
+              "content": "Who might be lame?",
               "options": [
                 "A healthy baby",
                 "An athlete",
@@ -78,7 +78,7 @@
             },
             {
               "id": "6",
-              "content": "6. A trance is most similar to _____.",
+              "content": "A trance is most similar to _____.",
               "options": [
                 "dancing",
                 "eating",
@@ -90,7 +90,7 @@
             },
             {
               "id": "7",
-              "content": "7. What is most likely to have a charter?",
+              "content": "What is most likely to have a charter?",
               "options": [
                 "An unknown island",
                 "A new automobile",
@@ -102,7 +102,7 @@
             },
             {
               "id": "8",
-              "content": "8. What might be censored?",
+              "content": "What might be censored?",
               "options": [
                 "A newspaper",
                 "A fly",
@@ -114,7 +114,7 @@
             },
             {
               "id": "9",
-              "content": "9. If your skills are phenomenal, they are____",
+              "content": "If your skills are phenomenal, they are____",
               "options": [
                 "ordinary",
                 "not appreciated",
@@ -126,7 +126,7 @@
             },
             {
               "id": "10",
-              "content": "10. Which area is likely to be cosmopolitan?",
+              "content": "Which area is likely to be cosmopolitan?",
               "options": [
                 "A television set",
                 "A bedroom",
@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. lame",
+              "content": "lame",
               "options": [
                 "rude",
                 "kind",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "2. secrecy",
+              "content": "secrecy",
               "options": [
                 "well known",
                 "hidden",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "3. abolish",
+              "content": "abolish",
               "options": [
                 "great",
                 "start",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "4. remorse",
+              "content": "remorse",
               "options": [
                 "again",
                 "grief",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "5. disseminate",
+              "content": "disseminate",
               "options": [
                 "distribute",
                 "collect",
@@ -214,70 +214,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. His moving speech caused a huge <u>strong, sudden expression of happy tears</u>. [ 16 ]",
+              "content": "<p class=\"mb-4\">His moving speech caused a huge <u>strong, sudden expression of happy tears</u>. [ 16 ]</p><p class=\"mb-4\">The main goal of the group was to <u>distribute</u> information about the needs of the poor. [ 17 ]</p><p class=\"mb-4\">The wounded soldier had to <u>walk with difficulty because of a hurt foot</u> back to the base. [ 18 ]</p><p class=\"mb-4\">We excitedly watched the results of the <u>survey in which people give opinions</u>. [ 19 ]</p><p class=\"mb-4\">The boys have a <u>strong desire</u> to finish college in less than three years. [ 20 ]</p><p class=\"mb-4\">When he saw how badly things had turned out, he felt a <u>strong feeling of sadness and regret</u>. [ 21 ]</p><p class=\"mb-4\">It is a difficult process to <u>improve</u> the official rulebook. [ 22 ]</p><p class=\"mb-4\">Those salesmen <u>praise in an insincere way</u> people to trick them into buying useless items. [ 23 ]</p><p class=\"mb-4\">The <u>document of principles</u> for the government was based on freedom for all people. [ 24 ]</p><p class=\"mb-4\">We were immediately suspicious of the boy because of his <u>act of keeping things secret</u>. [ 25 ]</p>",
               "options": [],
               "explanation": "outburst",
               "correctAnswer": "outburst"
             },
             {
               "id": "17",
-              "content": "2. The main goal of the group was to <u>distribute</u> information about the needs of the poor. [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "disseminate",
               "correctAnswer": "disseminate"
             },
             {
               "id": "18",
-              "content": "3. The wounded soldier had to <u>walk with difficulty because of a hurt foot</u> back to the base. [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "limp",
               "correctAnswer": "limp"
             },
             {
               "id": "19",
-              "content": "4. We excitedly watched the results of the <u>survey in which people give opinions</u>. [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "poll",
               "correctAnswer": "poll"
             },
             {
               "id": "20",
-              "content": "5. The boys have a <u>strong desire</u> to finish college in less than three years. [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "aspire",
               "correctAnswer": "aspire"
             },
             {
               "id": "21",
-              "content": "6. When he saw how badly things had turned out, he felt a <u>strong feeling of sadness and regret</u>. [ 21 ]",
+              "content": "",
               "options": [],
               "explanation": "remorse",
               "correctAnswer": "remorse"
             },
             {
               "id": "22",
-              "content": "7. It is a difficult process to <u>improve</u> the official rulebook. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "amend",
               "correctAnswer": "amend"
             },
             {
               "id": "23",
-              "content": "8. Those salesmen <u>praise in an insincere way</u> people to trick them into buying useless items. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "flatter",
               "correctAnswer": "flatter"
             },
             {
               "id": "24",
-              "content": "9. The <u>document of principles</u> for the government was based on freedom for all people. [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "constitution",
               "correctAnswer": "constitution"
             },
             {
               "id": "25",
-              "content": "10. We were immediately suspicious of the boy because of his <u>act of keeping things secret</u>. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "secrecy",
               "correctAnswer": "secrecy"
@@ -292,7 +292,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. The boy <i>tackled</i> when he slipped on the ice.",
+              "content": "The boy <i>tackled</i> when he slipped on the ice.",
               "options": [
                 "I",
                 "C"
@@ -302,7 +302,7 @@
             },
             {
               "id": "27",
-              "content": "2. Many different languages are spoken in this <i>cosmopolitan</i> area.",
+              "content": "Many different languages are spoken in this <i>cosmopolitan</i> area.",
               "options": [
                 "I",
                 "C"
@@ -312,7 +312,7 @@
             },
             {
               "id": "28",
-              "content": "3. The <i>trance</i> was a beautiful arrangement of fruits and flowers on the table.",
+              "content": "The <i>trance</i> was a beautiful arrangement of fruits and flowers on the table.",
               "options": [
                 "I",
                 "C"
@@ -322,7 +322,7 @@
             },
             {
               "id": "29",
-              "content": "4. The doctor had to <i>amend</i> the man’s lungs to help him breathe better.",
+              "content": "The doctor had to <i>amend</i> the man’s lungs to help him breathe better.",
               "options": [
                 "I",
                 "C"
@@ -332,7 +332,7 @@
             },
             {
               "id": "30",
-              "content": "5. The new country created a strong <i>constitution</i> to help guide it through the years.",
+              "content": "The new country created a strong <i>constitution</i> to help guide it through the years.",
               "options": [
                 "I",
                 "C"
@@ -358,7 +358,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Two men aspired to be mayor of the cosmopolitan city of Sherman.",
+              "content": "Two men aspired to be mayor of the cosmopolitan city of Sherman.",
               "options": [
                 "F",
                 "T"
@@ -368,7 +368,7 @@
             },
             {
               "id": "32",
-              "content": "2. Mr. Jones was a pathological speaker who flattered people with his words.",
+              "content": "Mr. Jones was a pathological speaker who flattered people with his words.",
               "options": [
                 "F",
                 "T"
@@ -378,7 +378,7 @@
             },
             {
               "id": "33",
-              "content": "3. Mr. Webb was lame, so he limped when he walked.",
+              "content": "Mr. Webb was lame, so he limped when he walked.",
               "options": [
                 "F",
                 "T"
@@ -388,7 +388,7 @@
             },
             {
               "id": "34",
-              "content": "4. Mr. Webb tackled important issues and amended unfair laws in the city charter.",
+              "content": "Mr. Webb tackled important issues and amended unfair laws in the city charter.",
               "options": [
                 "F",
                 "T"
@@ -398,7 +398,7 @@
             },
             {
               "id": "35",
-              "content": "5. Mr. Jones censored newspapers that tried to disseminate outbursts of anger.",
+              "content": "Mr. Jones censored newspapers that tried to disseminate outbursts of anger.",
               "options": [
                 "F",
                 "T"
@@ -416,7 +416,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. What did the polls predict after the people were put into a trance?",
+              "content": "What did the polls predict after the people were put into a trance?",
               "options": [
                 "The polls predicted that Mr. Jones would win the election.",
                 "They predicted Mr. Webb would win.",
@@ -428,7 +428,7 @@
             },
             {
               "id": "37",
-              "content": "2. What misguided decision did the people feel remorse for making?",
+              "content": "What misguided decision did the people feel remorse for making?",
               "options": [
                 "The decision to elect an ignorant mayor.",
                 "The decision to elect Mr. Webb.",
@@ -440,7 +440,7 @@
             },
             {
               "id": "38",
-              "content": "3. What was Mr. Webb willing to do after he abolished Mr. Jones’s laws from the constitution?",
+              "content": "What was Mr. Webb willing to do after he abolished Mr. Jones’s laws from the constitution?",
               "options": [
                 "He was willing to talk openly with everyone.",
                 "He was willing to resign.",
@@ -452,7 +452,7 @@
             },
             {
               "id": "39",
-              "content": "4. What did the phenomenal speaker become infamous for?",
+              "content": "What did the phenomenal speaker become infamous for?",
               "options": [
                 "The phenomenal speaker became infamous for his poor leadership.",
                 "He became infamous for his good leadership.",
@@ -464,7 +464,7 @@
             },
             {
               "id": "40",
-              "content": "5. What was Mr. Jones trying to do by working in secrecy?",
+              "content": "What was Mr. Jones trying to do by working in secrecy?",
               "options": [
                 "He was trying to hide his ignorance.",
                 "He was trying to make money.",

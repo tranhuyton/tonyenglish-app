@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "I met a very <u>friendly</u> girl on my first day of school. [ 11 ]",
+              "content": "<p class=\"mb-4\">I met a very <u>friendly</u> girl on my first day of school. [ 11 ]</p><p class=\"mb-4\">Marty <u>walked heavily</u> across the kitchen to the back door. [ 12 ]</p><p class=\"mb-4\">That lovely dresser was <u>skillfully made</u> from oak. [ 13 ]</p><p class=\"mb-4\">The man had <u>dishonestly changed</u> the game so that he would win every time. [ 14 ]</p><p class=\"mb-4\">The paint colors <u>combined</u> to make new ones on the canvas. [ 15 ]</p>",
               "options": [],
               "explanation": "friendly (thân thiện) tương đương với sociable.",
               "correctAnswer": "sociable"
             },
             {
               "id": "12",
-              "content": "Marty <u>walked heavily</u> across the kitchen to the back door. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "walked heavily (bước đi nặng nề) tương đương với tramped.",
               "correctAnswer": "tramped"
             },
             {
               "id": "13",
-              "content": "That lovely dresser was <u>skillfully made</u> from oak. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "skillfully made (làm một cách khéo léo) tương đương với crafted.",
               "correctAnswer": "crafted"
             },
             {
               "id": "14",
-              "content": "The man had <u>dishonestly changed</u> the game so that he would win every time. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "dishonestly changed (thay đổi một cách gian lận) tương đương với rigged.",
               "correctAnswer": "rigged"
             },
             {
               "id": "15",
-              "content": "The paint colors <u>combined</u> to make new ones on the canvas. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "combined (kết hợp) tương đương với merged.",
               "correctAnswer": "merged"

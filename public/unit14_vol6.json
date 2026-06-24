@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. paw",
+              "content": "paw",
               "options": [
                 "father",
                 "foot",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. cot",
+              "content": "cot",
               "options": [
                 "chamber",
                 "bed",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. camouflage",
+              "content": "camouflage",
               "options": [
                 "disguise",
                 "funny",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. lush",
+              "content": "lush",
               "options": [
                 "shelf",
                 "poem",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. substantial",
+              "content": "substantial",
               "options": [
                 "backward",
                 "majestic",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. contend",
+              "content": "contend",
               "options": [
                 "give up",
                 "ready",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "2. substantial",
+              "content": "substantial",
               "options": [
                 "bright",
                 "runny",
@@ -111,7 +111,7 @@
             },
             {
               "id": "8",
-              "content": "3. hesitant",
+              "content": "hesitant",
               "options": [
                 "visible",
                 "certain",
@@ -123,7 +123,7 @@
             },
             {
               "id": "9",
-              "content": "4. splendid",
+              "content": "splendid",
               "options": [
                 "night",
                 "whale",
@@ -135,7 +135,7 @@
             },
             {
               "id": "10",
-              "content": "5. enlist",
+              "content": "enlist",
               "options": [
                 "resign",
                 "erase",
@@ -155,7 +155,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I am so <i>weary</i>. The loud music kept me awake most of last night.",
+              "content": "I am so <i>weary</i>. The loud music kept me awake most of last night.",
               "options": [
                 "C",
                 "I"
@@ -165,7 +165,7 @@
             },
             {
               "id": "12",
-              "content": "2. The pages in the book were <i>quivering</i> with sheer horror.",
+              "content": "The pages in the book were <i>quivering</i> with sheer horror.",
               "options": [
                 "C",
                 "I"
@@ -175,7 +175,7 @@
             },
             {
               "id": "13",
-              "content": "3. Bill was <i>hesitant</i> to speak to his teacher. But after thinking about it, he talked to her.",
+              "content": "Bill was <i>hesitant</i> to speak to his teacher. But after thinking about it, he talked to her.",
               "options": [
                 "C",
                 "I"
@@ -185,7 +185,7 @@
             },
             {
               "id": "14",
-              "content": "4. You can tell that the bones are old because they don’t have any <i>marrow</i> left in them.",
+              "content": "You can tell that the bones are old because they don’t have any <i>marrow</i> left in them.",
               "options": [
                 "C",
                 "I"
@@ -195,7 +195,7 @@
             },
             {
               "id": "15",
-              "content": "5. I have five siblings. We often <i>contend</i> with each other for our parents’ attention.",
+              "content": "I have five siblings. We often <i>contend</i> with each other for our parents’ attention.",
               "options": [
                 "C",
                 "I"
@@ -205,7 +205,7 @@
             },
             {
               "id": "16",
-              "content": "6. After the meal, Father <i>strayed</i> the bill, and we left.",
+              "content": "After the meal, Father <i>strayed</i> the bill, and we left.",
               "options": [
                 "C",
                 "I"
@@ -215,7 +215,7 @@
             },
             {
               "id": "17",
-              "content": "7. Mountains divide the northern <i>frontier</i> from the southern plains.",
+              "content": "Mountains divide the northern <i>frontier</i> from the southern plains.",
               "options": [
                 "C",
                 "I"
@@ -225,7 +225,7 @@
             },
             {
               "id": "18",
-              "content": "8. He parked the car in the <i>cot</i> but didn’t notice he was on the wrong street.",
+              "content": "He parked the car in the <i>cot</i> but didn’t notice he was on the wrong street.",
               "options": [
                 "C",
                 "I"
@@ -235,7 +235,7 @@
             },
             {
               "id": "19",
-              "content": "9. I installed a new <i>tract</i> in the bathroom today.",
+              "content": "I installed a new <i>tract</i> in the bathroom today.",
               "options": [
                 "C",
                 "I"
@@ -245,7 +245,7 @@
             },
             {
               "id": "20",
-              "content": "10. I had to <i>contemplate</i> what I was going to do with my life.",
+              "content": "I had to <i>contemplate</i> what I was going to do with my life.",
               "options": [
                 "C",
                 "I"
@@ -271,7 +271,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. Tom strayed from his squad to gaze at a splendid view of a lush forest near the frontier.",
+              "content": "Tom strayed from his squad to gaze at a splendid view of a lush forest near the frontier.",
               "options": [
                 "T",
                 "F"
@@ -281,7 +281,7 @@
             },
             {
               "id": "22",
-              "content": "2. Tom couldn’t find his squad on the tract of wilderness because their outfits had camouflage.",
+              "content": "Tom couldn’t find his squad on the tract of wilderness because their outfits had camouflage.",
               "options": [
                 "T",
                 "F"
@@ -291,7 +291,7 @@
             },
             {
               "id": "23",
-              "content": "3. All Tom had with him was his cot, a boomerang, and his handbook.",
+              "content": "All Tom had with him was his cot, a boomerang, and his handbook.",
               "options": [
                 "T",
                 "F"
@@ -301,7 +301,7 @@
             },
             {
               "id": "24",
-              "content": "4. A monster of substantial size left a print from its paw in the dirt near Tom’s fire.",
+              "content": "A monster of substantial size left a print from its paw in the dirt near Tom’s fire.",
               "options": [
                 "T",
                 "F"
@@ -311,7 +311,7 @@
             },
             {
               "id": "25",
-              "content": "5. A loud noise woke him from his sleep.",
+              "content": "A loud noise woke him from his sleep.",
               "options": [
                 "T",
                 "F"
@@ -329,7 +329,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. Why did Tom enlist in the military?",
+              "content": "Why did Tom enlist in the military?",
               "options": [
                 "He thought the military would teach him courage.",
                 "He wanted to fight in a war.",
@@ -341,7 +341,7 @@
             },
             {
               "id": "27",
-              "content": "2. What roused Tom from his sleep?",
+              "content": "What roused Tom from his sleep?",
               "options": [
                 "A loud noise.",
                 "A bright light.",
@@ -353,7 +353,7 @@
             },
             {
               "id": "28",
-              "content": "3. What caused Tom to shake so much that the marrow in his bones quivered?",
+              "content": "What caused Tom to shake so much that the marrow in his bones quivered?",
               "options": [
                 "Fear.",
                 "The cold.",
@@ -365,7 +365,7 @@
             },
             {
               "id": "29",
-              "content": "4. Though he contemplated many plans, he was hesitant to act. What did he finally decide to do?",
+              "content": "Though he contemplated many plans, he was hesitant to act. What did he finally decide to do?",
               "options": [
                 "He decided to stay by the fire.",
                 "He ran away.",
@@ -377,7 +377,7 @@
             },
             {
               "id": "30",
-              "content": "5. During his vigil, what could Tom not contend with any longer?",
+              "content": "During his vigil, what could Tom not contend with any longer?",
               "options": [
                 "His fear.",
                 "The cold.",

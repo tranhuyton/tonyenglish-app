@@ -18,70 +18,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. He chose to paint a picture on <u>the main body of the boat.</u> [ 1 ]",
+              "content": "<p class=\"mb-4\">He chose to paint a picture on <u>the main body of the boat.</u> [ 1 ]</p><p class=\"mb-4\">When the plane crashed on the island, the passenger knew he was <u>prevented from leaving.</u> [ 2 ]</p><p class=\"mb-4\">I admired the <u>very large number of</u> stamps in his collection. [ 3 ]</p><p class=\"mb-4\">I took some aspirin <u>to make less my</u> back pain. [ 4 ]</p><p class=\"mb-4\">The countries were concerned about the treaty’s <u>ability to last forever.</u> [ 5 ]</p><p class=\"mb-4\">Australia’s <u>distance from the equator</u> is less extreme than I imagined. [ 6 ]</p><p class=\"mb-4\">I’m still not sure if the <u>math operation I did was correct.</u> [ 7 ]</p><p class=\"mb-4\">When the rats got out of the cage, the girl was <u>behaving in a wild way because of fear.</u> [ 8 ]</p><p class=\"mb-4\">The <u>incorrect or partly correct</u> information gave us the wrong idea about the president. [ 9 ]</p><p class=\"mb-4\">When he forgot his rope at home, he had to make one <u>using whatever was available.</u> [ 10 ]</p>",
               "options": [],
               "explanation": "hull (n): the main body of a boat.",
               "correctAnswer": "hull"
             },
             {
               "id": "2",
-              "content": "2. When the plane crashed on the island, the passenger knew he was <u>prevented from leaving.</u> [ 2 ]",
+              "content": "",
               "options": [],
               "explanation": "stranded (adj): prevented from leaving a place.",
               "correctAnswer": "stranded"
             },
             {
               "id": "3",
-              "content": "3. I admired the <u>very large number of</u> stamps in his collection. [ 3 ]",
+              "content": "",
               "options": [],
               "explanation": "multitude (n): a very large number of things.",
               "correctAnswer": "multitude"
             },
             {
               "id": "4",
-              "content": "4. I took some aspirin <u>to make less my</u> back pain. [ 4 ]",
+              "content": "",
               "options": [],
               "explanation": "alleviate (v): to make something less intense or severe.",
               "correctAnswer": "alleviate"
             },
             {
               "id": "5",
-              "content": "5. The countries were concerned about the treaty’s <u>ability to last forever.</u> [ 5 ]",
+              "content": "",
               "options": [],
               "explanation": "permanence (n): the ability to last forever.",
               "correctAnswer": "permanence"
             },
             {
               "id": "6",
-              "content": "6. Australia’s <u>distance from the equator</u> is less extreme than I imagined. [ 6 ]",
+              "content": "",
               "options": [],
               "explanation": "latitude (n): the distance from the equator.",
               "correctAnswer": "latitude"
             },
             {
               "id": "7",
-              "content": "7. I’m still not sure if the <u>math operation I did was correct.</u> [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "equation (n): a math operation to determine the value of something.",
               "correctAnswer": "equation"
             },
             {
               "id": "8",
-              "content": "8. When the rats got out of the cage, the girl was <u>behaving in a wild way because of fear.</u> [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "frantic (adj): behaving in a wild way because of fear.",
               "correctAnswer": "frantic"
             },
             {
               "id": "9",
-              "content": "9. The <u>incorrect or partly correct</u> information gave us the wrong idea about the president. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "erroneous (adj): incorrect or only partly correct.",
               "correctAnswer": "erroneous"
             },
             {
               "id": "10",
-              "content": "10. When he forgot his rope at home, he had to make one <u>using whatever was available.</u> [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "improvise (v): to do something with whatever is available.",
               "correctAnswer": "improvise"
@@ -96,7 +96,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. She loves to <i>improvise</i> peanut butter and jelly sandwiches for lunch.",
+              "content": "She loves to <i>improvise</i> peanut butter and jelly sandwiches for lunch.",
               "options": [
                 "I",
                 "C"
@@ -106,7 +106,7 @@
             },
             {
               "id": "12",
-              "content": "2. Ice packs are sometimes used to <i>alleviate</i> headaches.",
+              "content": "Ice packs are sometimes used to <i>alleviate</i> headaches.",
               "options": [
                 "I",
                 "C"
@@ -116,7 +116,7 @@
             },
             {
               "id": "13",
-              "content": "3. This math book is full of <i>equations</i> for students to practice.",
+              "content": "This math book is full of <i>equations</i> for students to practice.",
               "options": [
                 "I",
                 "C"
@@ -126,7 +126,7 @@
             },
             {
               "id": "14",
-              "content": "4. The expert in <i>astrology</i> went to work every day to study rocks and soil.",
+              "content": "The expert in <i>astrology</i> went to work every day to study rocks and soil.",
               "options": [
                 "I",
                 "C"
@@ -136,7 +136,7 @@
             },
             {
               "id": "15",
-              "content": "5. This math problem is tricky, so be careful not to <i>err</i>.",
+              "content": "This math problem is tricky, so be careful not to <i>err</i>.",
               "options": [
                 "I",
                 "C"
@@ -146,7 +146,7 @@
             },
             {
               "id": "16",
-              "content": "6. The <i>permanence</i> of the flood was gone in a couple of days.",
+              "content": "The <i>permanence</i> of the flood was gone in a couple of days.",
               "options": [
                 "I",
                 "C"
@@ -156,7 +156,7 @@
             },
             {
               "id": "17",
-              "content": "7. After months of planning, the <i>inadvertent</i> decision to sell the company was carried out.",
+              "content": "After months of planning, the <i>inadvertent</i> decision to sell the company was carried out.",
               "options": [
                 "I",
                 "C"
@@ -166,7 +166,7 @@
             },
             {
               "id": "18",
-              "content": "8. The Earth and other planets <i>revolve</i> around the sun.",
+              "content": "The Earth and other planets <i>revolve</i> around the sun.",
               "options": [
                 "I",
                 "C"
@@ -176,7 +176,7 @@
             },
             {
               "id": "19",
-              "content": "9. Two flat tires <i>disrupted</i> our drive to the countryside.",
+              "content": "Two flat tires <i>disrupted</i> our drive to the countryside.",
               "options": [
                 "I",
                 "C"
@@ -186,7 +186,7 @@
             },
             {
               "id": "20",
-              "content": "10. What <i>differentiates</i> Dan from his brother is Dan’s unmatched love of sports.",
+              "content": "What <i>differentiates</i> Dan from his brother is Dan’s unmatched love of sports.",
               "options": [
                 "I",
                 "C"
@@ -212,7 +212,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. Even today, sailors opt to improvise by using Polaris on clear nights.",
+              "content": "Even today, sailors opt to improvise by using Polaris on clear nights.",
               "options": [
                 "F",
                 "T"
@@ -222,7 +222,7 @@
             },
             {
               "id": "22",
-              "content": "2. A ship could become stranded if a captain erred and made an inadvertent wrong turn.",
+              "content": "A ship could become stranded if a captain erred and made an inadvertent wrong turn.",
               "options": [
                 "F",
                 "T"
@@ -232,7 +232,7 @@
             },
             {
               "id": "23",
-              "content": "3. People who are lost can be alleviated by gazing up at a frantic sky.",
+              "content": "People who are lost can be alleviated by gazing up at a frantic sky.",
               "options": [
                 "F",
                 "T"
@@ -242,7 +242,7 @@
             },
             {
               "id": "24",
-              "content": "4. Volatile storms were more than nuisances because they disrupted entire journeys.",
+              "content": "Volatile storms were more than nuisances because they disrupted entire journeys.",
               "options": [
                 "F",
                 "T"
@@ -252,7 +252,7 @@
             },
             {
               "id": "25",
-              "content": "5. It is not difficult to differentiate Polaris from the multitude of other stars in the universe.",
+              "content": "It is not difficult to differentiate Polaris from the multitude of other stars in the universe.",
               "options": [
                 "F",
                 "T"
@@ -270,7 +270,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. How did sailors figure out their latitude?",
+              "content": "How did sailors figure out their latitude?",
               "options": [
                 "They figured out the angle between the star and the horizon.",
                 "They calculated their speed.",
@@ -282,7 +282,7 @@
             },
             {
               "id": "27",
-              "content": "2. What has the permanence of Polaris done for people?",
+              "content": "What has the permanence of Polaris done for people?",
               "options": [
                 "Helped countless people find their destinations.",
                 "Made people blind.",
@@ -294,7 +294,7 @@
             },
             {
               "id": "28",
-              "content": "3. What well-known constellation in astrology revolves around Polaris?",
+              "content": "What well-known constellation in astrology revolves around Polaris?",
               "options": [
                 "The Big Dipper",
                 "Orion",
@@ -306,7 +306,7 @@
             },
             {
               "id": "29",
-              "content": "4. On a cloudy night, when would a mariner finally feel soothed?",
+              "content": "On a cloudy night, when would a mariner finally feel soothed?",
               "options": [
                 "When the clouds cleared and Polaris came back into view.",
                 "When they found a new star.",

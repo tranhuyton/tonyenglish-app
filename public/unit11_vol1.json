@@ -82,31 +82,31 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. The doll broke when it fell onto the <u>floor</u>.<br/>gr [ 6 ]",
+              "content": "<p class=\"mb-4\">The doll broke when it fell onto the <u>floor</u>.<br/>gr [ 6 ]</p><p class=\"mb-4\">I like to <u>use my time</u> taking long walks in the forest.<br/>sp time [ 7 ]</p><p class=\"mb-4\">He loved to <u>travel in his boat</u> to many islands.<br/>sa [ 8 ]</p><p class=\"mb-4\">I <u>stop sleeping</u> when the dog barks.<br/>wa [ 9 ]</p><p class=\"mb-4\">The <u>area</u> was full of trees and plants.<br/>fo [ 10 ]</p>",
               "explanation": "Từ đồng nghĩa với 'floor' (sàn nhà, mặt đất) là 'ground'.",
               "correctAnswer": "ground"
             },
             {
               "id": "7",
-              "content": "2. I like to <u>use my time</u> taking long walks in the forest.<br/>sp time [ 7 ]",
+              "content": "",
               "explanation": "Từ đồng nghĩa với 'use my time' là 'spend'.",
               "correctAnswer": "spend time"
             },
             {
               "id": "8",
-              "content": "3. He loved to <u>travel in his boat</u> to many islands.<br/>sa [ 8 ]",
+              "content": "",
               "explanation": "Từ đồng nghĩa với 'travel in his boat' là 'sail'.",
               "correctAnswer": "sail"
             },
             {
               "id": "9",
-              "content": "4. I <u>stop sleeping</u> when the dog barks.<br/>wa [ 9 ]",
+              "content": "",
               "explanation": "Từ đồng nghĩa với 'stop sleeping' (ngừng ngủ, thức dậy) là 'wake'.",
               "correctAnswer": "wake"
             },
             {
               "id": "10",
-              "content": "5. The <u>area</u> was full of trees and plants.<br/>fo [ 10 ]",
+              "content": "",
               "explanation": "Khu vực nhiều cây cối là 'forest' (rừng).",
               "correctAnswer": "forest"
             }
@@ -120,7 +120,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. To [ 11 ] for the test, I had to study a long time.",
+              "content": "To [ 11 ] for the test, I had to study a long time.",
               "explanation": "Để chuẩn bị cho bài kiểm tra, cần phải học bài lâu (prepare).",
               "correctAnswer": "prepare",
               "options": [
@@ -138,7 +138,7 @@
             },
             {
               "id": "12",
-              "content": "2. Playing with a knife can lead to [ 12 ] injury.",
+              "content": "Playing with a knife can lead to [ 12 ] injury.",
               "explanation": "Chơi với dao có thể dẫn đến vết thương nghiêm trọng (serious).",
               "correctAnswer": "serious",
               "options": [
@@ -156,7 +156,7 @@
             },
             {
               "id": "13",
-              "content": "3. It's [ 13 ] for her to be mean; usually she is very kind.",
+              "content": "It's [ 13 ] for her to be mean; usually she is very kind.",
               "explanation": "Thật kỳ lạ khi cô ấy cư xử xấu tính vì bình thường cô ấy rất tốt (strange).",
               "correctAnswer": "strange",
               "options": [
@@ -174,7 +174,7 @@
             },
             {
               "id": "14",
-              "content": "4. Michael's parents and teacher had a [ 14 ] about his grades.",
+              "content": "Michael's parents and teacher had a [ 14 ] about his grades.",
               "explanation": "Bố mẹ và giáo viên của Michael có một cuộc trò chuyện về điểm số của cậu ấy (conversation).",
               "correctAnswer": "conversation",
               "options": [
@@ -192,7 +192,7 @@
             },
             {
               "id": "15",
-              "content": "5. I [ 15 ] books, and now I have over 500 of them.",
+              "content": "I [ 15 ] books, and now I have over 500 of them.",
               "explanation": "Tôi sưu tầm sách và bây giờ tôi có hơn 500 cuốn (collect).",
               "correctAnswer": "collect",
               "options": [
@@ -210,7 +210,7 @@
             },
             {
               "id": "16",
-              "content": "6. She did not know my name, so I had to [ 16 ] myself.",
+              "content": "She did not know my name, so I had to [ 16 ] myself.",
               "explanation": "Cô ấy không biết tên tôi nên tôi phải tự giới thiệu (introduce).",
               "correctAnswer": "introduce",
               "options": [
@@ -228,7 +228,7 @@
             },
             {
               "id": "17",
-              "content": "7. I had to make a [ 17 ] about which book I wanted to buy.",
+              "content": "I had to make a [ 17 ] about which book I wanted to buy.",
               "explanation": "Tôi phải đưa ra quyết định mua cuốn sách nào (decision).",
               "correctAnswer": "decision",
               "options": [
@@ -246,7 +246,7 @@
             },
             {
               "id": "18",
-              "content": "8. He lies a lot, but I hope he is telling the [ 18 ].",
+              "content": "He lies a lot, but I hope he is telling the [ 18 ].",
               "explanation": "Anh ta nói dối nhiều, nhưng tôi hi vọng anh ta đang nói sự thật (truth).",
               "correctAnswer": "truth",
               "options": [
@@ -264,7 +264,7 @@
             },
             {
               "id": "19",
-              "content": "9. Many countries [ 19 ] in the Olympics every four years.",
+              "content": "Many countries [ 19 ] in the Olympics every four years.",
               "explanation": "Nhiều quốc gia thi đấu ở thế vận hội Olympics mỗi 4 năm một lần (compete).",
               "correctAnswer": "compete",
               "options": [
@@ -282,7 +282,7 @@
             },
             {
               "id": "20",
-              "content": "10. He was so tired that he fell [ 20 ] right away.",
+              "content": "He was so tired that he fell [ 20 ] right away.",
               "explanation": "Anh ấy quá mệt nên đã ngủ thiếp đi ngay lập tức (asleep).",
               "correctAnswer": "asleep",
               "options": [

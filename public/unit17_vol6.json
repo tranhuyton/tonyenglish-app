@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. defect",
+              "content": "defect",
               "options": [
                 "perfect",
                 "broken",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. innovation",
+              "content": "innovation",
               "options": [
                 "obsolete",
                 "cunning",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. accelerate",
+              "content": "accelerate",
               "options": [
                 "speed up",
                 "slow down",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. meteorological",
+              "content": "meteorological",
               "options": [
                 "weather",
                 "past",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. dreary",
+              "content": "dreary",
               "options": [
                 "bright",
                 "fluorescent",
@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. You can hear because sound causes <u>activity in</u> the tiny hairs on the inside of your ear. [ 6 ]",
+              "content": "<p class=\"mb-4\">You can hear because sound causes <u>activity in</u> the tiny hairs on the inside of your ear. [ 6 ]</p><p class=\"mb-4\">Some worms are small enough <u>to enter into</u> the skin without being detected. [ 7 ]</p><p class=\"mb-4\">She tried <u>to copy</u> the way her best friend dressed. [ 8 ]</p><p class=\"mb-4\">The teacher offered the kids candy in order <u>to urge them into</u> finishing their homework. [ 9 ]</p><p class=\"mb-4\">In science class, we learned about the particles in atoms that have <u>a negative electric charge</u>. [ 10 ]</p><p class=\"mb-4\">Every time the children’s fort fell down, they built it <u>again and</u> better. [ 11 ]</p><p class=\"mb-4\">She took classes in <u>the science that studies the weather</u> and became a weatherperson. [ 12 ]</p><p class=\"mb-4\">The small airplane <u>flew without any effort</u> through the sky. [ 13 ]</p><p class=\"mb-4\">A rocket requires a lot of fuel in order to <u>start it into the sky</u>. [ 14 ]</p><p class=\"mb-4\">Amanda is quite an <u>intelligent</u> girl for her young age. [ 15 ]</p>",
               "options": [],
               "explanation": "stimulates means to cause or to increase activity in.",
               "correctAnswer": "stimulates"
             },
             {
               "id": "7",
-              "content": "2. Some worms are small enough <u>to enter into</u> the skin without being detected. [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "penetrate means to enter into it.",
               "correctAnswer": "penetrate"
             },
             {
               "id": "8",
-              "content": "3. She tried <u>to copy</u> the way her best friend dressed. [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "duplicate means to copy it.",
               "correctAnswer": "duplicate"
             },
             {
               "id": "9",
-              "content": "4. The teacher offered the kids candy in order <u>to urge them into</u> finishing their homework. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "spur means to urge them into action.",
               "correctAnswer": "spur"
             },
             {
               "id": "10",
-              "content": "5. In science class, we learned about the particles in atoms that have <u>a negative electric charge</u>. [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "electron is a particle in all atoms that has a negative electric charge.",
               "correctAnswer": "electrons"
             },
             {
               "id": "11",
-              "content": "6. Every time the children’s fort fell down, they built it <u>again and</u> better. [ 11 ]",
+              "content": "",
               "options": [],
               "explanation": "anew means again and in a different way.",
               "correctAnswer": "anew"
             },
             {
               "id": "12",
-              "content": "7. She took classes in <u>the science that studies the weather</u> and became a weatherperson. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "meteorology is the science that studies the weather.",
               "correctAnswer": "meteorology"
             },
             {
               "id": "13",
-              "content": "8. The small airplane <u>flew without any effort</u> through the sky. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "glided means flew on extended wings with little or no effort.",
               "correctAnswer": "glided"
             },
             {
               "id": "14",
-              "content": "9. A rocket requires a lot of fuel in order to <u>start it into the sky</u>. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "launch means to make it go into motion.",
               "correctAnswer": "launch"
             },
             {
               "id": "15",
-              "content": "10. Amanda is quite an <u>intelligent</u> girl for her young age. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "ingenious means very smart.",
               "correctAnswer": "ingenious"
@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Just when you thought you’d caught up to Brian, he’d <i>accelerate</i> and quickly get away.",
+              "content": "Just when you thought you’d caught up to Brian, he’d <i>accelerate</i> and quickly get away.",
               "options": [
                 "C",
                 "I"
@@ -174,7 +174,7 @@
             },
             {
               "id": "17",
-              "content": "2. The orchestra made a very <i>tenacious</i> sound, and many in the audience decided to leave.",
+              "content": "The orchestra made a very <i>tenacious</i> sound, and many in the audience decided to leave.",
               "options": [
                 "C",
                 "I"
@@ -184,7 +184,7 @@
             },
             {
               "id": "18",
-              "content": "3. Dan had <i>duplicated</i> the sculpture exactly. It now looked nothing like the original one.",
+              "content": "Dan had <i>duplicated</i> the sculpture exactly. It now looked nothing like the original one.",
               "options": [
                 "C",
                 "I"
@@ -194,7 +194,7 @@
             },
             {
               "id": "19",
-              "content": "4. Lions are dangerous hunters. They can <i>glide</i> through the air to capture their prey.",
+              "content": "Lions are dangerous hunters. They can <i>glide</i> through the air to capture their prey.",
               "options": [
                 "C",
                 "I"
@@ -204,7 +204,7 @@
             },
             {
               "id": "20",
-              "content": "5. They had a picnic in the park and <i>launched</i> on small sandwiches and grapes.",
+              "content": "They had a picnic in the park and <i>launched</i> on small sandwiches and grapes.",
               "options": [
                 "C",
                 "I"
@@ -214,7 +214,7 @@
             },
             {
               "id": "21",
-              "content": "6. We made a small toy train that <i>stimulated</i> how real trains worked 100 years ago.",
+              "content": "We made a small toy train that <i>stimulated</i> how real trains worked 100 years ago.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +224,7 @@
             },
             {
               "id": "22",
-              "content": "7. Cellular phones are one of the most popular <i>innovations</i> in the world today.",
+              "content": "Cellular phones are one of the most popular <i>innovations</i> in the world today.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +234,7 @@
             },
             {
               "id": "23",
-              "content": "8. The knight’s sword could not <i>penetrate</i> his opponent’s armor.",
+              "content": "The knight’s sword could not <i>penetrate</i> his opponent’s armor.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +244,7 @@
             },
             {
               "id": "24",
-              "content": "9. The thought of his warm bed <i>spurred</i> the traveler on through the cold night.",
+              "content": "The thought of his warm bed <i>spurred</i> the traveler on through the cold night.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +254,7 @@
             },
             {
               "id": "25",
-              "content": "10. We didn’t mind that our paintings got ruined. It was fun to start them <i>anew</i>.",
+              "content": "We didn’t mind that our paintings got ruined. It was fun to start them <i>anew</i>.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +264,7 @@
             },
             {
               "id": "26",
-              "content": "11. Satellites are very important for gathering <i>meteorological</i> data.",
+              "content": "Satellites are very important for gathering <i>meteorological</i> data.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +274,7 @@
             },
             {
               "id": "27",
-              "content": "12. Fish use their fins for <i>propulsion</i> in the water.",
+              "content": "Fish use their fins for <i>propulsion</i> in the water.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +284,7 @@
             },
             {
               "id": "28",
-              "content": "13. I wish Dad wasn’t so <i>innovative</i>. He always comes into my room without knocking.",
+              "content": "I wish Dad wasn’t so <i>innovative</i>. He always comes into my room without knocking.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +294,7 @@
             },
             {
               "id": "29",
-              "content": "14. Some metals are attracted to other metals due to an <i>electromagnetic</i> force.",
+              "content": "Some metals are attracted to other metals due to an <i>electromagnetic</i> force.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +304,7 @@
             },
             {
               "id": "30",
-              "content": "15. Certain kinds of light can <i>simulate</i> flowers into producing seeds earlier than usual.",
+              "content": "Certain kinds of light can <i>simulate</i> flowers into producing seeds earlier than usual.",
               "options": [
                 "C",
                 "I"
@@ -314,7 +314,7 @@
             },
             {
               "id": "31",
-              "content": "16. John is so <i>ingenious</i>. He hasn’t passed a single test so far this year.",
+              "content": "John is so <i>ingenious</i>. He hasn’t passed a single test so far this year.",
               "options": [
                 "C",
                 "I"
@@ -324,7 +324,7 @@
             },
             {
               "id": "32",
-              "content": "17. I’ve always been interested in meteors. That’s why I want to study <i>meteorology</i>.",
+              "content": "I’ve always been interested in meteors. That’s why I want to study <i>meteorology</i>.",
               "options": [
                 "C",
                 "I"
@@ -334,7 +334,7 @@
             },
             {
               "id": "33",
-              "content": "18. The lake was frightening. The water was still and <i>dreary</i>.",
+              "content": "The lake was frightening. The water was still and <i>dreary</i>.",
               "options": [
                 "C",
                 "I"
@@ -344,7 +344,7 @@
             },
             {
               "id": "34",
-              "content": "19. Everyone who voted in the <i>electron</i> was given the day off of work.",
+              "content": "Everyone who voted in the <i>electron</i> was given the day off of work.",
               "options": [
                 "C",
                 "I"
@@ -354,7 +354,7 @@
             },
             {
               "id": "35",
-              "content": "20. The new pot looked perfect. It was covered in new, shiny <i>defects</i>.",
+              "content": "The new pot looked perfect. It was covered in new, shiny <i>defects</i>.",
               "options": [
                 "C",
                 "I"
@@ -380,7 +380,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The student of meteorology had bought a device that simulated lightning in clouds.",
+              "content": "The student of meteorology had bought a device that simulated lightning in clouds.",
               "options": [
                 "T",
                 "F"
@@ -390,7 +390,7 @@
             },
             {
               "id": "37",
-              "content": "2. The electromagnetic pulse stimulated the electrons in the cloud’s particles.",
+              "content": "The electromagnetic pulse stimulated the electrons in the cloud’s particles.",
               "options": [
                 "T",
                 "F"
@@ -400,7 +400,7 @@
             },
             {
               "id": "38",
-              "content": "3. The student’s friends’ criticisms spurred him to try his experiment anew.",
+              "content": "The student’s friends’ criticisms spurred him to try his experiment anew.",
               "options": [
                 "T",
                 "F"
@@ -410,7 +410,7 @@
             },
             {
               "id": "39",
-              "content": "4. It was a dreary day when the device glided into the clouds.",
+              "content": "It was a dreary day when the device glided into the clouds.",
               "options": [
                 "T",
                 "F"
@@ -420,7 +420,7 @@
             },
             {
               "id": "40",
-              "content": "5. The propulsion of the rocket accelerated the speed of the lightning.",
+              "content": "The propulsion of the rocket accelerated the speed of the lightning.",
               "options": [
                 "T",
                 "F"
@@ -438,7 +438,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. What was the defect of the student’s meteorological experiment?",
+              "content": "What was the defect of the student’s meteorological experiment?",
               "options": [
                 "It couldn't get into the sky.",
                 "It was too expensive.",
@@ -450,7 +450,7 @@
             },
             {
               "id": "42",
-              "content": "2. What innovation did the innovative student use to launch his device into the clouds?",
+              "content": "What innovation did the innovative student use to launch his device into the clouds?",
               "options": [
                 "He placed the device on a rocket and launched it into the sky.",
                 "He shot it from a cannon.",
@@ -462,7 +462,7 @@
             },
             {
               "id": "43",
-              "content": "3. For whom did the student duplicate his ingenious experiment?",
+              "content": "For whom did the student duplicate his ingenious experiment?",
               "options": [
                 "His professors.",
                 "His friends.",
@@ -474,7 +474,7 @@
             },
             {
               "id": "44",
-              "content": "4. What did the device do when it finally penetrated the center of a large black cloud?",
+              "content": "What did the device do when it finally penetrated the center of a large black cloud?",
               "options": [
                 "It emitted the electromagnetic pulse.",
                 "It exploded.",
@@ -486,7 +486,7 @@
             },
             {
               "id": "45",
-              "content": "5. What happened to the student because he was tenacious?",
+              "content": "What happened to the student because he was tenacious?",
               "options": [
                 "He succeeded and became a famous inventor.",
                 "He gave up and studied something else.",

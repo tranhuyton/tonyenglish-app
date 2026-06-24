@@ -12,31 +12,31 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Sam was happy to <u>go back to</u> his house.<br/>re [ 1 ]",
+              "content": "<p class=\"mb-4\">Sam was happy to <u>go back to</u> his house.<br/>re [ 1 ]</p><p class=\"mb-4\">Her grandfather is a <u>smart</u> old man.<br/>wi [ 2 ]</p><p class=\"mb-4\">William wanted an <u>animal to live with</u>.<br/>pe [ 3 ]</p><p class=\"mb-4\">He studies what the <u>condition of the air</u> is like.<br/>we [ 4 ]</p><p class=\"mb-4\">I have to <u>deal with</u> my rising credit card bill.<br/>fa [ 5 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "return"
             },
             {
               "id": "2",
-              "content": "2. Her grandfather is a <u>smart</u> old man.<br/>wi [ 2 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "wise"
             },
             {
               "id": "3",
-              "content": "3. William wanted an <u>animal to live with</u>.<br/>pe [ 3 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "pet"
             },
             {
               "id": "4",
-              "content": "4. He studies what the <u>condition of the air</u> is like.<br/>we [ 4 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "weather"
             },
             {
               "id": "5",
-              "content": "5. I have to <u>deal with</u> my rising credit card bill.<br/>fa [ 5 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "face"
             }
@@ -50,7 +50,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">1. fright / ghost</p>The [ 6 ] lives in the old house.</p>A scary place might cause [ 7 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. dead / upset</p>The tree fell down because it was [ 8 ].</p>I was [ 9 ] when I got a bad grade on the test.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. advantage / reached</p>After 10 hours of driving, I finally [ 10 ] California.</p>He is smart and has a(n) [ 11 ] in class.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. escape / distance</p>He wanted to [ 12 ] from the room.</p>He lived a long [ 13 ] from the school.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. community / individual</p>The man is a nice [ 14 ].</p>The town is a small [ 15 ].</p>",
+              "content": "<p class=\"mb-4\">fright / ghost</p>The [ 6 ] lives in the old house.</p>A scary place might cause [ 7 ].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. dead / upset</p>The tree fell down because it was [ 8 ].</p>I was [ 9 ] when I got a bad grade on the test.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. advantage / reached</p>After 10 hours of driving, I finally [ 10 ] California.</p>He is smart and has a(n) [ 11 ] in class.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. escape / distance</p>He wanted to [ 12 ] from the room.</p>He lived a long [ 13 ] from the school.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. community / individual</p>The man is a nice [ 14 ].</p>The town is a small [ 15 ].</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "ghost",
               "options": [

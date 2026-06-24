@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Which would need to be supervised?",
+              "content": "Which would need to be supervised?",
               "options": [
                 "A car",
                 "An experienced pilot",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. What is most likely something that is situated?",
+              "content": "What is most likely something that is situated?",
               "options": [
                 "A building",
                 "An apology",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. What is something you can be appointed to?",
+              "content": "What is something you can be appointed to?",
               "options": [
                 "A television",
                 "A job",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. If someone confers with another person, ______ .",
+              "content": "If someone confers with another person, ______ .",
               "options": [
                 "they fight",
                 "they eat",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. What is something that might be a cube?",
+              "content": "What is something that might be a cube?",
               "options": [
                 "A box",
                 "A shirt",
@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. I feel the best when the hours I sleep are <u>one after another without interruption</u>. [ 6 ]",
+              "content": "<p class=\"mb-4\">I feel the best when the hours I sleep are <u>one after another without interruption</u>. [ 6 ]</p><p class=\"mb-4\">Even though he was young, the boy’s facial features were <u>qualities related to men</u>. [ 7 ]</p><p class=\"mb-4\">My girlfriend and I are happy because we are <u>successful at existing together</u>. [ 8 ]</p><p class=\"mb-4\">The <u>strong and fit</u> fireman carried the children out of the burning building. [ 9 ]</p><p class=\"mb-4\">The <u>college student</u> handbook lists the classes I need to take to get my degree. [ 10 ]</p><p class=\"mb-4\">My mother was shocked when she found out I had a <u>permanent drawing on my skin</u>. [ 11 ]</p><p class=\"mb-4\">The first thing Al noticed about the new employee was his bad <u>standing position</u>. [ 12 ]</p><p class=\"mb-4\">This snowflake has <u>perfect halves that are the exact same</u> but mirror images. [ 13 ]</p><p class=\"mb-4\">He was embarrassed by his <u>lack of knowledge</u>. [ 14 ]</p><p class=\"mb-4\">The <u>not exact or detailed</u> measurements turned out to be good enough. [ 15 ]</p>",
               "options": [],
               "explanation": "\"one after another without interruption\" (liên tiếp nhau không ngắt quãng) tương đương với \"consecutive\".",
               "correctAnswer": "consecutive"
             },
             {
               "id": "7",
-              "content": "2. Even though he was young, the boy’s facial features were <u>qualities related to men</u>. [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "\"qualities related to men\" (phẩm chất liên quan đến nam giới) là \"masculine\" (nam tính).",
               "correctAnswer": "masculine"
             },
             {
               "id": "8",
-              "content": "3. My girlfriend and I are happy because we are <u>successful at existing together</u>. [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "\"successful at existing together\" (tồn tại cùng nhau thành công) là \"compatible\" (tương thích, hòa hợp).",
               "correctAnswer": "compatible"
             },
             {
               "id": "9",
-              "content": "4. The <u>strong and fit</u> fireman carried the children out of the burning building. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "\"strong and fit\" (khỏe và cân đối) tương đương với \"muscular\" (vạm vỡ, cơ bắp).",
               "correctAnswer": "muscular"
             },
             {
               "id": "10",
-              "content": "5. The <u>college student</u> handbook lists the classes I need to take to get my degree. [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "\"college student\" (sinh viên đại học) tương đương với \"undergraduate\" (sinh viên chưa tốt nghiệp đại học).",
               "correctAnswer": "undergraduate"
             },
             {
               "id": "11",
-              "content": "6. My mother was shocked when she found out I had a <u>permanent drawing on my skin</u>. [ 11 ]",
+              "content": "",
               "options": [],
               "explanation": "\"permanent drawing on my skin\" (hình vẽ vĩnh viễn trên da) là \"tattoo\" (hình xăm).",
               "correctAnswer": "tattoo"
             },
             {
               "id": "12",
-              "content": "7. The first thing Al noticed about the new employee was his bad <u>standing position</u>. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "\"standing position\" (tư thế đứng) tương đương với \"posture\" (tư thế).",
               "correctAnswer": "posture"
             },
             {
               "id": "13",
-              "content": "8. This snowflake has <u>perfect halves that are the exact same</u> but mirror images. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "\"halves that are the exact same\" (các nửa giống hệt nhau) là sự đối xứng (\"symmetry\").",
               "correctAnswer": "symmetry"
             },
             {
               "id": "14",
-              "content": "9. He was embarrassed by his <u>lack of knowledge</u>. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "\"lack of knowledge\" (thiếu kiến thức) tương đương với \"ignorance\" (sự ngu dốt, thiếu hiểu biết).",
               "correctAnswer": "ignorance"
             },
             {
               "id": "15",
-              "content": "10. The <u>not exact or detailed</u> measurements turned out to be good enough. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "\"not exact or detailed\" (không chính xác hoặc không chi tiết) là \"crude\" (sơ sài, thô).",
               "correctAnswer": "crude"
@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. The undergraduate program at our school includes several possible degrees.",
+              "content": "The undergraduate program at our school includes several possible degrees.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -174,7 +174,7 @@
             },
             {
               "id": "17",
-              "content": "2. She conferred with her coworkers before presenting their work to the boss.",
+              "content": "She conferred with her coworkers before presenting their work to the boss.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -184,7 +184,7 @@
             },
             {
               "id": "18",
-              "content": "3. The rain made a cube on the grass.",
+              "content": "The rain made a cube on the grass.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -194,7 +194,7 @@
             },
             {
               "id": "19",
-              "content": "4. The tattoo appeared very dark on her light-colored skin.",
+              "content": "The tattoo appeared very dark on her light-colored skin.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -204,7 +204,7 @@
             },
             {
               "id": "20",
-              "content": "5. Our teacher was quick to give us feedback on our homework.",
+              "content": "Our teacher was quick to give us feedback on our homework.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -214,7 +214,7 @@
             },
             {
               "id": "21",
-              "content": "6. The wall was situated in the north part of the yard.",
+              "content": "The wall was situated in the north part of the yard.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -224,7 +224,7 @@
             },
             {
               "id": "22",
-              "content": "7. The baby supervised her mother in the store.",
+              "content": "The baby supervised her mother in the store.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -234,7 +234,7 @@
             },
             {
               "id": "23",
-              "content": "8. The symmetry of the flower arrangement made it look very attractive.",
+              "content": "The symmetry of the flower arrangement made it look very attractive.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -244,7 +244,7 @@
             },
             {
               "id": "24",
-              "content": "9. The angry father applauded his son when he got in trouble at school.",
+              "content": "The angry father applauded his son when he got in trouble at school.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -254,7 +254,7 @@
             },
             {
               "id": "25",
-              "content": "10. The manager needed an assistant. She appointed Bill to the new position.",
+              "content": "The manager needed an assistant. She appointed Bill to the new position.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -264,7 +264,7 @@
             },
             {
               "id": "26",
-              "content": "11. The masculine girl looked very pretty in her new dress.",
+              "content": "The masculine girl looked very pretty in her new dress.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -274,7 +274,7 @@
             },
             {
               "id": "27",
-              "content": "12. In the final revision, he made sure his work was crude.",
+              "content": "In the final revision, he made sure his work was crude.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -284,7 +284,7 @@
             },
             {
               "id": "28",
-              "content": "13. The captain ordered the sailor to have better posture.",
+              "content": "The captain ordered the sailor to have better posture.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -294,7 +294,7 @@
             },
             {
               "id": "29",
-              "content": "14. The muscular movie star always got the role of the superhero in the movie.",
+              "content": "The muscular movie star always got the role of the superhero in the movie.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -304,7 +304,7 @@
             },
             {
               "id": "30",
-              "content": "15. On our trip, we visited the monument built for George Washington.",
+              "content": "On our trip, we visited the monument built for George Washington.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -314,7 +314,7 @@
             },
             {
               "id": "31",
-              "content": "16. His ignorance led him to the final round of the tournament.",
+              "content": "His ignorance led him to the final round of the tournament.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -324,7 +324,7 @@
             },
             {
               "id": "32",
-              "content": "17. My favorite subject in college was anthropology.",
+              "content": "My favorite subject in college was anthropology.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -334,7 +334,7 @@
             },
             {
               "id": "33",
-              "content": "18. She leaves the lights on at night because of her competence for the dark.",
+              "content": "She leaves the lights on at night because of her competence for the dark.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -344,7 +344,7 @@
             },
             {
               "id": "34",
-              "content": "19. When the couple got divorced, it was clear that they were compatible.",
+              "content": "When the couple got divorced, it was clear that they were compatible.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -354,7 +354,7 @@
             },
             {
               "id": "35",
-              "content": "20. Our basketball team won the championship for three consecutive years.",
+              "content": "Our basketball team won the championship for three consecutive years.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -380,7 +380,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Mark’s masculine features included a mustache and a muscular body.",
+              "content": "Mark’s masculine features included a mustache and a muscular body.",
               "options": [
                 "True",
                 "False",
@@ -391,7 +391,7 @@
             },
             {
               "id": "37",
-              "content": "2. John laughed at Pharaoh Tut’s ignorance.",
+              "content": "John laughed at Pharaoh Tut’s ignorance.",
               "options": [
                 "True",
                 "False",
@@ -402,7 +402,7 @@
             },
             {
               "id": "38",
-              "content": "3. John appointed himself to supervise Mark’s work and give him feedback about posture and symmetry.",
+              "content": "John appointed himself to supervise Mark’s work and give him feedback about posture and symmetry.",
               "options": [
                 "True",
                 "False",
@@ -413,7 +413,7 @@
             },
             {
               "id": "39",
-              "content": "4. Mark made crude measurements and situated a tattoo on his original monument’s chest.",
+              "content": "Mark made crude measurements and situated a tattoo on his original monument’s chest.",
               "options": [
                 "True",
                 "False",
@@ -424,7 +424,7 @@
             },
             {
               "id": "40",
-              "content": "5. John was an undergraduate who studied sculpture and anthropology.",
+              "content": "John was an undergraduate who studied sculpture and anthropology.",
               "options": [
                 "True",
                 "False",
@@ -443,7 +443,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. Why did everyone applaud the brothers after ten consecutive hours?",
+              "content": "Why did everyone applaud the brothers after ten consecutive hours?",
               "options": [
                 "They were applauded for their hard work.",
                 "They sang a song.",
@@ -455,7 +455,7 @@
             },
             {
               "id": "42",
-              "content": "2. What did Mark think he had the competence to do?",
+              "content": "What did Mark think he had the competence to do?",
               "options": [
                 "He thought he could write a book.",
                 "He thought he could build a good statue.",
@@ -467,7 +467,7 @@
             },
             {
               "id": "43",
-              "content": "3. What did John explain to Mark after Mark got another cube of stone?",
+              "content": "What did John explain to Mark after Mark got another cube of stone?",
               "options": [
                 "John told him what Tut looked like.",
                 "John told him to go home.",
@@ -479,7 +479,7 @@
             },
             {
               "id": "44",
-              "content": "4. What did Mark confer with John about?",
+              "content": "What did Mark confer with John about?",
               "options": [
                 "About the weather.",
                 "About every detail.",
@@ -491,7 +491,7 @@
             },
             {
               "id": "45",
-              "content": "5. What did John say when he found out that he was compatible with his brother?",
+              "content": "What did John say when he found out that he was compatible with his brother?",
               "options": [
                 "He said he hated him.",
                 "When we put our talents together, we are capable of greatness.",

@@ -208,31 +208,31 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. My day at school was <u>not strange</u>.<br/>no [ 16 ]",
+              "content": "<p class=\"mb-4\">My day at school was <u>not strange</u>.<br/>no [ 16 ]</p><p class=\"mb-4\">The bird was <u>from nature</u>.<br/>wi [ 17 ]</p><p class=\"mb-4\">Sorry I can’t come; I’m <u>feeling discomfort in my body</u>.<br/>hu [ 18 ]</p><p class=\"mb-4\">He’s going to <u>rest</u> instead of going to the movie.<br/>re [ 19 ]</p><p class=\"mb-4\">The man walked through a <u>large area of land</u>.<br/>fi [ 20 ]</p>",
               "explanation": "normal có nghĩa tương tự 'not strange'.",
               "correctAnswer": "normal"
             },
             {
               "id": "17",
-              "content": "2. The bird was <u>from nature</u>.<br/>wi [ 17 ]",
+              "content": "",
               "explanation": "wild có nghĩa tương tự 'from nature'.",
               "correctAnswer": "wild"
             },
             {
               "id": "18",
-              "content": "3. Sorry I can’t come; I’m <u>feeling discomfort in my body</u>.<br/>hu [ 18 ]",
+              "content": "",
               "explanation": "hurt có nghĩa tương tự 'discomfort in my body'.",
               "correctAnswer": "hurt"
             },
             {
               "id": "19",
-              "content": "4. He’s going to <u>rest</u> instead of going to the movie.<br/>re [ 19 ]",
+              "content": "",
               "explanation": "relax có nghĩa tương tự 'rest'.",
               "correctAnswer": "relax"
             },
             {
               "id": "20",
-              "content": "5. The man walked through a <u>large area of land</u>.<br/>fi [ 20 ]",
+              "content": "",
               "explanation": "field có nghĩa tương tự 'large area of land'.",
               "correctAnswer": "field"
             }

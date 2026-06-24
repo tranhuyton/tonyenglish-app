@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. My new desk is made of [ 6 ] .",
+              "content": "My new desk is made of [ 6 ] .",
               "explanation": "desk made of wood (gỗ).",
               "correctAnswer": "wood",
               "options": [
@@ -93,7 +93,7 @@
             },
             {
               "id": "7",
-              "content": "2. Students must start class at 9:00 each morning. This is the school's [ 7 ] .",
+              "content": "Students must start class at 9:00 each morning. This is the school's [ 7 ] .",
               "explanation": "rule (quy định) -> policy.",
               "correctAnswer": "policy",
               "options": [
@@ -106,7 +106,7 @@
             },
             {
               "id": "8",
-              "content": "3. There are over 500 people on the hospital's [ 8 ] .",
+              "content": "There are over 500 people on the hospital's [ 8 ] .",
               "explanation": "people working -> staff (nhân viên).",
               "correctAnswer": "staff",
               "options": [
@@ -119,7 +119,7 @@
             },
             {
               "id": "9",
-              "content": "4. Go [ 9 ] the river, but stop before you get in the water!",
+              "content": "Go [ 9 ] the river, but stop before you get in the water!",
               "explanation": "hướng về phía -> toward.",
               "correctAnswer": "toward",
               "options": [
@@ -132,7 +132,7 @@
             },
             {
               "id": "10",
-              "content": "5. The president gave a [ 10 ] last night.",
+              "content": "The president gave a [ 10 ] last night.",
               "explanation": "give a speech (bài phát biểu).",
               "correctAnswer": "speech",
               "options": [
@@ -153,31 +153,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. He gave a <u>talk</u> to a group of people at the meeting.<br/>sp [ 11 ]",
+              "content": "<p class=\"mb-4\">He gave a <u>talk</u> to a group of people at the meeting.<br/>sp [ 11 ]</p><p class=\"mb-4\">Did anyone <u>make the effort</u> to do their homework?<br/>bo [ 12 ]</p><p class=\"mb-4\">The chair is made of <u>the material trees are made of</u>.<br/>wo [ 13 ]</p><p class=\"mb-4\">The <u>group of workers</u> helped him with his work.<br/>st [ 14 ]</p><p class=\"mb-4\">He is <u>not dead</u>; I saw him yesterday.<br/>al [ 15 ]</p>",
               "explanation": "talk to a group -> speech.",
               "correctAnswer": "speech"
             },
             {
               "id": "12",
-              "content": "2. Did anyone <u>make the effort</u> to do their homework?<br/>bo [ 12 ]",
+              "content": "",
               "explanation": "make the effort -> bother.",
               "correctAnswer": "bother"
             },
             {
               "id": "13",
-              "content": "3. The chair is made of <u>the material trees are made of</u>.<br/>wo [ 13 ]",
+              "content": "",
               "explanation": "material trees are made of -> wood.",
               "correctAnswer": "wood"
             },
             {
               "id": "14",
-              "content": "4. The <u>group of workers</u> helped him with his work.<br/>st [ 14 ]",
+              "content": "",
               "explanation": "group of workers -> staff.",
               "correctAnswer": "staff"
             },
             {
               "id": "15",
-              "content": "5. He is <u>not dead</u>; I saw him yesterday.<br/>al [ 15 ]",
+              "content": "",
               "explanation": "not dead -> alive.",
               "correctAnswer": "alive"
             }
@@ -191,7 +191,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. My teacher's name is Mrs. Smith. Yesterday, she gave a [ 16 ] to our class.",
+              "content": "My teacher's name is Mrs. Smith. Yesterday, she gave a [ 16 ] to our class.",
               "explanation": "gave a speech.",
               "correctAnswer": "speech",
               "options": [
@@ -209,7 +209,7 @@
             },
             {
               "id": "17",
-              "content": "2. She said there was a new [ 17 ] about the school diet.",
+              "content": "She said there was a new [ 17 ] about the school diet.",
               "explanation": "new policy (quy định).",
               "correctAnswer": "policy",
               "options": [
@@ -227,7 +227,7 @@
             },
             {
               "id": "18",
-              "content": "3. The school's [ 18 ] decided that their students didn't eat healthily.",
+              "content": "The school's [ 18 ] decided that their students didn't eat healthily.",
               "explanation": "school staff (nhân viên).",
               "correctAnswer": "staff",
               "options": [
@@ -245,7 +245,7 @@
             },
             {
               "id": "19",
-              "content": "4. She said milk gives our bodies stronger [ 19 ] .",
+              "content": "She said milk gives our bodies stronger [ 19 ] .",
               "explanation": "stronger bones (xương).",
               "correctAnswer": "bones",
               "options": [
@@ -263,7 +263,7 @@
             },
             {
               "id": "20",
-              "content": "5. She also [ 20 ] that sugar is bad for us.",
+              "content": "She also [ 20 ] that sugar is bad for us.",
               "explanation": "mentioned (nhắc đến).",
               "correctAnswer": "mentioned",
               "options": [
@@ -281,7 +281,7 @@
             },
             {
               "id": "21",
-              "content": "6. She said she had no [ 21 ] that we would all feel better.",
+              "content": "She said she had no [ 21 ] that we would all feel better.",
               "explanation": "no doubt (không nghi ngờ).",
               "correctAnswer": "doubt",
               "options": [
@@ -299,7 +299,7 @@
             },
             {
               "id": "22",
-              "content": "7. We all thought that it was an [ 22 ] .",
+              "content": "We all thought that it was an [ 22 ] .",
               "explanation": "an injustice (sự bất công).",
               "correctAnswer": "injustice",
               "options": [
@@ -317,7 +317,7 @@
             },
             {
               "id": "23",
-              "content": "8. But at the [ 23 ] of class, she told us one more thing, 'It was a joke!'",
+              "content": "But at the [ 23 ] of class, she told us one more thing, 'It was a joke!'",
               "explanation": "at the conclusion (cuối).",
               "correctAnswer": "conclusion",
               "options": [
@@ -335,7 +335,7 @@
             },
             {
               "id": "24",
-              "content": "9. [ 24 ] , no one thought that it was very funny.",
+              "content": "[ 24 ] , no one thought that it was very funny.",
               "explanation": "however (tuy nhiên).",
               "correctAnswer": "however",
               "options": [
@@ -353,7 +353,7 @@
             },
             {
               "id": "25",
-              "content": "10. And no students [ 25 ] to laugh.",
+              "content": "And no students [ 25 ] to laugh.",
               "explanation": "bothered to laugh (bận tâm cười).",
               "correctAnswer": "bothered",
               "options": [

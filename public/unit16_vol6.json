@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. culprit",
+              "content": "culprit",
               "options": [
                 "a. sewer",
                 "b. engine",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. segregate",
+              "content": "segregate",
               "options": [
                 "a. defend",
                 "b. whisper",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. uproar",
+              "content": "uproar",
               "options": [
                 "a. calm",
                 "b. particle",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. clumsy",
+              "content": "clumsy",
               "options": [
                 "a. helpful",
                 "b. quick",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. premature",
+              "content": "premature",
               "options": [
                 "a. smart",
                 "b. late",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. When they canceled the show, there was a great ________ from the crowd.",
+              "content": "When they canceled the show, there was a great ________ from the crowd.",
               "options": [
                 "uproar",
                 "clumsy",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "2. It was so loud that the actors could hear it ________ .",
+              "content": "It was so loud that the actors could hear it ________ .",
               "options": [
                 "backstage",
                 "segregated",
@@ -110,7 +110,7 @@
             },
             {
               "id": "8",
-              "content": "3. He placed the rags ________ the pile of logs.",
+              "content": "He placed the rags ________ the pile of logs.",
               "options": [
                 "amid",
                 "underestimate",
@@ -122,7 +122,7 @@
             },
             {
               "id": "9",
-              "content": "4. The rags were very ________ and would help start the fire.",
+              "content": "The rags were very ________ and would help start the fire.",
               "options": [
                 "flammable",
                 "backstage",
@@ -134,7 +134,7 @@
             },
             {
               "id": "10",
-              "content": "5. I wouldn’t ________ that man’s class just by the way he talks and dresses.",
+              "content": "I wouldn’t ________ that man’s class just by the way he talks and dresses.",
               "options": [
                 "underestimate",
                 "billionaire",
@@ -146,7 +146,7 @@
             },
             {
               "id": "11",
-              "content": "6. I’ve heard that he is actually a(n) ________ .",
+              "content": "I’ve heard that he is actually a(n) ________ .",
               "options": [
                 "billionaire",
                 "flammable",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "7. It might have been ________ of her to walk so soon after the operation.",
+              "content": "It might have been ________ of her to walk so soon after the operation.",
               "options": [
                 "premature",
                 "uproar",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "8. Her movements were very ________, and she might have hurt herself.",
+              "content": "Her movements were very ________, and she might have hurt herself.",
               "options": [
                 "clumsy",
                 "underestimate",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "9. The police officer ________ the people into two groups.",
+              "content": "The police officer ________ the people into two groups.",
               "options": [
                 "segregated",
                 "culprits",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "10. One group was innocent people, and the other was the ________.",
+              "content": "One group was innocent people, and the other was the ________.",
               "options": [
                 "culprits",
                 "uproar",
@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. mob",
+              "content": "mob",
               "options": [
                 "a. broom",
                 "b. crowd",
@@ -226,7 +226,7 @@
             },
             {
               "id": "17",
-              "content": "2. tumult",
+              "content": "tumult",
               "options": [
                 "a. plan",
                 "b. gate",
@@ -238,7 +238,7 @@
             },
             {
               "id": "18",
-              "content": "3. brute",
+              "content": "brute",
               "options": [
                 "a. monster",
                 "b. camera",
@@ -250,7 +250,7 @@
             },
             {
               "id": "19",
-              "content": "4. resent",
+              "content": "resent",
               "options": [
                 "a. buy",
                 "b. lose",
@@ -262,7 +262,7 @@
             },
             {
               "id": "20",
-              "content": "5. scrutiny",
+              "content": "scrutiny",
               "options": [
                 "a. tower",
                 "b. part",
@@ -274,7 +274,7 @@
             },
             {
               "id": "21",
-              "content": "6. testify",
+              "content": "testify",
               "options": [
                 "a. learn",
                 "b. solve",
@@ -286,7 +286,7 @@
             },
             {
               "id": "22",
-              "content": "7. collide",
+              "content": "collide",
               "options": [
                 "a. sing",
                 "b. crash",
@@ -298,7 +298,7 @@
             },
             {
               "id": "23",
-              "content": "8. subject",
+              "content": "subject",
               "options": [
                 "a. force",
                 "b. show",
@@ -310,7 +310,7 @@
             },
             {
               "id": "24",
-              "content": "9. evacuate",
+              "content": "evacuate",
               "options": [
                 "a. leave",
                 "b. suck",
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "10. satire",
+              "content": "satire",
               "options": [
                 "a. supper",
                 "b. promise",
@@ -342,7 +342,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. We had very little time to <i>evacuate</i> the building before the earthquake.",
+              "content": "We had very little time to <i>evacuate</i> the building before the earthquake.",
               "options": [
                 "C",
                 "I"
@@ -352,7 +352,7 @@
             },
             {
               "id": "27",
-              "content": "2. The guards sometimes <i>subjected</i> the prisoners to unfair punishments.",
+              "content": "The guards sometimes <i>subjected</i> the prisoners to unfair punishments.",
               "options": [
                 "C",
                 "I"
@@ -362,7 +362,7 @@
             },
             {
               "id": "28",
-              "content": "3. Some people like to watch action movies. But I enjoy a good <i>satire</i>.",
+              "content": "Some people like to watch action movies. But I enjoy a good <i>satire</i>.",
               "options": [
                 "C",
                 "I"
@@ -372,7 +372,7 @@
             },
             {
               "id": "29",
-              "content": "4. When we heard the phone <i>collide</i>, we thought it was our uncle calling us.",
+              "content": "When we heard the phone <i>collide</i>, we thought it was our uncle calling us.",
               "options": [
                 "C",
                 "I"
@@ -382,7 +382,7 @@
             },
             {
               "id": "30",
-              "content": "5. We whispered very quietly in all the <i>tumult</i>, or someone might have easily heard us.",
+              "content": "We whispered very quietly in all the <i>tumult</i>, or someone might have easily heard us.",
               "options": [
                 "C",
                 "I"
@@ -392,7 +392,7 @@
             },
             {
               "id": "31",
-              "content": "6. The women loved the <i>brute</i> because he was so kind and gentle.",
+              "content": "The women loved the <i>brute</i> because he was so kind and gentle.",
               "options": [
                 "C",
                 "I"
@@ -402,7 +402,7 @@
             },
             {
               "id": "32",
-              "content": "7. My brother was one of the angry people in the <i>mob</i> that day.",
+              "content": "My brother was one of the angry people in the <i>mob</i> that day.",
               "options": [
                 "C",
                 "I"
@@ -412,7 +412,7 @@
             },
             {
               "id": "33",
-              "content": "8. Her father had to <i>testify</i> in court about the car accident he saw.",
+              "content": "Her father had to <i>testify</i> in court about the car accident he saw.",
               "options": [
                 "C",
                 "I"
@@ -422,7 +422,7 @@
             },
             {
               "id": "34",
-              "content": "9. I tried to solve the math problem several times and finally <i>resented</i> it in the morning.",
+              "content": "I tried to solve the math problem several times and finally <i>resented</i> it in the morning.",
               "options": [
                 "C",
                 "I"
@@ -432,7 +432,7 @@
             },
             {
               "id": "35",
-              "content": "10. He has several large homes and his own airplane because he’s a <i>billionaire</i>.",
+              "content": "He has several large homes and his own airplane because he’s a <i>billionaire</i>.",
               "options": [
                 "C",
                 "I"
@@ -458,7 +458,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. The performance was a satire of Communism.",
+              "content": "The performance was a satire of Communism.",
               "options": [
                 "T",
                 "F"
@@ -468,7 +468,7 @@
             },
             {
               "id": "37",
-              "content": "2. The billionaire and the play’s star actress were the only two people backstage.",
+              "content": "The billionaire and the play’s star actress were the only two people backstage.",
               "options": [
                 "T",
                 "F"
@@ -478,7 +478,7 @@
             },
             {
               "id": "38",
-              "content": "3. Because Henry looked like a brute, the crowd underestimated his character.",
+              "content": "Because Henry looked like a brute, the crowd underestimated his character.",
               "options": [
                 "T",
                 "F"
@@ -488,7 +488,7 @@
             },
             {
               "id": "39",
-              "content": "4. The billionaire fell down amid the tumult while everyone fled the fire.",
+              "content": "The billionaire fell down amid the tumult while everyone fled the fire.",
               "options": [
                 "T",
                 "F"
@@ -498,7 +498,7 @@
             },
             {
               "id": "40",
-              "content": "5. The crowd made an uproar when they learned who had started the fire.",
+              "content": "The crowd made an uproar when they learned who had started the fire.",
               "options": [
                 "T",
                 "F"
@@ -516,7 +516,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. Why did the actors and audience have to evacuate the theater?",
+              "content": "Why did the actors and audience have to evacuate the theater?",
               "options": [
                 "Because there was a fire.",
                 "Because the play ended.",
@@ -528,7 +528,7 @@
             },
             {
               "id": "42",
-              "content": "2. When the mob segregated the two men, who did they first think was the culprit?",
+              "content": "When the mob segregated the two men, who did they first think was the culprit?",
               "options": [
                 "Bill",
                 "The billionaire",
@@ -540,7 +540,7 @@
             },
             {
               "id": "43",
-              "content": "3. Who testified in the Bill’s defense since the mob didn’t subject him to any scrutiny?",
+              "content": "Who testified in the Bill’s defense since the mob didn’t subject him to any scrutiny?",
               "options": [
                 "The billionaire's wife",
                 "The director",
@@ -552,7 +552,7 @@
             },
             {
               "id": "44",
-              "content": "4. What was the flammable object that caught fire when Mr. Rich collided with a lamp?",
+              "content": "What was the flammable object that caught fire when Mr. Rich collided with a lamp?",
               "options": [
                 "The floor",
                 "The curtains",
@@ -564,7 +564,7 @@
             },
             {
               "id": "45",
-              "content": "5. Because their decision was premature, what was the mob surprised to learn in the end?",
+              "content": "Because their decision was premature, what was the mob surprised to learn in the end?",
               "options": [
                 "The man they blamed was innocent and the billionaire was guilty.",
                 "The fire was part of the play.",

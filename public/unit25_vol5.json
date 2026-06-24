@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. The path leading out of the [ 6 ] was very steep. When they reached the top, they had to rest because of their [ 6 ].",
+              "content": "The path leading out of the [ 6 ] was very steep. When they reached the top, they had to rest because of their [ 6 ].",
               "options": [
                 "welfare",
                 "trail",
@@ -104,7 +104,7 @@
             },
             {
               "id": "7",
-              "content": "2. He had a(n) [ 7 ] about ancient cultures. He thought that all their customs and ideas were [ 7 ].",
+              "content": "He had a(n) [ 7 ] about ancient cultures. He thought that all their customs and ideas were [ 7 ].",
               "options": [
                 "welfare",
                 "trail",
@@ -122,7 +122,7 @@
             },
             {
               "id": "8",
-              "content": "3. The [ 8 ] led travelers to the top of the mountain. I was astonished by the [ 8 ] view.",
+              "content": "The [ 8 ] led travelers to the top of the mountain. I was astonished by the [ 8 ] view.",
               "options": [
                 "welfare",
                 "trail",
@@ -140,7 +140,7 @@
             },
             {
               "id": "9",
-              "content": "4. A line of [ 9 ] stretched from the mound across the forest floor. They were all going to eat a [ 9 ] that had fallen off a tree.",
+              "content": "A line of [ 9 ] stretched from the mound across the forest floor. They were all going to eat a [ 9 ] that had fallen off a tree.",
               "options": [
                 "welfare",
                 "trail",
@@ -158,7 +158,7 @@
             },
             {
               "id": "10",
-              "content": "5. People thought that the water from the [ 10 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 10 ].",
+              "content": "People thought that the water from the [ 10 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 10 ].",
               "options": [
                 "welfare",
                 "trail",
@@ -318,7 +318,7 @@
                   "answer": "twigs"
                 }
               ],
-              "content": "1. The kids gathered <u>short, thing branches</u> for their school art project.<br/>tw [ 21 ]"
+              "content": "<p class=\"mb-4\">The kids gathered <u>short, thing branches</u> for their school art project.<br/>tw [ 21 ]</p><p class=\"mb-4\">The glue was <u>covered with a substance that made things stick to it</u>.<br/>st [ 22 ]</p><p class=\"mb-4\">Early rocket development was <u>simple and basic</u> compared to what we have in the 21st century.<br/>pr [ 23 ]</p><p class=\"mb-4\"><u>Monkeys, apes, and humans</u> are some of the few animals with opposable thumbs.<br/>pr [ 24 ]</p><p class=\"mb-4\">After walking 12 kilometers, I was filled with a sense of <u>extreme tiredness</u>.<br/>fa [ 25 ]</p>"
             },
             {
               "id": "22",
@@ -328,7 +328,7 @@
                   "answer": "sticky"
                 }
               ],
-              "content": "2. The glue was <u>covered with a substance that made things stick to it</u>.<br/>st [ 22 ]"
+              "content": ""
             },
             {
               "id": "23",
@@ -338,7 +338,7 @@
                   "answer": "primitive"
                 }
               ],
-              "content": "3. Early rocket development was <u>simple and basic</u> compared to what we have in the 21st century.<br/>pr [ 23 ]"
+              "content": ""
             },
             {
               "id": "24",
@@ -348,7 +348,7 @@
                   "answer": "primates"
                 }
               ],
-              "content": "4. <u>Monkeys, apes, and humans</u> are some of the few animals with opposable thumbs.<br/>pr [ 24 ]"
+              "content": ""
             },
             {
               "id": "25",
@@ -358,7 +358,7 @@
                   "answer": "fatigue"
                 }
               ],
-              "content": "5. After walking 12 kilometers, I was filled with a sense of <u>extreme tiredness</u>.<br/>fa [ 25 ]"
+              "content": ""
             }
           ],
           "questionType": "Điền từ"

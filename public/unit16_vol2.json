@@ -12,31 +12,31 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Jennifer <u>looked for a long time</u> at the girl who looked just like her sister. [ 1 ]",
+              "content": "<p class=\"mb-4\">Jennifer <u>looked for a long time</u> at the girl who looked just like her sister. [ 1 ]</p><p class=\"mb-4\">Even though the noise scared me, I <u>returned to my calm mood</u>. [ 2 ]</p><p class=\"mb-4\">The man's speech <u>went on for another thirty minutes</u>. [ 3 ]</p><p class=\"mb-4\">I am quiet in a <u>big crowd of people</u>. [ 4 ]</p><p class=\"mb-4\">My little brother woke up with a <u>really bad hot temperature</u> today. [ 5 ]</p>",
               "options": [],
               "correctAnswer": "stared"
             },
             {
               "id": "2",
-              "content": "2. Even though the noise scared me, I <u>returned to my calm mood</u>. [ 2 ]",
+              "content": "",
               "options": [],
               "correctAnswer": "recovered"
             },
             {
               "id": "3",
-              "content": "3. The man's speech <u>went on for another thirty minutes</u>. [ 3 ]",
+              "content": "",
               "options": [],
               "correctAnswer": "lasted"
             },
             {
               "id": "4",
-              "content": "4. I am quiet in a <u>big crowd of people</u>. [ 4 ]",
+              "content": "",
               "options": [],
               "correctAnswer": "shy"
             },
             {
               "id": "5",
-              "content": "5. My little brother woke up with a <u>really bad hot temperature</u> today. [ 5 ]",
+              "content": "",
               "options": [],
               "correctAnswer": "fever"
             }
@@ -50,7 +50,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. My friend said I took her book, ________________ .",
+              "content": "My friend said I took her book, ________________ .",
               "options": [
                 "but I didn't, so I denied it",
                 "so I relied on what she told me"
@@ -59,7 +59,7 @@
             },
             {
               "id": "7",
-              "content": "2. When I opened the door, ________________ .",
+              "content": "When I opened the door, ________________ .",
               "options": [
                 "I was shocked by what I saw",
                 "it made a funny gesture"
@@ -68,7 +68,7 @@
             },
             {
               "id": "8",
-              "content": "3. My teacher ________________ .",
+              "content": "My teacher ________________ .",
               "options": [
                 "wanted to take a likeness of the class this year",
                 "emphasized that students must follow the classroom rules"
@@ -77,7 +77,7 @@
             },
             {
               "id": "9",
-              "content": "4. The book was easy for me to read , ________________ .",
+              "content": "The book was easy for me to read , ________________ .",
               "options": [
                 "thus I finished it in two days",
                 "so I recovered a harder book"
@@ -86,7 +86,7 @@
             },
             {
               "id": "10",
-              "content": "5. The things my sister said ________________ .",
+              "content": "The things my sister said ________________ .",
               "options": [
                 "seemed really shy",
                 "gave me a new perspective"
@@ -103,7 +103,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. He woke up feeling sick and with a high _______________ .",
+              "content": "He woke up feeling sick and with a high _______________ .",
               "options": [
                 "chamber",
                 "fever"
@@ -112,7 +112,7 @@
             },
             {
               "id": "12",
-              "content": "2. The door to her private _______________ was unlocked.",
+              "content": "The door to her private _______________ was unlocked.",
               "options": [
                 "chamber",
                 "fever"
@@ -121,7 +121,7 @@
             },
             {
               "id": "13",
-              "content": "3. Many people have a different _______________ than me.",
+              "content": "Many people have a different _______________ than me.",
               "options": [
                 "perspective",
                 "likeness"
@@ -130,7 +130,7 @@
             },
             {
               "id": "14",
-              "content": "4. The painting didn't have much of a _______________ to my dad.",
+              "content": "The painting didn't have much of a _______________ to my dad.",
               "options": [
                 "perspective",
                 "likeness"
@@ -139,7 +139,7 @@
             },
             {
               "id": "15",
-              "content": "5. The _______________ had to be signed by ten people.",
+              "content": "The _______________ had to be signed by ten people.",
               "options": [
                 "rational",
                 "document"
@@ -148,7 +148,7 @@
             },
             {
               "id": "16",
-              "content": "6. My brother was too excited to have a _______________ plan.",
+              "content": "My brother was too excited to have a _______________ plan.",
               "options": [
                 "rational",
                 "document"
@@ -157,7 +157,7 @@
             },
             {
               "id": "17",
-              "content": "7. The loud noise _______________ me.",
+              "content": "The loud noise _______________ me.",
               "options": [
                 "stared",
                 "shocked"
@@ -166,7 +166,7 @@
             },
             {
               "id": "18",
-              "content": "8. The monkey _______________ at me through the bars.",
+              "content": "The monkey _______________ at me through the bars.",
               "options": [
                 "stared",
                 "shocked"
@@ -175,7 +175,7 @@
             },
             {
               "id": "19",
-              "content": "9. I'm not old enough to drive; _______________ , it seems kind of scary.",
+              "content": "I'm not old enough to drive; _______________ , it seems kind of scary.",
               "options": [
                 "moreover",
                 "flu"
@@ -184,7 +184,7 @@
             },
             {
               "id": "20",
-              "content": "10. I'm scared that I might get the _______________ this winter.",
+              "content": "I'm scared that I might get the _______________ this winter.",
               "options": [
                 "moreover",
                 "flu"
@@ -193,7 +193,7 @@
             },
             {
               "id": "21",
-              "content": "11. The boy made a _______________ to his friends to follow him.",
+              "content": "The boy made a _______________ to his friends to follow him.",
               "options": [
                 "interrupted",
                 "gesture"
@@ -202,7 +202,7 @@
             },
             {
               "id": "22",
-              "content": "12. My sister ran in and _______________ what I was saying.",
+              "content": "My sister ran in and _______________ what I was saying.",
               "options": [
                 "interrupted",
                 "gesture"
@@ -211,7 +211,7 @@
             },
             {
               "id": "23",
-              "content": "13. I trusted the man, so I _______________ on his advice.",
+              "content": "I trusted the man, so I _______________ on his advice.",
               "options": [
                 "thus",
                 "relied"
@@ -220,7 +220,7 @@
             },
             {
               "id": "24",
-              "content": "14. I could not depend on the man; _______________, I had to do it all myself.",
+              "content": "I could not depend on the man; _______________, I had to do it all myself.",
               "options": [
                 "thus",
                 "relied"
@@ -229,7 +229,7 @@
             },
             {
               "id": "25",
-              "content": "15. The basketball game _______________ longer than three hours.",
+              "content": "The basketball game _______________ longer than three hours.",
               "options": [
                 "recovered",
                 "lasted"
@@ -238,7 +238,7 @@
             },
             {
               "id": "26",
-              "content": "16. I was sick, but I _______________ in time to go on the field trip.",
+              "content": "I was sick, but I _______________ in time to go on the field trip.",
               "options": [
                 "recovered",
                 "lasted"
@@ -247,7 +247,7 @@
             },
             {
               "id": "27",
-              "content": "17. The girl at the store was _______________, so she didn't talk.",
+              "content": "The girl at the store was _______________, so she didn't talk.",
               "options": [
                 "deny",
                 "shy"
@@ -256,7 +256,7 @@
             },
             {
               "id": "28",
-              "content": "18. The man did not _______________ that he liked ice cream.",
+              "content": "The man did not _______________ that he liked ice cream.",
               "options": [
                 "deny",
                 "shy"
@@ -265,7 +265,7 @@
             },
             {
               "id": "29",
-              "content": "19. She _______________ the need for good manners.",
+              "content": "She _______________ the need for good manners.",
               "options": [
                 "emphasized",
                 "freeze"
@@ -274,7 +274,7 @@
             },
             {
               "id": "30",
-              "content": "20. Did the flowers _______________ last night due to the snow?",
+              "content": "Did the flowers _______________ last night due to the snow?",
               "options": [
                 "emphasized",
                 "freeze"
@@ -299,7 +299,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. What is the main idea of this story?",
+              "content": "What is the main idea of this story?",
               "options": [
                 "A boy who denies that he's a prince",
                 "A student who's too shy to talk to a prince",
@@ -310,7 +310,7 @@
             },
             {
               "id": "32",
-              "content": "2. What happened after Sam ran into the prince?",
+              "content": "What happened after Sam ran into the prince?",
               "options": [
                 "Sam was too shocked to recover.",
                 "The prince stared at Sam.",
@@ -321,7 +321,7 @@
             },
             {
               "id": "33",
-              "content": "3. What did Sam think about being a prince?",
+              "content": "What did Sam think about being a prince?",
               "options": [
                 "He thought it was fun while it lasted.",
                 "He didn't like it; moreover, he missed his mother.",
@@ -332,7 +332,7 @@
             },
             {
               "id": "34",
-              "content": "4. What did the Prince miss when he was being Sam?",
+              "content": "What did the Prince miss when he was being Sam?",
               "options": [
                 "Sleeping in his own chamber",
                 "Having servants do things for him",
@@ -343,7 +343,7 @@
             },
             {
               "id": "35",
-              "content": "5. Why didn't Sam like the prince's chamber?",
+              "content": "Why didn't Sam like the prince's chamber?",
               "options": [
                 "Because it was cold at night.",
                 "Because it was too small.",

@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p>6. a. debt b. fund c. bean d. abuse</p>",
+              "content": "<p class=\"mb-4\">a. debt b. fund c. bean d. abuse</p>",
               "options": [
                 "debt and fund",
                 "bean and abuse",
@@ -92,7 +92,7 @@
             },
             {
               "id": "7",
-              "content": "<p>7. a. fault b. abuse c. monitor d. sue</p>",
+              "content": "<p class=\"mb-4\">a. fault b. abuse c. monitor d. sue</p>",
               "options": [
                 "fault and abuse",
                 "monitor and sue",
@@ -104,7 +104,7 @@
             },
             {
               "id": "8",
-              "content": "<p>8. a. afford b. bake c. insist d. ingredient</p>",
+              "content": "<p class=\"mb-4\">a. afford b. bake c. insist d. ingredient</p>",
               "options": [
                 "bake and ingredient",
                 "insist and ingredient",
@@ -116,7 +116,7 @@
             },
             {
               "id": "9",
-              "content": "<p>9. a. fault b. decrease c. quantity d. convert</p>",
+              "content": "<p class=\"mb-4\">a. fault b. decrease c. quantity d. convert</p>",
               "options": [
                 "fault and decrease",
                 "quantity and convert",
@@ -128,7 +128,7 @@
             },
             {
               "id": "10",
-              "content": "<p>10. a. debt b. monitor c. afford d. generous</p>",
+              "content": "<p class=\"mb-4\">a. debt b. monitor c. afford d. generous</p>",
               "options": [
                 "debt and afford",
                 "afford and generous",

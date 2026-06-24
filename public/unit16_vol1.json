@@ -140,7 +140,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p>11. a. process b. maybe c. flat d. publish</p>",
+              "content": "<p class=\"mb-4\">a. process b. maybe c. flat d. publish</p>",
               "options": [
                 "process and maybe",
                 "flat and publish",
@@ -152,7 +152,7 @@
             },
             {
               "id": "12",
-              "content": "<p>12. a. board b. century c. pound d. ancient</p>",
+              "content": "<p class=\"mb-4\">a. board b. century c. pound d. ancient</p>",
               "options": [
                 "century and ancient",
                 "pound and ancient",
@@ -164,7 +164,7 @@
             },
             {
               "id": "13",
-              "content": "<p>13. a. county b. concert c. theater d. clue</p>",
+              "content": "<p class=\"mb-4\">a. county b. concert c. theater d. clue</p>",
               "options": [
                 "county and concert",
                 "theater and clue",
@@ -176,7 +176,7 @@
             },
             {
               "id": "14",
-              "content": "<p>14. a. gentleman b. officer c. exist d. concert</p>",
+              "content": "<p class=\"mb-4\">a. gentleman b. officer c. exist d. concert</p>",
               "options": [
                 "gentleman and officer",
                 "exist and concert",
@@ -188,7 +188,7 @@
             },
             {
               "id": "15",
-              "content": "<p>15. a. ancient b. original c. process d. dictionary</p>",
+              "content": "<p class=\"mb-4\">a. ancient b. original c. process d. dictionary</p>",
               "options": [
                 "ancient and original",
                 "process and dictionary",
@@ -208,7 +208,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. My school was playing against a private [ 16 ]",
+              "content": "My school was playing against a private [ 16 ]",
               "explanation": "Chống lại một trường học (academy) tư thục.",
               "correctAnswer": "academy",
               "options": [
@@ -221,7 +221,7 @@
             },
             {
               "id": "17",
-              "content": "2. In the [ 17 ] of winning games, we had worked hard and had fun.",
+              "content": "In the [ 17 ] of winning games, we had worked hard and had fun.",
               "explanation": "Quá trình (process) chiến thắng.",
               "correctAnswer": "process",
               "options": [
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "3. If we won today, our coach said that [ 18 ] he would take us all...",
+              "content": "If we won today, our coach said that [ 18 ] he would take us all...",
               "explanation": "Có lẽ (maybe) huấn luyện viên sẽ dẫn chúng tôi đi...",
               "correctAnswer": "maybe",
               "options": [
@@ -247,7 +247,7 @@
             },
             {
               "id": "19",
-              "content": "4. ...to the [ 19 ] to see a new movie",
+              "content": "...to the [ 19 ] to see a new movie",
               "explanation": "Tới rạp hát/rạp chiếu phim (theater) để xem phim mới.",
               "correctAnswer": "theater",
               "options": [
@@ -260,7 +260,7 @@
             },
             {
               "id": "20",
-              "content": "5. ...on their latest [ 20 ] screen.",
+              "content": "...on their latest [ 20 ] screen.",
               "explanation": "Màn hình phẳng (flat screen).",
               "correctAnswer": "flat",
               "options": [

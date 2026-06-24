@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p>1. a. theft b. nut c. cereal d. routine</p>",
+              "content": "<p class=\"mb-4\">a. theft b. nut c. cereal d. routine</p>",
               "options": [
                 "cereal and theft",
                 "cereal and routine",
@@ -24,7 +24,7 @@
             },
             {
               "id": "2",
-              "content": "<p>2. a. roast b. pharaoh c. stove d. pardon</p>",
+              "content": "<p class=\"mb-4\">a. roast b. pharaoh c. stove d. pardon</p>",
               "options": [
                 "roast and stove",
                 "stove and pardon",
@@ -36,7 +36,7 @@
             },
             {
               "id": "3",
-              "content": "<p>3. a. assembly b. affair c. bless d. exploit</p>",
+              "content": "<p class=\"mb-4\">a. assembly b. affair c. bless d. exploit</p>",
               "options": [
                 "assembly and affair",
                 "bless and exploit",
@@ -48,7 +48,7 @@
             },
             {
               "id": "4",
-              "content": "<p>4. a. exploit b. famine c. merry d. cheerful</p>",
+              "content": "<p class=\"mb-4\">a. exploit b. famine c. merry d. cheerful</p>",
               "options": [
                 "exploit and famine",
                 "merry and cheerful",
@@ -60,7 +60,7 @@
             },
             {
               "id": "5",
-              "content": "<p>5. a. scheme b. slim c. ripe d. harvest</p>",
+              "content": "<p class=\"mb-4\">a. scheme b. slim c. ripe d. harvest</p>",
               "options": [
                 "scheme and slim",
                 "ripe and harvest",
@@ -80,70 +80,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "The sun has a larger <u>length across its center</u> than the Earth. [ 6 ]",
+              "content": "<p class=\"mb-4\">The sun has a larger <u>length across its center</u> than the Earth. [ 6 ]</p><p class=\"mb-4\">The <u>criminal act of taking something</u> stunned the classroom of friends. [ 7 ]</p><p class=\"mb-4\">Her new <u>plan</u> may just solve our year-long problem. [ 8 ]</p><p class=\"mb-4\">The woman wanted the religious man to <u>ask God for help</u> for her. [ 9 ]</p><p class=\"mb-4\">During the <u>long time with no food</u>, her family had to move to the city. [ 10 ]</p><p class=\"mb-4\">The oil company <u>used for greedy reasons</u> the resources of the poor country. [ 11 ]</p><p class=\"mb-4\">Since he is very <u>skinny</u>, most of his clothes don't fit him too well. [ 12 ]</p><p class=\"mb-4\">My <u>thing that I do everyday</u> consists of going to work, the health club, and finally home. [ 13 ]</p><p class=\"mb-4\">Would you <u>repeat what you just said</u> to me? I didn't quite understand. [ 14 ]</p><p class=\"mb-4\">In history class, the students learned about the <u>kings of ancient Egypt</u>. [ 15 ]</p>",
               "options": [],
               "explanation": "length across its center nghĩa là đường kính (diameter).",
               "correctAnswer": "DIAMETER"
             },
             {
               "id": "7",
-              "content": "The <u>criminal act of taking something</u> stunned the classroom of friends. [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "criminal act of taking something nghĩa là hành vi trộm cắp (theft).",
               "correctAnswer": "THEFT"
             },
             {
               "id": "8",
-              "content": "Her new <u>plan</u> may just solve our year-long problem. [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "plan nghĩa là kế hoạch (scheme).",
               "correctAnswer": "SCHEME"
             },
             {
               "id": "9",
-              "content": "The woman wanted the religious man to <u>ask God for help</u> for her. [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "ask God for help nghĩa là cầu nguyện, ban phước (bless).",
               "correctAnswer": "BLESS"
             },
             {
               "id": "10",
-              "content": "During the <u>long time with no food</u>, her family had to move to the city. [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "long time with no food nghĩa là nạn đói (famine).",
               "correctAnswer": "FAMINE"
             },
             {
               "id": "11",
-              "content": "The oil company <u>used for greedy reasons</u> the resources of the poor country. [ 11 ]",
+              "content": "",
               "options": [],
               "explanation": "used for greedy reasons nghĩa là bóc lột, lợi dụng (exploited).",
               "correctAnswer": "EXPLOITED"
             },
             {
               "id": "12",
-              "content": "Since he is very <u>skinny</u>, most of his clothes don't fit him too well. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "skinny nghĩa là mảnh khảnh, gầy (slim).",
               "correctAnswer": "SLIM"
             },
             {
               "id": "13",
-              "content": "My <u>thing that I do everyday</u> consists of going to work, the health club, and finally home. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "thing that I do everyday nghĩa là thói quen hàng ngày (routine).",
               "correctAnswer": "ROUTINE"
             },
             {
               "id": "14",
-              "content": "Would you <u>repeat what you just said</u> to me? I didn't quite understand. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "repeat what you just said nghĩa là yêu cầu nhắc lại, xin lỗi vì không nghe rõ (pardon).",
               "correctAnswer": "PARDON"
             },
             {
               "id": "15",
-              "content": "In history class, the students learned about the <u>kings of ancient Egypt</u>. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "kings of ancient Egypt nghĩa là các pharaoh (pharaohs).",
               "correctAnswer": "PHARAOHS"

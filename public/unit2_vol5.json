@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. What would probably happen if you deprived someone of food?",
+              "content": "What would probably happen if you deprived someone of food?",
               "options": [
                 "They could die.",
                 "They could feel relieved.",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. A rugged surface would feel.",
+              "content": "A rugged surface would feel.",
               "options": [
                 "very rough",
                 "smooth",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. If you were speculating about something, you would be doing what?",
+              "content": "If you were speculating about something, you would be doing what?",
               "options": [
                 "Stating a fact",
                 "Looking for truth",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. Where would someone take an oath?",
+              "content": "Where would someone take an oath?",
               "options": [
                 "At the subway",
                 "In court",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. If something were covered with moisture, then it would feel.",
+              "content": "If something were covered with moisture, then it would feel.",
               "options": [
                 "hard",
                 "rough",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. Traveling across the _____________ was more difficult than it seemed.",
+              "content": "Traveling across the _____________ was more difficult than it seemed.",
               "options": [
                 "prairie",
                 "rugged",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "2. The ground was very _____________, and the grass was high.",
+              "content": "The ground was very _____________, and the grass was high.",
               "options": [
                 "rugged",
                 "prairie",
@@ -110,7 +110,7 @@
             },
             {
               "id": "8",
-              "content": "3. John had been in a place with a(n) ______________climate for a long time.",
+              "content": "John had been in a place with a(n) ______________climate for a long time.",
               "options": [
                 "abundant",
                 "scarce",
@@ -122,7 +122,7 @@
             },
             {
               "id": "9",
-              "content": "4. He forgot that in a humid place everything was covered with _____________.",
+              "content": "He forgot that in a humid place everything was covered with _____________.",
               "options": [
                 "moisture",
                 "cathedral",
@@ -134,7 +134,7 @@
             },
             {
               "id": "10",
-              "content": "5. The people who attend that church ______________for two weeks in March.",
+              "content": "The people who attend that church ______________for two weeks in March.",
               "options": [
                 "fast",
                 "grumble",
@@ -146,7 +146,7 @@
             },
             {
               "id": "11",
-              "content": "6. Then they go to the ______________where they pray and eat a small meal of soup.",
+              "content": "Then they go to the ______________where they pray and eat a small meal of soup.",
               "options": [
                 "cathedral",
                 "abbey",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "7. We didn’t know what to do with such a(n) ______________supply of wood.",
+              "content": "We didn’t know what to do with such a(n) ______________supply of wood.",
               "options": [
                 "scarce",
                 "ample",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "8. We had gotten used to making small fires when it was so _____________.",
+              "content": "We had gotten used to making small fires when it was so _____________.",
               "options": [
                 "scarce",
                 "abundant",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "9. In order for the students to attend the dance, they had to take a(n) _____________.",
+              "content": "In order for the students to attend the dance, they had to take a(n) _____________.",
               "options": [
                 "oath",
                 "fast",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "10. Those that didn’t promise to be on their best behavior were not _____________.",
+              "content": "Those that didn’t promise to be on their best behavior were not _____________.",
               "options": [
                 "eligible",
                 "ragged",
@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Climbing up the prairie was more difficult without the help of ropes.",
+              "content": "Climbing up the prairie was more difficult without the help of ropes.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -224,7 +224,7 @@
             },
             {
               "id": "17",
-              "content": "2. There was no way he could mend the holes in his shirt. It was too rugged to wear.",
+              "content": "There was no way he could mend the holes in his shirt. It was too rugged to wear.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "3. In some countries, only people who owned land were eligible to vote.",
+              "content": "In some countries, only people who owned land were eligible to vote.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "4. The capital was in the middle of the country. They had to travel inland to get there.",
+              "content": "The capital was in the middle of the country. They had to travel inland to get there.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "5. He knew she didn’t like him, but he helped her nonetheless.",
+              "content": "He knew she didn’t like him, but he helped her nonetheless.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -272,70 +272,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. That part of the country is so <u>hot and dry</u> that no one lives there. [ 21 ]",
+              "content": "<p class=\"mb-4\">That part of the country is so <u>hot and dry</u> that no one lives there. [ 21 ]</p><p class=\"mb-4\">After getting off the boat, they took a train <u>toward the center of the country</u>. [ 22 ]</p><p class=\"mb-4\">They survived through the <u>time in which no rain fell</u> by carrying water down from the hills. [ 23 ]</p><p class=\"mb-4\">This <u>house for the monks</u> was built well over 200 years ago. [ 24 ]</p><p class=\"mb-4\">He knew he’d get in trouble, but he stole the money <u>despite the punishment</u>. [ 25 ]</p><p class=\"mb-4\">He <u>guessed</u> that the visitor’s team would win the game. [ 26 ]</p><p class=\"mb-4\">The number of people helping to clean the trash near the river was <u>more than enough</u>. [ 27 ]</p><p class=\"mb-4\">There was a small park that was <u>next to</u> the yard surrounding the church. [ 28 ]</p><p class=\"mb-4\">Because his pants were <u>old and torn</u>. Dad bought him a new pair. [ 29 ]</p><p class=\"mb-4\">The long lines <u>did not allow</u> her of a chance to buy a ticket for the concert. [ 30 ]</p>",
               "options": [],
               "explanation": "hot and dry (nóng và khô) tương đương với arid (khô cằn).",
               "correctAnswer": "arid"
             },
             {
               "id": "22",
-              "content": "2. After getting off the boat, they took a train <u>toward the center of the country</u>. [ 22 ]",
+              "content": "",
               "options": [],
               "explanation": "toward the center of the country (vào trung tâm đất nước) tương đương inland.",
               "correctAnswer": "inland"
             },
             {
               "id": "23",
-              "content": "3. They survived through the <u>time in which no rain fell</u> by carrying water down from the hills. [ 23 ]",
+              "content": "",
               "options": [],
               "explanation": "time in which no rain fell (thời gian không có mưa) tương đương drought (hạn hán).",
               "correctAnswer": "drought"
             },
             {
               "id": "24",
-              "content": "4. This <u>house for the monks</u> was built well over 200 years ago. [ 24 ]",
+              "content": "",
               "options": [],
               "explanation": "house for the monks (nhà cho các nhà sư) tương đương abbey (tu viện).",
               "correctAnswer": "abbey"
             },
             {
               "id": "25",
-              "content": "5. He knew he’d get in trouble, but he stole the money <u>despite the punishment</u>. [ 25 ]",
+              "content": "",
               "options": [],
               "explanation": "despite the punishment (bất chấp hình phạt) mang nghĩa mặc dù vậy, tương đương nonetheless.",
               "correctAnswer": "nonetheless"
             },
             {
               "id": "26",
-              "content": "6. He <u>guessed</u> that the visitor’s team would win the game. [ 26 ]",
+              "content": "",
               "options": [],
               "explanation": "guessed (đoán) tương đương speculated (suy đoán).",
               "correctAnswer": "speculated"
             },
             {
               "id": "27",
-              "content": "7. The number of people helping to clean the trash near the river was <u>more than enough</u>. [ 27 ]",
+              "content": "",
               "options": [],
               "explanation": "more than enough (nhiều hơn đủ) tương đương ample (dư dả).",
               "correctAnswer": "ample"
             },
             {
               "id": "28",
-              "content": "8. There was a small park that was <u>next to</u> the yard surrounding the church. [ 28 ]",
+              "content": "",
               "options": [],
               "explanation": "next to (kế bên) tương đương adjoined (giáp ranh).",
               "correctAnswer": "adjoined"
             },
             {
               "id": "29",
-              "content": "9. Because his pants were <u>old and torn</u>. Dad bought him a new pair. [ 29 ]",
+              "content": "",
               "options": [],
               "explanation": "old and torn (cũ và rách) tương đương ragged.",
               "correctAnswer": "ragged"
             },
             {
               "id": "30",
-              "content": "10. The long lines <u>did not allow</u> her of a chance to buy a ticket for the concert. [ 30 ]",
+              "content": "",
               "options": [],
               "explanation": "did not allow (không cho phép/tước đi) tương đương deprived.",
               "correctAnswer": "deprived"
@@ -358,7 +358,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. The moisture in the soil was gone because a drought made the prairie become arid.",
+              "content": "The moisture in the soil was gone because a drought made the prairie become arid.",
               "options": [
                 "True",
                 "False",
@@ -369,7 +369,7 @@
             },
             {
               "id": "32",
-              "content": "2. The hungry families traveled inland to an abbey that still had abundant food.",
+              "content": "The hungry families traveled inland to an abbey that still had abundant food.",
               "options": [
                 "True",
                 "False",
@@ -380,7 +380,7 @@
             },
             {
               "id": "33",
-              "content": "3. Food was scarce, but the monks had to deprive the families nonetheless.",
+              "content": "Food was scarce, but the monks had to deprive the families nonetheless.",
               "options": [
                 "True",
                 "False",
@@ -391,7 +391,7 @@
             },
             {
               "id": "34",
-              "content": "4. At first there was ample food and enough room in the cathedral for everyone.",
+              "content": "At first there was ample food and enough room in the cathedral for everyone.",
               "options": [
                 "True",
                 "False",
@@ -402,7 +402,7 @@
             },
             {
               "id": "35",
-              "content": "5. The rugged journey to the abbey had left many people’s clothing looking ragged.",
+              "content": "The rugged journey to the abbey had left many people’s clothing looking ragged.",
               "options": [
                 "True",
                 "False",
@@ -421,7 +421,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. According to the abbot, who was eligible to receive the monks’ help?",
+              "content": "According to the abbot, who was eligible to receive the monks’ help?",
               "options": [
                 "All were eligible",
                 "Only monks",
@@ -433,7 +433,7 @@
             },
             {
               "id": "37",
-              "content": "2. When the monks grumbled, what did the young monk speculate would happen if more families arrived?",
+              "content": "When the monks grumbled, what did the young monk speculate would happen if more families arrived?",
               "options": [
                 "They wouldn't make it through the winter",
                 "They would have more food",
@@ -445,7 +445,7 @@
             },
             {
               "id": "38",
-              "content": "3. Why did the monks fast and sleep in the churchyard that adjoined the cathedral?",
+              "content": "Why did the monks fast and sleep in the churchyard that adjoined the cathedral?",
               "options": [
                 "So that the families would have enough food and shelter",
                 "Because they liked the cold",
@@ -457,7 +457,7 @@
             },
             {
               "id": "39",
-              "content": "4. What was the oath that the monks had taken?",
+              "content": "What was the oath that the monks had taken?",
               "options": [
                 "To help those that need help",
                 "To eat abundant food",
@@ -469,7 +469,7 @@
             },
             {
               "id": "40",
-              "content": "5. What did the monks learn about helping others?",
+              "content": "What did the monks learn about helping others?",
               "options": [
                 "Sometimes it means giving more help than expected",
                 "It is always easy",

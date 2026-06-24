@@ -12,7 +12,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. This river will take us through the[ 1 ] .",
+              "content": "This river will take us through the[ 1 ] .",
               "options": [
                 "destination",
                 "edge",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. The doctor must[ 2 ]during surgery to keep the patient alive.",
+              "content": "The doctor must[ 2 ]during surgery to keep the patient alive.",
               "options": [
                 "destination",
                 "edge",
@@ -48,7 +48,7 @@
             },
             {
               "id": "3",
-              "content": "3. The sign was so[ 3 ] we couldn’t see around it.",
+              "content": "The sign was so[ 3 ] we couldn’t see around it.",
               "options": [
                 "destination",
                 "edge",
@@ -66,7 +66,7 @@
             },
             {
               "id": "4",
-              "content": "4. People can[ 4 ] their happiness by smiling.",
+              "content": "People can[ 4 ] their happiness by smiling.",
               "options": [
                 "destination",
                 "edge",
@@ -84,7 +84,7 @@
             },
             {
               "id": "5",
-              "content": "5. What is the[ 5 ] of this train?",
+              "content": "What is the[ 5 ] of this train?",
               "options": [
                 "destination",
                 "edge",
@@ -102,7 +102,7 @@
             },
             {
               "id": "6",
-              "content": "6. We walked to the[ 6 ] of the cliff and looked down.",
+              "content": "We walked to the[ 6 ] of the cliff and looked down.",
               "options": [
                 "destination",
                 "edge",
@@ -120,7 +120,7 @@
             },
             {
               "id": "7",
-              "content": "7. The hikers walked along the[ 7 ] in the forest.",
+              "content": "The hikers walked along the[ 7 ] in the forest.",
               "options": [
                 "destination",
                 "edge",
@@ -138,7 +138,7 @@
             },
             {
               "id": "8",
-              "content": "8. I planted a [ 8 ] in my yard last weekend.",
+              "content": "I planted a [ 8 ] in my yard last weekend.",
               "options": [
                 "destination",
                 "edge",
@@ -156,7 +156,7 @@
             },
             {
               "id": "9",
-              "content": "9. She is[ 9 ] of running faster than any boy in her class.",
+              "content": "She is[ 9 ] of running faster than any boy in her class.",
               "options": [
                 "destination",
                 "edge",
@@ -174,7 +174,7 @@
             },
             {
               "id": "10",
-              "content": "10. If the boys can’t agree, they will[ 10 ] to fighting.",
+              "content": "If the boys can’t agree, they will[ 10 ] to fighting.",
               "options": [
                 "destination",
                 "edge",
@@ -200,70 +200,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. He wants to win so much that he will <u>not obey the rules</u> to do it. [ 11 ]",
+              "content": "<p class=\"mb-4\">He wants to win so much that he will <u>not obey the rules</u> to do it. [ 11 ]</p><p class=\"mb-4\">I’m going to stand in <u>the dark area</u> of the tree because the sun is too hot here. [ 12 ]</p><p class=\"mb-4\">The police <u>believe it’s true</u> that the clerk stole the money. [ 13 ]</p><p class=\"mb-4\">If we do what we are trying <u>to do</u>, we will become very rich! [ 14 ]</p><p class=\"mb-4\">Please <u>read aloud</u> the questions so the students can write them down. [ 15 ]</p><p class=\"mb-4\">I am sure I <u>can do something</u> because I have practiced for years. [ 16 ]</p><p class=\"mb-4\">After seeing the evidence, you must <u>decide</u> if the man is innocent. [ 17 ]</p><p class=\"mb-4\">It was a <u>good feeling</u> knowing that I had saved enough money to go on a trip. [ 18 ]</p><p class=\"mb-4\">This horse is a <u>certain</u> winner. [ 19 ]</p><p class=\"mb-4\">The <u>large size</u> of the box made it difficult to move. [ 20 ]</p>",
               "options": [],
               "explanation": "cheat: to be dishonest so that you can win or do well.",
               "correctAnswer": "cheat"
             },
             {
               "id": "12",
-              "content": "2. I’m going to stand in <u>the dark area</u> of the tree because the sun is too hot here. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "shadow: the dark area that is made when something blocks light.",
               "correctAnswer": "shadow"
             },
             {
               "id": "13",
-              "content": "3. The police <u>believe it’s true</u> that the clerk stole the money. [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "suspect: to believe that it is true.",
               "correctAnswer": "suspect"
             },
             {
               "id": "14",
-              "content": "4. If we do what we are trying <u>to do</u>, we will become very rich! [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "succeed: to complete something that you planned or tried to do.",
               "correctAnswer": "succeed"
             },
             {
               "id": "15",
-              "content": "5. Please <u>read aloud</u> the questions so the students can write them down. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "dictate: to read it aloud so it can be written down.",
               "correctAnswer": "dictate"
             },
             {
               "id": "16",
-              "content": "6. I am sure I <u>can do something</u> because I have practiced for years. [ 16 ]",
+              "content": "",
               "options": [],
               "explanation": "confident: believes they can do something without failing.",
               "correctAnswer": "confident"
             },
             {
               "id": "17",
-              "content": "7. After seeing the evidence, you must <u>decide</u> if the man is innocent. [ 17 ]",
+              "content": "",
               "options": [],
               "explanation": "conclude: to arrive at a logical end by looking at evidence.",
               "correctAnswer": "conclude"
             },
             {
               "id": "18",
-              "content": "8. It was a <u>good feeling</u> knowing that I had saved enough money to go on a trip. [ 18 ]",
+              "content": "",
               "options": [],
               "explanation": "delight: a feeling of being very happy with something.",
               "correctAnswer": "delight"
             },
             {
               "id": "19",
-              "content": "9. This horse is a <u>certain</u> winner. [ 19 ]",
+              "content": "",
               "options": [],
               "explanation": "definite: certain or sure to be true.",
               "correctAnswer": "definite"
             },
             {
               "id": "20",
-              "content": "10. The <u>large size</u> of the box made it difficult to move. [ 20 ]",
+              "content": "",
               "options": [],
               "explanation": "considerable: large in size, amount or extent.",
               "correctAnswer": "considerable"
@@ -286,7 +286,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. What is this story about?",
+              "content": "What is this story about?",
               "options": [
                 "A confident rabbit",
                 "A rabbit that cheats in a race",
@@ -298,7 +298,7 @@
             },
             {
               "id": "22",
-              "content": "2. Where was the final destination of the race?",
+              "content": "Where was the final destination of the race?",
               "options": [
                 "The edge of the river",
                 "Behind the first bush",
@@ -310,7 +310,7 @@
             },
             {
               "id": "23",
-              "content": "3. Why was Tera the Turtle angry?",
+              "content": "Why was Tera the Turtle angry?",
               "options": [
                 "Because Ricky the rabbit said no one was capable of beating him",
                 "Because she thought that the path of the race was too difficult",
@@ -322,7 +322,7 @@
             },
             {
               "id": "24",
-              "content": "4. What did Tera say to her family?",
+              "content": "What did Tera say to her family?",
               "options": [
                 "She concluded that she must concentrate on the race.",
                 "She conveyed that Rabbit would cheat.",

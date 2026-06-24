@@ -11,31 +11,31 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. The story about the police dog <u>got to many people</u> in town.<br/>sp [ 1 ]",
+              "content": "<p class=\"mb-4\">The story about the police dog <u>got to many people</u> in town.<br/>sp [ 1 ]</p><p class=\"mb-4\">I was <u>happy</u> to sit and listen to music all night.<br/>co [ 2 ]</p><p class=\"mb-4\">The house will <u>move back and forth</u> if a strong wind blows.<br/>sh [ 3 ]</p><p class=\"mb-4\">I <u>waited for</u> the monster to come out of the cave.<br/>ex [ 4 ]</p><p class=\"mb-4\">I didn’t want to talk to my sister, so I <u>stayed away from</u> her.<br/>av [ 5 ]</p>",
               "explanation": "spread (lan truyền) tương đồng với 'got to many people' (đến với nhiều người).",
               "correctAnswer": "spread"
             },
             {
               "id": "2",
-              "content": "2. I was <u>happy</u> to sit and listen to music all night.<br/>co [ 2 ]",
+              "content": "",
               "explanation": "content (hài lòng, vui vẻ) tương đồng với 'happy' (vui vẻ).",
               "correctAnswer": "content"
             },
             {
               "id": "3",
-              "content": "3. The house will <u>move back and forth</u> if a strong wind blows.<br/>sh [ 3 ]",
+              "content": "",
               "explanation": "shake (rung lắc) tương đồng với 'move back and forth'.",
               "correctAnswer": "shake"
             },
             {
               "id": "4",
-              "content": "4. I <u>waited for</u> the monster to come out of the cave.<br/>ex [ 4 ]",
+              "content": "",
               "explanation": "expect (chờ đợi, mong đợi) tương đồng với 'waited for'.",
               "correctAnswer": "expected"
             },
             {
               "id": "5",
-              "content": "5. I didn’t want to talk to my sister, so I <u>stayed away from</u> her.<br/>av [ 5 ]",
+              "content": "",
               "explanation": "avoid (tránh xa) tương đồng với 'stayed away from'.",
               "correctAnswer": "avoided"
             }
@@ -171,7 +171,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "16. What is this story mainly about?",
+              "content": "What is this story mainly about?",
               "options": [
                 "A. A dog that is frequently bad",
                 "B. A dog's stroll through town",
@@ -183,7 +183,7 @@
             },
             {
               "id": "17",
-              "content": "17. What is true of the dog?",
+              "content": "What is true of the dog?",
               "options": [
                 "A. He likes none of John's friends.",
                 "B. He shakes his head too much.",
@@ -195,7 +195,7 @@
             },
             {
               "id": "18",
-              "content": "18. Why did the issue with the dog bother John?",
+              "content": "Why did the issue with the dog bother John?",
               "options": [
                 "A. People didn't think of John in a positive way.",
                 "B. People avoided going to John's house.",
@@ -207,7 +207,7 @@
             },
             {
               "id": "19",
-              "content": "19. What did John do to stop the dog's bad habit?",
+              "content": "What did John do to stop the dog's bad habit?",
               "options": [
                 "A. He instructed the dog on learning tricks.",
                 "B. He punished the dog for biting.",
@@ -219,7 +219,7 @@
             },
             {
               "id": "20",
-              "content": "20. What did the other dogs say about the bell?",
+              "content": "What did the other dogs say about the bell?",
               "options": [
                 "A. It makes people avoid him.",
                 "B. It sounds beautiful.",
@@ -231,7 +231,7 @@
             },
             {
               "id": "21",
-              "content": "21. What did the other dogs say about the bell?",
+              "content": "What did the other dogs say about the bell?",
               "options": [
                 "It tells people where he is so they can avoid him",
                 "It is a beautiful piece of jewelry",

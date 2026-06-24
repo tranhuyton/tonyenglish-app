@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. frigid",
+              "content": "frigid",
               "options": [
                 "happy",
                 "hot",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. wavy",
+              "content": "wavy",
               "options": [
                 "straight",
                 "pretty",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. crisp",
+              "content": "crisp",
               "options": [
                 "more",
                 "slow",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. replicate",
+              "content": "replicate",
               "options": [
                 "flight",
                 "original",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. allocate",
+              "content": "allocate",
               "options": [
                 "take away",
                 "freeze",
@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. No one else can open my <u><u>small cabinet with a lock</u>.</u> [ 6 ]",
+              "content": "<p class=\"mb-4\">No one else can open my <u><u>small cabinet with a lock</u>.</u> [ 6 ]</p><p class=\"mb-4\">How can we prevent <u>argument and <u>disagreement</u> in</u> the future? [ 7 ]</p><p class=\"mb-4\">The brave travelers were not stopped by <u>the <u>snow storm with strong winds</u>.</u> [ 8 ]</p><p class=\"mb-4\">The organizers made sure that the parade was <u><u>related to many different cultures</u>.</u> [ 9 ]</p><p class=\"mb-4\">The thief hid the money in a <u>small <u>hole</u> in the</u> wall. [ 10 ]</p><p class=\"mb-4\">I thought the hosts showed a <u>lot of <u>politeness and respect</u> for others</u>. [ 11 ]</p><p class=\"mb-4\">It was her job to <u><u>make sure everything was being done properly</u></u> on the project. [ 12 ]</p><p class=\"mb-4\">What can we do <u>to <u>cause the beginning</u> or development</u> of interest in our product? [ 13 ]</p><p class=\"mb-4\">People cannot withstand <u><u>extremely cold</u></u> temperatures without clothing and shelter. [ 14 ]</p><p class=\"mb-4\">John used a knife to <u><u>make a hole</u> in the</u> thick rubber. [ 15 ]</p>",
               "options": [],
               "explanation": "locker (n): a small cabinet with a lock.",
               "correctAnswer": "locker"
             },
             {
               "id": "7",
-              "content": "2. How can we prevent <u>argument and <u>disagreement</u> in</u> the future? [ 7 ]",
+              "content": "",
               "options": [],
               "explanation": "discord (n): disagreement or fighting.",
               "correctAnswer": "discord"
             },
             {
               "id": "8",
-              "content": "3. The brave travelers were not stopped by <u>the <u>snow storm with strong winds</u>.</u> [ 8 ]",
+              "content": "",
               "options": [],
               "explanation": "blizzard (n): a severe snow storm with strong winds.",
               "correctAnswer": "blizzard"
             },
             {
               "id": "9",
-              "content": "4. The organizers made sure that the parade was <u><u>related to many different cultures</u>.</u> [ 9 ]",
+              "content": "",
               "options": [],
               "explanation": "multicultural (adj): relating to many different cultures.",
               "correctAnswer": "multicultural"
             },
             {
               "id": "10",
-              "content": "5. The thief hid the money in a <u>small <u>hole</u> in the</u> wall. [ 10 ]",
+              "content": "",
               "options": [],
               "explanation": "cavity (n): a hole or space in something.",
               "correctAnswer": "cavity"
             },
             {
               "id": "11",
-              "content": "6. I thought the hosts showed a <u>lot of <u>politeness and respect</u> for others</u>. [ 11 ]",
+              "content": "",
               "options": [],
               "explanation": "courtesy (n): excellence of manners or social conduct.",
               "correctAnswer": "courtesy"
             },
             {
               "id": "12",
-              "content": "7. It was her job to <u><u>make sure everything was being done properly</u></u> on the project. [ 12 ]",
+              "content": "",
               "options": [],
               "explanation": "oversee (v): make sure that it is being done properly.",
               "correctAnswer": "oversee"
             },
             {
               "id": "13",
-              "content": "8. What can we do <u>to <u>cause the beginning</u> or development</u> of interest in our product? [ 13 ]",
+              "content": "",
               "options": [],
               "explanation": "generate (v): to cause it to develop or begin.",
               "correctAnswer": "generate"
             },
             {
               "id": "14",
-              "content": "9. People cannot withstand <u><u>extremely cold</u></u> temperatures without clothing and shelter. [ 14 ]",
+              "content": "",
               "options": [],
               "explanation": "frigid (adj): extremely cold.",
               "correctAnswer": "frigid"
             },
             {
               "id": "15",
-              "content": "10. John used a knife to <u><u>make a hole</u> in the</u> thick rubber. [ 15 ]",
+              "content": "",
               "options": [],
               "explanation": "pierce (v): make a hole in it using a sharp object.",
               "correctAnswer": "pierce"
@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. This is a <u>multicultural</u> holiday. People from all over the world celebrate it.",
+              "content": "This is a <u>multicultural</u> holiday. People from all over the world celebrate it.",
               "options": [
                 "I",
                 "C"
@@ -174,7 +174,7 @@
             },
             {
               "id": "17",
-              "content": "2. The valuables are kept in a secure <u>locker</u>.",
+              "content": "The valuables are kept in a secure <u>locker</u>.",
               "options": [
                 "I",
                 "C"
@@ -184,7 +184,7 @@
             },
             {
               "id": "18",
-              "content": "3. If things move <u>clockwise</u>, they move in reverse.",
+              "content": "If things move <u>clockwise</u>, they move in reverse.",
               "options": [
                 "I",
                 "C"
@@ -194,7 +194,7 @@
             },
             {
               "id": "19",
-              "content": "4. The doctor <u>pierced</u> his skin with the needle to draw blood.",
+              "content": "The doctor <u>pierced</u> his skin with the needle to draw blood.",
               "options": [
                 "I",
                 "C"
@@ -204,7 +204,7 @@
             },
             {
               "id": "20",
-              "content": "5. The scientist tried to <u>replicate</u> the experiment and compare the results.",
+              "content": "The scientist tried to <u>replicate</u> the experiment and compare the results.",
               "options": [
                 "I",
                 "C"
@@ -214,7 +214,7 @@
             },
             {
               "id": "21",
-              "content": "6. The <u>cavity</u> quickly traveled down the stream and to the lake.",
+              "content": "The <u>cavity</u> quickly traveled down the stream and to the lake.",
               "options": [
                 "I",
                 "C"
@@ -224,7 +224,7 @@
             },
             {
               "id": "22",
-              "content": "7. The <u>frigid</u> soup burned my tongue!",
+              "content": "The <u>frigid</u> soup burned my tongue!",
               "options": [
                 "I",
                 "C"
@@ -234,7 +234,7 @@
             },
             {
               "id": "23",
-              "content": "8. School was cancelled today because of the horrible <u>blizzard</u> outside.",
+              "content": "School was cancelled today because of the horrible <u>blizzard</u> outside.",
               "options": [
                 "I",
                 "C"
@@ -244,7 +244,7 @@
             },
             {
               "id": "24",
-              "content": "9. The <u>appetizing</u> scene made everyone in the theater cry.",
+              "content": "The <u>appetizing</u> scene made everyone in the theater cry.",
               "options": [
                 "I",
                 "C"
@@ -254,7 +254,7 @@
             },
             {
               "id": "25",
-              "content": "10. After a brief <u>interchange</u> of ideas, we were ready to begin the new project.",
+              "content": "After a brief <u>interchange</u> of ideas, we were ready to begin the new project.",
               "options": [
                 "I",
                 "C"
@@ -264,7 +264,7 @@
             },
             {
               "id": "26",
-              "content": "11. Make sure to include an <u>omission</u> of our goals in the presentation.",
+              "content": "Make sure to include an <u>omission</u> of our goals in the presentation.",
               "options": [
                 "I",
                 "C"
@@ -274,7 +274,7 @@
             },
             {
               "id": "27",
-              "content": "12. The charity raised money for all of the <u>wavy</u> children in the city.",
+              "content": "The charity raised money for all of the <u>wavy</u> children in the city.",
               "options": [
                 "I",
                 "C"
@@ -284,7 +284,7 @@
             },
             {
               "id": "28",
-              "content": "13. Tim was chosen to <u>oversee</u> the progress of the building crew.",
+              "content": "Tim was chosen to <u>oversee</u> the progress of the building crew.",
               "options": [
                 "I",
                 "C"
@@ -294,7 +294,7 @@
             },
             {
               "id": "29",
-              "content": "14. The <u>glacial</u> dog loved to run and chase the ball in the park.",
+              "content": "The <u>glacial</u> dog loved to run and chase the ball in the park.",
               "options": [
                 "I",
                 "C"
@@ -304,7 +304,7 @@
             },
             {
               "id": "30",
-              "content": "15. We need to <u>generate</u> a new plan because this one isn't going to work.",
+              "content": "We need to <u>generate</u> a new plan because this one isn't going to work.",
               "options": [
                 "I",
                 "C"
@@ -314,7 +314,7 @@
             },
             {
               "id": "31",
-              "content": "16. He was not pleased with the movie. He thought it was too <u>concentric</u>.",
+              "content": "He was not pleased with the movie. He thought it was too <u>concentric</u>.",
               "options": [
                 "I",
                 "C"
@@ -324,7 +324,7 @@
             },
             {
               "id": "32",
-              "content": "17. The brothers cannot work together. There is always <u>discord</u> between them.",
+              "content": "The brothers cannot work together. There is always <u>discord</u> between them.",
               "options": [
                 "I",
                 "C"
@@ -334,7 +334,7 @@
             },
             {
               "id": "33",
-              "content": "18. The <u>crisp</u> lettuce went well with the sandwich.",
+              "content": "The <u>crisp</u> lettuce went well with the sandwich.",
               "options": [
                 "I",
                 "C"
@@ -344,7 +344,7 @@
             },
             {
               "id": "34",
-              "content": "19. The mother was disappointed with the extreme <u>courtesy</u> her children displayed.",
+              "content": "The mother was disappointed with the extreme <u>courtesy</u> her children displayed.",
               "options": [
                 "I",
                 "C"
@@ -354,7 +354,7 @@
             },
             {
               "id": "35",
-              "content": "20. Seats will be <u>allocated</u> to the people who are the first to arrive.",
+              "content": "Seats will be <u>allocated</u> to the people who are the first to arrive.",
               "options": [
                 "I",
                 "C"
@@ -380,7 +380,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. A multicultural group traveled through blizzards and frigid temperatures to reach the site.",
+              "content": "A multicultural group traveled through blizzards and frigid temperatures to reach the site.",
               "options": [
                 "F",
                 "T"
@@ -390,7 +390,7 @@
             },
             {
               "id": "37",
-              "content": "2. Erik dines on crisp, appetizing fish that are pierced with icicles.",
+              "content": "Erik dines on crisp, appetizing fish that are pierced with icicles.",
               "options": [
                 "F",
                 "T"
@@ -400,7 +400,7 @@
             },
             {
               "id": "38",
-              "content": "3. The expert who oversaw the process made sure there wasn't discord in the glacial landscape.",
+              "content": "The expert who oversaw the process made sure there wasn't discord in the glacial landscape.",
               "options": [
                 "F",
                 "T"
@@ -410,7 +410,7 @@
             },
             {
               "id": "39",
-              "content": "4. One worker carved big wavy lines, and another made tiny clockwise, concentric circles.",
+              "content": "One worker carved big wavy lines, and another made tiny clockwise, concentric circles.",
               "options": [
                 "F",
                 "T"
@@ -420,7 +420,7 @@
             },
             {
               "id": "40",
-              "content": "5. The builders replicated the design from normal houses.",
+              "content": "The builders replicated the design from normal houses.",
               "options": [
                 "F",
                 "T"
@@ -438,7 +438,7 @@
           "questions": [
             {
               "id": "41",
-              "content": "1. What was allocated to the workers after an interchange of ideas?",
+              "content": "What was allocated to the workers after an interchange of ideas?",
               "options": [
                 "Tools were allocated to each worker.",
                 "They got right to work.",
@@ -450,7 +450,7 @@
             },
             {
               "id": "42",
-              "content": "2. What was put in cavities in the roof?",
+              "content": "What was put in cavities in the roof?",
               "options": [
                 "Colored lights were inserted in the cavities in the roof.",
                 "Tools were allocated to each worker.",
@@ -462,7 +462,7 @@
             },
             {
               "id": "43",
-              "content": "3. What happened when a plan was generated?",
+              "content": "What happened when a plan was generated?",
               "options": [
                 "They got right to work.",
                 "Colored lights were inserted in the cavities in the roof.",
@@ -474,7 +474,7 @@
             },
             {
               "id": "44",
-              "content": "4. What is provided as a courtesy when guests get too cold?",
+              "content": "What is provided as a courtesy when guests get too cold?",
               "options": [
                 "Nearby warm rooms were a courtesy to people who got too cold.",
                 "They got right to work.",
@@ -486,7 +486,7 @@
             },
             {
               "id": "45",
-              "content": "5. What did Erik put in his ice locker?",
+              "content": "What did Erik put in his ice locker?",
               "options": [
                 "Erik stores his belongings in his ice locker.",
                 "Tools were allocated to each worker.",

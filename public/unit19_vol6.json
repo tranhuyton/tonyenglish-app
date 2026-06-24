@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. lunar",
+              "content": "lunar",
               "options": [
                 "sun",
                 "moon",
@@ -30,7 +30,7 @@
             },
             {
               "id": "2",
-              "content": "2. reflex",
+              "content": "reflex",
               "options": [
                 "response",
                 "delay",
@@ -42,7 +42,7 @@
             },
             {
               "id": "3",
-              "content": "3. pertain",
+              "content": "pertain",
               "options": [
                 "piece",
                 "fact",
@@ -54,7 +54,7 @@
             },
             {
               "id": "4",
-              "content": "4. utensil",
+              "content": "utensil",
               "options": [
                 "horn",
                 "badge",
@@ -66,7 +66,7 @@
             },
             {
               "id": "5",
-              "content": "5. outmoded",
+              "content": "outmoded",
               "options": [
                 "old-fashioned",
                 "new",
@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. The doctors thought that too much sugar caused the [ 6 ].",
+              "content": "The doctors thought that too much sugar caused the [ 6 ].",
               "options": [
                 "utensil",
                 "seizure",
@@ -104,7 +104,7 @@
             },
             {
               "id": "7",
-              "content": "2. However, their findings weren’t [ 7 ].",
+              "content": "However, their findings weren’t [ 7 ].",
               "options": [
                 "utensil",
                 "seizure",
@@ -122,7 +122,7 @@
             },
             {
               "id": "8",
-              "content": "3. A star burning at night as brightly as the moon was quite a(n) [ 8 ].",
+              "content": "A star burning at night as brightly as the moon was quite a(n) [ 8 ].",
               "options": [
                 "utensil",
                 "seizure",
@@ -140,7 +140,7 @@
             },
             {
               "id": "9",
-              "content": "4. In fact, the [ 9 ] glow was actually not as bright.",
+              "content": "In fact, the [ 9 ] glow was actually not as bright.",
               "options": [
                 "utensil",
                 "seizure",
@@ -158,7 +158,7 @@
             },
             {
               "id": "10",
-              "content": "5. Those seven stars form the [ 10 ] known as the Big Dipper.",
+              "content": "Those seven stars form the [ 10 ] known as the Big Dipper.",
               "options": [
                 "utensil",
                 "seizure",
@@ -176,7 +176,7 @@
             },
             {
               "id": "11",
-              "content": "6. A dipper is a(n) [ 11 ] shaped like a spoon used for getting water.",
+              "content": "A dipper is a(n) [ 11 ] shaped like a spoon used for getting water.",
               "options": [
                 "utensil",
                 "seizure",
@@ -194,7 +194,7 @@
             },
             {
               "id": "12",
-              "content": "7. There are many methods used in [ 12 ] to help cure mental illnesses.",
+              "content": "There are many methods used in [ 12 ] to help cure mental illnesses.",
               "options": [
                 "utensil",
                 "seizure",
@@ -212,7 +212,7 @@
             },
             {
               "id": "13",
-              "content": "8. They are all [ 13 ] to the specific needs of the patient.",
+              "content": "They are all [ 13 ] to the specific needs of the patient.",
               "options": [
                 "utensil",
                 "seizure",
@@ -230,7 +230,7 @@
             },
             {
               "id": "14",
-              "content": "9. The body’s [ 14 ] are too quick to be controlled by the brain.",
+              "content": "The body’s [ 14 ] are too quick to be controlled by the brain.",
               "options": [
                 "utensil",
                 "seizure",
@@ -248,7 +248,7 @@
             },
             {
               "id": "15",
-              "content": "10. These actions [ 15 ] to the nerves and spine rather than the brain.",
+              "content": "These actions [ 15 ] to the nerves and spine rather than the brain.",
               "options": [
                 "utensil",
                 "seizure",
@@ -274,7 +274,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. inhale",
+              "content": "inhale",
               "options": [
                 "breathe",
                 "exit",
@@ -286,7 +286,7 @@
             },
             {
               "id": "17",
-              "content": "2. psychiatric",
+              "content": "psychiatric",
               "options": [
                 "passionate",
                 "cozy",
@@ -298,7 +298,7 @@
             },
             {
               "id": "18",
-              "content": "3. advent",
+              "content": "advent",
               "options": [
                 "start",
                 "moment",
@@ -310,7 +310,7 @@
             },
             {
               "id": "19",
-              "content": "4. equate",
+              "content": "equate",
               "options": [
                 "prepare",
                 "drip",
@@ -322,7 +322,7 @@
             },
             {
               "id": "20",
-              "content": "5. session",
+              "content": "session",
               "options": [
                 "ocean",
                 "sweater",
@@ -334,7 +334,7 @@
             },
             {
               "id": "21",
-              "content": "6. invoke",
+              "content": "invoke",
               "options": [
                 "allow",
                 "resist",
@@ -346,7 +346,7 @@
             },
             {
               "id": "22",
-              "content": "7. Almighty",
+              "content": "Almighty",
               "options": [
                 "fire",
                 "capital",
@@ -358,7 +358,7 @@
             },
             {
               "id": "23",
-              "content": "8. primal",
+              "content": "primal",
               "options": [
                 "basic",
                 "bright",
@@ -370,7 +370,7 @@
             },
             {
               "id": "24",
-              "content": "9. airway",
+              "content": "airway",
               "options": [
                 "cloud",
                 "throat",
@@ -382,7 +382,7 @@
             },
             {
               "id": "25",
-              "content": "10. outmoded",
+              "content": "outmoded",
               "options": [
                 "wild",
                 "whole",
@@ -402,35 +402,35 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. The coach <u>designed to their unique needs</u> a program for each of the athletes. [ 26 ]",
+              "content": "<p class=\"mb-4\">The coach <u>designed to their unique needs</u> a program for each of the athletes. [ 26 ]</p><p class=\"mb-4\">Jack’s parents had a weekly <u>meeting with his teacher to</u> discuss Jack’s schoolwork. [ 27 ]</p><p class=\"mb-4\">If you look at <u>that group of stars in the sky, what</u> do you see? [ 28 ]</p><p class=\"mb-4\">The priest asked the god to bless everyone in the church. [ 29 ]</p><p class=\"mb-4\"><u>She compared the pain in her back</u> to being stabbed with a knife. [ 30 ]</p>",
               "options": [],
               "explanation": "personalize (v): to design it to meet a person’s unique needs.",
               "correctAnswer": "personalized"
             },
             {
               "id": "27",
-              "content": "2. Jack’s parents had a weekly <u>meeting with his teacher to</u> discuss Jack’s schoolwork. [ 27 ]",
+              "content": "",
               "options": [],
               "explanation": "session (n): a meeting at a regular time.",
               "correctAnswer": "session"
             },
             {
               "id": "28",
-              "content": "3. If you look at <u>that group of stars in the sky, what</u> do you see? [ 28 ]",
+              "content": "",
               "options": [],
               "explanation": "constellation (n): a group of stars with a recognizable shape.",
               "correctAnswer": "constellation"
             },
             {
               "id": "29",
-              "content": "4. The priest asked the god to bless everyone in the church. [ 29 ]",
+              "content": "",
               "options": [],
               "explanation": "Almighty (n): a name for a god in a religion.",
               "correctAnswer": "Almighty"
             },
             {
               "id": "30",
-              "content": "5. <u>She compared the pain in her back</u> to being stabbed with a knife. [ 30 ]",
+              "content": "",
               "options": [],
               "explanation": "equate (v): to compare things and consider them very similar.",
               "correctAnswer": "equated"
@@ -453,7 +453,7 @@
           "questions": [
             {
               "id": "31",
-              "content": "1. Doctors who treated patients for seizures in the 1800s were influenced by primal medical beliefs.",
+              "content": "Doctors who treated patients for seizures in the 1800s were influenced by primal medical beliefs.",
               "options": [
                 "T",
                 "F"
@@ -463,7 +463,7 @@
             },
             {
               "id": "32",
-              "content": "2. Doctors still used outmoded treatments even after definitive treatments were developed.",
+              "content": "Doctors still used outmoded treatments even after definitive treatments were developed.",
               "options": [
                 "T",
                 "F"
@@ -473,7 +473,7 @@
             },
             {
               "id": "33",
-              "content": "3. The cause of seizures used to be equated to the work of the Almighty.",
+              "content": "The cause of seizures used to be equated to the work of the Almighty.",
               "options": [
                 "T",
                 "F"
@@ -483,7 +483,7 @@
             },
             {
               "id": "34",
-              "content": "4. Today, care for people with seizures is better because treatment sessions are more personalized.",
+              "content": "Today, care for people with seizures is better because treatment sessions are more personalized.",
               "options": [
                 "T",
                 "F"
@@ -493,7 +493,7 @@
             },
             {
               "id": "35",
-              "content": "5. The cause of seizures pertain to misfired signals in the brain that cause a jerking reflex in the body.",
+              "content": "The cause of seizures pertain to misfired signals in the brain that cause a jerking reflex in the body.",
               "options": [
                 "T",
                 "F"
@@ -511,7 +511,7 @@
           "questions": [
             {
               "id": "36",
-              "content": "1. Why would someone from the past be surprised by the novelty of today’s treatments for seizures?",
+              "content": "Why would someone from the past be surprised by the novelty of today’s treatments for seizures?",
               "options": [
                 "Because doctors in the 1800s were influenced more by primal medical beliefs than science.",
                 "Because they didn't have hospitals.",
@@ -523,7 +523,7 @@
             },
             {
               "id": "37",
-              "content": "2. How does a utensil placed in someone’s airway prevent them from inhaling?",
+              "content": "How does a utensil placed in someone’s airway prevent them from inhaling?",
               "options": [
                 "It often blocks the airway and prevents the person from inhaling.",
                 "It makes the person cough.",
@@ -535,7 +535,7 @@
             },
             {
               "id": "38",
-              "content": "3. During the advent of modern psychiatry, how were people treated in psychiatric hospitals?",
+              "content": "During the advent of modern psychiatry, how were people treated in psychiatric hospitals?",
               "options": [
                 "They were treated like they were insane.",
                 "They were given surgery.",
@@ -547,7 +547,7 @@
             },
             {
               "id": "39",
-              "content": "4. What did some people believe constellations and lunar cycles could cause?",
+              "content": "What did some people believe constellations and lunar cycles could cause?",
               "options": [
                 "They believed they could make someone have a seizure.",
                 "They believed they could cure a seizure.",
@@ -559,7 +559,7 @@
             },
             {
               "id": "40",
-              "content": "5. What did doctors force seizure patients to invoke in order to treat their seizures?",
+              "content": "What did doctors force seizure patients to invoke in order to treat their seizures?",
               "options": [
                 "They would force the patient to invoke the grace of the Almighty.",
                 "They would force the patient to inhale deeply.",

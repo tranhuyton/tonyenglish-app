@@ -18,7 +18,7 @@
                   "answer": "matches"
                 }
               ],
-              "content": "1. I need to find the other sock that is <u>the same as this one</u>.<br/>ma [ 1 ]",
+              "content": "<p class=\"mb-4\">I need to find the other sock that is <u>the same as this one</u>.<br/>ma [ 1 ]</p><p class=\"mb-4\">Please <u>take away</u> your feet from the table.<br/>re [ 2 ]</p><p class=\"mb-4\">This is a(an) <u>very normal</u> morning. Nothing bad has happened.<br/>av [ 3 ]</p><p class=\"mb-4\">The bell <u>rattled</u>, so we changed classes.<br/>so [ 4 ]</p><p class=\"mb-4\">William wanted to <u>go forward</u>, but a wall stopped him.<br/>ad [ 5 ]</p><p class=\"mb-4\">Clara is a <u>person in a group</u> of the running club.<br/>me [ 6 ]</p><p class=\"mb-4\">jesse is a <u>very good sports player</u>.<br/>at [ 7 ]</p><p class=\"mb-4\">What is your favorite <u>class</u>?<br/>co [ 8 ]</p><p class=\"mb-4\">He was a <u>person taking a ride</u> on the ship.<br/>pa [ 9 ]</p><p class=\"mb-4\">What kind of <u>character</u> does Ted have?<br/>pe [ 10 ]</p>",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -29,7 +29,7 @@
                   "answer": "remove"
                 }
               ],
-              "content": "2. Please <u>take away</u> your feet from the table.<br/>re [ 2 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -40,7 +40,7 @@
                   "answer": "average"
                 }
               ],
-              "content": "3. This is a(an) <u>very normal</u> morning. Nothing bad has happened.<br/>av [ 3 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -51,7 +51,7 @@
                   "answer": "sounded"
                 }
               ],
-              "content": "4. The bell <u>rattled</u>, so we changed classes.<br/>so [ 4 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -62,7 +62,7 @@
                   "answer": "advance"
                 }
               ],
-              "content": "5. William wanted to <u>go forward</u>, but a wall stopped him.<br/>ad [ 5 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -73,7 +73,7 @@
                   "answer": "member"
                 }
               ],
-              "content": "6. Clara is a <u>person in a group</u> of the running club.<br/>me [ 6 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -84,7 +84,7 @@
                   "answer": "athlete"
                 }
               ],
-              "content": "7. jesse is a <u>very good sports player</u>.<br/>at [ 7 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -95,7 +95,7 @@
                   "answer": "course"
                 }
               ],
-              "content": "8. What is your favorite <u>class</u>?<br/>co [ 8 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -106,7 +106,7 @@
                   "answer": "passenger"
                 }
               ],
-              "content": "9. He was a <u>person taking a ride</u> on the ship.<br/>pa [ 9 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             },
             {
@@ -117,7 +117,7 @@
                   "answer": "personality"
                 }
               ],
-              "content": "10. What kind of <u>character</u> does Ted have?<br/>pe [ 10 ]",
+              "content": "",
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài."
             }
           ],
