@@ -238,7 +238,7 @@
             },
             {
               "id": "20",
-              "content": "My homework was not turned in.",
+              "content": "My homework was not turned in. ____________.",
               "options": [
                 "a. I abused it at home",
                 "b. It was all my fault"
