@@ -278,9 +278,9 @@
       "imageUrl": "/unit1_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Reading Comprehension",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "21",
@@ -347,53 +347,63 @@
               ],
               "explanation": "Trong bài ghi rất rõ \"It exceeded the amount that Marcus needed.\" (Số tiền đó vượt quá số lượng mà Marcus cần). Từ \"exceeded\" nghĩa là vượt quá. Vì vậy câu này hoàn toàn Đúng (True).",
               "correctAnswer": "True"
-            },
+            }
+          ]
+        },
+        {
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "27",
               "content": "Which of the following is true about the job Marcus did?",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "He made pennies.",
+                "He was compensated unfairly.",
+                "He preached to people.",
+                "He barely sustained his family."
               ],
               "explanation": "Ở đoạn 3 có câu \"He worked hard, but he could barely sustain his family.\" (Ông ấy làm việc chăm chỉ, nhưng hầu như không thể nuôi sống nổi gia đình mình). Điều này hoàn toàn khớp với đáp án He barely sustained his family nhé.",
-              "correctAnswer": "Not Given"
+              "correctAnswer": "D"
             },
             {
               "id": "28",
               "content": "Why didn't Nicolas tell people that he gave money away?",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "He prospered.",
+                "He didn't want to be modest.",
+                "He wanted to be humble.",
+                "He wasn't popular in the province."
               ],
               "explanation": "Đoạn 5 của bài có nói \"But he also believed that he should be humble and charitable.\" (Nhưng anh ấy cũng tin rằng mình nên khiêm tốn và nhân từ). Nicholas muốn giữ sự khiêm tốn (humble) nên không nói cho mọi người biết về việc mình tặng tiền.",
-              "correctAnswer": "Not Given"
+              "correctAnswer": "C"
             },
             {
               "id": "29",
               "content": "What was dropped down the chimney?",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "A penny",
+                "A ladder",
+                "Gold",
+                "A benefactor"
               ],
               "explanation": "Câu văn trong bài là \"Nicholas climbed up a ladder and dropped the bag of gold down the chimney.\" (Nicholas leo lên một cái thang và thả túi vàng xuống ống khói). Từ đó chúng ta thấy thứ được thả xuống ống khói chính là vàng (Gold).",
-              "correctAnswer": "Not Given"
+              "correctAnswer": "C"
             },
             {
               "id": "30",
               "content": "Why did Marcus want more money?",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "To buy more iron",
+                "To feed his family",
+                "To give it away",
+                "To become a blacksmith"
               ],
               "explanation": "Bài đọc nói rằng \"He worked hard, but he could barely sustain his family. He wanted to save money and prosper.\" (Ông ấy làm việc chăm chỉ, nhưng hầu như không thể nuôi sống nổi gia đình mình. Ông ấy muốn tiết kiệm tiền và trở nên thịnh vượng). Mục đích ban đầu của việc muốn có tiền là để nuôi gia đình (To feed his family) nha.",
-              "correctAnswer": "Not Given"
+              "correctAnswer": "B"
             }
-          ],
-          "questionType": "TFNG"
+          ]
         }
       ]
     }

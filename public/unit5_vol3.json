@@ -288,85 +288,86 @@
       "imageUrl": "/unit5_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Reading Comprehension",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
-              "content": "Part A - 1. People from places like Iceland, Italy, Kenya and Canada believed souls needed food.",
+              "content": "People from places like Iceland, Italy, Kenya and Canada believed souls needed food.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bài đọc viết \"People in places like Ireland, China, Egypt and Mexico believed that souls needed food.\" (Người dân ở những nơi như Ireland, Trung Quốc, Ai Cập và Mexico tin rằng các linh hồn cần thức ăn). Danh sách quốc gia trong câu hỏi hoàn toàn sai. Vì vậy câu này là Sai (False) nha.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "27",
-              "content": "Part A - 2. Many cultures believed that souls needed food to nourish them on their journey back to life.",
+              "content": "Many cultures believed that souls needed food to nourish them on their journey back to life.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Trong bài có nói \"They thought the food nourished them on their journey from cemeteries to heaven.\" (Họ nghĩ rằng thức ăn sẽ nuôi dưỡng chúng trong cuộc hành trình từ nghĩa trang lên thiên đường). Tức là hành trình lên thiên đường chứ không phải là hành trình trở lại cuộc sống (journey back to life). Nên câu này là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "28",
-              "content": "Part A - 3. Housewives gave children food if they did chores around their homes.",
+              "content": "Housewives gave children food if they did chores around their homes.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Câu văn trong bài là \"Housewives gave the children food if they performed a song or a dance.\" (Các bà nội trợ sẽ cho bọn trẻ thức ăn nếu chúng biểu diễn một bài hát hoặc một điệu nhảy). Bọn trẻ không hề làm việc nhà (did chores). Nên câu này là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "29",
-              "content": "Part A - 4. Shortly after a children's publication wrote about trick-or-treating, it became popular.",
+              "content": "Shortly after a children's publication wrote about trick-or-treating, it became popular.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bài đọc giải thích \"In 1939 a children's publication acquainted the whole country with the tradition. It became very popular.\" (Năm 1939, một ấn phẩm dành cho trẻ em đã giúp cả nước làm quen với truyền thống này. Nó trở nên rất phổ biến). Điều này hoàn toàn khớp với câu hỏi. Đáp án là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "30",
-              "content": "Part A - 5. Children often wear fancy disguises for trick-or-treating today.",
+              "content": "Children often wear fancy disguises for trick-or-treating today.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Ở đoạn cuối có nhắc đến \"But some children wear fancy disguises, like pirates.\" (Nhưng một số trẻ em mặc những bộ đồ hóa trang lộng lẫy, chẳng hạn như cướp biển). Do đó câu này là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "31",
-              "content": "Part A - 6. Inhabitants from villages started trick-or-treating in the 1940s.",
+              "content": "Inhabitants from villages started trick-or-treating in the 1940s.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Xem lại đoạn 3 của bài viết: \"Inhabitants of villages started trick-or-treating in the early 1900s.\" (Cư dân của các ngôi làng đã bắt đầu trò 'trick-or-treat' vào đầu những năm 1900). Chứ không phải vào những năm 1940. Vậy câu này là Sai (False) nhé.",
-              "correctAnswer": "B"
-            },
+              "correctAnswer": "False"
+            }
+          ]
+        },
+        {
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "32",
-              "content": "Part B - 1. Which of the following is the most popular disguise?",
+              "content": "Which of the following is the most popular disguise?",
               "options": [
                 "Hood",
                 "Skeleton",
@@ -374,11 +375,11 @@
                 "Pirate"
               ],
               "explanation": "Câu văn nói rõ \"Ghosts and skeletons are favorite costumes.\" (Ma và bộ xương là những trang phục được yêu thích nhất). Vậy trong các lựa chọn thì bộ xương (Skeleton) là câu trả lời chính xác.",
-              "correctAnswer": "B"
+              "correctAnswer": "B. SKELETON"
             },
             {
               "id": "33",
-              "content": "Part B - 2. Why did souls need food?",
+              "content": "Why did souls need food?",
               "options": [
                 "Theirs rotted",
                 "They were starving",
@@ -386,11 +387,11 @@
                 "To obtain new bodies"
               ],
               "explanation": "Lý do được nhắc tới ở đoạn 1: \"They thought the food nourished them on their journey from cemeteries to heaven.\" (Họ nghĩ rằng thức ăn nuôi dưỡng các linh hồn trong cuộc hành trình từ nghĩa trang lên thiên đường). Vậy linh hồn cần thức ăn cho hành trình dài lên thiên đường (For their long journey to heaven).",
-              "correctAnswer": "C"
+              "correctAnswer": "C. FOR THEIR LONG JOURNEY TO HEAVEN"
             },
             {
               "id": "34",
-              "content": "Part B - 3. What did the souls do when they left cemeteries?",
+              "content": "What did the souls do when they left cemeteries?",
               "options": [
                 "Got new bodies",
                 "Dug up skeletons",
@@ -398,11 +399,11 @@
                 "Got acquainted with people"
               ],
               "explanation": "Cùng câu văn phía trên \"their journey from cemeteries to heaven.\" (cuộc hành trình của họ từ nghĩa trang lên thiên đường). Tức là sau khi rời nghĩa trang, họ sẽ đến thiên đường. Đáp án là Went to heaven.",
-              "correctAnswer": "C"
+              "correctAnswer": "C. WENT TO HEAVEN"
             },
             {
               "id": "35",
-              "content": "Part B - 4. Why do children perform riddles when they trick-or-treat?",
+              "content": "Why do children perform riddles when they trick-or-treat?",
               "options": [
                 "To get candy",
                 "To get flashlights",
@@ -410,10 +411,9 @@
                 "To get a thrill"
               ],
               "explanation": "Đoạn cuối bài viết có nói \"In some places, children still perform songs or riddles to get candy.\" (Ở một số nơi, trẻ em vẫn biểu diễn các bài hát hoặc câu đố để nhận được kẹo). Mục đích là để có được kẹo (To get candy).",
-              "correctAnswer": "A"
+              "correctAnswer": "A. TO GET CANDY"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     }

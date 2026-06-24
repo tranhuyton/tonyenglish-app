@@ -288,85 +288,86 @@
       "imageUrl": "/unit9_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Answer the questions based on the story.",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
-              "content": "Part A: 1. Mitch was a bully.",
+              "content": "Mitch was a bully.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: True. Ngay trong đoạn 1, tác giả đã viết rõ: 'He was a bully who boasted about his strength.' Vì vậy, nhận định Mitch là một kẻ bắt nạt là hoàn toàn chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
-              "content": "Part A: 2. Everyone was nice to Dalton.",
+              "content": "Everyone was nice to Dalton.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Ở ngay câu đầu tiên của đoạn 1, chúng ta thấy: 'sometimes the other boys made fun of him' (đôi khi những cậu bé khác chế nhạo cậu ấy). Do đó, không phải ai cũng đối xử tốt với Dalton.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "28",
-              "content": "Part A: 3. Dalton became ailed when a bee stung him.",
+              "content": "Dalton became ailed when a bee stung him.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Đoạn 4 viết: 'I got stung by a bee. I need to see the nurse. said Dalton. He made it up so he wouldn't have to play.' Dalton chỉ bịa ra chuyện bị ong đốt để trốn thi đấu chứ không hề bị ốm đau gì thật.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "29",
-              "content": "Part A: 4. Dalton's biggest problem was being tall.",
+              "content": "Dalton's biggest problem was being tall.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Đoạn 1 có ghi: 'Dalton's biggest problem was Mitch.' Vấn đề lớn nhất của Dalton không phải là chiều cao, mà chính là cậu bạn bắt nạt tên Mitch.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "30",
-              "content": "Part A: 5. When they wrestled, Mitch was dominant.",
+              "content": "When they wrestled, Mitch was dominant.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án đúng theo bài đọc là True. Theo đoạn 6: 'First, they wrestled... But Mitch was dominant in every event.' Do đó Mitch chiếm ưu thế ở mọi phần thi, bao gồm cả môn vật.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "31",
-              "content": "Part A: 6. The boys felt sore at lunchtime.",
+              "content": "The boys felt sore at lunchtime.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: True. Đoạn 7 viết: 'By lunch, they were sore.' Nghĩa là đến giờ ăn trưa, cả người họ đều cảm thấy đau nhức. Thông tin này hoàn toàn chính xác.",
-              "correctAnswer": "A"
-            },
+              "correctAnswer": "True"
+            }
+          ]
+        },
+        {
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "32",
-              "content": "Part B: 1. Which of the following was NOT part of their Olympics?",
+              "content": "Which of the following was NOT part of their Olympics?",
               "options": [
                 "Wrestling",
                 "Volleyball",
@@ -374,11 +375,11 @@
                 "Speed skating"
               ],
               "explanation": "Đáp án: Speed skating. Đoạn 6 liệt kê các môn thể thao: 'First, they wrestled. Then they jumped, crawled and played other games.' Trong các lựa chọn, môn trượt băng tốc độ (speed skating) không hề được nhắc đến trong cuộc thi.",
-              "correctAnswer": "D"
+              "correctAnswer": "SPEED SKATING"
             },
             {
               "id": "33",
-              "content": "Part B: 2. What did boys give Mitch so he would have mercy on them?",
+              "content": "What did boys give Mitch so he would have mercy on them?",
               "options": [
                 "A dial",
                 "Money",
@@ -386,11 +387,11 @@
                 "Carbohydrates"
               ],
               "explanation": "Đáp án: Money. Trong đoạn 1 có ghi: 'if boys gave Mitch their lunch money, he would have mercy and leave them alone.' Nghĩa là các cậu bé phải đưa tiền ăn trưa thì Mitch mới tha cho họ.",
-              "correctAnswer": "B"
+              "correctAnswer": "MONEY"
             },
             {
               "id": "34",
-              "content": "Part B: 3. Where did the Olympics happen?",
+              "content": "Where did the Olympics happen?",
               "options": [
                 "In the gym",
                 "At the bully's school",
@@ -398,11 +399,11 @@
                 "At Dalton's house"
               ],
               "explanation": "Đáp án: In the gym. Ở đoạn 3, tác giả có kể: 'He entered the gym... It was time to begin.' Cuộc thi Olympic của trường trung học đã được tổ chức ở trong phòng thể dục (gym).",
-              "correctAnswer": "A"
+              "correctAnswer": "IN THE GYM"
             },
             {
               "id": "35",
-              "content": "Part B: 4. What did the boys want to do to Mitch?",
+              "content": "What did the boys want to do to Mitch?",
               "options": [
                 "Be his opponent",
                 "Show him mercy",
@@ -410,10 +411,9 @@
                 "Strain against him"
               ],
               "explanation": "Đáp án: Defeat him. Trong đoạn 7, tác giả viết: 'They wanted him to help them beat Mitch.' Cụm từ beat Mitch đồng nghĩa với defeat him, tức là họ muốn đánh bại Mitch.",
-              "correctAnswer": "C"
+              "correctAnswer": "DEFEAT HIM"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     }

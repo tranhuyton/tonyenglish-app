@@ -288,85 +288,86 @@
       "imageUrl": "/unit6_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Reading Comprehension",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
-              "content": "Part A: 1. The senator had a lot of money.",
+              "content": "The senator had a lot of money.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Mở đầu câu chuyện là \"A rich senator lived in a big house. He had more money than anyone in his district.\" (Một vị thượng nghị sĩ giàu có sống trong một ngôi nhà lớn. Ông ấy có nhiều tiền hơn bất kỳ ai trong khu vực của mình). Vì vậy câu này là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
-              "content": "Part A: 2. The senator was listening to a radio broadcast.",
+              "content": "The senator was listening to a radio broadcast.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Cùng đoạn đó có nói \"One day, he was sitting on a chair listening to a radio broadcast.\" (Một ngày nọ, ông đang ngồi trên ghế nghe đài phát thanh). Câu này hoàn toàn trùng khớp với bài đọc, nên đáp án là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "28",
-              "content": "Part A: 3. The senator wanted the cook to kill the worm.",
+              "content": "The senator wanted the cook to kill the worm.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Vị thượng nghị sĩ đã hét lên: \"No! I want you to kill it.\" (Không! Tôi muốn anh giết nó). Vậy là ông ấy thực sự muốn người đầu bếp giết con giun. Đáp án là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "29",
-              "content": "Part A: 4. The cook found a pipe in one of the drawers.",
+              "content": "The cook found a pipe in one of the drawers.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bài đọc viết \"The cook looked through several drawers, but found nothing. Then he ran to the closet and took out a pipe.\" (Người đầu bếp tìm trong vài ngăn kéo, nhưng không thấy gì. Sau đó, anh ta chạy đến tủ quần áo và lấy ra một cái ống). Ống nước được tìm thấy trong tủ đồ (closet) chứ không phải ngăn kéo (drawers). Câu này là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "30",
-              "content": "Part A: 5. The cook knew he was going to tap the worm.",
+              "content": "The cook knew he was going to tap the worm.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Câu văn nói rõ \"He knew he couldn't just tap the worm. He was going to hit it hard.\" (Anh ta biết mình không thể chỉ gõ nhẹ vào con giun. Anh ta định đánh nó thật mạnh). Vì vậy câu này ngược lại với bài đọc. Đáp án là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "31",
-              "content": "Part A: 6. The worm was chopped in half on the senator’s head.",
+              "content": "The worm was chopped in half on the senator’s head.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Khi bị đánh, con giun nói \"He's going to chop me in half. It jumped off the senator's head.\" (Ông ta định chặt tôi ra làm đôi. Nó nhảy khỏi đầu của thượng nghị sĩ). Con giun đã nhảy ra trước khi bị chặt làm đôi. Nên câu này là Sai (False).",
-              "correctAnswer": "B"
-            },
+              "correctAnswer": "False"
+            }
+          ]
+        },
+        {
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "32",
-              "content": "Part B: 1. What was the senator doing when the worm crawled onto his head?",
+              "content": "What was the senator doing when the worm crawled onto his head?",
               "options": [
                 "Listening to the radio",
                 "Watching a broadcast",
@@ -374,11 +375,11 @@
                 "Consoling the cook"
               ],
               "explanation": "Đoạn đầu kể rằng \"As he listened to the news bulletin, a worm crawled from underneath the chair and onto his head.\" (Khi ông ấy đang nghe bản tin, một con giun đã bò từ dưới ghế lên đầu ông ấy). Bản tin này phát trên đài, nên ông ấy đang nghe đài (Listening to the radio).",
-              "correctAnswer": "A"
+              "correctAnswer": "A. LISTENING TO THE RADIO"
             },
             {
               "id": "33",
-              "content": "Part B: 2. Which of the following did the cook NOT do?",
+              "content": "Which of the following did the cook NOT do?",
               "options": [
                 "Stir some spaghetti sauce",
                 "Look through several drawers",
@@ -386,11 +387,11 @@
                 "Execute the worm"
               ],
               "explanation": "Ở cuối truyện, con giun đã nhảy ra ngoài an toàn nên người đầu bếp đã không giết được con giun (Execute the worm). Mặc dù anh ta có khuấy sốt mì Ý (stir some spaghetti sauce), tìm ngăn kéo (look through several drawers) và đánh trúng đầu thượng nghị sĩ (hit the senator's skull). Đáp án là Execute the worm.",
-              "correctAnswer": "D"
+              "correctAnswer": "D. EXECUTE THE WORM"
             },
             {
               "id": "34",
-              "content": "Part B: 3. Why did the senator tell the cook to hurry?",
+              "content": "Why did the senator tell the cook to hurry?",
               "options": [
                 "He was hiding in the rear of the house.",
                 "He knew he had to alert the cook.",
@@ -398,11 +399,11 @@
                 "He had heard a tremendous noise."
               ],
               "explanation": "Trong bài có giải thích \"The senator could not endure the worm on his head. 'Hurry!' he shouted.\" (Vị thượng nghị sĩ không thể chịu đựng được con giun trên đầu mình. 'Nhanh lên!' ông ấy hét). Vậy lý do là ông ấy không thể chịu đựng thêm (He couldn't endure the worm on his head).",
-              "correctAnswer": "C"
+              "correctAnswer": "C. HE COULDN’T ENDURE THE WORM ON HIS HEAD."
             },
             {
               "id": "35",
-              "content": "Part B: 4. After the cook hit the senator, where did the worm go?",
+              "content": "After the cook hit the senator, where did the worm go?",
               "options": [
                 "Into the kitchen",
                 "Underneath the chair",
@@ -410,10 +411,9 @@
                 "Onto the cook’s head"
               ],
               "explanation": "Cùng lúc thượng nghị sĩ bị đánh trúng đầu thì \"Meanwhile, the worm crawled outside.\" (Trong khi đó, con giun đã bò ra ngoài). Vậy con giun bò ra bên ngoài ngôi nhà (Outside the house).",
-              "correctAnswer": "C"
+              "correctAnswer": "C. OUTSIDE THE HOUSE"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     }

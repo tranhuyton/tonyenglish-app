@@ -288,9 +288,9 @@
       "imageUrl": "/unit8_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Reading Comprehension",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -298,11 +298,10 @@
               "options": [
                 "True",
                 "False",
-                "Not mentioned",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Để trả lời câu này, em hãy nhìn vào đoạn 2 của bài đọc, câu cuối cùng có viết: 'Joe and Stella were poor, but not ashamed.' Nghĩa là Joe và Stella rất nghèo, nhưng họ không hề cảm thấy xấu hổ về điều đó. Vì vậy, nhận định trong câu hỏi là sai nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "27",
@@ -310,11 +309,10 @@
               "options": [
                 "True",
                 "False",
-                "Not mentioned",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: True. Ngay ở câu đầu tiên của đoạn 1, tác giả đã viết rất rõ ràng: 'Joe was a carpenter.' Nghĩa là Joe là một thợ mộc. Nhận định này hoàn toàn chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "28",
@@ -322,11 +320,10 @@
               "options": [
                 "True",
                 "False",
-                "Not mentioned",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Câu hỏi nói rằng họ quá nghèo nên không thể sưởi ấm nhà kho bằng than. Tuy nhiên, ở đoạn 2 có câu: 'But they had coal for heat' (Nhưng họ có than để sưởi ấm). Do đó, thông tin trong câu hỏi là sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "29",
@@ -334,11 +331,10 @@
               "options": [
                 "True",
                 "False",
-                "Not mentioned",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Câu hỏi cho rằng Joe yêu cầu Stella cắt tỉa các bụi cây. Nhưng theo thông tin trong đoạn 2: 'Together, they trimmed the bushes to make their house look nice.' Nghĩa là cả hai người đã cùng nhau cắt tỉa bụi cây, chứ không phải Joe yêu cầu Stella làm một mình.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "30",
@@ -346,11 +342,10 @@
               "options": [
                 "True",
                 "False",
-                "Not mentioned",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: True. Đoạn 1 có ghi rõ: 'Stella used a needle and thread to sew elegant clothing. She only used beautiful fabric.' Nghĩa là Stella dùng kim chỉ để may những bộ quần áo thanh lịch và cô ấy chỉ dùng những loại vải đẹp. Câu này hoàn toàn đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "31",
@@ -358,12 +353,18 @@
               "options": [
                 "True",
                 "False",
-                "Not mentioned",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: True. Ở đoạn 2, tác giả có nhắc đến ngôi nhà của họ: 'Water dripped in when it rained.' Tức là nước mưa nhỏ giọt vào trong nhà mỗi khi trời mưa. Do vậy nhận định này là đúng.",
-              "correctAnswer": "A"
-            },
+              "correctAnswer": "True"
+            }
+          ]
+        },
+        {
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "32",
               "content": "Where were the houses that Joe worked on?",
@@ -374,7 +375,7 @@
                 "In the highlands"
               ],
               "explanation": "Đáp án: In the highlands. Trong đoạn 1, câu thứ hai có thông tin: 'He built houses in the highlands.' Nghĩa là Joe xây những ngôi nhà ở vùng cao.",
-              "correctAnswer": "D"
+              "correctAnswer": "IN THE HIGHLANDS"
             },
             {
               "id": "33",
@@ -386,7 +387,7 @@
                 "Polished it and sold it"
               ],
               "explanation": "Đáp án: Polished it and sold it. Câu hỏi hỏi Joe đã làm gì với chiếc đồng hồ của anh ấy. Trong đoạn 5, tác giả viết: 'So he polished it and sold it.' Joe đã đánh bóng chiếc đồng hồ và bán nó đi để lấy tiền mua quà cho Stella.",
-              "correctAnswer": "D"
+              "correctAnswer": "POLISHED IT AND SOLD IT"
             },
             {
               "id": "34",
@@ -398,7 +399,7 @@
                 "Anything for herself"
               ],
               "explanation": "Đáp án: Elegant clothing. Ở đoạn 1 có ghi: 'Stella used a needle and thread to sew elegant clothing.' Điều này cho biết Stella chuyên may những bộ trang phục thanh lịch.",
-              "correctAnswer": "A"
+              "correctAnswer": "ELEGANT CLOTHING"
             },
             {
               "id": "35",
@@ -410,10 +411,9 @@
                 "Bought him a gold watch"
               ],
               "explanation": "Đáp án: Sold her hair. Câu hỏi muốn biết Stella đã làm gì cho Joe vào ngày kỷ niệm. Cuối đoạn 4 có viết: 'She cut off all of her hair and sold it.' Stella đã cắt mái tóc của mình và bán đi để có tiền mua quà cho Joe.",
-              "correctAnswer": "A"
+              "correctAnswer": "SOLD HER HAIR"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     }

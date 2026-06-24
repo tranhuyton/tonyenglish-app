@@ -288,85 +288,86 @@
       "imageUrl": "/unit13_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Reading Comprehension",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
-              "content": "Part A - 1. The sheriff enforced cruel laws.",
+              "content": "The sheriff enforced cruel laws.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Trong đoạn 2 có câu 'Dan enforced cruel laws.' Điều này khớp hoàn toàn với câu hỏi nên đáp án là True. Cảnh sát trưởng Dan thực sự đã ban hành những luật lệ rất tàn nhẫn.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
-              "content": "Part A - 2. Dan pulled the trigger on his gun and shot bullets in the air to scare away criminals.",
+              "content": "Dan pulled the trigger on his gun and shot bullets in the air to scare away criminals.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Câu văn trong đoạn 2 viết 'He didn't want the bullets to hit anyone. He just wanted to scare people with the loud sound.' Dan chỉ muốn dọa mọi người (scare people) bằng tiếng nổ lớn chứ không phải để đuổi tội phạm (criminals) đi. Do đó đáp án là False.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "28",
-              "content": "Part A - 3. With their understanding, the crowd sought to unify the town.",
+              "content": "With their understanding, the crowd sought to unify the town.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đoạn 3 có câu 'With their understanding, the crowd sought to unify the town.' Câu này giống hệt với nhận định đưa ra, cho thấy đám đông đã tìm cách thống nhất thị trấn. Đáp án đúng là True.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "29",
-              "content": "Part A - 4. Dan’s police officers were paid almost nothing.",
+              "content": "Dan’s police officers were paid almost nothing.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đoạn 1 có nêu 'he paid his police officers almost nothing.' Dan trả cho các sĩ quan cảnh sát của mình mức lương gần như bằng không, vì vậy nhận định này hoàn toàn chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "30",
-              "content": "Part A - 5. Dan was sent on a voyage around the world.",
+              "content": "Dan was sent on a voyage around the world.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Trong đoạn cuối, đám đông nói rằng 'We're sending you on a voyage to the middle of the ocean.' Dan bị đưa lên chuyến đi ra giữa đại dương chứ không phải đi vòng quanh thế giới (around the world). Nhận định này sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "31",
-              "content": "Part A - 6. Every person who inhabited Oceantown worshipped Dan.",
+              "content": "Every person who inhabited Oceantown worshipped Dan.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Ngay đầu đoạn 2 có câu 'Every person who inhabited Oceantown disliked him.' Tất cả cư dân đều ghét ông ta, còn người duy nhất tôn thờ tiền bạc là chính Dan ('He worshipped money'). Vì vậy đáp án phải là False.",
-              "correctAnswer": "B"
-            },
+              "correctAnswer": "False"
+            }
+          ]
+        },
+        {
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "32",
-              "content": "Part B - 1. Where did the crowd take Dan?",
+              "content": "Where did the crowd take Dan?",
               "options": [
                 "To the streets",
                 "To the harbor",
@@ -374,11 +375,11 @@
                 "To the jail"
               ],
               "explanation": "Đoạn 4 có viết 'They carried Dan to the harbor and put him aboard a vessel.' Đám đông đã khiêng Dan đến bến cảng (the harbor) và đưa ông ta lên một con tàu. Vậy đáp án đúng là To the harbor.",
-              "correctAnswer": "B"
+              "correctAnswer": "TO THE HARBOR"
             },
             {
               "id": "33",
-              "content": "Part B - 2. At the end of the reading, Dan .",
+              "content": "At the end of the reading, Dan .",
               "options": [
                 "became fair and kind",
                 "drifted into another port",
@@ -386,11 +387,11 @@
                 "made Oceantown happy"
               ],
               "explanation": "Đoạn cuối bài đọc có ghi 'The boat drifted out of the port, and Dan was never seen again.' Con thuyền trôi dạt ra khỏi cảng và không ai còn nhìn thấy Dan nữa. Chọn was never seen again là chính xác.",
-              "correctAnswer": "C"
+              "correctAnswer": "WAS NEVER SEEN AGAIN"
             },
             {
               "id": "34",
-              "content": "Part B - 3. Why did Dan put his brother in jail?",
+              "content": "Why did Dan put his brother in jail?",
               "options": [
                 "He broke a fair law.",
                 "He tied Dan to a chair.",
@@ -398,11 +399,11 @@
                 "He tossed a coin in a fountain."
               ],
               "explanation": "Trong đoạn 2 có câu 'Once, Dan even put his own brother in jail for throwing a coin into a fountain!' Dan đã bỏ tù chính anh trai mình chỉ vì ném một đồng xu vào đài phun nước. Đáp án He tossed a coin in a fountain là hoàn toàn phù hợp.",
-              "correctAnswer": "D"
+              "correctAnswer": "HE TOSSED A COIN IN A FOUNTAIN."
             },
             {
               "id": "35",
-              "content": "Part B - 4. According to the reading, why did the crowd send Dan away?",
+              "content": "According to the reading, why did the crowd send Dan away?",
               "options": [
                 "The police were bitter towards Dan.",
                 "They wanted Dan’s money.",
@@ -410,10 +411,9 @@
                 "They hated millionaires."
               ],
               "explanation": "Trong đoạn 1 tác giả có viết 'Dan was as cruel as the devil.' Dù đám đông không nói trực tiếp câu này khi thả Dan đi, nhưng họ nói 'We know you will never change' (Chúng tôi biết ông sẽ không bao giờ thay đổi), chứng tỏ họ tống khứ ông ta vì bản tính tàn ác như ác quỷ của ông. Do đó đáp án Dan was a devil to them là hợp lý nhất.",
-              "correctAnswer": "C"
+              "correctAnswer": "DAN WAS A DEVIL TO THEM."
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     }

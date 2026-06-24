@@ -288,9 +288,9 @@
       "imageUrl": "/unit15_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Reading Comprehension",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -298,11 +298,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bữa tiệc của pharaoh là một sự kiện vui vẻ (happy affair), không phải buồn tẻ (sad).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "27",
@@ -310,11 +309,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Có rất nhiều trái cây chín (ripe fruit) tại bữa tiệc từ vụ thu hoạch.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "28",
@@ -322,11 +320,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Cuộc tụ tập của các loài động vật rất vui vẻ (merry).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "29",
@@ -334,11 +331,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Khỉ chỉ lặp lại thói quen đó trong bốn ngày (four days), không phải năm ngày.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "30",
@@ -346,11 +342,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đường kính eo của khỉ thực sự rộng hơn cả khung cửa.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "31",
@@ -358,12 +353,18 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Khỉ là người đã hỏi 'Pardon?' chứ không phải pharaoh.",
-              "correctAnswer": "B"
-            },
+              "correctAnswer": "False"
+            }
+          ]
+        },
+        {
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "32",
               "content": "The pharaoh gave a party for all the animals because _____.",
@@ -374,7 +375,7 @@
                 "they were too slim"
               ],
               "explanation": "Pharaoh tổ chức bữa tiệc vì nạn đói đã kết thúc (the famine ended).",
-              "correctAnswer": "B"
+              "correctAnswer": "B. THE FAMINE ENDED"
             },
             {
               "id": "33",
@@ -386,7 +387,7 @@
                 "He cooked it in the stove."
               ],
               "explanation": "Khỉ đã mang thức ăn về nhà của mình (took it to his house).",
-              "correctAnswer": "B"
+              "correctAnswer": "B. HE TOOK IT TO HIS HOUSE."
             },
             {
               "id": "34",
@@ -398,7 +399,7 @@
                 "roasted meat"
               ],
               "explanation": "Trên bàn có trái cây chín, ngũ cốc và thịt nướng, không có rau (vegetables).",
-              "correctAnswer": "A"
+              "correctAnswer": "A. VEGETABLES"
             },
             {
               "id": "35",
@@ -410,10 +411,9 @@
                 "The other animals"
               ],
               "explanation": "Eo quá béo (fat waist) khiến khỉ không thể lọt qua cửa.",
-              "correctAnswer": "C"
+              "correctAnswer": "C. HIS FAT WAIST"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     }

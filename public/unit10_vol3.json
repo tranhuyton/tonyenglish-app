@@ -338,21 +338,20 @@
       "imageUrl": "/unit10_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Reading Comprehension",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
-              "content": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.\n1. Anna took care of Grace in her mother's absence because her parents got a divorce.",
+              "content": "Anna took care of Grace in her mother's absence because her parents got a divorce.",
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: True. Đoạn 1 nêu rõ: 'Since her parents got a divorce... In her mother's absence, Anna takes care of Grace' (Kể từ khi bố mẹ ly hôn... Khi mẹ đi vắng, Anna chăm sóc Grace). Vậy nhận định này đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
@@ -360,11 +359,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Câu hỏi nói Grace có nhiều tóc và nếp nhăn. Nhưng đoạn 5 miêu tả 'bald head' (đầu hói/ít tóc) và đoạn 7 khẳng định 'had no wrinkles' (không có nếp nhăn). Do đó, câu này là sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "28",
@@ -372,11 +370,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: True. Trong đoạn 2 có kể: 'She meowed like a cat... In fact, Grace reproduced every sound that Anna made.' Anna bắt chước tiếng mèo kêu và Grace đã lặp lại y hệt những âm thanh đó.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "29",
@@ -384,11 +381,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: True. Ở cuối đoạn 2 tác giả viết: 'She put Grace in the wagon, but there was nowhere for them to go.' (Cô bé đặt Grace vào chiếc xe kéo nhỏ nhưng chẳng có nơi nào để đi cả). Nhận định này hoàn toàn chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "30",
@@ -396,11 +392,10 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Đoạn 3 viết: 'But when she came back, Grace had vanished!' Nghĩa là Grace biến mất. Còn việc bị bắt cóc chỉ là suy đoán lo sợ của Anna ('Maybe the baby had been kidnapped!'). Thực tế bé tự chui xuống gầm giường chứ không hề bị bắt cóc.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "31",
@@ -408,15 +403,21 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đáp án: False. Theo đoạn 7, việc Anna hát những bài vần điệu (sang rhymes) là để ru Grace ngủ ('put Grace in bed for a nap'), chứ không phải là để tìm bé nhanh hơn. Do đó nhận định này sai.",
-              "correctAnswer": "B"
-            },
+              "correctAnswer": "False"
+            }
+          ]
+        },
+        {
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "32",
-              "content": "Part B: Answer the questions.\n1. What did Anna feel when she finally found Grace?",
+              "content": "What did Anna feel when she finally found Grace?",
               "options": [
                 "Sleepy",
                 "Urgent",
@@ -424,7 +425,7 @@
                 "Pleasant"
               ],
               "explanation": "Đáp án: Relief. Khi tìm thấy Grace dưới gầm giường, Anna đã thốt lên: 'What a relief! Anna cried.' (Thật nhẹ nhõm!). Do vậy cảm giác của cô bé lúc đó là vô cùng nhẹ nhõm.",
-              "correctAnswer": "C"
+              "correctAnswer": "RELIEF"
             },
             {
               "id": "33",
@@ -436,7 +437,7 @@
                 "Anna carried her in the blanket."
               ],
               "explanation": "Đáp án: She crept there. Cuối đoạn 5 có câu: 'Grace had followed Anna into her room and crept under the bed.' Nghĩa là bé Grace đã đi theo Anna và rón rén bò (crept) xuống dưới gầm giường.",
-              "correctAnswer": "A"
+              "correctAnswer": "SHE CREPT THERE."
             },
             {
               "id": "34",
@@ -448,7 +449,7 @@
                 "Sing her rhymes"
               ],
               "explanation": "Đáp án: Read a book aloud. Trong bài, Anna đã cho em ngồi xe kéo (wagon), vỗ nhẹ đầu (patted her on the head), và hát ru (sing her rhymes). Việc đọc sách to (read a book aloud) không hề được nhắc đến.",
-              "correctAnswer": "C"
+              "correctAnswer": "READ A BOOK ALOUD"
             },
             {
               "id": "35",
@@ -460,10 +461,9 @@
                 "To keep her from sucking her thumb"
               ],
               "explanation": "Đáp án: So she could take a nap. Ở đoạn 7, tác giả viết: 'Anna wrapped her in a blanket... Then she put Grace in bed for a nap.' Việc quấn chăn là để chuẩn bị cho Grace có một giấc ngủ trưa ngoan ngoãn.",
-              "correctAnswer": "C"
+              "correctAnswer": "SO SHE COULD TAKE A NAP"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     }
