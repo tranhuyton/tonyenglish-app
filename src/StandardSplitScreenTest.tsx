@@ -634,6 +634,19 @@ const handleFinish = async () => {
     
     return { allQuestionIds: ids, questionIndexMap: map, questionToPartMap: partMap, questionDataMap: dataMap };
   }, [parts]);
+  const handleDragScroll = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    if (e.clientY === 0) return;
+    const container = rightPaneRef.current;
+    if (!container) return;
+    const rect = container.getBoundingClientRect();
+    const buffer = 80;
+    const speed = 15;
+    if (e.clientY - rect.top < buffer && e.clientY - rect.top > -50) {
+      container.scrollTop -= speed;
+    } else if (rect.bottom - e.clientY < buffer && rect.bottom - e.clientY > -50) {
+      container.scrollTop += speed;
+    }
+  }, []);
 
   const { answeredCount, markedCount, totalCount } = useMemo(() => {
     return {
@@ -1463,6 +1476,7 @@ const handleFinish = async () => {
                                                 draggable={!isUsed}
                                                 onDragStart={(e) => onDragStart(e, displayOpt)}
                                                 onDragEnd={() => setDraggedOption(null)}
+                                                onDrag={handleDragScroll}
                                                 className={`px-4 py-2 font-bold font-sans text-[14px] border rounded-lg transition-all select-none shadow-sm
                                                   ${isUsed
                                                     ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed border-slate-200'
@@ -1959,6 +1973,7 @@ const handleFinish = async () => {
                                                  draggable={!isUsed}
                                                  onDragStart={(e) => onDragStart(e, displayOpt)}
                                                  onDragEnd={() => setDraggedOption(null)}
+                                                 onDrag={handleDragScroll}
                                                  className={`px-4 py-2 font-bold font-sans text-[14px] border rounded-lg transition-all select-none shadow-sm
                                                    ${isUsed
                                                      ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed border-slate-200'
