@@ -82,8 +82,8 @@
               "id": "6",
               "content": "<p>6.</p>",
               "options": [
-                "a. It is a good idea to bet your money on silly things.",
-                "b. You should go to a mechanic if you have a problem with your car."
+                "a. It is a good idea to <b>bet</b> your money on silly things.",
+                "b. You should go to a <b>mechanic</b> if you have a problem with your car."
               ],
               "explanation": "mechanic (thợ cơ khí) sửa xe, đây là lựa chọn hợp lý.",
               "correctAnswer": "b"
@@ -92,8 +92,8 @@
               "id": "7",
               "content": "<p>7.</p>",
               "options": [
-                "a. Drivers use signals to make their cars go faster.",
-                "b. You should attach a stamp to a letter before you mail it."
+                "a. Drivers use <b>signals</b> to make their cars go faster.",
+                "b. You should <b>attach</b> a stamp to a letter before you mail it."
               ],
               "explanation": "attach a stamp (dán tem) là hành động đúng trước khi gửi thư.",
               "correctAnswer": "b"
@@ -102,8 +102,8 @@
               "id": "8",
               "content": "<p>8.</p>",
               "options": [
-                "a. If you and your date differ too much, you might not like each other.",
-                "b. When you confirm the results of the test, you make them better."
+                "a. If you and your date <b>differ</b> too much, you might not like each other.",
+                "b. When you <b>confirm</b> the results of the test, you make them better."
               ],
               "explanation": "differ (khác biệt): nếu hai người khác biệt quá nhiều, có thể họ không thích nhau.",
               "correctAnswer": "a"
@@ -112,8 +112,8 @@
               "id": "9",
               "content": "<p>9.</p>",
               "options": [
-                "a. It is O.K. to wear sandals to a formal party.",
-                "b. Teachers often criticize lazy students."
+                "a. It is O.K. to wear sandals to a <b>formal</b> party.",
+                "b. Teachers often <b>criticize</b> lazy students."
               ],
               "explanation": "criticize (chỉ trích): giáo viên thường phê bình học sinh lười biếng.",
               "correctAnswer": "b"
@@ -122,8 +122,8 @@
               "id": "10",
               "content": "<p>10.</p>",
               "options": [
-                "a. People must pay attention to signals when they are driving.",
-                "b. When you visit a mechanic they will sell you a new car."
+                "a. People must pay attention to <b>signals</b> when they are driving.",
+                "b. When you visit a <b>mechanic</b> they will sell you a new car."
               ],
               "explanation": "signals (tín hiệu): người lái xe phải chú ý đến các tín hiệu.",
               "correctAnswer": "a"
@@ -132,8 +132,8 @@
               "id": "11",
               "content": "<p>11.</p>",
               "options": [
-                "a. You should wear nice clothing if you go to a formal event.",
-                "b. Good friends like to criticize each other."
+                "a. You should wear nice clothing if you go to a <b>formal</b> event.",
+                "b. Good friends like to <b>criticize</b> each other."
               ],
               "explanation": "formal event (sự kiện trang trọng): nên mặc đồ đẹp.",
               "correctAnswer": "a"
@@ -142,8 +142,8 @@
               "id": "12",
               "content": "<p>12.</p>",
               "options": [
-                "a. Husbands and wives who differ are often very busy people.",
-                "b. If you commute to work, you have to travel a certain distance."
+                "a. Husbands and wives who <b>differ</b> are often very busy people.",
+                "b. If you <b>commute</b> to work, you have to travel a certain distance."
               ],
               "explanation": "commute (đi làm xa): đi lại một khoảng cách nhất định.",
               "correctAnswer": "b"
@@ -152,8 +152,8 @@
               "id": "13",
               "content": "<p>13.</p>",
               "options": [
-                "a. It is a good idea to confirm your plans before you travel.",
-                "b. If you attach a large sign to your door, no one will see it."
+                "a. It is a good idea to <b>confirm</b> your plans before you travel.",
+                "b. If you <b>attach</b> a large sign to your door, no one will see it."
               ],
               "explanation": "confirm (xác nhận): nên xác nhận kế hoạch trước khi đi.",
               "correctAnswer": "a"
@@ -162,8 +162,8 @@
               "id": "14",
               "content": "<p>14.</p>",
               "options": [
-                "a. If your aim is to learn how to swim, you must get in the water.",
-                "b. Everyone commutes in math class."
+                "a. If your <b>aim</b> is to learn how to swim, you must get in the water.",
+                "b. Everyone <b>commutes</b> in math class."
               ],
               "explanation": "aim (mục tiêu): nếu mục tiêu là học bơi, phải xuống nước.",
               "correctAnswer": "a"
@@ -172,8 +172,8 @@
               "id": "15",
               "content": "<p>15.</p>",
               "options": [
-                "a. People who have an aim to succeed are very lazy.",
-                "b. When you bet money, you might lose it."
+                "a. People who have an <b>aim</b> to succeed are very lazy.",
+                "b. When you <b>bet</b> money, you might lose it."
               ],
               "explanation": "bet (cá cược): khi cá cược bạn có thể bị mất tiền.",
               "correctAnswer": "b"

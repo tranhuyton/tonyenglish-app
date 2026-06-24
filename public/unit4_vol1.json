@@ -109,8 +109,8 @@
               "id": "11",
               "content": "",
               "options": [
-                "The <b>girl's</b> positive words made me feel better.",
-                "We took the village out of the house."
+                "The girl's <b>positive</b> words made me feel better.",
+                "We took the <b>village</b> out of the house."
               ],
               "explanation": "Từ ngữ tích cực (positive) làm cảm thấy tốt hơn là có nghĩa.",
               "correctAnswer": "A"
@@ -119,8 +119,8 @@
               "id": "12",
               "content": "",
               "options": [
-                "The calm <b>girl</b> yelled a lot.",
-                "The team members asked Kate to represent them at the dinner."
+                "The <b>calm</b> girl yelled a lot.",
+                "The team members asked Kate to <b>represent</b> them at the dinner."
               ],
               "explanation": "Đại diện (represent) cho đội là hợp lý. Người điềm tĩnh (calm) thì không la hét nhiều.",
               "correctAnswer": "B"
@@ -129,8 +129,8 @@
               "id": "13",
               "content": "",
               "options": [
-                "I was content to stay at home by the warm fire.",
-                "My mom punished me for doing my homework."
+                "I was <b>content</b> to stay at home by the warm fire.",
+                "My mom <b>punished</b> me for doing my homework."
               ],
               "explanation": "Hài lòng (content) khi ở nhà bên bếp lửa là có nghĩa.",
               "correctAnswer": "A"
@@ -139,8 +139,8 @@
               "id": "14",
               "content": "",
               "options": [
-                "The man expected me to say yes.",
-                "The issue did not taste very good."
+                "The man <b>expected</b> me to say yes.",
+                "The <b>issue</b> did not taste very good."
               ],
               "explanation": "Mong đợi (expected) ai đó nói đồng ý là có nghĩa.",
               "correctAnswer": "A"
@@ -149,8 +149,8 @@
               "id": "15",
               "content": "",
               "options": [
-                "I behaved wisely while I was asleep.",
-                "I avoided my friend because she had laughed at me."
+                "I <b>behaved</b> wisely while I was asleep.",
+                "I <b>avoided</b> my friend because she had laughed at me."
               ],
               "explanation": "Tránh mặt (avoided) bạn vì bị cười nhạo là có lý.",
               "correctAnswer": "B"
