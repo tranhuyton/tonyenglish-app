@@ -280,15 +280,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
               "content": "Marcus occupied a home with Nicholas.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu văn trong bài là \"A long time ago, a man named Marcus occupied a house with his family.\" (Cách đây rất lâu, một người đàn ông tên là Marcus đã ở trong một ngôi nhà cùng với gia đình của ông ấy). Như vậy Marcus sống với gia đình chứ không phải sống cùng Nicholas nhé. Do đó câu này là Sai (False).",
               "correctAnswer": "False"
@@ -298,8 +297,7 @@
               "content": "Marcus told Nicholas about his problem when he encountered Nicholas.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài có viết \"One day, Nicholas encountered Marcus. Marcus told Nicholas about his agreement with the blacksmith.\" (Một ngày nọ, Nicholas tình cờ gặp Marcus. Marcus đã kể cho Nicholas nghe về thỏa thuận của ông ấy với người thợ rèn). Đoạn tiếp theo Marcus kể về rắc rối của mình. Vì vậy câu này là Đúng (True).",
               "correctAnswer": "True"
@@ -309,8 +307,7 @@
               "content": "A problem arose for Marcus because he enjoyed preaching.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Theo bài đọc, \"Even though I worked for him, he didn't pay me.\" (Mặc dù tôi đã làm việc cho ông ta, ông ta lại không trả tiền cho tôi). Vấn đề nảy sinh là do người thợ rèn không trả tiền công cho Marcus, chứ không phải vì ông ấy thích giảng đạo (preaching là việc của Nicholas). Nên câu này là Sai (False) nha.",
               "correctAnswer": "False"
@@ -320,8 +317,7 @@
               "content": "Nicholas got a lot of satisfaction from being charitable and humble.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bạn hãy xem câu \"He learned that helping people gave him even more satisfaction than preaching.\" (Anh ấy nhận ra rằng việc giúp đỡ mọi người mang lại cho anh ấy nhiều sự thỏa mãn hơn cả việc giảng đạo). Giúp đỡ mọi người chính là thể hiện sự nhân từ (charitable). Câu này là Đúng (True).",
               "correctAnswer": "True"
@@ -331,8 +327,7 @@
               "content": "Marcus was compensated by the blacksmith for helping forge iron.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Marcus đã phàn nàn rằng \"Even though I worked for him, he didn't pay me.\" (Mặc dù tôi đã làm việc cho ông ta, ông ta lại không trả tiền cho tôi). Điều đó có nghĩa là Marcus không hề được đền bù (compensated) cho công sức rèn sắt của mình. Do vậy đáp án là Sai (False).",
               "correctAnswer": "False"
@@ -342,8 +337,7 @@
               "content": "The money that Nicholas gave Marcus exceeded the amount he needed.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài ghi rất rõ \"It exceeded the amount that Marcus needed.\" (Số tiền đó vượt quá số lượng mà Marcus cần). Từ \"exceeded\" nghĩa là vượt quá. Vì vậy câu này hoàn toàn Đúng (True).",
               "correctAnswer": "True"

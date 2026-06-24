@@ -354,8 +354,7 @@
               "content": "The North Wind thought that he was stronger than everyone else.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Gió Bắc cho rằng mình mạnh hơn tất cả mọi người.",
               "correctAnswer": "True"
@@ -365,8 +364,7 @@
               "content": "The North Wind blew the jacket off of the man.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Gió Bắc không thể thổi bay chiếc áo khoác của người đàn ông.",
               "correctAnswer": "False"
@@ -376,8 +374,7 @@
               "content": "The North Wind treated the Sun with disrespect.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Gió Bắc đối xử với Mặt trời bằng sự thiếu tôn trọng.",
               "correctAnswer": "True"
@@ -387,8 +384,7 @@
               "content": "The Sun was the target for the North Wind.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Mục tiêu của Gió Bắc là người đàn ông trên đường, không phải Mặt trời.",
               "correctAnswer": "False"
@@ -398,8 +394,7 @@
               "content": "The Sun was timid and did not teach the North Wind a lesson.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Mặt trời tuy thường rụt rè nhưng đã quyết định dạy cho Gió Bắc một bài học.",
               "correctAnswer": "False"
@@ -409,14 +404,13 @@
               "content": "The North Wind used violence in his bid to be powerful.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Gió Bắc đã sử dụng bạo lực trong nỗ lực tỏ ra mạnh mẽ.",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",

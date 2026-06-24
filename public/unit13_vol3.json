@@ -290,15 +290,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
               "content": "The sheriff enforced cruel laws.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong đoạn 2 có câu 'Dan enforced cruel laws.' Điều này khớp hoàn toàn với câu hỏi nên đáp án là True. Cảnh sát trưởng Dan thực sự đã ban hành những luật lệ rất tàn nhẫn.",
               "correctAnswer": "True"
@@ -308,8 +307,7 @@
               "content": "Dan pulled the trigger on his gun and shot bullets in the air to scare away criminals.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu văn trong đoạn 2 viết 'He didn't want the bullets to hit anyone. He just wanted to scare people with the loud sound.' Dan chỉ muốn dọa mọi người (scare people) bằng tiếng nổ lớn chứ không phải để đuổi tội phạm (criminals) đi. Do đó đáp án là False.",
               "correctAnswer": "False"
@@ -319,8 +317,7 @@
               "content": "With their understanding, the crowd sought to unify the town.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đoạn 3 có câu 'With their understanding, the crowd sought to unify the town.' Câu này giống hệt với nhận định đưa ra, cho thấy đám đông đã tìm cách thống nhất thị trấn. Đáp án đúng là True.",
               "correctAnswer": "True"
@@ -330,8 +327,7 @@
               "content": "Dan’s police officers were paid almost nothing.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đoạn 1 có nêu 'he paid his police officers almost nothing.' Dan trả cho các sĩ quan cảnh sát của mình mức lương gần như bằng không, vì vậy nhận định này hoàn toàn chính xác.",
               "correctAnswer": "True"
@@ -341,8 +337,7 @@
               "content": "Dan was sent on a voyage around the world.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong đoạn cuối, đám đông nói rằng 'We're sending you on a voyage to the middle of the ocean.' Dan bị đưa lên chuyến đi ra giữa đại dương chứ không phải đi vòng quanh thế giới (around the world). Nhận định này sai.",
               "correctAnswer": "False"
@@ -352,8 +347,7 @@
               "content": "Every person who inhabited Oceantown worshipped Dan.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Ngay đầu đoạn 2 có câu 'Every person who inhabited Oceantown disliked him.' Tất cả cư dân đều ghét ông ta, còn người duy nhất tôn thờ tiền bạc là chính Dan ('He worshipped money'). Vì vậy đáp án phải là False.",
               "correctAnswer": "False"

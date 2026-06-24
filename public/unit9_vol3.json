@@ -290,15 +290,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
               "content": "Mitch was a bully.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: True. Ngay trong đoạn 1, tác giả đã viết rõ: 'He was a bully who boasted about his strength.' Vì vậy, nhận định Mitch là một kẻ bắt nạt là hoàn toàn chính xác.",
               "correctAnswer": "True"
@@ -308,8 +307,7 @@
               "content": "Everyone was nice to Dalton.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Ở ngay câu đầu tiên của đoạn 1, chúng ta thấy: 'sometimes the other boys made fun of him' (đôi khi những cậu bé khác chế nhạo cậu ấy). Do đó, không phải ai cũng đối xử tốt với Dalton.",
               "correctAnswer": "False"
@@ -319,8 +317,7 @@
               "content": "Dalton became ailed when a bee stung him.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Đoạn 4 viết: 'I got stung by a bee. I need to see the nurse. said Dalton. He made it up so he wouldn't have to play.' Dalton chỉ bịa ra chuyện bị ong đốt để trốn thi đấu chứ không hề bị ốm đau gì thật.",
               "correctAnswer": "False"
@@ -330,8 +327,7 @@
               "content": "Dalton's biggest problem was being tall.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Đoạn 1 có ghi: 'Dalton's biggest problem was Mitch.' Vấn đề lớn nhất của Dalton không phải là chiều cao, mà chính là cậu bạn bắt nạt tên Mitch.",
               "correctAnswer": "False"
@@ -341,8 +337,7 @@
               "content": "When they wrestled, Mitch was dominant.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án đúng theo bài đọc là True. Theo đoạn 6: 'First, they wrestled... But Mitch was dominant in every event.' Do đó Mitch chiếm ưu thế ở mọi phần thi, bao gồm cả môn vật.",
               "correctAnswer": "True"
@@ -352,8 +347,7 @@
               "content": "The boys felt sore at lunchtime.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: True. Đoạn 7 viết: 'By lunch, they were sore.' Nghĩa là đến giờ ăn trưa, cả người họ đều cảm thấy đau nhức. Thông tin này hoàn toàn chính xác.",
               "correctAnswer": "True"

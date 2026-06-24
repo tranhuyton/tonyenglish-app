@@ -383,8 +383,7 @@
               "content": "People have narrated biographies about Beethoven’s dominance.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Tiểu sử (biographies) là thứ kể lại (narrate) sự thống trị của ông trong giới âm nhạc, chứ không phải mọi người (people) kể lại các cuốn tiểu sử. Do đó nhận định này sai.",
               "correctAnswer": "False"
@@ -394,8 +393,7 @@
               "content": "Beethoven created multiple masterpieces that sounded gorgeous.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Beethoven đã sáng tác nhiều kiệt tác (multiple masterpieces) và ông biết rằng những tác phẩm của mình nghe rất tuyệt vời (sounded gorgeous). Nhận định này hoàn toàn đúng.",
               "correctAnswer": "True"
@@ -405,8 +403,7 @@
               "content": "It was inevitable that Beethoven would lose his virtue altogether.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bài viết nói rằng việc ông mất đi hoàn toàn thính giác (lose his hearing) là điều không thể tránh khỏi (inevitable), chứ không phải mất đi đức tính (virtue). Vậy nhận định sai.",
               "correctAnswer": "False"
@@ -416,8 +413,7 @@
               "content": "Beethoven became notorious for his aggression.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Khi mất đi sự kiên nhẫn, ông trở nên mang tiếng xấu (notorious) vì sự nóng nảy, hung hăng của mình (aggression). Nhận định này là đúng.",
               "correctAnswer": "True"
@@ -427,14 +423,13 @@
               "content": "Beethoven’s legacy lives on because great music is outdated.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Âm nhạc vĩ đại thì không bao giờ lỗi thời (never becomes outdated). Câu nhận định nói âm nhạc vĩ đại 'bị lỗi thời' là sai hoàn toàn.",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",

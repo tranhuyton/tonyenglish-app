@@ -511,8 +511,7 @@
               "content": "A donor gave the school a painting with a sports theme as a stimulus for students to play sports.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Hiệu trưởng (principal) mới là người treo bức tranh như một động lực (stimulus) cho sinh viên, không phải người hiến tặng (donor).",
               "correctAnswer": "False"
@@ -522,8 +521,7 @@
               "content": "The painting showed a referee congratulating two athletes.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bức tranh vẽ một trọng tài đang chúc mừng hai vận động viên.",
               "correctAnswer": "True"
@@ -533,8 +531,7 @@
               "content": "Billy was implicated in the crime because a fellow student received a packet with a videotape showing him doing it.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Billy bị dính líu vì một bạn học (fellow student) nói rằng cô ấy nghĩ đã nhìn thấy cậu làm việc đó, không phải do cuộn băng.",
               "correctAnswer": "False"
@@ -544,8 +541,7 @@
               "content": "Everybody gossiped about Billy, and even some of our kin think he did it.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Mọi người đồn đoán (gossiped) và thậm chí một số người thân (kin) cũng nghĩ cậu ta làm.",
               "correctAnswer": "True"
@@ -555,14 +551,13 @@
               "content": "The principal threatened to terminate Billy’s education if his parents didn’t pay his tuition.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Hiệu trưởng đe dọa chấm dứt học tập nếu cha mẹ không trả tiền cho bức tranh (pay for the painting), không phải học phí (tuition).",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",

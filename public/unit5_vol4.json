@@ -394,8 +394,7 @@
               "content": "The computers were turned off because there was a recent problem.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng (True). 'Apparently there was a recent problem, and technicians were fixing it.'",
               "correctAnswer": "True"
@@ -405,8 +404,7 @@
               "content": "The private study rooms were upstairs.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai (False). The private study rooms were downstairs.",
               "correctAnswer": "False"
@@ -416,8 +414,7 @@
               "content": "The computers in the private study rooms weren't operating correctly.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai (False). The computers in the private study rooms were operating correctly.",
               "correctAnswer": "False"
@@ -427,8 +424,7 @@
               "content": "In his project, the student had to evaluate the government's response to global warming.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng (True). 'I typed and highlighted the assignment’s title: “Evaluate the Government’s Response to Global Warming.”'",
               "correctAnswer": "True"
@@ -438,8 +434,7 @@
               "content": "The geography test was worth fifty percent of the final grade.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai (False). The geography test was worth seventy percent of the final grade.",
               "correctAnswer": "False"
@@ -449,14 +444,13 @@
               "content": "The student failed the test because he was completely ignorant about the subject.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng (True). 'I failed the test, of course. I was completely ignorant about the subject.'",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",

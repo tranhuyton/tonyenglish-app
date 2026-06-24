@@ -366,8 +366,7 @@
               "content": "Archeological evidence shows there were prehistoric parachutes in China.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Không có bằng chứng khảo cổ nào (archeological evidence) cho thấy người Trung Quốc thực sự làm ra dù.",
               "correctAnswer": "False"
@@ -377,8 +376,7 @@
               "content": "Archeology experts cite an old Chinese book that describes a parachute that corresponds with modern parachutes.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bản vẽ của Leonardo Da Vinci (Leonardo Da Vinci's drawing) mới tương đồng (corresponds) với thiết kế dù hiện đại, không phải cuốn sách cũ của Trung Quốc.",
               "correctAnswer": "False"
@@ -388,8 +386,7 @@
               "content": "Sebastian brainstormed with scientists to invent a device that would allow people to jump from buildings safely.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sebastian đã cùng các nhà khoa học suy nghĩ (brainstormed) để tạo ra thiết bị giúp người nhảy khỏi tòa nhà đang cháy an toàn.",
               "correctAnswer": "True"
@@ -399,8 +396,7 @@
               "content": "On Sebastian’s first jump, he used a large blanket to restrict his speed as he traveled to the ground.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Lần nhảy đầu tiên, ông dùng hai chiếc ô (two umbrellas) chứ không phải cái chăn lớn (blanket).",
               "correctAnswer": "False"
@@ -410,14 +406,13 @@
               "content": "Jean-Pierre was a hot air balloon addict.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài đọc có đề cập Jean-Pierre là một người nghiện khinh khí cầu (hot air balloon addict).",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",

@@ -290,15 +290,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
               "content": "The senator had a lot of money.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Mở đầu câu chuyện là \"A rich senator lived in a big house. He had more money than anyone in his district.\" (Một vị thượng nghị sĩ giàu có sống trong một ngôi nhà lớn. Ông ấy có nhiều tiền hơn bất kỳ ai trong khu vực của mình). Vì vậy câu này là Đúng (True).",
               "correctAnswer": "True"
@@ -308,8 +307,7 @@
               "content": "The senator was listening to a radio broadcast.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Cùng đoạn đó có nói \"One day, he was sitting on a chair listening to a radio broadcast.\" (Một ngày nọ, ông đang ngồi trên ghế nghe đài phát thanh). Câu này hoàn toàn trùng khớp với bài đọc, nên đáp án là Đúng (True).",
               "correctAnswer": "True"
@@ -319,8 +317,7 @@
               "content": "The senator wanted the cook to kill the worm.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Vị thượng nghị sĩ đã hét lên: \"No! I want you to kill it.\" (Không! Tôi muốn anh giết nó). Vậy là ông ấy thực sự muốn người đầu bếp giết con giun. Đáp án là Đúng (True).",
               "correctAnswer": "True"
@@ -330,8 +327,7 @@
               "content": "The cook found a pipe in one of the drawers.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bài đọc viết \"The cook looked through several drawers, but found nothing. Then he ran to the closet and took out a pipe.\" (Người đầu bếp tìm trong vài ngăn kéo, nhưng không thấy gì. Sau đó, anh ta chạy đến tủ quần áo và lấy ra một cái ống). Ống nước được tìm thấy trong tủ đồ (closet) chứ không phải ngăn kéo (drawers). Câu này là Sai (False).",
               "correctAnswer": "False"
@@ -341,8 +337,7 @@
               "content": "The cook knew he was going to tap the worm.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu văn nói rõ \"He knew he couldn't just tap the worm. He was going to hit it hard.\" (Anh ta biết mình không thể chỉ gõ nhẹ vào con giun. Anh ta định đánh nó thật mạnh). Vì vậy câu này ngược lại với bài đọc. Đáp án là Sai (False).",
               "correctAnswer": "False"
@@ -352,8 +347,7 @@
               "content": "The worm was chopped in half on the senator’s head.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Khi bị đánh, con giun nói \"He's going to chop me in half. It jumped off the senator's head.\" (Ông ta định chặt tôi ra làm đôi. Nó nhảy khỏi đầu của thượng nghị sĩ). Con giun đã nhảy ra trước khi bị chặt làm đôi. Nên câu này là Sai (False).",
               "correctAnswer": "False"

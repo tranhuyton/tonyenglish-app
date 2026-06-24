@@ -383,8 +383,7 @@
               "content": "Jane thought she would precipitate a disaster if she omitted her frequent mistakes.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong đoạn 4, câu chuyện viết \"She thought she might make her usual mistakes, which would precipitate a disaster.\" (Cô ấy nghĩ mình có thể mắc những sai lầm thường ngày, điều này sẽ dẫn đến một thảm họa). Như vậy, cô ấy nghĩ mình sẽ gây ra thảm họa nếu MẮC PHẢI những lỗi thường xuyên chứ không phải là nếu bỏ qua (omitted) chúng. Do đó, câu này là sai.",
               "correctAnswer": "False"
@@ -394,8 +393,7 @@
               "content": "Jane submerged the anchor and secured it by putting a rope in a slot.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong đoạn 2, bài đọc nói rằng \"She learned how to submerge the anchor and secure it by putting a rope in a slot.\" (Cô ấy đã học cách thả mỏ neo xuống nước và cố định nó bằng cách luồn dây thừng vào một khe hở). Câu này hoàn toàn khớp với thông tin trong bài nên là đúng.",
               "correctAnswer": "True"
@@ -405,8 +403,7 @@
               "content": "Jane put grease on the intricate buoy.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong đoạn 2 có câu \"She learned how to put grease on the intricate gears of the motor.\" (Cô ấy đã học cách bôi trơn các bánh răng phức tạp của động cơ). Cô ấy bôi dầu mỡ lên các bánh răng phức tạp chứ không phải lên chiếc phao (buoy). Vì vậy, câu này là sai.",
               "correctAnswer": "False"
@@ -416,8 +413,7 @@
               "content": "Mike thought of a tactic to test Jane’s skills in the context of a catastrophe.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong đoạn 3, tác giả viết \"He thought of a tactic to test Jane's skills in the context of a catastrophe.\" (Ông ấy đã nghĩ ra một chiến thuật để kiểm tra kỹ năng của Jane trong bối cảnh một thảm họa). Thông tin này hoàn toàn chính xác.",
               "correctAnswer": "True"
@@ -427,14 +423,13 @@
               "content": "Mike designated the secondhand boat “Jane’s Pride.”",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Ở đoạn cuối cùng, bài đọc ghi \"He designated it 'Jane's Pride' and painted the name on the fore of the ship.\" (Ông ấy đã đặt tên nó là 'Niềm tự hào của Jane' và sơn tên đó lên mũi tàu). Tên cũ của con tàu là 'High Hopes' và nó là tàu cũ (secondhand boat), sau đó được Mike đổi tên. Câu này đúng.",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",

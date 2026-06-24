@@ -294,8 +294,7 @@
               "content": "The traveler watched people closely, like a predator.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu chuyện nói: 'He sat and watched people closely, like a predator.'",
               "correctAnswer": "True"
@@ -305,8 +304,7 @@
               "content": "The traveler staggered outside and tumbled into the street.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai. Trong câu chuyện là người chủ quán (innkeeper): 'The scared innkeeper staggered outside and tumbled into the street.'",
               "correctAnswer": "False"
@@ -316,8 +314,7 @@
               "content": "The innkeeper handed the traveler a saucer and a cup.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu chuyện kể: 'He made the coffee and handed the traveler a saucer and a cup.'",
               "correctAnswer": "True"
@@ -327,8 +324,7 @@
               "content": "The traveler snatched the innkeeper's coat.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng. 'As he ran, the traveler snatched his coat.'",
               "correctAnswer": "True"
@@ -338,8 +334,7 @@
               "content": "The traveler wanted to withhold the truth and not foster happiness.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai. Anh ấy muốn mang lại niềm vui và nói ra sự thật: 'He did not want to withhold the truth any longer. He just wanted to foster happiness.'",
               "correctAnswer": "False"
@@ -349,14 +344,13 @@
               "content": "The innkeeper cherished his coat.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng. Ông chủ quán nói: 'Oh, good. I cherish this coat.'",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_reading",

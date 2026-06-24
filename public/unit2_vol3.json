@@ -328,15 +328,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
               "content": "The shepherd counted his sheep because he didn't want to overlook any of them.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu văn trong bài là \"He was sure never to overlook any of them.\" (Ông ấy chắc chắn không bao giờ bỏ sót bất kỳ con nào trong số chúng). Việc đếm cừu giúp ông ấy không bỏ sót. Do đó câu này là Đúng (True).",
               "correctAnswer": "True"
@@ -346,8 +345,7 @@
               "content": "The shepherd couldn't take the sheep outside because it was dark outside.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bài đọc nói rằng \"It snowed that night. In the morning, the shepherd couldn't take his sheep out of his lodge.\" (Đêm đó trời có tuyết. Buổi sáng, người chăn cừu không thể đưa những con cừu của mình ra khỏi nhà). Lý do là vì trời có tuyết, chứ không phải vì trời tối. Do vậy câu này là Sai (False).",
               "correctAnswer": "False"
@@ -357,8 +355,7 @@
               "content": "The shepherd gave a little wheat to the wild sheep. But he gave his own sheep more.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài có nói \"He gave a small amount of wheat to his own sheep. But he gave more of the food to the wild sheep.\" (Ông ấy chỉ cho bầy cừu của mình một lượng nhỏ lúa mì. Nhưng ông ấy lại cho bầy cừu hoang nhiều thức ăn hơn). Câu hỏi viết ngược lại, nên câu này là Sai (False).",
               "correctAnswer": "False"
@@ -368,8 +365,7 @@
               "content": "The wild sheep ran away from the shepherd after the snow melted.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Cùng xem câu \"At last, the snow melted, and they ventured outdoors. As soon as he opened the door of his hut, the wild sheep started to run away.\" (Cuối cùng, tuyết tan, và họ bước ra ngoài. Ngay khi ông mở cửa túp lều, những con cừu hoang đã bắt đầu bỏ chạy). Điều này hoàn toàn khớp, nên đáp án là Đúng (True).",
               "correctAnswer": "True"
@@ -379,8 +375,7 @@
               "content": "The wild sheep thought the shepherd had neglected his own sheep.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Con cừu hoang đã nói \"Yesterday you treated us kindly, but tomorrow you might be different. If more wild sheep joined your herd, you would treat us as inferior sheep.\" (Hôm qua ông đối xử tốt với chúng tôi, nhưng ngày mai ông có thể sẽ khác. Nếu có thêm nhiều cừu hoang gia nhập đàn, ông sẽ coi chúng tôi là những con cừu thấp kém). Hành động đối xử bất công đã chứng tỏ sự bỏ bê của người chăn cừu đối với bầy cừu của chính mình. Đáp án là Đúng (True).",
               "correctAnswer": "True"
@@ -390,8 +385,7 @@
               "content": "The shepherd never knew what he had done wrong.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đoạn cuối bài viết \"As the wild sheep ran away, the shepherd understood his offense.\" (Khi những con cừu hoang bỏ chạy, người chăn cừu đã hiểu ra lỗi lầm của mình). Như vậy ông ấy biết mình làm sai điều gì. Câu này là Sai (False).",
               "correctAnswer": "False"

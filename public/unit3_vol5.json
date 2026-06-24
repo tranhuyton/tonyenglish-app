@@ -411,8 +411,7 @@
               "content": "The bachelor excelled at calculus, physiology, and theoretical science, such as relativity.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Theo đoạn 2, \"I excel at everything... I’ve mastered calculus and physiology. I even understand the great theoretical teachings... relativity.\" (Tôi xuất sắc trong mọi thứ... Tôi đã thành thạo giải tích và sinh lý học. Tôi thậm chí còn hiểu các học thuyết khoa học vĩ đại... như thuyết tương đối).",
               "correctAnswer": "True"
@@ -422,8 +421,7 @@
               "content": "He knew the movements of radioactive materials and how to harness the power of celestial objects.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Đoạn 2 ghi rõ: \"movements of celestial objects... harness the power of radioactive substances\" (sự chuyển động của các thiên thể... khai thác sức mạnh của các chất phóng xạ). Câu hỏi đã tráo đổi hai khái niệm này cho nhau.",
               "correctAnswer": "False"
@@ -433,8 +431,7 @@
               "content": "The bachelor thought the drivers in the collision were not competent.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Trong đoạn 5, anh ta nghĩ: \"Those idiots should have been more alert. They really must not be very competent.\" (Những tên ngốc đó đáng lẽ phải cảnh giác hơn. Bọn họ chắc hẳn không có chút năng lực nào).",
               "correctAnswer": "True"
@@ -444,8 +441,7 @@
               "content": "Studying mythology, sociology, and geology gave the bachelor a wonderful feeling.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Theo đoạn 8, \"Studying mythology, sociology, and geology didn’t give him this wonderful feeling. It was the act of helping others...\" (Việc nghiên cứu thần thoại, xã hội học và địa chất không mang lại cho anh cảm giác tuyệt vời này. Chính hành động giúp đỡ người khác...).",
               "correctAnswer": "False"
@@ -455,14 +451,13 @@
               "content": "The bachelor’s intellect and not his cognitive talents had made him feel this great.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Đoạn 8 giải thích rõ: \"It was the act of helping others, not his cognitive skills, that gave him this great feeling.\" (Chính hành động giúp đỡ người khác, chứ không phải kỹ năng nhận thức, đã mang lại cho anh cảm giác tuyệt vời này).",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_B",

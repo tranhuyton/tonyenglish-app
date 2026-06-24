@@ -421,8 +421,7 @@
               "content": "The museum director interviewed dozens of applicants when he recruited a new tour guide.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng rồi. Ở đoạn 1 có ghi The director interviewed dozens of applicants before he decided to hire Jen. Giám đốc bảo tàng đã phỏng vấn hàng chục người nộp đơn (applicants) trước khi chọn Jen.",
               "correctAnswer": "True"
@@ -432,8 +431,7 @@
               "content": "Jen did not want to humiliate herself in front of the diplomat and the monarch.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng nha. Đoạn 2 trích dẫn suy nghĩ của Jen: I hope I don't humiliate myself in front of a person of such renown! Cô ấy rất sợ bị bẽ mặt (humiliate) trước những vị khách nổi tiếng như nữ hoàng và nhà ngoại giao.",
               "correctAnswer": "True"
@@ -443,8 +441,7 @@
               "content": "The queen bumped into the fossil of an authentic elephant tusk.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai nhé. Đoạn 3 có viết As she turned around... she bumped into a fossil of an authentic elephant tusk. Tức là chính Jen mới là người vô tình va vào hóa thạch ngà voi chứ không phải Nữ hoàng.",
               "correctAnswer": "False"
@@ -454,8 +451,7 @@
               "content": "Jen was chosen for the job because she was friendly, punctual, and had a register.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai rồi. Đoạn 1 giải thích She was chosen because she was friendly, punctual and had a great attitude. Jen được chọn vì cô thân thiện, đúng giờ (punctual) và có thái độ tốt, chứ không phải vì có cuốn sổ đăng ký (register).",
               "correctAnswer": "False"
@@ -465,14 +461,13 @@
               "content": "Jen broke artifacts, including an antique vase.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng nhé. Ở đoạn 4 bài đọc kể lại She tripped over an antique vase and broke a piece off of it. Jen đã vấp ngã và làm vỡ một mảng của chiếc bình cổ (antique vase).",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",

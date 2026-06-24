@@ -290,15 +290,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
               "content": "Stella and Joe were ashamed of themselves.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Để trả lời câu này, em hãy nhìn vào đoạn 2 của bài đọc, câu cuối cùng có viết: 'Joe and Stella were poor, but not ashamed.' Nghĩa là Joe và Stella rất nghèo, nhưng họ không hề cảm thấy xấu hổ về điều đó. Vì vậy, nhận định trong câu hỏi là sai nhé.",
               "correctAnswer": "False"
@@ -308,8 +307,7 @@
               "content": "Joe was a carpenter.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: True. Ngay ở câu đầu tiên của đoạn 1, tác giả đã viết rất rõ ràng: 'Joe was a carpenter.' Nghĩa là Joe là một thợ mộc. Nhận định này hoàn toàn chính xác.",
               "correctAnswer": "True"
@@ -319,8 +317,7 @@
               "content": "Stella and Joe were too poor to heat their shed with coal.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Câu hỏi nói rằng họ quá nghèo nên không thể sưởi ấm nhà kho bằng than. Tuy nhiên, ở đoạn 2 có câu: 'But they had coal for heat' (Nhưng họ có than để sưởi ấm). Do đó, thông tin trong câu hỏi là sai.",
               "correctAnswer": "False"
@@ -330,8 +327,7 @@
               "content": "Joe asked Stella to trim the bushes.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Câu hỏi cho rằng Joe yêu cầu Stella cắt tỉa các bụi cây. Nhưng theo thông tin trong đoạn 2: 'Together, they trimmed the bushes to make their house look nice.' Nghĩa là cả hai người đã cùng nhau cắt tỉa bụi cây, chứ không phải Joe yêu cầu Stella làm một mình.",
               "correctAnswer": "False"
@@ -341,8 +337,7 @@
               "content": "Stella used a needle and thread to sew elegant things with beautiful fabric.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: True. Đoạn 1 có ghi rõ: 'Stella used a needle and thread to sew elegant clothing. She only used beautiful fabric.' Nghĩa là Stella dùng kim chỉ để may những bộ quần áo thanh lịch và cô ấy chỉ dùng những loại vải đẹp. Câu này hoàn toàn đúng.",
               "correctAnswer": "True"
@@ -352,8 +347,7 @@
               "content": "Water dripped into their house.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: True. Ở đoạn 2, tác giả có nhắc đến ngôi nhà của họ: 'Water dripped in when it rained.' Tức là nước mưa nhỏ giọt vào trong nhà mỗi khi trời mưa. Do vậy nhận định này là đúng.",
               "correctAnswer": "True"

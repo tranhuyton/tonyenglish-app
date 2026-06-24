@@ -411,8 +411,7 @@
               "content": "The gate between the soldier and the auditorium was coated with rust.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu chuyện có chi tiết chiếc cổng sắt phủ rỉ sét (coated in rust).",
               "correctAnswer": "True"
@@ -422,8 +421,7 @@
               "content": "The prisoner was led from the arena to the compound.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Anh ta được dẫn từ khu trại giam (compound) tới đấu trường (arena), không phải ngược lại.",
               "correctAnswer": "False"
@@ -433,8 +431,7 @@
               "content": "While he meditated, the soldier was distracted by his opponent.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Người lính không hề bị đối thủ làm xao nhãng (was not distracted).",
               "correctAnswer": "False"
@@ -444,8 +441,7 @@
               "content": "The king gave the brave soldier amnesty and made him join his elite army corps.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Nhà vua chỉ ban lệnh ân xá (amnesty) cho anh, không bắt anh gia nhập đội quân tinh nhuệ.",
               "correctAnswer": "False"
@@ -455,14 +451,13 @@
               "content": "The quiet soldier felt that all life was sacred.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Người lính cảm thấy mọi sự sống đều là thiêng liêng (sacred).",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",

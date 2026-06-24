@@ -266,8 +266,7 @@
               "content": "Fox used the rim of a bottle to dig a deep pit.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài: he used the sharp rim of a bottle to dig a pit in the ground.",
               "correctAnswer": "True"
@@ -277,8 +276,7 @@
               "content": "Fox had a roost near the pit.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Eagle had a roost near the pit, không phải Fox.",
               "correctAnswer": "False"
@@ -288,8 +286,7 @@
               "content": "The damp ivy was too slippery for Fox to climb out.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài: The walls of the pit were covered in damp ivy. It was too slippery for him to climb out.",
               "correctAnswer": "True"
@@ -299,8 +296,7 @@
               "content": "Immoral and mean behavior was typical with Fox.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài: That is typical behavior for Fox. He does mean things all the time. Sometimes, he is completely immoral.",
               "correctAnswer": "True"
@@ -310,8 +306,7 @@
               "content": "Fox was oblivious to the hidden pit.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Fox was oblivious to the hidden animals, không phải hố.",
               "correctAnswer": "False"
@@ -321,14 +316,13 @@
               "content": "Eagle flew into the pit to save Fox.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài: Eagle began her flight to the bottom of the pit. She picked up Fox... và đưa anh ta ra ngoài.",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_reading",

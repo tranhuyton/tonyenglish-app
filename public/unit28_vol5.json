@@ -433,8 +433,7 @@
               "content": "Joe was the recipient of a check because he won the lottery.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng rồi. Ở đoạn 2, cô gái đã nói You're the recipient of this check... You won the lottery! Joe là người nhận được tấm séc vì đã trúng xổ số.",
               "correctAnswer": "True"
@@ -444,8 +443,7 @@
               "content": "He wanted to buy new glass walls for the aquarium because the old ones were cracked.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng nhé. Đoạn 6 có trích dẫn rõ he would buy new glass walls for the aquarium because the old ones were cracked. Anh ấy muốn mua kính mới cho thuỷ cung vì những cái cũ đã bị nứt.",
               "correctAnswer": "True"
@@ -455,8 +453,7 @@
               "content": "If Joe wrote an autobiography, he would write about the norms of the overloaded aquarium.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai nha. Đoạn cuối cùng Joe có nói If I ever write an autobiography, I will write that this was the happiest day of my life. Nghĩa là nếu viết tự truyện, anh ấy sẽ kể lại rằng đây là ngày hạnh phúc nhất đời anh, chứ không phải viết về các chuẩn mực của thủy cung.",
               "correctAnswer": "False"
@@ -466,8 +463,7 @@
               "content": "Joe made a photocopy of the check in case he misplaced the original one.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng rồi. Ở đoạn 4 bài đọc viết Joe made a photocopy of the check in case he misplaced the original one. Anh đã photo tấm séc để phòng trường hợp làm mất bản gốc.",
               "correctAnswer": "True"
@@ -477,14 +473,13 @@
               "content": "When Joe opened the door, he saw one of the naughty neighborhood children.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai nhé. Đoạn 1 viết When he opened it, he saw a beautiful woman. Joe cứ nghĩ là những đứa trẻ nghịch ngợm gõ cửa, nhưng khi mở cửa thì lại thấy một người phụ nữ xinh đẹp.",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",

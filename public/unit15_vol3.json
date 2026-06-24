@@ -290,15 +290,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
               "content": "The pharaoh's party was a sad affair.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bữa tiệc của pharaoh là một sự kiện vui vẻ (happy affair), không phải buồn tẻ (sad).",
               "correctAnswer": "False"
@@ -308,8 +307,7 @@
               "content": "There was plenty of ripe fruit at the party from the harvest.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Có rất nhiều trái cây chín (ripe fruit) tại bữa tiệc từ vụ thu hoạch.",
               "correctAnswer": "True"
@@ -319,8 +317,7 @@
               "content": "The assembly of animals was merry.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Cuộc tụ tập của các loài động vật rất vui vẻ (merry).",
               "correctAnswer": "True"
@@ -330,8 +327,7 @@
               "content": "Monkey repeated his routine for five days.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Khỉ chỉ lặp lại thói quen đó trong bốn ngày (four days), không phải năm ngày.",
               "correctAnswer": "False"
@@ -341,8 +337,7 @@
               "content": "The diameter of Monkey's waist was wider than the doorway.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đường kính eo của khỉ thực sự rộng hơn cả khung cửa.",
               "correctAnswer": "True"
@@ -352,8 +347,7 @@
               "content": "The pharaoh asked Monkey, \"Pardon?\"",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Khỉ là người đã hỏi 'Pardon?' chứ không phải pharaoh.",
               "correctAnswer": "False"

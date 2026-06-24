@@ -275,8 +275,7 @@
               "content": "Anton's first microscope had an upright stand.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Thông tin trong bài: 'It had a lens in an upright stand.'",
               "correctAnswer": "True"
@@ -286,8 +285,7 @@
               "content": "Anton had a longing to become rich.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sửa lại: Anton had a longing to become famous. (Thông tin trong bài: 'Soon, Anton felt a longing to build a more powerful microscope... He wanted to become famous.')",
               "correctAnswer": "False"
@@ -297,8 +295,7 @@
               "content": "The tiny particles Anton saw were bacteria.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Thông tin trong bài: 'Anton Van Leeuwenhoek had discovered bacteria.'",
               "correctAnswer": "True"
@@ -308,8 +305,7 @@
               "content": "Anton classified the particles into different categories.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Thông tin trong bài: 'Then he classified them into different categories.'",
               "correctAnswer": "True"
@@ -319,8 +315,7 @@
               "content": "The sophisticated scientists drew diagrams of the bacteria.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sửa lại: Anton drew diagrams of the bacteria. (Thông tin trong bài: 'So he drew diagrams of the organisms and sent them to a group of scientists...')",
               "correctAnswer": "False"
@@ -330,14 +325,13 @@
               "content": "Anton took a ferry to Holland.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sửa lại: The scientists took a ferry to Holland. (Thông tin trong bài: 'The men took a ferry to Holland and met Anton.')",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "reading_comp_B",

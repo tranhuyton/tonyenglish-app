@@ -371,8 +371,7 @@
               "content": "Elvis possessed the criteria to be a spectator.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai nhé. Dựa vào bài đọc, ngay dòng thứ hai đã viết He possessed all the criteria to be a great racing dog. Điều này có nghĩa Elvis có đủ tiêu chuẩn để làm một chú chó đua xuất sắc, chứ không phải để làm khán giả (spectator). Vậy đáp án là False.",
               "correctAnswer": "False"
@@ -382,8 +381,7 @@
               "content": "Elvis’s owner was not considerate, and he degraded the dog.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này hoàn toàn đúng. Trong bài có đoạn mô tả người chủ cũ: Elvis's owner wasn't a considerate person. He degraded the dog all the time. Nghĩa là ông ta không hề chu đáo và luôn hạ nhục chú chó của mình. Mình chọn True nha.",
               "correctAnswer": "True"
@@ -393,8 +391,7 @@
               "content": "Elvis followed the brook to the big, impersonal city where pedestrians yelled at him.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Nhận định này chính xác. Bài đọc có ghi chú chó He decided to follow a brook into the city. Khi đến nơi, chú chó nhận ra thành phố là một nơi impersonal (xa cách, thiếu tình người) và Pedestrians yelled at him (Những người đi bộ la mắng chú). Đáp án là True nhé.",
               "correctAnswer": "True"
@@ -404,8 +401,7 @@
               "content": "In the interior of the facility, there was a heap of ornaments and bread crusts for consumption.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai nha. Bài đọc miêu tả rằng shiny ornaments hung from the ceiling (những món đồ trang trí lấp lánh treo trên trần nhà). Còn đồ ăn được nhắc đến là There was a heap of tasty bones and bread crusts for consumption (Có một đống xương ngon và vỏ bánh mì để ăn). Hai thứ này hoàn toàn tách biệt. Vậy đáp án là False.",
               "correctAnswer": "False"
@@ -415,14 +411,13 @@
               "content": "The old woman wanted to cater to Elvis’s needs at the sanctuary for old hounds.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng nhé. Khi gặp Elvis, bà lão đã nói: I can take you to a sanctuary for old dogs like you. I'll cater to all your needs. Tức là bà muốn đưa chú đến nơi trú ẩn và chăm lo mọi nhu cầu của chú. Mình chọn True nha.",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",

@@ -290,15 +290,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
               "content": "People from places like Iceland, Italy, Kenya and Canada believed souls needed food.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bài đọc viết \"People in places like Ireland, China, Egypt and Mexico believed that souls needed food.\" (Người dân ở những nơi như Ireland, Trung Quốc, Ai Cập và Mexico tin rằng các linh hồn cần thức ăn). Danh sách quốc gia trong câu hỏi hoàn toàn sai. Vì vậy câu này là Sai (False) nha.",
               "correctAnswer": "False"
@@ -308,8 +307,7 @@
               "content": "Many cultures believed that souls needed food to nourish them on their journey back to life.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài có nói \"They thought the food nourished them on their journey from cemeteries to heaven.\" (Họ nghĩ rằng thức ăn sẽ nuôi dưỡng chúng trong cuộc hành trình từ nghĩa trang lên thiên đường). Tức là hành trình lên thiên đường chứ không phải là hành trình trở lại cuộc sống (journey back to life). Nên câu này là Sai (False).",
               "correctAnswer": "False"
@@ -319,8 +317,7 @@
               "content": "Housewives gave children food if they did chores around their homes.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu văn trong bài là \"Housewives gave the children food if they performed a song or a dance.\" (Các bà nội trợ sẽ cho bọn trẻ thức ăn nếu chúng biểu diễn một bài hát hoặc một điệu nhảy). Bọn trẻ không hề làm việc nhà (did chores). Nên câu này là Sai (False).",
               "correctAnswer": "False"
@@ -330,8 +327,7 @@
               "content": "Shortly after a children's publication wrote about trick-or-treating, it became popular.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bài đọc giải thích \"In 1939 a children's publication acquainted the whole country with the tradition. It became very popular.\" (Năm 1939, một ấn phẩm dành cho trẻ em đã giúp cả nước làm quen với truyền thống này. Nó trở nên rất phổ biến). Điều này hoàn toàn khớp với câu hỏi. Đáp án là Đúng (True).",
               "correctAnswer": "True"
@@ -341,8 +337,7 @@
               "content": "Children often wear fancy disguises for trick-or-treating today.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Ở đoạn cuối có nhắc đến \"But some children wear fancy disguises, like pirates.\" (Nhưng một số trẻ em mặc những bộ đồ hóa trang lộng lẫy, chẳng hạn như cướp biển). Do đó câu này là Đúng (True).",
               "correctAnswer": "True"
@@ -352,8 +347,7 @@
               "content": "Inhabitants from villages started trick-or-treating in the 1940s.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Xem lại đoạn 3 của bài viết: \"Inhabitants of villages started trick-or-treating in the early 1900s.\" (Cư dân của các ngôi làng đã bắt đầu trò 'trick-or-treat' vào đầu những năm 1900). Chứ không phải vào những năm 1940. Vậy câu này là Sai (False) nhé.",
               "correctAnswer": "False"

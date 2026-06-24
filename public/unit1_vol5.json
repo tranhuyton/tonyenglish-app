@@ -401,8 +401,7 @@
               "content": "Beth was resourceful and conservative, so she gathered a paltry pile of beans for her cache.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này là sai. Dựa vào bài đọc ở đoạn 1 có viết \"By winter, she had collected a massive pile and hid them in a cache\". Beth đã thu thập được một đống thức ăn khổng lồ chứ không phải là một số lượng ít ỏi (paltry).",
               "correctAnswer": "False"
@@ -412,8 +411,7 @@
               "content": "Because gathering food was tedious, Beth allotted a few hours of every day to do it.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Theo đoạn 1 của bài đọc, \"She allotted herself a few hours every day to collect beans\". Beth đã dành ra vài giờ mỗi ngày để thu thập đậu.",
               "correctAnswer": "True"
@@ -423,8 +421,7 @@
               "content": "Beth did grueling and mundane work to overcome the dearth of food in the winter.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Trong đoạn 1 có ghi \"Gathering food was a grueling and mundane activity... She knew that winter was coming and that there would soon be a dearth of food\". Cô ấy làm công việc vất vả và nhàm chán để vượt qua sự thiếu hụt thức ăn vào mùa đông.",
               "correctAnswer": "True"
@@ -434,8 +431,7 @@
               "content": "Beth’s reply appalled Mary and made her reply in outrage.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Ở đoạn 5 có câu \"Beth’s words appalled Mary. Mary cried with outrage\". Lời nói của Beth đã làm Mary sửng sốt và khiến cô ấy hét lên trong sự phẫn nộ.",
               "correctAnswer": "True"
@@ -445,14 +441,13 @@
               "content": "When the hours of autumn elapsed, Mary had a massive amount of food.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này là sai. Đoạn 2 ghi rõ \"When the final hours of autumn elapsed, Mary had only a paltry amount of food stored away\". Mary chỉ có một lượng nhỏ thức ăn chứ không phải một lượng lớn (massive).",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_B",

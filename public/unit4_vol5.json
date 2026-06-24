@@ -411,8 +411,7 @@
               "content": "Mr. Rabbit was an administrator at a big factory that made different kinds of merchandise.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Theo đoạn 1, \"Mr. Pig was an administrator at a big factory...\" (Ông Lợn mới là người quản lý tại nhà máy lớn).",
               "correctAnswer": "False"
@@ -422,8 +421,7 @@
               "content": "Some of the changes made to the factory were legitimate.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Ở đoạn 3 có ghi: \"However, most were not very nice, and some were not legitimate.\" (Tuy nhiên, hầu hết các thay đổi đều không tốt và một số không hợp pháp). Câu hỏi nói \"Some of the changes... were legitimate\" là trái với thông tin trong bài.",
               "correctAnswer": "False"
@@ -433,8 +431,7 @@
               "content": "Mr. Pig bribed some corrupt senators into legislating special subsidies for his factory.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Trong đoạn 4, \"Next, he bribed some corrupt senators into legislating special subsidies for the factory.\" (Tiếp theo, ông ta hối lộ một số thượng nghị sĩ tham nhũng để ban hành các khoản trợ cấp đặc biệt cho nhà máy).",
               "correctAnswer": "True"
@@ -444,8 +441,7 @@
               "content": "Mr. Pig violated the law by disposing of the factory’s rubbish in the ocean.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Cuối đoạn 4 có viết: \"...he violated the law by throwing it into the river to save money.\" (ông ta đã vi phạm luật bằng cách ném rác xuống sông để tiết kiệm tiền). Rác bị ném xuống sông (river), không phải đại dương (ocean).",
               "correctAnswer": "False"
@@ -455,14 +451,13 @@
               "content": "At first, changes to the factory’s infrastructure created less revenue.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Ở đầu đoạn 5 có ghi: \"At first, all the changes to the factory’s infrastructure created more revenue.\" (Lúc đầu, tất cả những thay đổi đối với cơ sở hạ tầng của nhà máy đã tạo ra nhiều doanh thu hơn).",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_B",

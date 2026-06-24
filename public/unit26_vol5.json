@@ -481,8 +481,7 @@
               "content": "Cosmo was scared that his recurring dreams of the previous nights were a preview of what would happen.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng nhé. Ở đoạn 1 có ghi Cosmo was scared that his dreams were a preview of what was going to happen on his flight the next day. Cosmo rất sợ những giấc mơ lặp đi lặp lại của mình là điềm báo trước cho chuyến bay.",
               "correctAnswer": "True"
@@ -492,8 +491,7 @@
               "content": "Supernatural boys of Cosmo’s age participated in an important rite.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng rồi. Đoạn 2 giải thích In his culture, boys of his age were required to participate in an important rite. Những cậu bé có năng lực siêu nhiên đều phải tham gia một nghi lễ quan trọng này.",
               "correctAnswer": "True"
@@ -503,8 +501,7 @@
               "content": "In Dano’s summary, he told Cosmo to keep his body horizontal against the winds of the Indian Ocean.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai nha. Đoạn 3 Dano nói Keep your body horizontal when flying against the winds of the Pacific Ocean. Tức là giữ cơ thể nằm ngang khi bay ngược gió ở Thái Bình Dương (Pacific Ocean) chứ không phải Ấn Độ Dương (Indian Ocean).",
               "correctAnswer": "False"
@@ -514,8 +511,7 @@
               "content": "Dano flapped the wings he was provided with and orbited the globe.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai nhé. Trong bài đọc, Cosmo mới là người vỗ cánh và bay quanh địa cầu chứ không phải Dano (nhà tiên tri). Đoạn 5 ghi rõ The next morning, Cosmo was provided with a divine set of wings... He flapped his wings.",
               "correctAnswer": "False"
@@ -525,14 +521,13 @@
               "content": "Cosmo sang a tune while he flew and enjoyed the view.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai rồi. Đoạn 5 có nhắc He began to hum a song as he enjoyed the view. Cosmo chỉ ngân nga (hum) một giai điệu thôi chứ không hát thành lời (sing) khi bay.",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",

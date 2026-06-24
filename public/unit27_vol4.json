@@ -362,8 +362,7 @@
               "content": "Cloud forests provide much of the world’s oxygen supply.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Bài đọc có ghi \"Rainforests provide much of the world’s oxygen supply.\" (Rừng nhiệt đới cung cấp phần lớn lượng ô-xy, không phải rừng mây).",
               "correctAnswer": "False"
@@ -373,8 +372,7 @@
               "content": "Cloud forests are located at the tops of mountains, generally near the equator.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Bài đọc đề cập \"These forests are located at the tops of mountains, generally near the equator.\" (Những khu rừng này nằm trên đỉnh núi, thường là gần đường xích đạo).",
               "correctAnswer": "True"
@@ -384,8 +382,7 @@
               "content": "Cloud forests produce comparative amounts of water.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Bài đọc nói \"Cloud forests produce comparative amounts of water.\" (Rừng mây tạo ra lượng nước tương đương).",
               "correctAnswer": "True"
@@ -395,8 +392,7 @@
               "content": "These humid, wooded mountaintops are mainly in European and Asian countries.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Dẫn chứng trong bài: \"These humid, wooded mountaintops are mainly in African and Central and South American countries.\" (Nằm chủ yếu ở châu Phi, Trung và Nam Mỹ).",
               "correctAnswer": "False"
@@ -406,8 +402,7 @@
               "content": "Cloud forests are the birthplace of countless species of plants that can’t be found anywhere else.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Bài đọc khẳng định \"Cloud forests are also the birthplace of countless species of plants that can’t be found anywhere else.\" (Rừng mây là nơi sản sinh ra vô số loài thực vật không thể tìm thấy ở bất cứ nơi nào khác).",
               "correctAnswer": "True"
@@ -417,14 +412,13 @@
               "content": "One strategy to save the forests is to replace the destroyed plants.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. \"Another strategy is to replace the destroyed plants.\" (Một chiến lược khác là thay thế những loại cây đã bị tiêu diệt).",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",

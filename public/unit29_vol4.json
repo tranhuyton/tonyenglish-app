@@ -304,8 +304,7 @@
               "content": "Teams from universities and corporate organizations gather in Australia every two years for a solar car race.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. \"...teams from universities and corporate organizations gather in Australia every two years for a solar car race.\"",
               "correctAnswer": "True"
@@ -315,8 +314,7 @@
               "content": "Candidates for this tournament must design their own cars and keep all their plans confidential.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. \"Candidates for this tournament must design their own cars. The teams keep all their plans confidential.\"",
               "correctAnswer": "True"
@@ -326,8 +324,7 @@
               "content": "The cars incorporate solar panels onto the outside that lie perpendicular to each other.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Tấm pin nằm song song chứ không phải vuông góc. \"...incorporate solar panels onto the outside that lie parallel to each other.\"",
               "correctAnswer": "False"
@@ -337,8 +334,7 @@
               "content": "These cars drive over 300 kilometers across the Australian territories.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Khoảng cách là 3000km, không phải 300km. \"These cars race over 3,000 kilometers across the Australian territories.\"",
               "correctAnswer": "False"
@@ -348,8 +344,7 @@
               "content": "The objective of the race is to see how well the cars work under normal driving conditions.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. \"The objective is to see how well the cars work under normal driving conditions.\"",
               "correctAnswer": "True"
@@ -359,14 +354,13 @@
               "content": "They must never stop at any intervals to charge their batteries.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Họ phải dừng lại tại các khoảng cách nhất định để sạc pin. \"They must stop at certain intervals to charge their batteries.\"",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_read_b",

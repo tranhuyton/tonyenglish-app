@@ -340,15 +340,14 @@
         {
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "TFNG",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
               "content": "Anna took care of Grace in her mother's absence because her parents got a divorce.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: True. Đoạn 1 nêu rõ: 'Since her parents got a divorce... In her mother's absence, Anna takes care of Grace' (Kể từ khi bố mẹ ly hôn... Khi mẹ đi vắng, Anna chăm sóc Grace). Vậy nhận định này đúng.",
               "correctAnswer": "True"
@@ -358,8 +357,7 @@
               "content": "Grace had a lot of hair and wrinkles.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Câu hỏi nói Grace có nhiều tóc và nếp nhăn. Nhưng đoạn 5 miêu tả 'bald head' (đầu hói/ít tóc) và đoạn 7 khẳng định 'had no wrinkles' (không có nếp nhăn). Do đó, câu này là sai.",
               "correctAnswer": "False"
@@ -369,8 +367,7 @@
               "content": "Anna imitated a cat, and Grace reproduced the sounds she made.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: True. Trong đoạn 2 có kể: 'She meowed like a cat... In fact, Grace reproduced every sound that Anna made.' Anna bắt chước tiếng mèo kêu và Grace đã lặp lại y hệt những âm thanh đó.",
               "correctAnswer": "True"
@@ -380,8 +377,7 @@
               "content": "Anna had nowhere to go with the wagon.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: True. Ở cuối đoạn 2 tác giả viết: 'She put Grace in the wagon, but there was nowhere for them to go.' (Cô bé đặt Grace vào chiếc xe kéo nhỏ nhưng chẳng có nơi nào để đi cả). Nhận định này hoàn toàn chính xác.",
               "correctAnswer": "True"
@@ -391,8 +387,7 @@
               "content": "When Anna came back from her room, she found that the infant had been kidnapped.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Đoạn 3 viết: 'But when she came back, Grace had vanished!' Nghĩa là Grace biến mất. Còn việc bị bắt cóc chỉ là suy đoán lo sợ của Anna ('Maybe the baby had been kidnapped!'). Thực tế bé tự chui xuống gầm giường chứ không hề bị bắt cóc.",
               "correctAnswer": "False"
@@ -402,8 +397,7 @@
               "content": "Anna sang rhymes for Grace to try to find her more quickly.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đáp án: False. Theo đoạn 7, việc Anna hát những bài vần điệu (sang rhymes) là để ru Grace ngủ ('put Grace in bed for a nap'), chứ không phải là để tìm bé nhanh hơn. Do đó nhận định này sai.",
               "correctAnswer": "False"

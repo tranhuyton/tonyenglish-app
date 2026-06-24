@@ -383,8 +383,7 @@
               "content": "Mark’s masculine features included a mustache and a muscular body.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài nói Mark trông rất nam tính (masculine), anh ấy có riết mép (mustache) và cơ thể rất vạm vỡ (muscular). Nhận định này đúng.",
               "correctAnswer": "True"
@@ -394,8 +393,7 @@
               "content": "John laughed at Pharaoh Tut’s ignorance.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "John cười vì sự thiếu hiểu biết của Mark (Your ignorance), chứ không phải sự thiếu hiểu biết của Pharaoh Tut. Vậy nhận định này sai.",
               "correctAnswer": "False"
@@ -405,8 +403,7 @@
               "content": "John appointed himself to supervise Mark’s work and give him feedback about posture and symmetry.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "John tự nhận việc giám sát (supervise) công việc của Mark, đưa ra nhận xét (feedback), đồng thời nhắc Mark về tư thế (posture) và tính đối xứng (symmetry). Câu này đúng.",
               "correctAnswer": "True"
@@ -416,8 +413,7 @@
               "content": "Mark made crude measurements and situated a tattoo on his original monument’s chest.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Mark đã thực hiện những phép đo sơ sài (crude measurements) và khắc một hình xăm (tattoo) lên ngực bức tượng ban đầu. Nhận định này đúng.",
               "correctAnswer": "True"
@@ -427,14 +423,13 @@
               "content": "John was an undergraduate who studied sculpture and anthropology.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "John là một sinh viên đại học (undergraduate) học về nhân chủng học (anthropology) và lịch sử (history), chứ không học điêu khắc (sculpture). Nhận định sai.",
               "correctAnswer": "False"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",

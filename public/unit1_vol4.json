@@ -494,8 +494,7 @@
               "content": "Wild chocolate trees grow well in humid weather.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Cây sô cô la hoang dã phát triển tốt trong thời tiết ẩm ướt, điều này đúng theo bài đọc.",
               "correctAnswer": "True"
@@ -505,8 +504,7 @@
               "content": "The Mayans and Aztecs said chocolate was a divine plant brought from paradise.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Người Maya và Aztec cho rằng cây sô cô la là một loài cây thần thánh được mang đến từ thiên đường.",
               "correctAnswer": "True"
@@ -516,8 +514,7 @@
               "content": "The Mayans cultivated chocolate trees on plantations.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "The Aztecs cultivated chocolate trees on plantations, không phải người Mayans.",
               "correctAnswer": "False"
@@ -527,8 +524,7 @@
               "content": "Beans were combined with condensed milk to give chocolate a smooth texture.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Hạt cacao được kết hợp với sữa đặc để tạo cho sô cô la có kết cấu mịn màng.",
               "correctAnswer": "True"
@@ -538,8 +534,7 @@
               "content": "The first chocolate beverages were made in Europe.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Những thức uống sô cô la đầu tiên được làm ra bởi người Maya và Aztec ở châu Mỹ.",
               "correctAnswer": "False"
@@ -549,14 +544,13 @@
               "content": "The different types of chocolate available today vary widely.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Các loại sô cô la khác nhau có sẵn ngày nay rất đa dạng và khác biệt.",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",

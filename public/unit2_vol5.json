@@ -361,8 +361,7 @@
               "content": "The moisture in the soil was gone because a drought made the prairie become arid.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Theo đoạn 1, \"Because of the drought, the climate had become very arid. There was no moisture left in the soil.\" (Vì hạn hán, khí hậu trở nên rất khô cằn. Không còn hơi ẩm trong đất).",
               "correctAnswer": "True"
@@ -372,8 +371,7 @@
               "content": "The hungry families traveled inland to an abbey that still had abundant food.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Theo đoạn 2, \"The hungry families heard about an abbey near the mountains where food and water was still abundant. So they traveled inland...\" (Các gia đình đang đói nghe nói về một tu viện... nơi thức ăn và nước uống vẫn còn dồi dào. Vì vậy họ đi sâu vào đất liền...).",
               "correctAnswer": "True"
@@ -383,8 +381,7 @@
               "content": "Food was scarce, but the monks had to deprive the families nonetheless.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này sai. Theo đoạn 6 và 8, vị trụ trì nói \"It would be wrong to deprive them of food and shelter... we must help them nonetheless.\" (Thật sai trái nếu tước đoạt thức ăn và nơi ở của họ... dù sao đi nữa chúng ta vẫn phải giúp họ).",
               "correctAnswer": "False"
@@ -394,8 +391,7 @@
               "content": "At first there was ample food and enough room in the cathedral for everyone.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Theo đoạn 3, \"At first only a few families arrived... Then there was ample food. The monks fed them and let them sleep in the small cathedral.\" (Lúc đầu chỉ có một vài gia đình đến... Lúc đó có dư dả thức ăn. Các nhà sư cho họ ăn và ngủ trong nhà thờ nhỏ).",
               "correctAnswer": "True"
@@ -405,14 +401,13 @@
               "content": "The rugged journey to the abbey had left many people’s clothing looking ragged.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này đúng. Theo đoạn 4, \"The rugged journey had made their clothes ragged.\" (Hành trình gồ ghề đã làm cho quần áo của họ trở nên rách rưới).",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_B",

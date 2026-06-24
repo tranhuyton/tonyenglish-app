@@ -226,8 +226,7 @@
               "content": "Isaac was scared the plane would have a breakdown.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đúng vậy! Mình có thể thấy ngay ở đoạn mở đầu bài đọc: \"He was scared that his plane would have a breakdown.\" (Cậu bé sợ rằng máy bay của mình sẽ bị hỏng hóc). Câu này chứng tỏ nỗi sợ của Isaac hoàn toàn trùng khớp với phát biểu trong câu hỏi.",
               "correctAnswer": "True"
@@ -237,8 +236,7 @@
               "content": "Isaac ate raisins and peas and read a book by his favorite author.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Phát biểu này không chính xác. Mặc dù ở đoạn cuối, bài đọc có nhắc đến việc \"He put on headphones and took out a book by his favorite author\" (Cậu bé đeo tai nghe và lấy ra một cuốn sách của tác giả yêu thích), nhưng không hề có chi tiết nào nói rằng cậu bé ăn nho khô và đậu. Chi tiết về thức ăn chỉ xuất hiện trong lời kể của Rachel khi cô bé nhắc đến bữa ăn trước đó của mình: \"Last time, they served chicken, peas, and a box of raisins\".",
               "correctAnswer": "False"
@@ -248,8 +246,7 @@
               "content": "Rachel's parents suggested she read a chapter in her book when she was scared.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này hoàn toàn đúng. Trong đoạn văn kể về trải nghiệm của Rachel, cô bé chia sẻ: \"My parents told me to listen to music and read a chapter in my book\" (Bố mẹ tớ bảo tớ hãy nghe nhạc và đọc một chương trong sách). Lời khuyên này được đưa ra để giúp cô bé bình tĩnh lại khi thấy sợ hãi.",
               "correctAnswer": "True"
@@ -259,8 +256,7 @@
               "content": "Isaac's fear went away as soon as he took a nap.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sai mất rồi. Nỗi sợ của Isaac không tan biến nhờ một giấc ngủ ngắn. Ở cuối bài, tác giả viết: \"He put on headphones and took out a book by his favorite author. The book and the music helped Isaac feel better\" (Cậu bé đeo tai nghe và lấy ra một cuốn sách của tác giả yêu thích. Cuốn sách và âm nhạc đã giúp Isaac cảm thấy tốt hơn). Cậu bé đã nghe nhạc và đọc sách thay vì ngủ trưa.",
               "correctAnswer": "False"
@@ -270,8 +266,7 @@
               "content": "The pilot stated that the conditions in the atmosphere were sun, wind, etc.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Phát biểu này không đúng. Theo lời thông báo của phi công trong bài: \"We're tracking the weather: lightning, clouds, etc.\" (Chúng tôi đang theo dõi thời tiết: sấm chớp, mây, vân vân). Điều kiện thời tiết xấu được nhắc đến là sấm chớp và mây, chứ không phải nắng và gió.",
               "correctAnswer": "False"
@@ -281,14 +276,13 @@
               "content": "Isaac was scared, but he tried to retain a good attitude.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Câu này chính xác. Ở giữa bài đọc, tác giả có viết rõ ràng: \"Isaac was still scared, but he tried to retain a good attitude\" (Isaac vẫn còn sợ hãi, nhưng cậu bé đã cố gắng giữ một thái độ tốt). Dù sợ, cậu ấy vẫn nỗ lực bình tĩnh.",
               "correctAnswer": "True"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
