@@ -86,126 +86,76 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. You can hear because sound causes activity in the tiny hairs on the inside of your ear.",
-              "options": [
-                "stimulates",
-                "penetrate",
-                "duplicate",
-                "spur"
-              ],
+              "content": "<p class=\"mb-4\">1. You can hear because sound causes activity in the tiny hairs on the inside of your ear. [ 6 ]</p><p class=\"mb-4\">2. Some worms are small enough to enter into the skin without being detected. [ 7 ]</p><p class=\"mb-4\">3. She tried to copy the way her best friend dressed. [ 8 ]</p><p class=\"mb-4\">4. The teacher offered the kids candy in order to urge them into finishing their homework. [ 9 ]</p><p class=\"mb-4\">5. In science class, we learned about the particles in atoms that have a negative electric charge. [ 10 ]</p><p class=\"mb-4\">6. Every time the children’s fort fell down, they built it again and better. [ 11 ]</p><p class=\"mb-4\">7. She took classes in the science that studies the weather and became a weatherperson. [ 12 ]</p><p class=\"mb-4\">8. The small airplane flew without any effort through the sky. [ 13 ]</p><p class=\"mb-4\">9. A rocket requires a lot of fuel in order to start it into the sky. [ 14 ]</p><p class=\"mb-4\">10. Amanda is quite an intelligent girl for her young age. [ 15 ]</p>",
+              "options": [],
               "explanation": "stimulates means to cause or to increase activity in.",
-              "correctAnswer": "A"
+              "correctAnswer": "stimulates"
             },
             {
               "id": "7",
-              "content": "2. Some worms are small enough to enter into the skin without being detected.",
-              "options": [
-                "penetrate",
-                "launch",
-                "glide",
-                "duplicate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "penetrate means to enter into it.",
-              "correctAnswer": "A"
+              "correctAnswer": "penetrate"
             },
             {
               "id": "8",
-              "content": "3. She tried to copy the way her best friend dressed.",
-              "options": [
-                "duplicate",
-                "simulate",
-                "accelerate",
-                "anew"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "duplicate means to copy it.",
-              "correctAnswer": "A"
+              "correctAnswer": "duplicate"
             },
             {
               "id": "9",
-              "content": "4. The teacher offered the kids candy in order to urge them into finishing their homework.",
-              "options": [
-                "spur",
-                "launch",
-                "stimulate",
-                "innovative"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "spur means to urge them into action.",
-              "correctAnswer": "A"
+              "correctAnswer": "spur"
             },
             {
               "id": "10",
-              "content": "5. In science class, we learned about the particles in atoms that have a negative electric charge.",
-              "options": [
-                "electrons",
-                "meteorology",
-                "innovation",
-                "defect"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "electron is a particle in all atoms that has a negative electric charge.",
-              "correctAnswer": "A"
+              "correctAnswer": "electrons"
             },
             {
               "id": "11",
-              "content": "6. Every time the children’s fort fell down, they built it again and better.",
-              "options": [
-                "anew",
-                "tenacious",
-                "dreary",
-                "ingenious"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "anew means again and in a different way.",
-              "correctAnswer": "A"
+              "correctAnswer": "anew"
             },
             {
               "id": "12",
-              "content": "7. She took classes in the science that studies the weather and became a weatherperson.",
-              "options": [
-                "meteorology",
-                "propulsion",
-                "electromagnetic",
-                "innovation"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "meteorology is the science that studies the weather.",
-              "correctAnswer": "A"
+              "correctAnswer": "meteorology"
             },
             {
               "id": "13",
-              "content": "8. The small airplane flew without any effort through the sky.",
-              "options": [
-                "glided",
-                "launched",
-                "accelerated",
-                "penetrated"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "glided means flew on extended wings with little or no effort.",
-              "correctAnswer": "A"
+              "correctAnswer": "glided"
             },
             {
               "id": "14",
-              "content": "9. A rocket requires a lot of fuel in order to start it into the sky.",
-              "options": [
-                "launch",
-                "glide",
-                "spur",
-                "duplicate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "launch means to make it go into motion.",
-              "correctAnswer": "A"
+              "correctAnswer": "launch"
             },
             {
               "id": "15",
-              "content": "10. Amanda is quite an intelligent girl for her young age.",
-              "options": [
-                "ingenious",
-                "tenacious",
-                "innovative",
-                "dreary"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "ingenious means very smart.",
-              "correctAnswer": "A"
+              "correctAnswer": "ingenious"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

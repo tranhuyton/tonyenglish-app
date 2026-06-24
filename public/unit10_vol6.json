@@ -146,66 +146,41 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. The accident wasn’t serious, and Ernest was released from the hospital quickly.",
-              "options": [
-                "discharged",
-                "accumulated",
-                "secluded",
-                "sobbed"
-              ],
+              "content": "<p class=\"mb-4\">1. The accident wasn’t serious, and Ernest was released from the hospital quickly. [ 11 ]</p><p class=\"mb-4\">2. My grandfather says that if you have itchy hands, it’s a sign that you’ll receive money soon. [ 12 ]</p><p class=\"mb-4\">3. The book’s emotional descriptions taught me that war brings sadness to everyone. [ 13 ]</p><p class=\"mb-4\">4. The photograph was perfect except for a tiny mark on the corner. [ 14 ]</p><p class=\"mb-4\">5. The child cried loudly because his mother wouldn’t buy him a toy he wanted. [ 15 ]</p>",
+              "options": [],
               "explanation": "discharged means allowed to leave from a place.",
-              "correctAnswer": "A"
+              "correctAnswer": "discharged"
             },
             {
               "id": "12",
-              "content": "2. My grandfather says that if you have itchy hands, it’s a sign that you’ll receive money soon.",
-              "options": [
-                "omen",
-                "speck",
-                "rubble",
-                "apparatus"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "omen is a sign of what will happen in the future.",
-              "correctAnswer": "A"
+              "correctAnswer": "omen"
             },
             {
               "id": "13",
-              "content": "3. The book’s emotional descriptions taught me that war brings sadness to everyone.",
-              "options": [
-                "poignant",
-                "intact",
-                "aerial",
-                "sober"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "poignant causes a very strong feeling of sadness.",
-              "correctAnswer": "A"
+              "correctAnswer": "poignant"
             },
             {
               "id": "14",
-              "content": "4. The photograph was perfect except for a tiny mark on the corner.",
-              "options": [
-                "speck",
-                "convection",
-                "consistency",
-                "avalanche"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "speck is a very small mark or amount.",
-              "correctAnswer": "A"
+              "correctAnswer": "speck"
             },
             {
               "id": "15",
-              "content": "5. The child cried loudly because his mother wouldn’t buy him a toy he wanted.",
-              "options": [
-                "sobbed",
-                "discharged",
-                "accumulated",
-                "secluded"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "sobbed means cried loudly.",
-              "correctAnswer": "A"
+              "correctAnswer": "sobbed"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

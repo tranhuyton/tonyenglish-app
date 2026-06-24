@@ -216,126 +216,76 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Miguel did not want to [give up control of] his managerial powers.",
-              "options": [
-                "yield",
-                "withdraw",
-                "retreat",
-                "boom"
-              ],
+              "content": "<p class=\"mb-4\">1. Miguel did not want to [give up control of] his managerial powers. [ 16 ]</p><p class=\"mb-4\">2. With his [long pointed stick with a blade at the end], he was able to defend himself. [ 17 ]</p><p class=\"mb-4\">3. During the storm we heard [loud noises]. [ 18 ]</p><p class=\"mb-4\">4. The army was beaten, so it [ran away] to a safe place. [ 19 ]</p><p class=\"mb-4\">5. The [soldiers who fought in groups] during the battle were exhausted after the conflict. [ 20 ]</p><p class=\"mb-4\">6. The [metal we wore to protect our body] was heavy and hot during the summer. [ 21 ]</p><p class=\"mb-4\">7. We walked carefully down the [sharp angle] of the mountain. [ 22 ]</p><p class=\"mb-4\">8. A feeling of [being free] came over all the people after the election of a new prime minister. [ 23 ]</p><p class=\"mb-4\">9. The soldiers managed to hold off the [attack from another group]. [ 24 ]</p><p class=\"mb-4\">10. We heard a [loud sound] when the hammer hit the brick wall. [ 25 ]</p>",
+              "options": [],
               "explanation": "yield: to give up control of it.",
-              "correctAnswer": "A"
+              "correctAnswer": "yield"
             },
             {
               "id": "17",
-              "content": "2. With his [long pointed stick with a blade at the end], he was able to defend himself.",
-              "options": [
-                "armor",
-                "spear",
-                "knight",
-                "cliff"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "spear: a long stick with a blade on one end.",
-              "correctAnswer": "B"
+              "correctAnswer": "spear"
             },
             {
               "id": "18",
-              "content": "3. During the storm we heard [loud noises].",
-              "options": [
-                "lightning",
-                "flames",
-                "thunder",
-                "blazes"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "thunder: the loud noise heard during a storm.",
-              "correctAnswer": "C"
+              "correctAnswer": "thunder"
             },
             {
               "id": "19",
-              "content": "4. The army was beaten, so it [ran away] to a safe place.",
-              "options": [
-                "invaded",
-                "retreated",
-                "yielded",
-                "rebelled"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "retreat: to run away because you have been beaten in a fight.",
-              "correctAnswer": "B"
+              "correctAnswer": "retreated"
             },
             {
               "id": "20",
-              "content": "5. The [soldiers who fought in groups] during the battle were exhausted after the conflict.",
-              "options": [
-                "troops",
-                "knights",
-                "rebels",
-                "summit"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "troops: soldiers that fight in groups in a battle.",
-              "correctAnswer": "A"
+              "correctAnswer": "troops"
             },
             {
               "id": "21",
-              "content": "6. The [metal we wore to protect our body] was heavy and hot during the summer.",
-              "options": [
-                "armor",
-                "spear",
-                "flame",
-                "troops"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "armor: metal worn by soldiers to protect the body.",
-              "correctAnswer": "A"
+              "correctAnswer": "armor"
             },
             {
               "id": "22",
-              "content": "7. We walked carefully down the [sharp angle] of the mountain.",
-              "options": [
-                "steep",
-                "summit",
-                "cliff",
-                "retreat"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "steep: its slope or angle rises or falls sharply.",
-              "correctAnswer": "A"
+              "correctAnswer": "steep"
             },
             {
               "id": "23",
-              "content": "8. A feeling of [being free] came over all the people after the election of a new prime minister.",
-              "options": [
-                "invasion",
-                "revolution",
-                "independence",
-                "rebel"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "independence: the state of being free from the control of others.",
-              "correctAnswer": "C"
+              "correctAnswer": "independence"
             },
             {
               "id": "24",
-              "content": "9. The soldiers managed to hold off the [attack from another group].",
-              "options": [
-                "revolution",
-                "invasion",
-                "summit",
-                "lightning"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "invasion: an attack by a group from another country.",
-              "correctAnswer": "B"
+              "correctAnswer": "invasion"
             },
             {
               "id": "25",
-              "content": "10. We heard a [loud sound] when the hammer hit the brick wall.",
-              "options": [
-                "blaze",
-                "boom",
-                "yield",
-                "thunder"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "boom: to make a loud, deep sound.",
-              "correctAnswer": "B"
+              "correctAnswer": "boom"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

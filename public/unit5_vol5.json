@@ -274,126 +274,76 @@
           "questions": [
             {
               "id": "21",
-              "content": "Because she took the test with such speed, she made several silly mistakes.",
-              "options": [
-                "haste",
-                "proximity",
-                "latter",
-                "synthetic"
-              ],
+              "content": "<p class=\"mb-4\">Because she took the test with such speed, she made several silly mistakes. [ 21 ]</p><p class=\"mb-4\">Her anniversary had a quality that made it important because it was also her birthday. [ 22 ]</p><p class=\"mb-4\">Though the smallest basic units in ice and steam are similar, their shapes are different. [ 23 ]</p><p class=\"mb-4\">They began the ceremony at 9:00 in the evening. [ 24 ]</p><p class=\"mb-4\">The closeness in space of her office is only a short distance from mine. [ 25 ]</p><p class=\"mb-4\">He could sleep late that day or get up early and start his work. He chose the second choice. [ 26 ]</p><p class=\"mb-4\">The noises on the computer sounded like they were made to sound like real ones. [ 27 ]</p><p class=\"mb-4\">Please judge the quality of his proposal before we decide to meet with him. [ 28 ]</p><p class=\"mb-4\">The best cure for a slightly injured foot is putting ice on it. [ 29 ]</p><p class=\"mb-4\">Most of the advertisements on TV are related to the development of drugs commercials. [ 30 ]</p>",
+              "options": [],
               "explanation": "speed (tốc độ) tương đương với haste (sự vội vã).",
-              "correctAnswer": "A"
+              "correctAnswer": "haste"
             },
             {
               "id": "22",
-              "content": "Her anniversary had a quality that made it important because it was also her birthday.",
-              "options": [
-                "significance",
-                "pharmaceutical",
-                "molecules",
-                "remedy"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "quality that made it important tương đương significance (ý nghĩa quan trọng).",
-              "correctAnswer": "A"
+              "correctAnswer": "significance"
             },
             {
               "id": "23",
-              "content": "Though the smallest basic units in ice and steam are similar, their shapes are different.",
-              "options": [
-                "molecules",
-                "assess",
-                "synthetic",
-                "proximity"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "smallest basic units tương đương molecules (phân tử).",
-              "correctAnswer": "A"
+              "correctAnswer": "molecules"
             },
             {
               "id": "24",
-              "content": "They began the ceremony at 9:00 in the evening.",
-              "options": [
-                "commenced",
-                "latter",
-                "pharmaceutical",
-                "haste"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "began (bắt đầu) tương đương commenced.",
-              "correctAnswer": "A"
+              "correctAnswer": "commenced"
             },
             {
               "id": "25",
-              "content": "The closeness in space of her office is only a short distance from mine.",
-              "options": [
-                "proximity",
-                "remedy",
-                "significance",
-                "synthetic"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "closeness in space tương đương proximity (sự gần gũi).",
-              "correctAnswer": "A"
+              "correctAnswer": "proximity"
             },
             {
               "id": "26",
-              "content": "He could sleep late that day or get up early and start his work. He chose the second choice.",
-              "options": [
-                "latter",
-                "assess",
-                "haste",
-                "commenced"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "second choice (sự lựa chọn thứ hai) tương đương latter.",
-              "correctAnswer": "A"
+              "correctAnswer": "latter"
             },
             {
               "id": "27",
-              "content": "The noises on the computer sounded like they were made to sound like real ones.",
-              "options": [
-                "synthetic",
-                "proximity",
-                "molecules",
-                "pharmaceutical"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "made to sound like real ones (làm giả giống thật) tương đương synthetic (nhân tạo).",
-              "correctAnswer": "A"
+              "correctAnswer": "synthetic"
             },
             {
               "id": "28",
-              "content": "Please judge the quality of his proposal before we decide to meet with him.",
-              "options": [
-                "assess",
-                "remedy",
-                "commence",
-                "haste"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "judge the quality (đánh giá chất lượng) tương đương assess.",
-              "correctAnswer": "A"
+              "correctAnswer": "assess"
             },
             {
               "id": "29",
-              "content": "The best cure for a slightly injured foot is putting ice on it.",
-              "options": [
-                "remedy",
-                "significance",
-                "latter",
-                "proximity"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "cure (cách chữa trị) tương đương remedy.",
-              "correctAnswer": "A"
+              "correctAnswer": "remedy"
             },
             {
               "id": "30",
-              "content": "Most of the advertisements on TV are related to the development of drugs commercials.",
-              "options": [
-                "pharmaceutical",
-                "molecules",
-                "synthetic",
-                "assess"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "related to the development of drugs tương đương pharmaceutical.",
-              "correctAnswer": "A"
+              "correctAnswer": "pharmaceutical"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

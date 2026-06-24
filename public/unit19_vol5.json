@@ -86,126 +86,76 @@
           "questions": [
             {
               "id": "6",
-              "content": "I buy most of my clothes once owned.",
-              "options": [
-                "secondhand",
-                "genuine",
-                "frequent",
-                "intricate"
-              ],
+              "content": "<p class=\"mb-4\">I buy most of my clothes once owned. [ 6 ]</p><p class=\"mb-4\">The enclosed area in the harbor for loading ships is very busy this time of day. [ 7 ]</p><p class=\"mb-4\">Be sure not to lie about the facts about the crime. The police need to know everything in order to help us. [ 8 ]</p><p class=\"mb-4\">The women sat on the front part of the ship and enjoyed the warm sun. [ 9 ]</p><p class=\"mb-4\">I have to add a stop to our trip, so adjust your plans in a way that depends on the situation. [ 10 ]</p><p class=\"mb-4\">To understand this show, you have to know the general situation that relates to it. [ 11 ]</p><p class=\"mb-4\">The new sewing machine was made up of many small parts and details. [ 12 ]</p><p class=\"mb-4\">Let’s hope that our plans do not have a part of one occupying the space of the other. [ 13 ]</p><p class=\"mb-4\">The city has decided to give a particular description of this area as a non-smoking zone. [ 14 ]</p><p class=\"mb-4\">I think the gears need a little more oily substance used to make parts work smoothly. [ 15 ]</p>",
+              "options": [],
               "explanation": "\"once owned\" (từng thuộc về người khác) đồng nghĩa với secondhand (đồ cũ).",
-              "correctAnswer": "A"
+              "correctAnswer": "secondhand"
             },
             {
               "id": "7",
-              "content": "The enclosed area in the harbor for loading ships is very busy this time of day.",
-              "options": [
-                "dock",
-                "anchor",
-                "fore",
-                "slot"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"The enclosed area in the harbor for loading ships\" (khu vực bến cảng để chất hàng lên tàu) đồng nghĩa với dock (bến tàu).",
-              "correctAnswer": "A"
+              "correctAnswer": "dock"
             },
             {
               "id": "8",
-              "content": "Be sure not to lie about the facts about the crime. The police need to know everything in order to help us.",
-              "options": [
-                "distort",
-                "offset",
-                "designate",
-                "submerge"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"lie about\" (nói dối về) đồng nghĩa với distort (xuyên tạc).",
-              "correctAnswer": "A"
+              "correctAnswer": "distort"
             },
             {
               "id": "9",
-              "content": "The women sat on the front part of the ship and enjoyed the warm sun.",
-              "options": [
-                "fore",
-                "context",
-                "buoy",
-                "tactic"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"the front part\" (phần phía trước) đồng nghĩa với fore (phía trước tàu).",
-              "correctAnswer": "A"
+              "correctAnswer": "fore"
             },
             {
               "id": "10",
-              "content": "I have to add a stop to our trip, so adjust your plans in a way that depends on the situation.",
-              "options": [
-                "accordingly",
-                "frequent",
-                "intricate",
-                "genuine"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"in a way that depends on the situation\" (tùy theo tình huống) đồng nghĩa với accordingly (một cách phù hợp).",
-              "correctAnswer": "A"
+              "correctAnswer": "accordingly"
             },
             {
               "id": "11",
-              "content": "To understand this show, you have to know the general situation that relates to it.",
-              "options": [
-                "context",
-                "grease",
-                "catastrophe",
-                "anchor"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"general situation\" (tình huống chung, bối cảnh) đồng nghĩa với context (ngữ cảnh, bối cảnh).",
-              "correctAnswer": "A"
+              "correctAnswer": "context"
             },
             {
               "id": "12",
-              "content": "The new sewing machine was made up of many small parts and details.",
-              "options": [
-                "intricate",
-                "secondhand",
-                "frequent",
-                "genuine"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"many small parts and details\" (nhiều bộ phận và chi tiết nhỏ) đồng nghĩa với intricate (phức tạp, tinh xảo).",
-              "correctAnswer": "A"
+              "correctAnswer": "intricate"
             },
             {
               "id": "13",
-              "content": "Let’s hope that our plans do not have a part of one occupying the space of the other.",
-              "options": [
-                "overlap",
-                "offset",
-                "distort",
-                "precipitate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"occupying the space of the other\" (chiếm không gian của cái khác) đồng nghĩa với overlap (chồng chéo).",
-              "correctAnswer": "A"
+              "correctAnswer": "overlap"
             },
             {
               "id": "14",
-              "content": "The city has decided to give a particular description of this area as a non-smoking zone.",
-              "options": [
-                "designate",
-                "submerge",
-                "offset",
-                "distort"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"give a particular description\" (chỉ định) đồng nghĩa với designate.",
-              "correctAnswer": "A"
+              "correctAnswer": "designate"
             },
             {
               "id": "15",
-              "content": "I think the gears need a little more oily substance used to make parts work smoothly.",
-              "options": [
-                "grease",
-                "anchor",
-                "buoy",
-                "slot"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"oily substance\" (chất nhờn, dầu mỡ) đồng nghĩa với grease.",
-              "correctAnswer": "A"
+              "correctAnswer": "grease"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3",

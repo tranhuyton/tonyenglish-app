@@ -12,61 +12,36 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Jennifer looked for a long time at the girl who looked just like her sister.",
-              "options": [
-                "stared",
-                "recovered",
-                "lasted",
-                "shy"
-              ],
-              "correctAnswer": "A"
+              "content": "<p class=\"mb-4\">1. Jennifer looked for a long time at the girl who looked just like her sister. [ 1 ]</p><p class=\"mb-4\">2. Even though the noise scared me, I returned to my calm mood. [ 2 ]</p><p class=\"mb-4\">3. The man's speech went on for another thirty minutes. [ 3 ]</p><p class=\"mb-4\">4. I am quiet in a big crowd of people. [ 4 ]</p><p class=\"mb-4\">5. My little brother woke up with a really bad hot temperature today. [ 5 ]</p>",
+              "options": [],
+              "correctAnswer": "stared"
             },
             {
               "id": "2",
-              "content": "2. Even though the noise scared me, I returned to my calm mood.",
-              "options": [
-                "stared",
-                "recovered",
-                "lasted",
-                "shy"
-              ],
-              "correctAnswer": "B"
+              "content": "",
+              "options": [],
+              "correctAnswer": "recovered"
             },
             {
               "id": "3",
-              "content": "3. The man's speech went on for another thirty minutes.",
-              "options": [
-                "stared",
-                "recovered",
-                "lasted",
-                "shy"
-              ],
-              "correctAnswer": "C"
+              "content": "",
+              "options": [],
+              "correctAnswer": "lasted"
             },
             {
               "id": "4",
-              "content": "4. I am quiet in a big crowd of people.",
-              "options": [
-                "fever",
-                "recovered",
-                "lasted",
-                "shy"
-              ],
-              "correctAnswer": "D"
+              "content": "",
+              "options": [],
+              "correctAnswer": "shy"
             },
             {
               "id": "5",
-              "content": "5. My little brother woke up with a really bad hot temperature today.",
-              "options": [
-                "stared",
-                "fever",
-                "lasted",
-                "shy"
-              ],
-              "correctAnswer": "B"
+              "content": "",
+              "options": [],
+              "correctAnswer": "fever"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2",

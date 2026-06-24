@@ -18,126 +18,76 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. No matter how much she begged, the older girls still did <u>not accept Suzy.</u>",
-              "options": [
-                "excluded",
-                "linguistic",
-                "undermining",
-                "solemn"
-              ],
+              "content": "<p class=\"mb-4\">1. No matter how much she begged, the older girls still did <u>not accept Suzy.</u> [ 1 ]</p><p class=\"mb-4\">2. <u>Language</u> based approaches are the best way to learn about a culture. [ 2 ]</p><p class=\"mb-4\">3. Constant changes were <u>weakening the</u> project’s chances of being finished on time. [ 3 ]</p><p class=\"mb-4\">4. The boy made a <u>serious and honest</u> promise to his parents that he would never again cheat. [ 4 ]</p><p class=\"mb-4\">5. The movie director gave the actors and actresses a <u>personal and original view</u> of the newly completed movie. [ 5 ]</p><p class=\"mb-4\">6. Everyone knew that Luke studied Chinese. But no one knew he was <u>able to speak it very well.</u> [ 6 ]</p><p class=\"mb-4\">7. The teacher was waiting for one of the students to be <u>honest</u> about what had happened on the playground. [ 7 ]</p><p class=\"mb-4\">8. The Internet has made talking to people everywhere very natural. As a result, having <u>a sense of common support for your ideas is</u> easy. [ 8 ]</p><p class=\"mb-4\">9. Though he looked Greek, his <u>identity based on the country he came from was Mexican.</u> [ 9 ]</p><p class=\"mb-4\">10. Today, no one lives in the old royal palace. Instead, it’s part <u>of the university.</u> [ 10 ]</p>",
+              "options": [],
               "explanation": "excluded (v): not accepted into a group.",
-              "correctAnswer": "A"
+              "correctAnswer": "excluded"
             },
             {
               "id": "2",
-              "content": "2. <u>Language</u> based approaches are the best way to learn about a culture.",
-              "options": [
-                "Linguistic",
-                "excluded",
-                "solidarity",
-                "nationality"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Linguistic (adj): concerned with language.",
-              "correctAnswer": "A"
+              "correctAnswer": "Linguistic"
             },
             {
               "id": "3",
-              "content": "3. Constant changes were <u>weakening the</u> project’s chances of being finished on time.",
-              "options": [
-                "undermining",
-                "firsthand",
-                "fluent",
-                "earnest"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "undermining (v): weakening efforts or authority.",
-              "correctAnswer": "A"
+              "correctAnswer": "undermining"
             },
             {
               "id": "4",
-              "content": "4. The boy made a <u>serious and honest</u> promise to his parents that he would never again cheat.",
-              "options": [
-                "solemn",
-                "imperial",
-                "earnest",
-                "fluent"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "solemn (adj): serious and honest.",
-              "correctAnswer": "A"
+              "correctAnswer": "solemn"
             },
             {
               "id": "5",
-              "content": "5. The movie director gave the actors and actresses a <u>personal and original view</u> of the newly completed movie.",
-              "options": [
-                "firsthand",
-                "excluded",
-                "fluent",
-                "earnest"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "firsthand (adj): from an original source.",
-              "correctAnswer": "A"
+              "correctAnswer": "firsthand"
             },
             {
               "id": "6",
-              "content": "6. Everyone knew that Luke studied Chinese. But no one knew he was <u>able to speak it very well.</u>",
-              "options": [
-                "fluent",
-                "earnest",
-                "solemn",
-                "firsthand"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "fluent (adj): able to speak a language very well.",
-              "correctAnswer": "A"
+              "correctAnswer": "fluent"
             },
             {
               "id": "7",
-              "content": "7. The teacher was waiting for one of the students to be <u>honest</u> about what had happened on the playground.",
-              "options": [
-                "earnest",
-                "fluent",
-                "firsthand",
-                "imperial"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "earnest (adj): honest.",
-              "correctAnswer": "A"
+              "correctAnswer": "earnest"
             },
             {
               "id": "8",
-              "content": "8. The Internet has made talking to people everywhere very natural. As a result, having <u>a sense of common support for your ideas is</u> easy.",
-              "options": [
-                "solidarity",
-                "nationality",
-                "imperial",
-                "fluent"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "solidarity (n): a union formed from common responsibilities or interests.",
-              "correctAnswer": "A"
+              "correctAnswer": "solidarity"
             },
             {
               "id": "9",
-              "content": "9. Though he looked Greek, his <u>identity based on the country he came from was Mexican.</u>",
-              "options": [
-                "nationality",
-                "solidarity",
-                "imperial",
-                "earnest"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "nationality (n): an identity based on the nation from which you come.",
-              "correctAnswer": "A"
+              "correctAnswer": "nationality"
             },
             {
               "id": "10",
-              "content": "10. Today, no one lives in the old royal palace. Instead, it’s part <u>of the university.</u>",
-              "options": [
-                "imperial",
-                "firsthand",
-                "earnest",
-                "solemn"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "imperial (adj): of, or related to an empire.",
-              "correctAnswer": "A"
+              "correctAnswer": "imperial"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2_wordlist",

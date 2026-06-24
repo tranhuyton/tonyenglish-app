@@ -86,126 +86,76 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. No one else can open my <u><u>small cabinet with a lock</u>.</u>",
-              "options": [
-                "locker",
-                "blizzard",
-                "discord",
-                "cavity"
-              ],
+              "content": "<p class=\"mb-4\">1. No one else can open my <u><u>small cabinet with a lock</u>.</u> [ 6 ]</p><p class=\"mb-4\">2. How can we prevent _argument and <u>disagreement_ in</u> the future? [ 7 ]</p><p class=\"mb-4\">3. The brave travelers were not stopped by <u>the <u>snow storm with strong winds</u>.</u> [ 8 ]</p><p class=\"mb-4\">4. The organizers made sure that the parade was <u><u>related to many different cultures</u>.</u> [ 9 ]</p><p class=\"mb-4\">5. The thief hid the money in a <u>small <u>hole</u> in the</u> wall. [ 10 ]</p><p class=\"mb-4\">6. I thought the hosts showed a <u>lot of _politeness and respect</u> for others_. [ 11 ]</p><p class=\"mb-4\">7. It was her job to <u><u>make sure everything was being done properly</u></u> on the project. [ 12 ]</p><p class=\"mb-4\">8. What can we do <u>to _cause the beginning</u> or development_ of interest in our product? [ 13 ]</p><p class=\"mb-4\">9. People cannot withstand <u><u>extremely cold</u></u> temperatures without clothing and shelter. [ 14 ]</p><p class=\"mb-4\">10. John used a knife to <u><u>make a hole</u> in the</u> thick rubber. [ 15 ]</p>",
+              "options": [],
               "explanation": "locker (n): a small cabinet with a lock.",
-              "correctAnswer": "A"
+              "correctAnswer": "locker"
             },
             {
               "id": "7",
-              "content": "2. How can we prevent _argument and <u>disagreement_ in</u> the future?",
-              "options": [
-                "discord",
-                "courtesy",
-                "frigid",
-                "multicultural"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "discord (n): disagreement or fighting.",
-              "correctAnswer": "A"
+              "correctAnswer": "discord"
             },
             {
               "id": "8",
-              "content": "3. The brave travelers were not stopped by <u>the <u>snow storm with strong winds</u>.</u>",
-              "options": [
-                "blizzard",
-                "cavity",
-                "locker",
-                "omission"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "blizzard (n): a severe snow storm with strong winds.",
-              "correctAnswer": "A"
+              "correctAnswer": "blizzard"
             },
             {
               "id": "9",
-              "content": "4. The organizers made sure that the parade was <u><u>related to many different cultures</u>.</u>",
-              "options": [
-                "multicultural",
-                "clockwise",
-                "appetizing",
-                "glacial"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "multicultural (adj): relating to many different cultures.",
-              "correctAnswer": "A"
+              "correctAnswer": "multicultural"
             },
             {
               "id": "10",
-              "content": "5. The thief hid the money in a <u>small <u>hole</u> in the</u> wall.",
-              "options": [
-                "cavity",
-                "interchange",
-                "discord",
-                "locker"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "cavity (n): a hole or space in something.",
-              "correctAnswer": "A"
+              "correctAnswer": "cavity"
             },
             {
               "id": "11",
-              "content": "6. I thought the hosts showed a <u>lot of _politeness and respect</u> for others_.",
-              "options": [
-                "courtesy",
-                "omission",
-                "generate",
-                "pierce"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "courtesy (n): excellence of manners or social conduct.",
-              "correctAnswer": "A"
+              "correctAnswer": "courtesy"
             },
             {
               "id": "12",
-              "content": "7. It was her job to <u><u>make sure everything was being done properly</u></u> on the project.",
-              "options": [
-                "oversee",
-                "replicate",
-                "allocate",
-                "generate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "oversee (v): make sure that it is being done properly.",
-              "correctAnswer": "A"
+              "correctAnswer": "oversee"
             },
             {
               "id": "13",
-              "content": "8. What can we do <u>to _cause the beginning</u> or development_ of interest in our product?",
-              "options": [
-                "generate",
-                "pierce",
-                "replicate",
-                "allocate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "generate (v): to cause it to develop or begin.",
-              "correctAnswer": "A"
+              "correctAnswer": "generate"
             },
             {
               "id": "14",
-              "content": "9. People cannot withstand <u><u>extremely cold</u></u> temperatures without clothing and shelter.",
-              "options": [
-                "frigid",
-                "crisp",
-                "wavy",
-                "concentric"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "frigid (adj): extremely cold.",
-              "correctAnswer": "A"
+              "correctAnswer": "frigid"
             },
             {
               "id": "15",
-              "content": "10. John used a knife to <u><u>make a hole</u> in the</u> thick rubber.",
-              "options": [
-                "pierce",
-                "oversee",
-                "replicate",
-                "generate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "pierce (v): make a hole in it using a sharp object.",
-              "correctAnswer": "A"
+              "correctAnswer": "pierce"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

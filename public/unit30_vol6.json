@@ -86,126 +86,76 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. After seeing her house on fire, jenna <u>was troubled by thoughts of fire.</u>",
-              "options": [
-                "haunted",
-                "expired",
-                "courteous",
-                "liberal"
-              ],
+              "content": "<p class=\"mb-4\">1. After seeing her house on fire, jenna <u>was troubled by thoughts of fire.</u> [ 6 ]</p><p class=\"mb-4\">2. The boy <u>had small round</u> rocks stuck on the bottom of his shoe. [ 7 ]</p><p class=\"mb-4\">3. The bird <u>bit or hit the dish and</u> carried away pieces of bread. [ 8 ]</p><p class=\"mb-4\">4. The city made <u>a place to store water, so there</u> would always be water for the people. [ 9 ]</p><p class=\"mb-4\">5. She poured <u>soap to clean dishes</u> into the sink and washed the dishes. [ 10 ]</p><p class=\"mb-4\">6. The woman was impressed by her friend’s <u>polite and respectful</u> brother. [ 11 ]</p><p class=\"mb-4\">7. The scientist went to school for many years to earn <u>her proof of ability.</u> [ 12 ]</p><p class=\"mb-4\">8. I added some more <u>rocks that served as fuel to the fire.</u> [ 13 ]</p><p class=\"mb-4\">9. Clara didn’t want to offend her grandmother, so <u>she used a replacement for an unpleasant word</u> to refer to old age. [ 14 ]</p><p class=\"mb-4\">10. The land in the <u>flat place where the river divides was good for growing</u> food. [ 15 ]</p>",
+              "options": [],
               "explanation": "haunt (v): to cause problems or negative thoughts over a long period of time.",
-              "correctAnswer": "A"
+              "correctAnswer": "haunted"
             },
             {
               "id": "7",
-              "content": "2. The boy <u>had small round</u> rocks stuck on the bottom of his shoe.",
-              "options": [
-                "pebbles",
-                "crickets",
-                "moss",
-                "gravel"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "pebble (n): a small, round stone.",
-              "correctAnswer": "A"
+              "correctAnswer": "pebbles"
             },
             {
               "id": "8",
-              "content": "3. The bird <u>bit or hit the dish and</u> carried away pieces of bread.",
-              "options": [
-                "pecked",
-                "haunted",
-                "expired",
-                "courteous"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "peck (v): to bite or hit something with a beak.",
-              "correctAnswer": "A"
+              "correctAnswer": "pecked"
             },
             {
               "id": "9",
-              "content": "4. The city made <u>a place to store water, so there</u> would always be water for the people.",
-              "options": [
-                "reservoir",
-                "delta",
-                "maze",
-                "granite"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "reservoir (n): a place for storing water for a town to use.",
-              "correctAnswer": "A"
+              "correctAnswer": "reservoir"
             },
             {
               "id": "10",
-              "content": "5. She poured <u>soap to clean dishes</u> into the sink and washed the dishes.",
-              "options": [
-                "detergent",
-                "charcoal",
-                "amber",
-                "gravel"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "detergent (n): soap that is used to clean clothes or dishes.",
-              "correctAnswer": "A"
+              "correctAnswer": "detergent"
             },
             {
               "id": "11",
-              "content": "6. The woman was impressed by her friend’s <u>polite and respectful</u> brother.",
-              "options": [
-                "courteous",
-                "liberal",
-                "expired",
-                "haunted"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "courteous (adj): polite and respectful.",
-              "correctAnswer": "A"
+              "correctAnswer": "courteous"
             },
             {
               "id": "12",
-              "content": "7. The scientist went to school for many years to earn <u>her proof of ability.</u>",
-              "options": [
-                "credentials",
-                "euphemism",
-                "columnist",
-                "streak"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "credentials (n): the proof of someone’s experience or ability.",
-              "correctAnswer": "A"
+              "correctAnswer": "credentials"
             },
             {
               "id": "13",
-              "content": "8. I added some more <u>rocks that served as fuel to the fire.</u>",
-              "options": [
-                "charcoal",
-                "granite",
-                "amber",
-                "pebbles"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "charcoal (n): a black material that is used as fuel for fire.",
-              "correctAnswer": "A"
+              "correctAnswer": "charcoal"
             },
             {
               "id": "14",
-              "content": "9. Clara didn’t want to offend her grandmother, so <u>she used a replacement for an unpleasant word</u> to refer to old age.",
-              "options": [
-                "euphemism",
-                "credentials",
-                "columnist",
-                "maze"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "euphemism (n): a term that is used in place of a mean or unpleasant word.",
-              "correctAnswer": "A"
+              "correctAnswer": "euphemism"
             },
             {
               "id": "15",
-              "content": "10. The land in the <u>flat place where the river divides was good for growing</u> food.",
-              "options": [
-                "delta",
-                "reservoir",
-                "moss",
-                "gravel"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "delta (n): flat area where a river splits into smaller rivers that flow into the sea.",
-              "correctAnswer": "A"
+              "correctAnswer": "delta"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

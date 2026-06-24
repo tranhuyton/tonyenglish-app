@@ -146,66 +146,41 @@
           "questions": [
             {
               "id": "11",
-              "content": "I met a very friendly girl on my first day of school.",
-              "options": [
-                "sociable",
-                "fragile",
-                "talkative",
-                "moderate"
-              ],
+              "content": "<p class=\"mb-4\">I met a very friendly girl on my first day of school. [ 11 ]</p><p class=\"mb-4\">Marty walked heavily across the kitchen to the back door. [ 12 ]</p><p class=\"mb-4\">That lovely dresser was skillfully made from oak. [ 13 ]</p><p class=\"mb-4\">The man had dishonestly changed the game so that he would win every time. [ 14 ]</p><p class=\"mb-4\">The paint colors combined to make new ones on the canvas. [ 15 ]</p>",
+              "options": [],
               "explanation": "friendly (thân thiện) tương đương với sociable.",
-              "correctAnswer": "A"
+              "correctAnswer": "sociable"
             },
             {
               "id": "12",
-              "content": "Marty walked heavily across the kitchen to the back door.",
-              "options": [
-                "tramped",
-                "towed",
-                "rigged",
-                "crafted"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "walked heavily (bước đi nặng nề) tương đương với tramped.",
-              "correctAnswer": "A"
+              "correctAnswer": "tramped"
             },
             {
               "id": "13",
-              "content": "That lovely dresser was skillfully made from oak.",
-              "options": [
-                "crafted",
-                "merged",
-                "rigged",
-                "towed"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "skillfully made (làm một cách khéo léo) tương đương với crafted.",
-              "correctAnswer": "A"
+              "correctAnswer": "crafted"
             },
             {
               "id": "14",
-              "content": "The man had dishonestly changed the game so that he would win every time.",
-              "options": [
-                "rigged",
-                "merged",
-                "crafted",
-                "towed"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "dishonestly changed (thay đổi một cách gian lận) tương đương với rigged.",
-              "correctAnswer": "A"
+              "correctAnswer": "rigged"
             },
             {
               "id": "15",
-              "content": "The paint colors combined to make new ones on the canvas.",
-              "options": [
-                "merged",
-                "crafted",
-                "rigged",
-                "towed"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "combined (kết hợp) tương đương với merged.",
-              "correctAnswer": "A"
+              "correctAnswer": "merged"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3",

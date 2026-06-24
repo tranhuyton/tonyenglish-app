@@ -86,126 +86,76 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. The journalist checked all her sources to make sure they <u>were believable.</u>",
-              "options": [
-                "credible",
-                "psychotic",
-                "therapeutic",
-                "psychic"
-              ],
+              "content": "<p class=\"mb-4\">1. The journalist checked all her sources to make sure they <u>were believable.</u> [ 6 ]</p><p class=\"mb-4\">2. The hospital had a separate <u>section for very mentally ill</u> people. [ 7 ]</p><p class=\"mb-4\">3. The child’s handwriting was almost impossible to <u>figure out.</u> [ 8 ]</p><p class=\"mb-4\">4. The priest stood behind <u>a(n) table used in religious</u> ceremonies. [ 9 ]</p><p class=\"mb-4\">5. Her new <u>sweater was colorful and</u> decorated. [ 10 ]</p><p class=\"mb-4\">6. My dad <u>crushes food</u> for my baby brother because he doesn’t have teeth yet. [ 11 ]</p><p class=\"mb-4\">7. People with <u>an ailment affecting the joints</u> are often unable to do physical activities. [ 12 ]</p><p class=\"mb-4\">8. <u>Some people think</u> I have future seeing powers, but in reality I’m just very observant. [ 13 ]</p><p class=\"mb-4\">9. Cows release <u>so much waste material that</u> some scientists believe they harm the environment. [ 14 ]</p><p class=\"mb-4\">10. He didn’t like attending the opera, but he did it <u>to satisfy his mother.</u> [ 15 ]</p>",
+              "options": [],
               "explanation": "credible (adj): can be believed or trusted.",
-              "correctAnswer": "A"
+              "correctAnswer": "credible"
             },
             {
               "id": "7",
-              "content": "2. The hospital had a separate <u>section for very mentally ill</u> people.",
-              "options": [
-                "psychotic",
-                "deceased",
-                "sinister",
-                "credible"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "psychotic (adj): having a very serious mental illness.",
-              "correctAnswer": "A"
+              "correctAnswer": "psychotic"
             },
             {
               "id": "8",
-              "content": "3. The child’s handwriting was almost impossible to <u>figure out.</u>",
-              "options": [
-                "decipher",
-                "hone",
-                "mash",
-                "gratify"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "decipher (v): figure out what it says.",
-              "correctAnswer": "A"
+              "correctAnswer": "decipher"
             },
             {
               "id": "9",
-              "content": "4. The priest stood behind <u>a(n) table used in religious</u> ceremonies.",
-              "options": [
-                "altar",
-                "dung",
-                "scope",
-                "strife"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "altar (n): a table used in churches.",
-              "correctAnswer": "A"
+              "correctAnswer": "altar"
             },
             {
               "id": "10",
-              "content": "5. Her new <u>sweater was colorful and</u> decorated.",
-              "options": [
-                "ornate",
-                "credible",
-                "deceased",
-                "therapeutic"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "ornate (adj): decorated with a lot of fancy things.",
-              "correctAnswer": "A"
+              "correctAnswer": "ornate"
             },
             {
               "id": "11",
-              "content": "6. My dad <u>crushes food</u> for my baby brother because he doesn’t have teeth yet.",
-              "options": [
-                "mashes",
-                "hones",
-                "gratifies",
-                "deciphers"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "mash (v): crush it so that it is soft.",
-              "correctAnswer": "A"
+              "correctAnswer": "mashes"
             },
             {
               "id": "12",
-              "content": "7. People with <u>an ailment affecting the joints</u> are often unable to do physical activities.",
-              "options": [
-                "arthritis",
-                "pneumonia",
-                "botany",
-                "deception"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "arthritis (n): an illness causing pain and swelling in a person’s joints.",
-              "correctAnswer": "A"
+              "correctAnswer": "arthritis"
             },
             {
               "id": "13",
-              "content": "8. <u>Some people think</u> I have future seeing powers, but in reality I’m just very observant.",
-              "options": [
-                "psychic",
-                "psychotic",
-                "sinister",
-                "deceased"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "psychic (adj): knowing what will happen or what people think.",
-              "correctAnswer": "A"
+              "correctAnswer": "psychic"
             },
             {
               "id": "14",
-              "content": "9. Cows release <u>so much waste material that</u> some scientists believe they harm the environment.",
-              "options": [
-                "dung",
-                "dusk",
-                "scope",
-                "altar"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "dung (n): solid waste material produced by animals.",
-              "correctAnswer": "A"
+              "correctAnswer": "dung"
             },
             {
               "id": "15",
-              "content": "10. He didn’t like attending the opera, but he did it <u>to satisfy his mother.</u>",
-              "options": [
-                "gratify",
-                "decipher",
-                "mash",
-                "hone"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "gratify (v): to please someone.",
-              "correctAnswer": "A"
+              "correctAnswer": "gratify"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

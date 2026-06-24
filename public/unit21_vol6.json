@@ -214,126 +214,76 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. His moving speech caused a huge strong, sudden expression of happy tears.",
-              "options": [
-                "outburst",
-                "limp",
-                "poll",
-                "aspire"
-              ],
+              "content": "<p class=\"mb-4\">1. His moving speech caused a huge strong, sudden expression of happy tears. [ 16 ]</p><p class=\"mb-4\">2. The main goal of the group was to distribute information about the needs of the poor. [ 17 ]</p><p class=\"mb-4\">3. The wounded soldier had to walk with difficulty because of a hurt foot back to the base. [ 18 ]</p><p class=\"mb-4\">4. We excitedly watched the results of the survey in which people give opinions. [ 19 ]</p><p class=\"mb-4\">5. The boys have a strong desire to finish college in less than three years. [ 20 ]</p><p class=\"mb-4\">6. When he saw how badly things had turned out, he felt a strong feeling of sadness and regret. [ 21 ]</p><p class=\"mb-4\">7. It is a difficult process to improve the official rulebook. [ 22 ]</p><p class=\"mb-4\">8. Those salesmen praise in an insincere way people to trick them into buying useless items. [ 23 ]</p><p class=\"mb-4\">9. The document of principles for the government was based on freedom for all people. [ 24 ]</p><p class=\"mb-4\">10. We were immediately suspicious of the boy because of his act of keeping things secret. [ 25 ]</p>",
+              "options": [],
               "explanation": "outburst",
-              "correctAnswer": "A"
+              "correctAnswer": "outburst"
             },
             {
               "id": "17",
-              "content": "2. The main goal of the group was to distribute information about the needs of the poor.",
-              "options": [
-                "disseminate",
-                "flatter",
-                "amend",
-                "outburst"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "disseminate",
-              "correctAnswer": "A"
+              "correctAnswer": "disseminate"
             },
             {
               "id": "18",
-              "content": "3. The wounded soldier had to walk with difficulty because of a hurt foot back to the base.",
-              "options": [
-                "limp",
-                "poll",
-                "aspire",
-                "amend"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "limp",
-              "correctAnswer": "A"
+              "correctAnswer": "limp"
             },
             {
               "id": "19",
-              "content": "4. We excitedly watched the results of the survey in which people give opinions.",
-              "options": [
-                "poll",
-                "constitution",
-                "secrecy",
-                "outburst"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "poll",
-              "correctAnswer": "A"
+              "correctAnswer": "poll"
             },
             {
               "id": "20",
-              "content": "5. The boys have a strong desire to finish college in less than three years.",
-              "options": [
-                "aspire",
-                "amend",
-                "flatter",
-                "limp"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "aspire",
-              "correctAnswer": "A"
+              "correctAnswer": "aspire"
             },
             {
               "id": "21",
-              "content": "6. When he saw how badly things had turned out, he felt a strong feeling of sadness and regret.",
-              "options": [
-                "remorse",
-                "secrecy",
-                "constitution",
-                "poll"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "remorse",
-              "correctAnswer": "A"
+              "correctAnswer": "remorse"
             },
             {
               "id": "22",
-              "content": "7. It is a difficult process to improve the official rulebook.",
-              "options": [
-                "amend",
-                "flatter",
-                "aspire",
-                "disseminate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "amend",
-              "correctAnswer": "A"
+              "correctAnswer": "amend"
             },
             {
               "id": "23",
-              "content": "8. Those salesmen praise in an insincere way people to trick them into buying useless items.",
-              "options": [
-                "flatter",
-                "amend",
-                "disseminate",
-                "limp"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "flatter",
-              "correctAnswer": "A"
+              "correctAnswer": "flatter"
             },
             {
               "id": "24",
-              "content": "9. The document of principles for the government was based on freedom for all people.",
-              "options": [
-                "constitution",
-                "secrecy",
-                "remorse",
-                "poll"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "constitution",
-              "correctAnswer": "A"
+              "correctAnswer": "constitution"
             },
             {
               "id": "25",
-              "content": "10. We were immediately suspicious of the boy because of his act of keeping things secret.",
-              "options": [
-                "secrecy",
-                "constitution",
-                "remorse",
-                "outburst"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "secrecy",
-              "correctAnswer": "A"
+              "correctAnswer": "secrecy"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec4_wordlist",

@@ -18,126 +18,76 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. He chose to paint a picture on <u>the main body of the boat.</u>",
-              "options": [
-                "hull",
-                "permanence",
-                "equation",
-                "nuisance"
-              ],
+              "content": "<p class=\"mb-4\">1. He chose to paint a picture on <u>the main body of the boat.</u> [ 1 ]</p><p class=\"mb-4\">2. When the plane crashed on the island, the passenger knew he was <u>prevented from leaving.</u> [ 2 ]</p><p class=\"mb-4\">3. I admired the <u>very large number of</u> stamps in his collection. [ 3 ]</p><p class=\"mb-4\">4. I took some aspirin <u>to make less my</u> back pain. [ 4 ]</p><p class=\"mb-4\">5. The countries were concerned about the treaty’s <u>ability to last forever.</u> [ 5 ]</p><p class=\"mb-4\">6. Australia’s <u>distance from the equator</u> is less extreme than I imagined. [ 6 ]</p><p class=\"mb-4\">7. I’m still not sure if the <u>math operation I did was correct.</u> [ 7 ]</p><p class=\"mb-4\">8. When the rats got out of the cage, the girl was <u>behaving in a wild way because of fear.</u> [ 8 ]</p><p class=\"mb-4\">9. The <u>incorrect or partly correct</u> information gave us the wrong idea about the president. [ 9 ]</p><p class=\"mb-4\">10. When he forgot his rope at home, he had to make one <u>using whatever was available.</u> [ 10 ]</p>",
+              "options": [],
               "explanation": "hull (n): the main body of a boat.",
-              "correctAnswer": "A"
+              "correctAnswer": "hull"
             },
             {
               "id": "2",
-              "content": "2. When the plane crashed on the island, the passenger knew he was <u>prevented from leaving.</u>",
-              "options": [
-                "stranded",
-                "frantic",
-                "volatile",
-                "erroneous"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "stranded (adj): prevented from leaving a place.",
-              "correctAnswer": "A"
+              "correctAnswer": "stranded"
             },
             {
               "id": "3",
-              "content": "3. I admired the <u>very large number of</u> stamps in his collection.",
-              "options": [
-                "multitude",
-                "astrology",
-                "mariner",
-                "latitude"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "multitude (n): a very large number of things.",
-              "correctAnswer": "A"
+              "correctAnswer": "multitude"
             },
             {
               "id": "4",
-              "content": "4. I took some aspirin <u>to make less my</u> back pain.",
-              "options": [
-                "alleviate",
-                "soothe",
-                "disrupt",
-                "err"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "alleviate (v): to make something less intense or severe.",
-              "correctAnswer": "A"
+              "correctAnswer": "alleviate"
             },
             {
               "id": "5",
-              "content": "5. The countries were concerned about the treaty’s <u>ability to last forever.</u>",
-              "options": [
-                "permanence",
-                "latitude",
-                "equation",
-                "nuisance"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "permanence (n): the ability to last forever.",
-              "correctAnswer": "A"
+              "correctAnswer": "permanence"
             },
             {
               "id": "6",
-              "content": "6. Australia’s <u>distance from the equator</u> is less extreme than I imagined.",
-              "options": [
-                "latitude",
-                "astrology",
-                "permanence",
-                "mariner"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "latitude (n): the distance from the equator.",
-              "correctAnswer": "A"
+              "correctAnswer": "latitude"
             },
             {
               "id": "7",
-              "content": "7. I’m still not sure if the <u>math operation I did was correct.</u>",
-              "options": [
-                "equation",
-                "hull",
-                "nuisance",
-                "permanence"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "equation (n): a math operation to determine the value of something.",
-              "correctAnswer": "A"
+              "correctAnswer": "equation"
             },
             {
               "id": "8",
-              "content": "8. When the rats got out of the cage, the girl was <u>behaving in a wild way because of fear.</u>",
-              "options": [
-                "frantic",
-                "stranded",
-                "volatile",
-                "erroneous"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "frantic (adj): behaving in a wild way because of fear.",
-              "correctAnswer": "A"
+              "correctAnswer": "frantic"
             },
             {
               "id": "9",
-              "content": "9. The <u>incorrect or partly correct</u> information gave us the wrong idea about the president.",
-              "options": [
-                "erroneous",
-                "inadvertent",
-                "frantic",
-                "stranded"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "erroneous (adj): incorrect or only partly correct.",
-              "correctAnswer": "A"
+              "correctAnswer": "erroneous"
             },
             {
               "id": "10",
-              "content": "10. When he forgot his rope at home, he had to make one <u>using whatever was available.</u>",
-              "options": [
-                "improvise",
-                "revolve",
-                "alleviate",
-                "differentiate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "improvise (v): to do something with whatever is available.",
-              "correctAnswer": "A"
+              "correctAnswer": "improvise"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2_wordlist",

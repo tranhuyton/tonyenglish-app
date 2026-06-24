@@ -213,126 +213,76 @@
           "questions": [
             {
               "id": "16",
-              "content": "He <u>blamed me of taking</u> the last piece of pie. (ac__________)",
-              "options": [
-                "accused",
-                "plain",
-                "amuse",
-                "adjust"
-              ],
+              "content": "<p class=\"mb-2\">He <u>blamed me of taking</u> the last piece of pie. ac[ 16 ]</p><p class=\"mb-2\">The man's bedroom was <u>very simple</u>. pla[ 17 ]</p><p class=\"mb-2\">The clown likes to <u>entertain</u> children. amu[ 18 ]</p><p class=\"mb-2\">I need to <u>change</u> the way I run so I can be faster. adj[ 19 ]</p><p class=\"mb-2\">During their free time, the children <u>did</u> many different activities. (en___________ in) [ 20 ]</p><p class=\"mb-2\">This <u>cloth</u> dress is one of my favorites. co[ 21 ]</p><p class=\"mb-2\">The <u>bad storm over the ocean</u> almost reached the land. hu[ 22 ]</p><p class=\"mb-2\"><u>Tightly close</u> the window before the rain starts! s[ 23 ]</p><p class=\"mb-2\">He will <u>hit something and break</u> his bike if he closes his eyes while riding. c[ 24 ]</p><p class=\"mb-2\">The army fights in the war <u>area</u>. z[ 25 ]</p>",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "accused"
             },
             {
               "id": "17",
-              "content": "The man's bedroom was <u>very simple</u>. (pla____)",
-              "options": [
-                "plain",
-                "accused",
-                "amuse",
-                "adjust"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "plain"
             },
             {
               "id": "18",
-              "content": "The clown likes to <u>entertain</u> children. (amu____)",
-              "options": [
-                "amuse",
-                "adjust",
-                "engaged",
-                "cotton"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "amuse"
             },
             {
               "id": "19",
-              "content": "I need to <u>change</u> the way I run so I can be faster. (adj______)",
-              "options": [
-                "adjust",
-                "engaged",
-                "cotton",
-                "hurricane"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "adjust"
             },
             {
               "id": "20",
-              "content": "During their free time, the children <u>did</u> many different activities. (en___________ in)",
-              "options": [
-                "engaged",
-                "cotton",
-                "hurricane",
-                "shut"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "engaged"
             },
             {
               "id": "21",
-              "content": "This <u>cloth</u> dress is one of my favorites. (co_________)",
-              "options": [
-                "cotton",
-                "hurricane",
-                "shut",
-                "crash"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "cotton"
             },
             {
               "id": "22",
-              "content": "The <u>bad storm over the ocean</u> almost reached the land. (hu_______________)",
-              "options": [
-                "hurricane",
-                "shut",
-                "crash",
-                "zone"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "hurricane"
             },
             {
               "id": "23",
-              "content": "<u>Tightly close</u> the window before the rain starts! (s______)",
-              "options": [
-                "shut",
-                "crash",
-                "zone",
-                "accused"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "shut"
             },
             {
               "id": "24",
-              "content": "He will <u>hit something and break</u> his bike if he closes his eyes while riding. (c_____)",
-              "options": [
-                "crash",
-                "zone",
-                "accused",
-                "plain"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "crash"
             },
             {
               "id": "25",
-              "content": "The army fights in the war <u>area</u>. (z____)",
-              "options": [
-                "zone",
-                "crash",
-                "accused",
-                "plain"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "zone"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

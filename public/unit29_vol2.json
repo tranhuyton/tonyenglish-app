@@ -12,66 +12,41 @@
           "questions": [
             {
               "id": "1",
-              "content": "I need your help to move the tables and chairs.",
-              "options": [
-                "furniture",
-                "cloth",
-                "curtains",
-                "intelligence"
-              ],
+              "content": "<p class=\"mb-4\">I need your help to move the tables and chairs. [ 1 ]</p><p class=\"mb-4\">This problem will test your ability to understand. [ 2 ]</p><p class=\"mb-4\">I don’t like to be in dark rooms with covers over the windows. [ 3 ]</p><p class=\"mb-4\">Tom and Rob are the best roommates. [ 4 ]</p><p class=\"mb-4\">I need to get a ticket before I can board the train. [ 5 ]</p>",
+              "options": [],
               "explanation": "furniture (n): tables and chairs.",
-              "correctAnswer": "A"
+              "correctAnswer": "furniture"
             },
             {
               "id": "2",
-              "content": "This problem will test your ability to understand.",
-              "options": [
-                "intelligence",
-                "romantic",
-                "feathers",
-                "abstract"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "intelligence (n): ability to learn and understand things.",
-              "correctAnswer": "A"
+              "correctAnswer": "intelligence"
             },
             {
               "id": "3",
-              "content": "I don’t like to be in dark rooms with covers over the windows.",
-              "options": [
-                "curtains",
-                "shells",
-                "clay",
-                "cloth"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "curtains (n): cloth hung over a window.",
-              "correctAnswer": "A"
+              "correctAnswer": "curtains"
             },
             {
               "id": "4",
-              "content": "Tom and Rob are the best roommates.",
-              "options": [
-                "ideal",
-                "religious",
-                "annual",
-                "fertile"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "ideal (adj): the best that it can possibly be.",
-              "correctAnswer": "A"
+              "correctAnswer": "ideal"
             },
             {
               "id": "5",
-              "content": "I need to get a ticket before I can board the train.",
-              "options": [
-                "obtain",
-                "deserve",
-                "flood",
-                "grave"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "obtain (v): get something you want or need.",
-              "correctAnswer": "A"
+              "correctAnswer": "obtain"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2_wordlist",

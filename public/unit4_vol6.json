@@ -274,126 +274,76 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. The <u>movement downward</u> from the mountain was because it had started to rain.",
-              "options": [
-                "descent",
-                "fuss",
-                "ordeal",
-                "din"
-              ],
+              "content": "<p class=\"mb-4\">1. The <u>movement downward</u> from the mountain was because it had started to rain. [ 21 ]</p><p class=\"mb-4\">2. The berries were not ripe when he tried them. Their <u>taste was extremely sharp</u> and strong. [ 22 ]</p><p class=\"mb-4\">3. <u>A thick, solid piece of</u> dirt was stuck underneath the wagon's tire. [ 23 ]</p><p class=\"mb-4\">4. Please share your suggestions <u>with the department</u> leader so she can address them. [ 24 ]</p><p class=\"mb-4\">5. After toiling for hours in the hot sun, <u>the prisoners were tired from too much work.</u> [ 25 ]</p><p class=\"mb-4\">6. For her birthday, her boyfriend took her out for a <u>fancy and expensive</u> dinner. [ 26 ]</p><p class=\"mb-4\">7. The <u>room just below the roof</u> is on the third floor of the house. [ 27 ]</p><p class=\"mb-4\">8. She was respected by many because she was <u>not afraid to say what she</u> thought. [ 28 ]</p><p class=\"mb-4\">9. He always dreamed of getting a job with <u>one of the departments</u> of government. [ 29 ]</p><p class=\"mb-4\">10. Getting lost in the desert would have been quite <u>an awful experience.</u> [ 30 ]</p>",
+              "options": [],
               "explanation": "descent (n): a movement downwards.",
-              "correctAnswer": "A"
+              "correctAnswer": "descent"
             },
             {
               "id": "22",
-              "content": "2. The berries were not ripe when he tried them. Their <u>taste was extremely sharp</u> and strong.",
-              "options": [
-                "pungent",
-                "outspoken",
-                "civic",
-                "intrinsic"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "pungent (adj): tastes or smells strong and sharp.",
-              "correctAnswer": "A"
+              "correctAnswer": "pungent"
             },
             {
               "id": "23",
-              "content": "3. <u>A thick, solid piece of</u> dirt was stuck underneath the wagon's tire.",
-              "options": [
-                "chunk",
-                "attic",
-                "kettle",
-                "ministry"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "chunk (n): a thick, solid piece of something.",
-              "correctAnswer": "A"
+              "correctAnswer": "chunk"
             },
             {
               "id": "24",
-              "content": "4. Please share your suggestions <u>with the department</u> leader so she can address them.",
-              "options": [
-                "superintendent",
-                "din",
-                "fuss",
-                "ordeal"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "superintendent (n): a person who runs a department.",
-              "correctAnswer": "A"
+              "correctAnswer": "superintendent"
             },
             {
               "id": "25",
-              "content": "5. After toiling for hours in the hot sun, <u>the prisoners were tired from too much work.</u>",
-              "options": [
-                "overworked",
-                "dissatisfied",
-                "outspoken",
-                "soundly"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "overwork (v): to make someone tired with too much work.",
-              "correctAnswer": "A"
+              "correctAnswer": "overworked"
             },
             {
               "id": "26",
-              "content": "6. For her birthday, her boyfriend took her out for a <u>fancy and expensive</u> dinner.",
-              "options": [
-                "gourmet",
-                "pungent",
-                "civic",
-                "intrinsic"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "gourmet (adj): nicer and more expensive food.",
-              "correctAnswer": "A"
+              "correctAnswer": "gourmet"
             },
             {
               "id": "27",
-              "content": "7. The <u>room just below the roof</u> is on the third floor of the house.",
-              "options": [
-                "attic",
-                "ministry",
-                "kettle",
-                "chunk"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "attic (n): a room just below a house's roof.",
-              "correctAnswer": "A"
+              "correctAnswer": "attic"
             },
             {
               "id": "28",
-              "content": "8. She was respected by many because she was <u>not afraid to say what she</u> thought.",
-              "options": [
-                "outspoken",
-                "particular",
-                "pungent",
-                "gourmet"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "outspoken (adj): not afraid to say what they think.",
-              "correctAnswer": "A"
+              "correctAnswer": "outspoken"
             },
             {
               "id": "29",
-              "content": "9. He always dreamed of getting a job with <u>one of the departments</u> of government.",
-              "options": [
-                "ministries",
-                "superintendents",
-                "attics",
-                "kettles"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "ministry (n): a government department.",
-              "correctAnswer": "A"
+              "correctAnswer": "ministries"
             },
             {
               "id": "30",
-              "content": "10. Getting lost in the desert would have been quite <u>an awful experience.</u>",
-              "options": [
-                "ordeal",
-                "fuss",
-                "din",
-                "descent"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "ordeal (n): a bad experience.",
-              "correctAnswer": "A"
+              "correctAnswer": "ordeal"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec4_wordlist",

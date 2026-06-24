@@ -274,126 +274,76 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. The new law will <u>make the schools</u> less effective at teaching certain subjects.",
-              "options": [
-                "render",
-                "compile",
-                "diagnose",
-                "collaborate"
-              ],
+              "content": "<p class=\"mb-4\">1. The new law will <u>make the schools</u> less effective at teaching certain subjects. [ 21 ]</p><p class=\"mb-4\">2. Some countries have a larger population <u>of poor</u> citizens than other countries do. [ 22 ]</p><p class=\"mb-4\">3. The teachers <u>collected the names of</u> all the students who passed the test in her book. [ 23 ]</p><p class=\"mb-4\">4. If you touch that plant, you might get a sore <u>and infected area of skin</u> that itches badly. [ 24 ]</p><p class=\"mb-4\">5. The doctor <u>identified her illness</u> as being only a mild stomach flu. [ 25 ]</p><p class=\"mb-4\">6. I don’t like those kinds of movies because they have scenes that are really <u>disgusting.</u> [ 26 ]</p><p class=\"mb-4\">7. Many diseases are <u>passed from one person to another</u> when they shake hands. [ 27 ]</p><p class=\"mb-4\">8. The companies agreed that it would be cheaper to ship the fruit if they formed a group. [ 28 ]</p><p class=\"mb-4\">9. Her treatment of the patients was <u>good and kind,</u> and they seemed to heal much faster. [ 29 ]</p><p class=\"mb-4\">10. The two artists decided to <u>work together on their</u> next series of sculptures. [ 30 ]</p>",
+              "options": [],
               "explanation": "render: make become something else.",
-              "correctAnswer": "A"
+              "correctAnswer": "render"
             },
             {
               "id": "22",
-              "content": "2. Some countries have a larger population <u>of poor</u> citizens than other countries do.",
-              "options": [
-                "needy",
-                "intolerable",
-                "humane",
-                "gross"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "needy: very poor.",
-              "correctAnswer": "A"
+              "correctAnswer": "needy"
             },
             {
               "id": "23",
-              "content": "3. The teachers <u>collected the names of</u> all the students who passed the test in her book.",
-              "options": [
-                "compiled",
-                "transmitted",
-                "vowed",
-                "enacted"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "compile: collect a variety of things into a group.",
-              "correctAnswer": "A"
+              "correctAnswer": "compiled"
             },
             {
               "id": "24",
-              "content": "4. If you touch that plant, you might get a sore <u>and infected area of skin</u> that itches badly.",
-              "options": [
-                "rash",
-                "onset",
-                "smallpox",
-                "federation"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "rash: an infected area of the skin.",
-              "correctAnswer": "A"
+              "correctAnswer": "rash"
             },
             {
               "id": "25",
-              "content": "5. The doctor <u>identified her illness</u> as being only a mild stomach flu.",
-              "options": [
-                "diagnosed",
-                "certified",
-                "prohibited",
-                "pledged"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "diagnose: identify the medical condition.",
-              "correctAnswer": "A"
+              "correctAnswer": "diagnosed"
             },
             {
               "id": "26",
-              "content": "6. I don’t like those kinds of movies because they have scenes that are really <u>disgusting.</u>",
-              "options": [
-                "gross",
-                "humane",
-                "intolerable",
-                "needy"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "gross: disgusting.",
-              "correctAnswer": "A"
+              "correctAnswer": "gross"
             },
             {
               "id": "27",
-              "content": "7. Many diseases are <u>passed from one person to another</u> when they shake hands.",
-              "options": [
-                "transmitted",
-                "rendered",
-                "curbed",
-                "counteracted"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "transmit: pass it from one person or place to another.",
-              "correctAnswer": "A"
+              "correctAnswer": "transmitted"
             },
             {
               "id": "28",
-              "content": "8. The companies agreed that it would be cheaper to ship the fruit if they formed a group.",
-              "options": [
-                "federation",
-                "onset",
-                "rash",
-                "smallpox"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "federation: a group of states or businesses working for a common cause.",
-              "correctAnswer": "A"
+              "correctAnswer": "federation"
             },
             {
               "id": "29",
-              "content": "9. Her treatment of the patients was <u>good and kind,</u> and they seemed to heal much faster.",
-              "options": [
-                "humane",
-                "gross",
-                "intolerable",
-                "needy"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "humane: good and kind.",
-              "correctAnswer": "A"
+              "correctAnswer": "humane"
             },
             {
               "id": "30",
-              "content": "10. The two artists decided to <u>work together on their</u> next series of sculptures.",
-              "options": [
-                "collaborate",
-                "enact",
-                "vow",
-                "pledge"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "collaborate: work together on something.",
-              "correctAnswer": "A"
+              "correctAnswer": "collaborate"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

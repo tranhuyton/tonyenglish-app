@@ -208,126 +208,76 @@
           "questions": [
             {
               "id": "16",
-              "content": "When the house burned, a large heavy bar fell from the ceiling.",
-              "options": [
-                "beam",
-                "triumph",
-                "casual",
-                "puff"
-              ],
+              "content": "<p class=\"mb-4\">When the house burned, a large heavy bar fell from the ceiling. [ 16 ]</p><p class=\"mb-4\">Joshua smiled in great emotion and feeling after he got a good grade on his science test. [ 17 ]</p><p class=\"mb-4\">She walked on the ice with care so she wouldn't fall. [ 18 ]</p><p class=\"mb-4\">It was scary when the car blew up, but luckily no one was hurt. [ 19 ]</p><p class=\"mb-4\">I used a small towel from the sink to clean up the milk I spilled. [ 20 ]</p><p class=\"mb-4\">The basketball player was fast and stole the ball. [ 21 ]</p><p class=\"mb-4\">You can wear relaxed and simple clothes to the school. [ 22 ]</p><p class=\"mb-4\">I really like the smell of this candle. [ 23 ]</p><p class=\"mb-4\">My cat made her food go in many places. [ 24 ]</p><p class=\"mb-4\">When we lit the fire, a little smoke came out of the chimney. [ 25 ]</p>",
+              "options": [],
               "explanation": "beam có nghĩa tương đương với 'large heavy bar' (thanh xà lớn).",
               "correctAnswer": "BEAM"
             },
             {
               "id": "17",
-              "content": "Joshua smiled in great emotion and feeling after he got a good grade on his science test.",
-              "options": [
-                "caution",
-                "rag",
-                "triumph",
-                "swift"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "triumph có nghĩa tương đương với 'great emotion and feeling' (sự đắc thắng).",
               "correctAnswer": "TRIUMPH"
             },
             {
               "id": "18",
-              "content": "She walked on the ice with care so she wouldn't fall.",
-              "options": [
-                "scent",
-                "scatter",
-                "exploded",
-                "caution"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "caution có nghĩa tương đương với 'with care' (sự cẩn thận).",
               "correctAnswer": "CAUTION"
             },
             {
               "id": "19",
-              "content": "It was scary when the car blew up, but luckily no one was hurt.",
-              "options": [
-                "exploded",
-                "dissolve",
-                "fasten",
-                "scatter"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "exploded có nghĩa tương đương với 'blew up' (phát nổ).",
               "correctAnswer": "EXPLODED"
             },
             {
               "id": "20",
-              "content": "I used a small towel from the sink to clean up the milk I spilled.",
-              "options": [
-                "kit",
-                "rag",
-                "puff",
-                "beam"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "rag có nghĩa tương đương với 'a small towel' (giẻ lau).",
               "correctAnswer": "RAG"
             },
             {
               "id": "21",
-              "content": "The basketball player was fast and stole the ball.",
-              "options": [
-                "swift",
-                "casual",
-                "deliberate",
-                "contrary"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "swift có nghĩa tương đương với 'fast' (nhanh nhẹn).",
               "correctAnswer": "SWIFT"
             },
             {
               "id": "22",
-              "content": "You can wear relaxed and simple clothes to the school.",
-              "options": [
-                "deliberate",
-                "swift",
-                "casual",
-                "steel"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "casual có nghĩa tương đương với 'relaxed and simple' (bình thường, thoải mái).",
               "correctAnswer": "CASUAL"
             },
             {
               "id": "23",
-              "content": "I really like the smell of this candle.",
-              "options": [
-                "scent",
-                "puff",
-                "germs",
-                "barrel"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "scent có nghĩa tương đương với 'smell' (mùi hương).",
               "correctAnswer": "SCENT"
             },
             {
               "id": "24",
-              "content": "My cat made her food go in many places.",
-              "options": [
-                "scatter",
-                "fasten",
-                "dissolve",
-                "toss"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "scatter có nghĩa tương đương với 'go in many places' (rải rác, phân tán).",
               "correctAnswer": "SCATTER"
             },
             {
               "id": "25",
-              "content": "When we lit the fire, a little smoke came out of the chimney.",
-              "options": [
-                "beam",
-                "puff",
-                "rag",
-                "kit"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "puff có nghĩa tương đương với 'a little smoke' (một luồng khói nhỏ).",
               "correctAnswer": "PUFF"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

@@ -342,126 +342,76 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. These mines produce several types of valuable raw forms of rock.",
-              "options": [
-                "ore",
-                "tariff",
-                "binoculars",
-                "depicted"
-              ],
+              "content": "<p class=\"mb-4\">1. These mines produce several types of valuable raw forms of rock. [ 21 ]</p><p class=\"mb-4\">2. The company had to pay a tax on exports for the steel it shipped to Europe. [ 22 ]</p><p class=\"mb-4\">3. She used the device used for seeing things far away to observe the small bird. [ 23 ]</p><p class=\"mb-4\">4. The painting portrayed what the beach looked like twenty years ago. [ 24 ]</p><p class=\"mb-4\">5. He had sent a letter from the city three days earlier. But his precise location was still a mystery. [ 25 ]</p><p class=\"mb-4\">6. The two-part plan involves scientists from both universities. [ 26 ]</p><p class=\"mb-4\">7. The meal was made up mostly of beans and vegetables. [ 27 ]</p><p class=\"mb-4\">8. If you’re sick, take your temperature. The device for measuring temperature is in the cabinet. [ 28 ]</p><p class=\"mb-4\">9. His promotion was a real event opposite to common knowledge due to his sparse knowledge. [ 29 ]</p><p class=\"mb-4\">10. It was difficult to lift the great mass that had accumulated in his backpack. [ 30 ]</p>",
+              "options": [],
               "explanation": "ore",
-              "correctAnswer": "A"
+              "correctAnswer": "ore"
             },
             {
               "id": "22",
-              "content": "2. The company had to pay a tax on exports for the steel it shipped to Europe.",
-              "options": [
-                "tariff",
-                "whereabouts",
-                "dual",
-                "comprised"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "tariff",
-              "correctAnswer": "A"
+              "correctAnswer": "tariff"
             },
             {
               "id": "23",
-              "content": "3. She used the device used for seeing things far away to observe the small bird.",
-              "options": [
-                "thermometer",
-                "binoculars",
-                "paradox",
-                "bulk"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "binoculars",
-              "correctAnswer": "B"
+              "correctAnswer": "binoculars"
             },
             {
               "id": "24",
-              "content": "4. The painting portrayed what the beach looked like twenty years ago.",
-              "options": [
-                "depicted",
-                "tariff",
-                "binoculars",
-                "dual"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "depicted",
-              "correctAnswer": "A"
+              "correctAnswer": "depicted"
             },
             {
               "id": "25",
-              "content": "5. He had sent a letter from the city three days earlier. But his precise location was still a mystery.",
-              "options": [
-                "whereabouts",
-                "ore",
-                "comprised",
-                "paradox"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "whereabouts",
-              "correctAnswer": "A"
+              "correctAnswer": "whereabouts"
             },
             {
               "id": "26",
-              "content": "6. The two-part plan involves scientists from both universities.",
-              "options": [
-                "dual",
-                "bulk",
-                "thermometer",
-                "depicted"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "dual",
-              "correctAnswer": "A"
+              "correctAnswer": "dual"
             },
             {
               "id": "27",
-              "content": "7. The meal was made up mostly of beans and vegetables.",
-              "options": [
-                "comprised",
-                "binoculars",
-                "tariff",
-                "ore"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "comprised",
-              "correctAnswer": "A"
+              "correctAnswer": "comprised"
             },
             {
               "id": "28",
-              "content": "8. If you’re sick, take your temperature. The device for measuring temperature is in the cabinet.",
-              "options": [
-                "thermometer",
-                "paradox",
-                "bulk",
-                "whereabouts"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "thermometer",
-              "correctAnswer": "A"
+              "correctAnswer": "thermometer"
             },
             {
               "id": "29",
-              "content": "9. His promotion was a real event opposite to common knowledge due to his sparse knowledge.",
-              "options": [
-                "paradox",
-                "dual",
-                "tariff",
-                "ore"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "paradox",
-              "correctAnswer": "A"
+              "correctAnswer": "paradox"
             },
             {
               "id": "30",
-              "content": "10. It was difficult to lift the great mass that had accumulated in his backpack.",
-              "options": [
-                "bulk",
-                "thermometer",
-                "comprised",
-                "depicted"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "bulk",
-              "correctAnswer": "A"
+              "correctAnswer": "bulk"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

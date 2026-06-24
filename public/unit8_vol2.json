@@ -200,126 +200,76 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. He wants to win so much that he will not obey the rules to do it.",
-              "options": [
-                "cheat",
-                "shadow",
-                "suspect",
-                "succeed"
-              ],
+              "content": "<p class=\"mb-4\">1. He wants to win so much that he will not obey the rules to do it. [ 11 ]</p><p class=\"mb-4\">2. I’m going to stand in the dark area of the tree because the sun is too hot here. [ 12 ]</p><p class=\"mb-4\">3. The police believe it’s true that the clerk stole the money. [ 13 ]</p><p class=\"mb-4\">4. If we do what we are trying to do, we will become very rich! [ 14 ]</p><p class=\"mb-4\">5. Please read aloud the questions so the students can write them down. [ 15 ]</p><p class=\"mb-4\">6. I am sure I can do something because I have practiced for years. [ 16 ]</p><p class=\"mb-4\">7. After seeing the evidence, you must decide if the man is innocent. [ 17 ]</p><p class=\"mb-4\">8. It was a good feeling knowing that I had saved enough money to go on a trip. [ 18 ]</p><p class=\"mb-4\">9. This horse is a certain winner. [ 19 ]</p><p class=\"mb-4\">10. The large size of the box made it difficult to move. [ 20 ]</p>",
+              "options": [],
               "explanation": "cheat: to be dishonest so that you can win or do well.",
-              "correctAnswer": "A"
+              "correctAnswer": "cheat"
             },
             {
               "id": "12",
-              "content": "2. I’m going to stand in the dark area of the tree because the sun is too hot here.",
-              "options": [
-                "shadow",
-                "dictate",
-                "confident",
-                "delight"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "shadow: the dark area that is made when something blocks light.",
-              "correctAnswer": "A"
+              "correctAnswer": "shadow"
             },
             {
               "id": "13",
-              "content": "3. The police believe it’s true that the clerk stole the money.",
-              "options": [
-                "suspect",
-                "conclude",
-                "definite",
-                "considerable"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "suspect: to believe that it is true.",
-              "correctAnswer": "A"
+              "correctAnswer": "suspect"
             },
             {
               "id": "14",
-              "content": "4. If we do what we are trying to do, we will become very rich!",
-              "options": [
-                "succeed",
-                "cheat",
-                "dictate",
-                "shadow"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "succeed: to complete something that you planned or tried to do.",
-              "correctAnswer": "A"
+              "correctAnswer": "succeed"
             },
             {
               "id": "15",
-              "content": "5. Please read aloud the questions so the students can write them down.",
-              "options": [
-                "dictate",
-                "convey",
-                "suspect",
-                "confident"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "dictate: to read it aloud so it can be written down.",
-              "correctAnswer": "A"
+              "correctAnswer": "dictate"
             },
             {
               "id": "16",
-              "content": "6. I am sure I can do something because I have practiced for years.",
-              "options": [
-                "confident",
-                "definite",
-                "considerable",
-                "delight"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "confident: believes they can do something without failing.",
-              "correctAnswer": "A"
+              "correctAnswer": "confident"
             },
             {
               "id": "17",
-              "content": "7. After seeing the evidence, you must decide if the man is innocent.",
-              "options": [
-                "conclude",
-                "suspect",
-                "succeed",
-                "cheat"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "conclude: to arrive at a logical end by looking at evidence.",
-              "correctAnswer": "A"
+              "correctAnswer": "conclude"
             },
             {
               "id": "18",
-              "content": "8. It was a good feeling knowing that I had saved enough money to go on a trip.",
-              "options": [
-                "delight",
-                "shadow",
-                "dictate",
-                "confident"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "delight: a feeling of being very happy with something.",
-              "correctAnswer": "A"
+              "correctAnswer": "delight"
             },
             {
               "id": "19",
-              "content": "9. This horse is a certain winner.",
-              "options": [
-                "definite",
-                "considerable",
-                "delight",
-                "suspect"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "definite: certain or sure to be true.",
-              "correctAnswer": "A"
+              "correctAnswer": "definite"
             },
             {
               "id": "20",
-              "content": "10. The large size of the box made it difficult to move.",
-              "options": [
-                "considerable",
-                "confident",
-                "conclude",
-                "cheat"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "considerable: large in size, amount or extent.",
-              "correctAnswer": "A"
+              "correctAnswer": "considerable"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

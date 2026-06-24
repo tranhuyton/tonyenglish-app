@@ -146,66 +146,41 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. The old house was <u>full of insects that cause harm.</u>",
-              "options": [
-                "pests",
-                "arteries",
-                "microbes",
-                "paralysis"
-              ],
+              "content": "<p class=\"mb-4\">1. The old house was <u>full of insects that cause harm.</u> [ 11 ]</p><p class=\"mb-4\">2. My brother-in-law always tries to enlarge small problems so that they seem <u>much greater than they really</u> are. [ 12 ]</p><p class=\"mb-4\">3. Mr. Robinson owned <u>a violent dog</u> that terrified all the children in the neighborhood. [ 13 ]</p><p class=\"mb-4\">4. If you eat spicy food at night, it will lead to heartburn. [ 14 ]</p><p class=\"mb-4\">5. His <u>tubes that carry blood are clogged.</u> [ 15 ]</p>",
+              "options": [],
               "explanation": "pests: animals or insects that hurt plants or food.",
-              "correctAnswer": "A"
+              "correctAnswer": "pests"
             },
             {
               "id": "12",
-              "content": "2. My brother-in-law always tries to enlarge small problems so that they seem <u>much greater than they really</u> are.",
-              "options": [
-                "stun",
-                "magnify",
-                "impede",
-                "forage"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "magnify: to make something look bigger than it really is.",
-              "correctAnswer": "B"
+              "correctAnswer": "magnify"
             },
             {
               "id": "13",
-              "content": "3. Mr. Robinson owned <u>a violent dog</u> that terrified all the children in the neighborhood.",
-              "options": [
-                "savage",
-                "invalid",
-                "susceptible",
-                "negligible"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "savage: very violent or cruel.",
-              "correctAnswer": "A"
+              "correctAnswer": "savage"
             },
             {
               "id": "14",
-              "content": "4. If you eat spicy food at night, it will lead to heartburn.",
-              "options": [
-                "rupture",
-                "prevail",
-                "induce",
-                "impede"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "induce: to make something happen.",
-              "correctAnswer": "C"
+              "correctAnswer": "induce"
             },
             {
               "id": "15",
-              "content": "5. His <u>tubes that carry blood are clogged.</u>",
-              "options": [
-                "arteries",
-                "pests",
-                "microbes",
-                "respiration"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "arteries: tubes that take blood from the heart to the rest of the body.",
-              "correctAnswer": "A"
+              "correctAnswer": "arteries"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

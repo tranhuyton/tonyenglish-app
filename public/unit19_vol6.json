@@ -402,66 +402,41 @@
           "questions": [
             {
               "id": "26",
-              "content": "1. The coach <u>designed to their unique needs</u> a program for each of the athletes.",
-              "options": [
-                "personalized",
-                "invoked",
-                "equated",
-                "pertained"
-              ],
+              "content": "<p class=\"mb-4\">1. The coach <u>designed to their unique needs</u> a program for each of the athletes. [ 26 ]</p><p class=\"mb-4\">2. Jack’s parents had a weekly <u>meeting with his teacher to</u> discuss Jack’s schoolwork. [ 27 ]</p><p class=\"mb-4\">3. If you look at <u>that group of stars in the sky, what</u> do you see? [ 28 ]</p><p class=\"mb-4\">4. The priest asked the god to bless everyone in the church. [ 29 ]</p><p class=\"mb-4\">5. <u>She compared the pain in her back</u> to being stabbed with a knife. [ 30 ]</p>",
+              "options": [],
               "explanation": "personalize (v): to design it to meet a person’s unique needs.",
-              "correctAnswer": "A"
+              "correctAnswer": "personalized"
             },
             {
               "id": "27",
-              "content": "2. Jack’s parents had a weekly <u>meeting with his teacher to</u> discuss Jack’s schoolwork.",
-              "options": [
-                "session",
-                "novelty",
-                "reflex",
-                "advent"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "session (n): a meeting at a regular time.",
-              "correctAnswer": "A"
+              "correctAnswer": "session"
             },
             {
               "id": "28",
-              "content": "3. If you look at <u>that group of stars in the sky, what</u> do you see?",
-              "options": [
-                "constellation",
-                "psychiatry",
-                "Almighty",
-                "utensil"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "constellation (n): a group of stars with a recognizable shape.",
-              "correctAnswer": "A"
+              "correctAnswer": "constellation"
             },
             {
               "id": "29",
-              "content": "4. The priest asked the god to bless everyone in the church.",
-              "options": [
-                "Almighty",
-                "seizure",
-                "airway",
-                "novelty"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Almighty (n): a name for a god in a religion.",
-              "correctAnswer": "A"
+              "correctAnswer": "Almighty"
             },
             {
               "id": "30",
-              "content": "5. <u>She compared the pain in her back</u> to being stabbed with a knife.",
-              "options": [
-                "equated",
-                "inhaled",
-                "personalized",
-                "invoked"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "equate (v): to compare things and consider them very similar.",
-              "correctAnswer": "A"
+              "correctAnswer": "equated"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

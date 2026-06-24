@@ -86,66 +86,41 @@
           "questions": [
             {
               "id": "6",
-              "content": "The teacher held classes in the [outdoor area surrounded by walls] on warm days.",
-              "options": [
-                "courtyard",
-                "estate",
-                "parachute",
-                "budget"
-              ],
+              "content": "<p class=\"mb-4\">The teacher held classes in the [outdoor area surrounded by walls] on warm days. [ 6 ]</p><p class=\"mb-4\">The airport is usually [hectic] on Saturdays because many people were traveling. [ 7 ]</p><p class=\"mb-4\">The teacher made sure the correct answers [matched with] the questions on the test. [ 8 ]</p><p class=\"mb-4\">The student [gave an example] from an interview she heard on the radio. [ 9 ]</p><p class=\"mb-4\">The victim of the [crime of tricking] told the police about her experience. [ 10 ]</p>",
+              "options": [],
               "explanation": "\"outdoor area surrounded by walls\" là định nghĩa của courtyard (sân trong).",
-              "correctAnswer": "A"
+              "correctAnswer": "courtyard"
             },
             {
               "id": "7",
-              "content": "The airport is usually [hectic] on Saturdays because many people were traveling.",
-              "options": [
-                "prehistoric",
-                "chaotic",
-                "archeological",
-                "friendly"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"hectic\" mang nghĩa hỗn loạn, tương đương với chaotic.",
-              "correctAnswer": "B"
+              "correctAnswer": "chaotic"
             },
             {
               "id": "8",
-              "content": "The teacher made sure the correct answers [matched with] the questions on the test.",
-              "options": [
-                "corresponded",
-                "cited",
-                "restricted",
-                "refined"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"matched with\" mang nghĩa phù hợp, tương ứng, tương đương với corresponded.",
-              "correctAnswer": "A"
+              "correctAnswer": "corresponded"
             },
             {
               "id": "9",
-              "content": "The student [gave an example] from an interview she heard on the radio.",
-              "options": [
-                "cited",
-                "knit",
-                "brainstormed",
-                "refined"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"gave an example\" mang nghĩa trích dẫn, đưa ra ví dụ, tương đương với cited.",
-              "correctAnswer": "A"
+              "correctAnswer": "cited"
             },
             {
               "id": "10",
-              "content": "The victim of the [crime of tricking] told the police about her experience.",
-              "options": [
-                "fraud",
-                "hydrogen",
-                "integrity",
-                "outlook"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"crime of tricking\" mang nghĩa tội phạm lừa đảo, tương đương với fraud.",
-              "correctAnswer": "A"
+              "correctAnswer": "fraud"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3",

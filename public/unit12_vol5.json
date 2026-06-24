@@ -86,126 +86,76 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. I feel the best when the hours I sleep are *<i>one after another without interruption</i>*.",
-              "options": [
-                "consecutive",
-                "crude",
-                "masculine",
-                "muscular"
-              ],
+              "content": "<p class=\"mb-4\">1. I feel the best when the hours I sleep are *<i>one after another without interruption</i>*. [ 6 ]</p><p class=\"mb-4\">2. Even though he was young, the boy’s facial features were *<i>qualities related to men</i>*. [ 7 ]</p><p class=\"mb-4\">3. My girlfriend and I are happy because we are *<i>successful at existing together</i>*. [ 8 ]</p><p class=\"mb-4\">4. The *<i>strong and fit</i>* fireman carried the children out of the burning building. [ 9 ]</p><p class=\"mb-4\">5. The *<i>college student</i>* handbook lists the classes I need to take to get my degree. [ 10 ]</p><p class=\"mb-4\">6. My mother was shocked when she found out I had a *<i>permanent drawing on my skin</i>*. [ 11 ]</p><p class=\"mb-4\">7. The first thing Al noticed about the new employee was his bad *<i>standing position</i>*. [ 12 ]</p><p class=\"mb-4\">8. This snowflake has *<i>perfect halves that are the exact same</i>* but mirror images. [ 13 ]</p><p class=\"mb-4\">9. He was embarrassed by his *<i>lack of knowledge</i>*. [ 14 ]</p><p class=\"mb-4\">10. The *<i>not exact or detailed</i>* measurements turned out to be good enough. [ 15 ]</p>",
+              "options": [],
               "explanation": "\"one after another without interruption\" (liên tiếp nhau không ngắt quãng) tương đương với \"consecutive\".",
-              "correctAnswer": "A"
+              "correctAnswer": "consecutive"
             },
             {
               "id": "7",
-              "content": "2. Even though he was young, the boy’s facial features were *<i>qualities related to men</i>*.",
-              "options": [
-                "compatible",
-                "masculine",
-                "symmetry",
-                "posture"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"qualities related to men\" (phẩm chất liên quan đến nam giới) là \"masculine\" (nam tính).",
-              "correctAnswer": "B"
+              "correctAnswer": "masculine"
             },
             {
               "id": "8",
-              "content": "3. My girlfriend and I are happy because we are *<i>successful at existing together</i>*.",
-              "options": [
-                "compatible",
-                "ignorant",
-                "muscular",
-                "crude"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"successful at existing together\" (tồn tại cùng nhau thành công) là \"compatible\" (tương thích, hòa hợp).",
-              "correctAnswer": "A"
+              "correctAnswer": "compatible"
             },
             {
               "id": "9",
-              "content": "4. The *<i>strong and fit</i>* fireman carried the children out of the burning building.",
-              "options": [
-                "muscular",
-                "crude",
-                "consecutive",
-                "masculine"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"strong and fit\" (khỏe và cân đối) tương đương với \"muscular\" (vạm vỡ, cơ bắp).",
-              "correctAnswer": "A"
+              "correctAnswer": "muscular"
             },
             {
               "id": "10",
-              "content": "5. The *<i>college student</i>* handbook lists the classes I need to take to get my degree.",
-              "options": [
-                "anthropology",
-                "competence",
-                "undergraduate",
-                "feedback"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"college student\" (sinh viên đại học) tương đương với \"undergraduate\" (sinh viên chưa tốt nghiệp đại học).",
-              "correctAnswer": "C"
+              "correctAnswer": "undergraduate"
             },
             {
               "id": "11",
-              "content": "6. My mother was shocked when she found out I had a *<i>permanent drawing on my skin</i>*.",
-              "options": [
-                "monument",
-                "tattoo",
-                "cube",
-                "posture"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"permanent drawing on my skin\" (hình vẽ vĩnh viễn trên da) là \"tattoo\" (hình xăm).",
-              "correctAnswer": "B"
+              "correctAnswer": "tattoo"
             },
             {
               "id": "12",
-              "content": "7. The first thing Al noticed about the new employee was his bad *<i>standing position</i>*.",
-              "options": [
-                "posture",
-                "symmetry",
-                "ignorance",
-                "competence"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"standing position\" (tư thế đứng) tương đương với \"posture\" (tư thế).",
-              "correctAnswer": "A"
+              "correctAnswer": "posture"
             },
             {
               "id": "13",
-              "content": "8. This snowflake has *<i>perfect halves that are the exact same</i>* but mirror images.",
-              "options": [
-                "anthropology",
-                "symmetry",
-                "feedback",
-                "competence"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"halves that are the exact same\" (các nửa giống hệt nhau) là sự đối xứng (\"symmetry\").",
-              "correctAnswer": "B"
+              "correctAnswer": "symmetry"
             },
             {
               "id": "14",
-              "content": "9. He was embarrassed by his *<i>lack of knowledge</i>*.",
-              "options": [
-                "ignorance",
-                "competence",
-                "feedback",
-                "anthropology"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"lack of knowledge\" (thiếu kiến thức) tương đương với \"ignorance\" (sự ngu dốt, thiếu hiểu biết).",
-              "correctAnswer": "A"
+              "correctAnswer": "ignorance"
             },
             {
               "id": "15",
-              "content": "10. The *<i>not exact or detailed</i>* measurements turned out to be good enough.",
-              "options": [
-                "consecutive",
-                "crude",
-                "compatible",
-                "muscular"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "\"not exact or detailed\" (không chính xác hoặc không chi tiết) là \"crude\" (sơ sài, thô).",
-              "correctAnswer": "B"
+              "correctAnswer": "crude"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

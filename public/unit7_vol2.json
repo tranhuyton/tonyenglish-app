@@ -86,65 +86,40 @@
         {
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
+          "questionType": "Điền từ",
           "questions": [
             {
               "id": "6",
-              "content": "<p>1. He had a very important job that he loved.</p>",
-              "options": [
-                "mission",
-                "colleague",
-                "route",
-                "factual"
-              ],
+              "content": "<p class=\"mb-4\"><p>1. He had a very important job that he loved.</p> [ 6 ]</p><p class=\"mb-4\"><p>2. Linda was happy that she had good people at work.</p> [ 7 ]</p><p class=\"mb-4\"><p>3. Bernie had never taken that way home before.</p> [ 8 ]</p><p class=\"mb-4\"><p>4. This is a true movie about her life.</p> [ 9 ]</p><p class=\"mb-4\"><p>5. Our country used to have one other country under our control.</p> [ 10 ]</p>",
+              "options": [],
               "correctAnswer": "MISSION",
               "explanation": "important job đồng nghĩa với mission."
             },
             {
               "id": "7",
-              "content": "<p>2. Linda was happy that she had good people at work.</p>",
-              "options": [
-                "colleagues",
-                "basis",
-                "ruins",
-                "debate"
-              ],
+              "content": "",
+              "options": [],
               "correctAnswer": "COLLEAGUES",
               "explanation": "people at work đồng nghĩa với colleagues."
             },
             {
               "id": "8",
-              "content": "<p>3. Bernie had never taken that way home before.</p>",
-              "options": [
-                "route",
-                "volcano",
-                "overseas",
-                "occupation"
-              ],
+              "content": "",
+              "options": [],
               "correctAnswer": "ROUTE",
               "explanation": "way đồng nghĩa với route."
             },
             {
               "id": "9",
-              "content": "<p>4. This is a true movie about her life.</p>",
-              "options": [
-                "factual",
-                "significant",
-                "depart",
-                "fascinate"
-              ],
+              "content": "",
+              "options": [],
               "correctAnswer": "FACTUAL",
               "explanation": "true đồng nghĩa với factual."
             },
             {
               "id": "10",
-              "content": "<p>5. Our country used to have one other country under our control.</p>",
-              "options": [
-                "colony",
-                "cage",
-                "scholar",
-                "nevertheless"
-              ],
+              "content": "",
+              "options": [],
               "correctAnswer": "COLONY",
               "explanation": "country under our control đồng nghĩa với colony."
             }

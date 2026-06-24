@@ -148,126 +148,76 @@
           "questions": [
             {
               "id": "11",
-              "content": "The party was planned for tonight, but it was moved to a later time.",
-              "options": [
-                "postponed",
-                "descended",
-                "splashed",
-                "hesitated"
-              ],
+              "content": "<p class=\"mb-4\">The party was planned for tonight, but it was moved to a later time. [ 11 ]</p><p class=\"mb-4\">I was recently elected to the group of people who make laws in a government. [ 12 ]</p><p class=\"mb-4\">My grandfather was a person who sold things. [ 13 ]</p><p class=\"mb-4\">The hospital is an important organization in the town. [ 14 ]</p><p class=\"mb-4\">The scientist who works with chemicals created a new formula for health. [ 15 ]</p><p class=\"mb-4\">The foods made from milk section is in the back of the supermarket. [ 16 ]</p><p class=\"mb-4\">Don't burst the water inside the tub. [ 17 ]</p><p class=\"mb-4\">She lives in the small parts of the large city. [ 18 ]</p><p class=\"mb-4\">The level of the water in the sea rises and falls every day. [ 19 ]</p><p class=\"mb-4\">It hurts in my lower back. [ 20 ]</p>",
+              "options": [],
               "explanation": "Cụm từ 'moved to a later time' (dời sang thời gian muộn hơn) đồng nghĩa với 'postponed' (bị hoãn lại).",
-              "correctAnswer": "A"
+              "correctAnswer": "postponed"
             },
             {
               "id": "12",
-              "content": "I was recently elected to the group of people who make laws in a government.",
-              "options": [
-                "institution",
-                "suburb",
-                "congress",
-                "merchant"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Cụm từ 'group of people who make laws in a government' (nhóm người làm luật trong chính phủ) đồng nghĩa với 'congress' (quốc hội).",
-              "correctAnswer": "C"
+              "correctAnswer": "congress"
             },
             {
               "id": "13",
-              "content": "My grandfather was a person who sold things.",
-              "options": [
-                "grocer",
-                "merchant",
-                "chemist",
-                "congress"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Cụm từ 'a person who sold things' (người bán hàng hóa) đồng nghĩa với 'merchant' (thương gia).",
-              "correctAnswer": "B"
+              "correctAnswer": "merchant"
             },
             {
               "id": "14",
-              "content": "The hospital is an important organization in the town.",
-              "options": [
-                "suburb",
-                "tragedy",
-                "institution",
-                "canal"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Từ 'organization' (tổ chức) đồng nghĩa với 'institution' (cơ sở, tổ chức).",
-              "correctAnswer": "C"
+              "correctAnswer": "institution"
             },
             {
               "id": "15",
-              "content": "The scientist who works with chemicals created a new formula for health.",
-              "options": [
-                "chemist",
-                "merchant",
-                "grocer",
-                "congress"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Cụm từ 'scientist who works with chemicals' (nhà khoa học làm việc với hóa chất) đồng nghĩa với 'chemist' (nhà hóa học).",
-              "correctAnswer": "A"
+              "correctAnswer": "chemist"
             },
             {
               "id": "16",
-              "content": "The foods made from milk section is in the back of the supermarket.",
-              "options": [
-                "dairy",
-                "arctic",
-                "stubborn",
-                "chill"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Cụm từ 'foods made from milk' (thức ăn làm từ sữa) đồng nghĩa với 'dairy' (sản phẩm từ sữa).",
-              "correctAnswer": "A"
+              "correctAnswer": "dairy"
             },
             {
               "id": "17",
-              "content": "Don't burst the water inside the tub.",
-              "options": [
-                "splash",
-                "descend",
-                "poke",
-                "jog"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Cụm từ 'burst the water' (làm văng nước) đồng nghĩa với 'splash' (làm bắn nước, văng nước).",
-              "correctAnswer": "A"
+              "correctAnswer": "splash"
             },
             {
               "id": "18",
-              "content": "She lives in the small parts of the large city.",
-              "options": [
-                "canal",
-                "institution",
-                "suburb",
-                "congress"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Cụm từ 'small parts of the large city' (những khu vực nhỏ của thành phố lớn) đồng nghĩa với 'suburb' (vùng ngoại ô).",
-              "correctAnswer": "C"
+              "correctAnswer": "suburb"
             },
             {
               "id": "19",
-              "content": "The level of the water in the sea rises and falls every day.",
-              "options": [
-                "tide",
-                "canal",
-                "chill",
-                "tragedy"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Cụm từ 'level of the water in the sea' (mực nước trên biển) đồng nghĩa với 'tide' (thủy triều).",
-              "correctAnswer": "A"
+              "correctAnswer": "tide"
             },
             {
               "id": "20",
-              "content": "It hurts in my lower back.",
-              "options": [
-                "aches",
-                "chills",
-                "pokes",
-                "splashes"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Từ 'hurts' (bị đau) đồng nghĩa với 'aches' (đau nhức).",
-              "correctAnswer": "A"
+              "correctAnswer": "aches"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

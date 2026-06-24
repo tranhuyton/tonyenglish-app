@@ -140,126 +140,76 @@
           "questions": [
             {
               "id": "11",
-              "content": "The mother _comforted_ her crying child.",
-              "options": [
-                "consoled",
-                "alerted",
-                "tapped",
-                "endured"
-              ],
+              "content": "<p class=\"mb-4\">The mother _comforted_ her crying child. [ 11 ]</p><p class=\"mb-4\">Every Sunday, the family watched a television _show_ about animals. [ 12 ]</p><p class=\"mb-4\">I couldn’t find my coat in the _small room_. [ 13 ]</p><p class=\"mb-4\">John left his paper _lower than_ his school books. [ 14 ]</p><p class=\"mb-4\">The _person who makes laws_ sat behind a large desk. [ 15 ]</p><p class=\"mb-4\">In order to get over the wall, the cat had to make a _very large_ jump. [ 16 ]</p><p class=\"mb-4\">Harold slowed the car down as he drove over the _small raised part_. [ 17 ]</p><p class=\"mb-4\">There is very little rain in my _part of the state_. [ 18 ]</p><p class=\"mb-4\">Because he committed such a horrible crime, he was _killed by the legal system_. [ 19 ]</p><p class=\"mb-4\">The cook _cut into pieces_ the vegetables for his soup. [ 20 ]</p>",
+              "options": [],
               "explanation": "comforted có nghĩa là an ủi, tương đương với consoled.",
               "correctAnswer": "CONSOLED"
             },
             {
               "id": "12",
-              "content": "Every Sunday, the family watched a television _show_ about animals.",
-              "options": [
-                "broadcast",
-                "bulletin",
-                "drawer",
-                "closet"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "show ở đây chỉ chương trình phát sóng, tương đương với broadcast.",
               "correctAnswer": "BROADCAST"
             },
             {
               "id": "13",
-              "content": "I couldn’t find my coat in the _small room_.",
-              "options": [
-                "closet",
-                "drawer",
-                "district",
-                "rear"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "small room để đồ đạc quần áo là closet (tủ đồ, phòng để đồ).",
               "correctAnswer": "CLOSET"
             },
             {
               "id": "14",
-              "content": "John left his paper _lower than_ his school books.",
-              "options": [
-                "underneath",
-                "rear",
-                "tremendous",
-                "bump"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "lower than có nghĩa là bên dưới, tương đương underneath.",
               "correctAnswer": "UNDERNEATH"
             },
             {
               "id": "15",
-              "content": "The _person who makes laws_ sat behind a large desk.",
-              "options": [
-                "senator",
-                "worm",
-                "district",
-                "broadcast"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "Người làm luật là senator (thượng nghị sĩ).",
               "correctAnswer": "SENATOR"
             },
             {
               "id": "16",
-              "content": "In order to get over the wall, the cat had to make a _very large_ jump.",
-              "options": [
-                "tremendous",
-                "alert",
-                "bump",
-                "rear"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "very large có nghĩa là to lớn, tương đương với tremendous.",
               "correctAnswer": "TREMENDOUS"
             },
             {
               "id": "17",
-              "content": "Harold slowed the car down as he drove over the _small raised part_.",
-              "options": [
-                "bump",
-                "skull",
-                "drawer",
-                "closet"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "small raised part là phần nhô lên, tương đương với bump (chỗ xóc/u sưng).",
               "correctAnswer": "BUMP"
             },
             {
               "id": "18",
-              "content": "There is very little rain in my _part of the state_.",
-              "options": [
-                "district",
-                "closet",
-                "drawer",
-                "rear"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "part of the state là một khu vực, quận, tương đương với district.",
               "correctAnswer": "DISTRICT"
             },
             {
               "id": "19",
-              "content": "Because he committed such a horrible crime, he was _killed by the legal system_.",
-              "options": [
-                "executed",
-                "chopped",
-                "grasped",
-                "stirred"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "killed by the legal system có nghĩa là bị xử tử (executed).",
               "correctAnswer": "EXECUTED"
             },
             {
               "id": "20",
-              "content": "The cook _cut into pieces_ the vegetables for his soup.",
-              "options": [
-                "chopped",
-                "tapped",
-                "grasped",
-                "alerted"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "cut into pieces có nghĩa là chặt, băm nhỏ (chopped).",
               "correctAnswer": "CHOPPED"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec_wordlist_2",

@@ -18,126 +18,76 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. He chose to make his sculpture out of <u>a smooth paste that hardens when it dries.</u>",
-              "options": [
-                "plaster",
-                "periphery",
-                "locale",
-                "shovel"
-              ],
+              "content": "<p class=\"mb-4\">1. He chose to make his sculpture out of <u>a smooth paste that hardens when it dries.</u> [ 1 ]</p><p class=\"mb-4\">2. Our <u>violent and cruel</u> boss forced us to work twelve hours in a row without a break. [ 2 ]</p><p class=\"mb-4\">3. The race was close, so it was difficult to determine an <u>open and direct</u> winner. [ 3 ]</p><p class=\"mb-4\">4. This is the perfect <u>small area where something happens</u> for a picnic. [ 4 ]</p><p class=\"mb-4\">5. Truck drivers often stay <u>awake for many hours</u> to make their difficult and tiring drives. [ 5 ]</p><p class=\"mb-4\">6. The salesperson’s claim <u>seemed quite dishonest,</u> unsafe, and unreliable. [ 6 ]</p><p class=\"mb-4\">7. Mike was thrilled to pass the driving test and gain his driver’s license. [ 7 ]</p><p class=\"mb-4\">8. Physics on the moon are much <u>different than Earth-related</u> physics. [ 8 ]</p><p class=\"mb-4\">9. The prisoners <u>were unable to imagine and believe a</u> plot for escaping the jail. [ 9 ]</p><p class=\"mb-4\">10. To plant these seeds, I will first need to buy <u>a tool used for digging.</u> [ 10 ]</p>",
+              "options": [],
               "explanation": "plaster (n): a smooth paste that gets hard when it dries.",
-              "correctAnswer": "A"
+              "correctAnswer": "plaster"
             },
             {
               "id": "2",
-              "content": "2. Our <u>violent and cruel</u> boss forced us to work twelve hours in a row without a break.",
-              "options": [
-                "vicious",
-                "dubious",
-                "terrestrial",
-                "jagged"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "vicious (adj): violent and cruel.",
-              "correctAnswer": "A"
+              "correctAnswer": "vicious"
             },
             {
               "id": "3",
-              "content": "3. The race was close, so it was difficult to determine an <u>open and direct</u> winner.",
-              "options": [
-                "outright",
-                "skeletal",
-                "elastic",
-                "dubious"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "outright (adj): open and direct.",
-              "correctAnswer": "A"
+              "correctAnswer": "outright"
             },
             {
               "id": "4",
-              "content": "4. This is the perfect <u>small area where something happens</u> for a picnic.",
-              "options": [
-                "locale",
-                "mold",
-                "ego",
-                "periphery"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "locale (n): a small area or place where something specific happens.",
-              "correctAnswer": "A"
+              "correctAnswer": "locale"
             },
             {
               "id": "5",
-              "content": "5. Truck drivers often stay <u>awake for many hours</u> to make their difficult and tiring drives.",
-              "options": [
-                "arduous",
-                "jagged",
-                "terrestrial",
-                "elastic"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "arduous (adj): demands great effort or labor.",
-              "correctAnswer": "A"
+              "correctAnswer": "arduous"
             },
             {
               "id": "6",
-              "content": "6. The salesperson’s claim <u>seemed quite dishonest,</u> unsafe, and unreliable.",
-              "options": [
-                "dubious",
-                "outright",
-                "vicious",
-                "skeletal"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "dubious (adj): not considered honest.",
-              "correctAnswer": "A"
+              "correctAnswer": "dubious"
             },
             {
               "id": "7",
-              "content": "7. Mike was thrilled to pass the driving test and gain his driver’s license.",
-              "options": [
-                "attain",
-                "conceive",
-                "coexist",
-                "engrave"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "attain (v): to gain or achieve it, often after a lot of effort.",
-              "correctAnswer": "A"
+              "correctAnswer": "attain"
             },
             {
               "id": "8",
-              "content": "8. Physics on the moon are much <u>different than Earth-related</u> physics.",
-              "options": [
-                "terrestrial",
-                "jagged",
-                "outright",
-                "elastic"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "terrestrial (adj): relates to Earth.",
-              "correctAnswer": "A"
+              "correctAnswer": "terrestrial"
             },
             {
               "id": "9",
-              "content": "9. The prisoners <u>were unable to imagine and believe a</u> plot for escaping the jail.",
-              "options": [
-                "conceive",
-                "excavate",
-                "attain",
-                "engrave"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "conceive (v): to be able to imagine or believe it.",
-              "correctAnswer": "A"
+              "correctAnswer": "conceive"
             },
             {
               "id": "10",
-              "content": "10. To plant these seeds, I will first need to buy <u>a tool used for digging.</u>",
-              "options": [
-                "shovel",
-                "mold",
-                "plaster",
-                "endeavor"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "shovel (n): a tool with a long handle that is used for digging.",
-              "correctAnswer": "A"
+              "correctAnswer": "shovel"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2_wordlist",

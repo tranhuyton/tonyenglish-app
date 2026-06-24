@@ -140,126 +140,76 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I will go on a [long journey] to Japan this spring.",
-              "options": [
-                "voyage",
-                "march",
-                "harbor",
-                "port"
-              ],
+              "content": "<p class=\"mb-4\">1. I will go on a [long journey] to Japan this spring. [ 11 ]</p><p class=\"mb-4\">2. I was [on a plane] headed to South America. [ 12 ]</p><p class=\"mb-4\">3. The [part of a gun that you pull to make it fire] broke off the old gun. [ 13 ]</p><p class=\"mb-4\">4. The [police officer in charge of a large area] arrested the criminal who robbed the bank. [ 14 ]</p><p class=\"mb-4\">5. There is a beautiful [water source] at the shopping mall. [ 15 ]</p><p class=\"mb-4\">6. My brother likes to hide in the closet and [suddenly scare] me. [ 16 ]</p><p class=\"mb-4\">7. The president wants to [bring together] the people of her country. [ 17 ]</p><p class=\"mb-4\">8. We sailed the boat into the [area where the boats are supposed to land]. [ 18 ]</p><p class=\"mb-4\">9. I hope a bear doesn’t [live in] this cave! [ 19 ]</p><p class=\"mb-4\">10. The [evil spirit] made me commit the horrible crime. [ 20 ]</p>",
+              "options": [],
               "explanation": "voyage mang nghĩa chuyến đi dài ngày.",
               "correctAnswer": "VOYAGE"
             },
             {
               "id": "12",
-              "content": "2. I was [on a plane] headed to South America.",
-              "options": [
-                "aboard",
-                "bitter",
-                "drift",
-                "unify"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "aboard nghĩa là ở trên tàu, máy bay.",
               "correctAnswer": "ABOARD"
             },
             {
               "id": "13",
-              "content": "3. The [part of a gun that you pull to make it fire] broke off the old gun.",
-              "options": [
-                "trigger",
-                "bullet",
-                "devil",
-                "sheriff"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "trigger là cò súng.",
               "correctAnswer": "TRIGGER"
             },
             {
               "id": "14",
-              "content": "4. The [police officer in charge of a large area] arrested the criminal who robbed the bank.",
-              "options": [
-                "sheriff",
-                "millionaire",
-                "vessel",
-                "fountain"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "sheriff là cảnh sát trưởng.",
               "correctAnswer": "SHERIFF"
             },
             {
               "id": "15",
-              "content": "5. There is a beautiful [water source] at the shopping mall.",
-              "options": [
-                "fountain",
-                "port",
-                "harbor",
-                "sweat"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "fountain là đài phun nước.",
               "correctAnswer": "FOUNTAIN"
             },
             {
               "id": "16",
-              "content": "6. My brother likes to hide in the closet and [suddenly scare] me.",
-              "options": [
-                "startle",
-                "enforce",
-                "worship",
-                "inhabit"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "startle là làm giật mình.",
               "correctAnswer": "STARTLE"
             },
             {
               "id": "17",
-              "content": "7. The president wants to [bring together] the people of her country.",
-              "options": [
-                "unify",
-                "march",
-                "enforce",
-                "drift"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "unify là thống nhất, gắn kết.",
               "correctAnswer": "UNIFY"
             },
             {
               "id": "18",
-              "content": "8. We sailed the boat into the [area where the boats are supposed to land].",
-              "options": [
-                "harbor",
-                "vessel",
-                "voyage",
-                "trigger"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "harbor là bến cảng.",
               "correctAnswer": "HARBOR"
             },
             {
               "id": "19",
-              "content": "9. I hope a bear doesn’t [live in] this cave!",
-              "options": [
-                "inhabit",
-                "worship",
-                "enforce",
-                "startle"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "inhabit là sinh sống, cư ngụ.",
               "correctAnswer": "INHABIT"
             },
             {
               "id": "20",
-              "content": "10. The [evil spirit] made me commit the horrible crime.",
-              "options": [
-                "devil",
-                "sheriff",
-                "millionaire",
-                "bullet"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "devil là ác quỷ, tà linh.",
               "correctAnswer": "DEVIL"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec_wordlist_2",

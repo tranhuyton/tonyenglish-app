@@ -18,126 +18,76 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. The best theory was the one that was <u>a combination of all the scientist’s ideas.</u>",
-              "options": [
-                "synthesis",
-                "conversion",
-                "patent",
-                "scrap"
-              ],
+              "content": "<p class=\"mb-4\">1. The best theory was the one that was <u>a combination of all the scientist’s ideas.</u> [ 1 ]</p><p class=\"mb-4\">2. When the power went out, he was forced to stop <u>or delay progress</u> on his project. [ 2 ]</p><p class=\"mb-4\">3. The brothers believe along with other people <u>to the opinion that</u> socialism is best. [ 3 ]</p><p class=\"mb-4\">4. The cutting tool was just <u>a new machine not ready to be made in large amounts.</u> [ 4 ]</p><p class=\"mb-4\">5. Her job was to get all of the goods ready <u>to sell to other countries.</u> [ 5 ]</p><p class=\"mb-4\">6. The chemist demonstrated <u>the change into a different form</u> of liquid water into gas. [ 6 ]</p><p class=\"mb-4\">7. After the tornado, it was difficult for the family <u>to have the food and money needed to live.</u> [ 7 ]</p><p class=\"mb-4\">8. The mechanic yelled when he stepped on the sharp <u>small amount of</u> metal. [ 8 ]</p><p class=\"mb-4\">9. It is the policeman’s job to make sure people do what is <u>right by the</u> law. [ 9 ]</p><p class=\"mb-4\">10. We’ll have <u>to postpone our vacation until</u> next month. [ 10 ]</p>",
+              "options": [],
               "explanation": "synthesis (n): a combination of different ideas or styles.",
-              "correctAnswer": "A"
+              "correctAnswer": "synthesis"
             },
             {
               "id": "2",
-              "content": "2. When the power went out, he was forced to stop <u>or delay progress</u> on his project.",
-              "options": [
-                "suspend",
-                "cram",
-                "export",
-                "justify"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "suspend (v): to delay or stop it from happening for a while.",
-              "correctAnswer": "A"
+              "correctAnswer": "suspend"
             },
             {
               "id": "3",
-              "content": "3. The brothers believe along with other people <u>to the opinion that</u> socialism is best.",
-              "options": [
-                "subscribe",
-                "abide",
-                "defer",
-                "penalize"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "subscribe (v): to agree or to concur with it.",
-              "correctAnswer": "A"
+              "correctAnswer": "subscribe"
             },
             {
               "id": "4",
-              "content": "4. The cutting tool was just <u>a new machine not ready to be made in large amounts.</u>",
-              "options": [
-                "prototype",
-                "output",
-                "sector",
-                "petroleum"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "prototype (n): a new machine that is not ready to be made in large quantities.",
-              "correctAnswer": "A"
+              "correctAnswer": "prototype"
             },
             {
               "id": "5",
-              "content": "5. Her job was to get all of the goods ready <u>to sell to other countries.</u>",
-              "options": [
-                "export",
-                "cram",
-                "subsist",
-                "suspend"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "export (v): to sell products to other countries.",
-              "correctAnswer": "A"
+              "correctAnswer": "export"
             },
             {
               "id": "6",
-              "content": "6. The chemist demonstrated <u>the change into a different form</u> of liquid water into gas.",
-              "options": [
-                "conversion",
-                "synthesis",
-                "output",
-                "fume"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "conversion (n): the act of changing something into a different state or form.",
-              "correctAnswer": "A"
+              "correctAnswer": "conversion"
             },
             {
               "id": "7",
-              "content": "7. After the tornado, it was difficult for the family <u>to have the food and money needed to live.</u>",
-              "options": [
-                "subsist",
-                "abide",
-                "justify",
-                "defer"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "subsist (v): to have the food, water, and money needed to stay alive.",
-              "correctAnswer": "A"
+              "correctAnswer": "subsist"
             },
             {
               "id": "8",
-              "content": "8. The mechanic yelled when he stepped on the sharp <u>small amount of</u> metal.",
-              "options": [
-                "scrap",
-                "patent",
-                "prototype",
-                "sector"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "scrap (n): a small amount of it.",
-              "correctAnswer": "A"
+              "correctAnswer": "scrap"
             },
             {
               "id": "9",
-              "content": "9. It is the policeman’s job to make sure people do what is <u>right by the</u> law.",
-              "options": [
-                "abide",
-                "subscribe",
-                "penalize",
-                "suspend"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "abide (v): to obey it.",
-              "correctAnswer": "A"
+              "correctAnswer": "abide"
             },
             {
               "id": "10",
-              "content": "10. We’ll have <u>to postpone our vacation until</u> next month.",
-              "options": [
-                "defer",
-                "cram",
-                "justify",
-                "export"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "defer (v): to arrange for an action to happen at a later time.",
-              "correctAnswer": "A"
+              "correctAnswer": "defer"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2_wordlist",

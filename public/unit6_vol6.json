@@ -86,126 +86,76 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. <u>Human undeveloped babies grow inside the mother</u> for up to nine months.",
-              "options": [
-                "embryos",
-                "publicized",
-                "surplus",
-                "theorized"
-              ],
+              "content": "<p class=\"mb-4\">1. <u>Human undeveloped babies grow inside the mother</u> for up to nine months. [ 6 ]</p><p class=\"mb-4\">2. The concert was made well-known over the radio. [ 7 ]</p><p class=\"mb-4\">3. Ms. Hiller had <u>a spare amount of clothes,</u> so she gave them to charity. [ 8 ]</p><p class=\"mb-4\">4. The philosopher <u>developed an idea about what</u> happens to good people. [ 9 ]</p><p class=\"mb-4\">5. The principal called Alex’s house to make certain he was sick at home. [ 10 ]</p><p class=\"mb-4\">6. Margaret collected shells that had come <u>from the water to land</u> on the beach. [ 11 ]</p><p class=\"mb-4\">7. Elliot <u>moved down into the water as</u> soon as he arrived at the beach. [ 12 ]</p><p class=\"mb-4\">8. Oscar hid behind a tree <u>to not get caught by the</u> bully who was chasing him. [ 13 ]</p><p class=\"mb-4\">9. The <u>beads in the box were all the same.</u> [ 14 ]</p><p class=\"mb-4\">10. The <u>amount of hair he had on his head</u> was a small amount. [ 15 ]</p>",
+              "options": [],
               "explanation": "embryo (n): a human or animal that is still growing inside its mother.",
-              "correctAnswer": "A"
+              "correctAnswer": "embryos"
             },
             {
               "id": "7",
-              "content": "2. The concert was made well-known over the radio.",
-              "options": [
-                "verify",
-                "ashore",
-                "publicized",
-                "plunged"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "publicize (v): to make something get a lot of attention.",
-              "correctAnswer": "C"
+              "correctAnswer": "publicized"
             },
             {
               "id": "8",
-              "content": "3. Ms. Hiller had <u>a spare amount of clothes,</u> so she gave them to charity.",
-              "options": [
-                "surplus",
-                "elude",
-                "homogenous",
-                "sparse"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "surplus (n): an extra amount of something.",
-              "correctAnswer": "A"
+              "correctAnswer": "surplus"
             },
             {
               "id": "9",
-              "content": "4. The philosopher <u>developed an idea about what</u> happens to good people.",
-              "options": [
-                "theorized",
-                "verify",
-                "ashore",
-                "plunged"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "theorize (v): to develop ideas about something.",
-              "correctAnswer": "A"
+              "correctAnswer": "theorized"
             },
             {
               "id": "10",
-              "content": "5. The principal called Alex’s house to make certain he was sick at home.",
-              "options": [
-                "elude",
-                "homogenous",
-                "sparse",
-                "verify"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "verify (v): to find out if something is true.",
-              "correctAnswer": "D"
+              "correctAnswer": "verify"
             },
             {
               "id": "11",
-              "content": "6. Margaret collected shells that had come <u>from the water to land</u> on the beach.",
-              "options": [
-                "ashore",
-                "plunged",
-                "elude",
-                "homogenous"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "ashore (adv): from water to the land.",
-              "correctAnswer": "A"
+              "correctAnswer": "ashore"
             },
             {
               "id": "12",
-              "content": "7. Elliot <u>moved down into the water as</u> soon as he arrived at the beach.",
-              "options": [
-                "plunged",
-                "elude",
-                "homogenous",
-                "sparse"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "plunge (v): to move down into something very quickly.",
-              "correctAnswer": "A"
+              "correctAnswer": "plunged"
             },
             {
               "id": "13",
-              "content": "8. Oscar hid behind a tree <u>to not get caught by the</u> bully who was chasing him.",
-              "options": [
-                "elude",
-                "homogenous",
-                "sparse",
-                "embryos"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "elude (v): to avoid being caught by something.",
-              "correctAnswer": "A"
+              "correctAnswer": "elude"
             },
             {
               "id": "14",
-              "content": "9. The <u>beads in the box were all the same.</u>",
-              "options": [
-                "homogenous",
-                "sparse",
-                "publicized",
-                "surplus"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "homogeneous (adj): made up of things which are all the same.",
-              "correctAnswer": "A"
+              "correctAnswer": "homogenous"
             },
             {
               "id": "15",
-              "content": "10. The <u>amount of hair he had on his head</u> was a small amount.",
-              "options": [
-                "sparse",
-                "theorized",
-                "verify",
-                "ashore"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "sparse (adj): not very much of it in a big area.",
-              "correctAnswer": "A"
+              "correctAnswer": "sparse"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

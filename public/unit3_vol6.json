@@ -146,66 +146,41 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. I broke <u>the long piece of fabric that goes over my</u> shoulder on my purse.",
-              "options": [
-                "strap",
-                "rouge",
-                "tangle",
-                "craze"
-              ],
+              "content": "<p class=\"mb-4\">1. I broke <u>the long piece of fabric that goes over my</u> shoulder on my purse. [ 11 ]</p><p class=\"mb-4\">2. Matt’s female appearances made everyone take notice of him immediately. [ 12 ]</p><p class=\"mb-4\">3. You must <u>wear proper clothing</u> if you plan on attending the formal dance. [ 13 ]</p><p class=\"mb-4\">4. He works for a well-respected firm downtown. [ 14 ]</p><p class=\"mb-4\">5. <u>The soft materials in his helmet will protect him</u> if he should fall and strike his head on an object. [ 15 ]</p>",
+              "options": [],
               "explanation": "strap: a thin long piece of fabric used to fasten or carry.",
-              "correctAnswer": "A"
+              "correctAnswer": "strap"
             },
             {
               "id": "12",
-              "content": "2. Matt’s female appearances made everyone take notice of him immediately.",
-              "options": [
-                "vulgar",
-                "absurd",
-                "feminine",
-                "reputable"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "feminine: having qualities that are commonly related to women.",
-              "correctAnswer": "C"
+              "correctAnswer": "feminine"
             },
             {
               "id": "13",
-              "content": "3. You must <u>wear proper clothing</u> if you plan on attending the formal dance.",
-              "options": [
-                "vanity",
-                "attire",
-                "aristocracy",
-                "excess"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "attire: nice or special clothing.",
-              "correctAnswer": "B"
+              "correctAnswer": "attire"
             },
             {
               "id": "14",
-              "content": "4. He works for a well-respected firm downtown.",
-              "options": [
-                "reputable",
-                "predominant",
-                "absurd",
-                "feminine"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "reputable: having a good reputation.",
-              "correctAnswer": "A"
+              "correctAnswer": "reputable"
             },
             {
               "id": "15",
-              "content": "5. <u>The soft materials in his helmet will protect him</u> if he should fall and strike his head on an object.",
-              "options": [
-                "pads",
-                "straps",
-                "tangles",
-                "hallmarks"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "pad: a thick piece of soft material used to protect things.",
-              "correctAnswer": "A"
+              "correctAnswer": "pads"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3_wordlist",

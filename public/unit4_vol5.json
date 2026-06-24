@@ -322,126 +322,76 @@
           "questions": [
             {
               "id": "26",
-              "content": "Getting to play with her friends was something to make her want to clean her room.",
-              "options": [
-                "incentive",
-                "revenue",
-                "rubbish",
-                "transaction"
-              ],
+              "content": "<p class=\"mb-4\">Getting to play with her friends was something to make her want to clean her room. [ 26 ]</p><p class=\"mb-4\">The act of selling something took place right before the shop closed. [ 27 ]</p><p class=\"mb-4\">By the end of the meeting, they had made into law the repair of the highways. [ 28 ]</p><p class=\"mb-4\">She illegally persuaded the guard, so he would let her into the secret meeting. [ 29 ]</p><p class=\"mb-4\">It was a good year for the banks, but it was a bad year for places that sell things to the public. [ 30 ]</p><p class=\"mb-4\">The person who controls the company is a very efficient manager. [ 31 ]</p><p class=\"mb-4\">The papers that she needed were at the building where the bosses worked. [ 32 ]</p><p class=\"mb-4\">The law-breaking company was stealing money from many of its investors. [ 33 ]</p><p class=\"mb-4\">Shawn is working for a law-following organization in a bad part of town. [ 34 ]</p><p class=\"mb-4\">The money made by our company was even better than last year’s. [ 35 ]</p>",
+              "options": [],
               "explanation": "something to make her want (điều khiến cô ấy muốn) tương đương incentive (động lực).",
-              "correctAnswer": "A"
+              "correctAnswer": "incentive"
             },
             {
               "id": "27",
-              "content": "The act of selling something took place right before the shop closed.",
-              "options": [
-                "transaction",
-                "retail",
-                "manipulate",
-                "infrastructure"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "act of selling something (hành động bán cái gì đó) tương đương transaction.",
-              "correctAnswer": "A"
+              "correctAnswer": "transaction"
             },
             {
               "id": "28",
-              "content": "By the end of the meeting, they had made into law the repair of the highways.",
-              "options": [
-                "legislated",
-                "violated",
-                "automated",
-                "audited"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "made into law (đưa vào luật) tương đương legislated.",
-              "correctAnswer": "A"
+              "correctAnswer": "legislated"
             },
             {
               "id": "29",
-              "content": "She illegally persuaded the guard, so he would let her into the secret meeting.",
-              "options": [
-                "bribed",
-                "disposed",
-                "audited",
-                "manipulated"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "illegally persuaded (thuyết phục bất hợp pháp bằng tiền) tương đương bribed.",
-              "correctAnswer": "A"
+              "correctAnswer": "bribed"
             },
             {
               "id": "30",
-              "content": "It was a good year for the banks, but it was a bad year for places that sell things to the public.",
-              "options": [
-                "retail",
-                "revenue",
-                "subsidy",
-                "merchandise"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "places that sell things to the public (nơi bán hàng cho công chúng) tương đương retail.",
-              "correctAnswer": "A"
+              "correctAnswer": "retail"
             },
             {
               "id": "31",
-              "content": "The person who controls the company is a very efficient manager.",
-              "options": [
-                "administrator",
-                "corrupt",
-                "affluent",
-                "legitimate"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "person who controls the company (người điều hành công ty) tương đương administrator.",
-              "correctAnswer": "A"
+              "correctAnswer": "administrator"
             },
             {
               "id": "32",
-              "content": "The papers that she needed were at the building where the bosses worked.",
-              "options": [
-                "headquarters",
-                "infrastructure",
-                "retail",
-                "rubbish"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "building where the bosses worked tương đương headquarters.",
-              "correctAnswer": "A"
+              "correctAnswer": "headquarters"
             },
             {
               "id": "33",
-              "content": "The law-breaking company was stealing money from many of its investors.",
-              "options": [
-                "corrupt",
-                "affluent",
-                "legitimate",
-                "retail"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "law-breaking (phạm luật, đồi bại) tương đương corrupt.",
-              "correctAnswer": "A"
+              "correctAnswer": "corrupt"
             },
             {
               "id": "34",
-              "content": "Shawn is working for a law-following organization in a bad part of town.",
-              "options": [
-                "legitimate",
-                "affluent",
-                "corrupt",
-                "automated"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "law-following (tuân thủ luật pháp) tương đương legitimate.",
-              "correctAnswer": "A"
+              "correctAnswer": "legitimate"
             },
             {
               "id": "35",
-              "content": "The money made by our company was even better than last year’s.",
-              "options": [
-                "revenue",
-                "subsidy",
-                "merchandise",
-                "transaction"
-              ],
+              "content": "",
+              "options": [],
               "explanation": "money made by our company (tiền công ty kiếm được) tương đương revenue.",
-              "correctAnswer": "A"
+              "correctAnswer": "revenue"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },
