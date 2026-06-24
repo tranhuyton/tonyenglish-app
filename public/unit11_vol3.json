@@ -208,70 +208,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. When the house burned, a large heavy bar fell from the ceiling. [ 16 ]",
+              "content": "1. When the house burned, <u>a large heavy bar</u> fell from the ceiling. [ 16 ]",
               "options": [],
               "explanation": "a large heavy bar = beam (cái xà)",
               "correctAnswer": "A. BEAM"
             },
             {
               "id": "17",
-              "content": "2. Joshua smiled in great emotion and feeling after he got a good grade on his science test. [ 17 ]",
+              "content": "2. Joshua smiled in <u>great emotion and feeling after</u> he got a good grade on his science test. [ 17 ]",
               "options": [],
               "explanation": "great emotion and feeling (after winning) = triumph (sự chiến thắng)",
               "correctAnswer": "A. TRIUMPH"
             },
             {
               "id": "18",
-              "content": "3. She walked on the ice with care so she wouldn't fall. [ 18 ]",
+              "content": "3. She walked on the ice <u>with care</u> so she wouldn't fall. [ 18 ]",
               "options": [],
               "explanation": "with care = caution (sự cẩn thận)",
               "correctAnswer": "B. CAUTION"
             },
             {
               "id": "19",
-              "content": "4. It was scary when the car blew up, but luckily no one was hurt. [ 19 ]",
+              "content": "4. It was scary when the car <u>blew up</u>, but luckily no one was hurt. [ 19 ]",
               "options": [],
               "explanation": "blew up = exploded (nổ tung)",
               "correctAnswer": "D. EXPLODED"
             },
             {
               "id": "20",
-              "content": "5. I used a small towel from the sink to clean up the milk I spilled. [ 20 ]",
+              "content": "5. I used <u>a small towel</u> from the sink to clean up the milk I spilled. [ 20 ]",
               "options": [],
               "explanation": "a small towel = rag (giẻ lau)",
               "correctAnswer": "A. RAG"
             },
             {
               "id": "21",
-              "content": "6. The basketball player was fast and stole the ball. [ 21 ]",
+              "content": "6. The basketball player was <u>fast</u> and stole the ball. [ 21 ]",
               "options": [],
               "explanation": "fast = swift (nhanh chóng)",
               "correctAnswer": "B. SWIFT"
             },
             {
               "id": "22",
-              "content": "7. You can wear relaxed and simple clothes to the school. [ 22 ]",
+              "content": "7. You can wear <u>relaxed and simple</u> clothes to the school. [ 22 ]",
               "options": [],
               "explanation": "relaxed and simple = casual (đơn giản, bình thường)",
               "correctAnswer": "B. CASUAL"
             },
             {
               "id": "23",
-              "content": "8. I really like the smell of this candle. [ 23 ]",
+              "content": "8. I really like the <u>smell</u> of this candle. [ 23 ]",
               "options": [],
               "explanation": "smell = scent (mùi hương)",
               "correctAnswer": "A. SCENT"
             },
             {
               "id": "24",
-              "content": "9. My cat made her food go in many places. [ 24 ]",
+              "content": "9. My cat made her food <u>go in many places</u>. [ 24 ]",
               "options": [],
               "explanation": "go in many places = scattered (phân tán, rải rác)",
               "correctAnswer": "A. SCATTERED"
             },
             {
               "id": "25",
-              "content": "10. When we lit the fire, a little smoke came out of the chimney. [ 25 ]",
+              "content": "10. When we lit the fire, <u>a little smoke</u> came out of the chimney. [ 25 ]",
               "options": [],
               "explanation": "a little smoke = puff (luồng khói)",
               "correctAnswer": "A. PUFF"

@@ -322,70 +322,70 @@
           "questions": [
             {
               "id": "26",
-              "content": "She really learned a lot from just one class of the beliefs and stories of different cultures. [ 26 ]",
+              "content": "She really learned a lot from just one class of the <u>beliefs and stories of different cultures</u>. [ 26 ]",
               "options": [],
               "explanation": "beliefs and stories of different cultures tương đương với mythology.",
               "correctAnswer": "mythology"
             },
             {
               "id": "27",
-              "content": "When he states the fact with confidence that flowers can grow here, you believe him. [ 27 ]",
+              "content": "When he <u>states the fact with confidence</u> that flowers can grow here, you believe him. [ 27 ]",
               "options": [],
               "explanation": "states the fact with confidence tương đương với asserts.",
               "correctAnswer": "asserts"
             },
             {
               "id": "28",
-              "content": "The tests will prove whether or not his discovery is real and not just based on theory. [ 28 ]",
+              "content": "The tests will prove whether or not his discovery is real and not just <u>based on theory</u>. [ 28 ]",
               "options": [],
               "explanation": "based on theory tương đương với theoretical.",
               "correctAnswer": "theoretical"
             },
             {
               "id": "29",
-              "content": "The dangerous thing about nuclear power is the radiation waste it produces. [ 29 ]",
+              "content": "The dangerous thing about nuclear power is the <u>radiation</u> waste it produces. [ 29 ]",
               "options": [],
               "explanation": "radiation tương đương với radioactive.",
               "correctAnswer": "radioactive"
             },
             {
               "id": "30",
-              "content": "John has good learning skills that have helped him in his studies. [ 30 ]",
+              "content": "John has good <u>learning skills</u> that have helped him in his studies. [ 30 ]",
               "options": [],
               "explanation": "learning skills tương quan với cognitive.",
               "correctAnswer": "cognitive"
             },
             {
               "id": "31",
-              "content": "The stars and moon in outer space objects lit the path so I could see where I was walking. [ 31 ]",
+              "content": "The stars and moon in <u>outer space objects</u> lit the path so I could see where I was walking. [ 31 ]",
               "options": [],
               "explanation": "outer space objects tương đương với celestial.",
               "correctAnswer": "celestial"
             },
             {
               "id": "32",
-              "content": "Having a certificate of completed studies will give him more options for the future. [ 32 ]",
+              "content": "Having a <u>certificate of completed studies</u> will give him more options for the future. [ 32 ]",
               "options": [],
               "explanation": "certificate of completed studies tương đương với diploma.",
               "correctAnswer": "diploma"
             },
             {
               "id": "33",
-              "content": "Albert Einstein’s ideas about time and space changed both science and the world. [ 33 ]",
+              "content": "Albert Einstein’s <u>ideas about time and space</u> changed both science and the world. [ 33 ]",
               "options": [],
               "explanation": "ideas about time and space của Einstein gọi là relativity.",
               "correctAnswer": "relativity"
             },
             {
               "id": "34",
-              "content": "You have to be very intelligent in order to solve this puzzle in a short amount of time. [ 34 ]",
+              "content": "You have to be very <u>intelligent</u> in order to solve this puzzle in a short amount of time. [ 34 ]",
               "options": [],
               "explanation": "intelligent tương đương với keen.",
               "correctAnswer": "keen"
             },
             {
               "id": "35",
-              "content": "Every day the unmarried men came to her home to see which of them she might choose. [ 35 ]",
+              "content": "Every day the <u>unmarried men</u> came to her home to see which of them she might choose. [ 35 ]",
               "options": [],
               "explanation": "unmarried men tương đương với bachelors.",
               "correctAnswer": "bachelors"

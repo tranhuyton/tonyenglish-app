@@ -87,70 +87,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "Please (put into different groups) all the leaves you find. [ 6 ]",
+              "content": "Please (<u>put into different groups</u>) all the leaves you find. [ 6 ]",
               "options": [],
               "explanation": "sort (v.) đồng nghĩa với 'put into different groups' (phân loại).",
               "correctAnswer": "sort"
             },
             {
               "id": "7",
-              "content": "Everybody was (very interested) when Kate read that beautiful poem out loud. [ 7 ]",
+              "content": "Everybody was (<u>very interested</u>) when Kate read that beautiful poem out loud. [ 7 ]",
               "options": [],
               "explanation": "enchanted (v.) đồng nghĩa với 'very interested' (mê hoặc, thích thú).",
               "correctAnswer": "enchanted"
             },
             {
               "id": "8",
-              "content": "The performer heard great (sounds of people clapping their hands). [ 8 ]",
+              "content": "The performer heard great (<u>sounds of people clapping their hands</u>). [ 8 ]",
               "options": [],
               "explanation": "applause (n.) đồng nghĩa với 'sounds of people clapping their hands' (tiếng vỗ tay).",
               "correctAnswer": "applause"
             },
             {
               "id": "9",
-              "content": "Tim takes a long time to get ready because he is so (concerned with how he looks). [ 9 ]",
+              "content": "Tim takes a long time to get ready because he is so (<u>concerned with how he looks</u>). [ 9 ]",
               "options": [],
               "explanation": "vain (adj.) đồng nghĩa với 'concerned with how he looks' (tự phụ, kiêu ngạo, chú trọng vẻ bề ngoài).",
               "correctAnswer": "vain"
             },
             {
               "id": "10",
-              "content": "Ocean life is made up of a (wide variety of things). [ 10 ]",
+              "content": "Ocean life is made up of a (<u>wide variety of things</u>). [ 10 ]",
               "options": [],
               "explanation": "diverse (adj.) đồng nghĩa với 'wide variety of things' (đa dạng).",
               "correctAnswer": "diverse"
             },
             {
               "id": "11",
-              "content": "What is your favorite (kind or style) of music? [ 11 ]",
+              "content": "What is your favorite (<u>kind or style</u>) of music? [ 11 ]",
               "options": [],
               "explanation": "genre (n.) đồng nghĩa với 'kind or style' (thể loại).",
               "correctAnswer": "genre"
             },
             {
               "id": "12",
-              "content": "The (special event) will start at 8 o’clock tonight. [ 12 ]",
+              "content": "The (<u>special event</u>) will start at 8 o’clock tonight. [ 12 ]",
               "options": [],
               "explanation": "ceremony (n.) đồng nghĩa với 'special event' (buổi lễ, sự kiện đặc biệt).",
               "correctAnswer": "ceremony"
             },
             {
               "id": "13",
-              "content": "The city’s only (action taken to protect itself) was to build a giant brick wall around it. [ 13 ]",
+              "content": "The city’s only (<u>action taken to protect itself</u>) was to build a giant brick wall around it. [ 13 ]",
               "options": [],
               "explanation": "defense (n.) đồng nghĩa với 'action taken to protect itself' (phòng thủ, bảo vệ).",
               "correctAnswer": "defense"
             },
             {
               "id": "14",
-              "content": "Ben went through many (problems) before he finished his project. [ 14 ]",
+              "content": "Ben went through many <u>problems</u> before he finished his project. [ 14 ]",
               "options": [],
               "explanation": "obstacles (n.) đồng nghĩa với 'problems' (chướng ngại vật, vấn đề).",
               "correctAnswer": "obstacles"
             },
             {
               "id": "15",
-              "content": "Most girls like to play with dolls, but Samantha is the one who (doesn’t conform). [ 15 ]",
+              "content": "Most girls like to play with dolls, but Samantha is <u>the one who doesn’t conform</u>. [ 15 ]",
               "options": [],
               "explanation": "exception (n.) đồng nghĩa với 'the one who doesn’t conform' (ngoại lệ).",
               "correctAnswer": "exception"

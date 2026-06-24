@@ -12,35 +12,35 @@
           "questions": [
             {
               "id": "1",
-              "content": "I need your help to move the tables and chairs. [ 1 ]",
+              "content": "I need your help to move the <u>tables and chairs</u>. [ 1 ]",
               "options": [],
               "explanation": "furniture (n): tables and chairs.",
               "correctAnswer": "furniture"
             },
             {
               "id": "2",
-              "content": "This problem will test your ability to understand. [ 2 ]",
+              "content": "This problem will test your <u>ability to</u> understand. [ 2 ]",
               "options": [],
               "explanation": "intelligence (n): ability to learn and understand things.",
               "correctAnswer": "intelligence"
             },
             {
               "id": "3",
-              "content": "I don’t like to be in dark rooms with covers over the windows. [ 3 ]",
+              "content": "I don’t like to be in dark rooms with <u>covers over the windows</u>. [ 3 ]",
               "options": [],
               "explanation": "curtains (n): cloth hung over a window.",
               "correctAnswer": "curtains"
             },
             {
               "id": "4",
-              "content": "Tom and Rob are the best roommates. [ 4 ]",
+              "content": "Tom and Rob are <u>the best</u> roommates. [ 4 ]",
               "options": [],
               "explanation": "ideal (adj): the best that it can possibly be.",
               "correctAnswer": "ideal"
             },
             {
               "id": "5",
-              "content": "I need to get a ticket before I can board the train. [ 5 ]",
+              "content": "I need to <u>get a ticket</u> before I can board the train. [ 5 ]",
               "options": [],
               "explanation": "obtain (v): get something you want or need.",
               "correctAnswer": "obtain"

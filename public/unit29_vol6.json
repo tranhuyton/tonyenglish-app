@@ -342,70 +342,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. These mines produce several types of valuable raw forms of rock. [ 21 ]",
+              "content": "1. These mines produce several types of <u>valuable raw forms of rock</u>. [ 21 ]",
               "options": [],
               "explanation": "ore",
               "correctAnswer": "ore"
             },
             {
               "id": "22",
-              "content": "2. The company had to pay a tax on exports for the steel it shipped to Europe. [ 22 ]",
+              "content": "2. The company had to pay a <u>tax on exports</u> for the steel it shipped to Europe. [ 22 ]",
               "options": [],
               "explanation": "tariff",
               "correctAnswer": "tariff"
             },
             {
               "id": "23",
-              "content": "3. She used the device used for seeing things far away to observe the small bird. [ 23 ]",
+              "content": "3. She used the <u>device used for seeing things far away</u> to observe the small bird. [ 23 ]",
               "options": [],
               "explanation": "binoculars",
               "correctAnswer": "binoculars"
             },
             {
               "id": "24",
-              "content": "4. The painting portrayed what the beach looked like twenty years ago. [ 24 ]",
+              "content": "4. The painting <u>portrayed</u> what the beach looked like twenty years ago. [ 24 ]",
               "options": [],
               "explanation": "depicted",
               "correctAnswer": "depicted"
             },
             {
               "id": "25",
-              "content": "5. He had sent a letter from the city three days earlier. But his precise location was still a mystery. [ 25 ]",
+              "content": "5. He had sent a letter from the city three days earlier. But his <u>precise location</u> was still a mystery. [ 25 ]",
               "options": [],
               "explanation": "whereabouts",
               "correctAnswer": "whereabouts"
             },
             {
               "id": "26",
-              "content": "6. The two-part plan involves scientists from both universities. [ 26 ]",
+              "content": "6. The <u>two-part</u> plan involves scientists from both universities. [ 26 ]",
               "options": [],
               "explanation": "dual",
               "correctAnswer": "dual"
             },
             {
               "id": "27",
-              "content": "7. The meal was made up mostly of beans and vegetables. [ 27 ]",
+              "content": "7. The meal was <u>made up mostly of</u> beans and vegetables. [ 27 ]",
               "options": [],
               "explanation": "comprised",
               "correctAnswer": "comprised"
             },
             {
               "id": "28",
-              "content": "8. If you’re sick, take your temperature. The device for measuring temperature is in the cabinet. [ 28 ]",
+              "content": "8. If you’re sick, take your temperature. The <u>device for measuring temperature</u> is in the cabinet. [ 28 ]",
               "options": [],
               "explanation": "thermometer",
               "correctAnswer": "thermometer"
             },
             {
               "id": "29",
-              "content": "9. His promotion was a real event opposite to common knowledge due to his sparse knowledge. [ 29 ]",
+              "content": "9. His promotion was a real event <u>opposite to common knowledge</u> due to his sparse knowledge. [ 29 ]",
               "options": [],
               "explanation": "paradox",
               "correctAnswer": "paradox"
             },
             {
               "id": "30",
-              "content": "10. It was difficult to lift the great mass that had accumulated in his backpack. [ 30 ]",
+              "content": "10. It was difficult to lift the <u>great mass</u> that had accumulated in his backpack. [ 30 ]",
               "options": [],
               "explanation": "bulk",
               "correctAnswer": "bulk"

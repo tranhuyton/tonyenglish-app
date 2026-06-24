@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. You can hear because sound causes activity in the tiny hairs on the inside of your ear. [ 6 ]",
+              "content": "1. You can hear because sound causes <u>activity in</u> the tiny hairs on the inside of your ear. [ 6 ]",
               "options": [],
               "explanation": "stimulates means to cause or to increase activity in.",
               "correctAnswer": "stimulates"
             },
             {
               "id": "7",
-              "content": "2. Some worms are small enough to enter into the skin without being detected. [ 7 ]",
+              "content": "2. Some worms are small enough <u>to enter into</u> the skin without being detected. [ 7 ]",
               "options": [],
               "explanation": "penetrate means to enter into it.",
               "correctAnswer": "penetrate"
             },
             {
               "id": "8",
-              "content": "3. She tried to copy the way her best friend dressed. [ 8 ]",
+              "content": "3. She tried <u>to copy</u> the way her best friend dressed. [ 8 ]",
               "options": [],
               "explanation": "duplicate means to copy it.",
               "correctAnswer": "duplicate"
             },
             {
               "id": "9",
-              "content": "4. The teacher offered the kids candy in order to urge them into finishing their homework. [ 9 ]",
+              "content": "4. The teacher offered the kids candy in order <u>to urge them into</u> finishing their homework. [ 9 ]",
               "options": [],
               "explanation": "spur means to urge them into action.",
               "correctAnswer": "spur"
             },
             {
               "id": "10",
-              "content": "5. In science class, we learned about the particles in atoms that have a negative electric charge. [ 10 ]",
+              "content": "5. In science class, we learned about the particles in atoms that have <u>a negative electric charge</u>. [ 10 ]",
               "options": [],
               "explanation": "electron is a particle in all atoms that has a negative electric charge.",
               "correctAnswer": "electrons"
             },
             {
               "id": "11",
-              "content": "6. Every time the children’s fort fell down, they built it again and better. [ 11 ]",
+              "content": "6. Every time the children’s fort fell down, they built it <u>again and</u> better. [ 11 ]",
               "options": [],
               "explanation": "anew means again and in a different way.",
               "correctAnswer": "anew"
             },
             {
               "id": "12",
-              "content": "7. She took classes in the science that studies the weather and became a weatherperson. [ 12 ]",
+              "content": "7. She took classes in <u>the science that studies the weather</u> and became a weatherperson. [ 12 ]",
               "options": [],
               "explanation": "meteorology is the science that studies the weather.",
               "correctAnswer": "meteorology"
             },
             {
               "id": "13",
-              "content": "8. The small airplane flew without any effort through the sky. [ 13 ]",
+              "content": "8. The small airplane <u>flew without any effort</u> through the sky. [ 13 ]",
               "options": [],
               "explanation": "glided means flew on extended wings with little or no effort.",
               "correctAnswer": "glided"
             },
             {
               "id": "14",
-              "content": "9. A rocket requires a lot of fuel in order to start it into the sky. [ 14 ]",
+              "content": "9. A rocket requires a lot of fuel in order to <u>start it into the sky</u>. [ 14 ]",
               "options": [],
               "explanation": "launch means to make it go into motion.",
               "correctAnswer": "launch"
             },
             {
               "id": "15",
-              "content": "10. Amanda is quite an intelligent girl for her young age. [ 15 ]",
+              "content": "10. Amanda is quite an <u>intelligent</u> girl for her young age. [ 15 ]",
               "options": [],
               "explanation": "ingenious means very smart.",
               "correctAnswer": "ingenious"

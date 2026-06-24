@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Dogs do not have the ability to bear the pain to high pitched noises. [ 11 ]",
+              "content": "1. Dogs do not have the <u>ability to bear the pain</u> to high pitched noises. [ 11 ]",
               "options": [],
               "explanation": "ability to bear the pain tương đương với sự chịu đựng (tolerance).",
               "correctAnswer": "tolerance"
             },
             {
               "id": "12",
-              "content": "2. The boring and repeating sounds from a ticking clock can make some people annoyed. [ 12 ]",
+              "content": "2. The <u>boring and repeating</u> sounds from a ticking clock can make some people annoyed. [ 12 ]",
               "options": [],
               "explanation": "boring and repeating tương đương với repetitive (lặp đi lặp lại).",
               "correctAnswer": "repetitive"
             },
             {
               "id": "13",
-              "content": "3. My sister is a well-known and important musician. [ 13 ]",
+              "content": "3. My sister is a <u>well-known and important</u> musician. [ 13 ]",
               "options": [],
               "explanation": "well-known and important tương đương với prominent (nổi bật/xuất chúng).",
               "correctAnswer": "prominent"
             },
             {
               "id": "14",
-              "content": "4. I used my microscope to see the cell's central part. [ 14 ]",
+              "content": "4. I used my microscope to see the cell's <u>central part</u>. [ 14 ]",
               "options": [],
               "explanation": "central part of a cell là nucleus (nhân tế bào).",
               "correctAnswer": "nucleus"
             },
             {
               "id": "15",
-              "content": "5. The rough fur of the gorilla is a defining trait. [ 15 ]",
+              "content": "5. The <u>rough</u> fur of the gorilla is a defining trait. [ 15 ]",
               "options": [],
               "explanation": "rough tương đương với coarse (thô ráp).",
               "correctAnswer": "coarse"

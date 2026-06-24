@@ -32,70 +32,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. The reward for finding the lost dog was a very large specific amount.",
+              "content": "1. The reward for finding the lost dog was a very large <u>specific amount</u>.",
               "options": [],
               "explanation": "specific amount = sum (số tiền cụ thể)",
               "correctAnswer": "sum"
             },
             {
               "id": "2",
-              "content": "2. When his arm got crushed, it damaged a tube that carries blood to the heart was damaged.",
+              "content": "2. When his arm got crushed, it damaged a <u>tube that carries blood to the heart</u> was damaged.",
               "options": [],
               "explanation": "tube that carries blood to the heart = vein (tĩnh mạch)",
               "correctAnswer": "vein"
             },
             {
               "id": "3",
-              "content": "3. To which chart does this collection of data have a connection with?",
+              "content": "3. To which chart does this collection of data <u>have a connection with</u>?",
               "options": [],
               "explanation": "have a connection with = relate (có liên quan tới)",
               "correctAnswer": "relate"
             },
             {
               "id": "4",
-              "content": "4. This book records the first years of the king's life.",
+              "content": "4. This book <u>records</u> the first years of the king's life.",
               "options": [],
               "explanation": "records = chronicles (ghi chép lại)",
               "correctAnswer": "chronicles"
             },
             {
               "id": "5",
-              "content": "5. Since that pot is made out of a red-brown metal, it gets hot very quickly.",
+              "content": "5. Since that pot is made out of a <u>red-brown metal</u>, it gets hot very quickly.",
               "options": [],
               "explanation": "red-brown metal = copper (đồng)",
               "correctAnswer": "copper"
             },
             {
               "id": "6",
-              "content": "6. The nation had a party because their country had existed for a thousand years.",
+              "content": "6. The nation had a party because their country had existed for <u>a thousand years</u>.",
               "options": [],
               "explanation": "a thousand years = millennium (thiên niên kỷ)",
               "correctAnswer": "millennium"
             },
             {
               "id": "7",
-              "content": "7. Her experience made her the best person for the new job.",
+              "content": "7. Her <u>experience</u> made her the best person for the new job.",
               "options": [],
               "explanation": "experience = background (nền tảng kinh nghiệm/kiến thức)",
               "correctAnswer": "background"
             },
             {
               "id": "8",
-              "content": "8. The poisonous substance from that fish will make you very sick.",
+              "content": "8. The <u>poisonous substance</u> from that fish will make you very sick.",
               "options": [],
               "explanation": "poisonous substance = venom (nọc độc)",
               "correctAnswer": "venom"
             },
             {
               "id": "9",
-              "content": "9. I wouldn't believe him. He's not very honest.",
+              "content": "9. I wouldn't believe him. He's not very <u>honest</u>.",
               "options": [],
               "explanation": "honest = trustworthy (đáng tin cậy)",
               "correctAnswer": "trustworthy"
             },
             {
               "id": "10",
-              "content": "10. The owners of the hotel decided to modernize the computer system.",
+              "content": "10. The owners of the hotel decided to <u>modernize</u> the computer system.",
               "options": [],
               "explanation": "modernize = update (cập nhật/hiện đại hóa)",
               "correctAnswer": "update"

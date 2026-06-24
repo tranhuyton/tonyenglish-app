@@ -148,70 +148,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "The party was planned for tonight, but it was moved to a later time. [ 11 ]",
+              "content": "The party was planned for tonight, but it was <u>moved to a later time</u>. [ 11 ]",
               "options": [],
               "explanation": "Cụm từ 'moved to a later time' (dời sang thời gian muộn hơn) đồng nghĩa với 'postponed' (bị hoãn lại).",
               "correctAnswer": "postponed"
             },
             {
               "id": "12",
-              "content": "I was recently elected to the group of people who make laws in a government. [ 12 ]",
+              "content": "I was recently elected to the <u>group of people who make laws in a government</u>. [ 12 ]",
               "options": [],
               "explanation": "Cụm từ 'group of people who make laws in a government' (nhóm người làm luật trong chính phủ) đồng nghĩa với 'congress' (quốc hội).",
               "correctAnswer": "congress"
             },
             {
               "id": "13",
-              "content": "My grandfather was a person who sold things. [ 13 ]",
+              "content": "My grandfather was <u>a person who sold things</u>. [ 13 ]",
               "options": [],
               "explanation": "Cụm từ 'a person who sold things' (người bán hàng hóa) đồng nghĩa với 'merchant' (thương gia).",
               "correctAnswer": "merchant"
             },
             {
               "id": "14",
-              "content": "The hospital is an important organization in the town. [ 14 ]",
+              "content": "The hospital is an important <u>organization</u> in the town. [ 14 ]",
               "options": [],
               "explanation": "Từ 'organization' (tổ chức) đồng nghĩa với 'institution' (cơ sở, tổ chức).",
               "correctAnswer": "institution"
             },
             {
               "id": "15",
-              "content": "The scientist who works with chemicals created a new formula for health. [ 15 ]",
+              "content": "The <u>scientist who works with chemicals</u> created a new formula for health. [ 15 ]",
               "options": [],
               "explanation": "Cụm từ 'scientist who works with chemicals' (nhà khoa học làm việc với hóa chất) đồng nghĩa với 'chemist' (nhà hóa học).",
               "correctAnswer": "chemist"
             },
             {
               "id": "16",
-              "content": "The foods made from milk section is in the back of the supermarket. [ 16 ]",
+              "content": "The <u>foods made from milk</u> section is in the back of the supermarket. [ 16 ]",
               "options": [],
               "explanation": "Cụm từ 'foods made from milk' (thức ăn làm từ sữa) đồng nghĩa với 'dairy' (sản phẩm từ sữa).",
               "correctAnswer": "dairy"
             },
             {
               "id": "17",
-              "content": "Don't burst the water inside the tub. [ 17 ]",
+              "content": "Don't <u>burst the water</u> inside the tub. [ 17 ]",
               "options": [],
               "explanation": "Cụm từ 'burst the water' (làm văng nước) đồng nghĩa với 'splash' (làm bắn nước, văng nước).",
               "correctAnswer": "splash"
             },
             {
               "id": "18",
-              "content": "She lives in the small parts of the large city. [ 18 ]",
+              "content": "She lives in the <u>small parts of the large city</u>. [ 18 ]",
               "options": [],
               "explanation": "Cụm từ 'small parts of the large city' (những khu vực nhỏ của thành phố lớn) đồng nghĩa với 'suburb' (vùng ngoại ô).",
               "correctAnswer": "suburb"
             },
             {
               "id": "19",
-              "content": "The level of the water in the sea rises and falls every day. [ 19 ]",
+              "content": "The <u>level of the water in the sea</u> rises and falls every day. [ 19 ]",
               "options": [],
               "explanation": "Cụm từ 'level of the water in the sea' (mực nước trên biển) đồng nghĩa với 'tide' (thủy triều).",
               "correctAnswer": "tide"
             },
             {
               "id": "20",
-              "content": "It hurts in my lower back. [ 20 ]",
+              "content": "It <u>hurts</u> in my lower back. [ 20 ]",
               "options": [],
               "explanation": "Từ 'hurts' (bị đau) đồng nghĩa với 'aches' (đau nhức).",
               "correctAnswer": "aches"

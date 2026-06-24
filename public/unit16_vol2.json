@@ -12,31 +12,31 @@
           "questions": [
             {
               "id": "1",
-              "content": "1. Jennifer looked for a long time at the girl who looked just like her sister. [ 1 ]",
+              "content": "1. Jennifer <u>looked for a long time</u> at the girl who looked just like her sister. [ 1 ]",
               "options": [],
               "correctAnswer": "stared"
             },
             {
               "id": "2",
-              "content": "2. Even though the noise scared me, I returned to my calm mood. [ 2 ]",
+              "content": "2. Even though the noise scared me, I <u>returned to my calm mood</u>. [ 2 ]",
               "options": [],
               "correctAnswer": "recovered"
             },
             {
               "id": "3",
-              "content": "3. The man's speech went on for another thirty minutes. [ 3 ]",
+              "content": "3. The man's speech <u>went on for another thirty minutes</u>. [ 3 ]",
               "options": [],
               "correctAnswer": "lasted"
             },
             {
               "id": "4",
-              "content": "4. I am quiet in a big crowd of people. [ 4 ]",
+              "content": "4. I am quiet in a <u>big crowd of people</u>. [ 4 ]",
               "options": [],
               "correctAnswer": "shy"
             },
             {
               "id": "5",
-              "content": "5. My little brother woke up with a really bad hot temperature today. [ 5 ]",
+              "content": "5. My little brother woke up with a <u>really bad hot temperature</u> today. [ 5 ]",
               "options": [],
               "correctAnswer": "fever"
             }

@@ -200,70 +200,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. He wants to win so much that he will not obey the rules to do it. [ 11 ]",
+              "content": "1. He wants to win so much that he will <u>not obey the rules</u> to do it. [ 11 ]",
               "options": [],
               "explanation": "cheat: to be dishonest so that you can win or do well.",
               "correctAnswer": "cheat"
             },
             {
               "id": "12",
-              "content": "2. I’m going to stand in the dark area of the tree because the sun is too hot here. [ 12 ]",
+              "content": "2. I’m going to stand in <u>the dark area</u> of the tree because the sun is too hot here. [ 12 ]",
               "options": [],
               "explanation": "shadow: the dark area that is made when something blocks light.",
               "correctAnswer": "shadow"
             },
             {
               "id": "13",
-              "content": "3. The police believe it’s true that the clerk stole the money. [ 13 ]",
+              "content": "3. The police <u>believe it’s true</u> that the clerk stole the money. [ 13 ]",
               "options": [],
               "explanation": "suspect: to believe that it is true.",
               "correctAnswer": "suspect"
             },
             {
               "id": "14",
-              "content": "4. If we do what we are trying to do, we will become very rich! [ 14 ]",
+              "content": "4. If we do what we are trying <u>to do</u>, we will become very rich! [ 14 ]",
               "options": [],
               "explanation": "succeed: to complete something that you planned or tried to do.",
               "correctAnswer": "succeed"
             },
             {
               "id": "15",
-              "content": "5. Please read aloud the questions so the students can write them down. [ 15 ]",
+              "content": "5. Please <u>read aloud</u> the questions so the students can write them down. [ 15 ]",
               "options": [],
               "explanation": "dictate: to read it aloud so it can be written down.",
               "correctAnswer": "dictate"
             },
             {
               "id": "16",
-              "content": "6. I am sure I can do something because I have practiced for years. [ 16 ]",
+              "content": "6. I am sure I <u>can do something</u> because I have practiced for years. [ 16 ]",
               "options": [],
               "explanation": "confident: believes they can do something without failing.",
               "correctAnswer": "confident"
             },
             {
               "id": "17",
-              "content": "7. After seeing the evidence, you must decide if the man is innocent. [ 17 ]",
+              "content": "7. After seeing the evidence, you must <u>decide</u> if the man is innocent. [ 17 ]",
               "options": [],
               "explanation": "conclude: to arrive at a logical end by looking at evidence.",
               "correctAnswer": "conclude"
             },
             {
               "id": "18",
-              "content": "8. It was a good feeling knowing that I had saved enough money to go on a trip. [ 18 ]",
+              "content": "8. It was a <u>good feeling</u> knowing that I had saved enough money to go on a trip. [ 18 ]",
               "options": [],
               "explanation": "delight: a feeling of being very happy with something.",
               "correctAnswer": "delight"
             },
             {
               "id": "19",
-              "content": "9. This horse is a certain winner. [ 19 ]",
+              "content": "9. This horse is a <u>certain</u> winner. [ 19 ]",
               "options": [],
               "explanation": "definite: certain or sure to be true.",
               "correctAnswer": "definite"
             },
             {
               "id": "20",
-              "content": "10. The large size of the box made it difficult to move. [ 20 ]",
+              "content": "10. The <u>large size</u> of the box made it difficult to move. [ 20 ]",
               "options": [],
               "explanation": "considerable: large in size, amount or extent.",
               "correctAnswer": "considerable"

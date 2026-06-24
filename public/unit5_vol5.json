@@ -274,70 +274,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "Because she took the test with such speed, she made several silly mistakes. [ 21 ]",
+              "content": "Because she took the test with such <u>speed</u>, she made several silly mistakes. [ 21 ]",
               "options": [],
               "explanation": "speed (tốc độ) tương đương với haste (sự vội vã).",
               "correctAnswer": "haste"
             },
             {
               "id": "22",
-              "content": "Her anniversary had a quality that made it important because it was also her birthday. [ 22 ]",
+              "content": "Her anniversary had a <u>quality that made it important</u> because it was also her birthday. [ 22 ]",
               "options": [],
               "explanation": "quality that made it important tương đương significance (ý nghĩa quan trọng).",
               "correctAnswer": "significance"
             },
             {
               "id": "23",
-              "content": "Though the smallest basic units in ice and steam are similar, their shapes are different. [ 23 ]",
+              "content": "Though the <u>smallest basic units</u> in ice and steam are similar, their shapes are different. [ 23 ]",
               "options": [],
               "explanation": "smallest basic units tương đương molecules (phân tử).",
               "correctAnswer": "molecules"
             },
             {
               "id": "24",
-              "content": "They began the ceremony at 9:00 in the evening. [ 24 ]",
+              "content": "They <u>began</u> the ceremony at 9:00 in the evening. [ 24 ]",
               "options": [],
               "explanation": "began (bắt đầu) tương đương commenced.",
               "correctAnswer": "commenced"
             },
             {
               "id": "25",
-              "content": "The closeness in space of her office is only a short distance from mine. [ 25 ]",
+              "content": "The <u>closeness in space</u> of her office is only a short distance from mine. [ 25 ]",
               "options": [],
               "explanation": "closeness in space tương đương proximity (sự gần gũi).",
               "correctAnswer": "proximity"
             },
             {
               "id": "26",
-              "content": "He could sleep late that day or get up early and start his work. He chose the second choice. [ 26 ]",
+              "content": "He could sleep late that day or get up early and start his work. He chose the <u>second choice</u>. [ 26 ]",
               "options": [],
               "explanation": "second choice (sự lựa chọn thứ hai) tương đương latter.",
               "correctAnswer": "latter"
             },
             {
               "id": "27",
-              "content": "The noises on the computer sounded like they were made to sound like real ones. [ 27 ]",
+              "content": "The noises on the computer sounded like they were <u>made to sound like real ones</u>. [ 27 ]",
               "options": [],
               "explanation": "made to sound like real ones (làm giả giống thật) tương đương synthetic (nhân tạo).",
               "correctAnswer": "synthetic"
             },
             {
               "id": "28",
-              "content": "Please judge the quality of his proposal before we decide to meet with him. [ 28 ]",
+              "content": "Please <u>judge the quality</u> of his proposal before we decide to meet with him. [ 28 ]",
               "options": [],
               "explanation": "judge the quality (đánh giá chất lượng) tương đương assess.",
               "correctAnswer": "assess"
             },
             {
               "id": "29",
-              "content": "The best cure for a slightly injured foot is putting ice on it. [ 29 ]",
+              "content": "The best <u>cure</u> for a slightly injured foot is putting ice on it. [ 29 ]",
               "options": [],
               "explanation": "cure (cách chữa trị) tương đương remedy.",
               "correctAnswer": "remedy"
             },
             {
               "id": "30",
-              "content": "Most of the advertisements on TV are related to the development of drugs commercials. [ 30 ]",
+              "content": "Most of the advertisements on TV are <u>related to the development of drugs</u> commercials. [ 30 ]",
               "options": [],
               "explanation": "related to the development of drugs tương đương pharmaceutical.",
               "correctAnswer": "pharmaceutical"

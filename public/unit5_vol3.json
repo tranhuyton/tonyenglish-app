@@ -208,70 +208,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. Mom says we need to hurry because the game will start very soon. [ 16 ]",
+              "content": "1. Mom says we need to hurry because the game will start <u>very soon</u>. [ 16 ]",
               "options": [],
               "explanation": "very soon đồng nghĩa với shortly.",
               "correctAnswer": "SHORTLY"
             },
             {
               "id": "17",
-              "content": "2. It's a good idea to get to know with co-workers. [ 17 ]",
+              "content": "2. It's a good idea to <u>get to know</u> with co-workers. [ 17 ]",
               "options": [],
               "explanation": "get to know đồng nghĩa với acquaint.",
               "correctAnswer": "ACQUAINT"
             },
             {
               "id": "18",
-              "content": "3. My little brother bothered me all day by asking me to solve his difficult questions. [ 18 ]",
+              "content": "3. My little brother bothered me all day by asking me to solve his <u>difficult questions</u>. [ 18 ]",
               "options": [],
               "explanation": "difficult questions đồng nghĩa với riddles.",
               "correctAnswer": "RIDDLES"
             },
             {
               "id": "19",
-              "content": "4. A reporter at that newspaper won a prize. [ 19 ]",
+              "content": "4. A reporter at that <u>newspaper</u> won a prize. [ 19 ]",
               "options": [],
               "explanation": "newspaper là một dạng publication (ấn phẩm).",
               "correctAnswer": "PUBLICATION"
             },
             {
               "id": "20",
-              "content": "5. I am an individual who lives in the central part of town. [ 20 ]",
+              "content": "5. I am an <u>individual who lives in</u> the central part of town. [ 20 ]",
               "options": [],
               "explanation": "individual who lives in đồng nghĩa với inhabitant.",
               "correctAnswer": "INHABITANT"
             },
             {
               "id": "21",
-              "content": "6. He was crying because he was caused to feel fright. [ 21 ]",
+              "content": "6. He was crying because he was <u>caused to feel fright</u>. [ 21 ]",
               "options": [],
               "explanation": "caused to feel fright đồng nghĩa với scared.",
               "correctAnswer": "SCARED"
             },
             {
               "id": "22",
-              "content": "7. I want to buy that really nice dress I saw in the store. [ 22 ]",
+              "content": "7. I want to buy that <u>really nice</u> dress I saw in the store. [ 22 ]",
               "options": [],
               "explanation": "really nice đồng nghĩa với fancy.",
               "correctAnswer": "FANCY"
             },
             {
               "id": "23",
-              "content": "8. I need a light I can carry to see in the dark cabin. [ 23 ]",
+              "content": "8. I need a <u>light I can carry</u> to see in the dark cabin. [ 23 ]",
               "options": [],
               "explanation": "light I can carry đồng nghĩa với flashlight.",
               "correctAnswer": "FLASHLIGHT"
             },
             {
               "id": "24",
-              "content": "9. The children were afraid that the witch would hope bad things would happen to them. [ 24 ]",
+              "content": "9. The children were afraid that the witch would <u>hope bad things would happen</u> to them. [ 24 ]",
               "options": [],
               "explanation": "hope bad things would happen đồng nghĩa với curse.",
               "correctAnswer": "CURSE"
             },
             {
               "id": "25",
-              "content": "10. The part of your coat that covers your head keeps your head nice and warm. [ 25 ]",
+              "content": "10. The <u>part of your coat that covers your head</u> keeps your head nice and warm. [ 25 ]",
               "options": [],
               "explanation": "part of your coat that covers your head đồng nghĩa với hood.",
               "correctAnswer": "HOOD"

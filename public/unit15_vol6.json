@@ -214,70 +214,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "1. They need to improve and make more efficient the medical devices in the hospital. [ 16 ]",
+              "content": "1. They need to <u>improve and make more efficient</u> the medical devices in the hospital. [ 16 ]",
               "options": [],
               "explanation": "upgrade",
               "correctAnswer": "upgrade"
             },
             {
               "id": "17",
-              "content": "2. To save the boy, rushing into the burning house is extremely important and must be done. [ 17 ]",
+              "content": "2. To save the boy, rushing into the burning house is <u>extremely important and must be done</u>. [ 17 ]",
               "options": [],
               "explanation": "imperative",
               "correctAnswer": "imperative"
             },
             {
               "id": "18",
-              "content": "3. Handing out rain jackets was a necessary act of giving. [ 18 ]",
+              "content": "3. Handing out rain jackets was a <u>necessary act of giving</u>. [ 18 ]",
               "options": [],
               "explanation": "provision",
               "correctAnswer": "provision"
             },
             {
               "id": "19",
-              "content": "4. Sometimes, cold weather can be made visible or obvious in the most unlikely places. [ 19 ]",
+              "content": "4. Sometimes, cold weather can be <u>made visible or obvious</u> in the most unlikely places. [ 19 ]",
               "options": [],
               "explanation": "manifest",
               "correctAnswer": "manifest"
             },
             {
               "id": "20",
-              "content": "5. The theory seems capable of doing what it needs to do to me. [ 20 ]",
+              "content": "5. The theory seems <u>capable of doing what it needs to do</u> to me. [ 20 ]",
               "options": [],
               "explanation": "viable",
               "correctAnswer": "viable"
             },
             {
               "id": "21",
-              "content": "6. You must act in a way that is right according to the rules of the game. [ 21 ]",
+              "content": "6. You must act in a way that is <u>right according to the rules</u> of the game. [ 21 ]",
               "options": [],
               "explanation": "adhere",
               "correctAnswer": "adhere"
             },
             {
               "id": "22",
-              "content": "7. Joining the choir will be an action that is done by choice. [ 22 ]",
+              "content": "7. Joining the choir will be an action that is <u>done by choice</u>. [ 22 ]",
               "options": [],
               "explanation": "voluntary",
               "correctAnswer": "voluntary"
             },
             {
               "id": "23",
-              "content": "8. The amusement park was no fun because it was occupied by too many people. [ 23 ]",
+              "content": "8. The amusement park was no fun because it was <u>occupied by too many people</u>. [ 23 ]",
               "options": [],
               "explanation": "overcrowded",
               "correctAnswer": "overcrowded"
             },
             {
               "id": "24",
-              "content": "9. Who is going to take responsibility for organizing the protest? [ 24 ]",
+              "content": "9. Who is going to <u>take responsibility for organizing</u> the protest? [ 24 ]",
               "options": [],
               "explanation": "administer",
               "correctAnswer": "administer"
             },
             {
               "id": "25",
-              "content": "10. The criminal was certainly not feeling pity or sympathy for suffering people. [ 25 ]",
+              "content": "10. The criminal was certainly not <u>feeling pity or sympathy</u> for suffering people. [ 25 ]",
               "options": [],
               "explanation": "compassionate",
               "correctAnswer": "compassionate"

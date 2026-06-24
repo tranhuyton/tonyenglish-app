@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "I buy most of my clothes once owned. [ 6 ]",
+              "content": "I buy most of my clothes <u>once owned</u>. [ 6 ]",
               "options": [],
               "explanation": "\"once owned\" (từng thuộc về người khác) đồng nghĩa với secondhand (đồ cũ).",
               "correctAnswer": "secondhand"
             },
             {
               "id": "7",
-              "content": "The enclosed area in the harbor for loading ships is very busy this time of day. [ 7 ]",
+              "content": "<u>The enclosed area in the harbor for loading ships</u> is very busy this time of day. [ 7 ]",
               "options": [],
               "explanation": "\"The enclosed area in the harbor for loading ships\" (khu vực bến cảng để chất hàng lên tàu) đồng nghĩa với dock (bến tàu).",
               "correctAnswer": "dock"
             },
             {
               "id": "8",
-              "content": "Be sure not to lie about the facts about the crime. The police need to know everything in order to help us. [ 8 ]",
+              "content": "Be sure not to <u>lie about</u> the facts about the crime. The police need to know everything in order to help us. [ 8 ]",
               "options": [],
               "explanation": "\"lie about\" (nói dối về) đồng nghĩa với distort (xuyên tạc).",
               "correctAnswer": "distort"
             },
             {
               "id": "9",
-              "content": "The women sat on the front part of the ship and enjoyed the warm sun. [ 9 ]",
+              "content": "The women sat on <u>the front part</u> of the ship and enjoyed the warm sun. [ 9 ]",
               "options": [],
               "explanation": "\"the front part\" (phần phía trước) đồng nghĩa với fore (phía trước tàu).",
               "correctAnswer": "fore"
             },
             {
               "id": "10",
-              "content": "I have to add a stop to our trip, so adjust your plans in a way that depends on the situation. [ 10 ]",
+              "content": "I have to add a stop to our trip, so adjust your plans <u>in a way that depends on the situation</u>. [ 10 ]",
               "options": [],
               "explanation": "\"in a way that depends on the situation\" (tùy theo tình huống) đồng nghĩa với accordingly (một cách phù hợp).",
               "correctAnswer": "accordingly"
             },
             {
               "id": "11",
-              "content": "To understand this show, you have to know the general situation that relates to it. [ 11 ]",
+              "content": "To understand this show, you have to know the <u>general situation</u> that relates to it. [ 11 ]",
               "options": [],
               "explanation": "\"general situation\" (tình huống chung, bối cảnh) đồng nghĩa với context (ngữ cảnh, bối cảnh).",
               "correctAnswer": "context"
             },
             {
               "id": "12",
-              "content": "The new sewing machine was made up of many small parts and details. [ 12 ]",
+              "content": "The new sewing machine was made up of <u>many small parts and details</u>. [ 12 ]",
               "options": [],
               "explanation": "\"many small parts and details\" (nhiều bộ phận và chi tiết nhỏ) đồng nghĩa với intricate (phức tạp, tinh xảo).",
               "correctAnswer": "intricate"
             },
             {
               "id": "13",
-              "content": "Let’s hope that our plans do not have a part of one occupying the space of the other. [ 13 ]",
+              "content": "Let’s hope that our plans do not have a part of one <u>occupying the space of the other</u>. [ 13 ]",
               "options": [],
               "explanation": "\"occupying the space of the other\" (chiếm không gian của cái khác) đồng nghĩa với overlap (chồng chéo).",
               "correctAnswer": "overlap"
             },
             {
               "id": "14",
-              "content": "The city has decided to give a particular description of this area as a non-smoking zone. [ 14 ]",
+              "content": "The city has decided to <u>give a particular description</u> of this area as a non-smoking zone. [ 14 ]",
               "options": [],
               "explanation": "\"give a particular description\" (chỉ định) đồng nghĩa với designate.",
               "correctAnswer": "designate"
             },
             {
               "id": "15",
-              "content": "I think the gears need a little more oily substance used to make parts work smoothly. [ 15 ]",
+              "content": "I think the gears need a little more <u>oily substance</u> used to make parts work smoothly. [ 15 ]",
               "options": [],
               "explanation": "\"oily substance\" (chất nhờn, dầu mỡ) đồng nghĩa với grease.",
               "correctAnswer": "grease"
