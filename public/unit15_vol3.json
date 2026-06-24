@@ -12,63 +12,63 @@
           "questions": [
             {
               "id": "1",
-              "content": "a. theft b. nut c. cereal d. routine",
+              "content": "<p>1. a. theft b. nut c. cereal d. routine</p>",
               "options": [
-                "theft, nut",
-                "nut, cereal",
-                "cereal, routine",
-                "theft, routine"
+                "cereal and theft",
+                "cereal and routine",
+                "theft and routine",
+                "nut and cereal"
               ],
               "explanation": "nut (hạt) và cereal (ngũ cốc) đều là các loại thức ăn.",
-              "correctAnswer": "NUT, CEREAL"
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "a. roast b. pharaoh c. stove d. pardon",
+              "content": "<p>2. a. roast b. pharaoh c. stove d. pardon</p>",
               "options": [
-                "roast, stove",
-                "pharaoh, pardon",
-                "roast, pharaoh",
-                "stove, pardon"
+                "roast and stove",
+                "stove and pardon",
+                "roast and pardon",
+                "pharaoh and stove"
               ],
               "explanation": "roast (nướng) và stove (bếp) đều liên quan đến nấu ăn.",
-              "correctAnswer": "ROAST, STOVE"
+              "correctAnswer": "A"
             },
             {
               "id": "3",
-              "content": "a. assembly b. affair c. bless d. exploit",
+              "content": "<p>3. a. assembly b. affair c. bless d. exploit</p>",
               "options": [
-                "assembly, bless",
-                "affair, exploit",
-                "assembly, affair",
-                "bless, exploit"
+                "assembly and affair",
+                "bless and exploit",
+                "assembly and exploit",
+                "affair and bless"
               ],
               "explanation": "assembly (cuộc họp) và affair (sự kiện) đều chỉ các sự kiện tập trung đông người.",
-              "correctAnswer": "ASSEMBLY, AFFAIR"
+              "correctAnswer": "A"
             },
             {
               "id": "4",
-              "content": "a. exploit b. famine c. merry d. cheerful",
+              "content": "<p>4. a. exploit b. famine c. merry d. cheerful</p>",
               "options": [
-                "exploit, famine",
-                "merry, cheerful",
-                "famine, merry",
-                "exploit, cheerful"
+                "exploit and famine",
+                "merry and cheerful",
+                "exploit and cheerful",
+                "famine and merry"
               ],
               "explanation": "merry và cheerful đều có nghĩa là vui vẻ.",
-              "correctAnswer": "MERRY, CHEERFUL"
+              "correctAnswer": "B"
             },
             {
               "id": "5",
-              "content": "a. scheme b. slim c. ripe d. harvest",
+              "content": "<p>5. a. scheme b. slim c. ripe d. harvest</p>",
               "options": [
-                "scheme, slim",
-                "ripe, harvest",
-                "slim, ripe",
-                "scheme, harvest"
+                "scheme and slim",
+                "ripe and harvest",
+                "scheme and harvest",
+                "slim and ripe"
               ],
               "explanation": "ripe (chín) và harvest (thu hoạch) đều liên quan đến mùa màng, nông nghiệp.",
-              "correctAnswer": "RIPE, HARVEST"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

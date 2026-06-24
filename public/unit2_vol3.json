@@ -148,63 +148,63 @@
           "questions": [
             {
               "id": "11",
-              "content": "1.",
+              "content": "<p>11. a. discourage b. lodge c. venture d. hut</p>",
               "options": [
-                "discourage",
-                "lodge",
-                "venture",
-                "<b>hut</b>"
+                "lodge and hut",
+                "venture and hut",
+                "discourage and hut",
+                "lodge and venture"
               ],
               "explanation": "Lodge và hut đều chỉ các loại nhà gỗ, lều nhỏ.",
-              "correctAnswer": "B, D"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
-              "content": "2.",
+              "content": "<p>12. a. shepherd b. caretaker c. repay d. wheat</p>",
               "options": [
-                "<b>shepherd</b>",
-                "<b>caretaker</b>",
-                "<b>repay</b>",
-                "wheat"
+                "shepherd and caretaker",
+                "repay and wheat",
+                "shepherd and wheat",
+                "caretaker and repay"
               ],
               "explanation": "Shepherd và caretaker đều chỉ người chăm sóc, trông nom.",
-              "correctAnswer": "A, B"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
-              "content": "3.",
+              "content": "<p>13. a. offense b. fake c. hatred d. deceive</p>",
               "options": [
-                "offense",
-                "<b>fake</b>",
-                "<b>hatred</b>",
-                "<b>deceive</b>"
+                "fake and deceive",
+                "hatred and deceive",
+                "offense and deceive",
+                "fake and hatred"
               ],
               "explanation": "Fake (giả) và deceive (lừa dối) có ý nghĩa liên quan đến sự dối trá.",
-              "correctAnswer": "B, D"
+              "correctAnswer": "A"
             },
             {
               "id": "14",
-              "content": "4.",
+              "content": "<p>14. a. acquire b. awkward c. newcomer d. ridiculous</p>",
               "options": [
-                "<b>acquire</b>",
-                "<b>awkward</b>",
-                "newcomer",
-                "ridiculous"
+                "awkward and ridiculous",
+                "newcomer and ridiculous",
+                "acquire and ridiculous",
+                "awkward and newcomer"
               ],
               "explanation": "Awkward (kỳ cục) và ridiculous (nực cười) có nghĩa gần giống nhau.",
-              "correctAnswer": "B, D"
+              "correctAnswer": "A"
             },
             {
               "id": "15",
-              "content": "5.",
+              "content": "<p>15. a. overlook b. inferior c. neglect d. satisfactory</p>",
               "options": [
-                "<b>overlook</b>",
-                "inferior",
-                "neglect",
-                "satisfactory"
+                "overlook and neglect",
+                "neglect and satisfactory",
+                "overlook and satisfactory",
+                "inferior and neglect"
               ],
               "explanation": "Overlook (bỏ qua) và neglect (bỏ bê) đều liên quan đến sự thiếu chú ý.",
-              "correctAnswer": "A, C"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

@@ -12,63 +12,63 @@
           "questions": [
             {
               "id": "1",
-              "content": "1.\na. withdraw\nb. armor\nc. steep\nd. retreat",
+              "content": "<p>1. a. withdraw b. armor c. steep d. retreat</p>",
               "options": [
-                "a, b",
-                "b, c",
-                "c, d",
-                "a, d"
+                "withdraw and armor",
+                "steep and retreat",
+                "withdraw and retreat",
+                "armor and steep"
               ],
               "explanation": "withdraw và retreat đều có nghĩa là rút lui (to leave a place / run away).",
-              "correctAnswer": "D"
+              "correctAnswer": "C"
             },
             {
               "id": "2",
-              "content": "2.\na. blaze\nb. flame\nc. summit\nd. independence",
+              "content": "<p>2. a. blaze b. flame c. summit d. independence</p>",
               "options": [
-                "a, b",
-                "b, c",
-                "c, d",
-                "a, d"
+                "blaze and flame",
+                "summit and independence",
+                "blaze and independence",
+                "flame and summit"
               ],
               "explanation": "blaze và flame đều liên quan đến ngọn lửa, cháy.",
               "correctAnswer": "A"
             },
             {
               "id": "3",
-              "content": "3.\na. cliff\nb. spear\nc. rebel\nd. revolution",
+              "content": "<p>3. a. cliff b. spear c. rebel d. revolution</p>",
               "options": [
-                "a, b",
-                "b, c",
-                "c, d",
-                "a, d"
+                "cliff and spear",
+                "rebel and revolution",
+                "cliff and revolution",
+                "spear and rebel"
               ],
               "explanation": "rebel (người nổi loạn) và revolution (cuộc cách mạng) đều liên quan đến sự chống đối, đổi mới.",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "4",
-              "content": "4.\na. yield\nb. knight\nc. warrior\nd. boom",
-              "options": [
-                "a, b",
-                "b, c",
-                "c, d",
-                "a, d"
-              ],
-              "explanation": "knight (hiệp sĩ) và warrior (chiến binh) đều là những người lính tham gia chiến đấu.",
               "correctAnswer": "B"
             },
             {
-              "id": "5",
-              "content": "5.\na. thunder\nb. troop\nc. lightning\nd. steep",
+              "id": "4",
+              "content": "<p>4. a. yield b. knight c. warrior d. boom</p>",
               "options": [
-                "a, b",
-                "b, c",
-                "c, d",
-                "a, c"
+                "yield and knight",
+                "warrior and boom",
+                "yield and boom",
+                "knight and warrior"
+              ],
+              "explanation": "knight (hiệp sĩ) và warrior (chiến binh) đều là những người lính tham gia chiến đấu.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "5",
+              "content": "<p>5. a. thunder b. troop c. lightning d. steep</p>",
+              "options": [
+                "thunder and lightning",
+                "lightning and steep",
+                "thunder and steep",
+                "troop and lightning"
               ],
               "explanation": "thunder (sấm) và lightning (chớp) đều là hiện tượng thời tiết trong cơn bão.",
-              "correctAnswer": "D"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

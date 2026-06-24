@@ -80,63 +80,63 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p>1.</p>",
+              "content": "<p>6. a. debt b. fund c. bean d. abuse</p>",
               "options": [
-                "a. <b>debt</b> / b. fund",
-                "a. debt / c. <b>bean</b>",
-                "b. fund / d. abuse",
-                "c. <b>bean</b> / d. abuse"
+                "debt and fund",
+                "bean and abuse",
+                "debt and abuse",
+                "fund and bean"
               ],
               "explanation": "debt (nợ) và fund (quỹ) đều liên quan đến tiền bạc.",
               "correctAnswer": "A"
             },
             {
               "id": "7",
-              "content": "<p>2.</p>",
+              "content": "<p>7. a. fault b. abuse c. monitor d. sue</p>",
               "options": [
-                "a. <b>fault</b> / b. abuse",
-                "b. abuse / c. <b>monitor</b>",
-                "c. <b>monitor</b> / d. sue",
-                "a. <b>fault</b> / d. sue"
+                "fault and abuse",
+                "monitor and sue",
+                "fault and sue",
+                "abuse and monitor"
               ],
               "explanation": "fault (lỗi) và sue (kiện) có liên quan đến nhau: ai đó có lỗi nên bị kiện.",
-              "correctAnswer": "D"
+              "correctAnswer": "C"
             },
             {
               "id": "8",
-              "content": "<p>3.</p>",
+              "content": "<p>8. a. afford b. bake c. insist d. ingredient</p>",
               "options": [
-                "a. afford / b. <b>bake</b>",
-                "b. <b>bake</b> / d. ingredient",
-                "c. insist / d. ingredient",
-                "a. afford / c. insist"
+                "bake and ingredient",
+                "insist and ingredient",
+                "afford and ingredient",
+                "bake and insist"
               ],
               "explanation": "bake (nướng) và ingredient (nguyên liệu) đều liên quan đến nấu ăn.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
-              "content": "<p>4.</p>",
+              "content": "<p>9. a. fault b. decrease c. quantity d. convert</p>",
               "options": [
-                "a. fault / b. <b>decrease</b>",
-                "b. decrease / c. <b>quantity</b>",
-                "c. <b>quantity</b> / d. convert",
-                "a. <b>fault</b> / d. convert"
+                "fault and decrease",
+                "quantity and convert",
+                "fault and convert",
+                "decrease and quantity"
               ],
               "explanation": "decrease (giảm) và quantity (số lượng) có liên quan đến nhau.",
-              "correctAnswer": "B"
+              "correctAnswer": "D"
             },
             {
               "id": "10",
-              "content": "<p>5.</p>",
+              "content": "<p>10. a. debt b. monitor c. afford d. generous</p>",
               "options": [
-                "a. debt / b. <b>monitor</b>",
-                "b. <b>monitor</b> / c. afford",
-                "a. <b>debt</b> / c. afford",
-                "c. afford / d. generous"
+                "debt and afford",
+                "afford and generous",
+                "debt and generous",
+                "monitor and afford"
               ],
               "explanation": "debt (nợ) và afford (đủ khả năng chi trả) đều liên quan đến tài chính.",
-              "correctAnswer": "C"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

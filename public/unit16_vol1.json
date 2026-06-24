@@ -140,60 +140,60 @@
           "questions": [
             {
               "id": "11",
-              "content": "a. process / b. maybe / c. flat / d. publish",
+              "content": "<p>11. a. process b. maybe c. flat d. publish</p>",
               "options": [
-                "A. process & maybe",
-                "B. maybe & flat",
-                "C. flat & publish",
-                "D. process & publish"
+                "process and maybe",
+                "flat and publish",
+                "process and publish",
+                "maybe and flat"
               ],
               "explanation": "Hai từ liên quan: process (quá trình) và publish (xuất bản).",
-              "correctAnswer": "D"
+              "correctAnswer": "C"
             },
             {
               "id": "12",
-              "content": "a. board / b. century / c. pound / d. ancient",
+              "content": "<p>12. a. board b. century c. pound d. ancient</p>",
               "options": [
-                "A. board & century",
-                "B. century & ancient",
-                "C. board & pound",
-                "D. pound & ancient"
+                "century and ancient",
+                "pound and ancient",
+                "board and ancient",
+                "century and pound"
               ],
               "explanation": "Hai từ liên quan: century (thế kỷ) và ancient (cổ đại).",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
-              "content": "a. county / b. concert / c. theater / d. clue",
+              "content": "<p>13. a. county b. concert c. theater d. clue</p>",
               "options": [
-                "A. county & concert",
-                "B. concert & theater",
-                "C. theater & clue",
-                "D. county & clue"
+                "county and concert",
+                "theater and clue",
+                "county and clue",
+                "concert and theater"
               ],
               "explanation": "Hai từ liên quan: concert (buổi hòa nhạc) và theater (nhà hát).",
-              "correctAnswer": "B"
+              "correctAnswer": "D"
             },
             {
               "id": "14",
-              "content": "a. gentleman / b. officer / c. exist / d. concert",
+              "content": "<p>14. a. gentleman b. officer c. exist d. concert</p>",
               "options": [
-                "A. gentleman & officer",
-                "B. officer & exist",
-                "C. exist & concert",
-                "D. gentleman & concert"
+                "gentleman and officer",
+                "exist and concert",
+                "gentleman and concert",
+                "officer and exist"
               ],
               "explanation": "Hai từ liên quan: gentleman (quý ông) và officer (sĩ quan).",
               "correctAnswer": "A"
             },
             {
               "id": "15",
-              "content": "a. ancient / b. original / c. process / d. dictionary",
+              "content": "<p>15. a. ancient b. original c. process d. dictionary</p>",
               "options": [
-                "A. ancient & original",
-                "B. original & process",
-                "C. ancient & dictionary",
-                "D. process & dictionary"
+                "ancient and original",
+                "process and dictionary",
+                "ancient and dictionary",
+                "original and process"
               ],
               "explanation": "Theo Answer Key (a / d), hai từ liên quan: ancient (cổ xưa) và dictionary (từ điển).",
               "correctAnswer": "C"

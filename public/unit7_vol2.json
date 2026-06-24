@@ -25,65 +25,60 @@
               "id": "1",
               "content": "<p>1. a. volcano b. scholar c. colleague d. cage</p>",
               "options": [
-                "b, c",
-                "a, d",
-                "b, d",
-                "a, b",
-                "c, d"
+                "volcano and scholar",
+                "colleague and cage",
+                "volcano and cage",
+                "scholar and colleague"
               ],
-              "correctAnswer": "B, C",
+              "correctAnswer": "D",
               "explanation": "scholar và colleague là hai từ liên quan đến công việc, người làm việc."
             },
             {
               "id": "2",
               "content": "<p>2. a. persuade b. basis c. mission d. debate</p>",
               "options": [
-                "b, c",
-                "a, d",
-                "b, d",
-                "a, b",
-                "c, d"
+                "persuade and basis",
+                "mission and debate",
+                "persuade and debate",
+                "basis and mission"
               ],
-              "correctAnswer": "A, D",
+              "correctAnswer": "C",
               "explanation": "persuade và debate đều liên quan đến tranh luận và thuyết phục."
             },
             {
               "id": "3",
               "content": "<p>3. a. depress b. colony c. occupation d. overseas</p>",
               "options": [
-                "b, c",
-                "a, d",
-                "b, d",
-                "a, b",
-                "c, d"
+                "colony and overseas",
+                "occupation and overseas",
+                "depress and overseas",
+                "colony and occupation"
               ],
-              "correctAnswer": "B, D",
+              "correctAnswer": "A",
               "explanation": "colony và overseas đều liên quan đến một vùng đất, hải ngoại."
             },
             {
               "id": "4",
               "content": "<p>4. a. route b. depart c. cheer d. fascinate</p>",
               "options": [
-                "b, c",
-                "a, d",
-                "b, d",
-                "a, b",
-                "c, d"
+                "route and depart",
+                "cheer and fascinate",
+                "route and fascinate",
+                "depart and cheer"
               ],
-              "correctAnswer": "A,B",
+              "correctAnswer": "A",
               "explanation": "route và depart đều liên quan đến di chuyển, chuyến đi."
             },
             {
               "id": "5",
               "content": "<p>5. a. ruins b. factual c. significant d. nevertheless</p>",
               "options": [
-                "b, c",
-                "a, d",
-                "b, d",
-                "a, b",
-                "c, d"
+                "ruins and factual",
+                "significant and nevertheless",
+                "ruins and nevertheless",
+                "factual and significant"
               ],
-              "correctAnswer": "B, C",
+              "correctAnswer": "D",
               "explanation": "factual và significant đều là tính từ mô tả tầm quan trọng, thực tế."
             }
           ]

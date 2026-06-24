@@ -200,31 +200,31 @@
           "questions": [
             {
               "id": "11",
-              "content": "a. cancel b. see c. notice d. own",
+              "content": "<p>11. a. cancel b. see c. notice d. own</p>",
               "options": [
-                "cancel and own",
-                "see and notice",
                 "cancel and see",
-                "notice and own"
+                "notice and own",
+                "cancel and own",
+                "see and notice"
               ],
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "B"
+              "correctAnswer": "D"
             },
             {
               "id": "12",
-              "content": "a. band b. boring c. instrument d. predict",
+              "content": "<p>12. a. band b. boring c. instrument d. predict</p>",
               "options": [
                 "band and instrument",
-                "boring and predict",
-                "band and boring",
-                "instrument and predict"
+                "instrument and predict",
+                "band and predict",
+                "boring and instrument"
               ],
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
               "correctAnswer": "A"
             },
             {
               "id": "13",
-              "content": "a. magic b. rush c. tour d. trip",
+              "content": "<p>13. a. magic b. rush c. tour d. trip</p>",
               "options": [
                 "magic and rush",
                 "tour and trip",
@@ -236,27 +236,27 @@
             },
             {
               "id": "14",
-              "content": "a. bite b. within c. hunger d. share",
+              "content": "<p>14. a. bite b. within c. hunger d. share</p>",
               "options": [
-                "within and share",
                 "bite and hunger",
+                "hunger and share",
                 "bite and share",
                 "within and hunger"
               ],
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "15",
-              "content": "a. schedule b. message c. stage d. list",
+              "content": "<p>15. a. schedule b. message c. stage d. list</p>",
               "options": [
-                "schedule and list",
-                "message and stage",
                 "schedule and message",
-                "stage and list"
+                "stage and list",
+                "schedule and list",
+                "message and stage"
               ],
               "explanation": "Câu này đúng vì phù hợp với ngữ cảnh của bài.",
-              "correctAnswer": "A"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
