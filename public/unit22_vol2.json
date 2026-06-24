@@ -161,7 +161,7 @@
               "content": "",
               "options": [
                 "I made a cake with my <b>stable</b>.",
-                "The man robbed the store of over 200 dollars."
+                "The man <b>robbed</b> the store of over 200 dollars."
               ],
               "explanation": "rob: cướp.",
               "correctAnswer": "B"
@@ -201,7 +201,7 @@
               "content": "",
               "options": [
                 "The <b>stable</b> tree did not fall in the wind.",
-                "She slipped the table after dinner."
+                "She <b>slipped</b> the table after dinner."
               ],
               "explanation": "stable: ổn định, vững chắc.",
               "correctAnswer": "A"
@@ -211,7 +211,7 @@
               "content": "",
               "options": [
                 "My dog likes to play in the <b>yard</b>.",
-                "The man was upset after he robbed himself."
+                "The man was upset after he <b>robbed</b> himself."
               ],
               "explanation": "yard: cái sân.",
               "correctAnswer": "A"

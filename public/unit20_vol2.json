@@ -15,7 +15,7 @@
               "content": "<p>1.</p>",
               "options": [
                 "Learning Spanish was a <b>gradual</b> process for me.",
-                "The boy retired his mother."
+                "The boy <b>retired</b> his mother."
               ],
               "explanation": "Option a makes better sense.",
               "correctAnswer": "A"
@@ -35,7 +35,7 @@
               "content": "<p>3.</p>",
               "options": [
                 "Four is the <b>approximate</b> number of forty.",
-                "The old man retired from his job."
+                "The old man <b>retired</b> from his job."
               ],
               "explanation": "Option b makes better sense.",
               "correctAnswer": "B"

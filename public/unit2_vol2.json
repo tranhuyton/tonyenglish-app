@@ -150,7 +150,7 @@
               "id": "11",
               "content": "11.",
               "options": [
-                "Many castles are built with thick stone walls.",
+                "Many <b>castles</b> are built with thick stone walls.",
                 "When you <b>command</b> somebody, you work for them."
               ],
               "explanation": "Câu này hợp lý vì lâu đài thường được xây bằng tường đá dày.",
@@ -181,7 +181,7 @@
               "content": "14.",
               "options": [
                 "It takes a long time to get to <b>remote</b> places.",
-                "Weeds make a house more beautiful."
+                "<b>Weeds</b> make a house more beautiful."
               ],
               "explanation": "Câu này hợp lý vì những nơi xa xôi (remote places) mất nhiều thời gian để đi tới.",
               "correctAnswer": "A"
@@ -231,7 +231,7 @@
               "content": "19.",
               "options": [
                 "Many people have a <b>castle</b> inside their house.",
-                "If you don't keep your yard clean, weeds will grow."
+                "If you don't keep your yard clean, <b>weeds</b> will grow."
               ],
               "explanation": "Câu này hợp lý vì cỏ dại (weeds) sẽ mọc nếu sân không được dọn dẹp sạch sẽ.",
               "correctAnswer": "B"

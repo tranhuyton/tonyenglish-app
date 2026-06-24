@@ -54,7 +54,7 @@
               "id": "5",
               "content": "<p>5.</p>",
               "options": [
-                "a. The loud music interferes with my concentration.",
+                "a. The loud music <b>interferes</b> with my concentration.",
                 "b. It is against his <b>principals</b> to be dishonest."
               ],
               "explanation": "interfere nghĩa là làm cản trở. principal ở câu b bị sai chính tả so với principles.",

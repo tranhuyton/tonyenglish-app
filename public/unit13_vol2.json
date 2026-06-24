@@ -183,7 +183,7 @@
               "content": "",
               "options": [
                 "a. The boy was filled with <b>pride</b> when he learned how to read.",
-                "b. I hiked downstairs from my room."
+                "b. I <b>hiked</b> downstairs from my room."
               ],
               "explanation": "pride (tự hào) hợp lý khi cậu bé học được cách đọc.",
               "correctAnswer": "A"

@@ -143,7 +143,7 @@
               "content": "",
               "options": [
                 "a. Reading increases your <b>mental</b> activity.",
-                "b. We removed the city last week."
+                "b. We <b>removed</b> the city last week."
               ],
               "explanation": "Reading increases your mental activity. is logical.",
               "correctAnswer": "A"

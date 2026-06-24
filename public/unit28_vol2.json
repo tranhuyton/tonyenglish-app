@@ -190,7 +190,7 @@
               "id": "15",
               "content": "<p>5.</p>",
               "options": [
-                "The man dared to leap over the big fire.",
+                "The man <b>dared</b> to leap over the big fire.",
                 "It is important to <b>weigh</b> your math tests."
               ],
               "explanation": "dared makes sense here.",
@@ -220,7 +220,7 @@
               "id": "18",
               "content": "<p>8.</p>",
               "options": [
-                "The boy was accompanied alone to school.",
+                "The boy was <b>accompanied</b> alone to school.",
                 "The fish could not get out of the <b>net</b>."
               ],
               "explanation": "net makes sense here.",

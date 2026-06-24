@@ -186,7 +186,7 @@
               "content": "<p>4.</p>",
               "options": [
                 "a. He went to the <b>tip</b> of the school.",
-                "b. Doing a book report involves reading."
+                "b. Doing a book report <b>involves</b> reading."
               ],
               "explanation": "Câu b hợp lý: làm báo cáo sách bao gồm/đòi hỏi (involves) việc đọc.",
               "correctAnswer": "B"
@@ -195,7 +195,7 @@
               "id": "15",
               "content": "<p>5.</p>",
               "options": [
-                "a. The garbage truck came and produced some sunshine.",
+                "a. The garbage truck came and <b>produced</b> some sunshine.",
                 "b. I <b>associate</b> dogs with good pets."
               ],
               "explanation": "Câu b hợp lý: tôi liên tưởng (associate) chó là thú cưng tốt.",
