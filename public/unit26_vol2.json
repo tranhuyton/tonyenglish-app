@@ -213,7 +213,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "He blamed me of taking the last piece of pie. (ac__________)",
+              "content": "He <u>blamed me of taking</u> the last piece of pie. (ac__________)",
               "options": [
                 "accused",
                 "plain",
@@ -225,7 +225,7 @@
             },
             {
               "id": "17",
-              "content": "The man's bedroom was very simple. (pla____)",
+              "content": "The man's bedroom was <u>very simple</u>. (pla____)",
               "options": [
                 "plain",
                 "accused",
@@ -237,7 +237,7 @@
             },
             {
               "id": "18",
-              "content": "The clown likes to entertain children. (amu____)",
+              "content": "The clown likes to <u>entertain</u> children. (amu____)",
               "options": [
                 "amuse",
                 "adjust",
@@ -249,7 +249,7 @@
             },
             {
               "id": "19",
-              "content": "I need to change the way I run so I can be faster. (adj______)",
+              "content": "I need to <u>change</u> the way I run so I can be faster. (adj______)",
               "options": [
                 "adjust",
                 "engaged",
@@ -261,7 +261,7 @@
             },
             {
               "id": "20",
-              "content": "During their free time, the children did many different activities. (en___________ in)",
+              "content": "During their free time, the children <u>did</u> many different activities. (en___________ in)",
               "options": [
                 "engaged",
                 "cotton",
@@ -273,7 +273,7 @@
             },
             {
               "id": "21",
-              "content": "This cloth dress is one of my favorites. (co_________)",
+              "content": "This <u>cloth</u> dress is one of my favorites. (co_________)",
               "options": [
                 "cotton",
                 "hurricane",
@@ -285,7 +285,7 @@
             },
             {
               "id": "22",
-              "content": "The bad storm over the ocean almost reached the land. (hu_______________)",
+              "content": "The <u>bad storm over the ocean</u> almost reached the land. (hu_______________)",
               "options": [
                 "hurricane",
                 "shut",
@@ -297,7 +297,7 @@
             },
             {
               "id": "23",
-              "content": "Tightly close the window before the rain starts! (s______)",
+              "content": "<u>Tightly close</u> the window before the rain starts! (s______)",
               "options": [
                 "shut",
                 "crash",
@@ -309,7 +309,7 @@
             },
             {
               "id": "24",
-              "content": "He will hit something and break his bike if he closes his eyes while riding. (c_____)",
+              "content": "He will <u>hit something and break</u> his bike if he closes his eyes while riding. (c_____)",
               "options": [
                 "crash",
                 "zone",
@@ -321,7 +321,7 @@
             },
             {
               "id": "25",
-              "content": "The army fights in the war area. (z____)",
+              "content": "The army fights in the war <u>area</u>. (z____)",
               "options": [
                 "zone",
                 "crash",
