@@ -10,497 +10,389 @@
     {
       "id": "part_wordlist",
       "title": "Word List",
-      "content": "",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"https://raw.githubusercontent.com/tranhuyton/tonyenglish-app/main/public/volume-4/unit20_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);\" /><img src=\"https://raw.githubusercontent.com/tranhuyton/tonyenglish-app/main/public/volume-4/unit20_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);\" /></div><div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">betray</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[bitrei]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To betray someone means to treat them in a dishonest way.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">blast</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[blæst]</span><span style=\"color: #ef4444; font-weight: 500;\">n.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">A blast is a loud noise made by something that explodes.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">bracelet</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[breislit]</span><span style=\"color: #ef4444; font-weight: 500;\">n.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">A bracelet is a piece of jewelry that you wear around your wrist.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">cease</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[si:s]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To cease means to stop.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">choke</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[tʃouk]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To choke means to cough because you have difficulty breathing.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">civil</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[sivəl]</span><span style=\"color: #ef4444; font-weight: 500;\">adj.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">When an event is civil, it happens inside a country.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">comment</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[kament]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To comment means to say something that shows your personal opinion.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">cross</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[krɔ:s]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To cross means to go from one side to the other side.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">dent</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[dent]</span><span style=\"color: #ef4444; font-weight: 500;\">n.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">A dent is damage caused by something heavy hitting something else.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">distrust</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[distrʌst]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To distrust someone means to believe that they are not honest.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">fort</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[fɔ:rt]</span><span style=\"color: #ef4444; font-weight: 500;\">n.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">A fort is a small building that is specially built to defend an area from attack.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">found</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[faund]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To found means to bring something into existence.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">lining</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[lainiŋ]</span><span style=\"color: #ef4444; font-weight: 500;\">n.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">Lining is a piece of cloth that covers the inside of clothes.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">mass</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[mæs]</span><span style=\"color: #ef4444; font-weight: 500;\">n.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">A mass is a large number of things of one type.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">pray</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[prei]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To pray means to talk to God.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">rife</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[raif]</span><span style=\"color: #ef4444; font-weight: 500;\">adj.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">If a place is rife with something bad, it is very common in that place.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">sole</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[soul]</span><span style=\"color: #ef4444; font-weight: 500;\">adj.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">When something is the sole thing, it is the only thing of a particular type.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">sweep</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[swi:p]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">If you sweep the floor, you clean it with a tool like a broom or a brush.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">treachery</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[tretʃəri]</span><span style=\"color: #ef4444; font-weight: 500;\">n.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">Treachery is a behavior in which a person betrays a country or a person.</p></div><div style=\"margin-bottom: 24px; padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3b82f6;\"><div style=\"display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px;\"><h3 style=\"margin: 0; font-size: 1.25rem; color: #1e293b;\">tuck</h3><span style=\"color: #64748b; font-size: 0.9rem;\">[tʌk]</span><span style=\"color: #ef4444; font-weight: 500;\">v.</span></div><p style=\"margin: 0 0 8px 0; color: #334155; line-height: 1.5;\">To tuck something means to put it somewhere so that it is neat or safe.</p></div></div></div>",
       "sections": [
         {
-          "id": "part3",
-          "data": {
-            "title": "Unit 20: The Betrayal",
-            "words": [
-              {
-                "word": "betray",
-                "wordType": "v.",
-                "explanation": "To betray someone means to treat them in a dishonest way.",
-                "pronunciation": "[bitrei]"
-              },
-              {
-                "word": "blast",
-                "wordType": "n.",
-                "explanation": "A blast is a loud noise made by something that explodes.",
-                "pronunciation": "[blæst]"
-              },
-              {
-                "word": "bracelet",
-                "wordType": "n.",
-                "explanation": "A bracelet is a piece of jewelry that you wear around your wrist.",
-                "pronunciation": "[breislit]"
-              },
-              {
-                "word": "cease",
-                "wordType": "v.",
-                "explanation": "To cease means to stop.",
-                "pronunciation": "[si:s]"
-              },
-              {
-                "word": "choke",
-                "wordType": "v.",
-                "explanation": "To choke means to cough because you have difficulty breathing.",
-                "pronunciation": "[tʃouk]"
-              },
-              {
-                "word": "civil",
-                "wordType": "adj.",
-                "explanation": "When an event is civil, it happens inside a country.",
-                "pronunciation": "[sivəl]"
-              },
-              {
-                "word": "comment",
-                "wordType": "v.",
-                "explanation": "To comment means to say something that shows your personal opinion.",
-                "pronunciation": "[kament]"
-              },
-              {
-                "word": "cross",
-                "wordType": "v.",
-                "explanation": "To cross means to go from one side to the other side.",
-                "pronunciation": "[krɔ:s]"
-              },
-              {
-                "word": "dent",
-                "wordType": "n.",
-                "explanation": "A dent is damage caused by something heavy hitting something else.",
-                "pronunciation": "[dent]"
-              },
-              {
-                "word": "distrust",
-                "wordType": "v.",
-                "explanation": "To distrust someone means to believe that they are not honest.",
-                "pronunciation": "[distrʌst]"
-              },
-              {
-                "word": "fort",
-                "wordType": "n.",
-                "explanation": "A fort is a small building that is specially built to defend an area from attack.",
-                "pronunciation": "[fɔ:rt]"
-              },
-              {
-                "word": "found",
-                "wordType": "v.",
-                "explanation": "To found means to bring something into existence.",
-                "pronunciation": "[faund]"
-              },
-              {
-                "word": "lining",
-                "wordType": "n.",
-                "explanation": "Lining is a piece of cloth that covers the inside of clothes.",
-                "pronunciation": "[lainiŋ]"
-              },
-              {
-                "word": "mass",
-                "wordType": "n.",
-                "explanation": "A mass is a large number of things of one type.",
-                "pronunciation": "[mæs]"
-              },
-              {
-                "word": "pray",
-                "wordType": "v.",
-                "explanation": "To pray means to talk to God.",
-                "pronunciation": "[prei]"
-              },
-              {
-                "word": "rife",
-                "wordType": "adj.",
-                "explanation": "If a place is rife with something bad, it is very common in that place.",
-                "pronunciation": "[raif]"
-              },
-              {
-                "word": "sole",
-                "wordType": "adj.",
-                "explanation": "When something is the sole thing, it is the only thing of a particular type.",
-                "pronunciation": "[soul]"
-              },
-              {
-                "word": "sweep",
-                "wordType": "v.",
-                "explanation": "If you sweep the floor, you clean it with a tool like a broom or a brush.",
-                "pronunciation": "[swi:p]"
-              },
-              {
-                "word": "treachery",
-                "wordType": "n.",
-                "explanation": "Treachery is a behavior in which a person betrays a country or a person.",
-                "pronunciation": "[tretʃəri]"
-              },
-              {
-                "word": "tuck",
-                "wordType": "v.",
-                "explanation": "To tuck something means to put it somewhere so that it is neat or safe.",
-                "pronunciation": "[tʌk]"
-              }
-            ],
-            "reading": {
-              "passage": [
-                "A king lived in a fort with his daughter, Clara. The king had founded a great empire, but his land was rife with enemies who wanted to take over the kingdom. Because there was so much civil unrest, the king told Clara not to trust anyone.",
-                "One day, Clara was walking outside when she saw a girl sweeping the path. Clara crossed the garden, and they started talking. The girl's name was Susie. Clara felt sorry for Susie because she was very poor, and Clara gave her a bracelet. After that, Susie and Clara met every day.",
-                "Once, the King saw them talking. He told Clara, \"Don't talk to that girl. She could be an enemy.\"",
-                "\"You can't distrust everyone,\" commented Clara. \"She is my sole friend. It's OK to be friendly to people.\"",
-                "The King said, \"Don't argue with me. Stay inside from now on, and talk to no one.\"",
-                "Clara felt lonely in the fort. But one day she saw Susie outside. She wrote her a note with a map showing a secret entrance to the fort. Clara wrote: \"Come at night, and we can talk together. Don't show anybody this note.\" She threw the note to Susie, and Susie tucked it in the lining of her dress.",
-                "That night Clara waited for Susie. But she heard something ticking, and then a loud blast. She ran into the hall, and it was full of smoke, which made her choke. A mass of soldiers were there, fighting. Clara realized that Susie had betrayed her and given the map to her father's enemies. Clara prayed that everyone in the castle would be safe from her friend's treachery.",
-                "At last, the fighting ceased. Clara found her father in the hall with his soldiers. They had defeated their enemies, but there were dents in their armor from the heavy fighting. Clara told her father what she had done and promised never to disobey him again."
+          "id": "sec_wl_0",
+          "title": "Exercise 1",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_wl_0_0",
+              "content": "<p>to clean with a broom</p>",
+              "options": [
+                "sweep",
+                "betray",
+                "pray",
+                "choke"
               ],
-              "exercises": [
-                {
-                  "title": "Reading Comprehension - Part A",
-                  "questions": [
-                    {
-                      "options": [
-                        "T",
-                        "F"
-                      ],
-                      "question": "The land near the King's fort was safe from enemies.",
-                      "explanation": "The land near the King's fort was rife with enemies.",
-                      "correctAnswer": "F"
-                    },
-                    {
-                      "options": [
-                        "T",
-                        "F"
-                      ],
-                      "question": "When Clara and Susie met, Clara was sweeping the path.",
-                      "explanation": "When Clara and Susie met, Susie was sweeping the path.",
-                      "correctAnswer": "F"
-                    },
-                    {
-                      "options": [
-                        "T",
-                        "F"
-                      ],
-                      "question": "Clara crossed the garden to talk to Susie.",
-                      "explanation": "",
-                      "correctAnswer": "T"
-                    },
-                    {
-                      "options": [
-                        "T",
-                        "F"
-                      ],
-                      "question": "Clara gave Susie a bracelet.",
-                      "explanation": "",
-                      "correctAnswer": "T"
-                    },
-                    {
-                      "options": [
-                        "T",
-                        "F"
-                      ],
-                      "question": "Clara commented to her father that he should distrust people.",
-                      "explanation": "Clara commented to her father that he shouldn't distrust people.",
-                      "correctAnswer": "F"
-                    },
-                    {
-                      "options": [
-                        "T",
-                        "F"
-                      ],
-                      "question": "Clara choked because of the smoke.",
-                      "explanation": "",
-                      "correctAnswer": "T"
-                    }
-                  ],
-                  "description": "Mark each statement T for true or F for false. Rewrite the false statements to make them true."
-                },
-                {
-                  "title": "Reading Comprehension - Part B",
-                  "questions": [
-                    {
-                      "options": [
-                        "Sweep the path",
-                        "Betray her sole friend",
-                        "Found a clock ticking",
-                        "Pray"
-                      ],
-                      "question": "Which of the following actions did Clara do in the story?",
-                      "explanation": "Pray",
-                      "correctAnswer": "D"
-                    },
-                    {
-                      "options": [
-                        "Civil fighting",
-                        "A loud blast",
-                        "Susie calling at the window",
-                        "Someone sweeping"
-                      ],
-                      "question": "What did Clara hear in the middle of the night?",
-                      "explanation": "A loud blast",
-                      "correctAnswer": "B"
-                    },
-                    {
-                      "options": [
-                        "Anybody could be an enemy.",
-                        "Clara should be friendly to people.",
-                        "He distrusted his relatives.",
-                        "His enemy's treachery had ceased."
-                      ],
-                      "question": "What did the king emphasize?",
-                      "explanation": "Anybody could be an enemy.",
-                      "correctAnswer": "A"
-                    },
-                    {
-                      "options": [
-                        "In the garden",
-                        "In the hall",
-                        "In the King's bedroom",
-                        "Outside Clara's window"
-                      ],
-                      "question": "Where were the mass of soldiers fighting?",
-                      "explanation": "In the hall",
-                      "correctAnswer": "B"
-                    }
-                  ],
-                  "description": "Answer the questions."
-                }
-              ],
-              "storyImage": {
-                "alt": "The Betrayal",
-                "url": "https://raw.githubusercontent.com/tranhuyton/tonyenglish-app/main/public/volume-4/unit20_vol4_story.png"
-              }
+              "correctAnswer": "A",
+              "explanation": "sweep: quét nhà"
             },
-            "exercises": [
-              {
-                "title": "Exercise 1",
-                "questions": [
-                  {
-                    "options": [
-                      "sweep",
-                      "betray",
-                      "pray",
-                      "choke"
-                    ],
-                    "question": "to clean with a broom",
-                    "explanation": "sweep: quét nhà",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "comment",
-                      "cross",
-                      "cease",
-                      "distrust"
-                    ],
-                    "question": "to say your opinion",
-                    "explanation": "comment: bình luận, đưa ra ý kiến",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "sole",
-                      "dent",
-                      "tuck",
-                      "found"
-                    ],
-                    "question": "to bring into existence",
-                    "explanation": "found: thành lập, sáng lập",
-                    "correctAnswer": "D"
-                  },
-                  {
-                    "options": [
-                      "civil",
-                      "bracelet",
-                      "mass",
-                      "fort"
-                    ],
-                    "question": "a piece of jewelry",
-                    "explanation": "bracelet: vòng tay",
-                    "correctAnswer": "B"
-                  },
-                  {
-                    "options": [
-                      "treachery",
-                      "blast",
-                      "rife",
-                      "lining"
-                    ],
-                    "question": "a loud explosion",
-                    "explanation": "blast: tiếng nổ",
-                    "correctAnswer": "B"
-                  }
-                ],
-                "description": "Choose the right word for the given definition."
-              },
-              {
-                "title": "Exercise 2",
-                "questions": [
-                  {
-                    "answer": "sole",
-                    "question": "The lucky man was the <u class=\"font-bold\">only</u> winner of the grand prize.",
-                    "explanation": "sole = duy nhất"
-                  },
-                  {
-                    "answer": "pray",
-                    "question": "She was so worried about her mother's health that she went to church to <u class=\"font-bold\">talk to God</u>.",
-                    "explanation": "pray = cầu nguyện"
-                  },
-                  {
-                    "answer": "choked",
-                    "question": "He <u class=\"font-bold\">coughed and had difficulty breathing</u> after eating a large piece of food.",
-                    "explanation": "choke = nghẹt thở"
-                  },
-                  {
-                    "answer": "ceased",
-                    "question": "The rain <u class=\"font-bold\">stopped</u> in the early morning after pouring all night long.",
-                    "explanation": "cease = dừng lại"
-                  },
-                  {
-                    "answer": "mass",
-                    "question": "There is a <u class=\"font-bold\">large number</u> of people in the park today.",
-                    "explanation": "mass = số lượng lớn"
-                  },
-                  {
-                    "answer": "dent",
-                    "question": "I hit the wall with my car, and now there is a small <u class=\"font-bold\">amount of damage</u> in it.",
-                    "explanation": "dent = vết lõm"
-                  },
-                  {
-                    "answer": "distrust",
-                    "question": "I <u class=\"font-bold\">don't believe the honesty of</u> people who always try to borrow money.",
-                    "explanation": "distrust = không tin tưởng"
-                  },
-                  {
-                    "answer": "rife",
-                    "question": "The conditions in some parts of Africa are very poor, and disease is <u class=\"font-bold\">very common</u>.",
-                    "explanation": "rife = lan tràn, phổ biến"
-                  },
-                  {
-                    "answer": "betrayed",
-                    "question": "The man behaved in an <u class=\"font-bold\">untrustworthy way</u> toward his friends.",
-                    "explanation": "betray = phản bội"
-                  },
-                  {
-                    "answer": "cross",
-                    "question": "I'm going to <u class=\"font-bold\">go to the other side</u> of the road to meet my friend.",
-                    "explanation": "cross = đi qua"
-                  }
-                ],
-                "description": "Write a word that is similar in meaning to the underlined part."
-              },
-              {
-                "title": "Exercise 3",
-                "questions": [
-                  {
-                    "options": [
-                      "blast / choke",
-                      "choke / blast"
-                    ],
-                    "question": "The ______ threw a lot of smoke into the air, and it made me ______.",
-                    "explanation": "blast (vụ nổ), choke (nghẹt thở)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "fort / treachery",
-                      "treachery / fort"
-                    ],
-                    "question": "The army built a ______ to defend themselves from their former ally's ______.",
-                    "explanation": "fort (pháo đài), treachery (sự phản bội)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "sweep / tuck",
-                      "tuck / sweep"
-                    ],
-                    "question": "My jobs at home are to ______ the floor and ______ things under the bed.",
-                    "explanation": "sweep (quét), tuck (nhét, giấu)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "sole / lining",
-                      "lining / sole"
-                    ],
-                    "question": "The homeless man's ______ possession was a jacket with a warm ______.",
-                    "explanation": "sole (duy nhất), lining (lớp lót)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "distrust / betray",
-                      "betray / distrust"
-                    ],
-                    "question": "I ______ those girls because they ______ their friends by telling their secrets.",
-                    "explanation": "distrust (không tin tưởng), betray (phản bội)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "founded / ceased",
-                      "ceased / founded"
-                    ],
-                    "question": "He ______ his business after the fighting from the war ______.",
-                    "explanation": "found (thành lập), cease (chấm dứt)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "commented / civil",
-                      "civil / commented"
-                    ],
-                    "question": "The man on the news ______ on the recent ______ struggles of the people.",
-                    "explanation": "comment (bình luận), civil (thuộc về dân sự, nội bộ)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "bracelet / dent",
-                      "dent / bracelet"
-                    ],
-                    "question": "Fiona stepped on my ______ and made a ______.",
-                    "explanation": "bracelet (vòng tay), dent (vết lõm)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "mass / cross",
-                      "cross / mass"
-                    ],
-                    "question": "I watched the ______ of people ______ the bridge to see the Queen.",
-                    "explanation": "mass (đám đông), cross (băng qua)",
-                    "correctAnswer": "A"
-                  },
-                  {
-                    "options": [
-                      "rife / pray",
-                      "pray / rife"
-                    ],
-                    "question": "The country was ______ with enemies, so I ______ that our people would be safe.",
-                    "explanation": "rife (đầy rẫy), pray (cầu nguyện)",
-                    "correctAnswer": "A"
-                  }
-                ],
-                "description": "Choose the word that is the better fit for each blank."
-              }
-            ],
-            "wordListImage": [
-              {
-                "alt": "Unit 20 Word List 1",
-                "url": "https://raw.githubusercontent.com/tranhuyton/tonyenglish-app/main/public/volume-4/unit20_vol4_word_list_1.png"
-              },
-              {
-                "alt": "Unit 20 Word List 2",
-                "url": "https://raw.githubusercontent.com/tranhuyton/tonyenglish-app/main/public/volume-4/unit20_vol4_word_list_2.png"
-              }
-            ]
-          },
-          "title": "Vocabulary Exercises"
+            {
+              "id": "q_wl_0_1",
+              "content": "<p>to say your opinion</p>",
+              "options": [
+                "comment",
+                "cross",
+                "cease",
+                "distrust"
+              ],
+              "correctAnswer": "A",
+              "explanation": "comment: bình luận, đưa ra ý kiến"
+            },
+            {
+              "id": "q_wl_0_2",
+              "content": "<p>to bring into existence</p>",
+              "options": [
+                "sole",
+                "dent",
+                "tuck",
+                "found"
+              ],
+              "correctAnswer": "D",
+              "explanation": "found: thành lập, sáng lập"
+            },
+            {
+              "id": "q_wl_0_3",
+              "content": "<p>a piece of jewelry</p>",
+              "options": [
+                "civil",
+                "bracelet",
+                "mass",
+                "fort"
+              ],
+              "correctAnswer": "B",
+              "explanation": "bracelet: vòng tay"
+            },
+            {
+              "id": "q_wl_0_4",
+              "content": "<p>a loud explosion</p>",
+              "options": [
+                "treachery",
+                "blast",
+                "rife",
+                "lining"
+              ],
+              "correctAnswer": "B",
+              "explanation": "blast: tiếng nổ"
+            }
+          ]
+        },
+        {
+          "id": "sec_wl_1",
+          "title": "Exercise 2",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "q_wl_1_0",
+              "content": "<p style=\"margin-bottom: 12px;\">The lucky man was the <u class=\"font-bold\">only</u> winner of the grand prize. [ 1 ]</p><p style=\"margin-bottom: 12px;\">She was so worried about her mother's health that she went to church to <u class=\"font-bold\">talk to God</u>. [ 2 ]</p><p style=\"margin-bottom: 12px;\">He <u class=\"font-bold\">coughed and had difficulty breathing</u> after eating a large piece of food. [ 3 ]</p><p style=\"margin-bottom: 12px;\">The rain <u class=\"font-bold\">stopped</u> in the early morning after pouring all night long. [ 4 ]</p><p style=\"margin-bottom: 12px;\">There is a <u class=\"font-bold\">large number</u> of people in the park today. [ 5 ]</p><p style=\"margin-bottom: 12px;\">I hit the wall with my car, and now there is a small <u class=\"font-bold\">amount of damage</u> in it. [ 6 ]</p><p style=\"margin-bottom: 12px;\">I <u class=\"font-bold\">don't believe the honesty of</u> people who always try to borrow money. [ 7 ]</p><p style=\"margin-bottom: 12px;\">The conditions in some parts of Africa are very poor, and disease is <u class=\"font-bold\">very common</u>. [ 8 ]</p><p style=\"margin-bottom: 12px;\">The man behaved in an <u class=\"font-bold\">untrustworthy way</u> toward his friends. [ 9 ]</p><p style=\"margin-bottom: 12px;\">I'm going to <u class=\"font-bold\">go to the other side</u> of the road to meet my friend. [ 10 ]</p>",
+              "options": [],
+              "correctAnswer": "sole",
+              "explanation": "sole = duy nhất"
+            },
+            {
+              "id": "q_wl_1_1",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "pray",
+              "explanation": "pray = cầu nguyện"
+            },
+            {
+              "id": "q_wl_1_2",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "choked",
+              "explanation": "choke = nghẹt thở"
+            },
+            {
+              "id": "q_wl_1_3",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "ceased",
+              "explanation": "cease = dừng lại"
+            },
+            {
+              "id": "q_wl_1_4",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "mass",
+              "explanation": "mass = số lượng lớn"
+            },
+            {
+              "id": "q_wl_1_5",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "dent",
+              "explanation": "dent = vết lõm"
+            },
+            {
+              "id": "q_wl_1_6",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "distrust",
+              "explanation": "distrust = không tin tưởng"
+            },
+            {
+              "id": "q_wl_1_7",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "rife",
+              "explanation": "rife = lan tràn, phổ biến"
+            },
+            {
+              "id": "q_wl_1_8",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "betrayed",
+              "explanation": "betray = phản bội"
+            },
+            {
+              "id": "q_wl_1_9",
+              "content": "<p></p>",
+              "options": [],
+              "correctAnswer": "cross",
+              "explanation": "cross = đi qua"
+            }
+          ]
+        },
+        {
+          "id": "sec_wl_2",
+          "title": "Exercise 3",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_wl_2_0",
+              "content": "<p>The ______ threw a lot of smoke into the air, and it made me ______.</p>",
+              "options": [
+                "blast / choke",
+                "choke / blast"
+              ],
+              "correctAnswer": "A",
+              "explanation": "blast (vụ nổ), choke (nghẹt thở)"
+            },
+            {
+              "id": "q_wl_2_1",
+              "content": "<p>The army built a ______ to defend themselves from their former ally's ______.</p>",
+              "options": [
+                "fort / treachery",
+                "treachery / fort"
+              ],
+              "correctAnswer": "A",
+              "explanation": "fort (pháo đài), treachery (sự phản bội)"
+            },
+            {
+              "id": "q_wl_2_2",
+              "content": "<p>My jobs at home are to ______ the floor and ______ things under the bed.</p>",
+              "options": [
+                "sweep / tuck",
+                "tuck / sweep"
+              ],
+              "correctAnswer": "A",
+              "explanation": "sweep (quét), tuck (nhét, giấu)"
+            },
+            {
+              "id": "q_wl_2_3",
+              "content": "<p>The homeless man's ______ possession was a jacket with a warm ______.</p>",
+              "options": [
+                "sole / lining",
+                "lining / sole"
+              ],
+              "correctAnswer": "A",
+              "explanation": "sole (duy nhất), lining (lớp lót)"
+            },
+            {
+              "id": "q_wl_2_4",
+              "content": "<p>I ______ those girls because they ______ their friends by telling their secrets.</p>",
+              "options": [
+                "distrust / betray",
+                "betray / distrust"
+              ],
+              "correctAnswer": "A",
+              "explanation": "distrust (không tin tưởng), betray (phản bội)"
+            },
+            {
+              "id": "q_wl_2_5",
+              "content": "<p>He ______ his business after the fighting from the war ______.</p>",
+              "options": [
+                "founded / ceased",
+                "ceased / founded"
+              ],
+              "correctAnswer": "A",
+              "explanation": "found (thành lập), cease (chấm dứt)"
+            },
+            {
+              "id": "q_wl_2_6",
+              "content": "<p>The man on the news ______ on the recent ______ struggles of the people.</p>",
+              "options": [
+                "commented / civil",
+                "civil / commented"
+              ],
+              "correctAnswer": "A",
+              "explanation": "comment (bình luận), civil (thuộc về dân sự, nội bộ)"
+            },
+            {
+              "id": "q_wl_2_7",
+              "content": "<p>Fiona stepped on my ______ and made a ______.</p>",
+              "options": [
+                "bracelet / dent",
+                "dent / bracelet"
+              ],
+              "correctAnswer": "A",
+              "explanation": "bracelet (vòng tay), dent (vết lõm)"
+            },
+            {
+              "id": "q_wl_2_8",
+              "content": "<p>I watched the ______ of people ______ the bridge to see the Queen.</p>",
+              "options": [
+                "mass / cross",
+                "cross / mass"
+              ],
+              "correctAnswer": "A",
+              "explanation": "mass (đám đông), cross (băng qua)"
+            },
+            {
+              "id": "q_wl_2_9",
+              "content": "<p>The country was ______ with enemies, so I ______ that our people would be safe.</p>",
+              "options": [
+                "rife / pray",
+                "pray / rife"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rife (đầy rẫy), pray (cầu nguyện)"
+            }
+          ]
         }
       ]
     },
     {
       "id": "part_reading",
       "title": "Comprehensive Reading",
-      "content": "<div class=\"space-y-6\"><div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\"><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">betray</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">phản bội, phụ lòng tin</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">blast</span><span class=\"text-gray-500 italic\">n.</span></div><p class=\"text-gray-700 mt-1\">vụ nổ, tiếng nổ</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">bracelet</span><span class=\"text-gray-500 italic\">n.</span></div><p class=\"text-gray-700 mt-1\">vòng đeo tay</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">cease</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">dừng, ngừng, ngớt</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">choke</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">nghẹt thở, ngạt thở</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">civil</span><span class=\"text-gray-500 italic\">adj.</span></div><p class=\"text-gray-700 mt-1\">thuộc về dân sự, nội bộ</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">comment</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">bình luận, nhận xét</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">cross</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">đi ngang qua, vượt qua</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">dent</span><span class=\"text-gray-500 italic\">n.</span></div><p class=\"text-gray-700 mt-1\">vết lõm</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">distrust</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">không tin tưởng, nghi ngờ</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">fort</span><span class=\"text-gray-500 italic\">n.</span></div><p class=\"text-gray-700 mt-1\">pháo đài</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">found</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">thành lập, sáng lập</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">lining</span><span class=\"text-gray-500 italic\">n.</span></div><p class=\"text-gray-700 mt-1\">lớp lót (áo, mũ...)</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">mass</span><span class=\"text-gray-500 italic\">n.</span></div><p class=\"text-gray-700 mt-1\">số lượng lớn, khối lượng lớn</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">pray</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">cầu nguyện</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">rife</span><span class=\"text-gray-500 italic\">adj.</span></div><p class=\"text-gray-700 mt-1\">đầy rẫy, lan tràn</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">sole</span><span class=\"text-gray-500 italic\">adj.</span></div><p class=\"text-gray-700 mt-1\">duy nhất, độc nhất</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">sweep</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">quét, dọn dẹp</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">treachery</span><span class=\"text-gray-500 italic\">n.</span></div><p class=\"text-gray-700 mt-1\">sự phản bội, sự phản trắc</p></div><div class=\"bg-white p-4 rounded-lg shadow-sm border border-gray-200\"><div class=\"flex items-center gap-2\"><span class=\"font-bold text-lg text-blue-600\">tuck</span><span class=\"text-gray-500 italic\">v.</span></div><p class=\"text-gray-700 mt-1\">nhét vào, đút vào</p></div></div></div>",
-      "sections": []
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;\">The Betrayal</h1><img src=\"https://raw.githubusercontent.com/tranhuyton/tonyenglish-app/main/public/volume-4/unit20_vol4_story.png\" style=\"width: 100%; border-radius: 8px; margin-bottom: 20px;\" /><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">A king lived in a fort with his daughter, Clara. The king had founded a great empire, but his land was rife with enemies who wanted to take over the kingdom. Because there was so much civil unrest, the king told Clara not to trust anyone.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">One day, Clara was walking outside when she saw a girl sweeping the path. Clara crossed the garden, and they started talking. The girl's name was Susie. Clara felt sorry for Susie because she was very poor, and Clara gave her a bracelet. After that, Susie and Clara met every day.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">Once, the King saw them talking. He told Clara, \"Don't talk to that girl. She could be an enemy.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">\"You can't distrust everyone,\" commented Clara. \"She is my sole friend. It's OK to be friendly to people.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">The King said, \"Don't argue with me. Stay inside from now on, and talk to no one.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">Clara felt lonely in the fort. But one day she saw Susie outside. She wrote her a note with a map showing a secret entrance to the fort. Clara wrote: \"Come at night, and we can talk together. Don't show anybody this note.\" She threw the note to Susie, and Susie tucked it in the lining of her dress.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">That night Clara waited for Susie. But she heard something ticking, and then a loud blast. She ran into the hall, and it was full of smoke, which made her choke. A mass of soldiers were there, fighting. Clara realized that Susie had betrayed her and given the map to her father's enemies. Clara prayed that everyone in the castle would be safe from her friend's treachery.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">At last, the fighting ceased. Clara found her father in the hall with his soldiers. They had defeated their enemies, but there were dents in their armor from the heavy fighting. Clara told her father what she had done and promised never to disobey him again.</p></div>",
+      "sections": [
+        {
+          "id": "sec_r_0",
+          "title": "Reading Comprehension - Part A",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_r_0_0",
+              "content": "<p>The land near the King's fort was safe from enemies.</p>",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "The land near the King's fort was rife with enemies."
+            },
+            {
+              "id": "q_r_0_1",
+              "content": "<p>When Clara and Susie met, Clara was sweeping the path.</p>",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "When Clara and Susie met, Susie was sweeping the path."
+            },
+            {
+              "id": "q_r_0_2",
+              "content": "<p>Clara crossed the garden to talk to Susie.</p>",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "T",
+              "explanation": ""
+            },
+            {
+              "id": "q_r_0_3",
+              "content": "<p>Clara gave Susie a bracelet.</p>",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "T",
+              "explanation": ""
+            },
+            {
+              "id": "q_r_0_4",
+              "content": "<p>Clara commented to her father that he should distrust people.</p>",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "Clara commented to her father that he shouldn't distrust people."
+            },
+            {
+              "id": "q_r_0_5",
+              "content": "<p>Clara choked because of the smoke.</p>",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "T",
+              "explanation": ""
+            }
+          ]
+        },
+        {
+          "id": "sec_r_1",
+          "title": "Reading Comprehension - Part B",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_r_1_0",
+              "content": "<p>Which of the following actions did Clara do in the story?</p>",
+              "options": [
+                "Sweep the path",
+                "Betray her sole friend",
+                "Found a clock ticking",
+                "Pray"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Pray"
+            },
+            {
+              "id": "q_r_1_1",
+              "content": "<p>What did Clara hear in the middle of the night?</p>",
+              "options": [
+                "Civil fighting",
+                "A loud blast",
+                "Susie calling at the window",
+                "Someone sweeping"
+              ],
+              "correctAnswer": "B",
+              "explanation": "A loud blast"
+            },
+            {
+              "id": "q_r_1_2",
+              "content": "<p>What did the king emphasize?</p>",
+              "options": [
+                "Anybody could be an enemy.",
+                "Clara should be friendly to people.",
+                "He distrusted his relatives.",
+                "His enemy's treachery had ceased."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Anybody could be an enemy."
+            },
+            {
+              "id": "q_r_1_3",
+              "content": "<p>Where were the mass of soldiers fighting?</p>",
+              "options": [
+                "In the garden",
+                "In the hall",
+                "In the King's bedroom",
+                "Outside Clara's window"
+              ],
+              "correctAnswer": "B",
+              "explanation": "In the hall"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
