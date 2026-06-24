@@ -90,35 +90,35 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\"><p>1. He had a very important job that he loved.</p> [ 6 ]</p><p class=\"mb-4\"><p>2. Linda was happy that she had good people at work.</p> [ 7 ]</p><p class=\"mb-4\"><p>3. Bernie had never taken that way home before.</p> [ 8 ]</p><p class=\"mb-4\"><p>4. This is a true movie about her life.</p> [ 9 ]</p><p class=\"mb-4\"><p>5. Our country used to have one other country under our control.</p> [ 10 ]</p>",
+              "content": "<p>1. He had a very important job that he loved.</p> [ 6 ]",
               "options": [],
               "correctAnswer": "MISSION",
               "explanation": "important job đồng nghĩa với mission."
             },
             {
               "id": "7",
-              "content": "",
+              "content": "<p>2. Linda was happy that she had good people at work.</p> [ 7 ]",
               "options": [],
               "correctAnswer": "COLLEAGUES",
               "explanation": "people at work đồng nghĩa với colleagues."
             },
             {
               "id": "8",
-              "content": "",
+              "content": "<p>3. Bernie had never taken that way home before.</p> [ 8 ]",
               "options": [],
               "correctAnswer": "ROUTE",
               "explanation": "way đồng nghĩa với route."
             },
             {
               "id": "9",
-              "content": "",
+              "content": "<p>4. This is a true movie about her life.</p> [ 9 ]",
               "options": [],
               "correctAnswer": "FACTUAL",
               "explanation": "true đồng nghĩa với factual."
             },
             {
               "id": "10",
-              "content": "",
+              "content": "<p>5. Our country used to have one other country under our control.</p> [ 10 ]",
               "options": [],
               "correctAnswer": "COLONY",
               "explanation": "country under our control đồng nghĩa với colony."

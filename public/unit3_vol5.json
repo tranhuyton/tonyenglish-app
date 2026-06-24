@@ -322,70 +322,70 @@
           "questions": [
             {
               "id": "26",
-              "content": "<p class=\"mb-4\">She really learned a lot from just one class of the beliefs and stories of different cultures. [ 26 ]</p><p class=\"mb-4\">When he states the fact with confidence that flowers can grow here, you believe him. [ 27 ]</p><p class=\"mb-4\">The tests will prove whether or not his discovery is real and not just based on theory. [ 28 ]</p><p class=\"mb-4\">The dangerous thing about nuclear power is the radiation waste it produces. [ 29 ]</p><p class=\"mb-4\">John has good learning skills that have helped him in his studies. [ 30 ]</p><p class=\"mb-4\">The stars and moon in outer space objects lit the path so I could see where I was walking. [ 31 ]</p><p class=\"mb-4\">Having a certificate of completed studies will give him more options for the future. [ 32 ]</p><p class=\"mb-4\">Albert Einstein’s ideas about time and space changed both science and the world. [ 33 ]</p><p class=\"mb-4\">You have to be very intelligent in order to solve this puzzle in a short amount of time. [ 34 ]</p><p class=\"mb-4\">Every day the unmarried men came to her home to see which of them she might choose. [ 35 ]</p>",
+              "content": "She really learned a lot from just one class of the beliefs and stories of different cultures. [ 26 ]",
               "options": [],
               "explanation": "beliefs and stories of different cultures tương đương với mythology.",
               "correctAnswer": "mythology"
             },
             {
               "id": "27",
-              "content": "",
+              "content": "When he states the fact with confidence that flowers can grow here, you believe him. [ 27 ]",
               "options": [],
               "explanation": "states the fact with confidence tương đương với asserts.",
               "correctAnswer": "asserts"
             },
             {
               "id": "28",
-              "content": "",
+              "content": "The tests will prove whether or not his discovery is real and not just based on theory. [ 28 ]",
               "options": [],
               "explanation": "based on theory tương đương với theoretical.",
               "correctAnswer": "theoretical"
             },
             {
               "id": "29",
-              "content": "",
+              "content": "The dangerous thing about nuclear power is the radiation waste it produces. [ 29 ]",
               "options": [],
               "explanation": "radiation tương đương với radioactive.",
               "correctAnswer": "radioactive"
             },
             {
               "id": "30",
-              "content": "",
+              "content": "John has good learning skills that have helped him in his studies. [ 30 ]",
               "options": [],
               "explanation": "learning skills tương quan với cognitive.",
               "correctAnswer": "cognitive"
             },
             {
               "id": "31",
-              "content": "",
+              "content": "The stars and moon in outer space objects lit the path so I could see where I was walking. [ 31 ]",
               "options": [],
               "explanation": "outer space objects tương đương với celestial.",
               "correctAnswer": "celestial"
             },
             {
               "id": "32",
-              "content": "",
+              "content": "Having a certificate of completed studies will give him more options for the future. [ 32 ]",
               "options": [],
               "explanation": "certificate of completed studies tương đương với diploma.",
               "correctAnswer": "diploma"
             },
             {
               "id": "33",
-              "content": "",
+              "content": "Albert Einstein’s ideas about time and space changed both science and the world. [ 33 ]",
               "options": [],
               "explanation": "ideas about time and space của Einstein gọi là relativity.",
               "correctAnswer": "relativity"
             },
             {
               "id": "34",
-              "content": "",
+              "content": "You have to be very intelligent in order to solve this puzzle in a short amount of time. [ 34 ]",
               "options": [],
               "explanation": "intelligent tương đương với keen.",
               "correctAnswer": "keen"
             },
             {
               "id": "35",
-              "content": "",
+              "content": "Every day the unmarried men came to her home to see which of them she might choose. [ 35 ]",
               "options": [],
               "explanation": "unmarried men tương đương với bachelors.",
               "correctAnswer": "bachelors"

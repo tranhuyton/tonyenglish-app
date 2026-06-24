@@ -80,70 +80,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\">The sun has a larger length across its center than the Earth. [ 6 ]</p><p class=\"mb-4\">The criminal act of taking something stunned the classroom of friends. [ 7 ]</p><p class=\"mb-4\">Her new plan may just solve our year-long problem. [ 8 ]</p><p class=\"mb-4\">The woman wanted the religious man to ask God for help for her. [ 9 ]</p><p class=\"mb-4\">During the long time with no food, her family had to move to the city. [ 10 ]</p><p class=\"mb-4\">The oil company used for greedy reasons the resources of the poor country. [ 11 ]</p><p class=\"mb-4\">Since he is very skinny, most of his clothes don't fit him too well. [ 12 ]</p><p class=\"mb-4\">My thing that I do everyday consists of going to work, the health club, and finally home. [ 13 ]</p><p class=\"mb-4\">Would you repeat what you just said to me? I didn't quite understand. [ 14 ]</p><p class=\"mb-4\">In history class, the students learned about the kings of ancient Egypt. [ 15 ]</p>",
+              "content": "The sun has a larger length across its center than the Earth. [ 6 ]",
               "options": [],
               "explanation": "length across its center nghĩa là đường kính (diameter).",
               "correctAnswer": "DIAMETER"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "The criminal act of taking something stunned the classroom of friends. [ 7 ]",
               "options": [],
               "explanation": "criminal act of taking something nghĩa là hành vi trộm cắp (theft).",
               "correctAnswer": "THEFT"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "Her new plan may just solve our year-long problem. [ 8 ]",
               "options": [],
               "explanation": "plan nghĩa là kế hoạch (scheme).",
               "correctAnswer": "SCHEME"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "The woman wanted the religious man to ask God for help for her. [ 9 ]",
               "options": [],
               "explanation": "ask God for help nghĩa là cầu nguyện, ban phước (bless).",
               "correctAnswer": "BLESS"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "During the long time with no food, her family had to move to the city. [ 10 ]",
               "options": [],
               "explanation": "long time with no food nghĩa là nạn đói (famine).",
               "correctAnswer": "FAMINE"
             },
             {
               "id": "11",
-              "content": "",
+              "content": "The oil company used for greedy reasons the resources of the poor country. [ 11 ]",
               "options": [],
               "explanation": "used for greedy reasons nghĩa là bóc lột, lợi dụng (exploited).",
               "correctAnswer": "EXPLOITED"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "Since he is very skinny, most of his clothes don't fit him too well. [ 12 ]",
               "options": [],
               "explanation": "skinny nghĩa là mảnh khảnh, gầy (slim).",
               "correctAnswer": "SLIM"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "My thing that I do everyday consists of going to work, the health club, and finally home. [ 13 ]",
               "options": [],
               "explanation": "thing that I do everyday nghĩa là thói quen hàng ngày (routine).",
               "correctAnswer": "ROUTINE"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "Would you repeat what you just said to me? I didn't quite understand. [ 14 ]",
               "options": [],
               "explanation": "repeat what you just said nghĩa là yêu cầu nhắc lại, xin lỗi vì không nghe rõ (pardon).",
               "correctAnswer": "PARDON"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "In history class, the students learned about the kings of ancient Egypt. [ 15 ]",
               "options": [],
               "explanation": "kings of ancient Egypt nghĩa là các pharaoh (pharaohs).",
               "correctAnswer": "PHARAOHS"

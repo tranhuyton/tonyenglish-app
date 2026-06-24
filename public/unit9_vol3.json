@@ -208,70 +208,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">Carol is always talking about how good she is to other people. [ 16 ]</p><p class=\"mb-4\">Jerry is a person who enjoys being mean to classmates. [ 17 ]</p><p class=\"mb-4\">Foods like bread and rice give you a lot of energy for an active lifestyle. [ 18 ]</p><p class=\"mb-4\">We were all sad after our team was beaten in the game. [ 19 ]</p><p class=\"mb-4\">I was caused pain by a sharp point as I was walking through the grass barefoot. [ 20 ]</p><p class=\"mb-4\">Look at the numbers on the clock face to see what time it is. [ 21 ]</p><p class=\"mb-4\">If you can't speak, then move your head up and down for yes and no. [ 22 ]</p><p class=\"mb-4\">The person who was fighting against me tried to catch me off guard. [ 23 ]</p><p class=\"mb-4\">I tried very hard to lift the heavy boxes from the desk. [ 24 ]</p><p class=\"mb-4\">Sitting through his long, boring speech was a horrible mental pain. [ 25 ]</p>",
+              "content": "Carol is always talking about how good she is to other people. [ 16 ]",
               "options": [],
               "explanation": "\"boasting\" (khoác lác) đồng nghĩa với việc luôn nói tốt về bản thân.",
               "correctAnswer": "BOASTING"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "Jerry is a person who enjoys being mean to classmates. [ 17 ]",
               "options": [],
               "explanation": "\"bully\" (kẻ bắt nạt) đồng nghĩa với người thích làm điều ác với bạn học.",
               "correctAnswer": "BULLY"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "Foods like bread and rice give you a lot of energy for an active lifestyle. [ 18 ]",
               "options": [],
               "explanation": "\"Carbohydrates\" (tinh bột) như bánh mì và gạo cung cấp năng lượng.",
               "correctAnswer": "CARBOHYDRATES"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "We were all sad after our team was beaten in the game. [ 19 ]",
               "options": [],
               "explanation": "\"defeated\" đồng nghĩa với bị đánh bại (was beaten).",
               "correctAnswer": "DEFEATED"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "I was caused pain by a sharp point as I was walking through the grass barefoot. [ 20 ]",
               "options": [],
               "explanation": "\"stung\" (bị chích, đốt) đồng nghĩa với bị đau bởi một vật nhọn.",
               "correctAnswer": "STUNG"
             },
             {
               "id": "21",
-              "content": "",
+              "content": "Look at the numbers on the clock face to see what time it is. [ 21 ]",
               "options": [],
               "explanation": "\"dial\" (mặt đồng hồ) đồng nghĩa với mặt của đồng hồ.",
               "correctAnswer": "DIAL"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "If you can't speak, then move your head up and down for yes and no. [ 22 ]",
               "options": [],
               "explanation": "\"nod\" (gật đầu) đồng nghĩa với di chuyển đầu lên xuống.",
               "correctAnswer": "NOD"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "The person who was fighting against me tried to catch me off guard. [ 23 ]",
               "options": [],
               "explanation": "\"rival\" (đối thủ) đồng nghĩa với người đang chiến đấu chống lại bạn.",
               "correctAnswer": "RIVAL"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "I tried very hard to lift the heavy boxes from the desk. [ 24 ]",
               "options": [],
               "explanation": "\"strained\" (cố sức) đồng nghĩa với việc cố gắng hết sức.",
               "correctAnswer": "STRAINED"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "Sitting through his long, boring speech was a horrible mental pain. [ 25 ]",
               "options": [],
               "explanation": "\"torture\" (sự tra tấn) đồng nghĩa với nỗi đau tinh thần tồi tệ.",
               "correctAnswer": "TORTURE"

@@ -208,70 +208,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">1. Mom says we need to hurry because the game will start very soon. [ 16 ]</p><p class=\"mb-4\">2. It's a good idea to get to know with co-workers. [ 17 ]</p><p class=\"mb-4\">3. My little brother bothered me all day by asking me to solve his difficult questions. [ 18 ]</p><p class=\"mb-4\">4. A reporter at that newspaper won a prize. [ 19 ]</p><p class=\"mb-4\">5. I am an individual who lives in the central part of town. [ 20 ]</p><p class=\"mb-4\">6. He was crying because he was caused to feel fright. [ 21 ]</p><p class=\"mb-4\">7. I want to buy that really nice dress I saw in the store. [ 22 ]</p><p class=\"mb-4\">8. I need a light I can carry to see in the dark cabin. [ 23 ]</p><p class=\"mb-4\">9. The children were afraid that the witch would hope bad things would happen to them. [ 24 ]</p><p class=\"mb-4\">10. The part of your coat that covers your head keeps your head nice and warm. [ 25 ]</p>",
+              "content": "1. Mom says we need to hurry because the game will start very soon. [ 16 ]",
               "options": [],
               "explanation": "very soon đồng nghĩa với shortly.",
               "correctAnswer": "SHORTLY"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "2. It's a good idea to get to know with co-workers. [ 17 ]",
               "options": [],
               "explanation": "get to know đồng nghĩa với acquaint.",
               "correctAnswer": "ACQUAINT"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "3. My little brother bothered me all day by asking me to solve his difficult questions. [ 18 ]",
               "options": [],
               "explanation": "difficult questions đồng nghĩa với riddles.",
               "correctAnswer": "RIDDLES"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "4. A reporter at that newspaper won a prize. [ 19 ]",
               "options": [],
               "explanation": "newspaper là một dạng publication (ấn phẩm).",
               "correctAnswer": "PUBLICATION"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "5. I am an individual who lives in the central part of town. [ 20 ]",
               "options": [],
               "explanation": "individual who lives in đồng nghĩa với inhabitant.",
               "correctAnswer": "INHABITANT"
             },
             {
               "id": "21",
-              "content": "",
+              "content": "6. He was crying because he was caused to feel fright. [ 21 ]",
               "options": [],
               "explanation": "caused to feel fright đồng nghĩa với scared.",
               "correctAnswer": "SCARED"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "7. I want to buy that really nice dress I saw in the store. [ 22 ]",
               "options": [],
               "explanation": "really nice đồng nghĩa với fancy.",
               "correctAnswer": "FANCY"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "8. I need a light I can carry to see in the dark cabin. [ 23 ]",
               "options": [],
               "explanation": "light I can carry đồng nghĩa với flashlight.",
               "correctAnswer": "FLASHLIGHT"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "9. The children were afraid that the witch would hope bad things would happen to them. [ 24 ]",
               "options": [],
               "explanation": "hope bad things would happen đồng nghĩa với curse.",
               "correctAnswer": "CURSE"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "10. The part of your coat that covers your head keeps your head nice and warm. [ 25 ]",
               "options": [],
               "explanation": "part of your coat that covers your head đồng nghĩa với hood.",
               "correctAnswer": "HOOD"

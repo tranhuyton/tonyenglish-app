@@ -214,70 +214,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">Walking was the most common form of transportation in the big city. [ 16 ]</p><p class=\"mb-4\">We are now ready to begin the first particular stage in the process. [ 17 ]</p><p class=\"mb-4\">Do the doctors know if the condition is a disease caused by a virus? [ 18 ]</p><p class=\"mb-4\">Some people don’t believe in taking drugs used to treat infections. [ 19 ]</p><p class=\"mb-4\">We were offered a bottle of sparkling cider to go well with our meal. [ 20 ]</p><p class=\"mb-4\">I seem to have lost some of the information that is put into a computer. [ 21 ]</p><p class=\"mb-4\">I wish they wouldn’t store personal information in the collection of data in the computer. [ 22 ]</p><p class=\"mb-4\">His grandmother loves to take a piece of skin and squeeze his cheeks. [ 23 ]</p><p class=\"mb-4\">I don’t really understand my body’s way that chemical processes cause food to be used. [ 24 ]</p><p class=\"mb-4\">A spring looks like a shape which winds round and round. [ 25 ]</p>",
+              "content": "Walking was the most common form of transportation in the big city. [ 16 ]",
               "options": [],
               "explanation": "\"common\" (phổ biến) đồng nghĩa với prevalent.",
               "correctAnswer": "prevalent"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "We are now ready to begin the first particular stage in the process. [ 17 ]",
               "options": [],
               "explanation": "\"particular stage\" (giai đoạn cụ thể) đồng nghĩa với phase.",
               "correctAnswer": "phase"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "Do the doctors know if the condition is a disease caused by a virus? [ 18 ]",
               "options": [],
               "explanation": "\"a disease caused by a virus\" (bệnh do virus gây ra) đồng nghĩa với viral.",
               "correctAnswer": "viral"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "Some people don’t believe in taking drugs used to treat infections. [ 19 ]",
               "options": [],
               "explanation": "\"drugs used to treat infections\" (thuốc trị nhiễm trùng) đồng nghĩa với antibiotics.",
               "correctAnswer": "antibiotics"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "We were offered a bottle of sparkling cider to go well with our meal. [ 20 ]",
               "options": [],
               "explanation": "\"go well with\" (bổ sung, làm cho tốt hơn) đồng nghĩa với complement.",
               "correctAnswer": "complement"
             },
             {
               "id": "21",
-              "content": "",
+              "content": "I seem to have lost some of the information that is put into a computer. [ 21 ]",
               "options": [],
               "explanation": "\"information that is put into a computer\" đồng nghĩa với input (dữ liệu đầu vào).",
               "correctAnswer": "input"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "I wish they wouldn’t store personal information in the collection of data in the computer. [ 22 ]",
               "options": [],
               "explanation": "\"collection of data\" (tập hợp dữ liệu) đồng nghĩa với database.",
               "correctAnswer": "database"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "His grandmother loves to take a piece of skin and squeeze his cheeks. [ 23 ]",
               "options": [],
               "explanation": "\"take a piece of skin and squeeze\" (véo da) đồng nghĩa với pinch.",
               "correctAnswer": "pinch"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "I don’t really understand my body’s way that chemical processes cause food to be used. [ 24 ]",
               "options": [],
               "explanation": "\"way that chemical processes cause food to be used\" đồng nghĩa với metabolism (sự trao đổi chất).",
               "correctAnswer": "metabolism"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "A spring looks like a shape which winds round and round. [ 25 ]",
               "options": [],
               "explanation": "\"shape which winds round and round\" (hình cuộn vòng) đồng nghĩa với spiral.",
               "correctAnswer": "spiral"

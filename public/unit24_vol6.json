@@ -18,70 +18,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">1. The best theory was the one that was <u>a combination of all the scientist’s ideas.</u> [ 1 ]</p><p class=\"mb-4\">2. When the power went out, he was forced to stop <u>or delay progress</u> on his project. [ 2 ]</p><p class=\"mb-4\">3. The brothers believe along with other people <u>to the opinion that</u> socialism is best. [ 3 ]</p><p class=\"mb-4\">4. The cutting tool was just <u>a new machine not ready to be made in large amounts.</u> [ 4 ]</p><p class=\"mb-4\">5. Her job was to get all of the goods ready <u>to sell to other countries.</u> [ 5 ]</p><p class=\"mb-4\">6. The chemist demonstrated <u>the change into a different form</u> of liquid water into gas. [ 6 ]</p><p class=\"mb-4\">7. After the tornado, it was difficult for the family <u>to have the food and money needed to live.</u> [ 7 ]</p><p class=\"mb-4\">8. The mechanic yelled when he stepped on the sharp <u>small amount of</u> metal. [ 8 ]</p><p class=\"mb-4\">9. It is the policeman’s job to make sure people do what is <u>right by the</u> law. [ 9 ]</p><p class=\"mb-4\">10. We’ll have <u>to postpone our vacation until</u> next month. [ 10 ]</p>",
+              "content": "1. The best theory was the one that was <u>a combination of all the scientist’s ideas.</u> [ 1 ]",
               "options": [],
               "explanation": "synthesis (n): a combination of different ideas or styles.",
               "correctAnswer": "synthesis"
             },
             {
               "id": "2",
-              "content": "",
+              "content": "2. When the power went out, he was forced to stop <u>or delay progress</u> on his project. [ 2 ]",
               "options": [],
               "explanation": "suspend (v): to delay or stop it from happening for a while.",
               "correctAnswer": "suspend"
             },
             {
               "id": "3",
-              "content": "",
+              "content": "3. The brothers believe along with other people <u>to the opinion that</u> socialism is best. [ 3 ]",
               "options": [],
               "explanation": "subscribe (v): to agree or to concur with it.",
               "correctAnswer": "subscribe"
             },
             {
               "id": "4",
-              "content": "",
+              "content": "4. The cutting tool was just <u>a new machine not ready to be made in large amounts.</u> [ 4 ]",
               "options": [],
               "explanation": "prototype (n): a new machine that is not ready to be made in large quantities.",
               "correctAnswer": "prototype"
             },
             {
               "id": "5",
-              "content": "",
+              "content": "5. Her job was to get all of the goods ready <u>to sell to other countries.</u> [ 5 ]",
               "options": [],
               "explanation": "export (v): to sell products to other countries.",
               "correctAnswer": "export"
             },
             {
               "id": "6",
-              "content": "",
+              "content": "6. The chemist demonstrated <u>the change into a different form</u> of liquid water into gas. [ 6 ]",
               "options": [],
               "explanation": "conversion (n): the act of changing something into a different state or form.",
               "correctAnswer": "conversion"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "7. After the tornado, it was difficult for the family <u>to have the food and money needed to live.</u> [ 7 ]",
               "options": [],
               "explanation": "subsist (v): to have the food, water, and money needed to stay alive.",
               "correctAnswer": "subsist"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "8. The mechanic yelled when he stepped on the sharp <u>small amount of</u> metal. [ 8 ]",
               "options": [],
               "explanation": "scrap (n): a small amount of it.",
               "correctAnswer": "scrap"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "9. It is the policeman’s job to make sure people do what is <u>right by the</u> law. [ 9 ]",
               "options": [],
               "explanation": "abide (v): to obey it.",
               "correctAnswer": "abide"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "10. We’ll have <u>to postpone our vacation until</u> next month. [ 10 ]",
               "options": [],
               "explanation": "defer (v): to arrange for an action to happen at a later time.",
               "correctAnswer": "defer"

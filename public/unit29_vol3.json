@@ -12,35 +12,35 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">I need your help to move the tables and chairs. [ 1 ]</p><p class=\"mb-4\">This problem will test your ability to understand. [ 2 ]</p><p class=\"mb-4\">I don’t like to be in dark rooms with covers over the windows. [ 3 ]</p><p class=\"mb-4\">Tom and Rob are the best roommates. [ 4 ]</p><p class=\"mb-4\">I need to get a ticket before I can board the train. [ 5 ]</p>",
+              "content": "I need your help to move the tables and chairs. [ 1 ]",
               "options": [],
               "explanation": "furniture (n): đồ nội thất (bàn, ghế, v.v.).",
               "correctAnswer": "furniture"
             },
             {
               "id": "2",
-              "content": "",
+              "content": "This problem will test your ability to understand. [ 2 ]",
               "options": [],
               "explanation": "intelligence (n): sự thông minh (khả năng học hỏi và hiểu biết).",
               "correctAnswer": "intelligence"
             },
             {
               "id": "3",
-              "content": "",
+              "content": "I don’t like to be in dark rooms with covers over the windows. [ 3 ]",
               "options": [],
               "explanation": "curtains (n): rèm cửa (vải treo trên cửa sổ).",
               "correctAnswer": "curtains"
             },
             {
               "id": "4",
-              "content": "",
+              "content": "Tom and Rob are the best roommates. [ 4 ]",
               "options": [],
               "explanation": "ideal (adj): lý tưởng (tốt nhất có thể).",
               "correctAnswer": "ideal"
             },
             {
               "id": "5",
-              "content": "",
+              "content": "I need to get a ticket before I can board the train. [ 5 ]",
               "options": [],
               "explanation": "obtain (v): đạt được, thu được (có được thứ bạn muốn hoặc cần).",
               "correctAnswer": "obtain"

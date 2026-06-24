@@ -86,35 +86,35 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\">The teacher held classes in the [outdoor area surrounded by walls] on warm days. [ 6 ]</p><p class=\"mb-4\">The airport is usually [hectic] on Saturdays because many people were traveling. [ 7 ]</p><p class=\"mb-4\">The teacher made sure the correct answers [matched with] the questions on the test. [ 8 ]</p><p class=\"mb-4\">The student [gave an example] from an interview she heard on the radio. [ 9 ]</p><p class=\"mb-4\">The victim of the [crime of tricking] told the police about her experience. [ 10 ]</p>",
+              "content": "The teacher held classes in the <u>outdoor area surrounded by walls</u> on warm days. [ 6 ]",
               "options": [],
               "explanation": "\"outdoor area surrounded by walls\" là định nghĩa của courtyard (sân trong).",
               "correctAnswer": "courtyard"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "The airport is usually <u>hectic</u> on Saturdays because many people were traveling. [ 7 ]",
               "options": [],
               "explanation": "\"hectic\" mang nghĩa hỗn loạn, tương đương với chaotic.",
               "correctAnswer": "chaotic"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "The teacher made sure the correct answers <u>matched with</u> the questions on the test. [ 8 ]",
               "options": [],
               "explanation": "\"matched with\" mang nghĩa phù hợp, tương ứng, tương đương với corresponded.",
               "correctAnswer": "corresponded"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "The student <u>gave an example</u> from an interview she heard on the radio. [ 9 ]",
               "options": [],
               "explanation": "\"gave an example\" mang nghĩa trích dẫn, đưa ra ví dụ, tương đương với cited.",
               "correctAnswer": "cited"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "The victim of the <u>crime of tricking</u> told the police about her experience. [ 10 ]",
               "options": [],
               "explanation": "\"crime of tricking\" mang nghĩa tội phạm lừa đảo, tương đương với fraud.",
               "correctAnswer": "fraud"

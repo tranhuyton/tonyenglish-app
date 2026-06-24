@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">1. The accident wasn’t serious, and Ernest was released from the hospital quickly. [ 11 ]</p><p class=\"mb-4\">2. My grandfather says that if you have itchy hands, it’s a sign that you’ll receive money soon. [ 12 ]</p><p class=\"mb-4\">3. The book’s emotional descriptions taught me that war brings sadness to everyone. [ 13 ]</p><p class=\"mb-4\">4. The photograph was perfect except for a tiny mark on the corner. [ 14 ]</p><p class=\"mb-4\">5. The child cried loudly because his mother wouldn’t buy him a toy he wanted. [ 15 ]</p>",
+              "content": "1. The accident wasn’t serious, and Ernest was released from the hospital quickly. [ 11 ]",
               "options": [],
               "explanation": "discharged means allowed to leave from a place.",
               "correctAnswer": "discharged"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "2. My grandfather says that if you have itchy hands, it’s a sign that you’ll receive money soon. [ 12 ]",
               "options": [],
               "explanation": "omen is a sign of what will happen in the future.",
               "correctAnswer": "omen"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "3. The book’s emotional descriptions taught me that war brings sadness to everyone. [ 13 ]",
               "options": [],
               "explanation": "poignant causes a very strong feeling of sadness.",
               "correctAnswer": "poignant"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "4. The photograph was perfect except for a tiny mark on the corner. [ 14 ]",
               "options": [],
               "explanation": "speck is a very small mark or amount.",
               "correctAnswer": "speck"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "5. The child cried loudly because his mother wouldn’t buy him a toy he wanted. [ 15 ]",
               "options": [],
               "explanation": "sobbed means cried loudly.",
               "correctAnswer": "sobbed"

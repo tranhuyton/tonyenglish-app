@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\">1. <u>Human undeveloped babies grow inside the mother</u> for up to nine months. [ 6 ]</p><p class=\"mb-4\">2. The concert was made well-known over the radio. [ 7 ]</p><p class=\"mb-4\">3. Ms. Hiller had <u>a spare amount of clothes,</u> so she gave them to charity. [ 8 ]</p><p class=\"mb-4\">4. The philosopher <u>developed an idea about what</u> happens to good people. [ 9 ]</p><p class=\"mb-4\">5. The principal called Alex’s house to make certain he was sick at home. [ 10 ]</p><p class=\"mb-4\">6. Margaret collected shells that had come <u>from the water to land</u> on the beach. [ 11 ]</p><p class=\"mb-4\">7. Elliot <u>moved down into the water as</u> soon as he arrived at the beach. [ 12 ]</p><p class=\"mb-4\">8. Oscar hid behind a tree <u>to not get caught by the</u> bully who was chasing him. [ 13 ]</p><p class=\"mb-4\">9. The <u>beads in the box were all the same.</u> [ 14 ]</p><p class=\"mb-4\">10. The <u>amount of hair he had on his head</u> was a small amount. [ 15 ]</p>",
+              "content": "1. <u>Human undeveloped babies grow inside the mother</u> for up to nine months. [ 6 ]",
               "options": [],
               "explanation": "embryo (n): a human or animal that is still growing inside its mother.",
               "correctAnswer": "embryos"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "2. The concert was made well-known over the radio. [ 7 ]",
               "options": [],
               "explanation": "publicize (v): to make something get a lot of attention.",
               "correctAnswer": "publicized"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "3. Ms. Hiller had <u>a spare amount of clothes,</u> so she gave them to charity. [ 8 ]",
               "options": [],
               "explanation": "surplus (n): an extra amount of something.",
               "correctAnswer": "surplus"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "4. The philosopher <u>developed an idea about what</u> happens to good people. [ 9 ]",
               "options": [],
               "explanation": "theorize (v): to develop ideas about something.",
               "correctAnswer": "theorized"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "5. The principal called Alex’s house to make certain he was sick at home. [ 10 ]",
               "options": [],
               "explanation": "verify (v): to find out if something is true.",
               "correctAnswer": "verify"
             },
             {
               "id": "11",
-              "content": "",
+              "content": "6. Margaret collected shells that had come <u>from the water to land</u> on the beach. [ 11 ]",
               "options": [],
               "explanation": "ashore (adv): from water to the land.",
               "correctAnswer": "ashore"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "7. Elliot <u>moved down into the water as</u> soon as he arrived at the beach. [ 12 ]",
               "options": [],
               "explanation": "plunge (v): to move down into something very quickly.",
               "correctAnswer": "plunged"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "8. Oscar hid behind a tree <u>to not get caught by the</u> bully who was chasing him. [ 13 ]",
               "options": [],
               "explanation": "elude (v): to avoid being caught by something.",
               "correctAnswer": "elude"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "9. The <u>beads in the box were all the same.</u> [ 14 ]",
               "options": [],
               "explanation": "homogeneous (adj): made up of things which are all the same.",
               "correctAnswer": "homogenous"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "10. The <u>amount of hair he had on his head</u> was a small amount. [ 15 ]",
               "options": [],
               "explanation": "sparse (adj): not very much of it in a big area.",
               "correctAnswer": "sparse"

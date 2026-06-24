@@ -140,70 +140,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">How good are you at [math]? [ 11 ]</p><p class=\"mb-4\">There were some [thin strings] hanging from my shirt. [ 12 ]</p><p class=\"mb-4\">I wanted to get a little hair [cut off] today, but I had no time to make it to the salon. [ 13 ]</p><p class=\"mb-4\">The [cloth] was dirty from being outside. [ 14 ]</p><p class=\"mb-4\">Smoke from the fire rose [high into the air]. [ 15 ]</p><p class=\"mb-4\">Sometimes the dog goes inside the [small building with tools] when it gets cold. [ 16 ]</p><p class=\"mb-4\">I live in the [mountainous area] of the country. [ 17 ]</p><p class=\"mb-4\">The old [place where they made flour] was interesting to visit. [ 18 ]</p><p class=\"mb-4\">I used to [put cloth together] with my grandmother. [ 19 ]</p><p class=\"mb-4\">The silver was [made to look shiny]. [ 20 ]</p>",
+              "content": "How good are you at <u>math</u>? [ 11 ]",
               "options": [],
               "explanation": "math (toán học) tương đương arithmetic.",
               "correctAnswer": "ARITHMETIC"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "There were some <u>thin strings</u> hanging from my shirt. [ 12 ]",
               "options": [],
               "explanation": "thin strings (sợi chỉ) tương đương threads.",
               "correctAnswer": "THREADS"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "I wanted to get a little hair <u>cut off</u> today, but I had no time to make it to the salon. [ 13 ]",
               "options": [],
               "explanation": "cut off (cắt tỉa) tương đương trimmed. Lưu ý từ gốc là trim.",
               "correctAnswer": "TRIMMED"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "The <u>cloth</u> was dirty from being outside. [ 14 ]",
               "options": [],
               "explanation": "cloth (vải) tương đương fabric.",
               "correctAnswer": "FABRIC"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "Smoke from the fire rose <u>high into the air</u>. [ 15 ]",
               "options": [],
               "explanation": "high into the air (lên cao) tương đương upwards.",
               "correctAnswer": "UPWARDS"
             },
             {
               "id": "16",
-              "content": "",
+              "content": "Sometimes the dog goes inside the <u>small building with tools</u> when it gets cold. [ 16 ]",
               "options": [],
               "explanation": "small building with tools (nhà kho) tương đương shed.",
               "correctAnswer": "SHED"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "I live in the <u>mountainous area</u> of the country. [ 17 ]",
               "options": [],
               "explanation": "mountainous area (vùng núi cao) tương đương highlands.",
               "correctAnswer": "HIGHLANDS"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "The old <u>place where they made flour</u> was interesting to visit. [ 18 ]",
               "options": [],
               "explanation": "place where they made flour (cối xay gió/nhà máy bột) tương đương mill.",
               "correctAnswer": "MILL"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "I used to <u>put cloth together</u> with my grandmother. [ 19 ]",
               "options": [],
               "explanation": "put cloth together (khâu vá) tương đương sew.",
               "correctAnswer": "SEW"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "The silver was <u>made to look shiny</u>. [ 20 ]",
               "options": [],
               "explanation": "made to look shiny (đánh bóng) tương đương polished.",
               "correctAnswer": "POLISHED"

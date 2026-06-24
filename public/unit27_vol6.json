@@ -334,70 +334,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "<p class=\"mb-4\">1. He liked to pour the <u><u>strong tasting liquid made from sour wine</u></u> directly on his salad. [ 21 ]</p><p class=\"mb-4\">2. To better explain the procedure, he used a _great <u>way to show that things are similar_.</u> [ 22 ]</p><p class=\"mb-4\">3. We were in awe of the performance of the _skilled <u>person who uses a bow and arrows_.</u> [ 23 ]</p><p class=\"mb-4\">4. The war was a means to overthrow the <u><u>cruel and unfair government</u>.</u> [ 24 ]</p><p class=\"mb-4\">5. I have a feeling that the robbery was <u>a <u>secret plan to do something illegal</u></u> by the owners. [ 25 ]</p><p class=\"mb-4\">6. At the library, we learned how to <u>trace our <u>line of people from which we descended</u>.</u> [ 26 ]</p><p class=\"mb-4\">7. The people were convinced that the strange visitor was <u>a <u>person chosen by God</u>.</u> [ 27 ]</p><p class=\"mb-4\">8. The father acted like <u>a <u>person who treated people in a cruel and unfair way</u>.</u> [ 28 ]</p><p class=\"mb-4\">9. The _British <u>nobleman_ was</u> a very kind and respected man. [ 29 ]</p><p class=\"mb-4\">10. The new mayor's first priority was to select <u>a <u>second most important person</u>.</u> [ 30 ]</p>",
+              "content": "1. He liked to pour the <u><u>strong tasting liquid made from sour wine</u></u> directly on his salad. [ 21 ]",
               "options": [],
               "explanation": "vinegar: a strong tasting liquid made from sour wine.",
               "correctAnswer": "vinegar"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "2. To better explain the procedure, he used a <u>great <u>way to show that things are similar</u>.</u> [ 22 ]",
               "options": [],
               "explanation": "analogy: a connection made to show that things are similar.",
               "correctAnswer": "analogy"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "3. We were in awe of the performance of the <u>skilled <u>person who uses a bow and arrows</u>.</u> [ 23 ]",
               "options": [],
               "explanation": "archer: a person who uses a bow and arrows.",
               "correctAnswer": "archer"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "4. The war was a means to overthrow the <u><u>cruel and unfair government</u>.</u> [ 24 ]",
               "options": [],
               "explanation": "tyranny: a cruel and unfair government.",
               "correctAnswer": "tyranny"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "5. I have a feeling that the robbery was <u>a <u>secret plan to do something illegal</u></u> by the owners. [ 25 ]",
               "options": [],
               "explanation": "conspiracy: a secret plan to do something illegal.",
               "correctAnswer": "conspiracy"
             },
             {
               "id": "26",
-              "content": "",
+              "content": "6. At the library, we learned how to <u>trace our <u>line of people from which we descended</u>.</u> [ 26 ]",
               "options": [],
               "explanation": "ancestry: the series of people from whom a person descended.",
               "correctAnswer": "ancestry"
             },
             {
               "id": "27",
-              "content": "",
+              "content": "7. The people were convinced that the strange visitor was <u>a <u>person chosen by God</u>.</u> [ 27 ]",
               "options": [],
               "explanation": "prophet: a person chosen by God.",
               "correctAnswer": "prophet"
             },
             {
               "id": "28",
-              "content": "",
+              "content": "8. The father acted like <u>a <u>person who treated people in a cruel and unfair way</u>.</u> [ 28 ]",
               "options": [],
               "explanation": "tyrant: a person who treats people in a cruel, harsh, and unfair way.",
               "correctAnswer": "tyrant"
             },
             {
               "id": "29",
-              "content": "",
+              "content": "9. The <u>British <u>nobleman</u> was</u> a very kind and respected man. [ 29 ]",
               "options": [],
               "explanation": "earl: a nobleman from Britain.",
               "correctAnswer": "earl"
             },
             {
               "id": "30",
-              "content": "",
+              "content": "10. The new mayor's first priority was to select <u>a <u>second most important person</u>.</u> [ 30 ]",
               "options": [],
               "explanation": "deputy: the second-highest-ranking person.",
               "correctAnswer": "deputy"

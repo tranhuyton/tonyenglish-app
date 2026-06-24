@@ -140,70 +140,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">How good are you at math? [ 11 ]</p><p class=\"mb-4\">There were some thin strings hanging from my shirt. [ 12 ]</p><p class=\"mb-4\">I wanted to get a little hair cut off today, but I had no time to make it to the salon. [ 13 ]</p><p class=\"mb-4\">The cloth was dirty from being outside. [ 14 ]</p><p class=\"mb-4\">Smoke from the fire rose high into the air. [ 15 ]</p><p class=\"mb-4\">Sometimes the dog goes inside the small building with tools when it gets cold. [ 16 ]</p><p class=\"mb-4\">I live in the mountainous area of the country. [ 17 ]</p><p class=\"mb-4\">The old place where they made flour was interesting to visit. [ 18 ]</p><p class=\"mb-4\">I used to put cloth together with my grandmother. [ 19 ]</p><p class=\"mb-4\">The silver was made to look shiny. [ 20 ]</p>",
+              "content": "How good are you at math? [ 11 ]",
               "options": [],
               "explanation": "arithmetic có nghĩa là toán học, tương đồng với math.",
               "correctAnswer": "ARITHMETIC"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "There were some thin strings hanging from my shirt. [ 12 ]",
               "options": [],
               "explanation": "threads có nghĩa là những sợi chỉ, tương đồng với thin strings.",
               "correctAnswer": "THREADS"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "I wanted to get a little hair cut off today, but I had no time to make it to the salon. [ 13 ]",
               "options": [],
               "explanation": "trim có nghĩa là cắt tỉa, tương đồng với get a little hair cut off.",
               "correctAnswer": "TRIM"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "The cloth was dirty from being outside. [ 14 ]",
               "options": [],
               "explanation": "fabric có nghĩa là vải, tương đồng với cloth.",
               "correctAnswer": "FABRIC"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "Smoke from the fire rose high into the air. [ 15 ]",
               "options": [],
               "explanation": "upwards có nghĩa là hướng lên, tương đồng với high into the air.",
               "correctAnswer": "UPWARDS"
             },
             {
               "id": "16",
-              "content": "",
+              "content": "Sometimes the dog goes inside the small building with tools when it gets cold. [ 16 ]",
               "options": [],
               "explanation": "shed là nhà kho nhỏ, tương đồng với small building with tools.",
               "correctAnswer": "SHED"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "I live in the mountainous area of the country. [ 17 ]",
               "options": [],
               "explanation": "highlands là vùng cao/miền núi, tương đồng với mountainous area.",
               "correctAnswer": "HIGHLANDS"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "The old place where they made flour was interesting to visit. [ 18 ]",
               "options": [],
               "explanation": "mill là xưởng xay xát, tương đồng với place where they made flour.",
               "correctAnswer": "MILL"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "I used to put cloth together with my grandmother. [ 19 ]",
               "options": [],
               "explanation": "sew là khâu vá, tương đồng với put cloth together.",
               "correctAnswer": "SEW"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "The silver was made to look shiny. [ 20 ]",
               "options": [],
               "explanation": "polished là đánh bóng, tương đồng với made to look shiny.",
               "correctAnswer": "POLISHED"

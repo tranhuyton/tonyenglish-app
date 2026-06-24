@@ -272,70 +272,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "<p class=\"mb-4\">1. That part of the country is so hot and dry that no one lives there. [ 21 ]</p><p class=\"mb-4\">2. After getting off the boat, they took a train toward the center of the country. [ 22 ]</p><p class=\"mb-4\">3. They survived through the time in which no rain fell by carrying water down from the hills. [ 23 ]</p><p class=\"mb-4\">4. This house for the monks was built well over 200 years ago. [ 24 ]</p><p class=\"mb-4\">5. He knew he’d get in trouble, but he stole the money despite the punishment. [ 25 ]</p><p class=\"mb-4\">6. He guessed that the visitor’s team would win the game. [ 26 ]</p><p class=\"mb-4\">7. The number of people helping to clean the trash near the river was more than enough. [ 27 ]</p><p class=\"mb-4\">8. There was a small park that was next to the yard surrounding the church. [ 28 ]</p><p class=\"mb-4\">9. Because his pants were old and torn. Dad bought him a new pair. [ 29 ]</p><p class=\"mb-4\">10. The long lines did not allow her of a chance to buy a ticket for the concert. [ 30 ]</p>",
+              "content": "1. That part of the country is so hot and dry that no one lives there. [ 21 ]",
               "options": [],
               "explanation": "hot and dry (nóng và khô) tương đương với arid (khô cằn).",
               "correctAnswer": "arid"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "2. After getting off the boat, they took a train toward the center of the country. [ 22 ]",
               "options": [],
               "explanation": "toward the center of the country (vào trung tâm đất nước) tương đương inland.",
               "correctAnswer": "inland"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "3. They survived through the time in which no rain fell by carrying water down from the hills. [ 23 ]",
               "options": [],
               "explanation": "time in which no rain fell (thời gian không có mưa) tương đương drought (hạn hán).",
               "correctAnswer": "drought"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "4. This house for the monks was built well over 200 years ago. [ 24 ]",
               "options": [],
               "explanation": "house for the monks (nhà cho các nhà sư) tương đương abbey (tu viện).",
               "correctAnswer": "abbey"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "5. He knew he’d get in trouble, but he stole the money despite the punishment. [ 25 ]",
               "options": [],
               "explanation": "despite the punishment (bất chấp hình phạt) mang nghĩa mặc dù vậy, tương đương nonetheless.",
               "correctAnswer": "nonetheless"
             },
             {
               "id": "26",
-              "content": "",
+              "content": "6. He guessed that the visitor’s team would win the game. [ 26 ]",
               "options": [],
               "explanation": "guessed (đoán) tương đương speculated (suy đoán).",
               "correctAnswer": "speculated"
             },
             {
               "id": "27",
-              "content": "",
+              "content": "7. The number of people helping to clean the trash near the river was more than enough. [ 27 ]",
               "options": [],
               "explanation": "more than enough (nhiều hơn đủ) tương đương ample (dư dả).",
               "correctAnswer": "ample"
             },
             {
               "id": "28",
-              "content": "",
+              "content": "8. There was a small park that was next to the yard surrounding the church. [ 28 ]",
               "options": [],
               "explanation": "next to (kế bên) tương đương adjoined (giáp ranh).",
               "correctAnswer": "adjoined"
             },
             {
               "id": "29",
-              "content": "",
+              "content": "9. Because his pants were old and torn. Dad bought him a new pair. [ 29 ]",
               "options": [],
               "explanation": "old and torn (cũ và rách) tương đương ragged.",
               "correctAnswer": "ragged"
             },
             {
               "id": "30",
-              "content": "",
+              "content": "10. The long lines did not allow her of a chance to buy a ticket for the concert. [ 30 ]",
               "options": [],
               "explanation": "did not allow (không cho phép/tước đi) tương đương deprived.",
               "correctAnswer": "deprived"

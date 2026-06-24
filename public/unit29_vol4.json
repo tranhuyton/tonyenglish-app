@@ -147,70 +147,70 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">Factories built in the early 1900s contine to <u>unleash</u> <u>chemicals</u> <u>into</u> the air. [ 11 ]</p><p class=\"mb-4\">My soccer team is playing in a <u>competition</u> next weekend. [ 12 ]</p><p class=\"mb-4\">When the new buildings are finished, they will be <u>the</u> <u>same</u> <u>distance</u> <u>away</u> <u>from</u> <u>each</u> <u>other</u>. [ 13 ]</p><p class=\"mb-4\">In order for my science project to work, I need to <u>alter</u> it. [ 14 ]</p><p class=\"mb-4\">Amy hurt Jane's feelings when she <u>made</u> <u>fun</u> <u>of</u> her. [ 15 ]</p><p class=\"mb-4\">In this <u>period</u> <u>of</u> <u>time</u>, it's more common for kids to play video games than read books. [ 16 ]</p><p class=\"mb-4\">Kate is very shy and doesn't like to <u>talk</u> <u>to</u> <u>and</u> <u>do</u> <u>things</u> <u>with</u> the other girls. [ 17 ]</p><p class=\"mb-4\">Tom wants to <u>add</u> more colors <u>into</u> his painting. [ 18 ]</p><p class=\"mb-4\">My grandfather used to race <u>cars</u> across the long distances in endurance races. [ 19 ]</p><p class=\"mb-4\">The <u>person</u> <u>competing</u> <u>for</u> <u>the</u> <u>job</u> interviewed very well. [ 20 ]</p>",
+              "content": "Factories built in the early 1900s contine to <u>unleash</u> <u>chemicals</u> <u>into</u> the air. [ 11 ]",
               "options": [],
               "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì).",
               "correctAnswer": "pollute"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "My soccer team is playing in a <u>competition</u> next weekend. [ 12 ]",
               "options": [],
               "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ).",
               "correctAnswer": "tournament"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "When the new buildings are finished, they will be <u>the</u> <u>same</u> <u>distance</u> <u>away</u> <u>from</u> <u>each</u> <u>other</u>. [ 13 ]",
               "options": [],
               "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo).",
               "correctAnswer": "parallel"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "In order for my science project to work, I need to <u>alter</u> it. [ 14 ]",
               "options": [],
               "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông).",
               "correctAnswer": "modify"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "Amy hurt Jane's feelings when she <u>made</u> <u>fun</u> <u>of</u> her. [ 15 ]",
               "options": [],
               "explanation": "ridiculed (chế nhạo) tương đồng với made fun of.",
               "correctAnswer": "ridiculed"
             },
             {
               "id": "16",
-              "content": "",
+              "content": "In this <u>period</u> <u>of</u> <u>time</u>, it's more common for kids to play video games than read books. [ 16 ]",
               "options": [],
               "explanation": "era (kỷ nguyên/thời kỳ) tương đồng với period of time.",
               "correctAnswer": "era"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "Kate is very shy and doesn't like to <u>talk</u> <u>to</u> <u>and</u> <u>do</u> <u>things</u> <u>with</u> the other girls. [ 17 ]",
               "options": [],
               "explanation": "interact (tương tác) tương đồng với talk to and do things with.",
               "correctAnswer": "interact"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "Tom wants to <u>add</u> more colors <u>into</u> his painting. [ 18 ]",
               "options": [],
               "explanation": "incorporate (kết hợp/thêm vào) tương đồng với add into.",
               "correctAnswer": "incorporate"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "My grandfather used to race <u>cars</u> across the long distances in endurance races. [ 19 ]",
               "options": [],
               "explanation": "automobiles (ô tô) tương đồng với cars.",
               "correctAnswer": "automobiles"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "The <u>person</u> <u>competing</u> <u>for</u> <u>the</u> <u>job</u> interviewed very well. [ 20 ]",
               "options": [],
               "explanation": "candidate (ứng viên) tương đồng với person competing for the job.",
               "correctAnswer": "candidate"

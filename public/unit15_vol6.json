@@ -214,70 +214,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">1. They need to improve and make more efficient the medical devices in the hospital. [ 16 ]</p><p class=\"mb-4\">2. To save the boy, rushing into the burning house is extremely important and must be done. [ 17 ]</p><p class=\"mb-4\">3. Handing out rain jackets was a necessary act of giving. [ 18 ]</p><p class=\"mb-4\">4. Sometimes, cold weather can be made visible or obvious in the most unlikely places. [ 19 ]</p><p class=\"mb-4\">5. The theory seems capable of doing what it needs to do to me. [ 20 ]</p><p class=\"mb-4\">6. You must act in a way that is right according to the rules of the game. [ 21 ]</p><p class=\"mb-4\">7. Joining the choir will be an action that is done by choice. [ 22 ]</p><p class=\"mb-4\">8. The amusement park was no fun because it was occupied by too many people. [ 23 ]</p><p class=\"mb-4\">9. Who is going to take responsibility for organizing the protest? [ 24 ]</p><p class=\"mb-4\">10. The criminal was certainly not feeling pity or sympathy for suffering people. [ 25 ]</p>",
+              "content": "1. They need to improve and make more efficient the medical devices in the hospital. [ 16 ]",
               "options": [],
               "explanation": "upgrade",
               "correctAnswer": "upgrade"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "2. To save the boy, rushing into the burning house is extremely important and must be done. [ 17 ]",
               "options": [],
               "explanation": "imperative",
               "correctAnswer": "imperative"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "3. Handing out rain jackets was a necessary act of giving. [ 18 ]",
               "options": [],
               "explanation": "provision",
               "correctAnswer": "provision"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "4. Sometimes, cold weather can be made visible or obvious in the most unlikely places. [ 19 ]",
               "options": [],
               "explanation": "manifest",
               "correctAnswer": "manifest"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "5. The theory seems capable of doing what it needs to do to me. [ 20 ]",
               "options": [],
               "explanation": "viable",
               "correctAnswer": "viable"
             },
             {
               "id": "21",
-              "content": "",
+              "content": "6. You must act in a way that is right according to the rules of the game. [ 21 ]",
               "options": [],
               "explanation": "adhere",
               "correctAnswer": "adhere"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "7. Joining the choir will be an action that is done by choice. [ 22 ]",
               "options": [],
               "explanation": "voluntary",
               "correctAnswer": "voluntary"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "8. The amusement park was no fun because it was occupied by too many people. [ 23 ]",
               "options": [],
               "explanation": "overcrowded",
               "correctAnswer": "overcrowded"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "9. Who is going to take responsibility for organizing the protest? [ 24 ]",
               "options": [],
               "explanation": "administer",
               "correctAnswer": "administer"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "10. The criminal was certainly not feeling pity or sympathy for suffering people. [ 25 ]",
               "options": [],
               "explanation": "compassionate",
               "correctAnswer": "compassionate"

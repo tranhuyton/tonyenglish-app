@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\">1. I would like to write a *<i>story about his life</i>* for my father someday. [ 6 ]</p><p class=\"mb-4\">2. My little brother has an **awful, intense** case of chicken pox. [ 7 ]</p><p class=\"mb-4\">3. The entire family decided to talk to Father about his constant **mean, violent behavior**. [ 8 ]</p><p class=\"mb-4\">4. The preacher strongly believed that kindness was the most important *<i>good quality</i>*. [ 9 ]</p><p class=\"mb-4\">5. The action in the play was *<i>read aloud</i>* by the teacher. The students read the rest. [ 10 ]</p><p class=\"mb-4\">6. The girl had a strong *<i>preference over another</i>* flavor for chocolate ice cream. [ 11 ]</p><p class=\"mb-4\">7. Black and white TVs are *<i>no longer used in modern time</i>* because people prefer color TVs. [ 12 ]</p><p class=\"mb-4\">8. The great actor left behind a great *<i>result of his actions that continues to exist</i>*. [ 13 ]</p><p class=\"mb-4\">9. She is *<i>known for bad things</i>* because she likes to hang around the wrong people. [ 14 ]</p><p class=\"mb-4\">10. I have no idea what would *<i>force</i>* Dan to act in such a mean way. [ 15 ]</p>",
+              "content": "1. I would like to write a <u>story about his life</u> for my father someday. [ 6 ]",
               "options": [],
               "explanation": "\"story about his life\" (câu chuyện về cuộc đời ông ấy) đồng nghĩa với \"biography\" (tiểu sử).",
               "correctAnswer": "biography"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "2. My little brother has an **awful, intense** case of chicken pox. [ 7 ]",
               "options": [],
               "explanation": "\"awful, intense\" (tồi tệ, dữ dội) đồng nghĩa với \"acute\".",
               "correctAnswer": "acute"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "3. The entire family decided to talk to Father about his constant **mean, violent behavior**. [ 8 ]",
               "options": [],
               "explanation": "\"mean, violent behavior\" (hành vi hung hăng, bạo lực) đồng nghĩa với \"aggression\".",
               "correctAnswer": "aggression"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "4. The preacher strongly believed that kindness was the most important <u>good quality</u>. [ 9 ]",
               "options": [],
               "explanation": "\"good quality\" (phẩm chất tốt) đồng nghĩa với \"virtue\" (đức hạnh).",
               "correctAnswer": "virtue"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "5. The action in the play was <u>read aloud</u> by the teacher. The students read the rest. [ 10 ]",
               "options": [],
               "explanation": "\"read aloud\" (đọc to) đồng nghĩa với \"narrated\" (được kể lại).",
               "correctAnswer": "narrated"
             },
             {
               "id": "11",
-              "content": "",
+              "content": "6. The girl had a strong <u>preference over another</u> flavor for chocolate ice cream. [ 11 ]",
               "options": [],
               "explanation": "\"preference over another\" (sự ưu tiên hơn cái khác) đồng nghĩa với \"partiality\".",
               "correctAnswer": "partiality"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "7. Black and white TVs are <u>no longer used in modern time</u> because people prefer color TVs. [ 12 ]",
               "options": [],
               "explanation": "\"no longer used in modern time\" (không còn được sử dụng trong thời đại hiện nay) đồng nghĩa với \"outdated\" (lỗi thời).",
               "correctAnswer": "outdated"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "8. The great actor left behind a great <u>result of his actions that continues to exist</u>. [ 13 ]",
               "options": [],
               "explanation": "\"result of his actions that continues to exist\" (kết quả hành động tiếp tục tồn tại) đồng nghĩa với \"legacy\" (di sản).",
               "correctAnswer": "legacy"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "9. She is <u>known for bad things</u> because she likes to hang around the wrong people. [ 14 ]",
               "options": [],
               "explanation": "\"known for bad things\" (được biết đến vì những điều tồi tệ) đồng nghĩa với \"notorious\" (khét tiếng).",
               "correctAnswer": "notorious"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "10. I have no idea what would <u>force</u> Dan to act in such a mean way. [ 15 ]",
               "options": [],
               "explanation": "\"force\" (ép buộc) đồng nghĩa với \"compel\".",
               "correctAnswer": "compel"

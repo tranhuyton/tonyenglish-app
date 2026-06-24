@@ -18,70 +18,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">1. No matter how much she begged, the older girls still did <u>not accept Suzy.</u> [ 1 ]</p><p class=\"mb-4\">2. <u>Language</u> based approaches are the best way to learn about a culture. [ 2 ]</p><p class=\"mb-4\">3. Constant changes were <u>weakening the</u> project’s chances of being finished on time. [ 3 ]</p><p class=\"mb-4\">4. The boy made a <u>serious and honest</u> promise to his parents that he would never again cheat. [ 4 ]</p><p class=\"mb-4\">5. The movie director gave the actors and actresses a <u>personal and original view</u> of the newly completed movie. [ 5 ]</p><p class=\"mb-4\">6. Everyone knew that Luke studied Chinese. But no one knew he was <u>able to speak it very well.</u> [ 6 ]</p><p class=\"mb-4\">7. The teacher was waiting for one of the students to be <u>honest</u> about what had happened on the playground. [ 7 ]</p><p class=\"mb-4\">8. The Internet has made talking to people everywhere very natural. As a result, having <u>a sense of common support for your ideas is</u> easy. [ 8 ]</p><p class=\"mb-4\">9. Though he looked Greek, his <u>identity based on the country he came from was Mexican.</u> [ 9 ]</p><p class=\"mb-4\">10. Today, no one lives in the old royal palace. Instead, it’s part <u>of the university.</u> [ 10 ]</p>",
+              "content": "1. No matter how much she begged, the older girls still did <u>not accept Suzy.</u> [ 1 ]",
               "options": [],
               "explanation": "excluded (v): not accepted into a group.",
               "correctAnswer": "excluded"
             },
             {
               "id": "2",
-              "content": "",
+              "content": "2. <u>Language</u> based approaches are the best way to learn about a culture. [ 2 ]",
               "options": [],
               "explanation": "Linguistic (adj): concerned with language.",
               "correctAnswer": "Linguistic"
             },
             {
               "id": "3",
-              "content": "",
+              "content": "3. Constant changes were <u>weakening the</u> project’s chances of being finished on time. [ 3 ]",
               "options": [],
               "explanation": "undermining (v): weakening efforts or authority.",
               "correctAnswer": "undermining"
             },
             {
               "id": "4",
-              "content": "",
+              "content": "4. The boy made a <u>serious and honest</u> promise to his parents that he would never again cheat. [ 4 ]",
               "options": [],
               "explanation": "solemn (adj): serious and honest.",
               "correctAnswer": "solemn"
             },
             {
               "id": "5",
-              "content": "",
+              "content": "5. The movie director gave the actors and actresses a <u>personal and original view</u> of the newly completed movie. [ 5 ]",
               "options": [],
               "explanation": "firsthand (adj): from an original source.",
               "correctAnswer": "firsthand"
             },
             {
               "id": "6",
-              "content": "",
+              "content": "6. Everyone knew that Luke studied Chinese. But no one knew he was <u>able to speak it very well.</u> [ 6 ]",
               "options": [],
               "explanation": "fluent (adj): able to speak a language very well.",
               "correctAnswer": "fluent"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "7. The teacher was waiting for one of the students to be <u>honest</u> about what had happened on the playground. [ 7 ]",
               "options": [],
               "explanation": "earnest (adj): honest.",
               "correctAnswer": "earnest"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "8. The Internet has made talking to people everywhere very natural. As a result, having <u>a sense of common support for your ideas is</u> easy. [ 8 ]",
               "options": [],
               "explanation": "solidarity (n): a union formed from common responsibilities or interests.",
               "correctAnswer": "solidarity"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "9. Though he looked Greek, his <u>identity based on the country he came from was Mexican.</u> [ 9 ]",
               "options": [],
               "explanation": "nationality (n): an identity based on the nation from which you come.",
               "correctAnswer": "nationality"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "10. Today, no one lives in the old royal palace. Instead, it’s part <u>of the university.</u> [ 10 ]",
               "options": [],
               "explanation": "imperial (adj): of, or related to an empire.",
               "correctAnswer": "imperial"

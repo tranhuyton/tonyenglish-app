@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">I met a very friendly girl on my first day of school. [ 11 ]</p><p class=\"mb-4\">Marty walked heavily across the kitchen to the back door. [ 12 ]</p><p class=\"mb-4\">That lovely dresser was skillfully made from oak. [ 13 ]</p><p class=\"mb-4\">The man had dishonestly changed the game so that he would win every time. [ 14 ]</p><p class=\"mb-4\">The paint colors combined to make new ones on the canvas. [ 15 ]</p>",
+              "content": "I met a very friendly girl on my first day of school. [ 11 ]",
               "options": [],
               "explanation": "friendly (thân thiện) tương đương với sociable.",
               "correctAnswer": "sociable"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "Marty walked heavily across the kitchen to the back door. [ 12 ]",
               "options": [],
               "explanation": "walked heavily (bước đi nặng nề) tương đương với tramped.",
               "correctAnswer": "tramped"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "That lovely dresser was skillfully made from oak. [ 13 ]",
               "options": [],
               "explanation": "skillfully made (làm một cách khéo léo) tương đương với crafted.",
               "correctAnswer": "crafted"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "The man had dishonestly changed the game so that he would win every time. [ 14 ]",
               "options": [],
               "explanation": "dishonestly changed (thay đổi một cách gian lận) tương đương với rigged.",
               "correctAnswer": "rigged"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "The paint colors combined to make new ones on the canvas. [ 15 ]",
               "options": [],
               "explanation": "combined (kết hợp) tương đương với merged.",
               "correctAnswer": "merged"

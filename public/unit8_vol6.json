@@ -86,70 +86,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\">1. The meeting of the citizens’ group was <u>prevented from happening</u> by the police. [ 6 ]</p><p class=\"mb-4\">2. The warm weather <u>had changed the ice sculptures into strange shapes.</u> [ 7 ]</p><p class=\"mb-4\">3. Dad says drinking milk before going to bed helps with a disorder that <u>makes it hard to sleep.</u> [ 8 ]</p><p class=\"mb-4\">4. After I saw the scary movie, walking home in <u>the darkness upset</u> me. [ 9 ]</p><p class=\"mb-4\">5. After school, <u>I’m likely to go</u> visit my friend at her house. [ 10 ]</p><p class=\"mb-4\">6. Dylan believed it to be his <u>special right to be treated as superior to</u> all the others. [ 11 ]</p><p class=\"mb-4\">7. A gust of wind blew her scarf <u>over the edge of the boat</u> while she was sailing. [ 12 ]</p><p class=\"mb-4\">8. He didn’t know what the proper set of <u>rules about being polite</u> was for returning a gift. [ 13 ]</p><p class=\"mb-4\">9. The train was full <u>of clothes</u> that were to be sold overseas. [ 14 ]</p><p class=\"mb-4\">10. The wax candle twisted and formed a different shape <u>because it was left in the sun.</u> [ 15 ]</p>",
+              "content": "1. The meeting of the citizens’ group was <u>prevented from happening</u> by the police. [ 6 ]",
               "options": [],
               "explanation": "suppress (v): to prevent from happening.",
               "correctAnswer": "suppressed"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "2. The warm weather <u>had changed the ice sculptures into strange shapes.</u> [ 7 ]",
               "options": [],
               "explanation": "deform (v): to change from its correct or original shape.",
               "correctAnswer": "deformed"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "3. Dad says drinking milk before going to bed helps with a disorder that <u>makes it hard to sleep.</u> [ 8 ]",
               "options": [],
               "explanation": "insomnia (n): a condition with difficulty sleeping.",
               "correctAnswer": "insomnia"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "4. After I saw the scary movie, walking home in <u>the darkness upset</u> me. [ 9 ]",
               "options": [],
               "explanation": "unsettle (v): to make anxious or upset.",
               "correctAnswer": "unsettled"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "5. After school, <u>I’m likely to go</u> visit my friend at her house. [ 10 ]",
               "options": [],
               "explanation": "liable (adj): very likely to happen.",
               "correctAnswer": "liable"
             },
             {
               "id": "11",
-              "content": "",
+              "content": "6. Dylan believed it to be his <u>special right to be treated as superior to</u> all the others. [ 11 ]",
               "options": [],
               "explanation": "privilege (n): a special right given to a person or group.",
               "correctAnswer": "privilege"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "7. A gust of wind blew her scarf <u>over the edge of the boat</u> while she was sailing. [ 12 ]",
               "options": [],
               "explanation": "overboard (adv): over the side of a boat.",
               "correctAnswer": "overboard"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "8. He didn’t know what the proper set of <u>rules about being polite</u> was for returning a gift. [ 13 ]",
               "options": [],
               "explanation": "etiquette (n): the rules about how to be polite.",
               "correctAnswer": "etiquette"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "9. The train was full <u>of clothes</u> that were to be sold overseas. [ 14 ]",
               "options": [],
               "explanation": "garments (n): pieces of clothing.",
               "correctAnswer": "garments"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "10. The wax candle twisted and formed a different shape <u>because it was left in the sun.</u> [ 15 ]",
               "options": [],
               "explanation": "warp (v): to become bent into the wrong shape.",
               "correctAnswer": "warped"

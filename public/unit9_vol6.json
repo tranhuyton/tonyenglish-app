@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">1. The old house was <u>full of insects that cause harm.</u> [ 11 ]</p><p class=\"mb-4\">2. My brother-in-law always tries to enlarge small problems so that they seem <u>much greater than they really</u> are. [ 12 ]</p><p class=\"mb-4\">3. Mr. Robinson owned <u>a violent dog</u> that terrified all the children in the neighborhood. [ 13 ]</p><p class=\"mb-4\">4. If you eat spicy food at night, it will lead to heartburn. [ 14 ]</p><p class=\"mb-4\">5. His <u>tubes that carry blood are clogged.</u> [ 15 ]</p>",
+              "content": "1. The old house was <u>full of insects that cause harm.</u> [ 11 ]",
               "options": [],
               "explanation": "pests: animals or insects that hurt plants or food.",
               "correctAnswer": "pests"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "2. My brother-in-law always tries to enlarge small problems so that they seem <u>much greater than they really</u> are. [ 12 ]",
               "options": [],
               "explanation": "magnify: to make something look bigger than it really is.",
               "correctAnswer": "magnify"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "3. Mr. Robinson owned <u>a violent dog</u> that terrified all the children in the neighborhood. [ 13 ]",
               "options": [],
               "explanation": "savage: very violent or cruel.",
               "correctAnswer": "savage"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "4. If you eat spicy food at night, it will lead to heartburn. [ 14 ]",
               "options": [],
               "explanation": "induce: to make something happen.",
               "correctAnswer": "induce"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "5. His <u>tubes that carry blood are clogged.</u> [ 15 ]",
               "options": [],
               "explanation": "arteries: tubes that take blood from the heart to the rest of the body.",
               "correctAnswer": "arteries"

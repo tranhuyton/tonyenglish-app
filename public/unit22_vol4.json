@@ -19,70 +19,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">Appliances are `things that are bought` that usually last for many years. [ 1 ]</p><p class=\"mb-4\">After making five cakes, all the sugar in the house was `used up`. [ 2 ]</p><p class=\"mb-4\">During the holidays, `offering financial help to others` is very common. [ 3 ]</p><p class=\"mb-4\">Because my views were different, I was `treated badly` by my classmates. [ 4 ]</p><p class=\"mb-4\">`The group that wins` this game will have to play the very best team. [ 5 ]</p><p class=\"mb-4\">When his car ran out of gas, he `traveled by asking for rides` to the gas station. [ 6 ]</p><p class=\"mb-4\">Though it might seem like fun at the time, it's not nice to `tease in a cruel way` people. [ 7 ]</p><p class=\"mb-4\">The warm weather `lessened` the snow that covered the ground. [ 8 ]</p><p class=\"mb-4\">`The state of working together` the groups showed helped them to solve their problems. [ 9 ]</p><p class=\"mb-4\">`The many countries ruled by one person` was beginning to slowly fall apart. [ 10 ]</p>",
+              "content": "Appliances are `things that are bought` that usually last for many years. [ 1 ]",
               "options": [],
               "explanation": "Từ cần điền là 'goods' (hàng hóa), đồng nghĩa với 'things that are bought' (những thứ được mua).",
               "correctAnswer": "goods"
             },
             {
               "id": "2",
-              "content": "",
+              "content": "After making five cakes, all the sugar in the house was `used up`. [ 2 ]",
               "options": [],
               "explanation": "Từ cần điền là 'depleted' (cạn kiệt), đồng nghĩa với 'used up' (sử dụng hết).",
               "correctAnswer": "depleted"
             },
             {
               "id": "3",
-              "content": "",
+              "content": "During the holidays, `offering financial help to others` is very common. [ 3 ]",
               "options": [],
               "explanation": "Từ cần điền là 'charity' (từ thiện), đồng nghĩa với 'offering financial help to others' (cung cấp hỗ trợ tài chính cho người khác).",
               "correctAnswer": "charity"
             },
             {
               "id": "4",
-              "content": "",
+              "content": "Because my views were different, I was `treated badly` by my classmates. [ 4 ]",
               "options": [],
               "explanation": "Từ cần điền là 'persecuted' (bị bức hại), đồng nghĩa với 'treated badly' (bị đối xử tệ).",
               "correctAnswer": "persecuted"
             },
             {
               "id": "5",
-              "content": "",
+              "content": "`The group that wins` this game will have to play the very best team. [ 5 ]",
               "options": [],
               "explanation": "Từ cần điền là 'victors' (những người chiến thắng), đồng nghĩa với 'The group that wins' (nhóm chiến thắng).",
               "correctAnswer": "victors"
             },
             {
               "id": "6",
-              "content": "",
+              "content": "When his car ran out of gas, he `traveled by asking for rides` to the gas station. [ 6 ]",
               "options": [],
               "explanation": "Từ cần điền là 'hitchhiked' (đi quá giang), đồng nghĩa với 'traveled by asking for rides' (đi bằng cách xin đi nhờ xe).",
               "correctAnswer": "hitchhiked"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "Though it might seem like fun at the time, it's not nice to `tease in a cruel way` people. [ 7 ]",
               "options": [],
               "explanation": "Từ cần điền là 'mock' (chế nhạo), đồng nghĩa với 'tease in a cruel way' (trêu chọc một cách tàn nhẫn).",
               "correctAnswer": "mock"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "The warm weather `lessened` the snow that covered the ground. [ 8 ]",
               "options": [],
               "explanation": "Từ cần điền là 'reduced' (làm giảm đi), đồng nghĩa với 'lessened' (làm ít đi).",
               "correctAnswer": "reduced"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "`The state of working together` the groups showed helped them to solve their problems. [ 9 ]",
               "options": [],
               "explanation": "Từ cần điền là 'unity' (sự đoàn kết), đồng nghĩa với 'The state of working together' (trạng thái làm việc cùng nhau).",
               "correctAnswer": "unity"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "`The many countries ruled by one person` was beginning to slowly fall apart. [ 10 ]",
               "options": [],
               "explanation": "Từ cần điền là 'empire' (đế chế), đồng nghĩa với 'The many countries ruled by one person' (nhiều quốc gia do một người cai trị).",
               "correctAnswer": "empire"

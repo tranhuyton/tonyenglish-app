@@ -18,70 +18,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">1. The <u>large pile of dirt</u> covered most of the backyard. [ 1 ]</p><p class=\"mb-4\">2. Please call for <u>the most important male servant.</u> [ 2 ]</p><p class=\"mb-4\">3. I don’t think we have enough <u>wood used for building furniture</u> to complete the project. [ 3 ]</p><p class=\"mb-4\">4. The playful puppy made the baby <u>smile broadly.</u> [ 4 ]</p><p class=\"mb-4\">5. We’ll have to install a new <u>device that attaches to a tube to control the flow of liquid.</u> [ 5 ]</p><p class=\"mb-4\">6. I got a small muscle <u>pain in my leg after having a long workout at the</u> gym. [ 6 ]</p><p class=\"mb-4\">7. To reach the TV, the young girl stood on the <u>seat with legs but no arm support.</u> [ 7 ]</p><p class=\"mb-4\">8. A high examination score is <u>a proof of the existence of good studying</u> skills. [ 8 ]</p><p class=\"mb-4\">9. The man became worried <u>when his arm was without feeling.</u> [ 9 ]</p><p class=\"mb-4\">10. He was hired to repair the house that had become <u>old and in bad condition.</u> [ 10 ]</p>",
+              "content": "1. The <u>large pile of dirt</u> covered most of the backyard. [ 1 ]",
               "options": [],
               "explanation": "mound (n): a large pile of something.",
               "correctAnswer": "mound"
             },
             {
               "id": "2",
-              "content": "",
+              "content": "2. Please call for <u>the most important male servant.</u> [ 2 ]",
               "options": [],
               "explanation": "butler (n): the most important male servant in a wealthy house.",
               "correctAnswer": "butler"
             },
             {
               "id": "3",
-              "content": "",
+              "content": "3. I don’t think we have enough <u>wood used for building furniture</u> to complete the project. [ 3 ]",
               "options": [],
               "explanation": "timber (n): wood that is used for building houses and making furniture.",
               "correctAnswer": "timber"
             },
             {
               "id": "4",
-              "content": "",
+              "content": "4. The playful puppy made the baby <u>smile broadly.</u> [ 4 ]",
               "options": [],
               "explanation": "grin (v): to smile broadly.",
               "correctAnswer": "grin"
             },
             {
               "id": "5",
-              "content": "",
+              "content": "5. We’ll have to install a new <u>device that attaches to a tube to control the flow of liquid.</u> [ 5 ]",
               "options": [],
               "explanation": "valve (n): a device attached to a pipe that controls the flow of liquid or air.",
               "correctAnswer": "valve"
             },
             {
               "id": "6",
-              "content": "",
+              "content": "6. I got a small muscle <u>pain in my leg after having a long workout at the</u> gym. [ 6 ]",
               "options": [],
               "explanation": "cramp (n): a strong pain caused by a muscle after a lot of physical use.",
               "correctAnswer": "cramp"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "7. To reach the TV, the young girl stood on the <u>seat with legs but no arm support.</u> [ 7 ]",
               "options": [],
               "explanation": "stool (n): a seat with legs but no support for a person’s arms and back.",
               "correctAnswer": "stool"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "8. A high examination score is <u>a proof of the existence of good studying</u> skills. [ 8 ]",
               "options": [],
               "explanation": "testament (n): a testament to something shows that it exists or is true.",
               "correctAnswer": "testament"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "9. The man became worried <u>when his arm was without feeling.</u> [ 9 ]",
               "options": [],
               "explanation": "numb (adj): when a body part does not have any feeling.",
               "correctAnswer": "numb"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "10. He was hired to repair the house that had become <u>old and in bad condition.</u> [ 10 ]",
               "options": [],
               "explanation": "dilapidated (adj): old and in bad condition.",
               "correctAnswer": "dilapidated"

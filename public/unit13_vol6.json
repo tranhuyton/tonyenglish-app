@@ -274,70 +274,70 @@
           "questions": [
             {
               "id": "21",
-              "content": "<p class=\"mb-4\">1. The new law will <u>make the schools</u> less effective at teaching certain subjects. [ 21 ]</p><p class=\"mb-4\">2. Some countries have a larger population <u>of poor</u> citizens than other countries do. [ 22 ]</p><p class=\"mb-4\">3. The teachers <u>collected the names of</u> all the students who passed the test in her book. [ 23 ]</p><p class=\"mb-4\">4. If you touch that plant, you might get a sore <u>and infected area of skin</u> that itches badly. [ 24 ]</p><p class=\"mb-4\">5. The doctor <u>identified her illness</u> as being only a mild stomach flu. [ 25 ]</p><p class=\"mb-4\">6. I don’t like those kinds of movies because they have scenes that are really <u>disgusting.</u> [ 26 ]</p><p class=\"mb-4\">7. Many diseases are <u>passed from one person to another</u> when they shake hands. [ 27 ]</p><p class=\"mb-4\">8. The companies agreed that it would be cheaper to ship the fruit if they formed a group. [ 28 ]</p><p class=\"mb-4\">9. Her treatment of the patients was <u>good and kind,</u> and they seemed to heal much faster. [ 29 ]</p><p class=\"mb-4\">10. The two artists decided to <u>work together on their</u> next series of sculptures. [ 30 ]</p>",
+              "content": "1. The new law will <u>make the schools</u> less effective at teaching certain subjects. [ 21 ]",
               "options": [],
               "explanation": "render: make become something else.",
               "correctAnswer": "render"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "2. Some countries have a larger population <u>of poor</u> citizens than other countries do. [ 22 ]",
               "options": [],
               "explanation": "needy: very poor.",
               "correctAnswer": "needy"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "3. The teachers <u>collected the names of</u> all the students who passed the test in her book. [ 23 ]",
               "options": [],
               "explanation": "compile: collect a variety of things into a group.",
               "correctAnswer": "compiled"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "4. If you touch that plant, you might get a sore <u>and infected area of skin</u> that itches badly. [ 24 ]",
               "options": [],
               "explanation": "rash: an infected area of the skin.",
               "correctAnswer": "rash"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "5. The doctor <u>identified her illness</u> as being only a mild stomach flu. [ 25 ]",
               "options": [],
               "explanation": "diagnose: identify the medical condition.",
               "correctAnswer": "diagnosed"
             },
             {
               "id": "26",
-              "content": "",
+              "content": "6. I don’t like those kinds of movies because they have scenes that are really <u>disgusting.</u> [ 26 ]",
               "options": [],
               "explanation": "gross: disgusting.",
               "correctAnswer": "gross"
             },
             {
               "id": "27",
-              "content": "",
+              "content": "7. Many diseases are <u>passed from one person to another</u> when they shake hands. [ 27 ]",
               "options": [],
               "explanation": "transmit: pass it from one person or place to another.",
               "correctAnswer": "transmitted"
             },
             {
               "id": "28",
-              "content": "",
+              "content": "8. The companies agreed that it would be cheaper to ship the fruit if they formed a group. [ 28 ]",
               "options": [],
               "explanation": "federation: a group of states or businesses working for a common cause.",
               "correctAnswer": "federation"
             },
             {
               "id": "29",
-              "content": "",
+              "content": "9. Her treatment of the patients was <u>good and kind,</u> and they seemed to heal much faster. [ 29 ]",
               "options": [],
               "explanation": "humane: good and kind.",
               "correctAnswer": "humane"
             },
             {
               "id": "30",
-              "content": "",
+              "content": "10. The two artists decided to <u>work together on their</u> next series of sculptures. [ 30 ]",
               "options": [],
               "explanation": "collaborate: work together on something.",
               "correctAnswer": "collaborate"

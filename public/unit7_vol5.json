@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">1. Dogs do not have the ability to bear the pain to high pitched noises. [ 11 ]</p><p class=\"mb-4\">2. The boring and repeating sounds from a ticking clock can make some people annoyed. [ 12 ]</p><p class=\"mb-4\">3. My sister is a well-known and important musician. [ 13 ]</p><p class=\"mb-4\">4. I used my microscope to see the cell's central part. [ 14 ]</p><p class=\"mb-4\">5. The rough fur of the gorilla is a defining trait. [ 15 ]</p>",
+              "content": "1. Dogs do not have the ability to bear the pain to high pitched noises. [ 11 ]",
               "options": [],
               "explanation": "ability to bear the pain tương đương với sự chịu đựng (tolerance).",
               "correctAnswer": "tolerance"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "2. The boring and repeating sounds from a ticking clock can make some people annoyed. [ 12 ]",
               "options": [],
               "explanation": "boring and repeating tương đương với repetitive (lặp đi lặp lại).",
               "correctAnswer": "repetitive"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "3. My sister is a well-known and important musician. [ 13 ]",
               "options": [],
               "explanation": "well-known and important tương đương với prominent (nổi bật/xuất chúng).",
               "correctAnswer": "prominent"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "4. I used my microscope to see the cell's central part. [ 14 ]",
               "options": [],
               "explanation": "central part of a cell là nucleus (nhân tế bào).",
               "correctAnswer": "nucleus"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "5. The rough fur of the gorilla is a defining trait. [ 15 ]",
               "options": [],
               "explanation": "rough tương đương với coarse (thô ráp).",
               "correctAnswer": "coarse"

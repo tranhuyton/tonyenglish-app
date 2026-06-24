@@ -214,70 +214,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">1. They didn't want to get covered with sand, so they relaxed on an <i>extended</i> blanket. [ 16 ]</p><p class=\"mb-4\">2. The boys were <i>talking quickly</i> about what they were going to do that weekend. [ 17 ]</p><p class=\"mb-4\">3. It's easy to go past the exit when you're driving on the <i>road where cars drive fast</i>. [ 18 ]</p><p class=\"mb-4\">4. This building used to be a <i>house where monks lived</i>, but now it's used as a museum. [ 19 ]</p><p class=\"mb-4\">5. The <i>twisting</i> path that went through the mountains was beautiful to hike in the spring. [ 20 ]</p><p class=\"mb-4\">6. The photograph showed *one side of the man's face*. [ 21 ]</p><p class=\"mb-4\">7. Their chances of escaping the room became <i>worse</i> as the water level continued to rise. [ 22 ]</p><p class=\"mb-4\">8. The <i>outside surface</i> of the car looked bad, but the inside still looked new. [ 23 ]</p><p class=\"mb-4\">9. Lisa is a very <i>loud and happy</i> person. [ 24 ]</p><p class=\"mb-4\">10. I'll remember her forever. I had never before met such a *cheerful, talkative* person. [ 25 ]</p>",
+              "content": "1. They didn't want to get covered with sand, so they relaxed on an <i>extended</i> blanket. [ 16 ]",
               "options": [],
               "explanation": "outstretched means extended.",
               "correctAnswer": "outstretched"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "2. The boys were <i>talking quickly</i> about what they were going to do that weekend. [ 17 ]",
               "options": [],
               "explanation": "chattering means talking quickly.",
               "correctAnswer": "chattering"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "3. It's easy to go past the exit when you're driving on the <i>road where cars drive fast</i>. [ 18 ]",
               "options": [],
               "explanation": "freeway is a road where cars drive fast.",
               "correctAnswer": "freeway"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "4. This building used to be a <i>house where monks lived</i>, but now it's used as a museum. [ 19 ]",
               "options": [],
               "explanation": "monastery is a building where monks live.",
               "correctAnswer": "monastery"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "5. The <i>twisting</i> path that went through the mountains was beautiful to hike in the spring. [ 20 ]",
               "options": [],
               "explanation": "winding means twisting.",
               "correctAnswer": "winding"
             },
             {
               "id": "21",
-              "content": "",
+              "content": "6. The photograph showed *one side of the man's face*. [ 21 ]",
               "options": [],
               "explanation": "profile means an outline of a face, usually from the side.",
               "correctAnswer": "profile"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "7. Their chances of escaping the room became <i>worse</i> as the water level continued to rise. [ 22 ]",
               "options": [],
               "explanation": "deteriorated means became worse.",
               "correctAnswer": "deteriorated"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "8. The <i>outside surface</i> of the car looked bad, but the inside still looked new. [ 23 ]",
               "options": [],
               "explanation": "exterior is the outside surface.",
               "correctAnswer": "exterior"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "9. Lisa is a very <i>loud and happy</i> person. [ 24 ]",
               "options": [],
               "explanation": "hearty means loud and happy.",
               "correctAnswer": "hearty"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "10. I'll remember her forever. I had never before met such a *cheerful, talkative* person. [ 25 ]",
               "options": [],
               "explanation": "vivacious means talkative and cheerful.",
               "correctAnswer": "vivacious"

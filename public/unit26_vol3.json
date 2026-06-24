@@ -213,70 +213,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">He blamed me of taking the last piece of pie. (ac__________) [ 16 ]</p><p class=\"mb-4\">The man's bedroom was very simple. (pla____) [ 17 ]</p><p class=\"mb-4\">The clown likes to entertain children. (amu____) [ 18 ]</p><p class=\"mb-4\">I need to change the way I run so I can be faster. (adj______) [ 19 ]</p><p class=\"mb-4\">During their free time, the children did many different activities. (en___________ in) [ 20 ]</p><p class=\"mb-4\">This cloth dress is one of my favorites. (co_________) [ 21 ]</p><p class=\"mb-4\">The bad storm over the ocean almost reached the land. (hu_______________) [ 22 ]</p><p class=\"mb-4\">Tightly close the window before the rain starts! (s______) [ 23 ]</p><p class=\"mb-4\">He will hit something and break his bike if he closes his eyes while riding. (c_____) [ 24 ]</p><p class=\"mb-4\">The army fights in the war area. (z____) [ 25 ]</p>",
+              "content": "He blamed me of taking the last piece of pie. (ac__________) [ 16 ]",
               "options": [],
               "explanation": "'accused' (buộc tội) đồng nghĩa với 'blamed'. Cấu trúc 'accuse someone of something'.",
               "correctAnswer": "accused"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "The man's bedroom was very simple. (pla____) [ 17 ]",
               "options": [],
               "explanation": "'plain' (giản dị, đơn sơ) đồng nghĩa với 'simple'.",
               "correctAnswer": "plain"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "The clown likes to entertain children. (amu____) [ 18 ]",
               "options": [],
               "explanation": "'amuse' (làm cho vui, giải trí) đồng nghĩa với 'entertain'.",
               "correctAnswer": "amuse"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "I need to change the way I run so I can be faster. (adj______) [ 19 ]",
               "options": [],
               "explanation": "'adjust' (điều chỉnh) đồng nghĩa với 'change' để làm cho thứ gì đó tốt hơn.",
               "correctAnswer": "adjust"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "During their free time, the children did many different activities. (en___________ in) [ 20 ]",
               "options": [],
               "explanation": "'engaged in' (tham gia vào) đồng nghĩa với việc 'did' (thực hiện) các hoạt động.",
               "correctAnswer": "engaged"
             },
             {
               "id": "21",
-              "content": "",
+              "content": "This cloth dress is one of my favorites. (co_________) [ 21 ]",
               "options": [],
               "explanation": "'cotton' (vải bông) là chất liệu vải (cloth) quen thuộc.",
               "correctAnswer": "cotton"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "The bad storm over the ocean almost reached the land. (hu_______________) [ 22 ]",
               "options": [],
               "explanation": "'hurricane' (bão nhiệt đới) đồng nghĩa với 'bad storm over the ocean' (cơn bão lớn trên đại dương).",
               "correctAnswer": "hurricane"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "Tightly close the window before the rain starts! (s______) [ 23 ]",
               "options": [],
               "explanation": "'shut' (đóng) đồng nghĩa với 'tightly close' (đóng chặt).",
               "correctAnswer": "shut"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "He will hit something and break his bike if he closes his eyes while riding. (c_____) [ 24 ]",
               "options": [],
               "explanation": "'crash' (đâm sầm, va chạm) đồng nghĩa với 'hit something and break'.",
               "correctAnswer": "crash"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "The army fights in the war area. (z____) [ 25 ]",
               "options": [],
               "explanation": "'zone' (khu vực) đồng nghĩa với 'area'.",
               "correctAnswer": "zone"

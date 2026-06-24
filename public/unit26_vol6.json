@@ -18,70 +18,70 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p class=\"mb-4\">1. I’m glad our teacher is so <u>accepting of others</u> as they are. [ 1 ]</p><p class=\"mb-4\">2. Chewing gum creates a lot of <u>watery liquid used</u> for digestion and chewing food. [ 2 ]</p><p class=\"mb-4\">3. She had <u>to use physical strength to stop the big</u> dog so that it did not try to attack us. [ 3 ]</p><p class=\"mb-4\">4. Let’s see who can <u>run fast over a short distance</u> to the car in the shortest amount of time. [ 4 ]</p><p class=\"mb-4\">5. Lots of people try <u>to imitate the sports</u> star. [ 5 ]</p><p class=\"mb-4\">6. The ache is coming deep from within her <u>organs within the</u> body. [ 6 ]</p><p class=\"mb-4\">7. Please take a <u>slightly wet</u> towel and wipe the surface of the table to clean it. [ 7 ]</p><p class=\"mb-4\">8. She wore a ring on <u>her finger between her thumb and middle finger.</u> [ 8 ]</p><p class=\"mb-4\">9. A lack of money might <u>limit the development</u> of the project. [ 9 ]</p><p class=\"mb-4\">10. His answer is always an <u>informal way of saying no.</u> [ 10 ]</p>",
+              "content": "1. I’m glad our teacher is so <u>accepting of others</u> as they are. [ 1 ]",
               "options": [],
               "explanation": "tolerant (adj): accepting others.",
               "correctAnswer": "tolerant"
             },
             {
               "id": "2",
-              "content": "",
+              "content": "2. Chewing gum creates a lot of <u>watery liquid used</u> for digestion and chewing food. [ 2 ]",
               "options": [],
               "explanation": "saliva (n): watery liquid in the mouth.",
               "correctAnswer": "saliva"
             },
             {
               "id": "3",
-              "content": "",
+              "content": "3. She had <u>to use physical strength to stop the big</u> dog so that it did not try to attack us. [ 3 ]",
               "options": [],
               "explanation": "restrain (v): to use physical strength to stop someone or something.",
               "correctAnswer": "restrain"
             },
             {
               "id": "4",
-              "content": "",
+              "content": "4. Let’s see who can <u>run fast over a short distance</u> to the car in the shortest amount of time. [ 4 ]",
               "options": [],
               "explanation": "sprint (v): to run very fast over a short distance.",
               "correctAnswer": "sprint"
             },
             {
               "id": "5",
-              "content": "",
+              "content": "5. Lots of people try <u>to imitate the sports</u> star. [ 5 ]",
               "options": [],
               "explanation": "emulate (v): to imitate someone because they are admired.",
               "correctAnswer": "emulate"
             },
             {
               "id": "6",
-              "content": "",
+              "content": "6. The ache is coming deep from within her <u>organs within the</u> body. [ 6 ]",
               "options": [],
               "explanation": "guts (n): organs inside a person or animal.",
               "correctAnswer": "guts"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "7. Please take a <u>slightly wet</u> towel and wipe the surface of the table to clean it. [ 7 ]",
               "options": [],
               "explanation": "moist (adj): slightly wet.",
               "correctAnswer": "moist"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "8. She wore a ring on <u>her finger between her thumb and middle finger.</u> [ 8 ]",
               "options": [],
               "explanation": "forefinger (n): the finger between thumb and middle finger.",
               "correctAnswer": "forefinger"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "9. A lack of money might <u>limit the development</u> of the project. [ 9 ]",
               "options": [],
               "explanation": "constrain (v): to limit development.",
               "correctAnswer": "constrain"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "10. His answer is always an <u>informal way of saying no.</u> [ 10 ]",
               "options": [],
               "explanation": "nope (adv): informal way of saying no.",
               "correctAnswer": "nope"

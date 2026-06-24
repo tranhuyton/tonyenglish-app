@@ -216,70 +216,70 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">1. Miguel did not want to [give up control of] his managerial powers. [ 16 ]</p><p class=\"mb-4\">2. With his [long pointed stick with a blade at the end], he was able to defend himself. [ 17 ]</p><p class=\"mb-4\">3. During the storm we heard [loud noises]. [ 18 ]</p><p class=\"mb-4\">4. The army was beaten, so it [ran away] to a safe place. [ 19 ]</p><p class=\"mb-4\">5. The [soldiers who fought in groups] during the battle were exhausted after the conflict. [ 20 ]</p><p class=\"mb-4\">6. The [metal we wore to protect our body] was heavy and hot during the summer. [ 21 ]</p><p class=\"mb-4\">7. We walked carefully down the [sharp angle] of the mountain. [ 22 ]</p><p class=\"mb-4\">8. A feeling of [being free] came over all the people after the election of a new prime minister. [ 23 ]</p><p class=\"mb-4\">9. The soldiers managed to hold off the [attack from another group]. [ 24 ]</p><p class=\"mb-4\">10. We heard a [loud sound] when the hammer hit the brick wall. [ 25 ]</p>",
+              "content": "1. Miguel did not want to <u>give up control of</u> his managerial powers. [ 16 ]",
               "options": [],
               "explanation": "yield: to give up control of it.",
               "correctAnswer": "yield"
             },
             {
               "id": "17",
-              "content": "",
+              "content": "2. With his <u>long pointed stick with a blade at the end</u>, he was able to defend himself. [ 17 ]",
               "options": [],
               "explanation": "spear: a long stick with a blade on one end.",
               "correctAnswer": "spear"
             },
             {
               "id": "18",
-              "content": "",
+              "content": "3. During the storm we heard <u>loud noises</u>. [ 18 ]",
               "options": [],
               "explanation": "thunder: the loud noise heard during a storm.",
               "correctAnswer": "thunder"
             },
             {
               "id": "19",
-              "content": "",
+              "content": "4. The army was beaten, so it <u>ran away</u> to a safe place. [ 19 ]",
               "options": [],
               "explanation": "retreat: to run away because you have been beaten in a fight.",
               "correctAnswer": "retreated"
             },
             {
               "id": "20",
-              "content": "",
+              "content": "5. The <u>soldiers who fought in groups</u> during the battle were exhausted after the conflict. [ 20 ]",
               "options": [],
               "explanation": "troops: soldiers that fight in groups in a battle.",
               "correctAnswer": "troops"
             },
             {
               "id": "21",
-              "content": "",
+              "content": "6. The <u>metal we wore to protect our body</u> was heavy and hot during the summer. [ 21 ]",
               "options": [],
               "explanation": "armor: metal worn by soldiers to protect the body.",
               "correctAnswer": "armor"
             },
             {
               "id": "22",
-              "content": "",
+              "content": "7. We walked carefully down the <u>sharp angle</u> of the mountain. [ 22 ]",
               "options": [],
               "explanation": "steep: its slope or angle rises or falls sharply.",
               "correctAnswer": "steep"
             },
             {
               "id": "23",
-              "content": "",
+              "content": "8. A feeling of <u>being free</u> came over all the people after the election of a new prime minister. [ 23 ]",
               "options": [],
               "explanation": "independence: the state of being free from the control of others.",
               "correctAnswer": "independence"
             },
             {
               "id": "24",
-              "content": "",
+              "content": "9. The soldiers managed to hold off the <u>attack from another group</u>. [ 24 ]",
               "options": [],
               "explanation": "invasion: an attack by a group from another country.",
               "correctAnswer": "invasion"
             },
             {
               "id": "25",
-              "content": "",
+              "content": "10. We heard a <u>loud sound</u> when the hammer hit the brick wall. [ 25 ]",
               "options": [],
               "explanation": "boom: to make a loud, deep sound.",
               "correctAnswer": "boom"

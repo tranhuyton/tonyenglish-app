@@ -146,35 +146,35 @@
           "questions": [
             {
               "id": "11",
-              "content": "<p class=\"mb-4\">1. I broke <u>the long piece of fabric that goes over my</u> shoulder on my purse. [ 11 ]</p><p class=\"mb-4\">2. Matt’s female appearances made everyone take notice of him immediately. [ 12 ]</p><p class=\"mb-4\">3. You must <u>wear proper clothing</u> if you plan on attending the formal dance. [ 13 ]</p><p class=\"mb-4\">4. He works for a well-respected firm downtown. [ 14 ]</p><p class=\"mb-4\">5. <u>The soft materials in his helmet will protect him</u> if he should fall and strike his head on an object. [ 15 ]</p>",
+              "content": "1. I broke <u>the long piece of fabric that goes over my</u> shoulder on my purse. [ 11 ]",
               "options": [],
               "explanation": "strap: a thin long piece of fabric used to fasten or carry.",
               "correctAnswer": "strap"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "2. Matt’s female appearances made everyone take notice of him immediately. [ 12 ]",
               "options": [],
               "explanation": "feminine: having qualities that are commonly related to women.",
               "correctAnswer": "feminine"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "3. You must <u>wear proper clothing</u> if you plan on attending the formal dance. [ 13 ]",
               "options": [],
               "explanation": "attire: nice or special clothing.",
               "correctAnswer": "attire"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "4. He works for a well-respected firm downtown. [ 14 ]",
               "options": [],
               "explanation": "reputable: having a good reputation.",
               "correctAnswer": "reputable"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "5. <u>The soft materials in his helmet will protect him</u> if he should fall and strike his head on an object. [ 15 ]",
               "options": [],
               "explanation": "pad: a thick piece of soft material used to protect things.",
               "correctAnswer": "pads"

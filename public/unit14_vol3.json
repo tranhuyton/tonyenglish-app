@@ -80,70 +80,70 @@
           "questions": [
             {
               "id": "6",
-              "content": "<p class=\"mb-4\">The dinner plates with designs made of gold were a [treat but not needed]. [ 6 ]</p><p class=\"mb-4\">The king wore a large, golden [hat]. [ 7 ]</p><p class=\"mb-4\">Joan is a [person who gets paid to cook in a restaurant]. [ 8 ]</p><p class=\"mb-4\">George started to [lose blood] when he cut his finger. [ 9 ]</p><p class=\"mb-4\">The book was so [bad] that I couldn't read the whole thing. [ 10 ]</p><p class=\"mb-4\">It is [rude] to walk away when someone is talking to you. [ 11 ]</p><p class=\"mb-4\">Everyone is supposed to [get down on one knee] when the king walks past. [ 12 ]</p><p class=\"mb-4\">Her new boat is [very big]. Twenty people can ride on it. [ 13 ]</p><p class=\"mb-4\">He wanted to [become friends] with his new co-workers. [ 14 ]</p><p class=\"mb-4\">The long [threads] were woven into a warm scarf. [ 15 ]</p>",
+              "content": "The dinner plates with designs made of gold were a <u>treat but not needed</u>. [ 6 ]",
               "options": [],
               "explanation": "luxury: xa xỉ phẩm",
               "correctAnswer": "LUXURY"
             },
             {
               "id": "7",
-              "content": "",
+              "content": "The king wore a large, golden <u>hat</u>. [ 7 ]",
               "options": [],
               "explanation": "crown: vương miện",
               "correctAnswer": "CROWN"
             },
             {
               "id": "8",
-              "content": "",
+              "content": "Joan is a <u>person who gets paid to cook in a restaurant</u>. [ 8 ]",
               "options": [],
               "explanation": "chef: đầu bếp",
               "correctAnswer": "CHEF"
             },
             {
               "id": "9",
-              "content": "",
+              "content": "George started to <u>lose blood</u> when he cut his finger. [ 9 ]",
               "options": [],
               "explanation": "bleed: chảy máu",
               "correctAnswer": "BLEED"
             },
             {
               "id": "10",
-              "content": "",
+              "content": "The book was so <u>bad</u> that I couldn't read the whole thing. [ 10 ]",
               "options": [],
               "explanation": "horrible: tồi tệ",
               "correctAnswer": "HORRIBLE"
             },
             {
               "id": "11",
-              "content": "",
+              "content": "It is <u>rude</u> to walk away when someone is talking to you. [ 11 ]",
               "options": [],
               "explanation": "impolite: bất lịch sự",
               "correctAnswer": "IMPOLITE"
             },
             {
               "id": "12",
-              "content": "",
+              "content": "Everyone is supposed to <u>get down on one knee</u> when the king walks past. [ 12 ]",
               "options": [],
               "explanation": "kneel: quỳ gối",
               "correctAnswer": "KNEEL"
             },
             {
               "id": "13",
-              "content": "",
+              "content": "Her new boat is <u>very big</u>. Twenty people can ride on it. [ 13 ]",
               "options": [],
               "explanation": "massive: to lớn",
               "correctAnswer": "MASSIVE"
             },
             {
               "id": "14",
-              "content": "",
+              "content": "He wanted to <u>become friends</u> with his new co-workers. [ 14 ]",
               "options": [],
               "explanation": "bond: gắn kết",
               "correctAnswer": "BOND"
             },
             {
               "id": "15",
-              "content": "",
+              "content": "The long <u>threads</u> were woven into a warm scarf. [ 15 ]",
               "options": [],
               "explanation": "fiber: sợi",
               "correctAnswer": "FIBER"
