@@ -104,7 +104,7 @@
                 "d. “ I’m sorry.”"
               ],
               "explanation": "An ego is a person’s sense of their own worth.",
-              "correctAnswer": "a. “ I am the best.”"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -116,7 +116,7 @@
                 "d. A pillow"
               ],
               "explanation": "Jagged means having a tough, uneven shape or edge.",
-              "correctAnswer": "b. A cliff"
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -128,7 +128,7 @@
                 "d. The ground"
               ],
               "explanation": "To excavate means to dig on land and remove dirt.",
-              "correctAnswer": "d. The ground"
+              "correctAnswer": "D"
             },
             {
               "id": "14",
@@ -140,7 +140,7 @@
                 "d. The fingernails"
               ],
               "explanation": "Skeletal relates to bones in the body.",
-              "correctAnswer": "c. The skull"
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -152,7 +152,7 @@
                 "d. Combing your hair"
               ],
               "explanation": "An endeavor is an attempt to do something, especially something new or original.",
-              "correctAnswer": "b. Inventing a new machine"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

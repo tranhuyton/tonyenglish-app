@@ -237,63 +237,69 @@
               "content": "Marcus only postponed the tragedy for a short time.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (T). Bài đọc có nhắc đến việc hành động của cậu không giải quyết vấn đề mãi mãi, mà chỉ trì hoãn thảm kịch (This didn't fix the problem forever, but it did postpone the tragedy).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "22",
               "content": "The chill of the arctic water made Marcus take his finger out of the wall.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai (F). Nước lạnh làm ngón tay Marcus đau, nhưng cậu không hề rút tay ra mà đã đợi cho đến khi thủy triều rút xuống (He knew he had to wait until the tide descended. It was very difficult, but Marcus stayed there and saved the town).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "23",
               "content": "Marcus worked in an institution with his father.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai (F). Marcus không làm việc cùng cha trong viện nghiên cứu. Thay vào đó, cậu làm công việc giao sữa (Instead, the boy delivered milk).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "24",
               "content": "In the end, everyone was very angry with Marcus.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai (F). Cuối cùng, mọi người đều rất vui mừng với Marcus và cậu trở thành anh hùng (Everyone was very happy with Marcus ... He was a hero).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "25",
               "content": "Marcus didn't want to be late taking the milk to the merchant.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (T). Bài đọc ghi rõ: He didn't want to be late (Cậu ấy không muốn bị trễ giờ giao sữa cho thương gia).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "26",
               "content": "Marcus ran down a path by a canal.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (T). Dựa vào bài đọc: He ran down a path beside a large canal (Cậu chạy dọc theo một con đường mòn bên cạnh một con kênh lớn).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

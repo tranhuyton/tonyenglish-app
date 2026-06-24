@@ -20,7 +20,7 @@
                 "passion"
               ],
               "explanation": "distant: xa xôi",
-              "correctAnswer": "C. DISTANT"
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "bloom"
               ],
               "explanation": "dessert: món tráng miệng",
-              "correctAnswer": "A. DESSERT"
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "fairy"
               ],
               "explanation": "fairy: nàng tiên",
-              "correctAnswer": "D. FAIRY"
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "curl"
               ],
               "explanation": "eclipse: nhật thực",
-              "correctAnswer": "C. ECLIPSE"
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "sneeze"
               ],
               "explanation": "refresh: làm cho tỉnh táo, sảng khoái",
-              "correctAnswer": "B. REFRESH"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -88,7 +88,7 @@
                 "a flower"
               ],
               "explanation": "whistle: huýt sáo",
-              "correctAnswer": "B. TO MAKE NOISE WITH ONE'S LIPS"
+              "correctAnswer": "B"
             },
             {
               "id": "7",
@@ -100,7 +100,7 @@
                 "to help tired people"
               ],
               "explanation": "compact: nhỏ gọn",
-              "correctAnswer": "C. SMALL"
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -112,7 +112,7 @@
                 "strong feeling"
               ],
               "explanation": "wool: lông cừu",
-              "correctAnswer": "A. SHEEP'S HAIR"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -124,7 +124,7 @@
                 "in the shape of a circle"
               ],
               "explanation": "grace: sự uyển chuyển, duyên dáng",
-              "correctAnswer": "C. A NICE WAY TO MOVE"
+              "correctAnswer": "C"
             },
             {
               "id": "10",
@@ -136,7 +136,7 @@
                 "one of the things on your feet"
               ],
               "explanation": "dip: nhúng vào rồi rút ra",
-              "correctAnswer": "C. TO PUT IN AND OUT"
+              "correctAnswer": "C"
             },
             {
               "id": "11",
@@ -148,7 +148,7 @@
                 "a sweet thing to eat"
               ],
               "explanation": "spice: gia vị",
-              "correctAnswer": "A. A FLAVOR ADDED TO FOOD OR DRINK"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -160,7 +160,7 @@
                 "a feeling of wanting"
               ],
               "explanation": "leisure: thời gian rảnh rỗi",
-              "correctAnswer": "A. TIME WHEN YOU DO NOT HAVE TO WORK"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -172,7 +172,7 @@
                 "to go after"
               ],
               "explanation": "curl: lọn tóc xoăn, đường xoắn",
-              "correctAnswer": "B. SOMETHING WITH A CURVE"
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -184,7 +184,7 @@
                 "far away"
               ],
               "explanation": "pillow: cái gối",
-              "correctAnswer": "A. SOMETHING YOU SLEEP ON"
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -196,7 +196,7 @@
                 "to go away"
               ],
               "explanation": "pulse: nhịp tim",
-              "correctAnswer": "C. THE BEAT OF ONE'S HEART"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -216,7 +216,7 @@
                 "decay / bloom"
               ],
               "explanation": "distant: tương lai xa; compact: xe nhỏ gọn",
-              "correctAnswer": "A. DISTANT / COMPACT"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -228,7 +228,7 @@
                 "leisure / fairy"
               ],
               "explanation": "eclipse: nhật thực; pulse: nhịp tim",
-              "correctAnswer": "A. ECLIPSE / PULSE"
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -240,7 +240,7 @@
                 "curls / wool"
               ],
               "explanation": "mankind: loài người; grace: sự uyển chuyển",
-              "correctAnswer": "B. MANKIND / GRACE"
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -252,7 +252,7 @@
                 "passion / pillow"
               ],
               "explanation": "spice: gia vị (quế); desserts: các món tráng miệng",
-              "correctAnswer": "A. SPICE / DESSERTS"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -264,7 +264,7 @@
                 "refresh / whistled"
               ],
               "explanation": "bloom: nở hoa; decay: tàn úa",
-              "correctAnswer": "B. BLOOM / DECAY"
+              "correctAnswer": "B"
             },
             {
               "id": "21",
@@ -276,7 +276,7 @@
                 "sneezing / dipped"
               ],
               "explanation": "whistled: huýt sáo; refresh: làm cho tỉnh táo",
-              "correctAnswer": "B. WHISTLED / REFRESH"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -288,7 +288,7 @@
                 "pillow / passion"
               ],
               "explanation": "wool: lông cừu; curls: uốn lọn",
-              "correctAnswer": "A. WOOL / CURLS"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -300,7 +300,7 @@
                 "compact / distant"
               ],
               "explanation": "leisure time: thời gian rảnh rỗi; fairy: nàng tiên",
-              "correctAnswer": "A. LEISURE / FAIRY"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -312,7 +312,7 @@
                 "refresh / whistled"
               ],
               "explanation": "dipped: nhúng; sneezing: hắt hơi",
-              "correctAnswer": "B. DIPPED / SNEEZING"
+              "correctAnswer": "B"
             },
             {
               "id": "25",
@@ -324,7 +324,7 @@
                 "desserts / spice"
               ],
               "explanation": "passion: niềm đam mê, thích thú; pillow: cái gối",
-              "correctAnswer": "B. PASSION / PILLOW"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -352,7 +352,7 @@
                 "She had a fast pulse."
               ],
               "explanation": "Câu văn trong bài ghi rõ \"Suddenly, somebody sneezed. The sound woke Tina up.\" (Đột nhiên, có ai đó hắt hơi. Âm thanh đó đã đánh thức Tina dậy). Vì vậy, lý do cô ấy tỉnh giấc là do nghe thấy tiếng hắt hơi. Đáp án chính xác là She heard someone sneeze nha.",
-              "correctAnswer": "B. SHE HEARD SOMEONE SNEEZE."
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -364,7 +364,7 @@
                 "she was compact"
               ],
               "explanation": "Bài đọc viết \"Tina dipped a finger in the cup and tasted it. It was tea with all kinds of delicious spices in it. Tina felt refreshed after drinking the tea.\" (Tina nhúng một ngón tay vào cốc và nếm thử. Đó là trà có đủ loại gia vị thơm ngon. Tina cảm thấy sảng khoái sau khi uống). Như vậy cô ấy rất thích loại trà này, việc nói cô ấy không thích là thông tin sai.",
-              "correctAnswer": "C. SHE DID NOT LIKE TEA WITH SPICE"
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -376,7 +376,7 @@
                 "She lets them decay."
               ],
               "explanation": "Trong bài, bà Wilma đã nói \"I spend all my leisure time in my garden cutting flowers.\" (Tôi dành toàn bộ thời gian rảnh rỗi trong khu vườn của mình để cắt hoa). Vì vậy, hành động bà ấy làm với những bông hoa là cắt chúng (She cuts them).",
-              "correctAnswer": "B. SHE CUTS THEM."
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -388,7 +388,7 @@
                 "In a distant country"
               ],
               "explanation": "Ngay câu đầu tiên của bài đọc đã giới thiệu \"In a distant land, there was a kingdom where fairies lived.\" (Ở một vùng đất xa xôi, có một vương quốc nơi các nàng tiên sinh sống). Vùng đất xa xôi (distant land) cũng đồng nghĩa với distant country nhé.",
-              "correctAnswer": "D. IN A DISTANT COUNTRY"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"

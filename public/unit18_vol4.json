@@ -421,64 +421,70 @@
               "id": "31",
               "content": "The title of the script was The Big Barber.",
               "options": [
-                "A. True",
-                "B. False"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài viết: \"The title is The Lost Glove—it's a comic play,\" kịch bản có tên The Lost Glove, không phải The Big Barber.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "32",
               "content": "Robby wanted the part of the hermit because he would get to talk with an accent.",
               "options": [
-                "A. True",
-                "B. False"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Robby nói: \"I want to play the part of the hermit because the hermit gets to talk with an accent!\"",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "33",
               "content": "Robby declined Peter's offer to practice together.",
               "options": [
-                "A. True",
-                "B. False"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Sự thật là Peter từ chối lời mời của Robby, chứ không phải Robby từ chối Peter.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "The scene on the staircase was about the migrant searching for a new job.",
               "options": [
-                "A. True",
-                "B. False"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Robby nói: \"Do you want to practice the scene on the staircase? It's the part where the migrant searches for a new job.\"",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
               "content": "Peter's mind was blank during the audition.",
               "options": [
-                "A. True",
-                "B. False"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc viết: \"The teacher told him to begin, but his mind was blank.\"",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "36",
               "content": "Peter felt that Robby justly received the lead role.",
               "options": [
-                "A. True",
-                "B. False"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc viết: \"Peter pondered the situation and came to the idea that Robby justly received the part.\"",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "u18_rc_b",

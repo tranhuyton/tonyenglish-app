@@ -363,53 +363,58 @@
               "content": "One of the most fabulous pharmaceutical discoveries was an accident.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Theo đoạn 1, \"One of the greatest pharmaceutical discoveries happened by accident.\" (Một trong những khám phá dược phẩm vĩ đại nhất đã xảy ra một cách tình cờ).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
               "content": "The essence of the scientist’s ongoing work was to find a remedy for a terminal infection.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Theo đoạn 1, \"The essence of his ongoing work... An infection caused by the bacteria was often terminal, and he was looking for a remedy.\" (Bản chất công việc đang diễn ra của ông... Một căn bệnh nhiễm trùng do vi khuẩn gây ra thường dẫn đến tử vong, và ông đang tìm kiếm một phương thuốc).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "33",
               "content": "The infection caused by the bacteria he was working on was not terminal.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Trong đoạn 1 có viết: \"An infection caused by the bacteria was often terminal\" (Một căn bệnh nhiễm trùng do vi khuẩn gây ra thường dẫn đến tử vong).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "Fleming examined the fungus on an impulse.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Theo đoạn 2, \"While he was cleaning, he had an impulse to examine the fungus.\" (Trong khi dọn dẹp, ông bỗng nảy ra ý định kiểm tra nấm).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
               "content": "Whenever the synthetic material was far from the bacteria, the bacteria died.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Cuối đoạn 2 ghi: \"whenever the fungus was in close proximity to the bacteria, the bacteria died.\" (bất cứ khi nào nấm ở gần vi khuẩn, vi khuẩn sẽ chết). Vật liệu tổng hợp (synthetic material) và việc ở xa (far) là sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading_B",

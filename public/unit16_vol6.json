@@ -26,7 +26,7 @@
                 "d. muscle"
               ],
               "explanation": "culprit means someone who did a crime, opposite is victim.",
-              "correctAnswer": "c. victim"
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -38,7 +38,7 @@
                 "d. improve"
               ],
               "explanation": "segregate means to place apart, opposite is combine.",
-              "correctAnswer": "c. combine"
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -50,7 +50,7 @@
                 "d. substance"
               ],
               "explanation": "uproar means loud noise caused by anger, opposite is calm.",
-              "correctAnswer": "a. calm"
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,7 +62,7 @@
                 "d. graceful"
               ],
               "explanation": "clumsy means awkward in handling things, opposite is graceful.",
-              "correctAnswer": "d. graceful"
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -74,7 +74,7 @@
                 "d. great"
               ],
               "explanation": "premature means done too early, opposite is late.",
-              "correctAnswer": "b. late"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -222,7 +222,7 @@
                 "d. choice"
               ],
               "explanation": "mob means a crowd.",
-              "correctAnswer": "b. crowd"
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -234,7 +234,7 @@
                 "d. noise"
               ],
               "explanation": "tumult means noise.",
-              "correctAnswer": "d. noise"
+              "correctAnswer": "D"
             },
             {
               "id": "18",
@@ -246,7 +246,7 @@
                 "d. temper"
               ],
               "explanation": "brute means monster.",
-              "correctAnswer": "a. monster"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -258,7 +258,7 @@
                 "d. hate"
               ],
               "explanation": "resent means hate.",
-              "correctAnswer": "d. hate"
+              "correctAnswer": "D"
             },
             {
               "id": "20",
@@ -270,7 +270,7 @@
                 "d. dream"
               ],
               "explanation": "scrutiny means study or examination.",
-              "correctAnswer": "c. study"
+              "correctAnswer": "C"
             },
             {
               "id": "21",
@@ -282,7 +282,7 @@
                 "d. declare"
               ],
               "explanation": "testify means declare.",
-              "correctAnswer": "d. declare"
+              "correctAnswer": "D"
             },
             {
               "id": "22",
@@ -294,7 +294,7 @@
                 "d. bake"
               ],
               "explanation": "collide means crash.",
-              "correctAnswer": "b. crash"
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -306,7 +306,7 @@
                 "d. teach"
               ],
               "explanation": "subject means force.",
-              "correctAnswer": "a. force"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,7 +318,7 @@
                 "d. share"
               ],
               "explanation": "evacuate means leave.",
-              "correctAnswer": "a. leave"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,7 +330,7 @@
                 "d. comedy"
               ],
               "explanation": "satire means comedy.",
-              "correctAnswer": "d. comedy"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"

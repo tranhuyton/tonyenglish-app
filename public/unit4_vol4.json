@@ -266,63 +266,69 @@
               "content": "1. Fox used the rim of a bottle to dig a deep pit.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài: he used the sharp rim of a bottle to dig a pit in the ground.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "22",
               "content": "2. Fox had a roost near the pit.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Eagle had a roost near the pit, không phải Fox.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "23",
               "content": "3. The damp ivy was too slippery for Fox to climb out.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài: The walls of the pit were covered in damp ivy. It was too slippery for him to climb out.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "24",
               "content": "4. Immoral and mean behavior was typical with Fox.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài: That is typical behavior for Fox. He does mean things all the time. Sometimes, he is completely immoral.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "25",
               "content": "5. Fox was oblivious to the hidden pit.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Fox was oblivious to the hidden animals, không phải hố.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "26",
               "content": "6. Eagle flew into the pit to save Fox.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài: Eagle began her flight to the bottom of the pit. She picked up Fox... và đưa anh ta ra ngoài.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec4_reading",

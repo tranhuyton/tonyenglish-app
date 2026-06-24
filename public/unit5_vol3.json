@@ -20,7 +20,7 @@
                 "cursing / scary"
               ],
               "explanation": "cursed (nguyền rủa), scared (làm hoảng sợ).",
-              "correctAnswer": "CURSED / SCARED"
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "skeleton / cemeteries"
               ],
               "explanation": "cemetery (nghĩa trang), skeletons (bộ xương).",
-              "correctAnswer": "CEMETERY / SKELETONS"
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "hoods / fancies"
               ],
               "explanation": "fancy (lộng lẫy/đẹp đẽ), hood (mũ trùm đầu).",
-              "correctAnswer": "FANCY / HOOD"
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "riddle / flashlights"
               ],
               "explanation": "flashlight (đèn pin), riddles (câu đố).",
-              "correctAnswer": "FLASHLIGHT / RIDDLES"
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "wickedness / disguises"
               ],
               "explanation": "disguise (đồ hóa trang), wicked (độc ác).",
-              "correctAnswer": "DISGUISE / WICKED"
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -80,7 +80,7 @@
                 "rotting / nourishes"
               ],
               "explanation": "nourish (nuôi dưỡng), rotted (đã thối rữa).",
-              "correctAnswer": "NOURISH / ROTTED"
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -92,7 +92,7 @@
                 "spoils / starves"
               ],
               "explanation": "starving (chết đói), spoiled (đã hỏng).",
-              "correctAnswer": "STARVING / SPOILED"
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -104,7 +104,7 @@
                 "short / inhabitants"
               ],
               "explanation": "inhabitant (cư dân), shortly (không lâu sau).",
-              "correctAnswer": "INHABITANT / SHORTLY"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                 "thrills / publications"
               ],
               "explanation": "publication (ấn phẩm), thrill (sự phấn khích).",
-              "correctAnswer": "PUBLICATION / THRILL"
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -128,7 +128,7 @@
                 "pirate / acquaints"
               ],
               "explanation": "acquainted (làm quen), pirates (cướp biển).",
-              "correctAnswer": "ACQUAINTED / PIRATES"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -148,7 +148,7 @@
                 "Wicked"
               ],
               "explanation": "Wicked có nghĩa là độc ác.",
-              "correctAnswer": "D. WICKED"
+              "correctAnswer": "D"
             },
             {
               "id": "12",
@@ -160,7 +160,7 @@
                 "An inhabitant"
               ],
               "explanation": "Thrill là một cảm giác hồi hộp, phấn khích.",
-              "correctAnswer": "A. A THRILL"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -172,7 +172,7 @@
                 "A riddle"
               ],
               "explanation": "Disguise (đồ cải trang) là thứ có thể mặc được.",
-              "correctAnswer": "B. A DISGUISE"
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -184,7 +184,7 @@
                 "Nourish"
               ],
               "explanation": "Starve (chết đói) là từ liên quan nhiều nhất đến cái chết trong các từ đã cho.",
-              "correctAnswer": "C. STARVE"
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -196,7 +196,7 @@
                 "Pirate"
               ],
               "explanation": "Pirate (hải tặc) liên quan đến đại dương.",
-              "correctAnswer": "D. PIRATE"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -374,7 +374,7 @@
                 "Pirate"
               ],
               "explanation": "Câu văn nói rõ \"Ghosts and skeletons are favorite costumes.\" (Ma và bộ xương là những trang phục được yêu thích nhất). Vậy trong các lựa chọn thì bộ xương (Skeleton) là câu trả lời chính xác.",
-              "correctAnswer": "B. SKELETON"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -386,7 +386,7 @@
                 "To obtain new bodies"
               ],
               "explanation": "Lý do được nhắc tới ở đoạn 1: \"They thought the food nourished them on their journey from cemeteries to heaven.\" (Họ nghĩ rằng thức ăn nuôi dưỡng các linh hồn trong cuộc hành trình từ nghĩa trang lên thiên đường). Vậy linh hồn cần thức ăn cho hành trình dài lên thiên đường (For their long journey to heaven).",
-              "correctAnswer": "C. FOR THEIR LONG JOURNEY TO HEAVEN"
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -398,7 +398,7 @@
                 "Got acquainted with people"
               ],
               "explanation": "Cùng câu văn phía trên \"their journey from cemeteries to heaven.\" (cuộc hành trình của họ từ nghĩa trang lên thiên đường). Tức là sau khi rời nghĩa trang, họ sẽ đến thiên đường. Đáp án là Went to heaven.",
-              "correctAnswer": "C. WENT TO HEAVEN"
+              "correctAnswer": "C"
             },
             {
               "id": "35",
@@ -410,7 +410,7 @@
                 "To get a thrill"
               ],
               "explanation": "Đoạn cuối bài viết có nói \"In some places, children still perform songs or riddles to get candy.\" (Ở một số nơi, trẻ em vẫn biểu diễn các bài hát hoặc câu đố để nhận được kẹo). Mục đích là để có được kẹo (To get candy).",
-              "correctAnswer": "A. TO GET CANDY"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

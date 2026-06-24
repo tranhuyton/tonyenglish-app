@@ -414,63 +414,69 @@
               "content": "The young man decided to hike in the national parks.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "True. He heard about people hiking in the national parks and decided to try it for himself.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
               "content": "The young man disagreed with the old man.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "True. The young man disagreed with the old man and bragged that he had a perfect understanding of the park.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "33",
               "content": "The young man believed that his knowledge of the park's trails was thorough.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "True. He told the old man: 'I believe I have a thorough knowledge of these trails.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "34",
               "content": "When the young man had an option of two trails, he always chose the easier one.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "False. Whenever he had to choose between an easy or difficult route, he always chose the more difficult option.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "35",
               "content": "The young man was tormented by the thought of the eventual storm.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "True. The thought of the eventual storm tormented the young man.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "36",
               "content": "When the young man got home, he knew that the old man had acted like an idiot.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "False. When he arrived home, he knew that he had acted like an idiot (không phải là ông lão).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

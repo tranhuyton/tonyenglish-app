@@ -222,7 +222,7 @@
                 "fake / newcomers"
               ],
               "explanation": "newcomers (người mới đến) và fake (giả mạo).",
-              "correctAnswer": "NEWCOMERS / FAKE"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -232,7 +232,7 @@
                 "lodge / acquire"
               ],
               "explanation": "acquire (sở hữu) và lodge (căn nhà gỗ).",
-              "correctAnswer": "ACQUIRE / LODGE"
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -242,7 +242,7 @@
                 "neglected / repay"
               ],
               "explanation": "repay (đền đáp) và neglected (bỏ mặc).",
-              "correctAnswer": "REPAY / NEGLECTED"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -252,7 +252,7 @@
                 "offenses / discouraged"
               ],
               "explanation": "discouraged (làm nản lòng) và offenses (hành vi vi phạm).",
-              "correctAnswer": "DISCOURAGED / OFFENSES"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -262,7 +262,7 @@
                 "venturing / shepherd"
               ],
               "explanation": "shepherd (người chăn cừu) và venturing (đánh liều, đi đến nơi nguy hiểm).",
-              "correctAnswer": "SHEPHERD / VENTURING"
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -272,7 +272,7 @@
                 "ridiculous / deceive"
               ],
               "explanation": "deceive (lừa phỉnh) và ridiculous (nực cười).",
-              "correctAnswer": "DECEIVE / RIDICULOUS"
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -282,7 +282,7 @@
                 "wheat / hut"
               ],
               "explanation": "hut (túp lều) và wheat (lúa mì).",
-              "correctAnswer": "HUT / WHEAT"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -292,7 +292,7 @@
                 "awkward / caretaker"
               ],
               "explanation": "caretaker (người trông nom) và awkward (lúng túng, bối rối).",
-              "correctAnswer": "CARETAKER / AWKWARD"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -302,7 +302,7 @@
                 "inferior / overlook"
               ],
               "explanation": "overlook (bỏ qua) và inferior (kém chất lượng hơn).",
-              "correctAnswer": "OVERLOOK / INFERIOR"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -312,7 +312,7 @@
                 "satisfactory / hatred"
               ],
               "explanation": "hatred (sự căm ghét) và satisfactory (đủ tốt, thỏa đáng).",
-              "correctAnswer": "HATRED / SATISFACTORY"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -335,111 +335,113 @@
               "content": "1. The shepherd counted his sheep because he didn't want to overlook any of them.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu văn trong bài là \"He was sure never to overlook any of them.\" (Ông ấy chắc chắn không bao giờ bỏ sót bất kỳ con nào trong số chúng). Việc đếm cừu giúp ông ấy không bỏ sót. Do đó câu này là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
               "content": "2. The shepherd couldn't take the sheep outside because it was dark outside.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc nói rằng \"It snowed that night. In the morning, the shepherd couldn't take his sheep out of his lodge.\" (Đêm đó trời có tuyết. Buổi sáng, người chăn cừu không thể đưa những con cừu của mình ra khỏi nhà). Lý do là vì trời có tuyết, chứ không phải vì trời tối. Do vậy câu này là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "28",
               "content": "3. The shepherd gave a little wheat to the wild sheep. But he gave his own sheep more.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài có nói \"He gave a small amount of wheat to his own sheep. But he gave more of the food to the wild sheep.\" (Ông ấy chỉ cho bầy cừu của mình một lượng nhỏ lúa mì. Nhưng ông ấy lại cho bầy cừu hoang nhiều thức ăn hơn). Câu hỏi viết ngược lại, nên câu này là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "29",
               "content": "4. The wild sheep ran away from the shepherd after the snow melted.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Cùng xem câu \"At last, the snow melted, and they ventured outdoors. As soon as he opened the door of his hut, the wild sheep started to run away.\" (Cuối cùng, tuyết tan, và họ bước ra ngoài. Ngay khi ông mở cửa túp lều, những con cừu hoang đã bắt đầu bỏ chạy). Điều này hoàn toàn khớp, nên đáp án là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "30",
               "content": "5. The wild sheep thought the shepherd had neglected his own sheep.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Con cừu hoang đã nói \"Yesterday you treated us kindly, but tomorrow you might be different. If more wild sheep joined your herd, you would treat us as inferior sheep.\" (Hôm qua ông đối xử tốt với chúng tôi, nhưng ngày mai ông có thể sẽ khác. Nếu có thêm nhiều cừu hoang gia nhập đàn, ông sẽ coi chúng tôi là những con cừu thấp kém). Hành động đối xử bất công đã chứng tỏ sự bỏ bê của người chăn cừu đối với bầy cừu của chính mình. Đáp án là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "31",
               "content": "6. The shepherd never knew what he had done wrong.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đoạn cuối bài viết \"As the wild sheep ran away, the shepherd understood his offense.\" (Khi những con cừu hoang bỏ chạy, người chăn cừu đã hiểu ra lỗi lầm của mình). Như vậy ông ấy biết mình làm sai điều gì. Câu này là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "32",
               "content": "7. What was the shepherd's hope for the wild sheep?",
               "options": [
-                "That they wouldn't be awkward",
-                "That they would feel hatred for him",
-                "That he could acquire them",
-                "That he could repay them"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu đầu bài viết \"He hoped to acquire the newcomers.\" (Ông ấy hy vọng có thể thu nạp được những thành viên mới này). Vậy ông ấy muốn có được bầy cừu hoang. Đáp án đúng là That he could acquire them.",
-              "correctAnswer": "C"
+              "correctAnswer": "Not Given"
             },
             {
               "id": "33",
               "content": "8. How did the shepherd hope to discourage the wild sheep from running away?",
               "options": [
-                "By giving them extra food",
-                "By locking them in his hut",
-                "By selling his own sheep",
-                "By being their friend"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc giải thích \"He thought the extra wheat would discourage them from leaving.\" (Ông ấy nghĩ rằng việc cho thêm lúa mì sẽ làm chúng nản lòng mà không rời đi). Vậy ông ấy dùng thêm thức ăn (extra food) để giữ chúng lại.",
-              "correctAnswer": "A"
+              "correctAnswer": "Not Given"
             },
             {
               "id": "34",
               "content": "9. All of the following describe what kind of caretaker the shepherd was EXCEPT__",
               "options": [
-                "fake",
-                "ridiculous",
-                "inferior",
-                "satisfactory"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Ở đoạn cuối, tác giả kết luận \"He had not been a satisfactory caretaker. He was a fake friend to the wild sheep.\" (Ông ấy không phải là một người chăm sóc tốt. Ông ấy là một người bạn giả tạo đối với bầy cừu hoang). Do đó, từ KHÔNG mô tả ông ta là satisfactory (đáng hài lòng, tốt).",
-              "correctAnswer": "D"
+              "correctAnswer": "Not Given"
             },
             {
               "id": "35",
               "content": "10. What was the shepherd's offense?",
               "options": [
-                "He never acquired the wild sheep.",
-                "He trapped the sheep in his lodge.",
-                "He hurt the wild sheep.",
-                "He did not care for his own sheep."
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu chốt của bài là \"Because of this, he had neglected his own herd.\" (Chính vì điều này, ông ấy đã bỏ bê bầy cừu của mình). Đó chính là lỗi lầm lớn nhất của ông ấy. Đáp án đúng là He did not care for his own sheep.",
-              "correctAnswer": "D"
+              "correctAnswer": "Not Given"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     }

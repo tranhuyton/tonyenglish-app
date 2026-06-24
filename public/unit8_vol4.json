@@ -394,63 +394,69 @@
               "content": "Janie thought constantly about a device that played videos.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu đầu tiên của bài đọc viết: \"Janie had constant thoughts about getting a music player.\" (Janie luôn có những suy nghĩ thường trực về việc có được một chiếc máy nghe nhạc). Do đó, thông tin cô ấy nghĩ về thiết bị phát video là sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "32",
               "content": "Janie halted while she walked to class because she found a backpack.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đoạn văn mô tả: \"She hurried down the hall but halted when she saw a backpack on the floor.\" (Cô vội vã đi dọc hành lang nhưng dừng lại khi nhìn thấy một chiếc ba lô trên sàn). Vì vậy, câu nhận định này là đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "33",
               "content": "Janie found the player when she gripped the bag.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài có viết: \"She reached inside the bag and felt a small object at the bottom. It was a music player...\" (Cô thò tay vào trong túi và cảm thấy một vật nhỏ ở đáy. Đó là một chiếc máy nghe nhạc...). Điều này cho thấy Janie tìm thấy máy nghe nhạc khi thò tay vào túi chứ không phải khi nắm chặt (gripped) nó, nên đáp án là sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "The backpack belonged to a student in Janie's class.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Khi Janie mang chiếc túi vào lớp và giáo viên hỏi, \"A girl named Linda claimed the bag.\" (Một cô gái tên Linda đã nhận chiếc túi). Điều này chứng tỏ chiếc túi thuộc về một học sinh trong lớp của Janie, nên đáp án là đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
               "content": "When Linda put the player to 'on' mode, it started to work.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc chỉ rõ: \"She turned it to the 'on' mode, but it wouldn't work.\" (Cô ấy bật sang chế độ 'bật', nhưng nó không hoạt động). Vì vậy, nói máy bắt đầu hoạt động là sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "36",
               "content": "Janie's parents gave the music player to Linda to replace the one she broke.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bố mẹ Janie đã nói với cô bé: \"We bought you a music player, but we're giving it to Linda. It will replace the one you broke.\" (Bố mẹ đã mua cho con một chiếc máy nghe nhạc, nhưng bố mẹ sẽ đưa nó cho Linda. Nó sẽ thay thế chiếc mà con đã làm hỏng). Do đó, thông tin này là đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

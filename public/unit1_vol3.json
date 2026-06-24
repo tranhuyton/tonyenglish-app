@@ -287,111 +287,113 @@
               "content": "Marcus occupied a home with Nicholas.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu văn trong bài là \"A long time ago, a man named Marcus occupied a house with his family.\" (Cách đây rất lâu, một người đàn ông tên là Marcus đã ở trong một ngôi nhà cùng với gia đình của ông ấy). Như vậy Marcus sống với gia đình chứ không phải sống cùng Nicholas nhé. Do đó câu này là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "22",
               "content": "Marcus told Nicholas about his problem when he encountered Nicholas.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài có viết \"One day, Nicholas encountered Marcus. Marcus told Nicholas about his agreement with the blacksmith.\" (Một ngày nọ, Nicholas tình cờ gặp Marcus. Marcus đã kể cho Nicholas nghe về thỏa thuận của ông ấy với người thợ rèn). Đoạn tiếp theo Marcus kể về rắc rối của mình. Vì vậy câu này là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "23",
               "content": "A problem arose for Marcus because he enjoyed preaching.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Theo bài đọc, \"Even though I worked for him, he didn't pay me.\" (Mặc dù tôi đã làm việc cho ông ta, ông ta lại không trả tiền cho tôi). Vấn đề nảy sinh là do người thợ rèn không trả tiền công cho Marcus, chứ không phải vì ông ấy thích giảng đạo (preaching là việc của Nicholas). Nên câu này là Sai (False) nha.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "24",
               "content": "Nicholas got a lot of satisfaction from being charitable and humble.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bạn hãy xem câu \"He learned that helping people gave him even more satisfaction than preaching.\" (Anh ấy nhận ra rằng việc giúp đỡ mọi người mang lại cho anh ấy nhiều sự thỏa mãn hơn cả việc giảng đạo). Giúp đỡ mọi người chính là thể hiện sự nhân từ (charitable). Câu này là Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "25",
               "content": "Marcus was compensated by the blacksmith for helping forge iron.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Marcus đã phàn nàn rằng \"Even though I worked for him, he didn't pay me.\" (Mặc dù tôi đã làm việc cho ông ta, ông ta lại không trả tiền cho tôi). Điều đó có nghĩa là Marcus không hề được đền bù (compensated) cho công sức rèn sắt của mình. Do vậy đáp án là Sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "26",
               "content": "The money that Nicholas gave Marcus exceeded the amount he needed.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài ghi rất rõ \"It exceeded the amount that Marcus needed.\" (Số tiền đó vượt quá số lượng mà Marcus cần). Từ \"exceeded\" nghĩa là vượt quá. Vì vậy câu này hoàn toàn Đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
               "content": "Which of the following is true about the job Marcus did?",
               "options": [
-                "He made pennies.",
-                "He was compensated unfairly.",
-                "He preached to people.",
-                "He barely sustained his family."
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Ở đoạn 3 có câu \"He worked hard, but he could barely sustain his family.\" (Ông ấy làm việc chăm chỉ, nhưng hầu như không thể nuôi sống nổi gia đình mình). Điều này hoàn toàn khớp với đáp án He barely sustained his family nhé.",
-              "correctAnswer": "D"
+              "correctAnswer": "Not Given"
             },
             {
               "id": "28",
               "content": "Why didn't Nicolas tell people that he gave money away?",
               "options": [
-                "He prospered.",
-                "He didn't want to be modest.",
-                "He wanted to be humble.",
-                "He wasn't popular in the province."
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Đoạn 5 của bài có nói \"But he also believed that he should be humble and charitable.\" (Nhưng anh ấy cũng tin rằng mình nên khiêm tốn và nhân từ). Nicholas muốn giữ sự khiêm tốn (humble) nên không nói cho mọi người biết về việc mình tặng tiền.",
-              "correctAnswer": "C"
+              "correctAnswer": "Not Given"
             },
             {
               "id": "29",
               "content": "What was dropped down the chimney?",
               "options": [
-                "A penny",
-                "A ladder",
-                "Gold",
-                "A benefactor"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu văn trong bài là \"Nicholas climbed up a ladder and dropped the bag of gold down the chimney.\" (Nicholas leo lên một cái thang và thả túi vàng xuống ống khói). Từ đó chúng ta thấy thứ được thả xuống ống khói chính là vàng (Gold).",
-              "correctAnswer": "C"
+              "correctAnswer": "Not Given"
             },
             {
               "id": "30",
               "content": "Why did Marcus want more money?",
               "options": [
-                "To buy more iron",
-                "To feed his family",
-                "To give it away",
-                "To become a blacksmith"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc nói rằng \"He worked hard, but he could barely sustain his family. He wanted to save money and prosper.\" (Ông ấy làm việc chăm chỉ, nhưng hầu như không thể nuôi sống nổi gia đình mình. Ông ấy muốn tiết kiệm tiền và trở nên thịnh vượng). Mục đích ban đầu của việc muốn có tiền là để nuôi gia đình (To feed his family) nha.",
-              "correctAnswer": "B"
+              "correctAnswer": "Not Given"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     }

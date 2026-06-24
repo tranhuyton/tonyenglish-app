@@ -406,63 +406,69 @@
               "content": "Some scientists think the asteroid theory isn't accurate.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Thông tin trong bài: \"Some scientists think that it isn't accurate.\" (Một số nhà khoa học cho rằng giả thuyết tiểu hành tinh là không chính xác.)",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
               "content": "A huge creature may have been the biggest factor in the death of these tiny insects.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Theo bài viết: \"A tiny insect may have been the biggest factor in the death of these huge creatures.\" (Một loài côn trùng nhỏ bé có thể là yếu tố lớn nhất gây ra cái chết của những sinh vật khổng lồ này, chứ không phải ngược lại.)",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
               "content": "Today, we can regulate the number of mosquitoes with pesticides.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Thông tin trong bài: \"Today, we can regulate the number of mosquitoes with pesticides.\" (Ngày nay, chúng ta có thể kiểm soát số lượng muỗi bằng thuốc trừ sâu.)",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "34",
               "content": "A vast majority of mosquitoes, from the vegetarians to the meat eaters, died.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài viết nói: \"A vast majority of them (dinosaurs), from the vegetarians to the meat eaters, died.\" (Đại đa số khủng long chết, chứ không phải muỗi.)",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "35",
               "content": "In addition, scientists have found the genetic material of mammals in fossils.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Theo bài: \"In addition, scientists have found genetic material of mosquitoes in fossils.\" (Các nhà khoa học tìm thấy vật liệu di truyền của muỗi trong hóa thạch, không phải của động vật có vú.)",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "36",
               "content": "Many dinosaurs ate mammals.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Thông tin trong bài: \"Many dinosaurs ate mammals.\" (Nhiều con khủng long đã ăn động vật có vú.)",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec4",

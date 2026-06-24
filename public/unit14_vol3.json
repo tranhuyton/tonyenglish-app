@@ -20,7 +20,7 @@
                 "impolite"
               ],
               "explanation": "diligent: chăm chỉ",
-              "correctAnswer": "A. DILIGENT"
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "bond"
               ],
               "explanation": "panic: hoảng loạn",
-              "correctAnswer": "C. PANIC"
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "thread"
               ],
               "explanation": "apprentice: người học việc",
-              "correctAnswer": "B. APPRENTICE"
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "emperor"
               ],
               "explanation": "emperor: hoàng đế",
-              "correctAnswer": "D. EMPEROR"
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "robe"
               ],
               "explanation": "scold: la mắng",
-              "correctAnswer": "A. SCOLD"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -166,7 +166,7 @@
                 "They are sleepy."
               ],
               "explanation": "băng gạc được dùng khi bị đứt tay",
-              "correctAnswer": "B. THEY HAVE A CUT."
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -178,7 +178,7 @@
                 "Scream and lose control"
               ],
               "explanation": "người hoảng loạn thường la hét và mất kiểm soát",
-              "correctAnswer": "D. SCREAM AND LOSE CONTROL"
+              "correctAnswer": "D"
             },
             {
               "id": "18",
@@ -190,7 +190,7 @@
                 "In a king and queen's castle"
               ],
               "explanation": "áo choàng thường không mặc ở văn phòng",
-              "correctAnswer": "A. AT THE OFFICE"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -202,7 +202,7 @@
                 "To fight with them"
               ],
               "explanation": "tìm sở thích chung là cách tốt để gắn kết",
-              "correctAnswer": "A. TO FIND SOMETHING YOU BOTH LIKE"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -214,7 +214,7 @@
                 "Having ice cream"
               ],
               "explanation": "ăn kem không phải là ưu tiên quan trọng",
-              "correctAnswer": "D. HAVING ICE CREAM"
+              "correctAnswer": "D"
             },
             {
               "id": "21",
@@ -226,7 +226,7 @@
                 "A girl learning a new job"
               ],
               "explanation": "apprentice là người đang học việc",
-              "correctAnswer": "D. A GIRL LEARNING A NEW JOB"
+              "correctAnswer": "D"
             },
             {
               "id": "22",
@@ -238,7 +238,7 @@
                 "Laughter"
               ],
               "explanation": "chăm chỉ thường dẫn đến thành công",
-              "correctAnswer": "A. SUCCESS"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -250,7 +250,7 @@
                 "Younger"
               ],
               "explanation": "quỳ gối làm bạn trông thấp (nhỏ bé) hơn",
-              "correctAnswer": "C. SMALLER"
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -262,7 +262,7 @@
                 "Playing with them"
               ],
               "explanation": "cam đoan giúp người khác bớt lo lắng",
-              "correctAnswer": "A. MAKING THEM FEEL LESS WORRIED"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -274,7 +274,7 @@
                 "An arrival time"
               ],
               "explanation": "vé máy bay có giờ khởi hành và giờ đến",
-              "correctAnswer": "D. AN ARRIVAL TIME"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -316,7 +316,7 @@
                 "The Emperor ate there."
               ],
               "explanation": "Nhà hàng nổi tiếng vì có đầu bếp giỏi nhất thế giới.",
-              "correctAnswer": "C. THE BEST CHEF IN THE WORLD WORKED THERE."
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -328,7 +328,7 @@
                 "He cut himself and couldn't cook."
               ],
               "explanation": "Đầu bếp hoảng loạn vì ông bị đứt tay và không thể nấu.",
-              "correctAnswer": "D. HE CUT HIMSELF AND COULDN'T COOK."
+              "correctAnswer": "D"
             },
             {
               "id": "29",
@@ -340,7 +340,7 @@
                 "To make a meal for the Emperor."
               ],
               "explanation": "Ưu tiên hàng đầu của người học việc là nấu món ăn ngon nhất thế giới.",
-              "correctAnswer": "B. TO COOK GREAT FOOD."
+              "correctAnswer": "B"
             },
             {
               "id": "30",
@@ -352,7 +352,7 @@
                 "He wanted everyone to be diligent."
               ],
               "explanation": "Đầu bếp rất tệ vì ông thường xuyên mắng chửi nhân viên.",
-              "correctAnswer": "C. HE OFTEN SCOLDED HIS WORKERS."
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"

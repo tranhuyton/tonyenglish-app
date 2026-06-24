@@ -414,63 +414,69 @@
               "content": "Scientists did a variety of tests for research before the Sputnik 2 was due to leave.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Các nhà khoa học đã thực hiện nhiều thử nghiệm nghiên cứu với các chú chó trước khi tàu vũ trụ khởi hành. Trong bài viết có đoạn: The animals were used in a variety of tests... Sputnik 2 spaceship was due to leave Earth.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
               "content": "Wires were applied to Laika’s leash so that scientists could find the ship.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Những sợi dây điện được gắn vào da của Laika chứ không phải vào dây xích, và mục đích là để đo lường phản ứng cơ thể của cô ấy chứ không phải để tìm kiếm con tàu. Bằng chứng là: Scientists carefully applied wires to Laika's skin to measure her body's reactions.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
               "content": "Although Laika could not be buried, a spaceship was established in her honor.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai nhé. Bài đọc cho biết một đài tưởng niệm đã được xây dựng để vinh danh Laika, chứ không phải một con tàu vũ trụ. Trích đoạn trong bài là: Laika was never buried, but a memorial has been established in Moscow.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "In the midst of the scientists’ excitement, Laika’s ship became too hot.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này hoàn toàn chính xác. Giữa lúc mọi người đang vô cùng phấn khích thì tàu của Laika trở nên nóng ran. Câu văn chứng minh là: But in the midst of so much excitement, something very sad happened... Laika's entire ship had become as hot as a furnace.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
               "content": "In a prior launch, scientists sent two other dogs into space.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Trong một lần phóng trước đó, các nhà khoa học Nga đã đưa một vật thể nhân tạo vào vũ trụ, chứ không phải đưa hai chú chó khác. Đoạn văn ghi rõ: In a prior launch, Russia had put the first man-made object into space.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "36",
               "content": "Many people complained that Laika should not have gone to space.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Rất nhiều người đã phàn nàn và cho rằng không nên đưa một chú chó nhỏ bé vào nhiệm vụ nguy hiểm này. Bằng chứng trong bài đọc là: Some have complained that the little dog should never have been used in the mission.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

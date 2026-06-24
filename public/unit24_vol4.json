@@ -294,63 +294,69 @@
               "content": "The traveler watched people closely, like a predator.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu chuyện nói: 'He sat and watched people closely, like a predator.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "22",
               "content": "The traveler staggered outside and tumbled into the street.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai. Trong câu chuyện là người chủ quán (innkeeper): 'The scared innkeeper staggered outside and tumbled into the street.'",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "23",
               "content": "The innkeeper handed the traveler a saucer and a cup.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu chuyện kể: 'He made the coffee and handed the traveler a saucer and a cup.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "24",
               "content": "The traveler snatched the innkeeper's coat.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng. 'As he ran, the traveler snatched his coat.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "25",
               "content": "The traveler wanted to withhold the truth and not foster happiness.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai. Anh ấy muốn mang lại niềm vui và nói ra sự thật: 'He did not want to withhold the truth any longer. He just wanted to foster happiness.'",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "26",
               "content": "The innkeeper cherished his coat.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng. Ông chủ quán nói: 'Oh, good. I cherish this coat.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec2_reading",

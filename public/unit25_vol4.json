@@ -342,63 +342,69 @@
               "content": "The journey on the aircraft to Australia took a short time.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai vì chuyến đi bằng máy bay đến Úc mất tới 20 giờ. Trong bài có câu \"Firstly, she'd had to spend twenty uncomfortable hours on an aircraft getting here.\"",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "27",
               "content": "Eliza was a professor of zoology.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Chồng của Eliza mới là giáo sư động vật học, không phải cô ấy. Bằng chứng trong bài là \"her husband was a zoology professor\".",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "28",
               "content": "Eliza was hardier than Gilbert.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai vì Eliza thừa nhận mình không chịu đựng tốt như Gilbert. Cô ấy nói: \"I'm not hardy like you\".",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "29",
               "content": "The swamp was in a rural, secluded area.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Bài đọc có miêu tả đây là một nơi hẻo lánh và ở vùng nông thôn qua câu \"There were lots of birds in that secluded, rural place\".",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "30",
               "content": "Gilbert thought that the red lizard was an extinct species.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Gilbert tin rằng loài thằn lằn đỏ này đã tuyệt chủng. Anh ấy nói: \"That looks like a Red Swamp Lizard, but I thought that species was extinct\".",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "31",
               "content": "Gilbert nurtured the red lizard at the hotel.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Trong vài ngày sau đó, Gilbert đã cho ăn và chăm sóc chú thằn lằn tại khách sạn. Chi tiết trong bài là \"For the next few days, Gilbert fed and nurtured the lizard.\"",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

@@ -20,7 +20,7 @@
                 "quarrel"
               ],
               "explanation": "\"ally\" nghĩa là đồng minh, người giúp đỡ bạn.",
-              "correctAnswer": "ALLY"
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "defeat"
               ],
               "explanation": "\"nod\" nghĩa là gật đầu.",
-              "correctAnswer": "NOD"
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "mercy"
               ],
               "explanation": "\"crawl\" nghĩa là bò, trườn.",
-              "correctAnswer": "CRAWL"
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "bounce"
               ],
               "explanation": "\"bounce\" nghĩa là nảy lên.",
-              "correctAnswer": "BOUNCE"
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "carbohydrate"
               ],
               "explanation": "\"ail\" nghĩa là gây khó khăn hay đau đớn cho ai đó.",
-              "correctAnswer": "AIL"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -88,7 +88,7 @@
                 "to talk about yourself"
               ],
               "explanation": "\"boast\" nghĩa là khoác lác, nói nhiều về bản thân.",
-              "correctAnswer": "TO TALK ABOUT YOURSELF"
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -100,7 +100,7 @@
                 "a fight"
               ],
               "explanation": "\"dominant\" nghĩa là vượt trội, mạnh hơn.",
-              "correctAnswer": "STRONGER"
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -112,7 +112,7 @@
                 "a face"
               ],
               "explanation": "\"defeat\" nghĩa là đánh bại.",
-              "correctAnswer": "TO BEAT"
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -124,7 +124,7 @@
                 "to feel terrible"
               ],
               "explanation": "\"mercy\" nghĩa là lòng khoan dung, không trừng phạt.",
-              "correctAnswer": "TO NOT GIVE PUNISHMENT"
+              "correctAnswer": "C"
             },
             {
               "id": "10",
@@ -136,7 +136,7 @@
                 "food"
               ],
               "explanation": "\"carbohydrate\" là tinh bột (có trong thức ăn).",
-              "correctAnswer": "FOOD"
+              "correctAnswer": "D"
             },
             {
               "id": "11",
@@ -148,7 +148,7 @@
                 "to talk about yourself"
               ],
               "explanation": "\"quarrel\" nghĩa là cuộc cãi vã, tranh luận.",
-              "correctAnswer": "AN ARGUMENT"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -160,7 +160,7 @@
                 "to move something up and away"
               ],
               "explanation": "\"strain\" nghĩa là cố gắng hết sức.",
-              "correctAnswer": "TO TRY VERY HARD"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -172,7 +172,7 @@
                 "one who keeps another from getting something"
               ],
               "explanation": "\"rival\" nghĩa là đối thủ.",
-              "correctAnswer": "ONE WHO KEEPS ANOTHER FROM GETTING SOMETHING"
+              "correctAnswer": "D"
             },
             {
               "id": "14",
@@ -184,7 +184,7 @@
                 "to feel terrible"
               ],
               "explanation": "\"wrestle\" nghĩa là vật lộn, đẩy ai đó xuống đất.",
-              "correctAnswer": "TO PUSH TO THE GROUND"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -196,7 +196,7 @@
                 "to move on the floor"
               ],
               "explanation": "\"sore\" nghĩa là bị đau nhức.",
-              "correctAnswer": "TO BE HURT"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -374,7 +374,7 @@
                 "Speed skating"
               ],
               "explanation": "Đáp án: Speed skating. Đoạn 6 liệt kê các môn thể thao: 'First, they wrestled. Then they jumped, crawled and played other games.' Trong các lựa chọn, môn trượt băng tốc độ (speed skating) không hề được nhắc đến trong cuộc thi.",
-              "correctAnswer": "SPEED SKATING"
+              "correctAnswer": "D"
             },
             {
               "id": "33",
@@ -386,7 +386,7 @@
                 "Carbohydrates"
               ],
               "explanation": "Đáp án: Money. Trong đoạn 1 có ghi: 'if boys gave Mitch their lunch money, he would have mercy and leave them alone.' Nghĩa là các cậu bé phải đưa tiền ăn trưa thì Mitch mới tha cho họ.",
-              "correctAnswer": "MONEY"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -398,7 +398,7 @@
                 "At Dalton's house"
               ],
               "explanation": "Đáp án: In the gym. Ở đoạn 3, tác giả có kể: 'He entered the gym... It was time to begin.' Cuộc thi Olympic của trường trung học đã được tổ chức ở trong phòng thể dục (gym).",
-              "correctAnswer": "IN THE GYM"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -410,7 +410,7 @@
                 "Strain against him"
               ],
               "explanation": "Đáp án: Defeat him. Trong đoạn 7, tác giả viết: 'They wanted him to help them beat Mitch.' Cụm từ beat Mitch đồng nghĩa với defeat him, tức là họ muốn đánh bại Mitch.",
-              "correctAnswer": "DEFEAT HIM"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"

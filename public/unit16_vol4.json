@@ -414,63 +414,69 @@
               "content": "The custom was to allow the girls to choose their own teams.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này hoàn toàn chính xác. Huấn luyện viên đã nói rằng tập quán hay thói quen thường lệ là để các học sinh tự chọn đội của mình. Trích đoạn trong bài là: The custom is to let you choose your own teams.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
               "content": "Gwen told her teammates that she could stitch her pants later.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Gwen đã trấn an bạn bè rằng mình ổn và có thể tự khâu quần sau trận đấu. Bằng chứng là: Gwen told her teammates, My knee is fine, and I can stitch my pants later.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "33",
               "content": "There were eight girls per team.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai nhé. Huấn luyện viên đã chia mỗi đội gồm sáu cô gái chứ không phải tám. Câu văn chứng minh là: There were six girls per team.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "Gwen pleaded to be on another team that had some of her friends.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Khi thấy đội toàn người lạ, Gwen đã van nài xin được sang đội khác. Bằng chứng là đoạn: I don't know any of these girls! Let me play on another team. Please! she pleaded.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
               "content": "Stephanie asked Gwen to lose on purpose for the sake of the team.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Thực tế, Stephanie đã động viên Gwen hãy cố gắng hết sức vì mục tiêu chung của đội. Trong bài có ghi: For the sake of the team, please try your best.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "36",
               "content": "Gwen ripped her jeans, scraped her knee, and got a bruise when she fell.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này hoàn toàn đúng. Sau cú ngã, Gwen bị rách quần, trầy xước đầu gối và có một vết bầm nhỏ. Trích đoạn là: She had ripped her jeans. She had scraped her knee and had a small bruise.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

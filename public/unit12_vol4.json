@@ -354,63 +354,69 @@
               "content": "The North Wind thought that he was stronger than everyone else.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Gió Bắc cho rằng mình mạnh hơn tất cả mọi người.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
               "content": "The North Wind blew the jacket off of the man.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Gió Bắc không thể thổi bay chiếc áo khoác của người đàn ông.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "28",
               "content": "The North Wind treated the Sun with disrespect.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Gió Bắc đối xử với Mặt trời bằng sự thiếu tôn trọng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "29",
               "content": "The Sun was the target for the North Wind.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Mục tiêu của Gió Bắc là người đàn ông trên đường, không phải Mặt trời.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "30",
               "content": "The Sun was timid and did not teach the North Wind a lesson.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Mặt trời tuy thường rụt rè nhưng đã quyết định dạy cho Gió Bắc một bài học.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "31",
               "content": "The North Wind used violence in his bid to be powerful.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Gió Bắc đã sử dụng bạo lực trong nỗ lực tỏ ra mạnh mẽ.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

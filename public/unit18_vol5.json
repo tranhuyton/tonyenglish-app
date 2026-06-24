@@ -411,53 +411,58 @@
               "content": "The gate between the soldier and the auditorium was coated with rust.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu chuyện có chi tiết chiếc cổng sắt phủ rỉ sét (coated in rust).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
               "content": "The prisoner was led from the arena to the compound.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Anh ta được dẫn từ khu trại giam (compound) tới đấu trường (arena), không phải ngược lại.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
               "content": "While he meditated, the soldier was distracted by his opponent.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Người lính không hề bị đối thủ làm xao nhãng (was not distracted).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "The king gave the brave soldier amnesty and made him join his elite army corps.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Nhà vua chỉ ban lệnh ân xá (amnesty) cho anh, không bắt anh gia nhập đội quân tinh nhuệ.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "35",
               "content": "The quiet soldier felt that all life was sacred.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Người lính cảm thấy mọi sự sống đều là thiêng liêng (sacred).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

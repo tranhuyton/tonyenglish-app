@@ -411,53 +411,58 @@
               "content": "Microchips are made up of compressed electrical circuits.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đoạn 1 của bài viết chỉ ra rằng \"They are made up of compressed electrical circuits that can detect and record data about the body.\" (Chúng được tạo thành từ các mạch điện nén có thể phát hiện và ghi lại dữ liệu về cơ thể). Thông tin này trùng khớp hoàn toàn.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
               "content": "Chips express the aggregate number of immune and intimate cells in a ratio.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong đoạn 3, bài đọc viết \"They can find the aggregate number of immune and infected cells and present the results in a ratio.\" (Chúng có thể tìm ra tổng số tế bào miễn dịch và tế bào bị nhiễm bệnh rồi trình bày kết quả dưới dạng tỷ lệ). Câu hỏi nói về tế bào thân mật (intimate cells) thay vì tế bào nhiễm bệnh (infected cells), nên câu này là sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
               "content": "Chips detect viral infections and problems with people’s metabolism.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Ở đoạn 3 có ghi \"They can find problems with the person's metabolism and organs. They can also detect viral infections.\" (Chúng có thể tìm ra các vấn đề về quá trình trao đổi chất và các cơ quan của con người. Chúng cũng có thể phát hiện bệnh truyền nhiễm do virus). Câu này tóm tắt đúng chức năng của chip.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
               "content": "A doctor pinches the skin and cuts a hole with a tool shaped like a spiral.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong đoạn 2 miêu tả quá trình cấy ghép \"The doctor pinches a piece of skin and cuts a tiny hole with a tool shaped like a spiral.\" (Bác sĩ véo một mảnh da và cắt một lỗ nhỏ bằng một dụng cụ có hình xoắn ốc). Điều này hoàn toàn đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
               "content": "Putting antibiotics in humans is becoming more prevalent.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Ở đoạn cuối, bài đọc nói \"The idea of putting chips in humans is still very new. However, it is now becoming more prevalent.\" (Ý tưởng cấy chip vào cơ thể người vẫn còn rất mới. Tuy nhiên, nó đang dần trở nên phổ biến hơn). Cái ngày càng phổ biến là việc cấy chip, chứ không phải là cho con người dùng thuốc kháng sinh (antibiotics).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

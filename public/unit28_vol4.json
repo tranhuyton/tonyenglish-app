@@ -294,63 +294,69 @@
               "content": "Presently, a horrifying plague has broken out in Athens.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Dịch bệnh xảy ra từ thời xưa. \"In 430 BCE, an army attacked the city of Athens... Then a horrifying disease broke out.\"",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "22",
               "content": "At first, people thought the spread of the disease was random.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Bài đọc có ghi \"It seemed random.\" (Trông nó có vẻ như ngẫu nhiên).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "23",
               "content": "The people summoned doctors to no avail.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. \"People summoned doctors. But it was to no avail because no one understood how the disease spread.\" (Họ đã gọi bác sĩ nhưng vô ích).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "24",
               "content": "Thucydides was incredulous that the plague was caused by an organism.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Ông không tin căn bệnh do chư thần gây ra. \"Thucydides was incredulous that gods caused the plague\" (Thucydides không tin rằng chư thần đã gây ra bệnh dịch).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "25",
               "content": "By gathering in shrines, people made the plague worse.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. \"But the situation only worsened because these people were so close to each other they became sick.\" (Nhưng tình hình trở nên tồi tệ hơn vì mọi người đứng quá gần nhau tại các đền thờ).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "26",
               "content": "Thucydides luckily survived the plague.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Đoạn cuối bài có ghi: \"But luckily, Thucydides survived.\" (Nhưng may mắn thay, Thucydides đã sống sót).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

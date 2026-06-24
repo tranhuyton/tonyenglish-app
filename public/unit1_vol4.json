@@ -494,63 +494,69 @@
               "content": "Wild chocolate trees grow well in humid weather.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Cây sô cô la hoang dã phát triển tốt trong thời tiết ẩm ướt, điều này đúng theo bài đọc.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "42",
               "content": "The Mayans and Aztecs said chocolate was a divine plant brought from paradise.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Người Maya và Aztec cho rằng cây sô cô la là một loài cây thần thánh được mang đến từ thiên đường.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "43",
               "content": "The Mayans cultivated chocolate trees on plantations.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "The Aztecs cultivated chocolate trees on plantations, không phải người Mayans.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "44",
               "content": "Beans were combined with condensed milk to give chocolate a smooth texture.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Hạt cacao được kết hợp với sữa đặc để tạo cho sô cô la có kết cấu mịn màng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "45",
               "content": "The first chocolate beverages were made in Europe.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Những thức uống sô cô la đầu tiên được làm ra bởi người Maya và Aztec ở châu Mỹ.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "46",
               "content": "The different types of chocolate available today vary widely.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Các loại sô cô la khác nhau có sẵn ngày nay rất đa dạng và khác biệt.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

@@ -394,63 +394,69 @@
               "content": "1. The computers were turned off because there was a recent problem.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (True). 'Apparently there was a recent problem, and technicians were fixing it.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
               "content": "2. The private study rooms were upstairs.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai (False). The private study rooms were downstairs.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
               "content": "3. The computers in the private study rooms weren't operating correctly.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai (False). The computers in the private study rooms were operating correctly.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "4. In his project, the student had to evaluate the government's response to global warming.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (True). 'I typed and highlighted the assignment’s title: “Evaluate the Government’s Response to Global Warming.”'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
               "content": "5. The geography test was worth fifty percent of the final grade.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai (False). The geography test was worth seventy percent of the final grade.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "36",
               "content": "6. The student failed the test because he was completely ignorant about the subject.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (True). 'I failed the test, of course. I was completely ignorant about the subject.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

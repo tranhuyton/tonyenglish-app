@@ -367,63 +367,69 @@
               "content": "Larry, Harry and Lester were cattle on the widow Riley’s farm.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Larry was a cow, Harry was a rooster and Lester was a duck on the widow's farm.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "32",
               "content": "The animals fled because the widow wanted to kill the herd.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "The widow only pointed to Larry and said she would eat him tomorrow, not the whole herd.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
               "content": "Larry, Harry and Lester wanted to go to Bremen to perform in a parade.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "They dreamed of playing music in a parade in Bremen.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "34",
               "content": "The animals initiated the journey with only a portable microphone and a drum in a bundle.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "The bundle held a drum, a flute and a portable microphone.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "35",
               "content": "Larry was an optimist.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Lester was the optimist.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "36",
               "content": "Harry scratched the bulb to break it.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Harry knocked over the lamp to break the bulb.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec3_reading_partB",

@@ -20,7 +20,7 @@
                 "burst / dripped"
               ],
               "explanation": "anniversary (kỷ niệm) và elegant (thanh lịch) phù hợp với ngữ cảnh tặng quà kỷ niệm và chiếc áo khoác thanh lịch.",
-              "correctAnswer": "ANNIVERSARY / ELEGANT"
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "mill / threads"
               ],
               "explanation": "arithmetic (toán học) và upwards (hướng lên) phù hợp với việc thiết kế máy bay và làm cho nó bay lên.",
-              "correctAnswer": "ARITHMETIC / UPWARDS"
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "arithmetic / upwards"
               ],
               "explanation": "ashamed (xấu hổ) và couch (ghế sô pha) phù hợp ngữ cảnh không được ăn trên ghế sô pha.",
-              "correctAnswer": "ASHAMED / COUCH"
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "polish / fabric"
               ],
               "explanation": "burst (bật tung) và dripped (nhỏ giọt) phù hợp: cửa bật tung và nước mưa nhỏ giọt vào phòng.",
-              "correctAnswer": "BURST / DRIPPED"
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "coal / highlands"
               ],
               "explanation": "carpenter (thợ mộc) phù hợp với xây dựng, còn sew (khâu vá) là việc anh ấy không biết làm.",
-              "correctAnswer": "CARPENTER / SEW"
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -80,7 +80,7 @@
                 "shed / trim"
               ],
               "explanation": "highlands (vùng cao) và coal (than đá) dưới lòng đất.",
-              "correctAnswer": "HIGHLANDS / COAL"
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -92,7 +92,7 @@
                 "fabric / polish"
               ],
               "explanation": "needles (kim) làm từ ivory (ngà voi).",
-              "correctAnswer": "NEEDLES / IVORY"
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -104,7 +104,7 @@
                 "trim / shed"
               ],
               "explanation": "mill (nhà máy xay xát) và threads (sợi chỉ) lủng lẳng dễ bị kẹt vào máy.",
-              "correctAnswer": "MILL / THREADS"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                 "dripped / burst"
               ],
               "explanation": "polish (đánh bóng) sàn nhà và lau bằng fabric (vải) mềm.",
-              "correctAnswer": "POLISH / FABRIC"
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -128,7 +128,7 @@
                 "sew / carpenter"
               ],
               "explanation": "shed (nhà kho) và trim (cắt tỉa) bụi cây.",
-              "correctAnswer": "SHED / TRIM"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -226,7 +226,7 @@
                 "Wood"
               ],
               "explanation": "Thợ mộc (carpenter) làm việc với gỗ (Wood).",
-              "correctAnswer": "WOOD"
+              "correctAnswer": "D"
             },
             {
               "id": "22",
@@ -238,7 +238,7 @@
                 "Dirt"
               ],
               "explanation": "Nước (Water) có thể nhỏ giọt (drip).",
-              "correctAnswer": "WATER"
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -250,7 +250,7 @@
                 "A chair"
               ],
               "explanation": "Bạn có thể làm một chiếc áo sơ mi (A shirt) bằng kim (needle).",
-              "correctAnswer": "A SHIRT"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -262,7 +262,7 @@
                 "They've exploded."
               ],
               "explanation": "Burst nghĩa là vỡ tung, phát nổ (exploded).",
-              "correctAnswer": "THEY'VE EXPLODED."
+              "correctAnswer": "D"
             },
             {
               "id": "25",
@@ -274,7 +274,7 @@
                 "Wood"
               ],
               "explanation": "Ngà voi (ivory) có màu trắng đục, giống như màu của răng (A tooth).",
-              "correctAnswer": "A TOOTH"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -374,7 +374,7 @@
                 "In the highlands"
               ],
               "explanation": "Đáp án: In the highlands. Trong đoạn 1, câu thứ hai có thông tin: 'He built houses in the highlands.' Nghĩa là Joe xây những ngôi nhà ở vùng cao.",
-              "correctAnswer": "IN THE HIGHLANDS"
+              "correctAnswer": "D"
             },
             {
               "id": "33",
@@ -386,7 +386,7 @@
                 "Polished it and sold it"
               ],
               "explanation": "Đáp án: Polished it and sold it. Câu hỏi hỏi Joe đã làm gì với chiếc đồng hồ của anh ấy. Trong đoạn 5, tác giả viết: 'So he polished it and sold it.' Joe đã đánh bóng chiếc đồng hồ và bán nó đi để lấy tiền mua quà cho Stella.",
-              "correctAnswer": "POLISHED IT AND SOLD IT"
+              "correctAnswer": "D"
             },
             {
               "id": "34",
@@ -398,7 +398,7 @@
                 "Anything for herself"
               ],
               "explanation": "Đáp án: Elegant clothing. Ở đoạn 1 có ghi: 'Stella used a needle and thread to sew elegant clothing.' Điều này cho biết Stella chuyên may những bộ trang phục thanh lịch.",
-              "correctAnswer": "ELEGANT CLOTHING"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -410,7 +410,7 @@
                 "Bought him a gold watch"
               ],
               "explanation": "Đáp án: Sold her hair. Câu hỏi muốn biết Stella đã làm gì cho Joe vào ngày kỷ niệm. Cuối đoạn 4 có viết: 'She cut off all of her hair and sold it.' Stella đã cắt mái tóc của mình và bán đi để có tiền mua quà cho Joe.",
-              "correctAnswer": "SOLD HER HAIR"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

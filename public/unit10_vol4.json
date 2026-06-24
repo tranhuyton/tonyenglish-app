@@ -274,64 +274,70 @@
               "id": "21",
               "content": "Anton's first microscope had an upright stand.",
               "options": [
-                "T (True)",
-                "F (False)"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Thông tin trong bài: 'It had a lens in an upright stand.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "22",
               "content": "Anton had a longing to become rich.",
               "options": [
-                "T (True)",
-                "F (False)"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Sửa lại: Anton had a longing to become famous. (Thông tin trong bài: 'Soon, Anton felt a longing to build a more powerful microscope... He wanted to become famous.')",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "23",
               "content": "The tiny particles Anton saw were bacteria.",
               "options": [
-                "T (True)",
-                "F (False)"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Thông tin trong bài: 'Anton Van Leeuwenhoek had discovered bacteria.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "24",
               "content": "Anton classified the particles into different categories.",
               "options": [
-                "T (True)",
-                "F (False)"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Thông tin trong bài: 'Then he classified them into different categories.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "25",
               "content": "The sophisticated scientists drew diagrams of the bacteria.",
               "options": [
-                "T (True)",
-                "F (False)"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Sửa lại: Anton drew diagrams of the bacteria. (Thông tin trong bài: 'So he drew diagrams of the organisms and sent them to a group of scientists...')",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "26",
               "content": "Anton took a ferry to Holland.",
               "options": [
-                "T (True)",
-                "F (False)"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Sửa lại: The scientists took a ferry to Holland. (Thông tin trong bài: 'The men took a ferry to Holland and met Anton.')",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "reading_comp_B",

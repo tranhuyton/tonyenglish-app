@@ -433,53 +433,58 @@
               "content": "Sam’s class is going to study humanitarian efforts since the time of the Renaissance next week.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc có đoạn giáo viên nói: Next week, we'll be studying humanitarian efforts around the world since the time of the Renaissance. Câu này nhắc lại y hệt thông tin trong bài, nên đáp án là True nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
               "content": "At first, Sam’s hypothesis is that the assignment is going to be difficult.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài ghi rõ: Sam was a skeptic. He really didn't think the assignment would be too challenging. Nghĩa là cậu bé không hề nghĩ bài tập này khó. Vậy câu nhận định này là False nha.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
               "content": "When Sam goes into the kitchen, he reads a Braille newspaper.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Khi ở bếp, Sam nhờ lấy tờ báo và nhận ra mình không thể đọc được. Cậu chỉ thắc mắc: He wondered if Braille newspapers were ever made (Cậu tự hỏi liệu có báo chữ nổi hay không). Sam hoàn toàn chưa đọc báo chữ nổi nào. Đáp án là False nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "39",
               "content": "Sam runs into the baker’s rack on his way outside.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc kể lại rằng: As he followed them, he accidentally walked into the baker's rack. Cậu bé đã vô tình đụng trúng cái kệ bánh. Do đó câu này là True nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
               "content": "Without his sense of sight, Sam has better spatial awareness and can coordinate his movements more easily.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Ngược lại hoàn toàn nhé. Bài đọc nhấn mạnh: He wouldn't be able to coordinate his actions without being able to see. Without his optic senses, he had no spatial awareness. Khi không nhìn thấy, cậu mất đi khả năng cảm nhận không gian và khó phối hợp hành động. Đáp án là False.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

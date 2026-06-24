@@ -20,7 +20,7 @@
                 "tapped / skull"
               ],
               "explanation": "senator (thượng nghị sĩ) chỉ người, sống ở districts (quận/khu vực) nghèo nhất.",
-              "correctAnswer": "SENATOR / DISTRICTS"
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "worm / underneath"
               ],
               "explanation": "tapped (gõ nhẹ) nắm đấm lên skull (hộp sọ) tạo ra âm thanh buồn cười.",
-              "correctAnswer": "TAPPED / SKULL"
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "broadcast / consoled"
               ],
               "explanation": "Tìm worm (con giun) bằng cách nhìn underneath (bên dưới) các hòn đá.",
-              "correctAnswer": "WORM / UNDERNEATH"
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "tremendous / execute"
               ],
               "explanation": "consoled (an ủi) bọn trẻ bằng cách xem một broadcast (chương trình phát sóng) hài hước.",
-              "correctAnswer": "CONSOLED / BROADCAST"
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "bulletin / endure"
               ],
               "explanation": "felt tremendous (to lớn) sorrow khi chồng bị executed (xử tử).",
-              "correctAnswer": "TREMENDOUS / EXECUTED"
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -80,7 +80,7 @@
                 "stir / grasp"
               ],
               "explanation": "Nghe news bulletin (bản tin) vì không thể endure (chịu đựng) sự nhàm chán.",
-              "correctAnswer": "BULLETIN / ENDURE"
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -92,7 +92,7 @@
                 "rear / alerted"
               ],
               "explanation": "grasp (nắm chặt) cái thìa để stir (khuấy) súp.",
-              "correctAnswer": "GRASP / STIR"
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -104,7 +104,7 @@
                 "drawer / chop"
               ],
               "explanation": "Bản tin alerted (cảnh báo) về cơn bão, đỗ xe ở rear (phía sau) nhà.",
-              "correctAnswer": "ALERTED / REAR"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                 "closet / bump"
               ],
               "explanation": "Tìm trong drawer (ngăn kéo) nhưng không có dụng cụ để chop (băm/thái) thịt.",
-              "correctAnswer": "DRAWER / CHOP"
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -128,7 +128,7 @@
                 "chop / drawer"
               ],
               "explanation": "Đồ chơi trong closet (tủ quần áo), vết bump (sưng/u) trên đầu rất đau.",
-              "correctAnswer": "CLOSET / BUMP"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -226,7 +226,7 @@
                 "Alert"
               ],
               "explanation": "Bulletin là một bản tin (news program).",
-              "correctAnswer": "B. BULLETIN"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -238,7 +238,7 @@
                 "A worm"
               ],
               "explanation": "Drawer (ngăn kéo) là nơi dùng để cất giữ đồ đạc.",
-              "correctAnswer": "A. A DRAWER"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -250,7 +250,7 @@
                 "Tremendous"
               ],
               "explanation": "Rear có nghĩa là ở phía sau (in the back).",
-              "correctAnswer": "C. REAR"
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -262,7 +262,7 @@
                 "Tap them"
               ],
               "explanation": "Alarm (báo động) có chức năng alert (cảnh báo) mọi người.",
-              "correctAnswer": "A. ALERT THEM"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -274,7 +274,7 @@
                 "Endure"
               ],
               "explanation": "Endure có nghĩa là chịu đựng, vượt qua khó khăn (go through something difficult).",
-              "correctAnswer": "D. ENDURE"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -374,7 +374,7 @@
                 "Consoling the cook"
               ],
               "explanation": "Đoạn đầu kể rằng \"As he listened to the news bulletin, a worm crawled from underneath the chair and onto his head.\" (Khi ông ấy đang nghe bản tin, một con giun đã bò từ dưới ghế lên đầu ông ấy). Bản tin này phát trên đài, nên ông ấy đang nghe đài (Listening to the radio).",
-              "correctAnswer": "A. LISTENING TO THE RADIO"
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -386,7 +386,7 @@
                 "Execute the worm"
               ],
               "explanation": "Ở cuối truyện, con giun đã nhảy ra ngoài an toàn nên người đầu bếp đã không giết được con giun (Execute the worm). Mặc dù anh ta có khuấy sốt mì Ý (stir some spaghetti sauce), tìm ngăn kéo (look through several drawers) và đánh trúng đầu thượng nghị sĩ (hit the senator's skull). Đáp án là Execute the worm.",
-              "correctAnswer": "D. EXECUTE THE WORM"
+              "correctAnswer": "D"
             },
             {
               "id": "34",
@@ -398,7 +398,7 @@
                 "He had heard a tremendous noise."
               ],
               "explanation": "Trong bài có giải thích \"The senator could not endure the worm on his head. 'Hurry!' he shouted.\" (Vị thượng nghị sĩ không thể chịu đựng được con giun trên đầu mình. 'Nhanh lên!' ông ấy hét). Vậy lý do là ông ấy không thể chịu đựng thêm (He couldn't endure the worm on his head).",
-              "correctAnswer": "C. HE COULDN’T ENDURE THE WORM ON HIS HEAD."
+              "correctAnswer": "C"
             },
             {
               "id": "35",
@@ -410,7 +410,7 @@
                 "Onto the cook’s head"
               ],
               "explanation": "Cùng lúc thượng nghị sĩ bị đánh trúng đầu thì \"Meanwhile, the worm crawled outside.\" (Trong khi đó, con giun đã bò ra ngoài). Vậy con giun bò ra bên ngoài ngôi nhà (Outside the house).",
-              "correctAnswer": "C. OUTSIDE THE HOUSE"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"

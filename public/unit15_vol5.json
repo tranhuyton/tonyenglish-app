@@ -411,53 +411,58 @@
               "content": "Ernest usually used his fleet for his firm that imported marble statues from other countries.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Ngay phần đầu bài đọc đã cung cấp thông tin: Usually, he used them for his firm, which imported marble statues from other countries. Câu này lặp lại chính xác dữ kiện đó nên đáp án là True nhé.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
               "content": "His favorite ship had updated accessories like a new grid.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc mô tả chiếc tàu yêu thích của Ernest: It also had some new updates... a device with a small grid to show the ship's exact location. Tức là tàu được cập nhật thêm các phụ kiện mới như lưới tọa độ. Mình chọn True nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "33",
               "content": "When Ernest saw the old man standing next to the mast, he decided to go home.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Khi thấy ông lão và cậu bé, Ernest cho rằng họ đang gặp nạn và quyết định lái tàu đến để cứu (He began sailing toward them). Anh ấy không hề quay về nhà ngay lúc đó. Đáp án là False nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "Ernest offered the man and the boy a boat that inflates to facilitate their rescue.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Bài đọc ghi rằng Ernest đã ném một gói đồ xuống và hét lên: Here! You can inflate this boat to get you back to land. Việc này nhằm giúp đỡ và tạo điều kiện cứu hộ họ. Do đó câu này là True nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
               "content": "Ernest had the innate desire to make a lot of money.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong truyện có viết: Ernest had an innate desire to help people. Bản chất bẩm sinh của anh là mong muốn giúp đỡ mọi người, chứ không phải là khao khát kiếm thật nhiều tiền. Mình chọn False nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",

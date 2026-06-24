@@ -98,63 +98,69 @@
               "content": "Tracy invites Kara to visit a new civilization with her family.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai. Tracy mời Kara đi cắm trại (go camping) chứ không phải đi thăm một nền văn minh mới.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "7",
               "content": "Tracy's father shows them native plants and animals.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng. Chi tiết trong bài: 'Tracy's father, Mr. Grieves, showed them the native plants and animals.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "8",
               "content": "The group returns to camp because mighty clouds were looming.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng. Chi tiết trong bài: 'mighty clouds soon loomed in the distance. \"It looks like stormy weather,\" said Tracy. \"We should go back.\"'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "9",
               "content": "They used an umbrella to shield themselves from the rain.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng. Chi tiết trong bài: 'They used an umbrella to shield them from the rain.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "10",
               "content": "The weather was stormy on the second day of camping.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai. Ngày hôm sau trời tạnh mưa và thời tiết khác biệt rõ rệt: 'By morning, the rain had stopped. It was a drastic change from the previous day's weather.'",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "11",
               "content": "Kara has a drastic change in opinion about camping at the end of the story.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng. Ban đầu cô không thích (She didn't like camping at first) nhưng cuối cùng thấy cắm trại rất vui (she learned how fun it could be over the weekend).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec3_reading_mc",

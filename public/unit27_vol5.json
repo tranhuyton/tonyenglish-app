@@ -433,53 +433,58 @@
               "content": "Internal organ transplants were a fantasy after 1954.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai rồi. Đoạn 1 có giải thích The idea of taking an organ out of one person and putting it into another was just a fantasy. Việc cấy ghép nội tạng chỉ là một điều viển vông (fantasy) TRƯỚC năm 1954 (lúc chưa ai làm được), chứ không phải sau năm 1954.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
               "content": "Robert was a pioneer of new surgical procedures.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai nhé. Đoạn 3 có viết The twins went to Dr. Murray, who was a pioneer of new surgical methods. Bác sĩ Murray mới là người tiên phong (pioneer) về các phương pháp phẫu thuật mới, chứ không phải Robert.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
               "content": "The twins’ kidneys were identical on the cellular level because of their heredity.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng rồi. Đoạn 2 ghi rõ Since Richard and Robert were twins, their heredity was identical... Even their kidneys were identical on the cellular level. Nhờ vào di truyền học giống hệt nhau, thận của họ cũng giống nhau đến từng tế bào.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
               "content": "The dynamic surgeons followed a rigid sequence of directions to avoid mistakes.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng nha. Đoạn 3 có câu Dr. Murray made sure his surgeons followed a rigid sequence of directions so that no mistakes were made. Các bác sĩ phải tuân theo một chuỗi các chỉ dẫn cứng nhắc (rigid sequence) để không mắc sai lầm.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
               "content": "Richard’s body adapted to the kidney that was transferred from his brother.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng nhé. Cuối đoạn 2 dự đoán Richard's body could adapt to the new organ và đoạn 4 xác nhận Richard's new kidney worked great. Cơ thể của Richard đã thích nghi hoàn toàn với quả thận mới.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

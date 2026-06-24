@@ -287,63 +287,69 @@
               "content": "The adolescent had a natural literary aptitude.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (True). Câu chuyện có miêu tả: 'He always kept his room tidy and had a natural literary aptitude.' (Cậu luôn giữ phòng gọn gàng và có năng khiếu văn chương bẩm sinh).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "22",
               "content": "The boy leaning against the pole complimented Matthew’s pills.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai (False). Cậu bé kia đã khen chiếc áo khoác của Matthew chứ không phải thuốc: 'One of the boys complimented Matthew. “I like your jacket.”'",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "23",
               "content": "Matthew ordered a slice of pizza at the restaurant.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (True). Theo câu chuyện: 'They were going to have slices of pizza.' (Họ dự định ăn vài lát pizza).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "24",
               "content": "The boys ate too much, so their bellies swelled.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (True). Theo câu chuyện: 'They ate until their bellies swelled up.' (Họ ăn cho đến khi bụng phình to lên).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "25",
               "content": "Matthew wants to work in the justice system when he grows up.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai (False). Matthew ước mơ làm việc trong ngành báo chí chứ không phải hệ thống tư pháp: 'One day, he hoped to have a career in journalism.'",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "26",
               "content": "The jury allowed Matthew to keep his liberty, but he had to help in the community as punishment.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng (True). Theo câu chuyện: 'The jury then let him have his liberty. But they made Matthew pick up trash as punishment.' (Bồi thẩm đoàn sau đó cho cậu được tự do. Nhưng họ bắt Matthew nhặt rác như một hình phạt).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

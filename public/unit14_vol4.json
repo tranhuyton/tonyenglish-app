@@ -274,63 +274,69 @@
               "content": "Because the bread was stale, the mother wanted them to bake fresh bread.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Người mẹ yêu cầu hai anh em nướng bánh mới vì bánh mì trong nhà đã bị ôi thiu. Bằng chứng trong bài là: however, because the only bread in the house was stale, their mother told them they needed to bake fresh bread.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "22",
               "content": "The dough became a lump that was as hard as a brick.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này cũng hoàn toàn chính xác. Lượng muối quá nhiều đã khiến bột nhào biến thành một tảng cứng như đá. Đoạn văn ghi rõ: the salt made it into a lump that was as hard as a brick.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "23",
               "content": "The bread needed to be hard and sturdy.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai nhé. Theo bài đọc, bột bánh đáng lẽ ra phải mềm và dẻo dai chứ không phải cứng nhắc. Câu văn chứng minh là: The dough needed to be soft and flexible.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "24",
               "content": "The older brother uttered a sigh.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai rồi. Thực ra người em trai mới là người buông tiếng thở dài, chứ không phải người anh. Trích đoạn trong bài viết: The younger brother uttered a sigh.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "25",
               "content": "The brothers had to clean the kitchen, so it may sparkle.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này đúng. Do làm rối tung mọi thứ, người mẹ đã bắt họ phải dọn dẹp nhà bếp sạch sẽ đến mức sáng bóng. Bằng chứng là lời mẹ nói: I want this kitchen to be so clean that it may sparkle!",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "26",
               "content": "A major mistake only caused a slight problem.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Câu này sai. Bài đọc nói ngược lại, một sai lầm nhỏ bé đã dẫn đến một vấn đề lớn. Tác giả có viết: A slight mistake now became a major problem.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading_B",

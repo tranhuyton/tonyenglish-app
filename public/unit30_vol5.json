@@ -436,53 +436,58 @@
               "content": "The woman’s perception was that though the man was talkative and sociable, he was also an enigma.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng nha. Đoạn 4 viết The man was an enigma. The young woman's perception of him was that he was a sociable person. He was talkative, yet something was strange. Cô gái nhận thấy ông ta nói nhiều, hòa đồng nhưng vẫn là một người bí ẩn.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
               "content": "When the young woman returned, she was overwhelmed by the moderate water level.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai rồi. Đoạn 1 viết she was overwhelmed by how high the water had risen. Cô ấy bị quá tải (overwhelmed) vì mực nước dâng lên quá cao chứ không phải là mức vừa phải (moderate).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
               "content": "The fragile young woman thought she might be a burden to the man.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng nhé. Trong đoạn 3 và 5, ông ta gọi cô là A fragile young lady, và cô đáp lại I don't want to be a burden to you, sir (Tôi không muốn làm gánh nặng cho ông).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
               "content": "While crafting the bridge, the man merged the pieces with amazing speed.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Đúng rồi. Đoạn 6 miêu tả He merged the pieces of the bridge together with amazing speed. Anh ta đã lắp ráp (merged) các bộ phận của cây cầu với tốc độ đáng kinh ngạc.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
               "content": "The woman tramped across the bridge and had a happy reunion with the man.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Sai nha. Đoạn cuối ghi The woman tramped across the bridge... and had a happy reunion with her dog and cow. Cô bước qua cầu và đoàn tụ (reunion) với chó và bò của mình chứ không phải với người đàn ông.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

@@ -20,7 +20,7 @@
                 "aboard"
               ],
               "explanation": "voyage (chuyến đi biển) hợp lý cho câu: không thể đi chuyến đi của chúng ta.",
-              "correctAnswer": "VOYAGE"
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "vessel"
               ],
               "explanation": "port (cảng) là nơi con tàu đi vào.",
-              "correctAnswer": "PORT"
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "devil"
               ],
               "explanation": "sweat (mồ hôi) làm ướt áo.",
-              "correctAnswer": "SWEAT"
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "trigger"
               ],
               "explanation": "millionaire (triệu phú) có máy bay riêng.",
-              "correctAnswer": "MILLIONAIRE"
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "march"
               ],
               "explanation": "harbor (chứa chấp, là nơi trú ẩn) phù hợp trong ngữ cảnh này.",
-              "correctAnswer": "HARBOR"
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -80,7 +80,7 @@
                 "startle"
               ],
               "explanation": "inhabit (cư ngụ, ở) tại nhà tù.",
-              "correctAnswer": "INHABIT"
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -92,7 +92,7 @@
                 "devil"
               ],
               "explanation": "trigger (cò súng) được kéo.",
-              "correctAnswer": "TRIGGER"
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -104,7 +104,7 @@
                 "startle"
               ],
               "explanation": "unify (thống nhất, gắn kết) những người lính mới.",
-              "correctAnswer": "UNIFY"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                 "worship"
               ],
               "explanation": "startle (làm giật mình) bạn bè.",
-              "correctAnswer": "STARTLE"
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -128,7 +128,7 @@
                 "sweat"
               ],
               "explanation": "bitter (tức giận/cay đắng) khi để diều bay mất.",
-              "correctAnswer": "BITTER"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -226,7 +226,7 @@
                 "A devil"
               ],
               "explanation": "A millionaire (Triệu phú) là người có thể mua những thứ đắt tiền.",
-              "correctAnswer": "A MILLIONAIRE"
+              "correctAnswer": "C"
             },
             {
               "id": "22",
@@ -238,7 +238,7 @@
                 "Unified"
               ],
               "explanation": "Bitter diễn tả cảm giác tức giận, cay đắng về một tình huống.",
-              "correctAnswer": "BITTER"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -250,7 +250,7 @@
                 "In a sweat"
               ],
               "explanation": "On a vessel (Trên con tàu) là nơi có nhiều thủy thủ.",
-              "correctAnswer": "ON A VESSEL"
+              "correctAnswer": "B"
             },
             {
               "id": "24",
@@ -262,7 +262,7 @@
                 "Enforce"
               ],
               "explanation": "Drift (trôi dạt) là chuyển động của thuyền đồ chơi trên mặt nước.",
-              "correctAnswer": "DRIFT"
+              "correctAnswer": "B"
             },
             {
               "id": "25",
@@ -274,7 +274,7 @@
                 "Port"
               ],
               "explanation": "March (hành quân) là hoạt động quân đội thường làm.",
-              "correctAnswer": "MARCH"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -374,7 +374,7 @@
                 "To the jail"
               ],
               "explanation": "Đoạn 4 có viết 'They carried Dan to the harbor and put him aboard a vessel.' Đám đông đã khiêng Dan đến bến cảng (the harbor) và đưa ông ta lên một con tàu. Vậy đáp án đúng là To the harbor.",
-              "correctAnswer": "TO THE HARBOR"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -386,7 +386,7 @@
                 "made Oceantown happy"
               ],
               "explanation": "Đoạn cuối bài đọc có ghi 'The boat drifted out of the port, and Dan was never seen again.' Con thuyền trôi dạt ra khỏi cảng và không ai còn nhìn thấy Dan nữa. Chọn was never seen again là chính xác.",
-              "correctAnswer": "WAS NEVER SEEN AGAIN"
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -398,7 +398,7 @@
                 "He tossed a coin in a fountain."
               ],
               "explanation": "Trong đoạn 2 có câu 'Once, Dan even put his own brother in jail for throwing a coin into a fountain!' Dan đã bỏ tù chính anh trai mình chỉ vì ném một đồng xu vào đài phun nước. Đáp án He tossed a coin in a fountain là hoàn toàn phù hợp.",
-              "correctAnswer": "HE TOSSED A COIN IN A FOUNTAIN."
+              "correctAnswer": "D"
             },
             {
               "id": "35",
@@ -410,7 +410,7 @@
                 "They hated millionaires."
               ],
               "explanation": "Trong đoạn 1 tác giả có viết 'Dan was as cruel as the devil.' Dù đám đông không nói trực tiếp câu này khi thả Dan đi, nhưng họ nói 'We know you will never change' (Chúng tôi biết ông sẽ không bao giờ thay đổi), chứng tỏ họ tống khứ ông ta vì bản tính tàn ác như ác quỷ của ông. Do đó đáp án Dan was a devil to them là hợp lý nhất.",
-              "correctAnswer": "DAN WAS A DEVIL TO THEM."
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"

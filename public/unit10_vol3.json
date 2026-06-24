@@ -20,7 +20,7 @@
                 "nowhere"
               ],
               "explanation": "bald (hói) nghĩa là không có tóc.",
-              "correctAnswer": "BALD"
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "relief"
               ],
               "explanation": "relief (sự nhẹ nhõm) là cảm giác tốt khi điều tồi tệ qua đi. (Lưu ý: 'roar' là từ sai trong sách, nhưng được giữ nguyên làm lựa chọn sai).",
-              "correctAnswer": "RELIEF"
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "nap"
               ],
               "explanation": "suck (mút, ngậm) là hành động đặt một vật vào miệng để lấy hương vị.",
-              "correctAnswer": "SUCK"
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "imitate"
               ],
               "explanation": "imitate (bắt chước) là hành động giống người khác.",
-              "correctAnswer": "IMITATE"
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "reproduce"
               ],
               "explanation": "vanish (biến mất) là biến mất một cách đột ngột.",
-              "correctAnswer": "VANISH"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -88,7 +88,7 @@
                 "A pat"
               ],
               "explanation": "absence (sự thiếu vắng) là tình trạng không có cái gì đó.",
-              "correctAnswer": "AN ABSENCE"
+              "correctAnswer": "B"
             },
             {
               "id": "7",
@@ -100,7 +100,7 @@
                 "Infant"
               ],
               "explanation": "infant (trẻ sơ sinh) là một tên gọi khác của baby.",
-              "correctAnswer": "INFANT"
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -112,7 +112,7 @@
                 "A blanket"
               ],
               "explanation": "wagon (xe kéo) dùng để chở đồ nặng như gỗ.",
-              "correctAnswer": "A WAGON"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -124,7 +124,7 @@
                 "To pat"
               ],
               "explanation": "kidnap (bắt cóc) là một tội ác.",
-              "correctAnswer": "TO KIDNAP"
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -136,7 +136,7 @@
                 "Rhyme"
               ],
               "explanation": "rhyme (vần) là các từ kết thúc bằng âm giống nhau.",
-              "correctAnswer": "RHYME"
+              "correctAnswer": "D"
             },
             {
               "id": "11",
@@ -148,7 +148,7 @@
                 "A birthday party"
               ],
               "explanation": "An emergency phone call (cuộc gọi khẩn cấp) là việc cấp bách (urgent).",
-              "correctAnswer": "AN EMERGENCY PHONE CALL"
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -160,7 +160,7 @@
                 "They copy others."
               ],
               "explanation": "Khi ly hôn (divorced), họ không còn kết hôn nữa.",
-              "correctAnswer": "THEY'RE NOT MARRIED ANYMORE."
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -172,7 +172,7 @@
                 "Slowly"
               ],
               "explanation": "creep (bò, trườn, đi rón rén) thường thực hiện một cách chậm rãi (slowly).",
-              "correctAnswer": "SLOWLY"
+              "correctAnswer": "D"
             },
             {
               "id": "14",
@@ -184,7 +184,7 @@
                 "A table"
               ],
               "explanation": "Bạn thường vỗ nhẹ (pat) một chú chó để âu yếm.",
-              "correctAnswer": "A DOG"
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -196,7 +196,7 @@
                 "A new year"
               ],
               "explanation": "Một ý tưởng (idea) có thể xuất hiện đột ngột từ hư không (from nowhere).",
-              "correctAnswer": "AN IDEA"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -216,7 +216,7 @@
                 "nowhere / nowhere"
               ],
               "explanation": "aloud (lớn tiếng) phù hợp với 'asked' (hỏi), nowhere (không đi đâu) phù hợp với 'going' (đi).",
-              "correctAnswer": "ALOUD / NOWHERE"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -228,7 +228,7 @@
                 "wrinkles / wrinkles"
               ],
               "explanation": "infant (trẻ sơ sinh) có làn da hoàn hảo không có wrinkles (nếp nhăn).",
-              "correctAnswer": "INFANT / WRINKLES"
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -240,7 +240,7 @@
                 "absence / absence"
               ],
               "explanation": "divorced (ly hôn) đi với bố mẹ, absence (sự vắng mặt) đi với sự hiện diện của người bố.",
-              "correctAnswer": "DIVORCED / ABSENCE"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -252,7 +252,7 @@
                 "urgent / urgent"
               ],
               "explanation": "reproduce (tái tạo, sao chép) hình ảnh, và việc đó rất urgent (cấp bách).",
-              "correctAnswer": "REPRODUCE / URGENT"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -264,7 +264,7 @@
                 "patted / patted"
               ],
               "explanation": "sucked (mút) ngón tay bị đứt, mẹ patted (vỗ nhẹ) vào lưng.",
-              "correctAnswer": "SUCKED / PATTED"
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -276,7 +276,7 @@
                 "rhymes / rhymes"
               ],
               "explanation": "người đàn ông bald (hói đầu) giải trí bằng cách nói rhymes (vần điệu).",
-              "correctAnswer": "BALD / RHYMES"
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -288,7 +288,7 @@
                 "crept / crept"
               ],
               "explanation": "mẹ tưởng cậu bé đã vanished (biến mất), nhưng thực ra cậu vừa crept (lẻn) dưới gầm giường.",
-              "correctAnswer": "VANISHED / CREPT"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -300,7 +300,7 @@
                 "kidnap / kidnap"
               ],
               "explanation": "để lại trong wagon (xe kéo), sợ ai đó sẽ kidnap (bắt cóc).",
-              "correctAnswer": "WAGON / KIDNAP"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -312,7 +312,7 @@
                 "nap / nap"
               ],
               "explanation": "hoàn thành bài thi là một sự relief (nhẹ nhõm), quá mệt nên cần một nap (giấc ngủ ngắn).",
-              "correctAnswer": "RELIEF / NAP"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -324,7 +324,7 @@
                 "imitating / imitating"
               ],
               "explanation": "quấn blanket (chăn) và imitating (bắt chước) một con ma.",
-              "correctAnswer": "BLANKET / IMITATING"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -424,7 +424,7 @@
                 "Pleasant"
               ],
               "explanation": "Đáp án: Relief. Khi tìm thấy Grace dưới gầm giường, Anna đã thốt lên: 'What a relief! Anna cried.' (Thật nhẹ nhõm!). Do vậy cảm giác của cô bé lúc đó là vô cùng nhẹ nhõm.",
-              "correctAnswer": "RELIEF"
+              "correctAnswer": "C"
             },
             {
               "id": "33",
@@ -436,7 +436,7 @@
                 "Anna carried her in the blanket."
               ],
               "explanation": "Đáp án: She crept there. Cuối đoạn 5 có câu: 'Grace had followed Anna into her room and crept under the bed.' Nghĩa là bé Grace đã đi theo Anna và rón rén bò (crept) xuống dưới gầm giường.",
-              "correctAnswer": "SHE CREPT THERE."
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -448,7 +448,7 @@
                 "Sing her rhymes"
               ],
               "explanation": "Đáp án: Read a book aloud. Trong bài, Anna đã cho em ngồi xe kéo (wagon), vỗ nhẹ đầu (patted her on the head), và hát ru (sing her rhymes). Việc đọc sách to (read a book aloud) không hề được nhắc đến.",
-              "correctAnswer": "READ A BOOK ALOUD"
+              "correctAnswer": "C"
             },
             {
               "id": "35",
@@ -460,7 +460,7 @@
                 "To keep her from sucking her thumb"
               ],
               "explanation": "Đáp án: So she could take a nap. Ở đoạn 7, tác giả viết: 'Anna wrapped her in a blanket... Then she put Grace in bed for a nap.' Việc quấn chăn là để chuẩn bị cho Grace có một giấc ngủ trưa ngoan ngoãn.",
-              "correctAnswer": "SO SHE COULD TAKE A NAP"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"

@@ -20,7 +20,7 @@
                 "to go everywhere"
               ],
               "explanation": "anticipate (mong đợi, dự đoán) = to wait for",
-              "correctAnswer": "B. TO WAIT FOR"
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "a smell"
               ],
               "explanation": "kit (bộ dụng cụ) = set of things needed to do something",
-              "correctAnswer": "B. SET OF THINGS NEEDED TO DO SOMETHING"
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "opposite"
               ],
               "explanation": "steel (thép) = shiny metal",
-              "correctAnswer": "C. SHINY METAL"
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "to lockdown"
               ],
               "explanation": "contrary (ngược lại) = the opposite",
-              "correctAnswer": "B. THE OPPOSITE"
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "smoke"
               ],
               "explanation": "toss (quăng, ném) = to throw",
-              "correctAnswer": "A. TO THROW"
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -80,7 +80,7 @@
                 "a heavy metal bar"
               ],
               "explanation": "triumph (chiến thắng) = to win",
-              "correctAnswer": "A. TO WIN"
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -92,7 +92,7 @@
                 "to go in many places"
               ],
               "explanation": "scatter (phân tán, rải rác) = to go in many places",
-              "correctAnswer": "D. TO GO IN MANY PLACES"
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -104,7 +104,7 @@
                 "opposite"
               ],
               "explanation": "casual (thông thường, tự nhiên) = relaxed or simple",
-              "correctAnswer": "C. RELAXED OR SIMPLE"
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                 "to expect something"
               ],
               "explanation": "rag (giẻ lau) = a small towel",
-              "correctAnswer": "B. A SMALL TOWEL"
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -128,7 +128,7 @@
                 "a heavy metal bar"
               ],
               "explanation": "beam (cột, xà) = a heavy metal bar",
-              "correctAnswer": "D. A HEAVY METAL BAR"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -148,7 +148,7 @@
                 "barrel"
               ],
               "explanation": "barrel: thùng rỗng, hình trụ",
-              "correctAnswer": "D. BARREL"
+              "correctAnswer": "D"
             },
             {
               "id": "12",
@@ -160,7 +160,7 @@
                 "contrary"
               ],
               "explanation": "deliberate: cố ý",
-              "correctAnswer": "A. DELIBERATE"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -172,7 +172,7 @@
                 "triumph"
               ],
               "explanation": "germs: vi trùng",
-              "correctAnswer": "C. GERMS"
+              "correctAnswer": "C"
             },
             {
               "id": "14",
@@ -184,7 +184,7 @@
                 "explode"
               ],
               "explanation": "fasten: thắt chặt, khóa chặt",
-              "correctAnswer": "B. FASTEN"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -196,7 +196,7 @@
                 "steel"
               ],
               "explanation": "dissolve: hòa tan",
-              "correctAnswer": "C. DISSOLVE"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -302,7 +302,7 @@
                 "1.F 2.F 3.F 4.T 5.T 6.T"
               ],
               "explanation": "Đáp án đúng là lựa chọn A (1.T 2.T 3.F 4.F 5.T 6.T). Cụ thể các thông tin trong bài như sau:\n1. True: Đoạn 1 viết 'he caught the scent of ice cream cones'.\n2. True: Đoạn 3 bác John nói 'I built it from a kit'.\n3. False: Trong đoạn 3 bác John hướng dẫn 'Next, you fasten down the beam', nghĩa là bạn phải khóa thanh gạt lại.\n4. False: Đoạn 6 nói rõ 'Sam washed his hands with caution. He made a deliberate attempt to keep germs out of the dough', Sam đã cẩn thận rửa tay để loại bỏ vi khuẩn.\n5. True: Đoạn 7 viết 'Before long, cones scattered all over the floor'.\n6. True: Đoạn 11 viết 'He tossed Sam a rag to clean his face'.",
-              "correctAnswer": "A. 1.T 2.T 3.F 4.F 5.T 6.T"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -314,7 +314,7 @@
                 "To clean the steel"
               ],
               "explanation": "Đáp án: To clean his face. Đoạn cuối cùng của truyện có viết: 'He tossed Sam a rag to clean his face' (Ông ném cho Sam một chiếc giẻ để lau mặt).",
-              "correctAnswer": "C. TO CLEAN HIS FACE"
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -326,7 +326,7 @@
                 "The machine exploding"
               ],
               "explanation": "Đáp án: Getting an ice cream cone. Ở đoạn 1, tác giả mô tả: '...he caught the scent of ice cream cones and anticipated eating some ice cream.' Nghĩa là Sam đã ngửi thấy mùi hương và rất háo hức mong đợi được ăn một vài cây kem.",
-              "correctAnswer": "B. GETTING AN ICE CREAM CONE"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -338,7 +338,7 @@
                 "Give a puff of smoke"
               ],
               "explanation": "Đáp án: Give a puff of smoke. Theo đoạn 3, sau khi bác John khởi động máy thì: 'There was a puff of smoke' (Có một luồng khói phà ra).",
-              "correctAnswer": "D. GIVE A PUFF OF SMOKE"
+              "correctAnswer": "D"
             },
             {
               "id": "30",
@@ -350,7 +350,7 @@
                 "It was contrary."
               ],
               "explanation": "Đáp án: It's easy to use. Trong đoạn 5, bác John tự tin nói về cỗ máy: 'On the contrary. It's easy to use.' (Ngược lại chứ. Nó rất dễ sử dụng).",
-              "correctAnswer": "A. IT'S EASY TO USE."
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

@@ -20,7 +20,7 @@
                 "passion"
               ],
               "explanation": "“far away” có nghĩa là xa xôi, xa cách. Từ đồng nghĩa là “distant”.",
-              "correctAnswer": "DISTANT"
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "bloom"
               ],
               "explanation": "“a sweet thing to eat” là đồ ngọt để ăn. Đáp án là “dessert” (món tráng miệng).",
-              "correctAnswer": "DESSERT"
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "fairy"
               ],
               "explanation": "“a small magical creature” là sinh vật ma thuật nhỏ bé. Đáp án là “fairy” (tiên nữ).",
-              "correctAnswer": "FAIRY"
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "curl"
               ],
               "explanation": "“an event that covers the sun” là sự kiện che khuất mặt trời. Đáp án là “eclipse” (nhật thực).",
-              "correctAnswer": "ECLIPSE"
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "sneeze"
               ],
               "explanation": "“to make someone feel less tired” là làm cho ai đó bớt mệt mỏi. Đáp án là “refresh” (làm sảng khoái).",
-              "correctAnswer": "REFRESH"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -88,7 +88,7 @@
                 "a flower"
               ],
               "explanation": "“whistle” là huýt sáo, tức là tạo ra âm thanh bằng môi.",
-              "correctAnswer": "TO MAKE NOISE WITH ONE’S LIPS"
+              "correctAnswer": "B"
             },
             {
               "id": "7",
@@ -100,7 +100,7 @@
                 "to help tired people"
               ],
               "explanation": "“compact” có nghĩa là nhỏ gọn (small).",
-              "correctAnswer": "SMALL"
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -112,7 +112,7 @@
                 "strong feeling"
               ],
               "explanation": "“wool” là len, lông cừu.",
-              "correctAnswer": "SHEEP’S HAIR"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -124,7 +124,7 @@
                 "in the shape of a circle"
               ],
               "explanation": "“grace” là vẻ duyên dáng, di chuyển uyển chuyển (a nice way to move).",
-              "correctAnswer": "A NICE WAY TO MOVE"
+              "correctAnswer": "C"
             },
             {
               "id": "10",
@@ -136,7 +136,7 @@
                 "one of the things on your feet"
               ],
               "explanation": "“dip” là nhúng vào rồi rút ra.",
-              "correctAnswer": "TO PUT IN AND OUT"
+              "correctAnswer": "C"
             },
             {
               "id": "11",
@@ -148,7 +148,7 @@
                 "a sweet thing to eat"
               ],
               "explanation": "“spice” là gia vị, hương vị thêm vào thức ăn.",
-              "correctAnswer": "A FLAVOR ADDED TO FOOD OR DRINK"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -160,7 +160,7 @@
                 "a feeling of wanting"
               ],
               "explanation": "“leisure” là thời gian rảnh rỗi, không phải làm việc.",
-              "correctAnswer": "TIME WHEN YOU DO NOT HAVE TO WORK"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -172,7 +172,7 @@
                 "to go after"
               ],
               "explanation": "“curl” là lọn tóc xoăn hoặc vật có hình uốn cong.",
-              "correctAnswer": "SOMETHING WITH A CURVE"
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -184,7 +184,7 @@
                 "far away"
               ],
               "explanation": "“pillow” là cái gối để ngủ.",
-              "correctAnswer": "SOMETHING YOU SLEEP ON"
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -196,7 +196,7 @@
                 "to go away"
               ],
               "explanation": "“pulse” là nhịp tim.",
-              "correctAnswer": "THE BEAT OF ONE’S HEART"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -224,7 +224,7 @@
                 "She had a fast pulse"
               ],
               "explanation": "Câu văn trong bài ghi rõ \"Suddenly, somebody sneezed. The sound woke Tina up.\" (Đột nhiên, có ai đó hắt hơi. Âm thanh đó đã đánh thức Tina dậy). Vì vậy, lý do cô ấy tỉnh giấc là do nghe thấy tiếng hắt hơi. Đáp án chính xác là She heard someone sneeze.",
-              "correctAnswer": "SHE HEARD SOMEONE SNEEZE"
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -236,7 +236,7 @@
                 "she was compact"
               ],
               "explanation": "Bài đọc viết \"Tina dipped a finger in the cup and tasted it. It was tea with all kinds of delicious spices in it. Tina felt refreshed after drinking the tea.\" (Tina nhúng một ngón tay vào cốc và nếm thử. Đó là trà có đủ loại gia vị thơm ngon. Tina cảm thấy sảng khoái sau khi uống). Như vậy cô ấy rất thích loại trà này, việc nói cô ấy không thích (did not like) là thông tin sai.",
-              "correctAnswer": "SHE DID NOT LIKE TEA WITH SPICE"
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -248,7 +248,7 @@
                 "She lets them decay"
               ],
               "explanation": "Trong bài, bà Wilma đã nói \"I spend all my leisure time in my garden cutting flowers.\" (Tôi dành toàn bộ thời gian rảnh rỗi trong khu vườn của mình để cắt hoa). Vì vậy, hành động bà ấy làm với những bông hoa là cắt chúng (She cuts them).",
-              "correctAnswer": "SHE CUTS THEM"
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -260,7 +260,7 @@
                 "In a distant country"
               ],
               "explanation": "Ngay câu đầu tiên của bài đọc đã giới thiệu \"In a distant land, there was a kingdom where fairies lived.\" (Ở một vùng đất xa xôi, có một vương quốc nơi các nàng tiên sinh sống). Vùng đất xa xôi (distant land) cũng đồng nghĩa với distant country.",
-              "correctAnswer": "IN A DISTANT COUNTRY"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"

@@ -20,7 +20,7 @@
                 "to go everywhere"
               ],
               "explanation": "anticipate nghĩa là dự đoán, mong đợi (to wait for).",
-              "correctAnswer": "B. TO WAIT FOR"
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "to disappear in liquid"
               ],
               "explanation": "kit là bộ dụng cụ (set of things needed to do something).",
-              "correctAnswer": "B. SET OF THINGS NEEDED TO DO SOMETHING"
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "opposite"
               ],
               "explanation": "steel là thép, một kim loại sáng bóng (shiny metal).",
-              "correctAnswer": "C. SHINY METAL"
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "opposite"
               ],
               "explanation": "contrary là ngược lại, trái ngược (opposite).",
-              "correctAnswer": "D. OPPOSITE"
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "to lockdown"
               ],
               "explanation": "toss là ném nhẹ (to throw).",
-              "correctAnswer": "A. TO THROW"
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -80,7 +80,7 @@
                 "careful"
               ],
               "explanation": "triumph là chiến thắng, thành tựu (to win).",
-              "correctAnswer": "A. TO WIN"
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -92,7 +92,7 @@
                 "to go in many places"
               ],
               "explanation": "scatter là phân tán, rải rác (to go in many places).",
-              "correctAnswer": "D. TO GO IN MANY PLACES"
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -104,7 +104,7 @@
                 "smoke"
               ],
               "explanation": "casual là thoải mái, đơn giản (relaxed or simple).",
-              "correctAnswer": "C. RELAXED OR SIMPLE"
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                 "to disappear in water"
               ],
               "explanation": "rag là giẻ lau, khăn nhỏ (a small towel).",
-              "correctAnswer": "B. A SMALL TOWEL"
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -128,7 +128,7 @@
                 "a heavy metal bar"
               ],
               "explanation": "beam là thanh dầm, thanh xà lớn (a heavy metal bar).",
-              "correctAnswer": "D. A HEAVY METAL BAR"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -148,7 +148,7 @@
                 "barrel"
               ],
               "explanation": "barrel là cái thùng phuy (a round container).",
-              "correctAnswer": "D. BARREL"
+              "correctAnswer": "D"
             },
             {
               "id": "12",
@@ -160,7 +160,7 @@
                 "contrary"
               ],
               "explanation": "deliberate là cố ý, có mục đích (on purpose).",
-              "correctAnswer": "A. DELIBERATE"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -172,7 +172,7 @@
                 "triumph"
               ],
               "explanation": "germs là vi khuẩn, mầm bệnh (something that makes you sick).",
-              "correctAnswer": "C. GERMS"
+              "correctAnswer": "C"
             },
             {
               "id": "14",
@@ -184,7 +184,7 @@
                 "explode"
               ],
               "explanation": "fasten là buộc chặt, cố định (to lock something in place).",
-              "correctAnswer": "B. FASTEN"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -196,7 +196,7 @@
                 "steel"
               ],
               "explanation": "dissolve là hòa tan (to mix in a liquid and disappear).",
-              "correctAnswer": "C. DISSOLVE"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -302,7 +302,7 @@
                 "To clean the steel"
               ],
               "explanation": "Đáp án: To clean his face. Đoạn cuối cùng của truyện có viết: 'He tossed Sam a rag to clean his face' (Ông ném cho Sam một chiếc giẻ để lau mặt).",
-              "correctAnswer": "C. TO CLEAN HIS FACE"
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -314,7 +314,7 @@
                 "The machine exploding"
               ],
               "explanation": "Đáp án: Getting an ice cream cone. Ở đoạn 1, tác giả mô tả: '...he caught the scent of ice cream cones and anticipated eating some ice cream.' Nghĩa là Sam đã ngửi thấy mùi hương và rất háo hức mong đợi được ăn một vài cây kem.",
-              "correctAnswer": "B. GETTING AN ICE CREAM CONE"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -326,7 +326,7 @@
                 "Give a puff of smoke"
               ],
               "explanation": "Đáp án đúng là Give a puff of smoke. Theo đoạn 3, sau khi bác John khởi động máy thì: 'There was a puff of smoke' (Có một luồng khói phà ra). Lựa chọn 'Scatter dough' là sai vì máy làm văng những chiếc nón (cones scattered) chứ không phải bột nhào (dough).",
-              "correctAnswer": "D. GIVE A PUFF OF SMOKE"
+              "correctAnswer": "D"
             },
             {
               "id": "29",
@@ -338,7 +338,7 @@
                 "It was contrary."
               ],
               "explanation": "Đáp án: It's easy to use. Trong đoạn 5, bác John tự tin nói về cỗ máy: 'On the contrary. It's easy to use.' (Ngược lại chứ. Nó rất dễ sử dụng).",
-              "correctAnswer": "A. IT'S EASY TO USE."
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

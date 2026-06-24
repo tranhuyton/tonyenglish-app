@@ -383,53 +383,58 @@
               "content": "1. Mark’s masculine features included a mustache and a muscular body.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Trong bài nói Mark trông rất nam tính (masculine), anh ấy có riết mép (mustache) và cơ thể rất vạm vỡ (muscular). Nhận định này đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
               "content": "2. John laughed at Pharaoh Tut’s ignorance.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "John cười vì sự thiếu hiểu biết của Mark (Your ignorance), chứ không phải sự thiếu hiểu biết của Pharaoh Tut. Vậy nhận định này sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
               "content": "3. John appointed himself to supervise Mark’s work and give him feedback about posture and symmetry.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "John tự nhận việc giám sát (supervise) công việc của Mark, đưa ra nhận xét (feedback), đồng thời nhắc Mark về tư thế (posture) và tính đối xứng (symmetry). Câu này đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
               "content": "4. Mark made crude measurements and situated a tattoo on his original monument’s chest.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "Mark đã thực hiện những phép đo sơ sài (crude measurements) và khắc một hình xăm (tattoo) lên ngực bức tượng ban đầu. Nhận định này đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
               "content": "5. John was an undergraduate who studied sculpture and anthropology.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "explanation": "John là một sinh viên đại học (undergraduate) học về nhân chủng học (anthropology) và lịch sử (history), chứ không học điêu khắc (sculpture). Nhận định sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

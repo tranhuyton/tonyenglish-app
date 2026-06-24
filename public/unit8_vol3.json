@@ -20,7 +20,7 @@
                 "burst / dripped"
               ],
               "explanation": "anniversary: kỉ niệm, elegant: thanh lịch.",
-              "correctAnswer": "ANNIVERSARY / ELEGANT"
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -32,7 +32,7 @@
                 "carpenter / sew"
               ],
               "explanation": "arithmetic: toán học, upwards: hướng lên.",
-              "correctAnswer": "ARITHMETIC / UPWARDS"
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -44,7 +44,7 @@
                 "highlands / coal"
               ],
               "explanation": "ashamed: xấu hổ, couch: ghế dài.",
-              "correctAnswer": "ASHAMED / COUCH"
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -56,7 +56,7 @@
                 "needle / ivory"
               ],
               "explanation": "burst: bật mở, dripped: nhỏ giọt.",
-              "correctAnswer": "BURST / DRIPPED"
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -68,7 +68,7 @@
                 "mill / threads"
               ],
               "explanation": "carpenter: thợ mộc, sew: may vá.",
-              "correctAnswer": "CARPENTER / SEW"
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -80,7 +80,7 @@
                 "polish / fabric"
               ],
               "explanation": "highlands: vùng cao nguyên, coal: than đá.",
-              "correctAnswer": "HIGHLANDS / COAL"
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -92,7 +92,7 @@
                 "sheds / trims"
               ],
               "explanation": "needles: cây kim, ivory: ngà voi. (Lưu ý: số nhiều của needle).",
-              "correctAnswer": "NEEDLES / IVORY"
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -104,7 +104,7 @@
                 "anniversary / elegant"
               ],
               "explanation": "mill: cối xay, threads: sợi chỉ.",
-              "correctAnswer": "MILL / THREADS"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                 "arithmetic / upwards"
               ],
               "explanation": "polish: đánh bóng, fabric: vải.",
-              "correctAnswer": "POLISH / FABRIC"
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -128,7 +128,7 @@
                 "ashamed / couch"
               ],
               "explanation": "shed: nhà kho, trim: cắt tỉa.",
-              "correctAnswer": "SHED / TRIM"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -226,7 +226,7 @@
                 "Wood"
               ],
               "explanation": "Thợ mộc (carpenter) làm việc với gỗ (wood).",
-              "correctAnswer": "WOOD"
+              "correctAnswer": "D"
             },
             {
               "id": "22",
@@ -238,7 +238,7 @@
                 "Dirt"
               ],
               "explanation": "Nước (water) có thể nhỏ giọt (drip).",
-              "correctAnswer": "WATER"
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -250,7 +250,7 @@
                 "A chair"
               ],
               "explanation": "Bạn có thể may áo (A shirt) bằng kim (needle).",
-              "correctAnswer": "A SHIRT"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -262,7 +262,7 @@
                 "They've exploded."
               ],
               "explanation": "Burst nghĩa là nổ tung, phá vỡ (exploded).",
-              "correctAnswer": "THEY'VE EXPLODED."
+              "correctAnswer": "D"
             },
             {
               "id": "25",
@@ -274,7 +274,7 @@
                 "Wood"
               ],
               "explanation": "Ngà voi (ivory) có màu trắng giống như chiếc răng (A tooth).",
-              "correctAnswer": "A TOOTH"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -374,7 +374,7 @@
                 "In the highlands"
               ],
               "explanation": "Đáp án: In the highlands. Trong đoạn 1, câu thứ hai có thông tin: 'He built houses in the highlands.' Nghĩa là Joe xây những ngôi nhà ở vùng cao.",
-              "correctAnswer": "IN THE HIGHLANDS"
+              "correctAnswer": "D"
             },
             {
               "id": "33",
@@ -386,7 +386,7 @@
                 "Polished it and sold it"
               ],
               "explanation": "Đáp án: Polished it and sold it. Câu hỏi hỏi Joe đã làm gì với chiếc đồng hồ của anh ấy. Trong đoạn 5, tác giả viết: 'So he polished it and sold it.' Joe đã đánh bóng chiếc đồng hồ và bán nó đi để lấy tiền mua quà cho Stella.",
-              "correctAnswer": "POLISHED IT AND SOLD IT"
+              "correctAnswer": "D"
             },
             {
               "id": "34",
@@ -398,7 +398,7 @@
                 "Anything for herself"
               ],
               "explanation": "Đáp án: Elegant clothing. Ở đoạn 1 có ghi: 'Stella used a needle and thread to sew elegant clothing.' Điều này cho biết Stella chuyên may những bộ trang phục thanh lịch.",
-              "correctAnswer": "ELEGANT CLOTHING"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -410,7 +410,7 @@
                 "Bought him a gold watch"
               ],
               "explanation": "Đáp án: Sold her hair. Câu hỏi muốn biết Stella đã làm gì cho Joe vào ngày kỷ niệm. Cuối đoạn 4 có viết: 'She cut off all of her hair and sold it.' Stella đã cắt mái tóc của mình và bán đi để có tiền mua quà cho Joe.",
-              "correctAnswer": "SOLD HER HAIR"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
