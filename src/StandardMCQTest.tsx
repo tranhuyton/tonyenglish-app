@@ -2368,7 +2368,7 @@ const handleFinish = async () => {
                               }
                           } else {
                               const q = section?.questions.find((q:any) => String(q.id) === id);
-                              isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase() && String(q.correctAnswer || '').trim() !== '';
+                              isCorrect = q && isAnswerCorrect(answers[id] || '', q.correctAnswer || '');
                           }
                           btnStyle += isCorrect ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/30 border-transparent' : 'bg-red-500 text-white shadow-md shadow-red-500/30 border-transparent';
                       } else {
