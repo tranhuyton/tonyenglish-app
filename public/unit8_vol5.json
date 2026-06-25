@@ -337,16 +337,15 @@
         },
         {
           "id": "sec4_wordlist",
-          "title": "Exercise 4: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
+          "title": "Exercise 4: Check if the italicized word is used correctly.",
           "content": "",
           "questions": [
             {
               "id": "21",
               "content": "One of my classmates is very <i>hostile</i>. He always helps me with homework.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "hostile là thù địch/khó gần, mâu thuẫn với việc 'always helps me'.",
               "correctAnswer": "B"
@@ -355,9 +354,8 @@
               "id": "22",
               "content": "I chose an <i>obscure</i> book for my report. It was very difficult to find.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "obscure (ít người biết, vô danh) nên rất khó tìm (difficult to find).",
               "correctAnswer": "A"
@@ -366,9 +364,8 @@
               "id": "23",
               "content": "In the past, many people suffered from <i>malnutrition</i> because of a lack of food.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "malnutrition (suy dinh dưỡng) do thiếu thức ăn (lack of food) là hoàn toàn hợp lý.",
               "correctAnswer": "A"
@@ -377,9 +374,8 @@
               "id": "24",
               "content": "Did you know that some flowers are <i>edible</i>? They both look and taste good.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "edible (có thể ăn được) nên có taste good (vị ngon).",
               "correctAnswer": "A"
@@ -388,9 +384,8 @@
               "id": "25",
               "content": "The dog was hiding in a <i>dense</i> patch of grass. We had no trouble finding him.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "dense (dày đặc), nếu trốn trong bãi cỏ dày đặc thì sẽ khó tìm, câu nói 'no trouble' là mâu thuẫn.",
               "correctAnswer": "B"
@@ -399,9 +394,8 @@
               "id": "26",
               "content": "People enjoy Mark Twain's novels. They <i>likewise</i> enjoy his political comments.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "likewise (tương tự như vậy) dùng nối hai mệnh đề cùng ý nghĩa.",
               "correctAnswer": "A"
@@ -410,9 +404,8 @@
               "id": "27",
               "content": "You can have health problems if your <i>sugar</i> intake is too high.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "sugar intake (lượng đường nạp vào) quá cao gây vấn đề sức khoẻ.",
               "correctAnswer": "A"
@@ -421,9 +414,8 @@
               "id": "28",
               "content": "You need to ask your teacher for a <i>prescription</i>. Then you can get your medicine.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "prescription (đơn thuốc) do bác sĩ kê, không phải do giáo viên (teacher).",
               "correctAnswer": "B"
@@ -432,9 +424,8 @@
               "id": "29",
               "content": "After we lost the game, our coach showed his <i>dignity</i>. He yelled at us for hours.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "dignity (sự điềm tĩnh/phẩm giá), nhưng lại la mắng (yelled) thì mâu thuẫn.",
               "correctAnswer": "B"
@@ -443,9 +434,8 @@
               "id": "30",
               "content": "After the car accident, John needed a <i>respirator</i>. He could not walk without it.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "respirator (máy thở) giúp hô hấp, không giúp việc đi bộ (walk).",
               "correctAnswer": "B"
@@ -454,9 +444,8 @@
               "id": "31",
               "content": "They are taking a break outside. Why don't we do <i>likewise</i>?",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "do likewise (làm tương tự) là một cách dùng chính xác.",
               "correctAnswer": "A"
@@ -465,9 +454,8 @@
               "id": "32",
               "content": "A month ago, I hurt myself playing soccer. The <i>injury</i> finally oppressed this week.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "oppress là áp bức/đè nén, không thể dùng cho vết thương (injury).",
               "correctAnswer": "B"
@@ -476,9 +464,8 @@
               "id": "33",
               "content": "<i>Strive</i> to do worst on your test.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "strive là cố gắng vươn lên, không ai cố gắng để đạt điểm tệ nhất (worst).",
               "correctAnswer": "B"
@@ -487,9 +474,8 @@
               "id": "34",
               "content": "I <i>strive</i> to exercise at least twenty minutes each day to stay in shape.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "strive (phấn đấu/nỗ lực) tập thể dục là đúng.",
               "correctAnswer": "A"
@@ -498,15 +484,14 @@
               "id": "35",
               "content": "Many deserts are <i>barren</i> landscapes. You find little more than dirt and rocks there.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "barren (cằn cỗi), chỉ có đất và đá, không có cây cối là hợp lý.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -526,8 +511,7 @@
               "content": "The respirator helped people with the obscure syndrome, and the doctor hoped the medication would do likewise.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Căn bệnh khiến người ta cần dùng máy thở (respirator) để thở. Bác sĩ đang thử một loại thuốc mới để điều trị thay vì dùng máy thở, hy vọng nó sẽ giúp họ tương tự (do likewise). Nhận định này là đúng.",
               "correctAnswer": "A"
@@ -537,8 +521,7 @@
               "content": "The hostile doctor wanted to dominate and oppress the people.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đội quân xâm lược thù địch (hostile invading army) mới là phía muốn thống trị (dominate) và áp bức (oppress) người dân, chứ không phải bác sĩ. Vì vậy nhận định này sai.",
               "correctAnswer": "B"
@@ -548,8 +531,7 @@
               "content": "The doctor was not adept at treating malnutrition before meeting the mother and her son.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong đoạn 4, bác sĩ thừa nhận bản thân không giỏi/thành thạo (not adept) trong việc điều trị bệnh suy dinh dưỡng. Nhận định này đúng.",
               "correctAnswer": "A"
@@ -559,8 +541,7 @@
               "content": "The doctor showed the woman a dense patch of barren land.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bác sĩ dẫn người phụ nữ ra ngoài và chỉ cho cô ấy một bãi cây có thể ăn được mọc dày đặc (dense patch of edible plants), không phải mảnh đất cằn cỗi (barren land). Nhận định sai.",
               "correctAnswer": "B"
@@ -570,14 +551,13 @@
               "content": "The woman gave the doctor a ceramic bowl to show off her pottery skills.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Người phụ nữ tặng cái bát gốm (ceramic bowl) để cảm ơn (as thanks) bác sĩ vì đã cứu con bà, không phải để khoe kỹ năng làm gốm. Vậy nhận định sai.",
               "correctAnswer": "B"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_qa",

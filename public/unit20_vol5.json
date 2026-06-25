@@ -354,9 +354,8 @@
               "id": "26",
               "content": "The <i>microchip</i> was damaged when she spilled water on the computer.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"microchip\" (vi mạch máy tính) dùng chính xác, nước làm hỏng máy tính.",
               "correctAnswer": "A"
@@ -365,9 +364,8 @@
               "id": "27",
               "content": "<i>Quantum</i> mechanics deals with planets and stars.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"quantum mechanics\" (cơ học lượng tử) liên quan đến các hạt vi mô, không phải hành tinh.",
               "correctAnswer": "B"
@@ -376,9 +374,8 @@
               "id": "28",
               "content": "People with fast <i>metabolisms</i> are usually thin and in good shape.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"metabolisms\" (sự trao đổi chất) dùng chính xác cho việc giữ vóc dáng.",
               "correctAnswer": "A"
@@ -387,9 +384,8 @@
               "id": "29",
               "content": "I <i>compressed</i> the sponge into a little ball.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"compressed\" (nén lại) dùng chính xác cho việc nắn miếng bọt biển.",
               "correctAnswer": "A"
@@ -398,9 +394,8 @@
               "id": "30",
               "content": "You should <i>pinch</i> your homework if you want to get it turned in on time.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"pinch\" (véo, kẹp) không dùng cho việc hoàn thành bài tập về nhà.",
               "correctAnswer": "B"
@@ -409,9 +404,8 @@
               "id": "31",
               "content": "I was amazed by the <i>aggregate</i> total of donated gifts and money.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"aggregate\" (tổng số) dùng đúng khi nói về tổng tiền và quà quyên góp.",
               "correctAnswer": "A"
@@ -420,9 +414,8 @@
               "id": "32",
               "content": "The children played all day on the <i>circuit</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"circuit\" (mạch điện) không phải là nơi trẻ em có thể chơi đùa.",
               "correctAnswer": "B"
@@ -431,9 +424,8 @@
               "id": "33",
               "content": "Dressing and pepper <i>complemented</i> the tasty salad.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"complemented\" (bổ sung, làm tôn lên) dùng đúng cho gia vị món salad.",
               "correctAnswer": "A"
@@ -442,9 +434,8 @@
               "id": "34",
               "content": "<i>Intimate</i> friends should not tell lies about each other.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"intimate\" (thân thiết) dùng chính xác cho tình bạn.",
               "correctAnswer": "A"
@@ -453,15 +444,14 @@
               "id": "35",
               "content": "This tuba is the <i>equivalent</i> of a set of drums.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "\"equivalent\" (tương đương) dùng sai vì kèn tuba và dàn trống không thể tương đương nhau về số lượng hay âm thanh.",
               "correctAnswer": "B"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         }
       ]
     },

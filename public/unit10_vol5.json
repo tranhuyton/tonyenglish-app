@@ -209,16 +209,15 @@
         },
         {
           "id": "sec3_wordlist",
-          "title": "Exercise 3: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
+          "title": "Exercise 3: Check if the italicized word is used correctly.",
           "content": "",
           "questions": [
             {
               "id": "16",
               "content": "I think the <i>soy</i> beans would taste better if we cooked them first.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "soy beans (đậu nành) là đúng ngữ cảnh thực phẩm.",
               "correctAnswer": "A"
@@ -227,9 +226,8 @@
               "id": "17",
               "content": "Jim said he would <i>finance</i> their new store for a share of their profits.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "finance (tài trợ/đầu tư tiền) vào cửa hàng mới là hợp lý.",
               "correctAnswer": "A"
@@ -238,9 +236,8 @@
               "id": "18",
               "content": "We all knew the <i>precaution</i> of our actions would be terrible.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "precaution (sự phòng ngừa), không dùng cho hậu quả hành động ('consequences' mới đúng).",
               "correctAnswer": "B"
@@ -249,9 +246,8 @@
               "id": "19",
               "content": "The <i>preliminary</i> whistle blew, meaning the game was over.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "preliminary (sơ bộ/mở đầu), trái ngược với việc trò chơi kết thúc (over).",
               "correctAnswer": "B"
@@ -260,9 +256,8 @@
               "id": "20",
               "content": "It can be difficult to keep track of <i>monetary</i> matters.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "monetary matters (vấn đề tiền bạc) rất hợp lý.",
               "correctAnswer": "A"
@@ -271,9 +266,8 @@
               "id": "21",
               "content": "The <i>indifferent</i> fan cheered loudly for his favorite team.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "indifferent (thờ ơ/lãnh đạm) thì không thể 'cheered loudly' (cổ vũ cuồng nhiệt).",
               "correctAnswer": "B"
@@ -282,9 +276,8 @@
               "id": "22",
               "content": "The <i>capitalist</i> believed that his efforts would lead to great profits in the future.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "capitalist (nhà tư bản/nhà đầu tư) luôn mong chờ lợi nhuận (profits).",
               "correctAnswer": "A"
@@ -293,9 +286,8 @@
               "id": "23",
               "content": "The company <i>accountant</i> found an error in the bank statement.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "accountant (kế toán viên) tìm lỗi trong sao kê ngân hàng là công việc của họ.",
               "correctAnswer": "A"
@@ -304,9 +296,8 @@
               "id": "24",
               "content": "I need to <i>dedicate</i> my house before the winter season.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "dedicate (cống hiến/dành trọn) không dùng cho căn nhà. Nên dùng từ như decorate hoặc renovate.",
               "correctAnswer": "B"
@@ -315,15 +306,14 @@
               "id": "25",
               "content": "The rain <i>saturated</i> the ground so much that it was as dry as a stone.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "saturated (ngấm đẫm nước) trái ngược với cụm từ 'as dry as a stone' (khô như đá).",
               "correctAnswer": "B"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
@@ -471,8 +461,7 @@
               "content": "Bill could maximize monetary gains in the aviation enterprise that he financed.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bill đã tài trợ cho một doanh nghiệp hàng không và anh ấy biết cách tối đa hóa (maximize) lợi nhuận tiền tệ (monetary gains). Nhận định này hoàn toàn đúng.",
               "correctAnswer": "A"
@@ -482,8 +471,7 @@
               "content": "Bill was indifferent about the farm's success.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bill nói anh ấy thờ ơ (indifferent) với thành công của công ty anh ấy, chứ không phải với sự thành công của trang trại (farm's success). Câu này sai.",
               "correctAnswer": "B"
@@ -493,8 +481,7 @@
               "content": "Bill irrigated his crops as a precaution for the upcoming rain in summer.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bill tưới tiêu (irrigate) như một biện pháp phòng ngừa (precaution) vì mùa hè sắp tới sẽ rất khô hạn (very dry), không phải vì trời sắp mưa (upcoming rain). Câu này sai.",
               "correctAnswer": "B"
@@ -504,8 +491,7 @@
               "content": "Bill dug a ditch with a spade.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Rõ ràng trong bài nói rằng Bill đã lấy chiếc xẻng (spade) của mình và đào một con mương (dug a ditch). Nhận định này đúng.",
               "correctAnswer": "A"
@@ -515,14 +501,13 @@
               "content": "Bill sowed seeds and saturated the soy and cabbage plants.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Mặc dù Bill đã gieo hạt, nhưng dòng nước làm ẩm ướt (saturate) phần đất (soil) xung quanh cây, không trực tiếp saturate bản thân cái cây. Vậy nên nhận định này chưa hoàn toàn chính xác.",
               "correctAnswer": "B"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_qa",

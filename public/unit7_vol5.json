@@ -244,16 +244,15 @@
         },
         {
           "id": "sec3_wordlist",
-          "title": "Exercise 3: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
+          "title": "Exercise 3: Check if the italicized word is used correctly.",
           "content": "",
           "questions": [
             {
               "id": "16",
               "content": "The <i>reproductive</i> process in rabbits explains how they hunt for food.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "reproductive nghĩa là sinh sản, không liên quan đến cách chúng săn mồi (hunt for food).",
               "correctAnswer": "B"
@@ -262,9 +261,8 @@
               "id": "17",
               "content": "In Biology class, we learned about the different parts of a cell's <i>nucleus</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "nucleus (nhân tế bào) phù hợp với ngữ cảnh lớp học sinh học.",
               "correctAnswer": "A"
@@ -273,9 +271,8 @@
               "id": "18",
               "content": "It is hard for some people to remain silent for the <i>duration</i> of a long movie.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "duration (khoảng thời gian) hoàn toàn hợp lý.",
               "correctAnswer": "A"
@@ -284,9 +281,8 @@
               "id": "19",
               "content": "I could listen to my favorite song all day. I have <i>tolerance</i> for great music.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "tolerance là khả năng chịu đựng điều gì đó khó chịu, không dùng cho 'great music' (nhạc hay).",
               "correctAnswer": "B"
@@ -295,9 +291,8 @@
               "id": "20",
               "content": "I will have to <i>undergo</i> through the tunnel to get home.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "undergo là trải qua (một quá trình/sự việc/đợt điều trị), không đi kèm giới từ through (chỉ việc đi qua đường hầm).",
               "correctAnswer": "B"
@@ -306,9 +301,8 @@
               "id": "21",
               "content": "This blanket is not very comfortable. It would be better if it was not so <i>coarse</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "coarse (thô ráp) hợp lý với chiếc chăn không thoải mái.",
               "correctAnswer": "A"
@@ -317,9 +311,8 @@
               "id": "22",
               "content": "She has exactly twenty jelly beans, which is an <i>infinite</i> amount.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "infinite là vô hạn, không thể dùng cho số lượng cụ thể là 'exactly twenty'.",
               "correctAnswer": "B"
@@ -328,9 +321,8 @@
               "id": "23",
               "content": "The boy became a <i>prominent</i> figure in town after he saved the woman's life.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "prominent figure (nhân vật nổi bật) là một cụm từ hợp lý sau khi cứu sống ai đó.",
               "correctAnswer": "A"
@@ -339,9 +331,8 @@
               "id": "24",
               "content": "Her new car is <i>bizarre</i>. It has five wheels and no doors!",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "bizarre (kì lạ) dùng miêu tả chiếc ô tô có 5 bánh và không cửa là chính xác.",
               "correctAnswer": "A"
@@ -350,9 +341,8 @@
               "id": "25",
               "content": "There is no life on Venus, so researchers study its <i>ecology</i> instead.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "ecology (hệ sinh thái) liên quan đến sinh vật và môi trường sống, không có sự sống thì không nghiên cứu ecology.",
               "correctAnswer": "B"
@@ -361,9 +351,8 @@
               "id": "26",
               "content": "The <i>vulnerable</i> lion roared and scared away the zebras.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "vulnerable nghĩa là dễ bị tổn thương/yếu đuối, không hợp lý khi con sư tử gầm rống và đuổi ngựa vằn.",
               "correctAnswer": "B"
@@ -372,9 +361,8 @@
               "id": "27",
               "content": "Fish must live in <i>aquatic</i> environments.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "aquatic environments (môi trường nước) hoàn toàn đúng cho cá.",
               "correctAnswer": "A"
@@ -383,9 +371,8 @@
               "id": "28",
               "content": "The circus performers were capable of many wonderful <i>feats</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "feats (kĩ năng/màn trình diễn xuất sắc) hợp lý với diễn viên xiếc.",
               "correctAnswer": "A"
@@ -394,9 +381,8 @@
               "id": "29",
               "content": "The <i>repetitive</i> sound of ocean waves helps me to fall asleep.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "repetitive sound (âm thanh lặp lại đều đặn) của sóng biển ru ngủ là đúng.",
               "correctAnswer": "A"
@@ -405,9 +391,8 @@
               "id": "30",
               "content": "The <i>cake</i> digested the delicious cookies.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "digest (tiêu hoá), bánh ngọt (cake) không thể tiêu hoá cookie.",
               "correctAnswer": "B"
@@ -416,9 +401,8 @@
               "id": "31",
               "content": "The <i>temperate</i> nights were almost too cold to bear.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "temperate (ôn hoà/ấm áp), không thể miêu tả thời tiết 'too cold to bear'.",
               "correctAnswer": "B"
@@ -427,9 +411,8 @@
               "id": "32",
               "content": "Parasites are <i>independent</i> forms of life.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "parasite (kí sinh trùng) sống dựa vào sinh vật khác, nên không phải là dạng sống độc lập (independent).",
               "correctAnswer": "B"
@@ -438,9 +421,8 @@
               "id": "33",
               "content": "I don't want to go alone. I wish I had a <i>companion</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "companion (người đồng hành) rất phù hợp ngữ cảnh.",
               "correctAnswer": "A"
@@ -449,9 +431,8 @@
               "id": "34",
               "content": "Will you please <i>Celsius</i> the temperature outside?",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Celsius (độ C) là danh từ chỉ đơn vị đo, không thể dùng như động từ.",
               "correctAnswer": "B"
@@ -460,15 +441,14 @@
               "id": "35",
               "content": "The drawing of the earth showed the different elements of the <i>biosphere</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "biosphere (sinh quyển) hoàn toàn hợp nghĩa.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -488,8 +468,7 @@
               "content": "Protists have a high tolerance for temperate conditions.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Trong bài đọc, sinh vật nguyên sinh này nói rằng nó không cần khí hậu ôn hòa (temperate climate) mà có khả năng chịu đựng rất cao đối với các điều kiện khắc nghiệt (extreme conditions). Do đó nhận định này là sai.",
               "correctAnswer": "B"
@@ -499,8 +478,7 @@
               "content": "Things in an aquatic protist's world can be absolutely bizarre.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Tác giả có đề cập rõ trong bài rằng trong thế giới nhỏ bé của nó, mọi thứ có thể vô cùng kỳ lạ (bizarre). Nhận định này hoàn toàn chính xác.",
               "correctAnswer": "A"
@@ -510,8 +488,7 @@
               "content": "A protist splits its companion's nucleus in fission.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Sinh vật này tự phân chia nhân của chính nó (my own nucleus) làm đôi trong quá trình phân hạch (fission), chứ không phải phân chia nhân của người bạn đồng hành (companion's nucleus). Nhận định này là sai.",
               "correctAnswer": "B"
@@ -521,8 +498,7 @@
               "content": "Coarse cilia move in a repetitive motion for the duration of a protist's swim.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bài viết mô tả chi tiết rằng sinh vật này có những sợi lông thô (coarse hairs) gọi là cilia, và nó di chuyển chúng theo một chuyển động lặp đi lặp lại (repetitive motion) trong suốt thời gian bơi. Nhận định này là đúng.",
               "correctAnswer": "A"
@@ -532,14 +508,13 @@
               "content": "An infinite number of new protists can be created by the impressive feat of fission.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Ở cuối bài, sinh vật này khẳng định rằng quá trình phân hạch là một kỳ tích ấn tượng (impressive feat) và nó có thể tự tạo ra một số lượng vô hạn (infinite number) các sinh vật nguyên sinh mới. Nhận định này đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading_qa",

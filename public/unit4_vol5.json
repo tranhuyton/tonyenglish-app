@@ -148,9 +148,8 @@
               "id": "11",
               "content": "This is the <i>affluent</i> area of the city. It is where most of the poor people live.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "affluent (giàu có). Khu vực giàu có không thể là nơi hầu hết người nghèo sống. Sử dụng sai.",
               "correctAnswer": "B"
@@ -159,9 +158,8 @@
               "id": "12",
               "content": "He added his trash to the large pile of <i>rubbish</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "rubbish (rác thải). Thêm rác vào đống rác lớn là sử dụng đúng.",
               "correctAnswer": "A"
@@ -170,9 +168,8 @@
               "id": "13",
               "content": "The company <i>automated</i> by hiring twenty new workers.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "automate (tự động hóa). Tự động hóa là dùng máy móc, không phải thuê thêm công nhân. Sử dụng sai.",
               "correctAnswer": "B"
@@ -181,9 +178,8 @@
               "id": "14",
               "content": "This painting is an important part of the city’s <i>infrastructure</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "infrastructure (cơ sở hạ tầng). Bức tranh không phải là cơ sở hạ tầng. Sử dụng sai.",
               "correctAnswer": "B"
@@ -192,9 +188,8 @@
               "id": "15",
               "content": "The <i>subsidy</i> helped the company recover some of the money it had lost.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "subsidy (tiền trợ cấp). Tiền trợ cấp giúp công ty phục hồi số tiền đã mất là sử dụng đúng.",
               "correctAnswer": "A"
@@ -203,9 +198,8 @@
               "id": "16",
               "content": "The store sold most of its <i>merchandise</i> in the sale over the weekend.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "merchandise (hàng hóa). Cửa hàng bán phần lớn hàng hóa của mình là đúng.",
               "correctAnswer": "A"
@@ -214,9 +208,8 @@
               "id": "17",
               "content": "The cook <i>violated</i> the two sauces together into one delicious sauce.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "violate (vi phạm). Trộn hai loại nước sốt không dùng từ vi phạm. Sử dụng sai.",
               "correctAnswer": "B"
@@ -225,9 +218,8 @@
               "id": "18",
               "content": "She took the food out of the refrigerator and then <i>disposed</i> the door.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "dispose (vứt bỏ). Cô ấy không thể vứt bỏ cánh cửa tủ lạnh sau khi lấy thức ăn. Sử dụng sai.",
               "correctAnswer": "B"
@@ -236,9 +228,8 @@
               "id": "19",
               "content": "The company’s bank records were <i>audited</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "audit (kiểm toán). Hồ sơ ngân hàng của công ty được kiểm toán là sử dụng đúng.",
               "correctAnswer": "A"
@@ -247,15 +238,14 @@
               "id": "20",
               "content": "Bigger kids sometimes find it easy to <i>manipulate</i> smaller children.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "manipulate (thao túng). Trẻ lớn đôi khi dễ dàng thao túng trẻ nhỏ là sử dụng đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",

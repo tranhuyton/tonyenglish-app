@@ -166,9 +166,8 @@
               "id": "16",
               "content": "The good father was <i>notorious</i> for doing nice things for his family.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. \"Notorious\" mang nghĩa tiêu cực (khét tiếng), không phù hợp với \"doing nice things\" (làm việc tốt).",
               "correctAnswer": "B"
@@ -177,9 +176,8 @@
               "id": "17",
               "content": "We discussed the <i>overall</i> details of the plan.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Overall\" được dùng đúng (chi tiết tổng thể).",
               "correctAnswer": "A"
@@ -188,9 +186,8 @@
               "id": "18",
               "content": "We planned our <i>spontaneous</i> vacation for weeks before we left for the trip.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. \"Spontaneous\" mang nghĩa tự phát, không được lên kế hoạch trước, mâu thuẫn với \"planned... for weeks\".",
               "correctAnswer": "B"
@@ -199,9 +196,8 @@
               "id": "19",
               "content": "At the mayor’s <i>banquet</i>, guests ate steak and lobster.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Banquet\" (bữa tiệc lớn) phù hợp với bối cảnh ăn bít tết và tôm hùm.",
               "correctAnswer": "A"
@@ -210,9 +206,8 @@
               "id": "20",
               "content": "It is polite to wait until the end of a play to <i>clap</i> for the performers.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Clap\" (vỗ tay) được dùng đúng.",
               "correctAnswer": "A"
@@ -221,9 +216,8 @@
               "id": "21",
               "content": "The <i>outdated</i> computer came with all the newest software.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. Máy tính \"outdated\" (lỗi thời) không thể đi kèm phần mềm mới nhất (newest software).",
               "correctAnswer": "B"
@@ -232,9 +226,8 @@
               "id": "22",
               "content": "This novel is a <i>masterpiece</i> by the best writer of the 20th century.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Masterpiece\" (kiệt tác) được dùng đúng.",
               "correctAnswer": "A"
@@ -243,9 +236,8 @@
               "id": "23",
               "content": "When the child got scared, he hid in the closet to show his <i>dominance</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. Trốn vào tủ vì sợ không thể hiện \"dominance\" (sự thống trị).",
               "correctAnswer": "B"
@@ -254,9 +246,8 @@
               "id": "24",
               "content": "A funny movie always <i>boosts</i> my mood when I am feeling sad.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Boosts\" (nâng cao, thúc đẩy) được dùng đúng.",
               "correctAnswer": "A"
@@ -265,9 +256,8 @@
               "id": "25",
               "content": "The sunset was so <i>gorgeous</i> that everyone turned away in disgust.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. \"Gorgeous\" là tuyệt đẹp, không ai quay đi vì ghê tởm (disgust).",
               "correctAnswer": "B"
@@ -276,9 +266,8 @@
               "id": "26",
               "content": "The <i>acute</i> puppy rolled around on the floor.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. \"Acute\" (dữ dội, cấp tính) không thể dùng cho một con chó con.",
               "correctAnswer": "B"
@@ -287,9 +276,8 @@
               "id": "27",
               "content": "I moved to a different climate because of my <i>partiality</i> for warmer weather.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Partiality\" (sự yêu thích, thiên vị) được dùng đúng.",
               "correctAnswer": "A"
@@ -298,9 +286,8 @@
               "id": "28",
               "content": "I will write my own <i>biography</i> when I turn 50 years old.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. Tiểu sử tự viết phải gọi là \"autobiography\", còn \"biography\" là do người khác viết.",
               "correctAnswer": "B"
@@ -309,9 +296,8 @@
               "id": "29",
               "content": "My need to pay rent <i>compelled</i> me to get a job and make enough money.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Compelled\" (ép buộc, bắt buộc) được dùng đúng.",
               "correctAnswer": "A"
@@ -320,9 +306,8 @@
               "id": "30",
               "content": "Screaming loudly in the library is a <i>virtue</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. Hét lớn trong thư viện không phải là một \"virtue\" (đức tính tốt).",
               "correctAnswer": "B"
@@ -331,9 +316,8 @@
               "id": "31",
               "content": "One coat of paint was not enough, so I put on <i>multiple</i> coats.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Multiple\" (nhiều lớp) được dùng đúng.",
               "correctAnswer": "A"
@@ -342,9 +326,8 @@
               "id": "32",
               "content": "The author of this book <i>narrates</i> some famous battles.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Narrates\" (kể lại) được dùng đúng.",
               "correctAnswer": "A"
@@ -353,9 +336,8 @@
               "id": "33",
               "content": "My <i>legacy</i> will be tested in the coming week.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Incorrect. \"Legacy\" (di sản) là thứ để lại sau này, không dùng để nói về một bài kiểm tra trong tuần tới.",
               "correctAnswer": "B"
@@ -364,9 +346,8 @@
               "id": "34",
               "content": "We knew a win was <i>inevitable</i> when our team was ahead by 100 points.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. Khi dẫn trước 100 điểm thì chiến thắng là \"inevitable\" (không thể tránh khỏi / chắc chắn).",
               "correctAnswer": "A"
@@ -375,15 +356,14 @@
               "id": "35",
               "content": "I can be really mean. I wish I were better at controlling my <i>aggression</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "Correct. \"Aggression\" (sự hung hăng) được dùng đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         }
       ]
     },

@@ -217,16 +217,15 @@
         },
         {
           "id": "sec4_wordlist",
-          "title": "Exercise 4: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
+          "title": "Exercise 4: Check if the italicized word is used correctly.",
           "content": "",
           "questions": [
             {
               "id": "16",
               "content": "Knights in armor and their squires were common sites in <i>medieval</i> times.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "medieval (thời trung cổ) phù hợp với kỵ sĩ và áo giáp (Knights in armor).",
               "correctAnswer": "A"
@@ -235,9 +234,8 @@
               "id": "17",
               "content": "Our new boss hasn't made any changes to the company. He has very <i>radical</i> ideas.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "radical (căn bản/đổi mới hoàn toàn), nhưng vế trước lại nói 'hasn't made any changes' là mâu thuẫn.",
               "correctAnswer": "B"
@@ -246,9 +244,8 @@
               "id": "18",
               "content": "I don't want to <i>impose</i> on my father to help me with my homework. He's very busy.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "impose on someone (áp đặt/làm phiền ai đó), câu này dùng chính xác.",
               "correctAnswer": "A"
@@ -257,9 +254,8 @@
               "id": "19",
               "content": "He <i>refuted</i> me because I didn't wash the plates after dinner.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "refute (bác bỏ/chứng minh là sai), không hợp nghĩa với việc 'vì tôi không rửa bát'.",
               "correctAnswer": "B"
@@ -268,15 +264,14 @@
               "id": "20",
               "content": "In <i>capitalism</i>, people can own just about any product or object they want.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "capitalism (chủ nghĩa tư bản), người dân có thể sở hữu sản phẩm họ muốn là đúng ý nghĩa.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_wordlist",
@@ -424,8 +419,7 @@
               "content": "The mayor of Netherton wanted Joseph to impose his radical fad on the town.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Thị trưởng Netherton yêu cầu Joseph đừng áp đặt (don't impose) những ý tưởng mới mẻ nhưng khác biệt (radical ideas) lên thị trấn của ông, chứ không phải muốn ông ta áp đặt. Nhận định này sai.",
               "correctAnswer": "B"
@@ -435,8 +429,7 @@
               "content": "Joseph thought the mayor of Netherton's ideas were medieval and archaic.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Joseph thẳng thừng nói với thị trưởng Netherton rằng chúng ta không còn ở thời trung cổ (medieval age) nữa và khuyên ông nên thay đổi những cách thức cổ hủ (archaic ways) đó đi. Vậy nhận định là đúng.",
               "correctAnswer": "A"
@@ -446,8 +439,7 @@
               "content": "The mayor of Wilton refuted the fact that the machine had drawbacks.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Thị trưởng Wilton không thể bác bỏ (couldn't refute) việc cái máy này có khuyết điểm sẽ làm ảnh hưởng đến công việc của người dân. Vì vậy câu nói ông ấy đã bác bỏ (refuted) là sai.",
               "correctAnswer": "B"
@@ -457,8 +449,7 @@
               "content": "In Wilton, the people who used to weave got managerial positions at the factories.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Bài viết ghi rõ người dân không còn dệt vải nữa mà thay vào đó làm các công việc quản lý (managerial jobs) tại nhà máy. Nhận định này hoàn toàn chính xác.",
               "correctAnswer": "A"
@@ -468,14 +459,13 @@
               "content": "In the end, capitalism brought prestige to both cities.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "explanation": "Đến cuối cùng, hệ thống kinh tế hướng tới lợi nhuận mới đã giúp cả hai thành phố trở nên giàu có và nổi tiếng khắp nơi (mang lại prestige). Do đó nhận định này là đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec7_reading_qa",

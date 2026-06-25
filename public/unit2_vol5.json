@@ -276,9 +276,8 @@
               "id": "16",
               "content": "Climbing up the <i>prairie</i> was more difficult without the help of ropes.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "prairie (thảo nguyên) là vùng đất bằng phẳng, không cần leo trèo bằng dây thừng.",
               "correctAnswer": "B"
@@ -287,9 +286,8 @@
               "id": "17",
               "content": "There was no way he could mend the holes in his shirt. It was too <i>rugged</i> to wear.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "rugged dùng cho địa hình gồ ghề. Quần áo rách phải dùng ragged.",
               "correctAnswer": "B"
@@ -298,9 +296,8 @@
               "id": "18",
               "content": "In some countries, only people who owned land were <i>eligible</i> to vote.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "eligible (đủ điều kiện). Đủ điều kiện để bỏ phiếu là cách dùng đúng.",
               "correctAnswer": "A"
@@ -309,9 +306,8 @@
               "id": "19",
               "content": "The capital was in the middle of the country. They had to travel <i>inland</i> to get there.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "inland (vào sâu trong đất liền). Đi vào đất liền để đến thủ đô là hợp lý.",
               "correctAnswer": "A"
@@ -320,15 +316,14 @@
               "id": "20",
               "content": "He knew she didn’t like him, but he helped her <i>nonetheless</i>.",
               "options": [
-                "True",
-                "False",
-                "Not Given"
+                "Correct",
+                "Incorrect"
               ],
               "explanation": "nonetheless (tuy nhiên, dù sao). Biết cô ấy không thích nhưng anh ta vẫn giúp là đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "TFNG"
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
