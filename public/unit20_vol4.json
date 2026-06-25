@@ -83,80 +83,80 @@
         {
           "id": "sec_wl_1",
           "title": "Exercise 2",
-          "questionType": "Trắc nghiệm",
+          "questionType": "Điền từ",
           "questions": [
             {
               "id": 76,
-              "content": "<p>The lucky man was the <u class=\"font-bold\">only</u> winner of the grand prize.</p>",
+              "content": "<p class=\"mb-4\">The lucky man was the <u class=\"font-bold\">only</u> winner of the grand prize. [ 76 ]</p><p class=\"mb-4\">She was so worried about her mother's health that she went to church to <u class=\"font-bold\">talk to God</u>. [ 77 ]</p><p class=\"mb-4\">He <u class=\"font-bold\">coughed and had difficulty breathing</u> after eating a large piece of food. [ 78 ]</p><p class=\"mb-4\">The rain <u class=\"font-bold\">stopped</u> in the early morning after pouring all night long. [ 79 ]</p><p class=\"mb-4\">There is a <u class=\"font-bold\">large number</u> of people in the park today. [ 80 ]</p><p class=\"mb-4\">I hit the wall with my car, and now there is a small <u class=\"font-bold\">amount of damage</u> in it. [ 81 ]</p><p class=\"mb-4\">I <u class=\"font-bold\">don't believe the honesty of</u> people who always try to borrow money. [ 82 ]</p><p class=\"mb-4\">The conditions in some parts of Africa are very poor, and disease is <u class=\"font-bold\">very common</u>. [ 83 ]</p><p class=\"mb-4\">The man behaved in an <u class=\"font-bold\">untrustworthy way</u> toward his friends. [ 84 ]</p><p class=\"mb-4\">I'm going to <u class=\"font-bold\">go to the other side</u> of the road to meet my friend. [ 85 ]</p>",
               "options": [],
               "correctAnswer": "sole",
               "explanation": "sole = duy nhất"
             },
             {
               "id": 77,
-              "content": "<p>She was so worried about her mother's health that she went to church to <u class=\"font-bold\">talk to God</u>.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "pray",
               "explanation": "pray = cầu nguyện"
             },
             {
               "id": 78,
-              "content": "<p>He <u class=\"font-bold\">coughed and had difficulty breathing</u> after eating a large piece of food.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "choked",
               "explanation": "choke = nghẹt thở"
             },
             {
               "id": 79,
-              "content": "<p>The rain <u class=\"font-bold\">stopped</u> in the early morning after pouring all night long.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "ceased",
               "explanation": "cease = dừng lại"
             },
             {
               "id": 80,
-              "content": "<p>There is a <u class=\"font-bold\">large number</u> of people in the park today.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "mass",
               "explanation": "mass = số lượng lớn"
             },
             {
               "id": 81,
-              "content": "<p>I hit the wall with my car, and now there is a small <u class=\"font-bold\">amount of damage</u> in it.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "dent",
               "explanation": "dent = vết lõm"
             },
             {
               "id": 82,
-              "content": "<p>I <u class=\"font-bold\">don't believe the honesty of</u> people who always try to borrow money.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "distrust",
               "explanation": "distrust = không tin tưởng"
             },
             {
               "id": 83,
-              "content": "<p>The conditions in some parts of Africa are very poor, and disease is <u class=\"font-bold\">very common</u>.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "rife",
               "explanation": "rife = lan tràn, phổ biến"
             },
             {
               "id": 84,
-              "content": "<p>The man behaved in an <u class=\"font-bold\">untrustworthy way</u> toward his friends.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "betrayed",
               "explanation": "betray = phản bội"
             },
             {
               "id": 85,
-              "content": "<p>I'm going to <u class=\"font-bold\">go to the other side</u> of the road to meet my friend.</p>",
+              "content": "",
               "options": [],
               "correctAnswer": "cross",
               "explanation": "cross = đi qua"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>"
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>"
         },
         {
           "id": "sec_wl_2",
@@ -264,7 +264,7 @@
               "explanation": "rife (đầy rẫy), pray (cầu nguyện)"
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>"
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>"
         }
       ]
     },
