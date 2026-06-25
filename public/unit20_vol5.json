@@ -100,7 +100,7 @@
                 "viral"
               ],
               "explanation": "\"viral\" (do virus) bổ nghĩa cho danh từ infection.",
-              "correctAnswer": "viral"
+              "correctAnswer": "J"
             },
             {
               "id": "7",
@@ -118,7 +118,7 @@
                 "viral"
               ],
               "explanation": "\"antibiotic\" (thuốc kháng sinh) không điều trị được virus mà chỉ trị được vi khuẩn.",
-              "correctAnswer": "antibiotic"
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -136,7 +136,7 @@
                 "viral"
               ],
               "explanation": "\"database\" (cơ sở dữ liệu) là nơi lưu trữ thông tin.",
-              "correctAnswer": "database"
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -154,7 +154,7 @@
                 "viral"
               ],
               "explanation": "\"ratio\" (tỷ lệ) dùng để biểu thị kết quả so sánh số liệu.",
-              "correctAnswer": "ratio"
+              "correctAnswer": "H"
             },
             {
               "id": "10",
@@ -172,7 +172,7 @@
                 "viral"
               ],
               "explanation": "\"phase\" (giai đoạn) phù hợp với quy trình xây dựng (process).",
-              "correctAnswer": "phase"
+              "correctAnswer": "F"
             },
             {
               "id": "11",
@@ -190,7 +190,7 @@
                 "viral"
               ],
               "explanation": "\"spiral\" (hình xoắn ốc) phù hợp để chỉ hình dáng cầu thang.",
-              "correctAnswer": "spiral"
+              "correctAnswer": "I"
             },
             {
               "id": "12",
@@ -208,7 +208,7 @@
                 "viral"
               ],
               "explanation": "\"magnet\" (nam châm) hút kim loại.",
-              "correctAnswer": "magnet"
+              "correctAnswer": "E"
             },
             {
               "id": "13",
@@ -226,7 +226,7 @@
                 "viral"
               ],
               "explanation": "\"input\" (dữ liệu đầu vào) được đưa vào máy tính.",
-              "correctAnswer": "input"
+              "correctAnswer": "D"
             },
             {
               "id": "14",
@@ -244,7 +244,7 @@
                 "viral"
               ],
               "explanation": "\"prevalent\" (phổ biến) ý chỉ căn bệnh bại liệt không còn phổ biến ở nước này.",
-              "correctAnswer": "prevalent"
+              "correctAnswer": "G"
             },
             {
               "id": "15",
@@ -262,7 +262,7 @@
                 "viral"
               ],
               "explanation": "\"immune\" (miễn dịch) nhờ vào vắc-xin.",
-              "correctAnswer": "immune"
+              "correctAnswer": "C"
             }
           ],
           "questionType": "Kéo thả"

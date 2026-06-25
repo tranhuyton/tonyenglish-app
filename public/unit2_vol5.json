@@ -100,7 +100,7 @@
                 "scarce"
               ],
               "explanation": "Đi ngang qua thảo nguyên (prairie) khó khăn hơn so với vẻ bề ngoài.",
-              "correctAnswer": "prairie"
+              "correctAnswer": "H"
             },
             {
               "id": "7",
@@ -118,7 +118,7 @@
                 "scarce"
               ],
               "explanation": "Mặt đất rất gồ ghề (rugged).",
-              "correctAnswer": "rugged"
+              "correctAnswer": "I"
             },
             {
               "id": "8",
@@ -136,7 +136,7 @@
                 "scarce"
               ],
               "explanation": "Nơi có khí hậu khô cằn (arid).",
-              "correctAnswer": "arid"
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -154,7 +154,7 @@
                 "scarce"
               ],
               "explanation": "Nơi ẩm ướt mọi thứ được bao phủ bởi hơi ẩm (moisture).",
-              "correctAnswer": "moisture"
+              "correctAnswer": "F"
             },
             {
               "id": "10",
@@ -172,7 +172,7 @@
                 "scarce"
               ],
               "explanation": "Người đến nhà thờ thường nhịn ăn (fast) trong hai tuần.",
-              "correctAnswer": "fast"
+              "correctAnswer": "E"
             },
             {
               "id": "11",
@@ -190,7 +190,7 @@
                 "scarce"
               ],
               "explanation": "Đến nhà thờ lớn (cathedral) để cầu nguyện.",
-              "correctAnswer": "cathedral"
+              "correctAnswer": "C"
             },
             {
               "id": "12",
@@ -208,7 +208,7 @@
                 "scarce"
               ],
               "explanation": "Nguồn cung cấp gỗ dồi dào (abundant).",
-              "correctAnswer": "abundant"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -226,7 +226,7 @@
                 "scarce"
               ],
               "explanation": "Quen với việc đốt lửa nhỏ khi gỗ khan hiếm (scarce).",
-              "correctAnswer": "scarce"
+              "correctAnswer": "J"
             },
             {
               "id": "14",
@@ -244,7 +244,7 @@
                 "scarce"
               ],
               "explanation": "Phải tuyên thệ/thề (take an oath) để tham gia.",
-              "correctAnswer": "oath"
+              "correctAnswer": "G"
             },
             {
               "id": "15",
@@ -262,7 +262,7 @@
                 "scarce"
               ],
               "explanation": "Những người không hứa hẹn sẽ không đủ điều kiện (eligible).",
-              "correctAnswer": "eligible"
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Kéo thả"
