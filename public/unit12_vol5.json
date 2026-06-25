@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "The undergraduate program at our school includes several possible degrees.",
+              "content": "The <i>undergraduate</i> program at our school includes several possible degrees.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -174,7 +174,7 @@
             },
             {
               "id": "17",
-              "content": "She conferred with her coworkers before presenting their work to the boss.",
+              "content": "She <i>conferred</i> with her coworkers before presenting their work to the boss.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -184,7 +184,7 @@
             },
             {
               "id": "18",
-              "content": "The rain made a cube on the grass.",
+              "content": "The rain made a <i>cube</i> on the grass.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -194,7 +194,7 @@
             },
             {
               "id": "19",
-              "content": "The tattoo appeared very dark on her light-colored skin.",
+              "content": "The <i>tattoo</i> appeared very dark on her light-colored skin.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -204,7 +204,7 @@
             },
             {
               "id": "20",
-              "content": "Our teacher was quick to give us feedback on our homework.",
+              "content": "Our teacher was quick to give us <i>feedback</i> on our homework.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -214,7 +214,7 @@
             },
             {
               "id": "21",
-              "content": "The wall was situated in the north part of the yard.",
+              "content": "The wall was <i>situated</i> in the north part of the yard.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -224,7 +224,7 @@
             },
             {
               "id": "22",
-              "content": "The baby supervised her mother in the store.",
+              "content": "The baby <i>supervised</i> her mother in the store.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -234,7 +234,7 @@
             },
             {
               "id": "23",
-              "content": "The symmetry of the flower arrangement made it look very attractive.",
+              "content": "The <i>symmetry</i> of the flower arrangement made it look very attractive.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -244,7 +244,7 @@
             },
             {
               "id": "24",
-              "content": "The angry father applauded his son when he got in trouble at school.",
+              "content": "The angry father <i>applauded</i> his son when he got in trouble at school.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -254,7 +254,7 @@
             },
             {
               "id": "25",
-              "content": "The manager needed an assistant. She appointed Bill to the new position.",
+              "content": "The manager needed an assistant. She <i>appointed</i> Bill to the new position.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -264,7 +264,7 @@
             },
             {
               "id": "26",
-              "content": "The masculine girl looked very pretty in her new dress.",
+              "content": "The <i>masculine</i> girl looked very pretty in her new dress.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -274,7 +274,7 @@
             },
             {
               "id": "27",
-              "content": "In the final revision, he made sure his work was crude.",
+              "content": "In the <i>final</i> revision, he made sure his work was crude.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -284,7 +284,7 @@
             },
             {
               "id": "28",
-              "content": "The captain ordered the sailor to have better posture.",
+              "content": "The captain ordered the sailor to have better <i>posture</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -294,7 +294,7 @@
             },
             {
               "id": "29",
-              "content": "The muscular movie star always got the role of the superhero in the movie.",
+              "content": "The <i>muscular</i> movie star always got the role of the superhero in the movie.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -304,7 +304,7 @@
             },
             {
               "id": "30",
-              "content": "On our trip, we visited the monument built for George Washington.",
+              "content": "On our trip, we visited the <i>monument</i> built for George Washington.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -314,7 +314,7 @@
             },
             {
               "id": "31",
-              "content": "His ignorance led him to the final round of the tournament.",
+              "content": "His <i>ignorance</i> led him to the final round of the tournament.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -324,7 +324,7 @@
             },
             {
               "id": "32",
-              "content": "My favorite subject in college was anthropology.",
+              "content": "My favorite subject in college was <i>anthropology</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -334,7 +334,7 @@
             },
             {
               "id": "33",
-              "content": "She leaves the lights on at night because of her competence for the dark.",
+              "content": "She leaves the lights on at night because of her <i>competence</i> for the dark.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -344,7 +344,7 @@
             },
             {
               "id": "34",
-              "content": "When the couple got divorced, it was clear that they were compatible.",
+              "content": "When the couple got divorced, it was clear that they were <i>compatible</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -354,7 +354,7 @@
             },
             {
               "id": "35",
-              "content": "Our basketball team won the championship for three consecutive years.",
+              "content": "Our basketball team won the championship for three <i>consecutive</i> years.",
               "options": [
                 "Correct",
                 "Incorrect"

@@ -282,7 +282,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "One of my classmates is very hostile. He always helps me with homework.",
+              "content": "One of my classmates is very <i>hostile</i>. He always helps me with homework.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -294,7 +294,7 @@
             },
             {
               "id": "22",
-              "content": "I chose an obscure book for my report. It was very difficult to find.",
+              "content": "I chose an <i>obscure</i> book for my report. It was very difficult to find.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -306,7 +306,7 @@
             },
             {
               "id": "23",
-              "content": "In the past, many people suffered from malnutrition because of a lack of food.",
+              "content": "In the past, many people suffered from <i>malnutrition</i> because of a lack of food.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -318,7 +318,7 @@
             },
             {
               "id": "24",
-              "content": "Did you know that some flowers are edible? They both look and taste good.",
+              "content": "Did you know that some flowers are <i>edible</i>? They both look and taste good.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -330,7 +330,7 @@
             },
             {
               "id": "25",
-              "content": "The dog was hiding in a dense patch of grass. We had no trouble finding him.",
+              "content": "The dog was hiding in a <i>dense</i> patch of grass. We had no trouble finding him.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -342,7 +342,7 @@
             },
             {
               "id": "26",
-              "content": "People enjoy Mark Twain's novels. They likewise enjoy his political comments.",
+              "content": "People enjoy Mark Twain's novels. They <i>likewise</i> enjoy his political comments.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -354,7 +354,7 @@
             },
             {
               "id": "27",
-              "content": "You can have health problems if your sugar intake is too high.",
+              "content": "You can have health problems if your <i>sugar</i> intake is too high.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -366,7 +366,7 @@
             },
             {
               "id": "28",
-              "content": "You need to ask your teacher for a prescription. Then you can get your medicine.",
+              "content": "You need to ask your teacher for a <i>prescription</i>. Then you can get your medicine.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -378,7 +378,7 @@
             },
             {
               "id": "29",
-              "content": "After we lost the game, our coach showed his dignity. He yelled at us for hours.",
+              "content": "After we lost the game, our coach showed his <i>dignity</i>. He yelled at us for hours.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -390,7 +390,7 @@
             },
             {
               "id": "30",
-              "content": "After the car accident, John needed a respirator. He could not walk without it.",
+              "content": "After the car accident, John needed a <i>respirator</i>. He could not walk without it.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -402,7 +402,7 @@
             },
             {
               "id": "31",
-              "content": "They are taking a break outside. Why don't we do likewise?",
+              "content": "They are taking a break outside. Why don't we do <i>likewise</i>?",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -414,7 +414,7 @@
             },
             {
               "id": "32",
-              "content": "A month ago, I hurt myself playing soccer. The injury finally oppressed this week.",
+              "content": "A month ago, I hurt myself playing soccer. The <i>injury</i> finally oppressed this week.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -426,7 +426,7 @@
             },
             {
               "id": "33",
-              "content": "Strive to do worst on your test.",
+              "content": "<i>Strive</i> to do worst on your test.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -438,7 +438,7 @@
             },
             {
               "id": "34",
-              "content": "I strive to exercise at least twenty minutes each day to stay in shape.",
+              "content": "I <i>strive</i> to exercise at least twenty minutes each day to stay in shape.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -450,7 +450,7 @@
             },
             {
               "id": "35",
-              "content": "Many deserts are barren landscapes. You find little more than dirt and rocks there.",
+              "content": "Many deserts are <i>barren</i> landscapes. You find little more than dirt and rocks there.",
               "options": [
                 "Correct",
                 "Incorrect",

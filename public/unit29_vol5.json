@@ -86,126 +86,186 @@
           "questions": [
             {
               "id": "6",
-              "content": "The statue of the walrus had long, beautiful _____________.",
+              "content": "The statue of the walrus had long, beautiful [ 6 ].",
               "options": [
-                "tusks",
                 "antique",
+                "applicants",
+                "artifact",
+                "authentic",
+                "fossil",
+                "Majesty",
                 "monarch",
-                "Majesty"
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "tusks (ngà/răng nanh). Bức tượng con hải mã có những chiếc răng nanh dài và đẹp.",
-              "correctAnswer": "A"
+              "correctAnswer": "tusks"
             },
             {
               "id": "7",
-              "content": "The _____________ piece was over a hundred years old and quite valuable.",
+              "content": "The [ 7 ] piece was over a hundred years old and quite valuable.",
               "options": [
-                "tusks",
                 "antique",
+                "applicants",
+                "artifact",
+                "authentic",
+                "fossil",
+                "Majesty",
                 "monarch",
-                "Majesty"
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "antique (đồ cổ). Món đồ cổ này đã hơn 100 năm tuổi.",
-              "correctAnswer": "B"
+              "correctAnswer": "antique"
             },
             {
               "id": "8",
-              "content": "Many stories have been told about the powerful _____________.",
+              "content": "Many stories have been told about the powerful [ 8 ].",
               "options": [
-                "tusks",
                 "antique",
+                "applicants",
+                "artifact",
+                "authentic",
+                "fossil",
+                "Majesty",
                 "monarch",
-                "Majesty"
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "monarch (quốc vương). Nhiều câu chuyện về vị quốc vương quyền lực.",
-              "correctAnswer": "C"
+              "correctAnswer": "monarch"
             },
             {
               "id": "9",
-              "content": "All of the king’s servants addressed him as \"Your _____________.\"",
+              "content": "All of the king’s servants addressed him as \"Your [ 9 ].\"",
               "options": [
-                "tusks",
                 "antique",
+                "applicants",
+                "artifact",
+                "authentic",
+                "fossil",
+                "Majesty",
                 "monarch",
-                "Majesty"
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "Majesty (bệ hạ). Các người hầu gọi nhà vua là \"Bệ hạ\".",
-              "correctAnswer": "D"
+              "correctAnswer": "Majesty"
             },
             {
               "id": "10",
-              "content": "The college must decide who to accept among thousands of _____________.",
+              "content": "The college must decide who to accept among thousands of [ 10 ].",
               "options": [
+                "antique",
                 "applicants",
-                "register",
+                "artifact",
                 "authentic",
-                "refund"
+                "fossil",
+                "Majesty",
+                "monarch",
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "applicants (người nộp đơn). Chọn người trúng tuyển trong số hàng nghìn người nộp đơn.",
-              "correctAnswer": "A"
+              "correctAnswer": "applicants"
             },
             {
               "id": "11",
-              "content": "The most qualified will add their names to the elite _____________.",
+              "content": "The most qualified will add their names to the elite [ 11 ].",
               "options": [
+                "antique",
                 "applicants",
-                "register",
+                "artifact",
                 "authentic",
-                "refund"
+                "fossil",
+                "Majesty",
+                "monarch",
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "register (danh sách/sổ đăng ký). Ghi tên vào danh sách tinh anh.",
-              "correctAnswer": "B"
+              "correctAnswer": "register"
             },
             {
               "id": "12",
-              "content": "I now see that my new leather boots are not _____________.",
+              "content": "I now see that my new leather boots are not [ 12 ].",
               "options": [
+                "antique",
                 "applicants",
-                "register",
+                "artifact",
                 "authentic",
-                "refund"
+                "fossil",
+                "Majesty",
+                "monarch",
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "authentic (hàng thật/chính hãng). Đôi bốt da không phải là hàng thật.",
-              "correctAnswer": "C"
+              "correctAnswer": "authentic"
             },
             {
               "id": "13",
-              "content": "I need to take these fake boots back to the store and get a _____________.",
+              "content": "I need to take these fake boots back to the store and get a [ 13 ].",
               "options": [
+                "antique",
                 "applicants",
-                "register",
+                "artifact",
                 "authentic",
-                "refund"
+                "fossil",
+                "Majesty",
+                "monarch",
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "refund (tiền hoàn lại). Nhận lại tiền từ cửa hàng.",
-              "correctAnswer": "D"
+              "correctAnswer": "refund"
             },
             {
               "id": "14",
-              "content": "Mark thought that the old bone he found was a dinosaur _____________.",
+              "content": "Mark thought that the old bone he found was a dinosaur [ 14 ].",
               "options": [
-                "fossil",
+                "antique",
+                "applicants",
                 "artifact",
-                "tusks",
-                "antique"
+                "authentic",
+                "fossil",
+                "Majesty",
+                "monarch",
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "fossil (hóa thạch). Tưởng là hóa thạch khủng long.",
-              "correctAnswer": "A"
+              "correctAnswer": "fossil"
             },
             {
               "id": "15",
-              "content": "However, it turned out to be a man-made _____________.",
+              "content": "However, it turned out to be a man-made [ 15 ].",
               "options": [
-                "fossil",
+                "antique",
+                "applicants",
                 "artifact",
-                "tusks",
-                "antique"
+                "authentic",
+                "fossil",
+                "Majesty",
+                "monarch",
+                "refund",
+                "register",
+                "tusks"
               ],
               "explanation": "artifact (tạo tác). Thực ra là một đồ vật nhân tạo có tính lịch sử.",
-              "correctAnswer": "B"
+              "correctAnswer": "artifact"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3",

@@ -292,7 +292,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "The microchip was damaged when she spilled water on the computer.",
+              "content": "The <i>microchip</i> was damaged when she spilled water on the computer.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -302,7 +302,7 @@
             },
             {
               "id": "27",
-              "content": "Quantum mechanics deals with planets and stars.",
+              "content": "<i>Quantum</i> mechanics deals with planets and stars.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -312,7 +312,7 @@
             },
             {
               "id": "28",
-              "content": "People with fast metabolisms are usually thin and in good shape.",
+              "content": "People with fast <i>metabolisms</i> are usually thin and in good shape.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -322,7 +322,7 @@
             },
             {
               "id": "29",
-              "content": "I compressed the sponge into a little ball.",
+              "content": "I <i>compressed</i> the sponge into a little ball.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -332,7 +332,7 @@
             },
             {
               "id": "30",
-              "content": "You should pinch your homework if you want to get it turned in on time.",
+              "content": "You should <i>pinch</i> your homework if you want to get it turned in on time.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -342,7 +342,7 @@
             },
             {
               "id": "31",
-              "content": "I was amazed by the aggregate total of donated gifts and money.",
+              "content": "I was amazed by the <i>aggregate</i> total of donated gifts and money.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -352,7 +352,7 @@
             },
             {
               "id": "32",
-              "content": "The children played all day on the circuit.",
+              "content": "The children played all day on the <i>circuit</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -362,7 +362,7 @@
             },
             {
               "id": "33",
-              "content": "Dressing and pepper complemented the tasty salad.",
+              "content": "Dressing and pepper <i>complemented</i> the tasty salad.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -372,7 +372,7 @@
             },
             {
               "id": "34",
-              "content": "Intimate friends should not tell lies about each other.",
+              "content": "<i>Intimate</i> friends should not tell lies about each other.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -382,7 +382,7 @@
             },
             {
               "id": "35",
-              "content": "This tuba is the equivalent of a set of drums.",
+              "content": "This tuba is the <i>equivalent</i> of a set of drums.",
               "options": [
                 "Correct",
                 "Incorrect"

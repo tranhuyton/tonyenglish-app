@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "Climbing up the prairie was more difficult without the help of ropes.",
+              "content": "Climbing up the <i>prairie</i> was more difficult without the help of ropes.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -224,7 +224,7 @@
             },
             {
               "id": "17",
-              "content": "There was no way he could mend the holes in his shirt. It was too rugged to wear.",
+              "content": "There was no way he could mend the holes in his shirt. It was too <i>rugged</i> to wear.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "In some countries, only people who owned land were eligible to vote.",
+              "content": "In some countries, only people who owned land were <i>eligible</i> to vote.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "The capital was in the middle of the country. They had to travel inland to get there.",
+              "content": "The capital was in the middle of the country. They had to travel <i>inland</i> to get there.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "He knew she didn’t like him, but he helped her nonetheless.",
+              "content": "He knew she didn’t like him, but he helped her <i>nonetheless</i>.",
               "options": [
                 "Correct",
                 "Incorrect"

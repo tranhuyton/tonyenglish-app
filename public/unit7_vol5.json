@@ -189,7 +189,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "The reproductive process in rabbits explains how they hunt for food.",
+              "content": "The <i>reproductive</i> process in rabbits explains how they hunt for food.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -201,7 +201,7 @@
             },
             {
               "id": "17",
-              "content": "In Biology class, we learned about the different parts of a cell's nucleus.",
+              "content": "In Biology class, we learned about the different parts of a cell's <i>nucleus</i>.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -213,7 +213,7 @@
             },
             {
               "id": "18",
-              "content": "It is hard for some people to remain silent for the duration of a long movie.",
+              "content": "It is hard for some people to remain silent for the <i>duration</i> of a long movie.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -225,7 +225,7 @@
             },
             {
               "id": "19",
-              "content": "I could listen to my favorite song all day. I have tolerance for great music.",
+              "content": "I could listen to my favorite song all day. I have <i>tolerance</i> for great music.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -237,7 +237,7 @@
             },
             {
               "id": "20",
-              "content": "I will have to undergo through the tunnel to get home.",
+              "content": "I will have to <i>undergo</i> through the tunnel to get home.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -249,7 +249,7 @@
             },
             {
               "id": "21",
-              "content": "This blanket is not very comfortable. It would be better if it was not so coarse.",
+              "content": "This blanket is not very comfortable. It would be better if it was not so <i>coarse</i>.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -261,7 +261,7 @@
             },
             {
               "id": "22",
-              "content": "She has exactly twenty jelly beans, which is an infinite amount.",
+              "content": "She has exactly twenty jelly beans, which is an <i>infinite</i> amount.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -273,7 +273,7 @@
             },
             {
               "id": "23",
-              "content": "The boy became a prominent figure in town after he saved the woman's life.",
+              "content": "The boy became a <i>prominent</i> figure in town after he saved the woman's life.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -285,7 +285,7 @@
             },
             {
               "id": "24",
-              "content": "Her new car is bizarre. It has five wheels and no doors!",
+              "content": "Her new car is <i>bizarre</i>. It has five wheels and no doors!",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -297,7 +297,7 @@
             },
             {
               "id": "25",
-              "content": "There is no life on Venus, so researchers study its ecology instead.",
+              "content": "There is no life on Venus, so researchers study its <i>ecology</i> instead.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -309,7 +309,7 @@
             },
             {
               "id": "26",
-              "content": "The vulnerable lion roared and scared away the zebras.",
+              "content": "The <i>vulnerable</i> lion roared and scared away the zebras.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -321,7 +321,7 @@
             },
             {
               "id": "27",
-              "content": "Fish must live in aquatic environments.",
+              "content": "Fish must live in <i>aquatic</i> environments.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -333,7 +333,7 @@
             },
             {
               "id": "28",
-              "content": "The circus performers were capable of many wonderful feats.",
+              "content": "The circus performers were capable of many wonderful <i>feats</i>.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -345,7 +345,7 @@
             },
             {
               "id": "29",
-              "content": "The repetitive sound of ocean waves helps me to fall asleep.",
+              "content": "The <i>repetitive</i> sound of ocean waves helps me to fall asleep.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -357,7 +357,7 @@
             },
             {
               "id": "30",
-              "content": "The cake digested the delicious cookies.",
+              "content": "The <i>cake</i> digested the delicious cookies.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -369,7 +369,7 @@
             },
             {
               "id": "31",
-              "content": "The temperate nights were almost too cold to bear.",
+              "content": "The <i>temperate</i> nights were almost too cold to bear.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -381,7 +381,7 @@
             },
             {
               "id": "32",
-              "content": "Parasites are independent forms of life.",
+              "content": "Parasites are <i>independent</i> forms of life.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -393,7 +393,7 @@
             },
             {
               "id": "33",
-              "content": "I don't want to go alone. I wish I had a companion.",
+              "content": "I don't want to go alone. I wish I had a <i>companion</i>.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -405,7 +405,7 @@
             },
             {
               "id": "34",
-              "content": "Will you please Celsius the temperature outside?",
+              "content": "Will you please <i>Celsius</i> the temperature outside?",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -417,7 +417,7 @@
             },
             {
               "id": "35",
-              "content": "The drawing of the earth showed the different elements of the biosphere.",
+              "content": "The drawing of the earth showed the different elements of the <i>biosphere</i>.",
               "options": [
                 "Correct",
                 "Incorrect",

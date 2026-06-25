@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "Make sure to misplace your money so that you will always have it.",
+              "content": "Make sure to <i>misplace</i> your money so that you will always have it.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +224,7 @@
             },
             {
               "id": "17",
-              "content": "The orangutans at the zoo swung so gracefully from the trees.",
+              "content": "The <i>orangutans</i> at the zoo swung so gracefully from the trees.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "The tigers in the aquarium loved to run and play.",
+              "content": "The <i>tigers</i> in the aquarium loved to run and play.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "The greedy man loved philanthropy. He never offered to help anybody.",
+              "content": "The greedy man loved <i>philanthropy</i>. He never offered to help anybody.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "The box broke when he overloaded it with books.",
+              "content": "The box broke when he <i>overloaded</i> it with books.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +264,7 @@
             },
             {
               "id": "21",
-              "content": "The mechanics of computers intrigue me.",
+              "content": "The mechanics of computers <i>intrigue</i> me.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +274,7 @@
             },
             {
               "id": "22",
-              "content": "The longevity of the rat was fifty centimeters.",
+              "content": "The <i>longevity</i> of the rat was fifty centimeters.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +284,7 @@
             },
             {
               "id": "23",
-              "content": "Plants will thrive if they are not given any water.",
+              "content": "Plants will <i>thrive</i> if they are not given any water.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +294,7 @@
             },
             {
               "id": "24",
-              "content": "The naughty girl always obeyed her mother.",
+              "content": "The <i>naughty</i> girl always obeyed her mother.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +304,7 @@
             },
             {
               "id": "25",
-              "content": "The ultimate result of the game was a win for the home team.",
+              "content": "The <i>ultimate</i> result of the game was a win for the home team.",
               "options": [
                 "C",
                 "I"
@@ -314,7 +314,7 @@
             },
             {
               "id": "26",
-              "content": "Some people play the lottery in hopes that they will improve their lives.",
+              "content": "Some people play the lottery in hopes that they will <i>improve</i> their lives.",
               "options": [
                 "C",
                 "I"
@@ -324,7 +324,7 @@
             },
             {
               "id": "27",
-              "content": "Paying for gasoline before pumping it is a norm.",
+              "content": "Paying for gasoline before pumping it is a <i>norm</i>.",
               "options": [
                 "C",
                 "I"
@@ -334,7 +334,7 @@
             },
             {
               "id": "28",
-              "content": "I probed the audience because I didn’t want to hear what they had to say.",
+              "content": "I <i>probed</i> the audience because I didn’t want to hear what they had to say.",
               "options": [
                 "C",
                 "I"
@@ -344,7 +344,7 @@
             },
             {
               "id": "29",
-              "content": "Waiting your turn in line is a social convention.",
+              "content": "Waiting your turn in line is a <i>social</i> convention.",
               "options": [
                 "C",
                 "I"
@@ -354,7 +354,7 @@
             },
             {
               "id": "30",
-              "content": "My dog is a great reptile.",
+              "content": "My dog is a great <i>reptile</i>.",
               "options": [
                 "C",
                 "I"
@@ -364,7 +364,7 @@
             },
             {
               "id": "31",
-              "content": "I insulated my room with blankets to keep the loud noises out.",
+              "content": "I <i>insulated</i> my room with blankets to keep the loud noises out.",
               "options": [
                 "C",
                 "I"
@@ -374,7 +374,7 @@
             },
             {
               "id": "32",
-              "content": "She was the recipient of the grand prize.",
+              "content": "She was the <i>recipient</i> of the grand prize.",
               "options": [
                 "C",
                 "I"
@@ -384,7 +384,7 @@
             },
             {
               "id": "33",
-              "content": "Someday, I will write my father’s autobiography.",
+              "content": "Someday, I will write my father’s <i>autobiography</i>.",
               "options": [
                 "C",
                 "I"
@@ -394,7 +394,7 @@
             },
             {
               "id": "34",
-              "content": "I don’t want to play with you anymore. You make up arbitrary rules as we play.",
+              "content": "I don’t want to play with you anymore. You make up <i>arbitrary</i> rules as we play.",
               "options": [
                 "C",
                 "I"
@@ -404,7 +404,7 @@
             },
             {
               "id": "35",
-              "content": "The store clerk was so gracious. He helped me find everything I was looking for.",
+              "content": "The store clerk was so <i>gracious</i>. He helped me find everything I was looking for.",
               "options": [
                 "C",
                 "I"

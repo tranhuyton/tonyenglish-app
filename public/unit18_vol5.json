@@ -342,7 +342,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "The arena was filled with adoring fans.",
+              "content": "The <i>arena</i> was filled with adoring fans.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -352,7 +352,7 @@
             },
             {
               "id": "27",
-              "content": "The wooden fence was covered in a thick layer of rust.",
+              "content": "The wooden fence was covered in a thick layer of <i>rust</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -362,7 +362,7 @@
             },
             {
               "id": "28",
-              "content": "His reign only lasted three years before he became sick and passed away.",
+              "content": "His <i>reign</i> only lasted three years before he became sick and passed away.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -372,7 +372,7 @@
             },
             {
               "id": "29",
-              "content": "You will like Jack. You both have so much commonplace together.",
+              "content": "You will like Jack. You both have so much <i>commonplace</i> together.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -382,7 +382,7 @@
             },
             {
               "id": "30",
-              "content": "Her perfume was too strong. I was distracted by it during the meeting.",
+              "content": "Her perfume was too strong. I was <i>distracted</i> by it during the meeting.",
               "options": [
                 "Correct",
                 "Incorrect"

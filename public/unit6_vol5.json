@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "The little girl loves her cat. She tolerates it when they are together.",
+              "content": "The little girl loves her cat. She <i>tolerates</i> it when they are together.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -226,7 +226,7 @@
             },
             {
               "id": "17",
-              "content": "Going away to college is scary, but I have optimism that I'll have a good time.",
+              "content": "Going away to college is scary, but I have <i>optimism</i> that I'll have a good time.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -238,7 +238,7 @@
             },
             {
               "id": "18",
-              "content": "This migraine is killing me. My head hurts so badly that I can't think straight.",
+              "content": "This <i>migraine</i> is killing me. My head hurts so badly that I can't think straight.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -250,7 +250,7 @@
             },
             {
               "id": "19",
-              "content": "My bike's tire is flat again. I guess I'll have to impair it.",
+              "content": "My bike's tire is flat again. I guess I'll have to <i>impair</i> it.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -262,7 +262,7 @@
             },
             {
               "id": "20",
-              "content": "Her child is peculiar. He likes to wear his shoes on the wrong feet.",
+              "content": "Her child is <i>peculiar</i>. He likes to wear his shoes on the wrong feet.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -274,7 +274,7 @@
             },
             {
               "id": "21",
-              "content": "The tree is getting too big for our yard! Ask Jim to cut off some of the limbs.",
+              "content": "The tree is getting too big for our yard! Ask Jim to cut off some of the <i>limbs</i>.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -286,7 +286,7 @@
             },
             {
               "id": "22",
-              "content": "I fell off my bike, but I didn't break any bones. I just got a slight fracture on my toe.",
+              "content": "I fell off my bike, but I didn't break any bones. I just got a slight <i>fracture</i> on my toe.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -298,7 +298,7 @@
             },
             {
               "id": "23",
-              "content": "This bush in my yard comes from another country. It's indigenous to my yard.",
+              "content": "This bush in my yard comes from another country. It's <i>indigenous</i> to my yard.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -310,7 +310,7 @@
             },
             {
               "id": "24",
-              "content": "From the mountain ridge, you can see the entire city below.",
+              "content": "From the mountain <i>ridge</i>, you can see the entire city below.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "Mike is a very proficient reader. He finished the entire novel in just an hour.",
+              "content": "Mike is a very <i>proficient</i> reader. He finished the entire novel in just an hour.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -334,7 +334,7 @@
             },
             {
               "id": "26",
-              "content": "We were in awe of the professor's expertise on the subject.",
+              "content": "We were in awe of the professor's <i>expertise</i> on the subject.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -346,7 +346,7 @@
             },
             {
               "id": "27",
-              "content": "You should thrust the baby when putting him in bed, so he doesn't wake up.",
+              "content": "You should <i>thrust</i> the baby when putting him in bed, so he doesn't wake up.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -358,7 +358,7 @@
             },
             {
               "id": "28",
-              "content": "I will get married to my spouse one year from today.",
+              "content": "I will get married to my <i>spouse</i> one year from today.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -370,7 +370,7 @@
             },
             {
               "id": "29",
-              "content": "Australia has a very long coastline.",
+              "content": "Australia has a very long <i>coastline</i>.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -382,7 +382,7 @@
             },
             {
               "id": "30",
-              "content": "She is on a quest to find her long lost brother.",
+              "content": "She is on a <i>quest</i> to find her long lost brother.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -394,7 +394,7 @@
             },
             {
               "id": "31",
-              "content": "If you don't like your job, you should devise it.",
+              "content": "If you don't like your job, you should <i>devise</i> it.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -406,7 +406,7 @@
             },
             {
               "id": "32",
-              "content": "She will have to get more altitude if she wants to swim faster.",
+              "content": "She will have to get more <i>altitude</i> if she wants to swim faster.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -418,7 +418,7 @@
             },
             {
               "id": "33",
-              "content": "The workers implemented a new strategy to be more efficient.",
+              "content": "The workers <i>implemented</i> a new strategy to be more efficient.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -430,7 +430,7 @@
             },
             {
               "id": "34",
-              "content": "Nothing will deter me in my hunt for the perfect flower.",
+              "content": "Nothing will <i>deter</i> me in my hunt for the perfect flower.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -442,7 +442,7 @@
             },
             {
               "id": "35",
-              "content": "Her insight into our problem really helped us out.",
+              "content": "Her <i>insight</i> into our problem really helped us out.",
               "options": [
                 "Correct",
                 "Incorrect",

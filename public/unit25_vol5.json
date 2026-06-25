@@ -85,8 +85,8 @@
           "content": "Word bank: trail, fatigue, stereotype, aesthetic, twig, welfare, canyon, primitive, creek, termites",
           "questions": [
             {
-              "id": "6",
-              "content": "The path leading out of the [ 6 ] was very steep. When they reached the top, they had to rest because of their [ 6 ].",
+              "id": "100",
+              "content": "The path leading out of the [ 100 ] was very steep. When they reached the top, they had to rest because of their [ 101 ].",
               "options": [
                 "welfare",
                 "trail",
@@ -99,12 +99,12 @@
                 "twig",
                 "canyon"
               ],
-              "correctAnswer": "canyon|fatigue",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "canyon"
             },
             {
-              "id": "7",
-              "content": "He had a(n) [ 7 ] about ancient cultures. He thought that all their customs and ideas were [ 7 ].",
+              "id": "101",
+              "content": "",
               "options": [
                 "welfare",
                 "trail",
@@ -117,12 +117,12 @@
                 "twig",
                 "canyon"
               ],
-              "correctAnswer": "stereotype|primitive",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "",
+              "correctAnswer": "fatigue"
             },
             {
-              "id": "8",
-              "content": "The [ 8 ] led travelers to the top of the mountain. I was astonished by the [ 8 ] view.",
+              "id": "102",
+              "content": "He had a(n) [ 102 ] about ancient cultures. He thought that all their customs and ideas were [ 103 ].",
               "options": [
                 "welfare",
                 "trail",
@@ -135,12 +135,12 @@
                 "twig",
                 "canyon"
               ],
-              "correctAnswer": "trail|aesthetic",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "stereotype"
             },
             {
-              "id": "9",
-              "content": "A line of [ 9 ] stretched from the mound across the forest floor. They were all going to eat a [ 9 ] that had fallen off a tree.",
+              "id": "103",
+              "content": "",
               "options": [
                 "welfare",
                 "trail",
@@ -153,12 +153,12 @@
                 "twig",
                 "canyon"
               ],
-              "correctAnswer": "termites|twig",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "",
+              "correctAnswer": "primitive"
             },
             {
-              "id": "10",
-              "content": "People thought that the water from the [ 10 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 10 ].",
+              "id": "104",
+              "content": "The [ 104 ] led travelers to the top of the mountain. I was astonished by the [ 105 ] view.",
               "options": [
                 "welfare",
                 "trail",
@@ -171,11 +171,101 @@
                 "twig",
                 "canyon"
               ],
-              "correctAnswer": "creek|welfare",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "trail"
+            },
+            {
+              "id": "105",
+              "content": "",
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "explanation": "",
+              "correctAnswer": "aesthetic"
+            },
+            {
+              "id": "106",
+              "content": "A line of [ 106 ] stretched from the mound across the forest floor. They were all going to eat a [ 107 ] that had fallen off a tree.",
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "termites"
+            },
+            {
+              "id": "107",
+              "content": "",
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "explanation": "",
+              "correctAnswer": "twig"
+            },
+            {
+              "id": "108",
+              "content": "People thought that the water from the [ 108 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 109 ].",
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "creek"
+            },
+            {
+              "id": "109",
+              "content": "",
+              "options": [
+                "welfare",
+                "trail",
+                "stereotype",
+                "termites",
+                "primitive",
+                "fatigue",
+                "creek",
+                "aesthetic",
+                "twig",
+                "canyon"
+              ],
+              "explanation": "",
+              "correctAnswer": "welfare"
             }
           ],
-          "questionType": "Kéo thả"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3",

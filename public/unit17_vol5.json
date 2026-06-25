@@ -342,7 +342,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "I may not be able to go to college next year. I don’t have enough money for tuition.",
+              "content": "I may not be able to go to college next year. I don’t have enough money for <i>tuition</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -352,7 +352,7 @@
             },
             {
               "id": "27",
-              "content": "The boy’s parents didn’t know how to control him. They taught him discipline.",
+              "content": "The boy’s parents <i>didn</i>’t know how to control him. They taught him discipline.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -362,7 +362,7 @@
             },
             {
               "id": "28",
-              "content": "He was a donor. He received gifts from people all of the time.",
+              "content": "He was a <i>donor</i>. He received gifts from people all of the time.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -372,7 +372,7 @@
             },
             {
               "id": "29",
-              "content": "His new stove will be a stimulus for him to cook at home more often.",
+              "content": "His new stove will be a <i>stimulus</i> for him to cook at home more often.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -382,7 +382,7 @@
             },
             {
               "id": "30",
-              "content": "Ellen didn’t like the color of her walls, so she painted graffiti on them.",
+              "content": "Ellen didn’t like the color of her walls, so she painted <i>graffiti</i> on them.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -392,7 +392,7 @@
             },
             {
               "id": "31",
-              "content": "Jason was implicated in the bank robbery. Several people saw him do it.",
+              "content": "Jason was <i>implicated</i> in the bank robbery. Several people saw him do it.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -402,7 +402,7 @@
             },
             {
               "id": "32",
-              "content": "Besides her parents, Olivia had no other kin. She only had one sister.",
+              "content": "Besides her parents, Olivia had no other <i>kin</i>. She only had one sister.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -412,7 +412,7 @@
             },
             {
               "id": "33",
-              "content": "The gardener picked up the tool by the shaft. It was easiest to hold that way.",
+              "content": "The gardener picked up the tool by the <i>shaft</i>. It was easiest to hold that way.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -422,7 +422,7 @@
             },
             {
               "id": "34",
-              "content": "The man was sent to prison for stabbing someone. The person was hurt but survived.",
+              "content": "The man was sent to prison for <i>stabbing</i> someone. The person was hurt but survived.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -432,7 +432,7 @@
             },
             {
               "id": "35",
-              "content": "The theme of the book was forgiveness.",
+              "content": "The <i>theme</i> of the book was forgiveness.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -442,7 +442,7 @@
             },
             {
               "id": "36",
-              "content": "Leslie’s father is a policeman. He is a guardian of crime.",
+              "content": "Leslie’s father is a policeman. He is a <i>guardian</i> of crime.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -452,7 +452,7 @@
             },
             {
               "id": "37",
-              "content": "I took a knife and severed the line from the pole to the fish’s mouth.",
+              "content": "I took a knife and <i>severed</i> the line from the pole to the fish’s mouth.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -462,7 +462,7 @@
             },
             {
               "id": "38",
-              "content": "The food was being held on suspicion of committing two crimes in the city.",
+              "content": "The food was being held on <i>suspicion</i> of committing two crimes in the city.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -472,7 +472,7 @@
             },
             {
               "id": "39",
-              "content": "I spoke to my fellow teachers, and we all agreed to support the students at the rally.",
+              "content": "I spoke to my <i>fellow</i> teachers, and we all agreed to support the students at the rally.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -482,7 +482,7 @@
             },
             {
               "id": "40",
-              "content": "The referee said the player had broken the rules.",
+              "content": "The <i>referee</i> said the player had broken the rules.",
               "options": [
                 "Correct",
                 "Incorrect"

@@ -282,7 +282,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "I had a big breakfast. Many hours will elapse before I feel hungry again.",
+              "content": "I had a big breakfast. Many hours will <i>elapse</i> before I feel hungry again.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -292,7 +292,7 @@
             },
             {
               "id": "22",
-              "content": "Dan was a nice man, but no one would work for him because of his fanciful ideas.",
+              "content": "Dan was a nice man, but no one would work for him because of his <i>fanciful</i> ideas.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -302,7 +302,7 @@
             },
             {
               "id": "23",
-              "content": "I was very grateful for my birthday gifts. I griped about them to all of my friends.",
+              "content": "I was very grateful for my birthday gifts. I <i>griped</i> about them to all of my friends.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -312,7 +312,7 @@
             },
             {
               "id": "24",
-              "content": "Because there was a dearth of food at home, the family went out to eat.",
+              "content": "Because there was a <i>dearth</i> of food at home, the family went out to eat.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "The puppy was happy to learn new tricks. Each one was very mundane for him.",
+              "content": "The puppy was happy to learn new tricks. Each one was very <i>mundane</i> for him.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -332,7 +332,7 @@
             },
             {
               "id": "26",
-              "content": "Mother allotted me and my brother the money. Now she had all the money.",
+              "content": "Mother <i>allotted</i> me and my brother the money. Now she had all the money.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -342,7 +342,7 @@
             },
             {
               "id": "27",
-              "content": "The boy was proud of his trophies. He displayed them in a cache for everyone to see.",
+              "content": "The boy was proud of his trophies. He displayed them in a <i>cache</i> for everyone to see.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -352,7 +352,7 @@
             },
             {
               "id": "28",
-              "content": "Because he had planned for the trap to capture his victim, he was very deliberate.",
+              "content": "Because he had planned for the trap to capture his victim, he was very <i>deliberate</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -362,7 +362,7 @@
             },
             {
               "id": "29",
-              "content": "The violent criminal was on the news this evening. His actions appalled most people.",
+              "content": "The violent criminal was on the news this evening. His actions <i>appalled</i> most people.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -372,7 +372,7 @@
             },
             {
               "id": "30",
-              "content": "That man is very selfish. He has empathy for every person he meets.",
+              "content": "That man is very selfish. He has <i>empathy</i> for every person he meets.",
               "options": [
                 "Correct",
                 "Incorrect"

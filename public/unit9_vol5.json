@@ -222,7 +222,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "Knights in armor and their squires were common sites in medieval times.",
+              "content": "Knights in armor and their squires were common sites in <i>medieval</i> times.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -234,7 +234,7 @@
             },
             {
               "id": "17",
-              "content": "Our new boss hasn't made any changes to the company. He has very radical ideas.",
+              "content": "Our new boss hasn't made any changes to the company. He has very <i>radical</i> ideas.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -246,7 +246,7 @@
             },
             {
               "id": "18",
-              "content": "I don't want to impose on my father to help me with my homework. He's very busy.",
+              "content": "I don't want to <i>impose</i> on my father to help me with my homework. He's very busy.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -258,7 +258,7 @@
             },
             {
               "id": "19",
-              "content": "He refuted me because I didn't wash the plates after dinner.",
+              "content": "He <i>refuted</i> me because I didn't wash the plates after dinner.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -270,7 +270,7 @@
             },
             {
               "id": "20",
-              "content": "In capitalism, people can own just about any product or object they want.",
+              "content": "In <i>capitalism</i>, people can own just about any product or object they want.",
               "options": [
                 "Correct",
                 "Incorrect",

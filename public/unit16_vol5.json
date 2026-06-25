@@ -197,7 +197,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "The farmer lived on a large estate. It was given to him by his father.",
+              "content": "The farmer lived on a large <i>estate</i>. It was given to him by his father.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -207,7 +207,7 @@
             },
             {
               "id": "17",
-              "content": "The principal was a proponent of group learning. He wanted students to learn on their own.",
+              "content": "The principal was a <i>proponent</i> of group learning. He wanted students to learn on their own.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -217,7 +217,7 @@
             },
             {
               "id": "18",
-              "content": "He wanted to refine the machine before he sold it. He spent three years improving it.",
+              "content": "He wanted to <i>refine</i> the machine before he sold it. He spent three years improving it.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -227,7 +227,7 @@
             },
             {
               "id": "19",
-              "content": "The seat belt restricted the child’s movement in the car. He was able to move a lot.",
+              "content": "The seat belt <i>restricted</i> the child’s movement in the car. He was able to move a lot.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -237,7 +237,7 @@
             },
             {
               "id": "20",
-              "content": "After an accident in the laboratory, hydrogen filled the air. The gas was completely invisible.",
+              "content": "After an accident in the laboratory, <i>hydrogen</i> filled the air. The gas was completely invisible.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -247,7 +247,7 @@
             },
             {
               "id": "21",
-              "content": "The boy had a different outlook than his brother. He thought that people should try to save the environment, but his brother thought it wasn’t worth trying.",
+              "content": "The boy had a different <i>outlook</i> than his brother. He thought that people should try to save the environment, but his brother thought it wasn’t worth trying.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -257,7 +257,7 @@
             },
             {
               "id": "22",
-              "content": "The scientists found many archeological items in the desert. It would help them study modern societies.",
+              "content": "The scientists found many <i>archeological</i> items in the desert. It would help them study modern societies.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -267,7 +267,7 @@
             },
             {
               "id": "23",
-              "content": "Brian brainstormed with his group. After an hour, they came up with a great idea.",
+              "content": "Brian <i>brainstormed</i> with his group. After an hour, they came up with a great idea.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -277,7 +277,7 @@
             },
             {
               "id": "24",
-              "content": "The people in the plane crash were saved by parachutes. They dropped safely to the ground using the device.",
+              "content": "The people in the plane crash were saved by <i>parachutes</i>. They dropped safely to the ground using the device.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -287,7 +287,7 @@
             },
             {
               "id": "25",
-              "content": "Ellen wanted to learn how to knit. She wanted to save people from fires.",
+              "content": "Ellen wanted to learn how to <i>knit</i>. She wanted to save people from fires.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -297,7 +297,7 @@
             },
             {
               "id": "26",
-              "content": "The man was found guilty of fraud. He told people he was selling medicine, but it was only river water.",
+              "content": "The man was found guilty of <i>fraud</i>. He told people he was selling medicine, but it was only river water.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -307,7 +307,7 @@
             },
             {
               "id": "27",
-              "content": "The woman showed her integrity by lying to the police about her involvement in the crime.",
+              "content": "The woman showed her <i>integrity</i> by lying to the police about her involvement in the crime.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -317,7 +317,7 @@
             },
             {
               "id": "28",
-              "content": "The chocolate addict ate chocolate bars about once a month.",
+              "content": "The chocolate <i>addict</i> ate chocolate bars about once a month.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -327,7 +327,7 @@
             },
             {
               "id": "29",
-              "content": "The archeology expert was called to study some ancient bones. They are thought to belong to dinosaurs.",
+              "content": "The <i>archeology</i> expert was called to study some ancient bones. They are thought to belong to dinosaurs.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -337,7 +337,7 @@
             },
             {
               "id": "30",
-              "content": "The children ran into the courtyard when it started raining. They didn’t want to get wet.",
+              "content": "The children ran into the <i>courtyard</i> when it started raining. They didn’t want to get wet.",
               "options": [
                 "Correct",
                 "Incorrect"

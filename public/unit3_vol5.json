@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "In physiology, we studied various types of rock and the process that made them.",
+              "content": "In <i>physiology</i>, we studied various types of rock and the process that made them.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -224,7 +224,7 @@
             },
             {
               "id": "17",
-              "content": "She feared that if no one married her, she’d be a bachelor her entire life.",
+              "content": "She feared that if no one married her, she’d be a <i>bachelor</i> her entire life.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "Many old factories harnessed rivers and streams to power their equipment.",
+              "content": "Many old factories <i>harnessed</i> rivers and streams to power their equipment.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "Her knowledge of different societies came from her work in sociology.",
+              "content": "Her knowledge of different societies came from her work in <i>sociology</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "If the two bikes hadn’t turned at the last moment, there would have been a collision.",
+              "content": "If the two bikes hadn’t turned at the last moment, there would have been a <i>collision</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -264,7 +264,7 @@
             },
             {
               "id": "21",
-              "content": "In geology, we learned about the importance of our bones.",
+              "content": "In <i>geology</i>, we learned about the importance of our bones.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -274,7 +274,7 @@
             },
             {
               "id": "22",
-              "content": "The only proof that the new rocket would work was theoretical.",
+              "content": "The only proof that the new rocket would work was <i>theoretical</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -284,7 +284,7 @@
             },
             {
               "id": "23",
-              "content": "The car excelled every time he stepped on the gas pedal.",
+              "content": "The car <i>excelled</i> every time he stepped on the gas pedal.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -294,7 +294,7 @@
             },
             {
               "id": "24",
-              "content": "Learning about calculus in my literature class was a really enjoyable time.",
+              "content": "Learning about <i>calculus</i> in my literature class was a really enjoyable time.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -304,7 +304,7 @@
             },
             {
               "id": "25",
-              "content": "The test proved that Mark was keener than his older brother Dave.",
+              "content": "The test proved that <i>Mark</i> was keener than his older brother Dave.",
               "options": [
                 "Correct",
                 "Incorrect"

@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "I think the soy beans would taste better if we cooked them first.",
+              "content": "I think the <i>soy</i> beans would taste better if we cooked them first.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -226,7 +226,7 @@
             },
             {
               "id": "17",
-              "content": "Jim said he would finance their new store for a share of their profits.",
+              "content": "Jim said he would <i>finance</i> their new store for a share of their profits.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -238,7 +238,7 @@
             },
             {
               "id": "18",
-              "content": "We all knew the precaution of our actions would be terrible.",
+              "content": "We all knew the <i>precaution</i> of our actions would be terrible.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -250,7 +250,7 @@
             },
             {
               "id": "19",
-              "content": "The preliminary whistle blew, meaning the game was over.",
+              "content": "The <i>preliminary</i> whistle blew, meaning the game was over.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -262,7 +262,7 @@
             },
             {
               "id": "20",
-              "content": "It can be difficult to keep track of monetary matters.",
+              "content": "It can be difficult to keep track of <i>monetary</i> matters.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -274,7 +274,7 @@
             },
             {
               "id": "21",
-              "content": "The indifferent fan cheered loudly for his favorite team.",
+              "content": "The <i>indifferent</i> fan cheered loudly for his favorite team.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -286,7 +286,7 @@
             },
             {
               "id": "22",
-              "content": "The capitalist believed that his efforts would lead to great profits in the future.",
+              "content": "The <i>capitalist</i> believed that his efforts would lead to great profits in the future.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -298,7 +298,7 @@
             },
             {
               "id": "23",
-              "content": "The company accountant found an error in the bank statement.",
+              "content": "The company <i>accountant</i> found an error in the bank statement.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -310,7 +310,7 @@
             },
             {
               "id": "24",
-              "content": "I need to dedicate my house before the winter season.",
+              "content": "I need to <i>dedicate</i> my house before the winter season.",
               "options": [
                 "Correct",
                 "Incorrect",
@@ -322,7 +322,7 @@
             },
             {
               "id": "25",
-              "content": "The rain saturated the ground so much that it was as dry as a stone.",
+              "content": "The rain <i>saturated</i> the ground so much that it was as dry as a stone.",
               "options": [
                 "Correct",
                 "Incorrect",

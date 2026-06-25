@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "The surgeon made a small cut into the patient’s skin.",
+              "content": "The <i>surgeon</i> made a small cut into the patient’s skin.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +224,7 @@
             },
             {
               "id": "17",
-              "content": "The building materials must be transferred to the new site.",
+              "content": "The building materials must be <i>transferred</i> to the new site.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "The rigid rules were confusing because they changed all the time.",
+              "content": "The <i>rigid</i> rules were confusing because they changed all the time.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "The baby prescribed his mother to get a piece of candy.",
+              "content": "The baby <i>prescribed</i> his mother to get a piece of candy.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "You can observe water’s transition into ice when the temperature gets cold.",
+              "content": "You can observe water’s <i>transition</i> into ice when the temperature gets cold.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +264,7 @@
             },
             {
               "id": "21",
-              "content": "Blood flow is a biological process.",
+              "content": "Blood flow is a <i>biological</i> process.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +274,7 @@
             },
             {
               "id": "22",
-              "content": "I never want to get a new house, so I substitute the one I have.",
+              "content": "I never want to get a new house, so I <i>substitute</i> the one I have.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +284,7 @@
             },
             {
               "id": "23",
-              "content": "The dynamic teacher thought of new and exciting teaching methods.",
+              "content": "The <i>dynamic</i> teacher thought of new and exciting teaching methods.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +294,7 @@
             },
             {
               "id": "24",
-              "content": "Going to sleep at night is a fantasy.",
+              "content": "Going to sleep at night is a <i>fantasy</i>.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +304,7 @@
             },
             {
               "id": "25",
-              "content": "He needed plenty of rest after his liver transplant.",
+              "content": "He needed plenty of rest after his liver <i>transplant</i>.",
               "options": [
                 "C",
                 "I"
@@ -314,7 +314,7 @@
             },
             {
               "id": "26",
-              "content": "The pieces must be put on the machine in the correct sequence.",
+              "content": "The pieces must be put on the machine in the correct <i>sequence</i>.",
               "options": [
                 "C",
                 "I"
@@ -324,7 +324,7 @@
             },
             {
               "id": "27",
-              "content": "I admired how often he chose to be respective.",
+              "content": "I admired how often he chose to be <i>respective</i>.",
               "options": [
                 "C",
                 "I"
@@ -334,7 +334,7 @@
             },
             {
               "id": "28",
-              "content": "My new school is great. I can’t adapt to my classes.",
+              "content": "My new school is great. I can’t <i>adapt</i> to my classes.",
               "options": [
                 "C",
                 "I"
@@ -344,7 +344,7 @@
             },
             {
               "id": "29",
-              "content": "Hot dogs are one of my favorite surgical foods to revive.",
+              "content": "Hot dogs are one of my favorite <i>surgical</i> foods to revive.",
               "options": [
                 "C",
                 "I"
@@ -354,7 +354,7 @@
             },
             {
               "id": "30",
-              "content": "The heredity expert can tell us how traits are passed on from a father.",
+              "content": "The <i>heredity</i> expert can tell us how traits are passed on from a father.",
               "options": [
                 "C",
                 "I"
@@ -364,7 +364,7 @@
             },
             {
               "id": "31",
-              "content": "Please take the big, cellular pieces to the recycling center.",
+              "content": "Please take the big, <i>cellular</i> pieces to the recycling center.",
               "options": [
                 "C",
                 "I"
@@ -374,7 +374,7 @@
             },
             {
               "id": "32",
-              "content": "The hours of therapy were worth it when I could move my arm again.",
+              "content": "The hours of <i>therapy</i> were worth it when I could move my arm again.",
               "options": [
                 "C",
                 "I"
@@ -384,7 +384,7 @@
             },
             {
               "id": "33",
-              "content": "He’s always the last to understand a joke. He’s such a pioneer.",
+              "content": "He’s always the last to understand a joke. He’s such a <i>pioneer</i>.",
               "options": [
                 "C",
                 "I"
@@ -394,7 +394,7 @@
             },
             {
               "id": "34",
-              "content": "The internal roof got covered in snow after the storm.",
+              "content": "The <i>internal</i> roof got covered in snow after the storm.",
               "options": [
                 "C",
                 "I"
@@ -404,7 +404,7 @@
             },
             {
               "id": "35",
-              "content": "I was still hungry because I only ate a minimal amount of food at dinner.",
+              "content": "I was still hungry because I only ate a <i>minimal</i> amount of food at dinner.",
               "options": [
                 "C",
                 "I"

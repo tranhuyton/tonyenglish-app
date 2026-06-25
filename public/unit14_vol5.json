@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "We received humanitarian relief after I got a terrible haircut.",
+              "content": "We received <i>humanitarian</i> relief after I got a terrible haircut.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -224,7 +224,7 @@
             },
             {
               "id": "17",
-              "content": "The boy waited for the Renaissance, which was going to start in the future.",
+              "content": "The boy waited for the <i>Renaissance</i>, which was going to start in the future.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "Alice placed the ball on the rack where all her sport equipment was stored.",
+              "content": "<i>Alice</i> placed the ball on the rack where all her sport equipment was stored.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "The woman liked the premise of the show, but she thought the acting was bad.",
+              "content": "The woman liked the <i>premise</i> of the show, but she thought the acting was bad.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "The boy was scared by the simultaneous sound of the thunder and the phone.",
+              "content": "The boy was scared by the <i>simultaneous</i> sound of the thunder and the phone.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -264,7 +264,7 @@
             },
             {
               "id": "21",
-              "content": "The map was informative and helped them from getting lost.",
+              "content": "The map was <i>informative</i> and helped them from getting lost.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -274,7 +274,7 @@
             },
             {
               "id": "22",
-              "content": "The teacher disproved her expectations. He did exactly what she thought he would.",
+              "content": "The teacher <i>disproved</i> her expectations. He did exactly what she thought he would.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -284,7 +284,7 @@
             },
             {
               "id": "23",
-              "content": "Kelly had only met her uncle once and didn’t know much about him. She revered him.",
+              "content": "<i>Kelly</i> had only met her uncle once and didn’t know much about him. She revered him.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -294,7 +294,7 @@
             },
             {
               "id": "24",
-              "content": "In spring, all of the plants in the garden are covered with tiny buds.",
+              "content": "In spring, all of the plants in the garden are covered with tiny <i>buds</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -304,7 +304,7 @@
             },
             {
               "id": "25",
-              "content": "The skeptic didn’t believe that the magician could actually make someone disappear.",
+              "content": "The <i>skeptic</i> didn’t believe that the magician could actually make someone disappear.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -314,7 +314,7 @@
             },
             {
               "id": "26",
-              "content": "He didn’t think about the aspects of smoking. Later he realized the disadvantages.",
+              "content": "He didn’t think about the <i>aspects</i> of smoking. Later he realized the disadvantages.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -324,7 +324,7 @@
             },
             {
               "id": "27",
-              "content": "The new hearing aid provides a wide range of optic choices.",
+              "content": "The new <i>hearing</i> aid provides a wide range of optic choices.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -334,7 +334,7 @@
             },
             {
               "id": "28",
-              "content": "The bad dream left an imprint on Jared. He had forgot it by noon of the same day.",
+              "content": "The bad dream left an <i>imprint</i> on Jared. He had forgot it by noon of the same day.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -344,7 +344,7 @@
             },
             {
               "id": "29",
-              "content": "He had to specify to the waiter whether he wanted onions in his food or not.",
+              "content": "He had to <i>specify</i> to the waiter whether he wanted onions in his food or not.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -354,7 +354,7 @@
             },
             {
               "id": "30",
-              "content": "The fruits looked real, but they were made of wax.",
+              "content": "The fruits looked real, but they were made of <i>wax</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -364,7 +364,7 @@
             },
             {
               "id": "31",
-              "content": "Her understanding has been a real asset in her successful career.",
+              "content": "Her understanding has been a real <i>asset</i> in her successful career.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -374,7 +374,7 @@
             },
             {
               "id": "32",
-              "content": "I did an experiment to prove my hypotheses.",
+              "content": "I did an <i>experiment</i> to prove my hypotheses.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -384,7 +384,7 @@
             },
             {
               "id": "33",
-              "content": "Please use the spatial spoon to turn the eggs.",
+              "content": "Please use the <i>spatial</i> spoon to turn the eggs.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -394,7 +394,7 @@
             },
             {
               "id": "34",
-              "content": "Braille has helped many blind people enjoy literature.",
+              "content": "<i>Braille</i> has helped many blind people enjoy literature.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -404,7 +404,7 @@
             },
             {
               "id": "35",
-              "content": "If you coordinate all of sounds, you can make music.",
+              "content": "If you <i>coordinate</i> all of sounds, you can make music.",
               "options": [
                 "Correct",
                 "Incorrect"

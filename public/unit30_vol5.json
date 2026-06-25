@@ -317,7 +317,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "Let’s compromise and do exactly what I want.",
+              "content": "Let’s <i>compromise</i> and do exactly what I want.",
               "options": [
                 "C",
                 "I"
@@ -327,7 +327,7 @@
             },
             {
               "id": "27",
-              "content": "Jill’s perception of the movie was opposite to many viewers.",
+              "content": "Jill’s <i>perception</i> of the movie was opposite to many viewers.",
               "options": [
                 "C",
                 "I"
@@ -337,7 +337,7 @@
             },
             {
               "id": "28",
-              "content": "The temperature in here is too moderate. I’m freezing!",
+              "content": "The temperature in here is too <i>moderate</i>. I’m freezing!",
               "options": [
                 "C",
                 "I"
@@ -347,7 +347,7 @@
             },
             {
               "id": "29",
-              "content": "We had a reunion yesterday. I haven’t seen her for years.",
+              "content": "We had a <i>reunion</i> yesterday. I haven’t seen her for years.",
               "options": [
                 "C",
                 "I"
@@ -357,7 +357,7 @@
             },
             {
               "id": "30",
-              "content": "Tonya’s new car is a hybrid that runs on gas and electricity.",
+              "content": "Tonya’s new car is a <i>hybrid</i> that runs on gas and electricity.",
               "options": [
                 "C",
                 "I"
@@ -367,7 +367,7 @@
             },
             {
               "id": "31",
-              "content": "It is such burden to drive two hours to work each day.",
+              "content": "It is such <i>burden</i> to drive two hours to work each day.",
               "options": [
                 "C",
                 "I"
@@ -377,7 +377,7 @@
             },
             {
               "id": "32",
-              "content": "The enigma was so simple that a child could find a solution.",
+              "content": "The <i>enigma</i> was so simple that a child could find a solution.",
               "options": [
                 "C",
                 "I"
@@ -387,7 +387,7 @@
             },
             {
               "id": "33",
-              "content": "Her innocence reminded many of us when we were young.",
+              "content": "Her <i>innocence</i> reminded many of us when we were young.",
               "options": [
                 "C",
                 "I"
@@ -397,7 +397,7 @@
             },
             {
               "id": "34",
-              "content": "I crafted the airplane out of pieces of old wood.",
+              "content": "I <i>crafted</i> the airplane out of pieces of old wood.",
               "options": [
                 "C",
                 "I"
@@ -407,7 +407,7 @@
             },
             {
               "id": "35",
-              "content": "The snake tramped quietly on its stomach.",
+              "content": "The snake <i>tramped</i> quietly on its stomach.",
               "options": [
                 "C",
                 "I"

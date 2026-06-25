@@ -214,7 +214,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "Kevin was very vague about his job interview, and he told me all the details.",
+              "content": "Kevin was very <i>vague</i> about his job interview, and he told me all the details.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +224,7 @@
             },
             {
               "id": "17",
-              "content": "Liam had a plausible reason for not doing his work, saying aliens took it.",
+              "content": "Liam had a <i>plausible</i> reason for not doing his work, saying aliens took it.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +234,7 @@
             },
             {
               "id": "18",
-              "content": "Tom can only speak English. He is bilingual.",
+              "content": "Tom can only speak English. He is <i>bilingual</i>.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "Emma likes studying humanities like chemistry and physics.",
+              "content": "Emma likes studying <i>humanities</i> like chemistry and physics.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +254,7 @@
             },
             {
               "id": "20",
-              "content": "Ivy doesn’t have any siblings. It must be lonely without brothers or sisters.",
+              "content": "Ivy doesn’t have any <i>siblings</i>. It must be lonely without brothers or sisters.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +264,7 @@
             },
             {
               "id": "21",
-              "content": "The two brothers looked so much alike that they could be clones.",
+              "content": "The two brothers looked so much alike that they could be <i>clones</i>.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +274,7 @@
             },
             {
               "id": "22",
-              "content": "My mother was furious when she heard that I passed all my exams.",
+              "content": "My mother was <i>furious</i> when she heard that I passed all my exams.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +284,7 @@
             },
             {
               "id": "23",
-              "content": "Miranda is so skinny. She really needs to lose some weight.",
+              "content": "Miranda is so <i>skinny</i>. She really needs to lose some weight.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +294,7 @@
             },
             {
               "id": "24",
-              "content": "I was filled with disgust when I heard the news that he had lied to all of us.",
+              "content": "I was filled with <i>disgust</i> when I heard the news that he had lied to all of us.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +304,7 @@
             },
             {
               "id": "25",
-              "content": "Sarah and I really understand each other. There is a big gulf between us.",
+              "content": "Sarah and I really understand each other. There is a big <i>gulf</i> between us.",
               "options": [
                 "C",
                 "I"
@@ -314,7 +314,7 @@
             },
             {
               "id": "26",
-              "content": "Around the world, there are lots of different marriage rituals.",
+              "content": "Around the world, there are lots of different marriage <i>rituals</i>.",
               "options": [
                 "C",
                 "I"
@@ -324,7 +324,7 @@
             },
             {
               "id": "27",
-              "content": "We had lots of participants in the fishing competition last Saturday.",
+              "content": "We had lots of <i>participants</i> in the fishing competition last Saturday.",
               "options": [
                 "C",
                 "I"
@@ -334,7 +334,7 @@
             },
             {
               "id": "28",
-              "content": "Kay is a linguist and will give a lecture on the best way to learn a language.",
+              "content": "Kay is a <i>linguist</i> and will give a lecture on the best way to learn a language.",
               "options": [
                 "C",
                 "I"
@@ -344,7 +344,7 @@
             },
             {
               "id": "29",
-              "content": "You should wear dark clothes for the interview, such as your fluorescent jacket.",
+              "content": "You should wear dark clothes for the interview, such as your <i>fluorescent</i> jacket.",
               "options": [
                 "C",
                 "I"
@@ -354,7 +354,7 @@
             },
             {
               "id": "30",
-              "content": "You always dash so slowly. I wish you would walk faster.",
+              "content": "You always <i>dash</i> so slowly. I wish you would walk faster.",
               "options": [
                 "C",
                 "I"
@@ -364,7 +364,7 @@
             },
             {
               "id": "31",
-              "content": "I can’t use this thread for sewing because it has too many knots in it.",
+              "content": "I can’t use this thread for sewing because it has too many <i>knots</i> in it.",
               "options": [
                 "C",
                 "I"
@@ -374,7 +374,7 @@
             },
             {
               "id": "32",
-              "content": "Jan wanted to make a cake, so she went to the shop to buy some cosmetics.",
+              "content": "Jan wanted to make a cake, so she went to the shop to buy some <i>cosmetics</i>.",
               "options": [
                 "C",
                 "I"
@@ -384,7 +384,7 @@
             },
             {
               "id": "33",
-              "content": "The lesson was long and boring, and all the students felt astounded.",
+              "content": "The lesson was long and boring, and all the students felt <i>astounded</i>.",
               "options": [
                 "C",
                 "I"
@@ -394,7 +394,7 @@
             },
             {
               "id": "34",
-              "content": "I think Tom should get the job because he has all the right attributes.",
+              "content": "I think Tom should get the job because he has all the right <i>attributes</i>.",
               "options": [
                 "C",
                 "I"
@@ -404,7 +404,7 @@
             },
             {
               "id": "35",
-              "content": "You shouldn’t use colloquial language when you make formal presentations.",
+              "content": "You shouldn’t use <i>colloquial</i> language when you make formal presentations.",
               "options": [
                 "C",
                 "I"

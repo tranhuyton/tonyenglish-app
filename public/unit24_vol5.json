@@ -194,7 +194,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "The sharp rocks mended his jeans into pieces.",
+              "content": "The sharp rocks <i>mended</i> his jeans into pieces.",
               "options": [
                 "C",
                 "I"
@@ -204,7 +204,7 @@
             },
             {
               "id": "17",
-              "content": "The school sent a second bus whereby the students could get to school.",
+              "content": "The school sent a second bus <i>whereby</i> the students could get to school.",
               "options": [
                 "C",
                 "I"
@@ -214,7 +214,7 @@
             },
             {
               "id": "18",
-              "content": "He had poor hygiene. He never washed his hands or brushed his teeth.",
+              "content": "He had poor <i>hygiene</i>. He never washed his hands or brushed his teeth.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +224,7 @@
             },
             {
               "id": "19",
-              "content": "The dam on the lake became bankrupt, and soon water broke through the cracks.",
+              "content": "The dam on the lake became <i>bankrupt</i>, and soon water broke through the cracks.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +234,7 @@
             },
             {
               "id": "20",
-              "content": "The restaurant was a trendy place where all the rich and famous people went.",
+              "content": "The restaurant was a <i>trendy</i> place where all the rich and famous people went.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +244,7 @@
             },
             {
               "id": "21",
-              "content": "The first three cars to finish were given an award, but the forthcoming car got nothing.",
+              "content": "The first three cars to finish were given an award, but the <i>forthcoming</i> car got nothing.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +254,7 @@
             },
             {
               "id": "22",
-              "content": "She made a mistake and accidentally walked into the mandatory bathroom.",
+              "content": "She made a mistake and accidentally walked into the <i>mandatory</i> bathroom.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +264,7 @@
             },
             {
               "id": "23",
-              "content": "After he furnished dinner, the host gave him some dessert.",
+              "content": "After he <i>furnished</i> dinner, the host gave him some dessert.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +274,7 @@
             },
             {
               "id": "24",
-              "content": "Rather than conforming to one religion, Mary chose what she liked from all of them.",
+              "content": "Rather than conforming to one religion, <i>Mary</i> chose what she liked from all of them.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +284,7 @@
             },
             {
               "id": "25",
-              "content": "I knew something was wrong with the plumbing once the hot water stopped working.",
+              "content": "I knew something was wrong with the <i>plumbing</i> once the hot water stopped working.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +294,7 @@
             },
             {
               "id": "26",
-              "content": "She graduated from university where she studied utility.",
+              "content": "She graduated from university where she studied <i>utility</i>.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +304,7 @@
             },
             {
               "id": "27",
-              "content": "Because of an error, the game was given an extension of five more minutes.",
+              "content": "Because of an error, the game was given an <i>extension</i> of five more minutes.",
               "options": [
                 "C",
                 "I"
@@ -314,7 +314,7 @@
             },
             {
               "id": "28",
-              "content": "He’s very hygienic because he bathes once a week and seldom changes his clothes.",
+              "content": "He’s very <i>hygienic</i> because he bathes once a week and seldom changes his clothes.",
               "options": [
                 "C",
                 "I"
@@ -324,7 +324,7 @@
             },
             {
               "id": "29",
-              "content": "The landlord owned several buildings throughout the capital city.",
+              "content": "The <i>landlord</i> owned several buildings throughout the capital city.",
               "options": [
                 "C",
                 "I"
@@ -334,7 +334,7 @@
             },
             {
               "id": "30",
-              "content": "The factory needed more workers. It had to employ twenty more people.",
+              "content": "The factory needed more workers. It had to <i>employ</i> twenty more people.",
               "options": [
                 "C",
                 "I"
@@ -344,7 +344,7 @@
             },
             {
               "id": "31",
-              "content": "Tom didn’t want to talk about his father’s new job. He thought it was too personnel.",
+              "content": "Tom didn’t want to talk about his father’s new job. He thought it was too <i>personnel</i>.",
               "options": [
                 "C",
                 "I"
@@ -354,7 +354,7 @@
             },
             {
               "id": "32",
-              "content": "There was too much sugar in the recipe, so she leased the amount with a spoon.",
+              "content": "There was too much sugar in the recipe, so she <i>leased</i> the amount with a spoon.",
               "options": [
                 "C",
                 "I"
@@ -364,7 +364,7 @@
             },
             {
               "id": "33",
-              "content": "Because the rent was so expensive, all of the tenants are probably wealthy people.",
+              "content": "Because the rent was so expensive, all of the <i>tenants</i> are probably wealthy people.",
               "options": [
                 "C",
                 "I"
@@ -374,7 +374,7 @@
             },
             {
               "id": "34",
-              "content": "They were expelled from the restaurant because they couldn’t pay their bill.",
+              "content": "They were <i>expelled</i> from the restaurant because they couldn’t pay their bill.",
               "options": [
                 "C",
                 "I"
@@ -384,7 +384,7 @@
             },
             {
               "id": "35",
-              "content": "In order to buy a house, most people have to get a mortgage.",
+              "content": "In order to buy a house, most people have to get a <i>mortgage</i>.",
               "options": [
                 "C",
                 "I"

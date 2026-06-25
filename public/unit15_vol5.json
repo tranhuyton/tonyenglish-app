@@ -342,7 +342,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "The cardboard box was made from a tough metal.",
+              "content": "The <i>cardboard</i> box was made from a tough metal.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -352,7 +352,7 @@
             },
             {
               "id": "27",
-              "content": "The man had an acquisition for being mean to the people that he met.",
+              "content": "The man had an <i>acquisition</i> for being mean to the people that he met.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -362,7 +362,7 @@
             },
             {
               "id": "28",
-              "content": "The man helped the old woman infer the large object on the shelf.",
+              "content": "The man helped the old woman <i>infer</i> the large object on the shelf.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -372,7 +372,7 @@
             },
             {
               "id": "29",
-              "content": "We used the grid on the map to help us locate the museum.",
+              "content": "We used the <i>grid</i> on the map to help us locate the museum.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -382,7 +382,7 @@
             },
             {
               "id": "30",
-              "content": "The painting was elaborate. The artist paid attention to every detail.",
+              "content": "The painting was <i>elaborate</i>. The artist paid attention to every detail.",
               "options": [
                 "Correct",
                 "Incorrect"

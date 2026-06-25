@@ -164,7 +164,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "The key fit perfectly in the slot.",
+              "content": "The key fit perfectly in the <i>slot</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -174,7 +174,7 @@
             },
             {
               "id": "17",
-              "content": "Jackets help to offset the effect of a cold wind.",
+              "content": "Jackets help to <i>offset</i> the effect of a cold wind.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -184,7 +184,7 @@
             },
             {
               "id": "18",
-              "content": "I need to distort my homework if I’m going to get it turned in by tomorrow.",
+              "content": "I need to <i>distort</i> my homework if I’m going to get it turned in by tomorrow.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -194,7 +194,7 @@
             },
             {
               "id": "19",
-              "content": "The parade was a catastrophe. It went smoothly, and everyone had a great time.",
+              "content": "The parade was a <i>catastrophe</i>. It went smoothly, and everyone had a great time.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -204,7 +204,7 @@
             },
             {
               "id": "20",
-              "content": "They had to water the tree four times a day. It was a frequent chore.",
+              "content": "They had to water the tree four times a day. It was a <i>frequent</i> chore.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -214,7 +214,7 @@
             },
             {
               "id": "21",
-              "content": "The intricate bench was just a large, unpainted piece of wood.",
+              "content": "The <i>intricate</i> bench was just a large, unpainted piece of wood.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -224,7 +224,7 @@
             },
             {
               "id": "22",
-              "content": "The weather precipitates a great weekend.",
+              "content": "The weather <i>precipitates</i> a great weekend.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -234,7 +234,7 @@
             },
             {
               "id": "23",
-              "content": "We walked to the docks to watch ships pull in and out.",
+              "content": "We walked to the <i>docks</i> to watch ships pull in and out.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -244,7 +244,7 @@
             },
             {
               "id": "24",
-              "content": "The lion submerged out of the bushes and attacked its prey.",
+              "content": "The lion <i>submerged</i> out of the bushes and attacked its prey.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -254,7 +254,7 @@
             },
             {
               "id": "25",
-              "content": "The secondhand book was brand new. I was the first to read it.",
+              "content": "The <i>secondhand</i> book was brand new. I was the first to read it.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -264,7 +264,7 @@
             },
             {
               "id": "26",
-              "content": "She was noted for creating some imaginative tactics to claim victory.",
+              "content": "She was noted for creating some imaginative <i>tactics</i> to claim victory.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -274,7 +274,7 @@
             },
             {
               "id": "27",
-              "content": "The guide asked us to be very quiet, so we acted accordingly.",
+              "content": "The guide asked us to be very quiet, so we acted <i>accordingly</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -284,7 +284,7 @@
             },
             {
               "id": "28",
-              "content": "The chef arranged the slices of bread so that they overlapped each other.",
+              "content": "The chef arranged the slices of bread so that they <i>overlapped</i> each other.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -294,7 +294,7 @@
             },
             {
               "id": "29",
-              "content": "We knew from the beginning that the genuine man was not who he claimed to be.",
+              "content": "We knew from the beginning that the <i>genuine</i> man was not who he claimed to be.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -304,7 +304,7 @@
             },
             {
               "id": "30",
-              "content": "The buoy over there warns ships that the water is too shallow.",
+              "content": "The <i>buoy</i> over there warns ships that the water is too shallow.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -314,7 +314,7 @@
             },
             {
               "id": "31",
-              "content": "We stood at the fore of the ship. At the front we could see where we were going.",
+              "content": "We stood at the <i>fore</i> of the ship. At the front we could see where we were going.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -324,7 +324,7 @@
             },
             {
               "id": "32",
-              "content": "The grease made it easy to find a good parking spot.",
+              "content": "The <i>grease</i> made it easy to find a good parking spot.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -334,7 +334,7 @@
             },
             {
               "id": "33",
-              "content": "The fireman who saved the family was designated the “hero of the month.”",
+              "content": "The fireman who saved the family was <i>designated</i> the “hero of the month.”",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -344,7 +344,7 @@
             },
             {
               "id": "34",
-              "content": "Check the context for spelling errors before you turn it in to the teacher.",
+              "content": "Check the <i>context</i> for spelling errors before you turn it in to the teacher.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -354,7 +354,7 @@
             },
             {
               "id": "35",
-              "content": "This looks like a good place to drop the boat’s anchor and relax in the sun.",
+              "content": "This looks like a good place to drop the boat’s <i>anchor</i> and relax in the sun.",
               "options": [
                 "Correct",
                 "Incorrect"

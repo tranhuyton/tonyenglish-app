@@ -85,8 +85,8 @@
           "content": "Word bank: cholesterol, prone, framework, administration, explicit, deceptive, coalition, mechanisms, straightforward, manufactures",
           "questions": [
             {
-              "id": "6",
-              "content": "I learned about all the different things the factory [ 6 ]. They make big machinery as well as tiny parts and [ 6 ].",
+              "id": "100",
+              "content": "I learned about all the different things the factory [ 100 ]. They make big machinery as well as tiny parts and [ 101 ].",
               "options": [
                 "straightforward",
                 "framework",
@@ -99,12 +99,12 @@
                 "coalition",
                 "prone"
               ],
-              "correctAnswer": "manufactures|mechanisms",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "manufactures"
             },
             {
-              "id": "7",
-              "content": "The students asked the school’s [ 7 ] to buy a better kind of meat. The meat served there is too high in fat and [ 2 ].",
+              "id": "101",
+              "content": "",
               "options": [
                 "straightforward",
                 "framework",
@@ -117,12 +117,12 @@
                 "coalition",
                 "prone"
               ],
-              "correctAnswer": "administration|cholesterol",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "",
+              "correctAnswer": "mechanisms"
             },
             {
-              "id": "8",
-              "content": "I can’t stand companies that are [ 8 ]. Customers have to make sure they get [ 2 ] information about all details.",
+              "id": "102",
+              "content": "The students asked the school’s [ 102 ] to buy a better kind of meat. The meat served there is too high in fat and [ 103 ].",
               "options": [
                 "straightforward",
                 "framework",
@@ -135,12 +135,12 @@
                 "coalition",
                 "prone"
               ],
-              "correctAnswer": "deceptive|explicit",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "administration"
             },
             {
-              "id": "9",
-              "content": "Citizens formed a [ 9 ] because the city’s air was making people ill. Elderly people and infants were the most [ 2 ] to becoming sick.",
+              "id": "103",
+              "content": "",
               "options": [
                 "straightforward",
                 "framework",
@@ -153,12 +153,12 @@
                 "coalition",
                 "prone"
               ],
-              "correctAnswer": "coalition|prone",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "",
+              "correctAnswer": "cholesterol"
             },
             {
-              "id": "10",
-              "content": "To solve our problem, we’ll first need a strong [ 10 ]. Our ideas need to be intelligent and [ 2 ].",
+              "id": "104",
+              "content": "I can’t stand companies that are [ 104 ]. Customers have to make sure they get [ 105 ] information about all details.",
               "options": [
                 "straightforward",
                 "framework",
@@ -171,11 +171,101 @@
                 "coalition",
                 "prone"
               ],
-              "correctAnswer": "framework|straightforward",
-              "explanation": "Từ vựng phù hợp với ngữ cảnh."
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "deceptive"
+            },
+            {
+              "id": "105",
+              "content": "",
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "explanation": "",
+              "correctAnswer": "explicit"
+            },
+            {
+              "id": "106",
+              "content": "Citizens formed a [ 106 ] because the city’s air was making people ill. Elderly people and infants were the most [ 107 ] to becoming sick.",
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "coalition"
+            },
+            {
+              "id": "107",
+              "content": "",
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "explanation": "",
+              "correctAnswer": "prone"
+            },
+            {
+              "id": "108",
+              "content": "To solve our problem, we’ll first need a strong [ 108 ]. Our ideas need to be intelligent and [ 109 ].",
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "explanation": "Từ vựng phù hợp với ngữ cảnh.",
+              "correctAnswer": "framework"
+            },
+            {
+              "id": "109",
+              "content": "",
+              "options": [
+                "straightforward",
+                "framework",
+                "deceptive",
+                "administration",
+                "manufactures",
+                "cholesterol",
+                "mechanisms",
+                "explicit",
+                "coalition",
+                "prone"
+              ],
+              "explanation": "",
+              "correctAnswer": "straightforward"
             }
           ],
-          "questionType": "Kéo thả"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3",
@@ -184,7 +274,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "Smoking makes people more prone to breathing problems.",
+              "content": "Smoking makes people more <i>prone</i> to breathing problems.",
               "options": [
                 "C",
                 "I"
@@ -194,7 +284,7 @@
             },
             {
               "id": "12",
-              "content": "We toured the factory that manufactures cheese.",
+              "content": "We toured the factory that <i>manufactures</i> cheese.",
               "options": [
                 "C",
                 "I"
@@ -204,7 +294,7 @@
             },
             {
               "id": "13",
-              "content": "The deceptive man was very open and honest about his plans.",
+              "content": "The <i>deceptive</i> man was very open and honest about his plans.",
               "options": [
                 "C",
                 "I"
@@ -214,7 +304,7 @@
             },
             {
               "id": "14",
-              "content": "Eating a lot of fast food raises people’s cholesterol levels.",
+              "content": "Eating a lot of fast food raises people’s <i>cholesterol</i> levels.",
               "options": [
                 "C",
                 "I"
@@ -224,7 +314,7 @@
             },
             {
               "id": "15",
-              "content": "The straightforward instructions were impossible to understand.",
+              "content": "The <i>straightforward</i> instructions were impossible to understand.",
               "options": [
                 "C",
                 "I"
@@ -234,7 +324,7 @@
             },
             {
               "id": "16",
-              "content": "The group decided on a framework for the new project.",
+              "content": "The group decided on a <i>framework</i> for the new project.",
               "options": [
                 "C",
                 "I"
@@ -244,7 +334,7 @@
             },
             {
               "id": "17",
-              "content": "Businesses try to minimize the amount of money they can make.",
+              "content": "Businesses try to <i>minimize</i> the amount of money they can make.",
               "options": [
                 "C",
                 "I"
@@ -254,7 +344,7 @@
             },
             {
               "id": "18",
-              "content": "He had a notion that the speaker was not really an expert on the subject.",
+              "content": "He had a <i>notion</i> that the speaker was not really an expert on the subject.",
               "options": [
                 "C",
                 "I"
@@ -264,7 +354,7 @@
             },
             {
               "id": "19",
-              "content": "The maid used a kind of acid to dissolve the stains on the floor.",
+              "content": "The maid used a kind of <i>acid</i> to dissolve the stains on the floor.",
               "options": [
                 "C",
                 "I"
@@ -274,7 +364,7 @@
             },
             {
               "id": "20",
-              "content": "It is important for a judge to have good ethics.",
+              "content": "It is important for a judge to have good <i>ethics</i>.",
               "options": [
                 "C",
                 "I"
@@ -284,7 +374,7 @@
             },
             {
               "id": "21",
-              "content": "Some factories produce energy by burning coalitions.",
+              "content": "Some factories produce energy by burning <i>coalitions</i>.",
               "options": [
                 "C",
                 "I"
@@ -294,7 +384,7 @@
             },
             {
               "id": "22",
-              "content": "The lawyer hoped that the witness would tell an explicit version of the story.",
+              "content": "The lawyer hoped that the witness would tell an <i>explicit</i> version of the story.",
               "options": [
                 "C",
                 "I"
@@ -304,7 +394,7 @@
             },
             {
               "id": "23",
-              "content": "My father works in construction while my mom has an administrative job.",
+              "content": "My father works in construction while my mom has an <i>administrative</i> job.",
               "options": [
                 "C",
                 "I"
@@ -314,7 +404,7 @@
             },
             {
               "id": "24",
-              "content": "Be sure to eliminate all the ingredients to make a great cake.",
+              "content": "Be sure to <i>eliminate</i> all the ingredients to make a great cake.",
               "options": [
                 "C",
                 "I"
@@ -324,7 +414,7 @@
             },
             {
               "id": "25",
-              "content": "Jim receives shots to treat his diabetes. They reduce the sugar in his blood.",
+              "content": "Jim receives shots to treat his <i>diabetes</i>. They reduce the sugar in his blood.",
               "options": [
                 "C",
                 "I"
@@ -334,7 +424,7 @@
             },
             {
               "id": "26",
-              "content": "All of the prisoners formed an administration where they played games.",
+              "content": "All of the prisoners formed an <i>administration</i> where they played games.",
               "options": [
                 "C",
                 "I"
@@ -344,7 +434,7 @@
             },
             {
               "id": "27",
-              "content": "Dry weather, followed by sudden floods, caused the erosion in the valley.",
+              "content": "Dry weather, followed by sudden floods, caused the <i>erosion</i> in the valley.",
               "options": [
                 "C",
                 "I"
@@ -354,7 +444,7 @@
             },
             {
               "id": "28",
-              "content": "The biotechnology company only made things from nonliving rocks and sand.",
+              "content": "The <i>biotechnology</i> company only made things from nonliving rocks and sand.",
               "options": [
                 "C",
                 "I"
@@ -364,7 +454,7 @@
             },
             {
               "id": "29",
-              "content": "The cutting mechanism on the lawnmower is broken.",
+              "content": "The cutting <i>mechanism</i> on the lawnmower is broken.",
               "options": [
                 "C",
                 "I"
@@ -374,7 +464,7 @@
             },
             {
               "id": "30",
-              "content": "This nectar produces the best flowers.",
+              "content": "This <i>nectar</i> produces the best flowers.",
               "options": [
                 "C",
                 "I"

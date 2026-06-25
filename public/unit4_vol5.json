@@ -146,7 +146,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "This is the affluent area of the city. It is where most of the poor people live.",
+              "content": "This is the <i>affluent</i> area of the city. It is where most of the poor people live.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -156,7 +156,7 @@
             },
             {
               "id": "12",
-              "content": "He added his trash to the large pile of rubbish.",
+              "content": "He added his trash to the large pile of <i>rubbish</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -166,7 +166,7 @@
             },
             {
               "id": "13",
-              "content": "The company automated by hiring twenty new workers.",
+              "content": "The company <i>automated</i> by hiring twenty new workers.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -176,7 +176,7 @@
             },
             {
               "id": "14",
-              "content": "This painting is an important part of the city’s infrastructure.",
+              "content": "This painting is an important part of the city’s <i>infrastructure</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -186,7 +186,7 @@
             },
             {
               "id": "15",
-              "content": "The subsidy helped the company recover some of the money it had lost.",
+              "content": "The <i>subsidy</i> helped the company recover some of the money it had lost.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -196,7 +196,7 @@
             },
             {
               "id": "16",
-              "content": "The store sold most of its merchandise in the sale over the weekend.",
+              "content": "The store sold most of its <i>merchandise</i> in the sale over the weekend.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -206,7 +206,7 @@
             },
             {
               "id": "17",
-              "content": "The cook violated the two sauces together into one delicious sauce.",
+              "content": "The cook <i>violated</i> the two sauces together into one delicious sauce.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -216,7 +216,7 @@
             },
             {
               "id": "18",
-              "content": "She took the food out of the refrigerator and then disposed the door.",
+              "content": "She took the food out of the refrigerator and then <i>disposed</i> the door.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -226,7 +226,7 @@
             },
             {
               "id": "19",
-              "content": "The company’s bank records were audited.",
+              "content": "The company’s bank records were <i>audited</i>.",
               "options": [
                 "Correct",
                 "Incorrect"
@@ -236,7 +236,7 @@
             },
             {
               "id": "20",
-              "content": "Bigger kids sometimes find it easy to manipulate smaller children.",
+              "content": "Bigger kids sometimes find it easy to <i>manipulate</i> smaller children.",
               "options": [
                 "Correct",
                 "Incorrect"
