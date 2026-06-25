@@ -216,10 +216,9 @@
               "id": "16",
               "content": "The little girl loves her cat. She <i>tolerates</i> it when they are together.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "tolerate nghĩa là chịu đựng; nếu cô bé yêu con mèo thì không dùng từ chịu đựng. Sai ngữ cảnh.",
               "correctAnswer": "B"
@@ -228,10 +227,9 @@
               "id": "17",
               "content": "Going away to college is scary, but I have <i>optimism</i> that I'll have a good time.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "optimism nghĩa là sự lạc quan; hoàn toàn phù hợp với ngữ cảnh.",
               "correctAnswer": "A"
@@ -240,10 +238,9 @@
               "id": "18",
               "content": "This <i>migraine</i> is killing me. My head hurts so badly that I can't think straight.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "migraine (đau nửa đầu) phù hợp với ngữ cảnh 'my head hurts so badly'.",
               "correctAnswer": "A"
@@ -252,10 +249,9 @@
               "id": "19",
               "content": "My bike's tire is flat again. I guess I'll have to <i>impair</i> it.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "impair nghĩa là làm hư hại, ở đây nên dùng từ như 'repair' (sửa chữa).",
               "correctAnswer": "B"
@@ -264,10 +260,9 @@
               "id": "20",
               "content": "Her child is <i>peculiar</i>. He likes to wear his shoes on the wrong feet.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "peculiar nghĩa là kì lạ; việc mang giày ngược chân là một điều kì lạ.",
               "correctAnswer": "A"
@@ -276,10 +271,9 @@
               "id": "21",
               "content": "The tree is getting too big for our yard! Ask Jim to cut off some of the <i>limbs</i>.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "limb nghĩa là nhánh cây; hoàn toàn hợp lý.",
               "correctAnswer": "A"
@@ -288,10 +282,9 @@
               "id": "22",
               "content": "I fell off my bike, but I didn't break any bones. I just got a slight <i>fracture</i> on my toe.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "fracture chính là gãy xương/rạn xương, mâu thuẫn với câu trước 'didn't break any bones'.",
               "correctAnswer": "B"
@@ -300,10 +293,9 @@
               "id": "23",
               "content": "This bush in my yard comes from another country. It's <i>indigenous</i> to my yard.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "indigenous nghĩa là bản địa, nhưng câu trước nói 'comes from another country', như vậy không thể là bản địa.",
               "correctAnswer": "B"
@@ -312,10 +304,9 @@
               "id": "24",
               "content": "From the mountain <i>ridge</i>, you can see the entire city below.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "ridge là dải núi; đứng từ đó có thể nhìn thấy thành phố bên dưới, hợp ngữ cảnh.",
               "correctAnswer": "A"
@@ -324,10 +315,9 @@
               "id": "25",
               "content": "Mike is a very <i>proficient</i> reader. He finished the entire novel in just an hour.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "proficient (thành thạo) phù hợp với việc đọc xong một cuốn tiểu thuyết trong một giờ.",
               "correctAnswer": "A"
@@ -336,10 +326,9 @@
               "id": "26",
               "content": "We were in awe of the professor's <i>expertise</i> on the subject.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "expertise là chuyên môn; hợp lý khi nói về một giáo sư.",
               "correctAnswer": "A"
@@ -348,10 +337,9 @@
               "id": "27",
               "content": "You should <i>thrust</i> the baby when putting him in bed, so he doesn't wake up.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "thrust là đẩy mạnh; không ai đẩy mạnh một em bé khi đặt xuống giường.",
               "correctAnswer": "B"
@@ -360,10 +348,9 @@
               "id": "28",
               "content": "I will get married to my <i>spouse</i> one year from today.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "spouse là người bạn đời (vợ/chồng đã kết hôn), bạn không thể nói 'sẽ kết hôn với người vợ/chồng hiện tại'.",
               "correctAnswer": "B"
@@ -372,10 +359,9 @@
               "id": "29",
               "content": "Australia has a very long <i>coastline</i>.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "coastline (đường bờ biển), hợp lý vì Úc là một đảo quốc rộng lớn.",
               "correctAnswer": "A"
@@ -384,10 +370,9 @@
               "id": "30",
               "content": "She is on a <i>quest</i> to find her long lost brother.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "quest là cuộc tìm kiếm; hoàn toàn hợp nghĩa.",
               "correctAnswer": "A"
@@ -396,10 +381,9 @@
               "id": "31",
               "content": "If you don't like your job, you should <i>devise</i> it.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "devise là nghĩ ra/lên kế hoạch; không hợp lý trong ngữ cảnh không thích công việc.",
               "correctAnswer": "B"
@@ -408,10 +392,9 @@
               "id": "32",
               "content": "She will have to get more <i>altitude</i> if she wants to swim faster.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "altitude là độ cao, bơi lội thì không cần độ cao.",
               "correctAnswer": "B"
@@ -420,10 +403,9 @@
               "id": "33",
               "content": "The workers <i>implemented</i> a new strategy to be more efficient.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "implement (thi hành/áp dụng) chiến lược mới là hoàn toàn đúng.",
               "correctAnswer": "A"
@@ -432,10 +414,9 @@
               "id": "34",
               "content": "Nothing will <i>deter</i> me in my hunt for the perfect flower.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "deter (cản trở); hợp lý, ý nói không gì cản trở được.",
               "correctAnswer": "A"
@@ -444,16 +425,15 @@
               "id": "35",
               "content": "Her <i>insight</i> into our problem really helped us out.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "insight (sự thấu hiểu) giúp giải quyết vấn đề, rất hợp nghĩa.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     }

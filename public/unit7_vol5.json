@@ -18,7 +18,7 @@
           "questions": [
             {
               "id": "1",
-              "content": "The climate where I live is very [ 1 ].",
+              "content": "The climate where I live is very [ 1 ]. It never drops below 10 degrees [ 2 ]. I learned about a tiny animal called a [ 3 ]. Some live on land, and others are [ 4 ]. The strange old man's behavior is quite [ 5 ]. The plastic chicken he takes with him everywhere is his only [ 6 ]. Jim loves every type of plant and animal in the [ 7 ]. Therefore, he is going to college to study [ 8 ]. Without his shield, the sword fighter was [ 9 ]. Defeating his enemy without protection was an amazing [ 10 ].",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -36,7 +36,7 @@
             },
             {
               "id": "2",
-              "content": "It never drops below 10 degrees [ 2 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -54,7 +54,7 @@
             },
             {
               "id": "3",
-              "content": "I learned about a tiny animal called a [ 3 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -72,7 +72,7 @@
             },
             {
               "id": "4",
-              "content": "Some live on land, and others are [ 4 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -90,7 +90,7 @@
             },
             {
               "id": "5",
-              "content": "The strange old man's behavior is quite [ 5 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -108,7 +108,7 @@
             },
             {
               "id": "6",
-              "content": "The plastic chicken he takes with him everywhere is his only [ 6 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -126,7 +126,7 @@
             },
             {
               "id": "7",
-              "content": "Jim loves every type of plant and animal in the [ 7 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -144,7 +144,7 @@
             },
             {
               "id": "8",
-              "content": "Therefore, he is going to college to study [ 8 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -162,7 +162,7 @@
             },
             {
               "id": "9",
-              "content": "Without his shield, the sword fighter was [ 9 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -180,7 +180,7 @@
             },
             {
               "id": "10",
-              "content": "Defeating his enemy without protection was an amazing [ 10 ].",
+              "content": "",
               "options": [
                 "aquatic",
                 "biosphere",
@@ -251,10 +251,9 @@
               "id": "16",
               "content": "The <i>reproductive</i> process in rabbits explains how they hunt for food.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "reproductive nghĩa là sinh sản, không liên quan đến cách chúng săn mồi (hunt for food).",
               "correctAnswer": "B"
@@ -263,10 +262,9 @@
               "id": "17",
               "content": "In Biology class, we learned about the different parts of a cell's <i>nucleus</i>.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "nucleus (nhân tế bào) phù hợp với ngữ cảnh lớp học sinh học.",
               "correctAnswer": "A"
@@ -275,10 +273,9 @@
               "id": "18",
               "content": "It is hard for some people to remain silent for the <i>duration</i> of a long movie.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "duration (khoảng thời gian) hoàn toàn hợp lý.",
               "correctAnswer": "A"
@@ -287,10 +284,9 @@
               "id": "19",
               "content": "I could listen to my favorite song all day. I have <i>tolerance</i> for great music.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "tolerance là khả năng chịu đựng điều gì đó khó chịu, không dùng cho 'great music' (nhạc hay).",
               "correctAnswer": "B"
@@ -299,10 +295,9 @@
               "id": "20",
               "content": "I will have to <i>undergo</i> through the tunnel to get home.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "undergo là trải qua (một quá trình/sự việc/đợt điều trị), không đi kèm giới từ through (chỉ việc đi qua đường hầm).",
               "correctAnswer": "B"
@@ -311,10 +306,9 @@
               "id": "21",
               "content": "This blanket is not very comfortable. It would be better if it was not so <i>coarse</i>.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "coarse (thô ráp) hợp lý với chiếc chăn không thoải mái.",
               "correctAnswer": "A"
@@ -323,10 +317,9 @@
               "id": "22",
               "content": "She has exactly twenty jelly beans, which is an <i>infinite</i> amount.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "infinite là vô hạn, không thể dùng cho số lượng cụ thể là 'exactly twenty'.",
               "correctAnswer": "B"
@@ -335,10 +328,9 @@
               "id": "23",
               "content": "The boy became a <i>prominent</i> figure in town after he saved the woman's life.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "prominent figure (nhân vật nổi bật) là một cụm từ hợp lý sau khi cứu sống ai đó.",
               "correctAnswer": "A"
@@ -347,10 +339,9 @@
               "id": "24",
               "content": "Her new car is <i>bizarre</i>. It has five wheels and no doors!",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "bizarre (kì lạ) dùng miêu tả chiếc ô tô có 5 bánh và không cửa là chính xác.",
               "correctAnswer": "A"
@@ -359,10 +350,9 @@
               "id": "25",
               "content": "There is no life on Venus, so researchers study its <i>ecology</i> instead.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "ecology (hệ sinh thái) liên quan đến sinh vật và môi trường sống, không có sự sống thì không nghiên cứu ecology.",
               "correctAnswer": "B"
@@ -371,10 +361,9 @@
               "id": "26",
               "content": "The <i>vulnerable</i> lion roared and scared away the zebras.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "vulnerable nghĩa là dễ bị tổn thương/yếu đuối, không hợp lý khi con sư tử gầm rống và đuổi ngựa vằn.",
               "correctAnswer": "B"
@@ -383,10 +372,9 @@
               "id": "27",
               "content": "Fish must live in <i>aquatic</i> environments.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "aquatic environments (môi trường nước) hoàn toàn đúng cho cá.",
               "correctAnswer": "A"
@@ -395,10 +383,9 @@
               "id": "28",
               "content": "The circus performers were capable of many wonderful <i>feats</i>.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "feats (kĩ năng/màn trình diễn xuất sắc) hợp lý với diễn viên xiếc.",
               "correctAnswer": "A"
@@ -407,10 +394,9 @@
               "id": "29",
               "content": "The <i>repetitive</i> sound of ocean waves helps me to fall asleep.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "repetitive sound (âm thanh lặp lại đều đặn) của sóng biển ru ngủ là đúng.",
               "correctAnswer": "A"
@@ -419,10 +405,9 @@
               "id": "30",
               "content": "The <i>cake</i> digested the delicious cookies.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "digest (tiêu hoá), bánh ngọt (cake) không thể tiêu hoá cookie.",
               "correctAnswer": "B"
@@ -431,10 +416,9 @@
               "id": "31",
               "content": "The <i>temperate</i> nights were almost too cold to bear.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "temperate (ôn hoà/ấm áp), không thể miêu tả thời tiết 'too cold to bear'.",
               "correctAnswer": "B"
@@ -443,10 +427,9 @@
               "id": "32",
               "content": "Parasites are <i>independent</i> forms of life.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "parasite (kí sinh trùng) sống dựa vào sinh vật khác, nên không phải là dạng sống độc lập (independent).",
               "correctAnswer": "B"
@@ -455,10 +438,9 @@
               "id": "33",
               "content": "I don't want to go alone. I wish I had a <i>companion</i>.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "companion (người đồng hành) rất phù hợp ngữ cảnh.",
               "correctAnswer": "A"
@@ -467,10 +449,9 @@
               "id": "34",
               "content": "Will you please <i>Celsius</i> the temperature outside?",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Celsius (độ C) là danh từ chỉ đơn vị đo, không thể dùng như động từ.",
               "correctAnswer": "B"
@@ -479,16 +460,15 @@
               "id": "35",
               "content": "The drawing of the earth showed the different elements of the <i>biosphere</i>.",
               "options": [
-                "Correct",
-                "Incorrect",
-                "Not Given",
-                "None of the above"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "biosphere (sinh quyển) hoàn toàn hợp nghĩa.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     },
