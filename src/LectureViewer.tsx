@@ -457,14 +457,14 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          }
          table { 
              border-collapse: collapse;
-             width: 100%; 
+             width: 100% !important; 
              margin-bottom: 1.5rem; 
              border-radius: 8px; 
              overflow: hidden; 
              box-shadow: 0 1px 3px rgba(0,0,0,0.05);
          }
          table th, table td { 
-             border: 1px solid #e2e8f0;
+             border: 1px solid #94a3b8 !important;
              padding: 0.875rem 1rem; 
              vertical-align: top; 
          }
