@@ -19,126 +19,146 @@
           "questions": [
             {
               "id": "1",
-              "content": "A survey found that not very many people like the __________. So he is trying to think of ways to ___________ his image and make people like him.",
+              "content": "A survey found that not very many people like the [ 1_0 ]. So he is trying to think of ways to [ 1_1 ] his image and make people like him.",
               "options": [
-                "candidate / enhance",
-                "enhance / candidate",
-                "candidate / era",
-                "enhance / era"
+                "candidate",
+                "enhance",
+                "era"
               ],
               "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": [
+                "candidate",
+                "enhance"
+              ]
             },
             {
               "id": "2",
-              "content": "We live in a(n) ___________ where people are very concerned about conserving our natural resources. Many people think using ___________ energy is a good way to do this.",
+              "content": "We live in a(n) [ 2_0 ] where people are very concerned about conserving our natural resources. Many people think using [ 2_1 ] energy is a good way to do this.",
               "options": [
-                "solar / era",
-                "era / solar",
-                "pollute / solar",
-                "era / pollute"
+                "solar",
+                "era",
+                "pollute"
               ],
               "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng.",
-              "correctAnswer": "B"
+              "correctAnswer": [
+                "era",
+                "solar"
+              ]
             },
             {
               "id": "3",
-              "content": "The company doesn't want to ___________ the air anymore, so they are going to ___________ new rules for disposing waste.",
+              "content": "The company doesn't want to [ 3_0 ] the air anymore, so they are going to [ 3_1 ] new rules for disposing waste.",
               "options": [
-                "incorporate / pollute",
-                "pollute / incorporate",
-                "modify / incorporate",
-                "pollute / modify"
+                "incorporate",
+                "pollute",
+                "modify"
               ],
               "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng.",
-              "correctAnswer": "B"
+              "correctAnswer": [
+                "pollute",
+                "incorporate"
+              ]
             },
             {
               "id": "4",
-              "content": "The ___________ files were locked in the basement. The information in them was about important customers and had to be kept ___________.",
+              "content": "The [ 4_0 ] files were locked in the basement. The information in them was about important customers and had to be kept [ 4_1 ].",
               "options": [
-                "corporate / confidential",
-                "confidential / corporate",
-                "mobile / confidential",
-                "corporate / mobile"
+                "corporate",
+                "confidential",
+                "mobile"
               ],
               "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": [
+                "corporate",
+                "confidential"
+              ]
             },
             {
               "id": "5",
-              "content": "In the early 1900s, music records were an amazing ___________. People back then would have been even more amazed by today's ___________ music players.",
+              "content": "In the early 1900s, music records were an amazing [ 5_0 ]. People back then would have been even more amazed by today's [ 5_1 ] music players.",
               "options": [
-                "phenomenon / mobile",
-                "mobile / phenomenon",
-                "automobile / phenomenon",
-                "phenomenon / automobile"
+                "phenomenon",
+                "mobile",
+                "automobile"
               ],
               "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": [
+                "phenomenon",
+                "mobile"
+              ]
             },
             {
               "id": "6",
-              "content": "The old ___________ was very large and difficult to drive. Jane had trouble parking it between the ___________ lines in the parking lot.",
+              "content": "The old [ 6_0 ] was very large and difficult to drive. Jane had trouble parking it between the [ 6_1 ] lines in the parking lot.",
               "options": [
-                "automobile / parallel",
-                "parallel / automobile",
-                "automobile / territory",
-                "parallel / territory"
+                "automobile",
+                "parallel",
+                "territory"
               ],
               "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": [
+                "automobile",
+                "parallel"
+              ]
             },
             {
               "id": "7",
-              "content": "Ben didn't listen to my advice about ___________. Instead, he ___________ me and continued to drive fast, eventually causing an accident.",
+              "content": "Ben didn't listen to my advice about [ 7_0 ]. Instead, he [ 7_1 ] me and continued to drive fast, eventually causing an accident.",
               "options": [
-                "transportation / ridiculed",
-                "ridiculed / transportation",
-                "guidelines / ridiculed",
-                "transportation / guidelines"
+                "transportation",
+                "ridiculed",
+                "guidelines"
               ],
               "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": [
+                "transportation",
+                "ridiculed"
+              ]
             },
             {
               "id": "8",
-              "content": "The ___________ for the race are very simple: just run as fast as you can. There will be short ___________ when you can stop for a drink of water.",
+              "content": "The [ 8_0 ] for the race are very simple: just run as fast as you can. There will be short [ 8_1 ] when you can stop for a drink of water.",
               "options": [
-                "intervals / guidelines",
-                "guidelines / intervals",
-                "guidelines / territories",
-                "intervals / territories"
+                "intervals",
+                "guidelines",
+                "territories"
               ],
               "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng.",
-              "correctAnswer": "B"
+              "correctAnswer": [
+                "guidelines",
+                "intervals"
+              ]
             },
             {
               "id": "9",
-              "content": "The government decided to ___________ its borders. It made several of its ___________ smaller so that it could create a new one.",
+              "content": "The government decided to [ 9_0 ] its borders. It made several of its [ 9_1 ] smaller so that it could create a new one.",
               "options": [
-                "territories / modify",
-                "modify / territories",
-                "modify / interact",
-                "territories / interact"
+                "territories",
+                "modify",
+                "interact"
               ],
               "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng.",
-              "correctAnswer": "B"
+              "correctAnswer": [
+                "modify",
+                "territories"
+              ]
             },
             {
               "id": "10",
-              "content": "The baseball ___________ is always a lot of fun. It allows students from all over the city to ___________ with each other.",
+              "content": "The baseball [ 10_0 ] is always a lot of fun. It allows students from all over the city to [ 10_1 ] with each other.",
               "options": [
-                "tournament / interact",
-                "interact / tournament",
-                "tournament / modify",
-                "interact / modify"
+                "tournament",
+                "interact",
+                "modify"
               ],
               "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": [
+                "tournament",
+                "interact"
+              ]
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Droplist"
         },
         {
           "id": "sec1_ex2",
