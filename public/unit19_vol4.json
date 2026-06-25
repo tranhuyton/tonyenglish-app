@@ -87,7 +87,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "Scientists do not completely understand the *<i>air that surrounds the Earth</i>*.",
+              "content": "Scientists do not completely understand the <b class=\"font-bold\">air that surrounds the Earth</b>.",
               "options": [
                 "cargo",
                 "atmosphere",
@@ -99,7 +99,7 @@
             },
             {
               "id": "7",
-              "content": "The police officer said in a *<i>definite way</i>* that he arrived at exactly 1:15 PM.",
+              "content": "The police officer said in a <b class=\"font-bold\">definite way</b> that he arrived at exactly 1:15 PM.",
               "options": [
                 "stated",
                 "flipped",
@@ -111,7 +111,7 @@
             },
             {
               "id": "8",
-              "content": "The teacher asked the students to read three *<i>divisions in a book</i>*.",
+              "content": "The teacher asked the students to read three <b class=\"font-bold\">divisions in a book</b>.",
               "options": [
                 "aisles",
                 "peas",
@@ -123,7 +123,7 @@
             },
             {
               "id": "9",
-              "content": "Carolyn *<i>told</i>* me that she would be late to the meeting.",
+              "content": "Carolyn <b class=\"font-bold\">told</b> me that she would be late to the meeting.",
               "options": [
                 "notified",
                 "retained",
@@ -135,7 +135,7 @@
             },
             {
               "id": "10",
-              "content": "His mother brought his food to him on a *<i>flat serving plate</i>*.",
+              "content": "His mother brought his food to him on a <b class=\"font-bold\">flat serving plate</b>.",
               "options": [
                 "raisin",
                 "tray",
@@ -147,7 +147,7 @@
             },
             {
               "id": "11",
-              "content": "Gina was *<i>affected with</i>* guilt because her brother got hurt while she watched him.",
+              "content": "Gina was <b class=\"font-bold\">affected with</b> guilt because her brother got hurt while she watched him.",
               "options": [
                 "afflicted by",
                 "stated",
@@ -159,7 +159,7 @@
             },
             {
               "id": "12",
-              "content": "Islands like Bali, Hawaii, Brunei, and *<i>the others similar</i>*, rely on tourism.",
+              "content": "Islands like Bali, Hawaii, Brunei, and <b class=\"font-bold\">the others similar</b>, rely on tourism.",
               "options": [
                 "authors",
                 "etc.",
@@ -171,7 +171,7 @@
             },
             {
               "id": "13",
-              "content": "The flight attendant asked me to keep my bag out of the *<i>space between the seats</i>*.",
+              "content": "The flight attendant asked me to keep my bag out of the <b class=\"font-bold\">space between the seats</b>.",
               "options": [
                 "breakdown",
                 "cargo",
@@ -183,7 +183,7 @@
             },
             {
               "id": "14",
-              "content": "The computer's *<i>failure to work</i>* caused major problems at work.",
+              "content": "The computer's <b class=\"font-bold\">failure to work</b> caused major problems at work.",
               "options": [
                 "breakdown",
                 "author",
@@ -195,7 +195,7 @@
             },
             {
               "id": "15",
-              "content": "The *<i>person who wrote the book</i>* was nice enough to sign my copy of his book.",
+              "content": "The <b class=\"font-bold\">person who wrote the book</b> was nice enough to sign my copy of his book.",
               "options": [
                 "author",
                 "pea",
