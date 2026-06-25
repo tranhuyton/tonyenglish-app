@@ -86,7 +86,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "The child received treatment for his mental condition after he became depressed.",
+              "content": "The child received <u>treatment for his mental condition</u> after he became depressed.",
               "options": [
                 "therapy",
                 "biological",
@@ -98,7 +98,7 @@
             },
             {
               "id": "7",
-              "content": "The medical students learned which processes were occurring inside living things.",
+              "content": "The medical students learned which processes were <u>occurring inside living things</u>.",
               "options": [
                 "therapy",
                 "biological",
@@ -110,7 +110,7 @@
             },
             {
               "id": "8",
-              "content": "Unicorns only exist in a situation people think about but will not happen.",
+              "content": "Unicorns only exist in a <u>situation people think about but will not happen</u>.",
               "options": [
                 "therapy",
                 "biological",
@@ -122,7 +122,7 @@
             },
             {
               "id": "9",
-              "content": "When he begins his rule, people will have to change to the new situation.",
+              "content": "When he begins his rule, people will have to <u>change to the new situation</u>.",
               "options": [
                 "therapy",
                 "biological",
@@ -134,7 +134,7 @@
             },
             {
               "id": "10",
-              "content": "At the relating to cells level, plants and animals are quite similar.",
+              "content": "At the <u>relating to cells</u> level, plants and animals are quite similar.",
               "options": [
                 "cellular",
                 "rigid",
@@ -146,7 +146,7 @@
             },
             {
               "id": "11",
-              "content": "We thought his rules were too severe because they cannot be changed.",
+              "content": "We thought his rules were too <u>severe because they cannot be changed</u>.",
               "options": [
                 "cellular",
                 "rigid",
@@ -158,7 +158,7 @@
             },
             {
               "id": "12",
-              "content": "The lively and creative scientist invented a new formula to help stop aging.",
+              "content": "The <u>lively and creative</u> scientist invented a new formula to help stop aging.",
               "options": [
                 "cellular",
                 "rigid",
@@ -170,7 +170,7 @@
             },
             {
               "id": "13",
-              "content": "The creative inventor was a first person to discover the process of electricity.",
+              "content": "The creative inventor was a <u>first person to discover</u> the process of electricity.",
               "options": [
                 "cellular",
                 "rigid",
@@ -182,7 +182,7 @@
             },
             {
               "id": "14",
-              "content": "There is a specific number of events that come in an order in which to use the tools.",
+              "content": "There is a specific <u>number of events that come in an order</u> in which to use the tools.",
               "options": [
                 "sequence",
                 "revived",
@@ -194,7 +194,7 @@
             },
             {
               "id": "15",
-              "content": "The brilliant doctor brought back to life the dead patient.",
+              "content": "The brilliant doctor <u>brought back to life</u> the dead patient.",
               "options": [
                 "sequence",
                 "revived",

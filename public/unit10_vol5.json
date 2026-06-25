@@ -342,7 +342,7 @@
           "questions": [
             {
               "id": "26",
-              "content": "My favorite cake is made using flour from beans.",
+              "content": "My favorite cake is made using <u>flour from beans</u>.",
               "options": [
                 "soy",
                 "ditch",
@@ -390,7 +390,7 @@
             },
             {
               "id": "30",
-              "content": "The preparation duties before the concert included testing the microphones.",
+              "content": "The <u>preparation duties before</u> the concert included testing the microphones.",
               "options": [
                 "preliminary",
                 "exquisite",
@@ -402,7 +402,7 @@
             },
             {
               "id": "31",
-              "content": "The spilled juice completely soaked the small rug on the kitchen floor.",
+              "content": "The spilled juice <u>completely soaked</u> the small rug on the kitchen floor.",
               "options": [
                 "financed",
                 "saturated",
@@ -414,7 +414,7 @@
             },
             {
               "id": "32",
-              "content": "Many wealthy companies provided money for the private school.",
+              "content": "Many wealthy companies <u>provided money</u> for the private school.",
               "options": [
                 "financed",
                 "irrigated",
@@ -426,7 +426,7 @@
             },
             {
               "id": "33",
-              "content": "That business person owns companies in many countries around the world.",
+              "content": "That <u>business person</u> owns companies in many countries around the world.",
               "options": [
                 "capitalist",
                 "accountant",
@@ -438,7 +438,7 @@
             },
             {
               "id": "34",
-              "content": "She is lacking interest about what movie we choose to watch.",
+              "content": "She is <u>lacking interest</u> about what movie we choose to watch.",
               "options": [
                 "upcoming",
                 "indifferent",
@@ -450,7 +450,7 @@
             },
             {
               "id": "35",
-              "content": "I want to decide to put the time and effort of myself to saving kittens.",
+              "content": "I want to decide to <u>put the time and effort</u> of myself to saving kittens.",
               "options": [
                 "dedicate",
                 "sow",

@@ -290,7 +290,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "Our hotel was situated on a piece of land that was surrounded by the sea on three sides.",
+              "content": "Our hotel was situated on a <u>piece of land that was surrounded by the sea on three sides</u>.",
               "options": [
                 "peninsula",
                 "drawbacks",
@@ -302,7 +302,7 @@
             },
             {
               "id": "22",
-              "content": "Doctors say the exercise can reduce the chances of getting ill.",
+              "content": "Doctors say the exercise can <u>reduce</u> the chances of getting ill.",
               "options": [
                 "diminish",
                 "impose",
@@ -314,7 +314,7 @@
             },
             {
               "id": "23",
-              "content": "Children's reliance on their parents decreases as they get older.",
+              "content": "Children's <u>reliance</u> on their parents decreases as they get older.",
               "options": [
                 "dependence",
                 "proportion",
@@ -326,7 +326,7 @@
             },
             {
               "id": "24",
-              "content": "There are a number of disadvantages to taking up this new technology.",
+              "content": "There are a number of <u>disadvantages</u> to taking up this new technology.",
               "options": [
                 "drawbacks",
                 "components",
@@ -338,7 +338,7 @@
             },
             {
               "id": "25",
-              "content": "A large amount of students from my school want to go to university.",
+              "content": "A large <u>amount</u> of students from my school want to go to university.",
               "options": [
                 "fad",
                 "proportion",
@@ -350,7 +350,7 @@
             },
             {
               "id": "26",
-              "content": "I need to buy some new parts for my computer to make it work properly.",
+              "content": "I need to buy some new <u>parts</u> for my computer to make it work properly.",
               "options": [
                 "drawbacks",
                 "components",
@@ -362,7 +362,7 @@
             },
             {
               "id": "27",
-              "content": "I'm sorry to interrupt and intrude on you, but I need some help with my car.",
+              "content": "I'm sorry to <u>interrupt and intrude</u> on you, but I need some help with my car.",
               "options": [
                 "refute",
                 "weave",
@@ -374,7 +374,7 @@
             },
             {
               "id": "28",
-              "content": "The newspaper editor disproved the claim that the stories in the paper were untrue.",
+              "content": "The newspaper editor <u>disproved</u> the claim that the stories in the paper were untrue.",
               "options": [
                 "refuted",
                 "diminished",
@@ -386,7 +386,7 @@
             },
             {
               "id": "29",
-              "content": "The show at the theater was very impressive.",
+              "content": "The show at the theater was <u>very impressive</u>.",
               "options": [
                 "spectacular",
                 "archaic",
@@ -398,7 +398,7 @@
             },
             {
               "id": "30",
-              "content": "The kind and generous women gave lots of money to help the poor.",
+              "content": "The <u>kind and generous</u> women gave lots of money to help the poor.",
               "options": [
                 "benevolent",
                 "hostile",

@@ -342,7 +342,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "My earlier report was just a short account of the long, difficult book.",
+              "content": "My earlier report was just a <u>short account</u> of the long, difficult book.",
               "options": [
                 "previous",
                 "oracle",
@@ -354,7 +354,7 @@
             },
             {
               "id": "22",
-              "content": "In ancient Greece, the person who gives advice often gave information about the future.",
+              "content": "In ancient Greece, the <u>person who gives advice often gave information about the future</u>.",
               "options": [
                 "previous",
                 "oracle",
@@ -366,7 +366,7 @@
             },
             {
               "id": "23",
-              "content": "The top of the fence was perfectly flat and level with the ground.",
+              "content": "The top of the fence was perfectly <u>flat and level with the ground</u>.",
               "options": [
                 "previous",
                 "oracle",
@@ -378,7 +378,7 @@
             },
             {
               "id": "24",
-              "content": "I know about the piece because I saw the viewing before it was available to the public.",
+              "content": "I know about the piece because I saw the <u>viewing before it was available</u> to the public.",
               "options": [
                 "previous",
                 "oracle",
@@ -390,7 +390,7 @@
             },
             {
               "id": "25",
-              "content": "The baker made an extra piece of bread for the homeless man in the alley.",
+              "content": "The baker made an extra <u>piece of bread</u> for the homeless man in the alley.",
               "options": [
                 "loaf",
                 "inward",
@@ -402,7 +402,7 @@
             },
             {
               "id": "26",
-              "content": "She is embarrassed of some of her not expressed or shown thoughts.",
+              "content": "She is embarrassed of some of her <u>not expressed or shown thoughts</u>.",
               "options": [
                 "loaf",
                 "inward",
@@ -414,7 +414,7 @@
             },
             {
               "id": "27",
-              "content": "The fisherman liked to make a low, continuous noise while he waited for a bite.",
+              "content": "The fisherman liked to <u>make a low, continuous noise</u> while he waited for a bite.",
               "options": [
                 "loaf",
                 "inward",
@@ -426,7 +426,7 @@
             },
             {
               "id": "28",
-              "content": "The travelers were given a place to stay, but they had to supply their own food.",
+              "content": "The travelers were given a place to stay, but they had to <u>supply</u> their own food.",
               "options": [
                 "loaf",
                 "inward",
@@ -438,7 +438,7 @@
             },
             {
               "id": "29",
-              "content": "The company had to stop the process of the production of the dangerous toy.",
+              "content": "The company had to <u>stop the process</u> of the production of the dangerous toy.",
               "options": [
                 "stall",
                 "glacier",
@@ -450,7 +450,7 @@
             },
             {
               "id": "30",
-              "content": "We saw a cute polar bear jump into the water from the edge of the large mass of ice.",
+              "content": "We saw a cute polar bear jump into the water from the edge of the <u>large mass of ice</u>.",
               "options": [
                 "stall",
                 "glacier",

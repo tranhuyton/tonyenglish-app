@@ -282,7 +282,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "The circus performer held on to the elephant’s long, curved tooth.",
+              "content": "The circus performer held on to the elephant’s <u>long, curved tooth</u>.",
               "options": [
                 "tusk",
                 "authentic",
@@ -294,7 +294,7 @@
             },
             {
               "id": "22",
-              "content": "The salesman assured me that the artwork was not false or an imitation.",
+              "content": "The salesman assured me that the artwork was <u>not false or an imitation</u>.",
               "options": [
                 "tusk",
                 "authentic",
@@ -306,7 +306,7 @@
             },
             {
               "id": "23",
-              "content": "At the end of the year, our club will select a new person to join.",
+              "content": "At the end of the year, our club will <u>select a new person to join</u>.",
               "options": [
                 "tusk",
                 "authentic",
@@ -318,7 +318,7 @@
             },
             {
               "id": "24",
-              "content": "Janet isn’t able to arrive at the right time at all. She’s late to school every day.",
+              "content": "Janet isn’t able to <u>arrive at the right time</u> at all. She’s late to school every day.",
               "options": [
                 "tusk",
                 "authentic",
@@ -330,7 +330,7 @@
             },
             {
               "id": "25",
-              "content": "It is difficult to follow the series of past events and times of computer programming.",
+              "content": "It is difficult to follow the <u>series of past events and times</u> of computer programming.",
               "options": [
                 "chronology",
                 "fossil",
@@ -342,7 +342,7 @@
             },
             {
               "id": "26",
-              "content": "DNA can be taken from a part of hard remains from a prehistoric animal.",
+              "content": "DNA can be taken from a part of <u>hard remains from a prehistoric animal</u>.",
               "options": [
                 "chronology",
                 "fossil",
@@ -354,7 +354,7 @@
             },
             {
               "id": "27",
-              "content": "Please stand and read a(an) short piece of writing taken from a larger piece.",
+              "content": "Please stand and read a(an) <u>short piece of writing taken from a larger piece</u>.",
               "options": [
                 "chronology",
                 "fossil",
@@ -366,7 +366,7 @@
             },
             {
               "id": "28",
-              "content": "I took a class at the university where I wrote simple and direct poetry.",
+              "content": "I took a class at the university where I wrote <u>simple and direct poetry</u>.",
               "options": [
                 "chronology",
                 "fossil",
@@ -378,7 +378,7 @@
             },
             {
               "id": "29",
-              "content": "The Iliad is a wonderful long book about great events.",
+              "content": "The Iliad is a wonderful <u>long book about great events</u>.",
               "options": [
                 "epic",
                 "renown",
@@ -390,7 +390,7 @@
             },
             {
               "id": "30",
-              "content": "Her mother was a dancer of some quality of being well known for doing good things.",
+              "content": "Her mother was a dancer of some <u>quality of being well known for doing good things</u>.",
               "options": [
                 "epic",
                 "renown",
