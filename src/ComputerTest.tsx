@@ -2040,7 +2040,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               <label htmlFor="review" className="text-[14px] font-bold text-black cursor-pointer mt-0.5 whitespace-nowrap">Review</label>
             </div>
             
-            <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto px-6 py-1 custom-scrollbar min-w-0">
+            <div className="flex-1 flex justify-start items-center gap-1.5 overflow-x-auto px-6 py-1 custom-scrollbar min-w-0">
               {allQuestionIds.map(id => {
                 let isAnswered = answers[id] && answers[id].trim() !== '';
                 const isReview = reviewFlags[id];

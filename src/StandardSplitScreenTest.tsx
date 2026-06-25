@@ -2389,7 +2389,7 @@ const handleFinish = async () => {
 
          {!isListening && (
              <footer className="w-full h-[64px] bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-between items-center px-6 shrink-0 select-none font-sans relative z-30">
-               <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto py-1 custom-scrollbar min-w-0">
+               <div className="flex-1 flex justify-start items-center gap-1.5 overflow-x-auto py-1 custom-scrollbar min-w-0">
                  {allQuestionIds.map(id => {
                     let isAns = answers[id] && answers[id].trim() !== '';
                     const isMarked = marked[id];
