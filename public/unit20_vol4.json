@@ -77,7 +77,8 @@
               "correctAnswer": "B",
               "explanation": "blast: tiếng nổ"
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>"
         },
         {
           "id": "sec_wl_1",
@@ -154,7 +155,8 @@
               "correctAnswer": "cross",
               "explanation": "cross = đi qua"
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>"
         },
         {
           "id": "sec_wl_2",
@@ -261,7 +263,8 @@
               "correctAnswer": "A",
               "explanation": "rife (đầy rẫy), pray (cầu nguyện)"
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>"
         }
       ]
     },
@@ -335,7 +338,8 @@
               "correctAnswer": "T",
               "explanation": ""
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>"
         },
         {
           "id": "sec_r_1",
@@ -390,7 +394,8 @@
               "correctAnswer": "B",
               "explanation": "In the hall"
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>"
         }
       ],
       "imageUrl": "/unit20_vol4_story.png"

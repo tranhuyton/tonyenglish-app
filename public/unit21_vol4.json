@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1",
-          "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>",
           "questions": [
             {
               "id": "1",
@@ -92,8 +92,8 @@
         },
         {
           "id": "sec2",
-          "title": "Exercise 2: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "1",
@@ -160,8 +160,8 @@
         },
         {
           "id": "sec3",
-          "title": "Exercise 3: Match the phrases to make complete sentences (Part A).",
-          "content": "",
+          "title": "Exercise 3 Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases to make complete sentences .</p>",
           "questions": [
             {
               "id": "1",
@@ -238,8 +238,8 @@
         },
         {
           "id": "sec4",
-          "title": "Exercise 3: Match the clauses to make complete sentences (Part B).",
-          "content": "",
+          "title": "Exercise 3 Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the clauses to make complete sentences .</p>",
           "questions": [
             {
               "id": "1",
@@ -323,8 +323,8 @@
       "sections": [
         {
           "id": "sec5",
-          "title": "Reading Comprehension: Answer the questions. (Part A)",
-          "content": "",
+          "title": "Reading Comprehension Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "1",
@@ -391,8 +391,8 @@
         },
         {
           "id": "sec6",
-          "title": "Reading Comprehension: Answer the questions. (Part B)",
-          "content": "",
+          "title": "Reading Comprehension Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "1",

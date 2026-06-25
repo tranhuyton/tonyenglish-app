@@ -77,7 +77,8 @@
               "correctAnswer": "A",
               "explanation": "'brew' có nghĩa là pha (trà, cà phê), tương ứng với 'to make coffee'."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>"
         },
         {
           "id": "sec_3",
@@ -154,7 +155,8 @@
               "correctAnswer": "nutritious",
               "explanation": "'healthy' (tốt cho sức khỏe, bổ dưỡng) là nutritious."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the bracketed part.</p>"
         },
         {
           "id": "sec_4",
@@ -281,7 +283,8 @@
               "correctAnswer": "C",
               "explanation": "Báo cháy (fire alarms) có mục đích là cảnh báo mọi người (warn people)."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>"
         }
       ]
     },
@@ -355,7 +358,8 @@
               "correctAnswer": "true",
               "explanation": "Câu này đúng. Các vận động viên khác phóng vút đi trong khi Alex bị tụt lại phía sau vì mải nghĩ về giấc mơ. Bài đọc viết là: The runners zoomed toward the finish line. By the time Alex started, he lagged far behind everyone."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>"
         },
         {
           "id": "sec_6",
@@ -410,7 +414,8 @@
               "correctAnswer": "A",
               "explanation": "Cậu ấy đã bị ám ảnh bởi cơn ác mộng khiến bản thân mất tập trung và thua cuộc đua. Tác giả kết luận: He shouldn't have let the nightmare affect him. Vì thế đáp án A là chính xác."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>"
         }
       ],
       "imageUrl": "/unit13_vol4_story.png"

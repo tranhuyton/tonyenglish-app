@@ -77,7 +77,8 @@
               "correctAnswer": "D",
               "explanation": "\"Crime\" là tội phạm, tội ác có thể bị pháp luật trừng phạt."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>"
         },
         {
           "id": "sec_1",
@@ -144,7 +145,8 @@
               "correctAnswer": "C",
               "explanation": "\"Proclaim\" (tuyên bố) có nghĩa là nói hay thông báo điều gì đó trước công chúng."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>"
         },
         {
           "id": "sec_2",
@@ -211,7 +213,8 @@
               "correctAnswer": "D",
               "explanation": "\"Gratitude\" là lòng biết ơn, vì vậy người có lòng biết ơn thường nói \"Thank you.\" (Cảm ơn)."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>"
         },
         {
           "id": "sec_3",
@@ -288,7 +291,8 @@
               "correctAnswer": "gratitude",
               "explanation": "\"feeling of being thankful\" tương đương với \"gratitude\" (lòng biết ơn)."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>"
         }
       ]
     },
@@ -362,7 +366,8 @@
               "correctAnswer": "A",
               "explanation": "Kiến trúc sư đã khẳng định: \"There are enough resources in my company's bank account to create the best building ever made.\" (Có đủ tài nguyên trong tài khoản ngân hàng của công ty tôi để tạo ra tòa nhà tốt nhất từng được xây dựng). Vậy nên thông tin này là đúng (True)."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>"
         },
         {
           "id": "sec_5",
@@ -417,7 +422,8 @@
               "correctAnswer": "D",
               "explanation": "Thẩm phán đã tuyên bố: \"I cannot give you a sentence for any offenses...\" (Tôi không thể đưa ra bất kỳ bản án nào cho anh vì bất cứ tội danh gì...). Điều này có nghĩa là kiến trúc sư không phải nhận hình phạt hay bản án nào cả."
             }
-          ]
+          ],
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>"
         }
       ],
       "imageUrl": "/unit7_vol4_story.png"
