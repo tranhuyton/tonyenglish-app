@@ -1300,7 +1300,7 @@ const handleFinish = async () => {
               className={`p-8 md:p-10 overflow-y-auto custom-scrollbar html-content-renderer scroll-smooth ${isReviewMode ? 'bg-[#f4f4f4]' : 'bg-[#f4f4f4]'}`} 
               id="questions-container" 
               ref={rightPaneRef as any} 
-              style={{ width: !isListening ? `${100 - leftWidth}%` : '100%', flex: 'none' }}
+              style={{ width: !isListening ? `calc(${100 - leftWidth}% - 16px)` : '100%', flex: 'none' }}
           >
              <div className={`mx-auto relative ${!isListening ? 'pr-8' : ''} ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`} style={{ width: !isListening ? '100%' : '768px', maxWidth: '100%' }}>
                
