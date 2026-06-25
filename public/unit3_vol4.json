@@ -18,127 +18,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1",
-              "content": "I had the ___________ of going with them or staying home. I felt like an __________ for the choice I made.",
-              "options": [
-                "idiot / option",
-                "option / idiot",
-                "option / immense",
-                "immense / idiot"
-              ],
-              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2.",
-              "correctAnswer": "B"
+              "id": "1_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. admonished / idiot / option / torment</b><br/>I had the [ 1 ] of going with them or staying home. I felt like an [ 2 ] for the choice I made. Because he liked to [ 3 ] the kitten by pouring water on it, the boy's mother [ 4 ] him for his cruel behavior.</p><p style=\"margin-bottom: 12px;\"><b>2. brag / echoed / perfect / pinpoint</b><br/>It was difficult to [ 5 ] the dog's location because its cries [ 6 ] off of the hills. My sister likes to [ 7 ] about how my mother and father think her behavior is [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. beware / eventual / pastime / switch</b><br/>When you [ 9 ] the machine on, you need to [ 10 ] because the machine is dangerous. All of the accidents at the swimming pool led to the [ 11 ] closing of it and the end of a favorite summer [ 12 ].</p><p style=\"margin-bottom: 12px;\"><b>4. audible / awesome / conscious / disagreed</b><br/>The king wanted people to think that his power was [ 13 ] . He would put people in jail if they [ 14 ] with him. Even though the little girl was trying to sneak up on her parents, her [ 15 ] steps made her parents [ 16 ] of her.</p><p style=\"margin-bottom: 12px;\"><b>5. hint / immense / indirect / thorough</b><br/>An [ 17 ] tree fell across the road, forcing the travelers to take a more [ 18 ] route through the countryside. The police could not find a single clue to the crime, which gave a [ 19 ] as to how [ 20 ] the thief had been.</p>",
+              "options": [],
+              "correctAnswer": "option",
+              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2."
             },
             {
-              "id": "2",
-              "content": "Because he liked to ___________ the kitten by pouring water on it, the boy's mother ___________ him for his cruel behavior.",
-              "options": [
-                "admonished / torment",
-                "torment / perfect",
-                "torment / admonished",
-                "admonished / brag"
-              ],
-              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2.",
-              "correctAnswer": "C"
+              "id": "1_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "idiot",
+              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2."
             },
             {
-              "id": "3",
-              "content": "It was difficult to ___________ the dog's location because its cries ___________ off of the hills.",
-              "options": [
-                "echoed / pinpoint",
-                "pinpoint / echoed",
-                "pinpoint / switch",
-                "switch / echoed"
-              ],
-              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2.",
-              "correctAnswer": "B"
+              "id": "2_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "torment",
+              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2."
             },
             {
-              "id": "4",
-              "content": "My sister likes to ___________ about how my mother and father think her behavior is ___________.",
-              "options": [
-                "brag / perfect",
-                "perfect / brag",
-                "perfect / eventual",
-                "brag / eventual"
-              ],
-              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2.",
-              "correctAnswer": "A"
+              "id": "2_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "admonished",
+              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2."
             },
             {
-              "id": "5",
-              "content": "When you ___________ the machine on, you need to ___________ because the machine is dangerous.",
-              "options": [
-                "beware / switch",
-                "switch / beware",
-                "switch / conscious",
-                "conscious / beware"
-              ],
-              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2.",
-              "correctAnswer": "B"
+              "id": "3_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "pinpoint",
+              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2."
             },
             {
-              "id": "6",
-              "content": "All of the accidents at the swimming pool led to the __________ closing of it and the end of a favorite summer __________.",
-              "options": [
-                "eventual / pastime",
-                "pastime / eventual",
-                "pastime / awesome",
-                "eventual / awesome"
-              ],
-              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2.",
-              "correctAnswer": "A"
+              "id": "3_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "echoed",
+              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2."
             },
             {
-              "id": "7",
-              "content": "The king wanted people to think that his power was __________ . He would put people in jail if they ___________ with him.",
-              "options": [
-                "disagreed / awesome",
-                "awesome / disagreed",
-                "awesome / immense",
-                "disagreed / immense"
-              ],
-              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2.",
-              "correctAnswer": "B"
+              "id": "4_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "brag",
+              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2."
             },
             {
-              "id": "8",
-              "content": "Even though the little girl was trying to sneak up on her parents, her __________ steps made her parents ___________ of her.",
-              "options": [
-                "audible / conscious",
-                "conscious / audible",
-                "audible / thorough",
-                "conscious / thorough"
-              ],
-              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2.",
-              "correctAnswer": "A"
+              "id": "4_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "perfect",
+              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2."
             },
             {
-              "id": "9",
-              "content": "An ___________ tree fell across the road, forcing the travelers to take a more __________ route through the countryside.",
-              "options": [
-                "indirect / immense",
-                "immense / indirect",
-                "immense / perfect",
-                "indirect / perfect"
-              ],
-              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2.",
-              "correctAnswer": "B"
+              "id": "5_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "switch",
+              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2."
             },
             {
-              "id": "10",
-              "content": "The police could not find a single clue to the crime, which gave a ___________ as to how ___________ the thief had been.",
-              "options": [
-                "hint / thorough",
-                "thorough / hint",
-                "hint / option",
-                "thorough / option"
-              ],
-              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2.",
-              "correctAnswer": "A"
+              "id": "5_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "beware",
+              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2."
+            },
+            {
+              "id": "6_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "eventual",
+              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2."
+            },
+            {
+              "id": "6_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "pastime",
+              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2."
+            },
+            {
+              "id": "7_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "awesome",
+              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2."
+            },
+            {
+              "id": "7_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "disagreed",
+              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2."
+            },
+            {
+              "id": "8_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "audible",
+              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2."
+            },
+            {
+              "id": "8_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "conscious",
+              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2."
+            },
+            {
+              "id": "9_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "immense",
+              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2."
+            },
+            {
+              "id": "9_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "indirect",
+              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2."
+            },
+            {
+              "id": "10_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "hint",
+              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2."
+            },
+            {
+              "id": "10_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "thorough",
+              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2",

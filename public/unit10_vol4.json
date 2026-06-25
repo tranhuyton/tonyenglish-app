@@ -155,107 +155,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "11",
-              "content": "animate / particle\nScientists thought that the tiny _________ was not a living thing, so they were very surprised to find that it was indeed _________.",
-              "options": [
-                "particle / animate",
-                "animate / particle"
-              ],
-              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống).",
-              "correctAnswer": "A"
+              "id": "11_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. animate / handy / numerous / particle</b><br/>animate / particle\nScientists thought that the tiny [ 1 ] was not a living thing, so they were very surprised to find that it was indeed [ 2 ]. handy / numerous\nMy uncle, the carpenter, keeps [ 3 ] tools in his truck. However, he keeps the most [ 4 ] ones on his tool belt at all times.</p><p style=\"margin-bottom: 12px;\"><b>2. classify / longing / plea / upright</b><br/>classify / upright\nOne way that scientists [ 5 ] the different species of early humans is by how they walked. Homo Erectus, for example, walked [ 6 ]. longing / plea\nAfter sitting in the cell for just one hour, the prisoner felt a [ 7 ] to be free. He made a [ 8 ] to the officers to release him immediately.</p><p style=\"margin-bottom: 12px;\"><b>3. concept / review / sophisticated / worthwhile</b><br/>sophisticated / worthwhile\nLearning how to speak another language is a [ 9 ] skill to have in the world of international business. It also can make one into a more [ 10 ] person. review / concept\nJack had a great [ 11 ] for a new system, but his boss needs to conduct a thorough [ 12 ] to see if it will work.</p><p style=\"margin-bottom: 12px;\"><b>4. constructed / decades / diagram / isolate</b><br/>diagram / isolate\nWilliam used a piece of white paper to [ 13 ] the different plants in the garden. That made it easier for him to draw a [ 14 ] of the leaves of each type of plant. constructed / decades\nThe great pyramids of Egypt were not [ 15 ] overnight. In fact, it took many [ 16 ] to complete them.</p><p style=\"margin-bottom: 12px;\"><b>5. concede / ferry / refrain / surrender</b><br/>concede / ferry\nAs he drove his car onto the [ 17 ], John felt sad. He wanted to travel by airplane, but after looking at ticket prices, he had to [ 18 ] that air travel was just too expensive. refrain / surrender\nIn maintaining good health, it is important to [ 19 ] from eating unhealthy foods. But that doesn't mean you must [ 20 ] all of the foods that you enjoy.</p>",
+              "options": [],
+              "correctAnswer": "particle",
+              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống)."
             },
             {
-              "id": "12",
-              "content": "handy / numerous\nMy uncle, the carpenter, keeps _________ tools in his truck. However, he keeps the most _________ ones on his tool belt at all times.",
-              "options": [
-                "handy / numerous",
-                "numerous / handy"
-              ],
-              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất).",
-              "correctAnswer": "B"
+              "id": "11_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "animate",
+              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống)."
             },
             {
-              "id": "13",
-              "content": "classify / upright\nOne way that scientists _________ the different species of early humans is by how they walked. Homo Erectus, for example, walked _________.",
-              "options": [
-                "classify / upright",
-                "upright / classify"
-              ],
-              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng).",
-              "correctAnswer": "A"
+              "id": "12_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "numerous",
+              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất)."
             },
             {
-              "id": "14",
-              "content": "longing / plea\nAfter sitting in the cell for just one hour, the prisoner felt a _________ to be free. He made a _________ to the officers to release him immediately.",
-              "options": [
-                "longing / plea",
-                "plea / longing"
-              ],
-              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin).",
-              "correctAnswer": "A"
+              "id": "12_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "handy",
+              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất)."
             },
             {
-              "id": "15",
-              "content": "sophisticated / worthwhile\nLearning how to speak another language is a _________ skill to have in the world of international business. It also can make one into a more _________ person.",
-              "options": [
-                "sophisticated / worthwhile",
-                "worthwhile / sophisticated"
-              ],
-              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn).",
-              "correctAnswer": "B"
+              "id": "13_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "classify",
+              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng)."
             },
             {
-              "id": "16",
-              "content": "review / concept\nJack had a great _________ for a new system, but his boss needs to conduct a thorough _________ to see if it will work.",
-              "options": [
-                "review / concept",
-                "concept / review"
-              ],
-              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng).",
-              "correctAnswer": "B"
+              "id": "13_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "upright",
+              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng)."
             },
             {
-              "id": "17",
-              "content": "diagram / isolate\nWilliam used a piece of white paper to _________ the different plants in the garden. That made it easier for him to draw a _________ of the leaves of each type of plant.",
-              "options": [
-                "isolate / diagram",
-                "diagram / isolate"
-              ],
-              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ).",
-              "correctAnswer": "A"
+              "id": "14_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "longing",
+              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin)."
             },
             {
-              "id": "18",
-              "content": "constructed / decades\nThe great pyramids of Egypt were not _________ overnight. In fact, it took many _________ to complete them.",
-              "options": [
-                "constructed / decades",
-                "decades / constructed"
-              ],
-              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ).",
-              "correctAnswer": "A"
+              "id": "14_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "plea",
+              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin)."
             },
             {
-              "id": "19",
-              "content": "concede / ferry\nAs he drove his car onto the _________, John felt sad. He wanted to travel by airplane, but after looking at ticket prices, he had to _________ that air travel was just too expensive.",
-              "options": [
-                "concede / ferry",
-                "ferry / concede"
-              ],
-              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận).",
-              "correctAnswer": "B"
+              "id": "15_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "worthwhile",
+              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn)."
             },
             {
-              "id": "20",
-              "content": "refrain / surrender\nIn maintaining good health, it is important to _________ from eating unhealthy foods. But that doesn't mean you must _________ all of the foods that you enjoy.",
-              "options": [
-                "refrain / surrender",
-                "surrender / refrain"
-              ],
-              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ).",
-              "correctAnswer": "A"
+              "id": "15_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "sophisticated",
+              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn)."
+            },
+            {
+              "id": "16_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "concept",
+              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng)."
+            },
+            {
+              "id": "16_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "review",
+              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng)."
+            },
+            {
+              "id": "17_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "isolate",
+              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ)."
+            },
+            {
+              "id": "17_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "diagram",
+              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ)."
+            },
+            {
+              "id": "18_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "constructed",
+              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ)."
+            },
+            {
+              "id": "18_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "decades",
+              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ)."
+            },
+            {
+              "id": "19_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "ferry",
+              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận)."
+            },
+            {
+              "id": "19_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "concede",
+              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận)."
+            },
+            {
+              "id": "20_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "refrain",
+              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ)."
+            },
+            {
+              "id": "20_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "surrender",
+              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ)."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

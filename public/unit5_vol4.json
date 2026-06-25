@@ -18,107 +18,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1",
-              "content": "If you know how to __________ a computer, you can get access to __________.",
-              "options": [
-                "cyberspace / operate",
-                "operate / cyberspace"
-              ],
-              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'.",
-              "correctAnswer": "B"
+              "id": "1_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. cyberspace / global / operate / recent</b><br/>If you know how to [ 1 ] a computer, you can get access to [ 2 ]. A [ 3 ] study shows that [ 4 ] hunger is a very big problem.</p><p style=\"margin-bottom: 12px;\"><b>2. edit / essays / ignorant / weird</b><br/>My mom is completely [ 5 ] about computers. She thinks that email and chat rooms are [ 6 ] ways to spend one's time. Joe has the ability to write great [ 7 ]. His writing is so good that he never has to [ 8 ] his work.</p><p style=\"margin-bottom: 12px;\"><b>3. fainted / index / lecture / semester</b><br/>The report is due at the end of the [ 9 ]. You should look in the [ 10 ] to see if this book will help you with the report. Our teacher [ 11 ] while she was giving us a [ 12 ] about health!</p><p style=\"margin-bottom: 12px;\"><b>4. gymnasium / highlighted / resolution / typewritten</b><br/>Jennifer's notes are very neat! They are [ 13 ], and she has [ 14 ] the most important parts with a green pen. I made a [ 15 ] to go to the [ 16 ] more often to improve my health.</p><p style=\"margin-bottom: 12px;\"><b>5. awhile / evaluated / moral / private</b><br/>The [ 17 ] of the story is that you should think [ 18 ] before saying anything that might hurt someone. We [ 19 ] the company, and our suggestions are written in this [ 20 ] document.</p>",
+              "options": [],
+              "correctAnswer": "operate",
+              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'."
             },
             {
-              "id": "2",
-              "content": "A __________ study shows that __________ hunger is a very big problem.",
-              "options": [
-                "recent / global",
-                "global / recent"
-              ],
-              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn.",
-              "correctAnswer": "A"
+              "id": "1_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "cyberspace",
+              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'."
             },
             {
-              "id": "3",
-              "content": "My mom is completely __________ about computers. She thinks that email and chat rooms are __________ ways to spend one's time.",
-              "options": [
-                "ignorant / weird",
-                "weird / ignorant"
-              ],
-              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian.",
-              "correctAnswer": "A"
+              "id": "2_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "recent",
+              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn."
             },
             {
-              "id": "4",
-              "content": "Joe has the ability to write great __________. His writing is so good that he never has to __________ his work.",
-              "options": [
-                "edit / essays",
-                "essays / edit"
-              ],
-              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình.",
-              "correctAnswer": "B"
+              "id": "2_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "global",
+              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn."
             },
             {
-              "id": "5",
-              "content": "The report is due at the end of the __________. You should look in the __________ to see if this book will help you with the report.",
-              "options": [
-                "semester / index",
-                "index / semester"
-              ],
-              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích.",
-              "correctAnswer": "A"
+              "id": "3_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "ignorant",
+              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian."
             },
             {
-              "id": "6",
-              "content": "Our teacher __________ while she was giving us a __________ about health!",
-              "options": [
-                "lecture / fainted",
-                "fainted / lecture"
-              ],
-              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe.",
-              "correctAnswer": "B"
+              "id": "3_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "weird",
+              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian."
             },
             {
-              "id": "7",
-              "content": "Jennifer's notes are very neat! They are __________, and she has __________ the most important parts with a green pen.",
-              "options": [
-                "typewritten / highlighted",
-                "highlighted / typewritten"
-              ],
-              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất.",
-              "correctAnswer": "A"
+              "id": "4_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "essays",
+              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình."
             },
             {
-              "id": "8",
-              "content": "I made a __________ to go to the __________ more often to improve my health.",
-              "options": [
-                "gymnasium / resolution",
-                "resolution / gymnasium"
-              ],
-              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn.",
-              "correctAnswer": "B"
+              "id": "4_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "edit",
+              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình."
             },
             {
-              "id": "9",
-              "content": "The __________ of the story is that you should think __________ before saying anything that might hurt someone.",
-              "options": [
-                "awhile / moral",
-                "moral / awhile"
-              ],
-              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói.",
-              "correctAnswer": "B"
+              "id": "5_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "semester",
+              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích."
             },
             {
-              "id": "10",
-              "content": "We __________ the company, and our suggestions are written in this __________ document.",
-              "options": [
-                "private / evaluated",
-                "evaluated / private"
-              ],
-              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này.",
-              "correctAnswer": "B"
+              "id": "5_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "index",
+              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích."
+            },
+            {
+              "id": "6_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "fainted",
+              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe."
+            },
+            {
+              "id": "6_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "lecture",
+              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe."
+            },
+            {
+              "id": "7_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "typewritten",
+              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất."
+            },
+            {
+              "id": "7_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "highlighted",
+              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất."
+            },
+            {
+              "id": "8_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "resolution",
+              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn."
+            },
+            {
+              "id": "8_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "gymnasium",
+              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn."
+            },
+            {
+              "id": "9_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "moral",
+              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói."
+            },
+            {
+              "id": "9_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "awhile",
+              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói."
+            },
+            {
+              "id": "10_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "evaluated",
+              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này."
+            },
+            {
+              "id": "10_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "private",
+              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2_wordlist",

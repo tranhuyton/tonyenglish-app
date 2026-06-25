@@ -18,127 +18,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is a better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1",
-              "content": "After weeks of hard work, the scientists must ________ the results of their ________.",
-              "options": [
-                "await / research",
-                "research / await",
-                "await / misery",
-                "research / due"
-              ],
-              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ).",
-              "correctAnswer": "A"
+              "id": "1_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. await / beloved / misery / research</b><br/>After weeks of hard work, the scientists must [ 1 ] the results of their [ 2 ]. After the death of her [ 3 ] pet, the woman felt nothing but [ 4 ] for many weeks.</p><p style=\"margin-bottom: 12px;\"><b>2. complained / confused / due / variety</b><br/>The store had a [ 5 ] of canned vegetables, but the man [ 6 ] that they didn’t have his favorite brand. The new schedule [ 7 ] passengers who thought the train was [ 8 ] at 8 a.m.</p><p style=\"margin-bottom: 12px;\"><b>3. Although / climate / establish / prior</b><br/>The island was a great place to [ 9 ] a hotel since the [ 10 ] was warm throughout the year. [ 11 ] he had a lot of bad luck in the past, he refused to let [ 12 ] events stop him from moving forward.</p><p style=\"margin-bottom: 12px;\"><b>4. entire / furnace / mature / midst</b><br/>The [ 13 ] was turned up to the highest temperature, but it couldn’t heat the [ 14 ] room. In the [ 15 ] of a terrible war, the young boys had to [ 16 ] quickly.</p><p style=\"margin-bottom: 12px;\"><b>5. apply / buried / leash / measured</b><br/>To make sure the dog’s [ 17 ] was long enough, Bob took out a ruler and [ 18 ] it. She insisted that they [ 19 ] her mother’s favorite perfume before they [ 20 ] her.</p>",
+              "options": [],
+              "correctAnswer": "await",
+              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ)."
             },
             {
-              "id": "2",
-              "content": "After the death of her ________ pet, the woman felt nothing but ________ for many weeks.",
-              "options": [
-                "beloved / misery",
-                "misery / beloved",
-                "variety / complained",
-                "complain / variety"
-              ],
-              "explanation": "beloved là yêu dấu, misery là sự khốn khổ.",
-              "correctAnswer": "A"
+              "id": "1_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "research",
+              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ)."
             },
             {
-              "id": "3",
-              "content": "The store had a ________ of canned vegetables, but the man ________ that they didn’t have his favorite brand.",
-              "options": [
-                "complained / variety",
-                "variety / complained",
-                "due / confused",
-                "confused / due"
-              ],
-              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại.",
-              "correctAnswer": "B"
+              "id": "2_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "beloved",
+              "explanation": "beloved là yêu dấu, misery là sự khốn khổ."
             },
             {
-              "id": "4",
-              "content": "The new schedule ________ passengers who thought the train was ________ at 8 a.m.",
-              "options": [
-                "confused / due",
-                "due / confused",
-                "establish / climate",
-                "climate / establish"
-              ],
-              "explanation": "confused là làm bối rối, due là đến hạn (có mặt).",
-              "correctAnswer": "A"
+              "id": "2_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "misery",
+              "explanation": "beloved là yêu dấu, misery là sự khốn khổ."
             },
             {
-              "id": "5",
-              "content": "The island was a great place to ________ a hotel since the ________ was warm throughout the year.",
-              "options": [
-                "establish / climate",
-                "climate / establish",
-                "furnace / entire",
-                "entire / furnace"
-              ],
-              "explanation": "establish là thành lập/xây dựng, climate là khí hậu.",
-              "correctAnswer": "A"
+              "id": "3_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "variety",
+              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại."
             },
             {
-              "id": "6",
-              "content": "________ he had a lot of bad luck in the past, he refused to let ________ events stop him from moving forward.",
-              "options": [
-                "Prior / although",
-                "Although / prior",
-                "Although / midst",
-                "Prior / mature"
-              ],
-              "explanation": "Although là mặc dù, prior là trước đó.",
-              "correctAnswer": "B"
+              "id": "3_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "complained",
+              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại."
             },
             {
-              "id": "7",
-              "content": "The ________ was turned up to the highest temperature, but it couldn’t heat the ________ room.",
-              "options": [
-                "furnace / entire",
-                "entire / furnace",
-                "leash / measured",
-                "measured / leash"
-              ],
-              "explanation": "furnace là lò sưởi, entire là toàn bộ.",
-              "correctAnswer": "A"
+              "id": "4_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "confused",
+              "explanation": "confused là làm bối rối, due là đến hạn (có mặt)."
             },
             {
-              "id": "8",
-              "content": "In the ________ of a terrible war, the young boys had to ________ quickly.",
-              "options": [
-                "mature / midst",
-                "midst / mature",
-                "apply / buried",
-                "buried / apply"
-              ],
-              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó.",
-              "correctAnswer": "B"
+              "id": "4_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "due",
+              "explanation": "confused là làm bối rối, due là đến hạn (có mặt)."
             },
             {
-              "id": "9",
-              "content": "To make sure the dog’s ________ was long enough, Bob took out a ruler and ________ it.",
-              "options": [
-                "measured / leash",
-                "leash / measured",
-                "leash / entire",
-                "entire / measured"
-              ],
-              "explanation": "leash là dây xích chó, measured là đã đo đạc.",
-              "correctAnswer": "B"
+              "id": "5_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "establish",
+              "explanation": "establish là thành lập/xây dựng, climate là khí hậu."
             },
             {
-              "id": "10",
-              "content": "She insisted that they ________ her mother’s favorite perfume before they ________ her.",
-              "options": [
-                "buried / apply",
-                "apply / buried",
-                "apply / measure",
-                "measured / apply"
-              ],
-              "explanation": "apply là bôi/thoa, buried là đã chôn cất.",
-              "correctAnswer": "B"
+              "id": "5_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "climate",
+              "explanation": "establish là thành lập/xây dựng, climate là khí hậu."
+            },
+            {
+              "id": "6_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "Although",
+              "explanation": "Although là mặc dù, prior là trước đó."
+            },
+            {
+              "id": "6_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "prior",
+              "explanation": "Although là mặc dù, prior là trước đó."
+            },
+            {
+              "id": "7_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "furnace",
+              "explanation": "furnace là lò sưởi, entire là toàn bộ."
+            },
+            {
+              "id": "7_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "entire",
+              "explanation": "furnace là lò sưởi, entire là toàn bộ."
+            },
+            {
+              "id": "8_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "midst",
+              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó."
+            },
+            {
+              "id": "8_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "mature",
+              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó."
+            },
+            {
+              "id": "9_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "leash",
+              "explanation": "leash là dây xích chó, measured là đã đo đạc."
+            },
+            {
+              "id": "9_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "measured",
+              "explanation": "leash là dây xích chó, measured là đã đo đạc."
+            },
+            {
+              "id": "10_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "apply",
+              "explanation": "apply là bôi/thoa, buried là đã chôn cất."
+            },
+            {
+              "id": "10_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "buried",
+              "explanation": "apply là bôi/thoa, buried là đã chôn cất."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2",

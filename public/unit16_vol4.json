@@ -18,127 +18,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1",
-              "content": "Greg had the _____ of falling in a pool, though he didn’t know how to swim. The experience left him with _____ feelings about swimming pools.",
-              "options": [
-                "custom / stern",
-                "misfortune / negative",
-                "source / altogether",
-                "bruise / bound"
-              ],
-              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó.",
-              "correctAnswer": "B"
+              "id": "1_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. altogether / bruise / misfortune / negative</b><br/>Greg had the [ 1 ] of falling in a pool, though he didn’t know how to swim. The experience left him with [ 2 ] feelings about swimming pools. After one day, the [ 3 ] on her lip began to go away. In a week, it had disappeared [ 4 ].</p><p style=\"margin-bottom: 12px;\"><b>2. disobedient / per / pleaded / sake</b><br/>For the [ 5 ] of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices [ 6 ] person. A woman [ 7 ] with the child to behave in the store. The child, however, continued to be [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. glimpsed / hoop / source / stitched</b><br/>They walked past a large river, which the guide said was the [ 9 ] of a waterfall. They finally [ 10 ] the waterfall when they reached the bottom of the hill. The girl wanted to make her plastic [ 11 ] look pretty, so she [ 12 ] cloth around it.</p><p style=\"margin-bottom: 12px;\"><b>4. bound / custom / ripped / stern</b><br/>The family was [ 13 ] tightly. For example, on Saturdays, it was their [ 14 ] to go to the park together. The [ 15 ] teacher was angry to see the students passing notes. She took the note from the students and [ 16 ] it into pieces.</p><p style=\"margin-bottom: 12px;\"><b>5. foresee / scraped / thump / vehement</b><br/>The boy lost his balance and fell with a [ 17 ]. When he got up, he noticed that he’d [ 18 ] his elbow. The coach didn’t [ 19 ] the loss for his team. So, after the game, he was [ 20 ].</p>",
+              "options": [],
+              "correctAnswer": "misfortune",
+              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó."
             },
             {
-              "id": "2",
-              "content": "After one day, the _____ on her lip began to go away. In a week, it had disappeared _____.",
-              "options": [
-                "bruise / altogether",
-                "hoop / disobedient",
-                "sake / custom",
-                "thump / per"
-              ],
-              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn).",
-              "correctAnswer": "A"
+              "id": "1_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "negative",
+              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó."
             },
             {
-              "id": "3",
-              "content": "For the _____ of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices _____ person.",
-              "options": [
-                "foresee / altogether",
-                "glimpse / per",
-                "sake / per",
-                "source / custom"
-              ],
-              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người).",
-              "correctAnswer": "C"
+              "id": "2_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "bruise",
+              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn)."
             },
             {
-              "id": "4",
-              "content": "A woman _____ with the child to behave in the store. The child, however, continued to be _____.",
-              "options": [
-                "scraped / negative",
-                "pleaded / disobedient",
-                "stitched / stern",
-                "ripped / vehement"
-              ],
-              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời).",
-              "correctAnswer": "B"
+              "id": "2_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "altogether",
+              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn)."
             },
             {
-              "id": "5",
-              "content": "They walked past a large river, which the guide said was the _____ of a waterfall. They finally _____ the waterfall when they reached the bottom of the hill.",
-              "options": [
-                "misfortune / stitched",
-                "hoop / altogether",
-                "custom / bind",
-                "source / glimpsed"
-              ],
-              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó.",
-              "correctAnswer": "D"
+              "id": "3_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "sake",
+              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người)."
             },
             {
-              "id": "6",
-              "content": "The girl wanted to make her plastic _____ look pretty, so she _____ cloth around it.",
-              "options": [
-                "bruise / scraped",
-                "thump / bound",
-                "hoop / stitched",
-                "sake / ripped"
-              ],
-              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó.",
-              "correctAnswer": "C"
+              "id": "3_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "per",
+              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người)."
             },
             {
-              "id": "7",
-              "content": "The family was _____ tightly. For example, on Saturdays, it was their _____ to go to the park together.",
-              "options": [
-                "bound / custom",
-                "disobedient / source",
-                "stern / sake",
-                "vehement / misfortune"
-              ],
-              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau.",
-              "correctAnswer": "A"
+              "id": "4_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "pleaded",
+              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời)."
             },
             {
-              "id": "8",
-              "content": "The _____ teacher was angry to see the students passing notes. She took the note from the students and _____ it into pieces.",
-              "options": [
-                "vehement / per",
-                "disobedient / pleaded",
-                "negative / glimpsed",
-                "stern / ripped"
-              ],
-              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy.",
-              "correctAnswer": "D"
+              "id": "4_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "disobedient",
+              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời)."
             },
             {
-              "id": "9",
-              "content": "The boy lost his balance and fell with a _____. When he got up, he noticed that he’d _____ his elbow.",
-              "options": [
-                "bruise / bound",
-                "thump / scraped",
-                "hoop / stitched",
-                "misfortune / foreseen"
-              ],
-              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay.",
-              "correctAnswer": "B"
+              "id": "5_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "source",
+              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó."
             },
             {
-              "id": "10",
-              "content": "The coach didn’t _____ the loss for his team. So, after the game, he was _____.",
-              "options": [
-                "foresee / vehement",
-                "glimpse / negative",
-                "plead / disobedient",
-                "bind / altogether"
-              ],
-              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ).",
-              "correctAnswer": "A"
+              "id": "5_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "glimpsed",
+              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó."
+            },
+            {
+              "id": "6_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "hoop",
+              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó."
+            },
+            {
+              "id": "6_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "stitched",
+              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó."
+            },
+            {
+              "id": "7_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "bound",
+              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau."
+            },
+            {
+              "id": "7_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "custom",
+              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau."
+            },
+            {
+              "id": "8_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "stern",
+              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy."
+            },
+            {
+              "id": "8_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "ripped",
+              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy."
+            },
+            {
+              "id": "9_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "thump",
+              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay."
+            },
+            {
+              "id": "9_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "scraped",
+              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay."
+            },
+            {
+              "id": "10_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "foresee",
+              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ)."
+            },
+            {
+              "id": "10_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "vehement",
+              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ)."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2",

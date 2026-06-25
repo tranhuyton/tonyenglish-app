@@ -154,107 +154,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "11",
-              "content": "Before the project, the clay was one big __________. But when he was finished, he made a perfectly square __________.",
-              "options": [
-                "brick / lump",
-                "lump / brick"
-              ],
-              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick).",
-              "correctAnswer": "B"
+              "id": "11_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. brick / lump / reconciled / uttering</b><br/>Before the project, the clay was one big [ 1 ]. But when he was finished, he made a perfectly square [ 2 ]. Five minutes ago, the two senators were [ 3 ] insults at each other, but now they have [ 4 ] because they both agree with the new law.</p><p style=\"margin-bottom: 12px;\"><b>2. flushed / shutters / sparkled / stale</b><br/>In the middle of the night, she got out of bed and opened the [ 5 ]. She gazed at the sky where the stars [ 6 ] like tiny fires. The rice was not eaten soon enough, so it tasted [ 7 ]. It made me feel sick and my face became [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. crumbled / dough / shattered / sift</b><br/>The cook picked up the block of cheese and [ 9 ] it into little pieces. Then he mixed them with the [ 10 ] before placing it in the oven. When he started to [ 11 ] the flour into the bowl, he slipped and dropped it. The bowl hit the ground and [ 12 ].</p><p style=\"margin-bottom: 12px;\"><b>4. fist / flexible / mixture / sprinkle</b><br/>He hit the punching bag with his [ 13 ]. Since the bag was [ 14 ], it did not break. The [ 15 ] of ice cream and chocolate tastes good, but it will be even better if you [ 16 ] sugar on the top of it.</p><p style=\"margin-bottom: 12px;\"><b>5. expressed / injured / ruined / slight</b><br/>The doctor [ 17 ] a lot of concern for my hurt ankle, but I told him the pain was only [ 18 ]. The ship was [ 19 ] when it crashed into the island. Even though it was greatly damaged, none of the passengers were [ 20 ].</p>",
+              "options": [],
+              "correctAnswer": "lump",
+              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick)."
             },
             {
-              "id": "12",
-              "content": "Five minutes ago, the two senators were ___________ insults at each other, but now they have ___________ because they both agree with the new law.",
-              "options": [
-                "reconciled / uttering",
-                "uttering / reconciled"
-              ],
-              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải.",
-              "correctAnswer": "B"
+              "id": "11_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "brick",
+              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick)."
             },
             {
-              "id": "13",
-              "content": "In the middle of the night, she got out of bed and opened the __________. She gazed at the sky where the stars __________ like tiny fires.",
-              "options": [
-                "shutters / sparkled",
-                "sparkled / shutters"
-              ],
-              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled).",
-              "correctAnswer": "A"
+              "id": "12_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "uttering",
+              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải."
             },
             {
-              "id": "14",
-              "content": "The rice was not eaten soon enough, so it tasted __________. It made me feel sick and my face became __________.",
-              "options": [
-                "flushed / stale",
-                "stale / flushed"
-              ],
-              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed).",
-              "correctAnswer": "B"
+              "id": "12_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "reconciled",
+              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải."
             },
             {
-              "id": "15",
-              "content": "The cook picked up the block of cheese and ___________ it into little pieces. Then he mixed them with the __________ before placing it in the oven.",
-              "options": [
-                "dough / crumbled",
-                "crumbled / dough"
-              ],
-              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough).",
-              "correctAnswer": "B"
+              "id": "13_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "shutters",
+              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled)."
             },
             {
-              "id": "16",
-              "content": "When he started to ___________ the flour into the bowl, he slipped and dropped it. The bowl hit the ground and __________.",
-              "options": [
-                "sift / shattered",
-                "shattered / sift"
-              ],
-              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered).",
-              "correctAnswer": "A"
+              "id": "13_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "sparkled",
+              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled)."
             },
             {
-              "id": "17",
-              "content": "He hit the punching bag with his __________. Since the bag was ___________, it did not break.",
-              "options": [
-                "fist / flexible",
-                "flexible / fist"
-              ],
-              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible).",
-              "correctAnswer": "A"
+              "id": "14_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "stale",
+              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed)."
             },
             {
-              "id": "18",
-              "content": "The __________ of ice cream and chocolate tastes good, but it will be even better if you __________ sugar on the top of it.",
-              "options": [
-                "sprinkle / mixture",
-                "mixture / sprinkle"
-              ],
-              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường.",
-              "correctAnswer": "B"
+              "id": "14_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "flushed",
+              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed)."
             },
             {
-              "id": "19",
-              "content": "The doctor ___________ a lot of concern for my hurt ankle, but I told him the pain was only __________.",
-              "options": [
-                "expressed / slight",
-                "slight / expressed"
-              ],
-              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight).",
-              "correctAnswer": "A"
+              "id": "15_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "crumbled",
+              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough)."
             },
             {
-              "id": "20",
-              "content": "The ship was ___________ when it crashed into the island. Even though it was greatly damaged, none of the passengers were __________.",
-              "options": [
-                "injured / ruined",
-                "ruined / injured"
-              ],
-              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured).",
-              "correctAnswer": "B"
+              "id": "15_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "dough",
+              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough)."
+            },
+            {
+              "id": "16_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "sift",
+              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered)."
+            },
+            {
+              "id": "16_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "shattered",
+              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered)."
+            },
+            {
+              "id": "17_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "fist",
+              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible)."
+            },
+            {
+              "id": "17_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "flexible",
+              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible)."
+            },
+            {
+              "id": "18_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "mixture",
+              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường."
+            },
+            {
+              "id": "18_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "sprinkle",
+              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường."
+            },
+            {
+              "id": "19_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "expressed",
+              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight)."
+            },
+            {
+              "id": "19_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "slight",
+              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight)."
+            },
+            {
+              "id": "20_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "ruined",
+              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured)."
+            },
+            {
+              "id": "20_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "injured",
+              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured)."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },

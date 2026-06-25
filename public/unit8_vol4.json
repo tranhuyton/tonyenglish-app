@@ -18,107 +18,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1",
-              "content": "Mr. Holloway was sent to __________ the old coach, who was known for his wild __________ during games.",
-              "options": [
-                "replace / conduct",
-                "conduct / replace"
-              ],
-              "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình.",
-              "correctAnswer": "A"
+              "id": "1_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. conduct / influenced / laws / replace</b><br/>Mr. Holloway was sent to [ 1 ] the old coach, who was known for his wild [ 2 ] during games. Decisions made in courts are often [ 3 ] by the personal views of the judge. In some cases, the decisions help change [ 4 ].</p><p style=\"margin-bottom: 12px;\"><b>2. enclosed / gripped / snapped / whatsoever</b><br/>I [ 5 ] the pencil and squeezed it until it [ 6 ]. My father [ 7 ] a check in the letter he sent me. He always offered to help even if I didn't ask for any help [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. constantly / cracks / impending / tends</b><br/>The soldier dreaded the [ 9 ] battle. He [ 10 ] thought about what might happen to him. I saw several [ 11 ] in the ice. This [ 12 ] to happen when the weather becomes warmer.</p><p style=\"margin-bottom: 12px;\"><b>4. access / device / halted / mode</b><br/>Sheila took the [ 13 ] from her purse and pressed a couple of buttons. It took her awhile to figure out how to turn it to silent [ 14 ]. She ran from room to room quickly, but [ 15 ] suddenly. She couldn't have [ 16 ] to the room without a key.</p><p style=\"margin-bottom: 12px;\"><b>5. perspired / sly / valid / version</b><br/>The student had a [ 17 ] reason for leaving the classroom when his teacher was gone. He tried to explain his [ 18 ] of what happened while she was gone. The thief [ 19 ] while the police questioned him. They didn't feel sorry for the [ 20 ] criminal.</p>",
+              "options": [],
+              "correctAnswer": "replace",
+              "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình."
             },
             {
-              "id": "2",
-              "content": "Decisions made in courts are often __________ by the personal views of the judge. In some cases, the decisions help change __________.",
-              "options": [
-                "influenced / laws",
-                "laws / influenced"
-              ],
-              "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật.",
-              "correctAnswer": "A"
+              "id": "1_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "conduct",
+              "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình."
             },
             {
-              "id": "3",
-              "content": "I __________ the pencil and squeezed it until it __________.",
-              "options": [
-                "gripped / snapped",
-                "snapped / gripped"
-              ],
-              "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy.",
-              "correctAnswer": "A"
+              "id": "2_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "influenced",
+              "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật."
             },
             {
-              "id": "4",
-              "content": "My father __________ a check in the letter he sent me. He always offered to help even if I didn't ask for any help __________.",
-              "options": [
-                "enclosed / whatsoever",
-                "whatsoever / enclosed"
-              ],
-              "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào.",
-              "correctAnswer": "A"
+              "id": "2_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "laws",
+              "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật."
             },
             {
-              "id": "5",
-              "content": "The soldier dreaded the __________ battle. He __________ thought about what might happen to him.",
-              "options": [
-                "impending / constantly",
-                "constantly / impending"
-              ],
-              "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình.",
-              "correctAnswer": "A"
+              "id": "3_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "gripped",
+              "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy."
             },
             {
-              "id": "6",
-              "content": "I saw several __________ in the ice. This __________ to happen when the weather becomes warmer.",
-              "options": [
-                "cracks / tends",
-                "tends / cracks"
-              ],
-              "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn.",
-              "correctAnswer": "A"
+              "id": "3_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "snapped",
+              "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy."
             },
             {
-              "id": "7",
-              "content": "Sheila took the __________ from her purse and pressed a couple of buttons. It took her awhile to figure out how to turn it to silent __________.",
-              "options": [
-                "device / mode",
-                "mode / device"
-              ],
-              "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng.",
-              "correctAnswer": "A"
+              "id": "4_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "enclosed",
+              "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào."
             },
             {
-              "id": "8",
-              "content": "She ran from room to room quickly, but __________ suddenly. She couldn't have __________ to the room without a key.",
-              "options": [
-                "halted / access",
-                "access / halted"
-              ],
-              "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa.",
-              "correctAnswer": "A"
+              "id": "4_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "whatsoever",
+              "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào."
             },
             {
-              "id": "9",
-              "content": "The student had a __________ reason for leaving the classroom when his teacher was gone. He tried to explain his __________ of what happened while she was gone.",
-              "options": [
-                "valid / version",
-                "version / valid"
-              ],
-              "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình.",
-              "correctAnswer": "A"
+              "id": "5_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "impending",
+              "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình."
             },
             {
-              "id": "10",
-              "content": "The thief __________ while the police questioned him. They didn't feel sorry for the __________ criminal.",
-              "options": [
-                "perspired / sly",
-                "sly / perspired"
-              ],
-              "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo.",
-              "correctAnswer": "A"
+              "id": "5_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "constantly",
+              "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình."
+            },
+            {
+              "id": "6_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "cracks",
+              "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn."
+            },
+            {
+              "id": "6_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "tends",
+              "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn."
+            },
+            {
+              "id": "7_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "device",
+              "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng."
+            },
+            {
+              "id": "7_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "mode",
+              "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng."
+            },
+            {
+              "id": "8_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "halted",
+              "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa."
+            },
+            {
+              "id": "8_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "access",
+              "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa."
+            },
+            {
+              "id": "9_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "valid",
+              "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình."
+            },
+            {
+              "id": "9_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "version",
+              "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình."
+            },
+            {
+              "id": "10_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "perspired",
+              "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo."
+            },
+            {
+              "id": "10_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "sly",
+              "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2",

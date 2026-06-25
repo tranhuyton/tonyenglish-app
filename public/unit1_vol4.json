@@ -18,207 +18,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1",
-              "content": "The population growth in the city was incredibly ________.",
-              "options": [
-                "rapid",
-                "rate"
-              ],
-              "explanation": "'rapid' (nhanh chóng) là tính từ phù hợp để mô tả sự gia tăng dân số.",
-              "correctAnswer": "A"
+              "id": "1_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. rapid / rate</b><br/>The population growth in the city was incredibly [ 1 ]. It is quite surprising that people settled there at such a fast [ 2 ].</p><p style=\"margin-bottom: 12px;\"><b>2. contemporary / vary</b><br/>Many [ 3 ] laws make it illegal for business to compete in unfair ways. However, the specific laws in different countries [ 4 ] greatly.</p><p style=\"margin-bottom: 12px;\"><b>3. humid / toxic</b><br/>Because it is quite [ 5 ] on the island, various kinds of plants grow well there. However, some of these plants are [ 6 ] to humans.</p><p style=\"margin-bottom: 12px;\"><b>4. aroma / texture</b><br/>The cheese has a smooth [ 7 ]. However, some people find it hard to eat because of its powerful [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>5. cluster / combined</b><br/>A [ 9 ] of people suggested that nearby cities could fight the invaders if they cooperated with each other. As a result, everyone [ 10 ] their efforts and defeated the invaders.</p><p style=\"margin-bottom: 12px;\"><b>6. soothing / subtle</b><br/>The artist uses [ 11 ] differences of color in her landscapes. This has an overall calming and [ 12 ] effect on the viewer.</p><p style=\"margin-bottom: 12px;\"><b>7. cultivated / odor</b><br/>A huge garden was [ 13 ] in the middle of the city. However, a species of rare plants gave off an unpleasant [ 14 ].</p><p style=\"margin-bottom: 12px;\"><b>8. beverage / palate</b><br/>During a four or five course meal, one should drink something to clean the [ 15 ] between courses. The perfect [ 16 ] for this is, of course, water.</p><p style=\"margin-bottom: 12px;\"><b>9. condensed / divine</b><br/>I can explain the basic story in a simple, [ 17 ] way. A boy is given a [ 18 ] message, and he begins an exciting adventure.</p><p style=\"margin-bottom: 12px;\"><b>10. paradise / plantations</b><br/>The island of Oahu is not a natural [ 19 ] like Maui. However, tourists still visit its many [ 20 ].</p>",
+              "options": [],
+              "correctAnswer": "rapid",
+              "explanation": "'rapid' (nhanh chóng) là tính từ phù hợp để mô tả sự gia tăng dân số."
             },
             {
-              "id": "2",
-              "content": "It is quite surprising that people settled there at such a fast ________.",
-              "options": [
-                "rapid",
-                "rate"
-              ],
-              "explanation": "'rate' (tốc độ) phù hợp với cụm từ 'at a fast rate' (với một tốc độ nhanh).",
-              "correctAnswer": "B"
+              "id": "2_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "rate",
+              "explanation": "'rate' (tốc độ) phù hợp với cụm từ 'at a fast rate' (với một tốc độ nhanh)."
             },
             {
-              "id": "3",
-              "content": "Many ________ laws make it illegal for business to compete in unfair ways.",
-              "options": [
-                "contemporary",
-                "vary"
-              ],
-              "explanation": "'contemporary' (đương đại/hiện đại) là tính từ bổ nghĩa cho 'laws'.",
-              "correctAnswer": "A"
+              "id": "3_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "contemporary",
+              "explanation": "'contemporary' (đương đại/hiện đại) là tính từ bổ nghĩa cho 'laws'."
             },
             {
-              "id": "4",
-              "content": "However, the specific laws in different countries ________ greatly.",
-              "options": [
-                "contemporary",
-                "vary"
-              ],
-              "explanation": "'vary' (khác nhau) là động từ chính của câu.",
-              "correctAnswer": "B"
+              "id": "4_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "vary",
+              "explanation": "'vary' (khác nhau) là động từ chính của câu."
             },
             {
-              "id": "5",
-              "content": "Because it is quite ________ on the island, various kinds of plants grow well there.",
-              "options": [
-                "humid",
-                "toxic"
-              ],
-              "explanation": "'humid' (ẩm ướt) phù hợp với điều kiện khí hậu trên đảo.",
-              "correctAnswer": "A"
+              "id": "5_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "humid",
+              "explanation": "'humid' (ẩm ướt) phù hợp với điều kiện khí hậu trên đảo."
             },
             {
-              "id": "6",
-              "content": "However, some of these plants are ________ to humans.",
-              "options": [
-                "humid",
-                "toxic"
-              ],
-              "explanation": "'toxic' (có độc) đi kèm với 'to humans' (đối với con người).",
-              "correctAnswer": "B"
+              "id": "6_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "toxic",
+              "explanation": "'toxic' (có độc) đi kèm với 'to humans' (đối với con người)."
             },
             {
-              "id": "7",
-              "content": "The cheese has a smooth ________.",
-              "options": [
-                "texture",
-                "aroma"
-              ],
-              "explanation": "'texture' (kết cấu) phù hợp với tính từ 'smooth' (mịn màng).",
-              "correctAnswer": "A"
+              "id": "7_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "texture",
+              "explanation": "'texture' (kết cấu) phù hợp với tính từ 'smooth' (mịn màng)."
             },
             {
-              "id": "8",
-              "content": "However, some people find it hard to eat because of its powerful ________.",
-              "options": [
-                "texture",
-                "aroma"
-              ],
-              "explanation": "'aroma' (mùi hương) phù hợp với 'powerful' (mạnh mẽ/nồng).",
-              "correctAnswer": "B"
+              "id": "8_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "aroma",
+              "explanation": "'aroma' (mùi hương) phù hợp với 'powerful' (mạnh mẽ/nồng)."
             },
             {
-              "id": "9",
-              "content": "A ________ of people suggested that nearby cities could fight the invaders if they cooperated with each other.",
-              "options": [
-                "cluster",
-                "combined"
-              ],
-              "explanation": "'A cluster of people' (một nhóm người).",
-              "correctAnswer": "A"
+              "id": "9_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "cluster",
+              "explanation": "'A cluster of people' (một nhóm người)."
             },
             {
-              "id": "10",
-              "content": "As a result, everyone ________ their efforts and defeated the invaders.",
-              "options": [
-                "cluster",
-                "combined"
-              ],
-              "explanation": "'combined' (kết hợp) là động từ phù hợp cho hành động kết hợp nỗ lực.",
-              "correctAnswer": "B"
+              "id": "10_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "combined",
+              "explanation": "'combined' (kết hợp) là động từ phù hợp cho hành động kết hợp nỗ lực."
             },
             {
-              "id": "11",
-              "content": "The artist uses ________ differences of color in her landscapes.",
-              "options": [
-                "soothing",
-                "subtle"
-              ],
-              "explanation": "'subtle differences' (những sự khác biệt tinh tế).",
-              "correctAnswer": "B"
+              "id": "11_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "subtle",
+              "explanation": "'subtle differences' (những sự khác biệt tinh tế)."
             },
             {
-              "id": "12",
-              "content": "This has an overall calming and ________ effect on the viewer.",
-              "options": [
-                "soothing",
-                "subtle"
-              ],
-              "explanation": "'soothing effect' (tác dụng êm dịu), đồng nghĩa với 'calming'.",
-              "correctAnswer": "A"
+              "id": "12_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "soothing",
+              "explanation": "'soothing effect' (tác dụng êm dịu), đồng nghĩa với 'calming'."
             },
             {
-              "id": "13",
-              "content": "A huge garden was ________ in the middle of the city.",
-              "options": [
-                "cultivated",
-                "odor"
-              ],
-              "explanation": "'cultivated' (được trồng trọt) là dạng bị động phù hợp ở đây.",
-              "correctAnswer": "A"
+              "id": "13_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "cultivated",
+              "explanation": "'cultivated' (được trồng trọt) là dạng bị động phù hợp ở đây."
             },
             {
-              "id": "14",
-              "content": "However, a species of rare plants gave off an unpleasant ________.",
-              "options": [
-                "cultivated",
-                "odor"
-              ],
-              "explanation": "'unpleasant odor' (mùi khó chịu).",
-              "correctAnswer": "B"
+              "id": "14_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "odor",
+              "explanation": "'unpleasant odor' (mùi khó chịu)."
             },
             {
-              "id": "15",
-              "content": "During a four or five course meal, one should drink something to clean the ________ between courses.",
-              "options": [
-                "beverage",
-                "palate"
-              ],
-              "explanation": "'clean the palate' (làm sạch vòm miệng/khẩu vị) là một cụm từ phổ biến.",
-              "correctAnswer": "B"
+              "id": "15_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "palate",
+              "explanation": "'clean the palate' (làm sạch vòm miệng/khẩu vị) là một cụm từ phổ biến."
             },
             {
-              "id": "16",
-              "content": "The perfect ________ for this is, of course, water.",
-              "options": [
-                "beverage",
-                "palate"
-              ],
-              "explanation": "'beverage' (thức uống) ám chỉ nước trong câu này.",
-              "correctAnswer": "A"
+              "id": "16_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "beverage",
+              "explanation": "'beverage' (thức uống) ám chỉ nước trong câu này."
             },
             {
-              "id": "17",
-              "content": "I can explain the basic story in a simple, ________ way.",
-              "options": [
-                "condensed",
-                "divine"
-              ],
-              "explanation": "'condensed way' (cách tóm tắt/ngắn gọn).",
-              "correctAnswer": "A"
+              "id": "17_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "condensed",
+              "explanation": "'condensed way' (cách tóm tắt/ngắn gọn)."
             },
             {
-              "id": "18",
-              "content": "A boy is given a ________ message, and he begins an exciting adventure.",
-              "options": [
-                "condensed",
-                "divine"
-              ],
-              "explanation": "'divine message' (thông điệp từ thần linh).",
-              "correctAnswer": "B"
+              "id": "18_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "divine",
+              "explanation": "'divine message' (thông điệp từ thần linh)."
             },
             {
-              "id": "19",
-              "content": "The island of Oahu is not a natural ________ like Maui.",
-              "options": [
-                "paradise",
-                "plantations"
-              ],
-              "explanation": "'natural paradise' (thiên đường tự nhiên).",
-              "correctAnswer": "A"
+              "id": "19_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "paradise",
+              "explanation": "'natural paradise' (thiên đường tự nhiên)."
             },
             {
-              "id": "20",
-              "content": "However, tourists still visit its many ________.",
-              "options": [
-                "paradise",
-                "plantations"
-              ],
-              "explanation": "'plantations' (đồn điền) là danh từ số nhiều phù hợp.",
-              "correctAnswer": "B"
+              "id": "20_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "plantations",
+              "explanation": "'plantations' (đồn điền) là danh từ số nhiều phù hợp."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2",

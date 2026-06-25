@@ -18,127 +18,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1",
-              "content": "It was bad that the man had a lot of __________ because he used it to cause __________.",
-              "options": [
-                "muscles - violence",
-                "violence - muscles",
-                "muscles - disrespect",
-                "violence - disrespect"
-              ],
-              "explanation": "\"muscle\" (cơ bắp) và \"violence\" (bạo lực). Người đàn ông có nhiều cơ bắp (muscles) và sử dụng nó để gây ra bạo lực (violence).",
-              "correctAnswer": "A"
+              "id": "1_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. bid - belly / muscles - violence</b><br/>It was bad that the man had a lot of [ 1 ] because he used it to cause [ 2 ]. He had a [ 3 ] to win the race, but he had to quit when he got a bad pain in his [ 4 ].</p><p style=\"margin-bottom: 12px;\"><b>2. enthusiasm - continent / timid - disrespect</b><br/>The boy was always [ 5 ] because his classmates were mean and treated him with [ 6 ]. The boy had a lot of [ 7 ] before his trip to Europe. He had never been to a different [ 8 ] before.</p><p style=\"margin-bottom: 12px;\"><b>3. avenue - alternative / meantime - lean</b><br/>The movie will start soon. In the [ 9 ], help me to [ 10 ] these heavy boards against the wall. The [ 11 ] that the man wanted to drive on was blocked, so he found an [ 12 ] route.</p><p style=\"margin-bottom: 12px;\"><b>4. rescue - conflict / terrain - harsh</b><br/>The police officer had to [ 13 ] the woman from a bad [ 14 ] she had with another woman. The girl walked along the rough beach. The rocky [ 15 ] was [ 16 ] on her feet.</p><p style=\"margin-bottom: 12px;\"><b>5. blow - current / mischief - succession</b><br/>The boys were up to their usual [ 17 ] and were throwing balls of paper at each other in [ 18 ]. I turned on the fan so that it would [ 19 ] air on me. The [ 20 ] of cool air felt wonderful.</p>",
+              "options": [],
+              "correctAnswer": "muscles - violence",
+              "explanation": "\"muscle\" (cơ bắp) và \"violence\" (bạo lực). Người đàn ông có nhiều cơ bắp (muscles) và sử dụng nó để gây ra bạo lực (violence)."
             },
             {
-              "id": "2",
-              "content": "He had a __________ to win the race, but he had to quit when he got a bad pain in his __________.",
-              "options": [
-                "belly - bid",
-                "bid - belly",
-                "muscle - bid",
-                "bid - muscle"
-              ],
-              "explanation": "\"bid\" (sự nỗ lực) và \"belly\" (bụng). Anh ta đã nỗ lực (bid) để chiến thắng nhưng phải từ bỏ vì đau bụng (belly).",
-              "correctAnswer": "B"
+              "id": "1_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"muscle\" (cơ bắp) và \"violence\" (bạo lực). Người đàn ông có nhiều cơ bắp (muscles) và sử dụng nó để gây ra bạo lực (violence)."
             },
             {
-              "id": "3",
-              "content": "The boy was always __________ because his classmates were mean and treated him with __________.",
-              "options": [
-                "timid - disrespect",
-                "disrespect - timid",
-                "harsh - disrespect",
-                "timid - harsh"
-              ],
-              "explanation": "\"timid\" (rụt rè) và \"disrespect\" (sự thiếu tôn trọng). Cậu bé rụt rè (timid) vì bạn học đối xử thiếu tôn trọng (disrespect).",
-              "correctAnswer": "A"
+              "id": "2_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "bid - belly",
+              "explanation": "\"bid\" (sự nỗ lực) và \"belly\" (bụng). Anh ta đã nỗ lực (bid) để chiến thắng nhưng phải từ bỏ vì đau bụng (belly)."
             },
             {
-              "id": "4",
-              "content": "The boy had a lot of __________ before his trip to Europe. He had never been to a different __________ before.",
-              "options": [
-                "continent - enthusiasm",
-                "enthusiasm - continent",
-                "avenue - enthusiasm",
-                "enthusiasm - avenue"
-              ],
-              "explanation": "\"enthusiasm\" (sự nhiệt tình, hăng hái) và \"continent\" (lục địa). Cậu bé rất hăng hái (enthusiasm) vì chưa từng đến một lục địa (continent) khác.",
-              "correctAnswer": "B"
+              "id": "2_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"bid\" (sự nỗ lực) và \"belly\" (bụng). Anh ta đã nỗ lực (bid) để chiến thắng nhưng phải từ bỏ vì đau bụng (belly)."
             },
             {
-              "id": "5",
-              "content": "The movie will start soon. In the __________, help me to __________ these heavy boards against the wall.",
-              "options": [
-                "meantime - lean",
-                "lean - meantime",
-                "alternative - lean",
-                "lean - alternative"
-              ],
-              "explanation": "\"meantime\" (trong lúc đó) và \"lean\" (tựa). Trong lúc đó (meantime), giúp tôi tựa (lean) tấm ván này vào tường.",
-              "correctAnswer": "A"
+              "id": "3_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "timid - disrespect",
+              "explanation": "\"timid\" (rụt rè) và \"disrespect\" (sự thiếu tôn trọng). Cậu bé rụt rè (timid) vì bạn học đối xử thiếu tôn trọng (disrespect)."
             },
             {
-              "id": "6",
-              "content": "The __________ that the man wanted to drive on was blocked, so he found an __________ route.",
-              "options": [
-                "alternative - avenue",
-                "avenue - alternative",
-                "terrain - avenue",
-                "avenue - terrain"
-              ],
-              "explanation": "\"avenue\" (đại lộ) và \"alternative\" (sự thay thế). Đại lộ (avenue) bị kẹt nên anh ta phải tìm đường thay thế (alternative).",
-              "correctAnswer": "B"
+              "id": "3_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"timid\" (rụt rè) và \"disrespect\" (sự thiếu tôn trọng). Cậu bé rụt rè (timid) vì bạn học đối xử thiếu tôn trọng (disrespect)."
             },
             {
-              "id": "7",
-              "content": "The police officer had to __________ the woman from a bad __________ she had with another woman.",
-              "options": [
-                "conflict - rescue",
-                "rescue - conflict",
-                "rescue - violence",
-                "conflict - violence"
-              ],
-              "explanation": "\"rescue\" (giải cứu) và \"conflict\" (cuộc xung đột). Cảnh sát phải giải cứu (rescue) người phụ nữ khỏi cuộc xung đột (conflict).",
-              "correctAnswer": "B"
+              "id": "4_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "enthusiasm - continent",
+              "explanation": "\"enthusiasm\" (sự nhiệt tình, hăng hái) và \"continent\" (lục địa). Cậu bé rất hăng hái (enthusiasm) vì chưa từng đến một lục địa (continent) khác."
             },
             {
-              "id": "8",
-              "content": "The girl walked along the rough beach. The rocky __________ was __________ on her feet.",
-              "options": [
-                "harsh - terrain",
-                "terrain - harsh",
-                "terrain - timid",
-                "timid - terrain"
-              ],
-              "explanation": "\"terrain\" (địa hình) và \"harsh\" (khắc nghiệt, thô ráp). Địa hình (terrain) nhiều đá rất thô ráp/khắc nghiệt (harsh) với chân cô.",
-              "correctAnswer": "B"
+              "id": "4_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"enthusiasm\" (sự nhiệt tình, hăng hái) và \"continent\" (lục địa). Cậu bé rất hăng hái (enthusiasm) vì chưa từng đến một lục địa (continent) khác."
             },
             {
-              "id": "9",
-              "content": "The boys were up to their usual __________ and were throwing balls of paper at each other in __________.",
-              "options": [
-                "succession - mischief",
-                "mischief - succession",
-                "conflict - succession",
-                "succession - conflict"
-              ],
-              "explanation": "\"mischief\" (trò nghịch ngợm) và \"succession\" (liên tiếp). Bọn trẻ nghịch ngợm (mischief) và ném giấy liên tiếp (succession) vào nhau.",
-              "correctAnswer": "B"
+              "id": "5_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "meantime - lean",
+              "explanation": "\"meantime\" (trong lúc đó) và \"lean\" (tựa). Trong lúc đó (meantime), giúp tôi tựa (lean) tấm ván này vào tường."
             },
             {
-              "id": "10",
-              "content": "I turned on the fan so that it would __________ air on me. The __________ of cool air felt wonderful.",
-              "options": [
-                "current - blow",
-                "blow - current",
-                "blow - terrain",
-                "current - terrain"
-              ],
-              "explanation": "\"blow\" (thổi) và \"current\" (dòng chảy). Quạt thổi (blow) ra dòng (current) không khí mát mẻ.",
-              "correctAnswer": "B"
+              "id": "5_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"meantime\" (trong lúc đó) và \"lean\" (tựa). Trong lúc đó (meantime), giúp tôi tựa (lean) tấm ván này vào tường."
+            },
+            {
+              "id": "6_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "avenue - alternative",
+              "explanation": "\"avenue\" (đại lộ) và \"alternative\" (sự thay thế). Đại lộ (avenue) bị kẹt nên anh ta phải tìm đường thay thế (alternative)."
+            },
+            {
+              "id": "6_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"avenue\" (đại lộ) và \"alternative\" (sự thay thế). Đại lộ (avenue) bị kẹt nên anh ta phải tìm đường thay thế (alternative)."
+            },
+            {
+              "id": "7_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "rescue - conflict",
+              "explanation": "\"rescue\" (giải cứu) và \"conflict\" (cuộc xung đột). Cảnh sát phải giải cứu (rescue) người phụ nữ khỏi cuộc xung đột (conflict)."
+            },
+            {
+              "id": "7_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"rescue\" (giải cứu) và \"conflict\" (cuộc xung đột). Cảnh sát phải giải cứu (rescue) người phụ nữ khỏi cuộc xung đột (conflict)."
+            },
+            {
+              "id": "8_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "terrain - harsh",
+              "explanation": "\"terrain\" (địa hình) và \"harsh\" (khắc nghiệt, thô ráp). Địa hình (terrain) nhiều đá rất thô ráp/khắc nghiệt (harsh) với chân cô."
+            },
+            {
+              "id": "8_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"terrain\" (địa hình) và \"harsh\" (khắc nghiệt, thô ráp). Địa hình (terrain) nhiều đá rất thô ráp/khắc nghiệt (harsh) với chân cô."
+            },
+            {
+              "id": "9_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "mischief - succession",
+              "explanation": "\"mischief\" (trò nghịch ngợm) và \"succession\" (liên tiếp). Bọn trẻ nghịch ngợm (mischief) và ném giấy liên tiếp (succession) vào nhau."
+            },
+            {
+              "id": "9_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"mischief\" (trò nghịch ngợm) và \"succession\" (liên tiếp). Bọn trẻ nghịch ngợm (mischief) và ném giấy liên tiếp (succession) vào nhau."
+            },
+            {
+              "id": "10_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "blow - current",
+              "explanation": "\"blow\" (thổi) và \"current\" (dòng chảy). Quạt thổi (blow) ra dòng (current) không khí mát mẻ."
+            },
+            {
+              "id": "10_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "",
+              "explanation": "\"blow\" (thổi) và \"current\" (dòng chảy). Quạt thổi (blow) ra dòng (current) không khí mát mẻ."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2_wordlist",

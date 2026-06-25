@@ -146,107 +146,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "11",
-              "content": "All of the people in the movie will ___________ if they remain ___________ of the monster.",
-              "options": [
-                "oblivious / perish",
-                "perish / oblivious"
-              ],
-              "explanation": "perish: chết; oblivious: không hay biết.",
-              "correctAnswer": "B"
+              "id": "11_0",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. fond / oblivious / perish / roost</b><br/>All of the people in the movie will [ 1 ] if they remain [ 2 ] of the monster. When the owl wants to make a [ 3 ], it is [ 4 ] of using an empty barn.</p><p style=\"margin-bottom: 12px;\"><b>2. flight / pit / rim / soars</b><br/>He grabbed the can by its [ 5 ], then tossed it far down into the [ 6 ]. The eagle [ 7 ] into the clouds when it goes on a long [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. immoral / moan / typical / weep</b><br/>Every time the sick woman would [ 9 ] in pain, her daughter would [ 10 ]. It is not [ 11 ] for a policeman to do [ 12 ] things like stealing.</p><p style=\"margin-bottom: 12px;\"><b>4. beak / disapprove / except / trivial</b><br/>Every part of the bird was beautiful, [ 13 ] for its short, ugly [ 14 ]. Because his assistant is teaching them [ 15 ] plays, the coach will [ 16 ] of the time wasted.</p><p style=\"margin-bottom: 12px;\"><b>5. damp / ivy / slippery / utterly</b><br/>Because it [ 17 ] covered the fence, the gardener had to remove all of the [ 18 ]. The ground became dangerous and [ 19 ] because everyone placed their [ 20 ] towels there.</p>",
+              "options": [],
+              "correctAnswer": "perish",
+              "explanation": "perish: chết; oblivious: không hay biết."
             },
             {
-              "id": "12",
-              "content": "When the owl wants to make a ___________, it is ___________ of using an empty barn.",
-              "options": [
-                "roost / fond",
-                "fond / roost"
-              ],
-              "explanation": "roost: chỗ đậu; fond of: thích.",
-              "correctAnswer": "A"
+              "id": "11_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "oblivious",
+              "explanation": "perish: chết; oblivious: không hay biết."
             },
             {
-              "id": "13",
-              "content": "He grabbed the can by its ___________, then tossed it far down into the ___________.",
-              "options": [
-                "rim / pit",
-                "pit / rim"
-              ],
-              "explanation": "rim: miệng lon; pit: cái hố.",
-              "correctAnswer": "A"
+              "id": "12_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "roost",
+              "explanation": "roost: chỗ đậu; fond of: thích."
             },
             {
-              "id": "14",
-              "content": "The eagle ___________ into the clouds when it goes on a long ___________.",
-              "options": [
-                "soars / flight",
-                "flight / soars"
-              ],
-              "explanation": "soar: bay lượn; flight: chuyến bay.",
-              "correctAnswer": "A"
+              "id": "12_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "fond",
+              "explanation": "roost: chỗ đậu; fond of: thích."
             },
             {
-              "id": "15",
-              "content": "Every time the sick woman would ___________ in pain, her daughter would ___________.",
-              "options": [
-                "moan / weep",
-                "weep / moan"
-              ],
-              "explanation": "moan: rên rỉ; weep: khóc.",
-              "correctAnswer": "A"
+              "id": "13_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "rim",
+              "explanation": "rim: miệng lon; pit: cái hố."
             },
             {
-              "id": "16",
-              "content": "It is not ___________ for a policeman to do ___________ things like stealing.",
-              "options": [
-                "typical / immoral",
-                "immoral / typical"
-              ],
-              "explanation": "typical: điển hình; immoral: vô đạo đức.",
-              "correctAnswer": "A"
+              "id": "13_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "pit",
+              "explanation": "rim: miệng lon; pit: cái hố."
             },
             {
-              "id": "17",
-              "content": "Every part of the bird was beautiful, ___________ for its short, ugly ___________.",
-              "options": [
-                "except / beak",
-                "beak / except"
-              ],
-              "explanation": "except for: ngoại trừ; beak: mỏ chim.",
-              "correctAnswer": "A"
+              "id": "14_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "soars",
+              "explanation": "soar: bay lượn; flight: chuyến bay."
             },
             {
-              "id": "18",
-              "content": "Because his assistant is teaching them ___________ plays, the coach will ___________ of the time wasted.",
-              "options": [
-                "trivial / disapprove",
-                "disapprove / trivial"
-              ],
-              "explanation": "trivial: tầm thường; disapprove of: không tán thành.",
-              "correctAnswer": "A"
+              "id": "14_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "flight",
+              "explanation": "soar: bay lượn; flight: chuyến bay."
             },
             {
-              "id": "19",
-              "content": "Because it ___________ covered the fence, the gardener had to remove all of the ___________.",
-              "options": [
-                "utterly / ivy",
-                "ivy / utterly"
-              ],
-              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân.",
-              "correctAnswer": "A"
+              "id": "15_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "moan",
+              "explanation": "moan: rên rỉ; weep: khóc."
             },
             {
-              "id": "20",
-              "content": "The ground became dangerous and ___________ because everyone placed their ___________ towels there.",
-              "options": [
-                "slippery / damp",
-                "damp / slippery"
-              ],
-              "explanation": "slippery: trơn trượt; damp: ẩm ướt.",
-              "correctAnswer": "A"
+              "id": "15_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "weep",
+              "explanation": "moan: rên rỉ; weep: khóc."
+            },
+            {
+              "id": "16_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "typical",
+              "explanation": "typical: điển hình; immoral: vô đạo đức."
+            },
+            {
+              "id": "16_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "immoral",
+              "explanation": "typical: điển hình; immoral: vô đạo đức."
+            },
+            {
+              "id": "17_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "except",
+              "explanation": "except for: ngoại trừ; beak: mỏ chim."
+            },
+            {
+              "id": "17_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "beak",
+              "explanation": "except for: ngoại trừ; beak: mỏ chim."
+            },
+            {
+              "id": "18_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "trivial",
+              "explanation": "trivial: tầm thường; disapprove of: không tán thành."
+            },
+            {
+              "id": "18_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "disapprove",
+              "explanation": "trivial: tầm thường; disapprove of: không tán thành."
+            },
+            {
+              "id": "19_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "utterly",
+              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân."
+            },
+            {
+              "id": "19_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "ivy",
+              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân."
+            },
+            {
+              "id": "20_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "slippery",
+              "explanation": "slippery: trơn trượt; damp: ẩm ướt."
+            },
+            {
+              "id": "20_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "damp",
+              "explanation": "slippery: trơn trượt; damp: ẩm ướt."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Điền từ"
         }
       ]
     },
