@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1",
-          "title": "Exercise 1: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "1",
@@ -142,8 +142,8 @@
         },
         {
           "id": "sec2",
-          "title": "Exercise 2: Match to make complete sentences.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match to make complete sentences.</p>",
           "questions": [
             {
               "id": "11",
@@ -398,8 +398,8 @@
       "sections": [
         {
           "id": "sec3",
-          "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "",
+          "title": "Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "31",
@@ -466,8 +466,8 @@
         },
         {
           "id": "sec4",
-          "title": "Part B: Answer the questions.",
-          "content": "",
+          "title": "Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "37",

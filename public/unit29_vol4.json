@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_ex1",
-          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
               "id": "1",
@@ -142,8 +142,8 @@
         },
         {
           "id": "sec1_ex2",
-          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>",
           "questions": [
             {
               "id": "11",
@@ -220,8 +220,8 @@
         },
         {
           "id": "sec1_ex3",
-          "title": "Exercise 3: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 3",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "21",
@@ -296,8 +296,8 @@
       "sections": [
         {
           "id": "sec2_read_a",
-          "title": "Reading Comprehension: Part A - Mark each statement T for true or F for false.",
-          "content": "",
+          "title": "Reading Comprehension",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A - Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "26",
@@ -364,8 +364,8 @@
         },
         {
           "id": "sec2_read_b",
-          "title": "Reading Comprehension: Part B - Answer the questions based on the story.",
-          "content": "",
+          "title": "Reading Comprehension",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B - Answer the questions based on the story.</p>",
           "questions": [
             {
               "id": "32",

@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
               "id": "1",
@@ -142,8 +142,8 @@
         },
         {
           "id": "sec2_wordlist",
-          "title": "Exercise 2: Write a word that is similar in meaning to the bracketed part.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the bracketed part.</p>",
           "questions": [
             {
               "id": "11",
@@ -270,8 +270,8 @@
         },
         {
           "id": "sec3_wordlist",
-          "title": "Exercise 3: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 3",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "21",
@@ -346,8 +346,8 @@
       "sections": [
         {
           "id": "sec4_reading",
-          "title": "Reading Comprehension - Part A: Mark each statement True or False.",
-          "content": "",
+          "title": "Reading Comprehension - Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement True or False.</p>",
           "questions": [
             {
               "id": "26",
@@ -414,8 +414,8 @@
         },
         {
           "id": "sec5_reading",
-          "title": "Reading Comprehension - Part B: Answer the questions.",
-          "content": "",
+          "title": "Reading Comprehension - Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "32",

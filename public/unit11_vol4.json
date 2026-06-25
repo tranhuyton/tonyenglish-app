@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Exercise 1: Choose the right word for the given definition.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>",
           "questions": [
             {
               "id": "1",
@@ -82,8 +82,8 @@
         },
         {
           "id": "sec2_wordlist",
-          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>",
           "questions": [
             {
               "id": "6",
@@ -160,8 +160,8 @@
         },
         {
           "id": "sec3_wordlist",
-          "title": "Exercise 3: Match the phrases and clauses to make complete sentences.",
-          "content": "",
+          "title": "Exercise 3",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases and clauses to make complete sentences.</p>",
           "questions": [
             {
               "id": "16",

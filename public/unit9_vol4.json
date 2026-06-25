@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_wordlist_9A",
-          "title": "Exercise 1: Part A. Choose the right word for the given definition.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A. Choose the right word for the given definition.</p>",
           "questions": [
             {
               "id": "1",
@@ -82,8 +82,8 @@
         },
         {
           "id": "sec1_wordlist_9B",
-          "title": "Exercise 1: Part B. Choose the right definition for the given word.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B. Choose the right definition for the given word.</p>",
           "questions": [
             {
               "id": "6",
@@ -150,8 +150,8 @@
         },
         {
           "id": "sec3_wordlist_9",
-          "title": "Exercise 3: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 3",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "11",
@@ -226,8 +226,8 @@
       "sections": [
         {
           "id": "sec3_comp_9",
-          "title": "Part B: Answer the questions.",
-          "content": "",
+          "title": "Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "16",

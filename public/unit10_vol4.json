@@ -15,8 +15,8 @@
       "sections": [
         {
           "id": "ex1_partA",
-          "title": "Exercise 1 - Part A: Choose the right word for the given definition.",
-          "content": "",
+          "title": "Exercise 1 - Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>",
           "questions": [
             {
               "id": "1",
@@ -83,8 +83,8 @@
         },
         {
           "id": "ex1_partB",
-          "title": "Exercise 1 - Part B: Choose the right definition for the given word.",
-          "content": "",
+          "title": "Exercise 1 - Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
               "id": "6",
@@ -151,8 +151,8 @@
         },
         {
           "id": "ex2",
-          "title": "Exercise 2: Choose the word that is the better fit for each blank.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
               "id": "11",
@@ -267,8 +267,8 @@
       "sections": [
         {
           "id": "reading_comp_A",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
-          "content": "",
+          "title": "Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "21",
@@ -335,8 +335,8 @@
         },
         {
           "id": "reading_comp_B",
-          "title": "Part B: Answer the questions.",
-          "content": "",
+          "title": "Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "27",

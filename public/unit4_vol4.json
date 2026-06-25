@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Exercise 1: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "1",
@@ -142,8 +142,8 @@
         },
         {
           "id": "sec2_wordlist",
-          "title": "Exercise 2: Choose the word that is the better fit for each blank.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
               "id": "11",
@@ -258,8 +258,8 @@
       "sections": [
         {
           "id": "sec3_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "",
+          "title": "Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "21",
@@ -326,8 +326,8 @@
         },
         {
           "id": "sec4_reading",
-          "title": "Part B: Answer the questions.",
-          "content": "",
+          "title": "Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "27",

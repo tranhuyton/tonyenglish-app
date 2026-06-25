@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1",
-          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
               "id": "1",
@@ -122,8 +122,8 @@
         },
         {
           "id": "sec2",
-          "title": "Exercise 2: Part A. Match the phrases to make complete sentences.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A. Match the phrases to make complete sentences.</p>",
           "questions": [
             {
               "id": "11",
@@ -250,8 +250,8 @@
         },
         {
           "id": "sec3",
-          "title": "Exercise 2: Part B. Match the clauses to make complete sentences.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B. Match the clauses to make complete sentences.</p>",
           "questions": [
             {
               "id": "21",
@@ -386,8 +386,8 @@
       "sections": [
         {
           "id": "sec4",
-          "title": "Reading Comprehension Part A: True or False",
-          "content": "",
+          "title": "Reading Comprehension Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True or False</p>",
           "questions": [
             {
               "id": "31",
@@ -454,8 +454,8 @@
         },
         {
           "id": "sec5",
-          "title": "Reading Comprehension Part B: Choose the right answer",
-          "content": "",
+          "title": "Reading Comprehension Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right answer</p>",
           "questions": [
             {
               "id": "37",

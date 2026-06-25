@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Part A: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "1",
@@ -90,8 +90,8 @@
       "sections": [
         {
           "id": "sec2_reading_tf",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
-          "content": "",
+          "title": "Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "6",
@@ -158,8 +158,8 @@
         },
         {
           "id": "sec3_reading_mc",
-          "title": "Part B: Answer the questions.",
-          "content": "",
+          "title": "Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "12",

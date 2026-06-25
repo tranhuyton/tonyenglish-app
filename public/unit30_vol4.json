@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "1",
@@ -150,8 +150,8 @@
       "sections": [
         {
           "id": "sec2",
-          "title": "Answer the questions based on the story.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions based on the story.</p>",
           "questions": [
             {
               "id": "11",

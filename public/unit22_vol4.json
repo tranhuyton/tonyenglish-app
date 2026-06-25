@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_wordlist_ex1",
-          "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>",
           "questions": [
             {
               "id": "1",
@@ -92,8 +92,8 @@
         },
         {
           "id": "sec1_wordlist_ex2",
-          "title": "Exercise 2: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "11",
@@ -168,8 +168,8 @@
       "sections": [
         {
           "id": "sec2_reading_comp",
-          "title": "Reading Comprehension: Answer the questions.",
-          "content": "",
+          "title": "Reading Comprehension",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "16",

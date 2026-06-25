@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1_wordlist",
-          "title": "Exercise 1 - Part A: Choose the right definition for the given word.",
-          "content": "",
+          "title": "Exercise 1 - Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
               "id": "1",
@@ -82,8 +82,8 @@
         },
         {
           "id": "sec2_wordlist",
-          "title": "Exercise 1 - Part B: Choose the right word for the given definition.",
-          "content": "",
+          "title": "Exercise 1 - Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>",
           "questions": [
             {
               "id": "6",
@@ -150,8 +150,8 @@
         },
         {
           "id": "sec3_wordlist",
-          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the underlined part.</p>",
           "questions": [
             {
               "id": "11",
@@ -228,8 +228,8 @@
         },
         {
           "id": "sec4_wordlist",
-          "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
-          "content": "Word bank: character, accident, flesh, stake, wreck",
+          "title": "Exercise 3",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Fill in the blanks with the correct words from the word bank.</p>Word bank: character, accident, flesh, stake, wreck",
           "questions": [
             {
               "id": "21",
@@ -309,8 +309,8 @@
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
-          "content": "",
+          "title": "Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "26",
@@ -377,8 +377,8 @@
         },
         {
           "id": "sec6_reading",
-          "title": "Part B: Answer the questions.",
-          "content": "",
+          "title": "Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "32",

@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1",
-          "title": "Choose the right definition for the given word.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
               "id": "1",
@@ -82,8 +82,8 @@
         },
         {
           "id": "sec2",
-          "title": "Write a word that is similar in meaning to the bold part.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Write a word that is similar in meaning to the bold part.</p>",
           "questions": [
             {
               "id": "6",
@@ -218,8 +218,8 @@
       "sections": [
         {
           "id": "sec3",
-          "title": "Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
-          "content": "",
+          "title": "Exercise 1",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
           "questions": [
             {
               "id": "16",
@@ -286,8 +286,8 @@
         },
         {
           "id": "sec4",
-          "title": "Answer the questions.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "22",

@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "u18_ex1_a",
-          "title": "Exercise 1 Part A: Choose the right word for the given definition.",
-          "content": "",
+          "title": "Exercise 1 Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>",
           "questions": [
             {
               "id": "1",
@@ -82,8 +82,8 @@
         },
         {
           "id": "u18_ex1_b",
-          "title": "Exercise 1 Part B: Choose the right definition for the given word.",
-          "content": "",
+          "title": "Exercise 1 Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
               "id": "6",
@@ -150,8 +150,8 @@
         },
         {
           "id": "u18_ex2_a",
-          "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
-          "content": "",
+          "title": "Exercise 2 Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases to make complete sentences.</p>",
           "questions": [
             {
               "id": "11",
@@ -278,8 +278,8 @@
         },
         {
           "id": "u18_ex2_b",
-          "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
-          "content": "",
+          "title": "Exercise 2 Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the clauses to make complete sentences.</p>",
           "questions": [
             {
               "id": "21",
@@ -414,8 +414,8 @@
       "sections": [
         {
           "id": "u18_rc_a",
-          "title": "Reading Comprehension Part A: Mark each statement T for true or F for false.",
-          "content": "",
+          "title": "Reading Comprehension Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "31",
@@ -482,8 +482,8 @@
         },
         {
           "id": "u18_rc_b",
-          "title": "Reading Comprehension Part B: Answer the questions.",
-          "content": "",
+          "title": "Reading Comprehension Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "37",

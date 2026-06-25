@@ -14,8 +14,8 @@
       "sections": [
         {
           "id": "sec1",
-          "title": "Part A: Choose the right word for the given definition.",
-          "content": "",
+          "title": "Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>",
           "questions": [
             {
               "id": "1",
@@ -82,8 +82,8 @@
         },
         {
           "id": "sec2",
-          "title": "Part B: Choose the right definition for the given word.",
-          "content": "",
+          "title": "Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
               "id": "6",
@@ -150,8 +150,8 @@
         },
         {
           "id": "sec3",
-          "title": "Exercise 2: Choose the answer that best fits the question.",
-          "content": "",
+          "title": "Exercise 2",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
               "id": "11",
@@ -218,8 +218,8 @@
         },
         {
           "id": "sec4",
-          "title": "Exercise 3: Choose the word that is the better fit for each blank.",
-          "content": "",
+          "title": "Exercise 3",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
               "id": "16",
@@ -334,8 +334,8 @@
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "",
+          "title": "Part A",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
           "questions": [
             {
               "id": "26",
@@ -402,8 +402,8 @@
         },
         {
           "id": "sec6",
-          "title": "Part B: Answer the questions.",
-          "content": "",
+          "title": "Part B",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
               "id": "32",
