@@ -100,7 +100,7 @@
                 "prone"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "E"
+              "correctAnswer": "manufactures"
             },
             {
               "id": "101",
@@ -118,7 +118,7 @@
                 "prone"
               ],
               "explanation": "",
-              "correctAnswer": "G"
+              "correctAnswer": "mechanisms"
             },
             {
               "id": "102",
@@ -136,7 +136,7 @@
                 "prone"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "D"
+              "correctAnswer": "administration"
             },
             {
               "id": "103",
@@ -154,7 +154,7 @@
                 "prone"
               ],
               "explanation": "",
-              "correctAnswer": "F"
+              "correctAnswer": "cholesterol"
             },
             {
               "id": "104",
@@ -172,7 +172,7 @@
                 "prone"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "C"
+              "correctAnswer": "deceptive"
             },
             {
               "id": "105",
@@ -190,7 +190,7 @@
                 "prone"
               ],
               "explanation": "",
-              "correctAnswer": "H"
+              "correctAnswer": "explicit"
             },
             {
               "id": "106",
@@ -208,7 +208,7 @@
                 "prone"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "I"
+              "correctAnswer": "coalition"
             },
             {
               "id": "107",
@@ -226,7 +226,7 @@
                 "prone"
               ],
               "explanation": "",
-              "correctAnswer": "J"
+              "correctAnswer": "prone"
             },
             {
               "id": "108",
@@ -244,7 +244,7 @@
                 "prone"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "B"
+              "correctAnswer": "framework"
             },
             {
               "id": "109",
@@ -262,7 +262,7 @@
                 "prone"
               ],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "straightforward"
             }
           ],
           "questionType": "Kéo thả"

@@ -171,7 +171,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "identical to...: giống hệt. Chiếc áo sơ mi rẻ hơn gần như giống hệt cái tôi tìm thấy trong cửa hàng đắt tiền đó.",
-              "correctAnswer": "Q"
+              "correctAnswer": "to the one I found in that expensive store"
             },
             {
               "id": "12",
@@ -199,7 +199,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "mammals that come from...: các loài động vật có vú đến từ khắp nơi trên thế giới.",
-              "correctAnswer": "P"
+              "correctAnswer": "that come from all over the world"
             },
             {
               "id": "13",
@@ -227,7 +227,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "evolved from a big machine to a tiny one: tiến hóa / phát triển từ một cỗ máy lớn thành một cái nhỏ xíu.",
-              "correctAnswer": "A"
+              "correctAnswer": "a big machine to a tiny one"
             },
             {
               "id": "14",
@@ -255,7 +255,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "asteroids are made of rock...: tiểu hành tinh được tạo thành từ đá, băng và kim loại.",
-              "correctAnswer": "C"
+              "correctAnswer": "are made of rock, ice and metal"
             },
             {
               "id": "15",
@@ -283,7 +283,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "pesticides that are used on crops: thuốc trừ sâu được sử dụng trên cây trồng gây bệnh cho con người.",
-              "correctAnswer": "L"
+              "correctAnswer": "crops cause illnesses in humans"
             },
             {
               "id": "16",
@@ -311,7 +311,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "reinforced her statement with an example: củng cố tuyên bố của mình bằng một ví dụ từ một nghiên cứu khoa học.",
-              "correctAnswer": "S"
+              "correctAnswer": "with an example from a scientific study"
             },
             {
               "id": "17",
@@ -339,7 +339,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "analyzes the daily report about each patient: phân tích báo cáo hàng ngày về từng bệnh nhân.",
-              "correctAnswer": "B"
+              "correctAnswer": "about each patient"
             },
             {
               "id": "18",
@@ -367,7 +367,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "vast space ... big enough to fit: không gian rộng lớn ... đủ lớn để chứa ít nhất 5.000 người.",
-              "correctAnswer": "D"
+              "correctAnswer": "big enough to fit at least 5,000 people"
             },
             {
               "id": "19",
@@ -395,7 +395,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "report on animal genomes will be printed: báo cáo về bộ gen động vật sẽ được in trong một cuốn sách giáo khoa.",
-              "correctAnswer": "R"
+              "correctAnswer": "will be printed in a science textbook"
             },
             {
               "id": "20",
@@ -423,7 +423,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "stricken with two broken legs: bị thương nặng với hai chân gãy và một cánh tay bị thương.",
-              "correctAnswer": "T"
+              "correctAnswer": "with two broken legs and an injured arm"
             },
             {
               "id": "21",
@@ -451,7 +451,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "majority: đa số. Một nhóm nhỏ muốn ăn pizza, nhưng đa số lại muốn ăn hamburger.",
-              "correctAnswer": "J"
+              "correctAnswer": "but the majority wanted hamburgers"
             },
             {
               "id": "22",
@@ -479,7 +479,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "accurate: chính xác. Tôi không đọc các tạp chí ngồi lê đôi mách vì tin tức không chính xác.",
-              "correctAnswer": "M"
+              "correctAnswer": "since the news isn't accurate"
             },
             {
               "id": "23",
@@ -507,7 +507,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "regulate: quản lý, điều chỉnh. Những người ở bộ phận này không đáng tin, vì vậy chúng ta phải quản lý hành động của họ.",
-              "correctAnswer": "O"
+              "correctAnswer": "so we must regulate their actions"
             },
             {
               "id": "24",
@@ -535,7 +535,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "factor: yếu tố. Có nhiều điều cần xem xét về chiếc xe, nhưng yếu tố quan trọng nhất là giá của nó.",
-              "correctAnswer": "K"
+              "correctAnswer": "but the most important factor is its price"
             },
             {
               "id": "25",
@@ -563,7 +563,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "genetic: mang tính di truyền. Cả hai chị em đều mắc căn bệnh lạ, nên bố nghĩ nó là do di truyền.",
-              "correctAnswer": "N"
+              "correctAnswer": "so dad thought it was genetic"
             },
             {
               "id": "26",
@@ -591,7 +591,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "controversy: sự tranh cãi. James nghĩ rằng anh ấy đã chọn đúng, nhưng nó đã gây ra rất nhiều tranh cãi.",
-              "correctAnswer": "G"
+              "correctAnswer": "but it caused a lot of controversy"
             },
             {
               "id": "27",
@@ -619,7 +619,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "vegetarian: người ăn chay. Pam phục vụ bít tết và khoai tây cho Ben, nhưng cô không biết anh là người ăn chay.",
-              "correctAnswer": "H"
+              "correctAnswer": "but she didn't know he was a vegetarian"
             },
             {
               "id": "28",
@@ -647,7 +647,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "offspring: con cái. Alice là một phụ nữ thấp bé, nhưng con cái của cô ấy lại rất cao.",
-              "correctAnswer": "E"
+              "correctAnswer": "but her offspring are very tall"
             },
             {
               "id": "29",
@@ -675,7 +675,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "multiplied: nhân lên, phát triển. Tôi nghĩ sẽ mất nhiều tuần để chúng lớn lên, nhưng hoa phát triển rất nhanh.",
-              "correctAnswer": "I"
+              "correctAnswer": "but the flowers multiplied fast"
             },
             {
               "id": "30",
@@ -703,7 +703,7 @@
                 "with two broken legs and an injured arm"
               ],
               "explanation": "intellectual: người trí thức. Daniel thích thể thao và tiệc tùng, nhưng anh trai cậu lại là một người trí thức.",
-              "correctAnswer": "F"
+              "correctAnswer": "but his brother is more of an intellectual"
             }
           ],
           "questionType": "Matching"

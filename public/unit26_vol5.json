@@ -100,7 +100,7 @@
                 "provided"
               ],
               "explanation": "globe (địa cầu). Chuyến đi vòng quanh nửa vòng trái đất.",
-              "correctAnswer": "A"
+              "correctAnswer": "globe"
             },
             {
               "id": "7",
@@ -118,7 +118,7 @@
                 "provided"
               ],
               "explanation": "on my behalf (thay mặt tôi). Sarah sẽ nộp bài tập thay tôi.",
-              "correctAnswer": "D"
+              "correctAnswer": "behalf"
             },
             {
               "id": "8",
@@ -136,7 +136,7 @@
                 "provided"
               ],
               "explanation": "rite (nghi lễ). Chứng kiến một nghi lễ Ai Cập cổ đại.",
-              "correctAnswer": "E"
+              "correctAnswer": "rite"
             },
             {
               "id": "9",
@@ -154,7 +154,7 @@
                 "provided"
               ],
               "explanation": "overview (tổng quan). Được cung cấp một bản tóm tắt ngắn gọn.",
-              "correctAnswer": "G"
+              "correctAnswer": "overview"
             },
             {
               "id": "10",
@@ -172,7 +172,7 @@
                 "provided"
               ],
               "explanation": "provided (cung cấp). Anh ấy cung cấp những lát bánh mì.",
-              "correctAnswer": "J"
+              "correctAnswer": "provided"
             },
             {
               "id": "11",
@@ -190,7 +190,7 @@
                 "provided"
               ],
               "explanation": "loaf (ổ bánh mì). Bằng cách nướng một ổ bánh mì.",
-              "correctAnswer": "F"
+              "correctAnswer": "loaf"
             },
             {
               "id": "12",
@@ -208,7 +208,7 @@
                 "provided"
               ],
               "explanation": "inward (bên trong). Giữ kín suy nghĩ và cảm xúc bên trong.",
-              "correctAnswer": "B"
+              "correctAnswer": "inward"
             },
             {
               "id": "13",
@@ -226,7 +226,7 @@
                 "provided"
               ],
               "explanation": "relevant (có liên quan/quan trọng). Dù im lặng, chúng vẫn rất quan trọng.",
-              "correctAnswer": "C"
+              "correctAnswer": "relevant"
             },
             {
               "id": "14",
@@ -244,7 +244,7 @@
                 "provided"
               ],
               "explanation": "oracles (nhà tiên tri). Người xưa thường hỏi các nhà tiên tri.",
-              "correctAnswer": "H"
+              "correctAnswer": "oracles"
             },
             {
               "id": "15",
@@ -262,7 +262,7 @@
                 "provided"
               ],
               "explanation": "orbit (quay quanh quỹ đạo). Khoa học giải thích cách các hành tinh quay quanh mặt trời.",
-              "correctAnswer": "I"
+              "correctAnswer": "orbit"
             }
           ],
           "questionType": "Kéo thả"

@@ -169,7 +169,7 @@
                 "two hundred years ago."
               ],
               "explanation": "Mom made chocolate pudding for dessert last night. (Mẹ làm bánh pudding sô-cô-la cho bữa tráng miệng tối qua.)",
-              "correctAnswer": "E"
+              "correctAnswer": "for dessert last night."
             },
             {
               "id": "12",
@@ -187,7 +187,7 @@
                 "two hundred years ago."
               ],
               "explanation": "He is very attentive during science class. (Anh ấy rất chú ý trong giờ khoa học.)",
-              "correctAnswer": "C"
+              "correctAnswer": "during science class."
             },
             {
               "id": "13",
@@ -205,7 +205,7 @@
                 "two hundred years ago."
               ],
               "explanation": "People wore capes more often two hundred years ago. (Mọi người thường xuyên mặc áo choàng vào hai trăm năm trước.)",
-              "correctAnswer": "J"
+              "correctAnswer": "two hundred years ago."
             },
             {
               "id": "14",
@@ -223,7 +223,7 @@
                 "two hundred years ago."
               ],
               "explanation": "His strong spirit could not be hurt from mean comments. (Tinh thần mạnh mẽ của anh ấy không bị tổn thương bởi những bình luận ác ý.)",
-              "correctAnswer": "B"
+              "correctAnswer": "could not be hurt from mean comments."
             },
             {
               "id": "15",
@@ -241,7 +241,7 @@
                 "two hundred years ago."
               ],
               "explanation": "I can’t envision you as a politician. (Tôi không thể hình dung bạn là một chính trị gia.)",
-              "correctAnswer": "A"
+              "correctAnswer": "as a politician."
             },
             {
               "id": "16",
@@ -259,7 +259,7 @@
                 "two hundred years ago."
               ],
               "explanation": "It was a pleasure to meet you. (Rất hân hạnh được gặp bạn.)",
-              "correctAnswer": "I"
+              "correctAnswer": "to meet you."
             },
             {
               "id": "17",
@@ -277,7 +277,7 @@
                 "two hundred years ago."
               ],
               "explanation": "His role at work is to manage the team of employees. (Vai trò của anh ấy tại nơi làm việc là quản lý đội ngũ nhân viên.)",
-              "correctAnswer": "H"
+              "correctAnswer": "to manage the team of employees."
             },
             {
               "id": "18",
@@ -295,7 +295,7 @@
                 "two hundred years ago."
               ],
               "explanation": "The cat is sitting on the rail of the fence. (Con mèo đang ngồi trên thanh chắn hàng rào.)",
-              "correctAnswer": "F"
+              "correctAnswer": "of the fence."
             },
             {
               "id": "19",
@@ -313,7 +313,7 @@
                 "two hundred years ago."
               ],
               "explanation": "For this recipe, I will need flour, eggs and sugar. (Với công thức này, tôi sẽ cần bột mì, trứng và đường.)",
-              "correctAnswer": "D"
+              "correctAnswer": "flour, eggs and sugar."
             },
             {
               "id": "20",
@@ -331,7 +331,7 @@
                 "two hundred years ago."
               ],
               "explanation": "There were sparks flying out of the computer. (Có những tia lửa bắn ra từ máy tính.)",
-              "correctAnswer": "G"
+              "correctAnswer": "out of the computer."
             }
           ],
           "questionType": "Matching"
@@ -357,7 +357,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "If you wash this silk shirt in hot water, it will shrink. (Nếu bạn giặt chiếc áo lụa này trong nước nóng, nó sẽ co lại.)",
-              "correctAnswer": "D"
+              "correctAnswer": "it will shrink."
             },
             {
               "id": "22",
@@ -375,7 +375,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "Tony didn’t practice the presentation, so it was an absolute disaster. (Tony đã không thực hành bài thuyết trình, vì vậy nó hoàn toàn là một thảm họa.)",
-              "correctAnswer": "F"
+              "correctAnswer": "so it was an absolute disaster."
             },
             {
               "id": "23",
@@ -393,7 +393,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "I studied hard for the test, but alas, I still didn’t do very well. (Tôi đã học chăm chỉ cho bài kiểm tra, nhưng than ôi, tôi vẫn không làm tốt lắm.)",
-              "correctAnswer": "B"
+              "correctAnswer": "but alas, I still didn’t do very well."
             },
             {
               "id": "24",
@@ -411,7 +411,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "Dan was very unlucky because he fell in a patch of rocks. (Dan rất không may mắn vì anh ấy bị ngã vào một bãi đá.)",
-              "correctAnswer": "A"
+              "correctAnswer": "because he fell in a patch of rocks."
             },
             {
               "id": "25",
@@ -429,7 +429,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "Christmas is an important holiday when folks meet with their families. (Giáng sinh là ngày lễ quan trọng khi người ta gặp gỡ gia đình của họ.)",
-              "correctAnswer": "J"
+              "correctAnswer": "when folks meet with their families."
             },
             {
               "id": "26",
@@ -447,7 +447,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "If you put the butter near the fire, it will melt. (Nếu bạn để bơ gần lửa, nó sẽ tan chảy.)",
-              "correctAnswer": "C"
+              "correctAnswer": "it will melt."
             },
             {
               "id": "27",
@@ -465,7 +465,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "This pan was so dirty that I had to soak it overnight. (Cái chảo này quá bẩn đến nỗi tôi phải ngâm nó qua đêm.)",
-              "correctAnswer": "G"
+              "correctAnswer": "that I had to soak it overnight."
             },
             {
               "id": "28",
@@ -483,7 +483,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "To protect the kingdom, the soldiers spread out evenly. (Để bảo vệ vương quốc, binh lính dàn trải đồng đều.)",
-              "correctAnswer": "H"
+              "correctAnswer": "the soldiers spread out evenly."
             },
             {
               "id": "29",
@@ -501,7 +501,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "I knew the television had broken when I heard the pop. (Tôi biết ti vi đã hỏng khi tôi nghe tiếng 'bốp'.)",
-              "correctAnswer": "I"
+              "correctAnswer": "when I heard the pop."
             },
             {
               "id": "30",
@@ -519,7 +519,7 @@
                 "when folks meet with their families."
               ],
               "explanation": "At work, we have to dress well, so I usually wear a suit. (Tại nơi làm việc, chúng tôi phải ăn mặc đẹp, vì vậy tôi thường mặc một bộ com-lê.)",
-              "correctAnswer": "E"
+              "correctAnswer": "so I usually wear a suit."
             }
           ],
           "questionType": "Matching"

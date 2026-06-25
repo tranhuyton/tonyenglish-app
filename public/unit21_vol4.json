@@ -179,7 +179,7 @@
                 "is rich with tradition"
               ],
               "explanation": "The bank teller deposited Paul's money into his account.",
-              "correctAnswer": "f"
+              "correctAnswer": "deposited Paul's money into his account"
             },
             {
               "id": "2",
@@ -197,7 +197,7 @@
                 "is rich with tradition"
               ],
               "explanation": "Many religions believe that there is a god.",
-              "correctAnswer": "i"
+              "correctAnswer": "believe that there is a god"
             },
             {
               "id": "3",
@@ -215,7 +215,7 @@
                 "is rich with tradition"
               ],
               "explanation": "The nation's folklore is rich with tradition.",
-              "correctAnswer": "j"
+              "correctAnswer": "is rich with tradition"
             },
             {
               "id": "4",
@@ -233,7 +233,7 @@
                 "is rich with tradition"
               ],
               "explanation": "The factory's new worker had a background in engineering.",
-              "correctAnswer": "e"
+              "correctAnswer": "in engineering"
             },
             {
               "id": "5",
@@ -251,7 +251,7 @@
                 "is rich with tradition"
               ],
               "explanation": "Those veins pump blood to all necessary places in the body.",
-              "correctAnswer": "b"
+              "correctAnswer": "to all necessary places in the body"
             },
             {
               "id": "6",
@@ -269,7 +269,7 @@
                 "is rich with tradition"
               ],
               "explanation": "The snake's poisonous venom caused the boy to collapse.",
-              "correctAnswer": "a"
+              "correctAnswer": "caused the boy to collapse"
             },
             {
               "id": "7",
@@ -287,7 +287,7 @@
                 "is rich with tradition"
               ],
               "explanation": "The newspaper story chronicled the action of the heroic crime-fighter.",
-              "correctAnswer": "h"
+              "correctAnswer": "of the heroic crime-fighter"
             },
             {
               "id": "8",
@@ -305,7 +305,7 @@
                 "is rich with tradition"
               ],
               "explanation": "One of that culture's myths explains that the ocean was once a small pond.",
-              "correctAnswer": "c"
+              "correctAnswer": "was once a small pond"
             },
             {
               "id": "9",
@@ -323,7 +323,7 @@
                 "is rich with tradition"
               ],
               "explanation": "The total sum for staying three nights at the hotel was over $300.",
-              "correctAnswer": "d"
+              "correctAnswer": "was over $300"
             },
             {
               "id": "10",
@@ -341,7 +341,7 @@
                 "is rich with tradition"
               ],
               "explanation": "Her arm started to itch from all of the insect bites.",
-              "correctAnswer": "g"
+              "correctAnswer": "from all of the insect bites"
             }
           ],
           "questionType": "Matching"
@@ -367,7 +367,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "If you don't stay away from school today, then you might infect the other students.",
-              "correctAnswer": "e"
+              "correctAnswer": "then you might infect the other students"
             },
             {
               "id": "2",
@@ -385,7 +385,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "Because the calendar didn't list the new holidays, it had to be updated.",
-              "correctAnswer": "d"
+              "correctAnswer": "it had to be updated"
             },
             {
               "id": "3",
@@ -403,7 +403,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "The hunters put some food in the trap, but no animals wanted the bait.",
-              "correctAnswer": "b"
+              "correctAnswer": "but no animals wanted the bait"
             },
             {
               "id": "4",
@@ -421,7 +421,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "She learned to speak the country's language, so she could read their literature.",
-              "correctAnswer": "f"
+              "correctAnswer": "so she could read their literature"
             },
             {
               "id": "5",
@@ -439,7 +439,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "The police thought the two crimes might be connected, but it turned out that they didn't relate to each other.",
-              "correctAnswer": "i"
+              "correctAnswer": "but it turned out that they didn't relate to each other"
             },
             {
               "id": "6",
@@ -457,7 +457,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "The pipes were safe for carrying water because they were made from copper.",
-              "correctAnswer": "a"
+              "correctAnswer": "because they were made from copper"
             },
             {
               "id": "7",
@@ -475,7 +475,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "He had done great work for the company for three years, so his boss promoted him.",
-              "correctAnswer": "h"
+              "correctAnswer": "so his boss promoted him"
             },
             {
               "id": "8",
@@ -493,7 +493,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "She never shared her friends' secrets with anyone, so everyone knew she was trustworthy.",
-              "correctAnswer": "c"
+              "correctAnswer": "so everyone knew she was trustworthy"
             },
             {
               "id": "9",
@@ -511,7 +511,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "If you think a lot can happen in a hundred years, then imagine how much might happen in a millennium.",
-              "correctAnswer": "j"
+              "correctAnswer": "then imagine how much might happen in a millennium"
             },
             {
               "id": "10",
@@ -529,7 +529,7 @@
                 "then imagine how much might happen in a millennium"
               ],
               "explanation": "He had a bad cough and a headache, so he thought he'd caught a disease.",
-              "correctAnswer": "g"
+              "correctAnswer": "so he thought he'd caught a disease"
             }
           ],
           "questionType": "Matching"

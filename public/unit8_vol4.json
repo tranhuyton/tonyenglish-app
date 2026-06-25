@@ -181,7 +181,7 @@
                 "to miss school today"
               ],
               "explanation": "Các nhà khoa học có một thiết bị giúp họ biết một vật thể bao nhiêu tuổi.",
-              "correctAnswer": "I"
+              "correctAnswer": "them tell how old an object is"
             },
             {
               "id": "12",
@@ -199,7 +199,7 @@
                 "to miss school today"
               ],
               "explanation": "Người lái xe nắm chặt vô lăng khi rẽ ở góc đường.",
-              "correctAnswer": "A"
+              "correctAnswer": "as she turned around the corner"
             },
             {
               "id": "13",
@@ -217,7 +217,7 @@
                 "to miss school today"
               ],
               "explanation": "Tôi luôn đổ mồ hôi nhiều hơn vào mùa hè.",
-              "correctAnswer": "C"
+              "correctAnswer": "in the summer"
             },
             {
               "id": "14",
@@ -235,7 +235,7 @@
                 "to miss school today"
               ],
               "explanation": "Buổi hòa nhạc dừng lại khi mất điện.",
-              "correctAnswer": "D"
+              "correctAnswer": "light bulb with a new one"
             },
             {
               "id": "15",
@@ -253,7 +253,7 @@
                 "to miss school today"
               ],
               "explanation": "Cậu bé tinh ranh lấy chiếc bánh quy khi mẹ không để ý.",
-              "correctAnswer": "B"
+              "correctAnswer": "his mother wasn't watching him"
             },
             {
               "id": "16",
@@ -271,7 +271,7 @@
                 "to miss school today"
               ],
               "explanation": "Bố tôi thay bóng đèn cũ bằng một cái mới.",
-              "correctAnswer": "E"
+              "correctAnswer": "my brother in trouble"
             },
             {
               "id": "17",
@@ -289,7 +289,7 @@
                 "to miss school today"
               ],
               "explanation": "Cậu ấy có một lý do chính đáng để nghỉ học hôm nay.",
-              "correctAnswer": "J"
+              "correctAnswer": "to miss school today"
             },
             {
               "id": "18",
@@ -307,7 +307,7 @@
                 "to miss school today"
               ],
               "explanation": "Tôi bẻ gãy món đồ chơi bằng cách cầm nó quá chặt.",
-              "correctAnswer": "E"
+              "correctAnswer": "my brother in trouble"
             },
             {
               "id": "19",
@@ -325,7 +325,7 @@
                 "to miss school today"
               ],
               "explanation": "Giáo viên có xu hướng cho điểm cao nhất cho những học sinh làm hết bài tập về nhà.",
-              "correctAnswer": "H"
+              "correctAnswer": "students who do all of their homework"
             },
             {
               "id": "20",
@@ -343,7 +343,7 @@
                 "to miss school today"
               ],
               "explanation": "Tôi không cảm thấy vui chút nào khi khiến anh trai tôi gặp rắc rối.",
-              "correctAnswer": "E"
+              "correctAnswer": "my brother in trouble"
             }
           ],
           "questionType": "Matching"
@@ -369,7 +369,7 @@
                 "that he broke every law"
               ],
               "explanation": "Anh ấy không hiểu, nên họ kể cho anh ấy một phiên bản khác.",
-              "correctAnswer": "H"
+              "correctAnswer": "so they told him a different version"
             },
             {
               "id": "22",
@@ -387,7 +387,7 @@
                 "that he broke every law"
               ],
               "explanation": "Anh ấy được dặn phải cư xử tốt, nên hạnh kiểm của anh ấy rất xuất sắc.",
-              "correctAnswer": "F"
+              "correctAnswer": "so his conduct was excellent"
             },
             {
               "id": "23",
@@ -405,7 +405,7 @@
                 "that he broke every law"
               ],
               "explanation": "Joe là một kẻ tồi tệ đến mức anh ta đã phá vỡ mọi điều luật.",
-              "correctAnswer": "J"
+              "correctAnswer": "that he broke every law"
             },
             {
               "id": "24",
@@ -423,7 +423,7 @@
                 "that he broke every law"
               ],
               "explanation": "Để giữ an toàn cho những viên đá quý, nó được bọc trong kính.",
-              "correctAnswer": "E"
+              "correctAnswer": "it was enclosed in glass"
             },
             {
               "id": "25",
@@ -441,7 +441,7 @@
                 "that he broke every law"
               ],
               "explanation": "Hãy cẩn thận vì anh ấy có thể ảnh hưởng người khác làm bất cứ điều gì.",
-              "correctAnswer": "A"
+              "correctAnswer": "because there were cracks in it"
             },
             {
               "id": "26",
@@ -459,7 +459,7 @@
                 "that he broke every law"
               ],
               "explanation": "Mark đã thử mã số, nhưng anh ấy không được phép truy cập vào phòng.",
-              "correctAnswer": "C"
+              "correctAnswer": "but he wasn't given access to the room"
             },
             {
               "id": "27",
@@ -477,7 +477,7 @@
                 "that he broke every law"
               ],
               "explanation": "Cô ấy tập violin vào ban ngày, nên tiếng nhạc liên tục sẽ không làm phiền hàng xóm.",
-              "correctAnswer": "H"
+              "correctAnswer": "so they told him a different version"
             },
             {
               "id": "28",
@@ -495,7 +495,7 @@
                 "that he broke every law"
               ],
               "explanation": "Anh ấy học hành chăm chỉ vì bài kiểm tra sắp tới rất quan trọng.",
-              "correctAnswer": "C"
+              "correctAnswer": "but he wasn't given access to the room"
             },
             {
               "id": "29",
@@ -513,7 +513,7 @@
                 "that he broke every law"
               ],
               "explanation": "Cô ấy tắt điện thoại, nên chế độ đó sẽ không làm phiền ai.",
-              "correctAnswer": "G"
+              "correctAnswer": "so the mode wouldn't disturb anyone"
             },
             {
               "id": "30",
@@ -531,7 +531,7 @@
                 "that he broke every law"
               ],
               "explanation": "Anh ấy đã thay tấm kính vì có những vết nứt trên đó.",
-              "correctAnswer": "A"
+              "correctAnswer": "because there were cracks in it"
             }
           ],
           "questionType": "Matching"

@@ -228,7 +228,7 @@
                 "tuition"
               ],
               "explanation": "\"graduated\" (tốt nghiệp) phù hợp với ngữ cảnh từ trường đại học (university).",
-              "correctAnswer": "E"
+              "correctAnswer": "graduated"
             },
             {
               "id": "17",
@@ -246,7 +246,7 @@
                 "tuition"
               ],
               "explanation": "\"donor\" (người hiến tặng) phù hợp với tính từ generous (hào phóng).",
-              "correctAnswer": "C"
+              "correctAnswer": "donor"
             },
             {
               "id": "18",
@@ -264,7 +264,7 @@
                 "tuition"
               ],
               "explanation": "\"tuition\" (học phí) phù hợp với việc giảm chi phí tại trường đại học.",
-              "correctAnswer": "J"
+              "correctAnswer": "tuition"
             },
             {
               "id": "19",
@@ -282,7 +282,7 @@
                 "tuition"
               ],
               "explanation": "\"stimulus\" (động lực) giúp thu hút thêm sinh viên đến học thuật.",
-              "correctAnswer": "H"
+              "correctAnswer": "stimulus"
             },
             {
               "id": "20",
@@ -300,7 +300,7 @@
                 "tuition"
               ],
               "explanation": "\"implicated\" (dính líu) vào một việc tồi tệ (a terrible thing).",
-              "correctAnswer": "G"
+              "correctAnswer": "implicated"
             },
             {
               "id": "21",
@@ -318,7 +318,7 @@
                 "tuition"
               ],
               "explanation": "\"graffiti\" (hình vẽ bậy) trên bức tường trường học (school wall).",
-              "correctAnswer": "F"
+              "correctAnswer": "graffiti"
             },
             {
               "id": "22",
@@ -336,7 +336,7 @@
                 "tuition"
               ],
               "explanation": "\"chronic problems\" (vấn đề mãn tính, kéo dài) ở trường học.",
-              "correctAnswer": "A"
+              "correctAnswer": "chronic"
             },
             {
               "id": "23",
@@ -354,7 +354,7 @@
                 "tuition"
               ],
               "explanation": "\"discipline\" (kỷ luật) được phụ huynh áp dụng để giáo dục con cái.",
-              "correctAnswer": "B"
+              "correctAnswer": "discipline"
             },
             {
               "id": "24",
@@ -372,7 +372,7 @@
                 "tuition"
               ],
               "explanation": "\"gossip\" (lời đồn) về những người hàng xóm (neighbors).",
-              "correctAnswer": "D"
+              "correctAnswer": "gossip"
             },
             {
               "id": "25",
@@ -390,7 +390,7 @@
                 "tuition"
               ],
               "explanation": "\"terminate\" (chấm dứt) hành vi đó (that behavior).",
-              "correctAnswer": "I"
+              "correctAnswer": "terminate"
             }
           ],
           "questionType": "Kéo thả"

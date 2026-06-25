@@ -181,7 +181,7 @@
                 "to use the computer"
               ],
               "explanation": "misfortune of breaking her arm (sự rủi ro bị gãy tay).",
-              "correctAnswer": "F"
+              "correctAnswer": "her arm before the competition"
             },
             {
               "id": "12",
@@ -199,7 +199,7 @@
                 "to use the computer"
               ],
               "explanation": "disobedient dog (con chó không vâng lời) chạy khỏi chủ (from its owner).",
-              "correctAnswer": "D"
+              "correctAnswer": "from its owner at the park"
             },
             {
               "id": "13",
@@ -217,7 +217,7 @@
                 "to use the computer"
               ],
               "explanation": "bound to her friends (gắn kết với bạn bè) vì biết họ lâu rồi.",
-              "correctAnswer": "G"
+              "correctAnswer": "known them for a long time"
             },
             {
               "id": "14",
@@ -235,7 +235,7 @@
                 "to use the computer"
               ],
               "explanation": "foresee any bad weather (lường trước thời tiết xấu).",
-              "correctAnswer": "A"
+              "correctAnswer": "bad weather this weekend"
             },
             {
               "id": "15",
@@ -253,7 +253,7 @@
                 "to use the computer"
               ],
               "explanation": "custom of eating dinner early (thói quen ăn tối sớm).",
-              "correctAnswer": "C"
+              "correctAnswer": "eating dinner early on Sundays"
             },
             {
               "id": "16",
@@ -271,7 +271,7 @@
                 "to use the computer"
               ],
               "explanation": "glimpsed at his painting (nhìn lướt qua bức tranh) trước khi nó hoàn thành.",
-              "correctAnswer": "B"
+              "correctAnswer": "before it was completed"
             },
             {
               "id": "17",
@@ -289,7 +289,7 @@
                 "to use the computer"
               ],
               "explanation": "ripped the paper in half (xé giấy làm đôi) và đưa một nửa cho bạn.",
-              "correctAnswer": "E"
+              "correctAnswer": "gave one piece to his friend"
             },
             {
               "id": "18",
@@ -307,7 +307,7 @@
                 "to use the computer"
               ],
               "explanation": "pleaded with her teacher (van nài giáo viên) cho điểm cao hơn.",
-              "correctAnswer": "I"
+              "correctAnswer": "to give her a better grade"
             },
             {
               "id": "19",
@@ -325,7 +325,7 @@
                 "to use the computer"
               ],
               "explanation": "scraped the ice off the window (cạo băng khỏi cửa sổ).",
-              "correctAnswer": "H"
+              "correctAnswer": "off the window"
             },
             {
               "id": "20",
@@ -343,7 +343,7 @@
                 "to use the computer"
               ],
               "explanation": "vehement about being allowed to use the computer (kịch liệt về việc được cho phép dùng máy tính).",
-              "correctAnswer": "J"
+              "correctAnswer": "to use the computer"
             }
           ],
           "questionType": "Matching"
@@ -369,7 +369,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "stitch it back together (khâu nó lại) vì áo bị rách (a tear).",
-              "correctAnswer": "H"
+              "correctAnswer": "so my mom stitched it back together"
             },
             {
               "id": "22",
@@ -387,7 +387,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "rơi kéo gây ra 'a slight thump' (tiếng động nhỏ).",
-              "correctAnswer": "I"
+              "correctAnswer": "so there was a slight thump"
             },
             {
               "id": "23",
@@ -405,7 +405,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "strict (nghiêm khắc) đồng nghĩa với 'stern rules'.",
-              "correctAnswer": "A"
+              "correctAnswer": "because stern rules built character"
             },
             {
               "id": "24",
@@ -423,7 +423,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "trang web tốt nhưng 'sources' (nguồn) không đáng tin.",
-              "correctAnswer": "D"
+              "correctAnswer": "but the sources were unreliable"
             },
             {
               "id": "25",
@@ -441,7 +441,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "trận đánh kinh hoàng khiến có 'negative dreams' (giấc mơ tiêu cực).",
-              "correctAnswer": "E"
+              "correctAnswer": "it filled him with negative dreams"
             },
             {
               "id": "26",
@@ -459,7 +459,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "uống soda nhưng chỉ '2 cans per week' (2 lon mỗi tuần).",
-              "correctAnswer": "C"
+              "correctAnswer": "but only 2 cans per week"
             },
             {
               "id": "27",
@@ -477,7 +477,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "sake of his grade (vì lợi ích điểm số của anh ấy).",
-              "correctAnswer": "B"
+              "correctAnswer": "because the sake of his grade depended on it"
             },
             {
               "id": "28",
@@ -495,7 +495,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "different system (hệ thống khác) 'altogether different from mine' (hoàn toàn khác biệt với của tôi).",
-              "correctAnswer": "J"
+              "correctAnswer": "that was altogether different from mine"
             },
             {
               "id": "29",
@@ -513,7 +513,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "showing off (khoe khoang) nên nhảy qua 'hoop' (vòng).",
-              "correctAnswer": "G"
+              "correctAnswer": "so he tried jumping through the hoop"
             },
             {
               "id": "30",
@@ -531,7 +531,7 @@
                 "that was altogether different from mine"
               ],
               "explanation": "ngã cầu thang nên có 'bruises' (vết bầm).",
-              "correctAnswer": "F"
+              "correctAnswer": "so he had bruises on his arm"
             }
           ],
           "questionType": "Matching"

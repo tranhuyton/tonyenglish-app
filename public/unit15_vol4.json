@@ -181,7 +181,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Mặc dù anh ấy không biết khiêu vũ, anh ấy vẫn đi dự tiệc.",
-              "correctAnswer": "H"
+              "correctAnswer": "he went to the party anyway"
             },
             {
               "id": "12",
@@ -199,7 +199,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Lò sưởi giữ cho căn phòng ấm áp trong mùa đông.",
-              "correctAnswer": "B"
+              "correctAnswer": "a room warm during the winter"
             },
             {
               "id": "13",
@@ -217,7 +217,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Khí hậu ấm áp của Florida khiến nhiều du khách muốn đi nghỉ tại đó.",
-              "correctAnswer": "I"
+              "correctAnswer": "many travelers want to vacation there"
             },
             {
               "id": "14",
@@ -235,7 +235,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Anh ấy muốn thành lập một trường học cho trẻ em khiếm thị.",
-              "correctAnswer": "C"
+              "correctAnswer": "a school for blind children"
             },
             {
               "id": "15",
@@ -253,7 +253,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Đoàn tàu dự kiến đến vào khoảng 7 giờ sáng.",
-              "correctAnswer": "E"
+              "correctAnswer": "around seven in the morning"
             },
             {
               "id": "16",
@@ -271,7 +271,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Cần rất nhiều nghiên cứu trước khi có thể tạo ra các loại thuốc mới.",
-              "correctAnswer": "F"
+              "correctAnswer": "before new medicines can be created"
             },
             {
               "id": "17",
@@ -289,7 +289,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Người mua sắm có nhiều loại thức ăn để lựa chọn tại cửa hàng.",
-              "correctAnswer": "G"
+              "correctAnswer": "food to choose from at the store"
             },
             {
               "id": "18",
@@ -307,7 +307,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Giữa trận đấu, cầu thủ giỏi nhất của đội phải được thay ra.",
-              "correctAnswer": "J"
+              "correctAnswer": "the team’s best player had to be replaced"
             },
             {
               "id": "19",
@@ -325,7 +325,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Dây xích giữ cho chó không chạy đi mất.",
-              "correctAnswer": "A"
+              "correctAnswer": "a dog from running away"
             },
             {
               "id": "20",
@@ -343,7 +343,7 @@
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Người em gái yêu dấu của cô ấy luôn khiến cô bình tĩnh lại.",
-              "correctAnswer": "D"
+              "correctAnswer": "always calmed her"
             }
           ],
           "questionType": "Matching"
@@ -369,7 +369,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Để xác định xem thuốc mới có an toàn không, các nhà khoa học đã đo lường mọi hiệu ứng.",
-              "correctAnswer": "E"
+              "correctAnswer": "scientists measured all the effects"
             },
             {
               "id": "22",
@@ -387,7 +387,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Cuốn sách mới nhất của ông bán không chạy, nhưng các tác phẩm trước đó thì rất thành công.",
-              "correctAnswer": "B"
+              "correctAnswer": "but his prior works were very successful"
             },
             {
               "id": "23",
@@ -405,7 +405,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Anh muốn hoàn thành cuộc đua, nhưng cơn đau mắt cá chân mang lại quá nhiều đau khổ.",
-              "correctAnswer": "D"
+              "correctAnswer": "but the pain in his ankle gave him too much misery"
             },
             {
               "id": "24",
@@ -423,7 +423,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Anh ấy mất bản đồ nên đã bị bối rối mất phương hướng.",
-              "correctAnswer": "F"
+              "correctAnswer": "so he became confused"
             },
             {
               "id": "25",
@@ -441,7 +441,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Súp bị nguội, vì thế các thực khách phàn nàn với người phục vụ.",
-              "correctAnswer": "I"
+              "correctAnswer": "so the diners complained to the waiter"
             },
             {
               "id": "26",
@@ -459,7 +459,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Sue hồi nhỏ rất ngốc nghếch, nhưng cô trở nên nghiêm túc hơn khi trưởng thành.",
-              "correctAnswer": "C"
+              "correctAnswer": "but she became more serious as she matured"
             },
             {
               "id": "27",
@@ -477,7 +477,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Không ai có thể tìm thấy kho báu vì tên cướp biển đã chôn nó.",
-              "correctAnswer": "A"
+              "correctAnswer": "because the pirate had buried it"
             },
             {
               "id": "28",
@@ -495,7 +495,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Anh nói sẽ viết thư cho cô, vì thế cô kiên nhẫn chờ đợi thư của anh.",
-              "correctAnswer": "H"
+              "correctAnswer": "so she patiently awaited his letters"
             },
             {
               "id": "29",
@@ -513,7 +513,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Cô ấy muốn trông lớn tuổi hơn, nên đã trang điểm lên mặt.",
-              "correctAnswer": "G"
+              "correctAnswer": "so she applied makeup to her face"
             },
             {
               "id": "30",
@@ -531,7 +531,7 @@
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Họ đang khát nên đã uống toàn bộ bát nước uống (punch).",
-              "correctAnswer": "J"
+              "correctAnswer": "so they drank the entire bowl of punch"
             }
           ],
           "questionType": "Matching"

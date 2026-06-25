@@ -160,7 +160,7 @@
                 "terminal"
               ],
               "explanation": "Bệnh tình của bệnh nhân có vẻ như vô phương cứu chữa (terminal).",
-              "correctAnswer": "J"
+              "correctAnswer": "terminal"
             },
             {
               "id": "12",
@@ -178,7 +178,7 @@
                 "terminal"
               ],
               "explanation": "Bác sĩ phải cắt bỏ (extract) phần mô bị nhiễm trùng.",
-              "correctAnswer": "D"
+              "correctAnswer": "extract"
             },
             {
               "id": "13",
@@ -196,7 +196,7 @@
                 "terminal"
               ],
               "explanation": "Theo một sự bốc đồng (on an impulse), anh ta đá vào tường.",
-              "correctAnswer": "F"
+              "correctAnswer": "impulse"
             },
             {
               "id": "14",
@@ -214,7 +214,7 @@
                 "terminal"
               ],
               "explanation": "Dẫn đến cuộc vượt ngục sau đó (subsequent) của anh ta.",
-              "correctAnswer": "I"
+              "correctAnswer": "subsequent"
             },
             {
               "id": "15",
@@ -232,7 +232,7 @@
                 "terminal"
               ],
               "explanation": "Thật khó để đánh giá (assess) hướng cháy rừng.",
-              "correctAnswer": "A"
+              "correctAnswer": "assess"
             },
             {
               "id": "16",
@@ -250,7 +250,7 @@
                 "terminal"
               ],
               "explanation": "Trong khi đám cháy đang diễn ra (ongoing).",
-              "correctAnswer": "G"
+              "correctAnswer": "ongoing"
             },
             {
               "id": "17",
@@ -268,7 +268,7 @@
                 "terminal"
               ],
               "explanation": "Bản chất/ý chính (essence) của bài phát biểu.",
-              "correctAnswer": "C"
+              "correctAnswer": "essence"
             },
             {
               "id": "18",
@@ -286,7 +286,7 @@
                 "terminal"
               ],
               "explanation": "Sự bổ sung tuyệt vời (fabulous).",
-              "correctAnswer": "E"
+              "correctAnswer": "fabulous"
             },
             {
               "id": "19",
@@ -304,7 +304,7 @@
                 "terminal"
               ],
               "explanation": "Kỹ năng tuyệt vời đã làm kinh ngạc (astonished) đám đông.",
-              "correctAnswer": "B"
+              "correctAnswer": "astonished"
             },
             {
               "id": "20",
@@ -322,7 +322,7 @@
                 "terminal"
               ],
               "explanation": "Nhận được nhiều sự chú ý (publicity) từ truyền thông.",
-              "correctAnswer": "H"
+              "correctAnswer": "publicity"
             }
           ],
           "questionType": "Kéo thả"

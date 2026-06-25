@@ -100,7 +100,7 @@
                 "canyon"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "J"
+              "correctAnswer": "canyon"
             },
             {
               "id": "101",
@@ -118,7 +118,7 @@
                 "canyon"
               ],
               "explanation": "",
-              "correctAnswer": "F"
+              "correctAnswer": "fatigue"
             },
             {
               "id": "102",
@@ -136,7 +136,7 @@
                 "canyon"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "C"
+              "correctAnswer": "stereotype"
             },
             {
               "id": "103",
@@ -154,7 +154,7 @@
                 "canyon"
               ],
               "explanation": "",
-              "correctAnswer": "E"
+              "correctAnswer": "primitive"
             },
             {
               "id": "104",
@@ -172,7 +172,7 @@
                 "canyon"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "B"
+              "correctAnswer": "trail"
             },
             {
               "id": "105",
@@ -190,7 +190,7 @@
                 "canyon"
               ],
               "explanation": "",
-              "correctAnswer": "H"
+              "correctAnswer": "aesthetic"
             },
             {
               "id": "106",
@@ -208,7 +208,7 @@
                 "canyon"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "D"
+              "correctAnswer": "termites"
             },
             {
               "id": "107",
@@ -226,7 +226,7 @@
                 "canyon"
               ],
               "explanation": "",
-              "correctAnswer": "I"
+              "correctAnswer": "twig"
             },
             {
               "id": "108",
@@ -244,7 +244,7 @@
                 "canyon"
               ],
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
-              "correctAnswer": "G"
+              "correctAnswer": "creek"
             },
             {
               "id": "109",
@@ -262,7 +262,7 @@
                 "canyon"
               ],
               "explanation": "",
-              "correctAnswer": "A"
+              "correctAnswer": "welfare"
             }
           ],
           "questionType": "Kéo thả"

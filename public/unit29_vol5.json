@@ -100,7 +100,7 @@
                 "tusks"
               ],
               "explanation": "tusks (ngà/răng nanh). Bức tượng con hải mã có những chiếc răng nanh dài và đẹp.",
-              "correctAnswer": "J"
+              "correctAnswer": "tusks"
             },
             {
               "id": "7",
@@ -118,7 +118,7 @@
                 "tusks"
               ],
               "explanation": "antique (đồ cổ). Món đồ cổ này đã hơn 100 năm tuổi.",
-              "correctAnswer": "A"
+              "correctAnswer": "antique"
             },
             {
               "id": "8",
@@ -136,7 +136,7 @@
                 "tusks"
               ],
               "explanation": "monarch (quốc vương). Nhiều câu chuyện về vị quốc vương quyền lực.",
-              "correctAnswer": "G"
+              "correctAnswer": "monarch"
             },
             {
               "id": "9",
@@ -154,7 +154,7 @@
                 "tusks"
               ],
               "explanation": "Majesty (bệ hạ). Các người hầu gọi nhà vua là \"Bệ hạ\".",
-              "correctAnswer": "F"
+              "correctAnswer": "Majesty"
             },
             {
               "id": "10",
@@ -172,7 +172,7 @@
                 "tusks"
               ],
               "explanation": "applicants (người nộp đơn). Chọn người trúng tuyển trong số hàng nghìn người nộp đơn.",
-              "correctAnswer": "B"
+              "correctAnswer": "applicants"
             },
             {
               "id": "11",
@@ -190,7 +190,7 @@
                 "tusks"
               ],
               "explanation": "register (danh sách/sổ đăng ký). Ghi tên vào danh sách tinh anh.",
-              "correctAnswer": "I"
+              "correctAnswer": "register"
             },
             {
               "id": "12",
@@ -208,7 +208,7 @@
                 "tusks"
               ],
               "explanation": "authentic (hàng thật/chính hãng). Đôi bốt da không phải là hàng thật.",
-              "correctAnswer": "D"
+              "correctAnswer": "authentic"
             },
             {
               "id": "13",
@@ -226,7 +226,7 @@
                 "tusks"
               ],
               "explanation": "refund (tiền hoàn lại). Nhận lại tiền từ cửa hàng.",
-              "correctAnswer": "H"
+              "correctAnswer": "refund"
             },
             {
               "id": "14",
@@ -244,7 +244,7 @@
                 "tusks"
               ],
               "explanation": "fossil (hóa thạch). Tưởng là hóa thạch khủng long.",
-              "correctAnswer": "E"
+              "correctAnswer": "fossil"
             },
             {
               "id": "15",
@@ -262,7 +262,7 @@
                 "tusks"
               ],
               "explanation": "artifact (tạo tác). Thực ra là một đồ vật nhân tạo có tính lịch sử.",
-              "correctAnswer": "C"
+              "correctAnswer": "artifact"
             }
           ],
           "questionType": "Kéo thả"

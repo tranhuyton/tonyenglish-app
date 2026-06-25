@@ -100,7 +100,7 @@
                 "prescription"
               ],
               "explanation": "Một người khó đối phó vì hay trở nên thù hằn/cáu gắt (hostile).",
-              "correctAnswer": "D"
+              "correctAnswer": "hostile"
             },
             {
               "id": "7",
@@ -118,7 +118,7 @@
                 "prescription"
               ],
               "explanation": "Tức giận khi không thể thống trị/kiểm soát (dominate) người khác.",
-              "correctAnswer": "B"
+              "correctAnswer": "dominate"
             },
             {
               "id": "8",
@@ -136,7 +136,7 @@
                 "prescription"
               ],
               "explanation": "Một quan niệm sai lầm phổ biến (misconception) là nấu ăn ngon rất khó.",
-              "correctAnswer": "H"
+              "correctAnswer": "misconception"
             },
             {
               "id": "9",
@@ -154,7 +154,7 @@
                 "prescription"
               ],
               "explanation": "kỹ năng nấu nướng cơ bản (culinary techniques).",
-              "correctAnswer": "A"
+              "correctAnswer": "culinary"
             },
             {
               "id": "10",
@@ -172,7 +172,7 @@
                 "prescription"
               ],
               "explanation": "Thuốc (medication) sắp hết và cần thêm.",
-              "correctAnswer": "G"
+              "correctAnswer": "medication"
             },
             {
               "id": "11",
@@ -190,7 +190,7 @@
                 "prescription"
               ],
               "explanation": "Xin bác sĩ một đơn thuốc mới (prescription).",
-              "correctAnswer": "J"
+              "correctAnswer": "prescription"
             },
             {
               "id": "12",
@@ -208,7 +208,7 @@
                 "prescription"
               ],
               "explanation": "Vỏ của một số loại rau củ không thể ăn được (not edible).",
-              "correctAnswer": "C"
+              "correctAnswer": "edible"
             },
             {
               "id": "13",
@@ -226,7 +226,7 @@
                 "prescription"
               ],
               "explanation": "Vì không ăn được nên phải gọt vỏ (peel).",
-              "correctAnswer": "I"
+              "correctAnswer": "peel"
             },
             {
               "id": "14",
@@ -244,7 +244,7 @@
                 "prescription"
               ],
               "explanation": "Ở một số nơi, suy dinh dưỡng (malnutrition) là vấn đề lớn.",
-              "correctAnswer": "F"
+              "correctAnswer": "malnutrition"
             },
             {
               "id": "15",
@@ -262,7 +262,7 @@
                 "prescription"
               ],
               "explanation": "Nguyên nhân là lượng nạp vào (intake) vitamin không đủ.",
-              "correctAnswer": "E"
+              "correctAnswer": "intake"
             }
           ],
           "questionType": "Kéo thả"
