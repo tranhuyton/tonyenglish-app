@@ -459,19 +459,22 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
              border-collapse: collapse;
              width: 100% !important; 
              margin-bottom: 1.5rem; 
+             border-radius: 8px; 
+             overflow: hidden; 
+             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
          }
          table th, table td { 
-             border: none !important;
-             padding: 0.875rem 1rem; 
+             border: 1px solid #cbd5e1 !important;
+             padding: 0.875rem 1rem !important; 
              vertical-align: top; 
          }
          table th { 
-             background-color: transparent !important;
+             background-color: var(--bg-light) !important;
              font-weight: 600; 
              text-align: left; 
              color: #0f172a; 
          }
-         table tr:nth-child(even) { background-color: transparent !important; }
+         table tr:nth-child(even) { background-color: #fcfcfc !important; }
          code { 
              font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
              font-size: 0.9em; 
