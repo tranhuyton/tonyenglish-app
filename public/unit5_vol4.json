@@ -127,126 +127,186 @@
           "questions": [
             {
               "id": "11",
-              "content": "The team evaluated _____.",
+              "content": "The team evaluated.",
               "options": [
-                "to eat less chocolate",
+                "about birds",
+                "are getting worse",
+                "aren't as important as real friends",
                 "ate soup with a knife",
+                "is halfway through the school year",
+                "the success of the project",
+                "this large machine",
                 "to be nicer to people",
-                "the success of the project"
+                "to eat less chocolate",
+                "with a yellow pen"
               ],
               "explanation": "evaluated: đánh giá. 'The team evaluated the success of the project.' (Đội ngũ đã đánh giá sự thành công của dự án).",
-              "correctAnswer": "D"
+              "correctAnswer": "the success of the project"
             },
             {
               "id": "12",
-              "content": "The moral of the story is _____.",
+              "content": "The moral of the story is.",
               "options": [
-                "to be nicer to people",
-                "this large machine",
+                "about birds",
+                "are getting worse",
                 "aren't as important as real friends",
-                "ate soup with a knife"
+                "ate soup with a knife",
+                "is halfway through the school year",
+                "the success of the project",
+                "this large machine",
+                "to be nicer to people",
+                "to eat less chocolate",
+                "with a yellow pen"
               ],
               "explanation": "moral: bài học đạo đức. 'The moral of the story is to be nicer to people.' (Bài học của câu chuyện là hãy tử tế hơn với mọi người).",
-              "correctAnswer": "A"
+              "correctAnswer": "to be nicer to people"
             },
             {
               "id": "13",
-              "content": "The global economic problems _____.",
+              "content": "The global economic problems.",
               "options": [
-                "ate soup with a knife",
+                "about birds",
                 "are getting worse",
+                "aren't as important as real friends",
+                "ate soup with a knife",
+                "is halfway through the school year",
+                "the success of the project",
+                "this large machine",
                 "to be nicer to people",
-                "is halfway through the school year"
+                "to eat less chocolate",
+                "with a yellow pen"
               ],
               "explanation": "global: toàn cầu. 'The global economic problems are getting worse.' (Các vấn đề kinh tế toàn cầu đang trở nên tồi tệ hơn).",
-              "correctAnswer": "B"
+              "correctAnswer": "are getting worse"
             },
             {
               "id": "14",
-              "content": "Joe operates _____.",
+              "content": "Joe operates.",
               "options": [
+                "about birds",
+                "are getting worse",
+                "aren't as important as real friends",
                 "ate soup with a knife",
                 "is halfway through the school year",
+                "the success of the project",
                 "this large machine",
+                "to be nicer to people",
+                "to eat less chocolate",
                 "with a yellow pen"
               ],
               "explanation": "operates: vận hành. 'Joe operates this large machine.' (Joe vận hành cỗ máy lớn này).",
-              "correctAnswer": "C"
+              "correctAnswer": "this large machine"
             },
             {
               "id": "15",
-              "content": "We went to a lecture _____.",
+              "content": "We went to a lecture.",
               "options": [
-                "this large machine",
-                "aren't as important as real friends",
                 "about birds",
-                "ate soup with a knife"
+                "are getting worse",
+                "aren't as important as real friends",
+                "ate soup with a knife",
+                "is halfway through the school year",
+                "the success of the project",
+                "this large machine",
+                "to be nicer to people",
+                "to eat less chocolate",
+                "with a yellow pen"
               ],
               "explanation": "lecture: bài giảng. 'We went to a lecture about birds.' (Chúng tôi đã đi nghe một bài giảng về các loài chim).",
-              "correctAnswer": "C"
+              "correctAnswer": "about birds"
             },
             {
               "id": "16",
-              "content": "The friends you meet in cyberspace _____.",
+              "content": "The friends you meet in cyberspace.",
               "options": [
+                "about birds",
                 "are getting worse",
-                "to eat less chocolate",
+                "aren't as important as real friends",
+                "ate soup with a knife",
+                "is halfway through the school year",
+                "the success of the project",
+                "this large machine",
                 "to be nicer to people",
-                "aren't as important as real friends"
+                "to eat less chocolate",
+                "with a yellow pen"
               ],
               "explanation": "cyberspace: không gian mạng. 'The friends you meet in cyberspace aren't as important as real friends.' (Những người bạn trên mạng không quan trọng bằng bạn ngoài đời).",
-              "correctAnswer": "D"
+              "correctAnswer": "aren't as important as real friends"
             },
             {
               "id": "17",
-              "content": "The weird kid at school _____.",
+              "content": "The weird kid at school.",
               "options": [
-                "with a yellow pen",
+                "about birds",
                 "are getting worse",
+                "aren't as important as real friends",
                 "ate soup with a knife",
-                "the success of the project"
+                "is halfway through the school year",
+                "the success of the project",
+                "this large machine",
+                "to be nicer to people",
+                "to eat less chocolate",
+                "with a yellow pen"
               ],
               "explanation": "weird: kỳ lạ. 'The weird kid at school ate soup with a knife.' (Đứa trẻ kỳ lạ ở trường ăn súp bằng dao).",
-              "correctAnswer": "C"
+              "correctAnswer": "ate soup with a knife"
             },
             {
               "id": "18",
-              "content": "You should highlight these words _____.",
+              "content": "You should highlight these words.",
               "options": [
-                "ate soup with a knife",
-                "with a yellow pen",
+                "about birds",
+                "are getting worse",
                 "aren't as important as real friends",
-                "the success of the project"
+                "ate soup with a knife",
+                "is halfway through the school year",
+                "the success of the project",
+                "this large machine",
+                "to be nicer to people",
+                "to eat less chocolate",
+                "with a yellow pen"
               ],
               "explanation": "highlight: làm nổi bật. 'You should highlight these words with a yellow pen.' (Bạn nên làm nổi bật những từ này bằng bút vàng).",
-              "correctAnswer": "B"
+              "correctAnswer": "with a yellow pen"
             },
             {
               "id": "19",
-              "content": "I made a resolution _____.",
+              "content": "I made a resolution.",
               "options": [
-                "with a yellow pen",
-                "to eat less chocolate",
+                "about birds",
+                "are getting worse",
+                "aren't as important as real friends",
                 "ate soup with a knife",
-                "to be nicer to people"
+                "is halfway through the school year",
+                "the success of the project",
+                "this large machine",
+                "to be nicer to people",
+                "to eat less chocolate",
+                "with a yellow pen"
               ],
               "explanation": "resolution: sự quyết tâm. 'I made a resolution to eat less chocolate.' (Tôi đã quyết tâm ăn ít sô-cô-la lại).",
-              "correctAnswer": "B"
+              "correctAnswer": "to eat less chocolate"
             },
             {
               "id": "20",
-              "content": "The end of the first semester _____.",
+              "content": "The end of the first semester.",
               "options": [
+                "about birds",
+                "are getting worse",
+                "aren't as important as real friends",
+                "ate soup with a knife",
                 "is halfway through the school year",
                 "the success of the project",
+                "this large machine",
+                "to be nicer to people",
                 "to eat less chocolate",
-                "aren't as important as real friends"
+                "with a yellow pen"
               ],
               "explanation": "semester: học kỳ. 'The end of the first semester is halfway through the school year.' (Cuối học kỳ 1 là nửa chặng đường của năm học).",
-              "correctAnswer": "A"
+              "correctAnswer": "is halfway through the school year"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         },
         {
           "id": "sec3_wordlist",
@@ -255,126 +315,186 @@
           "questions": [
             {
               "id": "21",
-              "content": "I wanted to get fit, _____.",
+              "content": "I wanted to get fit,.",
               "options": [
-                "so I went to the gymnasium",
                 "because he's ignorant about math",
+                "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
                 "so I wrote an essay about rocks",
-                "it's private"
+                "so you should find a more recent one",
+                "you wait here awhile"
               ],
               "explanation": "gymnasium: phòng thể dục. Muốn khỏe mạnh nên tôi đến phòng thể dục (so I went to the gymnasium).",
-              "correctAnswer": "A"
+              "correctAnswer": "so I went to the gymnasium"
             },
             {
               "id": "22",
-              "content": "Geology is my favorite subject, _____.",
+              "content": "Geology is my favorite subject,.",
               "options": [
+                "because he's ignorant about math",
+                "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
                 "so I wrote an essay about rocks",
                 "so you should find a more recent one",
-                "if someone faints",
-                "it's private"
+                "you wait here awhile"
               ],
               "explanation": "essay: bài luận. Địa chất là môn yêu thích nên tôi viết một bài luận về đá (so I wrote an essay about rocks).",
-              "correctAnswer": "A"
+              "correctAnswer": "so I wrote an essay about rocks"
             },
             {
               "id": "23",
-              "content": "My paper was full of mistakes, _____.",
+              "content": "My paper was full of mistakes,.",
               "options": [
-                "so I went to the gymnasium",
-                "so you should find a more recent one",
+                "because he's ignorant about math",
+                "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
                 "so I looked under 'V' in the index",
-                "but he helped me edit it"
+                "so I went to the gymnasium",
+                "so I wrote an essay about rocks",
+                "so you should find a more recent one",
+                "you wait here awhile"
               ],
               "explanation": "edit: chỉnh sửa. Bài báo cáo của tôi đầy lỗi, nhưng anh ấy đã giúp tôi chỉnh sửa (but he helped me edit it).",
-              "correctAnswer": "D"
+              "correctAnswer": "but he helped me edit it"
             },
             {
               "id": "24",
-              "content": "My brother couldn't help me with my math homework _____.",
+              "content": "My brother couldn't help me with my math homework.",
               "options": [
-                "so I went to the gymnasium",
                 "because he's ignorant about math",
-                "you wait here awhile",
-                "if someone faints"
+                "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
+                "so I wrote an essay about rocks",
+                "so you should find a more recent one",
+                "you wait here awhile"
               ],
               "explanation": "ignorant: thiếu hiểu biết. Anh tôi không thể giúp làm bài toán vì anh ấy thiếu hiểu biết về môn toán (because he's ignorant about math).",
-              "correctAnswer": "B"
+              "correctAnswer": "because he's ignorant about math"
             },
             {
               "id": "25",
-              "content": "In the first aid class, we learned what to do _____.",
-              "options": [
-                "it's private",
-                "so you should find a more recent one",
-                "if someone faints",
-                "you wait here awhile"
-              ],
-              "explanation": "faints: ngất xỉu. Lớp học sơ cứu dạy chúng tôi phải làm gì nếu ai đó ngất xỉu (if someone faints).",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "26",
-              "content": "I wanted to find some information about volcanoes, _____.",
-              "options": [
-                "but he helped me edit it",
-                "so I looked under 'V' in the index",
-                "so I went to the gymnasium",
-                "so you should find a more recent one"
-              ],
-              "explanation": "index: mục lục / chỉ mục. Tìm thông tin về núi lửa bằng cách tra chữ 'V' ở phần mục lục cuối sách (so I looked under 'V' in the index).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "27",
-              "content": "That copy of the text book is too old, _____.",
-              "options": [
-                "but he helped me edit it",
-                "because my essay has to be typewritten",
-                "so I went to the gymnasium",
-                "so you should find a more recent one"
-              ],
-              "explanation": "recent: gần đây. Sách giáo khoa đó quá cũ, nên tìm bản gần đây hơn (so you should find a more recent one).",
-              "correctAnswer": "D"
-            },
-            {
-              "id": "28",
-              "content": "I need a computer _____.",
+              "content": "In the first aid class, we learned what to do.",
               "options": [
                 "because he's ignorant about math",
                 "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
                 "so I wrote an essay about rocks",
-                "so I went to the gymnasium"
+                "so you should find a more recent one",
+                "you wait here awhile"
+              ],
+              "explanation": "faints: ngất xỉu. Lớp học sơ cứu dạy chúng tôi phải làm gì nếu ai đó ngất xỉu (if someone faints).",
+              "correctAnswer": "if someone faints"
+            },
+            {
+              "id": "26",
+              "content": "I wanted to find some information about volcanoes,.",
+              "options": [
+                "because he's ignorant about math",
+                "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
+                "so I wrote an essay about rocks",
+                "so you should find a more recent one",
+                "you wait here awhile"
+              ],
+              "explanation": "index: mục lục / chỉ mục. Tìm thông tin về núi lửa bằng cách tra chữ 'V' ở phần mục lục cuối sách (so I looked under 'V' in the index).",
+              "correctAnswer": "so I looked under 'V' in the index"
+            },
+            {
+              "id": "27",
+              "content": "That copy of the text book is too old,.",
+              "options": [
+                "because he's ignorant about math",
+                "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
+                "so I wrote an essay about rocks",
+                "so you should find a more recent one",
+                "you wait here awhile"
+              ],
+              "explanation": "recent: gần đây. Sách giáo khoa đó quá cũ, nên tìm bản gần đây hơn (so you should find a more recent one).",
+              "correctAnswer": "so you should find a more recent one"
+            },
+            {
+              "id": "28",
+              "content": "I need a computer.",
+              "options": [
+                "because he's ignorant about math",
+                "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
+                "so I wrote an essay about rocks",
+                "so you should find a more recent one",
+                "you wait here awhile"
               ],
               "explanation": "typewritten: đánh máy. Tôi cần máy tính vì bài luận của tôi phải được đánh máy (because my essay has to be typewritten).",
-              "correctAnswer": "B"
+              "correctAnswer": "because my essay has to be typewritten"
             },
             {
               "id": "29",
-              "content": "I'll get some tea if _____.",
+              "content": "I'll get some tea if.",
               "options": [
-                "it's private",
-                "so I wrote an essay about rocks",
+                "because he's ignorant about math",
                 "because my essay has to be typewritten",
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
+                "so I wrote an essay about rocks",
+                "so you should find a more recent one",
                 "you wait here awhile"
               ],
               "explanation": "awhile: một chốc / một lát. Tôi sẽ mang trà ra nếu bạn đợi ở đây một chốc (you wait here awhile).",
-              "correctAnswer": "D"
+              "correctAnswer": "you wait here awhile"
             },
             {
               "id": "30",
-              "content": "You mustn't tell anyone this information; _____.",
+              "content": "You mustn't tell anyone this information;.",
               "options": [
-                "so you should find a more recent one",
-                "it's private",
+                "because he's ignorant about math",
                 "because my essay has to be typewritten",
-                "if someone faints"
+                "but he helped me edit it",
+                "if someone faints",
+                "it's private",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
+                "so I wrote an essay about rocks",
+                "so you should find a more recent one",
+                "you wait here awhile"
               ],
               "explanation": "private: riêng tư. Không được nói với ai thông tin này; nó là chuyện riêng tư (it's private).",
-              "correctAnswer": "B"
+              "correctAnswer": "it's private"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         }
       ]
     },

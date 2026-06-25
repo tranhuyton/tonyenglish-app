@@ -127,126 +127,186 @@
           "questions": [
             {
               "id": "11",
-              "content": "Scientists have a device that helps __________",
+              "content": "Scientists have a device that helps",
               "options": [
-                "them tell how old an object is",
                 "as she turned around the corner",
+                "his mother wasn't watching him",
                 "in the summer",
-                "when the electricity went out"
+                "light bulb with a new one",
+                "my brother in trouble",
+                "my brother in trouble",
+                "my brother in trouble",
+                "students who do all of their homework",
+                "them tell how old an object is",
+                "to miss school today"
               ],
               "explanation": "Các nhà khoa học có một thiết bị giúp họ biết một vật thể bao nhiêu tuổi.",
-              "correctAnswer": "A"
+              "correctAnswer": "them tell how old an object is"
             },
             {
               "id": "12",
-              "content": "The driver gripped the wheel __________",
+              "content": "The driver gripped the wheel",
               "options": [
                 "as she turned around the corner",
-                "by holding it too tightly",
-                "to miss school today",
-                "my brother in trouble"
+                "his mother wasn't watching him",
+                "in the summer",
+                "light bulb with a new one",
+                "my brother in trouble",
+                "my brother in trouble",
+                "my brother in trouble",
+                "students who do all of their homework",
+                "them tell how old an object is",
+                "to miss school today"
               ],
               "explanation": "Người lái xe nắm chặt vô lăng khi rẽ ở góc đường.",
-              "correctAnswer": "A"
+              "correctAnswer": "as she turned around the corner"
             },
             {
               "id": "13",
-              "content": "I always perspire more often __________",
+              "content": "I always perspire more often",
               "options": [
+                "as she turned around the corner",
+                "his mother wasn't watching him",
                 "in the summer",
-                "by holding it too tightly",
+                "light bulb with a new one",
+                "my brother in trouble",
+                "my brother in trouble",
+                "my brother in trouble",
+                "students who do all of their homework",
                 "them tell how old an object is",
-                "his mother wasn't watching him"
+                "to miss school today"
               ],
               "explanation": "Tôi luôn đổ mồ hôi nhiều hơn vào mùa hè.",
-              "correctAnswer": "A"
+              "correctAnswer": "in the summer"
             },
             {
               "id": "14",
-              "content": "The concert halted __________",
+              "content": "The concert halted",
               "options": [
-                "when the electricity went out",
+                "as she turned around the corner",
+                "his mother wasn't watching him",
+                "in the summer",
                 "light bulb with a new one",
+                "my brother in trouble",
+                "my brother in trouble",
+                "my brother in trouble",
                 "students who do all of their homework",
-                "my brother in trouble"
+                "them tell how old an object is",
+                "to miss school today"
               ],
               "explanation": "Buổi hòa nhạc dừng lại khi mất điện.",
-              "correctAnswer": "B"
+              "correctAnswer": "light bulb with a new one"
             },
             {
               "id": "15",
-              "content": "The sly boy took a cookie while __________",
+              "content": "The sly boy took a cookie while",
               "options": [
+                "as she turned around the corner",
                 "his mother wasn't watching him",
-                "by holding it too tightly",
-                "to miss school today",
-                "as she turned around the corner"
+                "in the summer",
+                "light bulb with a new one",
+                "my brother in trouble",
+                "my brother in trouble",
+                "my brother in trouble",
+                "students who do all of their homework",
+                "them tell how old an object is",
+                "to miss school today"
               ],
               "explanation": "Cậu bé tinh ranh lấy chiếc bánh quy khi mẹ không để ý.",
-              "correctAnswer": "A"
+              "correctAnswer": "his mother wasn't watching him"
             },
             {
               "id": "16",
-              "content": "My father replaced the old __________",
+              "content": "My father replaced the old",
               "options": [
+                "as she turned around the corner",
+                "his mother wasn't watching him",
+                "in the summer",
                 "light bulb with a new one",
-                "them tell how old an object is",
+                "my brother in trouble",
+                "my brother in trouble",
+                "my brother in trouble",
                 "students who do all of their homework",
-                "my brother in trouble"
+                "them tell how old an object is",
+                "to miss school today"
               ],
               "explanation": "Bố tôi thay bóng đèn cũ bằng một cái mới.",
-              "correctAnswer": "D"
+              "correctAnswer": "my brother in trouble"
             },
             {
               "id": "17",
-              "content": "He had a valid reason __________",
+              "content": "He had a valid reason",
               "options": [
-                "to miss school today",
                 "as she turned around the corner",
+                "his mother wasn't watching him",
                 "in the summer",
-                "when the electricity went out"
+                "light bulb with a new one",
+                "my brother in trouble",
+                "my brother in trouble",
+                "my brother in trouble",
+                "students who do all of their homework",
+                "them tell how old an object is",
+                "to miss school today"
               ],
               "explanation": "Cậu ấy có một lý do chính đáng để nghỉ học hôm nay.",
-              "correctAnswer": "A"
+              "correctAnswer": "to miss school today"
             },
             {
               "id": "18",
-              "content": "I snapped the toy __________",
+              "content": "I snapped the toy",
               "options": [
-                "by holding it too tightly",
+                "as she turned around the corner",
                 "his mother wasn't watching him",
+                "in the summer",
+                "light bulb with a new one",
                 "my brother in trouble",
-                "light bulb with a new one"
+                "my brother in trouble",
+                "my brother in trouble",
+                "students who do all of their homework",
+                "them tell how old an object is",
+                "to miss school today"
               ],
               "explanation": "Tôi bẻ gãy món đồ chơi bằng cách cầm nó quá chặt.",
-              "correctAnswer": "C"
+              "correctAnswer": "my brother in trouble"
             },
             {
               "id": "19",
-              "content": "The teacher tends to give the best grades to __________",
+              "content": "The teacher tends to give the best grades to",
               "options": [
+                "as she turned around the corner",
+                "his mother wasn't watching him",
+                "in the summer",
+                "light bulb with a new one",
+                "my brother in trouble",
+                "my brother in trouble",
+                "my brother in trouble",
                 "students who do all of their homework",
                 "them tell how old an object is",
-                "to miss school today",
-                "in the summer"
+                "to miss school today"
               ],
               "explanation": "Giáo viên có xu hướng cho điểm cao nhất cho những học sinh làm hết bài tập về nhà.",
-              "correctAnswer": "A"
+              "correctAnswer": "students who do all of their homework"
             },
             {
               "id": "20",
-              "content": "I got no joy whatsoever from getting __________",
+              "content": "I got no joy whatsoever from getting",
               "options": [
+                "as she turned around the corner",
+                "his mother wasn't watching him",
+                "in the summer",
+                "light bulb with a new one",
                 "my brother in trouble",
-                "when the electricity went out",
-                "by holding it too tightly",
-                "his mother wasn't watching him"
+                "my brother in trouble",
+                "my brother in trouble",
+                "students who do all of their homework",
+                "them tell how old an object is",
+                "to miss school today"
               ],
               "explanation": "Tôi không cảm thấy vui chút nào khi khiến anh trai tôi gặp rắc rối.",
-              "correctAnswer": "A"
+              "correctAnswer": "my brother in trouble"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         },
         {
           "id": "sec3",
@@ -255,126 +315,186 @@
           "questions": [
             {
               "id": "21",
-              "content": "He didn't understand, __________",
+              "content": "He didn't understand,",
               "options": [
-                "so they told him a different version",
+                "because there were cracks in it",
+                "because there were cracks in it",
+                "but he wasn't given access to the room",
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
                 "so his conduct was excellent",
-                "that he broke every law",
-                "it was enclosed in glass"
+                "so the mode wouldn't disturb anyone",
+                "so they told him a different version",
+                "so they told him a different version",
+                "that he broke every law"
               ],
               "explanation": "Anh ấy không hiểu, nên họ kể cho anh ấy một phiên bản khác.",
-              "correctAnswer": "A"
+              "correctAnswer": "so they told him a different version"
             },
             {
               "id": "22",
-              "content": "He was told to behave, __________",
+              "content": "He was told to behave,",
               "options": [
+                "because there were cracks in it",
+                "because there were cracks in it",
+                "but he wasn't given access to the room",
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
                 "so his conduct was excellent",
                 "so the mode wouldn't disturb anyone",
-                "because he can influence people to do anything",
-                "but he wasn't given access to the room"
+                "so they told him a different version",
+                "so they told him a different version",
+                "that he broke every law"
               ],
               "explanation": "Anh ấy được dặn phải cư xử tốt, nên hạnh kiểm của anh ấy rất xuất sắc.",
-              "correctAnswer": "A"
+              "correctAnswer": "so his conduct was excellent"
             },
             {
               "id": "23",
-              "content": "Joe was such a bad person __________",
+              "content": "Joe was such a bad person",
               "options": [
-                "that he broke every law",
                 "because there were cracks in it",
-                "because the impeding test was so important",
-                "so the constant music wouldn't annoy the neighbors"
-              ],
-              "explanation": "Joe là một kẻ tồi tệ đến mức anh ta đã phá vỡ mọi điều luật.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "24",
-              "content": "To keep the jewels safe, __________",
-              "options": [
-                "it was enclosed in glass",
+                "because there were cracks in it",
                 "but he wasn't given access to the room",
-                "because he can influence people to do anything",
-                "so the mode wouldn't disturb anyone"
-              ],
-              "explanation": "Để giữ an toàn cho những viên đá quý, nó được bọc trong kính.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "25",
-              "content": "Be careful __________",
-              "options": [
-                "because he can influence people to do anything",
-                "because there were cracks in it",
-                "so they told him a different version",
-                "because the impeding test was so important"
-              ],
-              "explanation": "Hãy cẩn thận vì anh ấy có thể ảnh hưởng người khác làm bất cứ điều gì.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "26",
-              "content": "Mark tried the code, __________",
-              "options": [
                 "but he wasn't given access to the room",
                 "it was enclosed in glass",
                 "so his conduct was excellent",
+                "so the mode wouldn't disturb anyone",
+                "so they told him a different version",
+                "so they told him a different version",
+                "that he broke every law"
+              ],
+              "explanation": "Joe là một kẻ tồi tệ đến mức anh ta đã phá vỡ mọi điều luật.",
+              "correctAnswer": "that he broke every law"
+            },
+            {
+              "id": "24",
+              "content": "To keep the jewels safe,",
+              "options": [
+                "because there were cracks in it",
+                "because there were cracks in it",
+                "but he wasn't given access to the room",
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
+                "so his conduct was excellent",
+                "so the mode wouldn't disturb anyone",
+                "so they told him a different version",
+                "so they told him a different version",
+                "that he broke every law"
+              ],
+              "explanation": "Để giữ an toàn cho những viên đá quý, nó được bọc trong kính.",
+              "correctAnswer": "it was enclosed in glass"
+            },
+            {
+              "id": "25",
+              "content": "Be careful",
+              "options": [
+                "because there were cracks in it",
+                "because there were cracks in it",
+                "but he wasn't given access to the room",
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
+                "so his conduct was excellent",
+                "so the mode wouldn't disturb anyone",
+                "so they told him a different version",
+                "so they told him a different version",
+                "that he broke every law"
+              ],
+              "explanation": "Hãy cẩn thận vì anh ấy có thể ảnh hưởng người khác làm bất cứ điều gì.",
+              "correctAnswer": "because there were cracks in it"
+            },
+            {
+              "id": "26",
+              "content": "Mark tried the code,",
+              "options": [
+                "because there were cracks in it",
+                "because there were cracks in it",
+                "but he wasn't given access to the room",
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
+                "so his conduct was excellent",
+                "so the mode wouldn't disturb anyone",
+                "so they told him a different version",
+                "so they told him a different version",
                 "that he broke every law"
               ],
               "explanation": "Mark đã thử mã số, nhưng anh ấy không được phép truy cập vào phòng.",
-              "correctAnswer": "A"
+              "correctAnswer": "but he wasn't given access to the room"
             },
             {
               "id": "27",
-              "content": "She practices the violin during the day, __________",
+              "content": "She practices the violin during the day,",
               "options": [
-                "so the constant music wouldn't annoy the neighbors",
-                "so the mode wouldn't disturb anyone",
                 "because there were cracks in it",
-                "so they told him a different version"
+                "because there were cracks in it",
+                "but he wasn't given access to the room",
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
+                "so his conduct was excellent",
+                "so the mode wouldn't disturb anyone",
+                "so they told him a different version",
+                "so they told him a different version",
+                "that he broke every law"
               ],
               "explanation": "Cô ấy tập violin vào ban ngày, nên tiếng nhạc liên tục sẽ không làm phiền hàng xóm.",
-              "correctAnswer": "D"
+              "correctAnswer": "so they told him a different version"
             },
             {
               "id": "28",
-              "content": "He studied hard __________",
+              "content": "He studied hard",
               "options": [
-                "because the impeding test was so important",
-                "because he can influence people to do anything",
+                "because there were cracks in it",
+                "because there were cracks in it",
                 "but he wasn't given access to the room",
-                "so his conduct was excellent"
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
+                "so his conduct was excellent",
+                "so the mode wouldn't disturb anyone",
+                "so they told him a different version",
+                "so they told him a different version",
+                "that he broke every law"
               ],
               "explanation": "Anh ấy học hành chăm chỉ vì bài kiểm tra sắp tới rất quan trọng.",
-              "correctAnswer": "C"
+              "correctAnswer": "but he wasn't given access to the room"
             },
             {
               "id": "29",
-              "content": "She turned her phone off, __________",
+              "content": "She turned her phone off,",
               "options": [
+                "because there were cracks in it",
+                "because there were cracks in it",
+                "but he wasn't given access to the room",
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
+                "so his conduct was excellent",
                 "so the mode wouldn't disturb anyone",
-                "so the constant music wouldn't annoy the neighbors",
-                "that he broke every law",
-                "it was enclosed in glass"
+                "so they told him a different version",
+                "so they told him a different version",
+                "that he broke every law"
               ],
               "explanation": "Cô ấy tắt điện thoại, nên chế độ đó sẽ không làm phiền ai.",
-              "correctAnswer": "A"
+              "correctAnswer": "so the mode wouldn't disturb anyone"
             },
             {
               "id": "30",
-              "content": "He replaced the glass __________",
+              "content": "He replaced the glass",
               "options": [
                 "because there were cracks in it",
+                "because there were cracks in it",
+                "but he wasn't given access to the room",
+                "but he wasn't given access to the room",
+                "it was enclosed in glass",
+                "so his conduct was excellent",
+                "so the mode wouldn't disturb anyone",
                 "so they told him a different version",
-                "because the impeding test was so important",
-                "because he can influence people to do anything"
+                "so they told him a different version",
+                "that he broke every law"
               ],
               "explanation": "Anh ấy đã thay tấm kính vì có những vết nứt trên đó.",
-              "correctAnswer": "A"
+              "correctAnswer": "because there were cracks in it"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         }
       ]
     },

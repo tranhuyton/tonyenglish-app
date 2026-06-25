@@ -147,126 +147,186 @@
           "questions": [
             {
               "id": "11",
-              "content": "Although he didn’t know how to dance, _____",
+              "content": "Although he didn’t know how to dance,",
               "options": [
-                "he went to the party anyway",
+                "a dog from running away",
+                "a room warm during the winter",
+                "a school for blind children",
+                "always calmed her",
+                "around seven in the morning",
                 "before new medicines can be created",
                 "food to choose from at the store",
-                "around seven in the morning"
+                "he went to the party anyway",
+                "many travelers want to vacation there",
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Mặc dù anh ấy không biết khiêu vũ, anh ấy vẫn đi dự tiệc.",
-              "correctAnswer": "A"
+              "correctAnswer": "he went to the party anyway"
             },
             {
               "id": "12",
-              "content": "A furnace keeps _____",
+              "content": "A furnace keeps",
               "options": [
+                "a dog from running away",
                 "a room warm during the winter",
-                "the team’s best player had to be replaced",
+                "a school for blind children",
+                "always calmed her",
+                "around seven in the morning",
+                "before new medicines can be created",
+                "food to choose from at the store",
+                "he went to the party anyway",
                 "many travelers want to vacation there",
-                "a dog from running away"
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Lò sưởi giữ cho căn phòng ấm áp trong mùa đông.",
-              "correctAnswer": "A"
+              "correctAnswer": "a room warm during the winter"
             },
             {
               "id": "13",
-              "content": "Florida’s warm climate makes _____",
+              "content": "Florida’s warm climate makes",
               "options": [
+                "a dog from running away",
+                "a room warm during the winter",
+                "a school for blind children",
                 "always calmed her",
-                "many travelers want to vacation there",
                 "around seven in the morning",
-                "a dog from running away"
+                "before new medicines can be created",
+                "food to choose from at the store",
+                "he went to the party anyway",
+                "many travelers want to vacation there",
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Khí hậu ấm áp của Florida khiến nhiều du khách muốn đi nghỉ tại đó.",
-              "correctAnswer": "B"
+              "correctAnswer": "many travelers want to vacation there"
             },
             {
               "id": "14",
-              "content": "He wanted to establish _____",
+              "content": "He wanted to establish",
               "options": [
-                "food to choose from at the store",
+                "a dog from running away",
+                "a room warm during the winter",
                 "a school for blind children",
+                "always calmed her",
                 "around seven in the morning",
+                "before new medicines can be created",
+                "food to choose from at the store",
+                "he went to the party anyway",
+                "many travelers want to vacation there",
                 "the team’s best player had to be replaced"
               ],
               "explanation": "Anh ấy muốn thành lập một trường học cho trẻ em khiếm thị.",
-              "correctAnswer": "B"
+              "correctAnswer": "a school for blind children"
             },
             {
               "id": "15",
-              "content": "The train was due to arrive at _____",
+              "content": "The train was due to arrive at",
               "options": [
-                "around seven in the morning",
+                "a dog from running away",
+                "a room warm during the winter",
+                "a school for blind children",
                 "always calmed her",
+                "around seven in the morning",
                 "before new medicines can be created",
-                "a room warm during the winter"
+                "food to choose from at the store",
+                "he went to the party anyway",
+                "many travelers want to vacation there",
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Đoàn tàu dự kiến đến vào khoảng 7 giờ sáng.",
-              "correctAnswer": "A"
+              "correctAnswer": "around seven in the morning"
             },
             {
               "id": "16",
-              "content": "A lot of research is needed _____",
+              "content": "A lot of research is needed",
               "options": [
                 "a dog from running away",
-                "food to choose from at the store",
+                "a room warm during the winter",
+                "a school for blind children",
+                "always calmed her",
+                "around seven in the morning",
                 "before new medicines can be created",
-                "always calmed her"
+                "food to choose from at the store",
+                "he went to the party anyway",
+                "many travelers want to vacation there",
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Cần rất nhiều nghiên cứu trước khi có thể tạo ra các loại thuốc mới.",
-              "correctAnswer": "C"
+              "correctAnswer": "before new medicines can be created"
             },
             {
               "id": "17",
-              "content": "Shoppers have a variety of _____",
+              "content": "Shoppers have a variety of",
               "options": [
-                "food to choose from at the store",
-                "the team’s best player had to be replaced",
+                "a dog from running away",
                 "a room warm during the winter",
-                "around seven in the morning"
+                "a school for blind children",
+                "always calmed her",
+                "around seven in the morning",
+                "before new medicines can be created",
+                "food to choose from at the store",
+                "he went to the party anyway",
+                "many travelers want to vacation there",
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Người mua sắm có nhiều loại thức ăn để lựa chọn tại cửa hàng.",
-              "correctAnswer": "A"
+              "correctAnswer": "food to choose from at the store"
             },
             {
               "id": "18",
-              "content": "In the midst of the game _____",
+              "content": "In the midst of the game",
               "options": [
-                "the team’s best player had to be replaced",
-                "before new medicines can be created",
+                "a dog from running away",
+                "a room warm during the winter",
                 "a school for blind children",
-                "many travelers want to vacation there"
+                "always calmed her",
+                "around seven in the morning",
+                "before new medicines can be created",
+                "food to choose from at the store",
+                "he went to the party anyway",
+                "many travelers want to vacation there",
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Giữa trận đấu, cầu thủ giỏi nhất của đội phải được thay ra.",
-              "correctAnswer": "A"
+              "correctAnswer": "the team’s best player had to be replaced"
             },
             {
               "id": "19",
-              "content": "A leash keeps _____",
+              "content": "A leash keeps",
               "options": [
                 "a dog from running away",
+                "a room warm during the winter",
+                "a school for blind children",
                 "always calmed her",
+                "around seven in the morning",
+                "before new medicines can be created",
                 "food to choose from at the store",
-                "around seven in the morning"
+                "he went to the party anyway",
+                "many travelers want to vacation there",
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Dây xích giữ cho chó không chạy đi mất.",
-              "correctAnswer": "A"
+              "correctAnswer": "a dog from running away"
             },
             {
               "id": "20",
-              "content": "Her beloved sister _____",
+              "content": "Her beloved sister",
               "options": [
-                "before new medicines can be created",
+                "a dog from running away",
+                "a room warm during the winter",
+                "a school for blind children",
                 "always calmed her",
-                "the team’s best player had to be replaced",
-                "a school for blind children"
+                "around seven in the morning",
+                "before new medicines can be created",
+                "food to choose from at the store",
+                "he went to the party anyway",
+                "many travelers want to vacation there",
+                "the team’s best player had to be replaced"
               ],
               "explanation": "Người em gái yêu dấu của cô ấy luôn khiến cô bình tĩnh lại.",
-              "correctAnswer": "B"
+              "correctAnswer": "always calmed her"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         },
         {
           "id": "sec3",
@@ -275,126 +335,186 @@
           "questions": [
             {
               "id": "21",
-              "content": "To determine if the new drug was safe, _____",
+              "content": "To determine if the new drug was safe,",
               "options": [
-                "scientists measured all the effects",
-                "but his prior works were very successful",
                 "because the pirate had buried it",
-                "so she applied makeup to her face"
+                "but his prior works were very successful",
+                "but she became more serious as she matured",
+                "but the pain in his ankle gave him too much misery",
+                "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
+                "so the diners complained to the waiter",
+                "so they drank the entire bowl of punch"
               ],
               "explanation": "Để xác định xem thuốc mới có an toàn không, các nhà khoa học đã đo lường mọi hiệu ứng.",
-              "correctAnswer": "A"
+              "correctAnswer": "scientists measured all the effects"
             },
             {
               "id": "22",
-              "content": "His newest book did not sell well, _____",
+              "content": "His newest book did not sell well,",
               "options": [
-                "so he became confused",
+                "because the pirate had buried it",
                 "but his prior works were very successful",
+                "but she became more serious as she matured",
+                "but the pain in his ankle gave him too much misery",
+                "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
                 "so the diners complained to the waiter",
-                "but she became more serious as she matured"
+                "so they drank the entire bowl of punch"
               ],
               "explanation": "Cuốn sách mới nhất của ông bán không chạy, nhưng các tác phẩm trước đó thì rất thành công.",
-              "correctAnswer": "B"
+              "correctAnswer": "but his prior works were very successful"
             },
             {
               "id": "23",
-              "content": "He wanted to finish the race, _____",
+              "content": "He wanted to finish the race,",
               "options": [
-                "so they drank the entire bowl of punch",
+                "because the pirate had buried it",
+                "but his prior works were very successful",
+                "but she became more serious as she matured",
                 "but the pain in his ankle gave him too much misery",
+                "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
                 "so she patiently awaited his letters",
-                "so she applied makeup to her face"
+                "so the diners complained to the waiter",
+                "so they drank the entire bowl of punch"
               ],
               "explanation": "Anh muốn hoàn thành cuộc đua, nhưng cơn đau mắt cá chân mang lại quá nhiều đau khổ.",
-              "correctAnswer": "B"
+              "correctAnswer": "but the pain in his ankle gave him too much misery"
             },
             {
               "id": "24",
-              "content": "He lost his map, _____",
+              "content": "He lost his map,",
               "options": [
-                "so he became confused",
                 "because the pirate had buried it",
                 "but his prior works were very successful",
-                "so the diners complained to the waiter"
+                "but she became more serious as she matured",
+                "but the pain in his ankle gave him too much misery",
+                "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
+                "so the diners complained to the waiter",
+                "so they drank the entire bowl of punch"
               ],
               "explanation": "Anh ấy mất bản đồ nên đã bị bối rối mất phương hướng.",
-              "correctAnswer": "A"
+              "correctAnswer": "so he became confused"
             },
             {
               "id": "25",
-              "content": "The soup was cold, _____",
+              "content": "The soup was cold,",
               "options": [
-                "so she patiently awaited his letters",
+                "because the pirate had buried it",
+                "but his prior works were very successful",
+                "but she became more serious as she matured",
                 "but the pain in his ankle gave him too much misery",
+                "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
                 "so the diners complained to the waiter",
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Súp bị nguội, vì thế các thực khách phàn nàn với người phục vụ.",
-              "correctAnswer": "C"
+              "correctAnswer": "so the diners complained to the waiter"
             },
             {
               "id": "26",
-              "content": "Sue was very silly as a child, _____",
+              "content": "Sue was very silly as a child,",
               "options": [
-                "but she became more serious as she matured",
                 "because the pirate had buried it",
+                "but his prior works were very successful",
+                "but she became more serious as she matured",
+                "but the pain in his ankle gave him too much misery",
                 "scientists measured all the effects",
-                "so he became confused"
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
+                "so the diners complained to the waiter",
+                "so they drank the entire bowl of punch"
               ],
               "explanation": "Sue hồi nhỏ rất ngốc nghếch, nhưng cô trở nên nghiêm túc hơn khi trưởng thành.",
-              "correctAnswer": "A"
+              "correctAnswer": "but she became more serious as she matured"
             },
             {
               "id": "27",
-              "content": "No one could find the treasure _____",
+              "content": "No one could find the treasure",
               "options": [
-                "but his prior works were very successful",
                 "because the pirate had buried it",
+                "but his prior works were very successful",
+                "but she became more serious as she matured",
+                "but the pain in his ankle gave him too much misery",
+                "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
                 "so the diners complained to the waiter",
-                "so she applied makeup to her face"
+                "so they drank the entire bowl of punch"
               ],
               "explanation": "Không ai có thể tìm thấy kho báu vì tên cướp biển đã chôn nó.",
-              "correctAnswer": "B"
+              "correctAnswer": "because the pirate had buried it"
             },
             {
               "id": "28",
-              "content": "He said he would write to her, _____",
+              "content": "He said he would write to her,",
               "options": [
+                "because the pirate had buried it",
+                "but his prior works were very successful",
+                "but she became more serious as she matured",
                 "but the pain in his ankle gave him too much misery",
-                "so she patiently awaited his letters",
                 "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
+                "so the diners complained to the waiter",
                 "so they drank the entire bowl of punch"
               ],
               "explanation": "Anh nói sẽ viết thư cho cô, vì thế cô kiên nhẫn chờ đợi thư của anh.",
-              "correctAnswer": "B"
+              "correctAnswer": "so she patiently awaited his letters"
             },
             {
               "id": "29",
-              "content": "She wanted to look older, _____",
+              "content": "She wanted to look older,",
               "options": [
-                "so she applied makeup to her face",
-                "so he became confused",
+                "because the pirate had buried it",
+                "but his prior works were very successful",
                 "but she became more serious as she matured",
-                "because the pirate had buried it"
+                "but the pain in his ankle gave him too much misery",
+                "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
+                "so the diners complained to the waiter",
+                "so they drank the entire bowl of punch"
               ],
               "explanation": "Cô ấy muốn trông lớn tuổi hơn, nên đã trang điểm lên mặt.",
-              "correctAnswer": "A"
+              "correctAnswer": "so she applied makeup to her face"
             },
             {
               "id": "30",
-              "content": "They were thirsty, _____",
+              "content": "They were thirsty,",
               "options": [
-                "so they drank the entire bowl of punch",
-                "scientists measured all the effects",
+                "because the pirate had buried it",
                 "but his prior works were very successful",
-                "so the diners complained to the waiter"
+                "but she became more serious as she matured",
+                "but the pain in his ankle gave him too much misery",
+                "scientists measured all the effects",
+                "so he became confused",
+                "so she applied makeup to her face",
+                "so she patiently awaited his letters",
+                "so the diners complained to the waiter",
+                "so they drank the entire bowl of punch"
               ],
               "explanation": "Họ đang khát nên đã uống toàn bộ bát nước uống (punch).",
-              "correctAnswer": "A"
+              "correctAnswer": "so they drank the entire bowl of punch"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         }
       ]
     },

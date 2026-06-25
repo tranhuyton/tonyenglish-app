@@ -155,126 +155,186 @@
           "questions": [
             {
               "id": "11",
-              "content": "The writer's comic stories_____",
+              "content": "The writer's comic stories",
               "options": [
+                "a. after hearing them sing in church",
                 "a. always make me laugh",
+                "a. just before I left the house",
+                "a. made him hard to understand",
+                "a. makes a great playroom",
+                "a. some seats for this week's show",
+                "b. before buying a new car",
                 "b. led up to the second floor",
-                "c. before buying a new car",
-                "d. made him hard to understand"
+                "c. slept in small cave",
+                "d. right before coming home from work"
               ],
               "explanation": "Nhà văn viết truyện hài nên luôn làm tôi cười (always make me laugh).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. always make me laugh"
             },
             {
               "id": "12",
-              "content": "Donna usually ran errands_____",
+              "content": "Donna usually ran errands",
               "options": [
                 "a. after hearing them sing in church",
-                "b. slept in small cave",
-                "c. just before I left the house",
+                "a. always make me laugh",
+                "a. just before I left the house",
+                "a. made him hard to understand",
+                "a. makes a great playroom",
+                "a. some seats for this week's show",
+                "b. before buying a new car",
+                "b. led up to the second floor",
+                "c. slept in small cave",
                 "d. right before coming home from work"
               ],
               "explanation": "Donna thường chạy việc vặt ngay trước khi đi làm về nhà (right before coming home from work).",
-              "correctAnswer": "D"
+              "correctAnswer": "d. right before coming home from work"
             },
             {
               "id": "13",
-              "content": "I tried to reserve_____",
+              "content": "I tried to reserve",
               "options": [
+                "a. after hearing them sing in church",
+                "a. always make me laugh",
+                "a. just before I left the house",
+                "a. made him hard to understand",
+                "a. makes a great playroom",
                 "a. some seats for this week's show",
-                "b. makes a great playroom",
-                "c. led up to the second floor",
-                "d. always make me laugh"
+                "b. before buying a new car",
+                "b. led up to the second floor",
+                "c. slept in small cave",
+                "d. right before coming home from work"
               ],
               "explanation": "reserve some seats: đặt trước một vài chỗ ngồi.",
-              "correctAnswer": "A"
+              "correctAnswer": "a. some seats for this week's show"
             },
             {
               "id": "14",
-              "content": "She wanted to join the choir_____",
+              "content": "She wanted to join the choir",
               "options": [
                 "a. after hearing them sing in church",
-                "b. made him hard to understand",
-                "c. just before I left the house",
-                "d. before buying a new car"
+                "a. always make me laugh",
+                "a. just before I left the house",
+                "a. made him hard to understand",
+                "a. makes a great playroom",
+                "a. some seats for this week's show",
+                "b. before buying a new car",
+                "b. led up to the second floor",
+                "c. slept in small cave",
+                "d. right before coming home from work"
               ],
               "explanation": "Tham gia dàn hợp xướng (choir) sau khi nghe họ hát ở nhà thờ.",
-              "correctAnswer": "A"
+              "correctAnswer": "a. after hearing them sing in church"
             },
             {
               "id": "15",
-              "content": "A beautiful staircase_____",
+              "content": "A beautiful staircase",
               "options": [
-                "a. slept in small cave",
+                "a. after hearing them sing in church",
+                "a. always make me laugh",
+                "a. just before I left the house",
+                "a. made him hard to understand",
+                "a. makes a great playroom",
+                "a. some seats for this week's show",
+                "b. before buying a new car",
                 "b. led up to the second floor",
-                "c. right before coming home from work",
-                "d. some seats for this week's show"
+                "c. slept in small cave",
+                "d. right before coming home from work"
               ],
               "explanation": "Cầu thang đẹp đẽ dẫn lên tầng 2 (led up to the second floor).",
-              "correctAnswer": "B"
+              "correctAnswer": "b. led up to the second floor"
             },
             {
               "id": "16",
-              "content": "The speaker's strong accent_____",
+              "content": "The speaker's strong accent",
               "options": [
+                "a. after hearing them sing in church",
+                "a. always make me laugh",
+                "a. just before I left the house",
                 "a. made him hard to understand",
-                "b. always make me laugh",
-                "c. makes a great playroom",
+                "a. makes a great playroom",
+                "a. some seats for this week's show",
+                "b. before buying a new car",
+                "b. led up to the second floor",
+                "c. slept in small cave",
                 "d. right before coming home from work"
               ],
               "explanation": "Giọng địa phương quá nặng (strong accent) khiến anh ta khó bị hiểu.",
-              "correctAnswer": "A"
+              "correctAnswer": "a. made him hard to understand"
             },
             {
               "id": "17",
-              "content": "Roger pondered a long time_____",
+              "content": "Roger pondered a long time",
               "options": [
-                "a. led up to the second floor",
+                "a. after hearing them sing in church",
+                "a. always make me laugh",
+                "a. just before I left the house",
+                "a. made him hard to understand",
+                "a. makes a great playroom",
+                "a. some seats for this week's show",
                 "b. before buying a new car",
-                "c. after hearing them sing in church",
-                "d. some seats for this week's show"
+                "b. led up to the second floor",
+                "c. slept in small cave",
+                "d. right before coming home from work"
               ],
               "explanation": "ponder: suy nghĩ cân nhắc trước khi mua ô tô mới.",
-              "correctAnswer": "B"
+              "correctAnswer": "b. before buying a new car"
             },
             {
               "id": "18",
-              "content": "The hermit_____",
+              "content": "The hermit",
               "options": [
+                "a. after hearing them sing in church",
+                "a. always make me laugh",
                 "a. just before I left the house",
-                "b. makes a great playroom",
+                "a. made him hard to understand",
+                "a. makes a great playroom",
+                "a. some seats for this week's show",
+                "b. before buying a new car",
+                "b. led up to the second floor",
                 "c. slept in small cave",
                 "d. right before coming home from work"
               ],
               "explanation": "hermit: người ẩn dật ngủ trong một hang nhỏ (slept in small cave).",
-              "correctAnswer": "C"
+              "correctAnswer": "c. slept in small cave"
             },
             {
               "id": "19",
-              "content": "I remembered to make sure I had my gloves_____",
+              "content": "I remembered to make sure I had my gloves",
               "options": [
+                "a. after hearing them sing in church",
+                "a. always make me laugh",
                 "a. just before I left the house",
+                "a. made him hard to understand",
+                "a. makes a great playroom",
+                "a. some seats for this week's show",
+                "b. before buying a new car",
                 "b. led up to the second floor",
-                "c. always make me laugh",
-                "d. after hearing them sing in church"
+                "c. slept in small cave",
+                "d. right before coming home from work"
               ],
               "explanation": "Tôi nhớ mang găng tay trước khi rời khỏi nhà (just before I left the house).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. just before I left the house"
             },
             {
               "id": "20",
-              "content": "The large basement_____",
+              "content": "The large basement",
               "options": [
+                "a. after hearing them sing in church",
+                "a. always make me laugh",
+                "a. just before I left the house",
+                "a. made him hard to understand",
                 "a. makes a great playroom",
-                "b. made him hard to understand",
-                "c. before buying a new car",
-                "d. some seats for this week's show"
+                "a. some seats for this week's show",
+                "b. before buying a new car",
+                "b. led up to the second floor",
+                "c. slept in small cave",
+                "d. right before coming home from work"
               ],
               "explanation": "Tầng hầm rộng lớn có thể tạo thành một phòng chơi tuyệt vời (makes a great playroom).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. makes a great playroom"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         },
         {
           "id": "u18_ex2_b",
@@ -283,126 +343,186 @@
           "questions": [
             {
               "id": "21",
-              "content": "I put some medicine in my eyes,_____",
+              "content": "I put some medicine in my eyes,",
               "options": [
+                "a. because Tony spent a lot of time on the script",
+                "a. it was completely blank",
                 "a. so I had to keep blinking them",
+                "a. so I went to see the barber",
+                "a. so doing the homework was complicated",
+                "a. so he had to search for them for an hour",
+                "a. so he left the room and slammed the door",
+                "a. so they justly shared the prize",
                 "b. so he cleaned the leather couch",
-                "c. but she declined",
-                "d. it was completely blank"
+                "c. but she declined"
               ],
               "explanation": "Tôi nhỏ thuốc vào mắt nên tôi phải liên tục chớp mắt (keep blinking them).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. so I had to keep blinking them"
             },
             {
               "id": "22",
-              "content": "The boy's mom yelled at him for getting mud on the couch,_____",
+              "content": "The boy's mom yelled at him for getting mud on the couch,",
               "options": [
                 "a. because Tony spent a lot of time on the script",
+                "a. it was completely blank",
+                "a. so I had to keep blinking them",
+                "a. so I went to see the barber",
+                "a. so doing the homework was complicated",
+                "a. so he had to search for them for an hour",
+                "a. so he left the room and slammed the door",
+                "a. so they justly shared the prize",
                 "b. so he cleaned the leather couch",
-                "c. so doing the homework was complicated",
-                "d. so he left the room and slammed the door"
+                "c. but she declined"
               ],
               "explanation": "Cậu bé làm bẩn ghế bằng bùn nên mẹ la, do đó cậu phải làm sạch chiếc ghế da (cleaned the leather couch).",
-              "correctAnswer": "B"
+              "correctAnswer": "b. so he cleaned the leather couch"
             },
             {
               "id": "23",
-              "content": "He asked Sara to see the scary movie,_____",
+              "content": "He asked Sara to see the scary movie,",
               "options": [
+                "a. because Tony spent a lot of time on the script",
+                "a. it was completely blank",
+                "a. so I had to keep blinking them",
                 "a. so I went to see the barber",
-                "b. so he had to search for them for an hour",
-                "c. but she declined",
-                "d. so they justly shared the prize"
+                "a. so doing the homework was complicated",
+                "a. so he had to search for them for an hour",
+                "a. so he left the room and slammed the door",
+                "a. so they justly shared the prize",
+                "b. so he cleaned the leather couch",
+                "c. but she declined"
               ],
               "explanation": "Anh ta rủ Sara xem phim kinh dị, nhưng cô ấy từ chối (declined).",
-              "correctAnswer": "C"
+              "correctAnswer": "c. but she declined"
             },
             {
               "id": "24",
-              "content": "He spent the period daydreaming. So when he turned in his test,_____",
+              "content": "He spent the period daydreaming. So when he turned in his test,",
               "options": [
+                "a. because Tony spent a lot of time on the script",
                 "a. it was completely blank",
-                "b. so I had to keep blinking them",
-                "c. so he cleaned the leather couch",
-                "d. because Tony spent a lot of time on the script"
+                "a. so I had to keep blinking them",
+                "a. so I went to see the barber",
+                "a. so doing the homework was complicated",
+                "a. so he had to search for them for an hour",
+                "a. so he left the room and slammed the door",
+                "a. so they justly shared the prize",
+                "b. so he cleaned the leather couch",
+                "c. but she declined"
               ],
               "explanation": "Cậu ta mộng du cả tiết. Khi nộp bài kiểm tra thì nó hoàn toàn để trắng (completely blank).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. it was completely blank"
             },
             {
               "id": "25",
-              "content": "The new play was great_____",
+              "content": "The new play was great",
               "options": [
                 "a. because Tony spent a lot of time on the script",
-                "b. so doing the homework was complicated",
-                "c. so he left the room and slammed the door",
-                "d. so I went to see the barber"
+                "a. it was completely blank",
+                "a. so I had to keep blinking them",
+                "a. so I went to see the barber",
+                "a. so doing the homework was complicated",
+                "a. so he had to search for them for an hour",
+                "a. so he left the room and slammed the door",
+                "a. so they justly shared the prize",
+                "b. so he cleaned the leather couch",
+                "c. but she declined"
               ],
               "explanation": "Vở kịch rất tuyệt vì Tony đã dành nhiều thời gian cho kịch bản (on the script).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. because Tony spent a lot of time on the script"
             },
             {
               "id": "26",
-              "content": "I didn't pay attention in class,_____",
+              "content": "I didn't pay attention in class,",
               "options": [
+                "a. because Tony spent a lot of time on the script",
+                "a. it was completely blank",
+                "a. so I had to keep blinking them",
+                "a. so I went to see the barber",
                 "a. so doing the homework was complicated",
-                "b. so he had to search for them for an hour",
-                "c. so they justly shared the prize",
-                "d. but she declined"
+                "a. so he had to search for them for an hour",
+                "a. so he left the room and slammed the door",
+                "a. so they justly shared the prize",
+                "b. so he cleaned the leather couch",
+                "c. but she declined"
               ],
               "explanation": "Tôi không chú ý trong lớp nên làm bài tập về nhà trở nên phức tạp (was complicated).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. so doing the homework was complicated"
             },
             {
               "id": "27",
-              "content": "My hair was a mess,_____",
+              "content": "My hair was a mess,",
               "options": [
+                "a. because Tony spent a lot of time on the script",
+                "a. it was completely blank",
+                "a. so I had to keep blinking them",
                 "a. so I went to see the barber",
-                "b. it was completely blank",
-                "c. so I had to keep blinking them",
-                "d. so he cleaned the leather couch"
+                "a. so doing the homework was complicated",
+                "a. so he had to search for them for an hour",
+                "a. so he left the room and slammed the door",
+                "a. so they justly shared the prize",
+                "b. so he cleaned the leather couch",
+                "c. but she declined"
               ],
               "explanation": "Tóc tôi rối bù nên tôi đến gặp thợ cắt tóc (went to see the barber).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. so I went to see the barber"
             },
             {
               "id": "28",
-              "content": "He couldn't stand the sound of the music,_____",
+              "content": "He couldn't stand the sound of the music,",
               "options": [
+                "a. because Tony spent a lot of time on the script",
+                "a. it was completely blank",
+                "a. so I had to keep blinking them",
+                "a. so I went to see the barber",
+                "a. so doing the homework was complicated",
+                "a. so he had to search for them for an hour",
                 "a. so he left the room and slammed the door",
-                "b. because Tony spent a lot of time on the script",
-                "c. so he had to search for them for an hour",
-                "d. so doing the homework was complicated"
+                "a. so they justly shared the prize",
+                "b. so he cleaned the leather couch",
+                "c. but she declined"
               ],
               "explanation": "Anh ta không chịu được tiếng nhạc nên rời phòng và đóng sầm cửa (slammed the door).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. so he left the room and slammed the door"
             },
             {
               "id": "29",
-              "content": "Dean and Anne finished the race at the same time,_____",
+              "content": "Dean and Anne finished the race at the same time,",
               "options": [
+                "a. because Tony spent a lot of time on the script",
+                "a. it was completely blank",
+                "a. so I had to keep blinking them",
+                "a. so I went to see the barber",
+                "a. so doing the homework was complicated",
+                "a. so he had to search for them for an hour",
+                "a. so he left the room and slammed the door",
                 "a. so they justly shared the prize",
-                "b. so I went to see the barber",
-                "c. but she declined",
-                "d. it was completely blank"
+                "b. so he cleaned the leather couch",
+                "c. but she declined"
               ],
               "explanation": "Cả hai về đích cùng lúc nên họ được chia giải một cách công bằng (justly shared the prize).",
-              "correctAnswer": "A"
+              "correctAnswer": "a. so they justly shared the prize"
             },
             {
               "id": "30",
-              "content": "He lost his glasses,_____",
+              "content": "He lost his glasses,",
               "options": [
+                "a. because Tony spent a lot of time on the script",
+                "a. it was completely blank",
+                "a. so I had to keep blinking them",
+                "a. so I went to see the barber",
+                "a. so doing the homework was complicated",
                 "a. so he had to search for them for an hour",
-                "b. so he left the room and slammed the door",
-                "c. so I had to keep blinking them",
-                "d. because Tony spent a lot of time on the script"
+                "a. so he left the room and slammed the door",
+                "a. so they justly shared the prize",
+                "b. so he cleaned the leather couch",
+                "c. but she declined"
               ],
               "explanation": "Anh ta làm mất kính nên phải tìm kiếm (search for) chúng cả giờ.",
-              "correctAnswer": "A"
+              "correctAnswer": "a. so he had to search for them for an hour"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         }
       ]
     },

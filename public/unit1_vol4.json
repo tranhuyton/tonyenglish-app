@@ -227,126 +227,186 @@
           "questions": [
             {
               "id": "21",
-              "content": "A soothing cup of tea ________.",
+              "content": "A soothing cup of tea.",
               "options": [
+                "covered almost a third of the country",
                 "feels so smooth",
+                "includes work from the 21st century",
                 "is good for a sore throat",
+                "several species of flowers as a hobby",
+                "the shoulder of Taurus the Bull",
                 "to insects and small animals",
+                "twenty workers who grew cotton",
+                "was surprisingly fast",
                 "was too strong to be enjoyable"
               ],
               "explanation": "Một tách trà dịu nhẹ rất tốt cho bệnh đau họng.",
-              "correctAnswer": "B"
+              "correctAnswer": "is good for a sore throat"
             },
             {
               "id": "22",
-              "content": "The odor of the cheese ________.",
+              "content": "The odor of the cheese.",
               "options": [
-                "was surprisingly fast",
-                "includes work from the 21st century",
+                "covered almost a third of the country",
                 "feels so smooth",
+                "includes work from the 21st century",
+                "is good for a sore throat",
+                "several species of flowers as a hobby",
+                "the shoulder of Taurus the Bull",
+                "to insects and small animals",
+                "twenty workers who grew cotton",
+                "was surprisingly fast",
                 "was too strong to be enjoyable"
               ],
               "explanation": "Mùi của pho mát quá nồng nên không thấy ngon.",
-              "correctAnswer": "D"
+              "correctAnswer": "was too strong to be enjoyable"
             },
             {
               "id": "23",
-              "content": "The pot's texture ________.",
+              "content": "The pot's texture.",
               "options": [
-                "feels so smooth",
-                "is good for a sore throat",
                 "covered almost a third of the country",
-                "the shoulder of Taurus the Bull"
+                "feels so smooth",
+                "includes work from the 21st century",
+                "is good for a sore throat",
+                "several species of flowers as a hobby",
+                "the shoulder of Taurus the Bull",
+                "to insects and small animals",
+                "twenty workers who grew cotton",
+                "was surprisingly fast",
+                "was too strong to be enjoyable"
               ],
               "explanation": "Bề mặt của cái nồi cảm giác rất mịn.",
-              "correctAnswer": "A"
+              "correctAnswer": "feels so smooth"
             },
             {
               "id": "24",
-              "content": "The chemical is toxic ________.",
+              "content": "The chemical is toxic.",
               "options": [
+                "covered almost a third of the country",
+                "feels so smooth",
+                "includes work from the 21st century",
+                "is good for a sore throat",
+                "several species of flowers as a hobby",
+                "the shoulder of Taurus the Bull",
                 "to insects and small animals",
                 "twenty workers who grew cotton",
-                "several species of flowers as a hobby",
-                "includes work from the 21st century"
+                "was surprisingly fast",
+                "was too strong to be enjoyable"
               ],
               "explanation": "Hóa chất này độc hại đối với côn trùng và động vật nhỏ.",
-              "correctAnswer": "A"
+              "correctAnswer": "to insects and small animals"
             },
             {
               "id": "25",
-              "content": "The contemporary fiction class ________.",
+              "content": "The contemporary fiction class.",
               "options": [
-                "was surprisingly fast",
-                "is good for a sore throat",
+                "covered almost a third of the country",
+                "feels so smooth",
                 "includes work from the 21st century",
-                "the shoulder of Taurus the Bull"
+                "is good for a sore throat",
+                "several species of flowers as a hobby",
+                "the shoulder of Taurus the Bull",
+                "to insects and small animals",
+                "twenty workers who grew cotton",
+                "was surprisingly fast",
+                "was too strong to be enjoyable"
               ],
               "explanation": "Lớp học văn học hư cấu đương đại bao gồm các tác phẩm từ thế kỷ 21.",
-              "correctAnswer": "C"
+              "correctAnswer": "includes work from the 21st century"
             },
             {
               "id": "26",
-              "content": "The rate at which these flowers grew ________.",
+              "content": "The rate at which these flowers grew.",
               "options": [
-                "feels so smooth",
-                "was surprisingly fast",
                 "covered almost a third of the country",
-                "to insects and small animals"
+                "feels so smooth",
+                "includes work from the 21st century",
+                "is good for a sore throat",
+                "several species of flowers as a hobby",
+                "the shoulder of Taurus the Bull",
+                "to insects and small animals",
+                "twenty workers who grew cotton",
+                "was surprisingly fast",
+                "was too strong to be enjoyable"
               ],
               "explanation": "Tốc độ lớn lên của những bông hoa này nhanh đến kinh ngạc.",
-              "correctAnswer": "B"
+              "correctAnswer": "was surprisingly fast"
             },
             {
               "id": "27",
-              "content": "My mother cultivates ________.",
+              "content": "My mother cultivates.",
               "options": [
+                "covered almost a third of the country",
+                "feels so smooth",
+                "includes work from the 21st century",
+                "is good for a sore throat",
                 "several species of flowers as a hobby",
-                "twenty workers who grew cotton",
                 "the shoulder of Taurus the Bull",
-                "feels so smooth"
+                "to insects and small animals",
+                "twenty workers who grew cotton",
+                "was surprisingly fast",
+                "was too strong to be enjoyable"
               ],
               "explanation": "Mẹ tôi trồng trọt một vài loài hoa như một sở thích.",
-              "correctAnswer": "A"
+              "correctAnswer": "several species of flowers as a hobby"
             },
             {
               "id": "28",
-              "content": "The plantation had ________.",
+              "content": "The plantation had.",
               "options": [
                 "covered almost a third of the country",
+                "feels so smooth",
                 "includes work from the 21st century",
+                "is good for a sore throat",
+                "several species of flowers as a hobby",
+                "the shoulder of Taurus the Bull",
+                "to insects and small animals",
                 "twenty workers who grew cotton",
+                "was surprisingly fast",
                 "was too strong to be enjoyable"
               ],
               "explanation": "Đồn điền này có hai mươi công nhân trồng bông.",
-              "correctAnswer": "C"
+              "correctAnswer": "twenty workers who grew cotton"
             },
             {
               "id": "29",
-              "content": "The thick and humid forest ________.",
+              "content": "The thick and humid forest.",
               "options": [
                 "covered almost a third of the country",
+                "feels so smooth",
+                "includes work from the 21st century",
+                "is good for a sore throat",
+                "several species of flowers as a hobby",
                 "the shoulder of Taurus the Bull",
                 "to insects and small animals",
-                "was surprisingly fast"
+                "twenty workers who grew cotton",
+                "was surprisingly fast",
+                "was too strong to be enjoyable"
               ],
               "explanation": "Khu rừng dày đặc và ẩm ướt bao phủ gần một phần ba diện tích quốc gia.",
-              "correctAnswer": "A"
+              "correctAnswer": "covered almost a third of the country"
             },
             {
               "id": "30",
-              "content": "That cluster of stars in the sky makes ________.",
+              "content": "That cluster of stars in the sky makes.",
               "options": [
+                "covered almost a third of the country",
+                "feels so smooth",
+                "includes work from the 21st century",
+                "is good for a sore throat",
                 "several species of flowers as a hobby",
                 "the shoulder of Taurus the Bull",
+                "to insects and small animals",
                 "twenty workers who grew cotton",
-                "is good for a sore throat"
+                "was surprisingly fast",
+                "was too strong to be enjoyable"
               ],
               "explanation": "Cụm sao trên bầu trời tạo thành vai của chòm sao Kim Ngưu (Taurus the Bull).",
-              "correctAnswer": "B"
+              "correctAnswer": "the shoulder of Taurus the Bull"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         },
         {
           "id": "sec3",
@@ -355,126 +415,186 @@
           "questions": [
             {
               "id": "31",
-              "content": "The scientists wanted to find a cure for the sickness, ________.",
+              "content": "The scientists wanted to find a cure for the sickness,.",
               "options": [
-                "so they combined the chemicals",
-                "but the condensed version was shorter",
                 "and Jim thought it was a divine message",
-                "people call it a paradise"
+                "and she looked at his palate",
+                "and she smelled the aroma of cookies",
+                "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
+                "but the condensed version was shorter",
+                "people call it a paradise",
+                "so economic growth was rapid",
+                "so they combined the chemicals",
+                "the effects of the medicine will vary"
               ],
               "explanation": "Các nhà khoa học muốn tìm cách chữa trị căn bệnh, vì vậy họ đã kết hợp các hóa chất.",
-              "correctAnswer": "A"
+              "correctAnswer": "so they combined the chemicals"
             },
             {
               "id": "32",
-              "content": "He offered to share his water, ________.",
+              "content": "He offered to share his water,.",
               "options": [
-                "but I wanted my own beverage",
-                "the effects of the medicine will vary",
+                "and Jim thought it was a divine message",
+                "and she looked at his palate",
                 "and she smelled the aroma of cookies",
-                "so economic growth was rapid"
+                "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
+                "but the condensed version was shorter",
+                "people call it a paradise",
+                "so economic growth was rapid",
+                "so they combined the chemicals",
+                "the effects of the medicine will vary"
               ],
               "explanation": "Anh ấy đề nghị chia sẻ nước của mình, nhưng tôi muốn thức uống của riêng tôi.",
-              "correctAnswer": "A"
+              "correctAnswer": "but I wanted my own beverage"
             },
             {
               "id": "33",
-              "content": "I prefer mocha to coffee ________.",
+              "content": "I prefer mocha to coffee.",
               "options": [
+                "and Jim thought it was a divine message",
                 "and she looked at his palate",
+                "and she smelled the aroma of cookies",
                 "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
                 "but the condensed version was shorter",
-                "and Jim thought it was a divine message"
+                "people call it a paradise",
+                "so economic growth was rapid",
+                "so they combined the chemicals",
+                "the effects of the medicine will vary"
               ],
               "explanation": "Tôi thích mocha hơn cà phê vì nó có hương vị sô cô la thoang thoảng.",
-              "correctAnswer": "B"
+              "correctAnswer": "because it has a subtle taste of chocolate"
             },
             {
               "id": "34",
-              "content": "Many new jobs were created, ________.",
+              "content": "Many new jobs were created,.",
               "options": [
+                "and Jim thought it was a divine message",
+                "and she looked at his palate",
+                "and she smelled the aroma of cookies",
+                "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
+                "but the condensed version was shorter",
+                "people call it a paradise",
                 "so economic growth was rapid",
                 "so they combined the chemicals",
-                "people call it a paradise",
                 "the effects of the medicine will vary"
               ],
               "explanation": "Nhiều việc làm mới được tạo ra, nên sự tăng trưởng kinh tế rất nhanh.",
-              "correctAnswer": "A"
+              "correctAnswer": "so economic growth was rapid"
             },
             {
               "id": "35",
-              "content": "The report was ten pages long, ________.",
+              "content": "The report was ten pages long,.",
               "options": [
-                "and she smelled the aroma of cookies",
-                "but the condensed version was shorter",
                 "and Jim thought it was a divine message",
-                "so they combined the chemicals"
+                "and she looked at his palate",
+                "and she smelled the aroma of cookies",
+                "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
+                "but the condensed version was shorter",
+                "people call it a paradise",
+                "so economic growth was rapid",
+                "so they combined the chemicals",
+                "the effects of the medicine will vary"
               ],
               "explanation": "Bản báo cáo dài 10 trang, nhưng phiên bản tóm tắt thì ngắn hơn.",
-              "correctAnswer": "B"
+              "correctAnswer": "but the condensed version was shorter"
             },
             {
               "id": "36",
-              "content": "The doctor asked him to open his mouth, ________.",
+              "content": "The doctor asked him to open his mouth,.",
               "options": [
+                "and Jim thought it was a divine message",
                 "and she looked at his palate",
-                "so they combined the chemicals",
+                "and she smelled the aroma of cookies",
+                "because it has a subtle taste of chocolate",
                 "but I wanted my own beverage",
-                "people call it a paradise"
+                "but the condensed version was shorter",
+                "people call it a paradise",
+                "so economic growth was rapid",
+                "so they combined the chemicals",
+                "the effects of the medicine will vary"
               ],
               "explanation": "Bác sĩ yêu cầu anh ấy mở miệng, và bà ấy nhìn vào vòm miệng của anh.",
-              "correctAnswer": "A"
+              "correctAnswer": "and she looked at his palate"
             },
             {
               "id": "37",
-              "content": "She walked in the door, ________.",
+              "content": "She walked in the door,.",
               "options": [
-                "because it has a subtle taste of chocolate",
+                "and Jim thought it was a divine message",
+                "and she looked at his palate",
                 "and she smelled the aroma of cookies",
+                "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
+                "but the condensed version was shorter",
+                "people call it a paradise",
                 "so economic growth was rapid",
+                "so they combined the chemicals",
                 "the effects of the medicine will vary"
               ],
               "explanation": "Cô ấy bước qua cửa, và ngửi thấy mùi thơm của bánh quy.",
-              "correctAnswer": "B"
+              "correctAnswer": "and she smelled the aroma of cookies"
             },
             {
               "id": "38",
-              "content": "Because the island is so warm and beautiful, ________.",
+              "content": "Because the island is so warm and beautiful,.",
               "options": [
-                "people call it a paradise",
-                "but the condensed version was shorter",
                 "and Jim thought it was a divine message",
-                "and she looked at his palate"
+                "and she looked at his palate",
+                "and she smelled the aroma of cookies",
+                "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
+                "but the condensed version was shorter",
+                "people call it a paradise",
+                "so economic growth was rapid",
+                "so they combined the chemicals",
+                "the effects of the medicine will vary"
               ],
               "explanation": "Vì hòn đảo quá ấm áp và xinh đẹp, mọi người gọi nó là một thiên đường.",
-              "correctAnswer": "A"
+              "correctAnswer": "people call it a paradise"
             },
             {
               "id": "39",
-              "content": "Because patients’ bodies are so different, ________.",
+              "content": "Because patients’ bodies are so different,.",
               "options": [
-                "the effects of the medicine will vary",
-                "so economic growth was rapid",
+                "and Jim thought it was a divine message",
+                "and she looked at his palate",
+                "and she smelled the aroma of cookies",
+                "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
+                "but the condensed version was shorter",
                 "people call it a paradise",
-                "and she smelled the aroma of cookies"
+                "so economic growth was rapid",
+                "so they combined the chemicals",
+                "the effects of the medicine will vary"
               ],
               "explanation": "Vì cơ thể của các bệnh nhân rất khác nhau, nên tác dụng của thuốc sẽ khác nhau.",
-              "correctAnswer": "A"
+              "correctAnswer": "the effects of the medicine will vary"
             },
             {
               "id": "40",
-              "content": "It didn’t rain all summer, ________.",
+              "content": "It didn’t rain all summer,.",
               "options": [
                 "and Jim thought it was a divine message",
+                "and she looked at his palate",
+                "and she smelled the aroma of cookies",
+                "because it has a subtle taste of chocolate",
+                "but I wanted my own beverage",
                 "but the condensed version was shorter",
+                "people call it a paradise",
+                "so economic growth was rapid",
                 "so they combined the chemicals",
-                "people call it a paradise"
+                "the effects of the medicine will vary"
               ],
               "explanation": "Trời không mưa suốt mùa hè, và Jim nghĩ đó là một thông điệp từ thần linh.",
-              "correctAnswer": "A"
+              "correctAnswer": "and Jim thought it was a divine message"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         }
       ]
     },

@@ -157,124 +157,184 @@
               "id": "11",
               "content": "Mom made chocolate pudding",
               "options": [
-                "out of the computer.",
+                "as a politician.",
+                "could not be hurt from mean comments.",
+                "during science class.",
                 "flour, eggs and sugar.",
                 "for dessert last night.",
-                "of the fence."
+                "of the fence.",
+                "out of the computer.",
+                "to manage the team of employees.",
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "Mom made chocolate pudding for dessert last night. (Mẹ làm bánh pudding sô-cô-la cho bữa tráng miệng tối qua.)",
-              "correctAnswer": "C"
+              "correctAnswer": "for dessert last night."
             },
             {
               "id": "12",
               "content": "He is very attentive",
               "options": [
-                "to meet you.",
+                "as a politician.",
+                "could not be hurt from mean comments.",
                 "during science class.",
-                "two hundred years ago.",
-                "for dessert last night."
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
+                "out of the computer.",
+                "to manage the team of employees.",
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "He is very attentive during science class. (Anh ấy rất chú ý trong giờ khoa học.)",
-              "correctAnswer": "B"
+              "correctAnswer": "during science class."
             },
             {
               "id": "13",
               "content": "People wore capes more often",
               "options": [
-                "to meet you.",
-                "two hundred years ago.",
                 "as a politician.",
-                "of the fence."
+                "could not be hurt from mean comments.",
+                "during science class.",
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
+                "out of the computer.",
+                "to manage the team of employees.",
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "People wore capes more often two hundred years ago. (Mọi người thường xuyên mặc áo choàng vào hai trăm năm trước.)",
-              "correctAnswer": "B"
+              "correctAnswer": "two hundred years ago."
             },
             {
               "id": "14",
               "content": "His strong spirit",
               "options": [
+                "as a politician.",
+                "could not be hurt from mean comments.",
+                "during science class.",
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
                 "out of the computer.",
                 "to manage the team of employees.",
-                "flour, eggs and sugar.",
-                "could not be hurt from mean comments."
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "His strong spirit could not be hurt from mean comments. (Tinh thần mạnh mẽ của anh ấy không bị tổn thương bởi những bình luận ác ý.)",
-              "correctAnswer": "D"
+              "correctAnswer": "could not be hurt from mean comments."
             },
             {
               "id": "15",
               "content": "I can’t envision you",
               "options": [
-                "out of the computer.",
-                "for dessert last night.",
                 "as a politician.",
-                "of the fence."
+                "could not be hurt from mean comments.",
+                "during science class.",
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
+                "out of the computer.",
+                "to manage the team of employees.",
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "I can’t envision you as a politician. (Tôi không thể hình dung bạn là một chính trị gia.)",
-              "correctAnswer": "C"
+              "correctAnswer": "as a politician."
             },
             {
               "id": "16",
               "content": "It was a pleasure",
               "options": [
-                "two hundred years ago.",
-                "for dessert last night.",
+                "as a politician.",
+                "could not be hurt from mean comments.",
                 "during science class.",
-                "to meet you."
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
+                "out of the computer.",
+                "to manage the team of employees.",
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "It was a pleasure to meet you. (Rất hân hạnh được gặp bạn.)",
-              "correctAnswer": "D"
+              "correctAnswer": "to meet you."
             },
             {
               "id": "17",
               "content": "His role at work is",
               "options": [
-                "out of the computer.",
+                "as a politician.",
+                "could not be hurt from mean comments.",
+                "during science class.",
                 "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
+                "out of the computer.",
                 "to manage the team of employees.",
-                "to meet you."
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "His role at work is to manage the team of employees. (Vai trò của anh ấy tại nơi làm việc là quản lý đội ngũ nhân viên.)",
-              "correctAnswer": "C"
+              "correctAnswer": "to manage the team of employees."
             },
             {
               "id": "18",
               "content": "The cat is sitting on the rail",
               "options": [
                 "as a politician.",
+                "could not be hurt from mean comments.",
                 "during science class.",
-                "two hundred years ago.",
-                "of the fence."
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
+                "out of the computer.",
+                "to manage the team of employees.",
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "The cat is sitting on the rail of the fence. (Con mèo đang ngồi trên thanh chắn hàng rào.)",
-              "correctAnswer": "D"
+              "correctAnswer": "of the fence."
             },
             {
               "id": "19",
               "content": "For this recipe, I will need",
               "options": [
-                "flour, eggs and sugar.",
-                "of the fence.",
                 "as a politician.",
-                "could not be hurt from mean comments."
+                "could not be hurt from mean comments.",
+                "during science class.",
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
+                "out of the computer.",
+                "to manage the team of employees.",
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "For this recipe, I will need flour, eggs and sugar. (Với công thức này, tôi sẽ cần bột mì, trứng và đường.)",
-              "correctAnswer": "A"
+              "correctAnswer": "flour, eggs and sugar."
             },
             {
               "id": "20",
               "content": "There were sparks flying",
               "options": [
+                "as a politician.",
+                "could not be hurt from mean comments.",
+                "during science class.",
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence.",
                 "out of the computer.",
                 "to manage the team of employees.",
-                "two hundred years ago.",
-                "could not be hurt from mean comments."
+                "to meet you.",
+                "two hundred years ago."
               ],
               "explanation": "There were sparks flying out of the computer. (Có những tia lửa bắn ra từ máy tính.)",
-              "correctAnswer": "A"
+              "correctAnswer": "out of the computer."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         },
         {
           "id": "sec4_wordlist",
@@ -285,124 +345,184 @@
               "id": "21",
               "content": "If you wash this silk shirt in hot water,",
               "options": [
+                "because he fell in a patch of rocks.",
+                "but alas, I still didn’t do very well.",
                 "it will melt.",
                 "it will shrink.",
+                "so I usually wear a suit.",
+                "so it was an absolute disaster.",
+                "that I had to soak it overnight.",
                 "the soldiers spread out evenly.",
-                "but alas, I still didn’t do very well."
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "If you wash this silk shirt in hot water, it will shrink. (Nếu bạn giặt chiếc áo lụa này trong nước nóng, nó sẽ co lại.)",
-              "correctAnswer": "B"
+              "correctAnswer": "it will shrink."
             },
             {
               "id": "22",
               "content": "Tony didn’t practice the presentation,",
               "options": [
-                "when I heard the pop.",
+                "because he fell in a patch of rocks.",
+                "but alas, I still didn’t do very well.",
+                "it will melt.",
+                "it will shrink.",
+                "so I usually wear a suit.",
                 "so it was an absolute disaster.",
-                "when folks meet with their families.",
-                "it will melt."
+                "that I had to soak it overnight.",
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "Tony didn’t practice the presentation, so it was an absolute disaster. (Tony đã không thực hành bài thuyết trình, vì vậy nó hoàn toàn là một thảm họa.)",
-              "correctAnswer": "B"
+              "correctAnswer": "so it was an absolute disaster."
             },
             {
               "id": "23",
               "content": "I studied hard for the test,",
               "options": [
-                "it will shrink.",
-                "when folks meet with their families.",
+                "because he fell in a patch of rocks.",
                 "but alas, I still didn’t do very well.",
-                "it will melt."
+                "it will melt.",
+                "it will shrink.",
+                "so I usually wear a suit.",
+                "so it was an absolute disaster.",
+                "that I had to soak it overnight.",
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "I studied hard for the test, but alas, I still didn’t do very well. (Tôi đã học chăm chỉ cho bài kiểm tra, nhưng than ôi, tôi vẫn không làm tốt lắm.)",
-              "correctAnswer": "C"
+              "correctAnswer": "but alas, I still didn’t do very well."
             },
             {
               "id": "24",
               "content": "Dan was very unlucky",
               "options": [
                 "because he fell in a patch of rocks.",
+                "but alas, I still didn’t do very well.",
+                "it will melt.",
+                "it will shrink.",
                 "so I usually wear a suit.",
                 "so it was an absolute disaster.",
-                "the soldiers spread out evenly."
+                "that I had to soak it overnight.",
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "Dan was very unlucky because he fell in a patch of rocks. (Dan rất không may mắn vì anh ấy bị ngã vào một bãi đá.)",
-              "correctAnswer": "A"
+              "correctAnswer": "because he fell in a patch of rocks."
             },
             {
               "id": "25",
               "content": "Christmas is an important holiday",
               "options": [
+                "because he fell in a patch of rocks.",
+                "but alas, I still didn’t do very well.",
+                "it will melt.",
+                "it will shrink.",
+                "so I usually wear a suit.",
+                "so it was an absolute disaster.",
+                "that I had to soak it overnight.",
                 "the soldiers spread out evenly.",
                 "when I heard the pop.",
-                "when folks meet with their families.",
-                "it will shrink."
+                "when folks meet with their families."
               ],
               "explanation": "Christmas is an important holiday when folks meet with their families. (Giáng sinh là ngày lễ quan trọng khi người ta gặp gỡ gia đình của họ.)",
-              "correctAnswer": "C"
+              "correctAnswer": "when folks meet with their families."
             },
             {
               "id": "26",
               "content": "If you put the butter near the fire,",
               "options": [
-                "the soldiers spread out evenly.",
+                "because he fell in a patch of rocks.",
                 "but alas, I still didn’t do very well.",
+                "it will melt.",
+                "it will shrink.",
+                "so I usually wear a suit.",
                 "so it was an absolute disaster.",
-                "it will melt."
+                "that I had to soak it overnight.",
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "If you put the butter near the fire, it will melt. (Nếu bạn để bơ gần lửa, nó sẽ tan chảy.)",
-              "correctAnswer": "D"
+              "correctAnswer": "it will melt."
             },
             {
               "id": "27",
               "content": "This pan was so dirty",
               "options": [
-                "the soldiers spread out evenly.",
+                "because he fell in a patch of rocks.",
                 "but alas, I still didn’t do very well.",
+                "it will melt.",
+                "it will shrink.",
+                "so I usually wear a suit.",
+                "so it was an absolute disaster.",
                 "that I had to soak it overnight.",
-                "so it was an absolute disaster."
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "This pan was so dirty that I had to soak it overnight. (Cái chảo này quá bẩn đến nỗi tôi phải ngâm nó qua đêm.)",
-              "correctAnswer": "C"
+              "correctAnswer": "that I had to soak it overnight."
             },
             {
               "id": "28",
               "content": "To protect the kingdom,",
               "options": [
+                "because he fell in a patch of rocks.",
+                "but alas, I still didn’t do very well.",
+                "it will melt.",
                 "it will shrink.",
-                "the soldiers spread out evenly.",
                 "so I usually wear a suit.",
-                "it will melt."
+                "so it was an absolute disaster.",
+                "that I had to soak it overnight.",
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "To protect the kingdom, the soldiers spread out evenly. (Để bảo vệ vương quốc, binh lính dàn trải đồng đều.)",
-              "correctAnswer": "B"
+              "correctAnswer": "the soldiers spread out evenly."
             },
             {
               "id": "29",
               "content": "I knew the television had broken",
               "options": [
                 "because he fell in a patch of rocks.",
-                "it will melt.",
                 "but alas, I still didn’t do very well.",
-                "when I heard the pop."
+                "it will melt.",
+                "it will shrink.",
+                "so I usually wear a suit.",
+                "so it was an absolute disaster.",
+                "that I had to soak it overnight.",
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "I knew the television had broken when I heard the pop. (Tôi biết ti vi đã hỏng khi tôi nghe tiếng 'bốp'.)",
-              "correctAnswer": "D"
+              "correctAnswer": "when I heard the pop."
             },
             {
               "id": "30",
               "content": "At work, we have to dress well,",
               "options": [
-                "that I had to soak it overnight.",
+                "because he fell in a patch of rocks.",
                 "but alas, I still didn’t do very well.",
+                "it will melt.",
                 "it will shrink.",
-                "so I usually wear a suit."
+                "so I usually wear a suit.",
+                "so it was an absolute disaster.",
+                "that I had to soak it overnight.",
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families."
               ],
               "explanation": "At work, we have to dress well, so I usually wear a suit. (Tại nơi làm việc, chúng tôi phải ăn mặc đẹp, vì vậy tôi thường mặc một bộ com-lê.)",
-              "correctAnswer": "D"
+              "correctAnswer": "so I usually wear a suit."
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         }
       ]
     },

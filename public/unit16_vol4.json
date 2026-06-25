@@ -147,126 +147,186 @@
           "questions": [
             {
               "id": "11",
-              "content": "Kelly had the misfortune of breaking _____.",
+              "content": "Kelly had the misfortune of breaking.",
               "options": [
-                "her arm before the competition",
-                "eating dinner early on Sundays",
                 "bad weather this weekend",
+                "before it was completed",
+                "eating dinner early on Sundays",
+                "from its owner at the park",
+                "gave one piece to his friend",
+                "her arm before the competition",
+                "known them for a long time",
+                "off the window",
+                "to give her a better grade",
                 "to use the computer"
               ],
               "explanation": "misfortune of breaking her arm (sự rủi ro bị gãy tay).",
-              "correctAnswer": "A"
+              "correctAnswer": "her arm before the competition"
             },
             {
               "id": "12",
-              "content": "The disobedient dog ran away _____.",
+              "content": "The disobedient dog ran away.",
               "options": [
-                "to give her a better grade",
                 "bad weather this weekend",
+                "before it was completed",
+                "eating dinner early on Sundays",
                 "from its owner at the park",
-                "eating dinner early on Sundays"
+                "gave one piece to his friend",
+                "her arm before the competition",
+                "known them for a long time",
+                "off the window",
+                "to give her a better grade",
+                "to use the computer"
               ],
               "explanation": "disobedient dog (con chó không vâng lời) chạy khỏi chủ (from its owner).",
-              "correctAnswer": "C"
+              "correctAnswer": "from its owner at the park"
             },
             {
               "id": "13",
-              "content": "She felt bound to her friends because she had _____.",
+              "content": "She felt bound to her friends because she had.",
               "options": [
                 "bad weather this weekend",
+                "before it was completed",
+                "eating dinner early on Sundays",
+                "from its owner at the park",
+                "gave one piece to his friend",
+                "her arm before the competition",
                 "known them for a long time",
-                "to use the computer",
-                "eating dinner early on Sundays"
+                "off the window",
+                "to give her a better grade",
+                "to use the computer"
               ],
               "explanation": "bound to her friends (gắn kết với bạn bè) vì biết họ lâu rồi.",
-              "correctAnswer": "B"
+              "correctAnswer": "known them for a long time"
             },
             {
               "id": "14",
-              "content": "The weatherman didn’t foresee any _____.",
+              "content": "The weatherman didn’t foresee any.",
               "options": [
-                "to give her a better grade",
                 "bad weather this weekend",
                 "before it was completed",
-                "her arm before the competition"
+                "eating dinner early on Sundays",
+                "from its owner at the park",
+                "gave one piece to his friend",
+                "her arm before the competition",
+                "known them for a long time",
+                "off the window",
+                "to give her a better grade",
+                "to use the computer"
               ],
               "explanation": "foresee any bad weather (lường trước thời tiết xấu).",
-              "correctAnswer": "B"
+              "correctAnswer": "bad weather this weekend"
             },
             {
               "id": "15",
-              "content": "The family had a custom of _____.",
+              "content": "The family had a custom of.",
               "options": [
+                "bad weather this weekend",
+                "before it was completed",
                 "eating dinner early on Sundays",
-                "to use the computer",
+                "from its owner at the park",
+                "gave one piece to his friend",
+                "her arm before the competition",
+                "known them for a long time",
                 "off the window",
-                "gave one piece to his friend"
+                "to give her a better grade",
+                "to use the computer"
               ],
               "explanation": "custom of eating dinner early (thói quen ăn tối sớm).",
-              "correctAnswer": "A"
+              "correctAnswer": "eating dinner early on Sundays"
             },
             {
               "id": "16",
-              "content": "She glimpsed at his painting _____.",
+              "content": "She glimpsed at his painting.",
               "options": [
+                "bad weather this weekend",
                 "before it was completed",
+                "eating dinner early on Sundays",
                 "from its owner at the park",
+                "gave one piece to his friend",
+                "her arm before the competition",
+                "known them for a long time",
+                "off the window",
                 "to give her a better grade",
-                "her arm before the competition"
+                "to use the computer"
               ],
               "explanation": "glimpsed at his painting (nhìn lướt qua bức tranh) trước khi nó hoàn thành.",
-              "correctAnswer": "A"
+              "correctAnswer": "before it was completed"
             },
             {
               "id": "17",
-              "content": "Charlie ripped the paper in half and _____.",
+              "content": "Charlie ripped the paper in half and.",
               "options": [
-                "gave one piece to his friend",
                 "bad weather this weekend",
+                "before it was completed",
+                "eating dinner early on Sundays",
+                "from its owner at the park",
+                "gave one piece to his friend",
+                "her arm before the competition",
+                "known them for a long time",
                 "off the window",
+                "to give her a better grade",
                 "to use the computer"
               ],
               "explanation": "ripped the paper in half (xé giấy làm đôi) và đưa một nửa cho bạn.",
-              "correctAnswer": "A"
+              "correctAnswer": "gave one piece to his friend"
             },
             {
               "id": "18",
-              "content": "Jasmine pleaded with her teacher _____.",
+              "content": "Jasmine pleaded with her teacher.",
               "options": [
-                "her arm before the competition",
-                "to give her a better grade",
+                "bad weather this weekend",
+                "before it was completed",
                 "eating dinner early on Sundays",
-                "before it was completed"
+                "from its owner at the park",
+                "gave one piece to his friend",
+                "her arm before the competition",
+                "known them for a long time",
+                "off the window",
+                "to give her a better grade",
+                "to use the computer"
               ],
               "explanation": "pleaded with her teacher (van nài giáo viên) cho điểm cao hơn.",
-              "correctAnswer": "B"
+              "correctAnswer": "to give her a better grade"
             },
             {
               "id": "19",
-              "content": "Leslie scraped the ice _____.",
+              "content": "Leslie scraped the ice.",
               "options": [
-                "to give her a better grade",
                 "bad weather this weekend",
+                "before it was completed",
                 "eating dinner early on Sundays",
-                "off the window"
+                "from its owner at the park",
+                "gave one piece to his friend",
+                "her arm before the competition",
+                "known them for a long time",
+                "off the window",
+                "to give her a better grade",
+                "to use the computer"
               ],
               "explanation": "scraped the ice off the window (cạo băng khỏi cửa sổ).",
-              "correctAnswer": "D"
+              "correctAnswer": "off the window"
             },
             {
               "id": "20",
-              "content": "George was vehement about being allowed _____.",
+              "content": "George was vehement about being allowed.",
               "options": [
+                "bad weather this weekend",
+                "before it was completed",
+                "eating dinner early on Sundays",
                 "from its owner at the park",
-                "to use the computer",
                 "gave one piece to his friend",
-                "before it was completed"
+                "her arm before the competition",
+                "known them for a long time",
+                "off the window",
+                "to give her a better grade",
+                "to use the computer"
               ],
               "explanation": "vehement about being allowed to use the computer (kịch liệt về việc được cho phép dùng máy tính).",
-              "correctAnswer": "B"
+              "correctAnswer": "to use the computer"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         },
         {
           "id": "sec3",
@@ -275,126 +335,186 @@
           "questions": [
             {
               "id": "21",
-              "content": "There was a tear in my shirt, _____.",
+              "content": "There was a tear in my shirt,.",
               "options": [
+                "because stern rules built character",
+                "because the sake of his grade depended on it",
                 "but only 2 cans per week",
+                "but the sources were unreliable",
+                "it filled him with negative dreams",
                 "so he had bruises on his arm",
+                "so he tried jumping through the hoop",
                 "so my mom stitched it back together",
-                "because stern rules built character"
+                "so there was a slight thump",
+                "that was altogether different from mine"
               ],
               "explanation": "stitch it back together (khâu nó lại) vì áo bị rách (a tear).",
-              "correctAnswer": "C"
+              "correctAnswer": "so my mom stitched it back together"
             },
             {
               "id": "22",
-              "content": "She dropped the scissors on the carpet, _____.",
+              "content": "She dropped the scissors on the carpet,.",
               "options": [
-                "so there was a slight thump",
                 "because stern rules built character",
+                "because the sake of his grade depended on it",
+                "but only 2 cans per week",
                 "but the sources were unreliable",
-                "so he tried jumping through the hoop"
+                "it filled him with negative dreams",
+                "so he had bruises on his arm",
+                "so he tried jumping through the hoop",
+                "so my mom stitched it back together",
+                "so there was a slight thump",
+                "that was altogether different from mine"
               ],
               "explanation": "rơi kéo gây ra 'a slight thump' (tiếng động nhỏ).",
-              "correctAnswer": "A"
+              "correctAnswer": "so there was a slight thump"
             },
             {
               "id": "23",
-              "content": "His parents were strict, _____.",
+              "content": "His parents were strict,.",
               "options": [
-                "but only 2 cans per week",
                 "because stern rules built character",
+                "because the sake of his grade depended on it",
+                "but only 2 cans per week",
+                "but the sources were unreliable",
+                "it filled him with negative dreams",
                 "so he had bruises on his arm",
-                "it filled him with negative dreams"
+                "so he tried jumping through the hoop",
+                "so my mom stitched it back together",
+                "so there was a slight thump",
+                "that was altogether different from mine"
               ],
               "explanation": "strict (nghiêm khắc) đồng nghĩa với 'stern rules'.",
-              "correctAnswer": "B"
+              "correctAnswer": "because stern rules built character"
             },
             {
               "id": "24",
-              "content": "The website was good, _____.",
+              "content": "The website was good,.",
               "options": [
-                "but the sources were unreliable",
                 "because stern rules built character",
+                "because the sake of his grade depended on it",
+                "but only 2 cans per week",
+                "but the sources were unreliable",
+                "it filled him with negative dreams",
+                "so he had bruises on his arm",
+                "so he tried jumping through the hoop",
+                "so my mom stitched it back together",
                 "so there was a slight thump",
-                "but only 2 cans per week"
+                "that was altogether different from mine"
               ],
               "explanation": "trang web tốt nhưng 'sources' (nguồn) không đáng tin.",
-              "correctAnswer": "A"
+              "correctAnswer": "but the sources were unreliable"
             },
             {
               "id": "25",
-              "content": "The fight was horrifying, _____.",
+              "content": "The fight was horrifying,.",
               "options": [
-                "so my mom stitched it back together",
+                "because stern rules built character",
+                "because the sake of his grade depended on it",
+                "but only 2 cans per week",
+                "but the sources were unreliable",
                 "it filled him with negative dreams",
-                "that was altogether different from mine",
-                "but the sources were unreliable"
+                "so he had bruises on his arm",
+                "so he tried jumping through the hoop",
+                "so my mom stitched it back together",
+                "so there was a slight thump",
+                "that was altogether different from mine"
               ],
               "explanation": "trận đánh kinh hoàng khiến có 'negative dreams' (giấc mơ tiêu cực).",
-              "correctAnswer": "B"
+              "correctAnswer": "it filled him with negative dreams"
             },
             {
               "id": "26",
-              "content": "I enjoy soda, _____.",
+              "content": "I enjoy soda,.",
               "options": [
-                "but only 2 cans per week",
                 "because stern rules built character",
+                "because the sake of his grade depended on it",
+                "but only 2 cans per week",
+                "but the sources were unreliable",
+                "it filled him with negative dreams",
                 "so he had bruises on his arm",
-                "so my mom stitched it back together"
+                "so he tried jumping through the hoop",
+                "so my mom stitched it back together",
+                "so there was a slight thump",
+                "that was altogether different from mine"
               ],
               "explanation": "uống soda nhưng chỉ '2 cans per week' (2 lon mỗi tuần).",
-              "correctAnswer": "A"
+              "correctAnswer": "but only 2 cans per week"
             },
             {
               "id": "27",
-              "content": "He went to school despite being sick _____.",
+              "content": "He went to school despite being sick.",
               "options": [
+                "because stern rules built character",
                 "because the sake of his grade depended on it",
-                "that was altogether different from mine",
+                "but only 2 cans per week",
+                "but the sources were unreliable",
+                "it filled him with negative dreams",
+                "so he had bruises on his arm",
                 "so he tried jumping through the hoop",
-                "it filled him with negative dreams"
+                "so my mom stitched it back together",
+                "so there was a slight thump",
+                "that was altogether different from mine"
               ],
               "explanation": "sake of his grade (vì lợi ích điểm số của anh ấy).",
-              "correctAnswer": "A"
+              "correctAnswer": "because the sake of his grade depended on it"
             },
             {
               "id": "28",
-              "content": "They used a different system _____.",
+              "content": "They used a different system.",
               "options": [
+                "because stern rules built character",
+                "because the sake of his grade depended on it",
                 "but only 2 cans per week",
-                "that was altogether different from mine",
+                "but the sources were unreliable",
+                "it filled him with negative dreams",
                 "so he had bruises on his arm",
-                "because the sake of his grade depended on it"
+                "so he tried jumping through the hoop",
+                "so my mom stitched it back together",
+                "so there was a slight thump",
+                "that was altogether different from mine"
               ],
               "explanation": "different system (hệ thống khác) 'altogether different from mine' (hoàn toàn khác biệt với của tôi).",
-              "correctAnswer": "B"
+              "correctAnswer": "that was altogether different from mine"
             },
             {
               "id": "29",
-              "content": "He liked showing off, _____.",
+              "content": "He liked showing off,.",
               "options": [
-                "so he tried jumping through the hoop",
-                "but only 2 cans per week",
                 "because stern rules built character",
-                "it filled him with negative dreams"
+                "because the sake of his grade depended on it",
+                "but only 2 cans per week",
+                "but the sources were unreliable",
+                "it filled him with negative dreams",
+                "so he had bruises on his arm",
+                "so he tried jumping through the hoop",
+                "so my mom stitched it back together",
+                "so there was a slight thump",
+                "that was altogether different from mine"
               ],
               "explanation": "showing off (khoe khoang) nên nhảy qua 'hoop' (vòng).",
-              "correctAnswer": "A"
+              "correctAnswer": "so he tried jumping through the hoop"
             },
             {
               "id": "30",
-              "content": "He fell down the stairs, _____.",
+              "content": "He fell down the stairs,.",
               "options": [
+                "because stern rules built character",
+                "because the sake of his grade depended on it",
+                "but only 2 cans per week",
                 "but the sources were unreliable",
-                "so he tried jumping through the hoop",
+                "it filled him with negative dreams",
                 "so he had bruises on his arm",
+                "so he tried jumping through the hoop",
+                "so my mom stitched it back together",
+                "so there was a slight thump",
                 "that was altogether different from mine"
               ],
               "explanation": "ngã cầu thang nên có 'bruises' (vết bầm).",
-              "correctAnswer": "C"
+              "correctAnswer": "so he had bruises on his arm"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Matching"
         }
       ]
     },
