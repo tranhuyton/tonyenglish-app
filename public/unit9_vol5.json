@@ -425,8 +425,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Thị trưởng Netherton yêu cầu Joseph đừng áp đặt (don't impose) những ý tưởng mới mẻ nhưng khác biệt (radical ideas) lên thị trấn của ông, chứ không phải muốn ông ta áp đặt. Nhận định này sai.",
               "correctAnswer": "B"
@@ -437,8 +436,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Joseph thẳng thừng nói với thị trưởng Netherton rằng chúng ta không còn ở thời trung cổ (medieval age) nữa và khuyên ông nên thay đổi những cách thức cổ hủ (archaic ways) đó đi. Vậy nhận định là đúng.",
               "correctAnswer": "A"
@@ -449,8 +447,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Thị trưởng Wilton không thể bác bỏ (couldn't refute) việc cái máy này có khuyết điểm sẽ làm ảnh hưởng đến công việc của người dân. Vì vậy câu nói ông ấy đã bác bỏ (refuted) là sai.",
               "correctAnswer": "B"
@@ -461,8 +458,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bài viết ghi rõ người dân không còn dệt vải nữa mà thay vào đó làm các công việc quản lý (managerial jobs) tại nhà máy. Nhận định này hoàn toàn chính xác.",
               "correctAnswer": "A"
@@ -473,14 +469,13 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đến cuối cùng, hệ thống kinh tế hướng tới lợi nhuận mới đã giúp cả hai thành phố trở nên giàu có và nổi tiếng khắp nơi (mang lại prestige). Do đó nhận định này là đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec7_reading_qa",

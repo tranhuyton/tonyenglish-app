@@ -166,8 +166,9 @@
               "id": "16",
               "content": "The <i>undergraduate</i> program at our school includes several possible degrees.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Chương trình \"undergraduate\" (đại học) bao gồm nhiều chuyên ngành.",
               "correctAnswer": "A"
@@ -176,8 +177,9 @@
               "id": "17",
               "content": "She <i>conferred</i> with her coworkers before presenting their work to the boss.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. \"Conferred\" (bàn bạc, thảo luận) được dùng đúng.",
               "correctAnswer": "A"
@@ -186,8 +188,9 @@
               "id": "18",
               "content": "The rain made a <i>cube</i> on the grass.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Incorrect. Mưa không thể tạo ra hình khối lập phương (cube) trên cỏ.",
               "correctAnswer": "B"
@@ -196,8 +199,9 @@
               "id": "19",
               "content": "The <i>tattoo</i> appeared very dark on her light-colored skin.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Hình xăm (tattoo) trông rất đậm trên làn da sáng.",
               "correctAnswer": "A"
@@ -206,8 +210,9 @@
               "id": "20",
               "content": "Our teacher was quick to give us <i>feedback</i> on our homework.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Giáo viên cho \"feedback\" (nhận xét) là hợp lý.",
               "correctAnswer": "A"
@@ -216,8 +221,9 @@
               "id": "21",
               "content": "The wall was <i>situated</i> in the north part of the yard.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Bức tường \"situated\" (tọa lạc/được đặt) ở phía bắc sân.",
               "correctAnswer": "A"
@@ -226,8 +232,9 @@
               "id": "22",
               "content": "The baby <i>supervised</i> her mother in the store.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Incorrect. Em bé không thể giám sát (supervised) mẹ mình.",
               "correctAnswer": "B"
@@ -236,8 +243,9 @@
               "id": "23",
               "content": "The <i>symmetry</i> of the flower arrangement made it look very attractive.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Sự đối xứng (symmetry) làm bình hoa trông hấp dẫn.",
               "correctAnswer": "A"
@@ -246,8 +254,9 @@
               "id": "24",
               "content": "The angry father <i>applauded</i> his son when he got in trouble at school.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Incorrect. Người cha tức giận sẽ không vỗ tay hoan hô (applauded) khi con gây rắc rối.",
               "correctAnswer": "B"
@@ -256,8 +265,9 @@
               "id": "25",
               "content": "The manager needed an assistant. She <i>appointed</i> Bill to the new position.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Quản lý bổ nhiệm (appointed) người cho vị trí mới.",
               "correctAnswer": "A"
@@ -266,8 +276,9 @@
               "id": "26",
               "content": "The <i>masculine</i> girl looked very pretty in her new dress.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Incorrect. Một cô gái nam tính (masculine) lại mặc váy thì không hợp lý về mặt ngữ nghĩa ở đây.",
               "correctAnswer": "B"
@@ -276,8 +287,9 @@
               "id": "27",
               "content": "In the <i>final</i> revision, he made sure his work was crude.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Incorrect. Trong bản chỉnh sửa cuối (final revision), không ai cố tình làm tác phẩm của mình trở nên thô kệch (crude).",
               "correctAnswer": "B"
@@ -286,8 +298,9 @@
               "id": "28",
               "content": "The captain ordered the sailor to have better <i>posture</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Thuyền trưởng ra lệnh có tư thế đứng (posture) tốt hơn.",
               "correctAnswer": "A"
@@ -296,8 +309,9 @@
               "id": "29",
               "content": "The <i>muscular</i> movie star always got the role of the superhero in the movie.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Ngôi sao cơ bắp (muscular) đóng vai siêu anh hùng.",
               "correctAnswer": "A"
@@ -306,8 +320,9 @@
               "id": "30",
               "content": "On our trip, we visited the <i>monument</i> built for George Washington.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Tượng đài (monument) được xây cho George Washington.",
               "correctAnswer": "A"
@@ -316,8 +331,9 @@
               "id": "31",
               "content": "His <i>ignorance</i> led him to the final round of the tournament.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Incorrect. Sự thiếu hiểu biết (ignorance) không thể giúp ai đó lọt vào vòng chung kết giải đấu.",
               "correctAnswer": "B"
@@ -326,8 +342,9 @@
               "id": "32",
               "content": "My favorite subject in college was <i>anthropology</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Môn nhân chủng học (anthropology) là một môn học.",
               "correctAnswer": "A"
@@ -336,8 +353,9 @@
               "id": "33",
               "content": "She leaves the lights on at night because of her <i>competence</i> for the dark.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Incorrect. Năng lực (competence) không phù hợp ngữ cảnh, phải là nỗi sợ (fear).",
               "correctAnswer": "B"
@@ -346,8 +364,9 @@
               "id": "34",
               "content": "When the couple got divorced, it was clear that they were <i>compatible</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Incorrect. Nếu họ ly hôn thì họ không hề hòa hợp (compatible).",
               "correctAnswer": "B"
@@ -356,14 +375,15 @@
               "id": "35",
               "content": "Our basketball team won the championship for three <i>consecutive</i> years.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Correct. Vô địch 3 năm liên tiếp (consecutive) là cách dùng hoàn toàn đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     },

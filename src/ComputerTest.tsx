@@ -329,7 +329,19 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               const userAns = String(answers[String(q.id)] || "");
               const correctAns = String(q.correctAnswer || "");
               
-              if (isAnswerCorrect(userAns, correctAns) && correctAns.trim() !== "") {
+              let isCorrect = isAnswerCorrect(userAns, correctAns);
+              if (!isCorrect && q.options) {
+                  const optIndex = q.options.findIndex((opt:string) => {
+                      const val = String(opt).replace(/<[^>]*>/g, '').trim().toUpperCase();
+                      return val === userAns.trim().toUpperCase();
+                  });
+                  if (optIndex !== -1) {
+                      const letter = String.fromCharCode(65 + optIndex);
+                      isCorrect = isAnswerCorrect(letter, correctAns);
+                  }
+              }
+
+              if (isCorrect && correctAns.trim() !== "") {
                  score++; 
                  questionTypeStats[qType].correct++;
               }

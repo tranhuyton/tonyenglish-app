@@ -216,8 +216,9 @@
               "id": "16",
               "content": "In <i>physiology</i>, we studied various types of rock and the process that made them.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "physiology (sinh lý học) không nghiên cứu về các loại đá. Sử dụng sai.",
               "correctAnswer": "B"
@@ -226,8 +227,9 @@
               "id": "17",
               "content": "She feared that if no one married her, she’d be a <i>bachelor</i> her entire life.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "bachelor chỉ người đàn ông độc thân, không dùng cho phụ nữ. Sử dụng sai.",
               "correctAnswer": "B"
@@ -236,8 +238,9 @@
               "id": "18",
               "content": "Many old factories <i>harnessed</i> rivers and streams to power their equipment.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "harness (khai thác, sử dụng). Khai thác sông suối để làm năng lượng là đúng.",
               "correctAnswer": "A"
@@ -246,8 +249,9 @@
               "id": "19",
               "content": "Her knowledge of different societies came from her work in <i>sociology</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "sociology (xã hội học) nghiên cứu về các xã hội khác nhau là đúng.",
               "correctAnswer": "A"
@@ -256,8 +260,9 @@
               "id": "20",
               "content": "If the two bikes hadn’t turned at the last moment, there would have been a <i>collision</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "collision (sự va chạm). Nếu không rẽ kịp sẽ có va chạm là đúng.",
               "correctAnswer": "A"
@@ -266,8 +271,9 @@
               "id": "21",
               "content": "In <i>geology</i>, we learned about the importance of our bones.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "geology (địa chất học) nghiên cứu về đá, không phải về xương. Sử dụng sai.",
               "correctAnswer": "B"
@@ -276,8 +282,9 @@
               "id": "22",
               "content": "The only proof that the new rocket would work was <i>theoretical</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "theoretical (trên lý thuyết). Bằng chứng duy nhất chỉ nằm trên lý thuyết là đúng.",
               "correctAnswer": "A"
@@ -286,8 +293,9 @@
               "id": "23",
               "content": "The car <i>excelled</i> every time he stepped on the gas pedal.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "excel (xuất sắc) không dùng để miêu tả xe ô tô tăng tốc. Sử dụng sai.",
               "correctAnswer": "B"
@@ -296,8 +304,9 @@
               "id": "24",
               "content": "Learning about <i>calculus</i> in my literature class was a really enjoyable time.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "calculus (giải tích) không thể được học trong lớp văn học (literature). Sử dụng sai.",
               "correctAnswer": "B"
@@ -306,14 +315,15 @@
               "id": "25",
               "content": "The test proved that <i>Mark</i> was keener than his older brother Dave.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "keen (thông minh, sắc sảo). Bài kiểm tra chứng minh Mark thông minh hơn là đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec4_wordlist",

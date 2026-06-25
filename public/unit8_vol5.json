@@ -527,8 +527,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Căn bệnh khiến người ta cần dùng máy thở (respirator) để thở. Bác sĩ đang thử một loại thuốc mới để điều trị thay vì dùng máy thở, hy vọng nó sẽ giúp họ tương tự (do likewise). Nhận định này là đúng.",
               "correctAnswer": "A"
@@ -539,8 +538,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Đội quân xâm lược thù địch (hostile invading army) mới là phía muốn thống trị (dominate) và áp bức (oppress) người dân, chứ không phải bác sĩ. Vì vậy nhận định này sai.",
               "correctAnswer": "B"
@@ -551,8 +549,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Trong đoạn 4, bác sĩ thừa nhận bản thân không giỏi/thành thạo (not adept) trong việc điều trị bệnh suy dinh dưỡng. Nhận định này đúng.",
               "correctAnswer": "A"
@@ -563,8 +560,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bác sĩ dẫn người phụ nữ ra ngoài và chỉ cho cô ấy một bãi cây có thể ăn được mọc dày đặc (dense patch of edible plants), không phải mảnh đất cằn cỗi (barren land). Nhận định sai.",
               "correctAnswer": "B"
@@ -575,14 +571,13 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Người phụ nữ tặng cái bát gốm (ceramic bowl) để cảm ơn (as thanks) bác sĩ vì đã cứu con bà, không phải để khoe kỹ năng làm gốm. Vậy nhận định sai.",
               "correctAnswer": "B"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading_qa",

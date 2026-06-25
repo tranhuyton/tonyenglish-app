@@ -284,8 +284,9 @@
               "id": "21",
               "content": "I had a big breakfast. Many hours will <i>elapse</i> before I feel hungry again.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "elapse (trôi qua). Thời gian trôi qua trước khi đói lại. Sử dụng đúng.",
               "correctAnswer": "A"
@@ -294,8 +295,9 @@
               "id": "22",
               "content": "Dan was a nice man, but no one would work for him because of his <i>fanciful</i> ideas.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "fanciful (viển vông). Mọi người không làm việc cho anh ta vì ý tưởng viển vông. Sử dụng đúng.",
               "correctAnswer": "A"
@@ -304,8 +306,9 @@
               "id": "23",
               "content": "I was very grateful for my birthday gifts. I <i>griped</i> about them to all of my friends.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "gripe (phàn nàn). Biết ơn nhưng lại phàn nàn là mâu thuẫn. Sử dụng sai.",
               "correctAnswer": "B"
@@ -314,8 +317,9 @@
               "id": "24",
               "content": "Because there was a <i>dearth</i> of food at home, the family went out to eat.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "dearth (sự thiếu hụt). Vì thiếu thức ăn nên ra ngoài ăn. Sử dụng đúng.",
               "correctAnswer": "A"
@@ -324,8 +328,9 @@
               "id": "25",
               "content": "The puppy was happy to learn new tricks. Each one was very <i>mundane</i> for him.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "mundane (nhàm chán, bình thường). Cún con vui vẻ học thủ thuật mới nên không thể là nhàm chán. Sử dụng sai.",
               "correctAnswer": "B"
@@ -334,8 +339,9 @@
               "id": "26",
               "content": "Mother <i>allotted</i> me and my brother the money. Now she had all the money.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "allot (phân bổ). Mẹ đã phân bổ tiền cho tôi và em trai thì mẹ không thể còn tất cả tiền. Sử dụng sai.",
               "correctAnswer": "B"
@@ -344,8 +350,9 @@
               "id": "27",
               "content": "The boy was proud of his trophies. He displayed them in a <i>cache</i> for everyone to see.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "cache (nơi cất giấu). Trưng bày cúp cho mọi người xem ở nơi cất giấu bí mật là vô lý. Sử dụng sai.",
               "correctAnswer": "B"
@@ -354,8 +361,9 @@
               "id": "28",
               "content": "Because he had planned for the trap to capture his victim, he was very <i>deliberate</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "deliberate (có chủ ý, tính toán). Lên kế hoạch bẫy là hành động có chủ ý. Sử dụng đúng.",
               "correctAnswer": "A"
@@ -364,8 +372,9 @@
               "id": "29",
               "content": "The violent criminal was on the news this evening. His actions <i>appalled</i> most people.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "appall (làm kinh hãi). Hành động của tên tội phạm bạo lực làm kinh hãi hầu hết mọi người. Sử dụng đúng.",
               "correctAnswer": "A"
@@ -374,14 +383,15 @@
               "id": "30",
               "content": "That man is very selfish. He has <i>empathy</i> for every person he meets.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "empathy (sự đồng cảm). Người ích kỷ (selfish) thì không thể có sự đồng cảm với mọi người. Sử dụng sai.",
               "correctAnswer": "B"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     },

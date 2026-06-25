@@ -404,8 +404,9 @@
               "id": "26",
               "content": "I may not be able to go to college next year. I don’t have enough money for <i>tuition</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"tuition\" (học phí) dùng chính xác khi nói về tiền học đại học.",
               "correctAnswer": "A"
@@ -414,8 +415,9 @@
               "id": "27",
               "content": "The boy’s parents <i>didn</i>’t know how to control him. They taught him discipline.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"didn't know how to control\" (không biết cách kiểm soát) mâu thuẫn với việc đã dạy \"discipline\" (kỷ luật). Dùng sai.",
               "correctAnswer": "B"
@@ -424,8 +426,9 @@
               "id": "28",
               "content": "He was a <i>donor</i>. He received gifts from people all of the time.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"donor\" (người hiến tặng) mâu thuẫn với \"received gifts\" (nhận quà). Dùng sai.",
               "correctAnswer": "B"
@@ -434,8 +437,9 @@
               "id": "29",
               "content": "His new stove will be a <i>stimulus</i> for him to cook at home more often.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"stimulus\" (động lực) dùng chính xác cho việc khích lệ nấu ăn.",
               "correctAnswer": "A"
@@ -444,8 +448,9 @@
               "id": "30",
               "content": "Ellen didn’t like the color of her walls, so she painted <i>graffiti</i> on them.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"graffiti\" (vẽ bậy nơi công cộng) không dùng để chỉ việc sơn lại tường nhà. Dùng sai.",
               "correctAnswer": "B"
@@ -454,8 +459,9 @@
               "id": "31",
               "content": "Jason was <i>implicated</i> in the bank robbery. Several people saw him do it.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"implicated\" (bị dính líu, bị cáo buộc) dùng chính xác trong ngữ cảnh vụ cướp ngân hàng.",
               "correctAnswer": "A"
@@ -464,8 +470,9 @@
               "id": "32",
               "content": "Besides her parents, Olivia had no other <i>kin</i>. She only had one sister.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"kin\" (người thân) mâu thuẫn với việc có một người em gái (sister). Dùng sai.",
               "correctAnswer": "B"
@@ -474,8 +481,9 @@
               "id": "33",
               "content": "The gardener picked up the tool by the <i>shaft</i>. It was easiest to hold that way.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"shaft\" (cán, tay cầm) dùng chính xác cho công cụ làm vườn.",
               "correctAnswer": "A"
@@ -484,8 +492,9 @@
               "id": "34",
               "content": "The man was sent to prison for <i>stabbing</i> someone. The person was hurt but survived.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"stabbing\" (đâm) dùng chính xác trong tội phạm gây thương tích.",
               "correctAnswer": "A"
@@ -494,8 +503,9 @@
               "id": "35",
               "content": "The <i>theme</i> of the book was forgiveness.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"theme\" (chủ đề) dùng chính xác cho sách.",
               "correctAnswer": "A"
@@ -504,8 +514,9 @@
               "id": "36",
               "content": "Leslie’s father is a policeman. He is a <i>guardian</i> of crime.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"guardian of crime\" (người bảo vệ tội phạm) là sai, cảnh sát bảo vệ pháp luật. Dùng sai.",
               "correctAnswer": "B"
@@ -514,8 +525,9 @@
               "id": "37",
               "content": "I took a knife and <i>severed</i> the line from the pole to the fish’s mouth.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"severed\" (cắt đứt) dùng chính xác khi dùng dao cắt dây.",
               "correctAnswer": "A"
@@ -524,8 +536,9 @@
               "id": "38",
               "content": "The food was being held on <i>suspicion</i> of committing two crimes in the city.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"suspicion\" (nghi ngờ) về việc phạm tội không thể dùng cho đồ ăn (food). Dùng sai.",
               "correctAnswer": "B"
@@ -534,8 +547,9 @@
               "id": "39",
               "content": "I spoke to my <i>fellow</i> teachers, and we all agreed to support the students at the rally.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"fellow\" (đồng nghiệp) dùng chính xác khi nói về giáo viên khác.",
               "correctAnswer": "A"
@@ -544,14 +558,15 @@
               "id": "40",
               "content": "The <i>referee</i> said the player had broken the rules.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"referee\" (trọng tài) dùng chính xác trong thể thao.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     },

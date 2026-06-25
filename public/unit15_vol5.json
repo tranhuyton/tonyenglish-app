@@ -404,8 +404,9 @@
               "id": "26",
               "content": "The <i>cardboard</i> box was made from a tough metal.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Cardboard là bìa các tông (làm từ giấy), trong khi câu lại miêu tả nó được làm từ kim loại cứng (tough metal). Câu này sai hoàn toàn về mặt ngữ nghĩa nên mình chọn B nha.",
               "correctAnswer": "B"
@@ -414,8 +415,9 @@
               "id": "27",
               "content": "The man had an <i>acquisition</i> for being mean to the people that he met.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Acquisition có nghĩa là sự giành được, sự mua lại (tài sản). Sử dụng từ này để miêu tả tính cách xấu tính (mean) là sai ngữ cảnh. Mình chọn B nhé.",
               "correctAnswer": "B"
@@ -424,8 +426,9 @@
               "id": "28",
               "content": "The man helped the old woman <i>infer</i> the large object on the shelf.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Infer mang nghĩa suy luận, suy diễn. Việc dùng từ này cho hành động lấy hay tác động lên một vật thể lớn trên kệ là không có nghĩa. Đáp án B nha.",
               "correctAnswer": "B"
@@ -434,8 +437,9 @@
               "id": "29",
               "content": "We used the <i>grid</i> on the map to help us locate the museum.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Grid là hệ thống lưới tọa độ trên bản đồ dùng để xác định vị trí. Câu này dùng từ cực kỳ chuẩn xác để định vị bảo tàng. Mình chọn A nhé.",
               "correctAnswer": "A"
@@ -444,14 +448,15 @@
               "id": "30",
               "content": "The painting was <i>elaborate</i>. The artist paid attention to every detail.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Elaborate là tỉ mỉ, công phu, nhiều chi tiết. Vế sau miêu tả người họa sĩ chú ý đến từng chi tiết nhỏ. Sự kết hợp này hoàn hảo. Mình khoanh A nha.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     },

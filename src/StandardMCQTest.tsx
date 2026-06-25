@@ -459,7 +459,19 @@ const handleFinish = async () => {
              const uAns = String(answers[String(q.id)] || '').trim();
              const cAns = String(q.correctAnswer || '').trim();
              
-             if (isAnswerCorrect(uAns, cAns)) { 
+             let isCorrect = isAnswerCorrect(uAns, cAns);
+             if (!isCorrect && q.options) {
+                 const optIndex = q.options.findIndex((opt:string) => {
+                     const val = String(opt).replace(/<[^>]*>/g, '').trim().toUpperCase();
+                     return val === uAns.toUpperCase();
+                 });
+                 if (optIndex !== -1) {
+                     const letter = String.fromCharCode(65 + optIndex);
+                     isCorrect = isAnswerCorrect(letter, cAns);
+                 }
+             }
+
+             if (isCorrect) { 
                  score++; 
                  questionTypeStats[qType].correct++; 
              }
@@ -1622,8 +1634,9 @@ const handleFinish = async () => {
                                              {q.options?.map((opt: string, i: number) => {
                                                 const safeOpt = String(opt || '');
                                                 const val = safeOpt.replace(/<[^>]*>/g, '').trim().toUpperCase();
-                                                const isSelected = userAns === val;
-                                                const isCorrectOpt = isAnswerCorrect(val, correctAns);
+                                                const letter = String.fromCharCode(65 + i);
+                                                const isSelected = userAns === val || userAns === letter;
+                                                const isCorrectOpt = isAnswerCorrect(val, correctAns) || isAnswerCorrect(letter, correctAns);
 
                                                 let labelStyle = "flex items-center gap-2 p-1.5 transition rounded-lg border border-transparent";
                                                 

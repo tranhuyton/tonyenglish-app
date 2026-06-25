@@ -166,8 +166,9 @@
               "id": "16",
               "content": "The key fit perfectly in the <i>slot</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"slot\" (khe, rãnh) dùng đúng cho chìa khóa.",
               "correctAnswer": "A"
@@ -176,8 +177,9 @@
               "id": "17",
               "content": "Jackets help to <i>offset</i> the effect of a cold wind.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"offset\" (bù đắp, làm giảm tác động) dùng đúng khi áo khoác chống lại gió lạnh.",
               "correctAnswer": "A"
@@ -186,8 +188,9 @@
               "id": "18",
               "content": "I need to <i>distort</i> my homework if I’m going to get it turned in by tomorrow.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"distort\" (xuyên tạc, bóp méo) không dùng cho việc làm bài tập về nhà.",
               "correctAnswer": "B"
@@ -196,8 +199,9 @@
               "id": "19",
               "content": "The parade was a <i>catastrophe</i>. It went smoothly, and everyone had a great time.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"catastrophe\" (thảm họa) mâu thuẫn với việc buổi diễu hành diễn ra suôn sẻ (went smoothly).",
               "correctAnswer": "B"
@@ -206,8 +210,9 @@
               "id": "20",
               "content": "They had to water the tree four times a day. It was a <i>frequent</i> chore.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"frequent\" (thường xuyên) dùng đúng cho việc tưới cây 4 lần một ngày.",
               "correctAnswer": "A"
@@ -216,8 +221,9 @@
               "id": "21",
               "content": "The <i>intricate</i> bench was just a large, unpainted piece of wood.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"intricate\" (tinh xảo, phức tạp) mâu thuẫn với một khúc gỗ thô không sơn (unpainted piece of wood).",
               "correctAnswer": "B"
@@ -226,8 +232,9 @@
               "id": "22",
               "content": "The weather <i>precipitates</i> a great weekend.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"precipitates\" (gây ra, đẩy nhanh) thường đi với điều tiêu cực hoặc biến cố, không dùng với \"great weekend\".",
               "correctAnswer": "B"
@@ -236,8 +243,9 @@
               "id": "23",
               "content": "We walked to the <i>docks</i> to watch ships pull in and out.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"docks\" (bến tàu) dùng đúng với ngữ cảnh xem tàu cập bến.",
               "correctAnswer": "A"
@@ -246,8 +254,9 @@
               "id": "24",
               "content": "The lion <i>submerged</i> out of the bushes and attacked its prey.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"submerged\" (lặn xuống nước) không dùng cho sư tử phóng ra từ bụi rậm.",
               "correctAnswer": "B"
@@ -256,8 +265,9 @@
               "id": "25",
               "content": "The <i>secondhand</i> book was brand new. I was the first to read it.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"secondhand\" (đồ cũ) mâu thuẫn với \"brand new\" (hoàn toàn mới).",
               "correctAnswer": "B"
@@ -266,8 +276,9 @@
               "id": "26",
               "content": "She was noted for creating some imaginative <i>tactics</i> to claim victory.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"tactics\" (chiến thuật) dùng đúng để giành chiến thắng.",
               "correctAnswer": "A"
@@ -276,8 +287,9 @@
               "id": "27",
               "content": "The guide asked us to be very quiet, so we acted <i>accordingly</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"accordingly\" (một cách phù hợp) dùng đúng cho việc làm theo lời hướng dẫn viên.",
               "correctAnswer": "A"
@@ -286,8 +298,9 @@
               "id": "28",
               "content": "The chef arranged the slices of bread so that they <i>overlapped</i> each other.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"overlapped\" (xếp chồng lên nhau) dùng đúng cho lát bánh mì.",
               "correctAnswer": "A"
@@ -296,8 +309,9 @@
               "id": "29",
               "content": "We knew from the beginning that the <i>genuine</i> man was not who he claimed to be.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"genuine\" (chân thật) mâu thuẫn với việc người đàn ông đó không phải là người anh ta nhận (\"not who he claimed to be\").",
               "correctAnswer": "B"
@@ -306,8 +320,9 @@
               "id": "30",
               "content": "The <i>buoy</i> over there warns ships that the water is too shallow.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"buoy\" (phao cảnh báo) dùng đúng để cảnh báo tàu bè.",
               "correctAnswer": "A"
@@ -316,8 +331,9 @@
               "id": "31",
               "content": "We stood at the <i>fore</i> of the ship. At the front we could see where we were going.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"fore\" (phần mũi tàu) đồng nghĩa với front, dùng đúng.",
               "correctAnswer": "A"
@@ -326,8 +342,9 @@
               "id": "32",
               "content": "The <i>grease</i> made it easy to find a good parking spot.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"grease\" (dầu mỡ bôi trơn) không liên quan gì đến việc tìm chỗ đậu xe.",
               "correctAnswer": "B"
@@ -336,8 +353,9 @@
               "id": "33",
               "content": "The fireman who saved the family was <i>designated</i> the “hero of the month.”",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"designated\" (được phong, được chỉ định) dùng đúng cho danh hiệu anh hùng.",
               "correctAnswer": "A"
@@ -346,8 +364,9 @@
               "id": "34",
               "content": "Check the <i>context</i> for spelling errors before you turn it in to the teacher.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"context\" (ngữ cảnh) bị dùng sai, đáng lẽ phải là \"content\" hoặc \"essay\".",
               "correctAnswer": "B"
@@ -356,14 +375,15 @@
               "id": "35",
               "content": "This looks like a good place to drop the boat’s <i>anchor</i> and relax in the sun.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"anchor\" (mỏ neo) dùng đúng khi thả neo thuyền để nghỉ ngơi.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     },

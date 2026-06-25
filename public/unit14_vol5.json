@@ -216,8 +216,9 @@
               "id": "16",
               "content": "We received <i>humanitarian</i> relief after I got a terrible haircut.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Cứu trợ nhân đạo (humanitarian relief) dành cho những thảm họa lớn chứ không dùng cho việc cắt tóc hỏng. Câu này dùng sai từ nên mình chọn B (Incorrect) nhé.",
               "correctAnswer": "B"
@@ -226,8 +227,9 @@
               "id": "17",
               "content": "The boy waited for the <i>Renaissance</i>, which was going to start in the future.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Renaissance là thời kỳ Phục hưng đã xảy ra trong lịch sử, không thể bắt đầu trong tương lai được. Do đó câu này sai nha.",
               "correctAnswer": "B"
@@ -236,8 +238,9 @@
               "id": "18",
               "content": "<i>Alice</i> placed the ball on the rack where all her sport equipment was stored.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Alice đặt quả bóng lên cái giá đỡ (rack) để đồ thể thao. Việc dùng từ rack ở đây là hoàn toàn chính xác. Mình chọn A nhé.",
               "correctAnswer": "A"
@@ -246,8 +249,9 @@
               "id": "19",
               "content": "The woman liked the <i>premise</i> of the show, but she thought the acting was bad.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Premise ở đây là tiền đề, ý tưởng chính của bộ phim. Câu này dùng từ rất hợp lý, mình chọn A nha.",
               "correctAnswer": "A"
@@ -256,8 +260,9 @@
               "id": "20",
               "content": "The boy was scared by the <i>simultaneous</i> sound of the thunder and the phone.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Âm thanh của sấm sét và tiếng điện thoại reo lên cùng một lúc (simultaneous). Từ này được dùng hoàn toàn đúng ngữ cảnh. Đáp án là A nhé.",
               "correctAnswer": "A"
@@ -266,8 +271,9 @@
               "id": "21",
               "content": "The map was <i>informative</i> and helped them from getting lost.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Tấm bản đồ cung cấp nhiều thông tin hữu ích (informative) giúp họ không bị lạc. Cách dùng từ này rất chính xác. Mình chọn A nha.",
               "correctAnswer": "A"
@@ -276,8 +282,9 @@
               "id": "22",
               "content": "The teacher <i>disproved</i> her expectations. He did exactly what she thought he would.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Disprove là bác bỏ, chứng minh điều gì đó sai. Nhưng vế sau lại nói thầy giáo làm đúng như cô ấy dự đoán, nên dùng từ disprove là sai logic. Câu này chọn B nhé.",
               "correctAnswer": "B"
@@ -286,8 +293,9 @@
               "id": "23",
               "content": "<i>Kelly</i> had only met her uncle once and didn’t know much about him. She revered him.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Revere là tôn kính. Kelly chỉ mới gặp chú một lần và không biết nhiều, nên việc tôn kính sâu sắc ngay lập tức là không hợp lý. Mình chọn B nha.",
               "correctAnswer": "B"
@@ -296,8 +304,9 @@
               "id": "24",
               "content": "In spring, all of the plants in the garden are covered with tiny <i>buds</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Vào mùa xuân, cây cối đâm chồi nảy lộc. Từ buds (nụ, chồi non) được dùng cực kỳ chính xác. Đáp án là A nhé.",
               "correctAnswer": "A"
@@ -306,8 +315,9 @@
               "id": "25",
               "content": "The <i>skeptic</i> didn’t believe that the magician could actually make someone disappear.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Skeptic là người hay hoài nghi. Việc một người hoài nghi không tin vào phép thuật là rất logic. Câu này dùng từ đúng, mình khoanh A nha.",
               "correctAnswer": "A"
@@ -316,8 +326,9 @@
               "id": "26",
               "content": "He didn’t think about the <i>aspects</i> of smoking. Later he realized the disadvantages.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Aspects mang nghĩa là các khía cạnh. Việc không suy nghĩ kỹ về các khía cạnh của việc hút thuốc là một cách diễn đạt hợp lý. Mình chọn A nhé.",
               "correctAnswer": "A"
@@ -326,8 +337,9 @@
               "id": "27",
               "content": "The new <i>hearing</i> aid provides a wide range of optic choices.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Hearing aid là máy trợ thính (dành cho tai), trong khi optic liên quan đến thị giác (mắt). Sự kết hợp này sai hoàn toàn. Câu này chọn B nha.",
               "correctAnswer": "B"
@@ -336,8 +348,9 @@
               "id": "28",
               "content": "The bad dream left an <i>imprint</i> on Jared. He had forgot it by noon of the same day.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Imprint là dấu ấn sâu đậm. Nếu cơn ác mộng để lại dấu ấn mà đến trưa anh ấy đã quên sạch thì rất mâu thuẫn. Do đó dùng từ này là sai nhé.",
               "correctAnswer": "B"
@@ -346,8 +359,9 @@
               "id": "29",
               "content": "He had to <i>specify</i> to the waiter whether he wanted onions in his food or not.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Specify nghĩa là chỉ rõ, nói cụ thể. Khách hàng cần nói rõ với bồi bàn là có lấy hành hay không. Câu này rất chuẩn xác, mình chọn A nha.",
               "correctAnswer": "A"
@@ -356,8 +370,9 @@
               "id": "30",
               "content": "The fruits looked real, but they were made of <i>wax</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Những trái cây trông như thật nhưng lại được làm từ sáp (wax). Việc làm hoa quả giả bằng sáp rất phổ biến nên câu này dùng đúng. Mình khoanh A nhé.",
               "correctAnswer": "A"
@@ -366,8 +381,9 @@
               "id": "31",
               "content": "Her understanding has been a real <i>asset</i> in her successful career.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Asset không chỉ là tài sản vật chất mà còn là những phẩm chất quý giá. Sự thấu hiểu của cô ấy là một điểm cộng lớn cho sự nghiệp. Cách dùng này hoàn toàn đúng nha.",
               "correctAnswer": "A"
@@ -376,8 +392,9 @@
               "id": "32",
               "content": "I did an <i>experiment</i> to prove my hypotheses.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Experiment là thí nghiệm, hypotheses là các giả thuyết. Làm thí nghiệm để chứng minh giả thuyết là quá chuẩn xác. Mình chọn A nhé.",
               "correctAnswer": "A"
@@ -386,8 +403,9 @@
               "id": "33",
               "content": "Please use the <i>spatial</i> spoon to turn the eggs.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Spatial có nghĩa là thuộc về không gian. Dùng từ này để miêu tả một chiếc thìa nấu ăn là vô nghĩa. Câu này sai nên chọn B nha.",
               "correctAnswer": "B"
@@ -396,8 +414,9 @@
               "id": "34",
               "content": "<i>Braille</i> has helped many blind people enjoy literature.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Braille là chữ nổi dành cho người khiếm thị. Việc chữ nổi giúp họ thưởng thức văn học là điều tuyệt vời và hợp lý. Mình chọn A nhé.",
               "correctAnswer": "A"
@@ -406,14 +425,15 @@
               "id": "35",
               "content": "If you <i>coordinate</i> all of sounds, you can make music.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "Coordinate có nghĩa là phối hợp. Phối hợp các âm thanh lại với nhau sẽ tạo ra âm nhạc. Câu này sử dụng từ rất chuẩn. Mình chọn A nha.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     },

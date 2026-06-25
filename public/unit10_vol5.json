@@ -472,8 +472,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bill đã tài trợ cho một doanh nghiệp hàng không và anh ấy biết cách tối đa hóa (maximize) lợi nhuận tiền tệ (monetary gains). Nhận định này hoàn toàn đúng.",
               "correctAnswer": "A"
@@ -484,8 +483,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bill nói anh ấy thờ ơ (indifferent) với thành công của công ty anh ấy, chứ không phải với sự thành công của trang trại (farm's success). Câu này sai.",
               "correctAnswer": "B"
@@ -496,8 +494,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bill tưới tiêu (irrigate) như một biện pháp phòng ngừa (precaution) vì mùa hè sắp tới sẽ rất khô hạn (very dry), không phải vì trời sắp mưa (upcoming rain). Câu này sai.",
               "correctAnswer": "B"
@@ -508,8 +505,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Rõ ràng trong bài nói rằng Bill đã lấy chiếc xẻng (spade) của mình và đào một con mương (dug a ditch). Nhận định này đúng.",
               "correctAnswer": "A"
@@ -520,14 +516,13 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Mặc dù Bill đã gieo hạt, nhưng dòng nước làm ẩm ướt (saturate) phần đất (soil) xung quanh cây, không trực tiếp saturate bản thân cái cây. Vậy nên nhận định này chưa hoàn toàn chính xác.",
               "correctAnswer": "B"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading_qa",

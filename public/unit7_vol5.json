@@ -489,8 +489,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Trong bài đọc, sinh vật nguyên sinh này nói rằng nó không cần khí hậu ôn hòa (temperate climate) mà có khả năng chịu đựng rất cao đối với các điều kiện khắc nghiệt (extreme conditions). Do đó nhận định này là sai.",
               "correctAnswer": "B"
@@ -501,8 +500,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Tác giả có đề cập rõ trong bài rằng trong thế giới nhỏ bé của nó, mọi thứ có thể vô cùng kỳ lạ (bizarre). Nhận định này hoàn toàn chính xác.",
               "correctAnswer": "A"
@@ -513,8 +511,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Sinh vật này tự phân chia nhân của chính nó (my own nucleus) làm đôi trong quá trình phân hạch (fission), chứ không phải phân chia nhân của người bạn đồng hành (companion's nucleus). Nhận định này là sai.",
               "correctAnswer": "B"
@@ -525,8 +522,7 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Bài viết mô tả chi tiết rằng sinh vật này có những sợi lông thô (coarse hairs) gọi là cilia, và nó di chuyển chúng theo một chuyển động lặp đi lặp lại (repetitive motion) trong suốt thời gian bơi. Nhận định này là đúng.",
               "correctAnswer": "A"
@@ -537,14 +533,13 @@
               "options": [
                 "True",
                 "False",
-                "Not Given",
-                "None of the above"
+                "Not Given"
               ],
               "explanation": "Ở cuối bài, sinh vật này khẳng định rằng quá trình phân hạch là một kỳ tích ấn tượng (impressive feat) và nó có thể tự tạo ra một số lượng vô hạn (infinite number) các sinh vật nguyên sinh mới. Nhận định này đúng.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading_qa",

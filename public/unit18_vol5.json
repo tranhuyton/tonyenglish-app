@@ -344,8 +344,9 @@
               "id": "26",
               "content": "The <i>arena</i> was filled with adoring fans.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"arena\" (đấu trường, sân vận động) dùng đúng khi nói về nơi chứa đầy người hâm mộ.",
               "correctAnswer": "A"
@@ -354,8 +355,9 @@
               "id": "27",
               "content": "The wooden fence was covered in a thick layer of <i>rust</i>.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"rust\" (rỉ sét) chỉ xảy ra với kim loại, không dùng cho hàng rào gỗ (wooden fence).",
               "correctAnswer": "B"
@@ -364,8 +366,9 @@
               "id": "28",
               "content": "His <i>reign</i> only lasted three years before he became sick and passed away.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"reign\" (thời gian trị vì) dùng chính xác cho khoảng thời gian ông cai trị.",
               "correctAnswer": "A"
@@ -374,8 +377,9 @@
               "id": "29",
               "content": "You will like Jack. You both have so much <i>commonplace</i> together.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"commonplace\" (bình thường, tầm thường) bị dùng sai ngữ cảnh, lẽ ra nên dùng từ \"in common\" (điểm chung).",
               "correctAnswer": "B"
@@ -384,14 +388,15 @@
               "id": "30",
               "content": "Her perfume was too strong. I was <i>distracted</i> by it during the meeting.",
               "options": [
-                "Correct",
-                "Incorrect"
+                "True",
+                "False",
+                "Not Given"
               ],
               "explanation": "\"distracted\" (bị phân tâm) dùng chính xác khi mùi nước hoa làm mất tập trung.",
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         }
       ]
     },
