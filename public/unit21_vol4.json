@@ -165,76 +165,186 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\">The bank teller [ 1 ]  .\na. caused the boy to collapse\nb. to all necessary places in the body\nc. was once a small pond\nd. was over $300\ne. in engineering\nf. deposited Paul's money into his account\ng. from all of the insect bites\nh. of the heroic crime-fighter\ni. believe that there is a god\nj. is rich with tradition</p><p style=\"margin-bottom: 12px;\">Many religions [ 2 ]  .</p><p style=\"margin-bottom: 12px;\">The nation's folklore [ 3 ]  .</p><p style=\"margin-bottom: 12px;\">The factory's new worker had a background [ 4 ]  .</p><p style=\"margin-bottom: 12px;\">Those veins pump blood [ 5 ]  .</p><p style=\"margin-bottom: 12px;\">The snake's poisonous venom [ 6 ]  .</p><p style=\"margin-bottom: 12px;\">The newspaper story chronicled the action [ 7 ]  .</p><p style=\"margin-bottom: 12px;\">One of that culture's myths explains that the ocean [ 8 ]  .</p><p style=\"margin-bottom: 12px;\">The total sum for staying three nights at the hotel [ 9 ]  .</p><p style=\"margin-bottom: 12px;\">Her arm started to itch [ 10 ]  .</p>",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The bank teller.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "The bank teller deposited Paul's money into his account.",
               "correctAnswer": "f"
             },
             {
               "id": "2",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">Many religions.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "Many religions believe that there is a god.",
               "correctAnswer": "i"
             },
             {
               "id": "3",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The nation's folklore.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "The nation's folklore is rich with tradition.",
               "correctAnswer": "j"
             },
             {
               "id": "4",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The factory's new worker had a background.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "The factory's new worker had a background in engineering.",
               "correctAnswer": "e"
             },
             {
               "id": "5",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">Those veins pump blood.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "Those veins pump blood to all necessary places in the body.",
               "correctAnswer": "b"
             },
             {
               "id": "6",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The snake's poisonous venom.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "The snake's poisonous venom caused the boy to collapse.",
               "correctAnswer": "a"
             },
             {
               "id": "7",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The newspaper story chronicled the action.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "The newspaper story chronicled the action of the heroic crime-fighter.",
               "correctAnswer": "h"
             },
             {
               "id": "8",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">One of that culture's myths explains that the ocean.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "One of that culture's myths explains that the ocean was once a small pond.",
               "correctAnswer": "c"
             },
             {
               "id": "9",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The total sum for staying three nights at the hotel.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "The total sum for staying three nights at the hotel was over $300.",
               "correctAnswer": "d"
             },
             {
               "id": "10",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">Her arm started to itch.</p>",
+              "options": [
+                "caused the boy to collapse",
+                "to all necessary places in the body",
+                "was once a small pond",
+                "was over $300",
+                "in engineering",
+                "deposited Paul's money into his account",
+                "from all of the insect bites",
+                "of the heroic crime-fighter",
+                "believe that there is a god",
+                "is rich with tradition"
+              ],
               "explanation": "Her arm started to itch from all of the insect bites.",
               "correctAnswer": "g"
             }
           ],
-          "questionType": "Điền từ"
+          "questionType": "Matching"
         },
         {
           "id": "sec4",
@@ -243,76 +353,186 @@
           "questions": [
             {
               "id": "1",
-              "content": "<p style=\"margin-bottom: 12px;\">If you don't stay away from school today, [ 1 ]  .\na. because they were made from copper\nb. but no animals wanted the bait\nc. so everyone knew she was trustworthy\nd. it had to be updated\ne. then you might infect the other students\nf. so she could read their literature\ng. so he thought he'd caught a disease\nh. so his boss promoted him\ni. but it turned out that they didn't relate to each other\nj. then imagine how much might happen in a millennium</p><p style=\"margin-bottom: 12px;\">Because the calendar didn't list the new holidays, [ 2 ]  .</p><p style=\"margin-bottom: 12px;\">The hunters put some food in the trap, [ 3 ]  .</p><p style=\"margin-bottom: 12px;\">She learned to speak the country's language, [ 4 ]  .</p><p style=\"margin-bottom: 12px;\">The police thought the two crimes might be connected, [ 5 ]  .</p><p style=\"margin-bottom: 12px;\">The pipes were safe for carrying water [ 6 ]  .</p><p style=\"margin-bottom: 12px;\">He had done great work for the company for three years, [ 7 ]  .</p><p style=\"margin-bottom: 12px;\">She never shared her friends' secrets with anyone, [ 8 ]  .</p><p style=\"margin-bottom: 12px;\">If you think a lot can happen in a hundred years, [ 9 ]  .</p><p style=\"margin-bottom: 12px;\">He had a bad cough and a headache, [ 10 ]  .</p>",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">If you don't stay away from school today,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "If you don't stay away from school today, then you might infect the other students.",
               "correctAnswer": "e"
             },
             {
               "id": "2",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">Because the calendar didn't list the new holidays,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "Because the calendar didn't list the new holidays, it had to be updated.",
               "correctAnswer": "d"
             },
             {
               "id": "3",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The hunters put some food in the trap,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "The hunters put some food in the trap, but no animals wanted the bait.",
               "correctAnswer": "b"
             },
             {
               "id": "4",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">She learned to speak the country's language,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "She learned to speak the country's language, so she could read their literature.",
               "correctAnswer": "f"
             },
             {
               "id": "5",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The police thought the two crimes might be connected,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "The police thought the two crimes might be connected, but it turned out that they didn't relate to each other.",
               "correctAnswer": "i"
             },
             {
               "id": "6",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">The pipes were safe for carrying water.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "The pipes were safe for carrying water because they were made from copper.",
               "correctAnswer": "a"
             },
             {
               "id": "7",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">He had done great work for the company for three years,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "He had done great work for the company for three years, so his boss promoted him.",
               "correctAnswer": "h"
             },
             {
               "id": "8",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">She never shared her friends' secrets with anyone,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "She never shared her friends' secrets with anyone, so everyone knew she was trustworthy.",
               "correctAnswer": "c"
             },
             {
               "id": "9",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">If you think a lot can happen in a hundred years,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "If you think a lot can happen in a hundred years, then imagine how much might happen in a millennium.",
               "correctAnswer": "j"
             },
             {
               "id": "10",
-              "content": "",
-              "options": [],
+              "content": "<p style=\"margin-bottom: 12px;\">He had a bad cough and a headache,.</p>",
+              "options": [
+                "because they were made from copper",
+                "but no animals wanted the bait",
+                "so everyone knew she was trustworthy",
+                "it had to be updated",
+                "then you might infect the other students",
+                "so she could read their literature",
+                "so he thought he'd caught a disease",
+                "so his boss promoted him",
+                "but it turned out that they didn't relate to each other",
+                "then imagine how much might happen in a millennium"
+              ],
               "explanation": "He had a bad cough and a headache, so he thought he'd caught a disease.",
               "correctAnswer": "g"
             }
           ],
-          "questionType": "Điền từ"
+          "questionType": "Matching"
         }
       ]
     },
