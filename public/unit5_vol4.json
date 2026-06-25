@@ -181,7 +181,7 @@
                 "with a yellow pen"
               ],
               "explanation": "evaluated: đánh giá. 'The team evaluated the success of the project.' (Đội ngũ đã đánh giá sự thành công của dự án).",
-              "correctAnswer": "the success of the project"
+              "correctAnswer": "F"
             },
             {
               "id": "12",
@@ -199,7 +199,7 @@
                 "with a yellow pen"
               ],
               "explanation": "moral: bài học đạo đức. 'The moral of the story is to be nicer to people.' (Bài học của câu chuyện là hãy tử tế hơn với mọi người).",
-              "correctAnswer": "to be nicer to people"
+              "correctAnswer": "H"
             },
             {
               "id": "13",
@@ -217,7 +217,7 @@
                 "with a yellow pen"
               ],
               "explanation": "global: toàn cầu. 'The global economic problems are getting worse.' (Các vấn đề kinh tế toàn cầu đang trở nên tồi tệ hơn).",
-              "correctAnswer": "are getting worse"
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -235,7 +235,7 @@
                 "with a yellow pen"
               ],
               "explanation": "operates: vận hành. 'Joe operates this large machine.' (Joe vận hành cỗ máy lớn này).",
-              "correctAnswer": "this large machine"
+              "correctAnswer": "G"
             },
             {
               "id": "15",
@@ -253,7 +253,7 @@
                 "with a yellow pen"
               ],
               "explanation": "lecture: bài giảng. 'We went to a lecture about birds.' (Chúng tôi đã đi nghe một bài giảng về các loài chim).",
-              "correctAnswer": "about birds"
+              "correctAnswer": "A"
             },
             {
               "id": "16",
@@ -271,7 +271,7 @@
                 "with a yellow pen"
               ],
               "explanation": "cyberspace: không gian mạng. 'The friends you meet in cyberspace aren't as important as real friends.' (Những người bạn trên mạng không quan trọng bằng bạn ngoài đời).",
-              "correctAnswer": "aren't as important as real friends"
+              "correctAnswer": "C"
             },
             {
               "id": "17",
@@ -289,7 +289,7 @@
                 "with a yellow pen"
               ],
               "explanation": "weird: kỳ lạ. 'The weird kid at school ate soup with a knife.' (Đứa trẻ kỳ lạ ở trường ăn súp bằng dao).",
-              "correctAnswer": "ate soup with a knife"
+              "correctAnswer": "D"
             },
             {
               "id": "18",
@@ -307,7 +307,7 @@
                 "with a yellow pen"
               ],
               "explanation": "highlight: làm nổi bật. 'You should highlight these words with a yellow pen.' (Bạn nên làm nổi bật những từ này bằng bút vàng).",
-              "correctAnswer": "with a yellow pen"
+              "correctAnswer": "J"
             },
             {
               "id": "19",
@@ -325,7 +325,7 @@
                 "with a yellow pen"
               ],
               "explanation": "resolution: sự quyết tâm. 'I made a resolution to eat less chocolate.' (Tôi đã quyết tâm ăn ít sô-cô-la lại).",
-              "correctAnswer": "to eat less chocolate"
+              "correctAnswer": "I"
             },
             {
               "id": "20",
@@ -343,7 +343,7 @@
                 "with a yellow pen"
               ],
               "explanation": "semester: học kỳ. 'The end of the first semester is halfway through the school year.' (Cuối học kỳ 1 là nửa chặng đường của năm học).",
-              "correctAnswer": "is halfway through the school year"
+              "correctAnswer": "E"
             }
           ],
           "questionType": "Matching"
@@ -369,7 +369,7 @@
                 "you wait here awhile"
               ],
               "explanation": "gymnasium: phòng thể dục. Muốn khỏe mạnh nên tôi đến phòng thể dục (so I went to the gymnasium).",
-              "correctAnswer": "so I went to the gymnasium"
+              "correctAnswer": "G"
             },
             {
               "id": "22",
@@ -387,7 +387,7 @@
                 "you wait here awhile"
               ],
               "explanation": "essay: bài luận. Địa chất là môn yêu thích nên tôi viết một bài luận về đá (so I wrote an essay about rocks).",
-              "correctAnswer": "so I wrote an essay about rocks"
+              "correctAnswer": "H"
             },
             {
               "id": "23",
@@ -405,7 +405,7 @@
                 "you wait here awhile"
               ],
               "explanation": "edit: chỉnh sửa. Bài báo cáo của tôi đầy lỗi, nhưng anh ấy đã giúp tôi chỉnh sửa (but he helped me edit it).",
-              "correctAnswer": "but he helped me edit it"
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -423,7 +423,7 @@
                 "you wait here awhile"
               ],
               "explanation": "ignorant: thiếu hiểu biết. Anh tôi không thể giúp làm bài toán vì anh ấy thiếu hiểu biết về môn toán (because he's ignorant about math).",
-              "correctAnswer": "because he's ignorant about math"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -441,7 +441,7 @@
                 "you wait here awhile"
               ],
               "explanation": "faints: ngất xỉu. Lớp học sơ cứu dạy chúng tôi phải làm gì nếu ai đó ngất xỉu (if someone faints).",
-              "correctAnswer": "if someone faints"
+              "correctAnswer": "D"
             },
             {
               "id": "26",
@@ -459,7 +459,7 @@
                 "you wait here awhile"
               ],
               "explanation": "index: mục lục / chỉ mục. Tìm thông tin về núi lửa bằng cách tra chữ 'V' ở phần mục lục cuối sách (so I looked under 'V' in the index).",
-              "correctAnswer": "so I looked under 'V' in the index"
+              "correctAnswer": "F"
             },
             {
               "id": "27",
@@ -477,7 +477,7 @@
                 "you wait here awhile"
               ],
               "explanation": "recent: gần đây. Sách giáo khoa đó quá cũ, nên tìm bản gần đây hơn (so you should find a more recent one).",
-              "correctAnswer": "so you should find a more recent one"
+              "correctAnswer": "I"
             },
             {
               "id": "28",
@@ -495,7 +495,7 @@
                 "you wait here awhile"
               ],
               "explanation": "typewritten: đánh máy. Tôi cần máy tính vì bài luận của tôi phải được đánh máy (because my essay has to be typewritten).",
-              "correctAnswer": "because my essay has to be typewritten"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -513,7 +513,7 @@
                 "you wait here awhile"
               ],
               "explanation": "awhile: một chốc / một lát. Tôi sẽ mang trà ra nếu bạn đợi ở đây một chốc (you wait here awhile).",
-              "correctAnswer": "you wait here awhile"
+              "correctAnswer": "J"
             },
             {
               "id": "30",
@@ -531,7 +531,7 @@
                 "you wait here awhile"
               ],
               "explanation": "private: riêng tư. Không được nói với ai thông tin này; nó là chuyện riêng tư (it's private).",
-              "correctAnswer": "it's private"
+              "correctAnswer": "E"
             }
           ],
           "questionType": "Matching"

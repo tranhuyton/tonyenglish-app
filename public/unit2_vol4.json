@@ -242,7 +242,7 @@
                 "character"
               ],
               "explanation": "\"stake\" là cái cọc. (Tôi sẽ buộc con bò vào một cái cọc trên mặt đất.)",
-              "correctAnswer": "stake"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -255,7 +255,7 @@
                 "character"
               ],
               "explanation": "\"flesh\" là thịt (của động vật). (Bạn không nên ăn thịt gà này. Thịt vẫn còn màu hồng.)",
-              "correctAnswer": "flesh"
+              "correctAnswer": "D"
             },
             {
               "id": "23",
@@ -268,7 +268,7 @@
                 "character"
               ],
               "explanation": "\"wreck\" là phá hủy, làm hỏng. (Những người mới lái xe dễ làm hỏng xe của họ hơn những người lái xe có kinh nghiệm.)",
-              "correctAnswer": "wreck"
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -281,7 +281,7 @@
                 "character"
               ],
               "explanation": "\"accident\" là tai nạn. (Nhiều người bị thương trong vụ tai nạn chèo thuyền.)",
-              "correctAnswer": "accident"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -294,7 +294,7 @@
                 "character"
               ],
               "explanation": "\"character\" là tính cách. (Anh trai tôi có tính cách rất thân thiện và vui vẻ.)",
-              "correctAnswer": "character"
+              "correctAnswer": "E"
             }
           ],
           "questionType": "Kéo thả"
