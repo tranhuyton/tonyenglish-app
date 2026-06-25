@@ -146,126 +146,186 @@
           "questions": [
             {
               "id": "11",
-              "content": "The patient’s illness seemed like it might be _____________.",
+              "content": "The patient’s illness seemed like it might be [ 11 ].",
               "options": [
-                "terminal",
+                "assess",
+                "astonished",
+                "essence",
                 "extract",
+                "fabulous",
                 "impulse",
-                "subsequent"
+                "ongoing",
+                "publicity",
+                "subsequent",
+                "terminal"
               ],
               "explanation": "Bệnh tình của bệnh nhân có vẻ như vô phương cứu chữa (terminal).",
-              "correctAnswer": "A"
+              "correctAnswer": "terminal"
             },
             {
               "id": "12",
-              "content": "To save him, doctors had to ______________the infected tissue.",
+              "content": "To save him, doctors had to [ 12 ]the infected tissue.",
               "options": [
                 "assess",
-                "extract",
+                "astonished",
                 "essence",
-                "ongoing"
+                "extract",
+                "fabulous",
+                "impulse",
+                "ongoing",
+                "publicity",
+                "subsequent",
+                "terminal"
               ],
               "explanation": "Bác sĩ phải cắt bỏ (extract) phần mô bị nhiễm trùng.",
-              "correctAnswer": "B"
+              "correctAnswer": "extract"
             },
             {
               "id": "13",
-              "content": "On an _____________, he kicked the wall and it revealed a secret pass.",
+              "content": "On an [ 13 ], he kicked the wall and it revealed a secret pass.",
               "options": [
+                "assess",
+                "astonished",
+                "essence",
+                "extract",
                 "fabulous",
                 "impulse",
+                "ongoing",
                 "publicity",
-                "subsequent"
+                "subsequent",
+                "terminal"
               ],
               "explanation": "Theo một sự bốc đồng (on an impulse), anh ta đá vào tường.",
-              "correctAnswer": "B"
+              "correctAnswer": "impulse"
             },
             {
               "id": "14",
-              "content": "It led to his ______________ escape from the prison.",
+              "content": "It led to his [ 14 ] escape from the prison.",
               "options": [
-                "subsequent",
-                "terminal",
+                "assess",
                 "astonished",
-                "assess"
+                "essence",
+                "extract",
+                "fabulous",
+                "impulse",
+                "ongoing",
+                "publicity",
+                "subsequent",
+                "terminal"
               ],
               "explanation": "Dẫn đến cuộc vượt ngục sau đó (subsequent) của anh ta.",
-              "correctAnswer": "A"
+              "correctAnswer": "subsequent"
             },
             {
               "id": "15",
-              "content": "It was difficult to ______________ in which direction the forest fire would go.",
+              "content": "It was difficult to [ 15 ] in which direction the forest fire would go.",
               "options": [
-                "ongoing",
-                "essence",
                 "assess",
-                "extract"
+                "astonished",
+                "essence",
+                "extract",
+                "fabulous",
+                "impulse",
+                "ongoing",
+                "publicity",
+                "subsequent",
+                "terminal"
               ],
               "explanation": "Thật khó để đánh giá (assess) hướng cháy rừng.",
-              "correctAnswer": "C"
+              "correctAnswer": "assess"
             },
             {
               "id": "16",
-              "content": "One reason was that anything could happen while the fire was _____________.",
+              "content": "One reason was that anything could happen while the fire was [ 16 ].",
               "options": [
-                "ongoing",
+                "assess",
+                "astonished",
+                "essence",
+                "extract",
                 "fabulous",
-                "terminal",
-                "publicity"
+                "impulse",
+                "ongoing",
+                "publicity",
+                "subsequent",
+                "terminal"
               ],
               "explanation": "Trong khi đám cháy đang diễn ra (ongoing).",
-              "correctAnswer": "A"
+              "correctAnswer": "ongoing"
             },
             {
               "id": "17",
-              "content": "The ______________ of the mayor’s speech was about building the new library.",
+              "content": "The [ 17 ] of the mayor’s speech was about building the new library.",
               "options": [
-                "essence",
                 "assess",
+                "astonished",
+                "essence",
+                "extract",
+                "fabulous",
+                "impulse",
+                "ongoing",
+                "publicity",
                 "subsequent",
-                "impulse"
+                "terminal"
               ],
               "explanation": "Bản chất/ý chính (essence) của bài phát biểu.",
-              "correctAnswer": "A"
+              "correctAnswer": "essence"
             },
             {
               "id": "18",
-              "content": "The building would be a(n) _____________ addition to the scenery downtown.",
+              "content": "The building would be a(n) [ 18 ] addition to the scenery downtown.",
               "options": [
-                "fabulous",
-                "terminal",
+                "assess",
+                "astonished",
+                "essence",
                 "extract",
-                "ongoing"
+                "fabulous",
+                "impulse",
+                "ongoing",
+                "publicity",
+                "subsequent",
+                "terminal"
               ],
               "explanation": "Sự bổ sung tuyệt vời (fabulous).",
-              "correctAnswer": "A"
+              "correctAnswer": "fabulous"
             },
             {
               "id": "19",
-              "content": "His amazing skills during the last half of the game _____________ the crowd.",
+              "content": "His amazing skills during the last half of the game [ 19 ] the crowd.",
               "options": [
-                "astonished",
-                "publicity",
                 "assess",
-                "essence"
+                "astonished",
+                "essence",
+                "extract",
+                "fabulous",
+                "impulse",
+                "ongoing",
+                "publicity",
+                "subsequent",
+                "terminal"
               ],
               "explanation": "Kỹ năng tuyệt vời đã làm kinh ngạc (astonished) đám đông.",
-              "correctAnswer": "A"
+              "correctAnswer": "astonished"
             },
             {
               "id": "20",
-              "content": "Then that night, he received a lot of ______________ from all the news shows.",
+              "content": "Then that night, he received a lot of [ 20 ] from all the news shows.",
               "options": [
-                "publicity",
+                "assess",
+                "astonished",
+                "essence",
+                "extract",
                 "fabulous",
+                "impulse",
                 "ongoing",
+                "publicity",
+                "subsequent",
                 "terminal"
               ],
               "explanation": "Nhận được nhiều sự chú ý (publicity) từ truyền thông.",
-              "correctAnswer": "A"
+              "correctAnswer": "publicity"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

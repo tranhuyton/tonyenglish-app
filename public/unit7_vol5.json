@@ -18,126 +18,186 @@
           "questions": [
             {
               "id": "1",
-              "content": "The climate where I live is very _____________.",
+              "content": "The climate where I live is very [ 1 ].",
               "options": [
-                "temperate",
+                "aquatic",
+                "biosphere",
+                "bizarre",
                 "Celsius",
+                "companion",
                 "ecology",
-                "bizarre"
+                "feat",
+                "parasite",
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Khí hậu (climate) ôn hoà (temperate) là đáp án hợp lý nhất.",
-              "correctAnswer": "A"
+              "correctAnswer": "temperate"
             },
             {
               "id": "2",
-              "content": "It never drops below 10 degrees _____________.",
+              "content": "It never drops below 10 degrees [ 2 ].",
               "options": [
                 "aquatic",
+                "biosphere",
+                "bizarre",
                 "Celsius",
                 "companion",
-                "feat"
+                "ecology",
+                "feat",
+                "parasite",
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Đơn vị đo nhiệt độ (độ C) là Celsius.",
-              "correctAnswer": "B"
+              "correctAnswer": "Celsius"
             },
             {
               "id": "3",
-              "content": "I learned about a tiny animal called a _____________.",
+              "content": "I learned about a tiny animal called a [ 3 ].",
               "options": [
+                "aquatic",
                 "biosphere",
-                "vulnerable",
+                "bizarre",
+                "Celsius",
+                "companion",
+                "ecology",
+                "feat",
                 "parasite",
-                "feat"
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Một động vật nhỏ gọn được gọi là kí sinh trùng (parasite).",
-              "correctAnswer": "C"
+              "correctAnswer": "parasite"
             },
             {
               "id": "4",
-              "content": "Some live on land, and others are _____________.",
+              "content": "Some live on land, and others are [ 4 ].",
               "options": [
                 "aquatic",
+                "biosphere",
                 "bizarre",
+                "Celsius",
+                "companion",
+                "ecology",
+                "feat",
+                "parasite",
                 "temperate",
-                "repetitive"
+                "vulnerable"
               ],
               "explanation": "Sống trên cạn (on land) và sống dưới nước (aquatic).",
-              "correctAnswer": "A"
+              "correctAnswer": "aquatic"
             },
             {
               "id": "5",
-              "content": "The strange old man's behavior is quite _____________.",
+              "content": "The strange old man's behavior is quite [ 5 ].",
               "options": [
-                "prominent",
+                "aquatic",
+                "biosphere",
                 "bizarre",
-                "vulnerable",
-                "coarse"
+                "Celsius",
+                "companion",
+                "ecology",
+                "feat",
+                "parasite",
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Hành vi kì lạ (strange) tương đương với bizarre.",
-              "correctAnswer": "B"
+              "correctAnswer": "bizarre"
             },
             {
               "id": "6",
-              "content": "The plastic chicken he takes with him everywhere is his only _____________.",
+              "content": "The plastic chicken he takes with him everywhere is his only [ 6 ].",
               "options": [
+                "aquatic",
+                "biosphere",
+                "bizarre",
+                "Celsius",
                 "companion",
-                "parasite",
+                "ecology",
                 "feat",
-                "ecology"
+                "parasite",
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Một vật mang theo khắp nơi đóng vai trò như bạn đồng hành (companion).",
-              "correctAnswer": "A"
+              "correctAnswer": "companion"
             },
             {
               "id": "7",
-              "content": "Jim loves every type of plant and animal in the _____________.",
+              "content": "Jim loves every type of plant and animal in the [ 7 ].",
               "options": [
-                "Celsius",
+                "aquatic",
                 "biosphere",
-                "nucleus",
-                "duration"
+                "bizarre",
+                "Celsius",
+                "companion",
+                "ecology",
+                "feat",
+                "parasite",
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Sinh quyển (biosphere) là nơi chứa các loài thực vật và động vật.",
-              "correctAnswer": "B"
+              "correctAnswer": "biosphere"
             },
             {
               "id": "8",
-              "content": "Therefore, he is going to college to study _____________.",
+              "content": "Therefore, he is going to college to study [ 8 ].",
               "options": [
+                "aquatic",
+                "biosphere",
+                "bizarre",
+                "Celsius",
+                "companion",
                 "ecology",
+                "feat",
                 "parasite",
-                "tolerance",
-                "feat"
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Nghiên cứu về môi trường sinh thái là ecology.",
-              "correctAnswer": "A"
+              "correctAnswer": "ecology"
             },
             {
               "id": "9",
-              "content": "Without his shield, the sword fighter was _____________.",
+              "content": "Without his shield, the sword fighter was [ 9 ].",
               "options": [
-                "infinite",
-                "vulnerable",
-                "prominent",
-                "aquatic"
+                "aquatic",
+                "biosphere",
+                "bizarre",
+                "Celsius",
+                "companion",
+                "ecology",
+                "feat",
+                "parasite",
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Không có khiên bảo vệ, anh ta trở nên dễ bị tổn thương (vulnerable).",
-              "correctAnswer": "B"
+              "correctAnswer": "vulnerable"
             },
             {
               "id": "10",
-              "content": "Defeating his enemy without protection was an amazing _____________.",
+              "content": "Defeating his enemy without protection was an amazing [ 10 ].",
               "options": [
-                "feat",
+                "aquatic",
                 "biosphere",
+                "bizarre",
+                "Celsius",
                 "companion",
-                "Celsius"
+                "ecology",
+                "feat",
+                "parasite",
+                "temperate",
+                "vulnerable"
               ],
               "explanation": "Chiến thắng kẻ thù mà không cần bảo vệ là một chiến công/kì tích (feat).",
-              "correctAnswer": "A"
+              "correctAnswer": "feat"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec2_wordlist",

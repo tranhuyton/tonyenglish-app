@@ -214,126 +214,186 @@
           "questions": [
             {
               "id": "16",
-              "content": "Mr. Wilson _______ from the university over 15 years ago.",
+              "content": "Mr. Wilson [ 16 ] from the university over 15 years ago.",
               "options": [
-                "graduated",
+                "chronic",
+                "discipline",
                 "donor",
-                "tuition",
-                "stimulus"
+                "gossip",
+                "graduated",
+                "graffiti",
+                "implicated",
+                "stimulus",
+                "terminate",
+                "tuition"
               ],
               "explanation": "\"graduated\" (tốt nghiệp) phù hợp với ngữ cảnh từ trường đại học (university).",
-              "correctAnswer": "A"
+              "correctAnswer": "graduated"
             },
             {
               "id": "17",
-              "content": "He has always been a generous _______ and wants to improve the school.",
+              "content": "He has always been a generous [ 17 ] and wants to improve the school.",
               "options": [
+                "chronic",
+                "discipline",
                 "donor",
                 "gossip",
-                "discipline",
-                "implicated"
+                "graduated",
+                "graffiti",
+                "implicated",
+                "stimulus",
+                "terminate",
+                "tuition"
               ],
               "explanation": "\"donor\" (người hiến tặng) phù hợp với tính từ generous (hào phóng).",
-              "correctAnswer": "A"
+              "correctAnswer": "donor"
             },
             {
               "id": "18",
-              "content": "The university recently decreased its _______.",
+              "content": "The university recently decreased its [ 18 ].",
               "options": [
-                "tuition",
                 "chronic",
+                "discipline",
+                "donor",
+                "gossip",
+                "graduated",
                 "graffiti",
-                "terminate"
+                "implicated",
+                "stimulus",
+                "terminate",
+                "tuition"
               ],
               "explanation": "\"tuition\" (học phí) phù hợp với việc giảm chi phí tại trường đại học.",
-              "correctAnswer": "A"
+              "correctAnswer": "tuition"
             },
             {
               "id": "19",
-              "content": "It was supposed to be a _______ for more students to study there.",
+              "content": "It was supposed to be a [ 19 ] for more students to study there.",
               "options": [
-                "stimulus",
-                "gossip",
+                "chronic",
                 "discipline",
-                "shaft"
+                "donor",
+                "gossip",
+                "graduated",
+                "graffiti",
+                "implicated",
+                "stimulus",
+                "terminate",
+                "tuition"
               ],
               "explanation": "\"stimulus\" (động lực) giúp thu hút thêm sinh viên đến học thuật.",
-              "correctAnswer": "A"
+              "correctAnswer": "stimulus"
             },
             {
               "id": "20",
-              "content": "Laurie was _______ in a terrible thing.",
+              "content": "Laurie was [ 20 ] in a terrible thing.",
               "options": [
+                "chronic",
+                "discipline",
+                "donor",
+                "gossip",
+                "graduated",
+                "graffiti",
                 "implicated",
-                "severed",
-                "stabbed",
-                "graduated"
+                "stimulus",
+                "terminate",
+                "tuition"
               ],
               "explanation": "\"implicated\" (dính líu) vào một việc tồi tệ (a terrible thing).",
-              "correctAnswer": "A"
+              "correctAnswer": "implicated"
             },
             {
               "id": "21",
-              "content": "She was caught leaving _______ on the school wall.",
+              "content": "She was caught leaving [ 21 ] on the school wall.",
               "options": [
-                "graffiti",
-                "tuition",
+                "chronic",
+                "discipline",
+                "donor",
                 "gossip",
-                "chronic"
+                "graduated",
+                "graffiti",
+                "implicated",
+                "stimulus",
+                "terminate",
+                "tuition"
               ],
               "explanation": "\"graffiti\" (hình vẽ bậy) trên bức tường trường học (school wall).",
-              "correctAnswer": "A"
+              "correctAnswer": "graffiti"
             },
             {
               "id": "22",
-              "content": "Elliot had _______ problems at school.",
+              "content": "Elliot had [ 22 ] problems at school.",
               "options": [
                 "chronic",
+                "discipline",
+                "donor",
+                "gossip",
+                "graduated",
+                "graffiti",
                 "implicated",
+                "stimulus",
                 "terminate",
-                "donor"
+                "tuition"
               ],
               "explanation": "\"chronic problems\" (vấn đề mãn tính, kéo dài) ở trường học.",
-              "correctAnswer": "A"
+              "correctAnswer": "chronic"
             },
             {
               "id": "23",
-              "content": "His parents decided to show more _______.",
+              "content": "His parents decided to show more [ 23 ].",
               "options": [
+                "chronic",
                 "discipline",
+                "donor",
+                "gossip",
+                "graduated",
                 "graffiti",
-                "tuition",
-                "stimulus"
+                "implicated",
+                "stimulus",
+                "terminate",
+                "tuition"
               ],
               "explanation": "\"discipline\" (kỷ luật) được phụ huynh áp dụng để giáo dục con cái.",
-              "correctAnswer": "A"
+              "correctAnswer": "discipline"
             },
             {
               "id": "24",
-              "content": "Hannah was tired of hearing _______ about her neighbors.",
+              "content": "Hannah was tired of hearing [ 24 ] about her neighbors.",
               "options": [
-                "gossip",
-                "donor",
+                "chronic",
                 "discipline",
-                "stimulus"
+                "donor",
+                "gossip",
+                "graduated",
+                "graffiti",
+                "implicated",
+                "stimulus",
+                "terminate",
+                "tuition"
               ],
               "explanation": "\"gossip\" (lời đồn) về những người hàng xóm (neighbors).",
-              "correctAnswer": "A"
+              "correctAnswer": "gossip"
             },
             {
               "id": "25",
-              "content": "She decided to _______ that behavior and think about better things.",
+              "content": "She decided to [ 25 ] that behavior and think about better things.",
               "options": [
+                "chronic",
+                "discipline",
+                "donor",
+                "gossip",
+                "graduated",
+                "graffiti",
+                "implicated",
+                "stimulus",
                 "terminate",
-                "sever",
-                "stab",
-                "graduate"
+                "tuition"
               ],
               "explanation": "\"terminate\" (chấm dứt) hành vi đó (that behavior).",
-              "correctAnswer": "A"
+              "correctAnswer": "terminate"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec4",

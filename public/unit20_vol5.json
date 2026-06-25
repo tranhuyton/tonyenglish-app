@@ -86,126 +86,186 @@
           "questions": [
             {
               "id": "6",
-              "content": "The doctors just found out that the infection is _______ .",
+              "content": "The doctors just found out that the infection is [ 6 ] .",
               "options": [
-                "viral",
-                "phase",
+                "antibiotic",
+                "database",
+                "immune",
                 "input",
-                "database"
+                "magnet",
+                "phase",
+                "prevalent",
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"viral\" (do virus) bổ nghĩa cho danh từ infection.",
-              "correctAnswer": "A"
+              "correctAnswer": "viral"
             },
             {
               "id": "7",
-              "content": "Since a virus is not a bacteria, it cannot be treated with a(n) _______ .",
+              "content": "Since a virus is not a bacteria, it cannot be treated with a(n) [ 7 ] .",
               "options": [
                 "antibiotic",
-                "ratio",
+                "database",
+                "immune",
+                "input",
+                "magnet",
+                "phase",
                 "prevalent",
-                "immune"
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"antibiotic\" (thuốc kháng sinh) không điều trị được virus mà chỉ trị được vi khuẩn.",
-              "correctAnswer": "A"
+              "correctAnswer": "antibiotic"
             },
             {
               "id": "8",
-              "content": "He looked at the information that was stored in the _______ .",
+              "content": "He looked at the information that was stored in the [ 8 ] .",
               "options": [
+                "antibiotic",
                 "database",
-                "spiral",
+                "immune",
                 "input",
-                "magnet"
+                "magnet",
+                "phase",
+                "prevalent",
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"database\" (cơ sở dữ liệu) là nơi lưu trữ thông tin.",
-              "correctAnswer": "A"
+              "correctAnswer": "database"
             },
             {
               "id": "9",
-              "content": "After comparing the data, he expressed the results in a _______ .",
+              "content": "After comparing the data, he expressed the results in a [ 9 ] .",
               "options": [
-                "ratio",
+                "antibiotic",
+                "database",
+                "immune",
+                "input",
+                "magnet",
                 "phase",
-                "viral",
-                "prevalent"
+                "prevalent",
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"ratio\" (tỷ lệ) dùng để biểu thị kết quả so sánh số liệu.",
-              "correctAnswer": "A"
+              "correctAnswer": "ratio"
             },
             {
               "id": "10",
-              "content": "The process of building the house is in the final _______ .",
+              "content": "The process of building the house is in the final [ 10 ] .",
               "options": [
-                "phase",
-                "immune",
                 "antibiotic",
-                "database"
+                "database",
+                "immune",
+                "input",
+                "magnet",
+                "phase",
+                "prevalent",
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"phase\" (giai đoạn) phù hợp với quy trình xây dựng (process).",
-              "correctAnswer": "A"
+              "correctAnswer": "phase"
             },
             {
               "id": "11",
-              "content": "The last step is putting in a staircase in the shape of a _______ .",
+              "content": "The last step is putting in a staircase in the shape of a [ 11 ] .",
               "options": [
-                "spiral",
-                "viral",
+                "antibiotic",
+                "database",
+                "immune",
+                "input",
+                "magnet",
+                "phase",
                 "prevalent",
-                "magnet"
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"spiral\" (hình xoắn ốc) phù hợp để chỉ hình dáng cầu thang.",
-              "correctAnswer": "A"
+              "correctAnswer": "spiral"
             },
             {
               "id": "12",
-              "content": "We learned what metals are attracted to a _______ .",
+              "content": "We learned what metals are attracted to a [ 12 ] .",
               "options": [
-                "magnet",
+                "antibiotic",
                 "database",
+                "immune",
                 "input",
-                "ratio"
+                "magnet",
+                "phase",
+                "prevalent",
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"magnet\" (nam châm) hút kim loại.",
-              "correctAnswer": "A"
+              "correctAnswer": "magnet"
             },
             {
               "id": "13",
-              "content": "We fed our results into the computer as _______ .",
+              "content": "We fed our results into the computer as [ 13 ] .",
               "options": [
-                "input",
-                "viral",
+                "antibiotic",
+                "database",
                 "immune",
-                "spiral"
+                "input",
+                "magnet",
+                "phase",
+                "prevalent",
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"input\" (dữ liệu đầu vào) được đưa vào máy tính.",
-              "correctAnswer": "A"
+              "correctAnswer": "input"
             },
             {
               "id": "14",
-              "content": "In this country, polio is not _______ .",
+              "content": "In this country, polio is not [ 14 ] .",
               "options": [
-                "prevalent",
-                "phase",
                 "antibiotic",
-                "ratio"
+                "database",
+                "immune",
+                "input",
+                "magnet",
+                "phase",
+                "prevalent",
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"prevalent\" (phổ biến) ý chỉ căn bệnh bại liệt không còn phổ biến ở nước này.",
-              "correctAnswer": "A"
+              "correctAnswer": "prevalent"
             },
             {
               "id": "15",
-              "content": "It is highly uncommon because most people are _______ thanks to vaccines.",
+              "content": "It is highly uncommon because most people are [ 15 ] thanks to vaccines.",
               "options": [
+                "antibiotic",
+                "database",
                 "immune",
-                "spiral",
                 "input",
-                "database"
+                "magnet",
+                "phase",
+                "prevalent",
+                "ratio",
+                "spiral",
+                "viral"
               ],
               "explanation": "\"immune\" (miễn dịch) nhờ vào vắc-xin.",
-              "correctAnswer": "A"
+              "correctAnswer": "immune"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3",

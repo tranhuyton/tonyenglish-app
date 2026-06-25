@@ -86,126 +86,186 @@
           "questions": [
             {
               "id": "6",
-              "content": "My boss is a difficult person to deal with because he can become so _____________.",
+              "content": "My boss is a difficult person to deal with because he can become so [ 6 ].",
               "options": [
                 "culinary",
-                "hostile",
+                "dominate",
                 "edible",
-                "misconception"
+                "hostile",
+                "intake",
+                "malnutrition",
+                "medication",
+                "misconception",
+                "peel",
+                "prescription"
               ],
               "explanation": "Một người khó đối phó vì hay trở nên thù hằn/cáu gắt (hostile).",
-              "correctAnswer": "B"
+              "correctAnswer": "hostile"
             },
             {
               "id": "7",
-              "content": "He gets incredibly angry when he can't _____________ an employee or a customer.",
+              "content": "He gets incredibly angry when he can't [ 7 ] an employee or a customer.",
               "options": [
-                "peel",
-                "prescription",
+                "culinary",
+                "dominate",
+                "edible",
+                "hostile",
                 "intake",
-                "dominate"
+                "malnutrition",
+                "medication",
+                "misconception",
+                "peel",
+                "prescription"
               ],
               "explanation": "Tức giận khi không thể thống trị/kiểm soát (dominate) người khác.",
-              "correctAnswer": "D"
+              "correctAnswer": "dominate"
             },
             {
               "id": "8",
-              "content": "There is a popular _____________ that cooking well is difficult.",
+              "content": "There is a popular [ 8 ] that cooking well is difficult.",
               "options": [
-                "medication",
+                "culinary",
+                "dominate",
+                "edible",
+                "hostile",
+                "intake",
                 "malnutrition",
+                "medication",
                 "misconception",
-                "hostile"
+                "peel",
+                "prescription"
               ],
               "explanation": "Một quan niệm sai lầm phổ biến (misconception) là nấu ăn ngon rất khó.",
-              "correctAnswer": "C"
+              "correctAnswer": "misconception"
             },
             {
               "id": "9",
-              "content": "Actually, most people can cook with basic _____________ techniques.",
+              "content": "Actually, most people can cook with basic [ 9 ] techniques.",
               "options": [
                 "culinary",
+                "dominate",
                 "edible",
+                "hostile",
                 "intake",
-                "dominate"
+                "malnutrition",
+                "medication",
+                "misconception",
+                "peel",
+                "prescription"
               ],
               "explanation": "kỹ năng nấu nướng cơ bản (culinary techniques).",
-              "correctAnswer": "A"
+              "correctAnswer": "culinary"
             },
             {
               "id": "10",
-              "content": "My _____________ is about to run out, but I still need more.",
+              "content": "My [ 10 ] is about to run out, but I still need more.",
               "options": [
-                "medication",
-                "peel",
+                "culinary",
+                "dominate",
+                "edible",
+                "hostile",
+                "intake",
                 "malnutrition",
+                "medication",
+                "misconception",
+                "peel",
                 "prescription"
               ],
               "explanation": "Thuốc (medication) sắp hết và cần thêm.",
-              "correctAnswer": "A"
+              "correctAnswer": "medication"
             },
             {
               "id": "11",
-              "content": "Tomorrow, I will ask the doctor for a new _____________.",
+              "content": "Tomorrow, I will ask the doctor for a new [ 11 ].",
               "options": [
-                "prescription",
-                "edible",
                 "culinary",
-                "dominate"
+                "dominate",
+                "edible",
+                "hostile",
+                "intake",
+                "malnutrition",
+                "medication",
+                "misconception",
+                "peel",
+                "prescription"
               ],
               "explanation": "Xin bác sĩ một đơn thuốc mới (prescription).",
-              "correctAnswer": "A"
+              "correctAnswer": "prescription"
             },
             {
               "id": "12",
-              "content": "The skin of some vegetables such as squash is not _____________.",
+              "content": "The skin of some vegetables such as squash is not [ 12 ].",
               "options": [
-                "hostile",
+                "culinary",
+                "dominate",
                 "edible",
+                "hostile",
+                "intake",
+                "malnutrition",
+                "medication",
+                "misconception",
                 "peel",
-                "misconception"
+                "prescription"
               ],
               "explanation": "Vỏ của một số loại rau củ không thể ăn được (not edible).",
-              "correctAnswer": "B"
+              "correctAnswer": "edible"
             },
             {
               "id": "13",
-              "content": "That is why you have to _____________ it before you eat it.",
+              "content": "That is why you have to [ 13 ] it before you eat it.",
               "options": [
+                "culinary",
                 "dominate",
-                "peel",
+                "edible",
+                "hostile",
                 "intake",
-                "malnutrition"
+                "malnutrition",
+                "medication",
+                "misconception",
+                "peel",
+                "prescription"
               ],
               "explanation": "Vì không ăn được nên phải gọt vỏ (peel).",
-              "correctAnswer": "B"
+              "correctAnswer": "peel"
             },
             {
               "id": "14",
-              "content": "In some parts of the world, _____________ is a major problem.",
+              "content": "In some parts of the world, [ 14 ] is a major problem.",
               "options": [
+                "culinary",
+                "dominate",
+                "edible",
+                "hostile",
+                "intake",
                 "malnutrition",
-                "prescription",
                 "medication",
-                "culinary"
+                "misconception",
+                "peel",
+                "prescription"
               ],
               "explanation": "Ở một số nơi, suy dinh dưỡng (malnutrition) là vấn đề lớn.",
-              "correctAnswer": "A"
+              "correctAnswer": "malnutrition"
             },
             {
               "id": "15",
-              "content": "One of the causes is inadequate _____________ of necessary vitamins and minerals.",
+              "content": "One of the causes is inadequate [ 15 ] of necessary vitamins and minerals.",
               "options": [
-                "intake",
+                "culinary",
+                "dominate",
                 "edible",
+                "hostile",
+                "intake",
+                "malnutrition",
+                "medication",
                 "misconception",
-                "peel"
+                "peel",
+                "prescription"
               ],
               "explanation": "Nguyên nhân là lượng nạp vào (intake) vitamin không đủ.",
-              "correctAnswer": "A"
+              "correctAnswer": "intake"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

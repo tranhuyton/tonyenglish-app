@@ -86,126 +86,186 @@
           "questions": [
             {
               "id": "6",
-              "content": "Traveling across the _____________ was more difficult than it seemed.",
+              "content": "Traveling across the [ 6 ] was more difficult than it seemed.",
               "options": [
+                "abundant",
+                "arid",
+                "cathedral",
+                "eligible",
+                "fast",
+                "moisture",
+                "oath",
                 "prairie",
                 "rugged",
-                "arid",
-                "moisture"
+                "scarce"
               ],
               "explanation": "Đi ngang qua thảo nguyên (prairie) khó khăn hơn so với vẻ bề ngoài.",
-              "correctAnswer": "A"
+              "correctAnswer": "prairie"
             },
             {
               "id": "7",
-              "content": "The ground was very _____________, and the grass was high.",
+              "content": "The ground was very [ 7 ], and the grass was high.",
               "options": [
-                "rugged",
-                "prairie",
+                "abundant",
+                "arid",
+                "cathedral",
+                "eligible",
+                "fast",
+                "moisture",
                 "oath",
-                "eligible"
+                "prairie",
+                "rugged",
+                "scarce"
               ],
               "explanation": "Mặt đất rất gồ ghề (rugged).",
-              "correctAnswer": "A"
+              "correctAnswer": "rugged"
             },
             {
               "id": "8",
-              "content": "John had been in a place with a(n) ______________climate for a long time.",
+              "content": "John had been in a place with a(n) [ 8 ]climate for a long time.",
               "options": [
                 "abundant",
-                "scarce",
                 "arid",
-                "fast"
+                "cathedral",
+                "eligible",
+                "fast",
+                "moisture",
+                "oath",
+                "prairie",
+                "rugged",
+                "scarce"
               ],
               "explanation": "Nơi có khí hậu khô cằn (arid).",
-              "correctAnswer": "C"
+              "correctAnswer": "arid"
             },
             {
               "id": "9",
-              "content": "He forgot that in a humid place everything was covered with _____________.",
+              "content": "He forgot that in a humid place everything was covered with [ 9 ].",
               "options": [
-                "moisture",
+                "abundant",
+                "arid",
                 "cathedral",
+                "eligible",
+                "fast",
+                "moisture",
                 "oath",
-                "prairie"
+                "prairie",
+                "rugged",
+                "scarce"
               ],
               "explanation": "Nơi ẩm ướt mọi thứ được bao phủ bởi hơi ẩm (moisture).",
-              "correctAnswer": "A"
+              "correctAnswer": "moisture"
             },
             {
               "id": "10",
-              "content": "The people who attend that church ______________for two weeks in March.",
+              "content": "The people who attend that church [ 10 ]for two weeks in March.",
               "options": [
+                "abundant",
+                "arid",
+                "cathedral",
+                "eligible",
                 "fast",
-                "grumble",
-                "adjoin",
-                "speculate"
+                "moisture",
+                "oath",
+                "prairie",
+                "rugged",
+                "scarce"
               ],
               "explanation": "Người đến nhà thờ thường nhịn ăn (fast) trong hai tuần.",
-              "correctAnswer": "A"
+              "correctAnswer": "fast"
             },
             {
               "id": "11",
-              "content": "Then they go to the ______________where they pray and eat a small meal of soup.",
+              "content": "Then they go to the [ 11 ]where they pray and eat a small meal of soup.",
               "options": [
+                "abundant",
+                "arid",
                 "cathedral",
-                "abbey",
+                "eligible",
+                "fast",
+                "moisture",
+                "oath",
                 "prairie",
-                "inland"
+                "rugged",
+                "scarce"
               ],
               "explanation": "Đến nhà thờ lớn (cathedral) để cầu nguyện.",
-              "correctAnswer": "A"
+              "correctAnswer": "cathedral"
             },
             {
               "id": "12",
-              "content": "We didn’t know what to do with such a(n) ______________supply of wood.",
+              "content": "We didn’t know what to do with such a(n) [ 12 ]supply of wood.",
               "options": [
-                "scarce",
-                "ample",
                 "abundant",
-                "ragged"
+                "arid",
+                "cathedral",
+                "eligible",
+                "fast",
+                "moisture",
+                "oath",
+                "prairie",
+                "rugged",
+                "scarce"
               ],
               "explanation": "Nguồn cung cấp gỗ dồi dào (abundant).",
-              "correctAnswer": "C"
+              "correctAnswer": "abundant"
             },
             {
               "id": "13",
-              "content": "We had gotten used to making small fires when it was so _____________.",
+              "content": "We had gotten used to making small fires when it was so [ 13 ].",
               "options": [
-                "scarce",
                 "abundant",
+                "arid",
+                "cathedral",
                 "eligible",
-                "arid"
+                "fast",
+                "moisture",
+                "oath",
+                "prairie",
+                "rugged",
+                "scarce"
               ],
               "explanation": "Quen với việc đốt lửa nhỏ khi gỗ khan hiếm (scarce).",
-              "correctAnswer": "A"
+              "correctAnswer": "scarce"
             },
             {
               "id": "14",
-              "content": "In order for the students to attend the dance, they had to take a(n) _____________.",
+              "content": "In order for the students to attend the dance, they had to take a(n) [ 14 ].",
               "options": [
-                "oath",
+                "abundant",
+                "arid",
+                "cathedral",
+                "eligible",
                 "fast",
-                "drought",
-                "moisture"
+                "moisture",
+                "oath",
+                "prairie",
+                "rugged",
+                "scarce"
               ],
               "explanation": "Phải tuyên thệ/thề (take an oath) để tham gia.",
-              "correctAnswer": "A"
+              "correctAnswer": "oath"
             },
             {
               "id": "15",
-              "content": "Those that didn’t promise to be on their best behavior were not _____________.",
+              "content": "Those that didn’t promise to be on their best behavior were not [ 15 ].",
               "options": [
+                "abundant",
+                "arid",
+                "cathedral",
                 "eligible",
-                "ragged",
+                "fast",
+                "moisture",
+                "oath",
+                "prairie",
                 "rugged",
-                "arid"
+                "scarce"
               ],
               "explanation": "Những người không hứa hẹn sẽ không đủ điều kiện (eligible).",
-              "correctAnswer": "A"
+              "correctAnswer": "eligible"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",

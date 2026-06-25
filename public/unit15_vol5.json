@@ -86,126 +86,186 @@
           "questions": [
             {
               "id": "6",
-              "content": "The equipment in the school was so old that Isla ______ that it would not be...",
+              "content": "The equipment in the school was so old that Isla [ 6 ] that it would not be...",
               "options": [
+                "adequate",
+                "facilitate",
+                "fleet",
                 "inferred",
                 "inflated",
-                "facilitate",
-                "adequate"
+                "innate",
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Dựa vào tình trạng thiết bị cũ kỹ, Isla đã suy luận ra một điều. Động từ infer mang nghĩa suy luận, rút ra kết luận. Chia quá khứ thành inferred lắp vào đây cực kỳ hợp lý. Mình chọn A nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "inferred"
             },
             {
               "id": "7",
-              "content": "...______ for students to use.",
+              "content": "...[ 7 ] for students to use.",
               "options": [
-                "saturated",
                 "adequate",
+                "facilitate",
                 "fleet",
-                "innate"
+                "inferred",
+                "inflated",
+                "innate",
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Từ adequate mang nghĩa là đầy đủ, đạt tiêu chuẩn hoặc đáp ứng được yêu cầu. Thiết bị quá cũ nên sẽ không đủ tiêu chuẩn cho học sinh sử dụng. Đáp án B là chính xác nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "adequate"
             },
             {
               "id": "8",
-              "content": "Marilyn had a(n) ______ love for education.",
+              "content": "Marilyn had a(n) [ 8 ] love for education.",
               "options": [
-                "innate",
-                "saturated",
+                "adequate",
+                "facilitate",
+                "fleet",
+                "inferred",
                 "inflated",
-                "naval"
+                "innate",
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Từ innate dùng để chỉ một phẩm chất hoặc năng khiếu bẩm sinh, ăn sâu vào bản chất. Tình yêu mãnh liệt bẩm sinh dành cho giáo dục thì dùng innate love là rất chính xác. Mình chọn A nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "innate"
             },
             {
               "id": "9",
-              "content": "She read many books to ______ her learning.",
+              "content": "She read many books to [ 9 ] her learning.",
               "options": [
-                "import",
+                "adequate",
                 "facilitate",
-                "update",
-                "infer"
+                "fleet",
+                "inferred",
+                "inflated",
+                "innate",
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Facilitate có nghĩa là tạo điều kiện thuận lợi hoặc giúp cho việc gì đó diễn ra dễ dàng hơn. Cô ấy đọc nhiều sách để giúp việc học thuật lợi hơn. Đáp án B chuẩn xác nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "facilitate"
             },
             {
               "id": "10",
-              "content": "Larry took a pen out of the ______ in his backpack...",
+              "content": "Larry took a pen out of the [ 10 ] in his backpack...",
               "options": [
-                "pouch",
-                "mast",
+                "adequate",
+                "facilitate",
                 "fleet",
-                "dilemma"
+                "inferred",
+                "inflated",
+                "innate",
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Pouch là một cái túi nhỏ. Larry lấy một cây bút ra khỏi cái túi nhỏ trong chiếc ba lô của mình. Các từ khác như cột buồm (mast) hay hạm đội (fleet) không thể nằm trong ba lô được. Mình khoanh A nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "pouch"
             },
             {
               "id": "11",
-              "content": "...and used it to ______ the information on the form.",
+              "content": "...and used it to [ 11 ] the information on the form.",
               "options": [
-                "infer",
-                "update",
-                "inflate",
-                "import"
+                "adequate",
+                "facilitate",
+                "fleet",
+                "inferred",
+                "inflated",
+                "innate",
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Anh ấy dùng bút để cập nhật thông tin trên tờ đơn. Từ có nghĩa cập nhật chính là update. Mình chọn B nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "update"
             },
             {
               "id": "12",
-              "content": "The ______ was used to being out at sea.",
+              "content": "The [ 12 ] was used to being out at sea.",
               "options": [
+                "adequate",
+                "facilitate",
                 "fleet",
+                "inferred",
+                "inflated",
+                "innate",
                 "mast",
                 "pouch",
-                "accessory"
+                "saturated",
+                "update"
               ],
               "explanation": "Từ fleet mang nghĩa là một hạm đội hoặc một đoàn tàu. Một đoàn tàu thì dĩ nhiên đã quen thuộc với việc lênh đênh trên biển. Đáp án A là hợp lý nhất nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "fleet"
             },
             {
               "id": "13",
-              "content": "As a result, they didn’t mind having their clothes ______ with sea water.",
+              "content": "As a result, they didn’t mind having their clothes [ 13 ] with sea water.",
               "options": [
                 "adequate",
-                "saturated",
+                "facilitate",
+                "fleet",
+                "inferred",
+                "inflated",
                 "innate",
-                "elaborate"
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Saturated có nghĩa là ướt đẫm, thấm đẫm. Họ không ngại việc quần áo của mình bị ướt đẫm nước biển. Mình chọn B nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "saturated"
             },
             {
               "id": "14",
-              "content": "After the fire, nothing was left of the ship except for its tall ______.",
+              "content": "After the fire, nothing was left of the ship except for its tall [ 14 ].",
               "options": [
-                "mast",
+                "adequate",
+                "facilitate",
                 "fleet",
-                "grid",
-                "marble"
+                "inferred",
+                "inflated",
+                "innate",
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Mast là cột buồm của con tàu. Sau trận hỏa hoạn, tàu bị thiêu rụi chỉ còn lại cái cột buồm cao ngất ngưởng. Đáp án A hoàn toàn phù hợp nha.",
-              "correctAnswer": "A"
+              "correctAnswer": "mast"
             },
             {
               "id": "15",
-              "content": "Soon, the sailors ______ a rescue boat and sailed to safety.",
+              "content": "Soon, the sailors [ 15 ] a rescue boat and sailed to safety.",
               "options": [
+                "adequate",
+                "facilitate",
+                "fleet",
                 "inferred",
                 "inflated",
-                "facilitated",
-                "updated"
+                "innate",
+                "mast",
+                "pouch",
+                "saturated",
+                "update"
               ],
               "explanation": "Inflate có nghĩa là bơm phồng lên. Các thủy thủ đã bơm phồng một chiếc thuyền cứu hộ (thường là xuồng cao su) để thoát đến nơi an toàn. Mình khoanh B nhé.",
-              "correctAnswer": "B"
+              "correctAnswer": "inflated"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Kéo thả"
         },
         {
           "id": "sec3_wordlist",
