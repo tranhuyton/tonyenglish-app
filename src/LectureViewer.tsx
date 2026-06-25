@@ -388,7 +388,12 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
              font-size: 17px;
              -webkit-font-smoothing: antialiased;
          }
-         * { box-sizing: border-box; }
+         * { 
+             box-sizing: border-box; 
+             max-width: 100% !important;
+             word-wrap: break-word;
+             overflow-wrap: break-word;
+         }
          
          /* Typography Styling cho Học thuật */
          h1, h2, h3, h4 { 
@@ -462,9 +467,12 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          table { 
              border-collapse: collapse;
              width: 100% !important; 
+             max-width: 100% !important;
+             display: block;
+             overflow-x: auto;
+             -webkit-overflow-scrolling: touch;
              margin-bottom: 1.5rem; 
              border-radius: 8px; 
-             overflow: hidden; 
              box-shadow: 0 1px 3px rgba(0,0,0,0.05);
          }
          table th, table td { 
