@@ -18,147 +18,147 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1",
-              "content": "A survey found that not very many people like the [ 1_0 ]. So he is trying to think of ways to [ 1_1 ] his image and make people like him.",
-              "options": [
-                "candidate",
-                "enhance",
-                "era"
-              ],
-              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng.",
-              "correctAnswer": [
-                "candidate",
-                "enhance"
-              ]
+              "id": "1_0",
+              "content": "<p style=\"margin-bottom: 12px;\">1. A survey found that not very many people like the [ 1 ]. So he is trying to think of ways to [ 2 ] his image and make people like him.</p><p style=\"margin-bottom: 12px;\">2. We live in a(n) [ 3 ] where people are very concerned about conserving our natural resources. Many people think using [ 4 ] energy is a good way to do this.</p><p style=\"margin-bottom: 12px;\">3. The company doesn't want to [ 5 ] the air anymore, so they are going to [ 6 ] new rules for disposing waste.</p><p style=\"margin-bottom: 12px;\">4. The [ 7 ] files were locked in the basement. The information in them was about important customers and had to be kept [ 8 ].</p><p style=\"margin-bottom: 12px;\">5. In the early 1900s, music records were an amazing [ 9 ]. People back then would have been even more amazed by today's [ 10 ] music players.</p><p style=\"margin-bottom: 12px;\">6. The old [ 11 ] was very large and difficult to drive. Jane had trouble parking it between the [ 12 ] lines in the parking lot.</p><p style=\"margin-bottom: 12px;\">7. Ben didn't listen to my advice about [ 13 ]. Instead, he [ 14 ] me and continued to drive fast, eventually causing an accident.</p><p style=\"margin-bottom: 12px;\">8. The [ 15 ] for the race are very simple: just run as fast as you can. There will be short [ 16 ] when you can stop for a drink of water.</p><p style=\"margin-bottom: 12px;\">9. The government decided to [ 17 ] its borders. It made several of its [ 18 ] smaller so that it could create a new one.</p><p style=\"margin-bottom: 12px;\">10. The baseball [ 19 ] is always a lot of fun. It allows students from all over the city to [ 20 ] with each other.</p>",
+              "options": [],
+              "correctAnswer": "candidate",
+              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng."
             },
             {
-              "id": "2",
-              "content": "We live in a(n) [ 2_0 ] where people are very concerned about conserving our natural resources. Many people think using [ 2_1 ] energy is a good way to do this.",
-              "options": [
-                "solar",
-                "era",
-                "pollute"
-              ],
-              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng.",
-              "correctAnswer": [
-                "era",
-                "solar"
-              ]
+              "id": "1_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "enhance",
+              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng."
             },
             {
-              "id": "3",
-              "content": "The company doesn't want to [ 3_0 ] the air anymore, so they are going to [ 3_1 ] new rules for disposing waste.",
-              "options": [
-                "incorporate",
-                "pollute",
-                "modify"
-              ],
-              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng.",
-              "correctAnswer": [
-                "pollute",
-                "incorporate"
-              ]
+              "id": "2_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "era",
+              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng."
             },
             {
-              "id": "4",
-              "content": "The [ 4_0 ] files were locked in the basement. The information in them was about important customers and had to be kept [ 4_1 ].",
-              "options": [
-                "corporate",
-                "confidential",
-                "mobile"
-              ],
-              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng.",
-              "correctAnswer": [
-                "corporate",
-                "confidential"
-              ]
+              "id": "2_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "solar",
+              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng."
             },
             {
-              "id": "5",
-              "content": "In the early 1900s, music records were an amazing [ 5_0 ]. People back then would have been even more amazed by today's [ 5_1 ] music players.",
-              "options": [
-                "phenomenon",
-                "mobile",
-                "automobile"
-              ],
-              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng.",
-              "correctAnswer": [
-                "phenomenon",
-                "mobile"
-              ]
+              "id": "3_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "pollute",
+              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng."
             },
             {
-              "id": "6",
-              "content": "The old [ 6_0 ] was very large and difficult to drive. Jane had trouble parking it between the [ 6_1 ] lines in the parking lot.",
-              "options": [
-                "automobile",
-                "parallel",
-                "territory"
-              ],
-              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng.",
-              "correctAnswer": [
-                "automobile",
-                "parallel"
-              ]
+              "id": "3_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "incorporate",
+              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng."
             },
             {
-              "id": "7",
-              "content": "Ben didn't listen to my advice about [ 7_0 ]. Instead, he [ 7_1 ] me and continued to drive fast, eventually causing an accident.",
-              "options": [
-                "transportation",
-                "ridiculed",
-                "guidelines"
-              ],
-              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng.",
-              "correctAnswer": [
-                "transportation",
-                "ridiculed"
-              ]
+              "id": "4_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "corporate",
+              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng."
             },
             {
-              "id": "8",
-              "content": "The [ 8_0 ] for the race are very simple: just run as fast as you can. There will be short [ 8_1 ] when you can stop for a drink of water.",
-              "options": [
-                "intervals",
-                "guidelines",
-                "territories"
-              ],
-              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng.",
-              "correctAnswer": [
-                "guidelines",
-                "intervals"
-              ]
+              "id": "4_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "confidential",
+              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng."
             },
             {
-              "id": "9",
-              "content": "The government decided to [ 9_0 ] its borders. It made several of its [ 9_1 ] smaller so that it could create a new one.",
-              "options": [
-                "territories",
-                "modify",
-                "interact"
-              ],
-              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng.",
-              "correctAnswer": [
-                "modify",
-                "territories"
-              ]
+              "id": "5_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "phenomenon",
+              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng."
             },
             {
-              "id": "10",
-              "content": "The baseball [ 10_0 ] is always a lot of fun. It allows students from all over the city to [ 10_1 ] with each other.",
-              "options": [
-                "tournament",
-                "interact",
-                "modify"
-              ],
-              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng.",
-              "correctAnswer": [
-                "tournament",
-                "interact"
-              ]
+              "id": "5_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "mobile",
+              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng."
+            },
+            {
+              "id": "6_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "automobile",
+              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng."
+            },
+            {
+              "id": "6_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "parallel",
+              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng."
+            },
+            {
+              "id": "7_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "transportation",
+              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng."
+            },
+            {
+              "id": "7_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "ridiculed",
+              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng."
+            },
+            {
+              "id": "8_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "guidelines",
+              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng."
+            },
+            {
+              "id": "8_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "intervals",
+              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng."
+            },
+            {
+              "id": "9_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "modify",
+              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng."
+            },
+            {
+              "id": "9_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "territories",
+              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng."
+            },
+            {
+              "id": "10_0",
+              "content": "",
+              "options": [],
+              "correctAnswer": "tournament",
+              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng."
+            },
+            {
+              "id": "10_1",
+              "content": "",
+              "options": [],
+              "correctAnswer": "interact",
+              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng."
             }
           ],
-          "questionType": "Droplist"
+          "questionType": "Điền từ"
         },
         {
           "id": "sec1_ex2",
