@@ -18,7 +18,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "q_wl_0_0",
+              "id": 71,
               "content": "<p>to clean with a broom</p>",
               "options": [
                 "sweep",
@@ -30,7 +30,7 @@
               "explanation": "sweep: quét nhà"
             },
             {
-              "id": "q_wl_0_1",
+              "id": 72,
               "content": "<p>to say your opinion</p>",
               "options": [
                 "comment",
@@ -42,7 +42,7 @@
               "explanation": "comment: bình luận, đưa ra ý kiến"
             },
             {
-              "id": "q_wl_0_2",
+              "id": 73,
               "content": "<p>to bring into existence</p>",
               "options": [
                 "sole",
@@ -54,7 +54,7 @@
               "explanation": "found: thành lập, sáng lập"
             },
             {
-              "id": "q_wl_0_3",
+              "id": 74,
               "content": "<p>a piece of jewelry</p>",
               "options": [
                 "civil",
@@ -66,7 +66,7 @@
               "explanation": "bracelet: vòng tay"
             },
             {
-              "id": "q_wl_0_4",
+              "id": 75,
               "content": "<p>a loud explosion</p>",
               "options": [
                 "treachery",
@@ -82,74 +82,74 @@
         {
           "id": "sec_wl_1",
           "title": "Exercise 2",
-          "questionType": "Điền từ",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "q_wl_1_0",
-              "content": "<p style=\"margin-bottom: 12px;\">The lucky man was the <u class=\"font-bold\">only</u> winner of the grand prize. [ 1 ]</p><p style=\"margin-bottom: 12px;\">She was so worried about her mother's health that she went to church to <u class=\"font-bold\">talk to God</u>. [ 2 ]</p><p style=\"margin-bottom: 12px;\">He <u class=\"font-bold\">coughed and had difficulty breathing</u> after eating a large piece of food. [ 3 ]</p><p style=\"margin-bottom: 12px;\">The rain <u class=\"font-bold\">stopped</u> in the early morning after pouring all night long. [ 4 ]</p><p style=\"margin-bottom: 12px;\">There is a <u class=\"font-bold\">large number</u> of people in the park today. [ 5 ]</p><p style=\"margin-bottom: 12px;\">I hit the wall with my car, and now there is a small <u class=\"font-bold\">amount of damage</u> in it. [ 6 ]</p><p style=\"margin-bottom: 12px;\">I <u class=\"font-bold\">don't believe the honesty of</u> people who always try to borrow money. [ 7 ]</p><p style=\"margin-bottom: 12px;\">The conditions in some parts of Africa are very poor, and disease is <u class=\"font-bold\">very common</u>. [ 8 ]</p><p style=\"margin-bottom: 12px;\">The man behaved in an <u class=\"font-bold\">untrustworthy way</u> toward his friends. [ 9 ]</p><p style=\"margin-bottom: 12px;\">I'm going to <u class=\"font-bold\">go to the other side</u> of the road to meet my friend. [ 10 ]</p>",
+              "id": 76,
+              "content": "<p>The lucky man was the <u class=\"font-bold\">only</u> winner of the grand prize.</p>",
               "options": [],
               "correctAnswer": "sole",
               "explanation": "sole = duy nhất"
             },
             {
-              "id": "q_wl_1_1",
-              "content": "<p></p>",
+              "id": 77,
+              "content": "<p>She was so worried about her mother's health that she went to church to <u class=\"font-bold\">talk to God</u>.</p>",
               "options": [],
               "correctAnswer": "pray",
               "explanation": "pray = cầu nguyện"
             },
             {
-              "id": "q_wl_1_2",
-              "content": "<p></p>",
+              "id": 78,
+              "content": "<p>He <u class=\"font-bold\">coughed and had difficulty breathing</u> after eating a large piece of food.</p>",
               "options": [],
               "correctAnswer": "choked",
               "explanation": "choke = nghẹt thở"
             },
             {
-              "id": "q_wl_1_3",
-              "content": "<p></p>",
+              "id": 79,
+              "content": "<p>The rain <u class=\"font-bold\">stopped</u> in the early morning after pouring all night long.</p>",
               "options": [],
               "correctAnswer": "ceased",
               "explanation": "cease = dừng lại"
             },
             {
-              "id": "q_wl_1_4",
-              "content": "<p></p>",
+              "id": 80,
+              "content": "<p>There is a <u class=\"font-bold\">large number</u> of people in the park today.</p>",
               "options": [],
               "correctAnswer": "mass",
               "explanation": "mass = số lượng lớn"
             },
             {
-              "id": "q_wl_1_5",
-              "content": "<p></p>",
+              "id": 81,
+              "content": "<p>I hit the wall with my car, and now there is a small <u class=\"font-bold\">amount of damage</u> in it.</p>",
               "options": [],
               "correctAnswer": "dent",
               "explanation": "dent = vết lõm"
             },
             {
-              "id": "q_wl_1_6",
-              "content": "<p></p>",
+              "id": 82,
+              "content": "<p>I <u class=\"font-bold\">don't believe the honesty of</u> people who always try to borrow money.</p>",
               "options": [],
               "correctAnswer": "distrust",
               "explanation": "distrust = không tin tưởng"
             },
             {
-              "id": "q_wl_1_7",
-              "content": "<p></p>",
+              "id": 83,
+              "content": "<p>The conditions in some parts of Africa are very poor, and disease is <u class=\"font-bold\">very common</u>.</p>",
               "options": [],
               "correctAnswer": "rife",
               "explanation": "rife = lan tràn, phổ biến"
             },
             {
-              "id": "q_wl_1_8",
-              "content": "<p></p>",
+              "id": 84,
+              "content": "<p>The man behaved in an <u class=\"font-bold\">untrustworthy way</u> toward his friends.</p>",
               "options": [],
               "correctAnswer": "betrayed",
               "explanation": "betray = phản bội"
             },
             {
-              "id": "q_wl_1_9",
-              "content": "<p></p>",
+              "id": 85,
+              "content": "<p>I'm going to <u class=\"font-bold\">go to the other side</u> of the road to meet my friend.</p>",
               "options": [],
               "correctAnswer": "cross",
               "explanation": "cross = đi qua"
@@ -162,7 +162,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "q_wl_2_0",
+              "id": 86,
               "content": "<p>The ______ threw a lot of smoke into the air, and it made me ______.</p>",
               "options": [
                 "blast / choke",
@@ -172,7 +172,7 @@
               "explanation": "blast (vụ nổ), choke (nghẹt thở)"
             },
             {
-              "id": "q_wl_2_1",
+              "id": 87,
               "content": "<p>The army built a ______ to defend themselves from their former ally's ______.</p>",
               "options": [
                 "fort / treachery",
@@ -182,7 +182,7 @@
               "explanation": "fort (pháo đài), treachery (sự phản bội)"
             },
             {
-              "id": "q_wl_2_2",
+              "id": 88,
               "content": "<p>My jobs at home are to ______ the floor and ______ things under the bed.</p>",
               "options": [
                 "sweep / tuck",
@@ -192,7 +192,7 @@
               "explanation": "sweep (quét), tuck (nhét, giấu)"
             },
             {
-              "id": "q_wl_2_3",
+              "id": 89,
               "content": "<p>The homeless man's ______ possession was a jacket with a warm ______.</p>",
               "options": [
                 "sole / lining",
@@ -202,7 +202,7 @@
               "explanation": "sole (duy nhất), lining (lớp lót)"
             },
             {
-              "id": "q_wl_2_4",
+              "id": 90,
               "content": "<p>I ______ those girls because they ______ their friends by telling their secrets.</p>",
               "options": [
                 "distrust / betray",
@@ -212,7 +212,7 @@
               "explanation": "distrust (không tin tưởng), betray (phản bội)"
             },
             {
-              "id": "q_wl_2_5",
+              "id": 91,
               "content": "<p>He ______ his business after the fighting from the war ______.</p>",
               "options": [
                 "founded / ceased",
@@ -222,7 +222,7 @@
               "explanation": "found (thành lập), cease (chấm dứt)"
             },
             {
-              "id": "q_wl_2_6",
+              "id": 92,
               "content": "<p>The man on the news ______ on the recent ______ struggles of the people.</p>",
               "options": [
                 "commented / civil",
@@ -232,7 +232,7 @@
               "explanation": "comment (bình luận), civil (thuộc về dân sự, nội bộ)"
             },
             {
-              "id": "q_wl_2_7",
+              "id": 93,
               "content": "<p>Fiona stepped on my ______ and made a ______.</p>",
               "options": [
                 "bracelet / dent",
@@ -242,7 +242,7 @@
               "explanation": "bracelet (vòng tay), dent (vết lõm)"
             },
             {
-              "id": "q_wl_2_8",
+              "id": 94,
               "content": "<p>I watched the ______ of people ______ the bridge to see the Queen.</p>",
               "options": [
                 "mass / cross",
@@ -252,7 +252,7 @@
               "explanation": "mass (đám đông), cross (băng qua)"
             },
             {
-              "id": "q_wl_2_9",
+              "id": 95,
               "content": "<p>The country was ______ with enemies, so I ______ that our people would be safe.</p>",
               "options": [
                 "rife / pray",
@@ -268,7 +268,7 @@
     {
       "id": "part_reading",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;\">The Betrayal</h1><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">A king lived in a <b>fort</b> with his daughter, Clara. The king had founded a great empire, but his land was <b>rife</b> with enemies who wanted to take over the kingdom. Because there was so much <b>civil</b> unrest, the king told Clara not to trust anyone.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">One day, Clara was walking outside when she saw a girl sweeping the path. Clara crossed the garden, and they started talking. The girl's name was Susie. Clara felt sorry for Susie because she was very poor, and Clara gave her a <b>bracelet</b>. After that, Susie and Clara met every day.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">Once, the King saw them talking. He told Clara, \"Don't talk to that girl. She could be an enemy.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">\"You can't <b>distrust</b> everyone,\" commented Clara. \"She is my <b>sole</b> friend. It's OK to be friendly to people.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">The King said, \"Don't argue with me. Stay inside from now on, and talk to no one.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">Clara felt lonely in the <b>fort</b>. But one day she saw Susie outside. She wrote her a note with a map showing a secret entrance to the <b>fort</b>. Clara wrote: \"Come at night, and we can talk together. Don't show anybody this note.\" She threw the note to Susie, and Susie tucked it in the <b>lining</b> of her dress.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">That night Clara waited for Susie. But she heard something ticking, and then a loud <b>blast</b>. She ran into the hall, and it was full of smoke, which made her <b>choke</b>. A <b>mass</b> of soldiers were there, fighting. Clara realized that Susie had betrayed her and given the map to her father's enemies. Clara prayed that everyone in the castle would be safe from her friend's <b>treachery</b>.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">At last, the fighting ceased. Clara <b>found</b> her father in the hall with his soldiers. They had defeated their enemies, but there were dents in their armor from the heavy fighting. Clara told her father what she had done and promised never to disobey him again.</p></div>",
+      "content": "<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px; line-height: 1.2;\">The Betrayal</h1><div style=\"font-family: Arial, sans-serif; \"><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">A king lived in a <b>fort</b> with his daughter, Clara. The king had founded a great empire, but his land was <b>rife</b> with enemies who wanted to take over the kingdom. Because there was so much <b>civil</b> unrest, the king told Clara not to trust anyone.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">One day, Clara was walking outside when she saw a girl sweeping the path. Clara crossed the garden, and they started talking. The girl's name was Susie. Clara felt sorry for Susie because she was very poor, and Clara gave her a <b>bracelet</b>. After that, Susie and Clara met every day.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">Once, the King saw them talking. He told Clara, \"Don't talk to that girl. She could be an enemy.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">\"You can't <b>distrust</b> everyone,\" commented Clara. \"She is my <b>sole</b> friend. It's OK to be friendly to people.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">The King said, \"Don't argue with me. Stay inside from now on, and talk to no one.\"</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">Clara felt lonely in the <b>fort</b>. But one day she saw Susie outside. She wrote her a note with a map showing a secret entrance to the <b>fort</b>. Clara wrote: \"Come at night, and we can talk together. Don't show anybody this note.\" She threw the note to Susie, and Susie tucked it in the <b>lining</b> of her dress.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">That night Clara waited for Susie. But she heard something ticking, and then a loud <b>blast</b>. She ran into the hall, and it was full of smoke, which made her <b>choke</b>. A <b>mass</b> of soldiers were there, fighting. Clara realized that Susie had betrayed her and given the map to her father's enemies. Clara prayed that everyone in the castle would be safe from her friend's <b>treachery</b>.</p><p style=\"font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 15px;\">At last, the fighting ceased. Clara <b>found</b> her father in the hall with his soldiers. They had defeated their enemies, but there were dents in their armor from the heavy fighting. Clara told her father what she had done and promised never to disobey him again.</p></div>",
       "sections": [
         {
           "id": "sec_r_0",
@@ -276,7 +276,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "q_r_0_0",
+              "id": 96,
               "content": "<p>The land near the King's fort was safe from enemies.</p>",
               "options": [
                 "T",
@@ -286,7 +286,7 @@
               "explanation": "The land near the King's fort was rife with enemies."
             },
             {
-              "id": "q_r_0_1",
+              "id": 97,
               "content": "<p>When Clara and Susie met, Clara was sweeping the path.</p>",
               "options": [
                 "T",
@@ -296,7 +296,7 @@
               "explanation": "When Clara and Susie met, Susie was sweeping the path."
             },
             {
-              "id": "q_r_0_2",
+              "id": 98,
               "content": "<p>Clara crossed the garden to talk to Susie.</p>",
               "options": [
                 "T",
@@ -306,7 +306,7 @@
               "explanation": ""
             },
             {
-              "id": "q_r_0_3",
+              "id": 99,
               "content": "<p>Clara gave Susie a bracelet.</p>",
               "options": [
                 "T",
@@ -316,7 +316,7 @@
               "explanation": ""
             },
             {
-              "id": "q_r_0_4",
+              "id": 100,
               "content": "<p>Clara commented to her father that he should distrust people.</p>",
               "options": [
                 "T",
@@ -326,7 +326,7 @@
               "explanation": "Clara commented to her father that he shouldn't distrust people."
             },
             {
-              "id": "q_r_0_5",
+              "id": 101,
               "content": "<p>Clara choked because of the smoke.</p>",
               "options": [
                 "T",
@@ -343,7 +343,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "q_r_1_0",
+              "id": 102,
               "content": "<p>Which of the following actions did Clara do in the story?</p>",
               "options": [
                 "Sweep the path",
@@ -355,7 +355,7 @@
               "explanation": "Pray"
             },
             {
-              "id": "q_r_1_1",
+              "id": 103,
               "content": "<p>What did Clara hear in the middle of the night?</p>",
               "options": [
                 "Civil fighting",
@@ -367,7 +367,7 @@
               "explanation": "A loud blast"
             },
             {
-              "id": "q_r_1_2",
+              "id": 104,
               "content": "<p>What did the king emphasize?</p>",
               "options": [
                 "Anybody could be an enemy.",
@@ -379,7 +379,7 @@
               "explanation": "Anybody could be an enemy."
             },
             {
-              "id": "q_r_1_3",
+              "id": 105,
               "content": "<p>Where were the mass of soldiers fighting?</p>",
               "options": [
                 "In the garden",
