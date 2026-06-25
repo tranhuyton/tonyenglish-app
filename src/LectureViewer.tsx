@@ -289,8 +289,10 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
    const [iframeHeight, setIframeHeight] = useState(100);
 
    // Bỏ các style padding inline cứng có chứa !important do Jodit sinh ra, 
-   // để CSS của viewer có thể ghi đè lại padding đẹp hơn
-   const cleanedHtml = (html || '').replace(/padding(?:-left|-right|-top|-bottom)?:\s*0(?:px)?\s*!important;?/gi, '');
+   // và các height gán cứng vào table để tránh bị lỗi hiển thị
+   const cleanedHtml = (html || '')
+       .replace(/padding(?:-left|-right|-top|-bottom)?:\s*0(?:px)?\s*!important;?/gi, '')
+       .replace(/height:\s*\d+px;?/gi, '');
 
    useEffect(() => { 
        setIframeHeight(10); 
