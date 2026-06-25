@@ -2351,8 +2351,16 @@ const handleFinish = async () => {
                                   isCorrect = idxInCombo < pts;
                               }
                           } else {
-                              const q = section?.questions.find((q:any) => String(q.id) === id);
-                              isCorrect = q && isAnswerCorrect(answers[id] || '', q.correctAnswer || '');
+                              let qCorrectAns = '';
+                              parts.forEach((p: any) => {
+                                 (Array.isArray(p?.sections) ? p.sections : []).forEach((s: any) => {
+                                    const q = (Array.isArray(s?.questions) ? s.questions : []).find((sq: any) => String(sq?.id) === String(id));
+                                    if (q) {
+                                        qCorrectAns = String(q.correctAnswer || '');
+                                    }
+                                 });
+                              });
+                              isCorrect = isAnswerCorrect(answers[id] || '', qCorrectAns) && qCorrectAns !== '';
                           }
                           btnStyle += isCorrect ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/30 border-transparent' : 'bg-red-500 text-white shadow-md shadow-red-500/30 border-transparent';
                       } else {
@@ -2434,8 +2442,16 @@ const handleFinish = async () => {
                                 isCorrect = idxInCombo < pts;
                             }
                         } else {
-                            const q = section?.questions.find((q:any) => String(q.id) === id);
-                            isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase() && String(q.correctAnswer || '').trim() !== '';
+                            let qCorrectAns = '';
+                            parts.forEach((p: any) => {
+                               (Array.isArray(p?.sections) ? p.sections : []).forEach((s: any) => {
+                                  const q = (Array.isArray(s?.questions) ? s.questions : []).find((sq: any) => String(sq?.id) === String(id));
+                                  if (q) {
+                                      qCorrectAns = String(q.correctAnswer || '');
+                                  }
+                               });
+                            });
+                            isCorrect = isAnswerCorrect(answers[id] || '', qCorrectAns) && qCorrectAns !== '';
                         }
                         btnClass += isCorrect ? 'bg-emerald-500 text-white border-emerald-500' : 'bg-red-500 text-white border-red-500';
                     } else { 
