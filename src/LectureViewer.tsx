@@ -289,10 +289,8 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
    const [iframeHeight, setIframeHeight] = useState(100);
 
    // Bỏ các style padding inline cứng có chứa !important do Jodit sinh ra, 
-   // và các height gán cứng vào table để tránh bị lỗi hiển thị
-   const cleanedHtml = (html || '')
-       .replace(/padding(?:-left|-right|-top|-bottom)?:\s*0(?:px)?\s*!important;?/gi, '')
-       .replace(/height:\s*\d+px;?/gi, '');
+   // để CSS của viewer có thể ghi đè lại padding đẹp hơn
+   const cleanedHtml = (html || '').replace(/padding(?:-left|-right|-top|-bottom)?:\s*0(?:px)?\s*!important;?/gi, '');
 
    useEffect(() => { 
        setIframeHeight(10); 
@@ -468,16 +466,14 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          table { 
              border-collapse: collapse;
              width: 100% !important; 
-             height: auto !important;
              margin-bottom: 1.5rem; 
              border-radius: 8px; 
              box-shadow: 0 1px 3px rgba(0,0,0,0.05);
          }
-         table th, table td, table tr { 
+         table th, table td { 
              border: 1px solid #94a3b8 !important;
              padding: 1rem 1.5rem !important; 
              vertical-align: top; 
-             height: auto !important;
          }
          table th { 
              background-color: var(--bg-light) !important;
@@ -500,8 +496,18 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
              color: #f8fafc; 
              padding: 1.25rem; 
              border-radius: 12px; 
-<body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
-       <div id="content-wrapper">${cleanedHtml ? cleanedHtml.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
+             overflow-x: auto; 
+             margin-bottom: 1.5rem; 
+             font-size: 0.9rem;
+         }
+         
+         #content-wrapper { display: flow-root; width: 100%; padding-bottom: 2rem; }
+       </style>
+     </head>
+     <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
+       <div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+           <div id="content-wrapper">${cleanedHtml ? cleanedHtml.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
+       </div>
        <script>
          document.addEventListener('click', function(e) {
            var target = e.target;
