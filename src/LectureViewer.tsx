@@ -390,7 +390,6 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          }
          * { 
              box-sizing: border-box; 
-             max-width: 100% !important;
              word-wrap: break-word;
              overflow-wrap: break-word;
          }
@@ -467,10 +466,6 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          table { 
              border-collapse: collapse;
              width: 100% !important; 
-             max-width: 100% !important;
-             display: block;
-             overflow-x: auto;
-             -webkit-overflow-scrolling: touch;
              margin-bottom: 1.5rem; 
              border-radius: 8px; 
              box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -510,7 +505,9 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
        </style>
      </head>
      <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
-       <div id="content-wrapper">${cleanedHtml ? cleanedHtml.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
+       <div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+           <div id="content-wrapper">${cleanedHtml ? cleanedHtml.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
+       </div>
        <script>
          document.addEventListener('click', function(e) {
            var target = e.target;
