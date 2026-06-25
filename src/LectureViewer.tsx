@@ -288,6 +288,10 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(100);
 
+   // Bỏ các style padding inline cứng có chứa !important do Jodit sinh ra, 
+   // để CSS của viewer có thể ghi đè lại padding đẹp hơn
+   const cleanedHtml = (html || '').replace(/padding(?:-left|-right|-top|-bottom)?:\s*0(?:px)?\s*!important;?/gi, '');
+
    useEffect(() => { 
        setIframeHeight(10); 
    }, [html]);
@@ -464,7 +468,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
              box-shadow: 0 1px 3px rgba(0,0,0,0.05);
          }
          table th, table td { 
-             border: 1px solid #cbd5e1 !important;
+             border: 1px solid #94a3b8 !important;
              padding: 1rem 1.5rem !important; 
              vertical-align: top; 
          }
@@ -498,7 +502,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
        </style>
      </head>
      <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
-       <div id="content-wrapper">${html ? html.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
+       <div id="content-wrapper">${cleanedHtml ? cleanedHtml.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
        <script>
          document.addEventListener('click', function(e) {
            var target = e.target;
