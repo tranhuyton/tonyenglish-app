@@ -98,101 +98,101 @@
               "id": "11",
               "content": "The scientist’s theory was full of <i>flaws</i>. There was no way it could work.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Flaw means a mistake in something that causes it to be less effective or correct.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
               "content": "The <i>butler</i> catered to the old man’s every need.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Butler means the most important male servant in a wealthy house.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
               "content": "I hope we do not have to say <i>farewells</i> to the bus to school.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Farewell means goodbye, usually to people, not to objects like a bus.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "14",
               "content": "The teacher was proud of the <i>filth</i> her students achieved in class.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Filth is a large amount of dirt or dirty things that disgust you. It is not something to be proud of.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
               "content": "After the initial pain of dropping the hammer on my toe, it went <i>numb</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Numb means a body part does not have any feeling.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "16",
               "content": "He was not looking forward to cleaning the huge <i>mound</i> of dirty dishes in the sink.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Mound means a large pile of something.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
               "content": "The scared child felt <i>bliss</i> and cried for his mother.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Bliss is a state of complete happiness, which contradicts being scared and crying.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "18",
               "content": "Huge stained-glass windows <i>adorn</i> the new church.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Adorn means to make it more beautiful by decorating it.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
               "content": "Fossil evidence is a <i>testament</i> to the immense size of dinosaurs.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Testament means proof that something exists or is true.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
               "content": "The <i>reckless</i> climber took every precaution to insure a safe climb.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Reckless means acting in an unsafe way, which contradicts taking every precaution.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

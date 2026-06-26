@@ -344,11 +344,11 @@
               "id": "26",
               "content": "Janice’s dad was a part of the <i>senate</i>. He fixed cars all day.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Senate is a part of government, not related to fixing cars.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -374,11 +374,11 @@
               "id": "29",
               "content": "Mariah <i>enrolled</i> the clothes and put them in her drawer.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Enroll means to put one's name on a list, not related to clothes.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "30",

@@ -379,101 +379,101 @@
               "id": "26",
               "content": "We all felt that the new office rules were completely <i>absurd</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Absurd means ridiculous.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
               "content": "The bushes were <i>tangled</i> with vine.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Tangle means twisted together.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
               "content": "Losing your memory as you get older is called <i>anemia</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Anemia is a blood condition that makes one tired, not losing memory.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
               "content": "A strong smell is the <i>hallmark</i> of a good cheese.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Hallmark means a unique characteristic.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
               "content": "It was easy to get lost in the big house. Its many hallways made it seem like a <i>craze</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Craze means a popular activity, not a maze.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "31",
               "content": "The local <i>vanity</i> asked people to give old clothing and money.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Vanity is excessive pride, it does not mean charity.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
               "content": "After putting on too much <i>rouge</i>, she looked like a clown.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Rouge is makeup for cheeks or lips.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "33",
               "content": "Everyone may attend <i>excess</i> those who have not finished their assignment.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Excess means an amount more than needed, not 'except'.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
               "content": "Talking to people with food in your mouth is not only gross. It is also quite <i>vulgar</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Vulgar means rude or lacking in style.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "Because he was an <i>aristocrat</i>, he had to wash dishes in order to make enough money.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Aristocrat is a person of the highest class, they usually don't have to wash dishes.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

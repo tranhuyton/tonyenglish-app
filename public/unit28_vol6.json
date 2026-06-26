@@ -276,151 +276,151 @@
               "id": "21",
               "content": "Once the weather was <i>renovated</i>, the day was warm and sunny. Now, we were all able to go on a picnic in the park.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Renovate applies to buildings, not weather.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
               "content": "The scientists worked all day in the <i>slab</i>. They were inventing a new plastic that would not melt under the extreme heat of the sun.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Slab is a piece of stone, not a laboratory.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "23",
               "content": "The amount of cows <i>outnumbered</i> the pigs. There were more pigs than cows.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Contradictory sentence.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "24",
               "content": "Why don’t you connect those two large blue <i>arches</i>, so that you can form a giant square?",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Arches are curved, not straight to form a square.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "25",
               "content": "The worse <i>casualty</i> from the earthquake was a woman who broke a leg.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Casualty refers to injured people.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "26",
               "content": "The two enemies <i>erected</i> a wall between their properties. They had hoped that it would reduce any future arguments.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Erected means built.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
               "content": "Whenever Doug was in a <i>foul</i> mood, everyone enjoyed being around him.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Contradictory sentence.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
               "content": "The glass was filled with a <i>hectare</i> of water.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Hectare measures land area, not volume of water.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
               "content": "This is the kitchen, and the <i>adjoining</i> room is the dining room.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Adjoining means next to.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
               "content": "The visit lacked in <i>hospitality</i>. There was nothing to eat and nowhere to sit.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Hospitality means friendly behavior and entertainment.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "31",
               "content": "You can stay in the house tonight, but your dog has to sleep outside in the <i>mansion</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Mansion is a large expensive home, not a dog house.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
               "content": "William <i>alleged</i> all the way home. As a result, he was out of breath and sweaty by the time he got there.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Allege means to accuse, not to run or exert physically.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "The grandmother was <i>overjoyed</i> to see her grandchildren. She couldn’t stop smiling when she saw their lovely faces.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Overjoyed means extremely happy.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "This room here is the <i>pasture</i>. It’s where we keep all our old furniture.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Pasture is a field for animals, not a storage room.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
               "content": "The manager read his employees’ <i>petition</i>. They wanted a longer lunch break.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Petition is a written request.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

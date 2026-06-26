@@ -414,51 +414,51 @@
               "id": "31",
               "content": "The <i>sarcastic</i> teacher was always sure to speak clearly and honestly with his students.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Sarcastic means the opposite of what is meant, which conflicts with speaking clearly and honestly.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
               "content": "The <i>tyranny</i> at the church made people feel welcome.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Tyranny is cruel and unfair, which contradicts making people feel welcome.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "The mechanic used a <i>funnel</i> to pour the gas into the tank.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "A funnel is used to pour liquids.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "Because of the <i>analogy</i>, many people were injured.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Analogy is a comparison, which doesn't directly cause injury.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
               "content": "I think the addition of more <i>sodium</i> to the recipe made the bread too salty.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Sodium forms salt, which makes things salty.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

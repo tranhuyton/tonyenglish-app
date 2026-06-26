@@ -354,51 +354,51 @@
               "id": "26",
               "content": "Allie could always count on her <i>intuitive</i> powers to know where her cat was.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Intuitive means knowing something without proof.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
               "content": "The weatherman said it was <i>liable</i> to rain over the entire weekend, so we decided to go for a picnic on Saturday.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "If it is liable to rain, going for a picnic is a bad idea.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
               "content": "Jared couldn’t stop <i>obsessing</i> about his grade. When his teacher returned his test, he forgot about it immediately.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Obsessing means to think about it all the time, which contradicts forgetting it immediately.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
               "content": "Maxine suffers from <i>insomnia</i>. She has seen several doctors, but none have helped her get any more sleep.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Insomnia is difficulty sleeping.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
               "content": "Walter didn’t know what to wear to the concert. All of his best <i>garments</i> needed to be washed.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Garments are clothes.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

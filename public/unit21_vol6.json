@@ -294,51 +294,51 @@
               "id": "26",
               "content": "The boy <i>tackled</i> when he slipped on the ice.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
               "content": "Many different languages are spoken in this <i>cosmopolitan</i> area.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
               "content": "The <i>trance</i> was a beautiful arrangement of fruits and flowers on the table.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
               "content": "The doctor had to <i>amend</i> the man’s lungs to help him breathe better.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
               "content": "The new country created a strong <i>constitution</i> to help guide it through the years.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

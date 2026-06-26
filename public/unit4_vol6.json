@@ -354,51 +354,51 @@
               "id": "31",
               "content": "The caffeine in the tea gave him more energy. <i>Hence</i>, he was more alert.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Hence means it happens as a result of something.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
               "content": "Mom, something smells good in the kitchen. I can't wait for <i>din</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Din means loud, unpleasant noise. The word meant here is probably dinner.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "The cat waited outside the door and made a <i>fuss</i> until someone let her inside the house.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Fuss is excited or annoyed behavior.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "See that politician over there? He works in the <i>Ministry</i> of Truth.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Ministry is a government department.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "The need to protect one's family is an <i>intrinsic</i> quality found in many animals.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Intrinsic means related to the basic nature of something.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

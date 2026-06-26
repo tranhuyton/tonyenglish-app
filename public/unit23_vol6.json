@@ -166,201 +166,201 @@
               "id": "16",
               "content": "This is a <u>multicultural</u> holiday. People from all over the world celebrate it.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "multicultural: relates to many different cultures.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
               "content": "The valuables are kept in a secure <u>locker</u>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "locker: a small cabinet with a lock.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "18",
               "content": "If things move <u>clockwise</u>, they move in reverse.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "clockwise: moves in a circle in the same direction as a clock, not reverse.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "19",
               "content": "The doctor <u>pierced</u> his skin with the needle to draw blood.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "pierce: to make a hole in it using a sharp object.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
               "content": "The scientist tried to <u>replicate</u> the experiment and compare the results.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "replicate: to do it in the exact same way.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "21",
               "content": "The <u>cavity</u> quickly traveled down the stream and to the lake.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "cavity: a hole or space, which doesn't travel down a stream.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
               "content": "The <u>frigid</u> soup burned my tongue!",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "frigid: extremely cold, so it wouldn't burn a tongue.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "23",
               "content": "School was cancelled today because of the horrible <u>blizzard</u> outside.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "blizzard: a severe snow storm.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
               "content": "The <u>appetizing</u> scene made everyone in the theater cry.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "appetizing: looks and smells very good (for food), not related to a sad movie scene.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "25",
               "content": "After a brief <u>interchange</u> of ideas, we were ready to begin the new project.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "interchange: a discussion of each person's idea.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "26",
               "content": "Make sure to include an <u>omission</u> of our goals in the presentation.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "omission: something left out or not done, which contradicts 'include'.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
               "content": "The charity raised money for all of the <u>wavy</u> children in the city.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "wavy: not straight but has a series of curves, doesn't describe children.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
               "content": "Tim was chosen to <u>oversee</u> the progress of the building crew.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "oversee: make sure that it is being done properly.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
               "content": "The <u>glacial</u> dog loved to run and chase the ball in the park.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "glacial: relates to large masses of ice that move slowly, doesn't describe a running dog.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
               "content": "We need to <u>generate</u> a new plan because this one isn't going to work.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "generate: cause to develop or begin.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "31",
               "content": "He was not pleased with the movie. He thought it was too <u>concentric</u>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "concentric: having the same center, doesn't make sense for a movie.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
               "content": "The brothers cannot work together. There is always <u>discord</u> between them.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "discord: disagreement or fighting.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "33",
               "content": "The <u>crisp</u> lettuce went well with the sandwich.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "crisp: hard or has a hard surface in a pleasant way.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "The mother was disappointed with the extreme <u>courtesy</u> her children displayed.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "courtesy: excellence of manners, which a mother would not be disappointed by.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
               "content": "Seats will be <u>allocated</u> to the people who are the first to arrive.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "allocate: put aside for a certain purpose or person.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

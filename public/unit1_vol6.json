@@ -98,101 +98,101 @@
               "id": "11",
               "content": "She loves to <i>improvise</i> peanut butter and jelly sandwiches for lunch.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Improvise means to do something with whatever is available or without planning. It does not mean to eat or make standard food.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "12",
               "content": "Ice packs are sometimes used to <i>alleviate</i> headaches.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Alleviate means to make less intense or severe.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
               "content": "This math book is full of <i>equations</i> for students to practice.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Equation means a math operation.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "14",
               "content": "The expert in <i>astrology</i> went to work every day to study rocks and soil.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Astrology is the study of stars, not rocks and soil (which is geology).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
               "content": "This math problem is tricky, so be careful not to <i>err</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Err means to make a mistake.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "16",
               "content": "The <i>permanence</i> of the flood was gone in a couple of days.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Permanence means the ability to last forever, so it contradicts being gone in a couple of days.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "17",
               "content": "After months of planning, the <i>inadvertent</i> decision to sell the company was carried out.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Inadvertent means done without realizing what you are doing, which contradicts 'months of planning'.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "18",
               "content": "The Earth and other planets <i>revolve</i> around the sun.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Revolve around means to keep it as the main focus or to orbit.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
               "content": "Two flat tires <i>disrupted</i> our drive to the countryside.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Disrupt means to prevent from working or to interrupt.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
               "content": "What <i>differentiates</i> Dan from his brother is Dan’s unmatched love of sports.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "Differentiate means to show the difference.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

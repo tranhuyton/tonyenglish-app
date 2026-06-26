@@ -98,201 +98,201 @@
               "id": "11",
               "content": "Peter is so <i>earnest</i>. He made more money than anyone I know.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: Earnest means honest, not wealthy.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "12",
               "content": "If you like <i>ethnic</i> foods, then you like foods from other cultures.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Ethnic means related to a group with a similar culture.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
               "content": "Though it’s the same language, there are <i>linguistic</i> differences between the two areas.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Linguistic means concerned with language.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "14",
               "content": "The <i>patriot</i> is an amazing bird. It can repeat anything you tell it.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: A patriot is someone who loves their country, not a bird (parrot).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
               "content": "If you want someone to care for your cattle, you should call a <i>coward</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: A coward lacks courage; a cowherd cares for cattle.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "16",
               "content": "The boy said that the test was unfair, and his classmates showed <i>solidarity</i> and agreed.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Solidarity means common support.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
               "content": "The king said the princes had <i>undermined</i> his authority when they issued new orders.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Undermined means weakened efforts or authority.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "18",
               "content": "We <i>deleted</i> all the words that were spelled wrong.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Deleted means removed or erased.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
               "content": "“I’m sorry you can’t eat here. This restaurant is <i>inclusive</i>.”",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: Inclusive means open to all groups; exclusive would mean restricted.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "20",
               "content": "The road going to the farmhouse is <i>monolingual</i>, so watch cars coming your way.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: Monolingual means speaking one language. A road might be one-way.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "21",
               "content": "He had seen the battle <i>firsthand</i> in old movies.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: Firsthand means from an original source. Seeing it in movies is not firsthand.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
               "content": "If someone goes to court, then they are judged by the <i>legislature</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: A legislature makes laws; a court or jury judges.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "23",
               "content": "This city’s history is important. It was once the <i>imperial</i> capital.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Imperial means related to an empire.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
               "content": "His friends had left him alone in the library, but he didn’t mind being <i>solemn</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: Solemn means serious and honest, it doesn't mean being alone.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "25",
               "content": "The criminals were <i>prosecuted</i> for the crimes they had committed.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Prosecuted means legal action was taken against them.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "26",
               "content": "That college <i>excludes</i> anyone who has low test scores.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Exclude means not accept into a group.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
               "content": "Many people wonder about her <i>nationality</i>. However, he knows where she’s from.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Nationality is the nation you come from.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
               "content": "The mothers covered their children’s heads because the rain was so <i>fluent</i>.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: Fluent refers to speaking a language well, not heavy rain.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
               "content": "I liked all the cars, but I bought the <i>racial</i> car because it was the fastest.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "I: Racial means related to a race; it doesn't describe a car.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
               "content": "His method had a lot of <i>tact</i>. Soon, everyone agreed with his point of view.",
               "options": [
-                "I",
-                "C"
+                "C",
+                "I"
               ],
               "explanation": "C: Tact is the ability to avoid offending people.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
