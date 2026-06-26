@@ -383,7 +383,7 @@
                 "C"
               ],
               "explanation": "Absurd means ridiculous.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -393,7 +393,7 @@
                 "C"
               ],
               "explanation": "Tangle means twisted together.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -403,7 +403,7 @@
                 "C"
               ],
               "explanation": "Anemia is a blood condition that makes one tired, not losing memory.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -413,7 +413,7 @@
                 "C"
               ],
               "explanation": "Hallmark means a unique characteristic.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
@@ -423,7 +423,7 @@
                 "C"
               ],
               "explanation": "Craze means a popular activity, not a maze.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "31",
@@ -433,7 +433,7 @@
                 "C"
               ],
               "explanation": "Vanity is excessive pride, it does not mean charity.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -443,7 +443,7 @@
                 "C"
               ],
               "explanation": "Rouge is makeup for cheeks or lips.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -453,7 +453,7 @@
                 "C"
               ],
               "explanation": "Excess means an amount more than needed, not 'except'.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -463,7 +463,7 @@
                 "C"
               ],
               "explanation": "Vulgar means rude or lacking in style.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
@@ -473,7 +473,7 @@
                 "C"
               ],
               "explanation": "Aristocrat is a person of the highest class, they usually don't have to wash dishes.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

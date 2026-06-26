@@ -102,7 +102,7 @@
                 "C"
               ],
               "explanation": "I: Earnest means honest, not wealthy.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -112,7 +112,7 @@
                 "C"
               ],
               "explanation": "C: Ethnic means related to a group with a similar culture.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -122,7 +122,7 @@
                 "C"
               ],
               "explanation": "C: Linguistic means concerned with language.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -132,7 +132,7 @@
                 "C"
               ],
               "explanation": "I: A patriot is someone who loves their country, not a bird (parrot).",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -142,7 +142,7 @@
                 "C"
               ],
               "explanation": "I: A coward lacks courage; a cowherd cares for cattle.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "16",
@@ -152,7 +152,7 @@
                 "C"
               ],
               "explanation": "C: Solidarity means common support.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -162,7 +162,7 @@
                 "C"
               ],
               "explanation": "C: Undermined means weakened efforts or authority.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -172,7 +172,7 @@
                 "C"
               ],
               "explanation": "C: Deleted means removed or erased.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -182,7 +182,7 @@
                 "C"
               ],
               "explanation": "I: Inclusive means open to all groups; exclusive would mean restricted.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -192,7 +192,7 @@
                 "C"
               ],
               "explanation": "I: Monolingual means speaking one language. A road might be one-way.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -202,7 +202,7 @@
                 "C"
               ],
               "explanation": "I: Firsthand means from an original source. Seeing it in movies is not firsthand.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -212,7 +212,7 @@
                 "C"
               ],
               "explanation": "I: A legislature makes laws; a court or jury judges.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -222,7 +222,7 @@
                 "C"
               ],
               "explanation": "C: Imperial means related to an empire.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "24",
@@ -232,7 +232,7 @@
                 "C"
               ],
               "explanation": "I: Solemn means serious and honest, it doesn't mean being alone.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -242,7 +242,7 @@
                 "C"
               ],
               "explanation": "C: Prosecuted means legal action was taken against them.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "26",
@@ -252,7 +252,7 @@
                 "C"
               ],
               "explanation": "C: Exclude means not accept into a group.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -262,7 +262,7 @@
                 "C"
               ],
               "explanation": "C: Nationality is the nation you come from.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -272,7 +272,7 @@
                 "C"
               ],
               "explanation": "I: Fluent refers to speaking a language well, not heavy rain.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -282,7 +282,7 @@
                 "C"
               ],
               "explanation": "I: Racial means related to a race; it doesn't describe a car.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -292,7 +292,7 @@
                 "C"
               ],
               "explanation": "C: Tact is the ability to avoid offending people.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

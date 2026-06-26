@@ -102,7 +102,7 @@
                 "C"
               ],
               "explanation": "Improvise means to do something with whatever is available or without planning. It does not mean to eat or make standard food.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -112,7 +112,7 @@
                 "C"
               ],
               "explanation": "Alleviate means to make less intense or severe.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -122,7 +122,7 @@
                 "C"
               ],
               "explanation": "Equation means a math operation.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -132,7 +132,7 @@
                 "C"
               ],
               "explanation": "Astrology is the study of stars, not rocks and soil (which is geology).",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -142,7 +142,7 @@
                 "C"
               ],
               "explanation": "Err means to make a mistake.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "16",
@@ -152,7 +152,7 @@
                 "C"
               ],
               "explanation": "Permanence means the ability to last forever, so it contradicts being gone in a couple of days.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -162,7 +162,7 @@
                 "C"
               ],
               "explanation": "Inadvertent means done without realizing what you are doing, which contradicts 'months of planning'.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -172,7 +172,7 @@
                 "C"
               ],
               "explanation": "Revolve around means to keep it as the main focus or to orbit.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -182,7 +182,7 @@
                 "C"
               ],
               "explanation": "Disrupt means to prevent from working or to interrupt.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -192,7 +192,7 @@
                 "C"
               ],
               "explanation": "Differentiate means to show the difference.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

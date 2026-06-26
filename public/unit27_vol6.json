@@ -418,7 +418,7 @@
                 "C"
               ],
               "explanation": "Sarcastic means the opposite of what is meant, which conflicts with speaking clearly and honestly.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -428,7 +428,7 @@
                 "C"
               ],
               "explanation": "Tyranny is cruel and unfair, which contradicts making people feel welcome.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -438,7 +438,7 @@
                 "C"
               ],
               "explanation": "A funnel is used to pour liquids.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -448,7 +448,7 @@
                 "C"
               ],
               "explanation": "Analogy is a comparison, which doesn't directly cause injury.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -458,7 +458,7 @@
                 "C"
               ],
               "explanation": "Sodium forms salt, which makes things salty.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

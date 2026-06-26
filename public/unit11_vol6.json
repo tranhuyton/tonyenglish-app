@@ -348,7 +348,7 @@
                 "C"
               ],
               "explanation": "Senate is a part of government, not related to fixing cars.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -358,7 +358,7 @@
                 "I"
               ],
               "explanation": "Conquest means taking over another country.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -368,7 +368,7 @@
                 "I"
               ],
               "explanation": "Dynamics means the way that parts of a situation affect each other.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -378,7 +378,7 @@
                 "C"
               ],
               "explanation": "Enroll means to put one's name on a list, not related to clothes.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -388,7 +388,7 @@
                 "I"
               ],
               "explanation": "Advocate means to support or suggest an idea in public.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

@@ -358,7 +358,7 @@
                 "C"
               ],
               "explanation": "Intuitive means knowing something without proof.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -368,7 +368,7 @@
                 "C"
               ],
               "explanation": "If it is liable to rain, going for a picnic is a bad idea.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -378,7 +378,7 @@
                 "C"
               ],
               "explanation": "Obsessing means to think about it all the time, which contradicts forgetting it immediately.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -388,7 +388,7 @@
                 "C"
               ],
               "explanation": "Insomnia is difficulty sleeping.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
@@ -398,7 +398,7 @@
                 "C"
               ],
               "explanation": "Garments are clothes.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

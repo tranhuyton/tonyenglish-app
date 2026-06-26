@@ -298,7 +298,7 @@
                 "C"
               ],
               "explanation": "I",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -308,7 +308,7 @@
                 "C"
               ],
               "explanation": "C",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -318,7 +318,7 @@
                 "C"
               ],
               "explanation": "I",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -328,7 +328,7 @@
                 "C"
               ],
               "explanation": "I",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -338,7 +338,7 @@
                 "C"
               ],
               "explanation": "C",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

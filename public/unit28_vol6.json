@@ -280,7 +280,7 @@
                 "C"
               ],
               "explanation": "Renovate applies to buildings, not weather.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -290,7 +290,7 @@
                 "C"
               ],
               "explanation": "Slab is a piece of stone, not a laboratory.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -300,7 +300,7 @@
                 "C"
               ],
               "explanation": "Contradictory sentence.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -310,7 +310,7 @@
                 "C"
               ],
               "explanation": "Arches are curved, not straight to form a square.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -320,7 +320,7 @@
                 "C"
               ],
               "explanation": "Casualty refers to injured people.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "26",
@@ -330,7 +330,7 @@
                 "C"
               ],
               "explanation": "Erected means built.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -340,7 +340,7 @@
                 "C"
               ],
               "explanation": "Contradictory sentence.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -350,7 +350,7 @@
                 "C"
               ],
               "explanation": "Hectare measures land area, not volume of water.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -360,7 +360,7 @@
                 "C"
               ],
               "explanation": "Adjoining means next to.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
@@ -370,7 +370,7 @@
                 "C"
               ],
               "explanation": "Hospitality means friendly behavior and entertainment.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "31",
@@ -380,7 +380,7 @@
                 "C"
               ],
               "explanation": "Mansion is a large expensive home, not a dog house.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -390,7 +390,7 @@
                 "C"
               ],
               "explanation": "Allege means to accuse, not to run or exert physically.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -400,7 +400,7 @@
                 "C"
               ],
               "explanation": "Overjoyed means extremely happy.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -410,7 +410,7 @@
                 "C"
               ],
               "explanation": "Pasture is a field for animals, not a storage room.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -420,7 +420,7 @@
                 "C"
               ],
               "explanation": "Petition is a written request.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

@@ -161,7 +161,7 @@
                 "I"
               ],
               "explanation": "Weary means tired.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -171,7 +171,7 @@
                 "I"
               ],
               "explanation": "Pages cannot quiver with sheer horror; people or animals quiver.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -181,7 +181,7 @@
                 "I"
               ],
               "explanation": "Hesitant means not sure or slow in acting.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -191,7 +191,7 @@
                 "I"
               ],
               "explanation": "Marrow is the soft substance in the center of bones.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -201,7 +201,7 @@
                 "I"
               ],
               "explanation": "Contend with means to struggle to overcome.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "16",
@@ -211,7 +211,7 @@
                 "I"
               ],
               "explanation": "Stray means to go in a wrong direction. The correct word is 'paid'.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -221,7 +221,7 @@
                 "I"
               ],
               "explanation": "Frontier is a border between two regions.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -231,7 +231,7 @@
                 "I"
               ],
               "explanation": "Cot is a small portable bed, not a place to park.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -241,7 +241,7 @@
                 "I"
               ],
               "explanation": "Tract is a large area of land.",
-              "correctAnswer": "I"
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -251,7 +251,7 @@
                 "I"
               ],
               "explanation": "Contemplate means to think about.",
-              "correctAnswer": "C"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
