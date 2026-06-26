@@ -1,0 +1,585 @@
+{
+  "title": "Unit 10: Anna the Babysitter",
+  "parts": [
+    {
+      "title": "Word List 1",
+      "content": "<p style=\"display: none;\">Word List 1</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit10_ielts_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">absence</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈæbsəns]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">the state of something being away. <span style=\"color:#0ea5e9;\">(Trạng thái vắng mặt hoặc thiếu vắng.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ There is an absence of sand in the hourglass. <span style=\"color:#0ea5e9;\">(Đồng hồ cát không còn cát bên trong.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">aloud</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[əˈlaʊd]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adv.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">saying something so that others can hear you. <span style=\"color:#0ea5e9;\">(Nói điều gì đó để người khác có thể nghe được, thành tiếng.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ My father often reads stories aloud to me and my sister. <span style=\"color:#0ea5e9;\">(Bố tôi thường đọc truyện thành tiếng cho tôi và em gái.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">bald</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[bɔːld]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">having no hair. <span style=\"color:#0ea5e9;\">(Không có tóc, hói đầu.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ My oldest brother is bald. <span style=\"color:#0ea5e9;\">(Anh cả của tôi bị hói.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">blanket</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈblæŋkɪt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a piece of cloth used to keep warm or to sit upon. <span style=\"color:#0ea5e9;\">(Miếng vải dùng để giữ ấm hoặc ngồi lên, chăn.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I laid a blanket on the ground for a picnic. <span style=\"color:#0ea5e9;\">(Tôi trải một tấm chăn trên mặt đất để đi dã ngoại.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">creep</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[kriːp]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to move quietly and slowly. <span style=\"color:#0ea5e9;\">(Di chuyển nhẹ nhàng và chậm rãi, bò, rón rén.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The cat slowly crept down the tree. <span style=\"color:#0ea5e9;\">(Con mèo từ từ bò xuống cây.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">divorce</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[dɪˈvɔːrs]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">an event in which a marriage is ended. <span style=\"color:#0ea5e9;\">(Sự kiện kết thúc hôn nhân, ly hôn.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Divorce rates have increased in the past twenty years. <span style=\"color:#0ea5e9;\">(Tỷ lệ ly hôn đã tăng trong hai mươi năm qua.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">imitate</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈɪmɪteɪt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to do exactly what someone else does. <span style=\"color:#0ea5e9;\">(Làm giống hệt những gì người khác làm, bắt chước.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He imitated his favorite superhero by putting on a costume. <span style=\"color:#0ea5e9;\">(Anh ấy bắt chước siêu anh hùng yêu thích bằng cách mặc trang phục.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">infant</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈɪnfənt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a baby. <span style=\"color:#0ea5e9;\">(Em bé, trẻ sơ sinh.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The infant cried all night. <span style=\"color:#0ea5e9;\">(Đứa trẻ sơ sinh khóc suốt đêm.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">kidnap</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈkɪdnæp]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to take someone illegally. <span style=\"color:#0ea5e9;\">(Bắt ai đó một cách bất hợp pháp, bắt cóc.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ She was terrified to find out her son was kidnapped. <span style=\"color:#0ea5e9;\">(Cô ấy kinh hoàng khi biết con trai mình bị bắt cóc.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">nap</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[næp]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a short sleep, usually during the day. <span style=\"color:#0ea5e9;\">(Giấc ngủ ngắn, thường vào ban ngày, giấc ngủ trưa.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I took a short nap because I stayed up late last night. <span style=\"color:#0ea5e9;\">(Tôi ngủ trưa một lát vì thức khuya đêm qua.)</span></div></div></div></div></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Choose the correct word to fill in the blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 1,
+              "content": "My oldest brother is ________ — he has no hair at all.",
+              "options": [
+                "infant",
+                "bald",
+                "absent",
+                "aloud"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bald means having no hair."
+            },
+            {
+              "id": 2,
+              "content": "He ________ his favorite superhero by putting on a costume.",
+              "options": [
+                "kidnapped",
+                "imitated",
+                "crept",
+                "divorced"
+              ],
+              "correctAnswer": "B",
+              "explanation": "To imitate means to do exactly what someone else does."
+            },
+            {
+              "id": 3,
+              "content": "She was terrified to find out her son was ________.",
+              "options": [
+                "napping",
+                "creeping",
+                "kidnapped",
+                "absent"
+              ],
+              "correctAnswer": "C",
+              "explanation": "To kidnap means to take someone illegally."
+            },
+            {
+              "id": 4,
+              "content": "I took a short ________ because I stayed up late last night.",
+              "options": [
+                "nap",
+                "blanket",
+                "divorce",
+                "absence"
+              ],
+              "correctAnswer": "A",
+              "explanation": "A nap is a short sleep, usually during the day."
+            },
+            {
+              "id": 5,
+              "content": "The cat slowly ________ down the tree without making a sound.",
+              "options": [
+                "imitated",
+                "sucked",
+                "crept",
+                "divorced"
+              ],
+              "correctAnswer": "C",
+              "explanation": "To creep means to move quietly and slowly."
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Choose the word that best matches the definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 6,
+              "content": "The state of something being away",
+              "options": [
+                "Nap",
+                "Absence",
+                "Divorce",
+                "Blanket"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Absence is the state of something being away."
+            },
+            {
+              "id": 7,
+              "content": "An event in which a marriage is ended",
+              "options": [
+                "Infant",
+                "Kidnap",
+                "Divorce",
+                "Creep"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Divorce is an event in which a marriage is ended."
+            },
+            {
+              "id": 8,
+              "content": "A baby",
+              "options": [
+                "Infant",
+                "Nap",
+                "Bald",
+                "Blanket"
+              ],
+              "correctAnswer": "A",
+              "explanation": "An infant is a baby."
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
+          "questionType": "TFNG",
+          "questions": [
+            {
+              "id": 9,
+              "content": "If you say something 'aloud', you whisper it so nobody can hear.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "False",
+              "explanation": "False. Aloud means saying something so others can hear you."
+            },
+            {
+              "id": 10,
+              "content": "A 'blanket' is a piece of cloth used to keep warm.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "True. A blanket is used to keep warm or to sit upon."
+            },
+            {
+              "id": 11,
+              "content": "To 'creep' means to run fast and make loud noises.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "False",
+              "explanation": "False. To creep means to move quietly and slowly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Word List 2",
+      "content": "<p style=\"display: none;\">Word List 2</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit10_ielts_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">nowhere</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈnoʊwer]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adv.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">used to say that a place or thing does not exist. <span style=\"color:#0ea5e9;\">(Dùng để nói rằng một nơi hoặc vật không tồn tại, không đâu.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Unfortunately, water was nowhere to be found. <span style=\"color:#0ea5e9;\">(Thật không may, nước không thể tìm thấy ở đâu.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">pat</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[pæt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to hit something softly with your hand. <span style=\"color:#0ea5e9;\">(Đập nhẹ vào cái gì đó bằng tay, vỗ nhẹ.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I patted some lotion onto my face. <span style=\"color:#0ea5e9;\">(Tôi vỗ nhẹ kem dưỡng lên mặt.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">relief</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[rɪˈliːf]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a feeling you get when something bad or challenging ends. <span style=\"color:#0ea5e9;\">(Cảm giác khi điều gì đó tệ hoặc khó khăn kết thúc, sự nhẹ nhõm.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I felt a sense of relief when I heard the good news. <span style=\"color:#0ea5e9;\">(Tôi cảm thấy nhẹ nhõm khi nghe tin tốt.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">reproduce</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˌriːprəˈduːs]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to make something exactly how someone else did it. <span style=\"color:#0ea5e9;\">(Làm lại điều gì đó giống hệt cách người khác đã làm, tái tạo.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The children tried to reproduce their house using toy blocks. <span style=\"color:#0ea5e9;\">(Lũ trẻ cố tái tạo ngôi nhà của chúng bằng các khối đồ chơi.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">rhyme</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[raɪm]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">words having the same sounds at the end. <span style=\"color:#0ea5e9;\">(Các từ có âm giống nhau ở cuối, vần điệu.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Humpty Dumpty is an old rhyme that children learn in school. <span style=\"color:#0ea5e9;\">(Humpty Dumpty là một bài vần cũ mà trẻ em học ở trường.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">suck</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[sʌk]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to put something in your mouth and try to get flavor from it. <span style=\"color:#0ea5e9;\">(Đặt thứ gì đó vào miệng và cố lấy hương vị, mút.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The baby sucked milk from her bottle. <span style=\"color:#0ea5e9;\">(Em bé mút sữa từ bình.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">urgent</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈɜːrdʒənt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">important and needing to be done now. <span style=\"color:#0ea5e9;\">(Quan trọng và cần được thực hiện ngay, khẩn cấp.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He had to leave now; it was urgent. <span style=\"color:#0ea5e9;\">(Anh ấy phải đi ngay; việc rất khẩn cấp.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">vanish</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈvænɪʃ]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to go away suddenly. <span style=\"color:#0ea5e9;\">(Biến mất đột ngột.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ All the passengers vanished from the train station. <span style=\"color:#0ea5e9;\">(Tất cả hành khách biến mất khỏi nhà ga.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">wagon</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈwæɡən]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a cart used to carry heavy things. <span style=\"color:#0ea5e9;\">(Xe đẩy dùng để chở đồ nặng, xe kéo.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He used his wagon to carry some of his gifts. <span style=\"color:#0ea5e9;\">(Anh ấy dùng xe kéo để chở một số món quà.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">wrinkle</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈrɪŋkl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a line on a person's face that happens as they get old. <span style=\"color:#0ea5e9;\">(Đường nhăn trên mặt người khi họ già đi, nếp nhăn.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ My grandfather has some wrinkles on his face. <span style=\"color:#0ea5e9;\">(Ông tôi có vài nếp nhăn trên mặt.)</span></div></div></div></div></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Choose the correct word to fill in the blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 12,
+              "content": "I felt a sense of ________ when I heard the good news.",
+              "options": [
+                "wrinkle",
+                "relief",
+                "wagon",
+                "rhyme"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Relief is a feeling you get when something bad ends."
+            },
+            {
+              "id": 13,
+              "content": "All the passengers ________ from the train station suddenly.",
+              "options": [
+                "patted",
+                "reproduced",
+                "vanished",
+                "sucked"
+              ],
+              "correctAnswer": "C",
+              "explanation": "To vanish means to go away suddenly."
+            },
+            {
+              "id": 14,
+              "content": "He had to leave now; the situation was ________.",
+              "options": [
+                "nowhere",
+                "urgent",
+                "wrinkled",
+                "pat"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Urgent means important and needing to be done now."
+            },
+            {
+              "id": 15,
+              "content": "My grandfather has some ________ on his face from getting old.",
+              "options": [
+                "rhymes",
+                "wrinkles",
+                "wagons",
+                "reliefs"
+              ],
+              "correctAnswer": "B",
+              "explanation": "A wrinkle is a line on a person's face that happens as they get old."
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 16,
+              "content": "The baby <i>sucked</i> milk from her bottle happily.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. To suck means to put something in your mouth and try to get flavor."
+            },
+            {
+              "id": 17,
+              "content": "He used his <i>rhyme</i> to carry heavy boxes across the yard.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. It should be 'wagon'. A rhyme is words having the same sounds at the end."
+            },
+            {
+              "id": 18,
+              "content": "Water was <i>nowhere</i> to be found in the desert.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Nowhere means a place or thing does not exist."
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Choose the word that best matches the definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 19,
+              "content": "To make something exactly how someone else did it",
+              "options": [
+                "Pat",
+                "Reproduce",
+                "Vanish",
+                "Suck"
+              ],
+              "correctAnswer": "B",
+              "explanation": "To reproduce means to make something exactly how someone else did it."
+            },
+            {
+              "id": 20,
+              "content": "To hit something softly with your hand",
+              "options": [
+                "Suck",
+                "Creep",
+                "Pat",
+                "Vanish"
+              ],
+              "correctAnswer": "C",
+              "explanation": "To pat means to hit something softly with your hand."
+            },
+            {
+              "id": 21,
+              "content": "A cart used to carry heavy things",
+              "options": [
+                "Blanket",
+                "Wagon",
+                "Wrinkle",
+                "Rhyme"
+              ],
+              "correctAnswer": "B",
+              "explanation": "A wagon is a cart used to carry heavy things."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comprehensive Reading",
+      "content": "<p style=\"display: none;\">Comprehensive Reading</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit10_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Anna the Babysitter</h1><p style=\"margin-bottom: 1rem;\">Since her parents got a <b>divorce</b>, Anna has had to help her mother. In her mother's <b>absence</b>, Anna takes care of Grace, the baby. At first, Anna thought it was an easy job.</p><p style=\"margin-bottom: 1rem;\">One afternoon, Anna played with Grace. She meowed like a cat and Grace <b>imitated</b> her. In fact, Grace <b>reproduced</b> every sound that Anna made. She took her sister outside. She put Grace in the <b>wagon</b>, but there was <b>nowhere</b> for them to go. So they went back inside.</p><p style=\"margin-bottom: 1rem;\">Anna put the <b>infant</b> on the floor and went into her room. But when she came back, Grace had <b>vanished</b>! Anna looked everywhere, but she could not find her sister. Maybe the baby had been <b>kidnapped</b>! \"Where are you?\" Anna called <b>aloud</b>.</p><p style=\"margin-bottom: 1rem;\">The situation was becoming <b>urgent</b>. She wanted to call her mom, but she didn't want her to think Anna couldn't do the job. Anna sat down. What was she going to do?</p><p style=\"margin-bottom: 1rem;\">But then, Anna heard something. It was coming from her room. \"Grace?\" She got down on her knees and looked under the bed. She could see Grace's <b>bald</b> head. Grace had followed Anna into her room and <b>crept</b> under the bed.</p><p style=\"margin-bottom: 1rem;\">\"What a <b>relief</b>!\" Anna cried.</p><p style=\"margin-bottom: 1rem;\">She picked up her sister and <b>patted</b> her on the head. Her head was soft and had no <b>wrinkles</b>. Grace was <b>sucking</b> on her thumb and looked tired. So, Anna wrapped her in a <b>blanket</b> and sang <b>rhymes</b> for her. Then she put Grace in bed for a <b>nap</b>.</p><p style=\"margin-bottom: 1rem;\">After that afternoon, Anna knew that taking care of Grace was not an easy job. It takes a lot of work to take care of a baby!</p></div></div>",
+      "explanation": "Transcript and Reading Passage Explanation",
+      "sections": [
+        {
+          "title": "Exercise 1: Fill in each blank with the appropriate word, making changes where necessary",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": 22,
+              "content": "1. Anna's parents got a [ 1 ].<br/><br/>2. In her mother's [ 2 ], Anna took care of Grace.<br/><br/>3. Grace [ 3 ] the sounds Anna made, like a cat meowing.<br/><br/>4. Grace [ 4 ] every sound that Anna made.<br/><br/>5. Anna put Grace in the [ 5 ] and took her outside.<br/><br/>6. There was [ 6 ] for them to go.<br/><br/>7. Anna put the [ 7 ] on the floor and went to her room.<br/><br/>8. When she came back, Grace had [ 8 ]!<br/><br/>9. Maybe the baby had been [ 9 ]!<br/><br/>10. \"Where are you?\" Anna called [ 10 ].<br/><br/>11. The situation was becoming [ 11 ].",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "divorce"
+            },
+            {
+              "id": 23,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "absence"
+            },
+            {
+              "id": 24,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "imitated"
+            },
+            {
+              "id": 25,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "reproduced"
+            },
+            {
+              "id": 26,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "wagon"
+            },
+            {
+              "id": 27,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "nowhere"
+            },
+            {
+              "id": 28,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "infant"
+            },
+            {
+              "id": 29,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "vanished"
+            },
+            {
+              "id": 30,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "kidnapped"
+            },
+            {
+              "id": 31,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "aloud"
+            },
+            {
+              "id": 32,
+              "content": "",
+              "options": [
+                "divorce",
+                "absence",
+                "imitated",
+                "reproduced",
+                "wagon",
+                "nowhere",
+                "infant",
+                "vanished",
+                "kidnapped",
+                "aloud",
+                "urgent"
+              ],
+              "correctAnswer": "urgent"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 33,
+              "content": "Why does Anna take care of Grace?",
+              "options": [
+                "Because her parents got a divorce and she helps her mother.",
+                "Because Grace is her own baby.",
+                "Because she wants to earn money.",
+                "Because her teacher asked her to."
+              ],
+              "correctAnswer": "A",
+              "explanation": "The passage states: 'Since her parents got a divorce, Anna has had to help her mother.'"
+            },
+            {
+              "id": 34,
+              "content": "What happened when Anna came back from her room?",
+              "options": [
+                "Grace was sleeping.",
+                "Grace had vanished.",
+                "Grace was crying.",
+                "Grace was playing."
+              ],
+              "correctAnswer": "B",
+              "explanation": "The passage states: 'when she came back, Grace had vanished!'"
+            },
+            {
+              "id": 35,
+              "content": "Where did Anna find Grace?",
+              "options": [
+                "In the wagon",
+                "In the kitchen",
+                "Under the bed",
+                "In the closet"
+              ],
+              "correctAnswer": "C",
+              "explanation": "The passage states: 'She got down on her knees and looked under the bed. She could see Grace's bald head.'"
+            },
+            {
+              "id": 36,
+              "content": "What did Anna do to help Grace fall asleep?",
+              "options": [
+                "She read a book aloud.",
+                "She wrapped her in a blanket and sang rhymes.",
+                "She patted her and gave her a wagon.",
+                "She played with Grace outside."
+              ],
+              "correctAnswer": "B",
+              "explanation": "The passage states: 'Anna wrapped her in a blanket and sang rhymes for her. Then she put Grace in bed for a nap.'"
+            },
+            {
+              "id": 37,
+              "content": "Which is NOT something Anna did with Grace?",
+              "options": [
+                "Went outside in the wagon",
+                "Patted her on the head",
+                "Read a book aloud",
+                "Sang rhymes for her"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Anna never read a book aloud to Grace in the story."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "MCQ (Standard)",
+    "title": "Unit 10: Anna the Babysitter",
+    "category": "exercise",
+    "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
+    "timeLimit": 40
+  }
+}
