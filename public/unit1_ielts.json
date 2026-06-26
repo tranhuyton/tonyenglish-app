@@ -11,7 +11,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "4cf9950d-d025-4707-bce3-bdcfce2f9ae4",
+              "id": 1,
               "content": "Visual learners prefer to see information presented in ________.",
               "options": [
                 "diagrams",
@@ -23,7 +23,7 @@
               "explanation": "Visual relates to seeing or sight."
             },
             {
-              "id": "67663e08-93b0-4d7f-88e0-aa58045c8ace",
+              "id": 2,
               "content": "I only have a ________ memory of my childhood.",
               "options": [
                 "clear",
@@ -35,7 +35,7 @@
               "explanation": "Hazy means unclear, vague, or ill-defined."
             },
             {
-              "id": "ba824ecc-c729-4368-a077-ee146624d138",
+              "id": 3,
               "content": "She explained the plan in ________.",
               "options": [
                 "glimpse",
@@ -47,7 +47,7 @@
               "explanation": "In detail means including or considering all the particulars."
             },
             {
-              "id": "d2ae11f5-3367-4c8d-b3ae-41652035f93f",
+              "id": 4,
               "content": "He had to pull a few ________ to get his son the job.",
               "options": [
                 "strings",
@@ -59,7 +59,7 @@
               "explanation": "Pull strings means to secretly use the influence you have over important people."
             },
             {
-              "id": "7192b4f6-3e25-41a7-8833-8ed6a720d3ab",
+              "id": 5,
               "content": "The manual is very ________.",
               "options": [
                 "easy-to-read",
@@ -78,7 +78,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "b579ca41-5387-4e3b-8618-4fb025e59ef9",
+              "id": 6,
               "content": "A general view from above",
               "options": [
                 "Glimpse",
@@ -90,7 +90,7 @@
               "explanation": "Bird's eye view is a general view from above."
             },
             {
-              "id": "8f9dd992-075b-4871-a44a-f196f95dfa37",
+              "id": 7,
               "content": "To express a feeling or opinion",
               "options": [
                 "Describe",
@@ -102,7 +102,7 @@
               "explanation": "To voice means to express a feeling or opinion."
             },
             {
-              "id": "36853bee-bc50-47e0-9aa7-cb6ec6b33421",
+              "id": 8,
               "content": "A serious disagreement or argument",
               "options": [
                 "Conflict",
@@ -121,7 +121,7 @@
           "questionType": "TFNG",
           "questions": [
             {
-              "id": "718859b8-d827-4780-aa5e-d29fb2aaafa1",
+              "id": 9,
               "content": "Kinesthetic students learn best by sitting still and listening.",
               "options": [
                 "True",
@@ -131,7 +131,7 @@
               "explanation": "False. Kinesthetic relates to learning through feeling and physical activities."
             },
             {
-              "id": "77cf909c-e8a1-4789-8c79-e33b63990642",
+              "id": 10,
               "content": "If you 'lay your cards on the table', you are being completely honest.",
               "options": [
                 "True",
@@ -141,7 +141,7 @@
               "explanation": "True. Lay one's cards on the table means to be completely honest and open."
             },
             {
-              "id": "0fb8ed27-f506-418e-a446-3c8d606fe255",
+              "id": 11,
               "content": "A 'handout' is a document given to students or reporters.",
               "options": [
                 "True",
@@ -164,7 +164,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "70407729-37b5-42e8-8bfe-d6b82b220de4",
+              "id": 12,
               "content": "Our newspapers try to ________ for all opinions.",
               "options": [
                 "cater",
@@ -176,7 +176,7 @@
               "explanation": "To cater means to provide what is needed or required."
             },
             {
-              "id": "82f187ec-7ae6-4ec0-a375-2b3cfc2e2f90",
+              "id": 13,
               "content": "Can these experts ________ military and diplomatic signals?",
               "options": [
                 "memorize",
@@ -188,7 +188,7 @@
               "explanation": "To decipher means to succeed in understanding, interpreting, or identifying."
             },
             {
-              "id": "552eaf4f-26c3-43cd-ad42-0bcc88baf3cb",
+              "id": 14,
               "content": "She gave an ________ speech about human rights.",
               "options": [
                 "eloquent",
@@ -200,7 +200,7 @@
               "explanation": "Eloquent means fluent or persuasive in speaking or writing."
             },
             {
-              "id": "926111df-241d-44c2-8391-0b6d63657c8b",
+              "id": 15,
               "content": "What was the ________ temperature yesterday?",
               "options": [
                 "quantum",
@@ -219,7 +219,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "7b037bc6-e2ec-4513-8e54-a4a4265c71fd",
+              "id": 16,
               "content": "He used a <i>pointer</i> to highlight the key data on the projector.",
               "options": [
                 "C",
@@ -229,7 +229,7 @@
               "explanation": "Correct. A pointer is used to point at something."
             },
             {
-              "id": "5b741f5b-7be6-4f7a-9f32-6b08e43e2cb5",
+              "id": 17,
               "content": "The scientist explained the basics of <i>comic</i> mechanics.",
               "options": [
                 "C",
@@ -239,7 +239,7 @@
               "explanation": "Incorrect. It should be 'quantum' mechanics."
             },
             {
-              "id": "b5256ca8-4a13-4515-b412-be4ec7dbffb1",
+              "id": 18,
               "content": "She was <i>doodling</i> in her notebook instead of paying attention.",
               "options": [
                 "C",
@@ -256,7 +256,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "93af0007-00de-45ad-bae4-5ac69601d294",
+              "id": 19,
               "content": "A mental connection between ideas or things",
               "options": [
                 "Association",
@@ -268,7 +268,7 @@
               "explanation": "Association is a mental connection between ideas or things."
             },
             {
-              "id": "d69c4459-4b4c-4fb9-b57b-71ba00555adc",
+              "id": 20,
               "content": "Relating to or in the form of words",
               "options": [
                 "Physical",
@@ -280,7 +280,7 @@
               "explanation": "Verbal means relating to or in the form of words."
             },
             {
-              "id": "efdbcfb0-0b89-49ac-8e4f-ac4e30290ca0",
+              "id": 21,
               "content": "To make or become stronger",
               "options": [
                 "Combine",
@@ -297,7 +297,7 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<p style=\"display: none;\">Comprehensive Reading</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit1_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">What's Your Learning Mode?</h1>        <p style=\"margin-bottom: 1rem;\">Which style best sums you up as a person?</p><p style=\"margin-bottom: 1rem;\">\"That looks good to me.\"<br>\"That sounds good to me.\"<br>\"That feels good to me.\"</p>    <p style=\"margin-bottom: 1rem;\">Experts say that these cues suggest a person's learning modality.</p><p style=\"margin-bottom: 1rem;\">The first expression reflects a <b>visual</b> person. The second an <b>auditory</b> person. The third a <b>kinesthetic</b> person.</p><p style=\"margin-bottom: 1rem;\">It simply means that a visual person learns through seeing, an auditory person learns through hearing and a kinesthetic person learns through moving, doing and touching.</p><p style=\"margin-bottom: 1rem;\">To help you understand the three learning modes better, here are additional cues used by learners of different styles.</p><p style=\"margin-bottom: 1rem;\">The <b>visual</b> person might say such things as \"it appears to me\", \"bird's eye view\", \"pretty as a picture\", \"catch a <b>glimpse</b> of\", \"<b>hazy</b> idea\", \"eye to eye\", and \"the mind's eye\".</p><p style=\"margin-bottom: 1rem;\">The <b>auditory</b> person might say such things as \"we are all ears\", \"it's clear as a bell\", \"it rings a bell\", \"<b>describe</b> in <b>detail</b>\", \"voice an opinion\", \"unheard of\".</p><p style=\"margin-bottom: 1rem;\">The <b>kinesthetic</b> person might say such things as \"hang in there\", \"come to grips with\", \"lay your cards on the table\", \"start from scratch\", \"too much hassle\", \"get in touch with\", \"pull some strings\".</p></div></div>",
+      "content": "<p style=\"display: none;\">Comprehensive Reading</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit1_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">What's Your Learning Mode?</h1>        <p style=\"margin-bottom: 1rem;\">Which style best sums you up as a person?</p><p style=\"margin-bottom: 1rem;\">\"That looks good to me.\"<br>\"That sounds good to me.\"<br>\"That feels good to me.\"</p>    <p style=\"margin-bottom: 1rem;\">Experts say that these cues suggest a person's learning modality.</p><p style=\"margin-bottom: 1rem;\">The first expression reflects a <b>visual</b> person. The second an <b>auditory</b> person. The third a <b>kinesthetic</b> person.</p><p style=\"margin-bottom: 1rem;\">It simply means that a visual person learns through seeing, an auditory person learns through hearing and a kinesthetic person learns through moving, doing and touching.</p><p style=\"margin-bottom: 1rem;\">To help you understand the three learning modes better, here are additional cues used by learners of different styles.</p><p style=\"margin-bottom: 1rem;\">The <b>visual</b> person might say such things as \"it appears to me\", \"bird's eye view\", \"pretty as a picture\", \"catch a <b>glimpse</b> of\", \"<b>hazy</b> idea\", \"eye to eye\", and \"the mind's eye\".</p><p style=\"margin-bottom: 1rem;\">The <b>auditory</b> person might say such things as \"we are all ears\", \"it's clear as a bell\", \"it rings a bell\", \"<b>describe</b> in <b>detail</b>\", \"voice an opinion\", \"unheard of\".</p><p style=\"margin-bottom: 1rem;\">The <b>kinesthetic</b> person might say such things as \"hang in there\", \"come to grips with\", \"lay your cards on the table\", \"start from scratch\", \"too much hassle\", \"get in touch with\", \"pull some strings\".</p>\n<p style=\"margin-bottom: 1rem;\">If you know your boss is a visual person, would you voice your opinion or would you get your point across using visual materials such as slides and easy-to-read handouts?</p>\n<p style=\"margin-bottom: 1rem;\">If you know that a colleague is a kinesthetic person who tends to speak slowly, maybe you could slow down to create a better understanding and rapport.</p>\n<p style=\"margin-bottom: 1rem;\">If you find that college students are <b>fumbling</b> in your class, even though they did well in high school, wouldn't you want to find out why in order to teach more effectively?</p>\n<p style=\"margin-bottom: 1rem;\">Perhaps there's a <b>conflict</b> between the students' preferred learning mode and your teaching style. Perhaps the majority of your students are visual learners and you are a mostly auditory teacher.</p>\n<p style=\"margin-bottom: 1rem;\">Remember how we learned as kids? We learned faster through visual and kinesthetic modes! It's important to find out your personal learning mode and that of your family members and key contacts in your company. If you are a teacher or a trainer, and it's difficult to <b>cater</b> to each learning mode, a good method is to combine visual, auditory and kinesthetic modes in your teaching.</p>\n<p style=\"margin-bottom: 1rem;\">So what is your learning mode?</p>\n<p style=\"margin-bottom: 1rem;\">Allow me to describe these modes from the book, \"Quantum Learning\" by Bobbi DePorter and Mike Hernacki. If you are a visual person, you are <b>observant</b>, can see words in your mind, remember more of what was seen than heard, <b>memorize</b> by visual association, read and speak fast, would rather read than be read to, need an overall view and purpose, <b>doodle</b> during phone conversations and meetings, like art more than music and often forget to <b>relay</b> verbal messages to others.</p>\n<p style=\"margin-bottom: 1rem;\">If you are an auditory person, you talk to yourself while working, enjoy reading aloud and listening, are better at telling than writing, are an <b>eloquent</b> speaker, remember what was discussed rather than seen, go into lengthy discussions, like jokes better than comics, like music more than art and speak at an average speed in rhythmic patterns.</p>\n<p style=\"margin-bottom: 1rem;\">If you are a kinesthetic person, you speak slowly, respond to physical rewards, touch people to get their attention, move a lot, learn by doing, memorize by walking and seeing, use a finger as a <b>pointer</b> when reading, <b>gesture</b> a lot, use action words, like to <b>be involved in</b> games, want to <b>act out</b> things and like <b>plot-oriented</b> books that have action.</p>\n<p style=\"margin-bottom: 1rem;\">This does not mean that we do not learn in all of these modalities. We do. It's just that we prefer one over the other. Knowing your style can help you learn faster and easier. Knowing how to <b>decipher</b> the learning styles of others will help you <b>strengthen</b> your rapport with them and help them learn more effectively, too.</p></div></div>",
       "explanation": "Transcript and Reading Passage Explanation",
       "sections": [
         {
@@ -306,7 +306,7 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": "ac557351-8c7e-4a56-9f2e-fec71fb3b1dc",
+              "id": 22,
               "content": "1. There are three learning modes: [ 1 ], auditory and kinesthetic.<br/><br/>2. I only caught a [ 2 ] of the thief, so I can't really describe him.<br/><br/>3. There's sufficient [ 3 ] between hospitals and family doctors.<br/><br/>4. I wasn't sure what to do, so I took my [ 4 ] from the person sitting next to me.<br/><br/>5. He suddenly became wealthy, which changed his whole [ 5 ] of life.<br/><br/>6. The sellers [ 6 ] it as a vintage car, but I'd call it an old wreck.<br/><br/>7. He knew every [ 7 ] of her romance.<br/><br/>8. The mountains were [ 8 ] in the distance.<br/><br/>9. Even simple true or false questions [ 9 ] the artistic taste of different times.<br/><br/>10. There was a lot of [ 10 ] between him and his father.<br/><br/>11. [ 11 ] 20 words a day and you'll throw the dictionary away.",
               "options": [
                 "visual",
@@ -324,7 +324,7 @@
               "correctAnswer": "visual"
             },
             {
-              "id": "849aac73-78e3-4d2b-95f2-25b9b4f6067d",
+              "id": 23,
               "content": "",
               "options": [
                 "visual",
@@ -342,7 +342,7 @@
               "correctAnswer": "glimpse"
             },
             {
-              "id": "7b3ddd82-d0c0-4336-9ea4-594dadd25c9c",
+              "id": 24,
               "content": "",
               "options": [
                 "visual",
@@ -360,7 +360,7 @@
               "correctAnswer": "rapport"
             },
             {
-              "id": "a11820ca-8438-4c8a-bcf8-7e4d47fac1f8",
+              "id": 25,
               "content": "",
               "options": [
                 "visual",
@@ -378,7 +378,7 @@
               "correctAnswer": "cue"
             },
             {
-              "id": "d582a6db-a8f4-47c4-a96a-cd3a2066f002",
+              "id": 26,
               "content": "",
               "options": [
                 "visual",
@@ -396,7 +396,7 @@
               "correctAnswer": "mode"
             },
             {
-              "id": "a1aa1695-1e1f-4b22-b68d-d84df2b647f1",
+              "id": 27,
               "content": "",
               "options": [
                 "visual",
@@ -414,7 +414,7 @@
               "correctAnswer": "describe"
             },
             {
-              "id": "5511611a-8b53-4895-8e22-2ad6ad8b75f8",
+              "id": 28,
               "content": "",
               "options": [
                 "visual",
@@ -432,7 +432,7 @@
               "correctAnswer": "detail"
             },
             {
-              "id": "9330eb23-93e8-4a2d-9f18-e0d940f1c199",
+              "id": 29,
               "content": "",
               "options": [
                 "visual",
@@ -450,7 +450,7 @@
               "correctAnswer": "hazy"
             },
             {
-              "id": "b8950b3c-cb28-49a8-92c5-990ec10f2cf8",
+              "id": 30,
               "content": "",
               "options": [
                 "visual",
@@ -468,7 +468,7 @@
               "correctAnswer": "reflect"
             },
             {
-              "id": "0d7be78b-0e4c-40ae-b9ea-84db98fd3d77",
+              "id": 31,
               "content": "",
               "options": [
                 "visual",
@@ -486,7 +486,7 @@
               "correctAnswer": "conflict"
             },
             {
-              "id": "31c0fa52-f800-4713-beca-c16d90513541",
+              "id": 32,
               "content": "",
               "options": [
                 "visual",
@@ -511,7 +511,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "6ffce7f8-90d0-489e-a742-8d8e2981829b",
+              "id": 33,
               "content": "What learning mode does the expression 'That sounds good to me' suggest?",
               "options": [
                 "Visual",
@@ -523,7 +523,7 @@
               "explanation": "According to the passage, 'The second [expression] an auditory person.' which refers to 'That sounds good to me.'"
             },
             {
-              "id": "e5ea07fd-ef25-4717-8d5c-510d28067efa",
+              "id": 34,
               "content": "Which of the following phrases would a visual person most likely use?",
               "options": [
                 "We are all ears",
@@ -535,7 +535,7 @@
               "explanation": "The passage states that a visual person might say things like 'catch a glimpse of'."
             },
             {
-              "id": "7337aeae-28aa-44fb-882a-7274b61d765c",
+              "id": 35,
               "content": "How does a kinesthetic person learn?",
               "options": [
                 "Through seeing",
