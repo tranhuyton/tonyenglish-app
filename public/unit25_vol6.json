@@ -77,7 +77,8 @@
               "correctAnswer": "A"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "Trắc nghiệm",
+          "imageUrl": "/unit25_vol6_word_list_2.png"
         },
         {
           "id": "sec2_wordlist",
@@ -475,7 +476,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "imageUrl": "/unit25_vol6_word_list_1.png"
     },
     {
       "id": "part2",
