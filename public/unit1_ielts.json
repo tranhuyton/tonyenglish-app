@@ -117,7 +117,7 @@
         },
         {
           "title": "Exercise 3: Mark each statement T for true or F for false.",
-          "content": "",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
           "questionType": "TFNG",
           "questions": [
             {
@@ -127,7 +127,7 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
+              "correctAnswer": "False",
               "explanation": "False. Kinesthetic relates to learning through feeling and physical activities."
             },
             {
@@ -137,7 +137,7 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
+              "correctAnswer": "True",
               "explanation": "True. Lay one's cards on the table means to be completely honest and open."
             },
             {
@@ -147,7 +147,7 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
+              "correctAnswer": "True",
               "explanation": "True. A handout contains information given to people."
             }
           ]
