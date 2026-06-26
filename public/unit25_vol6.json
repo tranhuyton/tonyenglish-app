@@ -9,7 +9,7 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<img src=\"/unit25_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); margin-bottom: 20px;\" />",
+      "content": "<p style=\"display: none;\">Word List</p><img src=\"/unit25_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); margin-bottom: 20px;\" />",
       "sections": [
         {
           "id": "sec1_wordlist",
