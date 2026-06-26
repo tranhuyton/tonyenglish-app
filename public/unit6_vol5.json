@@ -416,6 +416,92 @@
           "questionType": "Trắc nghiệm"
         }
       ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Island</h1>\n<p style=\"margin-bottom: 1rem;\">Bob found himself on a <b>peculiar</b> beach. The night before, his fishing boat had sunk during a terrible storm. Now he was stranded. The bright sun gave him a terrible <b>migraine</b>, and his shoulder had a painful <b>fracture</b>. But he refused to let this <b>deter</b> him. He had to return home to his <b>spouse</b> and children.</p>\n<p style=\"margin-bottom: 1rem;\">With great effort, he walked away from the <b>coastline</b> and climbed to a higher <b>altitude</b>. From a mountain <b>ridge</b>, he gained some <b>insight</b> into his situation. There were no signs of people, but he saw some sturdy <b>indigenous</b> trees. Bob decided to <b>devise</b> a plan to escape. He would build a raft.</p>\n<p style=\"margin-bottom: 1rem;\">The shoulder injury began to <b>impair</b> his ability to carry heavy materials, so he had to <b>tolerate</b> the pain. He used his <b>expertise</b> as a <b>proficient</b> builder to connect tree <b>limbs</b> with strong vines. His strong <b>optimism</b> kept him going during this difficult <b>quest</b>. Finally, he was ready to <b>implement</b> his escape. He gathered all his strength, managed to <b>thrust</b> the raft into the water, and paddled toward home.</p></div>",
+      "explanation": "",
+      "sections": [
+        {
+          "id": "sec5_reading_A",
+          "title": "Part A: Mark each statement True, False, or Not Given.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A: Mark each statement True, False, or Not Given.</p>",
+          "questionType": "TFNG",
+          "questions": [
+            {
+              "id": "36",
+              "content": "Bob suffered a fracture in his shoulder when his boat sank.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Đúng. Bài đọc nói rằng \"his shoulder had a painful fracture\"."
+            },
+            {
+              "id": "37",
+              "content": "Bob was a proficient doctor who knew how to treat his migraine.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "False",
+              "explanation": "Sai. Bob là một \"proficient builder\", không phải bác sĩ."
+            },
+            {
+              "id": "38",
+              "content": "Bob used indigenous trees and vines to build his raft.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Đúng. Anh ấy thấy \"indigenous trees\" và dùng \"tree limbs with strong vines\" để đóng bè."
+            },
+            {
+              "id": "39",
+              "content": "Bob's spouse was waiting for him at the coastline.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "False",
+              "explanation": "Sai. Anh ấy muốn trở về nhà với \"spouse\" (vợ) của mình, chứ cô ấy không đợi ở bờ biển."
+            },
+            {
+              "id": "40",
+              "content": "Bob brought enough food to survive for a week.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "Not Given",
+              "explanation": "Không có thông tin. Bài đọc không nhắc đến việc Bob mang theo thức ăn dự trữ."
+            }
+          ]
+        },
+        {
+          "id": "sec5_reading_B",
+          "title": "Part B: Fill in the blanks",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B: Fill in the blanks with the correct words.</p>",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "41",
+              "content": "Despite his [ 1 ], Bob maintained his [ 2 ] and managed to [ 3 ] a clever plan. He used his [ 4 ] to build a raft from sturdy [ 5 ].",
+              "options": [],
+              "correctAnswer": "migraine|optimism|devise|expertise|limbs",
+              "explanation": "1. migraine (chứng đau nửa đầu)\n2. optimism (sự lạc quan)\n3. devise (vạch ra, nghĩ ra)\n4. expertise (chuyên môn)\n5. limbs (nhành cây/cành cây)"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
