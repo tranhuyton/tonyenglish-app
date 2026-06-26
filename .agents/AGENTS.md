@@ -20,11 +20,14 @@ Các agent khi làm việc với cấu trúc dữ liệu JSON của bài test tr
 ## 4. Quy định về Question Type (Encoding & DropList)
 - **Cẩn thận khi lưu tiếng Việt có dấu:** Các chuỗi quy định dạng bài (`questionType`) như `"Điền từ"`, `"Trắc nghiệm"`, `"Kéo thả"`, `"Kéo thả vào Part"`, `"Matching"` phải được bảo toàn chuẩn xác encoding UTF-8 (Không được để biến dạng thành ký tự rác như `─Éiß╗ün tß╗½`). NẾU BỊ RÁC CHỮ, APP SẼ TRẮNG MÀN HÌNH KHI NỘP BÀI.
 - **Xử lý dạng bài True/False/Not Given (T/F/NG) hoặc Yes/No/Not Given (Y/N/NG):**
-  - **CẤM** sử dụng `questionType` là `"Khác"`. App không có logic UI render cho loại bài này.
-  - Thay vào đó, PHẢI sử dụng `questionType` là `"TFNG"`. (KHÔNG sử dụng Droplist cho dạng bài này vì TFNG sẽ hiển thị giao diện Radio Button trực quan hơn).
-  - Từ nay về sau, nếu dạng bài yêu cầu chọn `A/I/N` (Accurate/Inaccurate/Not Given) thì phải quy đổi CHUẨN HÓA thành `"Yes", "No", "Not Given"`.
-  - Set mảng `options` của câu hỏi T/F/NG hoặc Y/N/NG thống nhất là `["Yes", "No", "Not Given"]` hoặc `["True", "False", "Not Given"]` để tạo giao diện chọn chuẩn, tuyệt đối không được dùng `["A", "I", "N"]`.
-  - Đồng thời cập nhật trường `content` (hướng dẫn) của Section thành tên dạng bài rõ ràng, ví dụ: `<p>Yes No Not Given</p>`.
+  - **CẤM** sử dụng `questionType` là `"Khác"` hay `"True/False"`. App không có logic UI render riêng cho loại bài này.
+  - Thay vào đó, PHẢI LUÔN sử dụng `questionType` là `"TFNG"` cho BẤT KỲ dạng bài True/False nào (kể cả bài chỉ có 2 lựa chọn). (KHÔNG sử dụng Droplist cho dạng bài này vì TFNG sẽ hiển thị giao diện Radio Button trực quan hơn).
+  - **Số lượng Options (QUAN TRỌNG):** Phải thiết lập mảng `options` BÁM SÁT vào đúng số lượng và loại đáp án mà bài toán yêu cầu:
+    - Nếu đề bài CHỈ yêu cầu True/False (2 lựa chọn): Set mảng `options` đúng 2 phần tử là `["True", "False"]`. (TUYỆT ĐỐI KHÔNG được tự ý thêm "Not Given" vào nếu đề không nhắc đến).
+    - Nếu đề bài yêu cầu True/False/Not Given: Set mảng `options` là `["True", "False", "Not Given"]`.
+    - Nếu đề bài yêu cầu Yes/No/Not Given: Set mảng `options` là `["Yes", "No", "Not Given"]`.
+    - Nếu dạng bài yêu cầu chọn `A/I/N` (Accurate/Inaccurate/Not Given) thì phải quy đổi CHUẨN HÓA thành `"Yes", "No", "Not Given"`. TUYỆT ĐỐI không được dùng `["A", "I", "N"]`.
+  - Đồng thời cập nhật trường `content` (hướng dẫn) của Section thành tên dạng bài rõ ràng, ví dụ: `<p>Yes No Not Given</p>` hoặc `<p>True / False</p>`.
 
 ## 5. Cẩn trọng khi chia Section (Đặc biệt tránh gộp nhầm Trắc nghiệm vào TFNG)
 - Khi xử lý dữ liệu, KHÔNG được gộp các câu hỏi dạng Trắc nghiệm, Checkbox (VD: "Circle the appropriate letter", "Choose the reasons...") vào chung một Section với bài "Yes No Not Given" (TFNG) chỉ vì chúng đứng liền kề nhau mà không có tiêu đề "Task X" phân tách rõ ràng.
