@@ -426,16 +426,15 @@
         {
           "id": "sec6_reading_A",
           "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A: Mark each statement True, False, or Not Given.</p>",
-          "questionType": "TFNG",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A: Mark each statement True or False.</p>",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
               "content": "Bob had a migraine and a shoulder fracture when he awoke on the peculiar beach.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "correctAnswer": "True",
               "explanation": "Đúng. Bài đọc có câu: \"He had a terrible migraine, and he had a fracture in his shoulder.\""
@@ -445,8 +444,7 @@
               "content": "Bob implemented a plan to bring his spouse and children to the island.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "correctAnswer": "False",
               "explanation": "Sai. Bob thực hiện kế hoạch để \"return home to his spouse and children\" (trở về nhà với vợ và các con), chứ không phải mang họ đến hòn đảo."
@@ -456,8 +454,7 @@
               "content": "The indigenous tree limbs impaired Bob's ability to carry the materials.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "correctAnswer": "False",
               "explanation": "Sai. Bài đọc viết \"his shoulder injury impaired his ability to carry the materials\" (chấn thương vai của anh ấy làm suy yếu khả năng mang vác vật liệu), không phải do cành cây."
@@ -467,8 +464,7 @@
               "content": "Bob was proficient in building, and he used his expertise to build the raft.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "correctAnswer": "True",
               "explanation": "Đúng. Bài đọc có câu: \"Bob was a proficient builder. He used his building expertise to line up the limbs...\""
@@ -478,8 +474,7 @@
               "content": "Bob thrust the raft into the water to begin his quest.",
               "options": [
                 "True",
-                "False",
-                "Not Given"
+                "False"
               ],
               "correctAnswer": "True",
               "explanation": "Đúng. Bài đọc viết: \"he thrust the raft into the water. He climbed on and began the quest to find his way home.\""
