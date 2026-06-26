@@ -214,51 +214,51 @@
               "id": "21",
               "content": "The dilapidated mansion was covered in filth.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Ngay ở đoạn đầu, bài đọc có mô tả về căn biệt thự: \"The mansion was in terrible condition. It was covered with filth\" (Dinh thự ở trong tình trạng tồi tệ. Nó bị bao phủ bởi bụi bẩn).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "22",
               "content": "Gordon’s muscles were a testament to his flaws.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Ở đoạn hai viết: \"His muscles were a testament to his strong work ethic\" (Cơ bắp của anh là minh chứng cho tinh thần làm việc hăng say của anh), chứ không phải là minh chứng cho những khuyết điểm (flaws).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "23",
               "content": "Gordon was never reckless even when tasks were boring.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Trong đoạn ba có câu xác nhận rõ ràng: \"Even when tasks were boring, he was never reckless\" (Ngay cả khi công việc có nhàm chán, anh ấy cũng không bao giờ làm việc cẩu thả/thiếu thận trọng).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
               "content": "The mound of dirt evoked unhappy feelings in Gordon.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Theo đoạn ba, thứ gợi lên cảm giác buồn bã ở Gordon là do Greta không thể hiện sự trân trọng: \"The lack of appreciation evoked unhappy feelings in Gordon\" (Sự thiếu trân trọng đã gợi lên những cảm xúc không vui ở Gordon), chứ không phải vì đống bụi bẩn.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "25",
               "content": "Gordon tightened the valve under the kitchen faucet and bought timber to build stools.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Đoạn hai liệt kê các việc anh làm: \"He tightened the valve underneath the kitchen faucet to stop the leak. He even bought timber to build new stools for the kitchen.\"",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

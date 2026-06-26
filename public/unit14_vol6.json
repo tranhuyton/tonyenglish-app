@@ -161,7 +161,7 @@
                 "I"
               ],
               "explanation": "Weary means tired.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -171,7 +171,7 @@
                 "I"
               ],
               "explanation": "Pages cannot quiver with sheer horror; people or animals quiver.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -181,7 +181,7 @@
                 "I"
               ],
               "explanation": "Hesitant means not sure or slow in acting.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -191,7 +191,7 @@
                 "I"
               ],
               "explanation": "Marrow is the soft substance in the center of bones.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -201,7 +201,7 @@
                 "I"
               ],
               "explanation": "Contend with means to struggle to overcome.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "16",
@@ -211,7 +211,7 @@
                 "I"
               ],
               "explanation": "Stray means to go in a wrong direction. The correct word is 'paid'.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -221,7 +221,7 @@
                 "I"
               ],
               "explanation": "Frontier is a border between two regions.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -231,7 +231,7 @@
                 "I"
               ],
               "explanation": "Cot is a small portable bed, not a place to park.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -241,7 +241,7 @@
                 "I"
               ],
               "explanation": "Tract is a large area of land.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -251,7 +251,7 @@
                 "I"
               ],
               "explanation": "Contemplate means to think about.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -273,51 +273,51 @@
               "id": "21",
               "content": "Tom strayed from his squad to gaze at a splendid view of a lush forest near the frontier.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Tom bị lạc khỏi tiểu đội của mình để ngắm nhìn khung cảnh tuyệt đẹp của một khu rừng tươi tốt gần biên giới.\nGiải thích: F. Theo đoạn 2, anh ấy dừng lại để ngắm nhìn một thung lũng (valley) chứ không phải khu rừng (forest): \"He had stopped to gaze at a splendid view of a lush valley.\" (Anh ấy đã dừng lại để ngắm nhìn khung cảnh tuyệt đẹp của một thung lũng tươi tốt).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
               "content": "Tom couldn’t find his squad on the tract of wilderness because their outfits had camouflage.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Tom không thể tìm thấy tiểu đội của mình trên vùng hoang dã vì trang phục của họ có màu ngụy trang.\nGiải thích: T. Đoạn 2 nói rằng: \"He searched for them, but because their outfits had camouflage, he couldn’t find them.\" (Anh ấy tìm kiếm họ, nhưng vì trang phục của họ được ngụy trang nên anh ấy không thể tìm thấy). Câu này hoàn toàn đúng.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
               "content": "All Tom had with him was his cot, a boomerang, and his handbook.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Tất cả những gì Tom có là cái giường gấp của anh ấy, một chiếc boomerang và cuốn sổ tay.\nGiải thích: F. Ở đoạn 3 tác giả kể: \"All he had was a knife, a boomerang, and his handbook. He made a camp for the night. It was cold, and the ground was hard. He wished he had his cot and a blanket.\" (Tất cả những gì anh có là một con dao, một chiếc boomerang và cuốn sổ tay. Anh ấy ước gì mình có chiếc giường gấp và một chiếc chăn). Vậy là anh ấy chỉ có dao, boomerang và sổ tay, chứ không hề có giường gấp (cot) !",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "24",
               "content": "A monster of substantial size left a print from its paw in the dirt near Tom’s fire.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Một con quái vật có kích thước lớn đã để lại dấu chân trên mặt đất gần đống lửa của Tom.\nGiải thích: F. Đoạn 5 có viết: \"An animal of substantial size had left a print from its paw in the dirt.\" (Một con vật có kích thước đáng kể đã để lại một dấu chân trên mặt đất). Đó chỉ là một con vật chứ không phải một con quái vật (monster) như trong câu hỏi nhắc tới nhé. (Sau đó anh ta mới phát hiện đó là một con kangaroo).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "25",
               "content": "A loud noise woke him from his sleep.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Một tiếng động lớn đã đánh thức anh khỏi giấc ngủ.\nGiải thích: T. Đoạn 4 viết: \"A loud noise roused him from his sleep.\" (Một tiếng động lớn đã đánh thức anh ấy khỏi giấc ngủ). Từ \"roused\" đồng nghĩa với \"woke\", nên câu này hoàn toàn chính xác.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

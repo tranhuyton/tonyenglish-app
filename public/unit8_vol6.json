@@ -420,51 +420,51 @@
               "id": "31",
               "content": "Kevin took a taxi to the ship.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Câu đầu tiên của bài đọc ghi rõ: \"Kevin stepped off the tram and walked toward the ship\" (Kevin bước xuống khỏi xe điện và đi về phía con tàu), tức là anh ấy đi xe điện chứ không phải taxi.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
               "content": "In order to get the privilege to be in the exclusive section, one had to wear fancy garments.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Ở đoạn hai, tác giả viết: \"People paid a premium for the privilege to ride in first-class\" (Mọi người trả một mức phí cao cho đặc quyền đi khoang hạng nhất). Không phải mặc quần áo đẹp là được vào.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "Kevin didn’t socialize with the people in the exclusive section because it was too congested.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Theo đoạn hai: \"He would have liked to socialize with the people inside, but it was against proper etiquette\" (Anh ấy muốn giao lưu với những người bên trong, nhưng điều đó là trái với quy tắc lịch sự). Lý do không phải là vì quá đông đúc.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
               "content": "Kevin could not sleep because he had insomnia.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Trong đoạn bốn, bài viết có nêu: \"That night, he suffered from insomnia\" (Đêm đó, anh ấy bị chứng mất ngủ).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "If Kevin hadn’t seen the iceberg, the ship was liable to have crashed into it.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Cuối bài đọc, thuyền trưởng khẳng định điều này khi nói với Kevin: \"Without your help, we would have definitely hit the iceberg\" (Nếu không có sự giúp đỡ của cậu, chúng ta chắc chắn đã đâm vào tảng băng trôi).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

@@ -214,51 +214,51 @@
               "id": "21",
               "content": "Even today, sailors opt to improvise by using Polaris on clear nights.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) nhé. Bạn xem đoạn 3 có câu: 'Even today, sailors sometimes opt to navigate by using Polaris on clear nights.' (Ngay cả ngày nay, các thủy thủ đôi khi chọn cách điều hướng bằng cách sử dụng sao Bắc Đẩu vào những đêm trời quang). Trong câu hỏi lại dùng từ 'improvise' (ứng biến) thay vì 'navigate' (điều hướng) nên câu này sai .",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
               "content": "A ship could become stranded if a captain erred and made an inadvertent wrong turn.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) . Trong đoạn 3 có viết: 'A captain could err and make an inadvertent wrong turn. The ship could become stranded at sea...' (Một thuyền trưởng có thể mắc sai lầm và vô tình rẽ ngoặt sai hướng. Con tàu có thể bị mắc cạn trên biển...). Ý của câu hỏi hoàn toàn trùng khớp với thông tin trong bài nè.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
               "content": "People who are lost can be alleviated by gazing up at a frantic sky.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Thông tin trong đoạn cuối: 'When people get lost, it’s comforting to know that their problems can be alleviated by looking at the sky.' (Khi mọi người bị lạc, thật an tâm khi biết rằng vấn đề của họ có thể được xoa dịu bằng cách nhìn lên bầu trời). Không có chi tiết nào nói về bầu trời hoảng loạn ('frantic sky') cả, từ 'frantic' trong bài được dùng để miêu tả vị thuyền trưởng ('frantic captain') ở đoạn 3.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "24",
               "content": "Volatile storms were more than nuisances because they disrupted entire journeys.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Ở đầu đoạn 3 có câu: '...volatile storms and dark clouds were more than nuisances. They could disrupt entire journeys...' (...những cơn bão dữ dội và những đám mây đen không chỉ là những sự phiền toái. Chúng có thể phá vỡ toàn bộ các hành trình...). Câu hỏi tóm tắt lại chính xác ý của câu này đó.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
               "content": "It is not difficult to differentiate Polaris from the multitude of other stars in the universe.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) . Bạn xem câu đầu tiên của đoạn cuối: 'It’s not difficult to differentiate Polaris from other stars.' (Không khó để phân biệt sao Bắc Đẩu với các ngôi sao khác). Rất rõ ràng đúng không nào!",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

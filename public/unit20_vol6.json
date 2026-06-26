@@ -408,7 +408,7 @@
                 "I"
               ],
               "explanation": "fro means backward and forward or side to side.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -418,7 +418,7 @@
                 "I"
               ],
               "explanation": "pollen is the powder made in flowers.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -428,7 +428,7 @@
                 "I"
               ],
               "explanation": "eternal means lasting forever, which contradicts lasting only ten minutes.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -438,7 +438,7 @@
                 "I"
               ],
               "explanation": "adhesive is a substance used for sticking things together.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -448,7 +448,7 @@
                 "I"
               ],
               "explanation": "phoenix is a mythical bird, not a fee or money.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "31",
@@ -458,7 +458,7 @@
                 "I"
               ],
               "explanation": "fluctuated means rising and falling or changing; 'warm and sunny every day' means it was constant.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
@@ -468,7 +468,7 @@
                 "I"
               ],
               "explanation": "tickles means causing laughter by touching.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -478,7 +478,7 @@
                 "I"
               ],
               "explanation": "dumped means thrown away or gotten rid of.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -488,7 +488,7 @@
                 "I"
               ],
               "explanation": "intermediate means in the middle of two levels.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -498,7 +498,7 @@
                 "I"
               ],
               "explanation": "texture refers to the quality of something known by its touch, it doesn't make sense for a workload.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -520,51 +520,51 @@
               "id": "36",
               "content": "The bees had an important dependency on pollen.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Trong bài có câu: \"Bees had an important dependency on pollen.\" (Loài ong có một sự phụ thuộc quan trọng vào phấn hoa). Do đó câu này là True.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "37",
               "content": "The texture of the petals in the vibrant flower tickled.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Bài đọc viết: \"The fine texture of the pollen tickled when it stuck to his body.\" (Kết cấu mịn của phấn hoa làm cậu buồn buột khi dính vào người). Chứ không phải cánh hoa (petals) làm cậu buồn buột.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "38",
               "content": "The little bee was blown to and fro and reversed in his direction.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Trong bài có đoạn: \"He was blown to and fro. One minute he was flying straight, and the next minute the wind had reversed his course.\" (Cậu bị thổi bay tới tấp. Một phút trước cậu đang bay thẳng, phút tiếp theo cơn gió đã đảo ngược hướng của cậu).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "39",
               "content": "Because the pollen acted like an adhesive, the little bee couldn’t dump it.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Đoạn 5 có viết: \"He tried to dump some of the pollen, but it acted as an adhesive. He couldn't get it off.\" (Cậu cố gắng vứt bớt phấn hoa đi, nhưng nó lại giống như chất kết dính. Cậu không thể rũ bỏ được).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "40",
               "content": "After his mentor helped him regain his strength, the little bee lost his ambitions and fell to the ground like a phoenix.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Trong bài ghi là: \"Finally, with the pollen off of him, the bee easily regained his strength, and like a phoenix, the young bee flew back into the air.\" (Cuối cùng, khi đã rũ bỏ được phấn hoa, cậu ong dễ dàng lấy lại sức, và giống như một con phượng hoàng, cậu ong trẻ bay trở lại không trung). Nghĩa là cậu bay lên, chứ không phải rơi xuống đất (fell to the ground).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

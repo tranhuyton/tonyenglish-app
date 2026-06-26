@@ -407,51 +407,51 @@
               "id": "31",
               "content": "Becky was having charred sesame chicken for lunch.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) . Trong đoạn 2, Becky trả lời bữa trưa có món gà mè (sesame chicken) nhưng thịt bị cháy xém (charred). Ý của câu hỏi hoàn toàn khớp với bài nhé!",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
               "content": "The argument ensued because Becky wavered about whether to run the relay.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 5 ghi rõ: 'An argument ensued about eating chilies.' (Một cuộc tranh cãi đã nổ ra về việc ăn ớt). Không phải vì Becky phân vân có nên chạy tiếp sức (run the relay) hay không đâu nhé!",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "After Russell and Becky negotiated the bet, they decided that whoever lost would carry the winner's books for a year.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Ở đoạn 7 có trích lời: 'The loser has to carry the winner's books for a year!' (Người thua sẽ phải mang sách cho người thắng trong một năm!). Rất chính xác luôn!",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "Russell was wary about eating the pepper even if it looked benign.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Trong bài, người cảnh giác (wary) với quả ớt là Becky chứ không phải Russell: 'Becky was wary of eating the pepper' (đoạn 6) và 'The chili looked benign, but Becky knew...' (đoạn 10). Câu hỏi bị nhầm nhân vật rồi!",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
               "content": "Becky was apologetic because of her choice to take the first bite of the pepper.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Becky không xin lỗi đơn thuần vì việc cô ấy ăn miếng đầu tiên, mà ở đoạn 14 cô nói: 'I'm sorry—I feel like I cheated by going first.' (Mình xin lỗi—Mình cảm thấy như mình đã gian lận khi ăn miếng đầu tiên). Bởi vì cô đã cắn phần ít cay nhất ở dưới cùng (bottom) và để lại phần cay nhất ở giữa cho bạn mình.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

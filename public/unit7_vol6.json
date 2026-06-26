@@ -430,51 +430,51 @@
               "id": "31",
               "content": "The Greek Magical Papyri was hard to decipher because it was too large in scope.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Bạn có thể thấy đáp án là Sai (F). Câu văn trong bài nói rằng: \"The text was written in at least three different ancient languages\" (Văn bản này được viết bằng ít nhất ba ngôn ngữ cổ khác nhau), điều này làm cho nó khó giải mã, chứ không phải vì phạm vi quá rộng.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
               "content": "The book is about botany.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F) nhé. Ngay câu đầu tiên của bài đọc đã khẳng định: \"The Greek Magical Papyri is a collection of writing about magic\" (Greek Magical Papyri là một bộ sưu tập các bài viết về phép thuật). Thực vật học (botany) chỉ là một phần trong đó chứ không phải là chủ đề chính.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "The book gave advice for using crocodile dung to heal.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Trong đoạn hai có nhắc đến: \"Some spells asked for unusual things, like crocodile dung\" (Một số phép thuật yêu cầu những thứ kỳ lạ, như phân cá sấu) để dùng cho việc chữa bệnh.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "A spell is spoken at dusk to become more credible.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Theo đoạn ba, mục đích của việc đọc thần chú lúc chạng vạng là để làm hài lòng các vị thần: \"At dusk, he is supposed to say a spell, so the gods would be gratified\" (Lúc chạng vạng, người đó phải đọc một câu thần chú để các vị thần hài lòng).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
               "content": "The book had instructions for honing one’s psychic powers.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Đoạn bốn có đề cập rõ ràng rằng: \"Other parts of the collection describe how to hone one’s psychic abilities\" (Các phần khác của bộ sưu tập mô tả cách mài giũa khả năng ngoại cảm của một người).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

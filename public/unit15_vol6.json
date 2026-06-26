@@ -302,51 +302,51 @@
               "id": "26",
               "content": "The health hazard was a lack of sterile drinking water in overcrowded urban cities.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T: Trong đoạn 1 có viết \"There was an extreme lack of clean drinking water in the overcrowded urban cities.\" (Có một sự thiếu hụt nghiêm trọng nước sạch ở các thành thị đông đúc). Điều này hoàn toàn khớp với câu hỏi.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
               "content": "A deficiency of contaminated water caused metabolic processes to stop working correctly.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "F: Bài đọc viết \"It also caused a deficiency of important fluids... Without the proper fluids and minerals, metabolic processes stopped working correctly.\" (Thiếu hụt chất lỏng và khoáng chất quan trọng làm quá trình trao đổi chất ngừng hoạt động). Nguyên nhân là thiếu chất lỏng quan trọng, không phải thiếu nước ô nhiễm (contaminated water).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
               "content": "It was imperative that people received viable treatment quickly.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T: Đoạn 2 nêu rõ \"If they had not received viable treatment, they would have been likely to die. It was imperative for help to come soon.\" (Nếu không có phương pháp điều trị khả thi, họ có thể chết. Việc giúp đỡ sớm là vô cùng cấp thiết).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
               "content": "The government used to filter water is being upgraded.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "F: Trong đoạn cuối ghi \"The system used to filter water is being upgraded.\" (Hệ thống dùng để lọc nước đang được nâng cấp), chứ không phải chính phủ (The government) đang được nâng cấp.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
               "content": "The government now administers water supply plants to make sure they adhere to guidelines.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T: Đoạn cuối bài viết nêu rõ \"The government now administers the water supply plants and makes sure that they adhere to strict safety guidelines.\" (Chính phủ hiện đang quản lý các nhà máy cấp nước và đảm bảo chúng tuân thủ các quy định an toàn nghiêm ngặt).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

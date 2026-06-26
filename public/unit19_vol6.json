@@ -455,51 +455,51 @@
               "id": "31",
               "content": "Doctors who treated patients for seizures in the 1800s were influenced by primal medical beliefs.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Các bác sĩ điều trị cho bệnh nhân bị co giật vào những năm 1800 đã bị ảnh hưởng bởi những niềm tin y học nguyên thủy.\nGiải thích: T. Đoạn 1 có viết: \"doctors in the 1800s were influenced more by primal medical beliefs than science.\" (các bác sĩ vào những năm 1800 bị ảnh hưởng bởi những niềm tin y khoa nguyên thủy nhiều hơn là khoa học). Câu này hoàn toàn đúng.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
               "content": "Doctors still used outmoded treatments even after definitive treatments were developed.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Các bác sĩ vẫn sử dụng những phương pháp điều trị lỗi thời ngay cả sau khi các phương pháp điều trị chính thức được phát triển.\nGiải thích: F. Đoạn 6 cho biết: \"Once the causes of seizures were known, definitive treatments were developed.\" (Một khi nguyên nhân của cơn co giật được biết đến, các phương pháp điều trị dứt điểm đã được phát triển). Không có thông tin nào nói rằng họ vẫn tiếp tục dùng các cách cũ lỗi thời (outmoded) sau đó cả.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "The cause of seizures used to be equated to the work of the Almighty.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Nguyên nhân của các cơn co giật từng bị đánh đồng với sự tác động của Đấng Toàn Năng.\nGiải thích: F. Theo đoạn 2, nguyên nhân của các cơn co giật được đánh đồng với tà ma chứ không phải Đấng Toàn Năng: \"They equated seizures with the work of evil spirits.\" (Họ đánh đồng những cơn co giật là do tà ma gây ra).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
               "content": "Today, care for people with seizures is better because treatment sessions are more personalized.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Ngày nay, việc chăm sóc cho những người bị co giật đã tốt hơn vì các liệu trình điều trị được cá nhân hóa nhiều hơn.\nGiải thích: T. Đoạn 6 có nói: \"Treatment is personalized according to the type of seizure the patient has.\" (Việc điều trị được cá nhân hóa tùy theo loại co giật mà bệnh nhân mắc phải). Điều này làm cho việc chăm sóc tốt hơn.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "The cause of seizures pertain to misfired signals in the brain that cause a jerking reflex in the body.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Nguyên nhân của các cơn co giật liên quan đến các tín hiệu sai lệch trong não gây ra phản xạ giật trong cơ thể.\nGiải thích: T. Đoạn 5 giải thích rất rõ: \"We know today that these causes pertain to the brain. Misfired signals from the brain cause a jerking reflex in the body.\" (Ngày nay chúng ta biết rằng những nguyên nhân này liên quan đến não bộ. Các tín hiệu bị lỗi từ não gây ra một phản xạ co giật trong cơ thể).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

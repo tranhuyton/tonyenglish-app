@@ -170,7 +170,7 @@
                 "I"
               ],
               "explanation": "saliva means watery liquid in the mouth.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -180,7 +180,7 @@
                 "I"
               ],
               "explanation": "depot means a station.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -190,7 +190,7 @@
                 "I"
               ],
               "explanation": "yawn is opening mouth wide and breathing in air, usually due to tiredness, not from a joke.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -200,7 +200,7 @@
                 "I"
               ],
               "explanation": "tolerant means accepting others, contradicting the sentence.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -210,7 +210,7 @@
                 "I"
               ],
               "explanation": "spit means to force liquid from one's mouth.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -220,7 +220,7 @@
                 "I"
               ],
               "explanation": "constrain means to limit development, incorrect context for writing an essay.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -230,7 +230,7 @@
                 "I"
               ],
               "explanation": "restrain means to stop using physical strength, incorrect context.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -240,7 +240,7 @@
                 "I"
               ],
               "explanation": "inherent means a natural part of something, contradicting 'usually a very calm person'.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "24",
@@ -250,7 +250,7 @@
                 "I"
               ],
               "explanation": "ransom is money paid to a kidnapper.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -260,7 +260,7 @@
                 "I"
               ],
               "explanation": "guts means the organs inside a body.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -270,7 +270,7 @@
                 "I"
               ],
               "explanation": "intimidate means to frighten others, incorrect context.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -280,7 +280,7 @@
                 "I"
               ],
               "explanation": "stunt is something done to get attention.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -290,7 +290,7 @@
                 "I"
               ],
               "explanation": "forefinger is the pointing finger.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -300,7 +300,7 @@
                 "I"
               ],
               "explanation": "moist means slightly wet, deserts are typically dry.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "30",
@@ -310,7 +310,7 @@
                 "I"
               ],
               "explanation": "janitor makes repairs and takes care of a building.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -333,51 +333,51 @@
               "id": "31",
               "content": "Anne was constrained by her inherent fears.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này ĐÚNG. Trong đoạn 1 có viết: \"Anne hated being constrained by her fears...\" (Anne ghét bị gò bó bởi những nỗi sợ hãi của chính mình...).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
               "content": "The vampire restrained her arms and legs and carried her to his house.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này SAI. Đoạn 2 ghi rõ: \"The scary man restrained her arms and legs and carried her to his house.\" Không phải là \"vampire\" (ma cà rồng) mà là \"scary man\" (người đàn ông đáng sợ) đã trói tay chân và mang cô về nhà hắn.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "Anne’s guts began to hurt because she was intimidated by her classmates.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này SAI. Trong truyện viết: \"Her guts began to hurt because she was so scared.\" (Ruột gan cô bắt đầu đau thắt lại vì quá sợ hãi) sau khi bị bắt cóc bởi kẻ xấu, chứ không phải vì bị đe dọa (\"intimidated\") bởi bạn cùng lớp.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
               "content": "The dirty man spit when he talked.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này ĐÚNG. Đoạn 3 có nhắc đến: \"The dirty man spit when he talked. A string of saliva hung from his moist lips.\" (Gã đàn ông bẩn thỉu nhổ nước bọt khi hắn nói chuyện).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "At the end, the kids were tolerant of Anne and decided to emulate her bravery.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này ĐÚNG. Ở đoạn cuối, tác giả có viết: \"The kids were very tolerant of Anne from then on. They even decided that they would emulate her bravery...\" (Bọn trẻ từ đó rất khoan dung với Anne. Chúng thậm chí quyết định sẽ noi gương lòng dũng cảm của cô...).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

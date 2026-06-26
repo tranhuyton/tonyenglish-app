@@ -314,51 +314,51 @@
               "id": "31",
               "content": "The editor felt the imperial law excluded people of different nationalities and racial and ethnic backgrounds.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Trong đoạn 2 có viết: \"He felt that the new law excluded people of different nationalities and racial and ethnic backgrounds.\" (Ông cảm thấy rằng luật mới đã loại trừ những người có quốc tịch và bối cảnh chủng tộc, sắc tộc khác nhau).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
               "content": "The legislature prosecuted the editor for undermining the authority of the empire.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Đoạn cuối viết: \"Surprisingly, instead of being prosecuted, he became a hero. The legislature changed the law...\" (Đáng ngạc nhiên là thay vì bị khởi tố, ông lại trở thành một vị anh hùng. Cơ quan lập pháp đã thay đổi đạo luật...). Do đó, ông ấy không bị cơ quan lập pháp khởi tố (prosecuted).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "The editor was not fluent in the empire’s language.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Đoạn 2 viết: \"He had firsthand knowledge of what it feels like not to be fluent in the imperial language because he was from a remote part of the empire.\" (Ông hiểu rõ cảm giác không thông thạo ngôn ngữ của đế quốc là như thế nào vì ông đến từ một vùng đất xa xôi của đế quốc).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "Everyone was impressed by the editor’s tact and showed solidarity with his ideas.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Trong đoạn 5 có câu: \"Everyone was impressed by his tact and showed solidarity with his ideas.\" (Mọi người đều ấn tượng bởi sự khéo léo của ông và thể hiện sự đoàn kết với ý tưởng của ông).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "The article wasn’t solemn and intelligent, but rather rude and angry.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Đoạn 4 viết: \"It wasn’t rude or angry, but rather, very solemn and intelligent.\" (Bài báo không hề thô lỗ hay giận dữ, mà ngược lại, rất trang nghiêm và thông minh). Câu hỏi đã đảo ngược lại ý của bài đọc.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

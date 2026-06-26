@@ -358,7 +358,7 @@
                 "I"
               ],
               "explanation": "Conquest means taking over another country.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -368,7 +368,7 @@
                 "I"
               ],
               "explanation": "Dynamics means the way that parts of a situation affect each other.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -388,7 +388,7 @@
                 "I"
               ],
               "explanation": "Advocate means to support or suggest an idea in public.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -410,51 +410,51 @@
               "id": "31",
               "content": "People were envious of King Croesus because he understood the dynamics of war better than anybody else.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Mọi người ghen tị với Vua Croesus vì ông kiểm soát một mặt hàng có giá trị là vàng: \"...controlled a valuable commodity: gold. Many people were very envious of him\" (...kiểm soát một mặt hàng có giá trị: vàng. Nhiều người rất ghen tị với ông). Chứ không phải vì ông hiểu về động lực chiến tranh.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
               "content": "The messenger disclosed that the Persians were in a state of unrest.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Ngay đầu đoạn hai, bài đọc cho biết: \"One day, a messenger disclosed some interesting news: political unrest in Persia had weakened the empire\" (Một ngày nọ, một sứ giả tiết lộ tin tức thú vị: tình trạng bất ổn chính trị ở Ba Tư đã làm suy yếu đế chế).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "33",
               "content": "The sage man from the senate was the only one that shared the king’s sentiment.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Vị hiền triết (sage) không hề chia sẻ quan điểm với nhà vua, mà chỉ cảnh báo ông rằng sự may mắn của ông sẽ không kéo dài mãi: \"The sage didn’t say whether he should attack the Persians or not. He only warned him that his good luck wouldn’t last.\"",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
               "content": "The messenger gave the Oracle jugs of wine and baskets of lentils to make her happy.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Trong đoạn bốn có viết rõ chi tiết này: \"The messenger gave the Oracle jugs of wine and baskets of lentils in order to make her happy\" (Sứ giả đã tặng Oracle những bình rượu và giỏ đậu lăng để làm bà vui).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "The Oracle’s prophecy was that the Lydian conquest of Persia would be successful.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Lời tiên tri không nói là Lydia sẽ chiến thắng, mà chỉ dự báo rằng: \"She said that if you attack Persia, you will destroy a great empire\" (Bà ấy nói rằng nếu ngài tấn công Ba Tư, ngài sẽ tiêu diệt một đế chế vĩ đại). Và hóa ra \"đế chế vĩ đại\" bị tiêu diệt lại chính là vương quốc của ông.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

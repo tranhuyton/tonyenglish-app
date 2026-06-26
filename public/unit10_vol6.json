@@ -515,51 +515,51 @@
               "id": "36",
               "content": "The avalanche was caused by convection in the atmosphere.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Sự đối lưu (convection) trên đài phát thanh nói là gây ra bão, nhưng nguyên nhân trực tiếp gây lở tuyết (avalanche) là do tuyết tích tụ quá nhiều trên núi: \"If too much accumulated, it could cause an avalanche\" (Nếu tuyết tích tụ quá nhiều, nó có thể gây ra lở tuyết).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "37",
               "content": "Randy’s job as a ranger had taught him consistency.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Đoạn ba nói rõ rằng sự nuôi dưỡng từ nhỏ (upbringing) của anh ấy mới dạy anh ấy tính kiên định: \"His upbringing had taught him consistency\" (Sự giáo dục từ nhỏ đã dạy anh tính kiên định), chứ không phải do công việc kiểm lâm.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "38",
               "content": "Randy had an apparatus that moved snow sideways to help avoid avalanches.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Sai (F). Thiết bị (apparatus) của anh ấy sử dụng thuốc nổ (dynamite) để làm rung chuyển tuyết, chứ không phải di chuyển tuyết sang một bên (sideways): \"It used dynamite to shake the snow and make the top layer of snow come down\".",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "39",
               "content": "Randy was seen by the aerial rescue team thanks to his brightly colored jacket.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Trong đoạn năm có nêu rõ chi tiết này: \"...the team found him thanks to his brightly colored jacket\" (...đội cứu hộ đã tìm thấy anh nhờ chiếc áo khoác sáng màu của anh).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "40",
               "content": "According to the doctor, Randy was lucky to be alive after the avalanche.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đáp án là Đúng (T). Bác sĩ đã nói trực tiếp với anh ở đoạn chín: \"You are really lucky to be alive, the doctor said.\" (Anh thực sự may mắn khi còn sống, bác sĩ nói).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

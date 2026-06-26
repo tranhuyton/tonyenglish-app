@@ -495,51 +495,51 @@
               "id": "36",
               "content": "Ladies used pads to enlarge their hips and shoulders.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) . Trong đoạn 2 có nói rõ: 'Ladies even used pads to enlarge the appearance of their hips and shoulders.' (Các quý cô thậm chí còn dùng miếng đệm để làm to phần hông và vai của họ). Thông tin hoàn toàn khớp luôn nhé!",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "37",
               "content": "Only the ladies wore lipstick and rouge.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 5 cho biết: '...just like the ladies, the men wore lipstick and put rouge on their cheeks.' (...cũng giống như các quý cô, đàn ông cũng tô son và đánh phấn hồng lên má). Vậy không phải chỉ có phụ nữ mới trang điểm đâu nhé!",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "38",
               "content": "The aristocracy’s vanity would seem vulgar today.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Ngay câu cuối bài có viết: 'Though such vanity would seem vulgar today...' (Mặc dù sự phù phiếm như vậy có vẻ thô tục ngày nay...). Rất khớp với nội dung câu hỏi !",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "39",
               "content": "Women’s hair was a tangle of wigs, straps, flowers, and stuffed birds.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Theo đoạn 4: 'The columns of hair were a ridiculous tangle of wigs, jewels, flowers, and even stuffed birds.' (Những cột tóc là một mớ hỗn độn nực cười của những bộ tóc giả, đồ trang sức, hoa và thậm chí cả những con chim nhồi bông). Ở đây họ cài 'jewels' (trang sức) chứ không phải 'straps' (dây đai) nhé!",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "40",
               "content": "Men’s fashion was absurd and feminine.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Đầu đoạn 5 có miêu tả về thời trang của nam giới: 'Men’s fashion was similarly absurd. Today it would probably seem very feminine.' (Thời trang của nam giới cũng lố bịch tương tự. Ngày nay nó có lẽ sẽ trông rất nữ tính). Ý của câu hỏi miêu tả rất chính xác.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

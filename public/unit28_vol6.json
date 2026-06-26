@@ -442,51 +442,51 @@
               "id": "36",
               "content": "The farmers that assembled outnumbered the lord’s servants.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này ĐÚNG. Ở cuối đoạn 6 có viết: \"The lord’s servants tried to defend the house, but the farmers outnumbered them.\" (Những người hầu của lãnh chúa cố gắng bảo vệ ngôi nhà, nhưng những người nông dân đã áp đảo họ về số lượng).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "37",
               "content": "Despite the lord’s hospitality, the farmers appeared to be overjoyed.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này SAI. Trong đoạn 2 viết: \"Despite his hospitality, the farmers appeared to be in a foul mood.\" (Mặc dù ông đã tiếp đón họ rất nồng hậu, nhưng những người nông dân có vẻ đang trong tâm trạng rất tồi tệ). Từ \"foul mood\" (tâm trạng tồi tệ) trái ngược với \"overjoyed\" (vui mừng khôn xiết).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "38",
               "content": "The lord built an arch for the gate out of slabs of stone.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này ĐÚNG. Đoạn 1 có miêu tả: \"He built an arch for the gate out of huge slabs of stone.\" (Ông ta đã xây một vòm cổng từ những phiến đá khổng lồ).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "39",
               "content": "When the lord said it was too late to revise his plans, it heightened the farmers’ foul mood.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này ĐÚNG. Ở đoạn 6 ghi rõ: \"His reply only heightened the farmers’ anger.\" (Câu trả lời của ông ta chỉ làm cơn tức giận của những người nông dân tăng thêm).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "40",
               "content": "The pastures were owned by the lord.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này SAI. Trong truyện viết (đoạn 1 và 4) rằng đồng cỏ thuộc về những người nông dân: \"...overlooked the farmers’ pastures...\" (nhìn xuống những đồng cỏ của những người nông dân) và \"...our cattle now have less grass to eat.\" (...gia súc của chúng tôi hiện có ít cỏ hơn để ăn).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

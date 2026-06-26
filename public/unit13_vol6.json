@@ -362,51 +362,51 @@
               "id": "31",
               "content": "In the 1800s, more than 20 million people were diagnosed with smallpox each year.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Vào những năm 1800, hơn 20 triệu người mắc bệnh đậu mùa mỗi năm.\nGiải thích: T. Đoạn 1 có ghi: \"During the 1800s, more than 20 million people got the disease every year.\" (Vào những năm 1800, mỗi năm có hơn 20 triệu người mắc bệnh này). \"got the disease\" đồng nghĩa với mắc bệnh, tương đương với ý câu hỏi nhé.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
               "content": "Smallpox rendered people bald and caused an intolerable rash that left gross scars.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Bệnh đậu mùa khiến người ta bị hói và gây ra phát ban kinh khủng để lại những vết sẹo lớn.\nGiải thích: F. Đoạn 1 có viết: \"Those who survived the disease were often rendered blind or left with gross scars on their face and body.\" (Những người sống sót sau căn bệnh này thường bị mù hoặc để lại những vết sẹo lớn trên mặt và cơ thể). Căn bệnh này khiến họ bị mù (blind) chứ không phải bị hói (bald) nha bạn!",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "Laws were enacted to prohibit sick people from mixing with healthy people.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Các luật lệ được ban hành nhằm cấm những người bị bệnh tiếp xúc với những người khỏe mạnh.\nGiải thích: T. Trong đoạn 4, tác giả đề cập: \"They enacted laws that prohibited people with smallpox from mixing with those who did not.\" (Họ ban hành những đạo luật cấm những người mắc bệnh đậu mùa không được trộn lẫn, tiếp xúc với những người không mắc bệnh). Ý của câu hoàn toàn khớp với bài đọc nhé!",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "The wealthier countries pledged to give North America a vaccine to counteract smallpox.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Các nước giàu có cam kết sẽ cung cấp vắc-xin cho Bắc Mỹ để chống lại bệnh đậu mùa.\nGiải thích: F. Theo đoạn 4: \"They pledged to supply the vaccine to any country that could not afford it.\" (Họ cam kết sẽ cung cấp vắc-xin cho bất kỳ quốc gia nào không có khả năng chi trả). Như vậy là cho bất kì nước nào nghèo, chứ không phải dành riêng cho Bắc Mỹ ! (Bắc Mỹ vốn là những nước giàu đã có vắc xin từ sớm rồi).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
               "content": "The humane efforts of people everywhere helped to successfully stop smallpox.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Những nỗ lực nhân đạo của mọi người ở khắp mọi nơi đã giúp ngăn chặn thành công bệnh đậu mùa.\nGiải thích: T. Câu cuối của đoạn văn có nói: \"The humane efforts of people from all over the world had accomplished a great task.\" (Những nỗ lực nhân đạo của người dân trên toàn thế giới đã hoàn thành một nhiệm vụ tuyệt vời). Hoàn toàn chính xác nhé!",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

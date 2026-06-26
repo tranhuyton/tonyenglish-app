@@ -430,51 +430,51 @@
               "id": "31",
               "content": "Lucas’s thoughts about the house across the reservoir haunted him.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này ĐÚNG. Cuối đoạn 3 có ghi: \"Lucas didn’t know what a mad hatter was, but the image of a scary man haunted him.\" (Lucas không biết thợ làm mũ điên là gì, nhưng hình ảnh một người đàn ông đáng sợ cứ ám ảnh cậu). Do đó những suy nghĩ về ngôi nhà khiến cậu bị ám ảnh.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
               "content": "Lucas collected crickets and moss while he walked through the forest.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này SAI. Theo đoạn 4: \"He collected pieces of amber and granite that he found on the ground.\" (Cậu bé thu nhặt những mẩu hổ phách và đá granite tìm thấy trên mặt đất), chứ không phải thu nhặt dế (crickets) và rêu (moss).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "The bird was pecking at the maze.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này SAI. Đoạn 4 viết: \"...and watched a bird peck at the ground.\" (...và nhìn một con chim mổ xuống mặt đất), không phải mổ vào mê cung (maze).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
               "content": "Lucas got a streak of blood on his shirt and pebbles in his skin from falling down.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này ĐÚNG. Đoạn 5 có miêu tả: \"He wanted to run away, but he fell. He had a streak of blood on his shirt and some pebbles stuck in his skin.\" (Cậu bé muốn bỏ chạy, nhưng lại bị ngã. Cậu có một vệt máu trên áo và vài viên sỏi găm vào da).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "The man’s house smelled like food that had expired.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Câu này SAI. Trong đoạn 8 có nhắc tới: \"It smelled like charcoal, but it looked like a normal house.\" (Nó có mùi giống như than củi, nhưng trông giống một ngôi nhà bình thường). Ngôi nhà có mùi than củi chứ không phải mùi thức ăn hết hạn.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

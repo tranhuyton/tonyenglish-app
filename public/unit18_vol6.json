@@ -302,51 +302,51 @@
               "id": "26",
               "content": "The nurse was usually a vivacious woman who constantly chattered.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Người y tá thường là một người phụ nữ hoạt bát và luôn miệng trò chuyện.\nGiải thích: F. Đoạn 1 viết: \"The child's mother, who was usually quite vivacious and chattered constantly...\" (Mẹ của đứa trẻ, người thường khá hoạt bát và luôn miệng trò chuyện...). Do đó, người hoạt bát và hay nói chuyện là mẹ của đứa trẻ, không phải người y tá.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "27",
               "content": "The nursery was far from the freeway that was near Rabbit Cove.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Phòng trẻ em cách xa đường cao tốc gần Vịnh Thỏ.\nGiải thích: F. Đoạn 3 có viết: \"The monastery was far away by Rabbit Cove, and there was no freeway leading to it.\" (Tu viện ở rất xa cạnh Vịnh Thỏ, và không có đường cao tốc nào dẫn đến đó). Thứ ở Vịnh Thỏ là tu viện (monastery) và không hề có đường cao tốc (no freeway) nào. Câu này sai hoàn toàn.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "28",
               "content": "When it started to deteriorate, the nurse zipped up the jacket she had brought beforehand.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Khi thời tiết bắt đầu xấu đi, người y tá kéo khóa chiếc áo khoác mà cô đã mang theo từ trước.\nGiải thích: F. Đoạn 1 từ \"deteriorate\" được dùng để nói về tình trạng của đứa trẻ: \"the child's condition would deteriorate\" (tình trạng của đứa trẻ sẽ trở nên tồi tệ hơn). Câu hỏi cố tình dùng sai ngữ cảnh của từ này.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
               "content": "The temperature was close to zero degrees centigrade.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Nhiệt độ gần bằng 0 độ C.\nGiải thích: T. Đoạn 4 nêu rõ: \"The temperature was close to zero degrees centigrade\" (Nhiệt độ gần bằng 0 độ C). Câu này hoàn toàn chính xác.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
               "content": "When the nurse heard a concerto playing in another room, she became hospitable.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Khi người y tá nghe thấy một bản hòa tấu đang được chơi ở phòng khác, cô ấy trở nên hiếu khách.\nGiải thích: F. Đoạn 7 viết: \"she heard a concerto playing in another room. She relaxed.\" (cô ấy nghe thấy một bản hòa tấu đang chơi ở phòng khác. Cô ấy cảm thấy thư giãn). Cô ấy thư giãn (relaxed) chứ không phải trở nên hiếu khách (hospitable).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

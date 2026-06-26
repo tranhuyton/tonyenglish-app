@@ -170,7 +170,7 @@
                 "I"
               ],
               "explanation": "accelerate means to increase in speed.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -180,7 +180,7 @@
                 "I"
               ],
               "explanation": "tenacious means not giving up easily, not a sound.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -190,7 +190,7 @@
                 "I"
               ],
               "explanation": "duplicated means copied exactly, so it would look like the original.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -200,7 +200,7 @@
                 "I"
               ],
               "explanation": "lions do not glide (fly on wings).",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -210,7 +210,7 @@
                 "I"
               ],
               "explanation": "launched means to put into motion, not eaten.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "21",
@@ -220,7 +220,7 @@
                 "I"
               ],
               "explanation": "should be simulated, not stimulated.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -230,7 +230,7 @@
                 "I"
               ],
               "explanation": "innovation is a new product or idea.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -240,7 +240,7 @@
                 "I"
               ],
               "explanation": "penetrate means to enter into.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -250,7 +250,7 @@
                 "I"
               ],
               "explanation": "spurred means urged into action.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -260,7 +260,7 @@
                 "I"
               ],
               "explanation": "anew means again.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -270,7 +270,7 @@
                 "I"
               ],
               "explanation": "meteorological relates to weather science.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -280,7 +280,7 @@
                 "I"
               ],
               "explanation": "propulsion is the force that moves something forward.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -290,7 +290,7 @@
                 "I"
               ],
               "explanation": "innovative means thinking in creative ways, not entering without knocking.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -300,7 +300,7 @@
                 "I"
               ],
               "explanation": "electromagnetic relates to electricity and magnetic fields.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -310,7 +310,7 @@
                 "I"
               ],
               "explanation": "should be stimulate, not simulate.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "31",
@@ -320,7 +320,7 @@
                 "I"
               ],
               "explanation": "ingenious means smart, which contradicts not passing tests.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "32",
@@ -330,7 +330,7 @@
                 "I"
               ],
               "explanation": "meteorology is weather, not meteors.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -340,7 +340,7 @@
                 "I"
               ],
               "explanation": "dreary means dull, dark, lifeless.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -350,7 +350,7 @@
                 "I"
               ],
               "explanation": "should be election, not electron.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "35",
@@ -360,7 +360,7 @@
                 "I"
               ],
               "explanation": "defects are flaws, so it wouldn't look perfect.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -382,51 +382,51 @@
               "id": "36",
               "content": "The student of meteorology had bought a device that simulated lightning in clouds.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Cậu sinh viên ngành khí tượng học đã mua một thiết bị mô phỏng sấm sét trong các đám mây.\nGiải thích: F. Đoạn 1 viết rằng: \"He had made a device that could simulate lightning.\" (Cậu ấy đã tự tạo ra một thiết bị có thể mô phỏng sấm sét). Cậu ấy tự làm ra nó (made) chứ không phải đi mua (bought).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "37",
               "content": "The electromagnetic pulse stimulated the electrons in the cloud’s particles.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Xung điện từ đã kích thích các electron trong các hạt của đám mây.\nGiải thích: T. Đoạn 1 có miêu tả: \"This pulse, in turn, stimulated the electrons in the cloud’s particles.\" (Xung này sau đó kích thích các electron trong các hạt của đám mây). Câu này hoàn toàn đúng.",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "38",
               "content": "The student’s friends’ criticisms spurred him to try his experiment anew.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Những lời chỉ trích của bạn bè cậu sinh viên đã thúc đẩy cậu ấy thử lại thí nghiệm của mình.\nGiải thích: T. Đoạn 5 nói: \"But his friends’ criticisms only spurred him to try again... he started his experiment anew.\" (Nhưng những lời chỉ trích của bạn bè chỉ thúc giục anh ấy thử lại lần nữa... anh ấy bắt đầu lại thí nghiệm của mình).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "39",
               "content": "It was a dreary day when the device glided into the clouds.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Đó là một ngày ảm đạm khi thiết bị bay lượn vào trong những đám mây.\nGiải thích: T. Trong đoạn 5 tác giả có nói: \"and on one dreary day, when clouds blocked the light of the sun, he started his experiment anew.\" (và vào một ngày ảm đạm, khi những đám mây che khuất ánh sáng mặt trời, anh ấy bắt đầu lại thí nghiệm của mình).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "40",
               "content": "The propulsion of the rocket accelerated the speed of the lightning.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Dịch: Lực đẩy của tên lửa đã làm tăng tốc độ của tia sét.\nGiải thích: F. Đoạn 6 cho biết lực đẩy của tên lửa dùng để đưa thiết bị lên cao: \"The propulsion of the rocket carried the device high into the air.\" (Lực đẩy của tên lửa đã đưa thiết bị lên cao trong không trung). Tên lửa không hề làm tăng tốc độ của tia sét!",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

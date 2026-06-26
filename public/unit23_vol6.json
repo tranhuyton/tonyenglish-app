@@ -382,51 +382,51 @@
               "id": "36",
               "content": "A multicultural group traveled through blizzards and frigid temperatures to reach the site.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Đoạn 2 viết: \"The multicultural group journeyed through blizzards and frigid temperatures to reach the site.\" (Nhóm đa văn hóa đã vượt qua những trận bão tuyết và nhiệt độ lạnh giá để đến được địa điểm này).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "37",
               "content": "Erik dines on crisp, appetizing fish that are pierced with icicles.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Câu này kết hợp ý trong bài: cậu dùng bữa với salad có lớp phủ giòn (crisp toppings) và món cá ngon miệng (appetizing fish) được xiên qua bằng các nhũ băng (pierced with icicles).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "38",
               "content": "The expert who oversaw the process made sure there wasn't discord in the glacial landscape.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Đoạn 2 ghi rõ: \"An expert was selected to oversee the building process to make sure there was no discord between the workers.\" (Một chuyên gia được chọn để giám sát quá trình xây dựng nhằm đảm bảo không có sự bất hòa giữa các công nhân). Không phải là không có sự bất hòa ở \"vùng đất băng giá\" (glacial landscape).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "39",
               "content": "One worker carved big wavy lines, and another made tiny clockwise, concentric circles.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Đoạn 3 có viết: \"One worker carved big wavy lines, and another made tiny clockwise, concentric circles.\" (Một người thợ khắc những đường lượn sóng lớn, và một người khác tạo ra những vòng tròn nhỏ đồng tâm theo chiều kim đồng hồ).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "40",
               "content": "The builders replicated the design from normal houses.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Cuối đoạn 2 viết: \"The design was very unique; the builders couldn't replicate the design from normal houses.\" (Thiết kế rất độc đáo; những người thợ xây không thể sao chép thiết kế từ những ngôi nhà bình thường).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

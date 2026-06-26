@@ -102,7 +102,7 @@
                 "I"
               ],
               "explanation": "overpopulation (n): having too many people in an area.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -112,7 +112,7 @@
                 "I"
               ],
               "explanation": "cram (v): to put things into a place that can barely contain them.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -122,7 +122,7 @@
                 "I"
               ],
               "explanation": "output (n): the amount of something that a person or thing produces.",
-              "correctAnswer": "B"
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -132,7 +132,7 @@
                 "I"
               ],
               "explanation": "defer means to postpone to a later time, so 'until right now' is incorrect.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -142,7 +142,7 @@
                 "I"
               ],
               "explanation": "conversion means changing into a different state, which does not make sense here.",
-              "correctAnswer": "A"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -164,51 +164,51 @@
               "id": "16",
               "content": "Because of overpopulation, too many people are crammed into cities and towns.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Đoạn 1 viết: \"Overpopulation is a big problem... Too many people are crammed into cities and towns around the globe.\" (Bùng nổ dân số là một vấn đề lớn... Quá nhiều người bị nhồi nhét vào các thành phố và thị trấn trên toàn cầu).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "17",
               "content": "The environmental sectors of many governments are deferring strict standards.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Đoạn 4 có câu: \"...the environmental sectors of many governments are setting strict rules for industries that pollute too much.\" (các ban ngành môi trường của nhiều chính phủ đang đặt ra những quy định nghiêm ngặt đối với các ngành công nghiệp gây ô nhiễm quá mức). Họ đang thiết lập quy định, không phải đang trì hoãn (deferring) chúng.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "18",
               "content": "Some car companies have patents on prototypes.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Đoạn 4 viết: \"Many car companies already have patents on prototypes for very efficient cars.\" (Nhiều công ty ô tô đã có bằng sáng chế về các nguyên mẫu cho những chiếc xe hơi rất tiết kiệm nhiên liệu).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "19",
               "content": "A conversion to clean cars means petroleum can be used right now for people.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Đoạn 4 giải thích: \"A conversion to clean cars means that petroleum can be saved for the future.\" (Việc chuyển đổi sang ô tô sạch đồng nghĩa với việc dầu mỏ có thể được tiết kiệm cho tương lai). Chứ không phải được sử dụng ngay bây giờ (right now).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "20",
               "content": "Companies that don’t abide by standards are penalized or their operations might be suspended.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Đoạn 4 có viết: \"If companies do not abide by the standards, they are penalized with higher taxes. In some cases, their operations might be suspended altogether.\" (Nếu các công ty không tuân thủ các tiêu chuẩn, họ sẽ bị trừng phạt bằng mức thuế cao hơn. Trong một số trường hợp, hoạt động của họ có thể bị đình chỉ hoàn toàn).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"

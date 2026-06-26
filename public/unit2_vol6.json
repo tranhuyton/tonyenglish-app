@@ -382,51 +382,51 @@
               "id": "36",
               "content": "Tim and Dean were outright enemies who got into vicious arguments.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Ngay đoạn 1 có viết: '...they were outright enemies. The two men got into vicious arguments all the time.' (...họ là những kẻ thù hoàn toàn của nhau. Hai người đàn ông này lúc nào cũng vướng vào những cuộc tranh cãi ác ý). Câu hỏi phản ánh đúng y chang thông tin này !",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "37",
               "content": "Tim and Dean removed the jagged bones and used elastic to attain them.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 5 cho biết họ cẩn thận lấy từng khúc xương ra, sau đó: 'And to keep the bones together, they tied them with elastic strips.' (Và để giữ các khúc xương lại với nhau, họ đã buộc chúng bằng các dải thun). Họ dùng dây thun để 'buộc chúng lại' (tie them together) chứ không phải để 'đạt được chúng' (attain them) như câu hỏi viết đâu nhé.",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "38",
               "content": "Tim couldn’t conceive a plan to remove the bones because the endeavor would be too arduous.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Trong đoạn 2 có câu: 'Tim couldn’t conceive a plan to remove the huge skeleton all by himself. Such an endeavor would be too arduous.' (Tim không thể hình dung ra một kế hoạch để tự mình gỡ bỏ bộ xương khổng lồ. Một nỗ lực như vậy sẽ quá gian khổ). Hoàn toàn khớp với ý của câu hỏi luôn!",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "39",
               "content": "Dean thought that Tim’s ego might be dubious.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Bạn xem đoạn 4 sẽ thấy: 'Dean thought that Tim’s claim might be dubious.' (Dean nghĩ rằng lời khẳng định của Tim có thể là đáng ngờ). Chứ không phải 'Tim's ego' (cái tôi của Tim) đáng ngờ đâu nhé!",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "40",
               "content": "When Tim excavated the land, he uncovered many engraved bones.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 2 ghi rất rõ: '...excavated the dirt around it. As he dug, he uncovered more jagged bones.' (...đào lớp bụi bẩn xung quanh nó. Khi đào, anh ấy phát hiện ra nhiều đoạn xương lởm chởm hơn). Vậy xương ở đây là 'jagged bones' (lởm chởm) chứ không phải 'engraved bones' (xương được khắc chữ) nhé!",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

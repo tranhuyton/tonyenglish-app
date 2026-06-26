@@ -360,51 +360,51 @@
               "id": "31",
               "content": "Two men aspired to be mayor of the cosmopolitan city of Sherman.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Bài đọc mở đầu bằng câu: \"The cosmopolitan city of Sherman needed to elect a new mayor. Two men aspired to become mayor...\" (Thành phố quốc tế Sherman cần bầu một thị trưởng mới. Hai người đàn ông khao khát trở thành thị trưởng...).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "32",
               "content": "Mr. Jones was a pathological speaker who flattered people with his words.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Bài đọc viết: \"He was a phenomenal speaker...\" (Ông ấy là một diễn giả hiện tượng...) và \"He was a pathological liar who merely flattered people with his words.\" (Ông ta là một kẻ nói dối bệnh hoạn, chỉ biết dùng lời lẽ để tâng bốc mọi người). Ông ấy là \"pathological liar\" (kẻ nói dối bệnh hoạn) chứ không phải \"pathological speaker\".",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
               "content": "Mr. Webb was lame, so he limped when he walked.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Trong đoạn 1 có ghi: \"He was lame and limped when he walked.\" (Ông ấy bị thọt và đi cà nhắc khi bước đi).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "34",
               "content": "Mr. Webb tackled important issues and amended unfair laws in the city charter.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Đúng. Đoạn 5 viết: \"He tackled important issues and amended unfair laws in the city’s charter.\" (Ông giải quyết các vấn đề quan trọng và sửa đổi những luật lệ không công bằng trong hiến chương của thành phố).",
-              "correctAnswer": "T"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
               "content": "Mr. Jones censored newspapers that tried to disseminate outbursts of anger.",
               "options": [
-                "F",
-                "T"
+                "True",
+                "False"
               ],
               "explanation": "Sai. Đoạn 3 viết: \"He even censored newspapers that tried to disseminate information about his inability to help the people.\" (Ông ta thậm chí còn kiểm duyệt các tờ báo cố gắng phổ biến thông tin về sự bất lực của ông ta trong việc giúp đỡ người dân). Không phải là phổ biến sự phẫn nộ (outbursts of anger).",
-              "correctAnswer": "F"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"
