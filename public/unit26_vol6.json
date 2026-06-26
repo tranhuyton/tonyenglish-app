@@ -9,7 +9,7 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit26_vol6_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit26_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div></div>",
+      "content": "<img src=\"/unit26_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); margin-bottom: 20px;\" />",
       "sections": [
         {
           "id": "sec1_wordlist",
@@ -315,7 +315,8 @@
           ],
           "questionType": "Trắc nghiệm"
         }
-      ]
+      ],
+      "imageUrl": "/unit26_vol6_word_list_1.png"
     },
     {
       "id": "part2",
