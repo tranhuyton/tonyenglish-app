@@ -521,30 +521,6 @@
               ],
               "correctAnswer": "B",
               "explanation": "According to the passage, 'The second [expression] an auditory person.' which refers to 'That sounds good to me.'"
-            },
-            {
-              "id": 34,
-              "content": "Which of the following phrases would a visual person most likely use?",
-              "options": [
-                "We are all ears",
-                "Hang in there",
-                "Catch a glimpse of",
-                "Unheard of"
-              ],
-              "correctAnswer": "C",
-              "explanation": "The passage states that a visual person might say things like 'catch a glimpse of'."
-            },
-            {
-              "id": 35,
-              "content": "How does a kinesthetic person learn?",
-              "options": [
-                "Through seeing",
-                "Through hearing",
-                "Through moving, doing and touching",
-                "Through reading"
-              ],
-              "correctAnswer": "C",
-              "explanation": "The passage states: 'a kinesthetic person learns through moving, doing and touching.'"
             }
           ]
         }
