@@ -190,5 +190,12 @@
         }
       ]
     }
-  ]
+  ],
+  "basicInfo": {
+    "skill": "MCQ (Standard)",
+    "title": "Unit 2: Siesta Time",
+    "category": "exercise",
+    "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
+    "timeLimit": "40"
+  }
 }
