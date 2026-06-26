@@ -1,0 +1,582 @@
+{
+  "title": "Unit 30: Title Here",
+  "parts": [
+    {
+      "title": "Word List 1",
+      "content": "<p style=\"display: none;\">Word List 1</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit30_ielts_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"></div></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Choose the correct word to fill in the blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "content": "Where does a columnist work?",
+              "options": [
+                "At a university",
+                "At a newspaper",
+                "At a restaurant",
+                "At an airport"
+              ],
+              "explanation": "columnist (n): a writer who creates articles about a particular subject.",
+              "correctAnswer": "B",
+              "id": 1
+            },
+            {
+              "content": "Which of the following might a liberal person do?",
+              "options": [
+                "Restrict freedoms",
+                "Learn new ideas",
+                "Reject free speech",
+                "Support tyranny"
+              ],
+              "explanation": "liberal (adj): accept different ideas and people.",
+              "correctAnswer": "B",
+              "id": 2
+            },
+            {
+              "content": "What animal pecks?",
+              "options": [
+                "A bee",
+                "A cat",
+                "A bird",
+                "A tiger"
+              ],
+              "explanation": "peck (v): when a bird bites or hits something with its beak.",
+              "correctAnswer": "C",
+              "id": 3
+            },
+            {
+              "content": "What is stored in a reservoir?",
+              "options": [
+                "Water",
+                "Food",
+                "Books",
+                "Tools"
+              ],
+              "explanation": "reservoir (n): a place for storing water.",
+              "correctAnswer": "A",
+              "id": 4
+            },
+            {
+              "content": "Which of these animals have a long streak on their bodies?",
+              "options": [
+                "A skunk",
+                "A horse",
+                "A rhino",
+                "A gorilla"
+              ],
+              "explanation": "streak (n): a long, thin mark that is easy to see.",
+              "correctAnswer": "A",
+              "id": 5
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Choose the word that best matches the definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "content": "<p class=\"mb-4\">After seeing her house on fire, jenna <u>was troubled by thoughts of fire.</u> [ 6 ]</p><p class=\"mb-4\">The boy <u>had small round</u> rocks stuck on the bottom of his shoe. [ 7 ]</p><p class=\"mb-4\">The bird <u>bit or hit the dish and</u> carried away pieces of bread. [ 8 ]</p><p class=\"mb-4\">The city made <u>a place to store water, so there</u> would always be water for the people. [ 9 ]</p><p class=\"mb-4\">She poured <u>soap to clean dishes</u> into the sink and washed the dishes. [ 10 ]</p><p class=\"mb-4\">The woman was impressed by her friend’s <u>polite and respectful</u> brother. [ 11 ]</p><p class=\"mb-4\">The scientist went to school for many years to earn <u>her proof of ability.</u> [ 12 ]</p><p class=\"mb-4\">I added some more <u>rocks that served as fuel to the fire.</u> [ 13 ]</p><p class=\"mb-4\">Clara didn’t want to offend her grandmother, so <u>she used a replacement for an unpleasant word</u> to refer to old age. [ 14 ]</p><p class=\"mb-4\">The land in the <u>flat place where the river divides was good for growing</u> food. [ 15 ]</p>",
+              "options": [],
+              "explanation": "haunt (v): to cause problems or negative thoughts over a long period of time.",
+              "correctAnswer": "haunted",
+              "id": 6
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "pebble (n): a small, round stone.",
+              "correctAnswer": "pebbles",
+              "id": 7
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "peck (v): to bite or hit something with a beak.",
+              "correctAnswer": "pecked",
+              "id": 8
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "reservoir (n): a place for storing water for a town to use.",
+              "correctAnswer": "reservoir",
+              "id": 9
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "detergent (n): soap that is used to clean clothes or dishes.",
+              "correctAnswer": "detergent",
+              "id": 10
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Droplist",
+          "questions": [
+            {
+              "content": "",
+              "options": [],
+              "explanation": "courteous (adj): polite and respectful.",
+              "correctAnswer": "courteous",
+              "id": 11
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "credentials (n): the proof of someone’s experience or ability.",
+              "correctAnswer": "credentials",
+              "id": 12
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "charcoal (n): a black material that is used as fuel for fire.",
+              "correctAnswer": "charcoal",
+              "id": 13
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "euphemism (n): a term that is used in place of a mean or unpleasant word.",
+              "correctAnswer": "euphemism",
+              "id": 14
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "delta (n): flat area where a river splits into smaller rivers that flow into the sea.",
+              "correctAnswer": "delta",
+              "id": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Word List 2",
+      "content": "<p style=\"display: none;\">Word List 2</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit30_ielts_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"></div></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Choose the correct word to fill in the blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "content": "columnist",
+              "options": [
+                "singer",
+                "journalist",
+                "electrician",
+                "CEO"
+              ],
+              "explanation": "columnist (n): a writer who creates articles about a particular subject.",
+              "correctAnswer": "B",
+              "id": 16
+            },
+            {
+              "content": "cricket",
+              "options": [
+                "grasshopper",
+                "beetle",
+                "ant",
+                "mosquito"
+              ],
+              "explanation": "cricket (n): an insect.",
+              "correctAnswer": "A",
+              "id": 17
+            },
+            {
+              "content": "maze",
+              "options": [
+                "disguise",
+                "hoop",
+                "tower",
+                "puzzle"
+              ],
+              "explanation": "maze (n): a system of paths that is complicated and easy to get lost in.",
+              "correctAnswer": "D",
+              "id": 18
+            },
+            {
+              "content": "gravel",
+              "options": [
+                "boulder",
+                "rock",
+                "hill",
+                "mound"
+              ],
+              "explanation": "gravel (n): a combination of small stones mixed with sand.",
+              "correctAnswer": "B",
+              "id": 19
+            },
+            {
+              "content": "haunt",
+              "options": [
+                "calm",
+                "play",
+                "terrorize",
+                "soothe"
+              ],
+              "explanation": "haunt (v): to cause problems or negative thoughts over a long period of time.",
+              "correctAnswer": "C",
+              "id": 20
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Choose the word that best matches the definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "content": "They had three minutes to find their way out of the [ 21 ].",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "maze (n): a system of paths that is complicated and easy to get lost in.",
+              "correctAnswer": "maze",
+              "id": 21
+            },
+            {
+              "content": "They had to get out before the time [ 22 ].",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "expire (v): to no longer be effective because its use has come to an end.",
+              "correctAnswer": "expired",
+              "id": 22
+            },
+            {
+              "content": "Jessica had the carpet in her house replaced with [ 23 ] tiles.",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "granite (n): a very hard type of rock.",
+              "correctAnswer": "granite",
+              "id": 23
+            },
+            {
+              "content": "The tiles had lovely designs on them and also pieces of [ 24 ].",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "amber (n): a hard, yellowish material that comes from trees.",
+              "correctAnswer": "amber",
+              "id": 24
+            },
+            {
+              "content": "Gene squeezed the bottle and got a [ 25 ] of ketchup on his shirt.",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "streak (n): a long, thin mark that is easy to see.",
+              "correctAnswer": "streak",
+              "id": 25
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Droplist",
+          "questions": [
+            {
+              "content": "The [ 26 ] host was nice enough to get him a new shirt.",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "courteous (adj): polite and respectful.",
+              "correctAnswer": "courteous",
+              "id": 26
+            },
+            {
+              "content": "There was a pile of [ 27 ] near the water.",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "pebble (n): a small, round stone.",
+              "correctAnswer": "pebbles",
+              "id": 27
+            },
+            {
+              "content": "They had been washed up from the bottom of the [ 28 ].",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "reservoir (n): a place for storing water.",
+              "correctAnswer": "reservoir",
+              "id": 28
+            },
+            {
+              "content": "We walked down the road and passed many trees covered in [ 29 ].",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "moss (n): a small green or yellow plant that grows on wet dirt, rocks, or tree trunks.",
+              "correctAnswer": "moss",
+              "id": 29
+            },
+            {
+              "content": "It was dark already, and all that could be heard were the [ 30 ].",
+              "options": [
+                "granite",
+                "moss",
+                "amber",
+                "pebbles",
+                "streak",
+                "maze",
+                "reservoir",
+                "expired",
+                "crickets",
+                "courteous"
+              ],
+              "explanation": "cricket (n): an insect that makes loud noises, usually at night.",
+              "correctAnswer": "crickets",
+              "id": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Mad Hatter</h1>        <p style=\"margin-bottom: 1rem;\">One morning, Lucas sat outside with his grandfather. They looked past the <b>gravel</b> road that led to a natural <b>reservoir</b> on the <b>delta</b>. On the other side of the water, there was a cottage.</p>    <p style=\"margin-bottom: 1rem;\">“ Does a ghost live there?” Lucas asked.</p>    <p style=\"margin-bottom: 1rem;\">“ No, a mad hatter lives there,” said his grandfather. Lucas didn’t know what a mad hatter was, but the image of a scary man <b>haunted</b> him.</p>    <p style=\"margin-bottom: 1rem;\">Later, Lucas went for a walk in the forest. He collected pieces of <b>amber</b> and <b>granite</b> that he found on the ground. He looked at the <b>moss</b> on the trees and watched a bird <b>peck</b> at the ground. But the forest was like a <b>maze</b>. Soon, Lucas was lost.</p>    <p style=\"margin-bottom: 1rem;\">Lucas heard somebody behind him. He wanted to run away, but he fell. He had a <b>streak</b> of blood on his shirt and some <b>pebbles</b> stuck in his skin. Then a man appeared.</p>    <p style=\"margin-bottom: 1rem;\">“ I will take you home. First, let’s get you cleaned up,” he said.</p>    <p style=\"margin-bottom: 1rem;\">Lucas followed him. When they arrived at the cottage, he realized the man was the mad hatter!</p>    <p style=\"margin-bottom: 1rem;\">He sat down inside. It smelled like <b>charcoal</b>, but it looked like a normal house. The man brought Lucas back some medicine.</p>    <p style=\"margin-bottom: 1rem;\">“ It’s a bit old, but it’s not expired,” the man said.</p>    <p style=\"margin-bottom: 1rem;\">While Lucas cleaned his cut, the man washed the blood out of his shirt with <b>detergent</b>.</p>    <p style=\"margin-bottom: 1rem;\">Lucas asked, “Are you a mad hatter?”</p>    <p style=\"margin-bottom: 1rem;\">The man laughed and replied, “That’s a <b>euphemism</b> for a crazy person. Actually, I’m pretty normal. I’m a <b>columnist</b> fora newspaper,” said the man. He pointed to his <b>credentials</b> which hung on the wall.</p>    <p style=\"margin-bottom: 1rem;\">Lucas could hear the <b>crickets</b> outside. It was getting dark, so he asked, “ Could you take me home now?”</p>    <p style=\"margin-bottom: 1rem;\">The man said yes. Lucas was surprised that people thought the man was crazy. He was actually very <b>courteous</b>. Maybe Lucas should have a more <b>liberal</b> attitude. Next time, Lucas wouldn’t make judgments about people without getting to know them first.</p></div>",
+      "explanation": "",
+      "sections": [
+        {
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>1. They looked past the [ 1 ] road that led to a natural <b>reservoir</b> on the <b>delta</b>.<br/><br/>2. Lucas didn’t know what a mad hatter was, but the image of a scary man [ 2 ] him.<br/><br/>3. He collected pieces of [ 3 ] and <b>granite</b> that he found on the ground.<br/><br/>4. He looked at the [ 4 ] on the trees and watched a bird <b>peck</b> at the ground.<br/><br/>5. But the forest was like a [ 5 ].<br/><br/>",
+              "options": [
+                "gravel",
+                "haunted",
+                "amber",
+                "moss",
+                "maze"
+              ],
+              "correctAnswer": "gravel",
+              "explanation": "Từ cần điền là: gravel",
+              "id": 31
+            },
+            {
+              "content": "",
+              "options": [
+                "gravel",
+                "haunted",
+                "amber",
+                "moss",
+                "maze"
+              ],
+              "correctAnswer": "haunted",
+              "explanation": "Từ cần điền là: haunted",
+              "id": 32
+            },
+            {
+              "content": "",
+              "options": [
+                "gravel",
+                "haunted",
+                "amber",
+                "moss",
+                "maze"
+              ],
+              "correctAnswer": "amber",
+              "explanation": "Từ cần điền là: amber",
+              "id": 33
+            },
+            {
+              "content": "",
+              "options": [
+                "gravel",
+                "haunted",
+                "amber",
+                "moss",
+                "maze"
+              ],
+              "correctAnswer": "moss",
+              "explanation": "Từ cần điền là: moss",
+              "id": 34
+            },
+            {
+              "content": "",
+              "options": [
+                "gravel",
+                "haunted",
+                "amber",
+                "moss",
+                "maze"
+              ],
+              "correctAnswer": "maze",
+              "explanation": "Từ cần điền là: maze",
+              "id": 35
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 36,
+              "content": "Where was the cottage located in relation to the grandfather’s house?",
+              "options": [
+                "It was located past the gravel road and on the other side of the natural reservoir on the delta.",
+                "It was in the middle of a dark forest filled with moss.",
+                "It was on top of a mountain made of granite.",
+                "It was next to a large maze."
+              ],
+              "explanation": "Ở đoạn 1 có miêu tả: \"They looked past the gravel road that led to a natural reservoir on the delta. On the other side of the water, there was a cottage.\" (Họ nhìn qua con đường rải sỏi dẫn đến một hồ chứa nước tự nhiên trên đồng bằng châu thổ. Ở phía bên kia mặt nước, có một ngôi nhà nhỏ). Do đó đáp án A là chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": 37,
+              "content": "What did the man wash Lucas’s shirt with?",
+              "options": [
+                "He washed it with detergent.",
+                "He washed it with water from the reservoir.",
+                "He washed it with charcoal.",
+                "He washed it with amber."
+              ],
+              "explanation": "Đoạn 10 viết rất rõ: \"While Lucas cleaned his cut, the man washed the blood out of his shirt with detergent.\" (Trong khi Lucas rửa vết thương, người đàn ông đã giặt sạch vết máu trên áo cậu bằng bột giặt). Đáp án A là đúng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": 38,
+              "content": "Why did the man point to his credentials on the wall?",
+              "options": [
+                "To prove that he was a columnist.",
+                "To show that he was a mad hatter.",
+                "To prove that he was a doctor.",
+                "To show that he owned the cottage."
+              ],
+              "explanation": "Đoạn 12 kể lại: \"Actually, I’m pretty normal. I’m a columnist for a newspaper,” said the man. He pointed to his credentials which hung on the wall.\" (\"Thật ra, chú khá bình thường. Chú là người phụ trách chuyên mục cho một tờ báo,\" người đàn ông nói. Ông chỉ vào các chứng chỉ nghề nghiệp của mình treo trên tường). Điều này chứng minh ông ấy là một nhà báo, do đó đáp án A đúng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": 39,
+              "content": "What did the man say about the term “ mad hatter” ?",
+              "options": [
+                "He said it was a euphemism for a crazy person.",
+                "He said it was his real name.",
+                "He said it meant he loved making hats.",
+                "He said it was a word for a very courteous person."
+              ],
+              "explanation": "Cũng trong đoạn 12, ông giải thích: \"That’s a euphemism for a crazy person.\" (Đó là một lối nói hoa mỹ/uyển ngữ để chỉ một kẻ điên). Đáp án A là chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": 40,
+              "content": "What did the courteous man teach Lucas at the end of the story?",
+              "options": [
+                "He should have a more liberal attitude and not judge people without getting to know them.",
+                "He taught him how to navigate out of the maze.",
+                "He taught him to be careful of birds that peck.",
+                "He taught him how to collect pebbles and amber."
+              ],
+              "explanation": "Ở đoạn cuối, Lucas rút ra bài học: \"Maybe Lucas should have a more liberal attitude. Next time, Lucas wouldn’t make judgments about people without getting to know them first.\" (Có lẽ Lucas nên có một thái độ cởi mở hơn. Lần tới, Lucas sẽ không phán xét người khác mà chưa tìm hiểu họ trước). Đáp án A là câu trả lời đúng.",
+              "correctAnswer": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 30: Title Here",
+    "category": "exercise",
+    "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
+    "timeLimit": 40
+  }
+}

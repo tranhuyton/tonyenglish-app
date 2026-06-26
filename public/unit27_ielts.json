@@ -1,0 +1,582 @@
+{
+  "title": "Unit 27: Title Here",
+  "parts": [
+    {
+      "title": "Word List 1",
+      "content": "<p style=\"display: none;\">Word List 1</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit27_ielts_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">analogy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ənælədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An analogy is a connection made between things to show that they are similar.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The doctor made an analogy between the human heart and a water pump.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ancestry</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænsestri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A person's ancestry is the series of people from whom a person descended.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → We studied our ancestry and found out that we are related to royalty.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">archer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑ:rtʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An archer is a person who uses a bow and arrows.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The expert archer hit the target every time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conspiracy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənspirəsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A conspiracy is a secret plan made by a group of people to do something illegal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → Some people think that there was a conspiracy to kill American president John Kennedy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deputy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[depjəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A deputy is the second-highest-ranking person in a business or government.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → While the sheriff was ill, the deputy took over his duties.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">earl</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ə:rl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An earl is a nobleman from Britain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The Earl of Canterbury lived in a huge mansion.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fragrant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[freigrənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is fragrant, it has a pleasant smell.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The girl picked delicious berries and fragrant flowers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">funnel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fʌnl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A funnel is an object with a wide top and a narrow bottom for pouring liquids.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The worker used a funnel when he poured the oil into the engine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hereditary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hiredəteri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is hereditary, it is a trait passed onto children from their parents.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The hereditary disease affected three generations of children.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hymn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[him]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hymn is a religious song that often praises a god.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The book was filled with hymns that the worshippers sang.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Choose the correct word to fill in the blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "content": "If you invert a bottle, you",
+              "options": [
+                "drink from it",
+                "wash it with soap",
+                "turn it upside down",
+                "drop it"
+              ],
+              "explanation": "invert (v): turn it upside down.",
+              "correctAnswer": "C",
+              "id": 1
+            },
+            {
+              "content": "Which of the following would most likely require the use of a funnel?",
+              "options": [
+                "Snow",
+                "Books",
+                "Carrots",
+                "Water"
+              ],
+              "explanation": "funnel (n): object with a wide top and narrow bottom for pouring liquids.",
+              "correctAnswer": "D",
+              "id": 2
+            },
+            {
+              "content": "What is a wolf's prey?",
+              "options": [
+                "Its pups",
+                "Its den",
+                "Its food",
+                "Its ally"
+              ],
+              "explanation": "prey (n): animals hunted and eaten by another creature.",
+              "correctAnswer": "C",
+              "id": 3
+            },
+            {
+              "content": "Which is hereditary?",
+              "options": [
+                "Place of birth",
+                "Eye color",
+                "Favorite foods",
+                "Hobbies"
+              ],
+              "explanation": "hereditary (adj): a trait passed onto children from parents.",
+              "correctAnswer": "B",
+              "id": 4
+            },
+            {
+              "content": "If something is fragrant, you",
+              "options": [
+                "like to smell it",
+                "want to eat it",
+                "try to end it",
+                "want to sing it"
+              ],
+              "explanation": "fragrant (adj): has a pleasant smell.",
+              "correctAnswer": "A",
+              "id": 5
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Choose the word that best matches the definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "content": "Who uses seasoning at work?",
+              "options": [
+                "A teacher",
+                "A chef",
+                "A builder",
+                "An electrician"
+              ],
+              "explanation": "seasoning (n): a mix of salt, herbs, and spices to improve taste.",
+              "correctAnswer": "B",
+              "id": 6
+            },
+            {
+              "content": "Which of the following describes a kind of deputy?",
+              "options": [
+                "A supervisor",
+                "A CEO",
+                "A vice president",
+                "A Manager"
+              ],
+              "explanation": "deputy (n): the second-highest-ranking person.",
+              "correctAnswer": "C",
+              "id": 7
+            },
+            {
+              "content": "What is made from sodium?",
+              "options": [
+                "Furniture",
+                "Salts",
+                "Toys",
+                "Soda"
+              ],
+              "explanation": "sodium (n): an element used to make substances such as salt.",
+              "correctAnswer": "B",
+              "id": 8
+            },
+            {
+              "content": "Where would you most likely hear a hymn?",
+              "options": [
+                "At work",
+                "Underwater",
+                "At the zoo",
+                "In a church"
+              ],
+              "explanation": "hymn (n): a religious song praising a god.",
+              "correctAnswer": "D",
+              "id": 9
+            },
+            {
+              "content": "If your brother is sarcastic, he",
+              "options": [
+                "wants to hit you",
+                "insults you",
+                "betrays you",
+                "is ill"
+              ],
+              "explanation": "sarcastic (adj): the opposite of what is actually meant, often insulting.",
+              "correctAnswer": "B",
+              "id": 10
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Droplist",
+          "questions": [
+            {
+              "content": "One ingredient in the recipe is a small amount of [ 11 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "seasoning is an ingredient.",
+              "correctAnswer": "seasoning",
+              "id": 11
+            },
+            {
+              "content": "Then you need to pour in a pint of [ 12 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "vinegar is a liquid you pour.",
+              "correctAnswer": "vinegar",
+              "id": 12
+            },
+            {
+              "content": "She can play many instruments and sing many [ 13 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "hymns are songs you sing.",
+              "correctAnswer": "hymns",
+              "id": 13
+            },
+            {
+              "content": "Her mother is a good musician, too. Her talent must be [ 14 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "passed from mother to child means it is hereditary.",
+              "correctAnswer": "hereditary",
+              "id": 14
+            },
+            {
+              "content": "The hunter was a very talented [ 15 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "an archer is someone who hunts with a bow.",
+              "correctAnswer": "archer",
+              "id": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Word List 2",
+      "content": "<p style=\"display: none;\">Word List 2</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit27_ielts_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">invert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[invə:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To invert something means to turn it upside down.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → He inverted the bicycle to make repairs on the wheels.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prey</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Prey is the animals that are hunted and eaten by another creature.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The lion ran as fast as he could to catch his prey.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">procession</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəseʃn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A procession is a group of people who walk or drive in a line during a public event.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → The procession all celebrated when they reached the end.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prophet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑfit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A prophet is a person chosen by a god to give the god's message to people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → Harold believed that he was one of the prophets of his god.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sarcastic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɑ:rkæstik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is sarcastic, it is the opposite of what is actually meant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → She hurt her mother's feelings with her constant sarcastic remarks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">seasoning</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[si:zəniŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Seasoning is a mix of salt, herbs, and spices that improves the taste of food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → This steak tastes bland. Maybe I'll add some seasoning to it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sodium</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[soudiəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Sodium is an element that can be used to make substances such as salt.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → Sodium and chloride combine to make table salt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tyranny</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tirəni]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tyranny is a cruel and unfair government in which one person has power.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → His tyranny was impossible to live under.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tyrant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[taiərənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tyrant is someone who treats people in a cruel, harsh, and unfair way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → Our boss is a tyrant. He makes us work long hours for little pay.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vinegar</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vinigər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Vinegar is a strong liquid made from sour wine that is used in cooking.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+' → Be careful because too much vinegar will ruin the recipe.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Choose the correct word to fill in the blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "content": "He only needed one arrow to shoot his [ 16 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "prey is hunted and shot.",
+              "correctAnswer": "prey",
+              "id": 16
+            },
+            {
+              "content": "Everyone lined up to take part in the [ 17 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "people line up in a procession.",
+              "correctAnswer": "procession",
+              "id": 17
+            },
+            {
+              "content": "We marched to honor the king and the noble [ 18 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "earls are noblemen.",
+              "correctAnswer": "earls",
+              "id": 18
+            },
+            {
+              "content": "When it came to keeping the house clean, his mother was a [ 19 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "a tyrant acts strictly and harshly.",
+              "correctAnswer": "tyrant",
+              "id": 19
+            },
+            {
+              "content": "She punished him if his room did not smell very [ 20 ]",
+              "options": [
+                "fragrant",
+                "archer",
+                "procession",
+                "vinegar",
+                "tyrant",
+                "seasoning",
+                "hymns",
+                "prey",
+                "earls",
+                "hereditary"
+              ],
+              "explanation": "fragrant means smelling pleasant.",
+              "correctAnswer": "fragrant",
+              "id": 20
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Choose the word that best matches the definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "content": "<p class=\"mb-4\">He liked to pour the <u><u>strong tasting liquid made from sour wine</u></u> directly on his salad. [ 21 ]</p><p class=\"mb-4\">To better explain the procedure, he used a <u>great <u>way to show that things are similar</u>.</u> [ 22 ]</p><p class=\"mb-4\">We were in awe of the performance of the <u>skilled <u>person who uses a bow and arrows</u>.</u> [ 23 ]</p><p class=\"mb-4\">The war was a means to overthrow the <u><u>cruel and unfair government</u>.</u> [ 24 ]</p><p class=\"mb-4\">I have a feeling that the robbery was <u>a <u>secret plan to do something illegal</u></u> by the owners. [ 25 ]</p><p class=\"mb-4\">At the library, we learned how to <u>trace our <u>line of people from which we descended</u>.</u> [ 26 ]</p><p class=\"mb-4\">The people were convinced that the strange visitor was <u>a <u>person chosen by God</u>.</u> [ 27 ]</p><p class=\"mb-4\">The father acted like <u>a <u>person who treated people in a cruel and unfair way</u>.</u> [ 28 ]</p><p class=\"mb-4\">The <u>British <u>nobleman</u> was</u> a very kind and respected man. [ 29 ]</p><p class=\"mb-4\">The new mayor's first priority was to select <u>a <u>second most important person</u>.</u> [ 30 ]</p>",
+              "options": [],
+              "explanation": "vinegar: a strong tasting liquid made from sour wine.",
+              "correctAnswer": "vinegar",
+              "id": 21
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "analogy: a connection made to show that things are similar.",
+              "correctAnswer": "analogy",
+              "id": 22
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "archer: a person who uses a bow and arrows.",
+              "correctAnswer": "archer",
+              "id": 23
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "tyranny: a cruel and unfair government.",
+              "correctAnswer": "tyranny",
+              "id": 24
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "conspiracy: a secret plan to do something illegal.",
+              "correctAnswer": "conspiracy",
+              "id": 25
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Droplist",
+          "questions": [
+            {
+              "content": "",
+              "options": [],
+              "explanation": "ancestry: the series of people from whom a person descended.",
+              "correctAnswer": "ancestry",
+              "id": 26
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "prophet: a person chosen by God.",
+              "correctAnswer": "prophet",
+              "id": 27
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "tyrant: a person who treats people in a cruel, harsh, and unfair way.",
+              "correctAnswer": "tyrant",
+              "id": 28
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "earl: a nobleman from Britain.",
+              "correctAnswer": "earl",
+              "id": 29
+            },
+            {
+              "content": "",
+              "options": [],
+              "explanation": "deputy: the second-highest-ranking person.",
+              "correctAnswer": "deputy",
+              "id": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Earl of Shining</h1>        <p style=\"margin-bottom: 1rem;\">In the village of Hampton, there was an old soldier named Michael, but he was known to the world as the <b>earl</b> of Shining. Michael was once an expert <b>archer</b> and a great fighter. In fact, his skills seemed to be <b>hereditary</b>; all the people in his <b>ancestry</b> were famous warriors. However, he was getting old and no longer wished to fight.</p>    <p style=\"margin-bottom: 1rem;\">One day, he was in the forest hunting <b>prey</b> when he saw a beautiful <b>prophet</b> singing a <b>hymn</b>. She said, \"Michael, an evil army is involved in a <b>conspiracy</b> to take over Hampton. You're the only one who can defeat them and stop the <b>tyranny</b>. The village needs you!\"</p>    <p style=\"margin-bottom: 1rem;\">Michael replied, \"But I'm too old to fight! I'm not confident that I can do it.\"</p>    <p style=\"margin-bottom: 1rem;\">The <b>prophet</b> said, \"You must try. I will even make a potion to increase your strength.\"</p>    <p style=\"margin-bottom: 1rem;\">The <b>prophet</b> took out a bottle and a <b>funnel</b>. She poured some <b>vinegar</b> and garlic into the bottle. Next, she added some <b>seasoning</b> and <b>sodium</b> and shook it up.</p>    <p style=\"margin-bottom: 1rem;\">Michael smelled the potion. \"Wow, this is <b>fragrant</b>,\" he said in a <b>sarcastic</b> tone. He <b>inverted</b> the bottle and drank the whole potion. He immediately felt stronger. \"I'll try my best,\" he promised.</p>    <p style=\"margin-bottom: 1rem;\">Michael rode his horse to a hilltop, where he could see the village of Hampton below. He saw the evil <b>tyrant</b> and his men marching in a <b>procession</b> through the town.</p>    <p style=\"margin-bottom: 1rem;\">Michael charged down the hill and into the village. An enemy <b>deputy</b> officer shouted, \"He looks as strong as an ox!\" It was an apt <b>analogy</b>. Michael grabbed the officer and threw him across the street with one arm. The rest of the officers screamed and rode away, and their army followed.</p>    <p style=\"margin-bottom: 1rem;\">The <b>prophet</b> reappeared. Michael said, \"It's a good thing you gave me the potion.\"</p>    <p style=\"margin-bottom: 1rem;\">She replied, \"But Michael, the potion was fake! Your strength really came from having confidence!\"</p>    <p style=\"margin-bottom: 1rem;\">Michael realized he really was still great. He just needed to believe in himself.</p></div>",
+      "explanation": "",
+      "sections": [
+        {
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>1. In the village of Hampton, there was an old soldier named Michael, but he was known to the world as the [ 1 ] of Shining.<br/><br/>2. Michael was once an expert [ 2 ] and a great fighter.<br/><br/>3. In fact, his skills seemed to be [ 3 ]; all the people in his <b>ancestry</b> were famous warriors.<br/><br/>4. One day, he was in the forest hunting [ 4 ] when he saw a beautiful <b>prophet</b> singing a <b>hymn</b>.<br/><br/>5. She said, \"Michael, an evil army is involved in a [ 5 ] to take over Hampton.<br/><br/>",
+              "options": [
+                "earl",
+                "archer",
+                "hereditary",
+                "prey",
+                "conspiracy"
+              ],
+              "correctAnswer": "earl",
+              "explanation": "Từ cần điền là: earl",
+              "id": 31
+            },
+            {
+              "content": "",
+              "options": [
+                "earl",
+                "archer",
+                "hereditary",
+                "prey",
+                "conspiracy"
+              ],
+              "correctAnswer": "archer",
+              "explanation": "Từ cần điền là: archer",
+              "id": 32
+            },
+            {
+              "content": "",
+              "options": [
+                "earl",
+                "archer",
+                "hereditary",
+                "prey",
+                "conspiracy"
+              ],
+              "correctAnswer": "hereditary",
+              "explanation": "Từ cần điền là: hereditary",
+              "id": 33
+            },
+            {
+              "content": "",
+              "options": [
+                "earl",
+                "archer",
+                "hereditary",
+                "prey",
+                "conspiracy"
+              ],
+              "correctAnswer": "prey",
+              "explanation": "Từ cần điền là: prey",
+              "id": 34
+            },
+            {
+              "content": "",
+              "options": [
+                "earl",
+                "archer",
+                "hereditary",
+                "prey",
+                "conspiracy"
+              ],
+              "correctAnswer": "conspiracy",
+              "explanation": "Từ cần điền là: conspiracy",
+              "id": 35
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 36,
+              "content": "What suggests that Michael’s skills were hereditary?",
+              "options": [
+                "All the people in his ancestry were famous warriors.",
+                "He was known as the Earl of Shining.",
+                "He was an expert archer.",
+                "He grabbed the officer and threw him."
+              ],
+              "explanation": "Trong đoạn 1 có ghi: \"...his skills seemed to be hereditary; all the people in his ancestry were famous warriors.\" (...kỹ năng của ông dường như được di truyền; tất cả những người trong tổ tiên của ông đều là những chiến binh nổi tiếng). Vì vậy, đáp án đúng là A.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": 37,
+              "content": "What analogy did an enemy deputy officer use to describe Michael?",
+              "options": [
+                "\"He looks as strong as an ox!\"",
+                "\"He is too old to fight!\"",
+                "\"He is an expert archer.\"",
+                "\"He has magical strength.\""
+              ],
+              "explanation": "Ở đoạn 8, viên sĩ quan của phe địch đã kêu lên: \"He looks as strong as an ox!\" (Ông ta trông khỏe như một con bò tót!). Đây chính là phép so sánh (analogy) được sử dụng. Đáp án A là chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": 38,
+              "content": "What did Michael say in a sarcastic tone before he inverted the bottle?",
+              "options": [
+                "\"Wow, this is fragrant.\"",
+                "\"I'm too old to fight!\"",
+                "\"I'll try my best.\"",
+                "\"This smells bad.\""
+              ],
+              "explanation": "Trong đoạn 6 có viết: \"Wow, this is fragrant, he said in a sarcastic tone.\" (\"Chà, thơm quá nhỉ\", ông nói với một giọng điệu mỉa mai). Do đó đáp án là A.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": 39,
+              "content": "What did Michael say after the prophet said the village needed him to stop the tyranny?",
+              "options": [
+                "\"I'm too old to fight! I'm not confident that I can do it.\"",
+                "\"I'll try my best.\"",
+                "\"Wow, this is fragrant.\"",
+                "\"I am still great.\""
+              ],
+              "explanation": "Ở đoạn 3, sau khi nghe nhà tiên tri nói, Michael đã đáp lại: \"But I'm too old to fight! I'm not confident that I can do it.\" (Nhưng ta đã quá già để chiến đấu rồi! Ta không tự tin là mình có thể làm được). Đáp án A là chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": 40,
+              "content": "What did Michael realize after his final encounter with the prophet?",
+              "options": [
+                "Michael realized he really was still great. He just needed to believe in himself.",
+                "Michael realized the potion was fragrant.",
+                "Michael realized he was an earl.",
+                "Michael realized he was too old to fight."
+              ],
+              "explanation": "Câu cuối cùng của truyện (đoạn 11) cho biết: \"Michael realized he really was still great. He just needed to believe in himself.\" (Michael nhận ra mình thực sự vẫn rất tuyệt vời. Ông chỉ cần tin vào chính mình). Đáp án A là chính xác.",
+              "correctAnswer": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 27: Title Here",
+    "category": "exercise",
+    "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
+    "timeLimit": 40
+  }
+}
