@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1850,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1801,
+              "content": "1. There is a great [ 1 ] between the rich and the poor.<br/><br/>2. The [ 2 ] cleans the building every night.<br/><br/>3. The students organized a [ 3 ] to protest the new rules.<br/><br/>4. He is [ 4 ] his long commute to work.<br/><br/>5. We demand a fair [ 5 ] for all workers.",
               "options": [
                 "disparity",
-                "out of place",
+                "janitor",
+                "sit-in",
+                "be accustomed to",
+                "living wage",
                 "exhortation",
                 "rally",
-                "janitor",
-                "amaze",
-                "conduct",
-                "sit-in",
                 "provost",
-                "relentless"
+                "campus",
+                "adequate"
               ],
               "correctAnswer": "disparity"
             },
             {
-              "id": 1851,
+              "id": 1802,
               "content": "",
               "options": [
                 "disparity",
-                "out of place",
+                "janitor",
+                "sit-in",
+                "be accustomed to",
+                "living wage",
                 "exhortation",
                 "rally",
-                "janitor",
-                "amaze",
-                "conduct",
-                "sit-in",
                 "provost",
-                "relentless"
-              ],
-              "correctAnswer": "out of place"
-            },
-            {
-              "id": 1852,
-              "content": "",
-              "options": [
-                "disparity",
-                "out of place",
-                "exhortation",
-                "rally",
-                "janitor",
-                "amaze",
-                "conduct",
-                "sit-in",
-                "provost",
-                "relentless"
-              ],
-              "correctAnswer": "exhortation"
-            },
-            {
-              "id": 1853,
-              "content": "",
-              "options": [
-                "disparity",
-                "out of place",
-                "exhortation",
-                "rally",
-                "janitor",
-                "amaze",
-                "conduct",
-                "sit-in",
-                "provost",
-                "relentless"
-              ],
-              "correctAnswer": "rally"
-            },
-            {
-              "id": 1854,
-              "content": "",
-              "options": [
-                "disparity",
-                "out of place",
-                "exhortation",
-                "rally",
-                "janitor",
-                "amaze",
-                "conduct",
-                "sit-in",
-                "provost",
-                "relentless"
+                "campus",
+                "adequate"
               ],
               "correctAnswer": "janitor"
+            },
+            {
+              "id": 1803,
+              "content": "",
+              "options": [
+                "disparity",
+                "janitor",
+                "sit-in",
+                "be accustomed to",
+                "living wage",
+                "exhortation",
+                "rally",
+                "provost",
+                "campus",
+                "adequate"
+              ],
+              "correctAnswer": "sit-in"
+            },
+            {
+              "id": 1804,
+              "content": "",
+              "options": [
+                "disparity",
+                "janitor",
+                "sit-in",
+                "be accustomed to",
+                "living wage",
+                "exhortation",
+                "rally",
+                "provost",
+                "campus",
+                "adequate"
+              ],
+              "correctAnswer": "be accustomed to"
+            },
+            {
+              "id": 1805,
+              "content": "",
+              "options": [
+                "disparity",
+                "janitor",
+                "sit-in",
+                "be accustomed to",
+                "living wage",
+                "exhortation",
+                "rally",
+                "provost",
+                "campus",
+                "adequate"
+              ],
+              "correctAnswer": "living wage"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1855,
-              "content": "Which word is related to 'amaze'?",
+              "id": 1806,
+              "content": "To feel out of one's proper or usual environment.",
               "options": [
-                "amaze",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Out of place",
+                "Be stuck in",
+                "Turn one's back on",
+                "Cater to"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is amaze as it was taught in the lesson."
+              "explanation": "'Out of place' means feeling inappropriate or uncomfortable in a particular situation."
             },
             {
-              "id": 1856,
-              "content": "Which word is related to 'conduct'?",
+              "id": 1807,
+              "content": "Oppressively constant; incessant.",
               "options": [
-                "conduct",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Relentless",
+                "Adequate",
+                "Unconscionably",
+                "Perpetual"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is conduct as it was taught in the lesson."
+              "explanation": "Relentless means oppressively constant."
             },
             {
-              "id": 1857,
-              "content": "Which word is related to 'sit-in'?",
+              "id": 1808,
+              "content": "The action or fact of treating someone unfairly in order to benefit from their work.",
               "options": [
-                "sit-in",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Exploitation",
+                "Exhortation",
+                "Endowment",
+                "Entreaty"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is sit-in as it was taught in the lesson."
+              "explanation": "Exploitation is treating someone unfairly to benefit from their work."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1858,
-              "content": "The word 'provost' is an English word.",
+              "id": 1809,
+              "content": "An 'endowment' is an income or form of property given or bequeathed to someone.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'provost' is part of the English vocabulary."
+              "explanation": "True. An endowment is a financial gift or property given to an institution or person."
             },
             {
-              "id": 1859,
-              "content": "The word 'relentless' is an English word.",
+              "id": 1810,
+              "content": "To 'commute' means to stay at home and work online.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'relentless' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To commute means to travel some distance between one's home and place of work on a regular basis."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1900,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1811,
+              "content": "1. She collapsed from total [ 1 ].<br/><br/>2. We must [ 2 ] new strategies to improve sales.<br/><br/>3. The company hired a [ 3 ] to build the new office.<br/><br/>4. He was [ 4 ] as the new manager.<br/><br/>5. They made a passionate [ 5 ] for help.",
               "options": [
                 "exhaustion",
-                "in a hole",
-                "social security",
                 "adopt",
-                "City Council",
-                "establish",
-                "ordinance",
                 "contractor",
+                "appointed",
+                "plea",
                 "custodian",
-                "survive"
+                "survive",
+                "plight",
+                "reject",
+                "squeeze"
               ],
               "correctAnswer": "exhaustion"
             },
             {
-              "id": 1901,
+              "id": 1812,
               "content": "",
               "options": [
                 "exhaustion",
-                "in a hole",
-                "social security",
                 "adopt",
-                "City Council",
-                "establish",
-                "ordinance",
                 "contractor",
+                "appointed",
+                "plea",
                 "custodian",
-                "survive"
-              ],
-              "correctAnswer": "in a hole"
-            },
-            {
-              "id": 1902,
-              "content": "",
-              "options": [
-                "exhaustion",
-                "in a hole",
-                "social security",
-                "adopt",
-                "City Council",
-                "establish",
-                "ordinance",
-                "contractor",
-                "custodian",
-                "survive"
-              ],
-              "correctAnswer": "social security"
-            },
-            {
-              "id": 1903,
-              "content": "",
-              "options": [
-                "exhaustion",
-                "in a hole",
-                "social security",
-                "adopt",
-                "City Council",
-                "establish",
-                "ordinance",
-                "contractor",
-                "custodian",
-                "survive"
+                "survive",
+                "plight",
+                "reject",
+                "squeeze"
               ],
               "correctAnswer": "adopt"
             },
             {
-              "id": 1904,
+              "id": 1813,
               "content": "",
               "options": [
                 "exhaustion",
-                "in a hole",
-                "social security",
                 "adopt",
-                "City Council",
-                "establish",
-                "ordinance",
                 "contractor",
+                "appointed",
+                "plea",
                 "custodian",
-                "survive"
+                "survive",
+                "plight",
+                "reject",
+                "squeeze"
               ],
-              "correctAnswer": "City Council"
+              "correctAnswer": "contractor"
+            },
+            {
+              "id": 1814,
+              "content": "",
+              "options": [
+                "exhaustion",
+                "adopt",
+                "contractor",
+                "appointed",
+                "plea",
+                "custodian",
+                "survive",
+                "plight",
+                "reject",
+                "squeeze"
+              ],
+              "correctAnswer": "appointed"
+            },
+            {
+              "id": 1815,
+              "content": "",
+              "options": [
+                "exhaustion",
+                "adopt",
+                "contractor",
+                "appointed",
+                "plea",
+                "custodian",
+                "survive",
+                "plight",
+                "reject",
+                "squeeze"
+              ],
+              "correctAnswer": "plea"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1905,
-              "content": "Which word is related to 'establish'?",
+              "id": 1816,
+              "content": "A person responsible for protecting or taking care of something or keeping it in good condition.",
               "options": [
-                "establish",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Custodian",
+                "Honcho",
+                "Contractor",
+                "Administration"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is establish as it was taught in the lesson."
+              "explanation": "A custodian is a person responsible for taking care of something."
             },
             {
-              "id": 1906,
-              "content": "Which word is related to 'ordinance'?",
+              "id": 1817,
+              "content": "A dangerous, difficult, or otherwise unfortunate situation.",
               "options": [
-                "ordinance",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Plight",
+                "Ordinance",
+                "Strategy",
+                "Apparel"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is ordinance as it was taught in the lesson."
+              "explanation": "A plight is a dangerous or difficult situation."
             },
             {
-              "id": 1907,
-              "content": "Which word is related to 'contractor'?",
+              "id": 1818,
+              "content": "To grow or develop in a healthy or vigorous way.",
               "options": [
-                "contractor",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Flourish",
+                "Fade",
+                "Crave",
+                "Survive"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is contractor as it was taught in the lesson."
+              "explanation": "To flourish means to grow or develop vigorously."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1908,
-              "content": "The word 'custodian' is an English word.",
+              "id": 1819,
+              "content": "An 'ordinance' is an authoritative order or decree.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'custodian' is part of the English vocabulary."
+              "explanation": "True. An ordinance is an authoritative rule or law."
             },
             {
-              "id": 1909,
-              "content": "The word 'survive' is an English word.",
+              "id": 1820,
+              "content": "To 'reject' something means to accept it willingly.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'survive' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To reject means to dismiss as inadequate, inappropriate, or not to one's taste."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1880,
-              "content": "According to the text: 'Comprehensive Reading\\nDisparities at Harvard\\nFrank Morley seemed out of place in the crowd of young people moving excitedly to the loud music and the exhortations in Spanish at the rally in Harvard Yard...'",
+              "id": 1821,
+              "content": "Who is Frank Morley?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A Harvard professor",
+                "A 60-year-old janitor",
+                "A student organizer",
+                "A politician"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'Mr. Morley is 60 years old... and he was dressed in the uniform of his trade, which is janitor.'"
             },
             {
-              "id": 1881,
-              "content": "According to the text: 'Mr...'",
+              "id": 1822,
+              "content": "Where did the rally take place?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "In a city park",
+                "In Harvard Yard",
+                "Inside a classroom",
+                "At the City Council"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text mentions: '...at the rally in Harvard Yard.'"
             },
             {
-              "id": 1882,
-              "content": "According to the text: 'Morley is 60 years old and not particularly well educated, and he was dressed in the uniform of his trade, which is janitor...'",
+              "id": 1823,
+              "content": "Why was Frank Morley amazed by the crowd?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Because they were dancing well",
+                "Because they were protesting for people like him",
+                "Because they were very angry",
+                "Because they were speaking Spanish"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "He says: 'It amazes me... that there are people who would do this for other people. For guys like me.'"
             },
             {
-              "id": 1883,
-              "content": "According to the text: '\\n\"It amazes me,\" he said, raising his voice to be heard over the pounding of drums, \"that there are people who would do this for other people...'",
+              "id": 1824,
+              "content": "What did Frank Morley seem to feel in the crowd of young people?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Excited",
+                "Out of place",
+                "Angry",
+                "Bored"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text begins: 'Frank Morley seemed out of place in the crowd...'"
             },
             {
-              "id": 1884,
-              "content": "According to the text: 'For guys like me...'",
+              "id": 1825,
+              "content": "What was happening at the rally?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Loud music and exhortations in Spanish",
+                "A silent vigil",
+                "A violent clash",
+                "A final exam"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text describes 'young people moving excitedly to the loud music and the exhortations in Spanish at the rally...'"
             }
           ]
         }

@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1750,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1701,
+              "content": "1. She plays a vital [ 1 ] in the organization.<br/><br/>2. The committee faced a difficult [ 2 ].<br/><br/>3. The police will [ 3 ] an inquiry into the matter.<br/><br/>4. It is [ 4 ] that we maintain high standards.<br/><br/>5. He is [ 5 ] the new project.",
               "options": [
                 "role",
-                "internet",
                 "dilemma",
-                "brains",
-                "found",
                 "conduct",
-                "inquiry",
-                "chancellor",
                 "vital",
-                "maintain"
+                "in charge of",
+                "internet",
+                "brains",
+                "chancellor",
+                "relevance",
+                "recapture"
               ],
               "correctAnswer": "role"
             },
             {
-              "id": 1751,
+              "id": 1702,
               "content": "",
               "options": [
                 "role",
-                "internet",
                 "dilemma",
-                "brains",
-                "found",
                 "conduct",
-                "inquiry",
-                "chancellor",
                 "vital",
-                "maintain"
-              ],
-              "correctAnswer": "internet"
-            },
-            {
-              "id": 1752,
-              "content": "",
-              "options": [
-                "role",
+                "in charge of",
                 "internet",
-                "dilemma",
                 "brains",
-                "found",
-                "conduct",
-                "inquiry",
                 "chancellor",
-                "vital",
-                "maintain"
+                "relevance",
+                "recapture"
               ],
               "correctAnswer": "dilemma"
             },
             {
-              "id": 1753,
+              "id": 1703,
               "content": "",
               "options": [
                 "role",
-                "internet",
                 "dilemma",
-                "brains",
-                "found",
                 "conduct",
-                "inquiry",
-                "chancellor",
                 "vital",
-                "maintain"
+                "in charge of",
+                "internet",
+                "brains",
+                "chancellor",
+                "relevance",
+                "recapture"
               ],
-              "correctAnswer": "brains"
+              "correctAnswer": "conduct"
             },
             {
-              "id": 1754,
+              "id": 1704,
               "content": "",
               "options": [
                 "role",
-                "internet",
                 "dilemma",
-                "brains",
-                "found",
                 "conduct",
-                "inquiry",
-                "chancellor",
                 "vital",
-                "maintain"
+                "in charge of",
+                "internet",
+                "brains",
+                "chancellor",
+                "relevance",
+                "recapture"
               ],
-              "correctAnswer": "found"
+              "correctAnswer": "vital"
+            },
+            {
+              "id": 1705,
+              "content": "",
+              "options": [
+                "role",
+                "dilemma",
+                "conduct",
+                "vital",
+                "in charge of",
+                "internet",
+                "brains",
+                "chancellor",
+                "relevance",
+                "recapture"
+              ],
+              "correctAnswer": "in charge of"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1755,
-              "content": "Which word is related to 'conduct'?",
+              "id": 1706,
+              "content": "Happening or done every day.",
               "options": [
-                "conduct",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Day-to-day",
+                "Invariably",
+                "Remarkably",
+                "Intellectually"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is conduct as it was taught in the lesson."
+              "explanation": "Day-to-day means happening every day."
             },
             {
-              "id": 1756,
-              "content": "Which word is related to 'inquiry'?",
+              "id": 1707,
+              "content": "To buy or obtain for oneself.",
               "options": [
-                "inquiry",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Acquire",
+                "Recapture",
+                "Maintain",
+                "Muse"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is inquiry as it was taught in the lesson."
+              "explanation": "To acquire means to buy or obtain."
             },
             {
-              "id": 1757,
-              "content": "Which word is related to 'chancellor'?",
+              "id": 1708,
+              "content": "The grounds and buildings of a university or college.",
               "options": [
-                "chancellor",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Campus",
+                "Chancellor",
+                "Fee",
+                "Expansion"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is chancellor as it was taught in the lesson."
+              "explanation": "A campus is the grounds of a university."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1758,
-              "content": "The word 'vital' is an English word.",
+              "id": 1709,
+              "content": "To 'maintain' something means to cause or enable it to continue.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'vital' is part of the English vocabulary."
+              "explanation": "True. To maintain is to enable a condition or state of affairs to continue."
             },
             {
-              "id": 1759,
-              "content": "The word 'maintain' is an English word.",
+              "id": 1710,
+              "content": "'Expansion' refers to the action of becoming smaller or less extensive.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'maintain' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Expansion is the action of becoming larger or more extensive."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1800,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1711,
+              "content": "1. The two sides finally reached a [ 1 ].<br/><br/>2. The new policy will [ 2 ] on improving student life.<br/><br/>3. It's important to [ 3 ] a healthy work-life balance.<br/><br/>4. The students felt a lot of [ 4 ] before the exams.<br/><br/>5. The university is a highly respected [ 5 ].",
               "options": [
                 "compromise",
-                "moderate",
-                "elitist",
                 "focus",
-                "labor-intensive",
-                "tutorial system",
                 "retain",
                 "pressure",
-                "pack",
-                "abandon"
+                "institution",
+                "moderate",
+                "elitist",
+                "abandon",
+                "tutorial",
+                "spire"
               ],
               "correctAnswer": "compromise"
             },
             {
-              "id": 1801,
+              "id": 1712,
               "content": "",
               "options": [
                 "compromise",
-                "moderate",
-                "elitist",
                 "focus",
-                "labor-intensive",
-                "tutorial system",
                 "retain",
                 "pressure",
-                "pack",
-                "abandon"
-              ],
-              "correctAnswer": "moderate"
-            },
-            {
-              "id": 1802,
-              "content": "",
-              "options": [
-                "compromise",
+                "institution",
                 "moderate",
                 "elitist",
-                "focus",
-                "labor-intensive",
-                "tutorial system",
-                "retain",
-                "pressure",
-                "pack",
-                "abandon"
-              ],
-              "correctAnswer": "elitist"
-            },
-            {
-              "id": 1803,
-              "content": "",
-              "options": [
-                "compromise",
-                "moderate",
-                "elitist",
-                "focus",
-                "labor-intensive",
-                "tutorial system",
-                "retain",
-                "pressure",
-                "pack",
-                "abandon"
+                "abandon",
+                "tutorial",
+                "spire"
               ],
               "correctAnswer": "focus"
             },
             {
-              "id": 1804,
+              "id": 1713,
               "content": "",
               "options": [
                 "compromise",
-                "moderate",
-                "elitist",
                 "focus",
-                "labor-intensive",
-                "tutorial system",
                 "retain",
                 "pressure",
-                "pack",
-                "abandon"
+                "institution",
+                "moderate",
+                "elitist",
+                "abandon",
+                "tutorial",
+                "spire"
               ],
-              "correctAnswer": "labor-intensive"
+              "correctAnswer": "retain"
+            },
+            {
+              "id": 1714,
+              "content": "",
+              "options": [
+                "compromise",
+                "focus",
+                "retain",
+                "pressure",
+                "institution",
+                "moderate",
+                "elitist",
+                "abandon",
+                "tutorial",
+                "spire"
+              ],
+              "correctAnswer": "pressure"
+            },
+            {
+              "id": 1715,
+              "content": "",
+              "options": [
+                "compromise",
+                "focus",
+                "retain",
+                "pressure",
+                "institution",
+                "moderate",
+                "elitist",
+                "abandon",
+                "tutorial",
+                "spire"
+              ],
+              "correctAnswer": "institution"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1805,
-              "content": "Which word is related to 'tutorial system'?",
+              "id": 1716,
+              "content": "To cease to support or look after someone; desert.",
               "options": [
-                "tutorial system",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Abandon",
+                "Attract",
+                "Attempt",
+                "Overlap"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is tutorial system as it was taught in the lesson."
+              "explanation": "To abandon means to cease to support or look after."
             },
             {
-              "id": 1806,
-              "content": "Which word is related to 'retain'?",
+              "id": 1717,
+              "content": "A person or thing holding a position or performing a function that corresponds to that of another person or thing in another place.",
               "options": [
-                "retain",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Counterpart",
+                "Local",
+                "Legacy",
+                "Polytechnic"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is retain as it was taught in the lesson."
+              "explanation": "A counterpart is a person or thing that corresponds to another."
             },
             {
-              "id": 1807,
-              "content": "Which word is related to 'pressure'?",
+              "id": 1718,
+              "content": "To be controlled or determined by.",
               "options": [
-                "pressure",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Be dependent on",
+                "Pack",
+                "Fund",
+                "Attract"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is pressure as it was taught in the lesson."
+              "explanation": "To be dependent on means to be controlled or determined by."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1808,
-              "content": "The word 'pack' is an English word.",
+              "id": 1719,
+              "content": "'Labor-intensive' refers to a process or industry that requires a large amount of labor to produce its goods or services.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'pack' is part of the English vocabulary."
+              "explanation": "True. Labor-intensive means needing a large workforce."
             },
             {
-              "id": 1809,
-              "content": "The word 'abandon' is an English word.",
+              "id": 1720,
+              "content": "A 'legacy' is an amount of money or property left to someone in a will.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'abandon' is part of the English vocabulary."
+              "explanation": "True. A legacy is something left or handed down by a predecessor."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1780,
-              "content": "According to the text: 'Comprehensive Reading\\nOxford Considers Future Roles\\nOXFORD - What is Oxford University's role in the age of the Internet?\\nLike an examination question, the dilemma of combining the best of the old and the new is occupying Oxford's top brains...'",
+              "id": 1721,
+              "content": "What dilemma is occupying Oxford's top brains?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "How to lower tuition fees",
+                "Combining the best of the old and the new in the age of the Internet",
+                "How to recruit more local students",
+                "How to abandon the tutorial system"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'Like an examination question, the dilemma of combining the best of the old and the new is occupying Oxford's top brains.'"
             },
             {
-              "id": 1781,
-              "content": "According to the text: '\\nFounded in the 13th century, the university is conducting the first major inquiry into its future for 30 years and Vice-Chancellor Peter North sees international connections as vital in maintaining its relevance...'",
+              "id": 1722,
+              "content": "When was Oxford University founded?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "In the 30th century",
+                "In the 13th century",
+                "30 years ago",
+                "In the age of the Internet"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text says: 'Founded in the 13th century...'"
             },
             {
-              "id": 1782,
-              "content": "According to the text: '\\n\"I think we've only recaptured a more outward-looking role in the second half of this century...'",
+              "id": 1723,
+              "content": "What does Vice-Chancellor Peter North see as vital in maintaining Oxford's relevance?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Building more student housing",
+                "International connections",
+                "Reducing the number of post-graduates",
+                "Increasing the daily run of students"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage notes: '...and Vice-Chancellor Peter North sees international connections as vital in maintaining its relevance.'"
             },
             {
-              "id": 1783,
-              "content": "According to the text: '\" North, who is in charge of day-to-day running of the university, said in an interview...'",
+              "id": 1724,
+              "content": "According to the Vice-Chancellor, what has Oxford recently recaptured?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A large endowment",
+                "A more outward-looking stance",
+                "Its lost library books",
+                "Control over its colleges"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text quotes him: '\"I think we've only recaptured a more outward-looking stance in the past 10 years or so...\"'"
             },
             {
-              "id": 1784,
-              "content": "According to the text: '\\n\"It is more like the 13th century in a way than the 18th because Europe was (then) a continent in which scholars moved around quite remarkably...'",
+              "id": 1725,
+              "content": "What is the university currently conducting for the first time in 30 years?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A major inquiry into its future",
+                "A graduation ceremony",
+                "An online examination",
+                "A student protest"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text states: '...the university is conducting the first major inquiry into its future for 30 years...'"
             }
           ]
         }

@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1650,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1601,
+              "content": "1. The university is a respected [ 1 ].<br/><br/>2. Students must pay their tuition [ 2 ] on time.<br/><br/>3. The [ 3 ] has a strict set of rules.<br/><br/>4. She received a research [ 4 ] from the government.<br/><br/>5. We need to find cheap [ 5 ] near the campus.",
               "options": [
                 "institution",
-                "govern",
-                "council",
-                "local",
-                "academic",
                 "fee",
-                "authority",
+                "council",
                 "grant",
                 "lodging",
-                "syllabus"
+                "syllabus",
+                "master",
+                "thesis",
+                "admission",
+                "college"
               ],
               "correctAnswer": "institution"
             },
             {
-              "id": 1651,
+              "id": 1602,
               "content": "",
               "options": [
                 "institution",
-                "govern",
-                "council",
-                "local",
-                "academic",
                 "fee",
-                "authority",
+                "council",
                 "grant",
                 "lodging",
-                "syllabus"
+                "syllabus",
+                "master",
+                "thesis",
+                "admission",
+                "college"
               ],
-              "correctAnswer": "govern"
+              "correctAnswer": "fee"
             },
             {
-              "id": 1652,
+              "id": 1603,
               "content": "",
               "options": [
                 "institution",
-                "govern",
-                "council",
-                "local",
-                "academic",
                 "fee",
-                "authority",
+                "council",
                 "grant",
                 "lodging",
-                "syllabus"
+                "syllabus",
+                "master",
+                "thesis",
+                "admission",
+                "college"
               ],
               "correctAnswer": "council"
             },
             {
-              "id": 1653,
+              "id": 1604,
               "content": "",
               "options": [
                 "institution",
-                "govern",
-                "council",
-                "local",
-                "academic",
                 "fee",
-                "authority",
+                "council",
                 "grant",
                 "lodging",
-                "syllabus"
+                "syllabus",
+                "master",
+                "thesis",
+                "admission",
+                "college"
               ],
-              "correctAnswer": "local"
+              "correctAnswer": "grant"
             },
             {
-              "id": 1654,
+              "id": 1605,
               "content": "",
               "options": [
                 "institution",
-                "govern",
-                "council",
-                "local",
-                "academic",
                 "fee",
-                "authority",
+                "council",
                 "grant",
                 "lodging",
-                "syllabus"
+                "syllabus",
+                "master",
+                "thesis",
+                "admission",
+                "college"
               ],
-              "correctAnswer": "academic"
+              "correctAnswer": "lodging"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1655,
-              "content": "Which word is related to 'fee'?",
+              "id": 1606,
+              "content": "An outline of the subjects in a course of study or teaching.",
               "options": [
-                "fee",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Syllabus",
+                "Thesis",
+                "Grant",
+                "Institution"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is fee as it was taught in the lesson."
+              "explanation": "A syllabus is an outline of the subjects in a course of study."
             },
             {
-              "id": 1656,
-              "content": "Which word is related to 'authority'?",
+              "id": 1607,
+              "content": "To grant or bestow a title, degree, benefit, or right.",
               "options": [
-                "authority",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Confer",
+                "Govern",
+                "Resemble",
+                "Automatically"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is authority as it was taught in the lesson."
+              "explanation": "To confer means to grant or bestow."
             },
             {
-              "id": 1657,
-              "content": "Which word is related to 'grant'?",
+              "id": 1608,
+              "content": "The process or fact of entering or being allowed to enter a place, organization, or institution.",
               "options": [
-                "grant",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Admission",
+                "Authority",
+                "Lodging",
+                "Preeminence"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is grant as it was taught in the lesson."
+              "explanation": "Admission is the process of being allowed to enter."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1658,
-              "content": "The word 'lodging' is an English word.",
+              "id": 1609,
+              "content": "A 'post-graduate' is someone who has not yet completed their first degree.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'lodging' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. A post-graduate is a student who has successfully completed an undergraduate degree course and is studying for a higher degree."
             },
             {
-              "id": 1659,
-              "content": "The word 'syllabus' is an English word.",
+              "id": 1610,
+              "content": "To 'resemble' someone means to look or be like them.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'syllabus' is part of the English vocabulary."
+              "explanation": "True. To resemble is to have a similar appearance to or qualities in common with someone or something."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1700,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1611,
+              "content": "1. He is a [ 1 ] of the Royal Society.<br/><br/>2. The [ 2 ] architecture of the building is breathtaking.<br/><br/>3. She won the award based on her own [ 3 ].<br/><br/>4. The professor is an [ 4 ] scholar in his field.<br/><br/>5. Having bilingual skills is a great [ 5 ].",
               "options": [
                 "fellow",
-                "found",
                 "magnificent",
-                "arrogance",
-                "habitually",
-                "cabinet",
                 "merit",
                 "eminent",
                 "advantage",
-                "ancient"
+                "ancient",
+                "average",
+                "community",
+                "tutor",
+                "innovation"
               ],
               "correctAnswer": "fellow"
             },
             {
-              "id": 1701,
+              "id": 1612,
               "content": "",
               "options": [
                 "fellow",
-                "found",
                 "magnificent",
-                "arrogance",
-                "habitually",
-                "cabinet",
                 "merit",
                 "eminent",
                 "advantage",
-                "ancient"
-              ],
-              "correctAnswer": "found"
-            },
-            {
-              "id": 1702,
-              "content": "",
-              "options": [
-                "fellow",
-                "found",
-                "magnificent",
-                "arrogance",
-                "habitually",
-                "cabinet",
-                "merit",
-                "eminent",
-                "advantage",
-                "ancient"
+                "ancient",
+                "average",
+                "community",
+                "tutor",
+                "innovation"
               ],
               "correctAnswer": "magnificent"
             },
             {
-              "id": 1703,
+              "id": 1613,
               "content": "",
               "options": [
                 "fellow",
-                "found",
                 "magnificent",
-                "arrogance",
-                "habitually",
-                "cabinet",
                 "merit",
                 "eminent",
                 "advantage",
-                "ancient"
+                "ancient",
+                "average",
+                "community",
+                "tutor",
+                "innovation"
               ],
-              "correctAnswer": "arrogance"
+              "correctAnswer": "merit"
             },
             {
-              "id": 1704,
+              "id": 1614,
               "content": "",
               "options": [
                 "fellow",
-                "found",
                 "magnificent",
-                "arrogance",
-                "habitually",
-                "cabinet",
                 "merit",
                 "eminent",
                 "advantage",
-                "ancient"
+                "ancient",
+                "average",
+                "community",
+                "tutor",
+                "innovation"
               ],
-              "correctAnswer": "habitually"
+              "correctAnswer": "eminent"
+            },
+            {
+              "id": 1615,
+              "content": "",
+              "options": [
+                "fellow",
+                "magnificent",
+                "merit",
+                "eminent",
+                "advantage",
+                "ancient",
+                "average",
+                "community",
+                "tutor",
+                "innovation"
+              ],
+              "correctAnswer": "advantage"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1705,
-              "content": "Which word is related to 'cabinet'?",
+              "id": 1616,
+              "content": "Belonging to the very distant past and no longer in existence.",
               "options": [
-                "cabinet",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Ancient",
+                "Magnificent",
+                "Eminent",
+                "Tolerant"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is cabinet as it was taught in the lesson."
+              "explanation": "Ancient means belonging to the very distant past."
             },
             {
-              "id": 1706,
-              "content": "Which word is related to 'merit'?",
+              "id": 1617,
+              "content": "Competition for the same objective or for superiority in the same field.",
               "options": [
-                "merit",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Rivalry",
+                "Merit",
+                "Innovation",
+                "Channel"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is merit as it was taught in the lesson."
+              "explanation": "Rivalry is competition for the same objective."
             },
             {
-              "id": 1707,
-              "content": "Which word is related to 'eminent'?",
+              "id": 1618,
+              "content": "Showing willingness to allow the existence of opinions or behavior that one does not necessarily agree with.",
               "options": [
-                "eminent",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Tolerant",
+                "Arrogance",
+                "Conscious",
+                "Stimulating"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is eminent as it was taught in the lesson."
+              "explanation": "Tolerant means showing willingness to allow the existence of opinions one doesn't agree with."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1708,
-              "content": "The word 'advantage' is an English word.",
+              "id": 1619,
+              "content": "An 'undergraduate' is a student who has already completed their bachelor's degree.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'advantage' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. An undergraduate is a student at a college or university who has not yet earned a bachelor's or equivalent degree."
             },
             {
-              "id": 1709,
-              "content": "The word 'ancient' is an English word.",
+              "id": 1620,
+              "content": "To 'found' an institution means to establish or originate it.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'ancient' is part of the English vocabulary."
+              "explanation": "True. To found means to establish or originate an institution."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1680,
-              "content": "According to the text: 'Comprehensive Reading\\nBritish Universities: Cambridge and Oxford\\nThere are more than forty universities in Britain...'",
+              "id": 1621,
+              "content": "How many universities are there in Britain according to the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Less than forty",
+                "Exactly forty",
+                "More than forty",
+                "Around twenty"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text states: 'There are more than forty universities in Britain.'"
             },
             {
-              "id": 1681,
-              "content": "According to the text: 'They are all private institutions...'",
+              "id": 1622,
+              "content": "Are British universities public or private institutions?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They are all public institutions.",
+                "They are all private institutions.",
+                "Half are public and half are private.",
+                "It depends on the local authority."
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text explicitly says: 'They are all private institutions.'"
             },
             {
-              "id": 1682,
-              "content": "According to the text: 'Each has its own governing council, including some local businessmen and local politicians as well as a few academics...'",
+              "id": 1623,
+              "content": "Who might be included in a university's governing council?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Only academics",
+                "Only local businessmen",
+                "Local businessmen, local politicians, and academics",
+                "Students and their parents"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The passage notes: 'Each has its own governing council, including some local businessmen and local politicians as well as a few academics.'"
             },
             {
-              "id": 1683,
-              "content": "According to the text: 'Students have to pay fees and living costs, but every student may receive from the local authority of the place where he lives a personal grant which is enough to pay off his full costs, including lodging and food...'",
+              "id": 1624,
+              "content": "How do students typically pay for their living costs and fees?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They must work part-time.",
+                "They receive a personal grant from the local authority.",
+                "The university covers all costs.",
+                "They take out massive bank loans."
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: '...every student may receive from the local authority of the place where he lives a personal grant which is enough to pay off his full costs, including lodging and food.'"
             },
             {
-              "id": 1684,
-              "content": "According to the text: '\\nEach university has its own syllabuses, and there are some quite important differences between one and another...'",
+              "id": 1625,
+              "content": "What is the nature of the relationship between the central government and the universities?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The government fully controls the syllabus.",
+                "The government provides most of the money but does not control them directly.",
+                "The government refuses to provide any funding.",
+                "The government appoints all the academics."
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "Based on the context of them being private but students getting grants, they are independent but funded indirectly or via grants."
             }
           ]
         }
