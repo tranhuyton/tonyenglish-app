@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2850,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2801,
+              "content": "1. He is a very [ 1 ] writer who has won many awards.<br/><br/>2. The movie is a political [ 2 ] that mocks the government.<br/><br/>3. It was a big [ 3 ] to invest all his money in the stock market.<br/><br/>4. She works in a highly [ 4 ] environment at the university.<br/><br/>5. His sudden resignation caused a massive [ 5 ].",
               "options": [
-                "thriller",
-                "campus novel",
+                "gifted",
                 "satire",
-                "reported",
-                "deal",
                 "gamble",
+                "academic",
+                "scandal",
+                "thriller",
                 "recklessly",
-                "non-fiction",
                 "dissent",
-                "in vain"
+                "confirm",
+                "vendetta"
               ],
-              "correctAnswer": "thriller"
+              "correctAnswer": "gifted"
             },
             {
-              "id": 2851,
+              "id": 2802,
               "content": "",
               "options": [
-                "thriller",
-                "campus novel",
+                "gifted",
                 "satire",
-                "reported",
-                "deal",
                 "gamble",
-                "recklessly",
-                "non-fiction",
-                "dissent",
-                "in vain"
-              ],
-              "correctAnswer": "campus novel"
-            },
-            {
-              "id": 2852,
-              "content": "",
-              "options": [
+                "academic",
+                "scandal",
                 "thriller",
-                "campus novel",
-                "satire",
-                "reported",
-                "deal",
-                "gamble",
                 "recklessly",
-                "non-fiction",
                 "dissent",
-                "in vain"
+                "confirm",
+                "vendetta"
               ],
               "correctAnswer": "satire"
             },
             {
-              "id": 2853,
+              "id": 2803,
               "content": "",
               "options": [
-                "thriller",
-                "campus novel",
+                "gifted",
                 "satire",
-                "reported",
-                "deal",
                 "gamble",
+                "academic",
+                "scandal",
+                "thriller",
                 "recklessly",
-                "non-fiction",
                 "dissent",
-                "in vain"
+                "confirm",
+                "vendetta"
               ],
-              "correctAnswer": "reported"
+              "correctAnswer": "gamble"
             },
             {
-              "id": 2854,
+              "id": 2804,
               "content": "",
               "options": [
-                "thriller",
-                "campus novel",
+                "gifted",
                 "satire",
-                "reported",
-                "deal",
                 "gamble",
+                "academic",
+                "scandal",
+                "thriller",
                 "recklessly",
-                "non-fiction",
                 "dissent",
-                "in vain"
+                "confirm",
+                "vendetta"
               ],
-              "correctAnswer": "deal"
+              "correctAnswer": "academic"
+            },
+            {
+              "id": 2805,
+              "content": "",
+              "options": [
+                "gifted",
+                "satire",
+                "gamble",
+                "academic",
+                "scandal",
+                "thriller",
+                "recklessly",
+                "dissent",
+                "confirm",
+                "vendetta"
+              ],
+              "correctAnswer": "scandal"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2855,
-              "content": "Which word is related to 'gamble'?",
+              "id": 2806,
+              "content": "To destroy utterly; wipe out.",
               "options": [
-                "gamble",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Obliterate",
+                "Indicate",
+                "Confirm",
+                "Stimulate"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is gamble as it was taught in the lesson."
+              "explanation": "To obliterate means to destroy utterly."
             },
             {
-              "id": 2856,
-              "content": "Which word is related to 'recklessly'?",
+              "id": 2807,
+              "content": "Complicated and difficult to follow.",
               "options": [
-                "recklessly",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Convoluted",
+                "Competent",
+                "Anonymous",
+                "Witty"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is recklessly as it was taught in the lesson."
+              "explanation": "Convoluted means extremely complex and difficult to follow."
             },
             {
-              "id": 2857,
-              "content": "Which word is related to 'non-fiction'?",
+              "id": 2808,
+              "content": "A person who claims that someone has committed an offense or done something wrong.",
               "options": [
-                "non-fiction",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Accuser",
+                "Nomination",
+                "Vendetta",
+                "Machination"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is non-fiction as it was taught in the lesson."
+              "explanation": "An accuser is a person who claims someone has done wrong."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2858,
-              "content": "The word 'dissent' is an English word.",
+              "id": 2809,
+              "content": "A 'whodunit' is a story or play about a murder in which the identity of the murderer is not revealed until the end.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'dissent' is part of the English vocabulary."
+              "explanation": "True. A whodunit is a classic murder mystery."
             },
             {
-              "id": 2859,
-              "content": "The word 'in vain' is an English word.",
+              "id": 2810,
+              "content": "To 'covet' something means to give it away freely.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'in vain' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To covet means to yearn to possess or have something."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2900,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2811,
+              "content": "1. The company has its headquarters in a very [ 1 ] neighborhood.<br/><br/>2. There is a lot of [ 2 ] tension in that area.<br/><br/>3. The author decided to [ 3 ] the events of his own life in the novel.<br/><br/>4. She is a very [ 4 ] politician who wants to become president.<br/><br/>5. We should not [ 5 ] the feelings of others.",
               "options": [
+                "affluent",
+                "racial",
+                "fictionalise",
+                "ambitious",
+                "ignore",
                 "judicial",
                 "plagiarist",
                 "theme",
-                "viewpoint",
-                "take",
-                "enduring",
-                "racial",
-                "prejudice",
-                "stereotype",
-                "old-money"
+                "enclave",
+                "civilian"
               ],
-              "correctAnswer": "judicial"
+              "correctAnswer": "affluent"
             },
             {
-              "id": 2901,
+              "id": 2812,
               "content": "",
               "options": [
+                "affluent",
+                "racial",
+                "fictionalise",
+                "ambitious",
+                "ignore",
                 "judicial",
                 "plagiarist",
                 "theme",
-                "viewpoint",
-                "take",
-                "enduring",
-                "racial",
-                "prejudice",
-                "stereotype",
-                "old-money"
+                "enclave",
+                "civilian"
               ],
-              "correctAnswer": "plagiarist"
+              "correctAnswer": "racial"
             },
             {
-              "id": 2902,
+              "id": 2813,
               "content": "",
               "options": [
+                "affluent",
+                "racial",
+                "fictionalise",
+                "ambitious",
+                "ignore",
                 "judicial",
                 "plagiarist",
                 "theme",
-                "viewpoint",
-                "take",
-                "enduring",
-                "racial",
-                "prejudice",
-                "stereotype",
-                "old-money"
+                "enclave",
+                "civilian"
               ],
-              "correctAnswer": "theme"
+              "correctAnswer": "fictionalise"
             },
             {
-              "id": 2903,
+              "id": 2814,
               "content": "",
               "options": [
+                "affluent",
+                "racial",
+                "fictionalise",
+                "ambitious",
+                "ignore",
                 "judicial",
                 "plagiarist",
                 "theme",
-                "viewpoint",
-                "take",
-                "enduring",
-                "racial",
-                "prejudice",
-                "stereotype",
-                "old-money"
+                "enclave",
+                "civilian"
               ],
-              "correctAnswer": "viewpoint"
+              "correctAnswer": "ambitious"
             },
             {
-              "id": 2904,
+              "id": 2815,
               "content": "",
               "options": [
+                "affluent",
+                "racial",
+                "fictionalise",
+                "ambitious",
+                "ignore",
                 "judicial",
                 "plagiarist",
                 "theme",
-                "viewpoint",
-                "take",
-                "enduring",
-                "racial",
-                "prejudice",
-                "stereotype",
-                "old-money"
+                "enclave",
+                "civilian"
               ],
-              "correctAnswer": "take"
+              "correctAnswer": "ignore"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2905,
-              "content": "Which word is related to 'enduring'?",
+              "id": 2816,
+              "content": "To take the place of (another), as through force, scheming, or treachery.",
               "options": [
-                "enduring",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Supplant",
+                "Oppose",
+                "Withhold",
+                "Offend"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is enduring as it was taught in the lesson."
+              "explanation": "To supplant means to supersede and replace."
             },
             {
-              "id": 2906,
-              "content": "Which word is related to 'racial'?",
+              "id": 2817,
+              "content": "Preconceived opinion that is not based on reason or actual experience.",
               "options": [
-                "racial",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Prejudice",
+                "Stereotype",
+                "Denial",
+                "Ideological"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is racial as it was taught in the lesson."
+              "explanation": "Prejudice is a preconceived opinion."
             },
             {
-              "id": 2907,
-              "content": "Which word is related to 'prejudice'?",
+              "id": 2818,
+              "content": "A person who takes the work or an idea of someone else and passes it off as their own.",
               "options": [
-                "prejudice",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Plagiarist",
+                "Apparatchik",
+                "Civilian",
+                "Constituent"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is prejudice as it was taught in the lesson."
+              "explanation": "A plagiarist is someone who copies others' work."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2908,
-              "content": "The word 'stereotype' is an English word.",
+              "id": 2819,
+              "content": "An 'autobiographical' work is about the life of someone other than the author.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'stereotype' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Autobiographical means dealing with the writer's own life."
             },
             {
-              "id": 2909,
-              "content": "The word 'old-money' is an English word.",
+              "id": 2820,
+              "content": "To 'suck up to' someone means to behave obsequiously, especially for one's own advantage.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'old-money' is part of the English vocabulary."
+              "explanation": "True. It's an informal phrase meaning to fawn over someone for personal gain."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2880,
-              "content": "According to the text: 'Comprehensive Reading\\nVisible Man\\nPart thriller, part campus novel, part satire, a new novel is the talk of America...'",
+              "id": 2821,
+              "content": "How is the new novel described in the first sentence?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Part thriller, part campus novel, part satire",
+                "Part romance, part tragedy",
+                "Part history, part biography",
+                "Part science fiction, part mystery"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text states: 'Part thriller, part campus novel, part satire, a new novel is the talk of America.'"
             },
             {
-              "id": 2881,
-              "content": "According to the text: '\\nWhen Alfred Knopf paid a reported $4...'",
+              "id": 2822,
+              "content": "How much did Alfred Knopf reportedly pay for this thriller in a two-book deal?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "$4.2m",
+                "$1.2m",
+                "$42m",
+                "$400,000"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text explicitly states: 'When Alfred Knopf paid a reported $4.2m for this thriller in a two-book deal...'"
             },
             {
-              "id": 2882,
-              "content": "According to the text: '2m for this thriller in a two-book deal, the publishing house gambled recklessly...'",
+              "id": 2823,
+              "content": "What is the profession of the author of the new novel?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A professor of law at Yale",
+                "A full-time novelist",
+                "A judge",
+                "A journalist"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text notes: 'The author, a professor of law at Yale, had written seven non-fiction books...'"
             },
             {
-              "id": 2883,
-              "content": "According to the text: 'The author, a professor of law at Yale, had written seven non-fiction books, including \"The Dissent of the Governed\", \"God's Name in Vain\" and \"The Culture of Disbelief\", but not a single word of publishable fiction...'",
+              "id": 2824,
+              "content": "Had the author written any publishable fiction before this novel?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, several short stories",
+                "No, not a single word",
+                "Yes, one other novel",
+                "Yes, under a pseudonym"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage says: '...had written seven non-fiction books... but not a single word of publishable fiction.'"
             },
             {
-              "id": 2884,
-              "content": "According to the text: 'He was not even a particularly gifted writer...'",
+              "id": 2825,
+              "content": "What was the publishing house's action of paying such a large sum described as?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A safe investment",
+                "Gambled recklessly",
+                "A charitable donation",
+                "A calculated risk"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text says: '...the publishing house gambled recklessly.'"
             }
           ]
         }

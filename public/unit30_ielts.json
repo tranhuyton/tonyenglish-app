@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 3050,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 3001,
+              "content": "1. The [ 1 ] wiped out the dinosaurs.<br/><br/>2. She found a rare [ 2 ] in the rocks.<br/><br/>3. The storm will [ 3 ] a lot of damage.<br/><br/>4. We need to [ 4 ] the dates carefully.<br/><br/>5. The [ 5 ] shifts every few million years.",
               "options": [
-                "dinosaur",
-                "rise to power",
                 "asteroid",
+                "fossil",
+                "bring about",
+                "match",
+                "magnetic field",
+                "dinosaur",
                 "reptile",
-                "ironic",
                 "symmetry",
                 "impact",
-                "bring about",
-                "thesis",
-                "propose"
-              ],
-              "correctAnswer": "dinosaur"
-            },
-            {
-              "id": 3051,
-              "content": "",
-              "options": [
-                "dinosaur",
-                "rise to power",
-                "asteroid",
-                "reptile",
-                "ironic",
-                "symmetry",
-                "impact",
-                "bring about",
-                "thesis",
-                "propose"
-              ],
-              "correctAnswer": "rise to power"
-            },
-            {
-              "id": 3052,
-              "content": "",
-              "options": [
-                "dinosaur",
-                "rise to power",
-                "asteroid",
-                "reptile",
-                "ironic",
-                "symmetry",
-                "impact",
-                "bring about",
-                "thesis",
-                "propose"
+                "thesis"
               ],
               "correctAnswer": "asteroid"
             },
             {
-              "id": 3053,
+              "id": 3002,
               "content": "",
               "options": [
-                "dinosaur",
-                "rise to power",
                 "asteroid",
+                "fossil",
+                "bring about",
+                "match",
+                "magnetic field",
+                "dinosaur",
                 "reptile",
-                "ironic",
                 "symmetry",
                 "impact",
-                "bring about",
-                "thesis",
-                "propose"
+                "thesis"
               ],
-              "correctAnswer": "reptile"
+              "correctAnswer": "fossil"
             },
             {
-              "id": 3054,
+              "id": 3003,
               "content": "",
               "options": [
-                "dinosaur",
-                "rise to power",
                 "asteroid",
+                "fossil",
+                "bring about",
+                "match",
+                "magnetic field",
+                "dinosaur",
                 "reptile",
-                "ironic",
                 "symmetry",
                 "impact",
-                "bring about",
-                "thesis",
-                "propose"
+                "thesis"
               ],
-              "correctAnswer": "ironic"
+              "correctAnswer": "bring about"
+            },
+            {
+              "id": 3004,
+              "content": "",
+              "options": [
+                "asteroid",
+                "fossil",
+                "bring about",
+                "match",
+                "magnetic field",
+                "dinosaur",
+                "reptile",
+                "symmetry",
+                "impact",
+                "thesis"
+              ],
+              "correctAnswer": "match"
+            },
+            {
+              "id": 3005,
+              "content": "",
+              "options": [
+                "asteroid",
+                "fossil",
+                "bring about",
+                "match",
+                "magnetic field",
+                "dinosaur",
+                "reptile",
+                "symmetry",
+                "impact",
+                "thesis"
+              ],
+              "correctAnswer": "magnetic field"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 3055,
-              "content": "Which word is related to 'symmetry'?",
+              "id": 3006,
+              "content": "A crack, split, or break in something.",
               "options": [
-                "symmetry",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Rift",
+                "Track",
+                "Site",
+                "Sediment"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is symmetry as it was taught in the lesson."
+              "explanation": "A rift is a crack, split, or break."
             },
             {
-              "id": 3056,
-              "content": "Which word is related to 'impact'?",
+              "id": 3007,
+              "content": "Existing or available in large quantities; plentiful.",
               "options": [
-                "impact",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Abundant",
+                "Subsequent",
+                "Periodic",
+                "Squishy"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is impact as it was taught in the lesson."
+              "explanation": "Abundant means plentiful."
             },
             {
-              "id": 3057,
-              "content": "Which word is related to 'bring about'?",
+              "id": 3008,
+              "content": "A statement or theory that is put forward as a premise to be maintained or proved.",
               "options": [
-                "bring about",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Thesis",
+                "Indication",
+                "Reversal",
+                "Bonus"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is bring about as it was taught in the lesson."
+              "explanation": "A thesis is a statement or theory."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 3058,
-              "content": "The word 'thesis' is an English word.",
+              "id": 3009,
+              "content": "To 'depict' something means to show or represent it by a drawing, painting, or other art form.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'thesis' is part of the English vocabulary."
+              "explanation": "True. To depict means to represent visually or in words."
             },
             {
-              "id": 3059,
-              "content": "The word 'propose' is an English word.",
+              "id": 3010,
+              "content": "'Subsequent' means coming before something in time.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'propose' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Subsequent means coming after something in time; following."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 3100,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 3011,
+              "content": "1. Several plant [ 1 ] are found only in this forest.<br/><br/>2. The meteor left a large [ 2 ] in the ground.<br/><br/>3. A massive [ 3 ] eruption darkened the sky.<br/><br/>4. Did the animals [ 4 ] the harsh winter?<br/><br/>5. The evidence is [ 5 ] of a larger problem.",
               "options": [
-                "precisely",
                 "species",
-                "act as",
+                "crater",
+                "volcanic",
+                "survive",
+                "suggestive",
                 "indicator",
-                "fate",
-                "confidently",
                 "boundary",
-                "vanish",
-                "splutter",
-                "suggestive"
-              ],
-              "correctAnswer": "precisely"
-            },
-            {
-              "id": 3101,
-              "content": "",
-              "options": [
-                "precisely",
-                "species",
-                "act as",
-                "indicator",
-                "fate",
-                "confidently",
-                "boundary",
-                "vanish",
-                "splutter",
-                "suggestive"
+                "anomaly",
+                "spore",
+                "opportunist"
               ],
               "correctAnswer": "species"
             },
             {
-              "id": 3102,
+              "id": 3012,
               "content": "",
               "options": [
-                "precisely",
                 "species",
-                "act as",
+                "crater",
+                "volcanic",
+                "survive",
+                "suggestive",
                 "indicator",
-                "fate",
-                "confidently",
                 "boundary",
-                "vanish",
-                "splutter",
-                "suggestive"
+                "anomaly",
+                "spore",
+                "opportunist"
               ],
-              "correctAnswer": "act as"
+              "correctAnswer": "crater"
             },
             {
-              "id": 3103,
+              "id": 3013,
               "content": "",
               "options": [
-                "precisely",
                 "species",
-                "act as",
+                "crater",
+                "volcanic",
+                "survive",
+                "suggestive",
                 "indicator",
-                "fate",
-                "confidently",
                 "boundary",
-                "vanish",
-                "splutter",
-                "suggestive"
+                "anomaly",
+                "spore",
+                "opportunist"
               ],
-              "correctAnswer": "indicator"
+              "correctAnswer": "volcanic"
             },
             {
-              "id": 3104,
+              "id": 3014,
               "content": "",
               "options": [
-                "precisely",
                 "species",
-                "act as",
+                "crater",
+                "volcanic",
+                "survive",
+                "suggestive",
                 "indicator",
-                "fate",
-                "confidently",
                 "boundary",
-                "vanish",
-                "splutter",
-                "suggestive"
+                "anomaly",
+                "spore",
+                "opportunist"
               ],
-              "correctAnswer": "fate"
+              "correctAnswer": "survive"
+            },
+            {
+              "id": 3015,
+              "content": "",
+              "options": [
+                "species",
+                "crater",
+                "volcanic",
+                "survive",
+                "suggestive",
+                "indicator",
+                "boundary",
+                "anomaly",
+                "spore",
+                "opportunist"
+              ],
+              "correctAnswer": "suggestive"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 3105,
-              "content": "Which word is related to 'confidently'?",
+              "id": 3016,
+              "content": "To disappear suddenly and completely.",
               "options": [
-                "confidently",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Vanish",
+                "Flourish",
+                "Disintegrate",
+                "Recycle"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is confidently as it was taught in the lesson."
+              "explanation": "To vanish means to disappear suddenly."
             },
             {
-              "id": 3106,
-              "content": "Which word is related to 'boundary'?",
+              "id": 3017,
+              "content": "A celestial object consisting of a nucleus of ice and dust and, when near the sun, a 'tail' of gas and dust particles pointing away from the sun.",
               "options": [
-                "boundary",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Comet",
+                "Meteorite",
+                "Asteroid",
+                "Iridium"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is boundary as it was taught in the lesson."
+              "explanation": "A comet is an icy body that releases gas or dust."
             },
             {
-              "id": 3107,
-              "content": "Which word is related to 'vanish'?",
+              "id": 3018,
+              "content": "Something that deviates from what is standard, normal, or expected.",
               "options": [
-                "vanish",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Anomaly",
+                "Boundary",
+                "Indicator",
+                "Fate"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is vanish as it was taught in the lesson."
+              "explanation": "An anomaly is a deviation from the norm."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 3108,
-              "content": "The word 'splutter' is an English word.",
+              "id": 3019,
+              "content": "To 'flourish' means to fail completely.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'splutter' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To flourish means to grow or develop in a healthy or vigorous way."
             },
             {
-              "id": 3109,
-              "content": "The word 'suggestive' is an English word.",
+              "id": 3020,
+              "content": "A 'holocaust' is a destruction or slaughter on a mass scale.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'suggestive' is part of the English vocabulary."
+              "explanation": "True. A holocaust refers to mass destruction."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 3080,
-              "content": "According to the text: 'Comprehensive Reading\\nFootprints in the Muds of Time\\nThe dinosaurs may have risen to power in as little as 10,000 years...'",
+              "id": 3021,
+              "content": "According to the text, how quickly may the dinosaurs have risen to power?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "In 65 million years",
+                "In as little as 10,000 years",
+                "Over 100,000 years",
+                "Instantly"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'The dinosaurs may have risen to power in as little as 10,000 years.'"
             },
             {
-              "id": 3081,
-              "content": "According to the text: '\\nEverybody knows that the dinosaurs were killed by an asteroid...'",
+              "id": 3022,
+              "content": "What is widely known to have killed the dinosaurs?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "An ice age",
+                "A volcanic eruption",
+                "An asteroid",
+                "A disease"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text explicitly says: 'Everybody knows that the dinosaurs were killed by an asteroid.'"
             },
             {
-              "id": 3082,
-              "content": "According to the text: 'Something big hit the earth 65m years ago and, when the dust had fallen so had the great reptiles...'",
+              "id": 3023,
+              "content": "When did the big impact that killed the dinosaurs occur?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "10,000 years ago",
+                "65m years ago",
+                "In the Triassic period",
+                "Last week"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage notes: 'Something big hit the earth 65m years ago...'"
             },
             {
-              "id": 3083,
-              "content": "According to the text: 'There is thus a nice, if ironic, symmetry in the idea that a similar impact brought about the dinosaurs' rise...'",
+              "id": 3024,
+              "content": "What is the new thesis proposed by Paul Olsen and his colleagues?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "That dinosaurs are not extinct",
+                "That a similar impact brought about the dinosaurs' rise",
+                "That dinosaurs evolved from birds",
+                "That mammals killed the dinosaurs"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text says there is symmetry 'in the idea that a similar impact brought about the dinosaurs' rise. That is the thesis proposed by Paul Olsen...'"
             },
             {
-              "id": 3084,
-              "content": "According to the text: 'That is the thesis proposed by Paul Olsen, of Columbia University, and his colleagues in this week's Science...'",
+              "id": 3025,
+              "content": "Where was Paul Olsen's thesis published?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Nature",
+                "The New York Times",
+                "Science",
+                "Geology Today"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The passage mentions: '...Paul Olsen, of Columbia University, and his colleagues in this week's Science.'"
             }
           ]
         }

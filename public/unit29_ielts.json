@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2950,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2901,
+              "content": "1. The salesman used the power of [ 1 ] to close the deal.<br/><br/>2. There is strong [ 2 ] to support his theory.<br/><br/>3. You should [ 3 ] your expectations.<br/><br/>4. The lawyer made a very [ 4 ] argument in court.<br/><br/>5. We need to [ 5 ] the fuel tank before the long drive.",
               "options": [
                 "persuasion",
-                "uncover",
-                "persuasive",
-                "trick",
-                "correspondent",
-                "convincing",
                 "evidence",
-                "approach",
-                "work on",
-                "remove"
+                "lower",
+                "compelling",
+                "replenish",
+                "uncover",
+                "trick",
+                "inhibition",
+                "acceptance",
+                "minimise"
               ],
               "correctAnswer": "persuasion"
             },
             {
-              "id": 2951,
+              "id": 2902,
               "content": "",
               "options": [
                 "persuasion",
-                "uncover",
-                "persuasive",
-                "trick",
-                "correspondent",
-                "convincing",
                 "evidence",
-                "approach",
-                "work on",
-                "remove"
+                "lower",
+                "compelling",
+                "replenish",
+                "uncover",
+                "trick",
+                "inhibition",
+                "acceptance",
+                "minimise"
               ],
-              "correctAnswer": "uncover"
+              "correctAnswer": "evidence"
             },
             {
-              "id": 2952,
+              "id": 2903,
               "content": "",
               "options": [
                 "persuasion",
-                "uncover",
-                "persuasive",
-                "trick",
-                "correspondent",
-                "convincing",
                 "evidence",
-                "approach",
-                "work on",
-                "remove"
+                "lower",
+                "compelling",
+                "replenish",
+                "uncover",
+                "trick",
+                "inhibition",
+                "acceptance",
+                "minimise"
               ],
-              "correctAnswer": "persuasive"
+              "correctAnswer": "lower"
             },
             {
-              "id": 2953,
+              "id": 2904,
               "content": "",
               "options": [
                 "persuasion",
-                "uncover",
-                "persuasive",
-                "trick",
-                "correspondent",
-                "convincing",
                 "evidence",
-                "approach",
-                "work on",
-                "remove"
+                "lower",
+                "compelling",
+                "replenish",
+                "uncover",
+                "trick",
+                "inhibition",
+                "acceptance",
+                "minimise"
               ],
-              "correctAnswer": "trick"
+              "correctAnswer": "compelling"
             },
             {
-              "id": 2954,
+              "id": 2905,
               "content": "",
               "options": [
                 "persuasion",
-                "uncover",
-                "persuasive",
-                "trick",
-                "correspondent",
-                "convincing",
                 "evidence",
-                "approach",
-                "work on",
-                "remove"
+                "lower",
+                "compelling",
+                "replenish",
+                "uncover",
+                "trick",
+                "inhibition",
+                "acceptance",
+                "minimise"
               ],
-              "correctAnswer": "correspondent"
+              "correctAnswer": "replenish"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2955,
-              "content": "Which word is related to 'convincing'?",
+              "id": 2906,
+              "content": "A feeling that makes one self-conscious and unable to act in a relaxed and natural way.",
               "options": [
-                "convincing",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Inhibition",
+                "Persuasion",
+                "Insight",
+                "Collaboration"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is convincing as it was taught in the lesson."
+              "explanation": "Inhibition is a feeling that makes one self-conscious."
             },
             {
-              "id": 2956,
-              "content": "Which word is related to 'evidence'?",
+              "id": 2907,
+              "content": "Not wanted or desirable because it brings harmful or unpleasant consequences.",
               "options": [
-                "evidence",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Undesirable",
+                "Rational",
+                "Logical",
+                "Attractive"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is evidence as it was taught in the lesson."
+              "explanation": "Undesirable means not wanted or desirable."
             },
             {
-              "id": 2957,
-              "content": "Which word is related to 'approach'?",
+              "id": 2908,
+              "content": "Easily persuaded to believe something; credulous.",
               "options": [
-                "approach",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Gullible",
+                "Sceptical",
+                "Convincing",
+                "Compelling"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is approach as it was taught in the lesson."
+              "explanation": "Gullible means easily persuaded to believe something."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2958,
-              "content": "The word 'work on' is an English word.",
+              "id": 2909,
+              "content": "To 'uncover' means to hide something from view.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'work on' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To uncover means to discover something previously secret or obscure."
             },
             {
-              "id": 2959,
-              "content": "The word 'remove' is an English word.",
+              "id": 2910,
+              "content": "'Collaboration' is the action of working with someone to produce or create something.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'remove' is part of the English vocabulary."
+              "explanation": "True. Collaboration means working together."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 3000,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2911,
+              "content": "1. It is important to [ 1 ] the students clearly.<br/><br/>2. Her [ 2 ] reaction was to refuse the offer.<br/><br/>3. A strong [ 3 ] was built up over the years.<br/><br/>4. We need a [ 4 ] solution to this problem, not a temporary one.<br/><br/>5. He was easily fooled and became a [ 5 ].",
               "options": [
-                "travelogue",
-                "positively",
                 "instruct",
-                "criticise",
-                "early on",
-                "be critical of",
-                "proceed",
-                "inherent",
-                "messenger",
-                "frame of mind"
-              ],
-              "correctAnswer": "travelogue"
-            },
-            {
-              "id": 3001,
-              "content": "",
-              "options": [
+                "initial",
+                "tendency",
+                "permanent",
+                "dupe",
                 "travelogue",
-                "positively",
-                "instruct",
-                "criticise",
-                "early on",
-                "be critical of",
-                "proceed",
-                "inherent",
                 "messenger",
-                "frame of mind"
-              ],
-              "correctAnswer": "positively"
-            },
-            {
-              "id": 3002,
-              "content": "",
-              "options": [
-                "travelogue",
-                "positively",
-                "instruct",
-                "criticise",
-                "early on",
-                "be critical of",
-                "proceed",
-                "inherent",
-                "messenger",
-                "frame of mind"
+                "analogy",
+                "investigation",
+                "illusion"
               ],
               "correctAnswer": "instruct"
             },
             {
-              "id": 3003,
+              "id": 2912,
               "content": "",
               "options": [
-                "travelogue",
-                "positively",
                 "instruct",
-                "criticise",
-                "early on",
-                "be critical of",
-                "proceed",
-                "inherent",
+                "initial",
+                "tendency",
+                "permanent",
+                "dupe",
+                "travelogue",
                 "messenger",
-                "frame of mind"
+                "analogy",
+                "investigation",
+                "illusion"
               ],
-              "correctAnswer": "criticise"
+              "correctAnswer": "initial"
             },
             {
-              "id": 3004,
+              "id": 2913,
               "content": "",
               "options": [
-                "travelogue",
-                "positively",
                 "instruct",
-                "criticise",
-                "early on",
-                "be critical of",
-                "proceed",
-                "inherent",
+                "initial",
+                "tendency",
+                "permanent",
+                "dupe",
+                "travelogue",
                 "messenger",
-                "frame of mind"
+                "analogy",
+                "investigation",
+                "illusion"
               ],
-              "correctAnswer": "early on"
+              "correctAnswer": "tendency"
+            },
+            {
+              "id": 2914,
+              "content": "",
+              "options": [
+                "instruct",
+                "initial",
+                "tendency",
+                "permanent",
+                "dupe",
+                "travelogue",
+                "messenger",
+                "analogy",
+                "investigation",
+                "illusion"
+              ],
+              "correctAnswer": "permanent"
+            },
+            {
+              "id": 2915,
+              "content": "",
+              "options": [
+                "instruct",
+                "initial",
+                "tendency",
+                "permanent",
+                "dupe",
+                "travelogue",
+                "messenger",
+                "analogy",
+                "investigation",
+                "illusion"
+              ],
+              "correctAnswer": "dupe"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 3005,
-              "content": "Which word is related to 'be critical of'?",
+              "id": 2916,
+              "content": "Existing in something as a permanent, essential, or characteristic attribute.",
               "options": [
-                "be critical of",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Inherent",
+                "Temporary",
+                "Evolutionary",
+                "Regretful"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is be critical of as it was taught in the lesson."
+              "explanation": "Inherent means existing in something as a permanent attribute."
             },
             {
-              "id": 3006,
-              "content": "Which word is related to 'proceed'?",
+              "id": 2917,
+              "content": "To make (something) clear; explain.",
               "options": [
-                "proceed",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Elucidate",
+                "Admit",
+                "Criticise",
+                "Pursue"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is proceed as it was taught in the lesson."
+              "explanation": "To elucidate means to make something clear."
             },
             {
-              "id": 3007,
-              "content": "Which word is related to 'inherent'?",
+              "id": 2918,
+              "content": "The quality of being impossible to damage or defeat.",
               "options": [
-                "inherent",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Invulnerability",
+                "Enlargement",
+                "Illusion",
+                "Analogy"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is inherent as it was taught in the lesson."
+              "explanation": "Invulnerability is the quality of being impossible to damage."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 3008,
-              "content": "The word 'messenger' is an English word.",
+              "id": 2919,
+              "content": "A 'sceptic' is a person inclined to question or doubt accepted opinions.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'messenger' is part of the English vocabulary."
+              "explanation": "True. A sceptic is someone who doubts."
             },
             {
-              "id": 3009,
-              "content": "The word 'frame of mind' is an English word.",
+              "id": 2920,
+              "content": "If a process is 'hard-wired', it is easily changeable and not innate.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'frame of mind' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Hard-wired means innate and not easily changed."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2980,
-              "content": "According to the text: 'Comprehensive Reading\\nPersuasion\\nScientists are uncovering ways of making messages more persuasive...'",
+              "id": 2921,
+              "content": "What are scientists uncovering ways of making more persuasive?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "People",
+                "Messages",
+                "Salesmen",
+                "Politicians"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'Scientists are uncovering ways of making messages more persuasive.'"
             },
             {
-              "id": 2981,
-              "content": "According to the text: 'Politicians and salesmen use such tricks already...'",
+              "id": 2922,
+              "content": "Who already uses such persuasion tricks according to the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Only scientists",
+                "Politicians and salesmen",
+                "Only professors",
+                "Nobody"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage says: 'Politicians and salesmen use such tricks already.'"
             },
             {
-              "id": 2982,
-              "content": "According to the text: 'Who can afford not to read on?\\nYour correspondent was not sure whether to write this piece...'",
+              "id": 2923,
+              "content": "Who is Eric Knowles?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A politician",
+                "A salesman",
+                "A professor of social psychology at the University of Arkansas",
+                "A correspondent"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text notes: 'Eric Knowles, a professor of social psychology at the University of Arkansas, was very convincing.'"
             },
             {
-              "id": 2983,
-              "content": "According to the text: 'But Eric Knowles, a professor of social psychology at the University of Arkansas, was very convincing...'",
+              "id": 2924,
+              "content": "What does Eric Knowles have to support a new approach to persuasion?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A lot of money",
+                "Experimental evidence",
+                "A new book",
+                "A team of salesmen"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text says: 'He said that he had experimental evidence to support a new approach to persuasion...'"
             },
             {
-              "id": 2984,
-              "content": "According to the text: 'He said that he had experimental evidence to support a new approach to persuasion—one that works on removing people's inhibitions, or lowering their resistance...'",
+              "id": 2925,
+              "content": "How does this new approach to persuasion work?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "By increasing people's inhibitions",
+                "By working on removing people's inhibitions, or lowering their resist...",
+                "By yelling at them",
+                "By paying them"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage states it is 'one that works on removing people's inhibitions, or lowering their resist...'"
             }
           ]
         }
