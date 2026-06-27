@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1150,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1101,
+              "content": "1. It takes time to [ 1 ] a new language.<br/><br/>2. Try to stay [ 2 ] even in difficult situations.<br/><br/>3. The company will [ 3 ] employees for their hard work.<br/><br/>4. She is a very [ 4 ] person who loves buying new things.<br/><br/>5. He suffered from severe [ 5 ] after the accident.",
               "options": [
-                "positive",
-                "reward",
                 "acquire",
-                "credit card",
-                "materialistic",
-                "optimism",
-                "lasting",
-                "fulfillment",
-                "kid",
-                "optimist"
-              ],
-              "correctAnswer": "positive"
-            },
-            {
-              "id": 1151,
-              "content": "",
-              "options": [
-                "positive",
+                "optimistic",
                 "reward",
-                "acquire",
-                "credit card",
                 "materialistic",
-                "optimism",
-                "lasting",
-                "fulfillment",
-                "kid",
-                "optimist"
-              ],
-              "correctAnswer": "reward"
-            },
-            {
-              "id": 1152,
-              "content": "",
-              "options": [
-                "positive",
-                "reward",
-                "acquire",
+                "depression",
                 "credit card",
-                "materialistic",
-                "optimism",
-                "lasting",
                 "fulfillment",
-                "kid",
-                "optimist"
+                "pessimism",
+                "adversity",
+                "consequence"
               ],
               "correctAnswer": "acquire"
             },
             {
-              "id": 1153,
+              "id": 1102,
               "content": "",
               "options": [
-                "positive",
-                "reward",
                 "acquire",
-                "credit card",
+                "optimistic",
+                "reward",
                 "materialistic",
-                "optimism",
-                "lasting",
+                "depression",
+                "credit card",
                 "fulfillment",
-                "kid",
-                "optimist"
+                "pessimism",
+                "adversity",
+                "consequence"
               ],
-              "correctAnswer": "credit card"
+              "correctAnswer": "optimistic"
             },
             {
-              "id": 1154,
+              "id": 1103,
               "content": "",
               "options": [
-                "positive",
-                "reward",
                 "acquire",
-                "credit card",
+                "optimistic",
+                "reward",
                 "materialistic",
-                "optimism",
-                "lasting",
+                "depression",
+                "credit card",
                 "fulfillment",
-                "kid",
-                "optimist"
+                "pessimism",
+                "adversity",
+                "consequence"
+              ],
+              "correctAnswer": "reward"
+            },
+            {
+              "id": 1104,
+              "content": "",
+              "options": [
+                "acquire",
+                "optimistic",
+                "reward",
+                "materialistic",
+                "depression",
+                "credit card",
+                "fulfillment",
+                "pessimism",
+                "adversity",
+                "consequence"
               ],
               "correctAnswer": "materialistic"
+            },
+            {
+              "id": 1105,
+              "content": "",
+              "options": [
+                "acquire",
+                "optimistic",
+                "reward",
+                "materialistic",
+                "depression",
+                "credit card",
+                "fulfillment",
+                "pessimism",
+                "adversity",
+                "consequence"
+              ],
+              "correctAnswer": "depression"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1155,
-              "content": "Which word is related to 'optimism'?",
+              "id": 1106,
+              "content": "A difficult or unpleasant situation.",
               "options": [
-                "optimism",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Adversity",
+                "Fulfillment",
+                "Optimism",
+                "Disputation"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is optimism as it was taught in the lesson."
+              "explanation": "Adversity means a difficult or unpleasant situation."
             },
             {
-              "id": 1156,
-              "content": "Which word is related to 'lasting'?",
+              "id": 1107,
+              "content": "A person who tends to be hopeful and confident about the future.",
               "options": [
-                "lasting",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Pessimist",
+                "Psychologist",
+                "Optimist",
+                "Kid"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is lasting as it was taught in the lesson."
+              "correctAnswer": "C",
+              "explanation": "An optimist is a person who is hopeful and confident about the future."
             },
             {
-              "id": 1157,
-              "content": "Which word is related to 'fulfillment'?",
+              "id": 1108,
+              "content": "A result or effect of an action or condition.",
               "options": [
-                "fulfillment",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Trigger",
+                "Consequence",
+                "Reward",
+                "Energization"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is fulfillment as it was taught in the lesson."
+              "correctAnswer": "B",
+              "explanation": "A consequence is a result or effect of an action."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1158,
-              "content": "The word 'kid' is an English word.",
+              "id": 1109,
+              "content": "'Pessimism' is a tendency to see the worst aspect of things.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'kid' is part of the English vocabulary."
+              "explanation": "True. Pessimism is the tendency to see the worst aspect of things."
             },
             {
-              "id": 1159,
-              "content": "The word 'optimist' is an English word.",
+              "id": 1110,
+              "content": "To 'accompany' someone means to leave them alone.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'optimist' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To accompany means to go somewhere with someone as a companion."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1200,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1111,
+              "content": "1. He felt [ 1 ] after failing the exam.<br/><br/>2. I highly [ 2 ] this book to anyone interested in history.<br/><br/>3. It was a very [ 3 ] meeting where we solved many problems.<br/><br/>4. The new method is much more [ 4 ] than the old one.<br/><br/>5. We need to find an [ 5 ] solution to this issue.",
               "options": [
-                "playful",
-                "spouse",
                 "dejected",
-                "embarrassed",
-                "withdraw",
                 "recommend",
+                "constructive",
+                "efficient",
+                "alternative",
+                "withdraw",
                 "worthwhile",
-                "counter",
-                "argue against",
-                "evidence"
-              ],
-              "correctAnswer": "playful"
-            },
-            {
-              "id": 1201,
-              "content": "",
-              "options": [
-                "playful",
                 "spouse",
-                "dejected",
-                "embarrassed",
-                "withdraw",
-                "recommend",
-                "worthwhile",
-                "counter",
-                "argue against",
-                "evidence"
-              ],
-              "correctAnswer": "spouse"
-            },
-            {
-              "id": 1202,
-              "content": "",
-              "options": [
                 "playful",
-                "spouse",
-                "dejected",
-                "embarrassed",
-                "withdraw",
-                "recommend",
-                "worthwhile",
-                "counter",
-                "argue against",
                 "evidence"
               ],
               "correctAnswer": "dejected"
             },
             {
-              "id": 1203,
+              "id": 1112,
               "content": "",
               "options": [
-                "playful",
-                "spouse",
                 "dejected",
-                "embarrassed",
-                "withdraw",
                 "recommend",
+                "constructive",
+                "efficient",
+                "alternative",
+                "withdraw",
                 "worthwhile",
-                "counter",
-                "argue against",
+                "spouse",
+                "playful",
                 "evidence"
               ],
-              "correctAnswer": "embarrassed"
+              "correctAnswer": "recommend"
             },
             {
-              "id": 1204,
+              "id": 1113,
               "content": "",
               "options": [
-                "playful",
-                "spouse",
                 "dejected",
-                "embarrassed",
-                "withdraw",
                 "recommend",
+                "constructive",
+                "efficient",
+                "alternative",
+                "withdraw",
                 "worthwhile",
-                "counter",
-                "argue against",
+                "spouse",
+                "playful",
                 "evidence"
               ],
-              "correctAnswer": "withdraw"
+              "correctAnswer": "constructive"
+            },
+            {
+              "id": 1114,
+              "content": "",
+              "options": [
+                "dejected",
+                "recommend",
+                "constructive",
+                "efficient",
+                "alternative",
+                "withdraw",
+                "worthwhile",
+                "spouse",
+                "playful",
+                "evidence"
+              ],
+              "correctAnswer": "efficient"
+            },
+            {
+              "id": 1115,
+              "content": "",
+              "options": [
+                "dejected",
+                "recommend",
+                "constructive",
+                "efficient",
+                "alternative",
+                "withdraw",
+                "worthwhile",
+                "spouse",
+                "playful",
+                "evidence"
+              ],
+              "correctAnswer": "alternative"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1205,
-              "content": "Which word is related to 'recommend'?",
+              "id": 1116,
+              "content": "A husband or wife.",
               "options": [
-                "recommend",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Spouse",
+                "Advocate",
+                "Alternative",
+                "Approach"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is recommend as it was taught in the lesson."
+              "explanation": "A spouse is a husband or wife."
             },
             {
-              "id": 1206,
-              "content": "Which word is related to 'worthwhile'?",
+              "id": 1117,
+              "content": "To speak or act in opposition to something.",
               "options": [
-                "worthwhile",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Counter",
+                "Shorten",
+                "Affect",
+                "Withdraw"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is worthwhile as it was taught in the lesson."
+              "explanation": "To counter means to speak or act in opposition."
             },
             {
-              "id": 1207,
-              "content": "Which word is related to 'counter'?",
+              "id": 1118,
+              "content": "Feeling or showing embarrassment.",
               "options": [
-                "counter",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Dejected",
+                "Playful",
+                "Embarrassed",
+                "Worthwhile"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is counter as it was taught in the lesson."
+              "correctAnswer": "C",
+              "explanation": "Embarrassed means feeling or showing embarrassment."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1208,
-              "content": "The word 'argue against' is an English word.",
+              "id": 1119,
+              "content": "'Evidence' refers to the available body of facts indicating whether a belief is true.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'argue against' is part of the English vocabulary."
+              "explanation": "True. Evidence is the available body of facts."
             },
             {
-              "id": 1209,
-              "content": "The word 'evidence' is an English word.",
+              "id": 1120,
+              "content": "To 'withdraw' means to move forward.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'evidence' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To withdraw means to remove or take away (something) from a particular place or position, or to move back."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1180,
-              "content": "According to the text: 'Comprehensive Reading\\nPositive Thinking Brings Rewards\\nVery often, we think of acquiring cash, cars, houses, credit cards and other materialistic things...'",
+              "id": 1121,
+              "content": "According to the passage, what does psychologist Martin E.P. Seligman believe?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "People should focus on acquiring materialistic things.",
+                "Pessimism is an unavoidable part of life.",
+                "Each of us can learn to be optimistic.",
+                "Depression is caused by positive thinking."
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text states: 'Author and psychologist Martin E.P. Seligman believes that each of us can learn to be optimistic...'"
             },
             {
-              "id": 1181,
-              "content": "According to the text: '\\nHow about acquiring optimism to build a life of real rewards and lasting fulfillment?\\nNo, I am not kidding...'",
+              "id": 1122,
+              "content": "What is the 'A' in the ABCDE model?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Alternative",
+                "Adversity",
+                "Action",
+                "Acquire"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text explains: 'A is for adversity (the difficult situation).'"
             },
             {
-              "id": 1182,
-              "content": "According to the text: 'You can acquire optimism and become an optimist instead of a pessimist...'",
+              "id": 1123,
+              "content": "In the ABCDE model, what does 'C' stand for?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Consequence",
+                "Credit",
+                "Constructive",
+                "Concept"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text states: 'C is for consequence...'"
             },
             {
-              "id": 1183,
-              "content": "According to the text: '\\nAuthor and psychologist Martin E...'",
+              "id": 1124,
+              "content": "Which step in the ABCDE model involves arguing against your own negative beliefs?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A (Adversity)",
+                "B (Beliefs)",
+                "D (Disputation)",
+                "E (Energization)"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text explains: 'D is for disputation (arguing against your negative beliefs)...'"
             },
             {
-              "id": 1184,
-              "content": "According to the text: 'P...'",
+              "id": 1125,
+              "content": "What is the ultimate goal of the ABCDE model according to the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "To acquire more cash and credit cards.",
+                "To learn how to argue more effectively.",
+                "To rise above pessimism and the depression that accompanies negative thinking.",
+                "To completely ignore all difficult situations."
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text states Seligman's belief that 'each of us can learn to be optimistic by rising above pessimism and the depression that often accompanies negative thinking' through this model."
             }
           ]
         }

@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1050,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1001,
+              "content": "1. The old toys were [ 1 ] in the basement.<br/><br/>2. She kept her clothes in a large wooden [ 2 ].<br/><br/>3. The actor achieved great [ 3 ] after his first movie.<br/><br/>4. The audience began to [ 4 ] loudly at the end of the play.<br/><br/>5. We will [ 5 ] her birthday with a big party.",
               "options": [
-                "Barbie doll",
-                "cruelly",
-                "cabbage",
-                "patch",
-                "thunderbird",
-                "discard",
+                "discarded",
                 "cupboard",
-                "outlive",
+                "fame",
+                "applaud",
+                "celebrate",
                 "longevity",
-                "toyland"
+                "flop",
+                "icon",
+                "phenomenon",
+                "sociology"
               ],
-              "correctAnswer": "Barbie doll"
+              "correctAnswer": "discarded"
             },
             {
-              "id": 1051,
+              "id": 1002,
               "content": "",
               "options": [
-                "Barbie doll",
-                "cruelly",
-                "cabbage",
-                "patch",
-                "thunderbird",
-                "discard",
+                "discarded",
                 "cupboard",
-                "outlive",
+                "fame",
+                "applaud",
+                "celebrate",
                 "longevity",
-                "toyland"
+                "flop",
+                "icon",
+                "phenomenon",
+                "sociology"
               ],
-              "correctAnswer": "cruelly"
+              "correctAnswer": "cupboard"
             },
             {
-              "id": 1052,
+              "id": 1003,
               "content": "",
               "options": [
-                "Barbie doll",
-                "cruelly",
-                "cabbage",
-                "patch",
-                "thunderbird",
-                "discard",
+                "discarded",
                 "cupboard",
-                "outlive",
+                "fame",
+                "applaud",
+                "celebrate",
                 "longevity",
-                "toyland"
+                "flop",
+                "icon",
+                "phenomenon",
+                "sociology"
               ],
-              "correctAnswer": "cabbage"
+              "correctAnswer": "fame"
             },
             {
-              "id": 1053,
+              "id": 1004,
               "content": "",
               "options": [
-                "Barbie doll",
-                "cruelly",
-                "cabbage",
-                "patch",
-                "thunderbird",
-                "discard",
+                "discarded",
                 "cupboard",
-                "outlive",
+                "fame",
+                "applaud",
+                "celebrate",
                 "longevity",
-                "toyland"
+                "flop",
+                "icon",
+                "phenomenon",
+                "sociology"
               ],
-              "correctAnswer": "patch"
+              "correctAnswer": "applaud"
             },
             {
-              "id": 1054,
+              "id": 1005,
               "content": "",
               "options": [
-                "Barbie doll",
-                "cruelly",
-                "cabbage",
-                "patch",
-                "thunderbird",
-                "discard",
+                "discarded",
                 "cupboard",
-                "outlive",
+                "fame",
+                "applaud",
+                "celebrate",
                 "longevity",
-                "toyland"
+                "flop",
+                "icon",
+                "phenomenon",
+                "sociology"
               ],
-              "correctAnswer": "thunderbird"
+              "correctAnswer": "celebrate"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1055,
-              "content": "Which word is related to 'discard'?",
+              "id": 1006,
+              "content": "Long life.",
               "options": [
-                "discard",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Longevity",
+                "Fame",
+                "Academe",
+                "Sociology"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is discard as it was taught in the lesson."
+              "explanation": "Longevity means long life."
             },
             {
-              "id": 1056,
-              "content": "Which word is related to 'cupboard'?",
+              "id": 1007,
+              "content": "A person or thing regarded as a representative symbol or as worthy of veneration.",
               "options": [
-                "cupboard",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Bimbo",
+                "Icon",
+                "Flop",
+                "Time capsule"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is cupboard as it was taught in the lesson."
+              "correctAnswer": "B",
+              "explanation": "An icon is a person or thing regarded as a representative symbol."
             },
             {
-              "id": 1057,
-              "content": "Which word is related to 'outlive'?",
+              "id": 1008,
+              "content": "A total failure.",
               "options": [
-                "outlive",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Flop",
+                "Press",
+                "Phenomenon",
+                "Role model"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is outlive as it was taught in the lesson."
+              "explanation": "A flop is a total failure."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1058,
-              "content": "The word 'longevity' is an English word.",
+              "id": 1009,
+              "content": "A 'role model' is someone whose behavior or success can be emulated by others.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'longevity' is part of the English vocabulary."
+              "explanation": "True. A role model is someone whose behavior is emulated by others."
             },
             {
-              "id": 1059,
-              "content": "The word 'toyland' is an English word.",
+              "id": 1010,
+              "content": "'To discard' something means to keep it safely.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'toyland' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To discard means to get rid of something that is no longer useful or desirable."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1100,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1011,
+              "content": "1. The hotel offers cheap [ 1 ] for students.<br/><br/>2. The car's [ 2 ] fumes were polluting the air.<br/><br/>3. He was [ 3 ] into the army during the war.<br/><br/>4. She has a strong [ 4 ] to become a doctor.<br/><br/>5. He tried to [ 5 ] a smile but failed.",
               "options": [
                 "accommodation",
-                "conscript",
                 "exhaust",
-                "have a way of",
-                "head for",
-                "make it",
-                "add to",
-                "lore",
-                "picture frame",
-                "reasonably"
+                "conscripted",
+                "ambition",
+                "suppress",
+                "inspire",
+                "respectable",
+                "debut",
+                "sustain",
+                "retain"
               ],
               "correctAnswer": "accommodation"
             },
             {
-              "id": 1101,
+              "id": 1012,
               "content": "",
               "options": [
                 "accommodation",
-                "conscript",
                 "exhaust",
-                "have a way of",
-                "head for",
-                "make it",
-                "add to",
-                "lore",
-                "picture frame",
-                "reasonably"
-              ],
-              "correctAnswer": "conscript"
-            },
-            {
-              "id": 1102,
-              "content": "",
-              "options": [
-                "accommodation",
-                "conscript",
-                "exhaust",
-                "have a way of",
-                "head for",
-                "make it",
-                "add to",
-                "lore",
-                "picture frame",
-                "reasonably"
+                "conscripted",
+                "ambition",
+                "suppress",
+                "inspire",
+                "respectable",
+                "debut",
+                "sustain",
+                "retain"
               ],
               "correctAnswer": "exhaust"
             },
             {
-              "id": 1103,
+              "id": 1013,
               "content": "",
               "options": [
                 "accommodation",
-                "conscript",
                 "exhaust",
-                "have a way of",
-                "head for",
-                "make it",
-                "add to",
-                "lore",
-                "picture frame",
-                "reasonably"
+                "conscripted",
+                "ambition",
+                "suppress",
+                "inspire",
+                "respectable",
+                "debut",
+                "sustain",
+                "retain"
               ],
-              "correctAnswer": "have a way of"
+              "correctAnswer": "conscripted"
             },
             {
-              "id": 1104,
+              "id": 1014,
               "content": "",
               "options": [
                 "accommodation",
-                "conscript",
                 "exhaust",
-                "have a way of",
-                "head for",
-                "make it",
-                "add to",
-                "lore",
-                "picture frame",
-                "reasonably"
+                "conscripted",
+                "ambition",
+                "suppress",
+                "inspire",
+                "respectable",
+                "debut",
+                "sustain",
+                "retain"
               ],
-              "correctAnswer": "head for"
+              "correctAnswer": "ambition"
+            },
+            {
+              "id": 1015,
+              "content": "",
+              "options": [
+                "accommodation",
+                "exhaust",
+                "conscripted",
+                "ambition",
+                "suppress",
+                "inspire",
+                "respectable",
+                "debut",
+                "sustain",
+                "retain"
+              ],
+              "correctAnswer": "suppress"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1105,
-              "content": "Which word is related to 'make it'?",
+              "id": 1016,
+              "content": "Not likely to be true or to happen.",
               "options": [
-                "make it",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Improbable",
+                "Respectable",
+                "Innocent",
+                "Changeable"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is make it as it was taught in the lesson."
+              "explanation": "Improbable means not likely to be true or to happen."
             },
             {
-              "id": 1106,
-              "content": "Which word is related to 'add to'?",
+              "id": 1017,
+              "content": "To fill someone with the urge or ability to do or feel something.",
               "options": [
-                "add to",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Inspire",
+                "Exhaust",
+                "Conscript",
+                "Sustain"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is add to as it was taught in the lesson."
+              "explanation": "To inspire means to fill someone with the urge or ability to do something."
             },
             {
-              "id": 1107,
-              "content": "Which word is related to 'lore'?",
+              "id": 1018,
+              "content": "A person's first appearance or performance in a particular capacity or role.",
               "options": [
-                "lore",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Guise",
+                "Lore",
+                "Debut",
+                "Reproduction"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is lore as it was taught in the lesson."
+              "correctAnswer": "C",
+              "explanation": "A debut is a first appearance or performance."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1108,
-              "content": "The word 'picture frame' is an English word.",
+              "id": 1019,
+              "content": "To 'blush' is to show redness in the face, typically from embarrassment or shame.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'picture frame' is part of the English vocabulary."
+              "explanation": "True. Blushing is showing redness in the face due to embarrassment."
             },
             {
-              "id": 1109,
-              "content": "The word 'reasonably' is an English word.",
+              "id": 1020,
+              "content": "'Shameless' describes someone who is easily embarrassed.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'reasonably' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Shameless means showing a lack of shame or embarrassment."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1080,
-              "content": "According to the text: 'Comprehensive Reading\\nRuth Handler\\nRuth Handler, creator of the Barbie doll, died on April 27th, aged 85...'",
+              "id": 1021,
+              "content": "Who is the creator of the Barbie doll according to the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A German toy maker",
+                "Ruth Handler",
+                "A feminist scholar",
+                "An unnamed designer in steerage"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text explicitly states: 'Ruth Handler, creator of the Barbie doll, died on April 27th, aged 85.'"
             },
             {
-              "id": 1081,
-              "content": "According to the text: '\\nThe Barbie doll is 43 this year, a great age for a toy...'",
+              "id": 1022,
+              "content": "What inspired the creation of the Barbie doll?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A character in a comic strip named Lilli.",
+                "The Cabbage Patch Kids.",
+                "A desire to make a feminist statement.",
+                "A request from a group of children."
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text mentions: 'Mrs Handler got the idea for Barbie from a German doll, Lilli. ...Lilli was a character in a comic strip...'"
             },
             {
-              "id": 1082,
-              "content": "According to the text: 'Most toys have cruelly short lives...'",
+              "id": 1023,
+              "content": "According to the text, how do some feminists view the Barbie doll?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "As a role model for career women.",
+                "As an empowering icon.",
+                "As an archetypal bimbo who demeans women.",
+                "As a harmless toy for children."
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The passage notes: 'Some feminists have seen Barbie as an archetypal bimbo, demeaning to women.'"
             },
             {
-              "id": 1083,
-              "content": "According to the text: 'Who now remembers the Cabbage Patch Kids, Tiny Tears, Thunderbirds? They lie discarded in the toy cupboards of the rich world...'",
+              "id": 1024,
+              "content": "How did Ruth Handler retort to the feminist critique of Barbie?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "By arguing that Barbie is just a toy.",
+                "By creating a different doll named Ken.",
+                "By ignoring their comments entirely.",
+                "By saying that Barbie can be anything she wants to be."
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "D",
+              "explanation": "The text states: 'Mrs Handler's retort was that Barbie could be anything she wanted to be...'"
             },
             {
-              "id": 1084,
-              "content": "According to the text: 'Barbie has outlived them all...'",
+              "id": 1025,
+              "content": "What is one way Barbie has reflected changing mores over the years?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "By becoming a career woman.",
+                "By always wearing the same outfit.",
+                "By being manufactured solely in Germany.",
+                "By remaining unchanged in appearance."
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text implies this change: 'In Mrs Handler's time she was mostly a fashion-plate, but has since become more of a career woman, having some 75 professions...'"
             }
           ]
         }

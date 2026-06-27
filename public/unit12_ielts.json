@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1250,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1201,
+              "content": "1. Have you heard the [ 1 ] news about the company?<br/><br/>2. The new marketing [ 2 ] has been very successful.<br/><br/>3. The machine has a [ 3 ] capacity of 500 liters.<br/><br/>4. Can you [ 4 ] the suspect to the police?<br/><br/>5. We need to [ 5 ] the new restaurant downtown.",
               "options": [
                 "latest",
-                "mating",
                 "strategy",
-                "date",
                 "maximum",
-                "blood type",
+                "describe",
+                "check out",
                 "needy",
-                "boring",
                 "horoscope",
-                "describe"
+                "character",
+                "career",
+                "corporation"
               ],
               "correctAnswer": "latest"
             },
             {
-              "id": 1251,
+              "id": 1202,
               "content": "",
               "options": [
                 "latest",
-                "mating",
                 "strategy",
-                "date",
                 "maximum",
-                "blood type",
+                "describe",
+                "check out",
                 "needy",
-                "boring",
                 "horoscope",
-                "describe"
-              ],
-              "correctAnswer": "mating"
-            },
-            {
-              "id": 1252,
-              "content": "",
-              "options": [
-                "latest",
-                "mating",
-                "strategy",
-                "date",
-                "maximum",
-                "blood type",
-                "needy",
-                "boring",
-                "horoscope",
-                "describe"
+                "character",
+                "career",
+                "corporation"
               ],
               "correctAnswer": "strategy"
             },
             {
-              "id": 1253,
+              "id": 1203,
               "content": "",
               "options": [
                 "latest",
-                "mating",
                 "strategy",
-                "date",
                 "maximum",
-                "blood type",
+                "describe",
+                "check out",
                 "needy",
-                "boring",
                 "horoscope",
-                "describe"
-              ],
-              "correctAnswer": "date"
-            },
-            {
-              "id": 1254,
-              "content": "",
-              "options": [
-                "latest",
-                "mating",
-                "strategy",
-                "date",
-                "maximum",
-                "blood type",
-                "needy",
-                "boring",
-                "horoscope",
-                "describe"
+                "character",
+                "career",
+                "corporation"
               ],
               "correctAnswer": "maximum"
+            },
+            {
+              "id": 1204,
+              "content": "",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "describe",
+                "check out",
+                "needy",
+                "horoscope",
+                "character",
+                "career",
+                "corporation"
+              ],
+              "correctAnswer": "describe"
+            },
+            {
+              "id": 1205,
+              "content": "",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "describe",
+                "check out",
+                "needy",
+                "horoscope",
+                "character",
+                "career",
+                "corporation"
+              ],
+              "correctAnswer": "check out"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1255,
-              "content": "Which word is related to 'blood type'?",
+              "id": 1206,
+              "content": "An idea or thought that continually preoccupies a person's mind.",
               "options": [
-                "blood type",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Obsession",
+                "Strategy",
+                "Horoscope",
+                "Character"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is blood type as it was taught in the lesson."
+              "explanation": "An obsession is an idea that continually preoccupies a person's mind."
             },
             {
-              "id": 1256,
-              "content": "Which word is related to 'needy'?",
+              "id": 1207,
+              "content": "To refuse to give something that is due to or is desired by another.",
               "options": [
-                "needy",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Withhold",
+                "Describe",
+                "Check out",
+                "Invite"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is needy as it was taught in the lesson."
+              "explanation": "To withhold means to refuse to give something."
             },
             {
-              "id": 1257,
-              "content": "Which word is related to 'boring'?",
+              "id": 1208,
+              "content": "A large company or group of companies authorized to act as a single entity.",
               "options": [
-                "boring",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Corporation",
+                "Stylist",
+                "Beauty salon",
+                "Application"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is boring as it was taught in the lesson."
+              "explanation": "A corporation is a large company or group of companies."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1258,
-              "content": "The word 'horoscope' is an English word.",
+              "id": 1209,
+              "content": "A 'candidate' is a person who applies for a job or is nominated for election.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'horoscope' is part of the English vocabulary."
+              "explanation": "True. A candidate is a person applying for a position or nominated for an election."
             },
             {
-              "id": 1259,
-              "content": "The word 'describe' is an English word.",
+              "id": 1210,
+              "content": "'Productivity' refers to the state of being unproductive and lazy.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'describe' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Productivity is the effectiveness of productive effort, especially in industry."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1300,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1211,
+              "content": "1. There is [ 1 ] evidence linking the suspect to the crime.<br/><br/>2. Her [ 2 ] is very cheerful and outgoing.<br/><br/>3. We need to [ 3 ] all possible options before making a decision.<br/><br/>4. The scientist made an interesting [ 4 ] during the experiment.<br/><br/>5. Please fill out this [ 5 ] and return it to us.",
               "options": [
-                "single-type",
-                "Hitachi",
-                "Toyota",
-                "Nissan",
-                "seminar",
+                "solid",
+                "personality",
+                "explore",
+                "observation",
+                "questionnaire",
                 "potential",
-                "antigen",
-                "protein",
-                "blood cell",
-                "molecule"
+                "relevant",
+                "diet",
+                "truth",
+                "reckless"
               ],
-              "correctAnswer": "single-type"
+              "correctAnswer": "solid"
             },
             {
-              "id": 1301,
+              "id": 1212,
               "content": "",
               "options": [
-                "single-type",
-                "Hitachi",
-                "Toyota",
-                "Nissan",
-                "seminar",
+                "solid",
+                "personality",
+                "explore",
+                "observation",
+                "questionnaire",
                 "potential",
-                "antigen",
-                "protein",
-                "blood cell",
-                "molecule"
+                "relevant",
+                "diet",
+                "truth",
+                "reckless"
               ],
-              "correctAnswer": "Hitachi"
+              "correctAnswer": "personality"
             },
             {
-              "id": 1302,
+              "id": 1213,
               "content": "",
               "options": [
-                "single-type",
-                "Hitachi",
-                "Toyota",
-                "Nissan",
-                "seminar",
+                "solid",
+                "personality",
+                "explore",
+                "observation",
+                "questionnaire",
                 "potential",
-                "antigen",
-                "protein",
-                "blood cell",
-                "molecule"
+                "relevant",
+                "diet",
+                "truth",
+                "reckless"
               ],
-              "correctAnswer": "Toyota"
+              "correctAnswer": "explore"
             },
             {
-              "id": 1303,
+              "id": 1214,
               "content": "",
               "options": [
-                "single-type",
-                "Hitachi",
-                "Toyota",
-                "Nissan",
-                "seminar",
+                "solid",
+                "personality",
+                "explore",
+                "observation",
+                "questionnaire",
                 "potential",
-                "antigen",
-                "protein",
-                "blood cell",
-                "molecule"
+                "relevant",
+                "diet",
+                "truth",
+                "reckless"
               ],
-              "correctAnswer": "Nissan"
+              "correctAnswer": "observation"
             },
             {
-              "id": 1304,
+              "id": 1215,
               "content": "",
               "options": [
-                "single-type",
-                "Hitachi",
-                "Toyota",
-                "Nissan",
-                "seminar",
+                "solid",
+                "personality",
+                "explore",
+                "observation",
+                "questionnaire",
                 "potential",
-                "antigen",
-                "protein",
-                "blood cell",
-                "molecule"
+                "relevant",
+                "diet",
+                "truth",
+                "reckless"
               ],
-              "correctAnswer": "seminar"
+              "correctAnswer": "questionnaire"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1305,
-              "content": "Which word is related to 'potential'?",
+              "id": 1216,
+              "content": "Closely connected or appropriate to the matter at hand.",
               "options": [
-                "potential",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Relevant",
+                "Reckless",
+                "Fastidious",
+                "Candid"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is potential as it was taught in the lesson."
+              "explanation": "Relevant means closely connected or appropriate to the matter at hand."
             },
             {
-              "id": 1306,
-              "content": "Which word is related to 'antigen'?",
+              "id": 1217,
+              "content": "To make known to others.",
               "options": [
-                "antigen",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Reveal",
+                "Elicit",
+                "Send out",
+                "Come along"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is antigen as it was taught in the lesson."
+              "explanation": "To reveal means to make previously unknown or secret information known to others."
             },
             {
-              "id": 1307,
-              "content": "Which word is related to 'protein'?",
+              "id": 1218,
+              "content": "A distinguishing quality or characteristic.",
               "options": [
-                "protein",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Trait",
+                "Molecule",
+                "Diet",
+                "Seminar"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is protein as it was taught in the lesson."
+              "explanation": "A trait is a distinguishing quality or characteristic."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1308,
-              "content": "The word 'blood cell' is an English word.",
+              "id": 1219,
+              "content": "A 'nitpicker' is someone who ignores small mistakes.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'blood cell' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. A nitpicker is a person who is overly critical and focuses on minor details."
             },
             {
-              "id": 1309,
-              "content": "The word 'molecule' is an English word.",
+              "id": 1220,
+              "content": "If you do something 'for good', you do it permanently.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'molecule' is part of the English vocabulary."
+              "explanation": "True. 'For good' means permanently or forever."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1280,
-              "content": "According to the text: 'Comprehensive Reading\\nThe Latest Mating Strategy\\nTOKYO-Mika Matsui finds out on the first date...'",
+              "id": 1221,
+              "content": "How quickly does Mika Matsui find out a man's blood type on the first date?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Within the first two hours",
+                "Before the date starts",
+                "After several dates",
+                "She never asks on the first date"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text states: 'Mika Matsui finds out on the first date. First two hours, maximum.'"
             },
             {
-              "id": 1281,
-              "content": "According to the text: 'First two hours, maximum...'",
+              "id": 1222,
+              "content": "Why doesn't Mika want to date a man with Type O blood?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They are too boring",
+                "They don't like her",
+                "They are too needy",
+                "They are too kind"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text explains: 'Her last boyfriend was type O. Never again. O's are too needy.'"
             },
             {
-              "id": 1282,
-              "content": "According to the text: 'There's no sense getting your hopes up if Mr Wonderful is the wrong blood type...'",
+              "id": 1223,
+              "content": "What blood type is Mika looking for?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Type A",
+                "Type B",
+                "Type O",
+                "Type AB"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "D",
+              "explanation": "The text states: 'So it's the AB man she's looking for...'"
             },
             {
-              "id": 1283,
-              "content": "According to the text: '\\nHer last boyfriend was type O...'",
+              "id": 1224,
+              "content": "According to Mika, how well does blood type describe character?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Not at all",
+                "Somewhat accurately",
+                "Incredibly accurately",
+                "Only for women"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "Mika says: 'I don't believe in horoscopes, but I think blood type describes character incredibly accurately.'"
             },
             {
-              "id": 1284,
-              "content": "According to the text: 'Never again...'",
+              "id": 1225,
+              "content": "How do companies sometimes use blood type?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "To decide who gets a promotion",
+                "To assign employees to projects or teams",
+                "To determine salary",
+                "To choose lunch menus"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "While the passage snippet provided ends early, the context implies blood type is used to profile or group people (like in a 'single-type' project team)."
             }
           ]
         }

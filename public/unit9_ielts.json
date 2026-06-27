@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 950,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 901,
+              "content": "1. He likes to [ 1 ] a lot of time to his hobbies.<br/><br/>2. It's important to [ 2 ] your goals periodically.<br/><br/>3. The company was [ 3 ] by two brothers.<br/><br/>4. She showed great [ 4 ] in starting the project.<br/><br/>5. We need to [ 5 ] a high standard of quality.",
               "options": [
-                "harmonize",
-                "now and then",
+                "devote",
                 "self-evaluate",
                 "found",
-                "devote",
-                "principle",
-                "interdependence",
-                "renew",
-                "proactive",
-                "initiative"
+                "initiative",
+                "maintain",
+                "blame",
+                "priority",
+                "magnificent",
+                "argument",
+                "concept"
               ],
-              "correctAnswer": "harmonize"
+              "correctAnswer": "devote"
             },
             {
-              "id": 951,
+              "id": 902,
               "content": "",
               "options": [
-                "harmonize",
-                "now and then",
+                "devote",
                 "self-evaluate",
                 "found",
-                "devote",
-                "principle",
-                "interdependence",
-                "renew",
-                "proactive",
-                "initiative"
-              ],
-              "correctAnswer": "now and then"
-            },
-            {
-              "id": 952,
-              "content": "",
-              "options": [
-                "harmonize",
-                "now and then",
-                "self-evaluate",
-                "found",
-                "devote",
-                "principle",
-                "interdependence",
-                "renew",
-                "proactive",
-                "initiative"
+                "initiative",
+                "maintain",
+                "blame",
+                "priority",
+                "magnificent",
+                "argument",
+                "concept"
               ],
               "correctAnswer": "self-evaluate"
             },
             {
-              "id": 953,
+              "id": 903,
               "content": "",
               "options": [
-                "harmonize",
-                "now and then",
+                "devote",
                 "self-evaluate",
                 "found",
-                "devote",
-                "principle",
-                "interdependence",
-                "renew",
-                "proactive",
-                "initiative"
+                "initiative",
+                "maintain",
+                "blame",
+                "priority",
+                "magnificent",
+                "argument",
+                "concept"
               ],
               "correctAnswer": "found"
             },
             {
-              "id": 954,
+              "id": 904,
               "content": "",
               "options": [
-                "harmonize",
-                "now and then",
+                "devote",
                 "self-evaluate",
                 "found",
-                "devote",
-                "principle",
-                "interdependence",
-                "renew",
-                "proactive",
-                "initiative"
+                "initiative",
+                "maintain",
+                "blame",
+                "priority",
+                "magnificent",
+                "argument",
+                "concept"
               ],
-              "correctAnswer": "devote"
+              "correctAnswer": "initiative"
+            },
+            {
+              "id": 905,
+              "content": "",
+              "options": [
+                "devote",
+                "self-evaluate",
+                "found",
+                "initiative",
+                "maintain",
+                "blame",
+                "priority",
+                "magnificent",
+                "argument",
+                "concept"
+              ],
+              "correctAnswer": "maintain"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 955,
-              "content": "Which word is related to 'principle'?",
+              "id": 906,
+              "content": "A fact or condition connected with or relevant to an event or action.",
               "options": [
-                "principle",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Circumstance",
+                "Principle",
+                "Contribution",
+                "Mission"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is principle as it was taught in the lesson."
+              "explanation": "A circumstance is a fact or condition relevant to an event."
             },
             {
-              "id": 956,
-              "content": "Which word is related to 'interdependence'?",
+              "id": 907,
+              "content": "To leave, especially in order to start a journey.",
               "options": [
-                "interdependence",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Depart",
+                "Renew",
+                "Harmonize",
+                "Focus on"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is interdependence as it was taught in the lesson."
+              "explanation": "To depart means to leave."
             },
             {
-              "id": 957,
-              "content": "Which word is related to 'renew'?",
+              "id": 908,
+              "content": "A fundamental truth or proposition.",
               "options": [
-                "renew",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Handicap",
+                "Stimuli",
+                "Principle",
+                "Benefit"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is renew as it was taught in the lesson."
+              "correctAnswer": "C",
+              "explanation": "A principle is a fundamental truth."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 958,
-              "content": "The word 'proactive' is an English word.",
+              "id": 909,
+              "content": "A 'win/win' situation is one where only one person benefits.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'proactive' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. A win/win situation is advantageous to all parties involved."
             },
             {
-              "id": 959,
-              "content": "The word 'initiative' is an English word.",
+              "id": 910,
+              "content": "To 'blame' someone means to hold them responsible for a fault or wrong.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'initiative' is part of the English vocabulary."
+              "explanation": "True. Blame means to assign responsibility for a fault."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1000,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 911,
+              "content": "1. Effective [ 1 ] is essential for the project's success.<br/><br/>2. We need to [ 2 ] the results of the experiment.<br/><br/>3. It's important to [ 3 ] our skills through training.<br/><br/>4. Yoga and [ 4 ] can help reduce stress.<br/><br/>5. Please write your thoughts in your [ 5 ].",
               "options": [
-                "interaction",
-                "go for",
-                "philosophy",
-                "interdependent",
-                "at the expense of",
+                "teamwork",
                 "interpret",
-                "leading question",
-                "frame of reference",
-                "hence",
-                "empathic"
+                "sharpen",
+                "meditation",
+                "journal",
+                "philosophy",
+                "essence",
+                "clarity",
+                "makeup",
+                "renewal"
               ],
-              "correctAnswer": "interaction"
+              "correctAnswer": "teamwork"
             },
             {
-              "id": 1001,
+              "id": 912,
               "content": "",
               "options": [
-                "interaction",
-                "go for",
-                "philosophy",
-                "interdependent",
-                "at the expense of",
+                "teamwork",
                 "interpret",
-                "leading question",
-                "frame of reference",
-                "hence",
-                "empathic"
+                "sharpen",
+                "meditation",
+                "journal",
+                "philosophy",
+                "essence",
+                "clarity",
+                "makeup",
+                "renewal"
               ],
-              "correctAnswer": "go for"
+              "correctAnswer": "interpret"
             },
             {
-              "id": 1002,
+              "id": 913,
               "content": "",
               "options": [
-                "interaction",
-                "go for",
-                "philosophy",
-                "interdependent",
-                "at the expense of",
+                "teamwork",
                 "interpret",
-                "leading question",
-                "frame of reference",
-                "hence",
-                "empathic"
+                "sharpen",
+                "meditation",
+                "journal",
+                "philosophy",
+                "essence",
+                "clarity",
+                "makeup",
+                "renewal"
               ],
-              "correctAnswer": "philosophy"
+              "correctAnswer": "sharpen"
             },
             {
-              "id": 1003,
+              "id": 914,
               "content": "",
               "options": [
-                "interaction",
-                "go for",
-                "philosophy",
-                "interdependent",
-                "at the expense of",
+                "teamwork",
                 "interpret",
-                "leading question",
-                "frame of reference",
-                "hence",
-                "empathic"
+                "sharpen",
+                "meditation",
+                "journal",
+                "philosophy",
+                "essence",
+                "clarity",
+                "makeup",
+                "renewal"
               ],
-              "correctAnswer": "interdependent"
+              "correctAnswer": "meditation"
             },
             {
-              "id": 1004,
+              "id": 915,
               "content": "",
               "options": [
-                "interaction",
-                "go for",
-                "philosophy",
-                "interdependent",
-                "at the expense of",
+                "teamwork",
                 "interpret",
-                "leading question",
-                "frame of reference",
-                "hence",
-                "empathic"
+                "sharpen",
+                "meditation",
+                "journal",
+                "philosophy",
+                "essence",
+                "clarity",
+                "makeup",
+                "renewal"
               ],
-              "correctAnswer": "at the expense of"
+              "correctAnswer": "journal"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1005,
-              "content": "Which word is related to 'interpret'?",
+              "id": 916,
+              "content": "To combine or work together in order to be more effective.",
               "options": [
-                "interpret",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Synergize",
+                "Compensate for",
+                "Reflect on",
+                "Promote"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is interpret as it was taught in the lesson."
+              "explanation": "To synergize means to combine or work together to be more effective."
             },
             {
-              "id": 1006,
-              "content": "Which word is related to 'leading question'?",
+              "id": 917,
+              "content": "A request for help or expression of thanks addressed to God or an object of worship.",
               "options": [
-                "leading question",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Interaction",
+                "Prayer",
+                "Dimension",
+                "Strength"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is leading question as it was taught in the lesson."
+              "correctAnswer": "B",
+              "explanation": "A prayer is a request for help or expression of thanks to God."
             },
             {
-              "id": 1007,
-              "content": "Which word is related to 'frame of reference'?",
+              "id": 918,
+              "content": "Enough; adequate.",
               "options": [
-                "frame of reference",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Empathic",
+                "Creative",
+                "Sufficient",
+                "Interdependent"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is frame of reference as it was taught in the lesson."
+              "correctAnswer": "C",
+              "explanation": "Sufficient means enough or adequate."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1008,
-              "content": "The word 'hence' is an English word.",
+              "id": 919,
+              "content": "'Daily' means occurring every week.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'hence' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Daily means occurring every day."
             },
             {
-              "id": 1009,
-              "content": "The word 'empathic' is an English word.",
+              "id": 920,
+              "content": "'Harmony' refers to a state of peaceful existence and agreement.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'empathic' is part of the English vocabulary."
+              "explanation": "True. Harmony is a state of peaceful existence."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 980,
-              "content": "According to the text: 'Comprehensive Reading\\nHabits That Harmonize Life\\nEvery now and then, I read a self-development book and then self-evaluate my achievements in life and my future goals...'",
+              "id": 921,
+              "content": "What is the title of Stephen R. Covey's best-selling book?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Habits That Harmonize Life",
+                "The Seven Habits of Highly Effective People",
+                "The Power of Proactivity",
+                "Sharpen the Saw"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text explicitly mentions: 'One book that really has me excited is Stephen R. Covey\\'s \"The Seven Habits of Highly Effective People\".'"
             },
             {
-              "id": 981,
-              "content": "According to the text: 'One book that really has me excited is Stephen R...'",
+              "id": 922,
+              "content": "Which of the following is NOT listed as a habit of Independence?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Be Proactive",
+                "Begin with the End in Mind",
+                "Put First Things First",
+                "Think Win/Win"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "D",
+              "explanation": "The habits of Independence are 'Be Proactive', 'Begin with the End in Mind', and 'Put First Things First'. 'Think Win/Win' is a habit of Interdependence."
             },
             {
-              "id": 982,
-              "content": "According to the text: 'Covey's \"The Seven Habits of Highly Effective People\"...'",
+              "id": 923,
+              "content": "What does Habit 2, 'Begin with the End in Mind', ask you to focus on?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Being proactive and taking initiative",
+                "A picture of what you want your life to be at its end",
+                "Understanding others before seeking to be understood",
+                "Synergizing with team members"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "Habit 2 'focuses on you drawing a picture of what you want your life to be at its very end.'"
             },
             {
-              "id": 983,
-              "content": "According to the text: '\\nCovey founded an organization devoted to the development of principle-centred leadership...'",
+              "id": 924,
+              "content": "What does 'Sharpen the Saw' primarily deal with?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Improving your negotiation skills",
+                "Renewing yourself physically, spiritually, mentally, and socially/emotionally",
+                "Setting long-term career goals",
+                "Writing a daily journal"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'It has to do with renewing yourself... in four dimensions of your makeup: physical, spiritual, mental, and social/emotional.'"
             },
             {
-              "id": 984,
-              "content": "According to the text: 'His best-selling book talks about three habits of Independence or Private Victory...'",
+              "id": 925,
+              "content": "According to Habit 5, what must you do before explaining your own point of view?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Win the argument",
+                "Evaluate the other person's motives",
+                "Take off your own glasses and put on the other person's",
+                "Write down your thoughts in a journal"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "Habit 5 states: 'Before you can begin to evaluate another\\'s motives or explain your own, you must first take off your own glasses and put on theirs.'"
             }
           ]
         }
