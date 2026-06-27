@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2650,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2601,
+              "content": "1. The promised funding failed to [ 1 ].<br/><br/>2. We hope a solution will [ 2 ] soon.<br/><br/>3. The company holds a [ 3 ] position in the market.<br/><br/>4. The population of the town began to [ 4 ].<br/><br/>5. He receives a good [ 5 ] from his former employer.",
               "options": [
                 "materialize",
-                "shortly",
                 "emerge",
-                "unprecedented",
                 "dominant",
                 "shrink",
                 "pension",
+                "shortly",
+                "unprecedented",
                 "constituent",
-                "health permitting",
-                "sink in"
+                "temporary",
+                "consultant"
               ],
               "correctAnswer": "materialize"
             },
             {
-              "id": 2651,
+              "id": 2602,
               "content": "",
               "options": [
                 "materialize",
-                "shortly",
                 "emerge",
-                "unprecedented",
                 "dominant",
                 "shrink",
                 "pension",
-                "constituent",
-                "health permitting",
-                "sink in"
-              ],
-              "correctAnswer": "shortly"
-            },
-            {
-              "id": 2652,
-              "content": "",
-              "options": [
-                "materialize",
                 "shortly",
-                "emerge",
                 "unprecedented",
-                "dominant",
-                "shrink",
-                "pension",
                 "constituent",
-                "health permitting",
-                "sink in"
+                "temporary",
+                "consultant"
               ],
               "correctAnswer": "emerge"
             },
             {
-              "id": 2653,
+              "id": 2603,
               "content": "",
               "options": [
                 "materialize",
-                "shortly",
                 "emerge",
-                "unprecedented",
                 "dominant",
                 "shrink",
                 "pension",
-                "constituent",
-                "health permitting",
-                "sink in"
-              ],
-              "correctAnswer": "unprecedented"
-            },
-            {
-              "id": 2654,
-              "content": "",
-              "options": [
-                "materialize",
                 "shortly",
-                "emerge",
                 "unprecedented",
-                "dominant",
-                "shrink",
-                "pension",
                 "constituent",
-                "health permitting",
-                "sink in"
+                "temporary",
+                "consultant"
               ],
               "correctAnswer": "dominant"
+            },
+            {
+              "id": 2604,
+              "content": "",
+              "options": [
+                "materialize",
+                "emerge",
+                "dominant",
+                "shrink",
+                "pension",
+                "shortly",
+                "unprecedented",
+                "constituent",
+                "temporary",
+                "consultant"
+              ],
+              "correctAnswer": "shrink"
+            },
+            {
+              "id": 2605,
+              "content": "",
+              "options": [
+                "materialize",
+                "emerge",
+                "dominant",
+                "shrink",
+                "pension",
+                "shortly",
+                "unprecedented",
+                "constituent",
+                "temporary",
+                "consultant"
+              ],
+              "correctAnswer": "pension"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2655,
-              "content": "Which word is related to 'shrink'?",
+              "id": 2606,
+              "content": "A sudden, violent, or important change or disruption.",
               "options": [
-                "shrink",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Upheaval",
+                "Alignment",
+                "Decline",
+                "Driving force"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is shrink as it was taught in the lesson."
+              "explanation": "An upheaval is a sudden or violent change."
             },
             {
-              "id": 2656,
-              "content": "Which word is related to 'pension'?",
+              "id": 2607,
+              "content": "Of the same kind; alike.",
               "options": [
-                "pension",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Homogeneous",
+                "Divisive",
+                "Fundamental",
+                "Domestic"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is pension as it was taught in the lesson."
+              "explanation": "Homogeneous means of the same kind."
             },
             {
-              "id": 2657,
-              "content": "Which word is related to 'constituent'?",
+              "id": 2608,
+              "content": "To support or strengthen.",
               "options": [
-                "constituent",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Bolster",
+                "Assume",
+                "Participate",
+                "Shrink"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is constituent as it was taught in the lesson."
+              "explanation": "To bolster means to support or strengthen."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2658,
-              "content": "The word 'health permitting' is an English word.",
+              "id": 2609,
+              "content": "'Unprecedented' means never done or known before.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'health permitting' is part of the English vocabulary."
+              "explanation": "True. Unprecedented means without previous instance."
             },
             {
-              "id": 2659,
-              "content": "The word 'sink in' is an English word.",
+              "id": 2610,
+              "content": "A 'part-timer' is someone who works full hours every day.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'sink in' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. A part-timer works for only a part of the usual working day or week."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2700,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2611,
+              "content": "1. The company's [ 1 ] was exhausted after the long project.<br/><br/>2. There is a large [ 2 ] required for this job.<br/><br/>3. She completed the task [ 3 ] and quickly.<br/><br/>4. The internet has increased global [ 4 ].<br/><br/>5. Are there any rooms [ 5 ] for tonight?",
               "options": [
-                "from the start",
-                "split",
-                "employment pattern",
-                "resource",
                 "workforce",
-                "characteristic",
+                "resource",
                 "effortlessly",
                 "mobility",
                 "available",
-                "acquire"
+                "split",
+                "characteristic",
+                "competitive",
+                "alike",
+                "feature"
               ],
-              "correctAnswer": "from the start"
+              "correctAnswer": "workforce"
             },
             {
-              "id": 2701,
+              "id": 2612,
               "content": "",
               "options": [
-                "from the start",
-                "split",
-                "employment pattern",
-                "resource",
                 "workforce",
-                "characteristic",
+                "resource",
                 "effortlessly",
                 "mobility",
                 "available",
-                "acquire"
-              ],
-              "correctAnswer": "split"
-            },
-            {
-              "id": 2702,
-              "content": "",
-              "options": [
-                "from the start",
                 "split",
-                "employment pattern",
-                "resource",
-                "workforce",
                 "characteristic",
-                "effortlessly",
-                "mobility",
-                "available",
-                "acquire"
-              ],
-              "correctAnswer": "employment pattern"
-            },
-            {
-              "id": 2703,
-              "content": "",
-              "options": [
-                "from the start",
-                "split",
-                "employment pattern",
-                "resource",
-                "workforce",
-                "characteristic",
-                "effortlessly",
-                "mobility",
-                "available",
-                "acquire"
+                "competitive",
+                "alike",
+                "feature"
               ],
               "correctAnswer": "resource"
             },
             {
-              "id": 2704,
+              "id": 2613,
               "content": "",
               "options": [
-                "from the start",
-                "split",
-                "employment pattern",
-                "resource",
                 "workforce",
-                "characteristic",
+                "resource",
                 "effortlessly",
                 "mobility",
                 "available",
-                "acquire"
+                "split",
+                "characteristic",
+                "competitive",
+                "alike",
+                "feature"
               ],
-              "correctAnswer": "workforce"
+              "correctAnswer": "effortlessly"
+            },
+            {
+              "id": 2614,
+              "content": "",
+              "options": [
+                "workforce",
+                "resource",
+                "effortlessly",
+                "mobility",
+                "available",
+                "split",
+                "characteristic",
+                "competitive",
+                "alike",
+                "feature"
+              ],
+              "correctAnswer": "mobility"
+            },
+            {
+              "id": 2615,
+              "content": "",
+              "options": [
+                "workforce",
+                "resource",
+                "effortlessly",
+                "mobility",
+                "available",
+                "split",
+                "characteristic",
+                "competitive",
+                "alike",
+                "feature"
+              ],
+              "correctAnswer": "available"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2705,
-              "content": "Which word is related to 'characteristic'?",
+              "id": 2616,
+              "content": "Easily reached, entered, or obtained.",
               "options": [
-                "characteristic",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Accessible",
+                "Competitive",
+                "Considerable",
+                "Substantial"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is characteristic as it was taught in the lesson."
+              "explanation": "Accessible means easily reached or obtained."
             },
             {
-              "id": 2706,
-              "content": "Which word is related to 'effortlessly'?",
+              "id": 2617,
+              "content": "A person trained or skilled in the technicalities of a subject.",
               "options": [
-                "effortlessly",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Technician",
+                "Accountant",
+                "Analyst",
+                "Paralegal"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is effortlessly as it was taught in the lesson."
+              "explanation": "A technician is a person skilled in technicalities."
             },
             {
-              "id": 2707,
-              "content": "Which word is related to 'mobility'?",
+              "id": 2618,
+              "content": "Noticeable or prominent in a way that attracts attention.",
               "options": [
-                "mobility",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Striking",
+                "Available",
+                "Theoretical",
+                "Substantial"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is mobility as it was taught in the lesson."
+              "explanation": "Striking means noticeable or prominent."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2708,
-              "content": "The word 'available' is an English word.",
+              "id": 2619,
+              "content": "An 'apprenticeship' is a position where a person learns a trade from a skilled employer.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'available' is part of the English vocabulary."
+              "explanation": "True. An apprenticeship involves learning a trade from an employer."
             },
             {
-              "id": 2709,
-              "content": "The word 'acquire' is an English word.",
+              "id": 2620,
+              "content": "'Instantly' means taking a very long time to happen.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'acquire' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Instantly means at once; immediately."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2680,
-              "content": "According to the text: 'Comprehensive Reading\\nThe Next Society I\\nTomorrow is closer than you think...'",
+              "id": 2621,
+              "content": "According to Peter Drucker, when is the 'next society' coming?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "It will never come",
+                "It is already in the past",
+                "It will be with us shortly",
+                "In about 100 years"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text states: 'there is no doubt that the next society will be with us shortly.'"
             },
             {
-              "id": 2681,
-              "content": "According to the text: 'Peter Drucker explains how it will differ from today, and what needs to be done to prepare for it...'",
+              "id": 2622,
+              "content": "How important will the next society be compared to the 'new economy' in the developed world?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Much less important",
+                "A good deal more important",
+                "Equally important",
+                "The text does not compare them"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage says: 'this new society will be a good deal more important than the new economy (if any).'"
             },
             {
-              "id": 2682,
-              "content": "According to the text: '\\nThe new economy may or may not materialize, but there is no doubt that the next society will be with us shortly...'",
+              "id": 2623,
+              "content": "Will the next society be similar to the society of the late 20th century?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, exactly the same",
+                "Very similar",
+                "It will be quite different",
+                "It will be a return to the 19th century"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text states: 'It will be quite different from the society of the late 20th century...'"
             },
             {
-              "id": 2683,
-              "content": "According to the text: 'In developed world, and probably in the emerging countries as well, this new society will be a good deal more important than the new economy (if any)...'",
+              "id": 2624,
+              "content": "What is the title of the reading passage?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The New Economy",
+                "The Next Society I",
+                "Tomorrow is Closer",
+                "Peter Drucker's Vision"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The title is explicitly given as 'The Next Society I'."
             },
             {
-              "id": 2684,
-              "content": "According to the text: 'It will be quite different from the society of the late 20th century, and also different from what most people expect...'",
+              "id": 2625,
+              "content": "Who explains how tomorrow will differ from today in the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Bill Gates",
+                "Peter Drucker",
+                "An unnamed economist",
+                "A historian"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'Peter Drucker explains how it will differ from today...'"
             }
           ]
         }

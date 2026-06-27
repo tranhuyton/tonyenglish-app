@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2550,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2501,
+              "content": "1. He attended a very prestigious [ 1 ].<br/><br/>2. Did she [ 2 ] where she was going?<br/><br/>3. The school is governed by a board of [ 3 ].<br/><br/>4. We need to [ 4 ] the budget for next year.<br/><br/>5. Please provide a more [ 5 ] definition of the word.",
               "options": [
                 "public school",
                 "mention",
-                "in particular",
+                "trustee",
+                "balance",
+                "precise",
                 "independent",
                 "secondary school",
-                "in reality",
-                "form",
                 "fee",
-                "governing body",
-                "appoint"
+                "foundation",
+                "charitable"
               ],
               "correctAnswer": "public school"
             },
             {
-              "id": 2551,
+              "id": 2502,
               "content": "",
               "options": [
                 "public school",
                 "mention",
-                "in particular",
+                "trustee",
+                "balance",
+                "precise",
                 "independent",
                 "secondary school",
-                "in reality",
-                "form",
                 "fee",
-                "governing body",
-                "appoint"
+                "foundation",
+                "charitable"
               ],
               "correctAnswer": "mention"
             },
             {
-              "id": 2552,
+              "id": 2503,
               "content": "",
               "options": [
                 "public school",
                 "mention",
-                "in particular",
+                "trustee",
+                "balance",
+                "precise",
                 "independent",
                 "secondary school",
-                "in reality",
-                "form",
                 "fee",
-                "governing body",
-                "appoint"
+                "foundation",
+                "charitable"
               ],
-              "correctAnswer": "in particular"
+              "correctAnswer": "trustee"
             },
             {
-              "id": 2553,
+              "id": 2504,
               "content": "",
               "options": [
                 "public school",
                 "mention",
-                "in particular",
+                "trustee",
+                "balance",
+                "precise",
                 "independent",
                 "secondary school",
-                "in reality",
-                "form",
                 "fee",
-                "governing body",
-                "appoint"
+                "foundation",
+                "charitable"
               ],
-              "correctAnswer": "independent"
+              "correctAnswer": "balance"
             },
             {
-              "id": 2554,
+              "id": 2505,
               "content": "",
               "options": [
                 "public school",
                 "mention",
-                "in particular",
+                "trustee",
+                "balance",
+                "precise",
                 "independent",
                 "secondary school",
-                "in reality",
-                "form",
                 "fee",
-                "governing body",
-                "appoint"
+                "foundation",
+                "charitable"
               ],
-              "correctAnswer": "secondary school"
+              "correctAnswer": "precise"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2555,
-              "content": "Which word is related to 'in reality'?",
+              "id": 2506,
+              "content": "A religious or solemn ceremony consisting of a series of actions performed according to a prescribed order.",
               "options": [
-                "in reality",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Ritual",
+                "Custom",
+                "Foundation",
+                "Mixture"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is in reality as it was taught in the lesson."
+              "explanation": "A ritual is a religious or solemn ceremony."
             },
             {
-              "id": 2556,
-              "content": "Which word is related to 'form'?",
+              "id": 2507,
+              "content": "Consciously and intentionally; on purpose.",
               "options": [
-                "form",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Deliberately",
+                "Altogether",
+                "Universally",
+                "Provisionally"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is form as it was taught in the lesson."
+              "explanation": "Deliberately means consciously and intentionally."
             },
             {
-              "id": 2557,
-              "content": "Which word is related to 'fee'?",
+              "id": 2508,
+              "content": "Different to what is normal or expected; strange.",
               "options": [
-                "fee",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Peculiar",
+                "Typical",
+                "Essential",
+                "Independent"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is fee as it was taught in the lesson."
+              "explanation": "Peculiar means strange or unusual."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2558,
-              "content": "The word 'governing body' is an English word.",
+              "id": 2509,
+              "content": "'Eminent' describes someone who is famous and respected within a particular sphere or profession.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'governing body' is part of the English vocabulary."
+              "explanation": "True. Eminent means famous and respected."
             },
             {
-              "id": 2559,
-              "content": "The word 'appoint' is an English word.",
+              "id": 2510,
+              "content": "A 'charitable' institution is one that is primarily focused on making a profit.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'appoint' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Charitable institutions are non-profit organizations focused on helping those in need."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2600,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2511,
+              "content": "1. The students are required to [ 1 ] a song at the concert.<br/><br/>2. My little brother often [ 2 ] me when I'm busy.<br/><br/>3. He likes to [ 3 ] across the lake on weekends.<br/><br/>4. The priest delivered a powerful [ 4 ] on Sunday.<br/><br/>5. We need a more [ 5 ] schedule to accommodate everyone.",
               "options": [
                 "perform",
                 "run errands for",
-                "diminish",
-                "be obliged to",
-                "cricket",
                 "row",
-                "non-academic",
-                "pursuit",
-                "varied",
-                "religion"
+                "sermon",
+                "flexible",
+                "diminish",
+                "cricket",
+                "chapel",
+                "clergyman",
+                "master"
               ],
               "correctAnswer": "perform"
             },
             {
-              "id": 2601,
+              "id": 2512,
               "content": "",
               "options": [
                 "perform",
                 "run errands for",
-                "diminish",
-                "be obliged to",
-                "cricket",
                 "row",
-                "non-academic",
-                "pursuit",
-                "varied",
-                "religion"
+                "sermon",
+                "flexible",
+                "diminish",
+                "cricket",
+                "chapel",
+                "clergyman",
+                "master"
               ],
               "correctAnswer": "run errands for"
             },
             {
-              "id": 2602,
+              "id": 2513,
               "content": "",
               "options": [
                 "perform",
                 "run errands for",
-                "diminish",
-                "be obliged to",
-                "cricket",
                 "row",
-                "non-academic",
-                "pursuit",
-                "varied",
-                "religion"
+                "sermon",
+                "flexible",
+                "diminish",
+                "cricket",
+                "chapel",
+                "clergyman",
+                "master"
               ],
-              "correctAnswer": "diminish"
+              "correctAnswer": "row"
             },
             {
-              "id": 2603,
+              "id": 2514,
               "content": "",
               "options": [
                 "perform",
                 "run errands for",
-                "diminish",
-                "be obliged to",
-                "cricket",
                 "row",
-                "non-academic",
-                "pursuit",
-                "varied",
-                "religion"
+                "sermon",
+                "flexible",
+                "diminish",
+                "cricket",
+                "chapel",
+                "clergyman",
+                "master"
               ],
-              "correctAnswer": "be obliged to"
+              "correctAnswer": "sermon"
             },
             {
-              "id": 2604,
+              "id": 2515,
               "content": "",
               "options": [
                 "perform",
                 "run errands for",
-                "diminish",
-                "be obliged to",
-                "cricket",
                 "row",
-                "non-academic",
-                "pursuit",
-                "varied",
-                "religion"
+                "sermon",
+                "flexible",
+                "diminish",
+                "cricket",
+                "chapel",
+                "clergyman",
+                "master"
               ],
-              "correctAnswer": "cricket"
+              "correctAnswer": "flexible"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2605,
-              "content": "Which word is related to 'row'?",
+              "id": 2516,
+              "content": "Having, revealing, or proceeding from a great deal of worldly experience and knowledge of fashion and culture.",
               "options": [
-                "row",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Sophisticated",
+                "Humble",
+                "Respectful",
+                "Mature"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is row as it was taught in the lesson."
+              "explanation": "Sophisticated means having worldly experience and knowledge."
             },
             {
-              "id": 2606,
-              "content": "Which word is related to 'non-academic'?",
+              "id": 2517,
+              "content": "To cause to produce offspring, typically in a controlled way.",
               "options": [
-                "non-academic",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Breed",
+                "Perform",
+                "Diminish",
+                "Suppress"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is non-academic as it was taught in the lesson."
+              "explanation": "To breed means to cause to reproduce."
             },
             {
-              "id": 2607,
-              "content": "Which word is related to 'pursuit'?",
+              "id": 2518,
+              "content": "In a way that relates to education and scholarship.",
               "options": [
-                "pursuit",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Academically",
+                "Readily",
+                "Intellectually",
+                "Efficient"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is pursuit as it was taught in the lesson."
+              "explanation": "Academically relates to education and scholarship."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2608,
-              "content": "The word 'varied' is an English word.",
+              "id": 2519,
+              "content": "A 'prefect' in a school is a senior student authorized to enforce discipline.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'varied' is part of the English vocabulary."
+              "explanation": "True. A prefect is a senior student with disciplinary authority."
             },
             {
-              "id": 2609,
-              "content": "The word 'religion' is an English word.",
+              "id": 2520,
+              "content": "To 'suppress' something means to express it openly and freely.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'religion' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To suppress means to forcibly put an end to or prevent the development of."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2580,
-              "content": "According to the text: 'Comprehensive Reading\\nBritish Public School\\nAll over the world mention of English education suggests a picture of the public schools, and it suggests in particular the names like Eton...'",
+              "id": 2521,
+              "content": "What is Eton described as in the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A public school",
+                "A university",
+                "A grammar school",
+                "A state school"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text states: 'Actually Eton is a public school.'"
             },
             {
-              "id": 2581,
-              "content": "According to the text: 'Actually Eton is a public school...'",
+              "id": 2522,
+              "content": "Are the best-known public schools in Britain really 'public' in the sense of being state-run?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, they are run by the government",
+                "No, they are independent and private secondary schools",
+                "Only for boys under thirteen",
+                "The text does not explain this"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage says: 'And the best known of the public schools are not really public at all, but independent and private secondary schools...'"
             },
             {
-              "id": 2582,
-              "content": "According to the text: 'And the best known of the public schools are not really public at all, but independent and private secondary schools taking boys from the age of thirteen to eighteen years...'",
+              "id": 2523,
+              "content": "What age group do these independent and private secondary schools typically take?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Five to eleven years",
+                "Thirteen to eighteen years",
+                "Eighteen to twenty-one years",
+                "Any age"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text notes: '...taking boys from the age of thirteen to eighteen years.'"
             },
             {
-              "id": 2583,
-              "content": "According to the text: 'The public schools in reality form a very small part of the whole system of secondary education; only about one out of forty English boys goes to a public school, and one out of 1,500 goes to Eton...'",
+              "id": 2524,
+              "content": "What proportion of the whole system of secondary education do public schools form?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A very large part",
+                "About 50%",
+                "A very small part",
+                "They form the entire system"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text says: 'The public schools in reality form a very small part of the whole system of secondary education...'"
             },
             {
-              "id": 2584,
-              "content": "According to the text: 'However it is still true that if an English parent has enough money to pay the fees to send his children to an independent school he will most probably do so...'",
+              "id": 2525,
+              "content": "Who typically governs a public school?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The local council",
+                "A governing body of appointed trustees",
+                "The government's education department",
+                "The students themselves"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "While cut off in the snippet, public schools are typically governed by 'a governing body of appointed trustees'."
             }
           ]
         }

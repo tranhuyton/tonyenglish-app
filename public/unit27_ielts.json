@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2750,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2701,
+              "content": "1. The country relies heavily on its agricultural [ 1 ].<br/><br/>2. Their opinions started to [ 2 ] over time.<br/><br/>3. The factory's [ 3 ] has doubled this year.<br/><br/>4. High [ 4 ] is decreasing our purchasing power.<br/><br/>5. The storm caused a major [ 5 ] to transportation.",
               "options": [
+                "sector",
+                "diverge",
+                "production",
+                "inflation",
+                "disruption",
                 "protectionism",
                 "structurally",
-                "diverge",
-                "sector",
-                "in... terms",
-                "production",
-                "account for",
-                "at most",
-                "contributor to...",
-                "GDP(Gross Domestic Product)"
-              ],
-              "correctAnswer": "protectionism"
-            },
-            {
-              "id": 2751,
-              "content": "",
-              "options": [
-                "protectionism",
-                "structurally",
-                "diverge",
-                "sector",
-                "in... terms",
-                "production",
-                "account for",
-                "at most",
-                "contributor to...",
-                "GDP(Gross Domestic Product)"
-              ],
-              "correctAnswer": "structurally"
-            },
-            {
-              "id": 2752,
-              "content": "",
-              "options": [
-                "protectionism",
-                "structurally",
-                "diverge",
-                "sector",
-                "in... terms",
-                "production",
-                "account for",
-                "at most",
-                "contributor to...",
-                "GDP(Gross Domestic Product)"
-              ],
-              "correctAnswer": "diverge"
-            },
-            {
-              "id": 2753,
-              "content": "",
-              "options": [
-                "protectionism",
-                "structurally",
-                "diverge",
-                "sector",
-                "in... terms",
-                "production",
-                "account for",
-                "at most",
-                "contributor to...",
-                "GDP(Gross Domestic Product)"
+                "proportion",
+                "output",
+                "transition"
               ],
               "correctAnswer": "sector"
             },
             {
-              "id": 2754,
+              "id": 2702,
               "content": "",
               "options": [
+                "sector",
+                "diverge",
+                "production",
+                "inflation",
+                "disruption",
                 "protectionism",
                 "structurally",
-                "diverge",
-                "sector",
-                "in... terms",
-                "production",
-                "account for",
-                "at most",
-                "contributor to...",
-                "GDP(Gross Domestic Product)"
+                "proportion",
+                "output",
+                "transition"
               ],
-              "correctAnswer": "in... terms"
+              "correctAnswer": "diverge"
+            },
+            {
+              "id": 2703,
+              "content": "",
+              "options": [
+                "sector",
+                "diverge",
+                "production",
+                "inflation",
+                "disruption",
+                "protectionism",
+                "structurally",
+                "proportion",
+                "output",
+                "transition"
+              ],
+              "correctAnswer": "production"
+            },
+            {
+              "id": 2704,
+              "content": "",
+              "options": [
+                "sector",
+                "diverge",
+                "production",
+                "inflation",
+                "disruption",
+                "protectionism",
+                "structurally",
+                "proportion",
+                "output",
+                "transition"
+              ],
+              "correctAnswer": "inflation"
+            },
+            {
+              "id": 2705,
+              "content": "",
+              "options": [
+                "sector",
+                "diverge",
+                "production",
+                "inflation",
+                "disruption",
+                "protectionism",
+                "structurally",
+                "proportion",
+                "output",
+                "transition"
+              ],
+              "correctAnswer": "disruption"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2755,
-              "content": "Which word is related to 'production'?",
+              "id": 2706,
+              "content": "To diminish gradually in size, amount, or strength.",
               "options": [
-                "production",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Dwindle",
+                "Triple",
+                "Adjust",
+                "Trigger"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is production as it was taught in the lesson."
+              "explanation": "To dwindle means to diminish gradually."
             },
             {
-              "id": 2756,
-              "content": "Which word is related to 'account for'?",
+              "id": 2707,
+              "content": "A tax or duty to be paid on a particular class of imports or exports.",
               "options": [
-                "account for",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Tariff",
+                "Subsidy",
+                "Quota",
+                "Livelihood"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is account for as it was taught in the lesson."
+              "explanation": "A tariff is a tax on imports or exports."
             },
             {
-              "id": 2757,
-              "content": "Which word is related to 'at most'?",
+              "id": 2708,
+              "content": "Relating to or situated at the edge or margin of something; of secondary or minor importance.",
               "options": [
-                "at most",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Marginal",
+                "Internally",
+                "Externally",
+                "Prime"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is at most as it was taught in the lesson."
+              "explanation": "Marginal means of minor importance or at the edge."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2758,
-              "content": "The word 'contributor to...' is an English word.",
+              "id": 2709,
+              "content": "A 'subsidy' is a sum of money granted by the government or a public body to assist an industry or business.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'contributor to...' is part of the English vocabulary."
+              "explanation": "True. A subsidy is financial assistance."
             },
             {
-              "id": 2759,
-              "content": "The word 'GDP(Gross Domestic Product)' is an English word.",
+              "id": 2710,
+              "content": "To 'pay lip service to' something means to support it wholeheartedly with actions.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'GDP(Gross Domestic Product)' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. It means to express approval or support insincerely, without taking any significant action."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2800,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2711,
+              "content": "1. The large [ 1 ] has offices in many countries.<br/><br/>2. The local branch operates as a [ 2 ] of the main company.<br/><br/>3. The region demanded to be recognized as an [ 3 ] state.<br/><br/>4. The two companies formed a strategic [ 4 ] to share resources.<br/><br/>5. He owns a minority [ 5 ] in the business.",
               "options": [
-                "NAFTA = North American Free Trade Agreement",
-                "corporation",
-                "statistically",
                 "multinational",
-                "play... part in",
                 "subsidiary",
-                "self-contained",
-                "defined",
-                "territory",
-                "autonomous"
-              ],
-              "correctAnswer": "NAFTA = North American Free Trade Agreement"
-            },
-            {
-              "id": 2801,
-              "content": "",
-              "options": [
-                "NAFTA = North American Free Trade Agreement",
+                "autonomous",
+                "alliance",
+                "stake",
                 "corporation",
-                "statistically",
-                "multinational",
-                "play... part in",
-                "subsidiary",
-                "self-contained",
-                "defined",
                 "territory",
-                "autonomous"
-              ],
-              "correctAnswer": "corporation"
-            },
-            {
-              "id": 2802,
-              "content": "",
-              "options": [
-                "NAFTA = North American Free Trade Agreement",
-                "corporation",
-                "statistically",
-                "multinational",
-                "play... part in",
-                "subsidiary",
-                "self-contained",
-                "defined",
-                "territory",
-                "autonomous"
-              ],
-              "correctAnswer": "statistically"
-            },
-            {
-              "id": 2803,
-              "content": "",
-              "options": [
-                "NAFTA = North American Free Trade Agreement",
-                "corporation",
-                "statistically",
-                "multinational",
-                "play... part in",
-                "subsidiary",
-                "self-contained",
-                "defined",
-                "territory",
-                "autonomous"
+                "strategy",
+                "ownership",
+                "joint venture"
               ],
               "correctAnswer": "multinational"
             },
             {
-              "id": 2804,
+              "id": 2712,
               "content": "",
               "options": [
-                "NAFTA = North American Free Trade Agreement",
-                "corporation",
-                "statistically",
                 "multinational",
-                "play... part in",
                 "subsidiary",
-                "self-contained",
-                "defined",
+                "autonomous",
+                "alliance",
+                "stake",
+                "corporation",
                 "territory",
-                "autonomous"
+                "strategy",
+                "ownership",
+                "joint venture"
               ],
-              "correctAnswer": "play... part in"
+              "correctAnswer": "subsidiary"
+            },
+            {
+              "id": 2713,
+              "content": "",
+              "options": [
+                "multinational",
+                "subsidiary",
+                "autonomous",
+                "alliance",
+                "stake",
+                "corporation",
+                "territory",
+                "strategy",
+                "ownership",
+                "joint venture"
+              ],
+              "correctAnswer": "autonomous"
+            },
+            {
+              "id": 2714,
+              "content": "",
+              "options": [
+                "multinational",
+                "subsidiary",
+                "autonomous",
+                "alliance",
+                "stake",
+                "corporation",
+                "territory",
+                "strategy",
+                "ownership",
+                "joint venture"
+              ],
+              "correctAnswer": "alliance"
+            },
+            {
+              "id": 2715,
+              "content": "",
+              "options": [
+                "multinational",
+                "subsidiary",
+                "autonomous",
+                "alliance",
+                "stake",
+                "corporation",
+                "territory",
+                "strategy",
+                "ownership",
+                "joint venture"
+              ],
+              "correctAnswer": "stake"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2805,
-              "content": "Which word is related to 'subsidiary'?",
+              "id": 2716,
+              "content": "An owner of shares in a company.",
               "options": [
-                "subsidiary",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Shareholder",
+                "Investor",
+                "Constituency",
+                "Top management"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is subsidiary as it was taught in the lesson."
+              "explanation": "A shareholder owns shares in a company."
             },
             {
-              "id": 2806,
-              "content": "Which word is related to 'self-contained'?",
+              "id": 2717,
+              "content": "Practical knowledge or skill; expertise.",
               "options": [
-                "self-contained",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Know-how",
+                "Confederation",
+                "Extension",
+                "Organ"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is self-contained as it was taught in the lesson."
+              "explanation": "Know-how is practical knowledge or expertise."
             },
             {
-              "id": 2807,
-              "content": "Which word is related to 'defined'?",
+              "id": 2718,
+              "content": "To attempt to find (something).",
               "options": [
-                "defined",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Seek",
+                "Balance",
+                "Survey",
+                "Stand for"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is defined as it was taught in the lesson."
+              "explanation": "To seek means to attempt to find."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2808,
-              "content": "The word 'territory' is an English word.",
+              "id": 2719,
+              "content": "'Self-contained' means complete, or having all that is needed, in itself.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'territory' is part of the English vocabulary."
+              "explanation": "True. Self-contained means having everything needed within itself."
             },
             {
-              "id": 2809,
-              "content": "The word 'autonomous' is an English word.",
+              "id": 2720,
+              "content": "A 'joint venture' is a business enterprise undertaken by one single person.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'autonomous' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. A joint venture is undertaken jointly by two or more parties."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2780,
-              "content": "According to the text: 'Comprehensive Reading\\nThe Next Society II\\nThe new protectionism\\nStructurally, too, the next society is already diverging from the society almost all of us still live in...'",
+              "id": 2721,
+              "content": "What sector dominated society for 10,000 years according to the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Manufacturing",
+                "Agriculture",
+                "Technology",
+                "Services"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'The 20th century saw the rapid decline of the sector that had dominated society for 10,000 years: agriculture.'"
             },
             {
-              "id": 2781,
-              "content": "According to the text: 'The 20th century saw the rapid decline of the sector that had dominated society for 10,000 years: agriculture...'",
+              "id": 2722,
+              "content": "How much has farm production increased in volume since before the first world war?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "It has doubled",
+                "It has decreased",
+                "It is at least four or five times what it was",
+                "It has remained the same"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The passage says: 'In volume terms, farm production now is at least four or five times what it was before the first world war.'"
             },
             {
-              "id": 2782,
-              "content": "According to the text: 'In volume terms, farm production now is at least four or five times what it was before the first world war...'",
+              "id": 2723,
+              "content": "What percentage of world trade did farm products account for in 1913?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "17%",
+                "50%",
+                "70%",
+                "10%"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text explicitly states: 'But in 1913 farm products accounted for 70% of world trade...'"
             },
             {
-              "id": 2783,
-              "content": "According to the text: 'But in 1913 farm products accounted for 70% of world trade whereas now their share is at most 17%...'",
+              "id": 2724,
+              "content": "What is the maximum share of world trade that farm products account for now?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "17%",
+                "70%",
+                "5%",
+                "35%"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text notes: '...whereas now their share is at most 17%.'"
             },
             {
-              "id": 2784,
-              "content": "According to the text: 'In the early years of the 20th century, agriculture in most developed countries was the largest single contributor to GDP; now in rich countries its contribution has dwindled to the point of becoming marginal...'",
+              "id": 2725,
+              "content": "What is the next society already diverging from?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The 19th century",
+                "The society almost all of us still live in",
+                "The future",
+                "The agricultural sector"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text begins: 'Structurally, too, the next society is already diverging from the society almost all of us still live in.'"
             }
           ]
         }
