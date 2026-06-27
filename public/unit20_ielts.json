@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2050,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2001,
+              "content": "1. Elephant [ 1 ] is highly valued in illegal markets.<br/><br/>2. The government placed a [ 2 ] on hunting endangered species.<br/><br/>3. He will [ 3 ] our company at the conference.<br/><br/>4. The building could [ 4 ] in the earthquake.<br/><br/>5. People started to [ 5 ] when the fire alarm rang.",
               "options": [
-                "close in",
                 "ivory",
+                "ban",
+                "represent",
+                "collapse",
+                "panic",
                 "poach",
                 "heap",
                 "stinking",
-                "panic",
                 "huddle",
-                "convenient",
-                "instinct",
-                "scatter"
-              ],
-              "correctAnswer": "close in"
-            },
-            {
-              "id": 2051,
-              "content": "",
-              "options": [
-                "close in",
-                "ivory",
-                "poach",
-                "heap",
-                "stinking",
-                "panic",
-                "huddle",
-                "convenient",
-                "instinct",
-                "scatter"
+                "instinct"
               ],
               "correctAnswer": "ivory"
             },
             {
-              "id": 2052,
+              "id": 2002,
               "content": "",
               "options": [
-                "close in",
                 "ivory",
+                "ban",
+                "represent",
+                "collapse",
+                "panic",
                 "poach",
                 "heap",
                 "stinking",
-                "panic",
                 "huddle",
-                "convenient",
-                "instinct",
-                "scatter"
+                "instinct"
               ],
-              "correctAnswer": "poach"
+              "correctAnswer": "ban"
             },
             {
-              "id": 2053,
+              "id": 2003,
               "content": "",
               "options": [
-                "close in",
                 "ivory",
+                "ban",
+                "represent",
+                "collapse",
+                "panic",
                 "poach",
                 "heap",
                 "stinking",
-                "panic",
                 "huddle",
-                "convenient",
-                "instinct",
-                "scatter"
+                "instinct"
               ],
-              "correctAnswer": "heap"
+              "correctAnswer": "represent"
             },
             {
-              "id": 2054,
+              "id": 2004,
               "content": "",
               "options": [
-                "close in",
                 "ivory",
+                "ban",
+                "represent",
+                "collapse",
+                "panic",
                 "poach",
                 "heap",
                 "stinking",
-                "panic",
                 "huddle",
-                "convenient",
-                "instinct",
-                "scatter"
+                "instinct"
               ],
-              "correctAnswer": "stinking"
+              "correctAnswer": "collapse"
+            },
+            {
+              "id": 2005,
+              "content": "",
+              "options": [
+                "ivory",
+                "ban",
+                "represent",
+                "collapse",
+                "panic",
+                "poach",
+                "heap",
+                "stinking",
+                "huddle",
+                "instinct"
+              ],
+              "correctAnswer": "panic"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2055,
-              "content": "Which word is related to 'panic'?",
+              "id": 2006,
+              "content": "Not securely held or in position; dangerously likely to fall or collapse.",
               "options": [
-                "panic",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Precarious",
+                "Convenient",
+                "Negligible",
+                "Bloody"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is panic as it was taught in the lesson."
+              "explanation": "Precarious means dangerously likely to fall or collapse."
             },
             {
-              "id": 2056,
-              "content": "Which word is related to 'huddle'?",
+              "id": 2007,
+              "content": "A strong or habitual liking for something or tendency to do something.",
               "options": [
-                "huddle",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Penchant",
+                "Instinct",
+                "Shortfall",
+                "Skirmish"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is huddle as it was taught in the lesson."
+              "explanation": "A penchant is a strong habitual liking."
             },
             {
-              "id": 2057,
-              "content": "Which word is related to 'convenient'?",
+              "id": 2008,
+              "content": "To walk with difficulty, typically because of a damaged or stiff leg or foot.",
               "options": [
-                "convenient",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Limp",
+                "Scatter",
+                "Poach",
+                "Pick up"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is convenient as it was taught in the lesson."
+              "explanation": "To limp means to walk with difficulty."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2058,
-              "content": "The word 'instinct' is an English word.",
+              "id": 2009,
+              "content": "'Endangered' refers to a species of animal or plant that is seriously at risk of extinction.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'instinct' is part of the English vocabulary."
+              "explanation": "True. Endangered species are at risk of extinction."
             },
             {
-              "id": 2059,
-              "content": "The word 'scatter' is an English word.",
+              "id": 2010,
+              "content": "A 'skirmish' is a very long and peaceful negotiation.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'scatter' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. A skirmish is an episode of irregular or unpremeditated fighting."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2100,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2011,
+              "content": "1. The population is experiencing a sudden [ 1 ].<br/><br/>2. They found [ 2 ] from the rain under a large tree.<br/><br/>3. The results of the study are highly [ 3 ].<br/><br/>4. We need to [ 4 ] the damage caused by the storm.<br/><br/>5. The police tried to [ 5 ] the suspect in the crowd.",
               "options": [
-                "Namibia",
                 "boom",
-                "Zimbabwe",
-                "questionable",
-                "unculled",
                 "shelter",
-                "convention",
-                "nevertheless",
-                "surplus",
-                "vociferous"
-              ],
-              "correctAnswer": "Namibia"
-            },
-            {
-              "id": 2101,
-              "content": "",
-              "options": [
-                "Namibia",
-                "boom",
-                "Zimbabwe",
                 "questionable",
-                "unculled",
-                "shelter",
-                "convention",
-                "nevertheless",
+                "assess",
+                "detect",
                 "surplus",
-                "vociferous"
+                "routine",
+                "estimate",
+                "strife",
+                "conservation"
               ],
               "correctAnswer": "boom"
             },
             {
-              "id": 2102,
+              "id": 2012,
               "content": "",
               "options": [
-                "Namibia",
                 "boom",
-                "Zimbabwe",
-                "questionable",
-                "unculled",
                 "shelter",
-                "convention",
-                "nevertheless",
+                "questionable",
+                "assess",
+                "detect",
                 "surplus",
-                "vociferous"
+                "routine",
+                "estimate",
+                "strife",
+                "conservation"
               ],
-              "correctAnswer": "Zimbabwe"
+              "correctAnswer": "shelter"
             },
             {
-              "id": 2103,
+              "id": 2013,
               "content": "",
               "options": [
-                "Namibia",
                 "boom",
-                "Zimbabwe",
-                "questionable",
-                "unculled",
                 "shelter",
-                "convention",
-                "nevertheless",
+                "questionable",
+                "assess",
+                "detect",
                 "surplus",
-                "vociferous"
+                "routine",
+                "estimate",
+                "strife",
+                "conservation"
               ],
               "correctAnswer": "questionable"
             },
             {
-              "id": 2104,
+              "id": 2014,
               "content": "",
               "options": [
-                "Namibia",
                 "boom",
-                "Zimbabwe",
-                "questionable",
-                "unculled",
                 "shelter",
-                "convention",
-                "nevertheless",
+                "questionable",
+                "assess",
+                "detect",
                 "surplus",
-                "vociferous"
+                "routine",
+                "estimate",
+                "strife",
+                "conservation"
               ],
-              "correctAnswer": "unculled"
+              "correctAnswer": "assess"
+            },
+            {
+              "id": 2015,
+              "content": "",
+              "options": [
+                "boom",
+                "shelter",
+                "questionable",
+                "assess",
+                "detect",
+                "surplus",
+                "routine",
+                "estimate",
+                "strife",
+                "conservation"
+              ],
+              "correctAnswer": "detect"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2105,
-              "content": "Which word is related to 'shelter'?",
+              "id": 2016,
+              "content": "Taking place every other year.",
               "options": [
-                "shelter",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Biennial",
+                "Routine",
+                "Partial",
+                "Distinguishable"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is shelter as it was taught in the lesson."
+              "explanation": "Biennial means taking place every other year."
             },
             {
-              "id": 2106,
-              "content": "Which word is related to 'convention'?",
+              "id": 2017,
+              "content": "A dead body, especially of a human being rather than an animal.",
               "options": [
-                "convention",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Corpse",
+                "Surplus",
+                "Shelter",
+                "Database"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is convention as it was taught in the lesson."
+              "explanation": "A corpse is a dead body."
             },
             {
-              "id": 2107,
-              "content": "Which word is related to 'nevertheless'?",
+              "id": 2018,
+              "content": "To prove more powerful than opposing forces; be victorious.",
               "options": [
-                "nevertheless",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Prevail",
+                "Assess",
+                "Detect",
+                "Root out"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is nevertheless as it was taught in the lesson."
+              "explanation": "To prevail means to prove more powerful or be victorious."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2108,
-              "content": "The word 'surplus' is an English word.",
+              "id": 2019,
+              "content": "A 'surplus' is an amount of something left over when requirements have been met.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'surplus' is part of the English vocabulary."
+              "explanation": "True. Surplus means excess."
             },
             {
-              "id": 2109,
-              "content": "The word 'vociferous' is an English word.",
+              "id": 2020,
+              "content": "To 'root out' something means to plant it carefully in the ground.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'vociferous' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To root out means to find and eradicate."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2080,
-              "content": "According to the text: 'Comprehensive Reading\\nClosing in for the Kill?\\nAfter a decade of quiet, ivory poaching has started again in Kenya...'",
+              "id": 2021,
+              "content": "Where has ivory poaching started again after a decade of quiet?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "In South Africa",
+                "In Kenya",
+                "In Somalia",
+                "In Botswana"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'After a decade of quiet, ivory poaching has started again in Kenya.'"
             },
             {
-              "id": 2081,
-              "content": "According to the text: '\\nHeaped together, tail to trunk, ten dead elephants lie stinking in the Kenyan sun...'",
+              "id": 2022,
+              "content": "How many dead elephants were found in the huddle?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Five",
+                "Ten",
+                "Fifteen",
+                "One hundred"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text mentions: '...ten dead elephants lie stinking in the Kenyan sun.'"
             },
             {
-              "id": 2082,
-              "content": "According to the text: 'Their last panicked huddle made them a convenient target...'",
+              "id": 2023,
+              "content": "What happened to the poachers who killed the elephants?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They were all arrested.",
+                "They escaped unharmed with the ivory.",
+                "They left behind five dead men and the rest limped back to Somalia.",
+                "They surrendered to the police."
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The passage says: 'They left behind five dead men... The rest, including at least one who was badly wounded, limped back to Somalia...'"
             },
             {
-              "id": 2083,
-              "content": "According to the text: 'The poachers who killed them, though, had no such instinct...'",
+              "id": 2024,
+              "content": "Why were the elephants an easy target?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They were asleep",
+                "Their last panicked huddle made them a convenient target",
+                "They were drinking at a water-hole",
+                "They were sick"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'Their last panicked huddle made them a convenient target.'"
             },
             {
-              "id": 2084,
-              "content": "According to the text: 'They left behind five dead men, scattered along a 150 km trail...'",
+              "id": 2025,
+              "content": "What does the text imply about the poachers' instinct compared to the elephants' instinct?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They shared the same instinct",
+                "The poachers had a stronger instinct",
+                "The poachers had no such instinct as the elephants' panicked huddle",
+                "The elephants had no instinct"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text says about the poachers: 'The poachers who killed them, though, had no such instinct.'"
             }
           ]
         }

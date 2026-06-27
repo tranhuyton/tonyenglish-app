@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2150,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2101,
+              "content": "1. We need to analyze the economic [ 1 ] carefully.<br/><br/>2. It was a very [ 2 ] debate without any shouting.<br/><br/>3. The comedian's joke caused a loud [ 3 ] in the audience.<br/><br/>4. She has a strong [ 4 ] to travel the world.<br/><br/>5. The disease can be [ 5 ] if not treated quickly.",
               "options": [
                 "data",
-                "demographic",
+                "civilised",
+                "chuckle",
+                "urge",
+                "lethal",
                 "statistics",
                 "treatise",
-                "civilised",
                 "primitive",
-                "lethal",
                 "instinct",
-                "sublimation",
-                "urge"
+                "sublimation"
               ],
               "correctAnswer": "data"
             },
             {
-              "id": 2151,
+              "id": 2102,
               "content": "",
               "options": [
                 "data",
-                "demographic",
+                "civilised",
+                "chuckle",
+                "urge",
+                "lethal",
                 "statistics",
                 "treatise",
-                "civilised",
                 "primitive",
-                "lethal",
                 "instinct",
-                "sublimation",
-                "urge"
-              ],
-              "correctAnswer": "demographic"
-            },
-            {
-              "id": 2152,
-              "content": "",
-              "options": [
-                "data",
-                "demographic",
-                "statistics",
-                "treatise",
-                "civilised",
-                "primitive",
-                "lethal",
-                "instinct",
-                "sublimation",
-                "urge"
-              ],
-              "correctAnswer": "statistics"
-            },
-            {
-              "id": 2153,
-              "content": "",
-              "options": [
-                "data",
-                "demographic",
-                "statistics",
-                "treatise",
-                "civilised",
-                "primitive",
-                "lethal",
-                "instinct",
-                "sublimation",
-                "urge"
-              ],
-              "correctAnswer": "treatise"
-            },
-            {
-              "id": 2154,
-              "content": "",
-              "options": [
-                "data",
-                "demographic",
-                "statistics",
-                "treatise",
-                "civilised",
-                "primitive",
-                "lethal",
-                "instinct",
-                "sublimation",
-                "urge"
+                "sublimation"
               ],
               "correctAnswer": "civilised"
+            },
+            {
+              "id": 2103,
+              "content": "",
+              "options": [
+                "data",
+                "civilised",
+                "chuckle",
+                "urge",
+                "lethal",
+                "statistics",
+                "treatise",
+                "primitive",
+                "instinct",
+                "sublimation"
+              ],
+              "correctAnswer": "chuckle"
+            },
+            {
+              "id": 2104,
+              "content": "",
+              "options": [
+                "data",
+                "civilised",
+                "chuckle",
+                "urge",
+                "lethal",
+                "statistics",
+                "treatise",
+                "primitive",
+                "instinct",
+                "sublimation"
+              ],
+              "correctAnswer": "urge"
+            },
+            {
+              "id": 2105,
+              "content": "",
+              "options": [
+                "data",
+                "civilised",
+                "chuckle",
+                "urge",
+                "lethal",
+                "statistics",
+                "treatise",
+                "primitive",
+                "instinct",
+                "sublimation"
+              ],
+              "correctAnswer": "lethal"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2155,
-              "content": "Which word is related to 'primitive'?",
+              "id": 2106,
+              "content": "A written work dealing formally and systematically with a subject.",
               "options": [
-                "primitive",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Treatise",
+                "Comedy",
+                "Profession",
+                "Avenue"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is primitive as it was taught in the lesson."
+              "explanation": "A treatise is a systematic written work on a subject."
             },
             {
-              "id": 2156,
-              "content": "Which word is related to 'lethal'?",
+              "id": 2107,
+              "content": "Contemptuous ridicule or mockery.",
               "options": [
-                "lethal",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Derision",
+                "Sublimation",
+                "Convulsion",
+                "Sensitivity"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is lethal as it was taught in the lesson."
+              "explanation": "Derision means contemptuous ridicule."
             },
             {
-              "id": 2157,
-              "content": "Which word is related to 'instinct'?",
+              "id": 2108,
+              "content": "Relating to or typical of an early stage in the evolutionary or historical development of something.",
               "options": [
-                "instinct",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Primitive",
+                "Hostile",
+                "Noticeably",
+                "Enlightened"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is instinct as it was taught in the lesson."
+              "explanation": "Primitive means relating to an early stage of development."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2158,
-              "content": "The word 'sublimation' is an English word.",
+              "id": 2109,
+              "content": "An 'eternal' thing is something that lasts for a very short time.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'sublimation' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Eternal means lasting or existing forever."
             },
             {
-              "id": 2159,
-              "content": "The word 'urge' is an English word.",
+              "id": 2110,
+              "content": "'Racist' refers to a person who is prejudiced against or antagonistic toward people on the basis of their membership in a particular racial or ethnic group.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'urge' is part of the English vocabulary."
+              "explanation": "True. This is the definition of racist."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2200,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2111,
+              "content": "1. The comedian delivered a hilarious [ 1 ].<br/><br/>2. I will [ 2 ] that you are correct for now.<br/><br/>3. It was a [ 3 ] and not very funny joke.<br/><br/>4. The wasp's [ 4 ] was very painful.<br/><br/>5. We need to [ 5 ] the dog from eating the furniture.",
               "options": [
-                "coyote",
-                "chew off",
-                "European-Aryan Descent",
-                "crude",
-                "pun",
-                "pictogram",
-                "homophone",
-                "render",
                 "punchline",
-                "assume"
+                "assume",
+                "crude",
+                "sting",
+                "restrict",
+                "pun",
+                "homophone",
+                "intimate",
+                "guffaw",
+                "pest"
               ],
-              "correctAnswer": "coyote"
+              "correctAnswer": "punchline"
             },
             {
-              "id": 2201,
+              "id": 2112,
               "content": "",
               "options": [
-                "coyote",
-                "chew off",
-                "European-Aryan Descent",
-                "crude",
-                "pun",
-                "pictogram",
-                "homophone",
-                "render",
                 "punchline",
-                "assume"
+                "assume",
+                "crude",
+                "sting",
+                "restrict",
+                "pun",
+                "homophone",
+                "intimate",
+                "guffaw",
+                "pest"
               ],
-              "correctAnswer": "chew off"
+              "correctAnswer": "assume"
             },
             {
-              "id": 2202,
+              "id": 2113,
               "content": "",
               "options": [
-                "coyote",
-                "chew off",
-                "European-Aryan Descent",
-                "crude",
-                "pun",
-                "pictogram",
-                "homophone",
-                "render",
                 "punchline",
-                "assume"
-              ],
-              "correctAnswer": "European-Aryan Descent"
-            },
-            {
-              "id": 2203,
-              "content": "",
-              "options": [
-                "coyote",
-                "chew off",
-                "European-Aryan Descent",
+                "assume",
                 "crude",
+                "sting",
+                "restrict",
                 "pun",
-                "pictogram",
                 "homophone",
-                "render",
-                "punchline",
-                "assume"
+                "intimate",
+                "guffaw",
+                "pest"
               ],
               "correctAnswer": "crude"
             },
             {
-              "id": 2204,
+              "id": 2114,
               "content": "",
               "options": [
-                "coyote",
-                "chew off",
-                "European-Aryan Descent",
-                "crude",
-                "pun",
-                "pictogram",
-                "homophone",
-                "render",
                 "punchline",
-                "assume"
+                "assume",
+                "crude",
+                "sting",
+                "restrict",
+                "pun",
+                "homophone",
+                "intimate",
+                "guffaw",
+                "pest"
               ],
-              "correctAnswer": "pun"
+              "correctAnswer": "sting"
+            },
+            {
+              "id": 2115,
+              "content": "",
+              "options": [
+                "punchline",
+                "assume",
+                "crude",
+                "sting",
+                "restrict",
+                "pun",
+                "homophone",
+                "intimate",
+                "guffaw",
+                "pest"
+              ],
+              "correctAnswer": "restrict"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2205,
-              "content": "Which word is related to 'pictogram'?",
+              "id": 2116,
+              "content": "A joke exploiting the different possible meanings of a word.",
               "options": [
-                "pictogram",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Pun",
+                "Pictogram",
+                "Gazetteer",
+                "Scorpion"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is pictogram as it was taught in the lesson."
+              "explanation": "A pun is a play on words."
             },
             {
-              "id": 2206,
-              "content": "Which word is related to 'homophone'?",
+              "id": 2117,
+              "content": "Showing a lack of intelligence or thought; stupid.",
               "options": [
-                "homophone",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Dim-witted",
+                "Subtle",
+                "Revealing",
+                "Wry"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is homophone as it was taught in the lesson."
+              "explanation": "Dim-witted means lacking intelligence."
             },
             {
-              "id": 2207,
-              "content": "Which word is related to 'render'?",
+              "id": 2118,
+              "content": "To cry or wail lustily.",
               "options": [
-                "render",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Bawl",
+                "Guffaw",
+                "Crash",
+                "Smash"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is render as it was taught in the lesson."
+              "explanation": "To bawl means to cry or wail loudly."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2208,
-              "content": "The word 'punchline' is an English word.",
+              "id": 2119,
+              "content": "A 'homophone' is a word that sounds the same as another word but has a different meaning or spelling.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'punchline' is part of the English vocabulary."
+              "explanation": "True. Homophones sound the same but have different meanings."
             },
             {
-              "id": 2209,
-              "content": "The word 'assume' is an English word.",
+              "id": 2120,
+              "content": "'Subtle' means very loud and obvious.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'assume' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Subtle means so delicate or precise as to be difficult to analyze or describe; not obvious."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2180,
-              "content": "According to the text: 'Comprehensive Reading\\nYou Think That's Funny?\\nTo understand a country, you can study its economic data and demographic statistics...'",
+              "id": 2121,
+              "content": "According to the text, what are two ways to understand a country?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Study its food and music",
+                "Study its economic data/demographic statistics, or collect its jokes",
+                "Study its history and geography",
+                "Study its literature and art"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text explicitly states: 'To understand a country, you can study its economic data and demographic statistics. Or you can collect its jokes.'"
             },
             {
-              "id": 2181,
-              "content": "According to the text: 'Or you can collect its jokes...'",
+              "id": 2122,
+              "content": "According to Charles Darwin, what is laughter?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A respiratory convulsion",
+                "A sign of happiness",
+                "A civilised form of a primitive lethal instinct",
+                "A uniquely human trait"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The passage says Darwin called it 'a civilised form of a primitive lethal instinct, a sublimation of the ancient urge to kill.'"
             },
             {
-              "id": 2182,
-              "content": "According to the text: '\\nWhat is laughter? According to Darwin's treatise \"On the Expression of Emotion in Men and Animals\", it is a civilised form of a primitive lethal instinct, a sublimation of the ancient urge to kill...'",
+              "id": 2123,
+              "content": "What did Darwin write his views on laughter in?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The Origin of Species",
+                "A comedy script",
+                "The treatise 'On the Expression of Emotion in Men and Animals'",
+                "A medical journal"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text references: '...Darwin's treatise \"On the Expression of Emotion in Men and Animals\"...'"
             },
             {
-              "id": 2183,
-              "content": "According to the text: 'According to Jonathan Miller, a doctor and comedian, it is a respiratory convulsion over which we have little control...'",
+              "id": 2124,
+              "content": "According to Jonathan Miller, what is laughter?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "An urge to kill",
+                "A respiratory convulsion over which we have little control",
+                "A social construct",
+                "A form of crying"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'According to Jonathan Miller... it is a respiratory convulsion over which we have little control.'"
             },
             {
-              "id": 2184,
-              "content": "According to the text: '\\nSerious analysis of the nature of comedy tends to be horribly unfunny...'",
+              "id": 2125,
+              "content": "What is Jonathan Miller's profession as mentioned in the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Biologist and author",
+                "Doctor and comedian",
+                "Statistician and politician",
+                "Sociologist and demographic expert"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage refers to him as 'Jonathan Miller, a doctor and comedian...'"
             }
           ]
         }

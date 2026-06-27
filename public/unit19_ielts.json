@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1950,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1901,
+              "content": "1. There is a [ 1 ] fear of spiders in some people.<br/><br/>2. It is considered a [ 2 ] to speak about certain topics.<br/><br/>3. The discovery is of great historical [ 3 ].<br/><br/>4. They felt [ 4 ] before the big interview.<br/><br/>5. Three is an [ 5 ].",
               "options": [
-                "taboo",
-                "concern",
                 "deep-seated",
-                "superstition",
-                "uneasy",
-                "at the prospect of",
-                "attach",
-                "rationalist",
-                "multiple",
-                "mystical"
-              ],
-              "correctAnswer": "taboo"
-            },
-            {
-              "id": 1951,
-              "content": "",
-              "options": [
                 "taboo",
-                "concern",
-                "deep-seated",
-                "superstition",
+                "significance",
                 "uneasy",
-                "at the prospect of",
-                "attach",
-                "rationalist",
-                "multiple",
-                "mystical"
-              ],
-              "correctAnswer": "concern"
-            },
-            {
-              "id": 1952,
-              "content": "",
-              "options": [
-                "taboo",
+                "odd number",
                 "concern",
-                "deep-seated",
                 "superstition",
-                "uneasy",
-                "at the prospect of",
-                "attach",
                 "rationalist",
-                "multiple",
-                "mystical"
+                "mystical",
+                "multiple"
               ],
               "correctAnswer": "deep-seated"
             },
             {
-              "id": 1953,
+              "id": 1902,
               "content": "",
               "options": [
-                "taboo",
-                "concern",
                 "deep-seated",
-                "superstition",
+                "taboo",
+                "significance",
                 "uneasy",
-                "at the prospect of",
-                "attach",
+                "odd number",
+                "concern",
+                "superstition",
                 "rationalist",
-                "multiple",
-                "mystical"
+                "mystical",
+                "multiple"
               ],
-              "correctAnswer": "superstition"
+              "correctAnswer": "taboo"
             },
             {
-              "id": 1954,
+              "id": 1903,
               "content": "",
               "options": [
-                "taboo",
-                "concern",
                 "deep-seated",
-                "superstition",
+                "taboo",
+                "significance",
                 "uneasy",
-                "at the prospect of",
-                "attach",
+                "odd number",
+                "concern",
+                "superstition",
                 "rationalist",
-                "multiple",
-                "mystical"
+                "mystical",
+                "multiple"
+              ],
+              "correctAnswer": "significance"
+            },
+            {
+              "id": 1904,
+              "content": "",
+              "options": [
+                "deep-seated",
+                "taboo",
+                "significance",
+                "uneasy",
+                "odd number",
+                "concern",
+                "superstition",
+                "rationalist",
+                "mystical",
+                "multiple"
               ],
               "correctAnswer": "uneasy"
+            },
+            {
+              "id": 1905,
+              "content": "",
+              "options": [
+                "deep-seated",
+                "taboo",
+                "significance",
+                "uneasy",
+                "odd number",
+                "concern",
+                "superstition",
+                "rationalist",
+                "mystical",
+                "multiple"
+              ],
+              "correctAnswer": "odd number"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1955,
-              "content": "Which word is related to 'at the prospect of'?",
+              "id": 1906,
+              "content": "A person who moves with a group of others to live in a new country or area.",
               "options": [
-                "at the prospect of",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Settler",
+                "Sharpshooter",
+                "Rationalist",
+                "Source"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is at the prospect of as it was taught in the lesson."
+              "explanation": "A settler is someone who moves to a new area to live."
             },
             {
-              "id": 1956,
-              "content": "Which word is related to 'attach'?",
+              "id": 1907,
+              "content": "A measure taken in advance to prevent something dangerous or unpleasant from happening.",
               "options": [
-                "attach",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Precaution",
+                "Superstition",
+                "Current",
+                "Taboo"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is attach as it was taught in the lesson."
+              "explanation": "A precaution is a measure taken in advance to prevent harm."
             },
             {
-              "id": 1957,
-              "content": "Which word is related to 'rationalist'?",
+              "id": 1908,
+              "content": "Exactly; in a literal manner or sense.",
               "options": [
-                "rationalist",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Literally",
+                "Significant",
+                "Popular",
+                "Logical"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is rationalist as it was taught in the lesson."
+              "explanation": "Literally means exactly or in a literal manner."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1958,
-              "content": "The word 'multiple' is an English word.",
+              "id": 1909,
+              "content": "'Permissible' means not allowed.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'multiple' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Permissible means permitted or allowed."
             },
             {
-              "id": 1959,
-              "content": "The word 'mystical' is an English word.",
+              "id": 1910,
+              "content": "To 'exert' means to apply or bring to bear (a force, influence, or quality).",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'mystical' is part of the English vocabulary."
+              "explanation": "True. To exert is to apply force or influence."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2000,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1911,
+              "content": "1. Black cats crossing your path is considered a bad [ 1 ].<br/><br/>2. She is very [ 2 ] and believes in ghosts.<br/><br/>3. The journey across the ocean was long and [ 3 ].<br/><br/>4. The doctor tried to [ 4 ] the wound.<br/><br/>5. Some people wear a lucky [ 5 ] to ward off evil.",
               "options": [
+                "omen",
+                "superstitious",
+                "perilous",
+                "heal",
+                "charm",
                 "astrologer",
                 "horseshoe",
                 "nail",
-                "cab-driver",
-                "registration plate",
-                "omen",
-                "Anglo-Saxon",
-                "charm",
-                "heal",
-                "occur"
+                "occur",
+                "survive"
               ],
-              "correctAnswer": "astrologer"
+              "correctAnswer": "omen"
             },
             {
-              "id": 2001,
+              "id": 1912,
               "content": "",
               "options": [
+                "omen",
+                "superstitious",
+                "perilous",
+                "heal",
+                "charm",
                 "astrologer",
                 "horseshoe",
                 "nail",
-                "cab-driver",
-                "registration plate",
-                "omen",
-                "Anglo-Saxon",
-                "charm",
-                "heal",
-                "occur"
+                "occur",
+                "survive"
               ],
-              "correctAnswer": "horseshoe"
+              "correctAnswer": "superstitious"
             },
             {
-              "id": 2002,
+              "id": 1913,
               "content": "",
               "options": [
+                "omen",
+                "superstitious",
+                "perilous",
+                "heal",
+                "charm",
                 "astrologer",
                 "horseshoe",
                 "nail",
-                "cab-driver",
-                "registration plate",
-                "omen",
-                "Anglo-Saxon",
-                "charm",
-                "heal",
-                "occur"
+                "occur",
+                "survive"
               ],
-              "correctAnswer": "nail"
+              "correctAnswer": "perilous"
             },
             {
-              "id": 2003,
+              "id": 1914,
               "content": "",
               "options": [
+                "omen",
+                "superstitious",
+                "perilous",
+                "heal",
+                "charm",
                 "astrologer",
                 "horseshoe",
                 "nail",
-                "cab-driver",
-                "registration plate",
-                "omen",
-                "Anglo-Saxon",
-                "charm",
-                "heal",
-                "occur"
+                "occur",
+                "survive"
               ],
-              "correctAnswer": "cab-driver"
+              "correctAnswer": "heal"
             },
             {
-              "id": 2004,
+              "id": 1915,
               "content": "",
               "options": [
+                "omen",
+                "superstitious",
+                "perilous",
+                "heal",
+                "charm",
                 "astrologer",
                 "horseshoe",
                 "nail",
-                "cab-driver",
-                "registration plate",
-                "omen",
-                "Anglo-Saxon",
-                "charm",
-                "heal",
-                "occur"
+                "occur",
+                "survive"
               ],
-              "correctAnswer": "registration plate"
+              "correctAnswer": "charm"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2005,
-              "content": "Which word is related to 'omen'?",
+              "id": 1916,
+              "content": "Not logical or reasonable.",
               "options": [
-                "omen",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Irrational",
+                "Superstitious",
+                "Perilous",
+                "Ripe"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is omen as it was taught in the lesson."
+              "explanation": "Irrational means not logical or reasonable."
             },
             {
-              "id": 2006,
-              "content": "Which word is related to 'Anglo-Saxon'?",
+              "id": 1917,
+              "content": "Fearful apprehension; a feeling that something bad will happen.",
               "options": [
-                "Anglo-Saxon",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Foreboding",
+                "Betrayal",
+                "Awe",
+                "Progression"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is Anglo-Saxon as it was taught in the lesson."
+              "explanation": "Foreboding is a feeling that something bad will happen."
             },
             {
-              "id": 2007,
-              "content": "Which word is related to 'charm'?",
+              "id": 1918,
+              "content": "Developed to the point of readiness for harvesting and eating.",
               "options": [
-                "charm",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Ripe",
+                "Irrational",
+                "Superstitious",
+                "Oddly"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is charm as it was taught in the lesson."
+              "explanation": "Ripe means ready for harvesting or eating."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2008,
-              "content": "The word 'heal' is an English word.",
+              "id": 1919,
+              "content": "To 'derive from' means to obtain something from a specified source.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'heal' is part of the English vocabulary."
+              "explanation": "True. Deriving from means getting something from a source."
             },
             {
-              "id": 2009,
-              "content": "The word 'occur' is an English word.",
+              "id": 1920,
+              "content": "An 'astrologer' is someone who studies the physical structure of the earth.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'occur' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. An astrologer studies the movements and relative positions of celestial bodies to divine information about human affairs."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1980,
-              "content": "According to the text: 'Comprehensive Reading\\nUnlucky Thirteen\\nOne of our strongest taboos concerns the number 13...'",
+              "id": 1921,
+              "content": "What is considered perhaps the most deep-seated superstition in the West?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Fear of black cats",
+                "Fear of the number 13",
+                "Walking under a ladder",
+                "Breaking a mirror"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'One of our strongest taboos concerns the number 13. It is perhaps our most deep-seated superstition...'"
             },
             {
-              "id": 1981,
-              "content": "According to the text: '\\nIt is perhaps our most deep-seated superstition; it would be difficult to find a Western-educated person who did not fear or feel uneasy at the prospect of sitting 13 at table, or being allocated room 13 on the 13th floor of a hotel, and so on...'",
+              "id": 1922,
+              "content": "How do many Western-educated people feel about sitting 13 at a table?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They feel lucky",
+                "They feel uneasy",
+                "They don't care at all",
+                "They feel excited"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage mentions it would be difficult to find one who 'did not fear or feel uneasy at the prospect of sitting 13 at table...'"
             },
             {
-              "id": 1982,
-              "content": "According to the text: '\\nThere are also superstitions attached to other numbers; even those master rationalists, the ancient Greeks, believed that all numbers and their multiples had some mystical significance...'",
+              "id": 1923,
+              "content": "Did the ancient Greeks believe that numbers had mystical significance?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, they did",
+                "No, they were rationalists who rejected this",
+                "Only even numbers",
+                "Only the number 13"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text states: '...even those master rationalists, the ancient Greeks, believed that all numbers and their multiples had some mystical significance.'"
             },
             {
-              "id": 1983,
-              "content": "According to the text: '\\nThose numbers between one and 13 were thought in particular to exert a powerful influence over the affairs of men...'",
+              "id": 1924,
+              "content": "What is one example of a situation where the number 13 is avoided?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Being allocated room 13 on the 13th floor",
+                "Having 13 coins in your pocket",
+                "Working for 13 hours",
+                "Driving 13 miles"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text provides this example: '...or being allocated room 13 on the 13th floor of a hotel, and so on.'"
             },
             {
-              "id": 1984,
-              "content": "According to the text: '\\nThe odd numbers three, seven, nine, and 13 appear in some superstitions still current today...'",
+              "id": 1925,
+              "content": "Are superstitions in the West limited only to the number 13?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, it is the only one",
+                "No, there are superstitions attached to other numbers",
+                "The text does not say",
+                "Yes, other numbers are always considered lucky"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text notes: 'There are also superstitions attached to other numbers...'"
             }
           ]
         }
