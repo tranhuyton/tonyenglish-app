@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2250,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2201,
+              "content": "1. The [ 1 ] of the universe is a mystery.<br/><br/>2. There is an old [ 2 ] about a dragon living in this cave.<br/><br/>3. We visited the [ 3 ] ruins of Rome.<br/><br/>4. He won the 100m sprint [ 4 ] at the Olympics.<br/><br/>5. The journey took [ 5 ] three hours.",
               "options": [
                 "origin",
-                "Olympic Games",
                 "legend",
                 "ancient",
-                "Heracles",
-                "Zeus",
-                "BCE",
-                "naked",
                 "event",
-                "stade"
+                "approximately",
+                "champion",
+                "abolish",
+                "pagan",
+                "revival",
+                "aristocrat"
               ],
               "correctAnswer": "origin"
             },
             {
-              "id": 2251,
+              "id": 2202,
               "content": "",
               "options": [
                 "origin",
-                "Olympic Games",
                 "legend",
                 "ancient",
-                "Heracles",
-                "Zeus",
-                "BCE",
-                "naked",
                 "event",
-                "stade"
-              ],
-              "correctAnswer": "Olympic Games"
-            },
-            {
-              "id": 2252,
-              "content": "",
-              "options": [
-                "origin",
-                "Olympic Games",
-                "legend",
-                "ancient",
-                "Heracles",
-                "Zeus",
-                "BCE",
-                "naked",
-                "event",
-                "stade"
+                "approximately",
+                "champion",
+                "abolish",
+                "pagan",
+                "revival",
+                "aristocrat"
               ],
               "correctAnswer": "legend"
             },
             {
-              "id": 2253,
+              "id": 2203,
               "content": "",
               "options": [
                 "origin",
-                "Olympic Games",
                 "legend",
                 "ancient",
-                "Heracles",
-                "Zeus",
-                "BCE",
-                "naked",
                 "event",
-                "stade"
+                "approximately",
+                "champion",
+                "abolish",
+                "pagan",
+                "revival",
+                "aristocrat"
               ],
               "correctAnswer": "ancient"
             },
             {
-              "id": 2254,
+              "id": 2204,
               "content": "",
               "options": [
                 "origin",
-                "Olympic Games",
                 "legend",
                 "ancient",
-                "Heracles",
-                "Zeus",
-                "BCE",
-                "naked",
                 "event",
-                "stade"
+                "approximately",
+                "champion",
+                "abolish",
+                "pagan",
+                "revival",
+                "aristocrat"
               ],
-              "correctAnswer": "Heracles"
+              "correctAnswer": "event"
+            },
+            {
+              "id": 2205,
+              "content": "",
+              "options": [
+                "origin",
+                "legend",
+                "ancient",
+                "event",
+                "approximately",
+                "champion",
+                "abolish",
+                "pagan",
+                "revival",
+                "aristocrat"
+              ],
+              "correctAnswer": "approximately"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2255,
-              "content": "Which word is related to 'Zeus'?",
+              "id": 2206,
+              "content": "To formally put an end to (a system, practice, or institution).",
               "options": [
-                "Zeus",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Abolish",
+                "Examine",
+                "Decide",
+                "Overrun"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is Zeus as it was taught in the lesson."
+              "explanation": "To abolish means to formally put an end to something."
             },
             {
-              "id": 2256,
-              "content": "Which word is related to 'BCE'?",
+              "id": 2207,
+              "content": "Physical strength and good health.",
               "options": [
-                "BCE",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Vigor",
+                "Stade",
+                "Revival",
+                "Legend"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is BCE as it was taught in the lesson."
+              "explanation": "Vigor means physical strength and good health."
             },
             {
-              "id": 2257,
-              "content": "Which word is related to 'naked'?",
+              "id": 2208,
+              "content": "To regard something as being caused by someone or something.",
               "options": [
-                "naked",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Attribute",
+                "Abolish",
+                "Examine",
+                "Decide"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is naked as it was taught in the lesson."
+              "explanation": "To attribute is to regard something as being caused by."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2258,
-              "content": "The word 'event' is an English word.",
+              "id": 2209,
+              "content": "A 'champion' is someone who has defeated or surpassed all rivals in a competition.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'event' is part of the English vocabulary."
+              "explanation": "True. A champion is a winner who has defeated all rivals."
             },
             {
-              "id": 2259,
-              "content": "The word 'stade' is an English word.",
+              "id": 2210,
+              "content": "'Specifically' means in a general and undefined manner.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'stade' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Specifically means in a way that is exact and clear; precisely."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2300,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2211,
+              "content": "1. She had a very [ 1 ] workout at the gym.<br/><br/>2. They hope to [ 2 ] the old traditions.<br/><br/>3. The speaker could not [ 3 ] the audience's interest.<br/><br/>4. The conference was held in a large [ 4 ].<br/><br/>5. We need to [ 5 ] the room for the party.",
               "options": [
                 "vigorous",
-                "meet with",
-                "USFSA",
-                "pitch",
                 "revive",
-                "oarsman",
-                "fencer",
-                "ally",
-                "touch upon",
-                "hitherto"
+                "arouse",
+                "auditorium",
+                "decorate",
+                "persistent",
+                "beneficent",
+                "unanimously",
+                "eloquently",
+                "extend"
               ],
               "correctAnswer": "vigorous"
             },
             {
-              "id": 2301,
+              "id": 2212,
               "content": "",
               "options": [
                 "vigorous",
-                "meet with",
-                "USFSA",
-                "pitch",
                 "revive",
-                "oarsman",
-                "fencer",
-                "ally",
-                "touch upon",
-                "hitherto"
-              ],
-              "correctAnswer": "meet with"
-            },
-            {
-              "id": 2302,
-              "content": "",
-              "options": [
-                "vigorous",
-                "meet with",
-                "USFSA",
-                "pitch",
-                "revive",
-                "oarsman",
-                "fencer",
-                "ally",
-                "touch upon",
-                "hitherto"
-              ],
-              "correctAnswer": "USFSA"
-            },
-            {
-              "id": 2303,
-              "content": "",
-              "options": [
-                "vigorous",
-                "meet with",
-                "USFSA",
-                "pitch",
-                "revive",
-                "oarsman",
-                "fencer",
-                "ally",
-                "touch upon",
-                "hitherto"
-              ],
-              "correctAnswer": "pitch"
-            },
-            {
-              "id": 2304,
-              "content": "",
-              "options": [
-                "vigorous",
-                "meet with",
-                "USFSA",
-                "pitch",
-                "revive",
-                "oarsman",
-                "fencer",
-                "ally",
-                "touch upon",
-                "hitherto"
+                "arouse",
+                "auditorium",
+                "decorate",
+                "persistent",
+                "beneficent",
+                "unanimously",
+                "eloquently",
+                "extend"
               ],
               "correctAnswer": "revive"
+            },
+            {
+              "id": 2213,
+              "content": "",
+              "options": [
+                "vigorous",
+                "revive",
+                "arouse",
+                "auditorium",
+                "decorate",
+                "persistent",
+                "beneficent",
+                "unanimously",
+                "eloquently",
+                "extend"
+              ],
+              "correctAnswer": "arouse"
+            },
+            {
+              "id": 2214,
+              "content": "",
+              "options": [
+                "vigorous",
+                "revive",
+                "arouse",
+                "auditorium",
+                "decorate",
+                "persistent",
+                "beneficent",
+                "unanimously",
+                "eloquently",
+                "extend"
+              ],
+              "correctAnswer": "auditorium"
+            },
+            {
+              "id": 2215,
+              "content": "",
+              "options": [
+                "vigorous",
+                "revive",
+                "arouse",
+                "auditorium",
+                "decorate",
+                "persistent",
+                "beneficent",
+                "unanimously",
+                "eloquently",
+                "extend"
+              ],
+              "correctAnswer": "decorate"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2305,
-              "content": "Which word is related to 'oarsman'?",
+              "id": 2216,
+              "content": "Until now or until the point in time under discussion.",
               "options": [
-                "oarsman",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Hitherto",
+                "Unanimously",
+                "Eloquently",
+                "Specifically"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is oarsman as it was taught in the lesson."
+              "explanation": "Hitherto means until now."
             },
             {
-              "id": 2306,
-              "content": "Which word is related to 'fencer'?",
+              "id": 2217,
+              "content": "Continuing firmly or obstinately in a course of action in spite of difficulty or opposition.",
               "options": [
-                "fencer",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Persistent",
+                "Vigorous",
+                "Beneficent",
+                "Well-connected"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is fencer as it was taught in the lesson."
+              "explanation": "Persistent means continuing firmly in spite of difficulty."
             },
             {
-              "id": 2307,
-              "content": "Which word is related to 'ally'?",
+              "id": 2218,
+              "content": "A person sent or authorized to represent others.",
               "options": [
-                "ally",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Delegate",
+                "Ally",
+                "Fencer",
+                "Oarsman"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is ally as it was taught in the lesson."
+              "explanation": "A delegate is a person authorized to represent others."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2308,
-              "content": "The word 'touch upon' is an English word.",
+              "id": 2219,
+              "content": "'Unanimously' means with the agreement of all people involved.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'touch upon' is part of the English vocabulary."
+              "explanation": "True. Unanimously means fully in agreement."
             },
             {
-              "id": 2309,
-              "content": "The word 'hitherto' is an English word.",
+              "id": 2220,
+              "content": "To 'touch upon' a subject means to write a whole book about it.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'hitherto' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To touch upon means to mention a subject briefly or casually."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2280,
-              "content": "According to the text: 'Comprehensive Reading\\nOrigin of the Modern Olympic Games\\nAccording to legend, the ancient Olympic Games were founded by Heracles (the Roman Hercules), a son of Zeus...'",
+              "id": 2221,
+              "content": "According to legend, who founded the ancient Olympic Games?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Coroebus",
+                "Zeus",
+                "Heracles",
+                "A Roman Emperor"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text states: 'According to legend, the ancient Olympic Games were founded by Heracles...'"
             },
             {
-              "id": 2281,
-              "content": "According to the text: 'Yet the first Olympic Games for which we still have written records were held in 776 BCE (though it is generally believed that the Games had been going on for many years already)...'",
+              "id": 2222,
+              "content": "When were the first Olympic Games for which we still have written records held?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "192 BCE",
+                "776 BCE",
+                "776 CE",
+                "In the 19th century"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage notes: 'Yet the first Olympic Games for which we still have written records were held in 776 BCE...'"
             },
             {
-              "id": 2282,
-              "content": "According to the text: 'At this Olympic Games, a naked runner, Coroebus (a cook from Elis), won the sole event at the Olympics, the stade—a run of approximately 192 metres (210 yards)...'",
+              "id": 2223,
+              "content": "Had the Games been going on before 776 BCE?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, it is generally believed so",
+                "No, 776 BCE was the very first time",
+                "Only in Rome",
+                "The text does not mention this"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The text states: '(though it is generally believed that the Games had been going on for many years already)'."
             },
             {
-              "id": 2283,
-              "content": "According to the text: 'This made Coroebus the very first Olympic champion in history...'",
+              "id": 2224,
+              "content": "Who was Coroebus?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A son of Zeus",
+                "A naked runner and cook from Elis",
+                "A Roman Emperor",
+                "The founder of the Games"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text explicitly says: '...a naked runner, Coroebus (a cook from Elis), won the sole event...'"
             },
             {
-              "id": 2284,
-              "content": "According to the text: '\\nThe ancient Olympic Games grew and continued to be played every four years for nearly 1,200 years...'",
+              "id": 2225,
+              "content": "What was the sole event at the 776 BCE Olympics?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Wrestling",
+                "Marathon",
+                "The stade",
+                "Chariot racing"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The passage says: 'won the sole event at the Olympics, the stade...'"
             }
           ]
         }

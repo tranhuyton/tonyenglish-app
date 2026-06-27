@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2450,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2401,
+              "content": "1. She is a chronic [ 1 ] of migraines.<br/><br/>2. We need to [ 2 ] the symptoms before they get worse.<br/><br/>3. The disease can [ 3 ] anyone regardless of age.<br/><br/>4. High blood [ 4 ] is a serious condition.<br/><br/>5. Bright lights can [ 5 ] a headache.",
               "options": [
+                "sufferer",
+                "alleviate",
+                "afflict",
+                "pressure",
+                "trigger",
                 "traditional",
                 "migraine",
-                "significant",
                 "consequence",
-                "sufferer",
-                "some",
-                "at a cost",
-                "reckon",
-                "pop",
-                "pill"
-              ],
-              "correctAnswer": "traditional"
-            },
-            {
-              "id": 2451,
-              "content": "",
-              "options": [
-                "traditional",
-                "migraine",
-                "significant",
-                "consequence",
-                "sufferer",
-                "some",
-                "at a cost",
-                "reckon",
-                "pop",
-                "pill"
-              ],
-              "correctAnswer": "migraine"
-            },
-            {
-              "id": 2452,
-              "content": "",
-              "options": [
-                "traditional",
-                "migraine",
-                "significant",
-                "consequence",
-                "sufferer",
-                "some",
-                "at a cost",
-                "reckon",
-                "pop",
-                "pill"
-              ],
-              "correctAnswer": "significant"
-            },
-            {
-              "id": 2453,
-              "content": "",
-              "options": [
-                "traditional",
-                "migraine",
-                "significant",
-                "consequence",
-                "sufferer",
-                "some",
-                "at a cost",
-                "reckon",
-                "pop",
-                "pill"
-              ],
-              "correctAnswer": "consequence"
-            },
-            {
-              "id": 2454,
-              "content": "",
-              "options": [
-                "traditional",
-                "migraine",
-                "significant",
-                "consequence",
-                "sufferer",
-                "some",
-                "at a cost",
-                "reckon",
-                "pop",
-                "pill"
+                "pill",
+                "therapy"
               ],
               "correctAnswer": "sufferer"
+            },
+            {
+              "id": 2402,
+              "content": "",
+              "options": [
+                "sufferer",
+                "alleviate",
+                "afflict",
+                "pressure",
+                "trigger",
+                "traditional",
+                "migraine",
+                "consequence",
+                "pill",
+                "therapy"
+              ],
+              "correctAnswer": "alleviate"
+            },
+            {
+              "id": 2403,
+              "content": "",
+              "options": [
+                "sufferer",
+                "alleviate",
+                "afflict",
+                "pressure",
+                "trigger",
+                "traditional",
+                "migraine",
+                "consequence",
+                "pill",
+                "therapy"
+              ],
+              "correctAnswer": "afflict"
+            },
+            {
+              "id": 2404,
+              "content": "",
+              "options": [
+                "sufferer",
+                "alleviate",
+                "afflict",
+                "pressure",
+                "trigger",
+                "traditional",
+                "migraine",
+                "consequence",
+                "pill",
+                "therapy"
+              ],
+              "correctAnswer": "pressure"
+            },
+            {
+              "id": 2405,
+              "content": "",
+              "options": [
+                "sufferer",
+                "alleviate",
+                "afflict",
+                "pressure",
+                "trigger",
+                "traditional",
+                "migraine",
+                "consequence",
+                "pill",
+                "therapy"
+              ],
+              "correctAnswer": "trigger"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2455,
-              "content": "Which word is related to 'some'?",
+              "id": 2406,
+              "content": "To make (suffering, deficiency, or a problem) less severe.",
               "options": [
-                "some",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Alleviate",
+                "Constrict",
+                "Dilate",
+                "Curb"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is some as it was taught in the lesson."
+              "explanation": "To alleviate is to make suffering less severe."
             },
             {
-              "id": 2456,
-              "content": "Which word is related to 'at a cost'?",
+              "id": 2407,
+              "content": "To make or become narrower, especially by encircling pressure.",
               "options": [
-                "at a cost",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Constrict",
+                "Function",
+                "Malfunction",
+                "Dilate"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is at a cost as it was taught in the lesson."
+              "explanation": "Constrict means to make narrower."
             },
             {
-              "id": 2457,
-              "content": "Which word is related to 'reckon'?",
+              "id": 2408,
+              "content": "A physical or mental feature which is regarded as indicating a condition of disease.",
               "options": [
-                "reckon",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Symptom",
+                "Therapy",
+                "Disorder",
+                "Aura"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is reckon as it was taught in the lesson."
+              "explanation": "A symptom is a feature indicating disease."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2458,
-              "content": "The word 'pop' is an English word.",
+              "id": 2409,
+              "content": "To 'dilate' means to make or become wider, larger, or more open.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'pop' is part of the English vocabulary."
+              "explanation": "True. Dilate means to make wider."
             },
             {
-              "id": 2459,
-              "content": "The word 'pill' is an English word.",
+              "id": 2410,
+              "content": "A 'neurological' disorder relates to the heart.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'pill' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Neurological relates to the anatomy, functions, and organic disorders of nerves and the nervous system."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2500,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2411,
+              "content": "1. The doctor wrote a [ 1 ] for the medicine.<br/><br/>2. Extreme [ 2 ] can cause you to fall asleep at work.<br/><br/>3. The scientist proposed a new [ 3 ] to explain the phenomenon.<br/><br/>4. The machine experienced a sudden [ 4 ] of data.<br/><br/>5. We need to [ 5 ] the results of the experiment.",
               "options": [
-                "cortex",
-                "fire off",
-                "wildly",
-                "quiescent",
-                "phenomena",
-                "diameter",
+                "prescription",
+                "fatigue",
+                "hypothesis",
+                "overload",
                 "observe",
+                "cortex",
                 "dilatation",
-                "feature",
-                "associated with"
+                "signal",
+                "scan",
+                "trial"
               ],
-              "correctAnswer": "cortex"
+              "correctAnswer": "prescription"
             },
             {
-              "id": 2501,
+              "id": 2412,
               "content": "",
               "options": [
-                "cortex",
-                "fire off",
-                "wildly",
-                "quiescent",
-                "phenomena",
-                "diameter",
+                "prescription",
+                "fatigue",
+                "hypothesis",
+                "overload",
                 "observe",
+                "cortex",
                 "dilatation",
-                "feature",
-                "associated with"
+                "signal",
+                "scan",
+                "trial"
               ],
-              "correctAnswer": "fire off"
+              "correctAnswer": "fatigue"
             },
             {
-              "id": 2502,
+              "id": 2413,
               "content": "",
               "options": [
-                "cortex",
-                "fire off",
-                "wildly",
-                "quiescent",
-                "phenomena",
-                "diameter",
+                "prescription",
+                "fatigue",
+                "hypothesis",
+                "overload",
                 "observe",
+                "cortex",
                 "dilatation",
-                "feature",
-                "associated with"
+                "signal",
+                "scan",
+                "trial"
               ],
-              "correctAnswer": "wildly"
+              "correctAnswer": "hypothesis"
             },
             {
-              "id": 2503,
+              "id": 2414,
               "content": "",
               "options": [
-                "cortex",
-                "fire off",
-                "wildly",
-                "quiescent",
-                "phenomena",
-                "diameter",
+                "prescription",
+                "fatigue",
+                "hypothesis",
+                "overload",
                 "observe",
+                "cortex",
                 "dilatation",
-                "feature",
-                "associated with"
+                "signal",
+                "scan",
+                "trial"
               ],
-              "correctAnswer": "quiescent"
+              "correctAnswer": "overload"
             },
             {
-              "id": 2504,
+              "id": 2415,
               "content": "",
               "options": [
-                "cortex",
-                "fire off",
-                "wildly",
-                "quiescent",
-                "phenomena",
-                "diameter",
+                "prescription",
+                "fatigue",
+                "hypothesis",
+                "overload",
                 "observe",
+                "cortex",
                 "dilatation",
-                "feature",
-                "associated with"
+                "signal",
+                "scan",
+                "trial"
               ],
-              "correctAnswer": "phenomena"
+              "correctAnswer": "observe"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2505,
-              "content": "Which word is related to 'diameter'?",
+              "id": 2416,
+              "content": "Not pleasant to taste.",
               "options": [
-                "diameter",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Unpalatable",
+                "Quiescent",
+                "Imaginative",
+                "Precise"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is diameter as it was taught in the lesson."
+              "explanation": "Unpalatable means not pleasant to taste."
             },
             {
-              "id": 2506,
-              "content": "Which word is related to 'observe'?",
+              "id": 2417,
+              "content": "To prevent from happening or succeeding.",
               "options": [
-                "observe",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Block",
+                "Endorse",
+                "Amplify",
+                "Distract"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is observe as it was taught in the lesson."
+              "explanation": "To block means to prevent from happening."
             },
             {
-              "id": 2507,
-              "content": "Which word is related to 'dilatation'?",
+              "id": 2418,
+              "content": "To declare one's public approval or support of.",
               "options": [
-                "dilatation",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Endorse",
+                "Embark on",
+                "Act on",
+                "Rely on"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is dilatation as it was taught in the lesson."
+              "explanation": "To endorse means to declare public approval or support of."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2508,
-              "content": "The word 'feature' is an English word.",
+              "id": 2419,
+              "content": "To 'go awry' means to go exactly as planned.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'feature' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To go awry means to go away from the appropriate, planned, or expected course; amiss."
             },
             {
-              "id": 2509,
-              "content": "The word 'associated with' is an English word.",
+              "id": 2420,
+              "content": "'Fatigue' is extreme tiredness resulting from mental or physical exertion or illness.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'associated with' is part of the English vocabulary."
+              "explanation": "True. Fatigue is extreme tiredness."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2480,
-              "content": "According to the text: 'Comprehensive Reading\\nHead Cases\\nThe traditional explanation for migraines may have things backwards—with significant consequences for sufferers...'",
+              "id": 2421,
+              "content": "How common are migraines according to the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "One woman in 15 and one man in five suffers from them",
+                "One woman in five and one man in 15 suffers from them",
+                "Very rare",
+                "Only people in Britain suffer from them"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'One woman in five and one man in 15 suffers from them.'"
             },
             {
-              "id": 2481,
-              "content": "According to the text: '\\nMigraines are a big headache...'",
+              "id": 2422,
+              "content": "What is the estimated cost of migraines to the British economy each year?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "£90,000",
+                "$1.1 million",
+                "£750m ($1.1 billion)",
+                "£1.5 billion"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text notes: '...at a cost to the economy reckoned by some to be £750m ($1.1 billion) a year.'"
             },
             {
-              "id": 2482,
-              "content": "According to the text: 'One woman in five and one man in 15 suffers from them...'",
+              "id": 2423,
+              "content": "How many people are absent from work every day in Britain as a result of migraines?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Some 90,000 people",
+                "About 750,000 people",
+                "One in five people",
+                "Very few people"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "A",
+              "explanation": "The passage says: 'In Britain alone, some 90,000 people are absent from work every day as a result of migraines...'"
             },
             {
-              "id": 2483,
-              "content": "According to the text: 'In Britain alone, some 90,000 people are absent from work every day as a result of migraines, at a cost to the economy reckoned by some to be £750m ($1...'",
+              "id": 2424,
+              "content": "What can popping a pill do for migraine sufferers?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Cure them permanently",
+                "Alleviate the symptoms",
+                "Make the migraine worse",
+                "Cause a stroke"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text says: 'Popping a pill or two can help to alleviate the symptoms...'"
             },
             {
-              "id": 2484,
-              "content": "According to the text: '1 billion) a year...'",
+              "id": 2425,
+              "content": "What does the text imply about the traditional explanation for migraines?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "It is completely correct",
+                "It may have things backwards",
+                "It has no consequences for sufferers",
+                "It was discovered recently"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text begins: 'The traditional explanation for migraines may have things backwards—with significant consequences for sufferers.'"
             }
           ]
         }

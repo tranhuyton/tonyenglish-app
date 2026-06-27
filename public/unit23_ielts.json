@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2350,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2301,
+              "content": "1. There is a lot of economic [ 1 ] right now.<br/><br/>2. The school will [ 2 ] new teachers next month.<br/><br/>3. The company is facing a financial [ 3 ].<br/><br/>4. She is a very [ 4 ] candidate with a lot of experience.<br/><br/>5. We need to [ 5 ] a professional before making a decision.",
               "options": [
-                "global",
-                "expansion",
-                "faculty",
-                "multi-disciplinary",
-                "approach",
-                "curriculum",
                 "uncertainty",
-                "programme",
+                "recruit",
                 "downturn",
-                "consult"
+                "attractive",
+                "consult",
+                "global",
+                "faculty",
+                "curriculum",
+                "programme",
+                "traditional"
               ],
-              "correctAnswer": "global"
+              "correctAnswer": "uncertainty"
             },
             {
-              "id": 2351,
+              "id": 2302,
               "content": "",
               "options": [
-                "global",
-                "expansion",
-                "faculty",
-                "multi-disciplinary",
-                "approach",
-                "curriculum",
                 "uncertainty",
-                "programme",
+                "recruit",
                 "downturn",
-                "consult"
+                "attractive",
+                "consult",
+                "global",
+                "faculty",
+                "curriculum",
+                "programme",
+                "traditional"
               ],
-              "correctAnswer": "expansion"
+              "correctAnswer": "recruit"
             },
             {
-              "id": 2352,
+              "id": 2303,
               "content": "",
               "options": [
-                "global",
-                "expansion",
-                "faculty",
-                "multi-disciplinary",
-                "approach",
-                "curriculum",
                 "uncertainty",
-                "programme",
+                "recruit",
                 "downturn",
-                "consult"
+                "attractive",
+                "consult",
+                "global",
+                "faculty",
+                "curriculum",
+                "programme",
+                "traditional"
               ],
-              "correctAnswer": "faculty"
+              "correctAnswer": "downturn"
             },
             {
-              "id": 2353,
+              "id": 2304,
               "content": "",
               "options": [
-                "global",
-                "expansion",
-                "faculty",
-                "multi-disciplinary",
-                "approach",
-                "curriculum",
                 "uncertainty",
-                "programme",
+                "recruit",
                 "downturn",
-                "consult"
+                "attractive",
+                "consult",
+                "global",
+                "faculty",
+                "curriculum",
+                "programme",
+                "traditional"
               ],
-              "correctAnswer": "multi-disciplinary"
+              "correctAnswer": "attractive"
             },
             {
-              "id": 2354,
+              "id": 2305,
               "content": "",
               "options": [
-                "global",
-                "expansion",
-                "faculty",
-                "multi-disciplinary",
-                "approach",
-                "curriculum",
                 "uncertainty",
-                "programme",
+                "recruit",
                 "downturn",
-                "consult"
+                "attractive",
+                "consult",
+                "global",
+                "faculty",
+                "curriculum",
+                "programme",
+                "traditional"
               ],
-              "correctAnswer": "approach"
+              "correctAnswer": "consult"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2355,
-              "content": "Which word is related to 'curriculum'?",
+              "id": 2306,
+              "content": "To add an extra element or amount to.",
               "options": [
-                "curriculum",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Supplement",
+                "Reexamine",
+                "Impress",
+                "Perceive"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is curriculum as it was taught in the lesson."
+              "explanation": "To supplement means to add an extra element to."
             },
             {
-              "id": 2356,
-              "content": "Which word is related to 'uncertainty'?",
+              "id": 2307,
+              "content": "A system of methods used in a particular area of study or activity.",
               "options": [
-                "uncertainty",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Methodology",
+                "Concept",
+                "Innovation",
+                "Apprehension"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is uncertainty as it was taught in the lesson."
+              "explanation": "Methodology is a system of methods."
             },
             {
-              "id": 2357,
-              "content": "Which word is related to 'programme'?",
+              "id": 2308,
+              "content": "Very careful in choosing; fastidious.",
               "options": [
-                "programme",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Choosy",
+                "Primary",
+                "Practical",
+                "Qualified"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is programme as it was taught in the lesson."
+              "explanation": "Choosy means very careful or fussy in choosing."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2358,
-              "content": "The word 'downturn' is an English word.",
+              "id": 2309,
+              "content": "An 'applicant' is a person who gives someone else a job.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'downturn' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. An applicant is a person who makes a formal application for something, typically a job."
             },
             {
-              "id": 2359,
-              "content": "The word 'consult' is an English word.",
+              "id": 2310,
+              "content": "To 'catch on' means to become popular or fashionable.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'consult' is part of the English vocabulary."
+              "explanation": "True. To catch on means to become popular."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 2400,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 2311,
+              "content": "1. He has a lot of [ 1 ] in his own abilities.<br/><br/>2. We need a new marketing [ 2 ].<br/><br/>3. The [ 3 ] trend in the market is positive.<br/><br/>4. She was very [ 4 ] for the help.<br/><br/>5. The company will [ 5 ] new technology next year.",
               "options": [
-                "skew",
-                "latest",
                 "confidence",
-                "enthuse",
-                "entrepreneurship",
                 "strategy",
-                "definitely",
-                "strategic",
-                "feature",
-                "corporate"
-              ],
-              "correctAnswer": "skew"
-            },
-            {
-              "id": 2401,
-              "content": "",
-              "options": [
+                "dominant",
+                "grateful",
+                "adopt",
                 "skew",
-                "latest",
-                "confidence",
-                "enthuse",
                 "entrepreneurship",
-                "strategy",
-                "definitely",
-                "strategic",
-                "feature",
-                "corporate"
-              ],
-              "correctAnswer": "latest"
-            },
-            {
-              "id": 2402,
-              "content": "",
-              "options": [
-                "skew",
-                "latest",
-                "confidence",
-                "enthuse",
-                "entrepreneurship",
-                "strategy",
-                "definitely",
-                "strategic",
-                "feature",
-                "corporate"
+                "corporate",
+                "predict",
+                "reputation"
               ],
               "correctAnswer": "confidence"
             },
             {
-              "id": 2403,
+              "id": 2312,
               "content": "",
               "options": [
-                "skew",
-                "latest",
                 "confidence",
-                "enthuse",
-                "entrepreneurship",
                 "strategy",
-                "definitely",
-                "strategic",
-                "feature",
-                "corporate"
+                "dominant",
+                "grateful",
+                "adopt",
+                "skew",
+                "entrepreneurship",
+                "corporate",
+                "predict",
+                "reputation"
               ],
-              "correctAnswer": "enthuse"
+              "correctAnswer": "strategy"
             },
             {
-              "id": 2404,
+              "id": 2313,
               "content": "",
               "options": [
-                "skew",
-                "latest",
                 "confidence",
-                "enthuse",
-                "entrepreneurship",
                 "strategy",
-                "definitely",
-                "strategic",
-                "feature",
-                "corporate"
+                "dominant",
+                "grateful",
+                "adopt",
+                "skew",
+                "entrepreneurship",
+                "corporate",
+                "predict",
+                "reputation"
               ],
-              "correctAnswer": "entrepreneurship"
+              "correctAnswer": "dominant"
+            },
+            {
+              "id": 2314,
+              "content": "",
+              "options": [
+                "confidence",
+                "strategy",
+                "dominant",
+                "grateful",
+                "adopt",
+                "skew",
+                "entrepreneurship",
+                "corporate",
+                "predict",
+                "reputation"
+              ],
+              "correctAnswer": "grateful"
+            },
+            {
+              "id": 2315,
+              "content": "",
+              "options": [
+                "confidence",
+                "strategy",
+                "dominant",
+                "grateful",
+                "adopt",
+                "skew",
+                "entrepreneurship",
+                "corporate",
+                "predict",
+                "reputation"
+              ],
+              "correctAnswer": "adopt"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2405,
-              "content": "Which word is related to 'strategy'?",
+              "id": 2316,
+              "content": "To grow or develop well or vigorously.",
               "options": [
-                "strategy",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Thrive",
+                "Survive",
+                "Slip",
+                "Predict"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is strategy as it was taught in the lesson."
+              "explanation": "To thrive means to grow or develop vigorously."
             },
             {
-              "id": 2406,
-              "content": "Which word is related to 'definitely'?",
+              "id": 2317,
+              "content": "Showing smug or uncritical satisfaction with oneself or one's achievements.",
               "options": [
-                "definitely",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Complacent",
+                "Relevant",
+                "Scarce",
+                "Up-and-coming"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is definitely as it was taught in the lesson."
+              "explanation": "Complacent means smug or uncritical satisfaction with oneself."
             },
             {
-              "id": 2407,
-              "content": "Which word is related to 'strategic'?",
+              "id": 2318,
+              "content": "Closely connected or appropriate to what is being done or considered.",
               "options": [
-                "strategic",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Relevant",
+                "Scarce",
+                "Integrative",
+                "Strategic"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is strategic as it was taught in the lesson."
+              "explanation": "Relevant means closely connected or appropriate."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 2408,
-              "content": "The word 'feature' is an English word.",
+              "id": 2319,
+              "content": "'Scarce' means available in large quantities.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'feature' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Scarce means insufficient for the demand."
             },
             {
-              "id": 2409,
-              "content": "The word 'corporate' is an English word.",
+              "id": 2320,
+              "content": "A 'recruiter' is a person whose job is to enlist or enroll people as employees, in the armed forces, or as members of an organization.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'corporate' is part of the English vocabulary."
+              "explanation": "True. A recruiter enlists people."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 2380,
-              "content": "According to the text: 'Comprehensive Reading\\nThe Future of the MBA\\nIt includes global expansion, a faculty shortage, an increasingly multi-disciplinary approach to the curriculum, and a bit of uncertainty...'",
+              "id": 2321,
+              "content": "According to the text, what does the future of the MBA include?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Only a faculty shortage",
+                "Global expansion, a faculty shortage, a multi-disciplinary approach, and uncertainty",
+                "A decrease in applications",
+                "A completely traditional curriculum"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text explicitly states: 'It includes global expansion, a faculty shortage, an increasingly multi-disciplinary approach to the curriculum, and a bit of uncertainty.'"
             },
             {
-              "id": 2381,
-              "content": "According to the text: '\\nIn some ways the future of the MBA programme has never looked brighter...'",
+              "id": 2322,
+              "content": "How are MBA applications currently trending?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They are down",
+                "They are stable",
+                "They are up",
+                "The text does not mention this"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text states: 'Applications are up.'"
             },
             {
-              "id": 2382,
-              "content": "According to the text: 'Applications are up...'",
+              "id": 2323,
+              "content": "What has made it harder for graduates to get recruited recently?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A lack of skills",
+                "The downturn, particularly in consulting and investment banking",
+                "Too many MBA programs",
+                "High tuition fees"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage notes: 'Though the downturn, particularly in consulting and investment banking, has made it harder for graduates to get recruited...'"
             },
             {
-              "id": 2383,
-              "content": "According to the text: 'Though the downturn, particularly in consulting and investment banking, has made it harder for graduates to get recruited, having an MBA remains as attractive as ever to those firms that are hiring...'",
+              "id": 2324,
+              "content": "Despite the downturn, how do firms that are hiring view an MBA?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "As completely useless",
+                "As somewhat helpful",
+                "As attractive as ever",
+                "As too theoretical"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text says: '...having an MBA remains as attractive as ever to those firms that are hiring.'"
             },
             {
-              "id": 2384,
-              "content": "According to the text: 'Many schools are benefiting from a perceived \"flight to quality\" as students hope that an MBA will impress choosy employers...'",
+              "id": 2325,
+              "content": "What are many schools benefiting from?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Lower application rates",
+                "Government grants",
+                "Not mentioned in the provided text snippet, but they are benefiting",
+                "A decrease in faculty"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The snippet ends with 'Many schools are benefiti...', implying they are benefiting from the high applications or attractiveness of the degree."
             }
           ]
         }
