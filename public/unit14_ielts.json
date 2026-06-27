@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1450,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1401,
+              "content": "1. Australia has a very [ 1 ] ecosystem.<br/><br/>2. The native [ 2 ] of the island are protected.<br/><br/>3. The animals need to find [ 3 ] during the storm.<br/><br/>4. We must protect the natural [ 4 ] of these endangered species.<br/><br/>5. The journey will [ 5 ] all our supplies.",
               "options": [
-                "aboriginal",
                 "unique",
                 "flora",
-                "significantly",
-                "people",
-                "follow",
-                "code",
-                "but",
-                "establish",
-                "as far as"
-              ],
-              "correctAnswer": "aboriginal"
-            },
-            {
-              "id": 1451,
-              "content": "",
-              "options": [
+                "shelter",
+                "habitat",
+                "exhaust",
                 "aboriginal",
-                "unique",
-                "flora",
-                "significantly",
-                "people",
-                "follow",
-                "code",
-                "but",
-                "establish",
-                "as far as"
+                "water-hole",
+                "lagoon",
+                "spear",
+                "capture"
               ],
               "correctAnswer": "unique"
             },
             {
-              "id": 1452,
+              "id": 1402,
               "content": "",
               "options": [
-                "aboriginal",
                 "unique",
                 "flora",
-                "significantly",
-                "people",
-                "follow",
-                "code",
-                "but",
-                "establish",
-                "as far as"
+                "shelter",
+                "habitat",
+                "exhaust",
+                "aboriginal",
+                "water-hole",
+                "lagoon",
+                "spear",
+                "capture"
               ],
               "correctAnswer": "flora"
             },
             {
-              "id": 1453,
+              "id": 1403,
               "content": "",
               "options": [
-                "aboriginal",
                 "unique",
                 "flora",
-                "significantly",
-                "people",
-                "follow",
-                "code",
-                "but",
-                "establish",
-                "as far as"
+                "shelter",
+                "habitat",
+                "exhaust",
+                "aboriginal",
+                "water-hole",
+                "lagoon",
+                "spear",
+                "capture"
               ],
-              "correctAnswer": "significantly"
+              "correctAnswer": "shelter"
             },
             {
-              "id": 1454,
+              "id": 1404,
               "content": "",
               "options": [
-                "aboriginal",
                 "unique",
                 "flora",
-                "significantly",
-                "people",
-                "follow",
-                "code",
-                "but",
-                "establish",
-                "as far as"
+                "shelter",
+                "habitat",
+                "exhaust",
+                "aboriginal",
+                "water-hole",
+                "lagoon",
+                "spear",
+                "capture"
               ],
-              "correctAnswer": "people"
+              "correctAnswer": "habitat"
+            },
+            {
+              "id": 1405,
+              "content": "",
+              "options": [
+                "unique",
+                "flora",
+                "shelter",
+                "habitat",
+                "exhaust",
+                "aboriginal",
+                "water-hole",
+                "lagoon",
+                "spear",
+                "capture"
+              ],
+              "correctAnswer": "exhaust"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1455,
-              "content": "Which word is related to 'follow'?",
+              "id": 1406,
+              "content": "Inhabiting or existing in a land from the earliest times or from before the arrival of colonists.",
               "options": [
-                "follow",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Aboriginal",
+                "Unique",
+                "Marine",
+                "Troublesome"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is follow as it was taught in the lesson."
+              "explanation": "Aboriginal means existing in a land from the earliest times."
             },
             {
-              "id": 1456,
-              "content": "Which word is related to 'code'?",
+              "id": 1407,
+              "content": "A place where animals come to drink.",
               "options": [
-                "code",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Habitat",
+                "Water-hole",
+                "Lagoon",
+                "Swamp"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is code as it was taught in the lesson."
+              "correctAnswer": "B",
+              "explanation": "A water-hole is a depression in which water collects, typically where animals drink."
             },
             {
-              "id": 1457,
-              "content": "Which word is related to 'but'?",
+              "id": 1408,
+              "content": "To take into one's possession or control by force.",
               "options": [
-                "but",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Capture",
+                "Establish",
+                "Pluck",
+                "Disturb"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is but as it was taught in the lesson."
+              "explanation": "To capture means to take into possession by force."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1458,
-              "content": "The word 'establish' is an English word.",
+              "id": 1409,
+              "content": "A 'lagoon' is a stretch of salt water separated from the sea by a low sandbank or coral reef.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'establish' is part of the English vocabulary."
+              "explanation": "True. A lagoon is a stretch of water separated from the sea."
             },
             {
-              "id": 1459,
-              "content": "The word 'as far as' is an English word.",
+              "id": 1410,
+              "content": "'Flora' refers to the animals of a particular region.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'as far as' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Flora refers to the plants of a particular region (Fauna refers to animals)."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1500,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1411,
+              "content": "1. There was an [ 1 ] supply of food for the winter.<br/><br/>2. The mushroom is [ 2 ] and safe to eat.<br/><br/>3. A [ 3 ] number of birds migrate here every year.<br/><br/>4. The judge will [ 4 ] the offender severely.<br/><br/>5. We need a [ 5 ] source of clean water.",
               "options": [
-                "nutritious",
                 "ample",
-                "reliable",
-                "slice",
-                "soak",
-                "store",
-                "pit",
                 "edible",
                 "considerable",
-                "swamplands"
-              ],
-              "correctAnswer": "nutritious"
-            },
-            {
-              "id": 1501,
-              "content": "",
-              "options": [
-                "nutritious",
-                "ample",
+                "punish",
                 "reliable",
-                "slice",
-                "soak",
-                "store",
-                "pit",
-                "edible",
-                "considerable",
-                "swamplands"
+                "nutritious",
+                "lethal",
+                "mysterious",
+                "mythical",
+                "tribal"
               ],
               "correctAnswer": "ample"
             },
             {
-              "id": 1502,
+              "id": 1412,
               "content": "",
               "options": [
-                "nutritious",
                 "ample",
-                "reliable",
-                "slice",
-                "soak",
-                "store",
-                "pit",
                 "edible",
                 "considerable",
-                "swamplands"
+                "punish",
+                "reliable",
+                "nutritious",
+                "lethal",
+                "mysterious",
+                "mythical",
+                "tribal"
+              ],
+              "correctAnswer": "edible"
+            },
+            {
+              "id": 1413,
+              "content": "",
+              "options": [
+                "ample",
+                "edible",
+                "considerable",
+                "punish",
+                "reliable",
+                "nutritious",
+                "lethal",
+                "mysterious",
+                "mythical",
+                "tribal"
+              ],
+              "correctAnswer": "considerable"
+            },
+            {
+              "id": 1414,
+              "content": "",
+              "options": [
+                "ample",
+                "edible",
+                "considerable",
+                "punish",
+                "reliable",
+                "nutritious",
+                "lethal",
+                "mysterious",
+                "mythical",
+                "tribal"
+              ],
+              "correctAnswer": "punish"
+            },
+            {
+              "id": 1415,
+              "content": "",
+              "options": [
+                "ample",
+                "edible",
+                "considerable",
+                "punish",
+                "reliable",
+                "nutritious",
+                "lethal",
+                "mysterious",
+                "mythical",
+                "tribal"
               ],
               "correctAnswer": "reliable"
-            },
-            {
-              "id": 1503,
-              "content": "",
-              "options": [
-                "nutritious",
-                "ample",
-                "reliable",
-                "slice",
-                "soak",
-                "store",
-                "pit",
-                "edible",
-                "considerable",
-                "swamplands"
-              ],
-              "correctAnswer": "slice"
-            },
-            {
-              "id": 1504,
-              "content": "",
-              "options": [
-                "nutritious",
-                "ample",
-                "reliable",
-                "slice",
-                "soak",
-                "store",
-                "pit",
-                "edible",
-                "considerable",
-                "swamplands"
-              ],
-              "correctAnswer": "soak"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1505,
-              "content": "Which word is related to 'store'?",
+              "id": 1416,
+              "content": "Sufficient to cause death.",
               "options": [
-                "store",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Lethal",
+                "Nutritious",
+                "Sufficient",
+                "Innate"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is store as it was taught in the lesson."
+              "explanation": "Lethal means sufficient to cause death."
             },
             {
-              "id": 1506,
-              "content": "Which word is related to 'pit'?",
+              "id": 1417,
+              "content": "A very large number of people or things.",
               "options": [
-                "pit",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Multitude",
+                "Tribe",
+                "Descent",
+                "Abundance"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is pit as it was taught in the lesson."
+              "explanation": "A multitude is a very large number."
             },
             {
-              "id": 1507,
-              "content": "Which word is related to 'edible'?",
+              "id": 1418,
+              "content": "Inborn; natural.",
               "options": [
-                "edible",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Innate",
+                "Mysterious",
+                "Tribal",
+                "Featureless"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is edible as it was taught in the lesson."
+              "explanation": "Innate means inborn or natural."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1508,
-              "content": "The word 'considerable' is an English word.",
+              "id": 1419,
+              "content": "To 'soak' something is to keep it completely dry.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'considerable' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. To soak means to make or allow something to become thoroughly wet by immersing it in liquid."
             },
             {
-              "id": 1509,
-              "content": "The word 'swamplands' is an English word.",
+              "id": 1420,
+              "content": "'Nutritious' food is efficient as food and nourishing.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'swamplands' is part of the English vocabulary."
+              "explanation": "True. Nutritious means providing nourishment."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1480,
-              "content": "According to the text: 'Comprehensive Reading\\nAustralian Aboriginals\\nAustralia is a unique land...'",
+              "id": 1421,
+              "content": "What is unique about Australia's flora and animals according to the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They are similar to those in Europe.",
+                "They differ significantly from those on any other part of the world's surface.",
+                "They were brought there by white men.",
+                "They only exist in water-holes."
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'Its flora, its animals, and its aboriginal people differ significantly from those on any other part of the world\\'s surface.'"
             },
             {
-              "id": 1481,
-              "content": "According to the text: 'Its flora, its animals, and its aboriginal people differ significantly from those on any other part of the world's surface...'",
+              "id": 1422,
+              "content": "Who inhabited the Australian continent before the white man arrived?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "People of various different races.",
+                "Only brown-skinned aboriginals.",
+                "Nobody.",
+                "European settlers."
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'Before the white man reached Australia, the whole continent was peopled with brown-skinned aboriginals...'"
             },
             {
-              "id": 1482,
-              "content": "According to the text: '\\nBefore the white man reached Australia, the whole continent was peopled with brown-skinned aboriginals of the same appearance, following the same way of life, and accepting a similar code of beliefs...'",
+              "id": 1423,
+              "content": "Did the aboriginal people have different ways of life across the continent before white men arrived?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, they varied greatly.",
+                "No, they followed the same way of life.",
+                "Only in the coastal areas.",
+                "The text does not mention this."
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text describes them as 'following the same way of life, and accepting a similar code of beliefs.'"
             },
             {
-              "id": 1483,
-              "content": "According to the text: 'No other race but the aboriginals had established itself in Australia, nor, as far as we know, are there similar people in any other part of the world...'",
+              "id": 1424,
+              "content": "Had any other race established itself in Australia before the aboriginals?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, the Polynesians.",
+                "Yes, ancient Asians.",
+                "No, no other race had established itself.",
+                "Scientists are unsure."
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text explicitly states: 'No other race but the aboriginals had established itself in Australia...'"
             },
             {
-              "id": 1484,
-              "content": "According to the text: 'And they have inhabited the continent for over 40,000 years...'",
+              "id": 1425,
+              "content": "What was the appearance of the aboriginals described in the text?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Light-skinned",
+                "Brown-skinned",
+                "Dark-skinned",
+                "Red-skinned"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text mentions 'brown-skinned aboriginals'."
             }
           ]
         }

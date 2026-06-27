@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1550,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1501,
+              "content": "1. The company has a large [ 1 ] working in the office.<br/><br/>2. Please [ 2 ] your findings at the next meeting.<br/><br/>3. He is the [ 3 ] candidate for the job.<br/><br/>4. I have a [ 4 ] about the application process.<br/><br/>5. The [ 5 ] is available to answer any questions.",
               "options": [
-                "excerpt",
-                "Economist Intelligence Unit",
-                "working",
-                "prospective",
                 "staff",
-                "invariably",
                 "present",
                 "ideal",
-                "candidate",
-                "query"
-              ],
-              "correctAnswer": "excerpt"
-            },
-            {
-              "id": 1551,
-              "content": "",
-              "options": [
+                "query",
+                "recruiter",
                 "excerpt",
-                "Economist Intelligence Unit",
                 "working",
                 "prospective",
-                "staff",
                 "invariably",
-                "present",
-                "ideal",
-                "candidate",
-                "query"
-              ],
-              "correctAnswer": "Economist Intelligence Unit"
-            },
-            {
-              "id": 1552,
-              "content": "",
-              "options": [
-                "excerpt",
-                "Economist Intelligence Unit",
-                "working",
-                "prospective",
-                "staff",
-                "invariably",
-                "present",
-                "ideal",
-                "candidate",
-                "query"
-              ],
-              "correctAnswer": "working"
-            },
-            {
-              "id": 1553,
-              "content": "",
-              "options": [
-                "excerpt",
-                "Economist Intelligence Unit",
-                "working",
-                "prospective",
-                "staff",
-                "invariably",
-                "present",
-                "ideal",
-                "candidate",
-                "query"
-              ],
-              "correctAnswer": "prospective"
-            },
-            {
-              "id": 1554,
-              "content": "",
-              "options": [
-                "excerpt",
-                "Economist Intelligence Unit",
-                "working",
-                "prospective",
-                "staff",
-                "invariably",
-                "present",
-                "ideal",
-                "candidate",
-                "query"
+                "candidate"
               ],
               "correctAnswer": "staff"
+            },
+            {
+              "id": 1502,
+              "content": "",
+              "options": [
+                "staff",
+                "present",
+                "ideal",
+                "query",
+                "recruiter",
+                "excerpt",
+                "working",
+                "prospective",
+                "invariably",
+                "candidate"
+              ],
+              "correctAnswer": "present"
+            },
+            {
+              "id": 1503,
+              "content": "",
+              "options": [
+                "staff",
+                "present",
+                "ideal",
+                "query",
+                "recruiter",
+                "excerpt",
+                "working",
+                "prospective",
+                "invariably",
+                "candidate"
+              ],
+              "correctAnswer": "ideal"
+            },
+            {
+              "id": 1504,
+              "content": "",
+              "options": [
+                "staff",
+                "present",
+                "ideal",
+                "query",
+                "recruiter",
+                "excerpt",
+                "working",
+                "prospective",
+                "invariably",
+                "candidate"
+              ],
+              "correctAnswer": "query"
+            },
+            {
+              "id": 1505,
+              "content": "",
+              "options": [
+                "staff",
+                "present",
+                "ideal",
+                "query",
+                "recruiter",
+                "excerpt",
+                "working",
+                "prospective",
+                "invariably",
+                "candidate"
+              ],
+              "correctAnswer": "recruiter"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1555,
-              "content": "Which word is related to 'invariably'?",
+              "id": 1506,
+              "content": "A short extract from a film, broadcast, or piece of music or writing.",
               "options": [
-                "invariably",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Excerpt",
+                "Submission",
+                "Allowance",
+                "Profile"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is invariably as it was taught in the lesson."
+              "explanation": "An excerpt is a short extract."
             },
             {
-              "id": 1556,
-              "content": "Which word is related to 'present'?",
+              "id": 1507,
+              "content": "Very large in size, quantity, or extent.",
               "options": [
-                "present",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Enormous",
+                "Available",
+                "Grateful",
+                "Generous"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is present as it was taught in the lesson."
+              "explanation": "Enormous means very large."
             },
             {
-              "id": 1557,
-              "content": "Which word is related to 'ideal'?",
+              "id": 1508,
+              "content": "A former pupil or student, especially a male one, of a particular school, college, or university.",
               "options": [
-                "ideal",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Applicant",
+                "Faculty",
+                "Alumni",
+                "Candidate"
               ],
-              "correctAnswer": "A",
-              "explanation": "The correct word is ideal as it was taught in the lesson."
+              "correctAnswer": "C",
+              "explanation": "Alumni refers to former students."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1558,
-              "content": "The word 'candidate' is an English word.",
+              "id": 1509,
+              "content": "'Anecdotal' evidence is based on scientific research.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'candidate' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Anecdotal evidence is based on personal accounts rather than facts or research."
             },
             {
-              "id": 1559,
-              "content": "The word 'query' is an English word.",
+              "id": 1510,
+              "content": "To 'dominate' means to have a commanding influence on or exercise control over.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'query' is part of the English vocabulary."
+              "explanation": "True. To dominate is to have control or commanding influence."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1600,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1511,
+              "content": "1. The [ 1 ] weight allowed for luggage is 20kg.<br/><br/>2. Her [ 2 ] job was in marketing.<br/><br/>3. They attended a [ 3 ] event to raise money for orphans.<br/><br/>4. The new manager will [ 4 ] production significantly.<br/><br/>5. We need to [ 5 ] the progress of the project.",
               "options": [
                 "maximum",
-                "fast track",
-                "vary",
+                "former",
+                "charitable",
+                "boost",
+                "review",
                 "minimum",
                 "solid",
                 "potential",
-                "\"wow\" factor",
-                "set apart",
-                "former",
-                "ballerina"
+                "function",
+                "involve"
               ],
               "correctAnswer": "maximum"
             },
             {
-              "id": 1601,
+              "id": 1512,
               "content": "",
               "options": [
                 "maximum",
-                "fast track",
-                "vary",
+                "former",
+                "charitable",
+                "boost",
+                "review",
                 "minimum",
                 "solid",
                 "potential",
-                "\"wow\" factor",
-                "set apart",
-                "former",
-                "ballerina"
+                "function",
+                "involve"
               ],
-              "correctAnswer": "fast track"
+              "correctAnswer": "former"
             },
             {
-              "id": 1602,
+              "id": 1513,
               "content": "",
               "options": [
                 "maximum",
-                "fast track",
-                "vary",
+                "former",
+                "charitable",
+                "boost",
+                "review",
                 "minimum",
                 "solid",
                 "potential",
-                "\"wow\" factor",
-                "set apart",
-                "former",
-                "ballerina"
+                "function",
+                "involve"
               ],
-              "correctAnswer": "vary"
+              "correctAnswer": "charitable"
             },
             {
-              "id": 1603,
+              "id": 1514,
               "content": "",
               "options": [
                 "maximum",
-                "fast track",
-                "vary",
+                "former",
+                "charitable",
+                "boost",
+                "review",
                 "minimum",
                 "solid",
                 "potential",
-                "\"wow\" factor",
-                "set apart",
-                "former",
-                "ballerina"
+                "function",
+                "involve"
               ],
-              "correctAnswer": "minimum"
+              "correctAnswer": "boost"
             },
             {
-              "id": 1604,
+              "id": 1515,
               "content": "",
               "options": [
                 "maximum",
-                "fast track",
-                "vary",
+                "former",
+                "charitable",
+                "boost",
+                "review",
                 "minimum",
                 "solid",
                 "potential",
-                "\"wow\" factor",
-                "set apart",
-                "former",
-                "ballerina"
+                "function",
+                "involve"
               ],
-              "correctAnswer": "solid"
+              "correctAnswer": "review"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1605,
-              "content": "Which word is related to 'potential'?",
+              "id": 1516,
+              "content": "A balance achieved between two desirable but incompatible features; a compromise.",
               "options": [
-                "potential",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Trade-off",
+                "Intake",
+                "Function",
+                "Potential"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is potential as it was taught in the lesson."
+              "explanation": "A trade-off is a compromise between two things."
             },
             {
-              "id": 1606,
-              "content": "Which word is related to '\"wow\" factor'?",
+              "id": 1517,
+              "content": "Coming after something in time; following.",
               "options": [
-                "\"wow\" factor",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Subsequent",
+                "Former",
+                "Borderline",
+                "Typically"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is \"wow\" factor as it was taught in the lesson."
+              "explanation": "Subsequent means coming after something in time."
             },
             {
-              "id": 1607,
-              "content": "Which word is related to 'set apart'?",
+              "id": 1518,
+              "content": "To state or assert that something is the case, typically without providing evidence or proof.",
               "options": [
-                "set apart",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Claim",
+                "Involve",
+                "Take on",
+                "Vary"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is set apart as it was taught in the lesson."
+              "explanation": "To claim means to state that something is the case."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1608,
-              "content": "The word 'former' is an English word.",
+              "id": 1519,
+              "content": "The 'wow' factor is something that makes people feel bored.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'former' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. The 'wow' factor is a quality or feature that is extremely impressive."
             },
             {
-              "id": 1609,
-              "content": "The word 'ballerina' is an English word.",
+              "id": 1520,
+              "content": "To 'vary' means to differ in size, amount, degree, or nature from something else of the same general class.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'ballerina' is part of the English vocabulary."
+              "explanation": "True. To vary is to differ or change."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1580,
-              "content": "According to the text: 'Comprehensive Reading\\nThe Role of the Admissions Office\\nIn this excerpt from \"Which MBA?\", the Economist Intelligence Unit explains the workings of those who determine prospective students' fates...'",
+              "id": 1521,
+              "content": "Where is the excerpt in the text taken from?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The Admissions Office",
+                "The Economist Intelligence Unit",
+                "Which MBA?",
+                "A business magazine"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text begins: 'In this excerpt from \"Which MBA?\"...'"
             },
             {
-              "id": 1581,
-              "content": "According to the text: '\\nAlthough getting in is tough, admissions staff invariably present a smiling face...'",
+              "id": 1522,
+              "content": "Who explains the workings of those who determine prospective students' fates?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The students themselves",
+                "The faculty members",
+                "The Economist Intelligence Unit",
+                "The alumni"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text states: '...the Economist Intelligence Unit explains the workings of those who determine prospective students' fates.'"
             },
             {
-              "id": 1582,
-              "content": "According to the text: 'After all, you may be the ideal candidate...'",
+              "id": 1523,
+              "content": "What do admissions staff invariably present?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "A tough challenge",
+                "A smiling face",
+                "An anecdotal evidence",
+                "An offer of a place"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The passage says: 'Although getting in is tough, admissions staff invariably present a smiling face.'"
             },
             {
-              "id": 1583,
-              "content": "According to the text: 'As a result, you can expect them to be efficient in answering queries and eventually making an offer of a place...'",
+              "id": 1524,
+              "content": "Why might admissions staff present a smiling face?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Because they are always happy",
+                "Because getting in is easy",
+                "Because you may be the ideal candidate",
+                "Because they want your money"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text follows up with: 'After all, you may be the ideal candidate.'"
             },
             {
-              "id": 1584,
-              "content": "According to the text: 'Anecdotal evidence suggests that a common reason for choosing a particular school is the helpfulness of the admissions office...'",
+              "id": 1525,
+              "content": "According to the text, what can you expect the admissions staff to be efficient in?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Making things difficult",
+                "Answering queries and eventually making an offer of a place",
+                "Gathering anecdotal evidence",
+                "Rejecting applicants quickly"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text explicitly states: 'As a result, you can expect them to be efficient in answering queries and eventually making an offer of a place.'"
             }
           ]
         }

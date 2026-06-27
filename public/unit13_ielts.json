@@ -10,89 +10,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1350,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1301,
+              "content": "1. He spends his [ 1 ] time reading books.<br/><br/>2. The [ 2 ] nature of the club means not everyone can join.<br/><br/>3. She has a very [ 3 ] approach to her work.<br/><br/>4. The [ 4 ] of the committee will meet tomorrow.<br/><br/>5. Please [ 5 ] how this machine works.",
               "options": [
                 "leisure",
+                "exclusive",
                 "conservative",
-                "nature",
-                "position",
-                "elite",
-                "demonstrate",
-                "respect",
                 "VIP (very important person)",
+                "demonstrate",
                 "Pancake Race",
-                "start with"
+                "parliament",
+                "pirate",
+                "informal",
+                "napkin"
               ],
               "correctAnswer": "leisure"
             },
             {
-              "id": 1351,
+              "id": 1302,
               "content": "",
               "options": [
                 "leisure",
+                "exclusive",
                 "conservative",
-                "nature",
-                "position",
-                "elite",
-                "demonstrate",
-                "respect",
                 "VIP (very important person)",
+                "demonstrate",
                 "Pancake Race",
-                "start with"
+                "parliament",
+                "pirate",
+                "informal",
+                "napkin"
+              ],
+              "correctAnswer": "exclusive"
+            },
+            {
+              "id": 1303,
+              "content": "",
+              "options": [
+                "leisure",
+                "exclusive",
+                "conservative",
+                "VIP (very important person)",
+                "demonstrate",
+                "Pancake Race",
+                "parliament",
+                "pirate",
+                "informal",
+                "napkin"
               ],
               "correctAnswer": "conservative"
             },
             {
-              "id": 1352,
+              "id": 1304,
               "content": "",
               "options": [
                 "leisure",
+                "exclusive",
                 "conservative",
-                "nature",
-                "position",
-                "elite",
-                "demonstrate",
-                "respect",
                 "VIP (very important person)",
+                "demonstrate",
                 "Pancake Race",
-                "start with"
+                "parliament",
+                "pirate",
+                "informal",
+                "napkin"
               ],
-              "correctAnswer": "nature"
+              "correctAnswer": "VIP (very important person)"
             },
             {
-              "id": 1353,
+              "id": 1305,
               "content": "",
               "options": [
                 "leisure",
+                "exclusive",
                 "conservative",
-                "nature",
-                "position",
-                "elite",
-                "demonstrate",
-                "respect",
                 "VIP (very important person)",
-                "Pancake Race",
-                "start with"
-              ],
-              "correctAnswer": "position"
-            },
-            {
-              "id": 1354,
-              "content": "",
-              "options": [
-                "leisure",
-                "conservative",
-                "nature",
-                "position",
-                "elite",
                 "demonstrate",
-                "respect",
-                "VIP (very important person)",
                 "Pancake Race",
-                "start with"
+                "parliament",
+                "pirate",
+                "informal",
+                "napkin"
               ],
-              "correctAnswer": "elite"
+              "correctAnswer": "demonstrate"
             }
           ]
         },
@@ -102,40 +102,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1355,
-              "content": "Which word is related to 'demonstrate'?",
+              "id": 1306,
+              "content": "A person who is opposed to, struggles against, or competes with another.",
               "options": [
-                "demonstrate",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Antagonist",
+                "Elite",
+                "Executive Committee",
+                "Parliament"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is demonstrate as it was taught in the lesson."
+              "explanation": "An antagonist is an opponent or adversary."
             },
             {
-              "id": 1356,
-              "content": "Which word is related to 'respect'?",
+              "id": 1307,
+              "content": "To prevent a process or activity from continuing or being carried out properly.",
               "options": [
-                "respect",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Interfere with",
+                "Start with",
+                "Originate from",
+                "Engage in"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is respect as it was taught in the lesson."
+              "explanation": "To interfere with means to prevent something from continuing properly."
             },
             {
-              "id": 1357,
-              "content": "Which word is related to 'VIP (very important person)'?",
+              "id": 1308,
+              "content": "Strict, harsh, or exacting.",
               "options": [
-                "VIP (very important person)",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Rigorous",
+                "Informal",
+                "Amicable",
+                "Prominent"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is VIP (very important person) as it was taught in the lesson."
+              "explanation": "Rigorous means strictly applied or adhered to."
             }
           ]
         },
@@ -145,26 +145,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1358,
-              "content": "The word 'Pancake Race' is an English word.",
+              "id": 1309,
+              "content": "'Amicable' means showing a spirit of friendliness.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'Pancake Race' is part of the English vocabulary."
+              "explanation": "True. Amicable describes relations between people as friendly and without serious disagreement."
             },
             {
-              "id": 1359,
-              "content": "The word 'start with' is an English word.",
+              "id": 1310,
+              "content": "'Unfettered' means being restricted or confined.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'start with' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. Unfettered means unrestrained or uninhibited."
             }
           ]
         }
@@ -180,89 +180,89 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1400,
-              "content": "1. The student learned the word [ 1 ] today.",
+              "id": 1311,
+              "content": "1. The event will [ 1 ] next week.<br/><br/>2. It was a [ 2 ] display of fireworks.<br/><br/>3. She won the competition and became the new [ 3 ].<br/><br/>4. The soup [ 4 ] fresh vegetables and herbs.<br/><br/>5. Attendance at the meeting is [ 5 ].",
               "options": [
-                "popular",
-                "Lent",
                 "occur",
-                "reminder",
-                "consumption",
-                "use up",
-                "frugal",
-                "toss",
-                "observe",
-                "verger"
-              ],
-              "correctAnswer": "popular"
-            },
-            {
-              "id": 1401,
-              "content": "",
-              "options": [
+                "spectacular",
+                "champion",
+                "contain",
+                "optional",
                 "popular",
-                "Lent",
-                "occur",
-                "reminder",
-                "consumption",
-                "use up",
                 "frugal",
-                "toss",
-                "observe",
-                "verger"
-              ],
-              "correctAnswer": "Lent"
-            },
-            {
-              "id": 1402,
-              "content": "",
-              "options": [
-                "popular",
-                "Lent",
-                "occur",
-                "reminder",
-                "consumption",
-                "use up",
-                "frugal",
-                "toss",
-                "observe",
-                "verger"
+                "competitor",
+                "apron",
+                "scarf"
               ],
               "correctAnswer": "occur"
             },
             {
-              "id": 1403,
+              "id": 1312,
               "content": "",
               "options": [
-                "popular",
-                "Lent",
                 "occur",
-                "reminder",
-                "consumption",
-                "use up",
+                "spectacular",
+                "champion",
+                "contain",
+                "optional",
+                "popular",
                 "frugal",
-                "toss",
-                "observe",
-                "verger"
+                "competitor",
+                "apron",
+                "scarf"
               ],
-              "correctAnswer": "reminder"
+              "correctAnswer": "spectacular"
             },
             {
-              "id": 1404,
+              "id": 1313,
               "content": "",
               "options": [
-                "popular",
-                "Lent",
                 "occur",
-                "reminder",
-                "consumption",
-                "use up",
+                "spectacular",
+                "champion",
+                "contain",
+                "optional",
+                "popular",
                 "frugal",
-                "toss",
-                "observe",
-                "verger"
+                "competitor",
+                "apron",
+                "scarf"
               ],
-              "correctAnswer": "consumption"
+              "correctAnswer": "champion"
+            },
+            {
+              "id": 1314,
+              "content": "",
+              "options": [
+                "occur",
+                "spectacular",
+                "champion",
+                "contain",
+                "optional",
+                "popular",
+                "frugal",
+                "competitor",
+                "apron",
+                "scarf"
+              ],
+              "correctAnswer": "contain"
+            },
+            {
+              "id": 1315,
+              "content": "",
+              "options": [
+                "occur",
+                "spectacular",
+                "champion",
+                "contain",
+                "optional",
+                "popular",
+                "frugal",
+                "competitor",
+                "apron",
+                "scarf"
+              ],
+              "correctAnswer": "optional"
             }
           ]
         },
@@ -272,40 +272,40 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1405,
-              "content": "Which word is related to 'use up'?",
+              "id": 1316,
+              "content": "Sparing or economical with regard to money or food.",
               "options": [
-                "use up",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Frugal",
+                "Popular",
+                "Spectacular",
+                "Aristocratic"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is use up as it was taught in the lesson."
+              "explanation": "Frugal means sparing or economical."
             },
             {
-              "id": 1406,
-              "content": "Which word is related to 'frugal'?",
+              "id": 1317,
+              "content": "A sum of money saved or made available for a particular purpose.",
               "options": [
-                "frugal",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Fund",
+                "Procession",
+                "Guinea",
+                "Portion"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is frugal as it was taught in the lesson."
+              "explanation": "A fund is a sum of money saved for a purpose."
             },
             {
-              "id": 1407,
-              "content": "Which word is related to 'toss'?",
+              "id": 1318,
+              "content": "Occurring once a year.",
               "options": [
-                "toss",
-                "Apple",
-                "Banana",
-                "Orange"
+                "Annual",
+                "Optional",
+                "Prior to",
+                "Purely"
               ],
               "correctAnswer": "A",
-              "explanation": "The correct word is toss as it was taught in the lesson."
+              "explanation": "Annual means occurring once a year."
             }
           ]
         },
@@ -315,26 +315,26 @@
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 1408,
-              "content": "The word 'observe' is an English word.",
+              "id": 1319,
+              "content": "To 'toss' something means to throw it lightly or casually.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. 'observe' is part of the English vocabulary."
+              "explanation": "True. To toss is to throw lightly."
             },
             {
-              "id": 1409,
-              "content": "The word 'verger' is an English word.",
+              "id": 1320,
+              "content": "A 'competitor' is a person who helps you win a game.",
               "options": [
                 "True",
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
-              "explanation": "True. 'verger' is part of the English vocabulary."
+              "correctAnswer": "False",
+              "explanation": "False. A competitor is someone who takes part in a competition against others."
             }
           ]
         }
@@ -350,64 +350,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 1380,
-              "content": "According to the text: 'Comprehensive Reading\\nTwo Different Forms of British Leisure Life\\nBritish people are always famous for their conservative nature...'",
+              "id": 1321,
+              "content": "What is the British organized leisure for the VIPs called?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The Pancake Race",
+                "The Club",
+                "The Parliament",
+                "The Pub"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text states: 'If the organized leisure, the Club, is for the VIPs, then the amusement like the Pancake Race is for the commons.'"
             },
             {
-              "id": 1381,
-              "content": "According to the text: 'Nevertheless, they also have some interesting ways to enjoy themselves...'",
+              "id": 1322,
+              "content": "What did Club life start with around 1652?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Tea drinking",
+                "Wine tasting",
+                "Coffee drinking",
+                "Pancake eating"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text explains: 'Club life started with coffee drinking which began around 1652.'"
             },
             {
-              "id": 1382,
-              "content": "According to the text: 'Of course, because of their different positions, the social elite and common people demonstrate different tastes in this respect...'",
+              "id": 1323,
+              "content": "What is the Pancake Race for?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "The social elite",
+                "The VIPs",
+                "The commons",
+                "The parliament members"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The passage says: 'then the amusement like the Pancake Race is for the commons.'"
             },
             {
-              "id": 1383,
-              "content": "According to the text: 'If the organized leisure, the Club, is for the VIPs, then the amusement like the Pancake Race is for the commons...'",
+              "id": 1324,
+              "content": "Why are British people often described as having a certain nature?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "They are very liberal",
+                "They are always working",
+                "They are famous for their conservative nature",
+                "They do not enjoy leisure"
               ],
-              "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "correctAnswer": "C",
+              "explanation": "The text begins with: 'British people are always famous for their conservative nature.'"
             },
             {
-              "id": 1384,
-              "content": "According to the text: '\\nClub life started with coffee drinking which began around 1650...'",
+              "id": 1325,
+              "content": "Do the social elite and common people share the same tastes in leisure activities?",
               "options": [
-                "Option A",
-                "Option B",
-                "Option C",
-                "Option D"
+                "Yes, they do",
+                "No, they demonstrate different tastes",
+                "They only share a love for coffee",
+                "The text does not mention this"
               ],
               "correctAnswer": "B",
-              "explanation": "The text implies option B is the correct answer based on the context."
+              "explanation": "The text notes: '...the social elite and common people demonstrate different tastes in this respect.'"
             }
           ]
         }
