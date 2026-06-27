@@ -1,74 +1,98 @@
 {
-  "title": "Unit 11: Dinosaur Drawings",
   "parts": [
     {
       "title": "Word List 1",
-      "content": "<p style=\"display: none;\">Word List 1</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_ielts_word_list_1_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_ielts_word_list_1_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">admission</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ədmíʃən]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Admission is the act of allowing to enter a place. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The admission ticket to the movie was $5. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">astronomy</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[əstrɑ́nəmi]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Astronomy is the study of the stars and planets. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Harold loved watching the stars, so he decided to study astronomy. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">blame</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[bleim]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To blame someone for something bad is to say they did it. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ My mom blamed me for something I didn’t do. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">chemistry</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[kémistri]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Chemistry the study of and reaction to substances. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ In chemistry class, the professor taught us about chemical reactions. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">despite</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[dispáit]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">prep.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">If something happens despite what you do, it happens anyway. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ We still played the game despite the cold weather. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">dinosaur</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[dáinəsɔ̀:r]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A dinosaur is a very big animal that lived millions of years ago. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I like to see the dinosaur bones at the museum. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">exhibit</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[igzíbit]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">An exhibit is a display of interesting things. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ There was an animal exhibit at the fair. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">fame</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[feim]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Fame is reputation one has gained among the public. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He had fame and fortune, but he was not happy. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">forecast</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[fɔ́:rkæ̀st]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A forecast is an idea about what the weather will be like in the future. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The forecast says that it will rain all week. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">genius</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[dʒí:njəs]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A genius is a very smart person. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Since she was a genius, she easily passed all of her school exams. <span style=\"color:#0ea5e9;\"></span></div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Word List 1</p>\n<div style=\"display: flex; flex-direction: column; gap: 16px;\">\n<img src=\"/unit11_ielts_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n</div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n<h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n<div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">positive</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tích cực</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reward</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">phần thưởng</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">acquire</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">giành được, kiếm được</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">credit card</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thẻ tín dụng</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">materialistic</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thiên về vật chất</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">optimism</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự lạc quan</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lasting</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">kéo dài</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fulfillment</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự hoàn thành, sự làm tròn (nhiệm vụ)</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">kid</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nói đùa</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">optimist</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người lạc quan</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">psychologist</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhà tâm lý</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">optimistic</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">lạc quan</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rise above</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">vượt lên trên</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pessimism</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự bi quan</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">depression</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự trầm cảm</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accompany</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đi kèm</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">negative</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tiêu cực</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adversity</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nghịch cảnh, tai ương</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consequence</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hậu quả</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disputation</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự tranh cãi, sự tranh luận</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">energization</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự tiếp thêm sinh lực</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trigger</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">gây ra</span></div>\n\n</div></div></div></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1,
-              "content": "Complete the sentence with the correct word related to: admission",
+              "id": 1150,
+              "content": "1. The student learned the word [ 1 ] today.",
               "options": [
-                "admission",
-                "astronomy",
-                "blame",
-                "chemistry"
+                "positive",
+                "reward",
+                "acquire",
+                "credit card",
+                "materialistic",
+                "optimism",
+                "lasting",
+                "fulfillment",
+                "kid",
+                "optimist"
               ],
-              "correctAnswer": "admission",
-              "explanation": "The correct word is admission."
+              "correctAnswer": "positive"
             },
             {
-              "id": 2,
-              "content": "Complete the sentence with the correct word related to: astronomy",
+              "id": 1151,
+              "content": "",
               "options": [
-                "astronomy",
-                "blame",
-                "chemistry",
-                "despite"
+                "positive",
+                "reward",
+                "acquire",
+                "credit card",
+                "materialistic",
+                "optimism",
+                "lasting",
+                "fulfillment",
+                "kid",
+                "optimist"
               ],
-              "correctAnswer": "astronomy",
-              "explanation": "The correct word is astronomy."
+              "correctAnswer": "reward"
             },
             {
-              "id": 3,
-              "content": "Complete the sentence with the correct word related to: blame",
+              "id": 1152,
+              "content": "",
               "options": [
-                "blame",
-                "chemistry",
-                "despite",
-                "dinosaur"
+                "positive",
+                "reward",
+                "acquire",
+                "credit card",
+                "materialistic",
+                "optimism",
+                "lasting",
+                "fulfillment",
+                "kid",
+                "optimist"
               ],
-              "correctAnswer": "blame",
-              "explanation": "The correct word is blame."
+              "correctAnswer": "acquire"
             },
             {
-              "id": 4,
-              "content": "Complete the sentence with the correct word related to: chemistry",
+              "id": 1153,
+              "content": "",
               "options": [
-                "chemistry",
-                "despite",
-                "dinosaur",
-                "exhibit"
+                "positive",
+                "reward",
+                "acquire",
+                "credit card",
+                "materialistic",
+                "optimism",
+                "lasting",
+                "fulfillment",
+                "kid",
+                "optimist"
               ],
-              "correctAnswer": "chemistry",
-              "explanation": "The correct word is chemistry."
+              "correctAnswer": "credit card"
             },
             {
-              "id": 5,
-              "content": "Complete the sentence with the correct word related to: despite",
+              "id": 1154,
+              "content": "",
               "options": [
-                "despite",
-                "dinosaur",
-                "exhibit",
-                "fame"
+                "positive",
+                "reward",
+                "acquire",
+                "credit card",
+                "materialistic",
+                "optimism",
+                "lasting",
+                "fulfillment",
+                "kid",
+                "optimist"
               ],
-              "correctAnswer": "despite",
-              "explanation": "The correct word is despite."
+              "correctAnswer": "materialistic"
             }
           ]
         },
@@ -78,80 +102,69 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 6,
-              "content": "Which word means: A dinosaur is a very big animal that lived millions of years ago.",
+              "id": 1155,
+              "content": "Which word is related to 'optimism'?",
               "options": [
-                "dinosaur",
-                "exhibit",
-                "fame",
-                "forecast"
+                "optimism",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "dinosaur",
-              "explanation": "The word is dinosaur."
+              "correctAnswer": "A",
+              "explanation": "The correct word is optimism as it was taught in the lesson."
             },
             {
-              "id": 7,
-              "content": "Which word means: An exhibit is a display of interesting things.",
+              "id": 1156,
+              "content": "Which word is related to 'lasting'?",
               "options": [
-                "exhibit",
-                "fame",
-                "forecast",
-                "genius"
+                "lasting",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "exhibit",
-              "explanation": "The word is exhibit."
+              "correctAnswer": "A",
+              "explanation": "The correct word is lasting as it was taught in the lesson."
             },
             {
-              "id": 8,
-              "content": "Which word means: Fame is reputation one has gained among the public.",
+              "id": 1157,
+              "content": "Which word is related to 'fulfillment'?",
               "options": [
-                "fame",
-                "forecast",
-                "genius",
-                "admission"
+                "fulfillment",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "fame",
-              "explanation": "The word is fame."
+              "correctAnswer": "A",
+              "explanation": "The correct word is fulfillment as it was taught in the lesson."
             }
           ]
         },
         {
-          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 9,
-              "content": "True or False: forecast means A forecast is an idea about what the weather will be like in the future.",
+              "id": 1158,
+              "content": "The word 'kid' is an English word.",
               "options": [
-                "T",
-                "F",
-                "NG"
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "T",
-              "explanation": "True."
+              "correctAnswer": "True",
+              "explanation": "True. 'kid' is part of the English vocabulary."
             },
             {
-              "id": 10,
-              "content": "True or False: genius means A genius is a very smart person.",
+              "id": 1159,
+              "content": "The word 'optimist' is an English word.",
               "options": [
-                "T",
-                "F",
-                "NG"
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "T",
-              "explanation": "True."
-            },
-            {
-              "id": 11,
-              "content": "True or False: admission means a type of fruit.",
-              "options": [
-                "T",
-                "F",
-                "NG"
-              ],
-              "correctAnswer": "F",
-              "explanation": "False."
+              "correctAnswer": "True",
+              "explanation": "True. 'optimist' is part of the English vocabulary."
             }
           ]
         }
@@ -159,72 +172,97 @@
     },
     {
       "title": "Word List 2",
-      "content": "<p style=\"display: none;\">Word List 2</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_ielts_word_list_2_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_ielts_word_list_2_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">gentle</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[dʒéntl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Someone who is gentle is kind and calm. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He is very gentle with the baby. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">geography</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[dʒiɑ́grəfi]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Geography is the study of where things are. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I had to draw a map for geography class. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">interfere</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ìntərfíər]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To interfere is to cause problems and keep something from happening. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ My little sister always interferes when I’m trying to study. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">lightly</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[láitli]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adv.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To do something lightly is to not push very hard. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Draw lightly so you do not tear your paper. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">principal</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[prínsəpəl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A principal is a person in charge of a school. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ My school’s principal can be very strict with the rules. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">row</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[rou]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A row is a line of things. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ James put all of his toy soldiers into neat rows. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">shelf</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ʃelf]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A shelf is a place on a wall where you put things. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I keep my clothes on a shelf in my closet. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">spite</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[spait]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">If you do something out of spite, you want to be mean. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He snuck into his sister’s room and stole her bag out of spite. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">super</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[sú:pər]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Super means really good. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ My dad said I did a super job cleaning the house. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">wet</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[wet]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">If something is wet, it has water on it. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Since my dog was wet, he tried to shake all the water off his body. <span style=\"color:#0ea5e9;\"></span></div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Word List 2</p>\n<div style=\"display: flex; flex-direction: column; gap: 16px;\">\n<img src=\"/unit11_ielts_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n</div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n<h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n<div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">playful</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hay vui đùa, hay nghịch</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spouse</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">vợ, chồng</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dejected</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">buồn nản, chán nản</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">embarrassed</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bối rối</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">withdraw</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">rút lui</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recommend</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khuyên</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">worthwhile</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">xứng đáng, đáng giá, bõ công</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">counter</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">phản đối, chống lại</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">argue against</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cãi lại</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">evidence</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chứng cứ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concerning</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">liên quan đến</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lately</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">gần đây</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">implication</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">(động từ là imply) ẩn ý, điều ngụ ý</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alternative</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khác, thay thế</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">efficient</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">có hiệu lực, có hiệu quả</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">advocate</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ủng hộ, biện hộ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">approach</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cách giải quyết, phương pháp</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shorten</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">rút ngắn, rút gọn</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arise from</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">phát sinh từ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">affect</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ảnh hưởng</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">constructive</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">có tính xây dựng</span></div>\n\n</div></div></div></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 12,
-              "content": "Complete the sentence with the correct word related to: gentle",
+              "id": 1200,
+              "content": "1. The student learned the word [ 1 ] today.",
               "options": [
-                "gentle",
-                "geography",
-                "interfere",
-                "lightly"
+                "playful",
+                "spouse",
+                "dejected",
+                "embarrassed",
+                "withdraw",
+                "recommend",
+                "worthwhile",
+                "counter",
+                "argue against",
+                "evidence"
               ],
-              "correctAnswer": "gentle",
-              "explanation": "The correct word is gentle."
+              "correctAnswer": "playful"
             },
             {
-              "id": 13,
-              "content": "Complete the sentence with the correct word related to: geography",
+              "id": 1201,
+              "content": "",
               "options": [
-                "geography",
-                "interfere",
-                "lightly",
-                "principal"
+                "playful",
+                "spouse",
+                "dejected",
+                "embarrassed",
+                "withdraw",
+                "recommend",
+                "worthwhile",
+                "counter",
+                "argue against",
+                "evidence"
               ],
-              "correctAnswer": "geography",
-              "explanation": "The correct word is geography."
+              "correctAnswer": "spouse"
             },
             {
-              "id": 14,
-              "content": "Complete the sentence with the correct word related to: interfere",
+              "id": 1202,
+              "content": "",
               "options": [
-                "interfere",
-                "lightly",
-                "principal",
-                "row"
+                "playful",
+                "spouse",
+                "dejected",
+                "embarrassed",
+                "withdraw",
+                "recommend",
+                "worthwhile",
+                "counter",
+                "argue against",
+                "evidence"
               ],
-              "correctAnswer": "interfere",
-              "explanation": "The correct word is interfere."
+              "correctAnswer": "dejected"
             },
             {
-              "id": 15,
-              "content": "Complete the sentence with the correct word related to: lightly",
+              "id": 1203,
+              "content": "",
               "options": [
-                "lightly",
-                "principal",
-                "row",
-                "shelf"
+                "playful",
+                "spouse",
+                "dejected",
+                "embarrassed",
+                "withdraw",
+                "recommend",
+                "worthwhile",
+                "counter",
+                "argue against",
+                "evidence"
               ],
-              "correctAnswer": "lightly",
-              "explanation": "The correct word is lightly."
+              "correctAnswer": "embarrassed"
             },
             {
-              "id": 16,
-              "content": "Complete the sentence with the correct word related to: principal",
+              "id": 1204,
+              "content": "",
               "options": [
-                "principal",
-                "row",
-                "shelf",
-                "spite"
+                "playful",
+                "spouse",
+                "dejected",
+                "embarrassed",
+                "withdraw",
+                "recommend",
+                "worthwhile",
+                "counter",
+                "argue against",
+                "evidence"
               ],
-              "correctAnswer": "principal",
-              "explanation": "The correct word is principal."
+              "correctAnswer": "withdraw"
             }
           ]
         },
@@ -234,80 +272,69 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 17,
-              "content": "Which word means: A row is a line of things.",
+              "id": 1205,
+              "content": "Which word is related to 'recommend'?",
               "options": [
-                "row",
-                "shelf",
-                "spite",
-                "super"
+                "recommend",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "row",
-              "explanation": "The word is row."
+              "correctAnswer": "A",
+              "explanation": "The correct word is recommend as it was taught in the lesson."
             },
             {
-              "id": 18,
-              "content": "Which word means: A shelf is a place on a wall where you put things.",
+              "id": 1206,
+              "content": "Which word is related to 'worthwhile'?",
               "options": [
-                "shelf",
-                "spite",
-                "super",
-                "wet"
+                "worthwhile",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "shelf",
-              "explanation": "The word is shelf."
+              "correctAnswer": "A",
+              "explanation": "The correct word is worthwhile as it was taught in the lesson."
             },
             {
-              "id": 19,
-              "content": "Which word means: If you do something out of spite, you want to be mean.",
+              "id": 1207,
+              "content": "Which word is related to 'counter'?",
               "options": [
-                "spite",
-                "super",
-                "wet",
-                "gentle"
+                "counter",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "spite",
-              "explanation": "The word is spite."
+              "correctAnswer": "A",
+              "explanation": "The correct word is counter as it was taught in the lesson."
             }
           ]
         },
         {
-          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
           "questionType": "Droplist",
           "questions": [
             {
-              "id": 20,
-              "content": "True or False: super means Super means really good.",
+              "id": 1208,
+              "content": "The word 'argue against' is an English word.",
               "options": [
-                "T",
-                "F",
-                "NG"
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "T",
-              "explanation": "True."
+              "correctAnswer": "True",
+              "explanation": "True. 'argue against' is part of the English vocabulary."
             },
             {
-              "id": 21,
-              "content": "True or False: wet means If something is wet, it has water on it.",
+              "id": 1209,
+              "content": "The word 'evidence' is an English word.",
               "options": [
-                "T",
-                "F",
-                "NG"
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "T",
-              "explanation": "True."
-            },
-            {
-              "id": 22,
-              "content": "True or False: gentle means a type of fruit.",
-              "options": [
-                "T",
-                "F",
-                "NG"
-              ],
-              "correctAnswer": "F",
-              "explanation": "False."
+              "correctAnswer": "True",
+              "explanation": "True. 'evidence' is part of the English vocabulary."
             }
           ]
         }
@@ -315,143 +342,81 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<p style=\"display: none;\">Comprehensive Reading</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit11_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dinosaur Drawings</h1><p style=\"margin-bottom: 1rem;\">It was the worst morning ever. When Carl woke up, he realized that he didn’t do his <b>astronomy</b> and <b>chemistry</b> homework. Also, the <b>forecast</b> called for rain and that would affect baseball practice. Suddenly, his mother yelled, “Take out the garbage right now!” When Carl returned from taking the garbage outside, he was all <b>wet</b>. “What a terrible day,” he said.</p><p style=\"margin-bottom: 1rem;\">He walked to class. He put his umbrella on the <b>shelf</b> and sat in the third <b>row</b>. But the teacher asked why Carl’s umbrella was on the floor. He told her not to <b>blame</b> him. But she sent him to the <b>principal</b> out of <b>spite</b>.</p><p style=\"margin-bottom: 1rem;\">Next, he took a <b>geography</b> test. <b>Despite</b> studying, Carl didn’t know the answers. He started drawing <b>lightly</b> on his paper.</p><p style=\"margin-bottom: 1rem;\">Carl drew a huge <b>dinosaur</b>. What if it were real? He saw it in his mind. Carl’s class said he was a <b>genius</b> for having a <b>dinosaur</b>. It could <b>interfere</b> with math class, too! Soon, Carl’s <b>fame</b> spread through school.</p><p style=\"margin-bottom: 1rem;\">He taught his <b>dinosaur</b> to be very <b>gentle</b> and put it on <b>exhibit</b>. But <b>admission</b> would only be given to those classmates who paid him a fee. His idea was <b>super</b>.</p><p style=\"margin-bottom: 1rem;\">“It’s time to turn in your tests,” the teacher said. Carl looked at his paper. As he was dreaming in class, he hadn’t finished the test!</p></div></div>",
-      "explanation": "Transcript and Reading Passage Explanation",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit11_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Positive Thinking Brings Rewards</h1>\n  <p style=\"margin-bottom: 1rem;\">Very often, we think of acquiring cash, cars, houses, credit cards and other materialistic things.</p>\n  <p style=\"margin-bottom: 1rem;\">How about acquiring optimism to build a life of real rewards and lasting fulfillment?</p>\n  <p style=\"margin-bottom: 1rem;\">No, I am not kidding. You can acquire optimism and become an optimist instead of a pessimist.</p>\n  <p style=\"margin-bottom: 1rem;\">Author and psychologist Martin E.P. Seligman believes that each of us can learn to be optimistic by rising above pessimism and the depression that often accompanies negative thoughts.</p>\n  <p style=\"margin-bottom: 1rem;\">In his book, \"Learned Optimism: How to change your mind and your life\", Seligman says learning to manage your life is as simple as remembering \"ABCDE\".</p>\n  <p style=\"margin-bottom: 1rem;\">\"A\" is for Adversity, \"B\" for Beliefs, \"C\" for Consequences, \"D\" for Disputation and \"E\" for Energization.</p>\n  <p style=\"margin-bottom: 1rem;\">In life, we are constantly facing small and major problems or Adversities which trigger responses in thoughts and feelings.</p>\n  <p style=\"margin-bottom: 1rem;\">These Adversities could be as follows: someone steals the parking space you are about to drive into; your playful children are not doing their homework as told; your best friend has not been returning your phone calls; you and your spouse have a fight; you invite a boyfriend over for dinner but he says he has other things to do; you receive a poor grade in your studies; and so on.</p>\n  <p style=\"margin-bottom: 1rem;\">For any Adversity, you think in a certain way because of your Beliefs. If you receive a poor grade in your studies, you might think that you did the worst in class, that you are stupid, that you are too old to be competing with younger students, or that you should give up.</p>\n  <p style=\"margin-bottom: 1rem;\">As a Consequence of your Beliefs, you feel totally dejected, useless and embarrassed and decide to withdraw from further studies.</p>\n  <p style=\"margin-bottom: 1rem;\">If you think and feel like this, then you are pessimistic and miserable. Seligman recommends that it would be worthwhile to counter such thoughts and feelings with Disputation, that is, by arguing against such negative ideas.</p>\n  <p style=\"margin-bottom: 1rem;\">Through Disputation, you gather evidence to prove that not everything is bad. You might not have a good grade, but you are probably not the worst. It does not mean you are stupid since you have better grades in other subjects.</p>\n  <p style=\"margin-bottom: 1rem;\">To counter the pessimism, you think of more optimistic ways to look at the situation. You think about possible causes or beliefs concerning the situation. Perhaps you have a family and a full-time job and you have been busy at work lately.</p>\n  <p style=\"margin-bottom: 1rem;\">Then you look at implications of the alternative causes or beliefs. If you have a full-time job, the implications for your part-time study with better grades could be spending less time with the family or being more efficient at work or being more effective in learning.</p>\n  <p style=\"margin-bottom: 1rem;\">Finally, Seligman advocates Energization. This is where you respond optimistically and calmly by thinking, feeling and doing positive things.</p>\n  <p style=\"margin-bottom: 1rem;\">Once you acquire the art of optimism, you may not require the full ABCDE approach. You could shorten it to ABC.</p>\n  <p style=\"margin-bottom: 1rem;\">When you face Adversity, ask yourself, \"What are my optimistic Beliefs about this situation?\" Then, ask yourself again, \"How can I feel and act optimistically so that, arising from my behaviour, there is no or little Consequence affecting myself or someone else?\"</p>\n  <p style=\"margin-bottom: 1rem;\">Be optimistic. Give the ABCDE or ABC a try and keep practising the method. You can be optimistic, positive, constructive, happy and successful in life.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Fill in each blank with the appropriate word",
-          "content": "",
-          "questionType": "Kéo thả",
-          "questions": [
-            {
-              "id": 301,
-              "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>1. When Carl woke up, he realized that he didn’t do his [ 1 ] and chemistry homework.<br/><br/>2. Also, the [ 2 ] called for rain and that would affect baseball practice.<br/><br/>3. ” When Carl returned from taking the garbage outside, he was all [ 3 ].<br/><br/>4. He put his umbrella on the shelf and sat in the third [ 4 ].<br/><br/>5. He told her not to [ 5 ] him.<br/><br/>",
-              "options": [
-                "astronomy",
-                "forecast",
-                "wet",
-                "row",
-                "blame"
-              ],
-              "correctAnswer": "astronomy",
-              "explanation": "Từ cần điền là: astronomy"
-            },
-            {
-              "id": 302,
-              "content": "",
-              "options": [
-                "astronomy",
-                "forecast",
-                "wet",
-                "row",
-                "blame"
-              ],
-              "correctAnswer": "forecast",
-              "explanation": "Từ cần điền là: forecast"
-            },
-            {
-              "id": 303,
-              "content": "",
-              "options": [
-                "astronomy",
-                "forecast",
-                "wet",
-                "row",
-                "blame"
-              ],
-              "correctAnswer": "wet",
-              "explanation": "Từ cần điền là: wet"
-            },
-            {
-              "id": 304,
-              "content": "",
-              "options": [
-                "astronomy",
-                "forecast",
-                "wet",
-                "row",
-                "blame"
-              ],
-              "correctAnswer": "row",
-              "explanation": "Từ cần điền là: row"
-            },
-            {
-              "id": 305,
-              "content": "",
-              "options": [
-                "astronomy",
-                "forecast",
-                "wet",
-                "row",
-                "blame"
-              ],
-              "correctAnswer": "blame",
-              "explanation": "Từ cần điền là: blame"
-            }
-          ]
-        },
-        {
-          "title": "Exercise 2: Reading Comprehension",
+          "title": "Exercise 1: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 400,
-              "content": "1. What is this story about?",
+              "id": 1180,
+              "content": "According to the text: 'Comprehensive Reading\\nPositive Thinking Brings Rewards\\nVery often, we think of acquiring cash, cars, houses, credit cards and other materialistic things...'",
               "options": [
-                "a. A wet classroom",
-                "b. A boy who is a genius",
-                "c. A bell that keeps ringing",
-                "d. A day that was not super"
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "d. A day that was not super",
-              "explanation": "The story starts with 'It was the worst morning ever' and describes Carl's bad day."
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             },
             {
-              "id": 401,
-              "content": "2. What does Carl think his dinosaur can do?",
+              "id": 1181,
+              "content": "According to the text: '\\nHow about acquiring optimism to build a life of real rewards and lasting fulfillment?\\nNo, I am not kidding...'",
               "options": [
-                "a. Make money for him on admission fees",
-                "b. Interfere with taking out the garbage",
-                "c. Take the blame for failing geography",
-                "d. Reach things on the top shelf"
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "a. Make money for him on admission fees",
-              "explanation": "Carl thinks 'admission would only be given to those classmates who paid him a fee.'"
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             },
             {
-              "id": 402,
-              "content": "3. What did Carl do?",
+              "id": 1182,
+              "content": "According to the text: 'You can acquire optimism and become an optimist instead of a pessimist...'",
               "options": [
-                "a. Break a jar at breakfast",
-                "b. Draw lightly on his test paper",
-                "c. Forget his hat on the bus",
-                "d. Stay after school for being late"
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "b. Draw lightly on his test paper",
-              "explanation": "The story says 'He started drawing lightly on his paper.'"
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             },
             {
-              "id": 403,
-              "content": "4. Despite Carl studying for his test, what happened?",
+              "id": 1183,
+              "content": "According to the text: '\\nAuthor and psychologist Martin E...'",
               "options": [
-                "a. His teacher was not gentle with him.",
-                "b. He had to sit in the last row.",
-                "c. The exhibit did not earn him any fame.",
-                "d. He did not do well on his geography test."
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "d. He did not do well on his geography test.",
-              "explanation": "The story says 'Despite studying, Carl didn’t know the answers.'"
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1184,
+              "content": "According to the text: 'P...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             }
           ]
         }
-      ],
-      "imageUrl": "/unit11_ielts_story.png"
+      ]
     }
   ],
   "basicInfo": {
-    "skill": "SplitScreen (Standard)",
-    "title": "Unit 11: Dinosaur Drawings",
+    "skill": "MCQ (Standard)",
+    "title": "Unit 11: Positive Thinking Brings Rewards",
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40

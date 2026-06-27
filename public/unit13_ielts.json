@@ -1,322 +1,8 @@
 {
-  "title": "Unit 13: The Farmer and the Cats",
   "parts": [
     {
       "title": "Word List 1",
-      "content": "<p style=\"display: none;\">Word List 1</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit13_ielts_word_list_1_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit13_ielts_word_list_1_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">blood</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[blAd]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Blood is the red liquid in your body. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I cut my finger and got blood on my shirt. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">burn</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[bə:rn]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To burn something is to set it on fire. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I burned some wood in the camp fire. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">cell</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[sel]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A cell is a small room where a person is locked in. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The jail cell was very small. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">contain</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[kəntein]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To contain something is to have it inside. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The mailbox contained a letter. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">correct</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[kərekt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To be correct is to be right. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ All of my answers on the test were correct. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">crop</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[krap]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A crop is food that a farmer grows. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Wheat is a crop that is made into bread. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">demand</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[dimænd]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To demand something is to say strongly that you want it. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The workers demanded to be paid more money. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">equal</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[i:kwəl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To be equal is to be the same. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Both students are equal in age. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">feed</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[fi:d]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To feed is to give food. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Mother feeds my baby brother everyday. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">hole</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[houl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A hole is an opening in something. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The man was going to jump into the hole in the ice. <span style=\"color:#0ea5e9;\"></span></div></div></div></div></div></div>",
-      "sections": [
-        {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 1,
-              "content": "Complete the sentence with the correct word related to: blood",
-              "options": [
-                "blood",
-                "burn",
-                "cell",
-                "contain"
-              ],
-              "correctAnswer": "blood",
-              "explanation": "The correct word is blood."
-            },
-            {
-              "id": 2,
-              "content": "Complete the sentence with the correct word related to: burn",
-              "options": [
-                "burn",
-                "cell",
-                "contain",
-                "correct"
-              ],
-              "correctAnswer": "burn",
-              "explanation": "The correct word is burn."
-            },
-            {
-              "id": 3,
-              "content": "Complete the sentence with the correct word related to: cell",
-              "options": [
-                "cell",
-                "contain",
-                "correct",
-                "crop"
-              ],
-              "correctAnswer": "cell",
-              "explanation": "The correct word is cell."
-            },
-            {
-              "id": 4,
-              "content": "Complete the sentence with the correct word related to: contain",
-              "options": [
-                "contain",
-                "correct",
-                "crop",
-                "demand"
-              ],
-              "correctAnswer": "contain",
-              "explanation": "The correct word is contain."
-            },
-            {
-              "id": 5,
-              "content": "Complete the sentence with the correct word related to: correct",
-              "options": [
-                "correct",
-                "crop",
-                "demand",
-                "equal"
-              ],
-              "correctAnswer": "correct",
-              "explanation": "The correct word is correct."
-            }
-          ]
-        },
-        {
-          "title": "Exercise 2: Choose the word that best matches the definition.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 6,
-              "content": "Which word means: A crop is food that a farmer grows.",
-              "options": [
-                "crop",
-                "demand",
-                "equal",
-                "feed"
-              ],
-              "correctAnswer": "crop",
-              "explanation": "The word is crop."
-            },
-            {
-              "id": 7,
-              "content": "Which word means: To demand something is to say strongly that you want it.",
-              "options": [
-                "demand",
-                "equal",
-                "feed",
-                "hole"
-              ],
-              "correctAnswer": "demand",
-              "explanation": "The word is demand."
-            },
-            {
-              "id": 8,
-              "content": "Which word means: To be equal is to be the same.",
-              "options": [
-                "equal",
-                "feed",
-                "hole",
-                "blood"
-              ],
-              "correctAnswer": "equal",
-              "explanation": "The word is equal."
-            }
-          ]
-        },
-        {
-          "title": "Exercise 3: Mark each statement T for true or F for false.",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
-          "questions": [
-            {
-              "id": 9,
-              "content": "True or False: feed means To feed is to give food.",
-              "options": [
-                "T",
-                "F",
-                "NG"
-              ],
-              "correctAnswer": "T",
-              "explanation": "True."
-            },
-            {
-              "id": 10,
-              "content": "True or False: hole means A hole is an opening in something.",
-              "options": [
-                "T",
-                "F",
-                "NG"
-              ],
-              "correctAnswer": "T",
-              "explanation": "True."
-            },
-            {
-              "id": 11,
-              "content": "True or False: blood means a type of fruit.",
-              "options": [
-                "T",
-                "F",
-                "NG"
-              ],
-              "correctAnswer": "F",
-              "explanation": "False."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Word List 2",
-      "content": "<p style=\"display: none;\">Word List 2</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit13_ielts_word_list_2_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit13_ielts_word_list_2_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">increase</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[inkri:s]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To increase something is to make it larger or more. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ They've increased the price of gas by 15 cents! <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">lord</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[lɔ:rd]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Long ago, a lord was a man in charge of a town. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The lord of the town was not kind. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">owe</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ou]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To owe is to have to pay or give back something received from another. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I owed him twenty dollars, so I paid him back. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">position</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[pəziʃən]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A position is the way something is placed. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ How can you sit in that position? <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">raise</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[reiz]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">To raise something is to lift it up. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ We had to work together to raise the last piece. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">responsible</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[rispansəbəl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">If a person is responsible, they do the right things. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I try to be responsible and save money. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">sight</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[sait]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A sight is something interesting to see. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I saw the pyramids of Egypt. What a sight! <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">spot</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[spat]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A spot is a place where something happens. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The kitchen is a good spot to eat meals. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">structure</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[strʌktʃər]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">A structure is a building. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ They just built a beautiful new structure downtown. <span style=\"color:#0ea5e9;\"></span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">whole</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[houl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">Whole means all of something. <span style=\"color:#0ea5e9;\"></span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I ate the whole pie. We don't have any more. <span style=\"color:#0ea5e9;\"></span></div></div></div></div></div></div>",
-      "sections": [
-        {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 12,
-              "content": "Complete the sentence with the correct word related to: increase",
-              "options": [
-                "increase",
-                "lord",
-                "owe",
-                "position"
-              ],
-              "correctAnswer": "increase",
-              "explanation": "The correct word is increase."
-            },
-            {
-              "id": 13,
-              "content": "Complete the sentence with the correct word related to: lord",
-              "options": [
-                "lord",
-                "owe",
-                "position",
-                "raise"
-              ],
-              "correctAnswer": "lord",
-              "explanation": "The correct word is lord."
-            },
-            {
-              "id": 14,
-              "content": "Complete the sentence with the correct word related to: owe",
-              "options": [
-                "owe",
-                "position",
-                "raise",
-                "responsible"
-              ],
-              "correctAnswer": "owe",
-              "explanation": "The correct word is owe."
-            },
-            {
-              "id": 15,
-              "content": "Complete the sentence with the correct word related to: position",
-              "options": [
-                "position",
-                "raise",
-                "responsible",
-                "sight"
-              ],
-              "correctAnswer": "position",
-              "explanation": "The correct word is position."
-            },
-            {
-              "id": 16,
-              "content": "Complete the sentence with the correct word related to: raise",
-              "options": [
-                "raise",
-                "responsible",
-                "sight",
-                "spot"
-              ],
-              "correctAnswer": "raise",
-              "explanation": "The correct word is raise."
-            }
-          ]
-        },
-        {
-          "title": "Exercise 2: Choose the word that best matches the definition.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 17,
-              "content": "Which word means: If a person is responsible, they do the right things.",
-              "options": [
-                "responsible",
-                "sight",
-                "spot",
-                "structure"
-              ],
-              "correctAnswer": "responsible",
-              "explanation": "The word is responsible."
-            },
-            {
-              "id": 18,
-              "content": "Which word means: A sight is something interesting to see.",
-              "options": [
-                "sight",
-                "spot",
-                "structure",
-                "whole"
-              ],
-              "correctAnswer": "sight",
-              "explanation": "The word is sight."
-            },
-            {
-              "id": 19,
-              "content": "Which word means: A spot is a place where something happens.",
-              "options": [
-                "spot",
-                "structure",
-                "whole",
-                "increase"
-              ],
-              "correctAnswer": "spot",
-              "explanation": "The word is spot."
-            }
-          ]
-        },
-        {
-          "title": "Exercise 3: Mark each statement T for true or F for false.",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
-          "questions": [
-            {
-              "id": 20,
-              "content": "True or False: structure means A structure is a building.",
-              "options": [
-                "T",
-                "F",
-                "NG"
-              ],
-              "correctAnswer": "T",
-              "explanation": "True."
-            },
-            {
-              "id": 21,
-              "content": "True or False: whole means Whole means all of something.",
-              "options": [
-                "T",
-                "F",
-                "NG"
-              ],
-              "correctAnswer": "T",
-              "explanation": "True."
-            },
-            {
-              "id": 22,
-              "content": "True or False: increase means a type of fruit.",
-              "options": [
-                "T",
-                "F",
-                "NG"
-              ],
-              "correctAnswer": "F",
-              "explanation": "False."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Comprehensive Reading",
-      "content": "<p style=\"display: none;\">Comprehensive Reading</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit13_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"font-family: Arial, sans-serif; \">        <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Farmer and the Cats</h1>        <p style=\"margin-bottom: 1rem;\">Arthur was a <b>responsible</b> farmer, and Maria was a nice lady. But they were poor. They <b>owed</b> the town <b>lord</b> money for their land. One summer, their farm <b>burned</b>. One <b>structure</b> caught fire, and most of the animals ran away. Only the cats stayed. So Arthur and Maria had to bring in their <b>crops</b> without an animal's help.</p>    <p style=\"margin-bottom: 1rem;\">On a fall day, the lord <b>demanded</b> his money. Arthur asked if the lord could wait until he brought in his crops.</p>    <p style=\"margin-bottom: 1rem;\">The lord was angry. He <b>raised</b> his hands high and yelled, \"Pay me by the end of the week. If you don't, I will <b>increase</b> the money you have to pay. I might put you in a jail <b>cell</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">So Arthur and Maria worked until there was <b>blood</b> on their hands. They finished four lines of corn and went to bed.</p>    <p style=\"margin-bottom: 1rem;\">But the next morning, eight lines were finished! \"Maria, didn't we stop in this <b>spot</b> here?\" Arthur asked.</p>    <p style=\"margin-bottom: 1rem;\">\"Yes, that is <b>correct</b>. And the tools were in a different <b>position</b>, too,\" Maria said. They were surprised and happy. That day, they worked hard and finished five lines.</p>    <p style=\"margin-bottom: 1rem;\">But in the morning, ten lines were done! Each day they did a lot of work. Each night, someone else did an <b>equal</b> amount of work. In a week, the <b>whole</b> field was finished. \"Tomorrow I will sell the crops and pay the lord,\" Arthur said. But that morning, the crops were gone. A bag was in the middle of the field. It <b>contained</b> money.</p>    <p style=\"margin-bottom: 1rem;\">\"Maria, let's see who has helped us work.\" Through a <b>hole</b> in the wall, they saw a funny <b>sight</b>. The cats were dancing in the field and eating corn! Now Arthur knew what had happened. The cats had worked at night! After that, Arthur was very nice to his cats and <b>fed</b> them lots of corn.</p></div></div>",
-      "explanation": "Transcript and Reading Passage Explanation",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Word List 1</p>\n<div style=\"display: flex; flex-direction: column; gap: 16px;\">\n<img src=\"/unit13_ielts_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n</div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n<h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n<div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">leisure</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thời gian rảnh rỗi</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conservative</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bảo thủ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nature</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bản chất</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">position</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">vị trí, lập trường, quan điểm</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elite</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhóm tinh hoa</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">demonstrate</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bày tỏ, biểu lộ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">respect</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khía cạnh</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">VIP (very important person)</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhân vật quan trọng</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Pancake Race</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cuộc thi vào ngày thứ ba trước tuần chay, ngày ăn bánh kếp theo truyền thống</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">start with</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bắt đầu bằng</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">around</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khoảng</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exclusive</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">dành riêng, đặc quyền</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">parliament</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nghị viện</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">in session</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đang phiên họp</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">traditional</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thuộc truyền thống</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pirate</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tên cướp biển</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">informal</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thân mật</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">object</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">mục đích</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dine</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ăn cơm, dùng bữa (trưa, chiều)</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wine</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">uống rượu</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intercourse</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự giao thiệp</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">interfere with</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">gây trở ngại, can thiệp</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rigorous</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nghiêm khắc, nghiêm ngặt</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pursuit</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự theo đuổi</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Executive Committee</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">Ban điều hành</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">antagonist</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người đối lập, người phản đối</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">engage in</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tham gia vào</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unfettered</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tự do, không bị ràng buộc</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">amicable</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thân ái, thân mật, thân tình</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tradition</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">truyền thống</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">originate from</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bắt nguồn từ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">napkin</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khăn ăn</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">carve</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chạm, khắc</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plain</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">giản dị, đơn sơ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">limited to</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">giới hạn (ở số lượng)</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prominent</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">xuất chúng, lỗi lạc</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">the Commons</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">Hạ viện (Anh)</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">the Lords</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">Thượng viện (Anh)</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distinguished</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ưu tú, xuất sắc, lỗi lạc</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">point of view</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">quan điểm</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">in contrast with</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tương phản với</span></div>\n\n</div></div></div></div></div>",
       "sections": [
         {
           "title": "Exercise 1: Fill in each blank with the appropriate word",
@@ -324,141 +10,413 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 23,
-              "content": "1. The word is [ 1 ].<br/><br/>2. The word is [ 2 ].<br/><br/>3. The word is [ 3 ].<br/><br/>4. The word is [ 4 ].<br/><br/>5. The word is [ 5 ].",
+              "id": 1350,
+              "content": "1. The student learned the word [ 1 ] today.",
               "options": [
-                "blood",
-                "burn",
-                "cell",
-                "contain",
-                "correct"
+                "leisure",
+                "conservative",
+                "nature",
+                "position",
+                "elite",
+                "demonstrate",
+                "respect",
+                "VIP (very important person)",
+                "Pancake Race",
+                "start with"
               ],
-              "correctAnswer": "blood"
+              "correctAnswer": "leisure"
             },
             {
-              "id": 24,
+              "id": 1351,
               "content": "",
               "options": [
-                "blood",
-                "burn",
-                "cell",
-                "contain",
-                "correct"
+                "leisure",
+                "conservative",
+                "nature",
+                "position",
+                "elite",
+                "demonstrate",
+                "respect",
+                "VIP (very important person)",
+                "Pancake Race",
+                "start with"
               ],
-              "correctAnswer": "burn"
+              "correctAnswer": "conservative"
             },
             {
-              "id": 25,
+              "id": 1352,
               "content": "",
               "options": [
-                "blood",
-                "burn",
-                "cell",
-                "contain",
-                "correct"
+                "leisure",
+                "conservative",
+                "nature",
+                "position",
+                "elite",
+                "demonstrate",
+                "respect",
+                "VIP (very important person)",
+                "Pancake Race",
+                "start with"
               ],
-              "correctAnswer": "cell"
+              "correctAnswer": "nature"
             },
             {
-              "id": 26,
+              "id": 1353,
               "content": "",
               "options": [
-                "blood",
-                "burn",
-                "cell",
-                "contain",
-                "correct"
+                "leisure",
+                "conservative",
+                "nature",
+                "position",
+                "elite",
+                "demonstrate",
+                "respect",
+                "VIP (very important person)",
+                "Pancake Race",
+                "start with"
               ],
-              "correctAnswer": "contain"
+              "correctAnswer": "position"
             },
             {
-              "id": 27,
+              "id": 1354,
               "content": "",
               "options": [
-                "blood",
-                "burn",
-                "cell",
-                "contain",
-                "correct"
+                "leisure",
+                "conservative",
+                "nature",
+                "position",
+                "elite",
+                "demonstrate",
+                "respect",
+                "VIP (very important person)",
+                "Pancake Race",
+                "start with"
               ],
-              "correctAnswer": "correct"
+              "correctAnswer": "elite"
             }
           ]
         },
         {
-          "title": "Exercise 2: Reading Comprehension",
+          "title": "Exercise 2: Choose the word that best matches the definition.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "26",
-              "content": "1. What does Arthur do in the story?",
+              "id": 1355,
+              "content": "Which word is related to 'demonstrate'?",
               "options": [
-                "Put the lady in a jail cell",
-                "Raise his hands high",
-                "Demand money from people",
-                "Work until there is blood on his hands"
+                "demonstrate",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "Work until there is blood on his hands",
-              "explanation": "Câu chuyện có nói: 'So Arthur and Maria worked until there was blood on their hands.'"
+              "correctAnswer": "A",
+              "explanation": "The correct word is demonstrate as it was taught in the lesson."
             },
             {
-              "id": "27",
-              "content": "2. What is true of the cats in the story?",
+              "id": 1356,
+              "content": "Which word is related to 'respect'?",
               "options": [
-                "They burn the farm and scare the animals.",
-                "They do work equal to Arthur's work.",
-                "They think Arthur is very responsible.",
-                "They put all the tools in one spot."
+                "respect",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "They do work equal to Arthur's work.",
-              "explanation": "Bài đọc có đoạn: 'Each night, someone else did an equal amount of work.' (Những chú mèo làm lượng công việc tương đương)"
+              "correctAnswer": "A",
+              "explanation": "The correct word is respect as it was taught in the lesson."
             },
             {
-              "id": "28",
-              "content": "3. What does the bag contain?",
+              "id": 1357,
+              "content": "Which word is related to 'VIP (very important person)'?",
               "options": [
-                "A gift for the lady",
-                "Corn to feed the animals",
-                "Money for the lord",
-                "A new kind of crop"
+                "VIP (very important person)",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "Money for the lord",
-              "explanation": "Túi đó chứa tiền (money) để trả cho ngài lãnh chúa."
+              "correctAnswer": "A",
+              "explanation": "The correct word is VIP (very important person) as it was taught in the lesson."
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement True or False.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
+          "questionType": "Droplist",
+          "questions": [
+            {
+              "id": 1358,
+              "content": "The word 'Pancake Race' is an English word.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "True",
+              "explanation": "True. 'Pancake Race' is part of the English vocabulary."
             },
             {
-              "id": "29",
-              "content": "4. What sight did Maria and Arthur see in the morning?",
+              "id": 1359,
+              "content": "The word 'start with' is an English word.",
               "options": [
-                "A hole in the wall of their house",
-                "A whole new structure on the farm",
-                "The lord working in their fields",
-                "The cats dancing on the farm"
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "The cats dancing on the farm",
-              "explanation": "Họ nhìn thấy cảnh tượng: 'The cats were dancing in the field and eating corn!'"
-            },
-            {
-              "id": "30",
-              "content": "5. When will the lord increase the money that Arthur has to pay?",
-              "options": [
-                "At the end of the month",
-                "At the end of the summer",
-                "At the end of the week",
-                "At the end of the year"
-              ],
-              "correctAnswer": "At the end of the week",
-              "explanation": "Lãnh chúa nói: 'Pay me by the end of the week. If you don't, I will increase the money you have to pay.'"
+              "correctAnswer": "True",
+              "explanation": "True. 'start with' is part of the English vocabulary."
             }
           ]
         }
-      ],
-      "imageUrl": "/unit13_ielts_story.png"
+      ]
+    },
+    {
+      "title": "Word List 2",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Word List 2</p>\n<div style=\"display: flex; flex-direction: column; gap: 16px;\">\n<img src=\"/unit13_ielts_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n</div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n<h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n<div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">popular</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">phổ biến</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Lent</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tuần chay</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">occur</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">xảy ra</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reminder</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">điều nhắc nhở</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consumption</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự tiêu thụ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">use up</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sử dụng hết</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frugal</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tiết kiệm, thanh đạm</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">toss</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ném</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">observe</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tuân thủ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">verger</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người cai quản giáo đường, người cầm gậy giám mục</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">procession</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đám rước</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Westminster Abbey</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">Tu viện Westminster</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">competitor</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người tham gia cuộc thi</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">get hold of</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nắm, chộp</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">portion</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">phần, phần chia</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scramble</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự tranh cướp, sự tranh giành</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">guinea</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đồng ghinê (đồng tiền vàng xưa của Anh, có giá trị tương đương 21 silinh)</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fund</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">quỹ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">for one\\'s part</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">về phần mình</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spectacular</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ngoạn mục</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">custom</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tập quán, tập tục</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">annual</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hàng năm</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frying pan</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chảo chiên</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contain</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chứa, đựng</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sizzling</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nóng sôi xèo xèo</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">keep</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tuân theo</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">parish</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">giáo khu</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prior to</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">trước</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">apron</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tạp dề</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scarf</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khăn quàng cổ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loose-fitting</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">rộng thùng thình</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bar</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cấm</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spurt</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chặng nước rút</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">optional</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tùy chọn</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">serve</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">phục vụ</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hail</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hoan hô, hoan nghênh</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">champion</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhà vô địch</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aristocratic</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thuộc quý tộc</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">purely</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thuần túy</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">participant</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người tham gia</span></div>\n\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✨</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">throw light on</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">làm rõ thêm, làm sáng tỏ</span></div>\n\n</div></div></div></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": 1400,
+              "content": "1. The student learned the word [ 1 ] today.",
+              "options": [
+                "popular",
+                "Lent",
+                "occur",
+                "reminder",
+                "consumption",
+                "use up",
+                "frugal",
+                "toss",
+                "observe",
+                "verger"
+              ],
+              "correctAnswer": "popular"
+            },
+            {
+              "id": 1401,
+              "content": "",
+              "options": [
+                "popular",
+                "Lent",
+                "occur",
+                "reminder",
+                "consumption",
+                "use up",
+                "frugal",
+                "toss",
+                "observe",
+                "verger"
+              ],
+              "correctAnswer": "Lent"
+            },
+            {
+              "id": 1402,
+              "content": "",
+              "options": [
+                "popular",
+                "Lent",
+                "occur",
+                "reminder",
+                "consumption",
+                "use up",
+                "frugal",
+                "toss",
+                "observe",
+                "verger"
+              ],
+              "correctAnswer": "occur"
+            },
+            {
+              "id": 1403,
+              "content": "",
+              "options": [
+                "popular",
+                "Lent",
+                "occur",
+                "reminder",
+                "consumption",
+                "use up",
+                "frugal",
+                "toss",
+                "observe",
+                "verger"
+              ],
+              "correctAnswer": "reminder"
+            },
+            {
+              "id": 1404,
+              "content": "",
+              "options": [
+                "popular",
+                "Lent",
+                "occur",
+                "reminder",
+                "consumption",
+                "use up",
+                "frugal",
+                "toss",
+                "observe",
+                "verger"
+              ],
+              "correctAnswer": "consumption"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Choose the word that best matches the definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 1405,
+              "content": "Which word is related to 'use up'?",
+              "options": [
+                "use up",
+                "Apple",
+                "Banana",
+                "Orange"
+              ],
+              "correctAnswer": "A",
+              "explanation": "The correct word is use up as it was taught in the lesson."
+            },
+            {
+              "id": 1406,
+              "content": "Which word is related to 'frugal'?",
+              "options": [
+                "frugal",
+                "Apple",
+                "Banana",
+                "Orange"
+              ],
+              "correctAnswer": "A",
+              "explanation": "The correct word is frugal as it was taught in the lesson."
+            },
+            {
+              "id": 1407,
+              "content": "Which word is related to 'toss'?",
+              "options": [
+                "toss",
+                "Apple",
+                "Banana",
+                "Orange"
+              ],
+              "correctAnswer": "A",
+              "explanation": "The correct word is toss as it was taught in the lesson."
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement True or False.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
+          "questionType": "Droplist",
+          "questions": [
+            {
+              "id": 1408,
+              "content": "The word 'observe' is an English word.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "True",
+              "explanation": "True. 'observe' is part of the English vocabulary."
+            },
+            {
+              "id": 1409,
+              "content": "The word 'verger' is an English word.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "True",
+              "explanation": "True. 'verger' is part of the English vocabulary."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit13_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Two Different Forms of British Leisure Life</h1>\n  <p style=\"margin-bottom: 1rem;\">British people are always famous for their conservative nature. Nevertheless, they also have some interesting ways to enjoy themselves. Of course, because of their different positions, the social elite and common people demonstrate different tastes in this respect. If the organized leisure, the Club, is for the VIPs, then the amusement like the Pancake Race is for the commons.</p>\n  <p style=\"margin-bottom: 1rem;\">Club life started with coffee drinking which began around 1650. Among the most exclusive and famous clubs of London, the Other Club occupies a special position. It was founded in 1911 by Sir Winston Churchill and F. E. Smith. Members of this club gather for dinner once a month when Parliament is in session and their traditional meeting place is the Pirate Room of the Savoy Hotel. These meetings are very private and informal. The Club has only three rules: 1. The object is to dine, wine and talk; 2. Nothing in the intercourse of the members shall be allowed to interfere with the full rigorous pursuit of party politics; 3. The names of the members of the Executive Committee must remain to be unknown.</p>\n  <p style=\"margin-bottom: 1rem;\">Political antagonists, who may never be seen to say a word to each other in public, may dine side by side here and engage in unfettered and amicable conversation. The Other Club is rich in traditions. Many of them originated from Sir Winston Churchill. At his command, a large wooden and black cat was seated near him at dinner with a napkin tied around its neck. The name of the black cat is Kaspar. It was designed and carved from a piece of plain tree in 1926 and was placed near to Sir Winston whenever there were only thirteen at table.</p>\n  <p style=\"margin-bottom: 1rem;\">Limited to fifty, the list of membership includes prominent members of the Commons and the Lords and other distinguished people. It is a non-political club and was given the name the Other Club because it aims always to hear the other man's point of view.</p>\n  <p style=\"margin-bottom: 1rem;\">In contrast with the Other Club there is the popular Pancake Day. It is on the first day of Lent, and usually occurs between February 2 and March 8. It is believed to be a reminder of the days when the consumption of butter and eggs was forbidden during Lent and housewives were anxious to use up all they had left before the start of the frugal period.</p>\n  <p style=\"margin-bottom: 1rem;\">At Westminster School, London, the practice of tossing a pancake is carefully observed. Led by a verger, a pancake is carried in procession from Westminster Abbey to the school. The cook, all in white, tosses it high in the air over the heads of young competitors in the school hall and the boy getting hold of the largest portion of it in the scramble, receives a guinea from Abbey funds. The cook is given two guineas for his part.</p>\n  <p style=\"margin-bottom: 1rem;\">The most popular and most spectacular pancake custom is the annual Pancake Race at Olney, Buckinghamshire, which is said to have been held since 1450. At the starting line each woman holds a frying pan containing a sizzling pancake. These rules are strictly kept: 1. Competitors must be eighteen or more in age and they must have lived in Olney Parish or Warrington for at least six months prior to the race; 2. Each woman must wear an apron and cover her head with a hat or scarf; 3. Loose-fitting trousers are barred; 4. All competitors must toss their pancakes at least three times during the race, once at the start, once during the final spurt to the church path and once at an optional point during the race.</p>\n  <p style=\"margin-bottom: 1rem;\">The first to serve her pancake to the bell ringer at the church door receives from him a traditional kiss and is hailed as the year's Pancake Champion.</p>\n  <p style=\"margin-bottom: 1rem;\">If the Other Club is a way for a few political elite to enjoy their aristocratic taste of leisure, then the practice of the Pancake Race is purely a folk custom. Although they are different both in form and participants, both of them throw some light on the traditional culture of Britain.</p></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 1380,
+              "content": "According to the text: 'Comprehensive Reading\\nTwo Different Forms of British Leisure Life\\nBritish people are always famous for their conservative nature...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1381,
+              "content": "According to the text: 'Nevertheless, they also have some interesting ways to enjoy themselves...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1382,
+              "content": "According to the text: 'Of course, because of their different positions, the social elite and common people demonstrate different tastes in this respect...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1383,
+              "content": "According to the text: 'If the organized leisure, the Club, is for the VIPs, then the amusement like the Pancake Race is for the commons...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1384,
+              "content": "According to the text: '\\nClub life started with coffee drinking which began around 1650...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            }
+          ]
+        }
+      ]
     }
   ],
   "basicInfo": {
-    "skill": "SplitScreen (Standard)",
-    "title": "Unit 13: The Farmer and the Cats",
+    "skill": "MCQ (Standard)",
+    "title": "Unit 13: Two Different Forms of British Leisure Life",
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40

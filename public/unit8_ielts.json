@@ -1,215 +1,98 @@
 {
-  "title": "Unit 8: The Anniversary Gift",
   "parts": [
     {
       "title": "Word List 1",
-      "content": "<p style=\"display: none;\">Word List 1</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit8_ielts_word_list_1_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit8_ielts_word_list_1_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">anniversary</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˌænɪˈvɜːrsəri]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a day that celebrates something from the past. <span style=\"color:#0ea5e9;\">(Ngày kỉ niệm một sự kiện trong quá khứ.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ My parents went out to eat for their wedding anniversary. <span style=\"color:#0ea5e9;\">(Bố mẹ tôi đi ăn ngoài nhân dịp kỷ niệm ngày cưới.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">arithmetic</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[əˈrɪθmətɪk]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">the branch of math dealing with numbers and basic operations. <span style=\"color:#0ea5e9;\">(Môn toán học cơ bản liên quan đến số và các phép tính.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I like to study arithmetic at school. <span style=\"color:#0ea5e9;\">(Tôi thích học môn số học ở trường.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">ashamed</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[əˈʃeɪmd]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">feeling upset because you did something wrong or bad. <span style=\"color:#0ea5e9;\">(Cảm thấy buồn vì đã làm điều gì đó sai hoặc tệ, xấu hổ.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He was ashamed when he found out that I knew about his past. <span style=\"color:#0ea5e9;\">(Anh ấy xấu hổ khi phát hiện tôi biết về quá khứ của anh ấy.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">burst</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[bɜːrst]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to suddenly break open or apart. <span style=\"color:#0ea5e9;\">(Đột ngột vỡ ra hoặc bung ra.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The bomb burst over the city. <span style=\"color:#0ea5e9;\">(Quả bom nổ tung trên thành phố.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">carpenter</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈkɑːrpəntər]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a person who builds things with wood. <span style=\"color:#0ea5e9;\">(Người đóng đồ bằng gỗ, thợ mộc.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ We hired a carpenter to make a cupboard. <span style=\"color:#0ea5e9;\">(Chúng tôi thuê một thợ mộc để đóng tủ.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">coal</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[koʊl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a hard black rock that you burn for heat. <span style=\"color:#0ea5e9;\">(Một loại đá đen cứng dùng để đốt lấy nhiệt, than đá.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Many power stations burn coal to produce energy. <span style=\"color:#0ea5e9;\">(Nhiều nhà máy điện đốt than đá để sản xuất năng lượng.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">couch</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[kaʊtʃ]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a long, soft seat that many people can sit on. <span style=\"color:#0ea5e9;\">(Ghế dài, mềm cho nhiều người ngồi, ghế sofa.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Kim and Martin's new couch was very expensive. <span style=\"color:#0ea5e9;\">(Chiếc ghế sofa mới của Kim và Martin rất đắt.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">drip</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[drɪp]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">when a liquid falls just a little bit at a time. <span style=\"color:#0ea5e9;\">(Khi chất lỏng rơi từng giọt một, nhỏ giọt.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I heard water dripping from the faucet. <span style=\"color:#0ea5e9;\">(Tôi nghe thấy nước nhỏ giọt từ vòi.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">elegant</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈelɪɡənt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">very fancy and pleasing in appearance. <span style=\"color:#0ea5e9;\">(Rất sang trọng và đẹp mắt, thanh lịch.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ In Japan, women wear elegant kimonos on special occasions. <span style=\"color:#0ea5e9;\">(Ở Nhật, phụ nữ mặc kimono thanh lịch trong những dịp đặc biệt.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">fabric</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈfæbrɪk]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">cloth used to make clothes, furniture, etc. <span style=\"color:#0ea5e9;\">(Vải dùng để may quần áo, đồ nội thất, v.v.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The towels were made from a soft fabric. <span style=\"color:#0ea5e9;\">(Những chiếc khăn được làm từ loại vải mềm.)</span></div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Word List 1</p>\n<div style=\"display: flex; flex-direction: column; gap: 16px;\">\n<img src=\"/unit8_ielts_word_list_1a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<img src=\"/unit8_ielts_word_list_1b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n</div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n<h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n<div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">buck</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">(tiếng lóng) đô la Mỹ</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">applicant</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người xin việc</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compensation</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự bồi thường</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trend</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">xu hướng</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shell out</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">trả tiền</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">current</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hiện tại</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lousy</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">kinh khủng, tệ hại</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">MBA-holder</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người có bằng thạc sĩ quản trị kinh doanh</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">paycheck</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tiền lương</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">work force</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">lực lượng lao động</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">corporate</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thuộc liên đoàn, thuộc đoàn thể</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recruiter</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người phụ trách việc tuyển nhân viên mới</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">survey</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cuộc khảo sát</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">post-graduate</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sau khi tốt nghiệp đại học</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">undergraduate</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chưa tốt nghiệp đại học</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bonus</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tiền thưởng</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tip</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nghiêng về</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">respondent</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người trả lời câu hỏi (ở một cuộc khảo sát)</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">estimate</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ước tính</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">head for</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hướng đến</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">career</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự nghiệp</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">marketing</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tiếp thị</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consult</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hỏi ý kiến, tham vấn</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div></div></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1,
-              "content": "Because it was their ________, my father bought my mother a gift.",
+              "id": 801,
+              "content": "1. He had to [ 1 ] a lot of money for his new laptop.<br/><br/>2. The survey included over 500 [ 2 ].<br/><br/>3. The company offered a generous [ 3 ] package.<br/><br/>4. She is a recent [ 4 ] student looking for a job.<br/><br/>5. The [ 5 ] economic situation is quite unpredictable.",
               "options": [
-                "anniversary",
-                "arithmetic",
-                "fabric",
-                "shed"
+                "shell out",
+                "respondents",
+                "compensation",
+                "post-graduate",
+                "current",
+                "lousy",
+                "career",
+                "bonus",
+                "buck",
+                "survey"
               ],
-              "correctAnswer": "A",
-              "explanation": "Anniversary means a day that celebrates something from the past."
+              "correctAnswer": "shell out"
             },
             {
-              "id": 2,
-              "content": "I heard water ________ from the faucet all night long.",
+              "id": 802,
+              "content": "",
               "options": [
-                "bursting",
-                "sewing",
-                "dripping",
-                "trimming"
+                "shell out",
+                "respondents",
+                "compensation",
+                "post-graduate",
+                "current",
+                "lousy",
+                "career",
+                "bonus",
+                "buck",
+                "survey"
               ],
-              "correctAnswer": "C",
-              "explanation": "To drip means liquid falls a little bit at a time."
+              "correctAnswer": "respondents"
             },
             {
-              "id": 3,
-              "content": "In Japan, women wear ________ kimonos on special occasions.",
+              "id": 803,
+              "content": "",
               "options": [
-                "ashamed",
-                "elegant",
-                "arithmetic",
-                "coal"
+                "shell out",
+                "respondents",
+                "compensation",
+                "post-graduate",
+                "current",
+                "lousy",
+                "career",
+                "bonus",
+                "buck",
+                "survey"
               ],
-              "correctAnswer": "B",
-              "explanation": "Elegant means very fancy and pleasing in appearance."
+              "correctAnswer": "compensation"
             },
             {
-              "id": 4,
-              "content": "The towels were made from a very soft ________.",
+              "id": 804,
+              "content": "",
               "options": [
-                "couch",
-                "needle",
-                "fabric",
-                "mill"
+                "shell out",
+                "respondents",
+                "compensation",
+                "post-graduate",
+                "current",
+                "lousy",
+                "career",
+                "bonus",
+                "buck",
+                "survey"
               ],
-              "correctAnswer": "C",
-              "explanation": "Fabric is cloth used to make clothes, furniture, etc."
+              "correctAnswer": "post-graduate"
             },
             {
-              "id": 5,
-              "content": "You should be ________ of yourself for lying to your teacher.",
+              "id": 805,
+              "content": "",
               "options": [
-                "elegant",
-                "ashamed",
-                "upward",
-                "ivory"
+                "shell out",
+                "respondents",
+                "compensation",
+                "post-graduate",
+                "current",
+                "lousy",
+                "career",
+                "bonus",
+                "buck",
+                "survey"
               ],
-              "correctAnswer": "B",
-              "explanation": "Ashamed means feeling upset because you did something wrong."
-            }
-          ]
-        },
-        {
-          "title": "Exercise 2: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 6,
-              "content": "My brother is a <i>carpenter</i>, so he knows about building things with wood.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "correctAnswer": "A",
-              "explanation": "Correct. A carpenter is a person who builds things with wood."
-            },
-            {
-              "id": 7,
-              "content": "We sat on the <i>coal</i> and watched television together.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. It should be 'couch'. Coal is a hard black rock burned for heat."
-            },
-            {
-              "id": 8,
-              "content": "When the wind blew, the door <i>burst</i> open suddenly.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Burst means to suddenly break open or apart."
-            }
-          ]
-        },
-        {
-          "title": "Exercise 3: Choose the word that best matches the definition.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 9,
-              "content": "The branch of math dealing with numbers and basic operations",
-              "options": [
-                "Fabric",
-                "Arithmetic",
-                "Couch",
-                "Anniversary"
-              ],
-              "correctAnswer": "B",
-              "explanation": "Arithmetic is the branch of math dealing with numbers."
-            },
-            {
-              "id": 10,
-              "content": "To suddenly break open or apart",
-              "options": [
-                "Drip",
-                "Sew",
-                "Burst",
-                "Trim"
-              ],
-              "correctAnswer": "C",
-              "explanation": "Burst means to suddenly break open or apart."
-            },
-            {
-              "id": 11,
-              "content": "A long, soft seat that many people can sit on",
-              "options": [
-                "Shed",
-                "Mill",
-                "Couch",
-                "Fabric"
-              ],
-              "correctAnswer": "C",
-              "explanation": "A couch is a long, soft seat."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Word List 2",
-      "content": "<p style=\"display: none;\">Word List 2</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit8_ielts_word_list_2_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit8_ielts_word_list_2_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">highlands</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈhaɪləndz]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">high areas of land, usually with mountains. <span style=\"color:#0ea5e9;\">(Vùng đất cao, thường có núi, vùng cao nguyên.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The man had a small home in the highlands. <span style=\"color:#0ea5e9;\">(Người đàn ông có một ngôi nhà nhỏ ở vùng cao nguyên.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">ivory</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈaɪvəri]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a white, hard substance that comes from elephants. <span style=\"color:#0ea5e9;\">(Chất cứng, màu trắng lấy từ voi, ngà voi.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The elephant's long ivory tusks looked very impressive. <span style=\"color:#0ea5e9;\">(Cặp ngà voi dài trông rất ấn tượng.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">mill</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[mɪl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a building where flour is made. <span style=\"color:#0ea5e9;\">(Tòa nhà nơi bột mì được sản xuất, nhà máy xay.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The farmer took his wheat to the mill to make it into flour. <span style=\"color:#0ea5e9;\">(Người nông dân mang lúa mì đến nhà máy xay để xay thành bột.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">needle</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈniːdl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a small, sharp piece of metal used to make or fix clothes. <span style=\"color:#0ea5e9;\">(Mảnh kim loại nhỏ, nhọn dùng để may hoặc sửa quần áo, cây kim.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I used a needle to fix the hole in my pants. <span style=\"color:#0ea5e9;\">(Tôi dùng một cây kim để vá lỗ thủng trên quần.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">polish</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈpɑːlɪʃ]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to rub something in order to make it shiny. <span style=\"color:#0ea5e9;\">(Chà xát một vật gì đó để làm cho nó sáng bóng, đánh bóng.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Mark spent all morning polishing his shoes for the wedding. <span style=\"color:#0ea5e9;\">(Mark dành cả buổi sáng đánh bóng giày cho đám cưới.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">sew</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[soʊ]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to put pieces of cloth together using string. <span style=\"color:#0ea5e9;\">(Ghép các mảnh vải lại với nhau bằng chỉ, may.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I learned to sew when I was a little girl. <span style=\"color:#0ea5e9;\">(Tôi học may từ khi còn nhỏ.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">shed</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ʃed]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a small building where you store things like tools. <span style=\"color:#0ea5e9;\">(Tòa nhà nhỏ nơi bạn cất giữ đồ đạc như dụng cụ, nhà kho.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ We have a small shed in the backyard for storage. <span style=\"color:#0ea5e9;\">(Chúng tôi có một nhà kho nhỏ ở sân sau để cất đồ.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">thread</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[θred]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a thin piece of string. <span style=\"color:#0ea5e9;\">(Một sợi dây mỏng, sợi chỉ.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I have many different colors of thread at home. <span style=\"color:#0ea5e9;\">(Tôi có nhiều màu chỉ khác nhau ở nhà.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">trim</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[trɪm]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to cut something a little bit. <span style=\"color:#0ea5e9;\">(Cắt bớt một chút, cắt tỉa.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ I had my hair trimmed this afternoon. <span style=\"color:#0ea5e9;\">(Tôi đã cắt tỉa tóc chiều nay.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">upwards</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈʌpwərdz]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adv.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">moving vertically higher. <span style=\"color:#0ea5e9;\">(Di chuyển theo chiều dọc lên cao hơn, hướng lên trên.)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The kite went upwards further and further. <span style=\"color:#0ea5e9;\">(Con diều bay lên cao ngày càng xa hơn.)</span></div></div></div></div></div></div>",
-      "sections": [
-        {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 12,
-              "content": "The farmer took his wheat to the ________ to make it into flour.",
-              "options": [
-                "shed",
-                "mill",
-                "highlands",
-                "thread"
-              ],
-              "correctAnswer": "B",
-              "explanation": "A mill is a building where flour is made."
-            },
-            {
-              "id": 13,
-              "content": "Mark spent all morning ________ his shoes for the wedding.",
-              "options": [
-                "sewing",
-                "trimming",
-                "polishing",
-                "dripping"
-              ],
-              "correctAnswer": "C",
-              "explanation": "To polish means to rub something to make it shiny."
-            },
-            {
-              "id": 14,
-              "content": "The kite went ________ further and further into the sky.",
-              "options": [
-                "upwards",
-                "highlands",
-                "ivory",
-                "thread"
-              ],
-              "correctAnswer": "A",
-              "explanation": "Upwards means moving vertically higher."
-            },
-            {
-              "id": 15,
-              "content": "I used a ________ and thread to fix the hole in my pants.",
-              "options": [
-                "mill",
-                "shed",
-                "needle",
-                "coal"
-              ],
-              "correctAnswer": "C",
-              "explanation": "A needle is a small, sharp piece of metal used to fix clothes."
+              "correctAnswer": "current"
             }
           ]
         },
@@ -219,77 +102,239 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 16,
-              "content": "A white, hard substance that comes from elephants",
+              "id": 806,
+              "content": "A person who is applying for a job.",
               "options": [
-                "Coal",
-                "Thread",
-                "Ivory",
-                "Fabric"
+                "Applicant",
+                "Recruiter",
+                "Respondent",
+                "MBA-holder"
               ],
-              "correctAnswer": "C",
-              "explanation": "Ivory is a white, hard substance from elephants."
+              "correctAnswer": "A",
+              "explanation": "An applicant is someone who applies for something like a job."
             },
             {
-              "id": 17,
-              "content": "A small building where you store things like tools",
+              "id": 807,
+              "content": "A general direction in which something is developing or changing.",
               "options": [
-                "Mill",
-                "Shed",
-                "Highlands",
-                "Couch"
+                "Survey",
+                "Trend",
+                "Career",
+                "Bonus"
               ],
               "correctAnswer": "B",
-              "explanation": "A shed is a small building for storage."
+              "explanation": "A trend is a general direction of change."
             },
             {
-              "id": 18,
-              "content": "To cut something a little bit",
+              "id": 808,
+              "content": "Very poor or bad.",
               "options": [
-                "Sew",
-                "Polish",
-                "Burst",
-                "Trim"
+                "Corporate",
+                "Current",
+                "Lousy",
+                "Post-graduate"
               ],
-              "correctAnswer": "D",
-              "explanation": "To trim means to cut something a little bit."
+              "correctAnswer": "C",
+              "explanation": "Lousy means very poor or bad."
             }
           ]
         },
         {
-          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "TFNG",
+          "questionType": "Droplist",
           "questions": [
             {
-              "id": 19,
-              "content": "A 'needle' is a large, blunt piece of wood used for cooking.",
+              "id": 809,
+              "content": "A 'buck' is slang for a dollar.",
               "options": [
                 "True",
-                "False"
-              ],
-              "correctAnswer": "False",
-              "explanation": "False. A needle is a small, sharp piece of metal used to make or fix clothes."
-            },
-            {
-              "id": 20,
-              "content": "If something goes 'upwards', it moves vertically higher.",
-              "options": [
-                "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. Upwards means moving vertically higher."
+              "explanation": "True. In American slang, a buck refers to a dollar."
             },
             {
-              "id": 21,
-              "content": "The 'highlands' are flat, low-lying areas near the coast.",
+              "id": 810,
+              "content": "'Undergraduate' refers to a student who has already completed their first degree.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "correctAnswer": "False",
-              "explanation": "False. The highlands are high areas of land, usually with mountains."
+              "explanation": "False. An undergraduate is a student studying for their first degree."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Word List 2",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Word List 2</p>\n<div style=\"display: flex; flex-direction: column; gap: 16px;\">\n<img src=\"/unit8_ielts_word_list_2a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<img src=\"/unit8_ielts_word_list_2b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n</div>\n<div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n<h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n<div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">criteria</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">(số nhiều của criterion) tiêu chí</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">candidate</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ứng viên</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">internship</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">công việc thực tập</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deem</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cho rằng, thấy rằng</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reputation</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tiếng tăm (xấu, tốt)</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">professional</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người chuyên nghiệp</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">represent</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thay mặt, đại diện</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">participate in</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tham gia vào</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">finding</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">phát hiện</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pharmaceutical</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thuộc dược khoa</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alter</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thay đổi</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impact</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tác động</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">utilities</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">dịch vụ tiện ích</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rescind</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hủy bỏ</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lay off</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cho nghỉ việc, giãn (thợ)</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prior to</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">trước</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">slightly</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hơi, nhẹ, sơ sơ</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">retention</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự giữ lại, sự duy trì</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sufficient</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đủ</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pool</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhóm</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">profit</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">lợi nhuận</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n<div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n<div style=\"display: flex; flex-direction: column; gap: 6px;\">\n<div style=\"display: flex; align-items: baseline; gap: 8px;\">\n<span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sponsor</span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n<span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n</div>\n<div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tài trợ</span></div>\n<div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"\" <span style=\"color: #0ea5e9;\"></span></div>\n</div></div></div></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": 811,
+              "content": "1. The company's [ 1 ] was damaged by the scandal.<br/><br/>2. The manager decided to [ 2 ] the offer due to budget cuts.<br/><br/>3. She applied for an [ 3 ] to gain work experience.<br/><br/>4. We must establish clear [ 4 ] for evaluating candidates.<br/><br/>5. The economy had a major [ 5 ] on hiring plans.",
+              "options": [
+                "reputation",
+                "rescind",
+                "internship",
+                "criteria",
+                "impact",
+                "profit",
+                "candidate",
+                "pool",
+                "sponsor",
+                "finding"
+              ],
+              "correctAnswer": "reputation"
+            },
+            {
+              "id": 812,
+              "content": "",
+              "options": [
+                "reputation",
+                "rescind",
+                "internship",
+                "criteria",
+                "impact",
+                "profit",
+                "candidate",
+                "pool",
+                "sponsor",
+                "finding"
+              ],
+              "correctAnswer": "rescind"
+            },
+            {
+              "id": 813,
+              "content": "",
+              "options": [
+                "reputation",
+                "rescind",
+                "internship",
+                "criteria",
+                "impact",
+                "profit",
+                "candidate",
+                "pool",
+                "sponsor",
+                "finding"
+              ],
+              "correctAnswer": "internship"
+            },
+            {
+              "id": 814,
+              "content": "",
+              "options": [
+                "reputation",
+                "rescind",
+                "internship",
+                "criteria",
+                "impact",
+                "profit",
+                "candidate",
+                "pool",
+                "sponsor",
+                "finding"
+              ],
+              "correctAnswer": "criteria"
+            },
+            {
+              "id": 815,
+              "content": "",
+              "options": [
+                "reputation",
+                "rescind",
+                "internship",
+                "criteria",
+                "impact",
+                "profit",
+                "candidate",
+                "pool",
+                "sponsor",
+                "finding"
+              ],
+              "correctAnswer": "impact"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Choose the word that best matches the definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 816,
+              "content": "To discharge a worker temporarily or permanently because of a shortage of work.",
+              "options": [
+                "Deem",
+                "Sponsor",
+                "Lay off",
+                "Alter"
+              ],
+              "correctAnswer": "C",
+              "explanation": "To lay off means to discharge a worker."
+            },
+            {
+              "id": 817,
+              "content": "A person who applies for a job or is nominated for election.",
+              "options": [
+                "Candidate",
+                "Professional",
+                "Utilities",
+                "Retention"
+              ],
+              "correctAnswer": "A",
+              "explanation": "A candidate is a person applying for a position."
+            },
+            {
+              "id": 818,
+              "content": "To change or cause to change in character or composition.",
+              "options": [
+                "Represent",
+                "Alter",
+                "Deem",
+                "Participate"
+              ],
+              "correctAnswer": "B",
+              "explanation": "To alter means to change."
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement True or False.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
+          "questionType": "Droplist",
+          "questions": [
+            {
+              "id": 819,
+              "content": "'Pharmaceutical' relates to medicinal drugs.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "True",
+              "explanation": "True. Pharmaceutical refers to the preparation, use, or sale of medicinal drugs."
+            },
+            {
+              "id": 820,
+              "content": "If something is 'sufficient', it means there is not enough of it.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "False",
+              "explanation": "False. Sufficient means enough or adequate."
             }
           ]
         }
@@ -297,288 +342,81 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<p style=\"display: none;\">Comprehensive Reading</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit8_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Anniversary Gift</h1><p style=\"margin-bottom: 1rem;\">Joe was a <b>carpenter</b>. He built houses in the <b>highlands</b>. Joe's wife Stella used a <b>needle</b> and <b>thread</b> to <b>sew</b> <b>elegant</b> clothing. She only used beautiful <b>fabric</b> to make clothes.</p><p style=\"margin-bottom: 1rem;\">Since they didn't have a lot of money, they lived in an old <b>shed</b>. Water <b>dripped</b> in when it rained. They had broken chairs instead of a <b>couch</b>. But they had <b>coal</b> for heat, and flour from the <b>mill</b> for bread. Together, they <b>trimmed</b> the bushes to make their house look nice. Joe and Stella were poor, but not <b>ashamed</b>. They were happy.</p><p style=\"margin-bottom: 1rem;\">Sometimes in the evening, they walked downtown. They looked in store windows and dreamed. Stella wanted a hairbrush with an <b>ivory</b> handle. She pulled her hair <b>upwards</b> every day because she didn't have a brush to make it nice. Joe wanted to fix his grandfather's watch.</p><p style=\"margin-bottom: 1rem;\">For their <b>anniversary</b>, Stella wanted to get Joe what he wanted. But then she did the <b>arithmetic</b>. It would take at least six months to save enough money. Then she had an idea. She cut off all of her hair and sold it.</p><p style=\"margin-bottom: 1rem;\">Meanwhile, Joe knew that he could never fix his watch. So he <b>polished</b> it and sold it. He made enough to buy the brush.</p><p style=\"margin-bottom: 1rem;\">On their anniversary, the door <b>burst</b> open. Joe was excited to give Stella his gift. But first, Stella gave him the money to fix the watch. When he saw his wife without any hair, he smiled. \"I sold my watch to buy you something,\" Joe said. He gave her the brush, and she laughed. They were both willing to give up something very special to make each other happy.</p></div></div>",
-      "explanation": "Transcript and Reading Passage Explanation",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit8_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">MBA: More Bucks for Applicants</h1>\n  <p style=\"margin-bottom: 1rem;\">Compensation trends are changing, but the degree still brings rewards.</p>\n  <p style=\"margin-bottom: 1rem;\">So, you shelled out some serious cash to get that MBA. Was it a good investment? Apparently, the answer is yes—according to a new survey.</p>\n  <p style=\"margin-bottom: 1rem;\">Despite the current lousy economy, MBA-holders are still getting bigger paychecks than others in the work force, according to the 2002 Graduate Management Admission Council (GMAC) Corporate Recruiters Survey.</p>\n  <p style=\"margin-bottom: 1rem;\">Recruiters report they are offering an average base salary of $75,000 to individuals with MBAs. By comparison, recruiters say they're offering about $50,000 for holders of other post-graduate degrees, and $41,000 for those with undergraduate degrees. In addition, 69% indicate they will offer signing bonuses to MBAs.</p>\n  <p style=\"margin-bottom: 1rem;\">This said, the job market is now tipping in favor of the employer. Indeed, 68% of the respondents indicated the weak economy has created a \"buyer's market\" for their companies.</p>\n  <p style=\"margin-bottom: 1rem;\">Even so, recruiters still estimate that 30% of their 2002 hires will be MBAs, increasing to 35% in 2003.</p>\n  <p style=\"margin-bottom: 1rem;\">Which fields do MBA graduates head for? The most popular one is finance: 52% of the recruiters say graduates are seeking MBAs for finance careers. Marketing is a distant second (31%), followed by IT/MIS (25%) and consulting (24%).</p>\n  <p style=\"margin-bottom: 1rem;\">And what are the most important criteria recruiters consider when hiring somebody with an MBA? Surprisingly, it's not the school that the candidate attended.</p>\n  <p style=\"margin-bottom: 1rem;\">Internship and related work experience were deemed the most important criteria, selected by 70% of the respondents. Other key criteria included the candidate's history of increased job responsibility (66%); industry-related internship or work experience (61%) and MBA concentration of study (61%).</p>\n  <p style=\"margin-bottom: 1rem;\">Recruiters deemed internship and related work experience the most important criteria when evaluating MBA students.</p>\n  <p style=\"margin-bottom: 1rem;\">The reputation of the MBA school was only selected by 59% of the respondents, followed by history of leading teams (55%).</p>\n  <p style=\"margin-bottom: 1rem;\">Altogether, 550 recruitment professionals, representing 423 companies, participated in the GMAC survey.</p>\n  <p style=\"margin-bottom: 1rem;\">Other findings in the survey:</p>\n  <p style=\"margin-bottom: 1rem;\">Most recruiters (65%) in the health care and pharmaceutical industries say they have not altered their hiring plans. The economy's impact was felt most by recruiters for the consulting industry (86%), manufacturing (79%), energy and utilities (71%) and technology (69%).</p>\n  <p style=\"margin-bottom: 1rem;\">Three-quarters of recruiters said they did not rescind offers, lay off new MBA hires, delay job starts or move MBA hires into different departments in 2001.</p>\n  <p style=\"margin-bottom: 1rem;\">Just 4% of recruiters rescinded offers this year.</p>\n  <p style=\"margin-bottom: 1rem;\">The number of recruiters for US companies making job offers to MBAs three months or more prior to graduation dropped 10% in 2002. The number offering jobs within weeks of graduation rose slightly.</p>\n  <p style=\"margin-bottom: 1rem;\">A majority of respondents (76%) said the most important criteria in selecting schools at which to recruit are the school's reputation and their existing relationships at the school.</p>\n  <p style=\"margin-bottom: 1rem;\">Other school recruitment factors included the retention history of previous hires (50%) and a sufficiently large candidate pool (50%).</p>\n  <p style=\"margin-bottom: 1rem;\">The Graduate Management Admission Council is a not-for-profit education organization of graduate business schools worldwide. The organization sponsors the Graduate Management Admission Test (GMAT) used as part of the admissions process by graduate management programs around the world.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Fill in each blank with the appropriate word, making changes where necessary",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
-          "questionType": "Kéo thả",
-          "questions": [
-            {
-              "id": 22,
-              "content": "1. Joe was a [ 1 ]. He built houses in the highlands.<br/><br/>2. Joe built houses in the [ 2 ].<br/><br/>3. Stella used a [ 3 ] and thread to sew clothing.<br/><br/>4. She used a needle and [ 4 ] to sew clothing.<br/><br/>5. Stella knew how to [ 5 ] elegant clothing.<br/><br/>6. She made [ 6 ] clothing from beautiful fabric.<br/><br/>7. She only used beautiful [ 7 ] to make clothes.<br/><br/>8. They lived in an old [ 8 ].<br/><br/>9. Water [ 9 ] in when it rained.<br/><br/>10. They had broken chairs instead of a [ 10 ].<br/><br/>11. They had [ 11 ] for heat.",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "carpenter"
-            },
-            {
-              "id": 23,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "highlands"
-            },
-            {
-              "id": 24,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "needle"
-            },
-            {
-              "id": 25,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "thread"
-            },
-            {
-              "id": 26,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "sew"
-            },
-            {
-              "id": 27,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "elegant"
-            },
-            {
-              "id": 28,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "fabric"
-            },
-            {
-              "id": 29,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "shed"
-            },
-            {
-              "id": 30,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "dripped"
-            },
-            {
-              "id": 31,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "couch"
-            },
-            {
-              "id": 32,
-              "content": "",
-              "options": [
-                "carpenter",
-                "highlands",
-                "needle",
-                "thread",
-                "sew",
-                "elegant",
-                "fabric",
-                "shed",
-                "dripped",
-                "couch",
-                "coal"
-              ],
-              "correctAnswer": "coal"
-            }
-          ]
-        },
-        {
-          "title": "Exercise 2: Reading Comprehension",
+          "title": "Exercise 1: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 33,
-              "content": "What did Joe do for a living?",
+              "id": 821,
+              "content": "What is the average base salary offered to individuals with MBAs according to recruiters?",
               "options": [
-                "He was a mill worker.",
-                "He was a carpenter.",
-                "He sold ivory.",
-                "He polished shoes."
+                "$41,000",
+                "$50,000",
+                "$75,000",
+                "$69,000"
+              ],
+              "correctAnswer": "C",
+              "explanation": "According to the passage, recruiters are offering an average base salary of $75,000 to individuals with MBAs."
+            },
+            {
+              "id": 822,
+              "content": "Which field is the most popular for MBA graduates according to the text?",
+              "options": [
+                "Marketing",
+                "Finance",
+                "Consulting",
+                "IT/MIS"
               ],
               "correctAnswer": "B",
-              "explanation": "The passage states: 'Joe was a carpenter. He built houses in the highlands.'"
+              "explanation": "The text states: 'The most popular one is finance: 52% of the recruiters say graduates are seeking MBAs for finance careers.'"
             },
             {
-              "id": 34,
-              "content": "Why were Joe and Stella not ashamed of their poverty?",
+              "id": 823,
+              "content": "What was deemed the most important criterion when evaluating MBA students by recruiters?",
               "options": [
-                "They had elegant furniture.",
-                "They had plenty of money.",
-                "They were happy together.",
-                "They lived in the highlands."
+                "The reputation of the MBA school",
+                "History of leading teams",
+                "MBA concentration of study",
+                "Internship and related work experience"
               ],
-              "correctAnswer": "C",
-              "explanation": "The passage states: 'Joe and Stella were poor, but not ashamed. They were happy.'"
+              "correctAnswer": "D",
+              "explanation": "The text explicitly says: 'Internship and related work experience were deemed the most important criteria, selected by 70% of the respondents.'"
             },
             {
-              "id": 35,
-              "content": "What did Stella want as a gift?",
+              "id": 824,
+              "content": "Which industry's recruiters felt the economy's impact the MOST?",
               "options": [
-                "A needle and thread",
-                "An elegant coat",
-                "A hairbrush with an ivory handle",
-                "A new couch"
+                "Health care",
+                "Manufacturing",
+                "Consulting",
+                "Technology"
               ],
               "correctAnswer": "C",
-              "explanation": "The passage states: 'Stella wanted a hairbrush with an ivory handle.'"
+              "explanation": "The passage says: 'The economy's impact was felt most by recruiters for the consulting industry (86%).'"
             },
             {
-              "id": 36,
-              "content": "How did Stella get the money for Joe's gift?",
+              "id": 825,
+              "content": "What percentage of recruiters rescinded offers this year?",
               "options": [
-                "She sold fabric.",
-                "She did arithmetic.",
-                "She sold her hair.",
-                "She polished ivory."
+                "10%",
+                "4%",
+                "65%",
+                "76%"
               ],
-              "correctAnswer": "C",
-              "explanation": "The passage states: 'She cut off all of her hair and sold it.'"
-            },
-            {
-              "id": 37,
-              "content": "What happened when Joe gave Stella the brush?",
-              "options": [
-                "She cried.",
-                "She was ashamed.",
-                "She laughed.",
-                "She burst into tears."
-              ],
-              "correctAnswer": "C",
-              "explanation": "The passage states: 'He gave her the brush, and she laughed.'"
+              "correctAnswer": "B",
+              "explanation": "The text states: 'Just 4% of recruiters rescinded offers this year.'"
             }
           ]
         }
-      ],
-      "imageUrl": "/unit8_ielts_story.png"
+      ]
     }
   ],
   "basicInfo": {
     "skill": "MCQ (Standard)",
-    "title": "Unit 8: The Anniversary Gift",
+    "title": "Unit 8: MBA: More Bucks for Applicants",
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40

@@ -1,74 +1,98 @@
 {
-  "title": "Unit 18: The Knight's Plan",
   "parts": [
     {
       "title": "Word List 1",
-      "content": "<p style=\"display: none;\">Word List 1</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit18_ielts_word_list_1_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit18_ielts_word_list_1_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">armor</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈɑːrmər]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">metal worn by soldiers to protect the body. <span style=\"color:#0ea5e9;\">(áo giáp)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The soldier wore armor to protect his body. <span style=\"color:#0ea5e9;\">(Người lính mặc áo giáp để bảo vệ cơ thể.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">blaze</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[bleɪz]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to burn brightly or powerfully. <span style=\"color:#0ea5e9;\">(bốc cháy, rực lửa)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The small fire soon blazed into a large dangerous one. <span style=\"color:#0ea5e9;\">(Đám cháy nhỏ nhanh chóng bùng cháy dữ dội.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">boom</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[buːm]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to make a loud, deep sound. <span style=\"color:#0ea5e9;\">(nổ vang)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The firecrackers made a loud boom when they exploded. <span style=\"color:#0ea5e9;\">(Pháo hoa phát ra tiếng nổ vang khi nổ.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">cliff</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[klɪf]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a high and often flat wall of rock. <span style=\"color:#0ea5e9;\">(vách đá)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The wolf stood at the cliff and howled. <span style=\"color:#0ea5e9;\">(Con sói đứng trên vách đá và hú.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">flame</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[fleɪm]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">part of fire. <span style=\"color:#0ea5e9;\">(ngọn lửa)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The torch was filled with yellow and orange flames. <span style=\"color:#0ea5e9;\">(Ngọn đuốc đầy ngọn lửa vàng và cam.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">independence</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˌɪndɪˈpendəns]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">the state of being free from the control of others. <span style=\"color:#0ea5e9;\">(sự độc lập)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ After leaving home, Sophia had a great feeling of independence. <span style=\"color:#0ea5e9;\">(Sau khi rời nhà, Sophia có cảm giác tự do tuyệt vời.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">invasion</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ɪnˈveɪʒn]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">an attack by a group from another country. <span style=\"color:#0ea5e9;\">(cuộc xâm lược)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ In Korea, walls were built to protect from invasions. <span style=\"color:#0ea5e9;\">(Ở Hàn Quốc, tường thành được xây để bảo vệ khỏi xâm lược.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">knight</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[naɪt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a soldier of high rank and skill who usually serves a king. <span style=\"color:#0ea5e9;\">(hiệp sĩ)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He was the best soldier, so the king made him a knight. <span style=\"color:#0ea5e9;\">(Anh ấy là người lính giỏi nhất, nên vua phong anh làm hiệp sĩ.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">lightning</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈlaɪtnɪŋ]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">the bright light seen during a storm. <span style=\"color:#0ea5e9;\">(tia chớp)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The lightning flashed above the water. <span style=\"color:#0ea5e9;\">(Tia chớp lóe sáng trên mặt nước.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">rebel</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈrebl]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a person who fights the government to change it. <span style=\"color:#0ea5e9;\">(người nổi dậy)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The rebel had enough of the government's unfair policies. <span style=\"color:#0ea5e9;\">(Người nổi dậy đã chán ngấy các chính sách bất công.)</span></div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Word List 1</p>\n  <div style=\"display: flex; flex-direction: column; gap: 16px;\">\n  <img src=\"/unit18_ielts_word_list_1a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <img src=\"/unit18_ielts_word_list_1b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  </div>\n  <div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n  <h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n  <div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disparity</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự chênh lệch, sự khác biệt, sự không bình đẳng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">out of place</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">không thích hợp, không đúng chỗ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exhortation</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự hô hào, sự cổ vũ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rally</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n./v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cuộc mít tinh lớn, cuộc tụ họp đông đảo</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">janitor</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người gác cổng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">amaze</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">làm kinh ngạc, làm sửng sốt</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conduct</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tiến hành</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sit-in</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cuộc biểu tình ngồi</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">provost</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hiệu trưởng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">relentless</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tàn nhẫn, không thương xót</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exploitation</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự bóc lột</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">administrator</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người quản lý</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">campus</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khuôn viên trường đại học</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unconscionably</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">không hợp lý, quá đáng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">be accustomed to</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">quen với</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adequate</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đủ, tương xứng, xứng đáng, thích hợp</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">house</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ở, trú</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cater to</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cung cấp thực phẩm cho</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elite</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">giới ưu tú, giới tinh hoa</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">be stuck in</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bị kẹt trong</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sit on</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tham gia</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">endowment</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khoản tiền ủng hộ, sự hiến tặng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">turn one's back on</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">quay lưng với</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">entreaty</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">lời cầu khẩn, sự nài xin</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">living wage</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">mức lương đủ sống</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">commute</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự đi lại thường xuyên (bằng xe buýt, xe lửa) giữa nơi làm việc và nhà ở</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cover</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chi trả</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bag</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thu nhặt, bỏ vào túi</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stock</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">xếp hàng (lên kệ)</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">perpetual</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">không ngừng, thường xuyên</span></div>\n  \n  </div></div></div></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1,
-              "content": "The soldier wore ________ to protect his body.",
+              "id": 1850,
+              "content": "1. The student learned the word [ 1 ] today.",
               "options": [
-                "flame",
-                "cliff",
-                "armor",
-                "lightning"
+                "disparity",
+                "out of place",
+                "exhortation",
+                "rally",
+                "janitor",
+                "amaze",
+                "conduct",
+                "sit-in",
+                "provost",
+                "relentless"
               ],
-              "correctAnswer": "C",
-              "explanation": "Armor is metal worn by soldiers to protect the body."
+              "correctAnswer": "disparity"
             },
             {
-              "id": 2,
-              "content": "The small fire soon ________ into a large dangerous one.",
+              "id": 1851,
+              "content": "",
               "options": [
-                "boomed",
-                "blazed",
-                "invaded",
-                "rebelled"
+                "disparity",
+                "out of place",
+                "exhortation",
+                "rally",
+                "janitor",
+                "amaze",
+                "conduct",
+                "sit-in",
+                "provost",
+                "relentless"
               ],
-              "correctAnswer": "B",
-              "explanation": "Blaze means to burn brightly or powerfully."
+              "correctAnswer": "out of place"
             },
             {
-              "id": 3,
-              "content": "Several ________ started a revolution for their independence.",
+              "id": 1852,
+              "content": "",
               "options": [
-                "knights",
-                "rebels",
-                "cliffs",
-                "flames"
+                "disparity",
+                "out of place",
+                "exhortation",
+                "rally",
+                "janitor",
+                "amaze",
+                "conduct",
+                "sit-in",
+                "provost",
+                "relentless"
               ],
-              "correctAnswer": "B",
-              "explanation": "A rebel is a person who fights the government to change it."
+              "correctAnswer": "exhortation"
             },
             {
-              "id": 4,
-              "content": "He was the best soldier, so the king made him a ________.",
+              "id": 1853,
+              "content": "",
               "options": [
-                "rebel",
-                "cliff",
-                "knight",
-                "boom"
+                "disparity",
+                "out of place",
+                "exhortation",
+                "rally",
+                "janitor",
+                "amaze",
+                "conduct",
+                "sit-in",
+                "provost",
+                "relentless"
               ],
-              "correctAnswer": "C",
-              "explanation": "A knight is a soldier of high rank who serves a king."
+              "correctAnswer": "rally"
             },
             {
-              "id": 5,
-              "content": "The ________ flashed above the water during the storm.",
+              "id": 1854,
+              "content": "",
               "options": [
-                "flame",
-                "lightning",
-                "cliff",
-                "armor"
+                "disparity",
+                "out of place",
+                "exhortation",
+                "rally",
+                "janitor",
+                "amaze",
+                "conduct",
+                "sit-in",
+                "provost",
+                "relentless"
               ],
-              "correctAnswer": "B",
-              "explanation": "Lightning is the bright light seen during a storm."
+              "correctAnswer": "janitor"
             }
           ]
         },
@@ -78,77 +102,69 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 6,
-              "content": "A high and often flat wall of rock",
+              "id": 1855,
+              "content": "Which word is related to 'amaze'?",
               "options": [
-                "Summit",
-                "Cliff",
-                "Flame",
-                "Armor"
+                "amaze",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "B",
-              "explanation": "A cliff is a high and often flat wall of rock."
+              "correctAnswer": "A",
+              "explanation": "The correct word is amaze as it was taught in the lesson."
             },
             {
-              "id": 7,
-              "content": "An attack by a group from another country",
+              "id": 1856,
+              "content": "Which word is related to 'conduct'?",
               "options": [
-                "Revolution",
-                "Independence",
-                "Invasion",
-                "Rebellion"
+                "conduct",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "C",
-              "explanation": "An invasion is an attack by a group from another country."
+              "correctAnswer": "A",
+              "explanation": "The correct word is conduct as it was taught in the lesson."
             },
             {
-              "id": 8,
-              "content": "To make a loud, deep sound",
+              "id": 1857,
+              "content": "Which word is related to 'sit-in'?",
               "options": [
-                "Blaze",
-                "Boom",
-                "Flash",
-                "Invade"
+                "sit-in",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "B",
-              "explanation": "Boom means to make a loud, deep sound."
+              "correctAnswer": "A",
+              "explanation": "The correct word is sit-in as it was taught in the lesson."
             }
           ]
         },
         {
-          "title": "Exercise 3: Mark each statement T for true or F for false.",
+          "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "TFNG",
+          "questionType": "Droplist",
           "questions": [
             {
-              "id": 9,
-              "content": "'Independence' means being controlled by another country.",
+              "id": 1858,
+              "content": "The word 'provost' is an English word.",
               "options": [
                 "True",
-                "False"
-              ],
-              "correctAnswer": "False",
-              "explanation": "False. Independence is the state of being free from the control of others."
-            },
-            {
-              "id": 10,
-              "content": "A 'flame' is part of fire.",
-              "options": [
-                "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. A flame is part of fire."
+              "explanation": "True. 'provost' is part of the English vocabulary."
             },
             {
-              "id": 11,
-              "content": "A 'knight' is a soldier of high rank who usually serves a king.",
+              "id": 1859,
+              "content": "The word 'relentless' is an English word.",
               "options": [
                 "True",
-                "False"
+                "False",
+                "Not Given"
               ],
               "correctAnswer": "True",
-              "explanation": "True. A knight is a soldier of high rank and skill who usually serves a king."
+              "explanation": "True. 'relentless' is part of the English vocabulary."
             }
           ]
         }
@@ -156,149 +172,7 @@
     },
     {
       "title": "Word List 2",
-      "content": "<p style=\"display: none;\">Word List 2</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit18_ielts_word_list_2_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit18_ielts_word_list_2_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display:flex;flex-direction:column;gap:24px;padding-top:24px;border-top:1px dashed #cbd5e1;\"><h3 style=\"font-size:1.125rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:0.05em;margin:0;\">Detailed Meanings</h3><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">retreat</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[rɪˈtriːt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to run away because you have been beaten in a fight. <span style=\"color:#0ea5e9;\">(rút lui)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The army retreated because they were losing the battle. <span style=\"color:#0ea5e9;\">(Quân đội rút lui vì đang thua trận.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">revolution</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˌrevəˈluːʃn]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a change to the political system by a group of people. <span style=\"color:#0ea5e9;\">(cuộc cách mạng)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The revolution in Russia led to the creation of the Soviet Union. <span style=\"color:#0ea5e9;\">(Cuộc cách mạng ở Nga dẫn đến việc thành lập Liên Xô.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">spear</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[spɪr]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a long stick with a blade on one end used as a weapon. <span style=\"color:#0ea5e9;\">(ngọn giáo)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The soldier was holding a spear in his hand. <span style=\"color:#0ea5e9;\">(Người lính cầm ngọn giáo trong tay.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">steep</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[stiːp]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">adj.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">having a slope or angle that rises or falls sharply. <span style=\"color:#0ea5e9;\">(dốc)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He rode his bike up the steep hill. <span style=\"color:#0ea5e9;\">(Anh ấy đạp xe lên ngọn đồi dốc.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">summit</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈsʌmɪt]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">the highest part of a hill or mountain. <span style=\"color:#0ea5e9;\">(đỉnh núi)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ Snow covered the summit of the mountain even during the summer. <span style=\"color:#0ea5e9;\">(Tuyết phủ đỉnh núi ngay cả trong mùa hè.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">thunder</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈθʌndər]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">the loud noise heard during a storm. <span style=\"color:#0ea5e9;\">(sấm)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The sound of the thunder startled me. <span style=\"color:#0ea5e9;\">(Tiếng sấm làm tôi giật mình.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">troops</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[truːps]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">soldiers that fight in groups in a battle. <span style=\"color:#0ea5e9;\">(quân đội)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The troops were all prepared to go into battle. <span style=\"color:#0ea5e9;\">(Quân đội đã sẵn sàng ra trận.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">warrior</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[ˈwɔːriər]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">n.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">a brave soldier or fighter. <span style=\"color:#0ea5e9;\">(chiến binh)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ The samurai were some of the most skilled warriors. <span style=\"color:#0ea5e9;\">(Samurai là những chiến binh tài ba nhất.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">withdraw</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[wɪðˈdrɔː]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to leave a place, usually during war. <span style=\"color:#0ea5e9;\">(rút quân)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ After losing the battle, the enemy withdrew. <span style=\"color:#0ea5e9;\">(Sau khi thua trận, kẻ thù đã rút quân.)</span></div></div></div><div style=\"display:flex;gap:16px;align-items:flex-start;\"><div style=\"width:32px;height:32px;flex-shrink:0;background-color:#f8fafc;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);border:1px solid #e2e8f0;font-size:16px;\">😎</div><div style=\"display:flex;flex-direction:column;gap:6px;\"><div style=\"display:flex;align-items:baseline;gap:8px;\"><span style=\"font-size:1.25rem;font-weight:800;color:#65a30d;\">yield</span><span style=\"font-size:0.875rem;color:#94a3b8;font-family:monospace;\">[jiːld]</span><span style=\"font-size:0.875rem;color:#94a3b8;font-style:italic;\">v.</span></div><div style=\"color:#475569;font-size:0.95rem;line-height:1.5;\">to give up control of something or to give it away. <span style=\"color:#0ea5e9;\">(nhường, giao nộp)</span></div><div style=\"color:#64748b;font-size:0.95rem;font-style:italic;\">→ He had to yield his turn because he was in checkmate. <span style=\"color:#0ea5e9;\">(Anh ấy phải nhường lượt vì đã bị chiếu hết.)</span></div></div></div></div></div></div>",
-      "sections": [
-        {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 12,
-              "content": "The army ________ because they were losing the battle.",
-              "options": [
-                "yielded",
-                "retreated",
-                "withdrew",
-                "speared"
-              ],
-              "correctAnswer": "B",
-              "explanation": "Retreat means to run away because you have been beaten in a fight."
-            },
-            {
-              "id": 13,
-              "content": "The ________ were all prepared to go into battle.",
-              "options": [
-                "summits",
-                "spears",
-                "troops",
-                "revolutions"
-              ],
-              "correctAnswer": "C",
-              "explanation": "Troops are soldiers that fight in groups in a battle."
-            },
-            {
-              "id": 14,
-              "content": "Snow covered the ________ of the mountain even during summer.",
-              "options": [
-                "cliff",
-                "summit",
-                "steep",
-                "warrior"
-              ],
-              "correctAnswer": "B",
-              "explanation": "Summit is the highest part of a hill or mountain."
-            },
-            {
-              "id": 15,
-              "content": "He had to ________ his turn because he was in checkmate.",
-              "options": [
-                "withdraw",
-                "retreat",
-                "yield",
-                "thunder"
-              ],
-              "correctAnswer": "C",
-              "explanation": "Yield means to give up control of something."
-            }
-          ]
-        },
-        {
-          "title": "Exercise 2: Write C if the italicized word is used correctly. Write I if incorrectly.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 16,
-              "content": "The samurai were some of the most skilled <i>warriors</i> in the ancient world.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "correctAnswer": "A",
-              "explanation": "Correct. A warrior is a brave soldier or fighter."
-            },
-            {
-              "id": 17,
-              "content": "The road up the mountain was very <i>steep</i>, making the climb exhausting.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Steep means its slope rises or falls sharply."
-            },
-            {
-              "id": 18,
-              "content": "The <i>revolution</i> of the earth around the sun causes the seasons to change.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Revolution here means a political change, not an orbit. The word should be 'rotation' or 'orbit'."
-            }
-          ]
-        },
-        {
-          "title": "Exercise 3: Choose the word that best matches the definition.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
-          "questions": [
-            {
-              "id": 19,
-              "content": "To leave a place, usually during war",
-              "options": [
-                "Yield",
-                "Withdraw",
-                "Retreat",
-                "Thunder"
-              ],
-              "correctAnswer": "B",
-              "explanation": "Withdraw means to leave a place, usually during war."
-            },
-            {
-              "id": 20,
-              "content": "A long stick with a blade on one end used as a weapon",
-              "options": [
-                "Armor",
-                "Warrior",
-                "Spear",
-                "Cliff"
-              ],
-              "correctAnswer": "C",
-              "explanation": "A spear is a long stick with a blade on one end."
-            },
-            {
-              "id": 21,
-              "content": "The loud noise heard during a storm",
-              "options": [
-                "Lightning",
-                "Thunder",
-                "Boom",
-                "Blaze"
-              ],
-              "correctAnswer": "B",
-              "explanation": "Thunder is the loud noise heard during a storm."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Comprehensive Reading",
-      "content": "<p style=\"display: none;\">Comprehensive Reading</p><div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><img src=\"/unit18_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Knight's Plan</h1><p style=\"margin-bottom: 1rem;\">A town was fighting for their <b>independence</b> from another country. Several <b>rebels</b> started a <b>revolution</b>. However, they were afraid of an <b>invasion</b> from a lot of <b>troops</b>. They didn't have enough <b>warriors</b> to stop them, so they asked a <b>knight</b> for help.</p><p style=\"margin-bottom: 1rem;\">The knight made a plan. A tall mountain was outside the town. The road near the top was very narrow. <b>Cliffs</b> rose on both sides of it.</p><p style=\"margin-bottom: 1rem;\">\"We must trick the enemy. They have to follow us up the mountain,\" the knight explained. \"On the narrow path, only a few can attack us at one time.\"</p><p style=\"margin-bottom: 1rem;\">The people agreed with the knight's plan.</p><p style=\"margin-bottom: 1rem;\">The knight put on his <b>armor</b>, and the warriors got their <b>spears</b>. When the enemy attacked, the knight and warriors acted as if they were afraid. They quickly <b>withdrew</b> toward the mountain.</p><p style=\"margin-bottom: 1rem;\">The enemy troops followed them up the <b>steep</b> path. Soon, the enemy became tired.</p><p style=\"margin-bottom: 1rem;\">At the <b>summit</b>, the knight and his troops stopped. The enemy was close behind them. But now they were tired. Also, only a few could attack because the path was narrow. The knight and the warriors fought the enemy.</p><p style=\"margin-bottom: 1rem;\">But there were too many troops.</p><p style=\"margin-bottom: 1rem;\">The knight was afraid. If the warriors <b>yielded</b> the path to the enemy, the town would be lost.</p><p style=\"margin-bottom: 1rem;\">A storm suddenly came over the mountain. There was strong wind and rain. <b>Thunder</b> <b>boomed</b>. <b>Lightning</b> struck some trees near the enemy. The trees <b>blazed</b>. The <b>flames</b> scared the enemy and they <b>retreated</b>. They ran down the mountain, out of the town, and never returned.</p><p style=\"margin-bottom: 1rem;\">The knight explained, \"With a little luck, a good plan beats even a big army.\"</p></div></div>",
-      "explanation": "Transcript and Reading Passage Explanation",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Word List 2</p>\n  <div style=\"display: flex; flex-direction: column; gap: 16px;\">\n  <img src=\"/unit18_ielts_word_list_2a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <img src=\"/unit18_ielts_word_list_2b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  </div>\n  <div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n  <h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n  <div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exhaustion</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự mệt nhoài, sự kiệt sức</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">in a hole</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tình thế khó xử hoặc lúng túng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">social security</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">an sinh xã hội</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adopt</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chấp nhận và thực hiện</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">City Council</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">Hội đồng thành phố</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">establish</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thiết lập, thành lập</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ordinance</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sắc lệnh, quy định</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contractor</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhà thầu</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">custodian</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người trông coi, người canh giữ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">survive</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sống sót</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">brief</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ngắn, ngắn ngủi, ngắn gọn</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">honcho</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người lãnh đạo, người đứng đầu</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plea</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự yêu cầu, sự cầu xin</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plight</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hoàn cảnh, cảnh ngộ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">appoint</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bổ nhiệm</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">administration</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">ban quản trị</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reject</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">không chấp thuận, bác bỏ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bet on</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đánh cược vào</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">soulless</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">không có tâm hồn</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">get away with</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">không bị trừng phạt về điều gì</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">squeeze</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">vắt kiệt</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nickel</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đồng năm xu</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">apparel</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">quần áo, vải vóc</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">celebrated</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nổi tiếng, lừng danh</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crave</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khao khát</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">moral high ground</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nền tảng đạo đức vững chắc</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fade</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhạt đi, phai đi</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flourish</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hưng thịnh, phát đạt</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exit</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">lối ra, lối thoát</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">strategy</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">chiến lược</span></div>\n  \n  </div></div></div></div></div>",
       "sections": [
         {
           "title": "Exercise 1: Fill in each blank with the appropriate word",
@@ -306,189 +180,243 @@
           "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 22,
-              "content": "1. Several [ 1 ] started a revolution.<br/><br/>2. They were afraid of an [ 2 ] from enemy troops.<br/><br/>3. The knight put on his [ 3 ].<br/><br/>4. They quickly [ 4 ] toward the mountain.<br/><br/>5. At the [ 5 ], the knight and his troops stopped.<br/><br/>6. Thunder [ 6 ] during the storm.<br/><br/>7. Lightning struck and the trees [ 7 ].<br/><br/>8. The flames scared the enemy and they [ 8 ].",
+              "id": 1900,
+              "content": "1. The student learned the word [ 1 ] today.",
               "options": [
-                "rebels",
-                "invasion",
-                "armor",
-                "withdrew",
-                "summit",
-                "boomed",
-                "blazed",
-                "retreated"
+                "exhaustion",
+                "in a hole",
+                "social security",
+                "adopt",
+                "City Council",
+                "establish",
+                "ordinance",
+                "contractor",
+                "custodian",
+                "survive"
               ],
-              "correctAnswer": "rebels"
+              "correctAnswer": "exhaustion"
             },
             {
-              "id": 23,
+              "id": 1901,
               "content": "",
               "options": [
-                "rebels",
-                "invasion",
-                "armor",
-                "withdrew",
-                "summit",
-                "boomed",
-                "blazed",
-                "retreated"
+                "exhaustion",
+                "in a hole",
+                "social security",
+                "adopt",
+                "City Council",
+                "establish",
+                "ordinance",
+                "contractor",
+                "custodian",
+                "survive"
               ],
-              "correctAnswer": "invasion"
+              "correctAnswer": "in a hole"
             },
             {
-              "id": 24,
+              "id": 1902,
               "content": "",
               "options": [
-                "rebels",
-                "invasion",
-                "armor",
-                "withdrew",
-                "summit",
-                "boomed",
-                "blazed",
-                "retreated"
+                "exhaustion",
+                "in a hole",
+                "social security",
+                "adopt",
+                "City Council",
+                "establish",
+                "ordinance",
+                "contractor",
+                "custodian",
+                "survive"
               ],
-              "correctAnswer": "armor"
+              "correctAnswer": "social security"
             },
             {
-              "id": 25,
+              "id": 1903,
               "content": "",
               "options": [
-                "rebels",
-                "invasion",
-                "armor",
-                "withdrew",
-                "summit",
-                "boomed",
-                "blazed",
-                "retreated"
+                "exhaustion",
+                "in a hole",
+                "social security",
+                "adopt",
+                "City Council",
+                "establish",
+                "ordinance",
+                "contractor",
+                "custodian",
+                "survive"
               ],
-              "correctAnswer": "withdrew"
+              "correctAnswer": "adopt"
             },
             {
-              "id": 26,
+              "id": 1904,
               "content": "",
               "options": [
-                "rebels",
-                "invasion",
-                "armor",
-                "withdrew",
-                "summit",
-                "boomed",
-                "blazed",
-                "retreated"
+                "exhaustion",
+                "in a hole",
+                "social security",
+                "adopt",
+                "City Council",
+                "establish",
+                "ordinance",
+                "contractor",
+                "custodian",
+                "survive"
               ],
-              "correctAnswer": "summit"
-            },
-            {
-              "id": 27,
-              "content": "",
-              "options": [
-                "rebels",
-                "invasion",
-                "armor",
-                "withdrew",
-                "summit",
-                "boomed",
-                "blazed",
-                "retreated"
-              ],
-              "correctAnswer": "boomed"
-            },
-            {
-              "id": 28,
-              "content": "",
-              "options": [
-                "rebels",
-                "invasion",
-                "armor",
-                "withdrew",
-                "summit",
-                "boomed",
-                "blazed",
-                "retreated"
-              ],
-              "correctAnswer": "blazed"
-            },
-            {
-              "id": 29,
-              "content": "",
-              "options": [
-                "rebels",
-                "invasion",
-                "armor",
-                "withdrew",
-                "summit",
-                "boomed",
-                "blazed",
-                "retreated"
-              ],
-              "correctAnswer": "retreated"
+              "correctAnswer": "City Council"
             }
           ]
         },
         {
-          "title": "Exercise 2: Reading Comprehension",
+          "title": "Exercise 2: Choose the word that best matches the definition.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 30,
-              "content": "Why was the narrow path important to the knight's plan?",
+              "id": 1905,
+              "content": "Which word is related to 'establish'?",
               "options": [
-                "Few soldiers could attack from it.",
-                "It led to a high cliff.",
-                "It was a safe place to hide.",
-                "The enemy troops were afraid of it."
+                "establish",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
               "correctAnswer": "A",
-              "explanation": "On the narrow path, only a few can attack at one time."
+              "explanation": "The correct word is establish as it was taught in the lesson."
             },
             {
-              "id": 31,
-              "content": "Where did the knight and warriors stop after they withdrew?",
+              "id": 1906,
+              "content": "Which word is related to 'ordinance'?",
               "options": [
-                "Between two cliffs",
-                "At the summit",
-                "Near the bottom",
-                "Out of the town"
-              ],
-              "correctAnswer": "B",
-              "explanation": "At the summit, the knight and his troops stopped."
-            },
-            {
-              "id": 32,
-              "content": "What scared the enemy and made them retreat?",
-              "options": [
-                "The thunder",
-                "The steep path",
-                "The flames from the blazing trees",
-                "The knight's armor"
-              ],
-              "correctAnswer": "C",
-              "explanation": "The flames scared the enemy and they retreated."
-            },
-            {
-              "id": 33,
-              "content": "What lesson does the knight teach?",
-              "options": [
-                "A good plan beats even a big army.",
-                "Always fight at the summit.",
-                "Never retreat from battle.",
-                "Warriors are better than knights."
+                "ordinance",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
               "correctAnswer": "A",
-              "explanation": "The knight said: 'With a little luck, a good plan beats even a big army.'"
+              "explanation": "The correct word is ordinance as it was taught in the lesson."
+            },
+            {
+              "id": 1907,
+              "content": "Which word is related to 'contractor'?",
+              "options": [
+                "contractor",
+                "Apple",
+                "Banana",
+                "Orange"
+              ],
+              "correctAnswer": "A",
+              "explanation": "The correct word is contractor as it was taught in the lesson."
+            }
+          ]
+        },
+        {
+          "title": "Exercise 3: Mark each statement True or False.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
+          "questionType": "Droplist",
+          "questions": [
+            {
+              "id": 1908,
+              "content": "The word 'custodian' is an English word.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "True",
+              "explanation": "True. 'custodian' is part of the English vocabulary."
+            },
+            {
+              "id": 1909,
+              "content": "The word 'survive' is an English word.",
+              "options": [
+                "True",
+                "False",
+                "Not Given"
+              ],
+              "correctAnswer": "True",
+              "explanation": "True. 'survive' is part of the English vocabulary."
             }
           ]
         }
-      ],
-      "imageUrl": "/unit18_ielts_story.png"
+      ]
+    },
+    {
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit18_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Disparities at Harvard</h1>\n  <p style=\"margin-bottom: 1rem;\">Frank Morley seemed out of place in the crowd of young people moving excitedly to the loud music and the exhortations in Spanish at the rally in Harvard Yard. Mr. Morley is 60 years old and not particularly well educated, and he was dressed in the uniform of his trade, which is janitor.</p>\n  <p style=\"margin-bottom: 1rem;\">\"It amazes me,\" he said, raising his voice to be heard over the pounding of drums, \"that there are people who would do this for other people. For guys like me.\"</p>\n  <p style=\"margin-bottom: 1rem;\">The rally was just outside Massachusetts Hall, where about 40 students have been conducting a sit-in for nearly two weeks. Massachusetts Hall is where the school's president and provost have their offices. The sit-in is part of a long campaign to get the university to stop what the students feel is the relentless exploitation of Harvard's lowest-paid workers—the janitors, kitchen staff, guards and others who are there every day to keep the students, faculty and administrators clean, comfortable and safe.</p>\n  <p style=\"margin-bottom: 1rem;\">The problem, in the view of the students and many others, is that these workers and many others, is that these workers on the campus of America's greatest and richest university are paid unconscionably low wages. While they work hard to maintain the daily living conditions to which Harvard has become accustomed, they do not make enough money to keep their own families adequately housed and fed. They cater to the elite, but they are stuck in poverty themselves. And Harvard, which is sitting on an endowment of nearly $20 billion, has coldly turned its back on entreaties to pay the workers the few dollars more that would lift their pay to a so-called living wage.</p>\n  <p style=\"margin-bottom: 1rem;\">Frank Morley lives in Mansfield (he can't afford to live in Cambridge) and his daily commute is more than an hour each way. He takes home $309.46 for a 40-hour workweek, which is not enough to cover his expenses. For more than two years he worked a second job bagging groceries and stocking shelves at a supermarket. He got only four hours of sleep a night and was in a perpetual state of exhaustion. He recently gave up the second job.</p>\n  <p style=\"margin-bottom: 1rem;\">\"I'm in a hole,\" he said. \"I had to take money out of a retirement fund to pay debts. Pretty soon the retirement money will be gone. When I finally do retire, all I'll have is whatever Social Security, I guess.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Harvard students began the living-wage campaign in the fall of 1998. They wanted Harvard to adopt a policy, similar to one that was then being considered by the Cambridge City Council, establishing a \"living wage\" of $10.25 an hour as the minimum that could be paid to employees. The Cambridge Council passed its ordinance in 1999, but it does not apply to Harvard. More than 1,000 workers at Harvard—some working directly for the university and some for contractors hired by the university—earn less than $10.25 an hour.</p>\n  <p style=\"margin-bottom: 1rem;\">Porfiro Figueroa is one of them. He's 31 years old, has a wife and two young children and earns $9.40 an hour as a custodian. Speaking in Spanish, he explained through an interpreter that he has to work two jobs \"just to survive a little bit.\" But he doesn't get to see much of his kids. He sees his year-old daughter for a brief period in the middle of the day, during the break between jobs. But his other child, a 5-year-old boy, is in school. \"I only see my son on weekends and at night when he is sleeping,\" he said.</p>\n  <p style=\"margin-bottom: 1rem;\">Harvard's honchos have not been moved by the pleas of the students or the plight of workers trying to raise families on less than $20,000 a year. A committee appointed by the administration in 1999 studied the matter, and then rejected the idea of a wage standard for the university. Just two weeks ago a spokesman for the school said, \"We will not be adopting a living wage.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Don't bet on that. This is not a fight the school can easily win. Harvard University is not some soulless corporation that can get away with squeezing the last nickel out of its poorest workers. It's not an apparel company. It's a celebrated institution that craves the moral high ground.</p>\n  <p style=\"margin-bottom: 1rem;\">Instead of fading, as Harvard administrators had hoped, the living wage campaign has flourished. Harvard and its president, Rudenstine, need an exit strategy, fast.</p></div></div>",
+      "sections": [
+        {
+          "title": "Exercise 1: Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": 1880,
+              "content": "According to the text: 'Comprehensive Reading\\nDisparities at Harvard\\nFrank Morley seemed out of place in the crowd of young people moving excitedly to the loud music and the exhortations in Spanish at the rally in Harvard Yard...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1881,
+              "content": "According to the text: 'Mr...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1882,
+              "content": "According to the text: 'Morley is 60 years old and not particularly well educated, and he was dressed in the uniform of his trade, which is janitor...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1883,
+              "content": "According to the text: '\\n\"It amazes me,\" he said, raising his voice to be heard over the pounding of drums, \"that there are people who would do this for other people...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            },
+            {
+              "id": 1884,
+              "content": "According to the text: 'For guys like me...'",
+              "options": [
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
+              ],
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
+            }
+          ]
+        }
+      ]
     }
   ],
   "basicInfo": {
-    "skill": "SplitScreen (Standard)",
-    "title": "Unit 18: The Knight's Plan",
+    "skill": "MCQ (Standard)",
+    "title": "Unit 18: Disparities at Harvard",
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40

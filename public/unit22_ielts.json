@@ -1,58 +1,98 @@
 {
-  "title": "Unit 22: The Farm Festival",
   "parts": [
     {
       "title": "Word List 1",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><p style=\"display: none;\">Word List 1</p><div style=\"display: flex; flex-direction: column; gap: 16px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit22_ielts_word_list_1_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit22_ielts_word_list_1_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alarm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əlá:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An alarm is something that warns people of danger. <span style=\"color: #0ea5e9;\">Còi báo động.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"When the students heard the fire alarm, they left the building.\" <span style=\"color: #0ea5e9;\">Khi học sinh nghe thấy còi báo cháy, họ đã rời khỏi tòa nhà.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">apart</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əpά:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people or things are apart, they are not close together. <span style=\"color: #0ea5e9;\">Tách biệt, xa nhau.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The couple decided to live apart from each other.\" <span style=\"color: #0ea5e9;\">Cặp đôi quyết định sống xa nhau.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arrest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ərést]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To arrest someone means to catch them for doing something bad. <span style=\"color: #0ea5e9;\">Bắt giữ.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The man was arrested for breaking the law.\" <span style=\"color: #0ea5e9;\">Người đàn ông bị bắt vì vi phạm pháp luật.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">award</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əwɔ́:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An award is a prize someone gets for doing something well. <span style=\"color: #0ea5e9;\">Phần thưởng, giải thưởng.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"He got an award for having the best grades in class.\" <span style=\"color: #0ea5e9;\">Cậu ấy nhận được giải thưởng vì có điểm cao nhất lớp.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">breed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bri:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A breed is a group of animals within a species. <span style=\"color: #0ea5e9;\">Giống loài.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"I like small dog breeds, such as terriers.\" <span style=\"color: #0ea5e9;\">Tôi thích những giống chó nhỏ, chẳng hạn như chó sục.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bucket</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bΛkit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bucket is a round container to put things in. <span style=\"color: #0ea5e9;\">Cái xô.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"I filled the bucket with water.\" <span style=\"color: #0ea5e9;\">Tôi đổ đầy nước vào xô.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kάntest]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A contest is a game or a race. <span style=\"color: #0ea5e9;\">Cuộc thi.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The girls had a contest to see who could jump higher.\" <span style=\"color: #0ea5e9;\">Các cô gái đã tổ chức một cuộc thi xem ai có thể nhảy cao hơn.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvíkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To convict someone means to prove that they did a bad thing. <span style=\"color: #0ea5e9;\">Kết án.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"He was convicted of the crime and sent to jail.\" <span style=\"color: #0ea5e9;\">Anh ta đã bị kết án vì tội ác và bị tống vào tù.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">garage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gərά:ʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A garage is the part of a house where people put their cars. <span style=\"color: #0ea5e9;\">Nhà để xe.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"My car does not get dirty because I keep it in the garage.\" <span style=\"color: #0ea5e9;\">Xe của tôi không bị bẩn vì tôi cất nó trong nhà để xe.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">journalist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒə́:rnəlist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A journalist is a person who writes news stories. <span style=\"color: #0ea5e9;\">Nhà báo.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The journalist took notes for a story he was writing.\" <span style=\"color: #0ea5e9;\">Nhà báo đã ghi chú cho một câu chuyện mà ông ấy đang viết.</span></div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Word List 1</p>\n  <div style=\"display: flex; flex-direction: column; gap: 16px;\">\n  <img src=\"/unit22_ielts_word_list_1a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <img src=\"/unit22_ielts_word_list_1b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  </div>\n  <div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n  <h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n  <div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">origin</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nguồn gốc</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Olympic Games</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">Thế vận hội Olympic</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">legend</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">huyền thoại</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ancient</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cổ xưa</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Heracles</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">= Hercules thần Hercules</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Zeus</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thần Zeus</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">BCE</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">= Before the Christian Era trước Công nguyên</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">naked</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">trần truồng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">event</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự kiện</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stade</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">đơn vị đo chiều dài của Hy Lạp, khoảng 607 bộ hoặc 185 mét</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">approximately</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">xấp xỉ, khoảng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">champion</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhà vô địch</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">CE</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">= Christian Era Công nguyên</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abolish</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bãi bỏ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pagan</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thuộc ngoại giáo</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">revival</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sự phục hưng, sự phục hồi</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">le Rénovateur</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người theo phong trào đổi mới</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aristocrat</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nhà quý tộc</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overrun</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tràn vào</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Franco-Prussian War</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cuộc chiến tranh Pháp-Phổ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">attribute</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">quy cho, cho là</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vigor</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">sức mạnh, sự cường tráng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">examine</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">xem xét kỹ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decide</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">quyết định</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">specifically</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cụ thể, rõ rệt</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">well-rounded</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">toàn diện</span></div>\n  \n  </div></div></div></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 1,
-              "content": "1. a place to put a car",
+              "id": 2250,
+              "content": "1. The student learned the word [ 1 ] today.",
               "options": [
-                "stable",
-                "bucket",
-                "alarm",
-                "garage"
+                "origin",
+                "Olympic Games",
+                "legend",
+                "ancient",
+                "Heracles",
+                "Zeus",
+                "BCE",
+                "naked",
+                "event",
+                "stade"
               ],
-              "correctAnswer": "garage",
-              "explanation": "garage: nhà để xe (a place to put a car)"
+              "correctAnswer": "origin"
             },
             {
-              "id": 2,
-              "content": "4. a type of animal",
+              "id": 2251,
+              "content": "",
               "options": [
-                "tissue",
-                "breed",
-                "yard",
-                "contest"
+                "origin",
+                "Olympic Games",
+                "legend",
+                "ancient",
+                "Heracles",
+                "Zeus",
+                "BCE",
+                "naked",
+                "event",
+                "stade"
               ],
-              "correctAnswer": "breed",
-              "explanation": "breed: giống loài (a type of animal)"
+              "correctAnswer": "Olympic Games"
             },
             {
-              "id": 3,
-              "content": "4. Which sentence makes better sense?",
+              "id": 2252,
+              "content": "",
               "options": [
-                "The award for winning the game is a new toy.",
-                "The boy pulled the car apart by washing it."
+                "origin",
+                "Olympic Games",
+                "legend",
+                "ancient",
+                "Heracles",
+                "Zeus",
+                "BCE",
+                "naked",
+                "event",
+                "stade"
               ],
-              "correctAnswer": "The award for winning the game is a new toy.",
-              "explanation": "award: phần thưởng."
+              "correctAnswer": "legend"
             },
             {
-              "id": 4,
-              "content": "9. Which sentence makes better sense?",
+              "id": 2253,
+              "content": "",
               "options": [
-                "China and Mexico are far apart.",
-                "The alarm washed away the dirt."
+                "origin",
+                "Olympic Games",
+                "legend",
+                "ancient",
+                "Heracles",
+                "Zeus",
+                "BCE",
+                "naked",
+                "event",
+                "stade"
               ],
-              "correctAnswer": "China and Mexico are far apart.",
-              "explanation": "apart: cách xa."
+              "correctAnswer": "ancient"
+            },
+            {
+              "id": 2254,
+              "content": "",
+              "options": [
+                "origin",
+                "Olympic Games",
+                "legend",
+                "ancient",
+                "Heracles",
+                "Zeus",
+                "BCE",
+                "naked",
+                "event",
+                "stade"
+              ],
+              "correctAnswer": "Heracles"
             }
           ]
         },
@@ -62,87 +102,69 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 5,
-              "content": "2. to prove someone did a bad thing",
+              "id": 2255,
+              "content": "Which word is related to 'Zeus'?",
               "options": [
-                "somewhat",
-                "repair",
-                "convict",
-                "resume"
+                "Zeus",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "convict",
-              "explanation": "convict: kết án (to prove someone did a bad thing)"
+              "correctAnswer": "A",
+              "explanation": "The correct word is Zeus as it was taught in the lesson."
             },
             {
-              "id": 6,
-              "content": "5. a news writer",
+              "id": 2256,
+              "content": "Which word is related to 'BCE'?",
               "options": [
-                "pup",
-                "journalist",
-                "award",
-                "qualify"
+                "BCE",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "journalist",
-              "explanation": "journalist: nhà báo (a news writer)"
+              "correctAnswer": "A",
+              "explanation": "The correct word is BCE as it was taught in the lesson."
             },
             {
-              "id": 7,
-              "content": "5. Which sentence makes better sense?",
+              "id": 2257,
+              "content": "Which word is related to 'naked'?",
               "options": [
-                "The mother arrested dinner for her family.",
-                "An alarm sounds to warn us of a fire."
+                "naked",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "An alarm sounds to warn us of a fire.",
-              "explanation": "alarm: báo động."
-            },
-            {
-              "id": 8,
-              "content": "10. Which sentence makes better sense?",
-              "options": [
-                "The bucket wrote down every word.",
-                "If you steal, the police will arrest you."
-              ],
-              "correctAnswer": "If you steal, the police will arrest you.",
-              "explanation": "arrest: bắt giữ."
+              "correctAnswer": "A",
+              "explanation": "The correct word is naked as it was taught in the lesson."
             }
           ]
         },
         {
-          "title": "Exercise 3: Mark each statement T for true or F for false.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
+          "title": "Exercise 3: Mark each statement True or False.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
+          "questionType": "Droplist",
           "questions": [
             {
-              "id": 9,
-              "content": "3. not close together",
+              "id": 2258,
+              "content": "The word 'event' is an English word.",
               "options": [
-                "apart",
-                "arrest",
-                "slip",
-                "qualify"
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "apart",
-              "explanation": "apart: cách xa (not close together)"
+              "correctAnswer": "True",
+              "explanation": "True. 'event' is part of the English vocabulary."
             },
             {
-              "id": 10,
-              "content": "3. Which sentence makes better sense?",
+              "id": 2259,
+              "content": "The word 'stade' is an English word.",
               "options": [
-                "The boy carried sand in his bucket.",
-                "He used the contest to clean the floor."
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "The boy carried sand in his bucket.",
-              "explanation": "bucket: cái xô."
-            },
-            {
-              "id": 11,
-              "content": "8. Which sentence makes better sense?",
-              "options": [
-                "I fell down and got hurt as an award.",
-                "I won the contest because I was the fastest runner."
-              ],
-              "correctAnswer": "I won the contest because I was the fastest runner.",
-              "explanation": "contest: cuộc thi."
+              "correctAnswer": "True",
+              "explanation": "True. 'stade' is part of the English vocabulary."
             }
           ]
         }
@@ -150,46 +172,97 @@
     },
     {
       "title": "Word List 2",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><p style=\"display: none;\">Word List 2</p><div style=\"display: flex; flex-direction: column; gap: 16px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit22_ielts_word_list_2_a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit22_ielts_word_list_2_b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pup</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pup is a young dog. <span style=\"color: #0ea5e9;\">Chó con.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"All the girl wanted for her birthday was a pup.\" <span style=\"color: #0ea5e9;\">Tất cả những gì cô gái muốn trong ngày sinh nhật của mình là một chú chó con.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">qualify</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kwάləfài]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To qualify is to get, or to be declared, adequate or good enough. <span style=\"color: #0ea5e9;\">Đủ điều kiện, vượt qua vòng loại.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"He qualified to go to the final match by beating the opponent.\" <span style=\"color: #0ea5e9;\">Anh ấy đã đủ điều kiện vào trận chung kết bằng cách đánh bại đối thủ.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">repair</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ripέər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To repair something is to fix it. <span style=\"color: #0ea5e9;\">Sửa chữa.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"I repaired the flat tire on my car.\" <span style=\"color: #0ea5e9;\">Tôi đã sửa chiếc lốp bị xẹp trên ô tô của mình.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">resume</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rizú:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To resume something means to start it again after taking a break. <span style=\"color: #0ea5e9;\">Tiếp tục.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"I put the newspaper down to eat breakfast. Then I resumed reading.\" <span style=\"color: #0ea5e9;\">Tôi đặt tờ báo xuống để ăn sáng. Sau đó tôi tiếp tục đọc.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rob</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɑb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rob a person or place is to take their property by using force. <span style=\"color: #0ea5e9;\">Cướp.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"A thief has robbed me of my passport.\" <span style=\"color: #0ea5e9;\">Một tên trộm đã cướp hộ chiếu của tôi.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">slip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[slip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To slip means to slide and fall down. <span style=\"color: #0ea5e9;\">Trượt chân.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The man slipped on the wet floor.\" <span style=\"color: #0ea5e9;\">Người đàn ông trượt ngã trên sàn ướt.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">somewhat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sΛmw(h)Λt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Somewhat means to some degree, but not to a large degree. <span style=\"color: #0ea5e9;\">Phần nào, hơi.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"James was somewhat upset when he had to move some boxes.\" <span style=\"color: #0ea5e9;\">James hơi khó chịu khi anh ấy phải di chuyển một số hộp.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stéibl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is stable, it will not fall over. <span style=\"color: #0ea5e9;\">Ổn định, vững chắc.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The chair is stable. Its legs are strong.\" <span style=\"color: #0ea5e9;\">Chiếc ghế rất vững chắc. Chân của nó rất khỏe.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tissue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tíʃu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tissue is a soft piece of paper people use to wipe their noses. <span style=\"color: #0ea5e9;\">Khăn giấy.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"There was a box of tissue on the table.\" <span style=\"color: #0ea5e9;\">Có một hộp khăn giấy trên bàn.</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">yard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[jɑ:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A yard is the ground just outside of a person's house. <span style=\"color: #0ea5e9;\">Cái sân.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The girls jumped rope in the yard.\" <span style=\"color: #0ea5e9;\">Các cô gái nhảy dây trong sân.</span></div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Word List 2</p>\n  <div style=\"display: flex; flex-direction: column; gap: 16px;\">\n  <img src=\"/unit22_ielts_word_list_2a.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <img src=\"/unit22_ielts_word_list_2b.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  </div>\n  <div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\">\n  <h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3>\n  <div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vigorous</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khỏe mạnh, cường tráng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">meet with</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">hưởng ứng với</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">USFSA</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">Hiệp hội vận động viên thể thao Pháp</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pitch</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">diễn đạt</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">revive</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">phục hồi</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">oarsman</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">vận động viên chèo thuyền</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fencer</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">vận động viên đấu kiếm</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ally</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">nước đồng minh</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">touch upon</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bàn đến, nói đến, đề cập đến</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hitherto</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">cho đến nay</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">extend</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">mở rộng, gửi tới (lời chúc)</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beneficent</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tốt, có lợi</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">well-connected</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">có quan hệ với nhiều người giàu có/quyền lực</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">persistent</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">kiên gan, bền bỉ</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">delegate</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">người đại biểu, người đại diện</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">auditorium</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">thính đường, giảng đường</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decorate</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">trang trí, trang hoàng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">neoclassical</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">a.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">tân cổ điển</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mural</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">bức tranh tường</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ambiance</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">môi trường, bầu không khí</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">eloquently</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">(một cách) hùng hồn</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arouse</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">khơi gợi</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unanimously</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">ad.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">(một cách) nhất trí/đồng lòng</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">IOC</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\"></span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">Ủy ban Olympic Quốc tế</span></div>\n  \n  </div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\">\n  <div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div>\n  <div style=\"display: flex; flex-direction: column; gap: 6px;\">\n  <div style=\"display: flex; align-items: baseline; gap: 8px;\">\n  <span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Athens</span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\"></span>\n  <span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span>\n  </div>\n  <div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"> <span style=\"color: #0ea5e9;\">(thủ đô của Hy Lạp)</span></div>\n  \n  </div></div></div></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Choose the correct word to fill in the blank.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
           "questions": [
             {
-              "id": 12,
-              "content": "1. repair",
+              "id": 2300,
+              "content": "1. The student learned the word [ 1 ] today.",
               "options": [
-                "to fix",
-                "to start after a break",
-                "to slide and fall",
-                "to catch a bad person"
+                "vigorous",
+                "meet with",
+                "USFSA",
+                "pitch",
+                "revive",
+                "oarsman",
+                "fencer",
+                "ally",
+                "touch upon",
+                "hitherto"
               ],
-              "correctAnswer": "to fix",
-              "explanation": "repair: sửa chữa (to fix)"
+              "correctAnswer": "vigorous"
             },
             {
-              "id": 13,
-              "content": "4. resume",
+              "id": 2301,
+              "content": "",
               "options": [
-                "to slide and fall",
-                "to start after a break",
-                "to prove",
-                "to fix"
+                "vigorous",
+                "meet with",
+                "USFSA",
+                "pitch",
+                "revive",
+                "oarsman",
+                "fencer",
+                "ally",
+                "touch upon",
+                "hitherto"
               ],
-              "correctAnswer": "to start after a break",
-              "explanation": "resume: tiếp tục (to start after a break)"
+              "correctAnswer": "meet with"
             },
             {
-              "id": 14,
-              "content": "2. Which sentence makes better sense?",
+              "id": 2302,
+              "content": "",
               "options": [
-                "I made a cake with my stable.",
-                "The man robbed the store of over 200 dollars."
+                "vigorous",
+                "meet with",
+                "USFSA",
+                "pitch",
+                "revive",
+                "oarsman",
+                "fencer",
+                "ally",
+                "touch upon",
+                "hitherto"
               ],
-              "correctAnswer": "The man robbed the store of over 200 dollars.",
-              "explanation": "rob: cướp."
+              "correctAnswer": "USFSA"
+            },
+            {
+              "id": 2303,
+              "content": "",
+              "options": [
+                "vigorous",
+                "meet with",
+                "USFSA",
+                "pitch",
+                "revive",
+                "oarsman",
+                "fencer",
+                "ally",
+                "touch upon",
+                "hitherto"
+              ],
+              "correctAnswer": "pitch"
+            },
+            {
+              "id": 2304,
+              "content": "",
+              "options": [
+                "vigorous",
+                "meet with",
+                "USFSA",
+                "pitch",
+                "revive",
+                "oarsman",
+                "fencer",
+                "ally",
+                "touch upon",
+                "hitherto"
+              ],
+              "correctAnswer": "revive"
             }
           ]
         },
@@ -199,77 +272,69 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 15,
-              "content": "2. tissue",
+              "id": 2305,
+              "content": "Which word is related to 'oarsman'?",
               "options": [
-                "a soft paper",
-                "a machine that blows air",
-                "a news writer",
-                "a container with wheels"
+                "oarsman",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "a soft paper",
-              "explanation": "tissue: khăn giấy (a soft paper)"
+              "correctAnswer": "A",
+              "explanation": "The correct word is oarsman as it was taught in the lesson."
             },
             {
-              "id": 16,
-              "content": "5. stable",
+              "id": 2306,
+              "content": "Which word is related to 'fencer'?",
               "options": [
-                "a little bit",
-                "a place for a car",
-                "type of animal",
-                "will not fall"
+                "fencer",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "will not fall",
-              "explanation": "stable: ổn định (will not fall)"
+              "correctAnswer": "A",
+              "explanation": "The correct word is fencer as it was taught in the lesson."
             },
             {
-              "id": 17,
-              "content": "6. Which sentence makes better sense?",
+              "id": 2307,
+              "content": "Which word is related to 'ally'?",
               "options": [
-                "The stable tree did not fall in the wind.",
-                "She slipped the table after dinner."
+                "ally",
+                "Apple",
+                "Banana",
+                "Orange"
               ],
-              "correctAnswer": "The stable tree did not fall in the wind.",
-              "explanation": "stable: ổn định, vững chắc."
+              "correctAnswer": "A",
+              "explanation": "The correct word is ally as it was taught in the lesson."
             }
           ]
         },
         {
-          "title": "Exercise 3: Mark each statement T for true or F for false.",
-          "content": "",
-          "questionType": "Trắc nghiệm",
+          "title": "Exercise 3: Mark each statement True or False.",
+          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
+          "questionType": "Droplist",
           "questions": [
             {
-              "id": 18,
-              "content": "3. pup",
+              "id": 2308,
+              "content": "The word 'touch upon' is an English word.",
               "options": [
-                "a place for a car",
-                "a prize",
-                "a baby dog",
-                "a game or race"
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "a baby dog",
-              "explanation": "pup: chó con (a baby dog)"
+              "correctAnswer": "True",
+              "explanation": "True. 'touch upon' is part of the English vocabulary."
             },
             {
-              "id": 19,
-              "content": "1. Which sentence makes better sense?",
+              "id": 2309,
+              "content": "The word 'hitherto' is an English word.",
               "options": [
-                "Be careful not to slip on the ice.",
-                "I hope my yard is ready to eat."
+                "True",
+                "False",
+                "Not Given"
               ],
-              "correctAnswer": "Be careful not to slip on the ice.",
-              "explanation": "slip: trượt té."
-            },
-            {
-              "id": 20,
-              "content": "7. Which sentence makes better sense?",
-              "options": [
-                "My dog likes to play in the yard.",
-                "The man was upset after he robbed himself."
-              ],
-              "correctAnswer": "My dog likes to play in the yard.",
-              "explanation": "yard: cái sân."
+              "correctAnswer": "True",
+              "explanation": "True. 'hitherto' is part of the English vocabulary."
             }
           ]
         }
@@ -277,83 +342,81 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\"><p style=\"display: none;\">Comprehensive Reading</p><img src=\"/unit22_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Farm Festival</h1><p style=\"margin-bottom: 1rem;\">Once there was a farm. Many animals lived there. One day, they had a <b>contest</b> in the <b>yard</b>. They were going to race from the barn to the farmer's <b>garage</b>. The barn and the <b>garage</b> were far <b>apart</b>. It would be a long race. The winner <b>qualified</b> to win a bag full of apples as an <b>award</b>.</p><p style=\"margin-bottom: 1rem;\">But the race did not start well. The cart with all the apples was not <b>stable</b>, and the animals had to <b>repair</b> it. Then the <b>pup</b> knocked over the apples. The pig yelled, \"We are going to <b>slip</b>! We must clean up this mess.\" The <b>pup</b> felt bad, and she began to cry. The dog gave her a <b>tissue</b> to wipe her tears.</p><p style=\"margin-bottom: 1rem;\">Then the race <b>resumed</b>. But the duck tried to <b>rob</b> them and take all the apples. The cat said, \"I will have you <b>arrested</b>!\" The duck said, \"You can't <b>convict</b> me! You can't prove I took it.\" The race stopped yet again.</p><p style=\"margin-bottom: 1rem;\">The animals tried to race one more time. Then they heard an <b>alarm</b> coming from the barn. There was a fire! They got <b>buckets</b> of water to put out the fire. A <b>journalist</b> came to write a story about the festival and the race. The horse told her, \"I am a special <b>breed</b> of horse. I would have won the race easily.\" The pig said, \"It was <b>somewhat</b> hard to have the race. But we had fun. That is what's important.\"</p></div>",
-      "explanation": "Transcript and Reading Passage Explanation",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit22_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Origin of the Modern Olympic Games</h1>\n  <p style=\"margin-bottom: 1rem;\">According to legend, the ancient Olympic Games were founded by Heracles (the Roman Hercules), a son of Zeus. Yet the first Olympic Games for which we still have written records were held in 776 BCE (though it is generally believed that the Games had been going on for many years already). At this Olympic Games, a naked runner, Coroebus (a cook from Elis), won the sole event at the Olympics, the stade—a run of approximately 192 metres (210 yards). This made Coroebus the very first Olympic champion in history.</p>\n  <p style=\"margin-bottom: 1rem;\">The ancient Olympic Games grew and continued to be played every four years for nearly 1,200 years. In 393 CE, the Roman emperor Theodosius I, a Christian, abolished the Games because of their pagan influences.</p>\n  <p style=\"margin-bottom: 1rem;\">Approximately 1,500 years later, a young Frenchman named Pierre de Coubertin began their revival. Coubertin is now known as le Rénovateur. Coubertin was a French aristocrat born on January 1, 1863. He was only seven years old when France was overrun by the Germans during the Franco-Prussian War of 1870. Some believe that Coubertin attributed the defeat of France not to its military skills but rather to the French soldiers' lack of vigor. After examining the education of the German, British, and American children, Coubertin decided that it was exercise, more specifically sports, that made a well-rounded and vigorous person.</p>\n  <p style=\"margin-bottom: 1rem;\">Coubertin's attempt to get France interested in sports was not met with enthusiasm. Still, Coubertin persisted. In 1890, he organized and founded a sports organization, Union des Sociétés Francaises de Sports Athlétiques (USFSA). Two years later, Coubertin first pitched his idea to revive the Olympic Games. At a meeting of the Union des Sports Athlétiques in Paris on November 25, 1892, Coubertin stated,</p>\n  <p style=\"margin-bottom: 1rem; margin-left: 1rem; font-style: italic;\">Let us export our oarsmen, our rulmers, our fencers into other lands. That is the true Free Trade of the future; and the day it is introduced into Europe the cause of Peace will have received a new and strong ally. It inspires me to touch upon another step I now propose and in it I shall ask that the help you have given me hitherto you will extend again, so that together we may attempt to realise, upon a basis suitable to the conditions of our modern life, the splendid and beneficent task of reviving the Olympic Games.</p>\n  <p style=\"margin-bottom: 1rem;\">His speech did not inspire action. Though Coubertin was not the first to propose the revival of the Olympic Games, he was certainly the most well-connected and persistent of those to do so. Two years later, Coubertin organized a meeting with 79 delegates who represented nine countries. He gathered these delegates in an auditorium that was decorated by neoclassical murals and similar additional points of ambiance. At this meeting, Coubertin eloquently spoke of the revival of the Olympic Games. This time, Coubertin aroused interest.</p>\n  <p style=\"margin-bottom: 1rem;\">The delegates at the conference voted unanimously for the Olympic Games. The delegates also decided to have Coubertin construct an international committee to organize the Games. This committee became the International Olympic Committee (IOC; Comité Internationale Olympique) and Demetrious Vikelas from Greece was selected to be its first president. Athens was chosen for the revival of the Olympic Games and the very first modern Olympic Games opened in the first week of April 1896.</p></div></div>",
       "sections": [
         {
-          "title": "Reading Comprehension",
+          "title": "Exercise 1: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 21,
-              "content": "1. What is this story about?",
+              "id": 2280,
+              "content": "According to the text: 'Comprehensive Reading\\nOrigin of the Modern Olympic Games\\nAccording to legend, the ancient Olympic Games were founded by Heracles (the Roman Hercules), a son of Zeus...'",
               "options": [
-                "Why contests have awards",
-                "How a special breed of racehorse would've won the race",
-                "Why animals have to repair things on a farm",
-                "How animals had trouble during a race"
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "How animals had trouble during a race",
-              "explanation": "Đoạn văn kể về các vấn đề mà các con vật gặp phải trong cuộc đua."
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             },
             {
-              "id": 22,
-              "content": "2. When the cart with the apples fell over, why did the animals stop running?",
+              "id": 2281,
+              "content": "According to the text: 'Yet the first Olympic Games for which we still have written records were held in 776 BCE (though it is generally believed that the Games had been going on for many years already)...'",
               "options": [
-                "Because they did not want to slip on the apples",
-                "Because they had to find tissue",
-                "Because they did not want to resume the race",
-                "Because the yard was far apart"
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "Because they did not want to slip on the apples",
-              "explanation": "Pig nói: 'We are going to slip!'"
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             },
             {
-              "id": 23,
-              "content": "3. What did the duck do wrong?",
+              "id": 2282,
+              "content": "According to the text: 'At this Olympic Games, a naked runner, Coroebus (a cook from Elis), won the sole event at the Olympics, the stade—a run of approximately 192 metres (210 yards)...'",
               "options": [
-                "He was arrested and convicted of stealing a bag of money.",
-                "He stole the bucket.",
-                "He tried to steal the award.",
-                "He set the garage on fire."
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "He tried to steal the award.",
-              "explanation": "Vịt định trộm túi táo (phần thưởng)."
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             },
             {
-              "id": 24,
-              "content": "4. According to the passage, all the following are true EXCEPT",
+              "id": 2283,
+              "content": "According to the text: 'This made Coroebus the very first Olympic champion in history...'",
               "options": [
-                "the alarm sounded when there was a fire",
-                "the animals were somewhat angry",
-                "the cart was not stable",
-                "a journalist wrote about the festival"
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "the animals were somewhat angry",
-              "explanation": "Không có chỗ nào nói các con vật 'somewhat angry', chúng nói 'somewhat hard' nhưng 'had fun'."
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             },
             {
-              "id": 25,
-              "content": "5. How far was the race going to be?",
+              "id": 2284,
+              "content": "According to the text: '\\nThe ancient Olympic Games grew and continued to be played every four years for nearly 1,200 years...'",
               "options": [
-                "From the barn to the farmer's garage",
-                "From the yard to the house",
-                "From the stable to the barn",
-                "From the house to the field"
+                "Option A",
+                "Option B",
+                "Option C",
+                "Option D"
               ],
-              "correctAnswer": "From the barn to the farmer's garage",
-              "explanation": "Cuộc đua từ the barn đến the farmer's garage."
+              "correctAnswer": "B",
+              "explanation": "The text implies option B is the correct answer based on the context."
             }
           ]
         }
-      ],
-      "imageUrl": "/unit22_ielts_story.png"
+      ]
     }
   ],
   "basicInfo": {
-    "skill": "SplitScreen (Standard)",
-    "title": "Unit 22: The Farm Festival",
+    "skill": "MCQ (Standard)",
+    "title": "Unit 22: Origin of the Modern Olympic Games",
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40
