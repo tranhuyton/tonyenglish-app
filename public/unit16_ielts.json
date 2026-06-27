@@ -142,7 +142,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 1609,
@@ -152,7 +152,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. A post-graduate is a student who has successfully completed an undergraduate degree course and is studying for a higher degree."
             },
             {
@@ -163,7 +163,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. To resemble is to have a similar appearance to or qualities in common with someone or something."
             }
           ]
@@ -312,7 +312,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 1619,
@@ -322,7 +322,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. An undergraduate is a student at a college or university who has not yet earned a bachelor's or equivalent degree."
             },
             {
@@ -333,7 +333,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. To found means to establish or originate an institution."
             }
           ]

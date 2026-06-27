@@ -142,7 +142,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 1009,
@@ -152,7 +152,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. A role model is someone whose behavior is emulated by others."
             },
             {
@@ -163,7 +163,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. To discard means to get rid of something that is no longer useful or desirable."
             }
           ]
@@ -312,7 +312,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 1019,
@@ -322,7 +322,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. Blushing is showing redness in the face due to embarrassment."
             },
             {
@@ -333,7 +333,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. Shameless means showing a lack of shame or embarrassment."
             }
           ]

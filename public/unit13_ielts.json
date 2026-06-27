@@ -142,7 +142,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 1309,
@@ -152,7 +152,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. Amicable describes relations between people as friendly and without serious disagreement."
             },
             {
@@ -163,7 +163,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. Unfettered means unrestrained or uninhibited."
             }
           ]
@@ -312,7 +312,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 1319,
@@ -322,7 +322,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. To toss is to throw lightly."
             },
             {
@@ -333,7 +333,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. A competitor is someone who takes part in a competition against others."
             }
           ]

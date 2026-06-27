@@ -142,7 +142,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 3009,
@@ -152,7 +152,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. To depict means to represent visually or in words."
             },
             {
@@ -163,7 +163,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. Subsequent means coming after something in time; following."
             }
           ]
@@ -312,7 +312,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 3019,
@@ -322,7 +322,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. To flourish means to grow or develop in a healthy or vigorous way."
             },
             {
@@ -333,7 +333,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. A holocaust refers to mass destruction."
             }
           ]

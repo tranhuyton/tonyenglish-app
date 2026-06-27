@@ -142,7 +142,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 2809,
@@ -152,7 +152,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. A whodunit is a classic murder mystery."
             },
             {
@@ -163,7 +163,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. To covet means to yearn to possess or have something."
             }
           ]
@@ -312,7 +312,7 @@
         {
           "title": "Exercise 3: Mark each statement True or False.",
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True / False</p>",
-          "questionType": "Droplist",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": 2819,
@@ -322,7 +322,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "False",
+              "correctAnswer": "B",
               "explanation": "False. Autobiographical means dealing with the writer's own life."
             },
             {
@@ -333,7 +333,7 @@
                 "False",
                 "Not Given"
               ],
-              "correctAnswer": "True",
+              "correctAnswer": "A",
               "explanation": "True. It's an informal phrase meaning to fawn over someone for personal gain."
             }
           ]
