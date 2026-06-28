@@ -19,7 +19,7 @@
                 "a light",
                 "to speak"
               ],
-              "explanation": "b",
+              "explanation": "\"Stroke\" có nghĩa là vuốt ve, di chuyển tay nhẹ nhàng trên một bề mặt, tương đương với \"to move a hand\".",
               "correctAnswer": "B"
             },
             {
@@ -31,7 +31,7 @@
                 "to cry",
                 "to say"
               ],
-              "explanation": "a",
+              "explanation": "\"Sacrifice\" mang ý nghĩa hi sinh, từ bỏ một điều gì đó quý giá, tương đương với \"to give up\".",
               "correctAnswer": "A"
             },
             {
@@ -43,7 +43,7 @@
                 "a short story",
                 "where two bones meet"
               ],
-              "explanation": "d",
+              "explanation": "\"Joint\" là khớp xương, nơi hai xương giao nhau, tương đương với \"where two bones meet\".",
               "correctAnswer": "D"
             },
             {
@@ -55,7 +55,7 @@
                 "a doctor",
                 "special attention"
               ],
-              "explanation": "d",
+              "explanation": "\"Emphasis\" là sự nhấn mạnh, tập trung sự chú ý đặc biệt vào điều gì đó, tương đương với \"special attention\".",
               "correctAnswer": "D"
             },
             {
@@ -67,7 +67,7 @@
                 "to connect",
                 "empty"
               ],
-              "explanation": "d",
+              "explanation": "\"Hollow\" có nghĩa là rỗng tuếch, trống rỗng ở bên trong, tương đương với \"empty\".",
               "correctAnswer": "D"
             }
           ],
@@ -88,7 +88,7 @@
               ],
               "content": "<p class=\"mb-4\">She avoided walking in <u>low-light</u> areas.<br/>di [ 6 ]</p><p class=\"mb-4\">Since she's lived in hot places all her life, she's <u>used to</u> warm weather.<br/>ac [ 7 ]</p><p class=\"mb-4\">The holes in the old pipes let water <u>pass through</u> onto the bathroom floor.<br/>le [ 8 ]</p><p class=\"mb-4\">Her back felt <u>hard to move</u> after she slept on the floor.<br/>st [ 9 ]</p><p class=\"mb-4\">He was happy to go home and see the <u>group of family and friends</u>.<br/>cl [ 10 ]</p><p class=\"mb-4\">The very <u>shocked</u> crowd watched as the magician performed his tricks.<br/>as [ 11 ]</p><p class=\"mb-4\">The school served a <u>large meal</u> in honor of the new principal.<br/>fe [ 12 ]</p><p class=\"mb-4\">The only thing that I could see in the dark night was my flashlight <u>making light</u>.<br/>gl [ 13 ]</p><p class=\"mb-4\">It was a very <u>sad event</u> when his parents passed away in the accident.<br/>tr [ 14 ]</p><p class=\"mb-4\">Her <u>natural behavior</u> told her to leave the room as soon as possible.<br/>in [ 15 ]</p>",
               "correctAnswer": "DIM",
-              "explanation": "Đáp án đúng là DIM. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Dim\" có nghĩa là mờ ảo, ít ánh sáng, đồng nghĩa với \"low-light\"."
             },
             {
               "id": "7",
@@ -100,7 +100,7 @@
               ],
               "content": "",
               "correctAnswer": "ACCUSTOMED",
-              "explanation": "Đáp án đúng là ACCUSTOMED. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Accustomed\" có nghĩa là quen với điều gì đó, đồng nghĩa với cụm \"used to\"."
             },
             {
               "id": "8",
@@ -112,7 +112,7 @@
               ],
               "content": "",
               "correctAnswer": "LEAK",
-              "explanation": "Đáp án đúng là LEAK. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Leak\" có nghĩa là rò rỉ, để chất lỏng/ánh sáng đi qua khe hở, đồng nghĩa với \"pass through\" trong ngữ cảnh này."
             },
             {
               "id": "9",
@@ -124,7 +124,7 @@
               ],
               "content": "",
               "correctAnswer": "STIFF",
-              "explanation": "Đáp án đúng là STIFF. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Stiff\" có nghĩa là cứng đơ, khó cử động, đồng nghĩa với \"hard to move\"."
             },
             {
               "id": "10",
@@ -136,7 +136,7 @@
               ],
               "content": "",
               "correctAnswer": "CLAN",
-              "explanation": "Đáp án đúng là CLAN. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Clan\" có nghĩa là gia tộc, nhóm người thân, đồng nghĩa với \"group of family and friends\"."
             },
             {
               "id": "11",
@@ -148,7 +148,7 @@
               ],
               "content": "",
               "correctAnswer": "ASTONISHED",
-              "explanation": "Đáp án đúng là ASTONISHED. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Astonished\" có nghĩa là vô cùng ngạc nhiên, sửng sốt, đồng nghĩa với \"shocked\"."
             },
             {
               "id": "12",
@@ -160,7 +160,7 @@
               ],
               "content": "",
               "correctAnswer": "FEAST",
-              "explanation": "Đáp án đúng là FEAST. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Feast\" có nghĩa là bữa tiệc thịnh soạn, bữa ăn lớn, đồng nghĩa với \"large meal\"."
             },
             {
               "id": "13",
@@ -172,7 +172,7 @@
               ],
               "content": "",
               "correctAnswer": "GLOW",
-              "explanation": "Đáp án đúng là GLOW. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Glow\" có nghĩa là phát sáng nhẹ, tỏa sáng, đồng nghĩa với cụm \"making light\"."
             },
             {
               "id": "14",
@@ -184,7 +184,7 @@
               ],
               "content": "",
               "correctAnswer": "TRAGEDY",
-              "explanation": "Đáp án đúng là TRAGEDY. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "Từ chính xác là \"tragic\" (bi thảm), miêu tả một sự kiện rất buồn và đau thương (\"sad event\")."
             },
             {
               "id": "15",
@@ -196,7 +196,7 @@
               ],
               "content": "",
               "correctAnswer": "INSTINCT",
-              "explanation": "Đáp án đúng là INSTINCT. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Instinct\" là bản năng, hành vi tự nhiên không cần suy nghĩ, đồng nghĩa với \"natural behavior\"."
             }
           ],
           "questionType": "Điền từ"
@@ -214,7 +214,7 @@
                 "fable"
               ],
               "correctAnswer": "fable",
-              "explanation": "Đáp án đúng là fable. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Fable\" là truyện ngụ ngôn, phù hợp với câu chuyện hư cấu về một cậu bé có phép thuật."
             },
             {
               "id": "17",
@@ -224,7 +224,7 @@
                 "fable"
               ],
               "correctAnswer": "astonished",
-              "explanation": "Đáp án đúng là astonished. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Astonished\" là kinh ngạc, mô tả cảm xúc của mọi người khi thấy cậu bé làm biến mất con mèo."
             },
             {
               "id": "18",
@@ -234,7 +234,7 @@
                 "instincts"
               ],
               "correctAnswer": "banged",
-              "explanation": "Đáp án đúng là banged. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Banged\" là đập mạnh, phù hợp với hành động đập nắm đấm xuống bàn trong lúc tức giận."
             },
             {
               "id": "19",
@@ -244,7 +244,7 @@
                 "instincts"
               ],
               "correctAnswer": "instincts",
-              "explanation": "Đáp án đúng là instincts. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Instincts\" là trực giác/bản năng, mách bảo cho cô ấy biết điều tồi tệ sắp xảy ra."
             },
             {
               "id": "20",
@@ -254,7 +254,7 @@
                 "feast"
               ],
               "correctAnswer": "feast",
-              "explanation": "Đáp án đúng là feast. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Feast\" là bữa tiệc thịnh soạn, phù hợp với câu nói thức ăn rất ngon."
             },
             {
               "id": "21",
@@ -264,7 +264,7 @@
                 "feast"
               ],
               "correctAnswer": "accustomed",
-              "explanation": "Đáp án đúng là accustomed. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Accustomed\" đi với giới từ \"to\" mang nghĩa là chưa \"quen với\" việc ăn quá nhiều cùng một lúc."
             },
             {
               "id": "22",
@@ -274,7 +274,7 @@
                 "physician"
               ],
               "correctAnswer": "physician",
-              "explanation": "Đáp án đúng là physician. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Physician\" là bác sĩ, người đang khám cánh tay và khuỷu tay cho bệnh nhân."
             },
             {
               "id": "23",
@@ -284,7 +284,7 @@
                 "physician"
               ],
               "correctAnswer": "joint",
-              "explanation": "Đáp án đúng là joint. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Joint\" là khớp xương, bác sĩ muốn kiểm tra xem bệnh nhân có gặp vấn đề gì ở khớp khuỷu tay không."
             },
             {
               "id": "24",
@@ -294,7 +294,7 @@
                 "emphasis"
               ],
               "correctAnswer": "emphasis",
-              "explanation": "Đáp án đúng là emphasis. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Emphasis\" (placed a special emphasis on) nghĩa là đặc biệt chú trọng, nhấn mạnh vào sự an toàn của sinh viên."
             },
             {
               "id": "25",
@@ -304,7 +304,7 @@
                 "emphasis"
               ],
               "correctAnswer": "affirm",
-              "explanation": "Đáp án đúng là affirm. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Affirm\" là khẳng định, trường đại học muốn khẳng định rằng họ quan tâm đến việc bảo vệ sinh viên."
             },
             {
               "id": "26",
@@ -314,7 +314,7 @@
                 "stiff"
               ],
               "correctAnswer": "hollow",
-              "explanation": "Đáp án đúng là hollow. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Hollow\" (hollow tree) là bọng cây/cây rỗng, nơi cậu bé chọn làm chỗ trốn hoàn hảo."
             },
             {
               "id": "27",
@@ -324,7 +324,7 @@
                 "stiff"
               ],
               "correctAnswer": "stiff",
-              "explanation": "Đáp án đúng là stiff. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Stiff\" là cứng đơ, mô tả cảm giác nhức mỏi, cứng cơ sau khi cậu bé chui ra từ bọng cây chật hẹp."
             },
             {
               "id": "28",
@@ -334,7 +334,7 @@
                 "tunes"
               ],
               "correctAnswer": "clan",
-              "explanation": "Đáp án đúng là clan. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Clan\" là gia tộc, cả dòng họ đều hào hứng tụ tập lại vì đám cưới của cô ấy."
             },
             {
               "id": "29",
@@ -344,7 +344,7 @@
                 "tunes"
               ],
               "correctAnswer": "tunes",
-              "explanation": "Đáp án đúng là tunes. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Tunes\" là giai điệu/bài hát, họ vừa lái xe đến nhà thờ vừa hát những giai điệu vui tươi."
             },
             {
               "id": "30",
@@ -354,7 +354,7 @@
                 "stroked"
               ],
               "correctAnswer": "dim",
-              "explanation": "Đáp án đúng là dim. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Dim\" (dim light) là ánh sáng mờ ảo, khiến việc tìm bông tai bị rơi trở nên khó khăn."
             },
             {
               "id": "31",
@@ -364,7 +364,7 @@
                 "stroked"
               ],
               "correctAnswer": "stroked",
-              "explanation": "Đáp án đúng là stroked. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Stroked\" là quờ quạng, sờ soạng, cô ấy đưa tay sờ trên mặt đất cho đến khi tìm thấy chiếc bông tai."
             },
             {
               "id": "32",
@@ -374,7 +374,7 @@
                 "tragic"
               ],
               "correctAnswer": "tragic",
-              "explanation": "Đáp án đúng là tragic. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Tragic\" (tragic illness) là căn bệnh bi thảm, hiểm nghèo."
             },
             {
               "id": "33",
@@ -384,7 +384,7 @@
                 "tragic"
               ],
               "correctAnswer": "sacrifices",
-              "explanation": "Đáp án đúng là sacrifices. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Sacrifices\" (made sacrifices) là hi sinh, gia đình đã hi sinh mọi thứ để đảm bảo cậu bé luôn thoải mái."
             },
             {
               "id": "34",
@@ -394,7 +394,7 @@
                 "leak"
               ],
               "correctAnswer": "leak",
-              "explanation": "Đáp án đúng là leak. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Leak\" (leak into) là lọt vào/rò rỉ vào, anh ta đóng cửa để ánh sáng không lọt vào phòng."
             },
             {
               "id": "35",
@@ -404,7 +404,7 @@
                 "leak"
               ],
               "correctAnswer": "glowing",
-              "explanation": "Đáp án đúng là glowing. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "explanation": "\"Glowing\" là phát sáng, anh ta vẫn thấy ánh sáng mặt trăng đang phát sáng ngoài cửa sổ."
             }
           ],
           "questionType": "Điền từ"
@@ -429,7 +429,7 @@
                 "True",
                 "False"
               ],
-              "explanation": "Bài đọc có câu: I can't do anything (Tôi không thể làm gì được cả). Lời của bác sĩ hoàn toàn trùng khớp với nhận định. Nhận định này đúng (True).",
+              "explanation": "Khẳng định này là ĐÚNG. Bài đọc cho biết bác sĩ bảo ông lão \"There is nothing I can do\" (Tôi không thể làm gì được).",
               "correctAnswer": "True"
             },
             {
@@ -439,7 +439,7 @@
                 "True",
                 "False"
               ],
-              "explanation": "Trong bài viết: It leaked a little, but there was no other place he could wait. (Nó bị dột một chút, nhưng không có nơi nào khác để ông có thể chờ). Nhận định này đúng (True).",
+              "explanation": "Khẳng định này là ĐÚNG. Ông lão đã trốn trong bọng cây dù trời mưa và nó bị dột (\"The tree was hollow... it leaked...\").",
               "correctAnswer": "True"
             },
             {
@@ -449,7 +449,7 @@
                 "True",
                 "False"
               ],
-              "explanation": "Trong bài có câu: When the rain stopped, his joints felt stiff from sitting. (Khi mưa tạnh, các khớp xương của ông cảm thấy cứng nhắc vì ngồi lâu). Vậy ông bị cứng khớp do ngồi lâu chứ không phải do đi bộ. Nhận định này sai (False).",
+              "explanation": "Khẳng định này là SAI. Các khớp xương của ông lão bị cứng (stiff) do bệnh tuổi già, không phải do đi dạo trong rừng.",
               "correctAnswer": "False"
             },
             {
@@ -459,7 +459,7 @@
                 "True",
                 "False"
               ],
-              "explanation": "Bài đọc viết: Still, his instincts told him that there was something out there. (Tuy nhiên, bản năng của ông mách bảo rằng có thứ gì đó ngoài kia) và sau đó ông đi sâu hơn vào rừng chứ không phải lập tức về nhà. Nhận định này sai (False).",
+              "explanation": "Khẳng định này là SAI. Trực giác (instinct) của ông lão bảo ông rẽ phải vào một khu rừng, chứ không phải bảo ông trở về nhà ngay lập tức.",
               "correctAnswer": "False"
             },
             {
@@ -469,7 +469,7 @@
                 "True",
                 "False"
               ],
-              "explanation": "Bài đọc nói rõ ông lão bước ra và He started to dance (Ông bắt đầu nhảy). Vậy nhận định ông lão nhảy cho bầy quái vật xem là đúng (True).",
+              "explanation": "Khẳng định này là ĐÚNG. Ông lão lạ mặt đã nhảy múa cho một bầy quái vật (\"a clan of monsters\") xem.",
               "correctAnswer": "True"
             },
             {
@@ -479,7 +479,7 @@
                 "True",
                 "False"
               ],
-              "explanation": "Cuối cùng thì The monsters agreed that they had to take his bump. (Lũ quái vật đồng ý rằng chúng phải lấy cái bướu của ông). Nhận định này là đúng (True).",
+              "explanation": "Khẳng định này là ĐÚNG. Những con quái vật cảm thấy vui vẻ nên chúng đã lấy đi (took away) cục bướu trên mặt ông lão.",
               "correctAnswer": "True"
             }
           ],
@@ -499,7 +499,7 @@
                 "To sacrifice",
                 "To get accustomed to it"
               ],
-              "explanation": "Bác sĩ đã thông báo một tin buồn và khuyên ông lão: You'll have to get accustomed to it (Ông sẽ phải làm quen với nó thôi). Vậy đáp án D là đúng.",
+              "explanation": "Đáp án là D (He gave him no hope). Lời khuyên của bác sĩ là không có cách chữa trị, không cho ông ấy hy vọng nào.",
               "correctAnswer": "D"
             },
             {
@@ -511,7 +511,7 @@
                 "He was hiding from monsters.",
                 "His joints hurt."
               ],
-              "explanation": "Bài đọc viết: It was going to rain. So he found a hollow tree to sit under. (Trời sắp mưa. Vì thế ông đã tìm một cái cây rỗng để ngồi trú). Đáp án B là chính xác.",
+              "explanation": "Đáp án là B (Because of a rain storm). Ông lão phải trốn trong bọng cây vì có một cơn mưa bão lớn ập tới.",
               "correctAnswer": "B"
             },
             {
@@ -523,7 +523,7 @@
                 "To dance",
                 "To play music"
               ],
-              "explanation": "Khi thủ lĩnh bầy quái vật hỏi ai là người nhảy giỏi nhất, ông lão đã bước ra khỏi gốc cây, hét lên: Me! (Là ta!) và He started to dance (Ông bắt đầu nhảy). Vì thế ông bước ra là để nhảy (To dance). Đáp án C là chính xác.",
+              "explanation": "Đáp án là C (Because he heard a tune). Ông lão bước ra khỏi cây vì ông nghe thấy một giai điệu/bài hát vang lên.",
               "correctAnswer": "C"
             },
             {
@@ -535,7 +535,7 @@
                 "For emphasis",
                 "To affirm that the bump is there"
               ],
-              "explanation": "Cuối câu chuyện, tác giả viết: After they did, the man stroked his face to make sure it was gone. (Sau khi lũ quái vật lấy cái bướu đi, ông vuốt mặt để chắc chắn rằng nó đã biến mất). Do đó đáp án B là đúng.",
+              "explanation": "Đáp án là B (To make sure the lump was gone). Ông lão sờ lên khuôn mặt mình để chắc chắn rằng cục bướu đã hoàn toàn biến mất.",
               "correctAnswer": "B"
             }
           ],
