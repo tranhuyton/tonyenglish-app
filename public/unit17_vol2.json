@@ -86,7 +86,7 @@
                 "b. You should go to a <b>mechanic</b> if you have a problem with your car."
               ],
               "explanation": "mechanic (thợ cơ khí) sửa xe, đây là lựa chọn hợp lý.",
-              "correctAnswer": "b"
+              "correctAnswer": "B"
             },
             {
               "id": "7",
@@ -96,7 +96,7 @@
                 "b. You should <b>attach</b> a stamp to a letter before you mail it."
               ],
               "explanation": "attach a stamp (dán tem) là hành động đúng trước khi gửi thư.",
-              "correctAnswer": "b"
+              "correctAnswer": "B"
             },
             {
               "id": "8",
@@ -106,7 +106,7 @@
                 "b. When you <b>confirm</b> the results of the test, you make them better."
               ],
               "explanation": "differ (khác biệt): nếu hai người khác biệt quá nhiều, có thể họ không thích nhau.",
-              "correctAnswer": "a"
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -116,7 +116,7 @@
                 "b. Teachers often <b>criticize</b> lazy students."
               ],
               "explanation": "criticize (chỉ trích): giáo viên thường phê bình học sinh lười biếng.",
-              "correctAnswer": "b"
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -126,7 +126,7 @@
                 "b. When you visit a <b>mechanic</b> they will sell you a new car."
               ],
               "explanation": "signals (tín hiệu): người lái xe phải chú ý đến các tín hiệu.",
-              "correctAnswer": "a"
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -136,7 +136,7 @@
                 "b. Good friends like to <b>criticize</b> each other."
               ],
               "explanation": "formal event (sự kiện trang trọng): nên mặc đồ đẹp.",
-              "correctAnswer": "a"
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -146,7 +146,7 @@
                 "b. If you <b>commute</b> to work, you have to travel a certain distance."
               ],
               "explanation": "commute (đi làm xa): đi lại một khoảng cách nhất định.",
-              "correctAnswer": "b"
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -156,7 +156,7 @@
                 "b. If you <b>attach</b> a large sign to your door, no one will see it."
               ],
               "explanation": "confirm (xác nhận): nên xác nhận kế hoạch trước khi đi.",
-              "correctAnswer": "a"
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -166,7 +166,7 @@
                 "b. Everyone <b>commutes</b> in math class."
               ],
               "explanation": "aim (mục tiêu): nếu mục tiêu là học bơi, phải xuống nước.",
-              "correctAnswer": "a"
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -176,7 +176,7 @@
                 "b. When you <b>bet</b> money, you might lose it."
               ],
               "explanation": "bet (cá cược): khi cá cược bạn có thể bị mất tiền.",
-              "correctAnswer": "b"
+              "correctAnswer": "B"
             }
           ],
           "questionType": "Trắc nghiệm"

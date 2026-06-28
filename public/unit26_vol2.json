@@ -19,7 +19,7 @@
                 "loss",
                 "insure"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "A"
             },
             {
@@ -31,7 +31,7 @@
                 "loss",
                 "insure"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "B"
             },
             {
@@ -43,7 +43,7 @@
                 "coral",
                 "reef"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "A"
             },
             {
@@ -55,7 +55,7 @@
                 "coral",
                 "reef"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "B"
             },
             {
@@ -67,7 +67,7 @@
                 "amuse",
                 "surfed"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "A"
             },
             {
@@ -79,7 +79,7 @@
                 "amuse",
                 "surfed"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "B"
             },
             {
@@ -91,7 +91,7 @@
                 "task",
                 "shut"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "A"
             },
             {
@@ -103,7 +103,7 @@
                 "task",
                 "shut"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "B"
             },
             {
@@ -115,7 +115,7 @@
                 "fuel",
                 "cotton"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "A"
             },
             {
@@ -127,7 +127,7 @@
                 "fuel",
                 "cotton"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "B"
             }
           ],
@@ -148,7 +148,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "strict"
             },
             {
@@ -161,7 +161,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "ensure"
             },
             {
@@ -174,7 +174,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "grand"
             },
             {
@@ -187,7 +187,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "accuse"
             },
             {
@@ -200,7 +200,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "shut"
             }
           ],
@@ -215,70 +215,70 @@
               "id": "16",
               "content": "<p class=\"mb-4\">He <u>blamed me of taking</u> the last piece of pie. ac [ 16 ]</p><p class=\"mb-4\">The man's bedroom was <u>very simple</u>. pla [ 17 ]</p><p class=\"mb-4\">The clown likes to <u>entertain</u> children. amu [ 18 ]</p><p class=\"mb-4\">I need to <u>change</u> the way I run so I can be faster. adj [ 19 ]</p><p class=\"mb-4\">During their free time, the children <u>did</u> many different activities. (en___________ in) [ 20 ]</p><p class=\"mb-4\">This <u>cloth</u> dress is one of my favorites. co [ 21 ]</p><p class=\"mb-4\">The <u>bad storm over the ocean</u> almost reached the land. hu [ 22 ]</p><p class=\"mb-4\"><u>Tightly close</u> the window before the rain starts! s [ 23 ]</p><p class=\"mb-4\">He will <u>hit something and break</u> his bike if he closes his eyes while riding. c [ 24 ]</p><p class=\"mb-4\">The army fights in the war <u>area</u>. z [ 25 ]</p>",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "accused"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "plain"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "amuse"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "adjust"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "engaged"
             },
             {
               "id": "21",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "cotton"
             },
             {
               "id": "22",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "hurricane"
             },
             {
               "id": "23",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "shut"
             },
             {
               "id": "24",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "crash"
             },
             {
               "id": "25",
               "content": "",
               "options": [],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "zone"
             }
           ],
@@ -306,7 +306,7 @@
                 "c. Why people should be serious sometimes",
                 "d. Why hurricanes form over the ocean"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "C"
             },
             {
@@ -318,7 +318,7 @@
                 "c. He could not shut the door.",
                 "d. He wanted to engage in other activities."
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "A"
             },
             {
@@ -330,7 +330,7 @@
                 "c. He did not succeed in getting the cotton to its destination.",
                 "d. He ensured his crew that they would not crash."
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "B"
             },
             {
@@ -342,7 +342,7 @@
                 "c. he adjusted the radio dial to call William",
                 "d. he sang and danced to songs from an opera"
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "D"
             },
             {
@@ -354,7 +354,7 @@
                 "Thomas's ship rescued William's crew.",
                 "The crew started singing and dancing."
               ],
-              "explanation": "",
+              "explanation": "(Chưa có giải thích chi tiết)",
               "correctAnswer": "A"
             }
           ],

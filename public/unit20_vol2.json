@@ -69,7 +69,7 @@
           "content": "",
           "questions": [
             {
-              "id": "1",
+              "id": "1_B",
               "content": "My new friend is an [ 1 ] who came from Italy. He goes to the same [ 2 ] school that I do. He does not know many English words. Having to learn new words is a hard [ 3 ] for him to get past. When he says things wrong, he feels like a [ 4 ]. I tell him not to worry. Soon he will know English very well. When I help him learn, he is happy and gives me [ 5 ] for my good deed.",
               "correctAnswer": "immigrant",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
@@ -82,7 +82,7 @@
               ]
             },
             {
-              "id": "2",
+              "id": "2_B",
               "content": "",
               "correctAnswer": "elementary",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
@@ -95,7 +95,7 @@
               ]
             },
             {
-              "id": "3",
+              "id": "3_B",
               "content": "",
               "correctAnswer": "barrier",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
@@ -108,7 +108,7 @@
               ]
             },
             {
-              "id": "4",
+              "id": "4_B",
               "content": "",
               "correctAnswer": "failure",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
@@ -121,7 +121,7 @@
               ]
             },
             {
-              "id": "5",
+              "id": "5_B",
               "content": "",
               "correctAnswer": "recognition",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",

@@ -14,31 +14,36 @@
               "id": "1",
               "content": "<p class=\"mb-4\">Jennifer <u>looked for a long time</u> at the girl who looked just like her sister. [ 1 ]</p><p class=\"mb-4\">Even though the noise scared me, I <u>returned to my calm mood</u>. [ 2 ]</p><p class=\"mb-4\">The man's speech <u>went on for another thirty minutes</u>. [ 3 ]</p><p class=\"mb-4\">I am quiet in a <u>big crowd of people</u>. [ 4 ]</p><p class=\"mb-4\">My little brother woke up with a <u>really bad hot temperature</u> today. [ 5 ]</p>",
               "options": [],
-              "correctAnswer": "stared"
+              "correctAnswer": "stared",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "2",
               "content": "",
               "options": [],
-              "correctAnswer": "recovered"
+              "correctAnswer": "recovered",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "3",
               "content": "",
               "options": [],
-              "correctAnswer": "lasted"
+              "correctAnswer": "lasted",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "4",
               "content": "",
               "options": [],
-              "correctAnswer": "shy"
+              "correctAnswer": "shy",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "5",
               "content": "",
               "options": [],
-              "correctAnswer": "fever"
+              "correctAnswer": "fever",
+              "explanation": "(Chưa có giải thích chi tiết)"
             }
           ],
           "questionType": "Điền từ"
@@ -55,7 +60,8 @@
                 "but I didn't, so I denied it",
                 "so I relied on what she told me"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "7",
@@ -64,7 +70,8 @@
                 "I was shocked by what I saw",
                 "it made a funny gesture"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "8",
@@ -73,7 +80,8 @@
                 "wanted to take a likeness of the class this year",
                 "emphasized that students must follow the classroom rules"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "9",
@@ -82,7 +90,8 @@
                 "thus I finished it in two days",
                 "so I recovered a harder book"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "10",
@@ -91,7 +100,8 @@
                 "seemed really shy",
                 "gave me a new perspective"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -108,7 +118,8 @@
                 "chamber",
                 "fever"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "12",
@@ -117,7 +128,8 @@
                 "chamber",
                 "fever"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "13",
@@ -126,7 +138,8 @@
                 "perspective",
                 "likeness"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "14",
@@ -135,7 +148,8 @@
                 "perspective",
                 "likeness"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "15",
@@ -144,7 +158,8 @@
                 "rational",
                 "document"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "16",
@@ -153,7 +168,8 @@
                 "rational",
                 "document"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "17",
@@ -162,7 +178,8 @@
                 "stared",
                 "shocked"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "18",
@@ -171,7 +188,8 @@
                 "stared",
                 "shocked"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "19",
@@ -180,7 +198,8 @@
                 "moreover",
                 "flu"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "20",
@@ -189,7 +208,8 @@
                 "moreover",
                 "flu"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "21",
@@ -198,7 +218,8 @@
                 "interrupted",
                 "gesture"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "22",
@@ -207,7 +228,8 @@
                 "interrupted",
                 "gesture"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "23",
@@ -216,7 +238,8 @@
                 "thus",
                 "relied"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "24",
@@ -225,7 +248,8 @@
                 "thus",
                 "relied"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "25",
@@ -234,7 +258,8 @@
                 "recovered",
                 "lasted"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "26",
@@ -243,7 +268,8 @@
                 "recovered",
                 "lasted"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "27",
@@ -252,7 +278,8 @@
                 "deny",
                 "shy"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "28",
@@ -261,7 +288,8 @@
                 "deny",
                 "shy"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "29",
@@ -270,7 +298,8 @@
                 "emphasized",
                 "freeze"
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "30",
@@ -279,7 +308,8 @@
                 "emphasized",
                 "freeze"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -306,7 +336,8 @@
                 "How two boys who bore a likeness to each other traded places",
                 "A prince who has a rational perspective"
               ],
-              "correctAnswer": "C"
+              "correctAnswer": "C",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "32",
@@ -317,7 +348,8 @@
                 "Sam couldn't talk; thus, he ran away.",
                 "Sam made a gesture."
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "33",
@@ -328,7 +360,8 @@
                 "He liked to rely on the servants at the palace.",
                 "He was afraid he would freeze or get a fever or the flu."
               ],
-              "correctAnswer": "C"
+              "correctAnswer": "C",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "34",
@@ -339,7 +372,8 @@
                 "Signing all of the official documents",
                 "People not emphasizing how important he was"
               ],
-              "correctAnswer": "B"
+              "correctAnswer": "B",
+              "explanation": "(Chưa có giải thích chi tiết)"
             },
             {
               "id": "35",
@@ -350,7 +384,8 @@
                 "Because it was dirty.",
                 "Because he didn't like the color."
               ],
-              "correctAnswer": "A"
+              "correctAnswer": "A",
+              "explanation": "(Chưa có giải thích chi tiết)"
             }
           ],
           "questionType": "Trắc nghiệm"
