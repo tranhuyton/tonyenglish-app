@@ -144,7 +144,7 @@
         {
           "id": "sec3_wordlist_tf",
           "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
-          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
+          "content": "",
           "questionType": "TFNG",
           "questions": [
             {

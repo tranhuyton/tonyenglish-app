@@ -76,7 +76,7 @@
         {
           "id": "sec2_wordlist_tf",
           "title": "Exercise 1: Part B: Check (V) the one that suits the blank naturally.",
-          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
+          "content": "",
           "questionType": "TFNG",
           "questions": [
             {

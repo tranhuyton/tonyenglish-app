@@ -289,8 +289,8 @@
       "sections": [
         {
           "id": "sec_story_tf",
-          "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
           "questionType": "TFNG",
           "questions": [
             {
