@@ -1519,7 +1519,8 @@ const handleFinish = async () => {
                                           const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
                                           
                                           return allOptions.map((opt: string, oIdx: number) => {
-                                            const displayOpt = opt;
+                                            const prefix = `${String.fromCharCode(65 + oIdx)}. `;
+                                            const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
                                             const optLetter = String.fromCharCode(65 + oIdx);
                                             const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
                                             
@@ -2008,7 +2009,8 @@ const handleFinish = async () => {
                                            const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
                                            
                                            return allOpts.map((opt: string, oIdx: number) => {
-                                             const displayOpt = opt;
+                                             const prefix = `${String.fromCharCode(65 + oIdx)}. `;
+                                             const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
                                              const optLetter = String.fromCharCode(65 + oIdx);
                                              const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
                                              
