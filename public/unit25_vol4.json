@@ -225,7 +225,7 @@
               "id": "16_0",
               "content": "<p style=\"margin-bottom: 12px;\"><b>1. A. hardy / B. celebrity / institute / traverse</b><br/>You need to be [ 1 ] if you want to [ 2 ] the mountains. A(n) [ 3 ] is going to give a talk at the [ 4 ] of Drama.</p><p style=\"margin-bottom: 12px;\"><b>2. B. jealousy / B. migrate / aircraft / esteemed</b><br/>Many people [ 5 ] by ship or [ 6 ]. She felt a lot of [ 7 ] because her sister was highly [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. B. extinct / B. species / secluded / swamp</b><br/>They found the remains of [ 9 ] animals in the [ 10 ]. You can see many different bird [ 11 ] in this [ 12 ] location.</p><p style=\"margin-bottom: 12px;\"><b>4. A. zoology / B. decisive / ethical / nurture</b><br/>He made a quick, [ 13 ] choice, but he was worried if it was the [ 14 ] thing to fire him over the holidays. He chose to study [ 15 ] because he has always liked to [ 16 ] animals.</p><p style=\"margin-bottom: 12px;\"><b>5. B. principle / B. rural / concrete / overhead</b><br/>I like to be in [ 17 ] areas where there are no planes flying [ 18 ]. I don't like the [ 19 ] of covering the garden in [ 20 ].</p>",
               "options": [],
-              "correctAnswer": "A. hardy",
+              "correctAnswer": "hardy",
               "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi."
             },
             {
@@ -239,7 +239,7 @@
               "id": "17_0",
               "content": "",
               "options": [],
-              "correctAnswer": "B. celebrity",
+              "correctAnswer": "celebrity",
               "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute)."
             },
             {
@@ -253,7 +253,7 @@
               "id": "18_0",
               "content": "",
               "options": [],
-              "correctAnswer": "B. migrate",
+              "correctAnswer": "migrate",
               "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft)."
             },
             {
@@ -267,7 +267,7 @@
               "id": "19_0",
               "content": "",
               "options": [],
-              "correctAnswer": "B. jealousy",
+              "correctAnswer": "jealousy",
               "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed)."
             },
             {
@@ -281,7 +281,7 @@
               "id": "20_0",
               "content": "",
               "options": [],
-              "correctAnswer": "B. extinct",
+              "correctAnswer": "extinct",
               "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp)."
             },
             {
@@ -295,7 +295,7 @@
               "id": "21_0",
               "content": "",
               "options": [],
-              "correctAnswer": "B. species",
+              "correctAnswer": "species",
               "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded)."
             },
             {
@@ -309,7 +309,7 @@
               "id": "22_0",
               "content": "",
               "options": [],
-              "correctAnswer": "B. decisive",
+              "correctAnswer": "decisive",
               "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical)."
             },
             {
@@ -323,7 +323,7 @@
               "id": "23_0",
               "content": "",
               "options": [],
-              "correctAnswer": "A. zoology",
+              "correctAnswer": "zoology",
               "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật."
             },
             {
@@ -337,7 +337,7 @@
               "id": "24_0",
               "content": "",
               "options": [],
-              "correctAnswer": "B. rural",
+              "correctAnswer": "rural",
               "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead)."
             },
             {
@@ -351,7 +351,7 @@
               "id": "25_0",
               "content": "",
               "options": [],
-              "correctAnswer": "B. principle",
+              "correctAnswer": "principle",
               "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete)."
             },
             {
