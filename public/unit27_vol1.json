@@ -313,7 +313,7 @@
           "content": "",
           "questions": [
             {
-              "id": "21",
+              "id": "26",
               "content": "Which is NOT part of the spider's puzzle?",
               "options": [
                 "a. The coast",
@@ -325,7 +325,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "22",
+              "id": "27",
               "content": "Why does the bird make a deal instead of flying away?",
               "options": [
                 "a. Her wings are quite effective in the web.",
@@ -337,7 +337,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "23",
+              "id": "28",
               "content": "What will be the bird's gift to the spider?",
               "options": [
                 "a. A tour of the coast",
@@ -349,7 +349,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "24",
+              "id": "29",
               "content": "What is the spider's response to the bird's answer?",
               "options": [
                 "a. Your answer is false!",
@@ -361,7 +361,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "25",
+              "id": "30",
               "content": "What is the first thing the spider does when a bug gets into his web?",
               "options": [
                 "a. He asks the bug a question first.",

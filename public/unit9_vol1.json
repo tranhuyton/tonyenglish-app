@@ -213,7 +213,8 @@
               "options": [
                 "beach",
                 "wave"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "17",
@@ -222,7 +223,8 @@
               "options": [
                 "beach",
                 "wave"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "18",
@@ -231,7 +233,8 @@
               "options": [
                 "island",
                 "ocean"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "19",
@@ -240,7 +243,8 @@
               "options": [
                 "island",
                 "ocean"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "20",
@@ -249,7 +253,8 @@
               "options": [
                 "fix",
                 "damage"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "21",
@@ -258,7 +263,8 @@
               "options": [
                 "fix",
                 "damage"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "22",
@@ -267,7 +273,8 @@
               "options": [
                 "rock",
                 "still"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "23",
@@ -276,7 +283,8 @@
               "options": [
                 "rock",
                 "still"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "24",
@@ -285,7 +293,8 @@
               "options": [
                 "throw",
                 "step"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "25",
@@ -294,7 +303,8 @@
               "options": [
                 "throw",
                 "step"
-              ]
+              ],
+              "explanation": "Từ cần điền là từ vựng phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             }
           ],
           "questionType": "Điền từ"
