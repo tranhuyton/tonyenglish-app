@@ -18,140 +18,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. cyberspace / global / operate / recent</b><br/>If you know how to [ 1 ] a computer, you can get access to [ 2 ]. A [ 3 ] study shows that [ 4 ] hunger is a very big problem.</p><p style=\"margin-bottom: 12px;\"><b>2. edit / essays / ignorant / weird</b><br/>My mom is completely [ 5 ] about computers. She thinks that email and chat rooms are [ 6 ] ways to spend one's time. Joe has the ability to write great [ 7 ]. His writing is so good that he never has to [ 8 ] his work.</p><p style=\"margin-bottom: 12px;\"><b>3. fainted / index / lecture / semester</b><br/>The report is due at the end of the [ 9 ]. You should look in the [ 10 ] to see if this book will help you with the report. Our teacher [ 11 ] while she was giving us a [ 12 ] about health!</p><p style=\"margin-bottom: 12px;\"><b>4. gymnasium / highlighted / resolution / typewritten</b><br/>Jennifer's notes are very neat! They are [ 13 ], and she has [ 14 ] the most important parts with a green pen. I made a [ 15 ] to go to the [ 16 ] more often to improve my health.</p><p style=\"margin-bottom: 12px;\"><b>5. awhile / evaluated / moral / private</b><br/>The [ 17 ] of the story is that you should think [ 18 ] before saying anything that might hurt someone. We [ 19 ] the company, and our suggestions are written in this [ 20 ] document.</p>",
+              "id": "1",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. cyberspace / global / operate / recent</b><br/>If you know how to [ 2 ] a computer, you can get access to [ 4 ]. A [ 6 ] study shows that [ 8 ] hunger is a very big problem.</p><p style=\"margin-bottom: 12px;\"><b>2. edit / essays / ignorant / weird</b><br/>My mom is completely [ 10 ] about computers. She thinks that email and chat rooms are [ 12 ] ways to spend one's time. Joe has the ability to write great [ 14 ]. His writing is so good that he never has to [ 16 ] his work.</p><p style=\"margin-bottom: 12px;\"><b>3. fainted / index / lecture / semester</b><br/>The report is due at the end of the [ 18 ]. You should look in the [ 20 ] to see if this book will help you with the report. Our teacher [ 11 ] while she was giving us a [ 12 ] about health!</p><p style=\"margin-bottom: 12px;\"><b>4. gymnasium / highlighted / resolution / typewritten</b><br/>Jennifer's notes are very neat! They are [ 13 ], and she has [ 14 ] the most important parts with a green pen. I made a [ 15 ] to go to the [ 16 ] more often to improve my health.</p><p style=\"margin-bottom: 12px;\"><b>5. awhile / evaluated / moral / private</b><br/>The [ 17 ] of the story is that you should think [ 18 ] before saying anything that might hurt someone. We [ 19 ] the company, and our suggestions are written in this [ 20 ] document.</p>",
               "options": [],
               "correctAnswer": "operate",
               "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'."
             },
             {
-              "id": "1_1",
+              "id": "2",
               "content": "",
               "options": [],
               "correctAnswer": "cyberspace",
               "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'."
             },
             {
-              "id": "2_0",
+              "id": "3",
               "content": "",
               "options": [],
               "correctAnswer": "recent",
               "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn."
             },
             {
-              "id": "2_1",
+              "id": "4",
               "content": "",
               "options": [],
               "correctAnswer": "global",
               "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn."
             },
             {
-              "id": "3_0",
+              "id": "5",
               "content": "",
               "options": [],
               "correctAnswer": "ignorant",
               "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian."
             },
             {
-              "id": "3_1",
+              "id": "6",
               "content": "",
               "options": [],
               "correctAnswer": "weird",
               "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian."
             },
             {
-              "id": "4_0",
+              "id": "7",
               "content": "",
               "options": [],
               "correctAnswer": "essays",
               "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình."
             },
             {
-              "id": "4_1",
+              "id": "8",
               "content": "",
               "options": [],
               "correctAnswer": "edit",
               "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình."
             },
             {
-              "id": "5_0",
+              "id": "9",
               "content": "",
               "options": [],
               "correctAnswer": "semester",
               "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích."
             },
             {
-              "id": "5_1",
+              "id": "10",
               "content": "",
               "options": [],
               "correctAnswer": "index",
               "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích."
             },
             {
-              "id": "6_0",
+              "id": "11",
               "content": "",
               "options": [],
               "correctAnswer": "fainted",
               "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe."
             },
             {
-              "id": "6_1",
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "lecture",
               "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe."
             },
             {
-              "id": "7_0",
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "typewritten",
               "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất."
             },
             {
-              "id": "7_1",
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "highlighted",
               "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất."
             },
             {
-              "id": "8_0",
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "resolution",
               "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn."
             },
             {
-              "id": "8_1",
+              "id": "16",
               "content": "",
               "options": [],
               "correctAnswer": "gymnasium",
               "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn."
             },
             {
-              "id": "9_0",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "moral",
               "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói."
             },
             {
-              "id": "9_1",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "awhile",
               "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói."
             },
             {
-              "id": "10_0",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "evaluated",
               "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này."
             },
             {
-              "id": "10_1",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "private",
@@ -166,7 +166,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases to make complete sentences.</p>",
           "questions": [
             {
-              "id": "11",
+              "id": "21",
               "content": "The team evaluated.",
               "options": [
                 "about birds",
@@ -184,7 +184,7 @@
               "correctAnswer": "the success of the project"
             },
             {
-              "id": "12",
+              "id": "22",
               "content": "The moral of the story is.",
               "options": [
                 "about birds",
@@ -202,7 +202,7 @@
               "correctAnswer": "to be nicer to people"
             },
             {
-              "id": "13",
+              "id": "23",
               "content": "The global economic problems.",
               "options": [
                 "about birds",
@@ -220,7 +220,7 @@
               "correctAnswer": "are getting worse"
             },
             {
-              "id": "14",
+              "id": "24",
               "content": "Joe operates.",
               "options": [
                 "about birds",
@@ -238,7 +238,7 @@
               "correctAnswer": "this large machine"
             },
             {
-              "id": "15",
+              "id": "25",
               "content": "We went to a lecture.",
               "options": [
                 "about birds",
@@ -256,7 +256,7 @@
               "correctAnswer": "about birds"
             },
             {
-              "id": "16",
+              "id": "26",
               "content": "The friends you meet in cyberspace.",
               "options": [
                 "about birds",
@@ -274,7 +274,7 @@
               "correctAnswer": "aren't as important as real friends"
             },
             {
-              "id": "17",
+              "id": "27",
               "content": "The weird kid at school.",
               "options": [
                 "about birds",
@@ -292,7 +292,7 @@
               "correctAnswer": "ate soup with a knife"
             },
             {
-              "id": "18",
+              "id": "28",
               "content": "You should highlight these words.",
               "options": [
                 "about birds",
@@ -310,7 +310,7 @@
               "correctAnswer": "with a yellow pen"
             },
             {
-              "id": "19",
+              "id": "29",
               "content": "I made a resolution.",
               "options": [
                 "about birds",
@@ -328,7 +328,7 @@
               "correctAnswer": "to eat less chocolate"
             },
             {
-              "id": "20",
+              "id": "30",
               "content": "The end of the first semester.",
               "options": [
                 "about birds",
@@ -354,7 +354,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the clauses to make complete sentences.</p>",
           "questions": [
             {
-              "id": "21",
+              "id": "31",
               "content": "I wanted to get fit,.",
               "options": [
                 "because he's ignorant about math",
@@ -372,7 +372,7 @@
               "correctAnswer": "so I went to the gymnasium"
             },
             {
-              "id": "22",
+              "id": "32",
               "content": "Geology is my favorite subject,.",
               "options": [
                 "because he's ignorant about math",
@@ -390,7 +390,7 @@
               "correctAnswer": "so I wrote an essay about rocks"
             },
             {
-              "id": "23",
+              "id": "33",
               "content": "My paper was full of mistakes,.",
               "options": [
                 "because he's ignorant about math",
@@ -408,7 +408,7 @@
               "correctAnswer": "but he helped me edit it"
             },
             {
-              "id": "24",
+              "id": "34",
               "content": "My brother couldn't help me with my math homework.",
               "options": [
                 "because he's ignorant about math",
@@ -426,7 +426,7 @@
               "correctAnswer": "because he's ignorant about math"
             },
             {
-              "id": "25",
+              "id": "35",
               "content": "In the first aid class, we learned what to do.",
               "options": [
                 "because he's ignorant about math",
@@ -444,7 +444,7 @@
               "correctAnswer": "if someone faints"
             },
             {
-              "id": "26",
+              "id": "36",
               "content": "I wanted to find some information about volcanoes,.",
               "options": [
                 "because he's ignorant about math",
@@ -462,7 +462,7 @@
               "correctAnswer": "so I looked under 'V' in the index"
             },
             {
-              "id": "27",
+              "id": "37",
               "content": "That copy of the text book is too old,.",
               "options": [
                 "because he's ignorant about math",
@@ -480,7 +480,7 @@
               "correctAnswer": "so you should find a more recent one"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "I need a computer.",
               "options": [
                 "because he's ignorant about math",
@@ -498,7 +498,7 @@
               "correctAnswer": "because my essay has to be typewritten"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "I'll get some tea if.",
               "options": [
                 "because he's ignorant about math",
@@ -516,7 +516,7 @@
               "correctAnswer": "you wait here awhile"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "You mustn't tell anyone this information;.",
               "options": [
                 "because he's ignorant about math",
@@ -547,10 +547,10 @@
         {
           "id": "sec4_reading",
           "title": "Reading Comprehension Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
+          "content": "",
           "questions": [
             {
-              "id": "31",
+              "id": "41",
               "content": "The computers were turned off because there was a recent problem.",
               "options": [
                 "True",
@@ -560,7 +560,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "32",
+              "id": "42",
               "content": "The private study rooms were upstairs.",
               "options": [
                 "True",
@@ -570,7 +570,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "33",
+              "id": "43",
               "content": "The computers in the private study rooms weren't operating correctly.",
               "options": [
                 "True",
@@ -580,7 +580,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "34",
+              "id": "44",
               "content": "In his project, the student had to evaluate the government's response to global warming.",
               "options": [
                 "True",
@@ -590,7 +590,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "35",
+              "id": "45",
               "content": "The geography test was worth fifty percent of the final grade.",
               "options": [
                 "True",
@@ -600,7 +600,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "36",
+              "id": "46",
               "content": "The student failed the test because he was completely ignorant about the subject.",
               "options": [
                 "True",
@@ -610,7 +610,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",
@@ -618,7 +618,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
-              "id": "37",
+              "id": "47",
               "content": "How did the teacher want the project to be written?",
               "options": [
                 "In first person",
@@ -630,7 +630,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "38",
+              "id": "48",
               "content": "What was the project about?",
               "options": [
                 "Global warming",
@@ -642,7 +642,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "39",
+              "id": "49",
               "content": "What did the student NOT have to do in order to use the magic computer?",
               "options": [
                 "Type in the essay title",
@@ -654,7 +654,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "40",
+              "id": "50",
               "content": "Where did the student spend his free time?",
               "options": [
                 "In lectures",

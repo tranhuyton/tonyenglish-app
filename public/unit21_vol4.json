@@ -96,7 +96,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the answer that best fits the question.</p>",
           "questions": [
             {
-              "id": "1",
+              "id": "11",
               "content": "1. What do you need if you want to catch a fish?",
               "options": [
                 "a. Copper",
@@ -108,7 +108,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "2",
+              "id": "12",
               "content": "2. Which of the following means to be raised to a higher position?",
               "options": [
                 "a. Chronicle",
@@ -120,7 +120,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "3",
+              "id": "13",
               "content": "3. Which would most likely be found in a library?",
               "options": [
                 "a. Literature",
@@ -132,7 +132,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "4",
+              "id": "14",
               "content": "4. Sometimes, uncomfortable clothes will make you do this?",
               "options": [
                 "a. Itch",
@@ -144,7 +144,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "5",
+              "id": "15",
               "content": "5. Which of the following best describes the combination of two numbers?",
               "options": [
                 "a. A sum",
@@ -164,7 +164,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases to make complete sentences .</p>",
           "questions": [
             {
-              "id": "1",
+              "id": "16",
               "content": "<p style=\"margin-bottom: 12px;\">The bank teller.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -182,7 +182,7 @@
               "correctAnswer": "deposited Paul's money into his account"
             },
             {
-              "id": "2",
+              "id": "17",
               "content": "<p style=\"margin-bottom: 12px;\">Many religions.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -200,7 +200,7 @@
               "correctAnswer": "believe that there is a god"
             },
             {
-              "id": "3",
+              "id": "18",
               "content": "<p style=\"margin-bottom: 12px;\">The nation's folklore.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -218,7 +218,7 @@
               "correctAnswer": "is rich with tradition"
             },
             {
-              "id": "4",
+              "id": "19",
               "content": "<p style=\"margin-bottom: 12px;\">The factory's new worker had a background.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -236,7 +236,7 @@
               "correctAnswer": "in engineering"
             },
             {
-              "id": "5",
+              "id": "20",
               "content": "<p style=\"margin-bottom: 12px;\">Those veins pump blood.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -254,7 +254,7 @@
               "correctAnswer": "to all necessary places in the body"
             },
             {
-              "id": "6",
+              "id": "21",
               "content": "<p style=\"margin-bottom: 12px;\">The snake's poisonous venom.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -272,7 +272,7 @@
               "correctAnswer": "caused the boy to collapse"
             },
             {
-              "id": "7",
+              "id": "22",
               "content": "<p style=\"margin-bottom: 12px;\">The newspaper story chronicled the action.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -290,7 +290,7 @@
               "correctAnswer": "of the heroic crime-fighter"
             },
             {
-              "id": "8",
+              "id": "23",
               "content": "<p style=\"margin-bottom: 12px;\">One of that culture's myths explains that the ocean.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -308,7 +308,7 @@
               "correctAnswer": "was once a small pond"
             },
             {
-              "id": "9",
+              "id": "24",
               "content": "<p style=\"margin-bottom: 12px;\">The total sum for staying three nights at the hotel.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -326,7 +326,7 @@
               "correctAnswer": "was over $300"
             },
             {
-              "id": "10",
+              "id": "25",
               "content": "<p style=\"margin-bottom: 12px;\">Her arm started to itch.</p>",
               "options": [
                 "caused the boy to collapse",
@@ -352,7 +352,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the clauses to make complete sentences .</p>",
           "questions": [
             {
-              "id": "1",
+              "id": "26",
               "content": "<p style=\"margin-bottom: 12px;\">If you don't stay away from school today,.</p>",
               "options": [
                 "because they were made from copper",
@@ -370,7 +370,7 @@
               "correctAnswer": "then you might infect the other students"
             },
             {
-              "id": "2",
+              "id": "27",
               "content": "<p style=\"margin-bottom: 12px;\">Because the calendar didn't list the new holidays,.</p>",
               "options": [
                 "because they were made from copper",
@@ -388,7 +388,7 @@
               "correctAnswer": "it had to be updated"
             },
             {
-              "id": "3",
+              "id": "28",
               "content": "<p style=\"margin-bottom: 12px;\">The hunters put some food in the trap,.</p>",
               "options": [
                 "because they were made from copper",
@@ -406,7 +406,7 @@
               "correctAnswer": "but no animals wanted the bait"
             },
             {
-              "id": "4",
+              "id": "29",
               "content": "<p style=\"margin-bottom: 12px;\">She learned to speak the country's language,.</p>",
               "options": [
                 "because they were made from copper",
@@ -424,7 +424,7 @@
               "correctAnswer": "so she could read their literature"
             },
             {
-              "id": "5",
+              "id": "30",
               "content": "<p style=\"margin-bottom: 12px;\">The police thought the two crimes might be connected,.</p>",
               "options": [
                 "because they were made from copper",
@@ -442,7 +442,7 @@
               "correctAnswer": "but it turned out that they didn't relate to each other"
             },
             {
-              "id": "6",
+              "id": "31",
               "content": "<p style=\"margin-bottom: 12px;\">The pipes were safe for carrying water.</p>",
               "options": [
                 "because they were made from copper",
@@ -460,7 +460,7 @@
               "correctAnswer": "because they were made from copper"
             },
             {
-              "id": "7",
+              "id": "32",
               "content": "<p style=\"margin-bottom: 12px;\">He had done great work for the company for three years,.</p>",
               "options": [
                 "because they were made from copper",
@@ -478,7 +478,7 @@
               "correctAnswer": "so his boss promoted him"
             },
             {
-              "id": "8",
+              "id": "33",
               "content": "<p style=\"margin-bottom: 12px;\">She never shared her friends' secrets with anyone,.</p>",
               "options": [
                 "because they were made from copper",
@@ -496,7 +496,7 @@
               "correctAnswer": "so everyone knew she was trustworthy"
             },
             {
-              "id": "9",
+              "id": "34",
               "content": "<p style=\"margin-bottom: 12px;\">If you think a lot can happen in a hundred years,.</p>",
               "options": [
                 "because they were made from copper",
@@ -514,7 +514,7 @@
               "correctAnswer": "then imagine how much might happen in a millennium"
             },
             {
-              "id": "10",
+              "id": "35",
               "content": "<p style=\"margin-bottom: 12px;\">He had a bad cough and a headache,.</p>",
               "options": [
                 "because they were made from copper",
@@ -544,70 +544,70 @@
         {
           "id": "sec5",
           "title": "Reading Comprehension Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
+          "content": "",
           "questions": [
             {
-              "id": "1",
+              "id": "36",
               "content": "1. A teller at a bank thought her fellow employees were trustworthy.",
               "options": [
                 "True",
                 "False"
               ],
               "explanation": "Phát biểu này sai (False). Ngay ở câu đầu tiên của bài đọc, tác giả đã viết: \"A teller at a bank suspected some of her fellow employees of not being very trustworthy\" (Một nữ giao dịch viên tại ngân hàng nghi ngờ một số đồng nghiệp của mình không thực sự đáng tin cậy). Cô ấy cho rằng họ đang trộm tiền.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
-              "id": "2",
+              "id": "37",
               "content": "2. She remembered that one religion's literature had a myth about how thieves were captured.",
               "options": [
                 "True",
                 "False"
               ],
               "explanation": "Đúng vậy (True). Khi nhắc đến kiến thức nền tảng của nhân vật, bài đọc có nói: \"She remembered that one religion's literature had a myth that chronicled how a group of thieves was captured\" (Cô nhớ rằng văn học của một tôn giáo có một câu chuyện thần thoại ghi chép lại cách một nhóm trộm bị bắt).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
-              "id": "3",
+              "id": "38",
               "content": "3. The venom in the millennium-old story was taken from a poisonous plant.",
               "options": [
                 "True",
                 "False"
               ],
               "explanation": "Sai mất rồi (False). Nọc độc trong câu chuyện thần thoại không đến từ một loài cây. Bài đọc nêu rõ: \"In the millennium-old story, coins of copper were covered with venom taken from a poisonous snake\" (Trong câu chuyện nghìn năm tuổi đó, những đồng xu đồng được tẩm nọc độc lấy từ một con rắn độc).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
-              "id": "4",
+              "id": "39",
               "content": "4. In the millennium-old story, the coins were left as bait for the robbers.",
               "options": [
                 "True",
                 "False"
               ],
               "explanation": "Hoàn toàn chính xác (True). Theo lời kể trong bài: \"The coins were left as bait for the robbers\" (Những đồng xu được để lại làm mồi nhử bọn cướp). Khi bọn cướp chạm vào đồng xu, nọc độc sẽ ngấm qua da.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
-              "id": "5",
+              "id": "40",
               "content": "5. All of her coworkers were scratching their hands and arms.",
               "options": [
                 "True",
                 "False"
               ],
               "explanation": "Phát biểu này không chính xác (False). Không phải \"tất cả\" (all) đồng nghiệp đều bị ngứa. Bài văn viết: \"Within a few hours, three of her coworkers were scratching their hands and arms\" (Chỉ trong vài giờ, ba trong số các đồng nghiệp của cô đang gãi tay và cánh tay của họ). Nghĩa là chỉ có ba người (những kẻ đã lấy trộm tiền) bị ngứa mà thôi.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
-              "id": "6",
+              "id": "41",
               "content": "6. She proved that stories from the past still relate to the problems of today.",
               "options": [
                 "True",
                 "False"
               ],
               "explanation": "Đúng vậy (True). Ở đoạn cuối, tác giả có tổng kết: \"She proved that stories from the past still relate with the problems of today, and they can be helpful in solving problems\" (Cô đã chứng minh rằng những câu chuyện từ quá khứ vẫn có mối liên hệ với những vấn đề của ngày nay, và chúng có thể hữu ích trong việc giải quyết vấn đề).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",
@@ -615,7 +615,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
-              "id": "1",
+              "id": "42",
               "content": "1. What is the passage mainly about?",
               "options": [
                 "a. A teller who stole money",
@@ -627,7 +627,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "2",
+              "id": "43",
               "content": "2. What did the teller use as bait?",
               "options": [
                 "a. Poisonous venom",
@@ -639,7 +639,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "3",
+              "id": "44",
               "content": "3. Why did the teller update the old story?",
               "options": [
                 "a. Because she didn't have any copper coins",
@@ -651,7 +651,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "4",
+              "id": "45",
               "content": "4. What happened at the end of the story?",
               "options": [
                 "a. The thieves arrested the teller",

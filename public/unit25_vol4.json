@@ -222,140 +222,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "16_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. A. hardy / B. celebrity / institute / traverse</b><br/>You need to be [ 1 ] if you want to [ 2 ] the mountains. A(n) [ 3 ] is going to give a talk at the [ 4 ] of Drama.</p><p style=\"margin-bottom: 12px;\"><b>2. B. jealousy / B. migrate / aircraft / esteemed</b><br/>Many people [ 5 ] by ship or [ 6 ]. She felt a lot of [ 7 ] because her sister was highly [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. B. extinct / B. species / secluded / swamp</b><br/>They found the remains of [ 9 ] animals in the [ 10 ]. You can see many different bird [ 11 ] in this [ 12 ] location.</p><p style=\"margin-bottom: 12px;\"><b>4. A. zoology / B. decisive / ethical / nurture</b><br/>He made a quick, [ 13 ] choice, but he was worried if it was the [ 14 ] thing to fire him over the holidays. He chose to study [ 15 ] because he has always liked to [ 16 ] animals.</p><p style=\"margin-bottom: 12px;\"><b>5. B. principle / B. rural / concrete / overhead</b><br/>I like to be in [ 17 ] areas where there are no planes flying [ 18 ]. I don't like the [ 19 ] of covering the garden in [ 20 ].</p>",
+              "id": "16",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. A. hardy / B. celebrity / institute / traverse</b><br/>You need to be [ 1 ] if you want to [ 2 ] the mountains. A(n) [ 3 ] is going to give a talk at the [ 4 ] of Drama.</p><p style=\"margin-bottom: 12px;\"><b>2. B. jealousy / B. migrate / aircraft / esteemed</b><br/>Many people [ 5 ] by ship or [ 6 ]. She felt a lot of [ 7 ] because her sister was highly [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. B. extinct / B. species / secluded / swamp</b><br/>They found the remains of [ 9 ] animals in the [ 10 ]. You can see many different bird [ 11 ] in this [ 12 ] location.</p><p style=\"margin-bottom: 12px;\"><b>4. A. zoology / B. decisive / ethical / nurture</b><br/>He made a quick, [ 13 ] choice, but he was worried if it was the [ 14 ] thing to fire him over the holidays. He chose to study [ 15 ] because he has always liked to [ 17 ] animals.</p><p style=\"margin-bottom: 12px;\"><b>5. B. principle / B. rural / concrete / overhead</b><br/>I like to be in [ 19 ] areas where there are no planes flying [ 21 ]. I don't like the [ 23 ] of covering the garden in [ 25 ].</p>",
               "options": [],
               "correctAnswer": "hardy",
               "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi."
             },
             {
-              "id": "16_1",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "traverse",
               "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi."
             },
             {
-              "id": "17_0",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "celebrity",
               "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute)."
             },
             {
-              "id": "17_1",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "institute",
               "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute)."
             },
             {
-              "id": "18_0",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "migrate",
               "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft)."
             },
             {
-              "id": "18_1",
+              "id": "21",
               "content": "",
               "options": [],
               "correctAnswer": "aircraft",
               "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft)."
             },
             {
-              "id": "19_0",
+              "id": "22",
               "content": "",
               "options": [],
               "correctAnswer": "jealousy",
               "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed)."
             },
             {
-              "id": "19_1",
+              "id": "23",
               "content": "",
               "options": [],
               "correctAnswer": "esteemed",
               "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed)."
             },
             {
-              "id": "20_0",
+              "id": "24",
               "content": "",
               "options": [],
               "correctAnswer": "extinct",
               "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp)."
             },
             {
-              "id": "20_1",
+              "id": "25",
               "content": "",
               "options": [],
               "correctAnswer": "swamp",
               "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp)."
             },
             {
-              "id": "21_0",
+              "id": "26",
               "content": "",
               "options": [],
               "correctAnswer": "species",
               "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded)."
             },
             {
-              "id": "21_1",
+              "id": "27",
               "content": "",
               "options": [],
               "correctAnswer": "secluded",
               "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded)."
             },
             {
-              "id": "22_0",
+              "id": "28",
               "content": "",
               "options": [],
               "correctAnswer": "decisive",
               "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical)."
             },
             {
-              "id": "22_1",
+              "id": "29",
               "content": "",
               "options": [],
               "correctAnswer": "ethical",
               "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical)."
             },
             {
-              "id": "23_0",
+              "id": "30",
               "content": "",
               "options": [],
               "correctAnswer": "zoology",
               "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật."
             },
             {
-              "id": "23_1",
+              "id": "31",
               "content": "",
               "options": [],
               "correctAnswer": "nurture",
               "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật."
             },
             {
-              "id": "24_0",
+              "id": "32",
               "content": "",
               "options": [],
               "correctAnswer": "rural",
               "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead)."
             },
             {
-              "id": "24_1",
+              "id": "33",
               "content": "",
               "options": [],
               "correctAnswer": "overhead",
               "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead)."
             },
             {
-              "id": "25_0",
+              "id": "34",
               "content": "",
               "options": [],
               "correctAnswer": "principle",
               "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete)."
             },
             {
-              "id": "25_1",
+              "id": "35",
               "content": "",
               "options": [],
               "correctAnswer": "concrete",
@@ -375,10 +375,10 @@
         {
           "id": "sec5",
           "title": "Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
+          "content": "",
           "questions": [
             {
-              "id": "26",
+              "id": "36",
               "content": "The journey on the aircraft to Australia took a short time.",
               "options": [
                 "True",
@@ -388,7 +388,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "27",
+              "id": "37",
               "content": "Eliza was a professor of zoology.",
               "options": [
                 "True",
@@ -398,7 +398,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "Eliza was hardier than Gilbert.",
               "options": [
                 "True",
@@ -408,7 +408,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "The swamp was in a rural, secluded area.",
               "options": [
                 "True",
@@ -418,7 +418,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "Gilbert thought that the red lizard was an extinct species.",
               "options": [
                 "True",
@@ -428,7 +428,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "31",
+              "id": "41",
               "content": "Gilbert nurtured the red lizard at the hotel.",
               "options": [
                 "True",
@@ -438,7 +438,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",
@@ -446,7 +446,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
-              "id": "32",
+              "id": "42",
               "content": "What did Gilbert and Eliza see flying overhead?",
               "options": [
                 "a. An aircraft",
@@ -458,7 +458,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "33",
+              "id": "43",
               "content": "How was Gilbert described after he found the lizard?",
               "options": [
                 "a. Full of jealousy",
@@ -470,7 +470,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "34",
+              "id": "44",
               "content": "What did Gilbert think that the find would make him feel like?",
               "options": [
                 "a. A celebrity",
@@ -482,7 +482,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "35",
+              "id": "45",
               "content": "Where did Gilbert want to take the red lizard?",
               "options": [
                 "a. To the Zoology Institute",

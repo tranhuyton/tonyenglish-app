@@ -535,7 +535,7 @@
         {
           "id": "u18_rc_a",
           "title": "Reading Comprehension Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
+          "content": "",
           "questions": [
             {
               "id": "31",
@@ -598,7 +598,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "u18_rc_b",

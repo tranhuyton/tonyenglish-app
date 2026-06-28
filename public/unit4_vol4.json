@@ -146,140 +146,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "11_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. fond / oblivious / perish / roost</b><br/>All of the people in the movie will [ 1 ] if they remain [ 2 ] of the monster. When the owl wants to make a [ 3 ], it is [ 4 ] of using an empty barn.</p><p style=\"margin-bottom: 12px;\"><b>2. flight / pit / rim / soars</b><br/>He grabbed the can by its [ 5 ], then tossed it far down into the [ 6 ]. The eagle [ 7 ] into the clouds when it goes on a long [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. immoral / moan / typical / weep</b><br/>Every time the sick woman would [ 9 ] in pain, her daughter would [ 10 ]. It is not [ 11 ] for a policeman to do [ 12 ] things like stealing.</p><p style=\"margin-bottom: 12px;\"><b>4. beak / disapprove / except / trivial</b><br/>Every part of the bird was beautiful, [ 13 ] for its short, ugly [ 14 ]. Because his assistant is teaching them [ 15 ] plays, the coach will [ 16 ] of the time wasted.</p><p style=\"margin-bottom: 12px;\"><b>5. damp / ivy / slippery / utterly</b><br/>Because it [ 17 ] covered the fence, the gardener had to remove all of the [ 18 ]. The ground became dangerous and [ 19 ] because everyone placed their [ 20 ] towels there.</p>",
+              "id": "11",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. fond / oblivious / perish / roost</b><br/>All of the people in the movie will [ 1 ] if they remain [ 2 ] of the monster. When the owl wants to make a [ 3 ], it is [ 4 ] of using an empty barn.</p><p style=\"margin-bottom: 12px;\"><b>2. flight / pit / rim / soars</b><br/>He grabbed the can by its [ 5 ], then tossed it far down into the [ 6 ]. The eagle [ 7 ] into the clouds when it goes on a long [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. immoral / moan / typical / weep</b><br/>Every time the sick woman would [ 9 ] in pain, her daughter would [ 10 ]. It is not [ 12 ] for a policeman to do [ 14 ] things like stealing.</p><p style=\"margin-bottom: 12px;\"><b>4. beak / disapprove / except / trivial</b><br/>Every part of the bird was beautiful, [ 16 ] for its short, ugly [ 18 ]. Because his assistant is teaching them [ 20 ] plays, the coach will [ 22 ] of the time wasted.</p><p style=\"margin-bottom: 12px;\"><b>5. damp / ivy / slippery / utterly</b><br/>Because it [ 24 ] covered the fence, the gardener had to remove all of the [ 26 ]. The ground became dangerous and [ 28 ] because everyone placed their [ 30 ] towels there.</p>",
               "options": [],
               "correctAnswer": "perish",
               "explanation": "perish: chết; oblivious: không hay biết."
             },
             {
-              "id": "11_1",
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "oblivious",
               "explanation": "perish: chết; oblivious: không hay biết."
             },
             {
-              "id": "12_0",
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "roost",
               "explanation": "roost: chỗ đậu; fond of: thích."
             },
             {
-              "id": "12_1",
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "fond",
               "explanation": "roost: chỗ đậu; fond of: thích."
             },
             {
-              "id": "13_0",
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "rim",
               "explanation": "rim: miệng lon; pit: cái hố."
             },
             {
-              "id": "13_1",
+              "id": "16",
               "content": "",
               "options": [],
               "correctAnswer": "pit",
               "explanation": "rim: miệng lon; pit: cái hố."
             },
             {
-              "id": "14_0",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "soars",
               "explanation": "soar: bay lượn; flight: chuyến bay."
             },
             {
-              "id": "14_1",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "flight",
               "explanation": "soar: bay lượn; flight: chuyến bay."
             },
             {
-              "id": "15_0",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "moan",
               "explanation": "moan: rên rỉ; weep: khóc."
             },
             {
-              "id": "15_1",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "weep",
               "explanation": "moan: rên rỉ; weep: khóc."
             },
             {
-              "id": "16_0",
+              "id": "21",
               "content": "",
               "options": [],
               "correctAnswer": "typical",
               "explanation": "typical: điển hình; immoral: vô đạo đức."
             },
             {
-              "id": "16_1",
+              "id": "22",
               "content": "",
               "options": [],
               "correctAnswer": "immoral",
               "explanation": "typical: điển hình; immoral: vô đạo đức."
             },
             {
-              "id": "17_0",
+              "id": "23",
               "content": "",
               "options": [],
               "correctAnswer": "except",
               "explanation": "except for: ngoại trừ; beak: mỏ chim."
             },
             {
-              "id": "17_1",
+              "id": "24",
               "content": "",
               "options": [],
               "correctAnswer": "beak",
               "explanation": "except for: ngoại trừ; beak: mỏ chim."
             },
             {
-              "id": "18_0",
+              "id": "25",
               "content": "",
               "options": [],
               "correctAnswer": "trivial",
               "explanation": "trivial: tầm thường; disapprove of: không tán thành."
             },
             {
-              "id": "18_1",
+              "id": "26",
               "content": "",
               "options": [],
               "correctAnswer": "disapprove",
               "explanation": "trivial: tầm thường; disapprove of: không tán thành."
             },
             {
-              "id": "19_0",
+              "id": "27",
               "content": "",
               "options": [],
               "correctAnswer": "utterly",
               "explanation": "utterly: hoàn toàn; ivy: cây thường xuân."
             },
             {
-              "id": "19_1",
+              "id": "28",
               "content": "",
               "options": [],
               "correctAnswer": "ivy",
               "explanation": "utterly: hoàn toàn; ivy: cây thường xuân."
             },
             {
-              "id": "20_0",
+              "id": "29",
               "content": "",
               "options": [],
               "correctAnswer": "slippery",
               "explanation": "slippery: trơn trượt; damp: ẩm ướt."
             },
             {
-              "id": "20_1",
+              "id": "30",
               "content": "",
               "options": [],
               "correctAnswer": "damp",
@@ -299,10 +299,10 @@
         {
           "id": "sec3_reading",
           "title": "Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
+          "content": "",
           "questions": [
             {
-              "id": "21",
+              "id": "31",
               "content": "Fox used the rim of a bottle to dig a deep pit.",
               "options": [
                 "True",
@@ -312,7 +312,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "22",
+              "id": "32",
               "content": "Fox had a roost near the pit.",
               "options": [
                 "True",
@@ -322,7 +322,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "23",
+              "id": "33",
               "content": "The damp ivy was too slippery for Fox to climb out.",
               "options": [
                 "True",
@@ -332,7 +332,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "24",
+              "id": "34",
               "content": "Immoral and mean behavior was typical with Fox.",
               "options": [
                 "True",
@@ -342,7 +342,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "25",
+              "id": "35",
               "content": "Fox was oblivious to the hidden pit.",
               "options": [
                 "True",
@@ -352,7 +352,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "26",
+              "id": "36",
               "content": "Eagle flew into the pit to save Fox.",
               "options": [
                 "True",
@@ -362,7 +362,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec4_reading",
@@ -370,7 +370,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
-              "id": "27",
+              "id": "37",
               "content": "How did Rabbit fall into the pit?",
               "options": [
                 "Rabbit ran into the pit.",
@@ -382,7 +382,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "Why did Fox thank Eagle?",
               "options": [
                 "She gave him money.",
@@ -394,7 +394,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "Why did Fox moan and weep?",
               "options": [
                 "The animals taught him a lesson.",
@@ -406,7 +406,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "What happened after Eagle's flight to the bottom of the pit?",
               "options": [
                 "She disapproved of Fox.",

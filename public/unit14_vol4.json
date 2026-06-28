@@ -154,140 +154,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "11_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. brick / lump / reconciled / uttering</b><br/>Before the project, the clay was one big [ 1 ]. But when he was finished, he made a perfectly square [ 2 ]. Five minutes ago, the two senators were [ 3 ] insults at each other, but now they have [ 4 ] because they both agree with the new law.</p><p style=\"margin-bottom: 12px;\"><b>2. flushed / shutters / sparkled / stale</b><br/>In the middle of the night, she got out of bed and opened the [ 5 ]. She gazed at the sky where the stars [ 6 ] like tiny fires. The rice was not eaten soon enough, so it tasted [ 7 ]. It made me feel sick and my face became [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. crumbled / dough / shattered / sift</b><br/>The cook picked up the block of cheese and [ 9 ] it into little pieces. Then he mixed them with the [ 10 ] before placing it in the oven. When he started to [ 11 ] the flour into the bowl, he slipped and dropped it. The bowl hit the ground and [ 12 ].</p><p style=\"margin-bottom: 12px;\"><b>4. fist / flexible / mixture / sprinkle</b><br/>He hit the punching bag with his [ 13 ]. Since the bag was [ 14 ], it did not break. The [ 15 ] of ice cream and chocolate tastes good, but it will be even better if you [ 16 ] sugar on the top of it.</p><p style=\"margin-bottom: 12px;\"><b>5. expressed / injured / ruined / slight</b><br/>The doctor [ 17 ] a lot of concern for my hurt ankle, but I told him the pain was only [ 18 ]. The ship was [ 19 ] when it crashed into the island. Even though it was greatly damaged, none of the passengers were [ 20 ].</p>",
+              "id": "11",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. brick / lump / reconciled / uttering</b><br/>Before the project, the clay was one big [ 1 ]. But when he was finished, he made a perfectly square [ 2 ]. Five minutes ago, the two senators were [ 3 ] insults at each other, but now they have [ 4 ] because they both agree with the new law.</p><p style=\"margin-bottom: 12px;\"><b>2. flushed / shutters / sparkled / stale</b><br/>In the middle of the night, she got out of bed and opened the [ 5 ]. She gazed at the sky where the stars [ 6 ] like tiny fires. The rice was not eaten soon enough, so it tasted [ 7 ]. It made me feel sick and my face became [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. crumbled / dough / shattered / sift</b><br/>The cook picked up the block of cheese and [ 9 ] it into little pieces. Then he mixed them with the [ 10 ] before placing it in the oven. When he started to [ 12 ] the flour into the bowl, he slipped and dropped it. The bowl hit the ground and [ 14 ].</p><p style=\"margin-bottom: 12px;\"><b>4. fist / flexible / mixture / sprinkle</b><br/>He hit the punching bag with his [ 16 ]. Since the bag was [ 18 ], it did not break. The [ 20 ] of ice cream and chocolate tastes good, but it will be even better if you [ 22 ] sugar on the top of it.</p><p style=\"margin-bottom: 12px;\"><b>5. expressed / injured / ruined / slight</b><br/>The doctor [ 24 ] a lot of concern for my hurt ankle, but I told him the pain was only [ 26 ]. The ship was [ 28 ] when it crashed into the island. Even though it was greatly damaged, none of the passengers were [ 30 ].</p>",
               "options": [],
               "correctAnswer": "lump",
               "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick)."
             },
             {
-              "id": "11_1",
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "brick",
               "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick)."
             },
             {
-              "id": "12_0",
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "uttering",
               "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải."
             },
             {
-              "id": "12_1",
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "reconciled",
               "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải."
             },
             {
-              "id": "13_0",
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "shutters",
               "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled)."
             },
             {
-              "id": "13_1",
+              "id": "16",
               "content": "",
               "options": [],
               "correctAnswer": "sparkled",
               "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled)."
             },
             {
-              "id": "14_0",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "stale",
               "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed)."
             },
             {
-              "id": "14_1",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "flushed",
               "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed)."
             },
             {
-              "id": "15_0",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "crumbled",
               "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough)."
             },
             {
-              "id": "15_1",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "dough",
               "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough)."
             },
             {
-              "id": "16_0",
+              "id": "21",
               "content": "",
               "options": [],
               "correctAnswer": "sift",
               "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered)."
             },
             {
-              "id": "16_1",
+              "id": "22",
               "content": "",
               "options": [],
               "correctAnswer": "shattered",
               "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered)."
             },
             {
-              "id": "17_0",
+              "id": "23",
               "content": "",
               "options": [],
               "correctAnswer": "fist",
               "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible)."
             },
             {
-              "id": "17_1",
+              "id": "24",
               "content": "",
               "options": [],
               "correctAnswer": "flexible",
               "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible)."
             },
             {
-              "id": "18_0",
+              "id": "25",
               "content": "",
               "options": [],
               "correctAnswer": "mixture",
               "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường."
             },
             {
-              "id": "18_1",
+              "id": "26",
               "content": "",
               "options": [],
               "correctAnswer": "sprinkle",
               "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường."
             },
             {
-              "id": "19_0",
+              "id": "27",
               "content": "",
               "options": [],
               "correctAnswer": "expressed",
               "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight)."
             },
             {
-              "id": "19_1",
+              "id": "28",
               "content": "",
               "options": [],
               "correctAnswer": "slight",
               "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight)."
             },
             {
-              "id": "20_0",
+              "id": "29",
               "content": "",
               "options": [],
               "correctAnswer": "ruined",
               "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured)."
             },
             {
-              "id": "20_1",
+              "id": "30",
               "content": "",
               "options": [],
               "correctAnswer": "injured",
@@ -307,10 +307,10 @@
         {
           "id": "sec4_reading_A",
           "title": "Reading Comprehension Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
+          "content": "",
           "questions": [
             {
-              "id": "21",
+              "id": "31",
               "content": "Because the bread was stale, the mother wanted them to bake fresh bread.",
               "options": [
                 "True",
@@ -320,7 +320,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "22",
+              "id": "32",
               "content": "The dough became a lump that was as hard as a brick.",
               "options": [
                 "True",
@@ -330,7 +330,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "23",
+              "id": "33",
               "content": "The bread needed to be hard and sturdy.",
               "options": [
                 "True",
@@ -340,7 +340,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "24",
+              "id": "34",
               "content": "The older brother uttered a sigh.",
               "options": [
                 "True",
@@ -350,7 +350,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "25",
+              "id": "35",
               "content": "The brothers had to clean the kitchen, so it may sparkle.",
               "options": [
                 "True",
@@ -360,7 +360,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "26",
+              "id": "36",
               "content": "A major mistake only caused a slight problem.",
               "options": [
                 "True",
@@ -370,7 +370,7 @@
               "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading_B",
@@ -378,7 +378,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
-              "id": "27",
+              "id": "37",
               "content": "What made the dough into a hard lump?",
               "options": [
                 "Not putting in enough water",
@@ -390,7 +390,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "What happened when the older brother hit the dough with his fist?",
               "options": [
                 "The dough hit the shutters.",
@@ -402,7 +402,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "Why was the mother flushed with anger?",
               "options": [
                 "The dough was hard.",
@@ -414,7 +414,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "When were the brothers reconciled with their mother?",
               "options": [
                 "As she made fresh bread",

@@ -18,7 +18,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 36,
+              "id": "1",
               "content": "<p>irritable</p>",
               "options": [
                 "to please",
@@ -30,7 +30,7 @@
               "explanation": "'irritable' có nghĩa là dễ cáu kỉnh, nổi giận, tương ứng với 'to get angry easily'."
             },
             {
-              "id": 37,
+              "id": "2",
               "content": "<p>zoom</p>",
               "options": [
                 "to move quickly",
@@ -42,7 +42,7 @@
               "explanation": "'zoom' có nghĩa là phóng đi nhanh chóng, tương ứng với 'to move quickly'."
             },
             {
-              "id": 38,
+              "id": "3",
               "content": "<p>subconscious</p>",
               "options": [
                 "not aware",
@@ -54,7 +54,7 @@
               "explanation": "'subconscious' có nghĩa là tiềm thức, không nhận thức được một cách rõ ràng, tương ứng với 'not aware'."
             },
             {
-              "id": 39,
+              "id": "4",
               "content": "<p>charm</p>",
               "options": [
                 "to please",
@@ -66,7 +66,7 @@
               "explanation": "'charm' có nghĩa là làm say mê, quyến rũ, làm hài lòng ai đó, tương ứng với 'to please'."
             },
             {
-              "id": 40,
+              "id": "5",
               "content": "<p>brew</p>",
               "options": [
                 "to make coffee",
@@ -86,70 +86,70 @@
           "questionType": "Điền từ",
           "questions": [
             {
-              "id": 41,
-              "content": "<p style=\"margin-bottom: 12px;\">Mary asked for the singer’s  [ 41 ]  (handwritten name).</p><p style=\"margin-bottom: 12px;\">He isn’t allowed to watch scary movies because they give him  [ 42 ]  (bad dreams).</p><p style=\"margin-bottom: 12px;\">Push everything to one side to  [ 43 ]  (make the most of) the space of the gymnasium.</p><p style=\"margin-bottom: 12px;\">He borrowed a  [ 44 ]  (truck-like vehicle) to help him move some of his furniture.</p><p style=\"margin-bottom: 12px;\">Ellen wanted to get to the gym and try a new  [ 45 ]  (exercise routine).</p><p style=\"margin-bottom: 12px;\">Harriet doesn’t like talking to Jesse when he’s  [ 46 ]  (easily annoyed).</p><p style=\"margin-bottom: 12px;\">The cars honked their  [ 47 ]  (devices for making noises) while they waited in traffic.</p><p style=\"margin-bottom: 12px;\">If you don’t start trying harder, you will  [ 48 ]  (move slowly far behind) the rest of us.</p><p style=\"margin-bottom: 12px;\">The sign  [ 49 ]  (makes aware) of bears in the area.</p><p style=\"margin-bottom: 12px;\">Mother cooks me a  [ 50 ]  (healthy) breakfast every morning.</p>",
+              "id": "6",
+              "content": "<p style=\"margin-bottom: 12px;\">Mary asked for the singer’s  [ 6 ]  (handwritten name).</p><p style=\"margin-bottom: 12px;\">He isn’t allowed to watch scary movies because they give him  [ 7 ]  (bad dreams).</p><p style=\"margin-bottom: 12px;\">Push everything to one side to  [ 8 ]  (make the most of) the space of the gymnasium.</p><p style=\"margin-bottom: 12px;\">He borrowed a  [ 9 ]  (truck-like vehicle) to help him move some of his furniture.</p><p style=\"margin-bottom: 12px;\">Ellen wanted to get to the gym and try a new  [ 10 ]  (exercise routine).</p><p style=\"margin-bottom: 12px;\">Harriet doesn’t like talking to Jesse when he’s  [ 11 ]  (easily annoyed).</p><p style=\"margin-bottom: 12px;\">The cars honked their  [ 12 ]  (devices for making noises) while they waited in traffic.</p><p style=\"margin-bottom: 12px;\">If you don’t start trying harder, you will  [ 13 ]  (move slowly far behind) the rest of us.</p><p style=\"margin-bottom: 12px;\">The sign  [ 14 ]  (makes aware) of bears in the area.</p><p style=\"margin-bottom: 12px;\">Mother cooks me a  [ 15 ]  (healthy) breakfast every morning.</p>",
               "options": [],
               "correctAnswer": "autograph",
               "explanation": "'handwritten name' (tên viết tay của người nổi tiếng) là autograph."
             },
             {
-              "id": 42,
+              "id": "7",
               "content": "",
               "options": [],
               "correctAnswer": "nightmares",
               "explanation": "'bad dreams' (những giấc mơ tồi tệ, ác mộng) là nightmares."
             },
             {
-              "id": 43,
+              "id": "8",
               "content": "",
               "options": [],
               "correctAnswer": "maximize",
               "explanation": "'make the most of' (tận dụng tối đa) là maximize."
             },
             {
-              "id": 44,
+              "id": "9",
               "content": "",
               "options": [],
               "correctAnswer": "van",
               "explanation": "'truck-like vehicle' (xe giống xe tải nhưng nhỏ hơn, xe tải nhỏ) là van."
             },
             {
-              "id": 45,
+              "id": "10",
               "content": "",
               "options": [],
               "correctAnswer": "workout",
               "explanation": "'exercise routine' (thói quen tập luyện) là workout."
             },
             {
-              "id": 46,
+              "id": "11",
               "content": "",
               "options": [],
               "correctAnswer": "irritable",
               "explanation": "'easily annoyed' (dễ bị làm phiền, dễ cáu kỉnh) là irritable."
             },
             {
-              "id": 47,
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "horn",
               "explanation": "'devices for making noises' (thiết bị tạo tiếng ồn, còi) là horn (hoặc horns)."
             },
             {
-              "id": 48,
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "lag",
               "explanation": "'move slowly far behind' (di chuyển chậm và tụt lại xa phía sau) là lag."
             },
             {
-              "id": 49,
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "warns",
               "explanation": "'makes aware' (làm cho nhận biết, cảnh báo) là warns."
             },
             {
-              "id": 50,
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "nutritious",
@@ -164,7 +164,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 51,
+              "id": "16",
               "content": "<p>This is a good source of protein?</p>",
               "options": [
                 "Vegetables",
@@ -176,7 +176,7 @@
               "explanation": "Thịt bò (beef) là một nguồn cung cấp protein (chất đạm) tốt."
             },
             {
-              "id": 52,
+              "id": "17",
               "content": "<p>Stuff can be best described as what?</p>",
               "options": [
                 "Sports equipment",
@@ -188,7 +188,7 @@
               "explanation": "'Stuff' (đồ đạc, thứ) được mô tả tốt nhất là một bộ sưu tập các thứ không được gọi tên cụ thể (a collection of unnamed things)."
             },
             {
-              "id": 53,
+              "id": "18",
               "content": "<p>What is the most nutritious snack below?</p>",
               "options": [
                 "An apple",
@@ -200,7 +200,7 @@
               "explanation": "Trong các món ăn vặt được liệt kê, một quả táo (an apple) là bổ dưỡng nhất (most nutritious)."
             },
             {
-              "id": 54,
+              "id": "19",
               "content": "<p>What is something you might put your signature on?</p>",
               "options": [
                 "A business letter",
@@ -212,7 +212,7 @@
               "explanation": "Bạn thường đặt chữ ký (signature) của mình trên một bức thư діnh doanh (a business letter)."
             },
             {
-              "id": 55,
+              "id": "20",
               "content": "<p>If you lag behind your friends, you_.</p>",
               "options": [
                 "are slower than them",
@@ -224,7 +224,7 @@
               "explanation": "Nếu bạn tụt lại phía sau (lag behind) bạn bè, có nghĩa là bạn chậm hơn họ (are slower than them)."
             },
             {
-              "id": 56,
+              "id": "21",
               "content": "<p>What are things that happen and will happen in a person’s life?</p>",
               "options": [
                 "Their workout",
@@ -236,7 +236,7 @@
               "explanation": "Những điều đã xảy ra và sẽ xảy ra trong cuộc đời một người là định mệnh của họ (their destiny)."
             },
             {
-              "id": 57,
+              "id": "22",
               "content": "<p>Which of the following is similar to a small truck?</p>",
               "options": [
                 "A van",
@@ -248,7 +248,7 @@
               "explanation": "Loại xe tương tự như một chiếc xe tải nhỏ (small truck) là xe tải chở hàng nhỏ (a van)."
             },
             {
-              "id": 58,
+              "id": "23",
               "content": "<p>What is a small drop of water called?</p>",
               "options": [
                 "Bead",
@@ -260,7 +260,7 @@
               "explanation": "Một giọt nước nhỏ được gọi là giọt (bead)."
             },
             {
-              "id": 59,
+              "id": "24",
               "content": "<p>What does it mean to have influence over something?</p>",
               "options": [
                 "To charm",
@@ -272,7 +272,7 @@
               "explanation": "Có ảnh hưởng (influence) lên một cái gì đó có nghĩa là tác động lên nó (to affect)."
             },
             {
-              "id": 60,
+              "id": "25",
               "content": "<p>What are fire alarms meant to do?</p>",
               "options": [
                 "Make people irritable",
@@ -296,70 +296,70 @@
         {
           "id": "sec_5",
           "title": "Reading Comprehension - Part A",
-          "questionType": "Trắc nghiệm",
+          "questionType": "TFNG",
           "questions": [
             {
-              "id": 61,
+              "id": "26",
               "content": "<p>Alex had a nightmare that he forgot his stuff at home.</p>",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "false",
+              "correctAnswer": "False",
               "explanation": "Câu này sai nhé. Trong bài đọc, Alex đã mơ thấy một ác mộng rằng cậu ấy vấp ngã ngay trước khi chạm đến vạch đích. Câu văn chứng minh là: In it, he was running a race. Just before he reached the finish line, he fell."
             },
             {
-              "id": 62,
+              "id": "27",
               "content": "<p>The dream made Alex irritable on the day of the race.</p>",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "true",
+              "correctAnswer": "True",
               "explanation": "Câu này đúng. Giấc mơ khiến cậu bé cáu kỉnh và lo lắng mình sẽ thua cuộc. Bài đọc có ghi rõ: Did the dream mean he was going to lose? He became irritable."
             },
             {
-              "id": 63,
+              "id": "28",
               "content": "<p>Alex wanted to eat something with a lot of sugar for breakfast.</p>",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "false",
+              "correctAnswer": "False",
               "explanation": "Câu này sai. Alex không muốn ăn đồ ăn mẹ nấu vì nó có quá nhiều đường, cậu ấy cần thứ gì đó bổ dưỡng hơn chứa nhiều protein. Trích đoạn trong bài là: Alex didn't want it. It had too much sugar. He needed something nutritious."
             },
             {
-              "id": 64,
+              "id": "29",
               "content": "<p>Alex did a workout with his jump rope to help him feel less nervous.</p>",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "true",
+              "correctAnswer": "True",
               "explanation": "Câu này đúng. Cậu ấy hy vọng việc tập luyện sẽ giúp mình quên đi cơn ác mộng. Bằng chứng là: He took his jump rope from his bag and started his usual workout. Maybe exercising would help him forget about the nightmare."
             },
             {
-              "id": 65,
+              "id": "30",
               "content": "<p>Beads of sweat formed out of Alex's sweat glands.</p>",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "true",
+              "correctAnswer": "True",
               "explanation": "Câu này hoàn toàn chính xác. Trong bài viết y hệt như vậy khi nhắc đến việc huấn luyện viên báo hiệu cuộc đua sắp bắt đầu: Beads of sweat formed out of Alex's sweat glands."
             },
             {
-              "id": 66,
+              "id": "31",
               "content": "<p>Alex lagged behind while the other runners zoomed past him.</p>",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "true",
+              "correctAnswer": "True",
               "explanation": "Câu này đúng. Các vận động viên khác phóng vút đi trong khi Alex bị tụt lại phía sau vì mải nghĩ về giấc mơ. Bài đọc viết là: The runners zoomed toward the finish line. By the time Alex started, he lagged far behind everyone."
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>"
+          "content": ""
         },
         {
           "id": "sec_6",
@@ -367,7 +367,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 67,
+              "id": "32",
               "content": "<p>What did Alex think his destiny might be?</p>",
               "options": [
                 "To become irritable",
@@ -379,7 +379,7 @@
               "explanation": "Alex cứ mãi suy nghĩ về giấc mơ kinh khủng và cho rằng định mệnh của mình là trở thành một kẻ thua cuộc. Bằng chứng trong bài là: He thought it might be his destiny to become a loser. Do đó đáp án B là chính xác nhất."
             },
             {
-              "id": 68,
+              "id": "33",
               "content": "<p>What did Alex's father offer to help him do?</p>",
               "options": [
                 "Clean the beads of sweat",
@@ -391,7 +391,7 @@
               "explanation": "Bố của Alex đã hỏi xem liệu cậu có muốn được giúp đóng gói đồ đạc hay không. Trích đoạn: Then his father asked, Do you want help packing your stuff? Vậy nên đáp án C là lựa chọn đúng."
             },
             {
-              "id": 69,
+              "id": "34",
               "content": "<p>What did the boy at the track ask Alex for?</p>",
               "options": [
                 "His protein",
@@ -403,7 +403,7 @@
               "explanation": "Khi đến đường đua, có một cậu bé đã chạy tới và xin chữ ký của Alex. Câu văn chứng minh là: When they arrived, a boy ran toward Alex. Can I have your autograph? asked the boy. Nên chọn đáp án B."
             },
             {
-              "id": 70,
+              "id": "35",
               "content": "<p>What was Alex so affected by that he lost the race?</p>",
               "options": [
                 "His nightmare",

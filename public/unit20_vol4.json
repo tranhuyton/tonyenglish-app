@@ -18,7 +18,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 71,
+              "id": "1",
               "content": "<p>to clean with a broom</p>",
               "options": [
                 "sweep",
@@ -30,7 +30,7 @@
               "explanation": "sweep: quét nhà"
             },
             {
-              "id": 72,
+              "id": "2",
               "content": "<p>to say your opinion</p>",
               "options": [
                 "comment",
@@ -42,7 +42,7 @@
               "explanation": "comment: bình luận, đưa ra ý kiến"
             },
             {
-              "id": 73,
+              "id": "3",
               "content": "<p>to bring into existence</p>",
               "options": [
                 "sole",
@@ -54,7 +54,7 @@
               "explanation": "found: thành lập, sáng lập"
             },
             {
-              "id": 74,
+              "id": "4",
               "content": "<p>a piece of jewelry</p>",
               "options": [
                 "civil",
@@ -66,7 +66,7 @@
               "explanation": "bracelet: vòng tay"
             },
             {
-              "id": 75,
+              "id": "5",
               "content": "<p>a loud explosion</p>",
               "options": [
                 "treachery",
@@ -86,70 +86,70 @@
           "questionType": "Điền từ",
           "questions": [
             {
-              "id": 76,
-              "content": "<p class=\"mb-4\">The lucky man was the <u class=\"font-bold\">only</u> winner of the grand prize. [ 76 ]</p><p class=\"mb-4\">She was so worried about her mother's health that she went to church to <u class=\"font-bold\">talk to God</u>. [ 77 ]</p><p class=\"mb-4\">He <u class=\"font-bold\">coughed and had difficulty breathing</u> after eating a large piece of food. [ 78 ]</p><p class=\"mb-4\">The rain <u class=\"font-bold\">stopped</u> in the early morning after pouring all night long. [ 79 ]</p><p class=\"mb-4\">There is a <u class=\"font-bold\">large number</u> of people in the park today. [ 80 ]</p><p class=\"mb-4\">I hit the wall with my car, and now there is a small <u class=\"font-bold\">amount of damage</u> in it. [ 81 ]</p><p class=\"mb-4\">I <u class=\"font-bold\">don't believe the honesty of</u> people who always try to borrow money. [ 82 ]</p><p class=\"mb-4\">The conditions in some parts of Africa are very poor, and disease is <u class=\"font-bold\">very common</u>. [ 83 ]</p><p class=\"mb-4\">The man behaved in an <u class=\"font-bold\">untrustworthy way</u> toward his friends. [ 84 ]</p><p class=\"mb-4\">I'm going to <u class=\"font-bold\">go to the other side</u> of the road to meet my friend. [ 85 ]</p>",
+              "id": "6",
+              "content": "<p class=\"mb-4\">The lucky man was the <u class=\"font-bold\">only</u> winner of the grand prize. [ 6 ]</p><p class=\"mb-4\">She was so worried about her mother's health that she went to church to <u class=\"font-bold\">talk to God</u>. [ 7 ]</p><p class=\"mb-4\">He <u class=\"font-bold\">coughed and had difficulty breathing</u> after eating a large piece of food. [ 8 ]</p><p class=\"mb-4\">The rain <u class=\"font-bold\">stopped</u> in the early morning after pouring all night long. [ 9 ]</p><p class=\"mb-4\">There is a <u class=\"font-bold\">large number</u> of people in the park today. [ 10 ]</p><p class=\"mb-4\">I hit the wall with my car, and now there is a small <u class=\"font-bold\">amount of damage</u> in it. [ 11 ]</p><p class=\"mb-4\">I <u class=\"font-bold\">don't believe the honesty of</u> people who always try to borrow money. [ 12 ]</p><p class=\"mb-4\">The conditions in some parts of Africa are very poor, and disease is <u class=\"font-bold\">very common</u>. [ 13 ]</p><p class=\"mb-4\">The man behaved in an <u class=\"font-bold\">untrustworthy way</u> toward his friends. [ 14 ]</p><p class=\"mb-4\">I'm going to <u class=\"font-bold\">go to the other side</u> of the road to meet my friend. [ 15 ]</p>",
               "options": [],
               "correctAnswer": "sole",
               "explanation": "sole = duy nhất"
             },
             {
-              "id": 77,
+              "id": "7",
               "content": "",
               "options": [],
               "correctAnswer": "pray",
               "explanation": "pray = cầu nguyện"
             },
             {
-              "id": 78,
+              "id": "8",
               "content": "",
               "options": [],
               "correctAnswer": "choked",
               "explanation": "choke = nghẹt thở"
             },
             {
-              "id": 79,
+              "id": "9",
               "content": "",
               "options": [],
               "correctAnswer": "ceased",
               "explanation": "cease = dừng lại"
             },
             {
-              "id": 80,
+              "id": "10",
               "content": "",
               "options": [],
               "correctAnswer": "mass",
               "explanation": "mass = số lượng lớn"
             },
             {
-              "id": 81,
+              "id": "11",
               "content": "",
               "options": [],
               "correctAnswer": "dent",
               "explanation": "dent = vết lõm"
             },
             {
-              "id": 82,
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "distrust",
               "explanation": "distrust = không tin tưởng"
             },
             {
-              "id": 83,
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "rife",
               "explanation": "rife = lan tràn, phổ biến"
             },
             {
-              "id": 84,
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "betrayed",
               "explanation": "betray = phản bội"
             },
             {
-              "id": 85,
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "cross",
@@ -164,7 +164,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 86,
+              "id": "16",
               "content": "<p>The ______ threw a lot of smoke into the air, and it made me ______.</p>",
               "options": [
                 "blast / choke",
@@ -174,7 +174,7 @@
               "explanation": "blast (vụ nổ), choke (nghẹt thở)"
             },
             {
-              "id": 87,
+              "id": "17",
               "content": "<p>The army built a ______ to defend themselves from their former ally's ______.</p>",
               "options": [
                 "fort / treachery",
@@ -184,7 +184,7 @@
               "explanation": "fort (pháo đài), treachery (sự phản bội)"
             },
             {
-              "id": 88,
+              "id": "18",
               "content": "<p>My jobs at home are to ______ the floor and ______ things under the bed.</p>",
               "options": [
                 "sweep / tuck",
@@ -194,7 +194,7 @@
               "explanation": "sweep (quét), tuck (nhét, giấu)"
             },
             {
-              "id": 89,
+              "id": "19",
               "content": "<p>The homeless man's ______ possession was a jacket with a warm ______.</p>",
               "options": [
                 "sole / lining",
@@ -204,7 +204,7 @@
               "explanation": "sole (duy nhất), lining (lớp lót)"
             },
             {
-              "id": 90,
+              "id": "20",
               "content": "<p>I ______ those girls because they ______ their friends by telling their secrets.</p>",
               "options": [
                 "distrust / betray",
@@ -214,7 +214,7 @@
               "explanation": "distrust (không tin tưởng), betray (phản bội)"
             },
             {
-              "id": 91,
+              "id": "21",
               "content": "<p>He ______ his business after the fighting from the war ______.</p>",
               "options": [
                 "founded / ceased",
@@ -224,7 +224,7 @@
               "explanation": "found (thành lập), cease (chấm dứt)"
             },
             {
-              "id": 92,
+              "id": "22",
               "content": "<p>The man on the news ______ on the recent ______ struggles of the people.</p>",
               "options": [
                 "commented / civil",
@@ -234,7 +234,7 @@
               "explanation": "comment (bình luận), civil (thuộc về dân sự, nội bộ)"
             },
             {
-              "id": 93,
+              "id": "23",
               "content": "<p>Fiona stepped on my ______ and made a ______.</p>",
               "options": [
                 "bracelet / dent",
@@ -244,7 +244,7 @@
               "explanation": "bracelet (vòng tay), dent (vết lõm)"
             },
             {
-              "id": 94,
+              "id": "24",
               "content": "<p>I watched the ______ of people ______ the bridge to see the Queen.</p>",
               "options": [
                 "mass / cross",
@@ -254,7 +254,7 @@
               "explanation": "mass (đám đông), cross (băng qua)"
             },
             {
-              "id": 95,
+              "id": "25",
               "content": "<p>The country was ______ with enemies, so I ______ that our people would be safe.</p>",
               "options": [
                 "rife / pray",
@@ -276,70 +276,70 @@
         {
           "id": "sec_r_0",
           "title": "Reading Comprehension - Part A",
-          "questionType": "Trắc nghiệm",
+          "questionType": "TFNG",
           "questions": [
             {
-              "id": 96,
+              "id": "26",
               "content": "<p>The land near the King's fort was safe from enemies.</p>",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
-              "correctAnswer": "F",
+              "correctAnswer": "False",
               "explanation": "The land near the King's fort was rife with enemies."
             },
             {
-              "id": 97,
+              "id": "27",
               "content": "<p>When Clara and Susie met, Clara was sweeping the path.</p>",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
-              "correctAnswer": "F",
+              "correctAnswer": "False",
               "explanation": "When Clara and Susie met, Susie was sweeping the path."
             },
             {
-              "id": 98,
+              "id": "28",
               "content": "<p>Clara crossed the garden to talk to Susie.</p>",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
-              "correctAnswer": "T",
+              "correctAnswer": "True",
               "explanation": ""
             },
             {
-              "id": 99,
+              "id": "29",
               "content": "<p>Clara gave Susie a bracelet.</p>",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
-              "correctAnswer": "T",
+              "correctAnswer": "True",
               "explanation": ""
             },
             {
-              "id": 100,
+              "id": "30",
               "content": "<p>Clara commented to her father that he should distrust people.</p>",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
-              "correctAnswer": "F",
+              "correctAnswer": "False",
               "explanation": "Clara commented to her father that he shouldn't distrust people."
             },
             {
-              "id": 101,
+              "id": "31",
               "content": "<p>Clara choked because of the smoke.</p>",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
-              "correctAnswer": "T",
+              "correctAnswer": "True",
               "explanation": ""
             }
           ],
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>"
+          "content": ""
         },
         {
           "id": "sec_r_1",
@@ -347,7 +347,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": 102,
+              "id": "32",
               "content": "<p>Which of the following actions did Clara do in the story?</p>",
               "options": [
                 "Sweep the path",
@@ -359,7 +359,7 @@
               "explanation": "Pray"
             },
             {
-              "id": 103,
+              "id": "33",
               "content": "<p>What did Clara hear in the middle of the night?</p>",
               "options": [
                 "Civil fighting",
@@ -371,7 +371,7 @@
               "explanation": "A loud blast"
             },
             {
-              "id": 104,
+              "id": "34",
               "content": "<p>What did the king emphasize?</p>",
               "options": [
                 "Anybody could be an enemy.",
@@ -383,7 +383,7 @@
               "explanation": "Anybody could be an enemy."
             },
             {
-              "id": 105,
+              "id": "35",
               "content": "<p>Where were the mass of soldiers fighting?</p>",
               "options": [
                 "In the garden",

@@ -18,140 +18,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is a better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. await / beloved / misery / research</b><br/>After weeks of hard work, the scientists must [ 1 ] the results of their [ 2 ]. After the death of her [ 3 ] pet, the woman felt nothing but [ 4 ] for many weeks.</p><p style=\"margin-bottom: 12px;\"><b>2. complained / confused / due / variety</b><br/>The store had a [ 5 ] of canned vegetables, but the man [ 6 ] that they didn’t have his favorite brand. The new schedule [ 7 ] passengers who thought the train was [ 8 ] at 8 a.m.</p><p style=\"margin-bottom: 12px;\"><b>3. Although / climate / establish / prior</b><br/>The island was a great place to [ 9 ] a hotel since the [ 10 ] was warm throughout the year. [ 11 ] he had a lot of bad luck in the past, he refused to let [ 12 ] events stop him from moving forward.</p><p style=\"margin-bottom: 12px;\"><b>4. entire / furnace / mature / midst</b><br/>The [ 13 ] was turned up to the highest temperature, but it couldn’t heat the [ 14 ] room. In the [ 15 ] of a terrible war, the young boys had to [ 16 ] quickly.</p><p style=\"margin-bottom: 12px;\"><b>5. apply / buried / leash / measured</b><br/>To make sure the dog’s [ 17 ] was long enough, Bob took out a ruler and [ 18 ] it. She insisted that they [ 19 ] her mother’s favorite perfume before they [ 20 ] her.</p>",
+              "id": "1",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. await / beloved / misery / research</b><br/>After weeks of hard work, the scientists must [ 2 ] the results of their [ 4 ]. After the death of her [ 6 ] pet, the woman felt nothing but [ 8 ] for many weeks.</p><p style=\"margin-bottom: 12px;\"><b>2. complained / confused / due / variety</b><br/>The store had a [ 10 ] of canned vegetables, but the man [ 12 ] that they didn’t have his favorite brand. The new schedule [ 14 ] passengers who thought the train was [ 16 ] at 8 a.m.</p><p style=\"margin-bottom: 12px;\"><b>3. Although / climate / establish / prior</b><br/>The island was a great place to [ 18 ] a hotel since the [ 20 ] was warm throughout the year. [ 11 ] he had a lot of bad luck in the past, he refused to let [ 12 ] events stop him from moving forward.</p><p style=\"margin-bottom: 12px;\"><b>4. entire / furnace / mature / midst</b><br/>The [ 13 ] was turned up to the highest temperature, but it couldn’t heat the [ 14 ] room. In the [ 15 ] of a terrible war, the young boys had to [ 16 ] quickly.</p><p style=\"margin-bottom: 12px;\"><b>5. apply / buried / leash / measured</b><br/>To make sure the dog’s [ 17 ] was long enough, Bob took out a ruler and [ 18 ] it. She insisted that they [ 19 ] her mother’s favorite perfume before they [ 20 ] her.</p>",
               "options": [],
               "correctAnswer": "await",
               "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ)."
             },
             {
-              "id": "1_1",
+              "id": "2",
               "content": "",
               "options": [],
               "correctAnswer": "research",
               "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ)."
             },
             {
-              "id": "2_0",
+              "id": "3",
               "content": "",
               "options": [],
               "correctAnswer": "beloved",
               "explanation": "beloved là yêu dấu, misery là sự khốn khổ."
             },
             {
-              "id": "2_1",
+              "id": "4",
               "content": "",
               "options": [],
               "correctAnswer": "misery",
               "explanation": "beloved là yêu dấu, misery là sự khốn khổ."
             },
             {
-              "id": "3_0",
+              "id": "5",
               "content": "",
               "options": [],
               "correctAnswer": "variety",
               "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại."
             },
             {
-              "id": "3_1",
+              "id": "6",
               "content": "",
               "options": [],
               "correctAnswer": "complained",
               "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại."
             },
             {
-              "id": "4_0",
+              "id": "7",
               "content": "",
               "options": [],
               "correctAnswer": "confused",
               "explanation": "confused là làm bối rối, due là đến hạn (có mặt)."
             },
             {
-              "id": "4_1",
+              "id": "8",
               "content": "",
               "options": [],
               "correctAnswer": "due",
               "explanation": "confused là làm bối rối, due là đến hạn (có mặt)."
             },
             {
-              "id": "5_0",
+              "id": "9",
               "content": "",
               "options": [],
               "correctAnswer": "establish",
               "explanation": "establish là thành lập/xây dựng, climate là khí hậu."
             },
             {
-              "id": "5_1",
+              "id": "10",
               "content": "",
               "options": [],
               "correctAnswer": "climate",
               "explanation": "establish là thành lập/xây dựng, climate là khí hậu."
             },
             {
-              "id": "6_0",
+              "id": "11",
               "content": "",
               "options": [],
               "correctAnswer": "Although",
               "explanation": "Although là mặc dù, prior là trước đó."
             },
             {
-              "id": "6_1",
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "prior",
               "explanation": "Although là mặc dù, prior là trước đó."
             },
             {
-              "id": "7_0",
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "furnace",
               "explanation": "furnace là lò sưởi, entire là toàn bộ."
             },
             {
-              "id": "7_1",
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "entire",
               "explanation": "furnace là lò sưởi, entire là toàn bộ."
             },
             {
-              "id": "8_0",
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "midst",
               "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó."
             },
             {
-              "id": "8_1",
+              "id": "16",
               "content": "",
               "options": [],
               "correctAnswer": "mature",
               "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó."
             },
             {
-              "id": "9_0",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "leash",
               "explanation": "leash là dây xích chó, measured là đã đo đạc."
             },
             {
-              "id": "9_1",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "measured",
               "explanation": "leash là dây xích chó, measured là đã đo đạc."
             },
             {
-              "id": "10_0",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "apply",
               "explanation": "apply là bôi/thoa, buried là đã chôn cất."
             },
             {
-              "id": "10_1",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "buried",
@@ -166,7 +166,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases to make complete sentences.</p>",
           "questions": [
             {
-              "id": "11",
+              "id": "21",
               "content": "Although he didn’t know how to dance,",
               "options": [
                 "a dog from running away",
@@ -184,7 +184,7 @@
               "correctAnswer": "he went to the party anyway"
             },
             {
-              "id": "12",
+              "id": "22",
               "content": "A furnace keeps",
               "options": [
                 "a dog from running away",
@@ -202,7 +202,7 @@
               "correctAnswer": "a room warm during the winter"
             },
             {
-              "id": "13",
+              "id": "23",
               "content": "Florida’s warm climate makes",
               "options": [
                 "a dog from running away",
@@ -220,7 +220,7 @@
               "correctAnswer": "many travelers want to vacation there"
             },
             {
-              "id": "14",
+              "id": "24",
               "content": "He wanted to establish",
               "options": [
                 "a dog from running away",
@@ -238,7 +238,7 @@
               "correctAnswer": "a school for blind children"
             },
             {
-              "id": "15",
+              "id": "25",
               "content": "The train was due to arrive at",
               "options": [
                 "a dog from running away",
@@ -256,7 +256,7 @@
               "correctAnswer": "around seven in the morning"
             },
             {
-              "id": "16",
+              "id": "26",
               "content": "A lot of research is needed",
               "options": [
                 "a dog from running away",
@@ -274,7 +274,7 @@
               "correctAnswer": "before new medicines can be created"
             },
             {
-              "id": "17",
+              "id": "27",
               "content": "Shoppers have a variety of",
               "options": [
                 "a dog from running away",
@@ -292,7 +292,7 @@
               "correctAnswer": "food to choose from at the store"
             },
             {
-              "id": "18",
+              "id": "28",
               "content": "In the midst of the game",
               "options": [
                 "a dog from running away",
@@ -310,7 +310,7 @@
               "correctAnswer": "the team’s best player had to be replaced"
             },
             {
-              "id": "19",
+              "id": "29",
               "content": "A leash keeps",
               "options": [
                 "a dog from running away",
@@ -328,7 +328,7 @@
               "correctAnswer": "a dog from running away"
             },
             {
-              "id": "20",
+              "id": "30",
               "content": "Her beloved sister",
               "options": [
                 "a dog from running away",
@@ -354,7 +354,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the clauses to make complete sentences.</p>",
           "questions": [
             {
-              "id": "21",
+              "id": "31",
               "content": "To determine if the new drug was safe,",
               "options": [
                 "because the pirate had buried it",
@@ -372,7 +372,7 @@
               "correctAnswer": "scientists measured all the effects"
             },
             {
-              "id": "22",
+              "id": "32",
               "content": "His newest book did not sell well,",
               "options": [
                 "because the pirate had buried it",
@@ -390,7 +390,7 @@
               "correctAnswer": "but his prior works were very successful"
             },
             {
-              "id": "23",
+              "id": "33",
               "content": "He wanted to finish the race,",
               "options": [
                 "because the pirate had buried it",
@@ -408,7 +408,7 @@
               "correctAnswer": "but the pain in his ankle gave him too much misery"
             },
             {
-              "id": "24",
+              "id": "34",
               "content": "He lost his map,",
               "options": [
                 "because the pirate had buried it",
@@ -426,7 +426,7 @@
               "correctAnswer": "so he became confused"
             },
             {
-              "id": "25",
+              "id": "35",
               "content": "The soup was cold,",
               "options": [
                 "because the pirate had buried it",
@@ -444,7 +444,7 @@
               "correctAnswer": "so the diners complained to the waiter"
             },
             {
-              "id": "26",
+              "id": "36",
               "content": "Sue was very silly as a child,",
               "options": [
                 "because the pirate had buried it",
@@ -462,7 +462,7 @@
               "correctAnswer": "but she became more serious as she matured"
             },
             {
-              "id": "27",
+              "id": "37",
               "content": "No one could find the treasure",
               "options": [
                 "because the pirate had buried it",
@@ -480,7 +480,7 @@
               "correctAnswer": "because the pirate had buried it"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "He said he would write to her,",
               "options": [
                 "because the pirate had buried it",
@@ -498,7 +498,7 @@
               "correctAnswer": "so she patiently awaited his letters"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "She wanted to look older,",
               "options": [
                 "because the pirate had buried it",
@@ -516,7 +516,7 @@
               "correctAnswer": "so she applied makeup to her face"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "They were thirsty,",
               "options": [
                 "because the pirate had buried it",
@@ -547,10 +547,10 @@
         {
           "id": "sec4",
           "title": "Reading Comprehension",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A</p>Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
           "questions": [
             {
-              "id": "31",
+              "id": "41",
               "content": "Scientists did a variety of tests for research before the Sputnik 2 was due to leave.",
               "options": [
                 "True",
@@ -560,7 +560,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "32",
+              "id": "42",
               "content": "Wires were applied to Laika’s leash so that scientists could find the ship.",
               "options": [
                 "True",
@@ -570,7 +570,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "33",
+              "id": "43",
               "content": "Although Laika could not be buried, a spaceship was established in her honor.",
               "options": [
                 "True",
@@ -580,7 +580,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "34",
+              "id": "44",
               "content": "In the midst of the scientists’ excitement, Laika’s ship became too hot.",
               "options": [
                 "True",
@@ -590,7 +590,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "35",
+              "id": "45",
               "content": "In a prior launch, scientists sent two other dogs into space.",
               "options": [
                 "True",
@@ -600,7 +600,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "36",
+              "id": "46",
               "content": "Many people complained that Laika should not have gone to space.",
               "options": [
                 "True",
@@ -610,7 +610,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",
@@ -618,7 +618,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B</p>Answer the questions.",
           "questions": [
             {
-              "id": "37",
+              "id": "47",
               "content": "Why did scientists choose Laika for the mission?",
               "options": [
                 "She was tough.",
@@ -630,7 +630,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "38",
+              "id": "48",
               "content": "Why did Laika die during the trip?",
               "options": [
                 "The ship became as hot as a furnace.",
@@ -642,7 +642,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "39",
+              "id": "49",
               "content": "Scientists made Laika wear a special leash because they ________.",
               "options": [
                 "were awaiting information from the ship",
@@ -654,7 +654,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "40",
+              "id": "50",
               "content": "Why did scientists apply wires to Laika’s skin?",
               "options": [
                 "To measure her body’s reactions",

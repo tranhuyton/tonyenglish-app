@@ -310,70 +310,70 @@
         {
           "id": "sec5_reading",
           "title": "Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
+          "content": "",
           "questions": [
             {
               "id": "26",
               "content": "The admiral thought that selling the monkeys would make him rich.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T. Dựa vào đoạn văn: 'He thought, \"I could sell these monkeys and become very rich!\"'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
               "content": "The admiral caught the monkeys using loops of string and stakes.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T. Theo đoạn văn: \"He put stakes in the ground, tied string around them and made loops in the string.\"",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "28",
               "content": "The admiral put hay in the monkeys' cages.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "F. Theo đoạn văn: \"There was no soft hay for the monkeys to sleep on. Instead, they slept on branches with sharp thorns...\" Câu sửa lại: The admiral put branches with sharp thorns in the monkeys' cages.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "29",
               "content": "The steward had no conscience.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "F. Theo đoạn văn: \"He was a kind man with a good conscience.\" Câu sửa lại: The steward had a good conscience.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "30",
               "content": "The admiral was horrified because the monkeys were muscular.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "F. Theo đoạn văn: \"He [the steward] was horrified to see the thin monkeys in the cages.\" Câu sửa lại: The steward was horrified because the monkeys were thin and weak.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "31",
               "content": "The monkeys jumped on a raft after the accident.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T. Theo đoạn văn: \"After the accident, the monkeys jumped onto a raft.\"",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",

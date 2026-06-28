@@ -18,140 +18,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. altogether / bruise / misfortune / negative</b><br/>Greg had the [ 1 ] of falling in a pool, though he didn’t know how to swim. The experience left him with [ 2 ] feelings about swimming pools. After one day, the [ 3 ] on her lip began to go away. In a week, it had disappeared [ 4 ].</p><p style=\"margin-bottom: 12px;\"><b>2. disobedient / per / pleaded / sake</b><br/>For the [ 5 ] of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices [ 6 ] person. A woman [ 7 ] with the child to behave in the store. The child, however, continued to be [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. glimpsed / hoop / source / stitched</b><br/>They walked past a large river, which the guide said was the [ 9 ] of a waterfall. They finally [ 10 ] the waterfall when they reached the bottom of the hill. The girl wanted to make her plastic [ 11 ] look pretty, so she [ 12 ] cloth around it.</p><p style=\"margin-bottom: 12px;\"><b>4. bound / custom / ripped / stern</b><br/>The family was [ 13 ] tightly. For example, on Saturdays, it was their [ 14 ] to go to the park together. The [ 15 ] teacher was angry to see the students passing notes. She took the note from the students and [ 16 ] it into pieces.</p><p style=\"margin-bottom: 12px;\"><b>5. foresee / scraped / thump / vehement</b><br/>The boy lost his balance and fell with a [ 17 ]. When he got up, he noticed that he’d [ 18 ] his elbow. The coach didn’t [ 19 ] the loss for his team. So, after the game, he was [ 20 ].</p>",
+              "id": "1",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. altogether / bruise / misfortune / negative</b><br/>Greg had the [ 2 ] of falling in a pool, though he didn’t know how to swim. The experience left him with [ 4 ] feelings about swimming pools. After one day, the [ 6 ] on her lip began to go away. In a week, it had disappeared [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>2. disobedient / per / pleaded / sake</b><br/>For the [ 10 ] of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices [ 12 ] person. A woman [ 14 ] with the child to behave in the store. The child, however, continued to be [ 16 ].</p><p style=\"margin-bottom: 12px;\"><b>3. glimpsed / hoop / source / stitched</b><br/>They walked past a large river, which the guide said was the [ 18 ] of a waterfall. They finally [ 20 ] the waterfall when they reached the bottom of the hill. The girl wanted to make her plastic [ 11 ] look pretty, so she [ 12 ] cloth around it.</p><p style=\"margin-bottom: 12px;\"><b>4. bound / custom / ripped / stern</b><br/>The family was [ 13 ] tightly. For example, on Saturdays, it was their [ 14 ] to go to the park together. The [ 15 ] teacher was angry to see the students passing notes. She took the note from the students and [ 16 ] it into pieces.</p><p style=\"margin-bottom: 12px;\"><b>5. foresee / scraped / thump / vehement</b><br/>The boy lost his balance and fell with a [ 17 ]. When he got up, he noticed that he’d [ 18 ] his elbow. The coach didn’t [ 19 ] the loss for his team. So, after the game, he was [ 20 ].</p>",
               "options": [],
               "correctAnswer": "misfortune",
               "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó."
             },
             {
-              "id": "1_1",
+              "id": "2",
               "content": "",
               "options": [],
               "correctAnswer": "negative",
               "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó."
             },
             {
-              "id": "2_0",
+              "id": "3",
               "content": "",
               "options": [],
               "correctAnswer": "bruise",
               "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn)."
             },
             {
-              "id": "2_1",
+              "id": "4",
               "content": "",
               "options": [],
               "correctAnswer": "altogether",
               "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn)."
             },
             {
-              "id": "3_0",
+              "id": "5",
               "content": "",
               "options": [],
               "correctAnswer": "sake",
               "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người)."
             },
             {
-              "id": "3_1",
+              "id": "6",
               "content": "",
               "options": [],
               "correctAnswer": "per",
               "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người)."
             },
             {
-              "id": "4_0",
+              "id": "7",
               "content": "",
               "options": [],
               "correctAnswer": "pleaded",
               "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời)."
             },
             {
-              "id": "4_1",
+              "id": "8",
               "content": "",
               "options": [],
               "correctAnswer": "disobedient",
               "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời)."
             },
             {
-              "id": "5_0",
+              "id": "9",
               "content": "",
               "options": [],
               "correctAnswer": "source",
               "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó."
             },
             {
-              "id": "5_1",
+              "id": "10",
               "content": "",
               "options": [],
               "correctAnswer": "glimpsed",
               "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó."
             },
             {
-              "id": "6_0",
+              "id": "11",
               "content": "",
               "options": [],
               "correctAnswer": "hoop",
               "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó."
             },
             {
-              "id": "6_1",
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "stitched",
               "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó."
             },
             {
-              "id": "7_0",
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "bound",
               "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau."
             },
             {
-              "id": "7_1",
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "custom",
               "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau."
             },
             {
-              "id": "8_0",
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "stern",
               "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy."
             },
             {
-              "id": "8_1",
+              "id": "16",
               "content": "",
               "options": [],
               "correctAnswer": "ripped",
               "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy."
             },
             {
-              "id": "9_0",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "thump",
               "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay."
             },
             {
-              "id": "9_1",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "scraped",
               "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay."
             },
             {
-              "id": "10_0",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "foresee",
               "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ)."
             },
             {
-              "id": "10_1",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "vehement",
@@ -166,7 +166,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases to make complete sentences.</p>",
           "questions": [
             {
-              "id": "11",
+              "id": "21",
               "content": "Kelly had the misfortune of breaking.",
               "options": [
                 "bad weather this weekend",
@@ -184,7 +184,7 @@
               "correctAnswer": "her arm before the competition"
             },
             {
-              "id": "12",
+              "id": "22",
               "content": "The disobedient dog ran away.",
               "options": [
                 "bad weather this weekend",
@@ -202,7 +202,7 @@
               "correctAnswer": "from its owner at the park"
             },
             {
-              "id": "13",
+              "id": "23",
               "content": "She felt bound to her friends because she had.",
               "options": [
                 "bad weather this weekend",
@@ -220,7 +220,7 @@
               "correctAnswer": "known them for a long time"
             },
             {
-              "id": "14",
+              "id": "24",
               "content": "The weatherman didn’t foresee any.",
               "options": [
                 "bad weather this weekend",
@@ -238,7 +238,7 @@
               "correctAnswer": "bad weather this weekend"
             },
             {
-              "id": "15",
+              "id": "25",
               "content": "The family had a custom of.",
               "options": [
                 "bad weather this weekend",
@@ -256,7 +256,7 @@
               "correctAnswer": "eating dinner early on Sundays"
             },
             {
-              "id": "16",
+              "id": "26",
               "content": "She glimpsed at his painting.",
               "options": [
                 "bad weather this weekend",
@@ -274,7 +274,7 @@
               "correctAnswer": "before it was completed"
             },
             {
-              "id": "17",
+              "id": "27",
               "content": "Charlie ripped the paper in half and.",
               "options": [
                 "bad weather this weekend",
@@ -292,7 +292,7 @@
               "correctAnswer": "gave one piece to his friend"
             },
             {
-              "id": "18",
+              "id": "28",
               "content": "Jasmine pleaded with her teacher.",
               "options": [
                 "bad weather this weekend",
@@ -310,7 +310,7 @@
               "correctAnswer": "to give her a better grade"
             },
             {
-              "id": "19",
+              "id": "29",
               "content": "Leslie scraped the ice.",
               "options": [
                 "bad weather this weekend",
@@ -328,7 +328,7 @@
               "correctAnswer": "off the window"
             },
             {
-              "id": "20",
+              "id": "30",
               "content": "George was vehement about being allowed.",
               "options": [
                 "bad weather this weekend",
@@ -354,7 +354,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the clauses to make complete sentences.</p>",
           "questions": [
             {
-              "id": "21",
+              "id": "31",
               "content": "There was a tear in my shirt,.",
               "options": [
                 "because stern rules built character",
@@ -372,7 +372,7 @@
               "correctAnswer": "so my mom stitched it back together"
             },
             {
-              "id": "22",
+              "id": "32",
               "content": "She dropped the scissors on the carpet,.",
               "options": [
                 "because stern rules built character",
@@ -390,7 +390,7 @@
               "correctAnswer": "so there was a slight thump"
             },
             {
-              "id": "23",
+              "id": "33",
               "content": "His parents were strict,.",
               "options": [
                 "because stern rules built character",
@@ -408,7 +408,7 @@
               "correctAnswer": "because stern rules built character"
             },
             {
-              "id": "24",
+              "id": "34",
               "content": "The website was good,.",
               "options": [
                 "because stern rules built character",
@@ -426,7 +426,7 @@
               "correctAnswer": "but the sources were unreliable"
             },
             {
-              "id": "25",
+              "id": "35",
               "content": "The fight was horrifying,.",
               "options": [
                 "because stern rules built character",
@@ -444,7 +444,7 @@
               "correctAnswer": "it filled him with negative dreams"
             },
             {
-              "id": "26",
+              "id": "36",
               "content": "I enjoy soda,.",
               "options": [
                 "because stern rules built character",
@@ -462,7 +462,7 @@
               "correctAnswer": "but only 2 cans per week"
             },
             {
-              "id": "27",
+              "id": "37",
               "content": "He went to school despite being sick.",
               "options": [
                 "because stern rules built character",
@@ -480,7 +480,7 @@
               "correctAnswer": "because the sake of his grade depended on it"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "They used a different system.",
               "options": [
                 "because stern rules built character",
@@ -498,7 +498,7 @@
               "correctAnswer": "that was altogether different from mine"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "He liked showing off,.",
               "options": [
                 "because stern rules built character",
@@ -516,7 +516,7 @@
               "correctAnswer": "so he tried jumping through the hoop"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "He fell down the stairs,.",
               "options": [
                 "because stern rules built character",
@@ -547,10 +547,10 @@
         {
           "id": "sec4",
           "title": "Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
+          "content": "",
           "questions": [
             {
-              "id": "31",
+              "id": "41",
               "content": "The custom was to allow the girls to choose their own teams.",
               "options": [
                 "True",
@@ -560,7 +560,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "32",
+              "id": "42",
               "content": "Gwen told her teammates that she could stitch her pants later.",
               "options": [
                 "True",
@@ -570,7 +570,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "33",
+              "id": "43",
               "content": "There were eight girls per team.",
               "options": [
                 "True",
@@ -580,7 +580,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "34",
+              "id": "44",
               "content": "Gwen pleaded to be on another team that had some of her friends.",
               "options": [
                 "True",
@@ -590,7 +590,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "35",
+              "id": "45",
               "content": "Stephanie asked Gwen to lose on purpose for the sake of the team.",
               "options": [
                 "True",
@@ -600,7 +600,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "36",
+              "id": "46",
               "content": "Gwen ripped her jeans, scraped her knee, and got a bruise when she fell.",
               "options": [
                 "True",
@@ -610,7 +610,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",
@@ -618,7 +618,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
-              "id": "37",
+              "id": "47",
               "content": "Why did Coach Peeves speak to Gwen in a stern voice?",
               "options": [
                 "For falling with a thump",
@@ -630,7 +630,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "38",
+              "id": "48",
               "content": "How did Gwen know Stephanie?",
               "options": [
                 "They were old friends.",
@@ -642,7 +642,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "39",
+              "id": "49",
               "content": "What happened after Gwen’s shot went through the hoop?",
               "options": [
                 "She faced the stern coach.",
@@ -654,7 +654,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "40",
+              "id": "50",
               "content": "How were the girls on Gwen’s team bound together?",
               "options": [
                 "They were all disobedient.",

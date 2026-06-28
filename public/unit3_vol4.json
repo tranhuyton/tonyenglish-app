@@ -18,140 +18,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. admonished / idiot / option / torment</b><br/>I had the [ 1 ] of going with them or staying home. I felt like an [ 2 ] for the choice I made. Because he liked to [ 3 ] the kitten by pouring water on it, the boy's mother [ 4 ] him for his cruel behavior.</p><p style=\"margin-bottom: 12px;\"><b>2. brag / echoed / perfect / pinpoint</b><br/>It was difficult to [ 5 ] the dog's location because its cries [ 6 ] off of the hills. My sister likes to [ 7 ] about how my mother and father think her behavior is [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. beware / eventual / pastime / switch</b><br/>When you [ 9 ] the machine on, you need to [ 10 ] because the machine is dangerous. All of the accidents at the swimming pool led to the [ 11 ] closing of it and the end of a favorite summer [ 12 ].</p><p style=\"margin-bottom: 12px;\"><b>4. audible / awesome / conscious / disagreed</b><br/>The king wanted people to think that his power was [ 13 ] . He would put people in jail if they [ 14 ] with him. Even though the little girl was trying to sneak up on her parents, her [ 15 ] steps made her parents [ 16 ] of her.</p><p style=\"margin-bottom: 12px;\"><b>5. hint / immense / indirect / thorough</b><br/>An [ 17 ] tree fell across the road, forcing the travelers to take a more [ 18 ] route through the countryside. The police could not find a single clue to the crime, which gave a [ 19 ] as to how [ 20 ] the thief had been.</p>",
+              "id": "1",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. admonished / idiot / option / torment</b><br/>I had the [ 2 ] of going with them or staying home. I felt like an [ 4 ] for the choice I made. Because he liked to [ 6 ] the kitten by pouring water on it, the boy's mother [ 8 ] him for his cruel behavior.</p><p style=\"margin-bottom: 12px;\"><b>2. brag / echoed / perfect / pinpoint</b><br/>It was difficult to [ 10 ] the dog's location because its cries [ 12 ] off of the hills. My sister likes to [ 14 ] about how my mother and father think her behavior is [ 16 ].</p><p style=\"margin-bottom: 12px;\"><b>3. beware / eventual / pastime / switch</b><br/>When you [ 18 ] the machine on, you need to [ 20 ] because the machine is dangerous. All of the accidents at the swimming pool led to the [ 11 ] closing of it and the end of a favorite summer [ 12 ].</p><p style=\"margin-bottom: 12px;\"><b>4. audible / awesome / conscious / disagreed</b><br/>The king wanted people to think that his power was [ 13 ] . He would put people in jail if they [ 14 ] with him. Even though the little girl was trying to sneak up on her parents, her [ 15 ] steps made her parents [ 16 ] of her.</p><p style=\"margin-bottom: 12px;\"><b>5. hint / immense / indirect / thorough</b><br/>An [ 17 ] tree fell across the road, forcing the travelers to take a more [ 18 ] route through the countryside. The police could not find a single clue to the crime, which gave a [ 19 ] as to how [ 20 ] the thief had been.</p>",
               "options": [],
               "correctAnswer": "option",
               "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2."
             },
             {
-              "id": "1_1",
+              "id": "2",
               "content": "",
               "options": [],
               "correctAnswer": "idiot",
               "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2."
             },
             {
-              "id": "2_0",
+              "id": "3",
               "content": "",
               "options": [],
               "correctAnswer": "torment",
               "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2."
             },
             {
-              "id": "2_1",
+              "id": "4",
               "content": "",
               "options": [],
               "correctAnswer": "admonished",
               "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2."
             },
             {
-              "id": "3_0",
+              "id": "5",
               "content": "",
               "options": [],
               "correctAnswer": "pinpoint",
               "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2."
             },
             {
-              "id": "3_1",
+              "id": "6",
               "content": "",
               "options": [],
               "correctAnswer": "echoed",
               "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2."
             },
             {
-              "id": "4_0",
+              "id": "7",
               "content": "",
               "options": [],
               "correctAnswer": "brag",
               "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2."
             },
             {
-              "id": "4_1",
+              "id": "8",
               "content": "",
               "options": [],
               "correctAnswer": "perfect",
               "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2."
             },
             {
-              "id": "5_0",
+              "id": "9",
               "content": "",
               "options": [],
               "correctAnswer": "switch",
               "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2."
             },
             {
-              "id": "5_1",
+              "id": "10",
               "content": "",
               "options": [],
               "correctAnswer": "beware",
               "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2."
             },
             {
-              "id": "6_0",
+              "id": "11",
               "content": "",
               "options": [],
               "correctAnswer": "eventual",
               "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2."
             },
             {
-              "id": "6_1",
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "pastime",
               "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2."
             },
             {
-              "id": "7_0",
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "awesome",
               "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2."
             },
             {
-              "id": "7_1",
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "disagreed",
               "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2."
             },
             {
-              "id": "8_0",
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "audible",
               "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2."
             },
             {
-              "id": "8_1",
+              "id": "16",
               "content": "",
               "options": [],
               "correctAnswer": "conscious",
               "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2."
             },
             {
-              "id": "9_0",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "immense",
               "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2."
             },
             {
-              "id": "9_1",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "indirect",
               "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2."
             },
             {
-              "id": "10_0",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "hint",
               "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2."
             },
             {
-              "id": "10_1",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "thorough",
@@ -166,7 +166,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A Match the phrases to make complete sentences.</p>",
           "questions": [
             {
-              "id": "11",
+              "id": "21",
               "content": "You should beware",
               "options": [
                 "a. about how good she is at sports",
@@ -184,7 +184,7 @@
               "correctAnswer": "b. of the hole in the bridge"
             },
             {
-              "id": "12",
+              "id": "22",
               "content": "My favorite pastime",
               "options": [
                 "a. about how good she is at sports",
@@ -202,7 +202,7 @@
               "correctAnswer": "d. is listening to music"
             },
             {
-              "id": "13",
+              "id": "23",
               "content": "The doctor did a thorough check",
               "options": [
                 "a. about how good she is at sports",
@@ -220,7 +220,7 @@
               "correctAnswer": "b. of the sick man's health"
             },
             {
-              "id": "14",
+              "id": "24",
               "content": "The two friends disagreed",
               "options": [
                 "a. about how good she is at sports",
@@ -238,7 +238,7 @@
               "correctAnswer": "a. about which game was better"
             },
             {
-              "id": "15",
+              "id": "25",
               "content": "She switched the bag",
               "options": [
                 "a. about how good she is at sports",
@@ -256,7 +256,7 @@
               "correctAnswer": "c. from her left hand to her right"
             },
             {
-              "id": "16",
+              "id": "26",
               "content": "His proud sister brags",
               "options": [
                 "a. about how good she is at sports",
@@ -274,7 +274,7 @@
               "correctAnswer": "a. about how good she is at sports"
             },
             {
-              "id": "17",
+              "id": "27",
               "content": "An immense pile of garbage",
               "options": [
                 "a. about how good she is at sports",
@@ -292,7 +292,7 @@
               "correctAnswer": "d. was the reason for the bad smell"
             },
             {
-              "id": "18",
+              "id": "28",
               "content": "The indirect route",
               "options": [
                 "a. about how good she is at sports",
@@ -310,7 +310,7 @@
               "correctAnswer": "c. took an hour more to drive"
             },
             {
-              "id": "19",
+              "id": "29",
               "content": "The awesome storm caused",
               "options": [
                 "a. about how good she is at sports",
@@ -328,7 +328,7 @@
               "correctAnswer": "d. fear that his home would be damaged"
             },
             {
-              "id": "20",
+              "id": "30",
               "content": "She admonished the student",
               "options": [
                 "a. about how good she is at sports",
@@ -354,7 +354,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B Match the clauses to make complete sentences.</p>",
           "questions": [
             {
-              "id": "21",
+              "id": "31",
               "content": "He couldn't sleep at night",
               "options": [
                 "a. and it led to her eventual illness",
@@ -372,7 +372,7 @@
               "correctAnswer": "c. because bad dreams tormented him"
             },
             {
-              "id": "22",
+              "id": "32",
               "content": "We knew he broke his leg when he fell",
               "options": [
                 "a. and it led to her eventual illness",
@@ -390,7 +390,7 @@
               "correctAnswer": "d. because the sound of the bone breaking was audible"
             },
             {
-              "id": "23",
+              "id": "33",
               "content": "He had to choose the blue car",
               "options": [
                 "a. and it led to her eventual illness",
@@ -408,7 +408,7 @@
               "correctAnswer": "b. because there weren't any other options"
             },
             {
-              "id": "24",
+              "id": "34",
               "content": "The hiker always carried a compass and map,",
               "options": [
                 "a. and it led to her eventual illness",
@@ -426,7 +426,7 @@
               "correctAnswer": "c. so he could pinpoint his location in the wild"
             },
             {
-              "id": "25",
+              "id": "35",
               "content": "She didn't eat good food and didn't exercise,",
               "options": [
                 "a. and it led to her eventual illness",
@@ -444,7 +444,7 @@
               "correctAnswer": "a. and it led to her eventual illness"
             },
             {
-              "id": "26",
+              "id": "36",
               "content": "The students had to answer all the questions correctly",
               "options": [
                 "a. and it led to her eventual illness",
@@ -462,7 +462,7 @@
               "correctAnswer": "c. if they wanted to get a perfect grade"
             },
             {
-              "id": "27",
+              "id": "37",
               "content": "The captain did not see the ship approaching behind him,",
               "options": [
                 "a. and it led to her eventual illness",
@@ -480,7 +480,7 @@
               "correctAnswer": "d. but he was conscious of the other boats"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "She thought someone was calling to her from the other cliff,",
               "options": [
                 "a. and it led to her eventual illness",
@@ -498,7 +498,7 @@
               "correctAnswer": "c. but it was just the echo of her voice"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "He knew his friends were having a surprise party for him",
               "options": [
                 "a. and it led to her eventual illness",
@@ -516,7 +516,7 @@
               "correctAnswer": "b. because they gave him so many hints"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "If you can't tie your own shoes by the time you're twelve years old",
               "options": [
                 "a. and it led to her eventual illness",
@@ -547,10 +547,10 @@
         {
           "id": "sec4",
           "title": "Reading Comprehension",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A</p>Mark each statement T for true or F for false.",
+          "content": "",
           "questions": [
             {
-              "id": "31",
+              "id": "41",
               "content": "The young man decided to hike in the national parks.",
               "options": [
                 "True",
@@ -560,7 +560,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "32",
+              "id": "42",
               "content": "The young man disagreed with the old man.",
               "options": [
                 "True",
@@ -570,7 +570,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "33",
+              "id": "43",
               "content": "The young man believed that his knowledge of the park's trails was thorough.",
               "options": [
                 "True",
@@ -580,7 +580,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "34",
+              "id": "44",
               "content": "When the young man had an option of two trails, he always chose the easier one.",
               "options": [
                 "True",
@@ -590,7 +590,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "35",
+              "id": "45",
               "content": "The young man was tormented by the thought of the eventual storm.",
               "options": [
                 "True",
@@ -600,7 +600,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "36",
+              "id": "46",
               "content": "When the young man got home, he knew that the old man had acted like an idiot.",
               "options": [
                 "True",
@@ -610,7 +610,7 @@
               "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",
@@ -618,7 +618,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B</p>Answer the questions.",
           "questions": [
             {
-              "id": "37",
+              "id": "47",
               "content": "What did the young man choose as his new pastime?",
               "options": [
                 "a. Picking trails",
@@ -630,7 +630,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "38",
+              "id": "48",
               "content": "Why did the old man admonish the young man?",
               "options": [
                 "a. The young man was awesome.",
@@ -642,7 +642,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "39",
+              "id": "49",
               "content": "Why did the young man become lost?",
               "options": [
                 "a. He was not conscious of where he went.",
@@ -654,7 +654,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "40",
+              "id": "50",
               "content": "Which of the following gave a hint of an eventual storm?",
               "options": [
                 "a. The sudden strong winds",

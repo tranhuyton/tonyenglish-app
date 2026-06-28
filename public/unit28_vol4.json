@@ -154,140 +154,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "11_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. defined / paraphrased / riot / shrine</b><br/>There was a [ 1 ] in the city yesterday, but the [ 2 ] was not damaged. For the book report, I [ 3 ] the story and [ 4 ] my purpose for writing it.</p><p style=\"margin-bottom: 12px;\"><b>2. avail / expand / presently / solitude</b><br/>There are 15 members in the group [ 5 ] . We should [ 6 ] it. His attempt to catch the train was to no [ 7 ] . He sat in [ 8 ] waiting for the next one.</p><p style=\"margin-bottom: 12px;\"><b>3. fundamental / linger / scribble / worsen</b><br/>The [ 9 ] point of my speech was to show that people need to act. If we don’t do something, things will [ 10 ] . I tried to [ 11 ] the information as fast as I could because I didn’t have time to [ 12 ] .</p><p style=\"margin-bottom: 12px;\"><b>4. dreaded / horrifying / incredulous / stark</b><br/>After seeing that [ 13 ] plane crash, I [ 14 ] getting on an airplane. She was [ 15 ] that there could be such a [ 16 ] contrast between boys’ and girls’ grades.</p><p style=\"margin-bottom: 12px;\"><b>5. organism / plague / random / summon</b><br/>We had to [ 17 ] scientists from around the world to study this new [ 18 ] . At first we thought it was [ 19 ] that people were getting sick. Then we realized that a [ 20 ] was spreading.</p>",
+              "id": "11",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. defined / paraphrased / riot / shrine</b><br/>There was a [ 1 ] in the city yesterday, but the [ 2 ] was not damaged. For the book report, I [ 3 ] the story and [ 4 ] my purpose for writing it.</p><p style=\"margin-bottom: 12px;\"><b>2. avail / expand / presently / solitude</b><br/>There are 15 members in the group [ 5 ] . We should [ 6 ] it. His attempt to catch the train was to no [ 7 ] . He sat in [ 8 ] waiting for the next one.</p><p style=\"margin-bottom: 12px;\"><b>3. fundamental / linger / scribble / worsen</b><br/>The [ 9 ] point of my speech was to show that people need to act. If we don’t do something, things will [ 10 ] . I tried to [ 12 ] the information as fast as I could because I didn’t have time to [ 14 ] .</p><p style=\"margin-bottom: 12px;\"><b>4. dreaded / horrifying / incredulous / stark</b><br/>After seeing that [ 16 ] plane crash, I [ 18 ] getting on an airplane. She was [ 20 ] that there could be such a [ 22 ] contrast between boys’ and girls’ grades.</p><p style=\"margin-bottom: 12px;\"><b>5. organism / plague / random / summon</b><br/>We had to [ 24 ] scientists from around the world to study this new [ 26 ] . At first we thought it was [ 28 ] that people were getting sick. Then we realized that a [ 30 ] was spreading.</p>",
               "options": [],
               "correctAnswer": "riot",
               "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì)."
             },
             {
-              "id": "11_1",
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "shrine",
               "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì)."
             },
             {
-              "id": "12_0",
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "paraphrased",
               "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ)."
             },
             {
-              "id": "12_1",
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "defined",
               "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ)."
             },
             {
-              "id": "13_0",
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "presently",
               "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo)."
             },
             {
-              "id": "13_1",
+              "id": "16",
               "content": "",
               "options": [],
               "correctAnswer": "expand",
               "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo)."
             },
             {
-              "id": "14_0",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "avail",
               "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông)."
             },
             {
-              "id": "14_1",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "solitude",
               "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông)."
             },
             {
-              "id": "15_0",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "fundamental",
               "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn."
             },
             {
-              "id": "15_1",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "worsen",
               "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn."
             },
             {
-              "id": "16_0",
+              "id": "21",
               "content": "",
               "options": [],
               "correctAnswer": "scribble",
               "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại."
             },
             {
-              "id": "16_1",
+              "id": "22",
               "content": "",
               "options": [],
               "correctAnswer": "linger",
               "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại."
             },
             {
-              "id": "17_0",
+              "id": "23",
               "content": "",
               "options": [],
               "correctAnswer": "horrifying",
               "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay."
             },
             {
-              "id": "17_1",
+              "id": "24",
               "content": "",
               "options": [],
               "correctAnswer": "dreaded",
               "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay."
             },
             {
-              "id": "18_0",
+              "id": "25",
               "content": "",
               "options": [],
               "correctAnswer": "incredulous",
               "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ."
             },
             {
-              "id": "18_1",
+              "id": "26",
               "content": "",
               "options": [],
               "correctAnswer": "stark",
               "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ."
             },
             {
-              "id": "19_0",
+              "id": "27",
               "content": "",
               "options": [],
               "correctAnswer": "summon",
               "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này."
             },
             {
-              "id": "19_1",
+              "id": "28",
               "content": "",
               "options": [],
               "correctAnswer": "organism",
               "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này."
             },
             {
-              "id": "20_0",
+              "id": "29",
               "content": "",
               "options": [],
               "correctAnswer": "random",
               "explanation": "random (ngẫu nhiên) và plague (bệnh dịch). Lúc đầu chúng tôi nghĩ việc mọi người bị ốm là ngẫu nhiên. Sau đó chúng tôi nhận ra rằng một bệnh dịch đang lây lan."
             },
             {
-              "id": "20_1",
+              "id": "30",
               "content": "",
               "options": [],
               "correctAnswer": "plague",
@@ -307,10 +307,10 @@
         {
           "id": "sec4_reading",
           "title": "Reading Comprehension, Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement True or False.</p>",
+          "content": "",
           "questions": [
             {
-              "id": "21",
+              "id": "31",
               "content": "Presently, a horrifying plague has broken out in Athens.",
               "options": [
                 "True",
@@ -320,7 +320,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "22",
+              "id": "32",
               "content": "At first, people thought the spread of the disease was random.",
               "options": [
                 "True",
@@ -330,7 +330,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "23",
+              "id": "33",
               "content": "The people summoned doctors to no avail.",
               "options": [
                 "True",
@@ -340,7 +340,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "24",
+              "id": "34",
               "content": "Thucydides was incredulous that the plague was caused by an organism.",
               "options": [
                 "True",
@@ -350,7 +350,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "25",
+              "id": "35",
               "content": "By gathering in shrines, people made the plague worse.",
               "options": [
                 "True",
@@ -360,7 +360,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "26",
+              "id": "36",
               "content": "Thucydides luckily survived the plague.",
               "options": [
                 "True",
@@ -370,7 +370,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",
@@ -378,7 +378,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
-              "id": "27",
+              "id": "37",
               "content": "Why did Athens’ population expand?",
               "options": [
                 "Because the army moved into the city",
@@ -390,7 +390,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "Thucydides scribbled quickly because ________.",
               "options": [
                 "there were so many riots",
@@ -402,7 +402,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "What fundamental lesson did the people learn?",
               "options": [
                 "The plague was a punishment.",
@@ -414,7 +414,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "What is NOT true of Thucydides?",
               "options": [
                 "He was the world’s first historian.",

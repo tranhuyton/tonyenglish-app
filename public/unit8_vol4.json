@@ -18,140 +18,140 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the word that is the better fit for each blank.</p>",
           "questions": [
             {
-              "id": "1_0",
-              "content": "<p style=\"margin-bottom: 12px;\"><b>1. conduct / influenced / laws / replace</b><br/>Mr. Holloway was sent to [ 1 ] the old coach, who was known for his wild [ 2 ] during games. Decisions made in courts are often [ 3 ] by the personal views of the judge. In some cases, the decisions help change [ 4 ].</p><p style=\"margin-bottom: 12px;\"><b>2. enclosed / gripped / snapped / whatsoever</b><br/>I [ 5 ] the pencil and squeezed it until it [ 6 ]. My father [ 7 ] a check in the letter he sent me. He always offered to help even if I didn't ask for any help [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>3. constantly / cracks / impending / tends</b><br/>The soldier dreaded the [ 9 ] battle. He [ 10 ] thought about what might happen to him. I saw several [ 11 ] in the ice. This [ 12 ] to happen when the weather becomes warmer.</p><p style=\"margin-bottom: 12px;\"><b>4. access / device / halted / mode</b><br/>Sheila took the [ 13 ] from her purse and pressed a couple of buttons. It took her awhile to figure out how to turn it to silent [ 14 ]. She ran from room to room quickly, but [ 15 ] suddenly. She couldn't have [ 16 ] to the room without a key.</p><p style=\"margin-bottom: 12px;\"><b>5. perspired / sly / valid / version</b><br/>The student had a [ 17 ] reason for leaving the classroom when his teacher was gone. He tried to explain his [ 18 ] of what happened while she was gone. The thief [ 19 ] while the police questioned him. They didn't feel sorry for the [ 20 ] criminal.</p>",
+              "id": "1",
+              "content": "<p style=\"margin-bottom: 12px;\"><b>1. conduct / influenced / laws / replace</b><br/>Mr. Holloway was sent to [ 2 ] the old coach, who was known for his wild [ 4 ] during games. Decisions made in courts are often [ 6 ] by the personal views of the judge. In some cases, the decisions help change [ 8 ].</p><p style=\"margin-bottom: 12px;\"><b>2. enclosed / gripped / snapped / whatsoever</b><br/>I [ 10 ] the pencil and squeezed it until it [ 12 ]. My father [ 14 ] a check in the letter he sent me. He always offered to help even if I didn't ask for any help [ 16 ].</p><p style=\"margin-bottom: 12px;\"><b>3. constantly / cracks / impending / tends</b><br/>The soldier dreaded the [ 18 ] battle. He [ 20 ] thought about what might happen to him. I saw several [ 11 ] in the ice. This [ 12 ] to happen when the weather becomes warmer.</p><p style=\"margin-bottom: 12px;\"><b>4. access / device / halted / mode</b><br/>Sheila took the [ 13 ] from her purse and pressed a couple of buttons. It took her awhile to figure out how to turn it to silent [ 14 ]. She ran from room to room quickly, but [ 15 ] suddenly. She couldn't have [ 16 ] to the room without a key.</p><p style=\"margin-bottom: 12px;\"><b>5. perspired / sly / valid / version</b><br/>The student had a [ 17 ] reason for leaving the classroom when his teacher was gone. He tried to explain his [ 18 ] of what happened while she was gone. The thief [ 19 ] while the police questioned him. They didn't feel sorry for the [ 20 ] criminal.</p>",
               "options": [],
               "correctAnswer": "replace",
               "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình."
             },
             {
-              "id": "1_1",
+              "id": "2",
               "content": "",
               "options": [],
               "correctAnswer": "conduct",
               "explanation": "replace (thay thế), conduct (hạnh kiểm/hành vi). Ông Holloway được cử đến thay thế huấn luyện viên cũ, người nổi tiếng với hành vi hoang dã của mình."
             },
             {
-              "id": "2_0",
+              "id": "3",
               "content": "",
               "options": [],
               "correctAnswer": "influenced",
               "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật."
             },
             {
-              "id": "2_1",
+              "id": "4",
               "content": "",
               "options": [],
               "correctAnswer": "laws",
               "explanation": "influenced (bị ảnh hưởng), laws (luật). Các quyết định tại tòa án thường bị ảnh hưởng bởi quan điểm cá nhân của thẩm phán và đôi khi giúp thay đổi luật."
             },
             {
-              "id": "3_0",
+              "id": "5",
               "content": "",
               "options": [],
               "correctAnswer": "gripped",
               "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy."
             },
             {
-              "id": "3_1",
+              "id": "6",
               "content": "",
               "options": [],
               "correctAnswer": "snapped",
               "explanation": "gripped (nắm chặt), snapped (bẻ gãy). Tôi nắm chặt cây bút chì và bóp nó cho đến khi nó gãy."
             },
             {
-              "id": "4_0",
+              "id": "7",
               "content": "",
               "options": [],
               "correctAnswer": "enclosed",
               "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào."
             },
             {
-              "id": "4_1",
+              "id": "8",
               "content": "",
               "options": [],
               "correctAnswer": "whatsoever",
               "explanation": "enclosed (đính kèm), whatsoever (bất cứ thứ gì/chút nào). Bố tôi đính kèm một tấm séc trong bức thư. Ông luôn đề nghị giúp đỡ ngay cả khi tôi không yêu cầu chút nào."
             },
             {
-              "id": "5_0",
+              "id": "9",
               "content": "",
               "options": [],
               "correctAnswer": "impending",
               "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình."
             },
             {
-              "id": "5_1",
+              "id": "10",
               "content": "",
               "options": [],
               "correctAnswer": "constantly",
               "explanation": "impending (đang đến gần), constantly (liên tục). Người lính sợ hãi trận chiến đang đến gần. Anh ấy liên tục nghĩ về những gì có thể xảy ra với mình."
             },
             {
-              "id": "6_0",
+              "id": "11",
               "content": "",
               "options": [],
               "correctAnswer": "cracks",
               "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn."
             },
             {
-              "id": "6_1",
+              "id": "12",
               "content": "",
               "options": [],
               "correctAnswer": "tends",
               "explanation": "cracks (vết nứt), tends (có xu hướng). Tôi thấy vài vết nứt trên băng. Điều này có xu hướng xảy ra khi thời tiết trở nên ấm hơn."
             },
             {
-              "id": "7_0",
+              "id": "13",
               "content": "",
               "options": [],
               "correctAnswer": "device",
               "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng."
             },
             {
-              "id": "7_1",
+              "id": "14",
               "content": "",
               "options": [],
               "correctAnswer": "mode",
               "explanation": "device (thiết bị), mode (chế độ). Sheila lấy thiết bị từ ví của cô ấy và nó mất một lúc để cô ấy biết cách chuyển sang chế độ im lặng."
             },
             {
-              "id": "8_0",
+              "id": "15",
               "content": "",
               "options": [],
               "correctAnswer": "halted",
               "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa."
             },
             {
-              "id": "8_1",
+              "id": "16",
               "content": "",
               "options": [],
               "correctAnswer": "access",
               "explanation": "halted (dừng lại), access (sự truy cập). Cô ấy chạy từ phòng này sang phòng khác nhưng đột ngột dừng lại. Cô ấy không thể vào phòng nếu không có chìa khóa."
             },
             {
-              "id": "9_0",
+              "id": "17",
               "content": "",
               "options": [],
               "correctAnswer": "valid",
               "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình."
             },
             {
-              "id": "9_1",
+              "id": "18",
               "content": "",
               "options": [],
               "correctAnswer": "version",
               "explanation": "valid (hợp lệ/chính đáng), version (phiên bản). Học sinh có lý do chính đáng và cố gắng giải thích phiên bản câu chuyện của mình."
             },
             {
-              "id": "10_0",
+              "id": "19",
               "content": "",
               "options": [],
               "correctAnswer": "perspired",
               "explanation": "perspired (đổ mồ hôi), sly (gian xảo). Tên trộm đổ mồ hôi khi cảnh sát tra hỏi. Họ không cảm thấy tiếc cho tên tội phạm gian xảo."
             },
             {
-              "id": "10_1",
+              "id": "20",
               "content": "",
               "options": [],
               "correctAnswer": "sly",
@@ -166,7 +166,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A. Match the phrases to make complete sentences.</p>",
           "questions": [
             {
-              "id": "11",
+              "id": "21",
               "content": "Scientists have a device that helps",
               "options": [
                 "as she turned around the corner",
@@ -184,7 +184,7 @@
               "correctAnswer": "them tell how old an object is"
             },
             {
-              "id": "12",
+              "id": "22",
               "content": "The driver gripped the wheel",
               "options": [
                 "as she turned around the corner",
@@ -202,7 +202,7 @@
               "correctAnswer": "as she turned around the corner"
             },
             {
-              "id": "13",
+              "id": "23",
               "content": "I always perspire more often",
               "options": [
                 "as she turned around the corner",
@@ -220,7 +220,7 @@
               "correctAnswer": "in the summer"
             },
             {
-              "id": "14",
+              "id": "24",
               "content": "The concert halted",
               "options": [
                 "as she turned around the corner",
@@ -238,7 +238,7 @@
               "correctAnswer": "light bulb with a new one"
             },
             {
-              "id": "15",
+              "id": "25",
               "content": "The sly boy took a cookie while",
               "options": [
                 "as she turned around the corner",
@@ -256,7 +256,7 @@
               "correctAnswer": "his mother wasn't watching him"
             },
             {
-              "id": "16",
+              "id": "26",
               "content": "My father replaced the old",
               "options": [
                 "as she turned around the corner",
@@ -274,7 +274,7 @@
               "correctAnswer": "my brother in trouble"
             },
             {
-              "id": "17",
+              "id": "27",
               "content": "He had a valid reason",
               "options": [
                 "as she turned around the corner",
@@ -292,7 +292,7 @@
               "correctAnswer": "to miss school today"
             },
             {
-              "id": "18",
+              "id": "28",
               "content": "I snapped the toy",
               "options": [
                 "as she turned around the corner",
@@ -310,7 +310,7 @@
               "correctAnswer": "my brother in trouble"
             },
             {
-              "id": "19",
+              "id": "29",
               "content": "The teacher tends to give the best grades to",
               "options": [
                 "as she turned around the corner",
@@ -328,7 +328,7 @@
               "correctAnswer": "students who do all of their homework"
             },
             {
-              "id": "20",
+              "id": "30",
               "content": "I got no joy whatsoever from getting",
               "options": [
                 "as she turned around the corner",
@@ -354,7 +354,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part B. Match the clauses to make complete sentences.</p>",
           "questions": [
             {
-              "id": "21",
+              "id": "31",
               "content": "He didn't understand,",
               "options": [
                 "because there were cracks in it",
@@ -372,7 +372,7 @@
               "correctAnswer": "so they told him a different version"
             },
             {
-              "id": "22",
+              "id": "32",
               "content": "He was told to behave,",
               "options": [
                 "because there were cracks in it",
@@ -390,7 +390,7 @@
               "correctAnswer": "so his conduct was excellent"
             },
             {
-              "id": "23",
+              "id": "33",
               "content": "Joe was such a bad person",
               "options": [
                 "because there were cracks in it",
@@ -408,7 +408,7 @@
               "correctAnswer": "that he broke every law"
             },
             {
-              "id": "24",
+              "id": "34",
               "content": "To keep the jewels safe,",
               "options": [
                 "because there were cracks in it",
@@ -426,7 +426,7 @@
               "correctAnswer": "it was enclosed in glass"
             },
             {
-              "id": "25",
+              "id": "35",
               "content": "Be careful",
               "options": [
                 "because there were cracks in it",
@@ -444,7 +444,7 @@
               "correctAnswer": "because there were cracks in it"
             },
             {
-              "id": "26",
+              "id": "36",
               "content": "Mark tried the code,",
               "options": [
                 "because there were cracks in it",
@@ -462,7 +462,7 @@
               "correctAnswer": "but he wasn't given access to the room"
             },
             {
-              "id": "27",
+              "id": "37",
               "content": "She practices the violin during the day,",
               "options": [
                 "because there were cracks in it",
@@ -480,7 +480,7 @@
               "correctAnswer": "so they told him a different version"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "He studied hard",
               "options": [
                 "because there were cracks in it",
@@ -498,7 +498,7 @@
               "correctAnswer": "but he wasn't given access to the room"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "She turned her phone off,",
               "options": [
                 "because there were cracks in it",
@@ -516,7 +516,7 @@
               "correctAnswer": "so the mode wouldn't disturb anyone"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "He replaced the glass",
               "options": [
                 "because there were cracks in it",
@@ -547,10 +547,10 @@
         {
           "id": "sec4",
           "title": "Reading Comprehension Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">True or False</p>",
+          "content": "",
           "questions": [
             {
-              "id": "31",
+              "id": "41",
               "content": "Janie thought constantly about a device that played videos.",
               "options": [
                 "True",
@@ -560,7 +560,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "32",
+              "id": "42",
               "content": "Janie halted while she walked to class because she found a backpack.",
               "options": [
                 "True",
@@ -570,7 +570,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "33",
+              "id": "43",
               "content": "Janie found the player when she gripped the bag.",
               "options": [
                 "True",
@@ -580,7 +580,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "34",
+              "id": "44",
               "content": "The backpack belonged to a student in Janie's class.",
               "options": [
                 "True",
@@ -590,7 +590,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "35",
+              "id": "45",
               "content": "When Linda put the player to 'on' mode, it started to work.",
               "options": [
                 "True",
@@ -600,7 +600,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "36",
+              "id": "46",
               "content": "Janie's parents gave the music player to Linda to replace the one she broke.",
               "options": [
                 "True",
@@ -610,7 +610,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",
@@ -618,7 +618,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right answer</p>",
           "questions": [
             {
-              "id": "37",
+              "id": "47",
               "content": "What did Janie find enclosed in the black case?",
               "options": [
                 "A music player",
@@ -630,7 +630,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "38",
+              "id": "48",
               "content": "The reading explains that Janie lied to her teacher about what?",
               "options": [
                 "A backpack she found",
@@ -642,7 +642,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "39",
+              "id": "49",
               "content": "What did Ms. Johnson NOT expect from Janie?",
               "options": [
                 "Bad conduct",
@@ -654,7 +654,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "40",
+              "id": "50",
               "content": "Janie's parents said she had no respect whatsoever for what?",
               "options": [
                 "Her impending trouble",

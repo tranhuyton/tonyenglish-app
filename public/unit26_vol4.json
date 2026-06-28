@@ -19,7 +19,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right word for the given definition.</p>",
           "questions": [
             {
-              "id": "q_26_1_a_1",
+              "id": "1",
               "content": "<p>1. a dangerous animal</p>",
               "options": [
                 "barley",
@@ -30,7 +30,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q_26_1_a_2",
+              "id": "2",
               "content": "<p>2. to trouble or annoy someone</p>",
               "options": [
                 "extinguish",
@@ -41,7 +41,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q_26_1_a_3",
+              "id": "3",
               "content": "<p>3. a dead body</p>",
               "options": [
                 "colonel",
@@ -52,7 +52,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q_26_1_a_4",
+              "id": "4",
               "content": "<p>4. very small</p>",
               "options": [
                 "miniature",
@@ -63,7 +63,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q_26_1_a_5",
+              "id": "5",
               "content": "<p>5. a bad situation</p>",
               "options": [
                 "technician",
@@ -82,7 +82,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Choose the right definition for the given word.</p>",
           "questions": [
             {
-              "id": "q_26_1_b_1",
+              "id": "6",
               "content": "<p>1. assumption</p>",
               "options": [
                 "a grain",
@@ -93,7 +93,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q_26_1_b_2",
+              "id": "7",
               "content": "<p>2. integrate</p>",
               "options": [
                 "to be on time",
@@ -104,7 +104,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "q_26_1_b_3",
+              "id": "8",
               "content": "<p>3. flint</p>",
               "options": [
                 "a dead body",
@@ -115,7 +115,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q_26_1_b_4",
+              "id": "9",
               "content": "<p>4. nutrition</p>",
               "options": [
                 "trouble",
@@ -126,7 +126,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "q_26_1_b_5",
+              "id": "10",
               "content": "<p>5. tropics</p>",
               "options": [
                 "areas close to the Equator",
@@ -145,7 +145,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the phrases to make complete sentences.</p>",
           "questions": [
             {
-              "id": "q_26_2_a_1",
+              "id": "11",
               "content": "<p>1. Barley is often .</p>",
               "options": [
                 "to determine the cause of death",
@@ -162,7 +162,7 @@
               "correctAnswer": "fed to animals"
             },
             {
-              "id": "q_26_2_a_2",
+              "id": "12",
               "content": "<p>2. The colonel won a medal .</p>",
               "options": [
                 "to determine the cause of death",
@@ -179,7 +179,7 @@
               "correctAnswer": "for his work in the war"
             },
             {
-              "id": "q_26_2_a_3",
+              "id": "13",
               "content": "<p>3. Our new neighbors have integrated well.</p>",
               "options": [
                 "to determine the cause of death",
@@ -196,7 +196,7 @@
               "correctAnswer": "with the people in the village"
             },
             {
-              "id": "q_26_2_a_4",
+              "id": "14",
               "content": "<p>4. The corpse was examined .</p>",
               "options": [
                 "to determine the cause of death",
@@ -213,7 +213,7 @@
               "correctAnswer": "to determine the cause of death"
             },
             {
-              "id": "q_26_2_a_5",
+              "id": "15",
               "content": "<p>5. An employer should not discriminate.</p>",
               "options": [
                 "to determine the cause of death",
@@ -230,7 +230,7 @@
               "correctAnswer": "among people at work"
             },
             {
-              "id": "q_26_2_a_6",
+              "id": "16",
               "content": "<p>6. The embassy will tell you_____.</p>",
               "options": [
                 "to determine the cause of death",
@@ -247,7 +247,7 @@
               "correctAnswer": "how you can get a visa"
             },
             {
-              "id": "q_26_2_a_7",
+              "id": "17",
               "content": "<p>7. The financial crisis .</p>",
               "options": [
                 "to determine the cause of death",
@@ -264,7 +264,7 @@
               "correctAnswer": "was caused by poor bank management"
             },
             {
-              "id": "q_26_2_a_8",
+              "id": "18",
               "content": "<p>8. I was able to extinguish the .</p>",
               "options": [
                 "to determine the cause of death",
@@ -281,7 +281,7 @@
               "correctAnswer": "entire fire by myself"
             },
             {
-              "id": "q_26_2_a_9",
+              "id": "19",
               "content": "<p>9. Flint weapons were used_____.</p>",
               "options": [
                 "to determine the cause of death",
@@ -298,7 +298,7 @@
               "correctAnswer": "by people living ten thousand years ago"
             },
             {
-              "id": "q_26_2_a_10",
+              "id": "20",
               "content": "<p>10. A lot of miniature electronic machines.</p>",
               "options": [
                 "to determine the cause of death",
@@ -323,7 +323,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Match the clauses to make complete sentences.</p>",
           "questions": [
             {
-              "id": "q_26_2_b_1",
+              "id": "21",
               "content": "<p>1. Tom left the house early .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -340,7 +340,7 @@
               "correctAnswer": "on the assumption that the traffic would be bad"
             },
             {
-              "id": "q_26_2_b_2",
+              "id": "22",
               "content": "<p>2. The children wanted some chocolate, .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -357,7 +357,7 @@
               "correctAnswer": "so they harassed their father until he bought some"
             },
             {
-              "id": "q_26_2_b_3",
+              "id": "23",
               "content": "<p>3. The book was very fun to read .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -374,7 +374,7 @@
               "correctAnswer": "because all the beasts could talk"
             },
             {
-              "id": "q_26_2_b_4",
+              "id": "24",
               "content": "<p>4. I phoned the police, .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -391,7 +391,7 @@
               "correctAnswer": "and they arrived very promptly"
             },
             {
-              "id": "q_26_2_b_5",
+              "id": "25",
               "content": "<p>5. Pam isn’t at work today .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -408,7 +408,7 @@
               "correctAnswer": "because the illness is contagious"
             },
             {
-              "id": "q_26_2_b_6",
+              "id": "26",
               "content": "<p>6. I want to cut down the tree in the garden .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -425,7 +425,7 @@
               "correctAnswer": "because it is deformed and looks ugly"
             },
             {
-              "id": "q_26_2_b_7",
+              "id": "27",
               "content": "<p>7. James studied chemistry at university, .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -442,7 +442,7 @@
               "correctAnswer": "and now he works as a technician in a laboratory"
             },
             {
-              "id": "q_26_2_b_8",
+              "id": "28",
               "content": "<p>8. Mike was released from the hospital .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -459,7 +459,7 @@
               "correctAnswer": "because the doctors cured his illness"
             },
             {
-              "id": "q_26_2_b_9",
+              "id": "29",
               "content": "<p>9. If you want to be healthy, .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -476,7 +476,7 @@
               "correctAnswer": "you need to pay attention to your nutrition"
             },
             {
-              "id": "q_26_2_b_10",
+              "id": "30",
               "content": "<p>10. You may need to have some vaccinations .</p>",
               "options": [
                 "if you go on vacation in the tropics",
@@ -504,11 +504,11 @@
         {
           "id": "sec_read_a",
           "title": "Reading Comprehension Part A",
-          "questionType": "Trắc nghiệm",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false.</p>",
+          "questionType": "TFNG",
+          "content": "",
           "questions": [
             {
-              "id": "q_26_r_a_1",
+              "id": "31",
               "content": "<p>1. Wilbur and Mary had to land in the forest because the engine caught fire.</p>",
               "options": [
                 "True",
@@ -517,7 +517,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "q_26_r_a_2",
+              "id": "32",
               "content": "<p>2. It was possible for the colonel to extinguish the fire on the plane.</p>",
               "options": [
                 "True",
@@ -526,7 +526,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "q_26_r_a_3",
+              "id": "33",
               "content": "<p>3. Even though the plane crashed, it still had plenty of gasoline.</p>",
               "options": [
                 "True",
@@ -535,7 +535,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "q_26_r_a_4",
+              "id": "34",
               "content": "<p>4. Mary refused to go to the people on the assumption they had a contagious virus.</p>",
               "options": [
                 "True",
@@ -544,7 +544,7 @@
               "correctAnswer": "True"
             },
             {
-              "id": "q_26_r_a_5",
+              "id": "35",
               "content": "<p>5. The couple searched for help in the forest for five days.</p>",
               "options": [
                 "True",
@@ -553,7 +553,7 @@
               "correctAnswer": "False"
             },
             {
-              "id": "q_26_r_a_6",
+              "id": "36",
               "content": "<p>6. The forest people led Wilbur and Mary through the trees, and they promptly arrived at a city.</p>",
               "options": [
                 "True",
@@ -570,7 +570,7 @@
           "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Answer the questions.</p>",
           "questions": [
             {
-              "id": "q_26_r_b_1",
+              "id": "37",
               "content": "<p>1. What was the bread that the forest people gave Wilbur and Mary made of?</p>",
               "options": [
                 "Barley",
@@ -581,7 +581,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q_26_r_b_2",
+              "id": "38",
               "content": "<p>2. After the crisis in the forest, Mary learned not to .</p>",
               "options": [
                 "discriminate against people",
@@ -592,7 +592,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "q_26_r_b_3",
+              "id": "39",
               "content": "<p>3. Where was the embassy located?</p>",
               "options": [
                 "In the village",
@@ -603,7 +603,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "q_26_r_b_4",
+              "id": "40",
               "content": "<p>4. Why didn’t Mary want to integrate with the forest people?</p>",
               "options": [
                 "They had poor nutrition.",

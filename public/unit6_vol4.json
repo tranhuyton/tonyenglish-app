@@ -535,70 +535,70 @@
         {
           "id": "sec1_reading",
           "title": "Reading Comprehension - Part A",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Mark each statement T for true or F for false. Rewrite the false statements to make them true.</p>",
+          "content": "",
           "questions": [
             {
               "id": "31",
               "content": "Tom Muggins likes playing tricks on folks.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "F. Jack Frost likes playing tricks on folks.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "32",
               "content": "Jack Frost was sitting on the rail of a fence.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "33",
               "content": "Jack Frost’s role is to cover everything with fire.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "F. Jack Frost’s role is to decorate everything with frost and ice.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
               "content": "Tom wished that he had been more attentive.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
               "content": "Tom said “Alas!” because he knew he wouldn’t have any cake.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "T.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "36",
               "content": "When Jack Frost set fire to the food, the eggs started to melt.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "F. When Jack Frost set fire to the food, the butter started to melt.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec2_reading",
