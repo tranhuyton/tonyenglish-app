@@ -280,7 +280,7 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "21",

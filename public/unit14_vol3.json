@@ -288,26 +288,81 @@
       "imageUrl": "/unit14_v3_story.png",
       "sections": [
         {
-          "id": "sec_story",
-          "title": "Reading Comprehension",
+          "id": "sec_story_tf",
+          "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
-              "content": "Part A: Mark each statement T for true or F for false.",
+              "content": "The apprentice helped the chef make food for the Emperor.",
               "options": [
-                "1. The apprentice helped the chef make food for the Emperor.",
-                "2. The chef was a massive person that everyone hated.",
-                "3. The Emperor had a crown and a robe.",
-                "4. The chef's finger was bleeding and needed a bandage.",
-                "5. The chef was very polite and always scolded his workers.",
-                "6. The apprentice was a diligent worker."
+                "True",
+                "False"
               ],
-              "explanation": "Xác định đúng/sai dựa vào nội dung câu chuyện.",
-              "correctAnswer": "1. T, 2. F (THE CHEF WAS A HORRIBLE PERSON THAT EVERYONE HATED.), 3. T, 4. T, 5. F (THE CHEF WAS VERY IMPOLITE AND ALWAYS SCOLDED HIS WORKERS.), 6. T"
+              "correctAnswer": "True",
+              "explanation": "Theo nội dung bài đọc."
             },
             {
               "id": "27",
+              "content": "The chef was a massive person that everyone hated.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "False",
+              "explanation": "Theo nội dung bài đọc."
+            },
+            {
+              "id": "28",
+              "content": "The Emperor had a crown and a robe.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Theo nội dung bài đọc."
+            },
+            {
+              "id": "29",
+              "content": "The chef's finger was bleeding and needed a bandage.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Theo nội dung bài đọc."
+            },
+            {
+              "id": "30",
+              "content": "The chef was very polite and always scolded his workers.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "False",
+              "explanation": "Theo nội dung bài đọc."
+            },
+            {
+              "id": "31",
+              "content": "The apprentice was a diligent worker.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Theo nội dung bài đọc."
+            }
+          ]
+        },
+        {
+          "id": "sec_story_mc",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "32",
               "content": "Part B: 1. Why was the restaurant famous?",
               "options": [
                 "It served beautiful fibers.",
@@ -319,7 +374,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "28",
+              "id": "33",
               "content": "Part B: 2. Why did the chef panic before the Emperor arrived?",
               "options": [
                 "The apprentice assured him things were good.",
@@ -331,7 +386,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "29",
+              "id": "34",
               "content": "Part B: 3. What was the apprentice's first priority?",
               "options": [
                 "To fill the restaurant with luxuries.",
@@ -343,7 +398,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "30",
+              "id": "35",
               "content": "Part B: 4. Why was the chef a bad person to work for?",
               "options": [
                 "He was the best chef in the world.",
@@ -354,8 +409,7 @@
               "explanation": "Đầu bếp rất tệ vì ông thường xuyên mắng chửi nhân viên.",
               "correctAnswer": "C"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     }

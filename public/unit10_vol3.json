@@ -340,7 +340,7 @@
         {
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -419,7 +419,7 @@
                 "Pleasant"
               ],
               "explanation": "Đáp án: Relief. Khi tìm thấy Grace dưới gầm giường, Anna đã thốt lên: 'What a relief! Anna cried.' (Thật nhẹ nhõm!). Do vậy cảm giác của cô bé lúc đó là vô cùng nhẹ nhõm.",
-              "correctAnswer": "RELIEF"
+              "correctAnswer": "C"
             },
             {
               "id": "33",
@@ -431,7 +431,7 @@
                 "Anna carried her in the blanket."
               ],
               "explanation": "Đáp án: She crept there. Cuối đoạn 5 có câu: 'Grace had followed Anna into her room and crept under the bed.' Nghĩa là bé Grace đã đi theo Anna và rón rén bò (crept) xuống dưới gầm giường.",
-              "correctAnswer": "SHE CREPT THERE."
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -443,7 +443,7 @@
                 "Sing her rhymes"
               ],
               "explanation": "Đáp án: Read a book aloud. Trong bài, Anna đã cho em ngồi xe kéo (wagon), vỗ nhẹ đầu (patted her on the head), và hát ru (sing her rhymes). Việc đọc sách to (read a book aloud) không hề được nhắc đến.",
-              "correctAnswer": "READ A BOOK ALOUD"
+              "correctAnswer": "C"
             },
             {
               "id": "35",
@@ -455,7 +455,7 @@
                 "To keep her from sucking her thumb"
               ],
               "explanation": "Đáp án: So she could take a nap. Ở đoạn 7, tác giả viết: 'Anna wrapped her in a blanket... Then she put Grace in bed for a nap.' Việc quấn chăn là để chuẩn bị cho Grace có một giấc ngủ trưa ngoan ngoãn.",
-              "correctAnswer": "SO SHE COULD TAKE A NAP"
+              "correctAnswer": "C"
             }
           ]
         }

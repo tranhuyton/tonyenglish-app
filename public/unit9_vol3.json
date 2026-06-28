@@ -290,7 +290,7 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -369,7 +369,7 @@
                 "Speed skating"
               ],
               "explanation": "Đáp án: Speed skating. Đoạn 6 liệt kê các môn thể thao: 'First, they wrestled. Then they jumped, crawled and played other games.' Trong các lựa chọn, môn trượt băng tốc độ (speed skating) không hề được nhắc đến trong cuộc thi.",
-              "correctAnswer": "SPEED SKATING"
+              "correctAnswer": "D"
             },
             {
               "id": "33",
@@ -381,7 +381,7 @@
                 "Carbohydrates"
               ],
               "explanation": "Đáp án: Money. Trong đoạn 1 có ghi: 'if boys gave Mitch their lunch money, he would have mercy and leave them alone.' Nghĩa là các cậu bé phải đưa tiền ăn trưa thì Mitch mới tha cho họ.",
-              "correctAnswer": "MONEY"
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -393,7 +393,7 @@
                 "At Dalton's house"
               ],
               "explanation": "Đáp án: In the gym. Ở đoạn 3, tác giả có kể: 'He entered the gym... It was time to begin.' Cuộc thi Olympic của trường trung học đã được tổ chức ở trong phòng thể dục (gym).",
-              "correctAnswer": "IN THE GYM"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -405,7 +405,7 @@
                 "Strain against him"
               ],
               "explanation": "Đáp án: Defeat him. Trong đoạn 7, tác giả viết: 'They wanted him to help them beat Mitch.' Cụm từ beat Mitch đồng nghĩa với defeat him, tức là họ muốn đánh bại Mitch.",
-              "correctAnswer": "DEFEAT HIM"
+              "correctAnswer": "C"
             }
           ]
         }

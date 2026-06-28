@@ -87,7 +87,8 @@
                 }
               ],
               "content": "<p class=\"mb-4\">She avoided walking in <u>low-light</u> areas.<br/>di [ 6 ]</p><p class=\"mb-4\">Since she's lived in hot places all her life, she's <u>used to</u> warm weather.<br/>ac [ 7 ]</p><p class=\"mb-4\">The holes in the old pipes let water <u>pass through</u> onto the bathroom floor.<br/>le [ 8 ]</p><p class=\"mb-4\">Her back felt <u>hard to move</u> after she slept on the floor.<br/>st [ 9 ]</p><p class=\"mb-4\">He was happy to go home and see the <u>group of family and friends</u>.<br/>cl [ 10 ]</p><p class=\"mb-4\">The very <u>shocked</u> crowd watched as the magician performed his tricks.<br/>as [ 11 ]</p><p class=\"mb-4\">The school served a <u>large meal</u> in honor of the new principal.<br/>fe [ 12 ]</p><p class=\"mb-4\">The only thing that I could see in the dark night was my flashlight <u>making light</u>.<br/>gl [ 13 ]</p><p class=\"mb-4\">It was a very <u>sad event</u> when his parents passed away in the accident.<br/>tr [ 14 ]</p><p class=\"mb-4\">Her <u>natural behavior</u> told her to leave the room as soon as possible.<br/>in [ 15 ]</p>",
-              "correctAnswer": "DIM"
+              "correctAnswer": "DIM",
+              "explanation": "Đáp án đúng là DIM. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "7",
@@ -98,7 +99,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "ACCUSTOMED"
+              "correctAnswer": "ACCUSTOMED",
+              "explanation": "Đáp án đúng là ACCUSTOMED. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "8",
@@ -109,7 +111,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "LEAK"
+              "correctAnswer": "LEAK",
+              "explanation": "Đáp án đúng là LEAK. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "9",
@@ -120,7 +123,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "STIFF"
+              "correctAnswer": "STIFF",
+              "explanation": "Đáp án đúng là STIFF. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "10",
@@ -131,7 +135,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "CLAN"
+              "correctAnswer": "CLAN",
+              "explanation": "Đáp án đúng là CLAN. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "11",
@@ -142,7 +147,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "ASTONISHED"
+              "correctAnswer": "ASTONISHED",
+              "explanation": "Đáp án đúng là ASTONISHED. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "12",
@@ -153,7 +159,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "FEAST"
+              "correctAnswer": "FEAST",
+              "explanation": "Đáp án đúng là FEAST. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "13",
@@ -164,7 +171,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "GLOW"
+              "correctAnswer": "GLOW",
+              "explanation": "Đáp án đúng là GLOW. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "14",
@@ -175,7 +183,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "TRAGEDY"
+              "correctAnswer": "TRAGEDY",
+              "explanation": "Đáp án đúng là TRAGEDY. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "15",
@@ -186,7 +195,8 @@
                 }
               ],
               "content": "",
-              "correctAnswer": "INSTINCT"
+              "correctAnswer": "INSTINCT",
+              "explanation": "Đáp án đúng là INSTINCT. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             }
           ],
           "questionType": "Điền từ"
@@ -212,7 +222,8 @@
               "options": [
                 "fable",
                 "astonished"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "17",
@@ -230,7 +241,8 @@
               "options": [
                 "fable",
                 "astonished"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "18",
@@ -248,7 +260,8 @@
               "options": [
                 "accustomed",
                 "feast"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "19",
@@ -266,7 +279,8 @@
               "options": [
                 "accustomed",
                 "feast"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "20",
@@ -284,7 +298,8 @@
               "options": [
                 "affirm",
                 "emphasis"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "21",
@@ -302,7 +317,8 @@
               "options": [
                 "affirm",
                 "emphasis"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "22",
@@ -320,7 +336,8 @@
               "options": [
                 "clan",
                 "tunes"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "23",
@@ -338,7 +355,8 @@
               "options": [
                 "clan",
                 "tunes"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "24",
@@ -356,7 +374,8 @@
               "options": [
                 "tragic",
                 "sacrifices"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "25",
@@ -374,7 +393,8 @@
               "options": [
                 "tragic",
                 "sacrifices"
-              ]
+              ],
+              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             }
           ],
           "questionType": "Điền từ"

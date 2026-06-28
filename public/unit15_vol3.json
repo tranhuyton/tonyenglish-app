@@ -290,7 +290,7 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -369,7 +369,7 @@
                 "they were too slim"
               ],
               "explanation": "Pharaoh tổ chức bữa tiệc vì nạn đói đã kết thúc (the famine ended).",
-              "correctAnswer": "B. THE FAMINE ENDED"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -381,7 +381,7 @@
                 "He cooked it in the stove."
               ],
               "explanation": "Khỉ đã mang thức ăn về nhà của mình (took it to his house).",
-              "correctAnswer": "B. HE TOOK IT TO HIS HOUSE."
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -393,7 +393,7 @@
                 "roasted meat"
               ],
               "explanation": "Trên bàn có trái cây chín, ngũ cốc và thịt nướng, không có rau (vegetables).",
-              "correctAnswer": "A. VEGETABLES"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -405,7 +405,7 @@
                 "The other animals"
               ],
               "explanation": "Eo quá béo (fat waist) khiến khỉ không thể lọt qua cửa.",
-              "correctAnswer": "C. HIS FAT WAIST"
+              "correctAnswer": "C"
             }
           ]
         }

@@ -290,7 +290,7 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -369,7 +369,7 @@
                 "In the highlands"
               ],
               "explanation": "Đáp án: In the highlands. Trong đoạn 1, câu thứ hai có thông tin: 'He built houses in the highlands.' Nghĩa là Joe xây những ngôi nhà ở vùng cao.",
-              "correctAnswer": "IN THE HIGHLANDS"
+              "correctAnswer": "D"
             },
             {
               "id": "33",
@@ -381,7 +381,7 @@
                 "Polished it and sold it"
               ],
               "explanation": "Đáp án: Polished it and sold it. Câu hỏi hỏi Joe đã làm gì với chiếc đồng hồ của anh ấy. Trong đoạn 5, tác giả viết: 'So he polished it and sold it.' Joe đã đánh bóng chiếc đồng hồ và bán nó đi để lấy tiền mua quà cho Stella.",
-              "correctAnswer": "POLISHED IT AND SOLD IT"
+              "correctAnswer": "D"
             },
             {
               "id": "34",
@@ -393,7 +393,7 @@
                 "Anything for herself"
               ],
               "explanation": "Đáp án: Elegant clothing. Ở đoạn 1 có ghi: 'Stella used a needle and thread to sew elegant clothing.' Điều này cho biết Stella chuyên may những bộ trang phục thanh lịch.",
-              "correctAnswer": "ELEGANT CLOTHING"
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -405,7 +405,7 @@
                 "Bought him a gold watch"
               ],
               "explanation": "Đáp án: Sold her hair. Câu hỏi muốn biết Stella đã làm gì cho Joe vào ngày kỷ niệm. Cuối đoạn 4 có viết: 'She cut off all of her hair and sold it.' Stella đã cắt mái tóc của mình và bán đi để có tiền mua quà cho Joe.",
-              "correctAnswer": "SOLD HER HAIR"
+              "correctAnswer": "A"
             }
           ]
         }

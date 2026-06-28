@@ -290,7 +290,7 @@
         {
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "26",
@@ -369,7 +369,7 @@
                 "To the jail"
               ],
               "explanation": "Đoạn 4 có viết 'They carried Dan to the harbor and put him aboard a vessel.' Đám đông đã khiêng Dan đến bến cảng (the harbor) và đưa ông ta lên một con tàu. Vậy đáp án đúng là To the harbor.",
-              "correctAnswer": "TO THE HARBOR"
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -381,7 +381,7 @@
                 "made Oceantown happy"
               ],
               "explanation": "Đoạn cuối bài đọc có ghi 'The boat drifted out of the port, and Dan was never seen again.' Con thuyền trôi dạt ra khỏi cảng và không ai còn nhìn thấy Dan nữa. Chọn was never seen again là chính xác.",
-              "correctAnswer": "WAS NEVER SEEN AGAIN"
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -393,7 +393,7 @@
                 "He tossed a coin in a fountain."
               ],
               "explanation": "Trong đoạn 2 có câu 'Once, Dan even put his own brother in jail for throwing a coin into a fountain!' Dan đã bỏ tù chính anh trai mình chỉ vì ném một đồng xu vào đài phun nước. Đáp án He tossed a coin in a fountain là hoàn toàn phù hợp.",
-              "correctAnswer": "HE TOSSED A COIN IN A FOUNTAIN."
+              "correctAnswer": "D"
             },
             {
               "id": "35",
@@ -405,7 +405,7 @@
                 "They hated millionaires."
               ],
               "explanation": "Trong đoạn 1 tác giả có viết 'Dan was as cruel as the devil.' Dù đám đông không nói trực tiếp câu này khi thả Dan đi, nhưng họ nói 'We know you will never change' (Chúng tôi biết ông sẽ không bao giờ thay đổi), chứng tỏ họ tống khứ ông ta vì bản tính tàn ác như ác quỷ của ông. Do đó đáp án Dan was a devil to them là hợp lý nhất.",
-              "correctAnswer": "DAN WAS A DEVIL TO THEM."
+              "correctAnswer": "C"
             }
           ]
         }
