@@ -298,70 +298,70 @@
         {
           "id": "u18_rc_a",
           "title": "Reading Comprehension Part A: Mark each statement T for true or F for false.",
-          "content": "",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
           "questions": [
             {
               "id": "26",
               "content": "The town was afraid of an invasion.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Theo bài đọc: 'they were afraid of an invasion from a lot of troops.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
               "content": "The town agreed with the knight’s plan.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Theo bài đọc: 'The people agreed with the knight’s plan.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "28",
               "content": "The warriors wore armor, and the knight used a spear.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sự thật: The knight wore armor, and the warriors used spears.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "29",
               "content": "The path to the summit was steep.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Theo bài đọc: 'The enemy troops followed them up the steep path.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "30",
               "content": "Some rebels started a revolution for their independence.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Theo bài đọc: 'A town was fighting for their independence... Several rebels started a revolution.'",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "31",
               "content": "Sounds from the trees scared the enemy.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sự thật: The flames scared the enemy.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "u18_rc_b",

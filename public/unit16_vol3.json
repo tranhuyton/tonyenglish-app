@@ -280,7 +280,7 @@
         {
           "id": "sec4_reading",
           "title": "Part A: Mark each statement True or False.",
-          "content": "",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
           "questions": [
             {
               "id": "21",

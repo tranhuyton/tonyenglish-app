@@ -142,9 +142,28 @@
           "questionType": "Trắc nghiệm"
         },
         {
-          "id": "sec3_wordlist",
+          "id": "sec3_wordlist_tf",
+          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
+          "questionType": "TFNG",
+          "questions": [
+            {
+              "id": "16",
+              "content": "",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "stable: ổn định, vững chắc.",
+              "correctAnswer": "True"
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist_mc",
           "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
           "content": "",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -197,16 +216,6 @@
               "correctAnswer": "B"
             },
             {
-              "id": "16",
-              "content": "",
-              "options": [
-                "The <b>stable</b> tree did not fall in the wind.",
-                "She <b>slipped</b> the table after dinner."
-              ],
-              "explanation": "stable: ổn định, vững chắc.",
-              "correctAnswer": "A"
-            },
-            {
               "id": "17",
               "content": "",
               "options": [
@@ -246,8 +255,7 @@
               "explanation": "arrest: bắt giữ.",
               "correctAnswer": "B"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         }
       ]
     },

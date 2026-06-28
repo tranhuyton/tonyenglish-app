@@ -152,7 +152,7 @@
         {
           "id": "sec3",
           "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
           "questions": [
             {
               "id": "11",
@@ -162,7 +162,7 @@
                 "False"
               ],
               "explanation": "Sai (F). Dựa vào bài đọc, The sun's rays don't shine there for three whole months. Tức là mặt trời chỉ không chiếu sáng trong 3 tháng, chứ không phải là không bao giờ chiếu sáng (don't ever shine).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "12",
@@ -172,7 +172,7 @@
                 "False"
               ],
               "explanation": "Sai (F). Dựa vào bài đọc, Erik muốn bắt đầu một vương triều mang tên mình ở vùng đất mới là Greenland, chứ không phải ở Iceland.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "13",
@@ -182,7 +182,7 @@
                 "False"
               ],
               "explanation": "Sai (F). Bài đọc cho biết His consequent punishment was to leave Iceland (Hình phạt của ông là phải rời khỏi Iceland), nhưng không hề nhắc đến việc phải đi tới Đan Mạch (Denmark).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "14",
@@ -192,7 +192,7 @@
                 "False"
               ],
               "explanation": "Đúng (T). Bài đọc có nhắc đến việc viên trung úy của Erik muốn từ chức: Erik's lieutenant wanted to resign from his position.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "15",
@@ -202,7 +202,7 @@
                 "False"
               ],
               "explanation": "Đúng (T). Erik nhận ra băng giá có thể ngăn cản kẻ thù: Not even the best navy could invade the new land.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "16",
@@ -212,10 +212,10 @@
                 "False"
               ],
               "explanation": "Sai (F). Erik đặt tên Greenland không phải vì màu sắc yêu thích, mà để đánh lừa và thuyết phục mọi người đến đây sinh sống (In the end, Greenland got its name all because of a trick).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec4",

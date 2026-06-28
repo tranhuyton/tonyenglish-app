@@ -400,70 +400,70 @@
         {
           "id": "sec4_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "1. Mother Wolf was a magnificent animal.\n2. Little Wolf knew how to seize prey.\n3. Mother Wolf couldn't move the pile of branches.\n4. Mother Wolf made a den inside of a tree.\n5. The large animals pulled the branches away.\n6. Little Wolf saved Mother Wolf's life.",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
           "questions": [
             {
               "id": "26",
               "content": "Mother Wolf was a magnificent animal.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Bài đọc mở đầu bằng câu: Mother Wolf was a magnificent animal. (Sói Mẹ là một loài động vật tuyệt vời). Vì thế nhận định này là đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "27",
               "content": "Little Wolf knew how to seize prey.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong bài có câu mô tả Sói Mẹ: She knew how to hide and how to seize prey (Cô ấy biết cách ẩn nấp và vồ mồi). Vậy kỹ năng vồ mồi (seize prey) là của Sói Mẹ chứ không phải Sói Nhỏ. Nhận định này sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "28",
               "content": "Mother Wolf couldn't move the pile of branches.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sói Mẹ đã nói: I cannot move the heavy pile of branches. (Mẹ không thể di chuyển đống cành cây nặng nề này). Do đó, nhận định này là đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "29",
               "content": "Mother Wolf made a den inside of a tree.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Bài đọc viết: Mother Wolf lived in a den beneath a tree with her cub... (Sói Mẹ sống trong một cái hang dưới một cái cây...). Vậy hang nằm ở dưới gốc cây chứ không phải bên trong cái cây (inside of a tree). Nhận định này sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "30",
               "content": "The large animals pulled the branches away.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong bài có nói: They went to the den and pulled away the branches. (Họ - những loài động vật lớn - đã đến hang và kéo những cành cây ra). Nhận định này đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "31",
               "content": "Little Wolf saved Mother Wolf's life.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sói Mẹ đã nói với Sói Nhỏ: Thank you Little Wolf! You saved my life! (Cảm ơn Sói Nhỏ! Con đã cứu mạng mẹ!). Vì vậy nhận định này đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

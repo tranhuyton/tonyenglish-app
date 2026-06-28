@@ -208,7 +208,7 @@
           "questions": [
             {
               "id": "16",
-              "content": "<p class=\"mb-4\">1. fable / astonished<br/>\nThe [ 16 ] was about a young boy with magic powers. At first nobody believed him, but everyone was [ 17 ] when he made a cat disappear.</p>\n<p class=\"mb-4\">2. instincts / banged<br/>\nAfter hearing the bad news, she [ 18 ] her fist on the table in anger. Things would go wrong, her [ 19 ] told her.</p>\n<p class=\"mb-4\">3. accustomed / feast<br/>\nThough the food was good, he felt sick after the [ 20 ]. He just wasn't [ 21 ] to eating so much at one time.</p>\n<p class=\"mb-4\">4. joint / physician<br/>\nThe [ 22 ] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [ 23 ].</p>\n<p class=\"mb-4\">5. affirm / emphasis<br/>\nThe university placed a special [ 24 ] on student safety. They wanted to [ 25 ] that they were interested in protecting students.</p>\n<p class=\"mb-4\">6. stiff / hollow<br/>\nHe wanted to find out where his sister went after school, so he hid in a [ 36 ] tree in the schoolyard. However, when he came out, he felt [ 37 ] all over.</p>\n<p class=\"mb-4\">7. clan / tunes<br/>\nThe entire [ 38 ] was excited about her wedding. While they drove to the church, they sang happy [ 39 ].</p>\n<p class=\"mb-4\">8. dim / stroked<br/>\nIn the [ 40 ] light, it was hard to find the earring she'd dropped on the floor. She [ 41 ] the ground until she finally felt it.</p>\n<p class=\"mb-4\">9. tragic / sacrifices<br/>\nThe boy suffered from a [ 42 ] illness. Still, his family made [ 43 ] to make sure he was always comfortable.</p>\n<p class=\"mb-4\">10. leak / glowing<br/>\nHe shut the door to make sure that no light could [ 44 ] into the room. However, he could still see the moon [ 45 ] outside of his window.</p>",
+              "content": "<p class=\"mb-4\">1. fable / astonished<br/>\nThe [ 16 ] was about a young boy with magic powers. At first nobody believed him, but everyone was [ 17 ] when he made a cat disappear.</p>\n<p class=\"mb-4\">2. instincts / banged<br/>\nAfter hearing the bad news, she [ 18 ] her fist on the table in anger. Things would go wrong, her [ 19 ] told her.</p>\n<p class=\"mb-4\">3. accustomed / feast<br/>\nThough the food was good, he felt sick after the [ 20 ]. He just wasn't [ 21 ] to eating so much at one time.</p>\n<p class=\"mb-4\">4. joint / physician<br/>\nThe [ 22 ] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [ 23 ].</p>\n<p class=\"mb-4\">5. affirm / emphasis<br/>\nThe university placed a special [ 24 ] on student safety. They wanted to [ 25 ] that they were interested in protecting students.</p>\n<p class=\"mb-4\">6. stiff / hollow<br/>\nHe wanted to find out where his sister went after school, so he hid in a [ 26 ] tree in the schoolyard. However, when he came out, he felt [ 27 ] all over.</p>\n<p class=\"mb-4\">7. clan / tunes<br/>\nThe entire [ 28 ] was excited about her wedding. While they drove to the church, they sang happy [ 29 ].</p>\n<p class=\"mb-4\">8. dim / stroked<br/>\nIn the [ 30 ] light, it was hard to find the earring she'd dropped on the floor. She [ 31 ] the ground until she finally felt it.</p>\n<p class=\"mb-4\">9. tragic / sacrifices<br/>\nThe boy suffered from a [ 32 ] illness. Still, his family made [ 33 ] to make sure he was always comfortable.</p>\n<p class=\"mb-4\">10. leak / glowing<br/>\nHe shut the door to make sure that no light could [ 34 ] into the room. However, he could still see the moon [ 35 ] outside of his window.</p>",
               "options": [
                 "astonished",
                 "fable"
@@ -420,70 +420,70 @@
         {
           "id": "sec3",
           "title": "Reading Comprehension - Part A: Mark each statement T for true or F for false.",
-          "content": "",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
           "questions": [
             {
               "id": "36",
               "content": "The physician told the old man there was nothing he could do.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Bài đọc có câu: I can't do anything (Tôi không thể làm gì được cả). Lời của bác sĩ hoàn toàn trùng khớp với nhận định. Nhận định này đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
               "content": "The old man waited in the hollow tree even though it leaked a little.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong bài viết: It leaked a little, but there was no other place he could wait. (Nó bị dột một chút, nhưng không có nơi nào khác để ông có thể chờ). Nhận định này đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "38",
               "content": "The old man's joints were stiff from walking in the forest.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong bài có câu: When the rain stopped, his joints felt stiff from sitting. (Khi mưa tạnh, các khớp xương của ông cảm thấy cứng nhắc vì ngồi lâu). Vậy ông bị cứng khớp do ngồi lâu chứ không phải do đi bộ. Nhận định này sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "39",
               "content": "The old man's instincts told him to return home immediately.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Bài đọc viết: Still, his instincts told him that there was something out there. (Tuy nhiên, bản năng của ông mách bảo rằng có thứ gì đó ngoài kia) và sau đó ông đi sâu hơn vào rừng chứ không phải lập tức về nhà. Nhận định này sai (False).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "40",
               "content": "The man danced for the clan of monsters.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Bài đọc nói rõ ông lão bước ra và He started to dance (Ông bắt đầu nhảy). Vậy nhận định ông lão nhảy cho bầy quái vật xem là đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "41",
               "content": "The monsters took away the man's tragic bump.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Cuối cùng thì The monsters agreed that they had to take his bump. (Lũ quái vật đồng ý rằng chúng phải lấy cái bướu của ông). Nhận định này là đúng (True).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec4",

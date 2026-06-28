@@ -310,70 +310,70 @@
         {
           "id": "sec4_reading_A",
           "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
           "questions": [
             {
               "id": "36",
               "content": "The trip to find the magic cup was very easy.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "The trip to find the magic cup was very difficult.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
               "content": "The boys dismissed their mother’s advice before they left for the trip.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "True",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "38",
               "content": "The boys were confined to a hilltop by the lava after the volcano erupted.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "True",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
               "content": "A superstition said that anyone who retrieved the cup would become the leader of the agency.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "A superstition said that anyone who retrieved the magic cup would get their greatest wish.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "40",
               "content": "The boys had more affection and sympathy for each other after the trip.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "True",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "41",
               "content": "After the volcano erupted, there was ash in the sky and lava on the ground.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "True",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading_B",

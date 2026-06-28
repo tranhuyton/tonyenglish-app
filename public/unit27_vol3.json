@@ -152,70 +152,70 @@
         {
           "id": "sec3",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
-          "content": "",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
           "questions": [
             {
               "id": "11",
               "content": "Atahualpa didn't want to fight the Spaniards.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng (T). Dựa vào bài đọc: Atahualpa was a kind man and didn't want to fight the Spaniards (Atahualpa là một người tốt bụng và không muốn chiến đấu với người Tây Ban Nha).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "12",
               "content": "The Incas had blonde hair.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai (F). Câu sửa lại: The Spanish men had blonde hair. Dựa vào bài đọc: He thought the blonde Spanish men held prejudices against the Incas.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "13",
               "content": "Atahualpa offered Pizarro a room filled with stacks of precious gold.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng (T). Bài đọc có nhắc đến lời đề nghị của Atahualpa: If I give you a room full of gold, will you leave my country in peace? (Nếu ta cho ông một căn phòng đầy vàng, ông sẽ rời khỏi đất nước ta trong hòa bình chứ?).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "14",
               "content": "The Spanish conquered parts of South America.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng (T). Dựa vào bài đọc: It got there when the Spanish conquered parts of South America (Nó xuất hiện ở đó khi người Tây Ban Nha xâm chiếm các vùng của Nam Mỹ).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "15",
               "content": "Pizarro thought that Atahualpa had insulted his heritage and that his men held prejudices against the Incas.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai (F). Câu sửa lại: Atahualpa thought Pizarro was insulting his heritage and held prejudices against the Incas. Bài đọc viết: Atahualpa thought Pizarro was insulting his heritage. He thought the blonde Spanish men held prejudices against the Incas. Tức là Atahualpa nghĩ Pizarro xúc phạm mình, chứ không phải ngược lại.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "16",
               "content": "Pizarro agreed that Atahualpa was both a god and a king.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai (F). Câu sửa lại: Pizarro didn't agree that Atahualpa was both a god and a king. Bài đọc ghi rõ: But Pizarro didn’t agree (Nhưng Pizarro không đồng ý).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec4",

@@ -74,20 +74,29 @@
           "questionType": "Trắc nghiệm"
         },
         {
-          "id": "sec2_wordlist",
+          "id": "sec2_wordlist_tf",
           "title": "Exercise 1: Part B: Check (V) the one that suits the blank naturally.",
-          "content": "",
+          "content": "<p class=\"font-bold text-lg text-slate-800 mb-2 mt-4\">True / False</p>",
+          "questionType": "TFNG",
           "questions": [
             {
               "id": "6",
               "content": "When I found the lost cat,________________ .",
               "options": [
-                "I asked my mom if we could adopt it",
-                "I extended my hurt foot"
+                "True",
+                "False"
               ],
               "explanation": "We adopt a lost cat.",
-              "correctAnswer": "A"
-            },
+              "correctAnswer": "True"
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist_mc",
+          "title": "Exercise 1: Part B: Check (V) the one that suits the blank naturally.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
             {
               "id": "7",
               "content": "When I visit other countries,________________ .",
@@ -128,8 +137,7 @@
               "explanation": "Her motive to go to Africa was to help people.",
               "correctAnswer": "B"
             }
-          ],
-          "questionType": "Trắc nghiệm"
+          ]
         },
         {
           "id": "sec3_wordlist",
