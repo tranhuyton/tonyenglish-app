@@ -208,193 +208,203 @@
           "questions": [
             {
               "id": "16",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "fable"
-                },
-                {
-                  "id": "2",
-                  "answer": "astonished"
-                }
-              ],
-              "content": "<p class=\"mb-4\">fable / astonished</p>The [fable] was about a young boy with magic powers. At first nobody believed him, but everyone was [astonished] when he made a cat disappear.</p>instincts / banged\nAfter hearing the bad news, she [banged] her fist on the table in anger. Things would go wrong, her [instincts] told her.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">2. accustomed / feast</p>Though the food was good, he felt sick after the [feast]. He just wasn't [accustomed] to eating so much at one time.</p>joint / physician\nThe [physician] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [joint].</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">3. affirm / emphasis</p>The university placed a special [emphasis] on student safety. They wanted to [affirm] that they were interested in protecting students.</p>stiff / hollow\nHe wanted to find out where his sister went after school, so he hid in a [hollow] tree in the schoolyard. However, when he came out, he felt [stiff] all over.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">4. clan / tunes</p>The entire [clan] was excited about her wedding. While they drove to the church, they sang happy [tunes].</p>dim / stroked\nIn the [dim] light, it was hard to find the earring she'd dropped on the floor. She [stroked] the ground until she finally felt it.</p><p class=\"font-bold text-[16px] text-slate-800 mt-5 mb-2\">5. tragic / sacrifices</p>The boy suffered from a [tragic] illness. Still, his family made [sacrifices] to make sure he was always comfortable.</p>leak / glowing\nHe shut the door to make sure that no light could [leak] into the room. However, he could still see the moon [glowing] outside of his window.</p>",
+              "content": "<p class=\"mb-4\">1. fable / astonished<br/>\nThe [ 16 ] was about a young boy with magic powers. At first nobody believed him, but everyone was [ 17 ] when he made a cat disappear.</p>\n<p class=\"mb-4\">2. instincts / banged<br/>\nAfter hearing the bad news, she [ 18 ] her fist on the table in anger. Things would go wrong, her [ 19 ] told her.</p>\n<p class=\"mb-4\">3. accustomed / feast<br/>\nThough the food was good, he felt sick after the [ 20 ]. He just wasn't [ 21 ] to eating so much at one time.</p>\n<p class=\"mb-4\">4. joint / physician<br/>\nThe [ 22 ] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [ 23 ].</p>\n<p class=\"mb-4\">5. affirm / emphasis<br/>\nThe university placed a special [ 24 ] on student safety. They wanted to [ 25 ] that they were interested in protecting students.</p>\n<p class=\"mb-4\">6. stiff / hollow<br/>\nHe wanted to find out where his sister went after school, so he hid in a [ 36 ] tree in the schoolyard. However, when he came out, he felt [ 37 ] all over.</p>\n<p class=\"mb-4\">7. clan / tunes<br/>\nThe entire [ 38 ] was excited about her wedding. While they drove to the church, they sang happy [ 39 ].</p>\n<p class=\"mb-4\">8. dim / stroked<br/>\nIn the [ 40 ] light, it was hard to find the earring she'd dropped on the floor. She [ 41 ] the ground until she finally felt it.</p>\n<p class=\"mb-4\">9. tragic / sacrifices<br/>\nThe boy suffered from a [ 42 ] illness. Still, his family made [ 43 ] to make sure he was always comfortable.</p>\n<p class=\"mb-4\">10. leak / glowing<br/>\nHe shut the door to make sure that no light could [ 44 ] into the room. However, he could still see the moon [ 45 ] outside of his window.</p>",
               "options": [
-                "fable",
-                "astonished"
+                "astonished",
+                "fable"
               ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "correctAnswer": "fable",
+              "explanation": "Đáp án đúng là fable. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "17",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "banged"
-                },
-                {
-                  "id": "2",
-                  "answer": "instincts"
-                }
-              ],
               "content": "",
               "options": [
-                "fable",
-                "astonished"
+                "astonished",
+                "fable"
               ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "correctAnswer": "astonished",
+              "explanation": "Đáp án đúng là astonished. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "18",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "feast"
-                },
-                {
-                  "id": "2",
-                  "answer": "accustomed"
-                }
-              ],
               "content": "",
               "options": [
-                "accustomed",
-                "feast"
+                "banged",
+                "instincts"
               ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "correctAnswer": "banged",
+              "explanation": "Đáp án đúng là banged. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "19",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "physician"
-                },
-                {
-                  "id": "2",
-                  "answer": "joint"
-                }
+              "content": "",
+              "options": [
+                "banged",
+                "instincts"
               ],
+              "correctAnswer": "instincts",
+              "explanation": "Đáp án đúng là instincts. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "20",
               "content": "",
               "options": [
                 "accustomed",
                 "feast"
               ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
-            },
-            {
-              "id": "20",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "emphasis"
-                },
-                {
-                  "id": "2",
-                  "answer": "affirm"
-                }
-              ],
-              "content": "",
-              "options": [
-                "affirm",
-                "emphasis"
-              ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "correctAnswer": "feast",
+              "explanation": "Đáp án đúng là feast. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "21",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "hollow"
-                },
-                {
-                  "id": "2",
-                  "answer": "stiff"
-                }
+              "content": "",
+              "options": [
+                "accustomed",
+                "feast"
               ],
+              "correctAnswer": "accustomed",
+              "explanation": "Đáp án đúng là accustomed. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "22",
+              "content": "",
+              "options": [
+                "joint",
+                "physician"
+              ],
+              "correctAnswer": "physician",
+              "explanation": "Đáp án đúng là physician. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "23",
+              "content": "",
+              "options": [
+                "joint",
+                "physician"
+              ],
+              "correctAnswer": "joint",
+              "explanation": "Đáp án đúng là joint. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "24",
               "content": "",
               "options": [
                 "affirm",
                 "emphasis"
               ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
-            },
-            {
-              "id": "22",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "clan"
-                },
-                {
-                  "id": "2",
-                  "answer": "tunes"
-                }
-              ],
-              "content": "",
-              "options": [
-                "clan",
-                "tunes"
-              ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
-            },
-            {
-              "id": "23",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "dim"
-                },
-                {
-                  "id": "2",
-                  "answer": "stroked"
-                }
-              ],
-              "content": "",
-              "options": [
-                "clan",
-                "tunes"
-              ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
-            },
-            {
-              "id": "24",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "tragic"
-                },
-                {
-                  "id": "2",
-                  "answer": "sacrifices"
-                }
-              ],
-              "content": "",
-              "options": [
-                "tragic",
-                "sacrifices"
-              ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "correctAnswer": "emphasis",
+              "explanation": "Đáp án đúng là emphasis. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             },
             {
               "id": "25",
-              "blanks": [
-                {
-                  "id": "1",
-                  "answer": "leak"
-                },
-                {
-                  "id": "2",
-                  "answer": "glowing"
-                }
-              ],
               "content": "",
               "options": [
-                "tragic",
-                "sacrifices"
+                "affirm",
+                "emphasis"
               ],
-              "explanation": "Đáp án đúng là undefined. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+              "correctAnswer": "affirm",
+              "explanation": "Đáp án đúng là affirm. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "26",
+              "content": "",
+              "options": [
+                "hollow",
+                "stiff"
+              ],
+              "correctAnswer": "hollow",
+              "explanation": "Đáp án đúng là hollow. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "27",
+              "content": "",
+              "options": [
+                "hollow",
+                "stiff"
+              ],
+              "correctAnswer": "stiff",
+              "explanation": "Đáp án đúng là stiff. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "28",
+              "content": "",
+              "options": [
+                "clan",
+                "tunes"
+              ],
+              "correctAnswer": "clan",
+              "explanation": "Đáp án đúng là clan. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "29",
+              "content": "",
+              "options": [
+                "clan",
+                "tunes"
+              ],
+              "correctAnswer": "tunes",
+              "explanation": "Đáp án đúng là tunes. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "30",
+              "content": "",
+              "options": [
+                "dim",
+                "stroked"
+              ],
+              "correctAnswer": "dim",
+              "explanation": "Đáp án đúng là dim. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "31",
+              "content": "",
+              "options": [
+                "dim",
+                "stroked"
+              ],
+              "correctAnswer": "stroked",
+              "explanation": "Đáp án đúng là stroked. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "32",
+              "content": "",
+              "options": [
+                "sacrifices",
+                "tragic"
+              ],
+              "correctAnswer": "tragic",
+              "explanation": "Đáp án đúng là tragic. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "33",
+              "content": "",
+              "options": [
+                "sacrifices",
+                "tragic"
+              ],
+              "correctAnswer": "sacrifices",
+              "explanation": "Đáp án đúng là sacrifices. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "34",
+              "content": "",
+              "options": [
+                "glowing",
+                "leak"
+              ],
+              "correctAnswer": "leak",
+              "explanation": "Đáp án đúng là leak. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
+            },
+            {
+              "id": "35",
+              "content": "",
+              "options": [
+                "glowing",
+                "leak"
+              ],
+              "correctAnswer": "glowing",
+              "explanation": "Đáp án đúng là glowing. Lựa chọn này phù hợp nhất với ngữ cảnh và ý nghĩa của câu."
             }
           ],
           "questionType": "Điền từ"
@@ -413,7 +423,7 @@
           "content": "",
           "questions": [
             {
-              "id": "26",
+              "id": "36",
               "content": "The physician told the old man there was nothing he could do.",
               "options": [
                 "T",
@@ -423,7 +433,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "27",
+              "id": "37",
               "content": "The old man waited in the hollow tree even though it leaked a little.",
               "options": [
                 "T",
@@ -433,7 +443,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "28",
+              "id": "38",
               "content": "The old man's joints were stiff from walking in the forest.",
               "options": [
                 "T",
@@ -443,7 +453,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "29",
+              "id": "39",
               "content": "The old man's instincts told him to return home immediately.",
               "options": [
                 "T",
@@ -453,7 +463,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "30",
+              "id": "40",
               "content": "The man danced for the clan of monsters.",
               "options": [
                 "T",
@@ -463,7 +473,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "31",
+              "id": "41",
               "content": "The monsters took away the man's tragic bump.",
               "options": [
                 "T",
@@ -481,7 +491,7 @@
           "content": "",
           "questions": [
             {
-              "id": "32",
+              "id": "42",
               "content": "What advice did the doctor give the old man?",
               "options": [
                 "To bang",
@@ -493,7 +503,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "33",
+              "id": "43",
               "content": "Why did the man have to wait inside a hollow tree?",
               "options": [
                 "The light became dim.",
@@ -505,7 +515,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "34",
+              "id": "44",
               "content": "Why did the old man come out from behind the tree?",
               "options": [
                 "To run away",
@@ -517,7 +527,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "35",
+              "id": "45",
               "content": "Why does the old man stroke his face at the end of the story?",
               "options": [
                 "To astonish the monsters",
