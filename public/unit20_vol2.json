@@ -69,8 +69,8 @@
           "content": "",
           "questions": [
             {
-              "id": "1_B",
-              "content": "My new friend is an [ 1 ] who came from Italy. He goes to the same [ 2 ] school that I do. He does not know many English words. Having to learn new words is a hard [ 3 ] for him to get past. When he says things wrong, he feels like a [ 4 ]. I tell him not to worry. Soon he will know English very well. When I help him learn, he is happy and gives me [ 5 ] for my good deed.",
+              "id": "6",
+              "content": "My new friend is an [ 6 ] who came from Italy. He goes to the same [ 7 ] school that I do. He does not know many English words. Having to learn new words is a hard [ 8 ] for him to get past. When he says things wrong, he feels like a [ 9 ]. I tell him not to worry. Soon he will know English very well. When I help him learn, he is happy and gives me [ 10 ] for my good deed.",
               "correctAnswer": "immigrant",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
               "options": [
@@ -82,7 +82,7 @@
               ]
             },
             {
-              "id": "2_B",
+              "id": "7",
               "content": "",
               "correctAnswer": "elementary",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
@@ -95,7 +95,7 @@
               ]
             },
             {
-              "id": "3_B",
+              "id": "8",
               "content": "",
               "correctAnswer": "barrier",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
@@ -108,7 +108,7 @@
               ]
             },
             {
-              "id": "4_B",
+              "id": "9",
               "content": "",
               "correctAnswer": "failure",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
@@ -121,7 +121,7 @@
               ]
             },
             {
-              "id": "5_B",
+              "id": "10",
               "content": "",
               "correctAnswer": "recognition",
               "explanation": "Từ vựng phù hợp với ngữ cảnh.",
@@ -150,7 +150,7 @@
           "content": "",
           "questions": [
             {
-              "id": "7",
+              "id": "11",
               "content": "What is this story about?",
               "options": [
                 "How Einstein got instant recognition",
@@ -162,7 +162,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "8",
+              "id": "12",
               "content": "Why did Einstein's family become immigrants?",
               "options": [
                 "They were unhappy about new developments in math and statistics.",
@@ -174,7 +174,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "9",
+              "id": "13",
               "content": "Why was Einstein's rise in the ranks of scientists gradual?",
               "options": [
                 "Einstein did not write down his ideas.",
@@ -186,7 +186,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "10",
+              "id": "14",
               "content": "According to the passage, all the following are true about Einstein EXCEPT",
               "options": [
                 "he found the approximate size of stars",
@@ -206,7 +206,7 @@
           "content": "",
           "questions": [
             {
-              "id": "11",
+              "id": "15",
               "content": "Why did Albert's family live in poverty?",
               "explanation": "From the text.",
               "correctAnswer": "Albert's family lived in poverty because his father lost his job."
