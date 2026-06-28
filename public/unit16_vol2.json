@@ -15,35 +15,35 @@
               "content": "<p class=\"mb-4\">Jennifer <u>looked for a long time</u> at the girl who looked just like her sister. [ 1 ]</p><p class=\"mb-4\">Even though the noise scared me, I <u>returned to my calm mood</u>. [ 2 ]</p><p class=\"mb-4\">The man's speech <u>went on for another thirty minutes</u>. [ 3 ]</p><p class=\"mb-4\">I am quiet in a <u>big crowd of people</u>. [ 4 ]</p><p class=\"mb-4\">My little brother woke up with a <u>really bad hot temperature</u> today. [ 5 ]</p>",
               "options": [],
               "correctAnswer": "stared",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Từ 'stare' có nghĩa là nhìn chằm chằm."
             },
             {
               "id": "2",
               "content": "",
               "options": [],
               "correctAnswer": "recovered",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Từ 'recover' có nghĩa là hồi phục, trở lại trạng thái bình thường."
             },
             {
               "id": "3",
               "content": "",
               "options": [],
               "correctAnswer": "lasted",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Từ 'last' có nghĩa là kéo dài (trong một khoảng thời gian)."
             },
             {
               "id": "4",
               "content": "",
               "options": [],
               "correctAnswer": "shy",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Từ 'shy' có nghĩa là nhút nhát, e thẹn."
             },
             {
               "id": "5",
               "content": "",
               "options": [],
               "correctAnswer": "fever",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Từ 'fever' có nghĩa là cơn sốt (nhiệt độ cơ thể cao)."
             }
           ],
           "questionType": "Điền từ"
@@ -61,7 +61,7 @@
                 "so I relied on what she told me"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'but I didn't, so I denied it' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "7",
@@ -71,7 +71,7 @@
                 "it made a funny gesture"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'I was shocked by what I saw' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "8",
@@ -81,7 +81,7 @@
                 "emphasized that students must follow the classroom rules"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'emphasized that students must follow the classroom rules' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "9",
@@ -91,7 +91,7 @@
                 "so I recovered a harder book"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'thus I finished it in two days' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "10",
@@ -101,7 +101,7 @@
                 "gave me a new perspective"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'gave me a new perspective' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -119,7 +119,7 @@
                 "fever"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'fever' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "12",
@@ -129,7 +129,7 @@
                 "fever"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'chamber' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "13",
@@ -139,7 +139,7 @@
                 "likeness"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'perspective' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "14",
@@ -149,7 +149,7 @@
                 "likeness"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'likeness' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "15",
@@ -159,7 +159,7 @@
                 "document"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'document' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "16",
@@ -169,7 +169,7 @@
                 "document"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'rational' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "17",
@@ -179,7 +179,7 @@
                 "shocked"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'shocked' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "18",
@@ -189,7 +189,7 @@
                 "shocked"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'stared' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "19",
@@ -199,7 +199,7 @@
                 "flu"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'moreover' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "20",
@@ -209,7 +209,7 @@
                 "flu"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'flu' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "21",
@@ -219,7 +219,7 @@
                 "gesture"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'gesture' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "22",
@@ -229,7 +229,7 @@
                 "gesture"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'interrupted' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "23",
@@ -239,7 +239,7 @@
                 "relied"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'relied' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "24",
@@ -249,7 +249,7 @@
                 "relied"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'thus' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "25",
@@ -259,7 +259,7 @@
                 "lasted"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'lasted' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "26",
@@ -269,7 +269,7 @@
                 "lasted"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'recovered' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "27",
@@ -279,7 +279,7 @@
                 "shy"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'shy' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "28",
@@ -289,7 +289,7 @@
                 "shy"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'deny' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "29",
@@ -299,7 +299,7 @@
                 "freeze"
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là A. Lý do: 'emphasized' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             },
             {
               "id": "30",
@@ -309,7 +309,7 @@
                 "freeze"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đáp án đúng là B. Lý do: 'freeze' là lựa chọn phù hợp nhất với ngữ cảnh của câu."
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -337,7 +337,7 @@
                 "A prince who has a rational perspective"
               ],
               "correctAnswer": "C",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Đoạn văn kể về hai cậu bé có ngoại hình giống nhau đã đổi chỗ cho nhau."
             },
             {
               "id": "32",
@@ -349,7 +349,7 @@
                 "Sam made a gesture."
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Theo bài đọc, hoàng tử đã nhìn chằm chằm (stared) vào Sam."
             },
             {
               "id": "33",
@@ -361,7 +361,7 @@
                 "He was afraid he would freeze or get a fever or the flu."
               ],
               "correctAnswer": "C",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Bài đọc cho biết Sam thích việc có thể dựa dẫm (rely) vào những người hầu trong cung điện."
             },
             {
               "id": "34",
@@ -373,7 +373,7 @@
                 "People not emphasizing how important he was"
               ],
               "correctAnswer": "B",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Hoàng tử nhớ cảm giác có người hầu làm việc cho mình (having servants do things for him)."
             },
             {
               "id": "35",
@@ -385,7 +385,7 @@
                 "Because he didn't like the color."
               ],
               "correctAnswer": "A",
-              "explanation": "(Chưa có giải thích chi tiết)"
+              "explanation": "Sam không thích phòng của hoàng tử vì ban đêm ở đó rất lạnh."
             }
           ],
           "questionType": "Trắc nghiệm"

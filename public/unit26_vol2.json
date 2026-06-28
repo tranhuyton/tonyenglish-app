@@ -19,7 +19,7 @@
                 "loss",
                 "insure"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là A. Lý do: 'fuel' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "A"
             },
             {
@@ -31,7 +31,7 @@
                 "loss",
                 "insure"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là B. Lý do: 'cotton' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "B"
             },
             {
@@ -43,7 +43,7 @@
                 "coral",
                 "reef"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là A. Lý do: 'loss' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "A"
             },
             {
@@ -55,7 +55,7 @@
                 "coral",
                 "reef"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là B. Lý do: 'insure' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "B"
             },
             {
@@ -67,7 +67,7 @@
                 "amuse",
                 "surfed"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là A. Lý do: 'coral' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "A"
             },
             {
@@ -79,7 +79,7 @@
                 "amuse",
                 "surfed"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là B. Lý do: 'reef' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "B"
             },
             {
@@ -91,7 +91,7 @@
                 "task",
                 "shut"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là A. Lý do: 'amuse' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "A"
             },
             {
@@ -103,7 +103,7 @@
                 "task",
                 "shut"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là B. Lý do: 'surfed' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "B"
             },
             {
@@ -115,7 +115,7 @@
                 "fuel",
                 "cotton"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là A. Lý do: 'task' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "A"
             },
             {
@@ -127,7 +127,7 @@
                 "fuel",
                 "cotton"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Đáp án đúng là B. Lý do: 'shut' là lựa chọn phù hợp nhất với ngữ cảnh của câu.",
               "correctAnswer": "B"
             }
           ],
@@ -148,7 +148,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'strict' có nghĩa là nghiêm khắc.",
               "correctAnswer": "strict"
             },
             {
@@ -161,7 +161,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'ensure' có nghĩa là đảm bảo chắc chắn điều gì đó sẽ xảy ra.",
               "correctAnswer": "ensure"
             },
             {
@@ -174,7 +174,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'grand' có nghĩa là to lớn, hoành tráng, tuyệt vời.",
               "correctAnswer": "grand"
             },
             {
@@ -187,7 +187,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'accuse' có nghĩa là buộc tội.",
               "correctAnswer": "accuse"
             },
             {
@@ -200,7 +200,7 @@
                 "grand",
                 "accuse"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'shut' có nghĩa là đóng lại.",
               "correctAnswer": "shut"
             }
           ],
@@ -215,70 +215,70 @@
               "id": "16",
               "content": "<p class=\"mb-4\">He <u>blamed me of taking</u> the last piece of pie. ac [ 16 ]</p><p class=\"mb-4\">The man's bedroom was <u>very simple</u>. pla [ 17 ]</p><p class=\"mb-4\">The clown likes to <u>entertain</u> children. amu [ 18 ]</p><p class=\"mb-4\">I need to <u>change</u> the way I run so I can be faster. adj [ 19 ]</p><p class=\"mb-4\">During their free time, the children <u>did</u> many different activities. (en___________ in) [ 20 ]</p><p class=\"mb-4\">This <u>cloth</u> dress is one of my favorites. co [ 21 ]</p><p class=\"mb-4\">The <u>bad storm over the ocean</u> almost reached the land. hu [ 22 ]</p><p class=\"mb-4\"><u>Tightly close</u> the window before the rain starts! s [ 23 ]</p><p class=\"mb-4\">He will <u>hit something and break</u> his bike if he closes his eyes while riding. c [ 24 ]</p><p class=\"mb-4\">The army fights in the war <u>area</u>. z [ 25 ]</p>",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'accused' là lựa chọn phù hợp nhất về mặt ngữ nghĩa và ngữ pháp để điền vào câu.",
               "correctAnswer": "accused"
             },
             {
               "id": "17",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'plain' có nghĩa là đơn giản, trơn, không có họa tiết.",
               "correctAnswer": "plain"
             },
             {
               "id": "18",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'amuse' có nghĩa là làm cho vui vẻ, giải trí.",
               "correctAnswer": "amuse"
             },
             {
               "id": "19",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'adjust' có nghĩa là điều chỉnh cho phù hợp.",
               "correctAnswer": "adjust"
             },
             {
               "id": "20",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'engage in' có nghĩa là tham gia vào một hoạt động nào đó.",
               "correctAnswer": "engaged"
             },
             {
               "id": "21",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'cotton' có nghĩa là sợi bông, vải cotton.",
               "correctAnswer": "cotton"
             },
             {
               "id": "22",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'hurricane' có nghĩa là cơn bão lớn.",
               "correctAnswer": "hurricane"
             },
             {
               "id": "23",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'shut' có nghĩa là đóng lại.",
               "correctAnswer": "shut"
             },
             {
               "id": "24",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'crash' có nghĩa là đâm, va chạm mạnh.",
               "correctAnswer": "crash"
             },
             {
               "id": "25",
               "content": "",
               "options": [],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Từ 'zone' có nghĩa là khu vực.",
               "correctAnswer": "zone"
             }
           ],
@@ -306,7 +306,7 @@
                 "c. Why people should be serious sometimes",
                 "d. Why hurricanes form over the ocean"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Câu chuyện khuyên mọi người đôi khi cần phải nghiêm túc (why people should be serious sometimes).",
               "correctAnswer": "C"
             },
             {
@@ -318,7 +318,7 @@
                 "c. He could not shut the door.",
                 "d. He wanted to engage in other activities."
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Thomas cho thuyền quay lại vì ông thấy bão và không muốn bị đâm (did not want to crash).",
               "correctAnswer": "A"
             },
             {
@@ -330,7 +330,7 @@
                 "c. He did not succeed in getting the cotton to its destination.",
                 "d. He ensured his crew that they would not crash."
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Thủy thủ đoàn buộc tội William vì anh ta đã làm mất con tàu (caused the loss of the ship).",
               "correctAnswer": "B"
             },
             {
@@ -342,7 +342,7 @@
                 "c. he adjusted the radio dial to call William",
                 "d. he sang and danced to songs from an opera"
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Trong bài không hề đề cập đến việc Thomas hát và khiêu vũ theo nhạc opera.",
               "correctAnswer": "D"
             },
             {
@@ -354,7 +354,7 @@
                 "Thomas's ship rescued William's crew.",
                 "The crew started singing and dancing."
               ],
-              "explanation": "(Chưa có giải thích chi tiết)",
+              "explanation": "Khi tàu của William gặp bão, gió đã thổi nó đập vào rạn san hô và vỡ nát.",
               "correctAnswer": "A"
             }
           ],
