@@ -426,12 +426,12 @@
       "sections": [
         {
           "id": "sec6_reading_A",
-          "title": "Part A: Mark each statement T for true or F for false.",
-          "content": "<p class=\"font-bold text-[16px] text-slate-800 mb-4\">Part A: Mark each statement True or False.</p>",
-          "questionType": "Trắc nghiệm",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
+          "questionType": "TFNG",
           "questions": [
             {
-              "id": "1",
+              "id": "36",
               "content": "Bob had a migraine and a shoulder fracture when he awoke on the peculiar beach.",
               "options": [
                 "True",
@@ -441,7 +441,7 @@
               "explanation": "Đúng. Bài đọc có câu: \"He had a terrible migraine, and he had a fracture in his shoulder.\""
             },
             {
-              "id": "2",
+              "id": "37",
               "content": "Bob implemented a plan to bring his spouse and children to the island.",
               "options": [
                 "True",
@@ -451,7 +451,7 @@
               "explanation": "Sai. Bob thực hiện kế hoạch để \"return home to his spouse and children\" (trở về nhà với vợ và các con), chứ không phải mang họ đến hòn đảo."
             },
             {
-              "id": "3",
+              "id": "38",
               "content": "The indigenous tree limbs impaired Bob's ability to carry the materials.",
               "options": [
                 "True",
@@ -461,7 +461,7 @@
               "explanation": "Sai. Bài đọc viết \"his shoulder injury impaired his ability to carry the materials\" (chấn thương vai của anh ấy làm suy yếu khả năng mang vác vật liệu), không phải do cành cây."
             },
             {
-              "id": "4",
+              "id": "39",
               "content": "Bob was proficient in building, and he used his expertise to build the raft.",
               "options": [
                 "True",
@@ -471,7 +471,7 @@
               "explanation": "Đúng. Bài đọc có câu: \"Bob was a proficient builder. He used his building expertise to line up the limbs...\""
             },
             {
-              "id": "5",
+              "id": "40",
               "content": "Bob thrust the raft into the water to begin his quest.",
               "options": [
                 "True",
@@ -489,7 +489,7 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "6",
+              "id": "41",
               "content": "What type of insight did Bob hope to gain when he moved to a higher altitude?",
               "options": [
                 "Insight about the island and finding something to help him escape.",
@@ -501,7 +501,7 @@
               "explanation": "Bob hy vọng có cái nhìn sâu sắc (insight) về hòn đảo và tìm thấy thứ gì đó giúp anh ta trốn thoát."
             },
             {
-              "id": "7",
+              "id": "42",
               "content": "Why did Bob need to tolerate the pain and devise a plan?",
               "options": [
                 "Because he wanted to explore the entire island.",
@@ -513,7 +513,7 @@
               "explanation": "Bob phải chịu đựng cơn đau và vạch ra kế hoạch vì anh có khao khát mãnh liệt được trở về nhà với gia đình."
             },
             {
-              "id": "8",
+              "id": "43",
               "content": "What did Bob drag from the ridge to the coastline?",
               "options": [
                 "He dragged his broken fishing boat.",
@@ -525,7 +525,7 @@
               "explanation": "Bob đã chặt cành cây và kéo chúng từ sườn núi xuống bờ biển để làm bè."
             },
             {
-              "id": "9",
+              "id": "44",
               "content": "How did Bob prevent pain from deterring him?",
               "options": [
                 "By keeping a good attitude.",
@@ -537,7 +537,7 @@
               "explanation": "Bob nghĩ: \"I'm glad I kept a good attitude. It prevented the pain from deterring me from my plan.\""
             },
             {
-              "id": "10",
+              "id": "45",
               "content": "What does Bob believe about optimism and ambition?",
               "options": [
                 "They are only useful when building a raft.",

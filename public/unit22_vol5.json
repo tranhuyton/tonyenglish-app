@@ -85,8 +85,8 @@
           "content": "Word bank: cholesterol, prone, framework, administration, explicit, deceptive, coalition, mechanisms, straightforward, manufactures",
           "questions": [
             {
-              "id": "100",
-              "content": "I learned about all the different things the factory [ 100 ]. They make big machinery as well as tiny parts and [ 101 ].",
+              "id": "6",
+              "content": "I learned about all the different things the factory [ 6 ]. They make big machinery as well as tiny parts and [ 7 ].",
               "options": [
                 "straightforward",
                 "framework",
@@ -103,7 +103,7 @@
               "correctAnswer": "manufactures"
             },
             {
-              "id": "101",
+              "id": "7",
               "content": "",
               "options": [
                 "straightforward",
@@ -121,7 +121,7 @@
               "correctAnswer": "mechanisms"
             },
             {
-              "id": "102",
+              "id": "8",
               "content": "The students asked the school’s [ 102 ] to buy a better kind of meat. The meat served there is too high in fat and [ 103 ].",
               "options": [
                 "straightforward",
@@ -139,7 +139,7 @@
               "correctAnswer": "administration"
             },
             {
-              "id": "103",
+              "id": "9",
               "content": "",
               "options": [
                 "straightforward",
@@ -157,7 +157,7 @@
               "correctAnswer": "cholesterol"
             },
             {
-              "id": "104",
+              "id": "10",
               "content": "I can’t stand companies that are [ 104 ]. Customers have to make sure they get [ 105 ] information about all details.",
               "options": [
                 "straightforward",
@@ -175,7 +175,7 @@
               "correctAnswer": "deceptive"
             },
             {
-              "id": "105",
+              "id": "11",
               "content": "",
               "options": [
                 "straightforward",
@@ -193,7 +193,7 @@
               "correctAnswer": "explicit"
             },
             {
-              "id": "106",
+              "id": "12",
               "content": "Citizens formed a [ 106 ] because the city’s air was making people ill. Elderly people and infants were the most [ 107 ] to becoming sick.",
               "options": [
                 "straightforward",
@@ -211,7 +211,7 @@
               "correctAnswer": "coalition"
             },
             {
-              "id": "107",
+              "id": "13",
               "content": "",
               "options": [
                 "straightforward",
@@ -229,7 +229,7 @@
               "correctAnswer": "prone"
             },
             {
-              "id": "108",
+              "id": "14",
               "content": "To solve our problem, we’ll first need a strong [ 108 ]. Our ideas need to be intelligent and [ 109 ].",
               "options": [
                 "straightforward",
@@ -247,7 +247,7 @@
               "correctAnswer": "framework"
             },
             {
-              "id": "109",
+              "id": "15",
               "content": "",
               "options": [
                 "straightforward",
@@ -273,7 +273,7 @@
           "content": "",
           "questions": [
             {
-              "id": "11",
+              "id": "16",
               "content": "Smoking makes people more <i>prone</i> to breathing problems.",
               "options": [
                 "C",
@@ -283,7 +283,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "12",
+              "id": "17",
               "content": "We toured the factory that <i>manufactures</i> cheese.",
               "options": [
                 "C",
@@ -293,7 +293,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "13",
+              "id": "18",
               "content": "The <i>deceptive</i> man was very open and honest about his plans.",
               "options": [
                 "C",
@@ -303,7 +303,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "14",
+              "id": "19",
               "content": "Eating a lot of fast food raises people’s <i>cholesterol</i> levels.",
               "options": [
                 "C",
@@ -313,7 +313,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "15",
+              "id": "20",
               "content": "The <i>straightforward</i> instructions were impossible to understand.",
               "options": [
                 "C",
@@ -323,7 +323,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "16",
+              "id": "21",
               "content": "The group decided on a <i>framework</i> for the new project.",
               "options": [
                 "C",
@@ -333,7 +333,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "17",
+              "id": "22",
               "content": "Businesses try to <i>minimize</i> the amount of money they can make.",
               "options": [
                 "C",
@@ -343,7 +343,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "18",
+              "id": "23",
               "content": "He had a <i>notion</i> that the speaker was not really an expert on the subject.",
               "options": [
                 "C",
@@ -353,7 +353,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "19",
+              "id": "24",
               "content": "The maid used a kind of <i>acid</i> to dissolve the stains on the floor.",
               "options": [
                 "C",
@@ -363,7 +363,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "20",
+              "id": "25",
               "content": "It is important for a judge to have good <i>ethics</i>.",
               "options": [
                 "C",
@@ -373,7 +373,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "21",
+              "id": "26",
               "content": "Some factories produce energy by burning <i>coalitions</i>.",
               "options": [
                 "C",
@@ -383,7 +383,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "22",
+              "id": "27",
               "content": "The lawyer hoped that the witness would tell an <i>explicit</i> version of the story.",
               "options": [
                 "C",
@@ -393,7 +393,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "23",
+              "id": "28",
               "content": "My father works in construction while my mom has an <i>administrative</i> job.",
               "options": [
                 "C",
@@ -403,7 +403,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "24",
+              "id": "29",
               "content": "Be sure to <i>eliminate</i> all the ingredients to make a great cake.",
               "options": [
                 "C",
@@ -413,7 +413,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "25",
+              "id": "30",
               "content": "Jim receives shots to treat his <i>diabetes</i>. They reduce the sugar in his blood.",
               "options": [
                 "C",
@@ -423,7 +423,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "26",
+              "id": "31",
               "content": "All of the prisoners formed an <i>administration</i> where they played games.",
               "options": [
                 "C",
@@ -433,7 +433,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "27",
+              "id": "32",
               "content": "Dry weather, followed by sudden floods, caused the <i>erosion</i> in the valley.",
               "options": [
                 "C",
@@ -443,7 +443,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "28",
+              "id": "33",
               "content": "The <i>biotechnology</i> company only made things from nonliving rocks and sand.",
               "options": [
                 "C",
@@ -453,7 +453,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "29",
+              "id": "34",
               "content": "The cutting <i>mechanism</i> on the lawnmower is broken.",
               "options": [
                 "C",
@@ -463,7 +463,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "30",
+              "id": "35",
               "content": "This <i>nectar</i> produces the best flowers.",
               "options": [
                 "C",
@@ -485,61 +485,61 @@
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
-              "id": "31",
+              "id": "36",
               "content": "Bioco was a biotechnology company that manufactured diabetes and high cholesterol.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong đoạn 1, bài đọc ghi \"Bioco manufactured drugs to treat diabetes and high cholesterol.\" (Bioco sản xuất thuốc để điều trị bệnh tiểu đường và cholesterol cao). Công ty sản xuất THUỐC ĐIỀU TRỊ hai bệnh đó, chứ không phải sản xuất ra bệnh.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
-              "id": "32",
+              "id": "37",
               "content": "Jack used a mechanism to get nectar from flowers.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đoạn 1 có câu \"Jack's job was to use a tiny mechanism to get nectar from flowers.\" (Công việc của Jack là sử dụng một cỗ máy siêu nhỏ để lấy mật từ những bông hoa).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
-              "id": "33",
+              "id": "38",
               "content": "The new framework involved an explicit plan to fix the smog and acid problems.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong đoạn 4 \"Jack explained what they were to do. His coworkers liked his explicit plan.\" và đoạn 5 \"Jack, his supervisor, and his coworkers spent the next month designing a new framework for the company. They cleaned up the acid from the river and minimized the amount of air pollution...\" Kế hoạch này là để giải quyết các vấn đề trên.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
-              "id": "34",
+              "id": "39",
               "content": "The waste acid caused erosion and made fish prone to illness.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đoạn 2 cho biết \"Bioco poured the acid in a nearby river, which caused erosion and made fish prone to illness.\" (Bioco đã đổ axit xuống một con sông gần đó, gây xói mòn và khiến cá dễ bị bệnh).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
-              "id": "35",
+              "id": "40",
               "content": "After the company minimized Jack’s ethics, the motto became apt.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Ở đoạn cuối ghi \"They cleaned up the acid from the river and minimized the amount of air pollution the company released. At last, the company motto became apt.\" (Họ đã dọn sạch axit khỏi sông và giảm thiểu lượng ô nhiễm không khí mà công ty thải ra. Cuối cùng, phương châm của công ty đã trở nên phù hợp). Công ty giảm ô nhiễm không khí chứ không phải làm giảm đạo đức (ethics) của Jack.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",
@@ -547,7 +547,7 @@
           "content": "",
           "questions": [
             {
-              "id": "36",
+              "id": "41",
               "content": "What was Bioco’s deceptive motto?",
               "options": [
                 "\"Make the Earth a better place.\"",
@@ -559,7 +559,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "37",
+              "id": "42",
               "content": "What did Jack stand up to do in the cafeteria?",
               "options": [
                 "Jack stood up to leave.",
@@ -571,7 +571,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "38",
+              "id": "43",
               "content": "What was Jack’s notion about fixing things?",
               "options": [
                 "He wanted to break the mechanism.",
@@ -583,7 +583,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "39",
+              "id": "44",
               "content": "What did the coalition of workers threaten to do if the administration didn’t eliminate the problems?",
               "options": [
                 "The workers threatened to strike.",
@@ -595,7 +595,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "40",
+              "id": "45",
               "content": "What did the boss in the offices say after the workers were straightforward with him?",
               "options": [
                 "He fired all of them.",

@@ -453,7 +453,7 @@
       "sections": [
         {
           "id": "sec5_reading_tf",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -464,7 +464,7 @@
                 "False"
               ],
               "explanation": "Bill đã tài trợ cho một doanh nghiệp hàng không và anh ấy biết cách tối đa hóa (maximize) lợi nhuận tiền tệ (monetary gains). Nhận định này hoàn toàn đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
@@ -474,7 +474,7 @@
                 "False"
               ],
               "explanation": "Bill nói anh ấy thờ ơ (indifferent) với thành công của công ty anh ấy, chứ không phải với sự thành công của trang trại (farm's success). Câu này sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
@@ -484,7 +484,7 @@
                 "False"
               ],
               "explanation": "Bill tưới tiêu (irrigate) như một biện pháp phòng ngừa (precaution) vì mùa hè sắp tới sẽ rất khô hạn (very dry), không phải vì trời sắp mưa (upcoming rain). Câu này sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "39",
@@ -494,7 +494,7 @@
                 "False"
               ],
               "explanation": "Rõ ràng trong bài nói rằng Bill đã lấy chiếc xẻng (spade) của mình và đào một con mương (dug a ditch). Nhận định này đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
@@ -504,10 +504,10 @@
                 "False"
               ],
               "explanation": "Mặc dù Bill đã gieo hạt, nhưng dòng nước làm ẩm ướt (saturate) phần đất (soil) xung quanh cây, không trực tiếp saturate bản thân cái cây. Vậy nên nhận định này chưa hoàn toàn chính xác.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading_qa",

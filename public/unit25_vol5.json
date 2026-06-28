@@ -85,8 +85,8 @@
           "content": "Word bank: trail, fatigue, stereotype, aesthetic, twig, welfare, canyon, primitive, creek, termites",
           "questions": [
             {
-              "id": "100",
-              "content": "The path leading out of the [ 100 ] was very steep. When they reached the top, they had to rest because of their [ 101 ].",
+              "id": "6",
+              "content": "The path leading out of the [ 6 ] was very steep. When they reached the top, they had to rest because of their [ 7 ].",
               "options": [
                 "welfare",
                 "trail",
@@ -103,7 +103,7 @@
               "correctAnswer": "canyon"
             },
             {
-              "id": "101",
+              "id": "7",
               "content": "",
               "options": [
                 "welfare",
@@ -121,7 +121,7 @@
               "correctAnswer": "fatigue"
             },
             {
-              "id": "102",
+              "id": "8",
               "content": "He had a(n) [ 102 ] about ancient cultures. He thought that all their customs and ideas were [ 103 ].",
               "options": [
                 "welfare",
@@ -139,7 +139,7 @@
               "correctAnswer": "stereotype"
             },
             {
-              "id": "103",
+              "id": "9",
               "content": "",
               "options": [
                 "welfare",
@@ -157,7 +157,7 @@
               "correctAnswer": "primitive"
             },
             {
-              "id": "104",
+              "id": "10",
               "content": "The [ 104 ] led travelers to the top of the mountain. I was astonished by the [ 105 ] view.",
               "options": [
                 "welfare",
@@ -175,7 +175,7 @@
               "correctAnswer": "trail"
             },
             {
-              "id": "105",
+              "id": "11",
               "content": "",
               "options": [
                 "welfare",
@@ -193,7 +193,7 @@
               "correctAnswer": "aesthetic"
             },
             {
-              "id": "106",
+              "id": "12",
               "content": "A line of [ 106 ] stretched from the mound across the forest floor. They were all going to eat a [ 107 ] that had fallen off a tree.",
               "options": [
                 "welfare",
@@ -211,7 +211,7 @@
               "correctAnswer": "termites"
             },
             {
-              "id": "107",
+              "id": "13",
               "content": "",
               "options": [
                 "welfare",
@@ -229,7 +229,7 @@
               "correctAnswer": "twig"
             },
             {
-              "id": "108",
+              "id": "14",
               "content": "People thought that the water from the [ 108 ] cured illnesses. They drank it because they hoped it would beneficial to their [ 109 ].",
               "options": [
                 "welfare",
@@ -247,7 +247,7 @@
               "correctAnswer": "creek"
             },
             {
-              "id": "109",
+              "id": "15",
               "content": "",
               "options": [
                 "welfare",
@@ -273,7 +273,7 @@
           "content": "",
           "questions": [
             {
-              "id": "11",
+              "id": "16",
               "content": "perceive",
               "options": [
                 "notice",
@@ -285,7 +285,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "12",
+              "id": "17",
               "content": "welfare",
               "options": [
                 "welcome",
@@ -297,7 +297,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "13",
+              "id": "18",
               "content": "bias",
               "options": [
                 "herb",
@@ -309,7 +309,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "14",
+              "id": "19",
               "content": "arrogant",
               "options": [
                 "proud",
@@ -321,7 +321,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "15",
+              "id": "20",
               "content": "creek",
               "options": [
                 "button",
@@ -333,7 +333,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "16",
+              "id": "21",
               "content": "nasty",
               "options": [
                 "slow",
@@ -345,7 +345,7 @@
               "correctAnswer": "D"
             },
             {
-              "id": "17",
+              "id": "22",
               "content": "executive",
               "options": [
                 "group",
@@ -357,7 +357,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "18",
+              "id": "23",
               "content": "trail",
               "options": [
                 "path",
@@ -369,7 +369,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "19",
+              "id": "24",
               "content": "incline",
               "options": [
                 "rise",
@@ -381,7 +381,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "20",
+              "id": "25",
               "content": "thereby",
               "options": [
                 "growth",
@@ -401,17 +401,17 @@
           "content": "",
           "questions": [
             {
-              "id": "21",
+              "id": "26",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "twigs"
                 }
               ],
-              "content": "<p class=\"mb-4\">The kids gathered <u>short, thing branches</u> for their school art project.<br/>tw [ 21 ]</p><p class=\"mb-4\">The glue was <u>covered with a substance that made things stick to it</u>.<br/>st [ 22 ]</p><p class=\"mb-4\">Early rocket development was <u>simple and basic</u> compared to what we have in the 21st century.<br/>pr [ 23 ]</p><p class=\"mb-4\"><u>Monkeys, apes, and humans</u> are some of the few animals with opposable thumbs.<br/>pr [ 24 ]</p><p class=\"mb-4\">After walking 12 kilometers, I was filled with a sense of <u>extreme tiredness</u>.<br/>fa [ 25 ]</p>"
+              "content": "<p class=\"mb-4\">The kids gathered <u>short, thing branches</u> for their school art project.<br/>tw [ 26 ]</p><p class=\"mb-4\">The glue was <u>covered with a substance that made things stick to it</u>.<br/>st [ 27 ]</p><p class=\"mb-4\">Early rocket development was <u>simple and basic</u> compared to what we have in the 21st century.<br/>pr [ 28 ]</p><p class=\"mb-4\"><u>Monkeys, apes, and humans</u> are some of the few animals with opposable thumbs.<br/>pr [ 29 ]</p><p class=\"mb-4\">After walking 12 kilometers, I was filled with a sense of <u>extreme tiredness</u>.<br/>fa [ 30 ]</p>"
             },
             {
-              "id": "22",
+              "id": "27",
               "blanks": [
                 {
                   "id": "1",
@@ -421,7 +421,7 @@
               "content": ""
             },
             {
-              "id": "23",
+              "id": "28",
               "blanks": [
                 {
                   "id": "1",
@@ -431,7 +431,7 @@
               "content": ""
             },
             {
-              "id": "24",
+              "id": "29",
               "blanks": [
                 {
                   "id": "1",
@@ -441,7 +441,7 @@
               "content": ""
             },
             {
-              "id": "25",
+              "id": "30",
               "blanks": [
                 {
                   "id": "1",
@@ -463,61 +463,61 @@
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
-              "id": "26",
+              "id": "31",
               "content": "The executive only cared about the welfare of his pilot and crew.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai rồi. Trong đoạn 1 có câu The arrogant executive, though, didn't care about the welfare of the pilot and crew. Điều này có nghĩa là vị quản lý kiêu ngạo này không hề quan tâm đến sự an toàn của phi công và phi hành đoàn.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
-              "id": "27",
+              "id": "32",
               "content": "The executive followed a trail through a canyon and along a creek.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng nhé. Ở đoạn 2 bài đọc viết He followed a trail through a canyon and along a creek. Tức là ông ta đã đi theo một con đường mòn xuyên qua hẻm núi và dọc theo một con suối nhỏ.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
-              "id": "28",
+              "id": "33",
               "content": "The executive was in a nasty mood, so he did not see the aesthetic value of the jungle.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đúng rồi. Đoạn 2 ghi rõ But he was in a nasty mood and had no care for the aesthetic value of the jungle. Vì tâm trạng bực tức nên ông ta chẳng màng đến vẻ đẹp thẩm mỹ của khu rừng xung quanh.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
-              "id": "29",
+              "id": "34",
               "content": "The executive walked up the small incline of the jungle’s hills.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai nhé. Cuối đoạn 2 có ghi He continued to walk up the steep incline of the jungle's hills. Ông ta đi bộ lên một con dốc thẳng đứng chứ không phải dốc nhỏ (small incline).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
-              "id": "30",
+              "id": "35",
               "content": "The executive’s stereotype of the primate was correct.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Sai rồi. Đoạn 6 mở đầu bằng câu The executive's stereotype of the monkey was wrong. Khuôn mẫu hay định kiến của ông ta về con khỉ là hoàn toàn sai lầm.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",
@@ -525,7 +525,7 @@
           "content": "",
           "questions": [
             {
-              "id": "31",
+              "id": "36",
               "content": "What was on the twig that made it sticky enough to capture termites?",
               "options": [
                 "The honey on the twig that made it sticky enough to capture termites.",
@@ -537,7 +537,7 @@
               "correctAnswer": "A"
             },
             {
-              "id": "32",
+              "id": "37",
               "content": "What did hunger and fatigue do to the executive?",
               "options": [
                 "Hunger and fatigue made him strong.",
@@ -549,7 +549,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "33",
+              "id": "38",
               "content": "What happened to the executive because of his bias against the monkey’s primitive ways?",
               "options": [
                 "Because he had a bias against the primitive ways of the monkey, he had been attacked.",
@@ -561,7 +561,7 @@
               "correctAnswer": "B"
             },
             {
-              "id": "34",
+              "id": "39",
               "content": "What did the monkey use like it was a drill?",
               "options": [
                 "He used the rock like it was a drill.",
@@ -573,7 +573,7 @@
               "correctAnswer": "C"
             },
             {
-              "id": "35",
+              "id": "40",
               "content": "What did the executive never perceive about his arrogant attitude?",
               "options": [
                 "He never perceived that his arrogant attitude was good for his health.",

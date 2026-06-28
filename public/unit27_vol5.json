@@ -425,7 +425,7 @@
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -479,7 +479,7 @@
               "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

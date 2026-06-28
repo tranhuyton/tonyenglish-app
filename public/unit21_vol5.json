@@ -424,61 +424,61 @@
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
               "id": "36",
               "content": "The girls looked like clones, but they used different colloquial language.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong đoạn 1, tác giả viết \"They were almost like clones. They even used the same colloquial language as each other.\" (Họ gần như là những bản sao. Họ thậm chí còn sử dụng chung một loại ngôn ngữ thông tục). Vì vậy, họ dùng chung một ngôn ngữ chứ không phải khác nhau (different).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
               "content": "The twins’ attributes were different in that Katie was bilingual and Alice liked humanities.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Ở đoạn 2, bài đọc chỉ ra sự khác biệt \"Alice liked humanities, and Katie was a good linguist.\" (Alice thích khoa học xã hội, còn Katie là một nhà ngôn ngữ học giỏi). Ban đầu Katie là một nhà ngôn ngữ học (linguist), sau khi trở về cô mới trở thành người thạo hai thứ tiếng (bilingual). Câu hỏi gộp chung đặc điểm ban đầu là không chính xác.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
               "content": "Alice’s hair was in knots when she dashed to the airport to meet her sister.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong đoạn 3, khi đón Katie tại sân bay, bài miêu tả Alice \"She was just wearing a fluorescent t-shirt, and her hair had knots in it.\" (Cô ấy chỉ mặc một chiếc áo phông dạ quang và tóc thì bù xù). Thông tin này là đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
               "content": "Alice was astounded when she saw Katie wearing a fluorescent t-shirt.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đoạn 3 cho biết \"Katie was now bilingual, and she looked completely different! She was wearing nice clothes, cosmetics and looked skinnier.\" (Katie giờ đã thông thạo hai thứ tiếng và cô ấy trông hoàn toàn khác! Cô ấy mặc quần áo đẹp, trang điểm và trông gầy hơn). Người mặc áo dạ quang (fluorescent t-shirt) là Alice, không phải Katie.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "40",
               "content": "When the gulf formed between the sisters, they stopped speaking to each other in detail.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Ở cuối đoạn 4, bài có nói \"Now there was a huge gulf between them. Over the weeks, the sisters spoke even less.\" (Giờ đây có một khoảng cách lớn giữa họ. Qua nhiều tuần, hai chị em thậm chí còn ít nói chuyện với nhau hơn). Điều này hoàn toàn khớp.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

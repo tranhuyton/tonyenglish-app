@@ -453,61 +453,61 @@
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
               "id": "36",
               "content": "The little rock drifted through the debris of broken atoms.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đoạn 1 viết \"It slowly drifted through the debris of broken asteroids with a feeling of sadness.\" (Nó trôi dạt chậm rãi qua những mảnh vỡ của các tiểu hành tinh với một cảm giác buồn bã). Nó trôi qua mảnh vỡ của tiểu hành tinh (asteroids), không phải nguyên tử (atoms).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
               "content": "The gigantic planet was in the shape of a sphere.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Ở đoạn 4 \"The rock passed a gigantic planet. The sphere had a circumference hundreds of times larger...\" (Hòn đá đi ngang qua một hành tinh khổng lồ. Khối cầu đó có chu vi lớn gấp hàng trăm lần...). Ở đây \"sphere\" chính là đang gọi hành tinh đó.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "38",
               "content": "The ice embedded in the little rock bubbled with all the colors of the spectrum.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong đoạn 12, \"Suddenly, the ice that was embedded in the rock's tiny cracks melted and became steam... The tail shined with all the colors of the spectrum.\" Băng tan thành hơi nước (steam) tạo thành chiếc đuôi tỏa sáng đủ màu sắc, chứ không phải băng nổi bong bóng (bubbled).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "39",
               "content": "The star radiated its light hotter and brighter than ever before.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đoạn 11 có ghi \"The star radiated its light brighter and hotter than it had ever done before.\" (Ngôi sao tỏa ánh sáng rực rỡ và nóng bức hơn bao giờ hết). Thông tin này chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
               "content": "The little rock wished it had a higher status in the galaxy.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Ở đoạn 9, hòn đá nói \"Oh, I wish I had a higher status in the galaxy.\" (Ôi, tôi ước mình có địa vị cao hơn trong thiên hà). Điều này hoàn toàn đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

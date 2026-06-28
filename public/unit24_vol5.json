@@ -405,61 +405,61 @@
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
               "id": "36",
               "content": "If the tenants didn’t pay the mortgage, the landlord could not pay his lease and would be bankrupt.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong đoạn 1, \"Without tenants to lease the rooms, the landlord would be unable to pay his mortgage. He'd be bankrupt\" (Nếu không có người thuê các căn phòng, chủ nhà sẽ không thể trả tiền thế chấp. Ông ấy sẽ bị phá sản). Sự thật là chủ nhà phải trả tiền thế chấp (mortgage), còn người thuê trả tiền thuê (lease). Câu này đổi ngược vị trí nên sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
               "content": "The landlord did not have money whereby he could employ personnel.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Ở đoạn 2, bài viết \"But he didn't have the money whereby he could employ the personnel needed to make the repairs.\" (Nhưng ông ấy không có tiền để thuê nhân sự cần thiết để thực hiện việc sửa chữa). Câu này chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "38",
               "content": "The city would expel everyone if the building did not pass the inspection for safety and hygiene.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Trong đoạn 3, chủ nhà giải thích \"If the building does not meet the appropriate standards for safety and hygiene, the city will expel everyone.\" (Nếu tòa nhà không đáp ứng được các tiêu chuẩn phù hợp về an toàn và vệ sinh, thành phố sẽ trục xuất mọi người). Câu này đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
               "content": "The hairdresser mended the holes in the floors and walls.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Đoạn 6 cho biết \"Another tenant was a carpenter; he mended the holes in the floor and walls.\" (Một người thuê khác là thợ mộc; anh ấy đã vá các lỗ thủng trên sàn và tường). Người sửa chữa là thợ mộc, không phải là thợ làm tóc (hairdresser).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "40",
               "content": "After everyone helped to fix it, the building looked like one of the trendiest buildings in town.",
               "options": [
-                "T",
-                "F"
+                "True",
+                "False"
               ],
               "explanation": "Ở đoạn 7 ghi \"His old building now looked like one of the trendiest buildings in town.\" (Tòa nhà cũ của ông ấy giờ đây trông giống như một trong những tòa nhà hợp thời trang nhất trong thị trấn).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",
