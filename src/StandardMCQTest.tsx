@@ -1364,7 +1364,7 @@ const handleFinish = async () => {
                            {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />}
                        </div>
 
-                       {isReviewMode && part?.translation && (
+                       {isReviewMode && part?.translation && (part.translation.replace(/<[^>]*>?/gm, '').replace(/&nbsp;/g, '').trim() !== '' || part.translation.includes('<img')) && (
                           <div className="flex justify-end mb-4 relative z-10">
                              <button 
                                 onClick={() => setShowTranslation(!showTranslation)}
