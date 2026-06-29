@@ -448,7 +448,7 @@
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -459,7 +459,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Bài đọc cho biết rắn mamushi tấn công khi bị làm giật mình (stunned), ví dụ như vô tình giẫm phải nó: \"If someone stuns it by accidentally stepping on it, it bites to protect itself\" (Nếu ai đó làm nó giật mình bằng cách vô tình giẫm lên, nó sẽ cắn để tự vệ). Không phải vì nó bị làm phiền bởi sâu bọ.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
@@ -469,7 +469,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Ban đầu hậu quả có vẻ không đáng kể, nhưng thực ra rất nghiêm trọng. Bài viết chỉ ra: \"At first, the effects of the bite may seem negligible... However, after a few moments, the venom induces paralysis\" (Lúc đầu, tác động của vết cắn có vẻ không đáng kể... Tuy nhiên, sau vài khoảnh khắc, nọc độc gây ra chứng tê liệt).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
@@ -479,7 +479,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Đúng (T). Ngay ở đoạn hai, tác giả viết: \"Mother tigers are inseparable from their babies\" (Hổ mẹ luôn gắn bó không thể tách rời khỏi con của chúng).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
@@ -489,7 +489,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Đúng (T). Ở đoạn hai có câu: \"That's because it always tries to bite an important artery when it attacks\" (Đó là bởi vì nó luôn cố gắng cắn vào một động mạch quan trọng khi tấn công).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
@@ -499,10 +499,10 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Các nhà khoa học cho rằng quan niệm phổ biến (mainstream) \"động vật cắn là nguy hiểm nhất\" mới là sai (invalid). Đoạn cuối viết: \"In the mainstream, animal bites are seen as the most dangerous. But some scientists think this idea is invalid.\"",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",

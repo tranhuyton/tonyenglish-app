@@ -513,7 +513,7 @@
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -524,7 +524,7 @@
                 "False"
               ],
               "explanation": "Đúng. Trong bài có câu: \"Bees had an important dependency on pollen.\" (Loài ong có một sự phụ thuộc quan trọng vào phấn hoa). Do đó câu này là True.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
@@ -534,7 +534,7 @@
                 "False"
               ],
               "explanation": "Sai. Bài đọc viết: \"The fine texture of the pollen tickled when it stuck to his body.\" (Kết cấu mịn của phấn hoa làm cậu buồn buột khi dính vào người). Chứ không phải cánh hoa (petals) làm cậu buồn buột.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
@@ -544,7 +544,7 @@
                 "False"
               ],
               "explanation": "Đúng. Trong bài có đoạn: \"He was blown to and fro. One minute he was flying straight, and the next minute the wind had reversed his course.\" (Cậu bị thổi bay tới tấp. Một phút trước cậu đang bay thẳng, phút tiếp theo cơn gió đã đảo ngược hướng của cậu).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
@@ -554,7 +554,7 @@
                 "False"
               ],
               "explanation": "Đúng. Đoạn 5 có viết: \"He tried to dump some of the pollen, but it acted as an adhesive. He couldn't get it off.\" (Cậu cố gắng vứt bớt phấn hoa đi, nhưng nó lại giống như chất kết dính. Cậu không thể rũ bỏ được).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
@@ -564,10 +564,10 @@
                 "False"
               ],
               "explanation": "Sai. Trong bài ghi là: \"Finally, with the pollen off of him, the bee easily regained his strength, and like a phoenix, the young bee flew back into the air.\" (Cuối cùng, khi đã rũ bỏ được phấn hoa, cậu ong dễ dàng lấy lại sức, và giống như một con phượng hoàng, cậu ong trẻ bay trở lại không trung). Nghĩa là cậu bay lên, chứ không phải rơi xuống đất (fell to the ground).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

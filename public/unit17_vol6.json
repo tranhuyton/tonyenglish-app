@@ -375,7 +375,7 @@
       "sections": [
         {
           "id": "sec4_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -386,7 +386,7 @@
                 "False"
               ],
               "explanation": "Dịch: Cậu sinh viên ngành khí tượng học đã mua một thiết bị mô phỏng sấm sét trong các đám mây.\nGiải thích: F. Đoạn 1 viết rằng: \"He had made a device that could simulate lightning.\" (Cậu ấy đã tự tạo ra một thiết bị có thể mô phỏng sấm sét). Cậu ấy tự làm ra nó (made) chứ không phải đi mua (bought).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
@@ -396,7 +396,7 @@
                 "False"
               ],
               "explanation": "Dịch: Xung điện từ đã kích thích các electron trong các hạt của đám mây.\nGiải thích: T. Đoạn 1 có miêu tả: \"This pulse, in turn, stimulated the electrons in the cloud’s particles.\" (Xung này sau đó kích thích các electron trong các hạt của đám mây). Câu này hoàn toàn đúng.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "38",
@@ -406,7 +406,7 @@
                 "False"
               ],
               "explanation": "Dịch: Những lời chỉ trích của bạn bè cậu sinh viên đã thúc đẩy cậu ấy thử lại thí nghiệm của mình.\nGiải thích: T. Đoạn 5 nói: \"But his friends’ criticisms only spurred him to try again... he started his experiment anew.\" (Nhưng những lời chỉ trích của bạn bè chỉ thúc giục anh ấy thử lại lần nữa... anh ấy bắt đầu lại thí nghiệm của mình).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
@@ -416,7 +416,7 @@
                 "False"
               ],
               "explanation": "Dịch: Đó là một ngày ảm đạm khi thiết bị bay lượn vào trong những đám mây.\nGiải thích: T. Trong đoạn 5 tác giả có nói: \"and on one dreary day, when clouds blocked the light of the sun, he started his experiment anew.\" (và vào một ngày ảm đạm, khi những đám mây che khuất ánh sáng mặt trời, anh ấy bắt đầu lại thí nghiệm của mình).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
@@ -426,10 +426,10 @@
                 "False"
               ],
               "explanation": "Dịch: Lực đẩy của tên lửa đã làm tăng tốc độ của tia sét.\nGiải thích: F. Đoạn 6 cho biết lực đẩy của tên lửa dùng để đưa thiết bị lên cao: \"The propulsion of the rocket carried the device high into the air.\" (Lực đẩy của tên lửa đã đưa thiết bị lên cao trong không trung). Tên lửa không hề làm tăng tốc độ của tia sét!",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

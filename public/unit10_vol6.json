@@ -508,7 +508,7 @@
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -519,7 +519,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Sự đối lưu (convection) trên đài phát thanh nói là gây ra bão, nhưng nguyên nhân trực tiếp gây lở tuyết (avalanche) là do tuyết tích tụ quá nhiều trên núi: \"If too much accumulated, it could cause an avalanche\" (Nếu tuyết tích tụ quá nhiều, nó có thể gây ra lở tuyết).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
@@ -529,7 +529,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Đoạn ba nói rõ rằng sự nuôi dưỡng từ nhỏ (upbringing) của anh ấy mới dạy anh ấy tính kiên định: \"His upbringing had taught him consistency\" (Sự giáo dục từ nhỏ đã dạy anh tính kiên định), chứ không phải do công việc kiểm lâm.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
@@ -539,7 +539,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Thiết bị (apparatus) của anh ấy sử dụng thuốc nổ (dynamite) để làm rung chuyển tuyết, chứ không phải di chuyển tuyết sang một bên (sideways): \"It used dynamite to shake the snow and make the top layer of snow come down\".",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "39",
@@ -549,7 +549,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Đúng (T). Trong đoạn năm có nêu rõ chi tiết này: \"...the team found him thanks to his brightly colored jacket\" (...đội cứu hộ đã tìm thấy anh nhờ chiếc áo khoác sáng màu của anh).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
@@ -559,10 +559,10 @@
                 "False"
               ],
               "explanation": "Đáp án là Đúng (T). Bác sĩ đã nói trực tiếp với anh ở đoạn chín: \"You are really lucky to be alive, the doctor said.\" (Anh thực sự may mắn khi còn sống, bác sĩ nói).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",

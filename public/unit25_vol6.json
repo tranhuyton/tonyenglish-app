@@ -486,7 +486,7 @@
       "sections": [
         {
           "id": "sec4_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -497,7 +497,7 @@
                 "False"
               ],
               "explanation": "Sai. Đoạn 1 viết: \"Since they had so much free time during the long, cold winters, the inventive farmers started performing tricks to entertain themselves... Over time, they became great acrobats...\" (Vì có quá nhiều thời gian rảnh rỗi trong suốt mùa đông dài và lạnh giá, những người nông dân sáng tạo đã bắt đầu biểu diễn các trò kỹ xảo để giải trí... Theo thời gian, họ trở thành những diễn viên nhào lộn tài ba...). Vì vậy, họ không trở thành diễn viên nhào lộn trong lúc trồng trọt (while planting crops) mà là trong lúc rảnh rỗi vào mùa đông.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
@@ -507,7 +507,7 @@
                 "False"
               ],
               "explanation": "Đúng. Đoạn 2 giải thích: \"...in Mandarin-speaking parts of China, performers do the lion dance. They wear costumes and mimic the animal’s movements.\" (...ở những vùng nói tiếng Quan Thoại của Trung Quốc, các nghệ sĩ biểu diễn múa lân. Họ mặc trang phục và bắt chước các chuyển động của con vật).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "38",
@@ -517,7 +517,7 @@
                 "False"
               ],
               "explanation": "Đúng. Đoạn 3 và 4 nêu rõ rằng những chuyển động mượt mà (fluid movements) đòi hỏi rất nhiều công sức: \"They spend a lot of time rehearsing.\" (Họ dành rất nhiều thời gian để tập luyện).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
@@ -527,7 +527,7 @@
                 "False"
               ],
               "explanation": "Đúng. Đoạn 4 có viết: \"The teachings help them harmonize the sensory aspects of acrobatics with mental aspects.\" (Những lời dạy giúp họ kết hợp hài hòa các khía cạnh giác quan của nghệ thuật nhào lộn với các khía cạnh tinh thần).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "40",
@@ -537,10 +537,10 @@
                 "False"
               ],
               "explanation": "Sai. Đoạn cuối viết: \"Arts advocacy groups convinced the government to support Chinese acrobatics. As a result, there is now a statute that made several villages the center of training future acrobats.\" (Các nhóm ủng hộ nghệ thuật đã thuyết phục chính phủ hỗ trợ nghệ thuật nhào lộn Trung Quốc. Nhờ đó, hiện có một đạo luật biến một số ngôi làng thành trung tâm đào tạo những nghệ sĩ nhào lộn tương lai). Đạo luật này không dùng để \"bảo vệ họ khỏi bị khinh miệt\" (protect acrobats from being scorned).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5_reading",

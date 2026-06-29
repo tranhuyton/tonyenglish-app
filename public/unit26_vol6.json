@@ -326,7 +326,7 @@
       "sections": [
         {
           "id": "sec4",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -337,7 +337,7 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Trong đoạn 1 có viết: \"Anne hated being constrained by her fears...\" (Anne ghét bị gò bó bởi những nỗi sợ hãi của chính mình...).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
@@ -347,7 +347,7 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Đoạn 2 ghi rõ: \"The scary man restrained her arms and legs and carried her to his house.\" Không phải là \"vampire\" (ma cà rồng) mà là \"scary man\" (người đàn ông đáng sợ) đã trói tay chân và mang cô về nhà hắn.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
@@ -357,7 +357,7 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Trong truyện viết: \"Her guts began to hurt because she was so scared.\" (Ruột gan cô bắt đầu đau thắt lại vì quá sợ hãi) sau khi bị bắt cóc bởi kẻ xấu, chứ không phải vì bị đe dọa (\"intimidated\") bởi bạn cùng lớp.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
@@ -367,7 +367,7 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Đoạn 3 có nhắc đến: \"The dirty man spit when he talked. A string of saliva hung from his moist lips.\" (Gã đàn ông bẩn thỉu nhổ nước bọt khi hắn nói chuyện).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
@@ -377,10 +377,10 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Ở đoạn cuối, tác giả có viết: \"The kids were very tolerant of Anne from then on. They even decided that they would emulate her bravery...\" (Bọn trẻ từ đó rất khoan dung với Anne. Chúng thậm chí quyết định sẽ noi gương lòng dũng cảm của cô...).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec5",

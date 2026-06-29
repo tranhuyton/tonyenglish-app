@@ -413,7 +413,7 @@
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -424,7 +424,7 @@
                 "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 2 cho biết chính người quản gia (butler) mới là người dọn dẹp vào ban đêm: '...and then cleaned up after them late at night. Hence, while the superintendent slept soundly... the butler was still awake.' (...và sau đó dọn dẹp vào đêm khuya. Do đó, trong khi viên giám đốc ngủ say... thì người quản gia vẫn thức). Người quản gia bận rộn hơn viên giám đốc nhiều nhé!",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
@@ -434,7 +434,7 @@
                 "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 3 có viết ngược lại hoàn toàn: 'Sadly, though the butler was always overworked, his profession's intrinsic nature demanded he never be outspoken.' (Đáng buồn thay, mặc dù người quản gia luôn làm việc quá sức, nhưng bản chất vốn có của nghề nghiệp lại đòi hỏi ông không bao giờ được thẳng thắn lên tiếng). Câu hỏi đã tráo đổi vị trí của 'outspoken' và 'overworked' đó!",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
@@ -444,7 +444,7 @@
                 "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Trong đoạn 4, viên giám đốc nói rất rõ: 'This particular party is important. People from the ministry are coming.' (Bữa tiệc cụ thể này rất quan trọng. Những người từ bộ sẽ đến). Vì vậy câu này mô tả hoàn toàn chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
@@ -454,7 +454,7 @@
                 "False"
               ],
               "explanation": "Câu này là False (Sai) . Ở đoạn 5, người quản gia đun sôi NƯỚC chứ không phải đun sôi CAFFEINE: 'He boiled water in a kettle for soup and chopped some beef into chunks.' (Ông ấy đun sôi nước trong ấm để nấu súp và thái thịt bò thành từng cục). Đọc kỹ là nhận ra ngay điểm sai nhé!",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "40",
@@ -464,10 +464,10 @@
                 "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Trong đoạn 6 có chi tiết: '...and the soup tasted too pungent.' (...và món súp có vị quá hăng/cay nồng). Do đó câu hỏi đã nêu đúng tình tiết trong bài rồi.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

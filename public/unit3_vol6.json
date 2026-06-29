@@ -488,7 +488,7 @@
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -499,7 +499,7 @@
                 "False"
               ],
               "explanation": "Câu này là True (Đúng) . Trong đoạn 2 có nói rõ: 'Ladies even used pads to enlarge the appearance of their hips and shoulders.' (Các quý cô thậm chí còn dùng miếng đệm để làm to phần hông và vai của họ). Thông tin hoàn toàn khớp luôn nhé!",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
@@ -509,7 +509,7 @@
                 "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 5 cho biết: '...just like the ladies, the men wore lipstick and put rouge on their cheeks.' (...cũng giống như các quý cô, đàn ông cũng tô son và đánh phấn hồng lên má). Vậy không phải chỉ có phụ nữ mới trang điểm đâu nhé!",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
@@ -519,7 +519,7 @@
                 "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Ngay câu cuối bài có viết: 'Though such vanity would seem vulgar today...' (Mặc dù sự phù phiếm như vậy có vẻ thô tục ngày nay...). Rất khớp với nội dung câu hỏi !",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
@@ -529,7 +529,7 @@
                 "False"
               ],
               "explanation": "Câu này là False (Sai) . Theo đoạn 4: 'The columns of hair were a ridiculous tangle of wigs, jewels, flowers, and even stuffed birds.' (Những cột tóc là một mớ hỗn độn nực cười của những bộ tóc giả, đồ trang sức, hoa và thậm chí cả những con chim nhồi bông). Ở đây họ cài 'jewels' (trang sức) chứ không phải 'straps' (dây đai) nhé!",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "40",
@@ -539,10 +539,10 @@
                 "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Đầu đoạn 5 có miêu tả về thời trang của nam giới: 'Men’s fashion was similarly absurd. Today it would probably seem very feminine.' (Thời trang của nam giới cũng lố bịch tương tự. Ngày nay nó có lẽ sẽ trông rất nữ tính). Ý của câu hỏi miêu tả rất chính xác.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",

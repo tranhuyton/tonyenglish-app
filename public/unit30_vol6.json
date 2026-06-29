@@ -423,7 +423,7 @@
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -434,7 +434,7 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Cuối đoạn 3 có ghi: \"Lucas didn’t know what a mad hatter was, but the image of a scary man haunted him.\" (Lucas không biết thợ làm mũ điên là gì, nhưng hình ảnh một người đàn ông đáng sợ cứ ám ảnh cậu). Do đó những suy nghĩ về ngôi nhà khiến cậu bị ám ảnh.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
@@ -444,7 +444,7 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Theo đoạn 4: \"He collected pieces of amber and granite that he found on the ground.\" (Cậu bé thu nhặt những mẩu hổ phách và đá granite tìm thấy trên mặt đất), chứ không phải thu nhặt dế (crickets) và rêu (moss).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
@@ -454,7 +454,7 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Đoạn 4 viết: \"...and watched a bird peck at the ground.\" (...và nhìn một con chim mổ xuống mặt đất), không phải mổ vào mê cung (maze).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
@@ -464,7 +464,7 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Đoạn 5 có miêu tả: \"He wanted to run away, but he fell. He had a streak of blood on his shirt and some pebbles stuck in his skin.\" (Cậu bé muốn bỏ chạy, nhưng lại bị ngã. Cậu có một vệt máu trên áo và vài viên sỏi găm vào da).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
@@ -474,10 +474,10 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Trong đoạn 8 có nhắc tới: \"It smelled like charcoal, but it looked like a normal house.\" (Nó có mùi giống như than củi, nhưng trông giống một ngôi nhà bình thường). Ngôi nhà có mùi than củi chứ không phải mùi thức ăn hết hạn.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",

@@ -413,7 +413,7 @@
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -424,7 +424,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Câu đầu tiên của bài đọc ghi rõ: \"Kevin stepped off the tram and walked toward the ship\" (Kevin bước xuống khỏi xe điện và đi về phía con tàu), tức là anh ấy đi xe điện chứ không phải taxi.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "32",
@@ -434,7 +434,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Ở đoạn hai, tác giả viết: \"People paid a premium for the privilege to ride in first-class\" (Mọi người trả một mức phí cao cho đặc quyền đi khoang hạng nhất). Không phải mặc quần áo đẹp là được vào.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
@@ -444,7 +444,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Sai (F). Theo đoạn hai: \"He would have liked to socialize with the people inside, but it was against proper etiquette\" (Anh ấy muốn giao lưu với những người bên trong, nhưng điều đó là trái với quy tắc lịch sự). Lý do không phải là vì quá đông đúc.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
@@ -454,7 +454,7 @@
                 "False"
               ],
               "explanation": "Đáp án là Đúng (T). Trong đoạn bốn, bài viết có nêu: \"That night, he suffered from insomnia\" (Đêm đó, anh ấy bị chứng mất ngủ).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "35",
@@ -464,10 +464,10 @@
                 "False"
               ],
               "explanation": "Đáp án là Đúng (T). Cuối bài đọc, thuyền trưởng khẳng định điều này khi nói với Kevin: \"Without your help, we would have definitely hit the iceberg\" (Nếu không có sự giúp đỡ của cậu, chúng ta chắc chắn đã đâm vào tảng băng trôi).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",

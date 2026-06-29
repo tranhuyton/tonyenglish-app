@@ -343,7 +343,7 @@
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -354,7 +354,7 @@
                 "False"
               ],
               "explanation": "Câu này là True (Đúng) . Trong đoạn 1 có viết: 'After the scientists publicized their discovery, many people thought it was fictitious.' (Sau khi các nhà khoa học công bố khám phá của họ, nhiều người cho rằng đó là chuyện hư cấu). Ý của câu hỏi miêu tả chính xác sự việc này!",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
@@ -364,7 +364,7 @@
                 "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Ở đoạn 2 có câu: 'It was discovered that female komodo dragons can have babies without the help of their male counterparts.' (Người ta phát hiện ra rằng những con rồng komodo cái có thể sinh con mà không cần sự giúp đỡ của những con đực). Câu này hoàn toàn trùng khớp !",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "33",
@@ -374,7 +374,7 @@
                 "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 3 khẳng định ngược lại: '...scientists verified that when Komodo babies are born, their genes aren’t the exact same genes as their mother. Also, they are devoid of any genetic problems.' (...các nhà khoa học đã xác minh rằng khi những con Komodo con được sinh ra... chúng không mắc phải bất kỳ vấn đề di truyền nào). Tức là chúng KHÔNG hề có hệ gen đồng nhất hay gặp vấn đề di truyền nhé!",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
@@ -384,7 +384,7 @@
                 "False"
               ],
               "explanation": "Câu này là False (Sai) . Đoạn 4 có viết: 'Scientists theorize that Komodo dragons developed the ability because it helps the species fend off extinction.' (Các nhà khoa học đưa ra giả thuyết rằng rồng Komodo phát triển khả năng này vì nó giúp loài này chống lại sự tuyệt chủng). Khả năng này dùng để chống lại sự tuyệt chủng chứ không phải để lẩn tránh động vật ăn thịt (predators) đâu nhé!",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "35",
@@ -394,10 +394,10 @@
                 "False"
               ],
               "explanation": "Câu này là True (Đúng) nhé. Theo đoạn 4: 'Then, the sparse population increases. Once again there is a surplus of lizards on one island.' (Sau đó, quần thể thưa thớt tăng lên. Một lần nữa lại có số lượng lớn thằn lằn dư thừa trên một hòn đảo). Nội dung câu hỏi đã tóm tắt chính xác diễn biến này!",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",

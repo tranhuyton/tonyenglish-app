@@ -423,7 +423,7 @@
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "title": "Part A: Mark each statement True or False. Rewrite the false statements to make them true.",
           "content": "",
           "questions": [
             {
@@ -434,7 +434,7 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Ngay đầu đoạn 1 có ghi: \"His load was comprised of many types of ore.\" (Hàng hóa của ông ta bao gồm nhiều loại quặng).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "32",
@@ -444,7 +444,7 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Ở đoạn cuối, tác giả kết luận: \"The shortest route can be the longest, and vice versa, a long route may be the fastest.\" (Tuyến đường ngắn nhất có thể là dài nhất, và ngược lại, tuyến đường dài có thể lại là nhanh nhất). Do đó, \"ngược lại\" (vice versa) vẫn đúng chứ không phải là sai.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "33",
@@ -454,7 +454,7 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Trong đoạn 4 có viết: \"The thermometer read over 100 degrees Fahrenheit.\" (Nhiệt kế chỉ hơn 100 độ F), chứ không phải \"under\" (dưới 100 độ).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "34",
@@ -464,7 +464,7 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Theo đoạn 3: \"The bridge started to break as the truck crossed, and the trailer tilted to the right... most of the ore fell into the river below.\" (Cây cầu bắt đầu gãy khi xe tải đi qua, và rơ-moóc nghiêng về bên phải... phần lớn quặng rơi xuống sông). Thứ rơi xuống sông là quặng (ore) chứ không phải ống nhòm (binoculars).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "35",
@@ -474,10 +474,10 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Ở đoạn 6, khi ông tới nơi và tàu đã rời đi, tác giả viết: \"He had not fulfilled his duty.\" (Ông ta đã không hoàn thành nhiệm vụ của mình).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

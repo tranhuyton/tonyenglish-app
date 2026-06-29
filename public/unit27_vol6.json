@@ -473,7 +473,7 @@
       "sections": [
         {
           "id": "sec5",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -484,7 +484,7 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Đoạn 1 và 2 có nhắc đến việc Michael là một cung thủ xuất sắc và đang đi săn: \"Michael was once an expert archer... One day, he was in the forest hunting prey\" (Michael từng là một cung thủ xuất sắc... Một ngày nọ, ông đang đi săn mồi trong rừng).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "37",
@@ -494,7 +494,7 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Trong đoạn 5, tác giả viết: \"The prophet took out a bottle and a funnel. She poured some vinegar and garlic... added some seasoning and sodium...\" (Nhà tiên tri lấy ra một cái chai và một cái phễu. Cô ấy đổ một ít giấm và tỏi... thêm một số gia vị và natri...).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "38",
@@ -504,7 +504,7 @@
                 "False"
               ],
               "explanation": "Câu này ĐÚNG. Đoạn 7 có miêu tả: \"He saw the evil tyrant and his men marching in a procession through the town.\" (Ông nhìn thấy tên bạo chúa xấu xa và đồng bọn đang diễu hành qua thị trấn).",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             },
             {
               "id": "39",
@@ -514,7 +514,7 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Theo đoạn 2, nhà tiên tri hát thánh ca (\"singing a hymn\") nhưng chính đội quân xấu xa mới là kẻ tham gia vào âm mưu chiếm đoạt Hampton (\"an evil army is involved in a conspiracy to take over Hampton\"), không phải nhà tiên tri.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "40",
@@ -524,10 +524,10 @@
                 "False"
               ],
               "explanation": "Câu này SAI. Ở đoạn 10, nhà tiên tri tiết lộ: \"...the potion was fake! Your strength really came from having confidence!\" (Lọ thuốc là giả đấy! Sức mạnh của ông thực sự đến từ sự tự tin!).",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6",

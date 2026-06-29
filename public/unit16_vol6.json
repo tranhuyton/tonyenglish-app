@@ -453,7 +453,7 @@
       "sections": [
         {
           "id": "sec5_reading",
-          "title": "Part A: Mark each statement T for true or F for false.",
+          "title": "Part A: Mark each statement True or False.",
           "content": "",
           "questions": [
             {
@@ -464,7 +464,7 @@
                 "False"
               ],
               "explanation": "Dịch: Buổi biểu diễn là một vở châm biếm về Chủ nghĩa Cộng sản.\nGiải thích: F. Đoạn 1 chỉ đề cập: \"Hundreds of people had come to see a popular satire\" (Hàng trăm người đã đến xem một vở kịch châm biếm nổi tiếng). Bài đọc hoàn toàn không nhắc đến việc nó châm biếm cái gì.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "37",
@@ -474,7 +474,7 @@
                 "False"
               ],
               "explanation": "Dịch: Vị tỷ phú và nữ diễn viên chính của vở kịch là hai người duy nhất ở trong hậu trường.\nGiải thích: F. Theo đoạn 2: \"only two people were in the area at the time. One was the husband of the play’s star actress, the billionaire Henry Rich. The other was the theater’s janitor, Bill...\" (chỉ có hai người ở khu vực đó vào lúc đó. Một người là chồng của nữ diễn viên chính, tỷ phú Henry Rich. Người kia là người gác cổng của nhà hát, Bill...). Như vậy hai người ở đó là tỷ phú và Bill, chứ không phải nữ diễn viên chính.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "38",
@@ -484,7 +484,7 @@
                 "False"
               ],
               "explanation": "Dịch: Bởi vì Henry trông giống một kẻ vũ phu, đám đông đã đánh giá thấp nhân cách của ông ấy.\nGiải thích: F. Trong đoạn 2 và 4, người bị đánh giá thấp nhân cách và trông giống kẻ vũ phu là người gác cổng Bill, không phải tỷ phú Henry Rich. \"The other was the theater’s janitor, Bill, a large and strong man who looked like a brute.\" (Người kia là Bill, người quét dọn của nhà hát, một người đàn ông to lớn, mạnh mẽ trông giống như một tên vũ phu.)",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "39",
@@ -494,7 +494,7 @@
                 "False"
               ],
               "explanation": "Dịch: Vị tỷ phú đã vấp ngã giữa sự hỗn loạn khi mọi người chạy trốn khỏi đám cháy.\nGiải thích: F. Đoạn 4 cho biết lời của người vợ: \"I fell down amid the tumult while everyone fled the fire.\" (Tôi đã bị ngã giữa sự hỗn loạn trong khi mọi người chạy trốn đám cháy). Người bị ngã là vợ của tỷ phú (nữ diễn viên), chứ không phải bản thân vị tỷ phú.",
-              "correctAnswer": "B"
+              "correctAnswer": "False"
             },
             {
               "id": "40",
@@ -504,10 +504,10 @@
                 "False"
               ],
               "explanation": "Dịch: Đám đông đã gây ra một sự náo động lớn khi họ biết ai là người đã gây ra đám cháy.\nGiải thích: T. Đoạn 5 và 6 có chi tiết: \"The crowd then turned their eyes to the billionaire. “He did it!” they shouted... “Wait,” the billionaire said over the uproar.\" (Đám đông sau đó hướng ánh mắt về phía tỷ phú. \"Ông ta đã làm điều đó!\" họ hét lên... \"Đợi đã,\" tỷ phú nói lớn át đi tiếng ồn ào). Việc này hoàn toàn khớp với việc họ gây náo động.",
-              "correctAnswer": "A"
+              "correctAnswer": "True"
             }
           ],
-          "questionType": "Trắc nghiệm"
+          "questionType": "TFNG"
         },
         {
           "id": "sec6_reading",
