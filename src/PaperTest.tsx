@@ -146,6 +146,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   const [reviewFlags, setReviewFlags] = useState<Record<string, boolean>>({});
   const [activeQuestionId, setActiveQuestionId] = useState<string>('');
   const [draggedOption, setDraggedOption] = useState<string | null>(null);
+  const [showTranslation, setShowTranslation] = useState<Record<number, boolean>>({});
 
   // Resize Cột Trái/Phải (Thanh Kéo)
   const [leftWidth, setLeftWidth] = useState(50);
@@ -1223,7 +1224,23 @@ const handleFinish = async () => {
 
                     {/* Cột Câu Hỏi */}
                     <div className={`${enableSplitPane ? 'pl-4' : 'mx-auto'}`} style={{ width: enableSplitPane ? `calc(${100 - leftWidth}% - 1rem)` : '100%', flex: 'none', transition: 'width 0.3s ease' }}>
-                      {part.sections?.map((sec: any, sIndex: number) => {
+                      
+                      {isReviewMode && part?.translation && (part.translation.replace(/<[^>]*>?/gm, '').replace(/&nbsp;/g, '').replace(/[\u200B-\u200D\uFEFF]/g, '').trim() !== '' || part.translation.includes('<img')) && (
+                         <div className="flex justify-end mb-4 relative z-10">
+                            <button 
+                               onClick={() => setShowTranslation(prev => ({ ...prev, [pIndex]: !prev[pIndex] }))}
+                               className="px-4 py-2 bg-[#e0f2fe] text-[#0369a1] border border-[#bae6fd] rounded-lg font-bold text-[13px] hover:bg-[#bae6fd] transition shadow-sm flex items-center gap-2"
+                            >
+                               {showTranslation[pIndex] ? 'Tắt bài dịch & Hiện bài tập' : '📖 Xem bài dịch'}
+                            </button>
+                         </div>
+                      )}
+
+                      {showTranslation[pIndex] && (
+                         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-[15px] text-slate-700 leading-relaxed html-content-renderer mb-8" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.translation) }} />
+                      )}
+
+                      {!showTranslation[pIndex] && part.sections?.map((sec: any, sIndex: number) => {
                         
                         let rawContentText = '';
                         if (String(sec.content || '').match(/\[\s*\d+\s*\]/)) {

@@ -426,6 +426,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   };
 
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
+  const [showTranslation, setShowTranslation] = useState(false);
   const currentPart = parts[currentPartIndex] || {};
 
   const { allQuestionIds, questionIndexMap, questionToPartMap, questionDataMap } = useMemo(() => {
@@ -476,6 +477,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     
     if (targetPartIndex !== undefined && targetPartIndex !== currentPartIndex) {
       setCurrentPartIndex(targetPartIndex);
+      setShowTranslation(false);
       setTimeout(() => {
         const el = document.getElementById(`q-${qNum}`);
         if (el) { 
@@ -1264,7 +1266,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               return (
                 <button 
                   key={index} 
-                  onClick={() => setCurrentPartIndex(index)} 
+                  onClick={() => { setCurrentPartIndex(index); setShowTranslation(false); }} 
                   className={`px-3 py-2 text-[14px] font-bold transition-all whitespace-nowrap border-b-[3px] rounded-none ${isActive ? (isReviewMode ? 'text-[#064e3b] border-[#064e3b]' : 'text-black border-black') : 'text-slate-500 border-transparent hover:text-black'}`}
                 >
                   {p.title || `Part ${index + 1}`}
@@ -1343,7 +1345,22 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                     </div>
                   )}
                   
-                  {(Array.isArray(currentPart?.sections) ? currentPart.sections : []).map((sec: any, index: number) => {
+                  {isReviewMode && currentPart?.translation && (currentPart.translation.replace(/<[^>]*>?/gm, '').replace(/&nbsp;/g, '').replace(/[\u200B-\u200D\uFEFF]/g, '').trim() !== '' || currentPart.translation.includes('<img')) && (
+                     <div className="flex justify-end mb-4 relative z-10">
+                        <button 
+                           onClick={() => setShowTranslation(!showTranslation)}
+                           className="px-4 py-2 bg-[#e0f2fe] text-[#0369a1] border border-[#bae6fd] rounded-lg font-bold text-[13px] hover:bg-[#bae6fd] transition shadow-sm flex items-center gap-2"
+                        >
+                           {showTranslation ? 'Tắt bài dịch & Hiện bài tập' : '📖 Xem bài dịch'}
+                        </button>
+                     </div>
+                  )}
+
+                  {showTranslation && (
+                     <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-[15px] text-slate-700 leading-relaxed html-content-renderer mb-8" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(currentPart.translation) }} />
+                  )}
+
+                  {!showTranslation && (Array.isArray(currentPart?.sections) ? currentPart.sections : []).map((sec: any, index: number) => {
                     
                     let rawContentText = '';
                     if (String(sec.content || '').match(/\[\s*\d+\s*\]/)) {
