@@ -1340,7 +1340,7 @@ const handleFinish = async () => {
                            </div>
                        )}
 
-                       {isReviewMode && part?.translation && (part.translation.replace(/<[^>]*>?/gm, '').replace(/&nbsp;/g, '').trim() !== '' || part.translation.includes('<img')) && (
+                       {isReviewMode && part?.translation && (part.translation.replace(/<[^>]*>?/gm, '').replace(/&nbsp;/g, '').replace(/[\u200B-\u200D\uFEFF]/g, '').trim() !== '' || part.translation.includes('<img')) && (
                           <div className="flex justify-end mb-4 relative z-10">
                              <button 
                                 onClick={() => setShowTranslation(!showTranslation)}
