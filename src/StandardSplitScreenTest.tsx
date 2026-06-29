@@ -226,7 +226,7 @@ export default function StandardSplitScreenTest({
   });
   
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
-  
+  const [showTranslation, setShowTranslation] = useState(false);
   const [showPalette, setShowPalette] = useState(false); 
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -1209,7 +1209,7 @@ const handleFinish = async () => {
               return (
                 <button 
                   key={index} 
-                  onClick={() => setCurrentPartIndex(index)} 
+                  onClick={() => { setCurrentPartIndex(index); setShowTranslation(false); }} 
                   className={`px-4 py-2 text-[14px] font-bold transition-all whitespace-nowrap border-b-[3px] rounded-none ${isActive ? (isReviewMode ? 'text-emerald-700 border-emerald-600' : 'text-[#0ea5e9] border-[#0ea5e9]') : 'text-slate-500 border-transparent hover:text-slate-800'}`}
                 >
                   {p.title || `Part ${index + 1}`}
@@ -1340,7 +1340,22 @@ const handleFinish = async () => {
                            </div>
                        )}
 
-                       {part?.sections?.map((sec: any, sIdx: number) => {
+                       {isReviewMode && part?.translation && (
+                          <div className="flex justify-end mb-4 relative z-10">
+                             <button 
+                                onClick={() => setShowTranslation(!showTranslation)}
+                                className="px-4 py-2 bg-[#e0f2fe] text-[#0369a1] border border-[#bae6fd] rounded-lg font-bold text-[13px] hover:bg-[#bae6fd] transition shadow-sm flex items-center gap-2"
+                             >
+                                {showTranslation ? 'Tắt bài dịch & Hiện bài tập' : '📖 Xem bài dịch'}
+                             </button>
+                          </div>
+                       )}
+
+                       {showTranslation && (
+                           <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-[15px] text-slate-700 leading-relaxed html-content-renderer mb-8" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.translation) }} />
+                       )}
+
+                       {!showTranslation && part?.sections?.map((sec: any, sIdx: number) => {
                           
                           let displaySecTitle = sec.title;
                           if (displaySecTitle && /Questions?\s+\d+/i.test(displaySecTitle)) {

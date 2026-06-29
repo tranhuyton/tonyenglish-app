@@ -611,6 +611,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
               tags: '', 
               audioUrl: '', 
               explanation: '', 
+              translation: '',
               sections: [] 
             };
             newParts.push(currentPart);
@@ -764,6 +765,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       tags: '', 
       audioUrl: '', 
       explanation: '', 
+      translation: '',
       sections: [] 
     });
     setTestData(newData);
@@ -1112,6 +1114,11 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                         label="Nội dung Part (Bài đọc/Giới thiệu)" 
                         value={part.content} 
                         onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} 
+                      />
+                      <JoditEditorRow 
+                        label="Bài dịch Part (Tùy chọn, chỉ hiện khi chữa bài)" 
+                        value={part.translation} 
+                        onChange={(e:any) => updateField([pIdx], 'translation', e.target.value)} 
                       />
                       <JoditEditorRow 
                         label="Lời giải thích Part / Audio Transcript (Tùy chọn, chỉ hiện khi chữa bài)" 
