@@ -2,6 +2,7 @@ import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
 import * as XLSX from 'xlsx';
 import JoditEditor from 'jodit-react';
+import { fixJoditOutdent } from './utils/joditFix';
 
 // ==========================================
 // 1. CÁC HÀM VÀ COMPONENT CON
@@ -114,6 +115,10 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
           console.error("Lỗi parse HTML:", err);
           return html; // Fallback nếu có lỗi
         }
+      },
+      beforeCommand: (command: string, _1: any, _2: any, _3: any, editor: any) => {
+        const outdentResult = fixJoditOutdent(command, _1, _2, _3, editor);
+        if (outdentResult === false) return false;
       },
       beforeInsertNode: (node: any) => {
         if (node && node.tagName === 'IMG') {

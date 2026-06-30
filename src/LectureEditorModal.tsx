@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { supabase } from './supabase';
 import JoditEditor from 'jodit-react';
+import ReactPlayer from 'react-player';
+import { fixJoditOutdent } from './utils/joditFix';
 
 // =========================================================================
 // COMPONENT CHỌN BÀI TẬP VỚI BỘ GIẢM XÓC (DEBOUNCE) TÌM KIẾM
@@ -283,6 +285,10 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     toolbarSticky: true, 
     toolbarAdaptive: false,
     
+    // FIX PHÍM TAB: Ép thực hiện lệnh thụt lề (indent) thay vì chuyển focus sang ô khác
+    tabAction: 'indent',
+    tabIndex: -1,
+    
     // NÚT "SOURCE" ĐƯỢC ĐẶT Ở CUỐI CÙNG (CẠNH PRINT)
     buttons: [
       'bold', 'italic', 'underline', 'strikethrough', '|',
@@ -303,6 +309,10 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     disablePlugins: ['clean-html', 'sanitize'], 
     cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false },
     events: {
+      beforeCommand: (command: string, _1: any, _2: any, _3: any, editor: any) => {
+        const outdentResult = fixJoditOutdent(command, _1, _2, _3, editor);
+        if (outdentResult === false) return false;
+      },
       beforeInsertNode: (node: any) => {
         if (node && node.tagName === 'IMG') {
           node.style.width = '80%';
