@@ -1,41 +1,4 @@
 export const fixJoditIndentAndOutdent = function(command: string, _1: any, _2: any, _3: any, editor: any) {
-    if (command === 'indent') {
-        try {
-            const current = editor.selection.current();
-            const li = current instanceof Element ? current.closest('li') : current?.parentElement?.closest('li');
-            if (!li) return; // Not in a list, let Jodit handle
-            
-            const parentUl = li.parentElement;
-            if (!parentUl || (parentUl.tagName !== 'UL' && parentUl.tagName !== 'OL')) return;
-
-            const previousLi = li.previousElementSibling;
-            if (!previousLi || previousLi.tagName !== 'LI') {
-                // Cannot indent the first item in a list
-                return false; 
-            }
-
-            // Look for an existing UL/OL inside the previous LI
-            let nestedList = Array.from(previousLi.children).find(c => c.tagName === 'UL' || c.tagName === 'OL');
-            
-            if (!nestedList) {
-                nestedList = document.createElement(parentUl.tagName);
-                // Inherit list-style-type from Jodit's dropdown if present on parentUl
-                // But normally we let CSS handle it
-                previousLi.appendChild(nestedList);
-            }
-            
-            nestedList.appendChild(li);
-            
-            // Cleanup empty parent list if any
-            if (parentUl.children.length === 0) parentUl.remove();
-            
-            editor.selection.setCursorIn(li);
-            return false; // Prevent Jodit's default indent
-        } catch(e) {
-            console.error("Custom indent error", e);
-        }
-    }
-    
     if (command === 'outdent') {
         try {
             const current = editor.selection.current();

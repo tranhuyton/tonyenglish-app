@@ -307,7 +307,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     uploader: { insertImageAsBase64URI: true },
     safeMode: false, 
     htmlParseBrowser: false,
-    disablePlugins: ['clean-html', 'sanitize'], 
+    disablePlugins: ['sanitize'], 
     cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false },
     events: {
       beforeCommand: (command: string, _1: any, _2: any, _3: any, editor: any) => {
