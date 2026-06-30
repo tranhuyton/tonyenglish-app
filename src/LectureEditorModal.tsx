@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { supabase } from './supabase';
 import JoditEditor from 'jodit-react';
 import ReactPlayer from 'react-player';
-import { fixJoditIndentAndOutdent } from './utils/joditFix';
+import { setupJoditListFix } from './utils/joditFix';
 
 // =========================================================================
 // COMPONENT CHỌN BÀI TẬP VỚI BỘ GIẢM XÓC (DEBOUNCE) TÌM KIẾM
@@ -370,9 +370,8 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           return html; // Fallback nếu có lỗi
         }
       },
-      beforeCommand: (command: string, _1: any, _2: any, _3: any, editor: any) => {
-        const outdentResult = fixJoditIndentAndOutdent(command, _1, _2, _3, editor);
-        if (outdentResult === false) return false;
+      afterInit: (editor: any) => {
+        setupJoditListFix(editor);
       },
       beforeInsertNode: (node: any) => {
         if (node && node.tagName === 'IMG') {
