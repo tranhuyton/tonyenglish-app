@@ -107,6 +107,18 @@ const MemoizedEditor = React.memo(({ initialValue, config, onHtmlChange }: any) 
             .jodit-toolbar__box {
                 flex-wrap: wrap !important;
             }
+            
+            /* --- CĂN CHỈNH LẠI BULLET POINT CHUẨN BRUTALIST IDP/BC --- */
+            .jodit-wysiwyg ul {
+                padding-left: 1.5rem !important;
+                margin: 0.5rem 0 !important;
+            }
+            .jodit-wysiwyg ol {
+                list-style: decimal outside !important;
+                padding-left: 1.5rem !important;
+                margin: 0.5rem 0 !important;
+            }
+            
             /* Ép thẳng vào thẻ LI để trị dứt điểm inline-style của Jodit */
             .jodit-wysiwyg ul > li {
                 list-style-type: disc !important; /* Level 1: Chấm đen */
