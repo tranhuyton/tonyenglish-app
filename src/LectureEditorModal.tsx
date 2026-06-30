@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { supabase } from './supabase';
 import JoditEditor from 'jodit-react';
 import ReactPlayer from 'react-player';
-import { setupJoditListFix } from './utils/joditFix';
+
 
 // =========================================================================
 // COMPONENT CHỌN BÀI TẬP VỚI BỘ GIẢM XÓC (DEBOUNCE) TÌM KIẾM
@@ -288,6 +288,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     // FIX PHÍM TAB: Ép thực hiện lệnh thụt lề (indent) thay vì chuyển focus sang ô khác
     tabAction: 'indent',
     tabIndex: -1,
+    tab: { tabInsideLiInsertNewList: true },
     
     // NÚT "SOURCE" ĐƯỢC ĐẶT Ở CUỐI CÙNG (CẠNH PRINT)
     buttons: [
@@ -369,9 +370,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           console.error("Lỗi parse HTML:", err);
           return html; // Fallback nếu có lỗi
         }
-      },
-      afterInit: (editor: any) => {
-        setupJoditListFix(editor);
       },
       beforeInsertNode: (node: any) => {
         if (node && node.tagName === 'IMG') {

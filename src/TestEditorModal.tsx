@@ -2,7 +2,7 @@ import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
 import * as XLSX from 'xlsx';
 import JoditEditor from 'jodit-react';
-import { setupJoditListFix } from './utils/joditFix';
+
 
 // ==========================================
 // 1. CÁC HÀM VÀ COMPONENT CON
@@ -33,6 +33,7 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
     // FIX PHÍM TAB: Ép thực hiện lệnh thụt lề (indent) thay vì chuyển focus sang ô khác
     tabAction: 'indent',
     tabIndex: -1,
+    tab: { tabInsideLiInsertNewList: true },
 
     buttons: [
       'source', 'fullsize', '|', 
@@ -115,9 +116,6 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
           console.error("Lỗi parse HTML:", err);
           return html; // Fallback nếu có lỗi
         }
-      },
-      afterInit: (editor: any) => {
-        setupJoditListFix(editor);
       },
       beforeInsertNode: (node: any) => {
         if (node && node.tagName === 'IMG') {
