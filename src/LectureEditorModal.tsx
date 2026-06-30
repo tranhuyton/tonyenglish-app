@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { supabase } from './supabase';
 import JoditEditor from 'jodit-react';
 import ReactPlayer from 'react-player';
-import { fixJoditOutdent } from './utils/joditFix';
+import { fixJoditIndentAndOutdent } from './utils/joditFix';
 
 // =========================================================================
 // COMPONENT CHỌN BÀI TẬP VỚI BỘ GIẢM XÓC (DEBOUNCE) TÌM KIẾM
@@ -311,7 +311,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false },
     events: {
       beforeCommand: (command: string, _1: any, _2: any, _3: any, editor: any) => {
-        const outdentResult = fixJoditOutdent(command, _1, _2, _3, editor);
+        const outdentResult = fixJoditIndentAndOutdent(command, _1, _2, _3, editor);
         if (outdentResult === false) return false;
       },
       beforeInsertNode: (node: any) => {
