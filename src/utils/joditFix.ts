@@ -10,17 +10,13 @@ export function setupListIndent(editor: any) {
   if (!editor) return;
 
   const attach = () => {
-    // editor.editor = thẻ contenteditable div bên trong Jodit
     const el = editor.editor;
     if (!el) return;
-
-    console.log('[joditFix] ✅ Attached Tab handler to contenteditable element');
 
     // CAPTURE PHASE = chạy trước tất cả handlers khác
     el.addEventListener('keydown', (e: KeyboardEvent) => {
       if (e.key !== 'Tab') return;
 
-      // Tìm LI chứa con trỏ
       const sel = window.getSelection();
       if (!sel || !sel.rangeCount) return;
       
@@ -29,17 +25,19 @@ export function setupListIndent(editor: any) {
       
       // Tìm LI gần nhất
       let li: HTMLElement | null = null;
+      let depth = 0;
       while (node && node !== el) {
         if (node.nodeType === 1 && (node as HTMLElement).tagName === 'LI') {
           li = node as HTMLElement;
           break;
         }
         node = node.parentNode;
+        depth++;
+        if (depth > 20) break;
       }
 
       if (!li) return; // Không ở trong list → bỏ qua
 
-      // CHẶN TẤT CẢ handler khác
       e.preventDefault();
       e.stopPropagation();
       e.stopImmediatePropagation();
@@ -49,7 +47,7 @@ export function setupListIndent(editor: any) {
       } else {
         doIndent(editor, li);
       }
-    }, true); // true = CAPTURE PHASE
+    }, true);
 
     // Bắt nút indent/outdent trên toolbar
     editor.e.on('beforeCommand.listfix', (command: string) => {
@@ -81,13 +79,11 @@ export function setupListIndent(editor: any) {
     });
   };
 
-  // Đợi editor ready
   if (editor.isReady) {
     attach();
   } else if (editor.waitForReady) {
     editor.waitForReady().then(attach);
   } else {
-    // Fallback: thử sau 500ms
     setTimeout(attach, 500);
   }
 }
@@ -159,7 +155,6 @@ function placeCursor(li: HTMLElement) {
   if (!sel) return;
   const range = document.createRange();
   
-  // Đặt cursor vào text node đầu tiên trong li
   const walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT, null);
   const firstText = walker.nextNode();
   if (firstText) {
