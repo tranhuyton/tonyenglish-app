@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { supabase } from './supabase';
 import JoditEditor from 'jodit-react';
 import ReactPlayer from 'react-player';
-import { setupJoditListFix } from './utils/joditFix';
 
 // =========================================================================
 // COMPONENT CHỌN BÀI TẬP VỚI BỘ GIẢM XÓC (DEBOUNCE) TÌM KIẾM

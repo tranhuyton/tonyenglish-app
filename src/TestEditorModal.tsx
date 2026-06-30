@@ -2,7 +2,6 @@ import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
 import * as XLSX from 'xlsx';
 import JoditEditor from 'jodit-react';
-import { setupJoditListFix } from './utils/joditFix';
 
 // ==========================================
 // 1. CÁC HÀM VÀ COMPONENT CON
