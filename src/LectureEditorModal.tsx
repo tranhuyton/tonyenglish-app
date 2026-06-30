@@ -103,6 +103,14 @@ const ExerciseSelectionModal = React.memo(({ availableExercises, onClose, onAddE
 // =========================================================================
 const MemoizedEditor = React.memo(({ initialValue, config, onHtmlChange }: any) => {
   const editorRef = useRef(null);
+
+  // Bypass jodit-react: trực tiếp configure tab plugin trên Jodit instance
+  const editorRefCallback = React.useCallback((jodit: any) => {
+    if (jodit && jodit.o) {
+      jodit.o.tab = { tabInsideLiInsertNewList: true };
+    }
+  }, []);
+
   return (
      <div className="w-full bg-white relative rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
          <style>{`
@@ -240,6 +248,7 @@ const MemoizedEditor = React.memo(({ initialValue, config, onHtmlChange }: any) 
          `}</style>
          <JoditEditor
             ref={editorRef}
+            editorRef={editorRefCallback}
             value={initialValue}
             config={config}
             onBlur={onHtmlChange}

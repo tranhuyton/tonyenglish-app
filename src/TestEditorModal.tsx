@@ -22,6 +22,16 @@ const uploadToSupabase = async (file: File) => {
 const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
   const editorRef = useRef(null);
 
+  // Bypass jodit-react: trực tiếp configure tab plugin trên Jodit instance
+  const editorRefCallback = React.useCallback((jodit: any) => {
+    if (jodit) {
+      // Đảm bảo tab plugin config được set đúng
+      if (jodit.o) {
+        jodit.o.tab = { tabInsideLiInsertNewList: true };
+      }
+    }
+  }, []);
+
   const editorConfig = useMemo(() => ({
     readonly: false,
     height: 250, 
@@ -268,6 +278,7 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
          `}</style>
          <JoditEditor
             ref={editorRef}
+            editorRef={editorRefCallback}
             value={value || ''}
             config={editorConfig}
             onBlur={(newContent) => onChange({ target: { value: newContent } })}
