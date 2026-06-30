@@ -301,15 +301,76 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
       'hr', 'eraser', 'copyformat', 'symbol', 'fullsize', 'print', 'source'
     ],
     
+    // --- FIX PASTE: insert_as_html để giữ nguyên cấu trúc bảng từ Excel/Word ---
     defaultActionOnPaste: 'insert_as_html', 
     askBeforePasteHTML: false,
     askBeforePasteFromWord: false,
-    uploader: { insertImageAsBase64URI: true },
+    uploader: { insertImageAsBase64URI: true }, 
     safeMode: false, 
     htmlParseBrowser: false,
-    disablePlugins: ['sanitize'], 
-    cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false },
+    cleanHTML: { 
+        fillEmptyParagraph: false, 
+        cleanOnPaste: false, // Tắt clean mặc định của Jodit để dùng bộ lọc Custom bên dưới
+        replaceNBSP: true,
+        removeOnError: false 
+    },
+    
+    // --- BỘ LỌC DOM PARSER BÀN TAY SẮT: Lột sạch style rác, giữ nguyên Bảng/Đậm/Nghiêng ---
     events: {
+      processPaste: (event: any, html: any) => {
+        if (!html || typeof html !== 'string') return html;
+        try {
+          // Bắt trình duyệt giả lập đọc đoạn HTML vừa paste
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          
+          // 1. Tiêu diệt các thẻ CSS, Script, Meta ẩn dính từ web khác
+          doc.querySelectorAll('style, meta, script, link, title').forEach(n => n.remove());
+          
+          // 2. Quét TẤT CẢ các thẻ còn lại
+          doc.querySelectorAll('*').forEach((el: any) => {
+            // Xóa tận gốc các định dạng nội tuyến (inline styles) gây lệch giao diện
+            if (el.style) {
+              el.style.removeProperty('font-family');
+              el.style.removeProperty('font-size');
+              el.style.removeProperty('line-height');
+              el.style.removeProperty('background-color');
+              el.style.removeProperty('background');
+              el.style.removeProperty('margin');
+              el.style.removeProperty('margin-top');
+              el.style.removeProperty('margin-bottom');
+              el.style.removeProperty('padding');
+              
+              // Giữ lại màu cho thẻ Link, còn lại xóa màu chữ rác
+              if (el.tagName !== 'A') {
+                el.style.removeProperty('color');
+              }
+              
+              // Nếu style rỗng thì xóa luôn thuộc tính style cho sạch code
+              if (el.getAttribute('style') === '') {
+                el.removeAttribute('style');
+              }
+            }
+            
+            // Xóa các class và ID lạ do web khác tự gen ra
+            el.removeAttribute('class');
+            el.removeAttribute('id');
+            
+            // Lột bỏ định dạng của các thẻ <font> cổ lỗ sĩ
+            if (el.tagName === 'FONT') {
+              el.removeAttribute('face');
+              el.removeAttribute('size');
+              el.removeAttribute('color');
+            }
+          });
+          
+          // Trả lại HTML sạch sẽ, chỉ còn cấu trúc nguyên thủy
+          return doc.body.innerHTML;
+        } catch(err) {
+          console.error("Lỗi parse HTML:", err);
+          return html; // Fallback nếu có lỗi
+        }
+      },
       beforeCommand: (command: string, _1: any, _2: any, _3: any, editor: any) => {
         const outdentResult = fixJoditIndentAndOutdent(command, _1, _2, _3, editor);
         if (outdentResult === false) return false;
