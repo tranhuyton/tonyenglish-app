@@ -107,6 +107,122 @@ const MemoizedEditor = React.memo(({ initialValue, config, onHtmlChange }: any) 
             .jodit-toolbar__box {
                 flex-wrap: wrap !important;
             }
+            /* Ép thẳng vào thẻ LI để trị dứt điểm inline-style của Jodit */
+            .jodit-wysiwyg ul > li {
+                list-style-type: disc !important; /* Level 1: Chấm đen */
+                margin-bottom: 0.25rem !important;
+            }
+            .jodit-wysiwyg ul ul > li {
+                list-style-type: circle !important; /* Level 2: Vòng tròn trắng */
+            }
+            .jodit-wysiwyg ul ul ul > li {
+                list-style-type: square !important; /* Level 3: Hình vuông đen */
+            }
+
+            /* FIX LỖI RỚT DÒNG: Ép thẻ p bên trong li nằm trên cùng 1 hàng */
+            .jodit-wysiwyg li > p, 
+            .jodit-wysiwyg li > div {
+                display: inline !important; 
+                margin: 0 !important;
+            }
+
+            /* --- FIX HIỂN THỊ BẢNG EXCEL TRONG EDITOR --- */
+            .jodit-wysiwyg table {
+                width: 100% !important;
+                border-collapse: collapse !important;
+                margin: 1.5rem auto !important;
+            }
+            .jodit-wysiwyg th, .jodit-wysiwyg td {
+                border: 1px solid #cbd5e1 !important;
+                padding: 12px 16px !important;
+                white-space: normal !important;
+                word-break: break-word !important;
+            }
+            /* Trả lại quyền Vertical Align cho Editor */
+            .jodit-wysiwyg td { vertical-align: top; }
+            .jodit-wysiwyg [style*="vertical-align: middle"], .jodit-wysiwyg [valign="middle"] { vertical-align: middle !important; }
+            .jodit-wysiwyg [style*="vertical-align: bottom"], .jodit-wysiwyg [valign="bottom"] { vertical-align: bottom !important; }
+            .jodit-wysiwyg [style*="vertical-align: top"], .jodit-wysiwyg [valign="top"] { vertical-align: top !important; }
+
+            /* --- BÀN TAY SẮT: ĐỒNG BỘ FONT CHỮ & GIÃN DÒNG MẶC ĐỊNH --- */
+            .jodit-wysiwyg {
+                font-family: inherit !important; 
+                line-height: 1.7 !important;     
+                color: #334155;                  
+                font-size: 15px;                 
+            }
+            
+            /* Ép các thẻ con kế thừa Font và Giãn dòng, KHÔNG ép chết Size và Màu */
+            .jodit-wysiwyg p,
+            .jodit-wysiwyg div,
+            .jodit-wysiwyg span,
+            .jodit-wysiwyg li,
+            .jodit-wysiwyg td,
+            .jodit-wysiwyg th,
+            .jodit-wysiwyg b,
+            .jodit-wysiwyg strong,
+            .jodit-wysiwyg i,
+            .jodit-wysiwyg em {
+                font-family: inherit !important;
+                line-height: inherit !important;
+            }
+            
+            /* Giữ lại màu cho thẻ link */
+            .jodit-wysiwyg a {
+                color: #00a651 !important;
+                text-decoration: underline !important;
+                font-family: inherit !important;
+            }
+            
+            /* --- FIX LỖI KHOẢNG TRẮNG DƯỚI ẢNH TRONG BẢNG --- */
+            .jodit-wysiwyg table p {
+                margin: 0 !important;
+            }
+            .jodit-wysiwyg td img {
+                display: block !important; 
+                max-width: 100% !important;
+                height: auto !important;
+                margin: 0 auto !important; 
+            }
+            /* Ép ẩn hoàn toàn các thẻ P rỗng hoặc chỉ chứa thẻ BR do Editor sinh ra trong bảng */
+            .jodit-wysiwyg td > p:empty,
+            .jodit-wysiwyg td > p:has(> br:only-child) {
+                display: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                height: 0 !important;
+            }
+
+            /* --- FIX NÚT UPDATE/SAVE TRONG BẢNG CHỈNH ẢNH --- */
+            html body div.jodit-dialog__footer {
+                display: flex !important;
+                justify-content: flex-end !important;
+                gap: 8px !important;
+                padding: 12px !important;
+                border-top: 1px solid #eee !important;
+                background: #f9f9f9 !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            html body div.jodit-dialog__footer button.jodit-button_primary, 
+            html body div.jodit-dialog__footer button.jodit-ui-button_primary,
+            html body div.jodit-dialog__footer button[type="submit"] {
+                background-color: #00a651 !important; 
+                color: #ffffff !important;
+                padding: 6px 20px !important;
+                border-radius: 4px !important;
+                font-weight: bold !important;
+                border: none !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                display: inline-flex !important;
+                text-shadow: none !important;
+                box-shadow: none !important;
+            }
+            html body div.jodit-dialog__box {
+                max-height: 85vh !important;
+                overflow-y: auto !important;
+            }
          `}</style>
          <JoditEditor
             ref={editorRef}
