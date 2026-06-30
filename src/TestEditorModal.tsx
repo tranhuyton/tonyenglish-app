@@ -116,9 +116,6 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
           return html; // Fallback nếu có lỗi
         }
       },
-      afterInit: (editor: any) => {
-        setupJoditListFix(editor);
-      },
       beforeInsertNode: (node: any) => {
         if (node && node.tagName === 'IMG') {
           node.style.width = '80%';
