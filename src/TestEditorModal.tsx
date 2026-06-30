@@ -2,6 +2,7 @@ import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
 import * as XLSX from 'xlsx';
 import JoditEditor from 'jodit-react';
+import { setupListIndent } from './utils/joditFix';
 
 
 // ==========================================
@@ -22,14 +23,9 @@ const uploadToSupabase = async (file: File) => {
 const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
   const editorRef = useRef(null);
 
-  // Bypass jodit-react: trực tiếp configure tab plugin trên Jodit instance
+  // Bypass jodit-react: gắn trực tiếp keydown handler vào Jodit instance
   const editorRefCallback = React.useCallback((jodit: any) => {
-    if (jodit) {
-      // Đảm bảo tab plugin config được set đúng
-      if (jodit.o) {
-        jodit.o.tab = { tabInsideLiInsertNewList: true };
-      }
-    }
+    if (jodit) setupListIndent(jodit);
   }, []);
 
   const editorConfig = useMemo(() => ({

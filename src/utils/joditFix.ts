@@ -1,190 +1,151 @@
 /**
- * FIX JODIT v4 INDENT/OUTDENT CHO BULLET POINT CẤP 1/2/3
+ * FIX TAB INDENT/OUTDENT TRONG LIST CHO JODIT + REACT
  * 
- * Jodit v4 plugin indent.js CHỈ thêm margin-left, KHÔNG tạo nested <ul>.
- * File này override lệnh indent/outdent khi con trỏ đang ở trong <li>
- * để tạo/xóa nested <ul> thật sự → CSS phân cấp disc/circle/square hoạt động.
+ * Plugin `tab` của Jodit v4 CÓ logic tạo nested list, nhưng jodit-react
+ * khiến nó không hoạt động (có thể do event bị chặn bởi React).
  * 
- * Cách dùng: Gọi setupJoditListFix(editor) trong events.afterInit
+ * File này gắn trực tiếp keydown handler vào Jodit instance,
+ * bypass hoàn toàn plugin system.
+ * 
+ * Gọi: setupListIndent(joditInstance) trong editorRef callback
  */
 
-/**
- * Tìm thẻ <li> gần nhất chứa con trỏ
- */
-function findCurrentLi(editor: any): HTMLLIElement | null {
-  try {
+import { Jodit } from 'jodit';
+
+export function setupListIndent(editor: any) {
+  if (!editor || !editor.e) return;
+
+  // === Tab key handler ===
+  editor.e.on('keydown.listfix', (e: KeyboardEvent) => {
+    if (e.key !== 'Tab') return;
+
     const current = editor.s.current();
-    if (!current) return null;
-    
-    if (current instanceof HTMLElement) {
-      if (current.tagName === 'LI') return current as HTMLLIElement;
-      return current.closest('li') as HTMLLIElement | null;
+    if (!current) return;
+
+    // Tìm LI chứa con trỏ
+    const li = (current.nodeType === 1) 
+      ? (current as HTMLElement).closest('li') 
+      : current.parentElement?.closest('li');
+    if (!li) return; // Không ở trong list → bỏ qua
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    if (e.shiftKey) {
+      doOutdent(editor, li);
+    } else {
+      doIndent(editor, li);
     }
-    // Text node
-    return current.parentElement?.closest('li') as HTMLLIElement | null;
-  } catch {
-    return null;
-  }
+    
+    return false;
+  });
+
+  // === Indent/Outdent toolbar button handler ===
+  editor.e.on('beforeCommand.listfix', (command: string) => {
+    if (command !== 'indent' && command !== 'outdent') return;
+
+    const current = editor.s.current();
+    if (!current) return;
+
+    const li = (current.nodeType === 1)
+      ? (current as HTMLElement).closest('li')
+      : current.parentElement?.closest('li');
+    if (!li) return;
+
+    if (command === 'indent') {
+      doIndent(editor, li);
+    } else {
+      doOutdent(editor, li);
+    }
+
+    return false; // Chặn Jodit default (margin-left)
+  });
 }
 
 /**
- * INDENT: Nhét <li> vào nested <ul> bên trong <li> phía trên
+ * INDENT: Chuyển LI vào nested list bên trong LI phía trước
  */
-function handleIndent(editor: any): false | void {
-  const li = findCurrentLi(editor);
-  if (!li) return; // Không ở trong list → để Jodit xử lý bình thường (margin)
-  
+function doIndent(editor: any, li: HTMLElement) {
   const parentList = li.parentElement;
-  if (!parentList || (parentList.tagName !== 'UL' && parentList.tagName !== 'OL')) return;
-  
+  if (!parentList || !isListTag(parentList.tagName)) return;
+
   const prevLi = li.previousElementSibling;
-  if (!prevLi || prevLi.tagName !== 'LI') {
-    return false; // Item đầu tiên, không indent được → chặn Jodit thêm margin
-  }
-  
-  // Tìm nested list đã tồn tại cuối prevLi
+  if (!prevLi || prevLi.tagName !== 'LI') return; // Phải có LI phía trước
+
+  // Tìm nested list đã có cuối prevLi
   let nestedList: Element | null = null;
-  for (let i = prevLi.children.length - 1; i >= 0; i--) {
-    const child = prevLi.children[i];
-    if (child.tagName === 'UL' || child.tagName === 'OL') {
-      nestedList = child;
-      break;
-    }
+  const lastChild = prevLi.lastElementChild;
+  if (lastChild && isListTag(lastChild.tagName)) {
+    nestedList = lastChild;
   }
-  
-  // Chưa có thì tạo mới cùng loại với parent
+
+  // Chưa có → tạo mới cùng loại
   if (!nestedList) {
-    nestedList = editor.ed.createElement(parentList.tagName.toLowerCase());
+    nestedList = document.createElement(parentList.tagName.toLowerCase());
+    // Copy attributes từ parent list
+    Array.from(parentList.attributes).forEach(attr => {
+      (nestedList as Element).setAttribute(attr.name, attr.value);
+    });
     prevLi.appendChild(nestedList);
   }
-  
-  // Xóa margin-left rác mà Jodit có thể đã thêm
-  li.style.removeProperty('margin-left');
-  li.style.removeProperty('padding-left');
-  
-  // Nhét li vào nested list
-  nestedList.appendChild(li);
-  
-  editor.s.setCursorIn(li);
-  return false; // Chặn Jodit mặc định
-}
 
-/**
- * OUTDENT: Kéo <li> ra 1 cấp
- */
-function handleOutdent(editor: any): false | void {
-  const li = findCurrentLi(editor);
-  if (!li) return;
-  
-  const parentList = li.parentElement;
-  if (!parentList || (parentList.tagName !== 'UL' && parentList.tagName !== 'OL')) return;
-  
+  // Di chuyển LI vào nested list
+  nestedList.appendChild(li);
+
   // Xóa margin-left rác
   li.style.removeProperty('margin-left');
   li.style.removeProperty('padding-left');
-  
-  const grandParent = parentList.parentElement;
-  
-  if (grandParent && grandParent.tagName === 'LI') {
-    // ===== ĐANG Ở NESTED LIST → KÉO RA 1 CẤP =====
-    const grandParentList = grandParent.parentElement;
-    if (!grandParentList) return;
-    
-    // Thu thập siblings phía sau li hiện tại
-    const siblingsAfter: Node[] = [];
-    let next = li.nextSibling;
-    while (next) {
-      siblingsAfter.push(next);
-      next = next.nextSibling;
-    }
-    
-    // Chèn li ra cấp cha, ngay sau grandParent LI
-    grandParentList.insertBefore(li, grandParent.nextSibling);
-    
-    // Nếu còn siblings → tạo nested list mới gắn vào li
-    if (siblingsAfter.length > 0) {
-      const newList = editor.ed.createElement(parentList.tagName.toLowerCase());
-      siblingsAfter.forEach((sib: Node) => newList.appendChild(sib));
-      li.appendChild(newList);
-    }
-    
-    // Dọn nested list cũ nếu rỗng
-    if (parentList.children.length === 0) parentList.remove();
-    
-    editor.s.setCursorIn(li);
-    return false;
-    
-  } else {
-    // ===== ĐÃ Ở CẤP NGOÀI CÙNG → CHUYỂN THÀNH <p> =====
-    const p = editor.ed.createElement('p');
-    
-    // Tách nested list con ra riêng
-    const childLists: Element[] = [];
-    const contentNodes: Node[] = [];
-    Array.from(li.childNodes).forEach((child: any) => {
-      if (child.tagName === 'UL' || child.tagName === 'OL') {
-        childLists.push(child);
-      } else {
-        contentNodes.push(child);
-      }
-    });
-    
-    // Đưa nội dung text vào <p>
-    contentNodes.forEach((node: Node) => p.appendChild(node));
-    
-    // Thu thập siblings phía sau
-    const siblingsAfter: Node[] = [];
-    let next = li.nextSibling;
-    while (next) {
-      siblingsAfter.push(next);
-      next = next.nextSibling;
-    }
-    
-    // Chèn <p> sau parentList
-    if (parentList.parentNode) {
-      parentList.parentNode.insertBefore(p, parentList.nextSibling);
-    }
-    
-    // Siblings phía sau → tạo list mới sau <p>
-    if (siblingsAfter.length > 0) {
-      const newList = editor.ed.createElement(parentList.tagName.toLowerCase());
-      siblingsAfter.forEach((sib: Node) => newList.appendChild(sib));
-      if (p.parentNode) p.parentNode.insertBefore(newList, p.nextSibling);
-    }
-    
-    // Nested list con → đặt sau <p>
-    childLists.forEach((list: Element) => {
-      if (p.parentNode) p.parentNode.insertBefore(list, p.nextSibling);
-    });
-    
-    li.remove();
-    if (parentList.children.length === 0) parentList.remove();
-    
-    editor.s.setCursorIn(p);
-    return false;
-  }
+
+  // Đặt lại cursor
+  editor.s.setCursorIn(li, false);
+  editor.setEditorValue();
 }
 
 /**
- * Gắn vào editor qua afterInit event.
- * Override lệnh indent/outdent KHI con trỏ đang ở trong <li>.
+ * OUTDENT: Kéo LI ra cấp cha
  */
-export function setupJoditListFix(editor: any) {
-  // Override indent command
-  editor.registerCommand('indent', {
-    exec: () => {
-      const result = handleIndent(editor);
-      if (result === false) return false;
-    },
-    hotkeys: ['ctrl+]', 'cmd+]']
-  }, { priority: 1 });  // priority 1 = chạy trước plugin indent mặc định
-  
-  // Override outdent command
-  editor.registerCommand('outdent', {
-    exec: () => {
-      const result = handleOutdent(editor);
-      if (result === false) return false;
-    },
-    hotkeys: ['ctrl+[', 'cmd+[']
-  }, { priority: 1 });
+function doOutdent(editor: any, li: HTMLElement) {
+  const parentList = li.parentElement;
+  if (!parentList || !isListTag(parentList.tagName)) return;
+
+  const grandParentLi = parentList.parentElement;
+  if (!grandParentLi || grandParentLi.tagName !== 'LI') return; // Đã ở cấp ngoài cùng
+
+  const grandParentList = grandParentLi.parentElement;
+  if (!grandParentList) return;
+
+  // Thu thập siblings sau li hiện tại
+  const siblingsAfter: Node[] = [];
+  let next = li.nextSibling;
+  while (next) {
+    siblingsAfter.push(next);
+    next = next.nextSibling;
+  }
+
+  // Chèn li vào sau grandParentLi
+  grandParentList.insertBefore(li, grandParentLi.nextSibling);
+
+  // Nếu có siblings sau → tạo nested list mới gắn vào li
+  if (siblingsAfter.length > 0) {
+    const newList = document.createElement(parentList.tagName.toLowerCase());
+    siblingsAfter.forEach(sib => newList.appendChild(sib));
+    li.appendChild(newList);
+  }
+
+  // Dọn list cũ nếu rỗng
+  if (parentList.children.length === 0) {
+    parentList.remove();
+  }
+
+  // Xóa margin-left rác
+  li.style.removeProperty('margin-left');
+  li.style.removeProperty('padding-left');
+
+  // Đặt lại cursor
+  editor.s.setCursorIn(li, false);
+  editor.setEditorValue();
+}
+
+function isListTag(tagName: string): boolean {
+  return tagName === 'UL' || tagName === 'OL';
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { supabase } from './supabase';
 import JoditEditor from 'jodit-react';
 import ReactPlayer from 'react-player';
+import { setupListIndent } from './utils/joditFix';
 
 
 // =========================================================================
@@ -104,11 +105,9 @@ const ExerciseSelectionModal = React.memo(({ availableExercises, onClose, onAddE
 const MemoizedEditor = React.memo(({ initialValue, config, onHtmlChange }: any) => {
   const editorRef = useRef(null);
 
-  // Bypass jodit-react: trực tiếp configure tab plugin trên Jodit instance
+  // Bypass jodit-react: gắn trực tiếp keydown handler vào Jodit instance
   const editorRefCallback = React.useCallback((jodit: any) => {
-    if (jodit && jodit.o) {
-      jodit.o.tab = { tabInsideLiInsertNewList: true };
-    }
+    if (jodit) setupListIndent(jodit);
   }, []);
 
   return (
