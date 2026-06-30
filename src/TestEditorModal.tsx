@@ -866,7 +866,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     const qType = section.questionType;
     let initialOptions = ['A', 'B', 'C', 'D'];
     
-    if (["Điền từ", "Kéo thả", "Kéo thả vào Part", "Matching"].includes(qType)) {
+    if (["Điền từ", "Điền từ AI", "Đoạn văn", "Kéo thả", "Kéo thả vào Part", "Matching"].includes(qType)) {
       initialOptions = [];
     } else if (qType === 'Droplist') {
       if (section.questions.length > 0) {
@@ -1193,7 +1193,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                 <option value="Checkbox">Checkbox (Nhiều đáp án/ Combo)</option>
                                 <option value="Droplist">Droplist (Sổ chọn)</option>
                                 <option value="Kéo thả">Kéo thả (Matching / Kéo hộp từ)</option>
-                                <option value="Điền từ">Điền từ (Gõ tay)</option>
+                                <option value="Điền từ">Điền từ (Gõ tay chấm tự động)</option>
+                                <option value="Điền từ AI">Điền từ AI (Gõ tay chấm bằng AI)</option>
+                                <option value="Đoạn văn">Đoạn văn (Viết luận chấm bằng AI)</option>
                               </select>
                             </div>
                             <MediaRow 

@@ -398,7 +398,7 @@ const handleFinish = async () => {
                 }
              });
           }
-          if (["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(s?.questionType)) {
+          if (["Điền từ", "Điền từ AI", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(s?.questionType)) {
             let combinedContent = String(s?.content || '');
             if (Array.isArray(s?.questions)) {
               s.questions.forEach((q: any) => combinedContent += ' ' + String(q.content || ''));
@@ -1243,7 +1243,7 @@ const handleFinish = async () => {
                                 sec.questions.forEach((q: any) => {
                                     let qContent = String(q.content || '').trim();
                                     if (qContent) {
-                                        if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
+                                        if ((sec.questionType === "Điền từ" || sec.questionType === "Điền từ AI") && !/\[\s*\d+\s*\]/.test(qContent)) {
                                             qContent += ` [${q.id}]`;
                                         }
                                         rawContentText += (rawContentText ? '<br><br>' : '') + qContent;
@@ -1281,7 +1281,7 @@ const handleFinish = async () => {
                             )}
 
                             {/* DẠNG ĐIỀN TỪ & DROPLIST INLINE */}
-                            {(sec.questionType === "Điền từ" || isInlineDroplist) && (
+                            {(sec.questionType === "Điền từ" || sec.questionType === "Điền từ AI" || isInlineDroplist) && (
                               <div className={`border p-6 md:p-8 rounded-xl shadow-sm ${isReviewMode ? 'border-slate-300' : 'border-gray-200 bg-white'}`}>
                                 {(() => {
                                   let mainContent = rawContentText;
@@ -1457,9 +1457,21 @@ const handleFinish = async () => {
                                             </div>
                                           )}
                                           {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
-                                          <div className={`flex flex-col gap-2`}>
-                                            {validOptions.map((opt: any, i: number) => {
-                                              const safeOpt = String(opt || '');
+                                          
+                                          {sec.questionType === "Đoạn văn" ? (
+                                            <div className="mt-2">
+                                              <textarea
+                                                value={userAns}
+                                                onChange={(e) => handleAnswer(String(q.id), e.target.value)}
+                                                disabled={isReviewMode}
+                                                placeholder="Nhập câu trả lời của bạn vào đây..."
+                                                className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-y min-h-[150px] font-sans ${isReviewMode ? 'bg-gray-50' : 'bg-white'}`}
+                                              />
+                                            </div>
+                                          ) : (
+                                            <div className={`flex flex-col gap-2`}>
+                                              {validOptions.map((opt: any, i: number) => {
+                                                const safeOpt = String(opt || '');
                                               const optionValue = String.fromCharCode(65+i); 
                                               const isSelected = userAns === optionValue; 
                                               const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
@@ -1498,10 +1510,11 @@ const handleFinish = async () => {
                                                     </div>
                                                   </div>
                                                   <span className="text-[15px] font-serif leading-relaxed format-passage html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> {renderHtmlWithHoles(safeOpt, {})}</span>
-                                                </label>
-                                              );
-                                            })}
+                                              </label>
+                                            );
+                                          })}
                                           </div>
+                                          )}
                                           
                                           {isReviewMode && (
                                             <div className="mt-6 pt-4 border-t border-gray-200 font-sans">
@@ -2004,7 +2017,7 @@ const handleFinish = async () => {
             
             const section = parts.reduce((acc: any[], p: any) => acc.concat(Array.isArray(p?.sections) ? p.sections : []), []).find((s:any) => {
                 if ((Array.isArray(s?.questions) ? s.questions : []).some((sq:any)=>String(sq?.id)===id)) return true;
-                if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
+                if (s?.questionType === "Điền từ" || s?.questionType === "Điền từ AI" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
                     let combined = String(s?.content || '');
                     if (Array.isArray(s?.questions)) {
                         s.questions.forEach((q:any) => combined += ' ' + String(q.content || ''));
