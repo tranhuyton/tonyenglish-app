@@ -145,23 +145,24 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             .jodit-wysiwyg ul {
                 padding-left: 1.5rem !important;
                 margin: 0.5rem 0 !important;
+                list-style-type: disc; /* Level 1: Chấm đen */
             }
             .jodit-wysiwyg ol {
-                list-style: decimal outside !important;
                 padding-left: 1.5rem !important;
                 margin: 0.5rem 0 !important;
+                list-style-type: decimal outside;
             }
             
+            .jodit-wysiwyg ul ul {
+                list-style-type: circle; /* Level 2: Vòng tròn trắng */
+            }
+            .jodit-wysiwyg ul ul ul {
+                list-style-type: square; /* Level 3: Hình vuông đen */
+            }
+
             /* Ép thẳng vào thẻ LI để trị dứt điểm inline-style của Jodit */
-            .jodit-wysiwyg ul > li {
-                list-style-type: disc !important; /* Level 1: Chấm đen */
+            .jodit-wysiwyg ul > li, .jodit-wysiwyg ol > li {
                 margin-bottom: 0.25rem !important;
-            }
-            .jodit-wysiwyg ul ul > li {
-                list-style-type: circle !important; /* Level 2: Vòng tròn trắng */
-            }
-            .jodit-wysiwyg ul ul ul > li {
-                list-style-type: square !important; /* Level 3: Hình vuông đen */
             }
 
             /* FIX LỖI RỚT DÒNG: Ép thẻ p bên trong li nằm trên cùng 1 hàng */
