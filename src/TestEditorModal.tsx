@@ -440,6 +440,17 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       // Always use the actual course_id from the test record (not the stale one in content_json)
       if (data.basicInfo) {
         data.basicInfo = { ...data.basicInfo, courseId: testRecord.course_id || 'all' };
+      } else {
+        data.basicInfo = {
+          title: testRecord.title || '',
+          courseId: testRecord.course_id || 'all', 
+          folderId: testRecord.folder_id || '', 
+          skill: testRecord.test_type || 'Mixed-Paper',
+          category: 'exercise', 
+          mode: 'Đề thi',
+          timeLimit: '40',
+          scoreType: '1 điểm/ câu đúng'
+        };
       }
       return data;
     }

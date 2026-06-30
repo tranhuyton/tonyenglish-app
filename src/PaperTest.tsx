@@ -148,6 +148,12 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   const [draggedOption, setDraggedOption] = useState<string | null>(null);
   const [showTranslation, setShowTranslation] = useState<Record<number, boolean>>({});
 
+  useEffect(() => {
+    if (!isReviewMode) {
+      setShowTranslation({});
+    }
+  }, [isReviewMode]);
+
   // Resize Cột Trái/Phải (Thanh Kéo)
   const [leftWidth, setLeftWidth] = useState(50);
   const [listeningWidth, setListeningWidth] = useState(850); 
@@ -338,7 +344,7 @@ const handleFinish = async () => {
         await supabase.from('test_results').insert([{
           user_id: user.id, 
           course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
-          test_title: basicInfo.title || safeTestData?.title || "IELTS Test", 
+          test_title: safeTestData?.title || basicInfo.title || "IELTS Test", 
           test_type: safeTestData?.test_type || 'IELTS Paper',
           score: score, 
           total_score: total, 
@@ -352,7 +358,7 @@ const handleFinish = async () => {
         user_id: user.id, 
         action_type: 'finish_test',
         details: { 
-            test_title: basicInfo.title || "Bài kiểm tra", 
+            test_title: safeTestData?.title || basicInfo.title || "Bài kiểm tra", 
             score: score,
             total: total
         }
@@ -865,7 +871,7 @@ const handleFinish = async () => {
         {isListening && audioPlaylist.length > 0 && <audio ref={globalAudioRef} src={audioPlaylist[0]} preload="auto" className="hidden" />}
         <div className="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg border border-gray-200 w-full font-sans">
           <div className="text-6xl mb-6">{isListening ? '🎧' : '📝'}</div>
-          <h1 className="text-2xl font-black text-slate-800 mb-2">{basicInfo.title}</h1>
+          <h1 className="text-2xl font-black text-slate-800 mb-2">{safeTestData?.title || basicInfo.title}</h1>
           {basicInfo?.category === 'exercise' ? (
               <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">BÀI TẬP</p>
           ) : (
@@ -1115,7 +1121,7 @@ const handleFinish = async () => {
       <header className="bg-white border-b border-gray-300 px-6 py-3 flex justify-between items-center shadow-sm z-20 shrink-0 font-sans">
         <div className="flex items-center gap-4">
           <button onClick={onBack} className="text-gray-600 hover:bg-gray-100 text-sm px-3 py-1.5 rounded-lg font-bold border border-gray-300 transition shrink-0">⬅ Thoát</button>
-          <div className="font-bold text-lg text-gray-800 border-l border-gray-300 pl-4 truncate max-w-[200px] md:max-w-md">{isReviewMode ? `[CHỮA BÀI] ${basicInfo.title}` : basicInfo.title}</div>
+          <div className="font-bold text-lg text-gray-800 border-l border-gray-300 pl-4 truncate max-w-[200px] md:max-w-md">{isReviewMode ? `[CHỮA BÀI] ${safeTestData?.title || basicInfo.title}` : (safeTestData?.title || basicInfo.title)}</div>
         </div>
 
         {/* THIẾT KẾ LẠI HEADER CHO LISTENING */}

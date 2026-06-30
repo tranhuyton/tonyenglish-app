@@ -379,7 +379,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           await supabase.from('test_results').insert([{
             user_id: user.id, 
             course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
-            test_title: basicInfo.title || safeTestData?.title || "IELTS Test", 
+            test_title: safeTestData?.title || basicInfo.title || "IELTS Test", 
             test_type: safeTestData?.test_type || 'IELTS Computer',
             score: score, 
             total_score: total, 
@@ -427,6 +427,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
+
+  useEffect(() => {
+    if (!isReviewMode) {
+      setShowTranslation(false);
+    }
+  }, [isReviewMode]);
   const currentPart = parts[currentPartIndex] || {};
 
   const { allQuestionIds, questionIndexMap, questionToPartMap, questionDataMap } = useMemo(() => {
@@ -1090,7 +1096,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         <div className="flex flex-col h-screen items-center justify-center bg-[#eeeeee] font-sans">
           <div className="bg-white p-10 rounded-none border border-slate-300 shadow-sm text-center max-w-lg w-full">
             <div className="text-6xl mb-6">{isListening ? '🎧' : '💻'}</div>
-            <h1 className="text-2xl font-black text-slate-900 mb-2">{basicInfo.title || "IELTS Test"}</h1>
+            <h1 className="text-2xl font-black text-slate-900 mb-2">{safeTestData?.title || basicInfo.title || "IELTS Test"}</h1>
             {basicInfo?.category === 'exercise' ? (
                 <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">BÀI TẬP</p>
             ) : (
@@ -1200,7 +1206,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             <div className="flex items-center gap-2">
               <UserIcon />
               <span className="font-bold text-[14px] truncate max-w-[200px] md:max-w-xs text-white">
-                 {isReviewMode ? `[REVIEW] ${basicInfo.title || "IELTS"}` : (basicInfo.title || "IELTS Test")}
+                 {isReviewMode ? `[REVIEW] ${safeTestData?.title || basicInfo.title || "IELTS"}` : (safeTestData?.title || basicInfo.title || "IELTS Test")}
               </span>
             </div>
             

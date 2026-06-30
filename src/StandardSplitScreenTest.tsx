@@ -237,6 +237,12 @@ export default function StandardSplitScreenTest({
 
   const [leftWidth, setLeftWidth] = useState(50); 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+  useEffect(() => {
+    if (!isReviewMode) {
+      setShowTranslation(false);
+    }
+  }, [isReviewMode]);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -478,7 +484,7 @@ const handleFinish = async () => {
         await supabase.from('test_results').insert([{
           user_id: user.id,
           course_id: safeData?.course_id || safeData?.content_json?.basicInfo?.courseId || null,
-          test_title: basicInfo.title || safeData?.title || "Standard Test",
+          test_title: safeData?.title || basicInfo.title || "Standard Test",
           test_type: safeData?.test_type || 'Standard',
           score: score, 
           total_score: total,
@@ -493,7 +499,7 @@ const handleFinish = async () => {
         user_id: user.id, 
         action_type: 'finish_test',
         details: { 
-            test_title: basicInfo.title || "Bài kiểm tra", 
+            test_title: safeData?.title || basicInfo.title || "Bài kiểm tra", 
             score: score,
             total: total
         }
@@ -1090,7 +1096,7 @@ const handleFinish = async () => {
                 {(isListening && hasAnyAudio) ? '🎧' : '📖'}
             </span>
             <span className="truncate max-w-[200px] md:max-w-xl">
-                {isReviewMode ? `[CHỮA BÀI] ${basicInfo?.title}` : basicInfo?.title}
+                {isReviewMode ? `[CHỮA BÀI] ${safeData?.title || basicInfo?.title}` : (safeData?.title || basicInfo?.title)}
             </span>
           </div>
 
