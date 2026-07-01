@@ -280,20 +280,17 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
     </div>
   );
 };
-
-// =========================================================================================
-// 🚀 COMPONENT RENDER BÀI GIẢNG (EDTECH IFRAME STYLE)
-// =========================================================================================
 const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(100);
 
    // Bỏ các style padding inline cứng có chứa !important do Jodit sinh ra, 
-   // và các height/width gán cứng vào table để tránh bị lỗi hiển thị
+   // và các height/width gán cứng vào table/td/th để tránh bị lỗi hiển thị
+   // CHÚ Ý: Chỉ xóa width/height bên trong thẻ <table>, <td>, <th> — KHÔNG xóa tràn lan toàn bộ HTML
    const cleanedHtml = (html || '')
        .replace(/padding(?:-left|-right|-top|-bottom)?:\s*0(?:px)?\s*!important;?/gi, '')
-       .replace(/height:\s*\d+px;?/gi, '')
-       .replace(/width:\s*\d+(?:\.\d+)?px;?/gi, '');
+       .replace(/(<(?:table|td|th)\b[^>]*style="[^"]*?)height:\s*\d+px;?\s*/gi, '$1')
+       .replace(/(<(?:table|td|th)\b[^>]*style="[^"]*?)width:\s*\d+(?:\.\d+)?px;?\s*/gi, '$1');
 
    useEffect(() => { 
        setIframeHeight(10); 
