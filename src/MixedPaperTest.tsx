@@ -1781,6 +1781,37 @@ const handleFinish = async () => {
                                     </div>
                                   </div>
                                 )}
+
+                                {isReviewMode && (
+                                  <div className="mt-10 p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-inner font-sans">
+                                    <p className="text-[13px] font-black text-gray-500 uppercase tracking-widest mb-4">Danh sách lựa chọn:</p>
+                                    <div className="flex flex-wrap gap-3">
+                                      {(() => {
+                                        let allOptions: string[] = [];
+                                        (sec.questions || []).forEach((q: any) => {
+                                          if (Array.isArray(q.options)) {
+                                            q.options.forEach((o: any) => {
+                                              const cleanOpt = String(o).replace(stripHtmlRegex, '').trim();
+                                              if (cleanOpt && !allOptions.includes(cleanOpt)) allOptions.push(cleanOpt);
+                                            });
+                                          }
+                                        });
+                                        return allOptions.map((opt: string, oIdx: number) => {
+                                          const prefix = `${String.fromCharCode(65 + oIdx)}. `;
+                                          const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                          return (
+                                            <div
+                                              key={oIdx}
+                                              className="px-4 py-2 font-bold font-sans text-[14px] border border-gray-300 rounded bg-gray-50 text-slate-500 cursor-default select-none shadow-sm"
+                                            >
+                                              {displayOpt}
+                                            </div>
+                                          );
+                                        });
+                                      })()}
+                                    </div>
+                                  </div>
+                                )}
                               </div>
                             )}
 

@@ -2024,6 +2024,30 @@ const handleFinish = async () => {
                                        </div>
                                      </div>
                                    )}
+                                   {isReviewMode && (
+                                     <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
+                                       <p className="text-[13px] font-black text-slate-500 uppercase tracking-widest mb-4">Danh sách lựa chọn:</p>
+                                       <div className="flex flex-wrap gap-3">
+                                         {(() => {
+                                           const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
+                                           const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
+                                           return allOpts.map((opt: string, oIdx: number) => {
+                                             const prefix = `${String.fromCharCode(65 + oIdx)}. `;
+                                             const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                             return (
+                                               <div
+                                                 key={oIdx}
+                                                 draggable={false}
+                                                 className="px-4 py-2 font-bold font-sans text-[14px] border border-slate-300 rounded-lg bg-[#f4f4f4] text-slate-500 cursor-default select-none shadow-sm"
+                                               >
+                                                 {displayOpt}
+                                               </div>
+                                             );
+                                           });
+                                         })()}
+                                       </div>
+                                     </div>
+                                   )}
                                  </div>
                                );
                              })()}
