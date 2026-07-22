@@ -1424,7 +1424,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                     return (
                       <div key={index} className="mb-12">
-                        {isReviewMode && <div className="bg-yellow-200 text-black p-2 text-xs font-mono mb-2 border border-yellow-500">DEBUG: questionType="{sec.questionType}" | hasInlineBrackets={String(hasInlineBrackets)} | isInlineDragDrop={String(isInlineDragDrop)} | isBlockDragDrop={String(isBlockDragDrop)} | q[0].options={JSON.stringify(sec.questions?.[0]?.options?.length ?? 'N/A')}</div>}
                         
                         {sec.title && <h3 className="font-bold font-sans text-[17px] mb-3 text-black">{sec.title}</h3>}
                         
