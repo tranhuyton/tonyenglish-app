@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
-import { gradeAIQuestions } from './utils/aiGrader';
 import './tailwind.css';
 
 const UserIcon = () => (
@@ -244,8 +243,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   };
 
   const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [aiFeedback, setAiFeedback] = useState<any>(null);
 
   const clearDraft = () => {
     if(window.confirm('Xóa bản nháp và làm lại từ đầu?')) { 
@@ -269,7 +266,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const handleFinish = async () => {
     if (!isReviewMode) {
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
-      setIsSubmitting(true);
       isFinishingRef.current = true;
       
       if (safeTestData?.id) {
@@ -372,24 +368,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       else if (score >= 2) band = "2.0"; 
       else if (score >= 1) band = "1.0";
 
+      setScoreResult({ score, total, band }); 
+      setIsReviewMode(true); 
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
       try {
         const { data: { user } } = await supabase.auth.getUser();
-        
-        let aiResult = null;
-        if (user) {
-            const { aiScore, aiTotal, aiDetails } = await gradeAIQuestions(parts, answers, user.id);
-            score += aiScore;
-            total += aiTotal;
-            if (aiDetails.length > 0) {
-               aiResult = { details: aiDetails };
-               setAiFeedback(aiResult);
-            }
-        }
-
-        setScoreResult({ score, total, band }); 
-        setIsReviewMode(true); 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-
         if (user) {
           const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
           await supabase.from('test_results').insert([{
@@ -401,7 +385,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             total_score: total, 
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
             // 🚀 ĐÃ SỬA: ĐẨY TOÀN BỘ questionTypeStats VÀO DETAILS ĐỂ SUPABASE GHI NHẬN LẠI DẠNG BÀI
-            details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats, aiFeedback: aiResult }
+            details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats }
           }]);
         // 🚀 ANH DÁN ĐOẠN CODE BẮN PHÁO HIỆU VÀO ĐÂY NHÉ:
         await supabase.from('activity_logs').insert([{
@@ -416,8 +400,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         }
       } catch (error) { 
           console.error("Lỗi lưu kết quả thi:", error); 
-      } finally {
-          setIsSubmitting(false);
       }
       
     } else {
@@ -1401,7 +1383,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                             sec.questions.forEach((q: any) => {
                                 let qContent = String(q.content || '').trim();
                                 if (qContent) {
-                                    if ((sec.questionType === "Điền từ" || sec.questionType === "Điền từ AI") && !/\[\s*\d+\s*\]/.test(qContent)) {
+                                    if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
                                         const alreadyHasHole = new RegExp('\\\[\\s*' + q.id + '\\s*\\\]').test(rawContentText);
                                         if (!alreadyHasHole) {
                                             qContent += ` [${q.id}]`;
@@ -1431,7 +1413,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                             <div className="mb-6 text-[15px] font-bold font-sans text-black bg-white p-4 rounded-none border border-slate-400 html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
                         )}
                         
-                        {(sec.questionType === "Điền từ" || sec.questionType === "Điền từ AI" || isInlineDroplist) && (
+                        {(sec.questionType === "Điền từ" || isInlineDroplist) && (
                           <div className={`p-8 bg-white border border-slate-400 rounded-none`}>
                              {(() => {
                                 let mainContent = rawContentText;
@@ -1725,53 +1707,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                   {renderHtmlWithHoles(cleanHtmlContent(rawContentText), sec)}
                                 </div>
                                 
-                                {/* Word bank for inline drag-drop (shown in both test & review) */}
-                                {isInlineDragDrop && (
-                                  <div className="mt-8 p-5 bg-[#f4f4f4] border border-slate-400 rounded-none font-sans">
-                                    <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
-                                    <div className="flex flex-wrap gap-3">
-                                      {(() => {
-                                        let allOptions: string[] = [];
-                                        (sec.questions || []).forEach((q: any) => {
-                                          if (Array.isArray(q.options)) {
-                                            q.options.forEach((o: any) => {
-                                              const cleanOpt = String(o).replace(stripHtmlRegex, '').trim();
-                                              if (cleanOpt && !allOptions.includes(cleanOpt)) allOptions.push(cleanOpt);
-                                            });
-                                          }
-                                        });
-                                        const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
-                                        const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
-                                        
-                                        return allOptions.map((opt: string, oIdx: number) => {
-                                          const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                          const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
-                                          const optLetter = String.fromCharCode(65 + oIdx);
-                                          const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
-                                          
-                                          return (
-                                            <div
-                                              key={oIdx}
-                                              draggable={!isReviewMode && !isUsed}
-                                              onDragStart={(e) => onDragStart(e, displayOpt)}
-                                              onDragEnd={() => { setDraggedOption(null); stopAutoScroll(); }}
-                                              className={`px-4 py-2 font-bold font-sans text-[14px] border rounded-none transition-all select-none
-                                                ${isReviewMode
-                                                  ? 'bg-[#f4f4f4] text-slate-500 border-slate-300 cursor-default'
-                                                  : isUsed
-                                                    ? 'bg-slate-200 text-slate-400 opacity-50 cursor-not-allowed border-black'
-                                                    : 'bg-white text-black cursor-grab hover:bg-slate-200 active:cursor-grabbing border-black'
-                                                }`}
-                                            >
-                                              {displayOpt}
-                                            </div>
-                                          );
-                                        });
-                                      })()}
-                                    </div>
-                                  </div>
-                                )}
-
                                 {/* 🚀 THÊM BLOCK REVIEW & GỌI GIA SƯ CHO CÂU KÉO THẢ INLINE Ở ĐÂY */}
                                 {isReviewMode && (
                                    <div className="w-full mt-8 border-t border-slate-300 pt-6 font-sans">
@@ -1894,7 +1829,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                               </div>
                             )}
 
-                            {<div className="mt-10 p-6 bg-[#f4f4f4] border border-slate-400 rounded-none font-sans">
+                            {!isReviewMode && (
+                              <div className="mt-10 p-6 bg-[#f4f4f4] border border-slate-400 rounded-none font-sans">
                                  <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
                                 <div className="flex flex-wrap gap-3">
                                   {(() => {
@@ -1923,18 +1859,16 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                       return (
                                         <div
                                           key={oIdx}
-                                          draggable={!isReviewMode && !isUsed}
+                                          draggable={!isUsed}
                                           onDragStart={(e) => onDragStart(e, displayOpt)}
                                           onDragEnd={() => {
                                             setDraggedOption(null);
                                             stopAutoScroll(); 
                                           }}
-                                          className={`px-4 py-2 font-bold font-sans text-[14px] border rounded-none transition-all select-none
-                                            ${isReviewMode
-                                              ? 'bg-[#f4f4f4] text-slate-500 border-slate-300 cursor-default'
-                                              : isUsed 
-                                                ? 'bg-slate-200 text-slate-400 opacity-50 cursor-not-allowed border-black' 
-                                                : 'bg-white text-black cursor-grab hover:bg-slate-200 active:cursor-grabbing border-black'
+                                          className={`px-4 py-2 font-bold font-sans text-[14px] border border-black rounded-none transition-all select-none
+                                            ${isUsed 
+                                              ? 'bg-slate-200 text-slate-400 opacity-50 cursor-not-allowed' 
+                                              : 'bg-white text-black cursor-grab hover:bg-slate-200 active:cursor-grabbing'
                                             }`}
                                         >
                                           {displayOpt}
@@ -1943,7 +1877,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                     });
                                   })()}
                                 </div>
-                              </div>}
+                              </div>
+                            )}
                           </div>
                         )}
                         
@@ -2295,16 +2230,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             </div>
 
           </footer>
-        </div>
-      )}
-
-      {isSubmitting && (
-        <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[99999] flex items-center justify-center font-sans">
-            <div className="bg-white p-8 rounded-2xl shadow-2xl flex flex-col items-center max-w-sm text-center">
-                <div className="w-16 h-16 border-4 border-blue-100 border-t-[#0ea5e9] rounded-full animate-spin mb-6"></div>
-                <h3 className="text-xl font-black text-slate-800 mb-2">Đang chấm điểm...</h3>
-                <p className="text-[14px] text-slate-500 font-medium">Hệ thống AI đang phân tích bài làm của bạn. Vui lòng chờ trong giây lát.</p>
-            </div>
         </div>
       )}
     </React.Fragment>

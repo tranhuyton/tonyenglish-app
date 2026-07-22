@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { supabase } from './supabase';
-import { gradeAIQuestions } from './utils/aiGrader';
 import { CustomAudioPlayer } from './CustomAudioPlayer';
 import './tailwind.css';
 
@@ -398,8 +397,6 @@ const handleFinish = async () => {
         return;
     }
     
-    setIsSubmitting(true);
-    
     isFinishingRef.current = true;
     if (safeData?.id) {
       localStorage.removeItem(`std_ans_${safeData.id}`);
@@ -490,25 +487,13 @@ const handleFinish = async () => {
       });
     });
 
+    setScoreResult({ score, total });
+    setIsReviewMode(true);
+    setShowPalette(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     try {
       const { data: { user } } = await supabase.auth.getSession().then(({data}) => ({ data: { user: data.session?.user } }));
-      
-      let aiResult = null;
-      if (user) {
-         const { aiScore, aiTotal, aiDetails } = await gradeAIQuestions(parts, answers, user.id);
-         score += aiScore;
-         total += aiTotal;
-         if (aiDetails.length > 0) {
-            aiResult = { details: aiDetails };
-            setAiFeedback(aiResult);
-         }
-      }
-
-      setScoreResult({ score, total });
-      setIsReviewMode(true);
-      setShowPalette(false);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
       if (user) {
         const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
         await supabase.from('test_results').insert([{
@@ -522,8 +507,7 @@ const handleFinish = async () => {
           details: { 
               test_id: safeData?.id, 
               userAnswers: answers, 
-              type_stats: questionTypeStats,
-              aiFeedback: aiResult
+              type_stats: questionTypeStats 
           }
         }]);
       await supabase.from('activity_logs').insert([{
@@ -536,10 +520,8 @@ const handleFinish = async () => {
         }
       }]);  
       }
-    } catch (err) {
-      console.error("Error saving result:", err);
-    } finally {
-      setIsSubmitting(false);
+    } catch (error) { 
+        console.error("Lỗi lưu kết quả thi:", error); 
     }
 
   } else {
@@ -570,8 +552,6 @@ const handleFinish = async () => {
   };
 
   const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [aiFeedback, setAiFeedback] = useState<any>(null);
   
   // Countdown Timer
   useEffect(() => {
@@ -1472,7 +1452,7 @@ const handleFinish = async () => {
                                     sec.questions.forEach((q: any) => {
                                       let qContent = String(q.content || '').trim();
                                       if (qContent) {
-                                        if ((sec.questionType === "Điền từ" || sec.questionType === "Điền từ AI") && !/\[\s*\d+\s*\]/.test(qContent)) {
+                                        if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
                                           qContent += ` [${q.id}]`;
                                         }
                                         if (rawContentText && !rawContentText.endsWith('<div class="mb-5"></div>')) {
@@ -1498,7 +1478,7 @@ const handleFinish = async () => {
                                // Skip if this will be handled by block Droplist or block DragDrop sections below
                                if (isBlockDroplist || isBlockDragDrop) return null;
                                // Must have inline brackets for Điền từ too
-                               if ((sec.questionType === "Điền từ" || sec.questionType === "Điền từ AI" || sec.questionType === "Kéo thả vào Part") && !hasInlineBrackets) return null;
+                               if ((sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") && !hasInlineBrackets) return null;
                                
                                return (
                                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
@@ -1629,26 +1609,6 @@ const handleFinish = async () => {
                                            );
                                         })}
                                      </div>
-                                  )}
-                                  
-                                  {/* HIỂN THỊ CHẤM ĐIỂM AI CHO DẠNG ĐIỀN TỪ AI */}
-                                  {isReviewMode && sec.questionType === "Điền từ AI" && aiFeedback?.details && (
-                                      <div className="mt-8 space-y-4">
-                                          <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">🤖 AI Nhận Xét Từng Chỗ Trống:</p>
-                                          {sec.questions?.map((q: any) => {
-                                              const feedback = aiFeedback.details.find((d: any) => d.question_id === String(q.id));
-                                              if (!feedback) return null;
-                                              return (
-                                                  <div key={`ai-feedback-${q.id}`} className="p-4 bg-[#f4f4f4] border border-slate-300 rounded-xl">
-                                                      <div className="flex items-center justify-between mb-2">
-                                                          <span className="font-bold text-[14px] text-slate-800">Chỗ trống số {questionIndexMap[q.id] || q.id}</span>
-                                                          <span className="font-bold text-[14px] text-slate-800">{feedback.student_score} / {feedback.max_score} điểm</span>
-                                                      </div>
-                                                      <p className="text-[14px] text-slate-700 italic">{feedback.examiner_comment}</p>
-                                                  </div>
-                                              );
-                                          })}
-                                      </div>
                                   )}
                                 </div>
                                );
@@ -2062,7 +2022,7 @@ const handleFinish = async () => {
                                    </div>
                                    
                                    {/* Draggable options word bank */}
-                                   {(
+                                   {!isReviewMode && (
                                      <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
                                        <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
                                        <div className="flex flex-wrap gap-3">
@@ -2079,16 +2039,14 @@ const handleFinish = async () => {
                                              return (
                                                <div
                                                  key={oIdx}
-                                                 draggable={!isReviewMode && !isUsed}
+                                                 draggable={!isUsed}
                                                  onDragStart={(e) => onDragStart(e, displayOpt)}
                                                  onDragEnd={() => setDraggedOption(null)}
                                                  onDrag={handleDragScroll}
                                                  className={`px-4 py-2 font-bold font-sans text-[14px] border rounded-lg transition-all select-none shadow-sm
-                                                   ${isReviewMode
-                                                     ? 'bg-slate-50 text-slate-500 border-slate-200 cursor-default'
-                                                     : isUsed
-                                                       ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed border-slate-200'
-                                                       : 'bg-white text-slate-800 cursor-grab hover:bg-[#0ea5e9]/5 hover:border-[#0ea5e9] active:cursor-grabbing border-slate-300'
+                                                   ${isUsed
+                                                     ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed border-slate-200'
+                                                     : 'bg-white text-slate-800 cursor-grab hover:bg-[#0ea5e9]/5 hover:border-[#0ea5e9] active:cursor-grabbing border-slate-300'
                                                    }`}
                                                >
                                                  {displayOpt}
@@ -2316,37 +2274,25 @@ const handleFinish = async () => {
                                                             <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-2">Câu trả lời của bạn:</div>
                                                             <div className="text-slate-800 text-[15px] whitespace-pre-wrap">{userAns || '(Chưa trả lời)'}</div>
                                                             
-                                                            <div className="mt-4 pt-4 border-t border-slate-200">
-                                                                {aiFeedback?.details?.find((d:any) => d.question_id === String(q.id)) ? (
-                                                                    <div className="bg-[#f4f4f4] border border-slate-300 p-4 rounded-xl">
-                                                                        <div className="flex items-center justify-between mb-2">
-                                                                            <span className="font-bold text-[14px] text-slate-800">🤖 AI Chấm Điểm</span>
-                                                                            <span className="font-bold text-[14px] text-slate-800">{aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.student_score} / {aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.max_score} điểm</span>
-                                                                        </div>
-                                                                        <p className="text-[14px] text-slate-700 italic">{aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.examiner_comment}</p>
-                                                                    </div>
-                                                                ) : (
-                                                                    <div className="flex flex-wrap gap-2">
-                                                                        <button 
-                                                                            onClick={(e) => { 
-                                                                                e.stopPropagation(); 
-                                                                                askAIToExplain(String(q.id), q.content, q.explanation); 
-                                                                            }} 
-                                                                            className="px-4 py-2 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-lg text-[13px] transition shadow-sm border border-[#064e3b]"
-                                                                        >
-                                                                            💬 Nhờ AI Chấm Điểm
-                                                                        </button>
-                                                                        <button 
-                                                                            onClick={(e) => { 
-                                                                                e.stopPropagation(); 
-                                                                                callTutorForQuestion(String(q.id), q.content, q.explanation); 
-                                                                            }} 
-                                                                            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
-                                                                        >
-                                                                            📞 Gọi Gia sư
-                                                                        </button>
-                                                                    </div>
-                                                                )}
+                                                            <div className="mt-4 pt-4 border-t border-slate-200 flex flex-wrap gap-2">
+                                                                <button 
+                                                                    onClick={(e) => { 
+                                                                        e.stopPropagation(); 
+                                                                        askAIToExplain(String(q.id), q.content, q.explanation); 
+                                                                    }} 
+                                                                    className="px-4 py-2 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-lg text-[13px] transition shadow-sm border border-[#064e3b]"
+                                                                >
+                                                                    💬 Nhờ AI Chấm Điểm
+                                                                </button>
+                                                                <button 
+                                                                    onClick={(e) => { 
+                                                                        e.stopPropagation(); 
+                                                                        callTutorForQuestion(String(q.id), q.content, q.explanation); 
+                                                                    }} 
+                                                                    className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
+                                                                >
+                                                                    📞 Gọi Gia sư
+                                                                </button>
                                                             </div>
                                                         </div>
                                                     ) : (
@@ -2565,16 +2511,6 @@ const handleFinish = async () => {
         </div>
       ) : (
         renderTestLayout()
-      )}
-
-      {isSubmitting && (
-        <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[99999] flex items-center justify-center font-sans">
-            <div className="bg-white p-8 rounded-2xl shadow-2xl flex flex-col items-center max-w-sm text-center">
-                <div className="w-16 h-16 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin mb-6"></div>
-                <h3 className="text-xl font-black text-slate-800 mb-2">Đang chấm điểm...</h3>
-                <p className="text-[14px] text-slate-500 font-medium">Hệ thống AI đang phân tích bài làm của bạn. Vui lòng chờ trong giây lát.</p>
-            </div>
-        </div>
       )}
 
       {/* DICTIONARY POPUP */}

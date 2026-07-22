@@ -1989,7 +1989,7 @@ const handleFinish = async () => {
                                    </div>
                                    
                                    {/* Draggable options word bank */}
-                                   {(
+                                   {!isReviewMode && (
                                      <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
                                        <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
                                        <div className="flex flex-wrap gap-3">
@@ -2006,16 +2006,14 @@ const handleFinish = async () => {
                                              return (
                                                <div
                                                  key={oIdx}
-                                                 draggable={!isReviewMode && !isUsed}
+                                                 draggable={!isUsed}
                                                  onDragStart={(e) => onDragStart(e, displayOpt)}
                                                  onDragEnd={() => setDraggedOption(null)}
                                                  onDrag={handleDragScroll}
                                                  className={`px-4 py-2 font-bold font-sans text-[14px] border rounded-lg transition-all select-none shadow-sm
-                                                   ${isReviewMode
-                                                     ? 'bg-slate-50 text-slate-500 border-slate-200 cursor-default'
-                                                     : isUsed
-                                                       ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed border-slate-200'
-                                                       : 'bg-white text-slate-800 cursor-grab hover:bg-[#0ea5e9]/5 hover:border-[#0ea5e9] active:cursor-grabbing border-slate-300'
+                                                   ${isUsed
+                                                     ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed border-slate-200'
+                                                     : 'bg-white text-slate-800 cursor-grab hover:bg-[#0ea5e9]/5 hover:border-[#0ea5e9] active:cursor-grabbing border-slate-300'
                                                    }`}
                                                >
                                                  {displayOpt}

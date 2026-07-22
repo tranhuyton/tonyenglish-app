@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
-import { gradeAIQuestions } from './utils/aiGrader';
 
 // --- CÁC HÀM LOGIC DÙNG CHUNG TỪ COMPUTER TEST ---
 const stripHtmlRegex = /[<][^>]*[>]/g;
@@ -152,9 +151,6 @@ export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack:
   const [leftWidth, setLeftWidth] = useState(50);
   const [listeningWidth, setListeningWidth] = useState(850); 
   const containerRef = useRef<HTMLDivElement>(null);
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [aiFeedback, setAiFeedback] = useState<any>(null);
   const leftPaneRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const listeningDragRef = useRef(false);
@@ -266,7 +262,6 @@ const handleFinish = async () => {
   if (!isReviewMode) {
     if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
     isFinishingRef.current = true;
-    setIsSubmitting(true);
     if (safeTestData?.id) {
       localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
       localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
@@ -321,47 +316,18 @@ const handleFinish = async () => {
       });
     });
 
-    let aiGradeResult = null;
-    let finalScore = score;
-    let finalTotal = total;
-
-    // Collect AI Questions
-    const aiQuestions: any[] = [];
-    parts.forEach((p: any) => {
-      if (!Array.isArray(p.sections)) return;
-      p.sections.forEach((s: any) => {
-        if (s.questionType === "Điền từ AI" || s.questionType === "Đoạn văn") {
-          if (Array.isArray(s.questions)) {
-            s.questions.forEach((q: any) => {
-              aiQuestions.push({...q, qType: s.questionType});
-            });
-          }
-        }
-      });
-    });
-
-    if (aiQuestions.length > 0) {
-      aiGradeResult = await gradeAIQuestions(aiQuestions, answers);
-      if (aiGradeResult) {
-        setAiFeedback(aiGradeResult);
-        finalScore += aiGradeResult.total_student_score;
-        finalTotal += aiGradeResult.total_max_score;
-      }
-    }
-
     let band = "0.0";
-    if (finalScore >= 39) band = "9.0"; else if (finalScore >= 37) band = "8.5";
-    else if (finalScore >= 35) band = "8.0"; else if (finalScore >= 33) band = "7.5";
-    else if (finalScore >= 30) band = "7.0"; else if (finalScore >= 27) band = "6.5";
-    else if (finalScore >= 23) band = "6.0"; else if (finalScore >= 19) band = "5.5";
-    else if (finalScore >= 15) band = "5.0"; else if (finalScore >= 13) band = "4.5";
-    else if (finalScore >= 10) band = "4.0"; else if (finalScore >= 8) band = "3.5";
-    else if (finalScore >= 6) band = "3.0"; else if (finalScore >= 4) band = "2.5";
-    else if (finalScore >= 2) band = "2.0"; else if (finalScore >= 1) band = "1.0";
+    if (score >= 39) band = "9.0"; else if (score >= 37) band = "8.5";
+    else if (score >= 35) band = "8.0"; else if (score >= 33) band = "7.5";
+    else if (score >= 30) band = "7.0"; else if (score >= 27) band = "6.5";
+    else if (score >= 23) band = "6.0"; else if (score >= 19) band = "5.5";
+    else if (score >= 15) band = "5.0"; else if (score >= 13) band = "4.5";
+    else if (score >= 10) band = "4.0"; else if (score >= 8) band = "3.5";
+    else if (score >= 6) band = "3.0"; else if (score >= 4) band = "2.5";
+    else if (score >= 2) band = "2.0"; else if (score >= 1) band = "1.0";
     
-    setScoreResult({ score: finalScore, total: finalTotal, band }); 
+    setScoreResult({ score, total, band }); 
     setIsReviewMode(true); 
-    setIsSubmitting(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     try {
@@ -373,11 +339,11 @@ const handleFinish = async () => {
           course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
           test_title: safeTestData?.title || basicInfo.title || "IELTS Test", 
           test_type: safeTestData?.test_type || 'IELTS Paper',
-          score: finalScore, 
-          total_score: finalTotal, 
+          score: score, 
+          total_score: total, 
           time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
           // 🚀 LƯU TRỮ TOÀN BỘ PHÂN TÍCH DẠNG BÀI VÀO DETAILS
-          details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats, aiFeedback: aiGradeResult }
+          details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats }
         }]);
       
       // 🚀 ANH DÁN ĐOẠN CODE BẮN PHÁO HIỆU VÀO ĐÂY NHÉ:
@@ -386,8 +352,8 @@ const handleFinish = async () => {
         action_type: 'finish_test',
         details: { 
             test_title: safeTestData?.title || basicInfo.title || "Bài kiểm tra", 
-            score: finalScore,
-            total: finalTotal
+            score: score,
+            total: total
         }
       }]);  
 
@@ -1369,16 +1335,6 @@ const handleFinish = async () => {
                                                           </div>
                                                           <div className="text-[15px] text-gray-700 italic font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
                                                           
-                                                          {sec.questionType === "Điền từ AI" && aiFeedback?.details?.find((d:any) => d.question_id === String(q.id)) && (
-                                                            <div className="mt-4 p-4 rounded-xl bg-blue-50 border border-blue-200">
-                                                              <div className="flex items-center justify-between mb-2">
-                                                                <span className="font-bold text-[14px] text-blue-800">🤖 AI Chấm Điểm</span>
-                                                                <span className="font-bold text-[14px] text-blue-800">{aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.student_score} / {aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.max_score} điểm</span>
-                                                              </div>
-                                                              <p className="text-[14px] text-slate-700 italic">{aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.examiner_comment}</p>
-                                                            </div>
-                                                          )}
-                                                          
                                                           <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-100">
                                                               <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), qContentForAI, explanationText); }} className="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-blue-600">
                                                                  💬 Chat với AI
@@ -1502,6 +1458,17 @@ const handleFinish = async () => {
                                           )}
                                           {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                           
+                                          {sec.questionType === "Đoạn văn" ? (
+                                            <div className="mt-2">
+                                              <textarea
+                                                value={userAns}
+                                                onChange={(e) => handleAnswer(String(q.id), e.target.value)}
+                                                disabled={isReviewMode}
+                                                placeholder="Nhập câu trả lời của bạn vào đây..."
+                                                className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-y min-h-[150px] font-sans ${isReviewMode ? 'bg-gray-50' : 'bg-white'}`}
+                                              />
+                                            </div>
+                                          ) : (
                                             <div className={`flex flex-col gap-2`}>
                                               {validOptions.map((opt: any, i: number) => {
                                                 const safeOpt = String(opt || '');
@@ -1654,52 +1621,6 @@ const handleFinish = async () => {
                                     <div className="format-passage leading-[2.8] text-[16px] text-slate-800 font-serif html-content-renderer">
                                       {renderHtmlWithHoles(rawContentText, sec)}
                                     </div>
-                                    {/* Word bank for inline drag-drop (shown in both test & review) */}
-                                    {isInlineDragDrop && (
-                                      <div className="mt-8 p-5 bg-gray-50 border border-gray-200 rounded-lg shadow-inner font-sans">
-                                        <p className="text-[13px] font-black text-gray-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
-                                        <div className="flex flex-wrap gap-3">
-                                          {(() => {
-                                            let allOptions: string[] = [];
-                                            (sec.questions || []).forEach((q: any) => {
-                                              if (Array.isArray(q.options)) {
-                                                q.options.forEach((o: any) => {
-                                                  const cleanOpt = String(o).replace(stripHtmlRegex, '').trim();
-                                                  if (cleanOpt && !allOptions.includes(cleanOpt)) allOptions.push(cleanOpt);
-                                                });
-                                              }
-                                            });
-                                            const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
-                                            const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
-                                            
-                                            return allOptions.map((opt: string, oIdx: number) => {
-                                              const prefix = `${String.fromCharCode(65 + oIdx)}. `;
-                                              const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
-                                              const optLetter = String.fromCharCode(65 + oIdx);
-                                              const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
-                                              
-                                              return (
-                                                <div
-                                                  key={oIdx}
-                                                  draggable={!isReviewMode && !isUsed}
-                                                  onDragStart={(e) => onDragStart(e, displayOpt)}
-                                                  onDragEnd={() => { setDraggedOption(null); stopAutoScroll(); }}
-                                                  className={`px-4 py-2 font-bold text-[14px] font-sans border rounded transition-all select-none shadow-sm
-                                                    ${isReviewMode
-                                                      ? 'bg-gray-50 text-slate-500 border-gray-200 cursor-default'
-                                                      : isUsed
-                                                        ? 'bg-gray-200 border-gray-300 text-gray-400 opacity-60 cursor-not-allowed'
-                                                        : 'bg-white border-gray-300 text-gray-800 cursor-grab hover:bg-gray-100 hover:border-gray-400 active:cursor-grabbing'
-                                                    }`}
-                                                >
-                                                  {displayOpt}
-                                                </div>
-                                              );
-                                            });
-                                          })()}
-                                        </div>
-                                      </div>
-                                    )}
                                     {isReviewMode && (
                                        <div className="w-full mt-8 border-t border-slate-300 pt-6 font-sans">
                                           <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">💡 Giải thích chi tiết & Gia sư AI:</p>
@@ -1812,7 +1733,8 @@ const handleFinish = async () => {
                                 )}
 
                                 {/* KHO TỪ KÉO THẢ */}
-                                {<div className="mt-10 p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-inner">
+                                {!isReviewMode && (
+                                  <div className="mt-10 p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-inner">
                                     <p className="text-[13px] font-black text-gray-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
                                     <div className="flex flex-wrap gap-3">
                                       {(() => {
@@ -1839,18 +1761,16 @@ const handleFinish = async () => {
                                           return (
                                             <div
                                               key={oIdx}
-                                              draggable={!isReviewMode && !isUsed}
+                                              draggable={!isUsed}
                                               onDragStart={(e) => onDragStart(e, displayOpt)}
                                               onDragEnd={() => {
                                                 setDraggedOption(null);
                                                 stopAutoScroll(); 
                                               }}
                                               className={`px-4 py-2 font-bold text-[14px] font-sans border rounded transition-all select-none shadow-sm
-                                                ${isReviewMode
-                                                  ? 'bg-gray-50 text-slate-500 border-gray-200 cursor-default'
-                                                  : isUsed 
-                                                    ? 'bg-gray-200 border-gray-300 text-gray-400 opacity-60 cursor-not-allowed' 
-                                                    : 'bg-white border-gray-300 text-gray-800 cursor-grab hover:bg-gray-100 hover:border-gray-400 active:cursor-grabbing'
+                                                ${isUsed 
+                                                  ? 'bg-gray-200 border-gray-300 text-gray-400 opacity-60 cursor-not-allowed' 
+                                                  : 'bg-white border-gray-300 text-gray-800 cursor-grab hover:bg-gray-100 hover:border-gray-400 active:cursor-grabbing'
                                                 }`}
                                             >
                                               {displayOpt}
@@ -1859,7 +1779,8 @@ const handleFinish = async () => {
                                         });
                                       })()}
                                     </div>
-                                  </div>}
+                                  </div>
+                                )}
                               </div>
                             )}
 
@@ -2041,51 +1962,6 @@ const handleFinish = async () => {
                                </div>
                             )}
 
-                            {/* DẠNG ĐOẠN VĂN */}
-                            {sec.questionType === "Đoạn văn" && (
-                               <div className="space-y-6">
-                                 {sec.questions?.map((q: any) => {
-                                    if (!q?.id) return null;
-                                    const displayIndex = questionIndexMap[q.id] || q.id;
-                                    const userAns = String(answers[String(q.id)] || '');
-
-                                    return (
-                                       <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 rounded-xl border shadow-sm transition-all ${isReviewMode ? 'border-gray-200 bg-white' : (activeQuestionId === String(q.id) ? 'border-blue-400 bg-blue-50/30' : 'border-gray-200 bg-white hover:border-gray-300')}`}>
-                                          <div className="flex gap-4 mb-4">
-                                             <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
-                                             <div className="flex-1 min-w-0">
-                                                {q.imageUrl && (
-                                                   <div className="mb-4">
-                                                      <img src={q.imageUrl} alt="Question Illustration" className="rounded border border-gray-200 max-h-[400px] object-contain shadow-sm" />
-                                                   </div>
-                                                )}
-                                                {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
-                                                <div className="mt-2">
-                                                   <textarea
-                                                      value={userAns}
-                                                      onChange={(e) => handleAnswer(String(q.id), e.target.value)}
-                                                      disabled={isReviewMode}
-                                                      placeholder="Nhập câu trả lời của bạn vào đây..."
-                                                      className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-y min-h-[150px] font-sans ${isReviewMode ? 'bg-gray-50' : 'bg-white'}`}
-                                                   />
-                                                   {isReviewMode && aiFeedback?.details?.find((d:any) => d.question_id === String(q.id)) && (
-                                                      <div className="mt-4 p-4 rounded-xl bg-blue-50 border border-blue-200">
-                                                         <div className="flex items-center justify-between mb-2">
-                                                            <span className="font-bold text-[14px] text-blue-800">🤖 AI Chấm Điểm</span>
-                                                            <span className="font-bold text-[14px] text-blue-800">{aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.student_score} / {aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.max_score} điểm</span>
-                                                         </div>
-                                                         <p className="text-[14px] text-slate-700 italic">{aiFeedback.details.find((d:any) => d.question_id === String(q.id))?.examiner_comment}</p>
-                                                      </div>
-                                                   )}
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    );
-                                 })}
-                               </div>
-                            )}
-
                           </div>
                         )
                       })}
@@ -2224,12 +2100,6 @@ const handleFinish = async () => {
           </button>
         </div>
       </footer>
-      {isSubmitting && (
-        <div className="fixed inset-0 bg-white/80 backdrop-blur-[2px] z-50 flex flex-col items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-[3px] border-blue-600 border-t-transparent mb-4"></div>
-          <p className="text-[15px] font-bold text-slate-700">Đang nộp bài và gọi AI chấm điểm...</p>
-        </div>
-      )}
     </div>
   );
 }
