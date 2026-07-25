@@ -430,17 +430,23 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       if (error) throw new Error("Lỗi gọi Server: " + error.message);
       if (data?.error) throw new Error("Lỗi chấm điểm: " + data.error);
       
-      const cleanJson = (data.result || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
       let gradedData;
       try {
-          gradedData = JSON.parse(cleanJson);
+          // Edge function giờ trả về parsed object trực tiếp
+          if (data.result && typeof data.result === 'object') {
+              gradedData = data.result;
+          } else {
+              // Fallback: parse string (backward compatible)
+              const cleanJson = (data.result || data.rawText || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
+              gradedData = JSON.parse(cleanJson);
+          }
       } catch (parseErr: any) {
           console.error("Lỗi parse JSON từ AI:", parseErr);
-          console.log("Raw AI Output:", cleanJson);
+          console.log("Raw AI Output:", data.result || data.rawText);
           gradedData = {
               total_student_score: 0,
               total_max_score: 0,
-              general_feedback: "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n" + cleanJson,
+              general_feedback: "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n" + JSON.stringify(data.result || data.rawText),
               details: []
           };
       }

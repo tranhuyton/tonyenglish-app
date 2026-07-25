@@ -436,26 +436,27 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
       if (error) throw new Error("Lỗi gọi Server: " + error.message);
       if (data?.error) throw new Error("Lỗi chấm điểm: " + data.error);
       
-      let cleanJson = (data.result || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
-      // Loại bỏ các ký tự điều khiển/xuống dòng thực tế (literal newlines/tabs) bị dính trong chuỗi trả về
-      // vì JSON.parse sẽ crash nếu gặp literal \n bên trong một string value
-      cleanJson = cleanJson.replace(/[\n\r\t]+/g, ' ');
-      // Xóa dấu phẩy thừa (trailing commas) nếu có
-      cleanJson = cleanJson.replace(/,\s*([\}\]])/g, '$1');
-      // Thử lọc lấy phần thân JSON bằng Regex nếu AI trả về kèm theo text thừa ở đầu/cuối
-      const jsonMatch = cleanJson.match(/\{[\s\S]*\}/);
-      if (jsonMatch) cleanJson = jsonMatch[0];
-
       let gradedData;
       try {
-          gradedData = JSON.parse(cleanJson);
+          // Edge function giờ trả về parsed object trực tiếp
+          if (data.result && typeof data.result === 'object') {
+              gradedData = data.result;
+          } else {
+              // Fallback: parse string (backward compatible)
+              let cleanJson = (data.result || data.rawText || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
+              cleanJson = cleanJson.replace(/[\n\r\t]+/g, ' ');
+              cleanJson = cleanJson.replace(/,\s*([\}\]])/g, '$1');
+              const jsonMatch = cleanJson.match(/\{[\s\S]*\}/);
+              if (jsonMatch) cleanJson = jsonMatch[0];
+              gradedData = JSON.parse(cleanJson);
+          }
       } catch (parseErr: any) {
           console.error("Lỗi parse JSON từ AI:", parseErr);
-          console.log("Raw AI Output:", cleanJson);
+          console.log("Raw AI Output:", data.result || data.rawText);
           gradedData = {
               total_student_score: 0,
               total_max_score: 0,
-              general_feedback: "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n" + cleanJson,
+              general_feedback: "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n" + JSON.stringify(data.result || data.rawText),
               details: []
           };
       }
