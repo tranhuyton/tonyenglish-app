@@ -123,7 +123,7 @@ ${JSON.stringify(textAnswers, null, 2)}
             contents: [{ role: "user", parts: parts }],
             generationConfig: {
                 temperature: 0.1,
-                maxOutputTokens: 8192,
+                maxOutputTokens: 65536,
                 responseMimeType: "application/json"
             }
         })
@@ -137,8 +137,9 @@ ${JSON.stringify(textAnswers, null, 2)}
     }
 
     const data = await response.json();
+    const finishReason = data.candidates?.[0]?.finishReason;
     const resultText = data.candidates?.[0]?.content?.parts?.[0]?.text || "{}";
-    console.log(`[igcse-grader] Gemini response received, length: ${resultText.length}`);
+    console.log(`[igcse-grader] Gemini response: ${resultText.length} chars, finishReason=${finishReason}`);
 
     // Parse ngay tại đây để tránh lỗi double-stringify với Vietnamese text
     let parsedResult;
