@@ -1863,7 +1863,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                             const type = String(testDataToUse.test_type || '').toLowerCase();
                             let targetMode = 'standard';
-                            if (type.includes('split-standard')) targetMode = 'split-standard';
+                            if (type.includes('igcse-direct')) targetMode = 'igcse-direct';
+                            else if (type.includes('igcse')) targetMode = 'igcse';
+                            else if (type.includes('split-standard')) targetMode = 'split-standard';
                             else if (type.includes('splitscreen') && type.includes('standard')) targetMode = 'standard-splitscreen';
                             else if (type.includes('standard-reading')) targetMode = 'standard-reading';
                             else if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
