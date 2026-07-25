@@ -603,8 +603,33 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
             ro.observe(document.getElementById('content-wrapper'));
          } else { 
             setInterval(reportHeight, 500);
-         }
-       </script>
+          }
+          // === INTERACTIVE BUTTONS SUPPORT ===
+          // Convert onmouseover/onmouseout inline handlers to click/touch events
+          // so interactive lecture content works on both mobile and desktop
+          (function() {
+            var allElements = document.querySelectorAll('[onmouseover]');
+            allElements.forEach(function(el) {
+              var hoverCode = el.getAttribute('onmouseover');
+              if (!hoverCode) return;
+              
+              // Add click handler (works on both mobile and desktop)
+              el.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                try { new Function(hoverCode).call(el); } catch(err) { console.warn('Interactive handler error:', err); }
+              });
+              
+              // Add touchstart handler for immediate response on mobile
+              el.addEventListener('touchstart', function(e) {
+                try { new Function(hoverCode).call(el); } catch(err) {}
+              }, { passive: true });
+
+              // Visual feedback: add cursor pointer
+              el.style.cursor = 'pointer';
+            });
+          })();
+        </script>
      </body>
      </html>
    `;
