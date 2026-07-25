@@ -320,7 +320,8 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
         fillEmptyParagraph: false, 
         cleanOnPaste: false, // Tắt clean mặc định của Jodit để dùng bộ lọc Custom bên dưới
         replaceNBSP: true,
-        removeOnError: false 
+        removeOnError: false,
+        removeEventAttributes: false // GIỮ NGUYÊN onmouseover, onclick, onmouseout cho bài giảng tương tác
     },
     
     // --- BỘ LỌC DOM PARSER BÀN TAY SẮT: Lột sạch style rác, giữ nguyên Bảng/Đậm/Nghiêng ---
