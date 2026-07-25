@@ -1881,7 +1881,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 past_answers: viewingHistoryDetail.details?.userAnswers || viewingHistoryDetail.details?.answers || {},
                                 past_score: viewingHistoryDetail.scoreObj.value,
                                 past_total: totalStr ? totalStr.trim() : 0,
-                                past_band: viewingHistoryDetail.details?.bandScore || '0.0'
+                                past_band: viewingHistoryDetail.details?.bandScore || '0.0',
+                                aiFeedback: viewingHistoryDetail.details?.aiFeedback || null
                             });
                             setViewingHistoryDetail(null);
                         } else {
