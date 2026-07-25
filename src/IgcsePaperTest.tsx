@@ -422,7 +422,8 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
         body: { 
             testConfig: testData.json_config?.questions || [],
             textAnswers: textAnswers,
-            imageAnswers: imageAnswers
+            imageAnswers: imageAnswers,
+            pdfUrl: testData.insert_pdf_url || testData.pdf_url || null
         }
       });
 

@@ -11,7 +11,7 @@ serve(async (req) => {
   }
 
   try {
-    const { testConfig, textAnswers, imageAnswers } = await req.json();
+    const { testConfig, textAnswers, imageAnswers, pdfUrl } = await req.json();
     const GEMINI_API_KEY = Deno.env.get('GEMINI_API_KEY');
 
     if (!GEMINI_API_KEY) {
@@ -19,8 +19,33 @@ serve(async (req) => {
     }
 
     const parts: any[] = [];
+
+    // ============================================================
+    // 1. Gửi PDF đề thi cho Gemini Vision (nếu có)
+    // ============================================================
+    if (pdfUrl) {
+      try {
+        console.log(`Fetching exam PDF: ${pdfUrl}`);
+        const pdfResponse = await fetch(pdfUrl);
+        if (pdfResponse.ok) {
+          const pdfBuffer = await pdfResponse.arrayBuffer();
+          const pdfBase64 = btoa(
+            new Uint8Array(pdfBuffer).reduce((data, byte) => data + String.fromCharCode(byte), '')
+          );
+          parts.push({ text: "\n[ĐỀ THI GỐC (PDF) - HÃY NHÌN KỸ TẤT CẢ CÁC HÌNH ẢNH, BẢNG BIỂU, ĐỒ THỊ TRONG ĐỀ ĐỂ CHẤM CHÍNH XÁC]:" });
+          parts.push({ inline_data: { mime_type: "application/pdf", data: pdfBase64 } });
+          console.log(`PDF attached: ${(pdfBuffer.byteLength / 1024).toFixed(0)} KB`);
+        } else {
+          console.warn(`Failed to fetch PDF (${pdfResponse.status}), proceeding without it`);
+        }
+      } catch (pdfErr) {
+        console.warn("Error fetching PDF, proceeding without:", pdfErr);
+      }
+    }
     
-    // Attach student's image uploads for Gemini Vision
+    // ============================================================
+    // 2. Gửi ảnh bài làm của học sinh (nếu có)
+    // ============================================================
     if (imageAnswers && imageAnswers.length > 0) {
         imageAnswers.forEach((img: any) => {
             try {
@@ -34,8 +59,14 @@ serve(async (req) => {
         });
     }
 
+    // ============================================================
+    // 3. Prompt chấm điểm
+    // ============================================================
     const prompt = `
 Bạn là giám khảo Cambridge IGCSE cực kỳ nghiêm khắc và chính xác. Hãy chấm điểm bài làm của học sinh.
+
+## ĐỀ THI GỐC:
+${pdfUrl ? "File PDF đề thi đã được đính kèm ở trên. HÃY NHÌN KỸ các hình ảnh (Fig), bảng biểu, đồ thị trong đề để đối chiếu với bài làm học sinh." : "(Không có PDF đề thi đính kèm)"}
 
 ## THÔNG TIN ĐỀ THI & MARKING SCHEME CHUẨN:
 ${JSON.stringify(testConfig, null, 2)}
@@ -48,8 +79,13 @@ ${JSON.stringify(textAnswers, null, 2)}
 1. Chấm CHÍNH XÁC theo Marking Scheme (MS) của Cambridge. Không cho điểm thương hại.
 2. Với câu hỏi tính toán: nếu kết quả đúng nhưng không ghi đơn vị → trừ 1 điểm.
 3. Với câu hỏi vẽ đồ thị/bản vẽ (image_upload): phân tích chi tiết hình vẽ học sinh, đối chiếu với mô tả MS.
-4. Mỗi câu chấm độc lập, cho partial marks nếu đúng một phần.
-5. Feedback phải bằng Tiếng Việt, dễ hiểu cho học sinh.
+4. **QUAN TRỌNG - Câu hỏi nhận dạng hình ảnh:** Khi chấm các câu yêu cầu học sinh nhận dạng từ hình ảnh (ví dụ: dùng key để xác định loài từ hình vẽ), BẮT BUỘC phải:
+   - Nhìn kỹ từng hình ảnh trong PDF đề thi (Fig)
+   - Đối chiếu đặc điểm hình ảnh với dichotomous key
+   - So sánh kết quả với câu trả lời của học sinh
+   - KHÔNG được chấm đúng nếu chỉ dựa vào tên đúng mà thứ tự sai
+5. Mỗi câu chấm độc lập, cho partial marks nếu đúng một phần.
+6. Feedback phải bằng Tiếng Việt, dễ hiểu cho học sinh.
 
 ## YÊU CẦU JSON ĐẦU RA (Bắt buộc trả về JSON chuẩn, KHÔNG có backticks):
 {
