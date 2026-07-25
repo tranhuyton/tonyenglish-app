@@ -120,3 +120,19 @@ table th {
   margin-bottom: 0;
 }
 
+/* Images inside content should display at a reasonable size */
+.html-content-renderer img {
+  max-width: 100%;
+  min-width: 200px;
+  height: auto !important;
+  display: block;
+  margin: 12px auto;
+  border-radius: 6px;
+}
+
+/* When image has no explicit width/height or is very small, scale it up */
+.html-content-renderer img:not([width]),
+.html-content-renderer img[width="0"],
+.html-content-renderer img[width="1"] {
+  width: 80%;
+}

@@ -51,16 +51,25 @@ const stripHtmlRegex = /[<][^>]*[>]/g;
 
 const cleanHtmlContent = (html: any) => {
   if (!html) return '';
-  let cleaned = String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
+  let cleaned = String(html);
+  
+  // Xử lý riêng cho thẻ img: giữ nguyên style (width/height cần thiết cho hiển thị đúng kích thước)
+  // Chỉ xóa width/height/overflow cho các thẻ KHÔNG phải img
+  cleaned = cleaned.replace(/<([a-z][a-z0-9]*)\b([^>]*?)style\s*=\s*(['"])(.*?)\3([^>]*?)>/gi, 
+    (match, tagName, before, quote, styleContent, after) => {
+      if (tagName.toLowerCase() === 'img') {
+        return match; // Giữ nguyên style cho img
+      }
       let newStyle = styleContent
           .replace(/(?:^|;)\s*(max-width|width|max-height|min-height|height|overflow|overflow-y|overflow-x)\s*:[^;]+/gi, '')
           .replace(/^;+|;+$/g, '')
           .trim();
       if (newStyle) {
-          return `style=${quote}${newStyle}${quote}`;
+          return `<${tagName}${before}style=${quote}${newStyle}${quote}${after}>`;
       }
-      return '';
+      return `<${tagName}${before}${after}>`;
   });
+  
   // Xóa khoảng trắng/xuống dòng thừa giữa các thẻ block để tránh tạo khoảng trống khổng lồ do whitespace-pre-wrap
   cleaned = cleaned.replace(/<\/(p|div|h[1-6])>\s+<(p|div|h[1-6])\b/gi, '</$1><$2');
   return cleaned;
