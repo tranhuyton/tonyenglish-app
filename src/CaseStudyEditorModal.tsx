@@ -3,32 +3,32 @@ import { supabase } from './supabase';
 
 export default function CaseStudyEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
   const getInitialData = () => {
-    if (testRecord.content_json) {
-      const data = {...testRecord.content_json};
-      if (testRecord.insert_pdf_url) {
-        if (!data.basicInfo) data.basicInfo = {};
-        data.basicInfo.insert_pdf_url = testRecord.insert_pdf_url;
-      }
-      data.json_config_string = testRecord.json_config ? JSON.stringify(testRecord.json_config, null, 2) : '';
-      
-      // Đảm bảo có trường category
-      if (!data.basicInfo.category) data.basicInfo.category = 'test';
-      
-      return data;
+    const basicInfo = testRecord.content_json?.basicInfo || {};
+    
+    // Đảm bảo luôn có các trường cơ bản
+    if (!basicInfo.title) basicInfo.title = testRecord.title || '';
+    if (!basicInfo.courseId) basicInfo.courseId = 'all';
+    if (!basicInfo.skill) basicInfo.skill = 'Case-Study';
+    if (!basicInfo.category) basicInfo.category = 'test';
+    if (!basicInfo.mode) basicInfo.mode = 'Đề thi';
+    if (!basicInfo.timeLimit) basicInfo.timeLimit = '90';
+    if (!basicInfo.scoreType) basicInfo.scoreType = 'IGCSE Grading';
+    
+    // Gắn insert_pdf_url từ record gốc (nếu có)
+    if (testRecord.insert_pdf_url) {
+      basicInfo.insert_pdf_url = testRecord.insert_pdf_url;
+    }
+
+    // Tạo json_config_string từ json_config (ưu tiên) hoặc content_json
+    let json_config_string = '';
+    if (testRecord.json_config) {
+      json_config_string = JSON.stringify(testRecord.json_config, null, 2);
     }
 
     return {
-      basicInfo: {
-        title: testRecord.title || '',
-        courseId: 'all', 
-        skill: 'Case-Study',
-        category: 'test', // 🚀 DEFAULT CATEGORY LÀ ĐỀ THI
-        mode: 'Đề thi',
-        timeLimit: '90',
-        scoreType: 'IGCSE Grading', 
-        insert_pdf_url: '' 
-      },
-      json_config_string: ''
+      ...(testRecord.content_json || {}),
+      basicInfo,
+      json_config_string
     };
   };
 
