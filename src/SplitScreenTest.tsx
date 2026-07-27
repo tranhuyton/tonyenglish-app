@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 
-export default function SplitScreenTest({ onBack, onStartTest }: { onBack?: () => void, onStartTest?: any }) {
-  // LẤY ĐÚNG ĐỀ THI TỪ THƯ VIỆN TRUYỀN VÀO
+export default function SplitScreenTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
+  // LẤY ĐÚNG ĐỀ THI TỪ THƯ VIỆN TRUYỀN VÀO (ưu tiên prop, fallback sessionStorage)
   const [testData, setTestData] = useState<any>(() => {
+     if (propTestData) return propTestData;
      const saved = sessionStorage.getItem('lms_current_test');
      return saved ? JSON.parse(saved) : null;
   });

@@ -248,7 +248,7 @@ export default function App() {
         {currentView === 'mixed-paper' && <MixedPaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
         {currentView === 'standard' && <StandardMCQTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
         {currentView === 'standard-splitscreen' && <StandardSplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
-        {currentView === 'case-study' && <SplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} />}
+        {currentView === 'case-study' && <SplitScreenTest key={`split-${currentTestData?.id || ''}`} onBack={handleReturnFromTest} testData={currentTestData} />}
         {currentView === 'igcse' && <IgcsePaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
         {currentView === 'igcse-direct' && <IgcseDirectPaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
         {currentView === 'siege-game' && <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />}
