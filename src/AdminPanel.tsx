@@ -486,7 +486,37 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   // Lightweight refresh: only refetch assigned tests for current course (no modules/classes/enrollments)
   const refreshAssignedTestsOnly = async (courseId: string) => {
     const { data: ast } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('course_id', courseId).order('order_index', { ascending: true });
-    setAssignedTests(ast || []);
+    
+    let baseTests = ast || [];
+    setAssignedTests(baseTests);
+
+    if (baseTests.length > 0) {
+      try {
+        const testIds = baseTests.map((t: any) => t.id);
+        const chunkSize = 50;
+        const allRichData: any[] = [];
+        for (let i = 0; i < testIds.length; i += chunkSize) {
+          const chunk = testIds.slice(i, i + chunkSize);
+          const { data } = await supabase.from('tests').select('id, basicInfo:content_json->basicInfo').eq('course_id', courseId).in('id', chunk);
+          if (data) allRichData.push(...data);
+        }
+        if (allRichData.length > 0) {
+          const cjMap = new Map(allRichData.map(c => {
+             let bi = c.basicInfo;
+             if (typeof bi === 'string') {
+                try { bi = JSON.parse(bi); } catch(e) { bi = {}; }
+             }
+             return [c.id, { basicInfo: bi || {} }];
+          }));
+          setAssignedTests(prev => prev.map(t => {
+            const cj = cjMap.get(t.id);
+            return cj !== undefined ? { ...t, content_json: cj } : t;
+          }));
+        }
+      } catch (e) {
+        console.error("Error loading content_json in refresh:", e);
+      }
+    }
   };
 
   const fetchClassDetails = async (classId: string) => {
