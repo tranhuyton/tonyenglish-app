@@ -126,49 +126,41 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
     }
 
     try {
-      const prompt = `
-        Bạn là một giám khảo chấm thi Cambridge IGCSE vô cùng nghiêm khắc và chính xác.
-        Nhiệm vụ của bạn là chấm điểm bài làm của học sinh dựa trên Marking Scheme chính thức.
-
-        THÔNG TIN ĐỀ THI VÀ MARKING SCHEME:
-        ${JSON.stringify(testData.json_config?.questions || [])}
-
-        BÀI LÀM CỦA HỌC SINH:
-        ${JSON.stringify(currentAnswers)}
-
-        YÊU CẦU:
-        - So sánh từng câu trả lời của học sinh với Marking Scheme.
-        - Chấm điểm từng phần cực kỳ chặt chẽ (đúng từ khóa/ý mới cho điểm).
-        - Đưa ra nhận xét ngắn gọn vì sao được điểm và vì sao mất điểm.
-        - TÍNH TỔNG ĐIỂM.
-
-        BẠN BẮT BUỘC PHẢI TRẢ VỀ KẾT QUẢ DƯỚI ĐỊNH DẠNG JSON SAU (không chứa markdown hay text thừa):
-        {
-          "total_student_score": 0,
-          "total_max_score": 0,
-          "general_feedback": "Nhận xét tổng quan...",
-          "details": [
-            {
-              "question_number": "1(a)",
-              "student_score": 0,
-              "max_score": 8,
-              "examiner_comment": "Giải thích chi tiết tại sao..."
-            }
-          ]
+      // 🚀 Chuyển sang dùng igcse-grader: AI đọc được PDF đề thi + Marking Scheme
+      const pdfUrl = testData.insert_pdf_url || testData.pdf_url || testData.content_json?.basicInfo?.insert_pdf_url || null;
+      
+      // Xây dựng absolute URL cho PDF (igcse-grader cần fetch được)
+      let fullPdfUrl = null;
+      if (pdfUrl) {
+        if (pdfUrl.startsWith('http')) {
+          fullPdfUrl = pdfUrl;
+        } else {
+          // Relative path → absolute URL (ví dụ: /Business Studies/2024 June/0450_s24_qp_11.pdf)
+          fullPdfUrl = `${window.location.origin}${pdfUrl.startsWith('/') ? '' : '/'}${pdfUrl}`;
         }
-      `;
+      }
 
-      // GỌI QUA SUPABASE EDGE FUNCTION
-      const { data, error } = await supabase.functions.invoke('ai-grader', {
-        body: { prompt: prompt, model: 'gemini-2.5-flash' }
+      const { data, error } = await supabase.functions.invoke('igcse-grader', {
+        body: { 
+          testConfig: testData.json_config?.questions || [],
+          textAnswers: currentAnswers,
+          imageAnswers: [],
+          pdfUrl: fullPdfUrl
+        }
       });
 
       if (error) throw new Error("Lỗi gọi Server: " + error.message);
       if (data?.error) throw new Error("Lỗi chấm điểm AI: " + data.error);
 
-      // Xử lý làm sạch JSON đề phòng AI trả về markdown backticks
-      const aiResponseText = data.result.replace(/\u0060{3}(json)?/gi, "").trim();
-      const gradedData = JSON.parse(aiResponseText);
+      // igcse-grader trả về parsed object trực tiếp
+      let gradedData;
+      if (data.result && typeof data.result === 'object') {
+        gradedData = data.result;
+      } else {
+        // Fallback: parse string (backward compatible)
+        const cleanJson = (data.result || data.rawText || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
+        gradedData = JSON.parse(cleanJson);
+      }
 
       setGradeResult(gradedData);
       setIsReviewMode(true);
@@ -204,8 +196,12 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
       }
 
     } catch (err: any) {
-      console.error("Lỗi khi chấm bài:", err);
-      alert("❌ Đã có lỗi xảy ra: " + err.message);
+      if (err.message && err.message.includes("Unexpected end of JSON input")) {
+        alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file PDF quá nặng. Vui lòng thử nộp lại.");
+      } else {
+        console.error("Lỗi khi chấm bài:", err);
+        alert("❌ Đã có lỗi xảy ra: " + err.message);
+      }
     } finally {
       setIsSubmitting(false);
     }
