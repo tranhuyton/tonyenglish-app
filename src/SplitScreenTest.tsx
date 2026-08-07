@@ -363,7 +363,16 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                       <div className="mb-4">
                          <span className="font-bold text-slate-500 uppercase text-[11px] tracking-widest block mb-2">Bài làm của bạn:</span>
                          <div className="bg-slate-50 p-4 border border-slate-200 text-[14px] text-slate-600 italic whitespace-pre-wrap">
-                            {answers[`${item.question_number}_input_0`] || "Không có câu trả lời..."}
+                            {(() => {
+                              const qn = item.question_number || item.id || '';
+                              // Try multiple key patterns to find student answer
+                              const directKey = `${qn}_input_0`;
+                              const found = answers[directKey] 
+                                || answers[qn]
+                                || Object.entries(answers).find(([k]) => k.startsWith(qn))?.[1]
+                                || null;
+                              return found || "Không có câu trả lời...";
+                            })()}
                          </div>
                       </div>
 
