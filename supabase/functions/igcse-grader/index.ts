@@ -131,9 +131,11 @@ ${JSON.stringify(textAnswers, null, 2)}
 ${subjectRules}
 
 ## QUY TẮC CHẤM CHUNG:
-1. ĐỌC KỸ toàn bộ nội dung PDF case study trước khi chấm bất kỳ câu nào.
+1. ĐỌC KỸ toàn bộ nội dung PDF trước khi chấm bất kỳ câu nào.
 2. Mỗi câu chấm INDEPENDENTLY — cho partial marks nếu đúng một phần.
-3. Marking Scheme là HƯỚNG DẪN, không phải danh sách đáp án duy nhất. Nếu học sinh trả lời khác MS nhưng câu trả lời HỢP LÝ, CÓ CĂN CỨ từ case study → VẪN CHO ĐIỂM.
+${isBusinessOrEcon 
+  ? "3. Marking Scheme là HƯỚNG DẪN gợi ý, không phải danh sách đáp án duy nhất. Nếu học sinh trả lời khác MS nhưng câu trả lời HỢP LÝ, CÓ CĂN CỨ từ case study → VẪN CHO ĐIỂM."
+  : "3. Chấm CHÍNH XÁC theo Marking Scheme. Thuật ngữ khoa học, công thức, tên loài phải ĐÚNG CHÍNH XÁC. KHÔNG chấp nhận đáp án thay thế trừ khi MS ghi rõ (accept equivalent)."}
 4. Khi trả lời bằng tiếng Anh mà đề hỏi tiếng Anh → chấm nội dung, KHÔNG trừ điểm vì lỗi ngữ pháp nhẹ.
 5. Feedback bằng Tiếng Việt, giải thích tại sao đúng/sai và gợi ý cải thiện.
 
@@ -148,7 +150,7 @@ ${subjectRules}
       "student_score": <điểm đạt>,
       "max_score": <điểm tối đa>,
       "is_correct": <true/false>,
-      "correct_answer": "<Đáp án mẫu theo MS + các đáp án thay thế hợp lệ từ case study>",
+      "correct_answer": "<Đáp án đúng theo MS>",
       "examiner_comment": "<Giải thích chi tiết bằng tiếng Việt: tại sao đạt/mất điểm, trích dẫn cụ thể từ case study nếu liên quan>"
     }
   ]
