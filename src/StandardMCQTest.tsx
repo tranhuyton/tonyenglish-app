@@ -1658,7 +1658,7 @@ const handleFinish = async () => {
                                        <div className="flex gap-4 mb-2">
                                          <span className="font-bold text-slate-800 shrink-0 w-6 text-right pt-[2px]">{displayIdx}.</span>
                                          <div className="flex-1">
-                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded border border-slate-200" alt="Question" />}
+                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] my-8 rounded border border-slate-200" alt="Question" />}
                                            {cleanQText && <div className="text-[16px] text-slate-800 font-medium leading-relaxed whitespace-pre-wrap mb-4" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
                                            
                                            <div className="flex flex-row flex-wrap gap-4">
@@ -1757,7 +1757,7 @@ const handleFinish = async () => {
 
                                      <div className="flex gap-4 mb-5 pr-10 items-start">
                                         <div className="flex-1 w-full">
-                                           {q.imageUrl && <img src={q.imageUrl} className={`mb-4 rounded-xl border border-slate-200 shadow-sm ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
+                                           {q.imageUrl && <img src={q.imageUrl} className={`my-8 rounded-xl border border-slate-200 shadow-sm ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
                                            {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium mb-3 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
                                         </div>
                                      </div>
