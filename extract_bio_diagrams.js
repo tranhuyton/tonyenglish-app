@@ -138,6 +138,21 @@ function findDiagramByTextGap(qNum, positions, pageData) {
       // Find the highest Y option
       const firstOption = options[0]; 
       diagramBottomY = firstOption.y + 18;
+    } else {
+      // If NO left-aligned options are found, it means the options are embedded inside the diagram (e.g. 4 graphs)
+      // In this case, we fell back to nextQY + 25. But this leaves a huge blank space.
+      // We can safely tighten the bottom to the lowest text item in the diagram + 30pt padding.
+      if (allOptions.length > 0) {
+        let lowestTextY = Infinity;
+        for (const item of qItems) {
+          if (item.y >= diagramBottomY && item.y <= diagramTopY) {
+            if (item.y < lowestTextY) lowestTextY = item.y;
+          }
+        }
+        if (lowestTextY !== Infinity && lowestTextY - 30 > diagramBottomY) {
+          diagramBottomY = lowestTextY - 30;
+        }
+      }
     }
   }
 
