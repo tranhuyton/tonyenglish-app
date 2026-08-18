@@ -365,6 +365,10 @@ export default function StandardMCQTest({
     }
   });
 
+  // 🔒 REF CHỐNG STALE CLOSURE: Đảm bảo timer hết giờ luôn đọc answers mới nhất
+  const answersRef = useRef(answers);
+  useEffect(() => { answersRef.current = answers; }, [answers]);
+
   const [marked, setMarked] = useState<Record<string, boolean>>(() => {
     try {
       const saved = localStorage.getItem(`standard_mark_${safeData?.id}`);
@@ -407,6 +411,8 @@ const handleFinish = async () => {
     }
     
     isFinishingRef.current = true;
+    // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
+    const currentAnswers = answersRef.current;
     if (safeData?.id) {
       localStorage.removeItem(`std_ans_${safeData.id}`);
       localStorage.removeItem(`standard_mark_${safeData.id}`);
@@ -440,7 +446,7 @@ const handleFinish = async () => {
            combos.forEach(combo => {
                const comboIds = combo.map((q: any) => String(q.id));
                const userAnsComboSet = new Set(
-                   comboIds.map(id => answers[id])
+                   comboIds.map(id => currentAnswers[id])
                            .filter(v => v && v.trim() !== '')
                            .flatMap(x => x.split(',').map(v => v.trim().toUpperCase()))
                );
@@ -472,7 +478,7 @@ const handleFinish = async () => {
              total++; 
              questionTypeStats[qType].total++;
              
-             const uAns = String(answers[String(q.id)] || '').trim();
+             const uAns = String(currentAnswers[String(q.id)] || '').trim();
              const cAns = String(q.correctAnswer || '').trim();
              
              let isCorrect = isAnswerCorrect(uAns, cAns);
@@ -515,7 +521,7 @@ const handleFinish = async () => {
           time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
           details: { 
               test_id: safeData?.id, 
-              userAnswers: answers, 
+              userAnswers: currentAnswers, 
               type_stats: questionTypeStats 
           }
         }]);

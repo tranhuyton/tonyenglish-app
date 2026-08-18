@@ -142,6 +142,9 @@ export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack:
       return saved ? JSON.parse(saved) : {};
     } catch (error) { return {}; }
   });
+  // 🔒 REF CHỐNG STALE CLOSURE: Đảm bảo timer hết giờ luôn đọc answers mới nhất
+  const answersRef = useRef(answers);
+  useEffect(() => { answersRef.current = answers; }, [answers]);
   
   const [reviewFlags, setReviewFlags] = useState<Record<string, boolean>>({});
   const [activeQuestionId, setActiveQuestionId] = useState<string>('');
@@ -262,6 +265,8 @@ const handleFinish = async () => {
   if (!isReviewMode) {
     if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
     isFinishingRef.current = true;
+    // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
+    const currentAnswers = answersRef.current;
     if (safeTestData?.id) {
       localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
       localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
@@ -282,7 +287,7 @@ const handleFinish = async () => {
           const combos = buildCheckboxCombos(s.questions);
           combos.forEach(combo => {
             const comboIds = combo.map((q: any) => String(q.id));
-            const userAnsComboSet = new Set(comboIds.map(id => answers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
+            const userAnsComboSet = new Set(comboIds.map(id => currentAnswers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
             const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
             
             let comboPoints = 0;
@@ -305,7 +310,7 @@ const handleFinish = async () => {
             if (!q?.id) return;
             total++;
             questionTypeStats[qType].total++;
-            const userAns = String(answers[String(q.id)] || "");
+            const userAns = String(currentAnswers[String(q.id)] || "");
             const correctAns = String(q.correctAnswer || "");
             
             if (isAnswerCorrect(userAns, correctAns) && correctAns.trim() !== "") {
@@ -343,7 +348,7 @@ const handleFinish = async () => {
           total_score: total, 
           time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
           // 🚀 LƯU TRỮ TOÀN BỘ PHÂN TÍCH DẠNG BÀI VÀO DETAILS
-          details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats }
+          details: { test_id: safeTestData?.id, bandScore: band, userAnswers: currentAnswers, type_stats: questionTypeStats }
         }]);
       
       // 🚀 ANH DÁN ĐOẠN CODE BẮN PHÁO HIỆU VÀO ĐÂY NHÉ:

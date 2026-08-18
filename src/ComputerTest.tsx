@@ -200,6 +200,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       return {}; 
     }
   });
+
+  // 🔒 REF CHỐNG STALE CLOSURE: Đảm bảo timer hết giờ luôn đọc answers mới nhất
+  const answersRef = useRef(answers);
+  useEffect(() => { answersRef.current = answers; }, [answers]);
   
   const [reviewFlags, setReviewFlags] = useState<Record<string, boolean>>({});
   const [activeQuestionId, setActiveQuestionId] = useState<string>('');
@@ -268,6 +272,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
       isFinishingRef.current = true;
       
+      // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
+      const currentAnswers = answersRef.current;
+      
       if (safeTestData?.id) {
         localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
         localStorage.removeItem(`ielts_endtime_${safeTestData.id}`);
@@ -293,7 +300,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               const comboIds = combo.map((q: any) => String(q.id));
               
               const userAnsComboSet = new Set(
-                  comboIds.map(id => answers[id])
+                  comboIds.map(id => currentAnswers[id])
                           .filter(v => v && v.trim() !== '')
                           .flatMap(x => x.split(',').map(v => v.trim().toUpperCase()))
               );
@@ -326,7 +333,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               total++;
               questionTypeStats[qType].total++;
               
-              const userAns = String(answers[String(q.id)] || "");
+              const userAns = String(currentAnswers[String(q.id)] || "");
               const correctAns = String(q.correctAnswer || "");
               
               let isCorrect = isAnswerCorrect(userAns, correctAns);
@@ -385,7 +392,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             total_score: total, 
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
             // 🚀 ĐÃ SỬA: ĐẨY TOÀN BỘ questionTypeStats VÀO DETAILS ĐỂ SUPABASE GHI NHẬN LẠI DẠNG BÀI
-            details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats }
+            details: { test_id: safeTestData?.id, bandScore: band, userAnswers: currentAnswers, type_stats: questionTypeStats }
           }]);
         // 🚀 ANH DÁN ĐOẠN CODE BẮN PHÁO HIỆU VÀO ĐÂY NHÉ:
         await supabase.from('activity_logs').insert([{
