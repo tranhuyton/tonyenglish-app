@@ -261,7 +261,19 @@ export default function StandardMCQTest({
     return flag;
   }, [parts, isReviewMode]);
 
-  const showLeftPane = isReviewMode && hasAnyContent;
+  // 🔒 Kiểm tra riêng: có nội dung Giải thích / Transcript không?
+  // Nếu không có → ẩn cột trái trong review mode (vì chỉ hiện tiêu đề part rỗng, vô nghĩa)
+  const hasExplanationContent = useMemo(() => {
+    for (const p of parts) {
+      if (isRealContent(p.explanation)) return true;
+      for (const sec of (p.sections || [])) {
+        if (isRealContent(sec.explanation)) return true;
+      }
+    }
+    return false;
+  }, [parts]);
+
+  const showLeftPane = isReviewMode && hasExplanationContent;
   const [leftWidth, setLeftWidth] = useState(50);
   const [scoreResult, setScoreResult] = useState({ 
       score: parseInt(safeData?.past_score || 0), 
@@ -1352,8 +1364,8 @@ const handleFinish = async () => {
           >
              <div className={`p-6 md:p-10 max-w-5xl w-full mx-auto ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                
-               {/* NẾU LÀ BÀI LISTENING CÓ CHẾ ĐỘ XEM LẠI, HIỂN THỊ ĐIỂM Ở ĐÂY CHO ĐẸP */}
-               {isListening && isReviewMode && (
+               {/* HIỂN THỊ ĐIỂM Ở PANEL PHẢI khi không có panel trái hoặc bài Listening */}
+               {isReviewMode && (isListening || !showLeftPane) && (
                    <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
                       <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
                       <div className="text-5xl font-black text-emerald-600">
