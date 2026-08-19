@@ -1220,6 +1220,108 @@ export default function LectureViewer({
 
   const isAllTasksDone = safeLectureTasks.length > 0 && safeCompletedTasks.length === safeLectureTasks.length;
 
+  // 📖 TRA TỪ ĐIỂN - State & Logic
+  const [dictQuery, setDictQuery] = useState('');
+  const [dictResults, setDictResults] = useState<any>(null);
+  const [isDictLoading, setIsDictLoading] = useState(false);
+  const [isDictOpen, setIsDictOpen] = useState(false);
+  const dictRef = useRef<HTMLDivElement>(null);
+  const dictTimerRef = useRef<any>(null);
+
+  // Phát hiện ngôn ngữ: có ký tự tiếng Việt có dấu → Vietnamese
+  const isVietnamese = (text: string) => /[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđ]/i.test(text);
+
+  const lookupDictionary = useCallback(async (word: string) => {
+    const trimmed = word.trim();
+    if (!trimmed || trimmed.length < 2) { setDictResults(null); return; }
+    setIsDictLoading(true);
+    setIsDictOpen(true);
+
+    try {
+      const isVi = isVietnamese(trimmed);
+
+      if (isVi) {
+        // VIETNAMESE → ENGLISH: Dùng MyMemory API
+        const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(trimmed)}&langpair=vi|en`);
+        const data = await res.json();
+        const translation = data?.responseData?.translatedText || '';
+        const matches = (data?.matches || [])
+          .filter((m: any) => m.translation && m.translation.toLowerCase() !== trimmed.toLowerCase())
+          .slice(0, 5);
+
+        setDictResults({
+          type: 'vi-en',
+          word: trimmed,
+          translation,
+          alternatives: matches.map((m: any) => m.translation),
+        });
+      } else {
+        // ENGLISH → VIETNAMESE: Gọi song song Free Dictionary + MyMemory
+        const [dictRes, transRes] = await Promise.allSettled([
+          fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed)}`),
+          fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(trimmed)}&langpair=en|vi`),
+        ]);
+
+        let definitions: any[] = [];
+        let phonetic = '';
+        let audioUrl = '';
+
+        if (dictRes.status === 'fulfilled' && dictRes.value.ok) {
+          const dictData = await dictRes.value.json();
+          if (Array.isArray(dictData) && dictData.length > 0) {
+            const entry = dictData[0];
+            phonetic = entry.phonetic || entry.phonetics?.find((p: any) => p.text)?.text || '';
+            audioUrl = entry.phonetics?.find((p: any) => p.audio)?.audio || '';
+            definitions = (entry.meanings || []).slice(0, 3).map((m: any) => ({
+              partOfSpeech: m.partOfSpeech,
+              defs: (m.definitions || []).slice(0, 2).map((d: any) => ({
+                definition: d.definition,
+                example: d.example || '',
+              })),
+            }));
+          }
+        }
+
+        let viTranslation = '';
+        if (transRes.status === 'fulfilled' && transRes.value.ok) {
+          const transData = await transRes.value.json();
+          viTranslation = transData?.responseData?.translatedText || '';
+        }
+
+        setDictResults({
+          type: 'en-vi',
+          word: trimmed,
+          phonetic,
+          audioUrl,
+          viTranslation,
+          definitions,
+        });
+      }
+    } catch (err) {
+      setDictResults({ type: 'error', word: trimmed, message: 'Không thể tra từ. Vui lòng thử lại.' });
+    } finally {
+      setIsDictLoading(false);
+    }
+  }, []);
+
+  const handleDictInput = (value: string) => {
+    setDictQuery(value);
+    if (dictTimerRef.current) clearTimeout(dictTimerRef.current);
+    if (!value.trim()) { setDictResults(null); setIsDictOpen(false); return; }
+    dictTimerRef.current = setTimeout(() => lookupDictionary(value), 500);
+  };
+
+  // Đóng dropdown khi click ra ngoài
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dictRef.current && !dictRef.current.contains(e.target as Node)) {
+        setIsDictOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   if (isLoading) {
       return (
           <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-slate-50">
@@ -1334,6 +1436,129 @@ export default function LectureViewer({
                  )}
                </div>
             )}
+         </div>
+
+         {/* 📖 THANH TRA TỪ ĐIỂN - CHÍNH GIỮA */}
+         <div className="hidden md:flex flex-1 justify-center mx-4 max-w-md relative" ref={dictRef}>
+           <div className="relative w-full max-w-[340px]">
+             <div className="flex items-center bg-white/15 hover:bg-white/25 focus-within:bg-white/30 rounded-full border border-white/20 transition-all px-3 h-9">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-white/70 shrink-0">
+                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+               </svg>
+               <input
+                 type="text"
+                 value={dictQuery}
+                 onChange={(e) => handleDictInput(e.target.value)}
+                 onFocus={() => { if (dictResults) setIsDictOpen(true); }}
+                 onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); lookupDictionary(dictQuery); } }}
+                 placeholder="Tra từ điển EN ↔ VI..."
+                 className="flex-1 bg-transparent text-white placeholder-white/50 text-[13px] font-medium px-2 py-1 outline-none border-none min-w-0"
+               />
+               {isDictLoading && (
+                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin shrink-0"></div>
+               )}
+               {dictQuery && !isDictLoading && (
+                 <button onClick={() => { setDictQuery(''); setDictResults(null); setIsDictOpen(false); }} className="text-white/50 hover:text-white shrink-0">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" /></svg>
+                 </button>
+               )}
+             </div>
+
+             {/* DROPDOWN KẾT QUẢ */}
+             {isDictOpen && dictResults && (
+               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[380px] max-h-[420px] overflow-y-auto bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-slate-100 z-[100] animate-in slide-in-from-top-2 duration-200 custom-scrollbar">
+                 
+                 {dictResults.type === 'error' && (
+                   <div className="p-5 text-center text-slate-400 text-[14px]">
+                     <span className="text-2xl block mb-2">🔍</span>
+                     {dictResults.message}
+                   </div>
+                 )}
+
+                 {dictResults.type === 'en-vi' && (
+                   <div className="p-5">
+                     {/* TỪ + PHIÊN ÂM */}
+                     <div className="flex items-center gap-3 mb-4">
+                       <h3 className="text-[20px] font-black text-slate-800">{dictResults.word}</h3>
+                       {dictResults.phonetic && (
+                         <span className="text-[13px] text-slate-400 font-medium">{dictResults.phonetic}</span>
+                       )}
+                       {dictResults.audioUrl && (
+                         <button
+                           onClick={() => { const a = new Audio(dictResults.audioUrl); a.play(); }}
+                           className="w-7 h-7 rounded-full bg-[#0ea5e9]/10 hover:bg-[#0ea5e9]/20 flex items-center justify-center text-[#0ea5e9] transition-colors"
+                         >
+                           🔊
+                         </button>
+                       )}
+                     </div>
+
+                     {/* NGHĨA TIẾNG VIỆT */}
+                     {dictResults.viTranslation && (
+                       <div className="bg-[#0ea5e9]/5 rounded-xl px-4 py-3 mb-4 border border-[#0ea5e9]/10">
+                         <span className="text-[10px] font-bold uppercase tracking-widest text-[#0ea5e9] block mb-1">Nghĩa tiếng Việt</span>
+                         <span className="text-[16px] font-bold text-slate-800">{dictResults.viTranslation}</span>
+                       </div>
+                     )}
+
+                     {/* ĐỊNH NGHĨA TIẾNG ANH + VÍ DỤ */}
+                     {dictResults.definitions?.length > 0 && (
+                       <div className="space-y-3">
+                         {dictResults.definitions.map((m: any, i: number) => (
+                           <div key={i}>
+                             <span className="inline-block bg-slate-100 text-slate-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md mb-1.5">{m.partOfSpeech}</span>
+                             {m.defs.map((d: any, j: number) => (
+                               <div key={j} className="ml-1 mb-2">
+                                 <p className="text-[13px] text-slate-700 leading-relaxed">• {d.definition}</p>
+                                 {d.example && (
+                                   <p className="text-[12px] text-slate-400 italic ml-3 mt-0.5">"{d.example}"</p>
+                                 )}
+                               </div>
+                             ))}
+                           </div>
+                         ))}
+                       </div>
+                     )}
+
+                     {!dictResults.viTranslation && dictResults.definitions?.length === 0 && (
+                       <div className="text-center text-slate-400 text-[14px] py-4">
+                         <span className="text-2xl block mb-2">📚</span>
+                         Không tìm thấy từ "<strong>{dictResults.word}</strong>"
+                       </div>
+                     )}
+                   </div>
+                 )}
+
+                 {dictResults.type === 'vi-en' && (
+                   <div className="p-5">
+                     <h3 className="text-[20px] font-black text-slate-800 mb-3">{dictResults.word}</h3>
+                     {dictResults.translation && (
+                       <div className="bg-emerald-50 rounded-xl px-4 py-3 mb-4 border border-emerald-100">
+                         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 block mb-1">English Translation</span>
+                         <span className="text-[16px] font-bold text-slate-800">{dictResults.translation}</span>
+                       </div>
+                     )}
+                     {dictResults.alternatives?.length > 0 && (
+                       <div>
+                         <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Gợi ý khác</span>
+                         <div className="flex flex-wrap gap-2">
+                           {dictResults.alternatives.map((alt: string, i: number) => (
+                             <span key={i} className="bg-slate-50 border border-slate-200 text-slate-600 text-[12px] font-medium px-3 py-1.5 rounded-lg">{alt}</span>
+                           ))}
+                         </div>
+                       </div>
+                     )}
+                     {!dictResults.translation && (
+                       <div className="text-center text-slate-400 text-[14px] py-4">
+                         <span className="text-2xl block mb-2">📚</span>
+                         Không tìm thấy nghĩa cho "<strong>{dictResults.word}</strong>"
+                       </div>
+                     )}
+                   </div>
+                 )}
+               </div>
+             )}
+           </div>
          </div>
 
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2">
