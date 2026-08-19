@@ -266,6 +266,9 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
         else if (type.includes('ielts')) targetMode = 'computer';
         
         sessionStorage.setItem('lms_current_view', 'admin'); 
+        // 🔒 Lưu context để khi quay lại admin sẽ tự mở đúng profile học viên + tab lịch sử
+        sessionStorage.setItem('admin_return_student_id', selectedStudent?.id || '');
+        sessionStorage.setItem('admin_return_tab', 'history');
         
         onStartTest(targetMode, { 
             ...foundTest, 

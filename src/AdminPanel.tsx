@@ -19,7 +19,12 @@ function displayTestType(type: string | null | undefined): string {
 }
 
 export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (view: string) => void, onStartTest?: any }) {
-  const [activeTab, setActiveTab] = useState('courses'); 
+  const [activeTab, setActiveTab] = useState(() => {
+    // 🔒 Nếu vừa xem bài làm của học viên quay lại → tự mở tab quản lý học viên
+    const returnStudentId = sessionStorage.getItem('admin_return_student_id');
+    if (returnStudentId) return 'students';
+    return 'courses';
+  }); 
   const [showCreateDropdown, setShowCreateDropdown] = useState(false);
   const [showBatchImport, setShowBatchImport] = useState(false);
   const [showBatchJsonImport, setShowBatchJsonImport] = useState(false);
@@ -118,8 +123,16 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [unreadCount, setUnreadCount] = useState(0);
   const notifRef = useRef<HTMLDivElement>(null);
   const [viewingNotif, setViewingNotif] = useState<any>(null);
-  const [notifTargetUserId, setNotifTargetUserId] = useState<string | null>(null);
-  const [notifTargetTab, setNotifTargetTab] = useState<string | null>(null);
+  const [notifTargetUserId, setNotifTargetUserId] = useState<string | null>(() => {
+    const returnId = sessionStorage.getItem('admin_return_student_id');
+    if (returnId) { sessionStorage.removeItem('admin_return_student_id'); return returnId; }
+    return null;
+  });
+  const [notifTargetTab, setNotifTargetTab] = useState<string | null>(() => {
+    const returnTab = sessionStorage.getItem('admin_return_tab');
+    if (returnTab) { sessionStorage.removeItem('admin_return_tab'); return returnTab; }
+    return null;
+  });
 
   const fetchNotifications = async () => {
     try {
