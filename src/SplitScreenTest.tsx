@@ -161,6 +161,18 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         const cleanJson = (data.result || data.rawText || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
         gradedData = JSON.parse(cleanJson);
       }
+      
+      // BẮT BUỘC TÍNH LẠI ĐIỂM (LLM thường cộng dồn sai)
+      if (gradedData && Array.isArray(gradedData.details)) {
+          let trueStudentScore = 0;
+          let trueMaxScore = 0;
+          gradedData.details.forEach((d: any) => {
+              trueStudentScore += (Number(d.student_score) || 0);
+              trueMaxScore += (Number(d.max_score) || 0);
+          });
+          gradedData.total_student_score = trueStudentScore;
+          gradedData.total_max_score = trueMaxScore;
+      }
 
       setGradeResult(gradedData);
       setIsReviewMode(true);
@@ -265,6 +277,19 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
       </div>
     );
   }
+
+  // 🚀 GỌI GIA SƯ AI (VOICE) CHO TỪNG CÂU HỎI
+  const callAiTutor = (questionText: string, studentAns: string, feedback: string) => {
+      const tutorContext = {
+          overall: 'Case Study Review',
+          transcript: `Câu hỏi: "${questionText}". \nĐáp án của học sinh: ${studentAns}. \nNhận xét: "${feedback}".`,
+          feedback: "Bạn là gia sư Cambridge IGCSE. Học sinh đang xem lại bài Case Study và không hiểu câu này. Hãy chủ động chào, đọc câu hỏi và giải thích chi tiết tại sao điểm lại bị trừ, phân tích từng bước lập luận. Dùng giọng điệu ân cần, dễ hiểu."
+      };
+      sessionStorage.setItem('tony_live_mode', 'TUTOR');
+      sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+      sessionStorage.setItem('tony_auto_start', 'true');
+      window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+  };
 
   return (
     <div className="h-screen w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
@@ -382,6 +407,39 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                           {item.examiner_comment}
                         </p>
                       </div>
+
+                      {item.correct_answer && (
+                        <div className="mt-4 bg-white p-3 rounded border border-slate-200 text-[13px]">
+                          <span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-1">Đáp án đúng (Cambridge MS):</span>
+                          <span className="font-medium text-emerald-600 whitespace-pre-wrap">{item.correct_answer}</span>
+                        </div>
+                      )}
+
+                      {item.student_score < item.max_score && (
+                        <div className="flex items-center gap-2 mt-5">
+                          <button onClick={() => {
+                              const qn = item.question_number || '';
+                              const studentAns = answers[`${qn}_input_0`] || answers[qn] || Object.entries(answers).find(([k]) => k.startsWith(qn))?.[1] || 'Bỏ trống';
+                              const query = `Câu hỏi số ${qn}\nĐáp án học sinh: "${studentAns}"\nĐiểm: ${item.student_score}/${item.max_score}\nNhận xét: "${item.examiner_comment}"${item.correct_answer ? `\nĐáp án đúng: "${item.correct_answer}"` : ''}\n\nThầy giải thích chi tiết giúp em tại sao em bị trừ điểm ạ!`;
+                              const btn = document.createElement('button');
+                              btn.className = 'btn-ai-trigger';
+                              btn.setAttribute('data-topic', query);
+                              btn.setAttribute('data-task', 'reading');
+                              document.body.appendChild(btn);
+                              btn.click();
+                              document.body.removeChild(btn);
+                          }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
+                              💬 Chat Thầy AI
+                          </button>
+                          <button onClick={() => {
+                              const qn = item.question_number || '';
+                              const studentAns = answers[`${qn}_input_0`] || answers[qn] || Object.entries(answers).find(([k]) => k.startsWith(qn))?.[1] || 'Bỏ trống';
+                              callAiTutor(`Câu ${qn}`, studentAns, item.examiner_comment || '');
+                          }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
+                              📞 Gọi Gia Sư
+                          </button>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
