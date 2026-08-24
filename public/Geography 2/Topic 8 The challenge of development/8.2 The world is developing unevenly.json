@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "RECALL AND CONNECT 2:\na) Define 'HIC', 'MIC' and 'LIC'.\nb) Give examples of countries that are HICs, MICs and LICs.",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Definitions and examples.",
+        "keywords_required": [
+          "a) HIC = High-Income Country (wealthy, highly developed). MIC = Middle-Income Country (rapidly developing/emerging). LIC = Low-Income Country (poorer, less developed).",
+          "b) HIC: USA, UK, Japan, Australia.",
+          "b) MIC: China, India, Brazil.",
+          "b) LIC: Mali, Chad, Afghanistan, Niger."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Sort the factors into three categories: economic, environmental, and social.\na) Colonialism slowed the development of the colony for the benefit of the colonising country.\nb) Trading primary products brings in less profit than manufactured goods.\nc) Countries with extreme climates may experience droughts and diseases such as malaria.\nd) Frequent natural disasters are expensive and disruptive.\ne) A good infrastructure can attract more foreign investment.\nf) Civil war can prevent a country from spending funds on essential services.",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Categorise development factors.",
+        "keywords_required": [
+          "Economic: b (trading primary products), e (infrastructure/foreign investment).",
+          "Environmental: c (extreme climates/droughts), d (natural disasters).",
+          "Social (or Political/Historical): a (colonialism), f (civil war)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "To what extent does climate determine a country's level of economic development? [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate the role of climate.",
+        "keywords_required": [
+          "Agree: Extreme climates (too hot/cold/dry) limit agriculture, which is the primary source of income for many developing nations.",
+          "Tropical climates encourage the spread of diseases (e.g. malaria), reducing the productivity of the workforce.",
+          "Disagree (Counterargument): Climate is not the only factor. Many countries with harsh climates (e.g. Middle Eastern countries with deserts) are wealthy due to natural resources like oil.",
+          "Other factors like political stability, good governance, historical exploitation (colonialism), and access to trade are often more decisive.",
+          "Conclusion: Climate plays a significant role, especially for agriculture-dependent LICs, but human and political factors ultimately determine if a country can overcome its environmental challenges."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "To what extent are natural resources essential for a country's development? [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate the role of natural resources.",
+        "keywords_required": [
+          "Agree: Natural resources (oil, minerals, timber) can be exported to generate massive revenue, which can be invested in infrastructure, schools, and hospitals (e.g. Saudi Arabia).",
+          "Disagree (Counterargument): Some countries with abundant resources suffer from the 'resource curse' (e.g. DRC), where wealth leads to corruption, conflict, and exploitation by foreign corporations.",
+          "Conversely, countries with very few natural resources (e.g. Japan, Singapore) have achieved high levels of development through investing in human capital (education), technology, and trade.",
+          "Conclusion: Natural resources are helpful but not essential; good governance and education are far more critical to long-term development."
+        ]
+      }
+    }
+  ]
+}

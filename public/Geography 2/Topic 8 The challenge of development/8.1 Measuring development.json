@@ -1,0 +1,134 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Categorise the following terms into Social or Economic indicators:\nGNI, Birth rate, Death rate, Human Development Index (HDI), Life expectancy, Number of doctors per 100,000, Literacy rate.",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Categorise development indicators.",
+        "keywords_required": [
+          "Economic: GNI.",
+          "Social: Birth rate, Death rate, Life expectancy, Number of doctors per 100,000, Literacy rate.",
+          "Both (Composite): Human Development Index (HDI) includes both social and economic factors."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Define 'Gross National Income (GNI)' and 'Gross Domestic Product (GDP)'.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Definitions.",
+        "keywords_required": [
+          "GDP: The total value of all goods and services produced within a country in a year.",
+          "GNI: The total value of goods and services produced within a country, PLUS income received from overseas (like remittances or profits from overseas investments)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Why might social indicators of development, such as adult literacy rate, give a different picture of a country's development compared to its GDP?",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Evaluate indicators.",
+        "keywords_required": [
+          "GDP is an average economic figure and hides inequalities (wealth might be concentrated in the hands of a few).",
+          "A high GDP does not guarantee that the government invests money into social services like education or healthcare.",
+          "Therefore, a country could be wealthy (high GDP) but still have poor social development (low literacy rate) for the majority of its citizens."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Describe the relationship typically shown on a scatter graph between GDP per capita and adult literacy rate.",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Understand relationships between indicators.",
+        "keywords_required": [
+          "It typically shows a positive correlation.",
+          "As GDP per capita increases, the adult literacy rate also increases (as wealthier countries can afford better education systems)."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Describe the relationship between GNI per capita and infant mortality shown on a typical scatter graph.",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Understand negative correlations.",
+        "keywords_required": [
+          "It typically shows a negative correlation (or inverse relationship).",
+          "As GNI per capita increases, the infant mortality rate decreases (due to better healthcare and nutrition in wealthier countries)."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Why is a scatter graph useful for comparing two development indicators?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Graph skills.",
+        "keywords_required": [
+          "It allows you to clearly see if there is a correlation (relationship) between the two variables.",
+          "It helps identify anomalies or outliers that don't fit the general trend."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "RECALL AND CONNECT 1:\na) What are three factors influencing a climate?\nb) Why is there no vegetation in parts of Antarctica?\nc) Where are tropical rainforests located?\nd) Give an example of sustainable management of the rainforest.",
+      "total_marks": 8,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Cross-topic ecosystem questions.",
+        "keywords_required": [
+          "a) Latitude, altitude, distance from the sea, ocean currents.",
+          "b) Extremely low temperatures, lack of liquid water, lack of sunlight for half the year, poor soil/ice cover.",
+          "c) Near the Equator (between the Tropic of Cancer and Tropic of Capricorn).",
+          "d) Selective logging, ecotourism, debt-for-nature swaps, agroforestry."
+        ]
+      }
+    }
+  ]
+}

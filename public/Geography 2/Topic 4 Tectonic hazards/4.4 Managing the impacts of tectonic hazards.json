@@ -1,0 +1,119 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "What is a primary response?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define primary response.",
+        "keywords_required": [
+          "The immediate reaction to a disaster (within the first few days or weeks).",
+          "Aims to save lives, provide emergency medical care, food, water, and shelter."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "What is a secondary response?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define secondary response.",
+        "keywords_required": [
+          "Long-term recovery and rebuilding efforts that take place weeks, months, or years after the disaster.",
+          "Aims to return the community to normal, rebuild infrastructure, and improve future resilience."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Draw a diagram to show how buildings can be protected from earthquake hazards.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Illustrate earthquake-resistant building design.",
+        "keywords_required": [
+          "Shock absorbers (base isolators) in the foundations to absorb tremors.",
+          "Cross-bracing (diagonal steel beams) to prevent the building from twisting.",
+          "Deep foundations into solid rock.",
+          "Shatterproof glass in windows."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "How does planning help reduce the impacts of tectonic hazards?",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the role of planning.",
+        "keywords_required": [
+          "Evacuation routes can be planned and clearly marked, saving lives.",
+          "Land-use zoning prevents essential buildings (hospitals) or high-density housing from being built on vulnerable ground (e.g. near fault lines).",
+          "Emergency services can practice drills and stockpile supplies."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Using an example you have studied, suggest how the impacts of earthquakes can be reduced. [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Detailed case study on earthquake management.",
+        "keywords_required": [
+          "Must name a specific earthquake example (e.g., Japan 2011, Haiti 2010).",
+          "Prediction/Preparation: Education, earthquake drills (e.g., Disaster Prevention Day in Japan), early warning systems via SMS.",
+          "Building design: Strict building codes, retrofitting older buildings with shock absorbers.",
+          "Planning: Land-use zoning, sea walls to prevent secondary tsunami impacts.",
+          "Response: Fast deployment of well-trained search and rescue teams, international aid."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "RECALL AND CONNECT 2:\na) Suggest two factors that have led to the global growth of tourism.\nb) What is the difference between the primary and quaternary employment sectors?\nc) How does the employment structure of a high-income country (HIC) typically differ from that of a low-income country (LIC)?",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Cross-topic questions on economic change.",
+        "keywords_required": [
+          "a) Increased disposable income, more leisure time/paid holidays, cheaper flights, better transport, internet booking.",
+          "b) Primary sector extracts raw materials (e.g., farming, mining), whereas quaternary sector involves high-tech research, information, and IT development.",
+          "c) HICs have the majority of their workforce in the tertiary (services) and quaternary sectors, with very few in primary. LICs have a high percentage of workers in the primary sector (agriculture) and fewer in the tertiary sector."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Complete Figure 9.1 to show the four sectors of the economy and examples of job types that fit within each sector.",
+      "total_marks": 8,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify economic sectors and jobs.",
+        "keywords_required": [
+          "Primary: Extracting raw materials (e.g. farming, mining, fishing).",
+          "Secondary: Manufacturing and processing (e.g. factory worker, car manufacturing, food processing).",
+          "Tertiary: Providing services (e.g. teacher, doctor, retail worker, transport).",
+          "Quaternary: High-tech research and information (e.g. software developer, pharmaceutical researcher)."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Match the following factors, a-e, to their explanations, 1-5.\na) labour\nb) containerisation\nc) technology\nd) political policies\ne) communications",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Match factors of global shift.",
+        "keywords_required": [
+          "a) labour - A skilled workforce at a comparatively lower cost increases profit.",
+          "b) containerisation - Easier and faster transport and distribution of products.",
+          "c) technology - The availability of specialist machinery.",
+          "d) political policies - Benefits such as tax exemptions or free trade zones.",
+          "e) communications - Reliable communications networks (or time zones/spoken language)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Of the factors listed in Question 2, which typically make the global shift in industry easier (pull factors), and which make it more challenging (push factors)? Explain your answers.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain push vs pull factors in industrial shift.",
+        "keywords_required": [
+          "Pull factors (make it easier to move TO a new country): Cheap labour, favorable political policies (tax breaks). These directly attract TNCs.",
+          "Push factors (make it challenging/push away from origin): High costs of labour/taxes in HICs push companies away.",
+          "Enablers (make the shift physically possible): Containerisation, internet/communications, and technology act as facilitators rather than strict push/pull factors."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "RECALL AND CONNECT 1:\na) What is the difference between a pro-natalist and an anti-natalist population policy?\nb) Can you name a country that has implemented one of these policies?",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Population policies recap.",
+        "keywords_required": [
+          "a) Pro-natalist encourages more births (e.g. financial rewards for having children). Anti-natalist discourages births (e.g. limits on family size).",
+          "b) Anti-natalist: China (former One-Child Policy). Pro-natalist: France, Singapore, or Russia."
+        ]
+      }
+    }
+  ]
+}

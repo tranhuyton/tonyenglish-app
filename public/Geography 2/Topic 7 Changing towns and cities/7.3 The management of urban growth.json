@@ -1,0 +1,121 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Match the key terms, a-d, with their definitions, 1-4.\na) Sustainable urban management\nb) Top-down development\nc) Self-help scheme\nd) Bottom-up development",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Match definitions.",
+        "keywords_required": [
+          "a) Sustainable urban management - 4 (meets needs of today without negatively impacting future)",
+          "b) Top-down development - 1 (planned by the government)",
+          "c) Self-help scheme - 2 (involves residents by providing materials to construct/improve homes)",
+          "d) Bottom-up development - 3 (planned by small NGOs, involving local people)"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Green roofs and urban gardens are examples of green infrastructure. What do you think is meant by the term 'green infrastructure'?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Define based on context.",
+        "keywords_required": [
+          "A network of natural and semi-natural spaces in urban areas.",
+          "Designed to provide environmental benefits like managing water, reducing heat, or improving air quality."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "RECALL AND CONNECT 2:\na) State two human causes of climate change.\nb) What is thermal expansion?\nc) What is the difference between mitigation and adaptation?",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Cross-topic climate change.",
+        "keywords_required": [
+          "a) Burning fossil fuels, deforestation, agriculture.",
+          "b) As oceans warm, water molecules spread out, causing sea levels to rise.",
+          "c) Mitigation aims to tackle the causes (reduce GHG emissions), while adaptation aims to cope with the impacts (e.g. building sea walls)."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "State two challenges that urban planners face as a result of urban growth. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: State challenges.",
+        "keywords_required": [
+          "Providing enough affordable housing (preventing slums).",
+          "Managing traffic congestion / providing sufficient public transport.",
+          "Ensuring adequate water supply and waste disposal."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Study Figure 7.1 (Stockholm). State two sustainable features of Stockholm. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Extract data from source.",
+        "keywords_required": [
+          "Generates most electricity from renewable sources (wind, hydropower).",
+          "Extensive use of public transport (electric buses, metro).",
+          "District heating system using excess heat.",
+          "Parks and green roofs to manage stormwater."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Evaluate the effectiveness of congestion charging as a strategy to manage urban traffic. [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate congestion charging.",
+        "keywords_required": [
+          "Strengths: Reduces the number of vehicles in the city center, leading to less congestion and improved air quality (lower CO2/NOx emissions).",
+          "The revenue generated can be reinvested into improving public transport systems.",
+          "Weaknesses: Can negatively affect businesses in the charge zone if shoppers avoid the area.",
+          "It is a regressive tax, meaning it hits lower-income drivers much harder than wealthy ones.",
+          "Conclusion: Effective for reducing traffic and raising funds, but must be paired with excellent and affordable public transport alternatives to be fair and truly successful."
+        ]
+      }
+    }
+  ]
+}

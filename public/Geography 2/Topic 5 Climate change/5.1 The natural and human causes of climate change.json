@@ -1,0 +1,174 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Draw a diagram to show the differences between the natural greenhouse effect and the enhanced greenhouse effect.",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Contrast the two effects.",
+        "keywords_required": [
+          "Diagram showing incoming solar radiation passing through the atmosphere.",
+          "Natural: A normal layer of greenhouse gases traps some outgoing heat, keeping Earth warm enough for life.",
+          "Enhanced: A thicker layer of greenhouse gases (due to human activities) traps more outgoing heat.",
+          "This causes global temperatures to rise beyond natural levels."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Sort the following into natural and human causes of climate change:\nchanges to Earth's orbit, volcanic eruptions, burning fossil fuels, deforestation, sunspot activity, agriculture",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Categorise causes correctly.",
+        "keywords_required": [
+          "Natural causes: changes to Earth's orbit (Milankovitch cycles), volcanic eruptions, sunspot activity.",
+          "Human causes: burning fossil fuels, deforestation, agriculture."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "What is the difference between climate change and global warming?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define both terms accurately.",
+        "keywords_required": [
+          "Global warming refers strictly to the long-term rise in Earth's average temperature.",
+          "Climate change is a broader term encompassing global warming as well as other long-term changes in weather patterns (e.g. changes in rainfall, extreme weather events)."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "What are three pieces of evidence used to measure climate change?",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify evidence sources.",
+        "keywords_required": [
+          "Ice cores (measuring trapped gases)",
+          "Tree rings (dendrochronology)",
+          "Historical records (paintings, writings)",
+          "Retreating glaciers/melting sea ice"
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Fill in the gaps with the correct words below: sea ice, paintings, ice cores, writings.\na) Scientists use ________ to study past temperatures by analysing gases trapped in ice.\nb) The position of ________ over time shows long-term climate changes.\nc) Historical records such as ________ and ________ provide evidence of past climate conditions.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Gap fill.",
+        "keywords_required": [
+          "a) ice cores",
+          "b) sea ice",
+          "c) paintings, writings"
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Predict the likely factors contributing to climate change in Figure 5.1 (A cattle ranch in the Bolivian rainforest). [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Analyze image to deduce human causes.",
+        "keywords_required": [
+          "Deforestation to clear land means fewer trees to absorb CO2.",
+          "Cattle produce large amounts of methane (a potent greenhouse gas) during digestion."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "Based on Figure 5.2 (Graph showing rising emissions and temperature), predict what will happen to global temperatures and carbon dioxide emissions in the future. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Trend prediction.",
+        "keywords_required": [
+          "Both carbon dioxide emissions and global temperatures will continue to rise (positive correlation)."
+        ]
+      }
+    },
+    {
+      "question_number": "8",
+      "question_text": "Assess the role of different greenhouse gases in global warming. [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate the contribution of various GHGs.",
+        "keywords_required": [
+          "Carbon dioxide (CO2) is the most abundant GHG from human activity (burning fossil fuels, deforestation) and is the primary driver of global warming.",
+          "Methane (CH4) is less abundant but much more potent at trapping heat than CO2, primarily originating from agriculture (cattle, rice paddies) and landfill sites.",
+          "Nitrous oxide (N2O) from fertilizers and CFCs from refrigeration also contribute significantly despite smaller volumes.",
+          "Conclusion should weigh their impacts: CO2 has the largest overall impact due to its volume, but others are more powerful per molecule."
+        ]
+      }
+    },
+    {
+      "question_number": "9",
+      "question_text": "Assess the extent to which humans are responsible for climate change. [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Balance natural vs human causes.",
+        "keywords_required": [
+          "Natural causes like Milankovitch cycles, sunspot activity, and volcanic eruptions have historically driven climate change over millions of years.",
+          "However, the rapid warming since the Industrial Revolution strongly correlates with human activities.",
+          "Human causes include burning fossil fuels (releasing CO2), deforestation, and intensive agriculture (methane).",
+          "Overall assessment: While natural factors play a background role, scientific consensus shows humans are overwhelmingly responsible for the current rapid rate of climate change."
+        ]
+      }
+    }
+  ]
+}

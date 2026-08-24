@@ -1,0 +1,79 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "What is meant by the term 'energy security'? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define energy security.",
+        "keywords_required": [
+          "The uninterrupted availability of energy sources",
+          "at an affordable price."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "What could make a country less energy secure? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Identify threats to energy security.",
+        "keywords_required": [
+          "Over-reliance on imported energy from politically unstable countries.",
+          "Depletion of domestic fossil fuel reserves."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Figure 10.5 shows the energy mix for Zimbabwe in 2022 (Coal 69%, HEP 30%, Bioenergy 1%).\na) Give the percentage total of all the renewable energy sources. [1]\nb) Justify the use of coal in low-income countries such as Zimbabwe. [3]",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3 and AO2: Analyze data and justify coal.",
+        "keywords_required": [
+          "a) 31% (HEP 30% + Bioenergy 1%).",
+          "b) Coal is often a domestic resource, making it cheap and providing energy security without relying on imports.",
+          "LICs urgently need large amounts of reliable base-load electricity to industrialise and develop.",
+          "They often lack the capital/technology to heavily invest in expensive renewable infrastructure (like massive solar farms)."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Why are HICs more likely to adopt renewable energy sources than LICs? [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain development link to renewables.",
+        "keywords_required": [
+          "HICs have the financial capital to invest in the expensive initial setup costs of renewable infrastructure.",
+          "HICs have access to advanced technology and research.",
+          "HICs often face stricter political/public pressure to meet international climate emission targets, whereas LICs prioritize basic economic survival and industrialization."
+        ]
+      }
+    }
+  ]
+}

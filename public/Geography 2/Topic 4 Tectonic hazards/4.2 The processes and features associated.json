@@ -1,0 +1,81 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "What is the difference between the focus and the epicentre of an earthquake?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define both terms accurately.",
+        "keywords_required": [
+          "The focus is the exact point underground where the earthquake originates (rock breaks).",
+          "The epicentre is the point on the Earth's surface directly above the focus."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Draw a labelled diagram to show a cinder cone volcano and its main features.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Sketch key features of a cinder cone.",
+        "keywords_required": [
+          "Steep, conical hill.",
+          "Bowl-shaped crater at the summit.",
+          "Made of loose volcanic ash, cinders, and pyroclastic material.",
+          "Central vent."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "What are the three frequency-of-activity classifications for volcanoes?",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: List the 3 activity states.",
+        "keywords_required": [
+          "Active (has erupted recently)",
+          "Dormant (sleeping but could erupt again)",
+          "Extinct (not expected to erupt ever again)"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "What are three volcanic hazards?",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: List three hazards.",
+        "keywords_required": [
+          "Lava flows",
+          "Ash fall",
+          "Pyroclastic flows (fast-moving hot gas and rock)",
+          "Lahars (mudflows)"
+        ]
+      }
+    }
+  ]
+}

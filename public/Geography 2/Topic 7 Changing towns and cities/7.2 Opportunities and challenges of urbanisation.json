@@ -1,0 +1,145 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "State two opportunities of urban living for residents in cities. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: State opportunities.",
+        "keywords_required": [
+          "Access to better jobs / higher wages.",
+          "Access to better healthcare, education, and services."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "State three environmental challenges faced by cities due to rapid urban growth. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: State environmental issues.",
+        "keywords_required": [
+          "Air pollution from traffic/industry.",
+          "Water pollution from untreated sewage.",
+          "Loss of green spaces/habitats due to urban sprawl."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "State one example of a social challenge caused by urbanisation in LICs. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: State social challenge.",
+        "keywords_required": [
+          "Overcrowding OR increase in crime OR growth of squatter settlements."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "State one push factor that drives people to leave rural areas for towns and cities. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: State a push factor.",
+        "keywords_required": [
+          "Lack of jobs in farming OR poverty OR natural disasters destroying crops."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Give one environmental challenge associated with urban growth. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: State environmental challenge.",
+        "keywords_required": [
+          "Air pollution (or water pollution, waste disposal issues)."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "What is urban sprawl?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define urban sprawl.",
+        "keywords_required": [
+          "The unplanned, uncontrolled outward expansion of a city",
+          "into the surrounding rural areas/countryside."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "What challenges do cities in LICs face regarding the provision of services? Select the correct answer:\na) low population density\nb) insufficient healthcare and education\nc) excessive funding for infrastructure",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify correct challenge.",
+        "keywords_required": [
+          "b) insufficient healthcare and education"
+        ]
+      }
+    },
+    {
+      "question_number": "8",
+      "question_text": "What is the difference between a brownfield site and a greenfield site?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define both site types.",
+        "keywords_required": [
+          "A brownfield site is land that has been built on before and is now derelict/abandoned.",
+          "A greenfield site is land that has never been built on before (usually countryside/agricultural land)."
+        ]
+      }
+    }
+  ]
+}

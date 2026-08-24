@@ -1,0 +1,108 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Copy and complete Table 3.2 to show the vertical layers of tropical rainforests.\nLayer / Approximate height above ground (metres)\n0\n0 to 5\n10 to 20\n30\nUp to 40",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify the layers of the rainforest by height.",
+        "keywords_required": [
+          "0 - Ground layer (forest floor)",
+          "0 to 5 - Shrub layer",
+          "10 to 20 - Under canopy",
+          "30 - Main canopy",
+          "Up to 40+ - Emergents"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "What adaptations have plants developed to survive in tropical rainforests?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Describe plant adaptations to the hot, wet environment.",
+        "keywords_required": [
+          "Drip tips on leaves to allow heavy rain to run off quickly without breaking the leaf.",
+          "Buttress roots to provide stability for tall trees in shallow soils.",
+          "Lianas (vines) that climb up tree trunks to reach the sunlight in the canopy.",
+          "Epiphytes that grow on high branches to access sunlight and catch rainwater."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Sketch a diagram to show why the air above the tropical rainforests is usually hot and wet.",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Diagram showing convectional rainfall and intense insolation at the Equator.",
+        "keywords_required": [
+          "Sun's rays hitting the Equator directly (high intensity insolation), heating the ground.",
+          "Warm air rising (convection), creating low pressure.",
+          "Moisture evaporating from the hot ground and transpiring from vegetation.",
+          "Rising air cools, condenses, and forms tall cumulonimbus clouds.",
+          "Heavy convectional rainfall over the rainforest."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Discuss how abiotic factors influence plants and animals in tropical rainforests.",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Discuss the relationship between climate/soil and the biotic ecosystem.",
+        "keywords_required": [
+          "High constant temperatures and heavy rainfall (abiotic) create a continuous growing season.",
+          "These conditions allow rapid plant growth and high biodiversity.",
+          "The intense rainfall washes away nutrients in the soil (leaching), making the soil (latosol) infertile.",
+          "Therefore, plants have shallow roots to quickly absorb nutrients from decomposing leaves on the surface.",
+          "The dense canopy created by the climate restricts sunlight to the forest floor, forcing plants to adapt (e.g. climbing vines).",
+          "Animals adapt to the different layers created by the trees, with many living in the canopy where food is abundant."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "RECALL AND CONNECT 3:\na) What is Fairtrade?\nb) What products are often labelled \"Fairtrade\" and how do farmers benefit from Fairtrade?\nc) What are the limitations of Fairtrade initiatives in low-income and middle-income countries?",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Link rainforest resources to economic development.",
+        "keywords_required": [
+          "a) Fairtrade is an arrangement designed to help producers in developing countries achieve better trading conditions.",
+          "b) Products: Cocoa (cacao), coffee, bananas, cotton.",
+          "b) Benefits: Farmers receive a guaranteed fair price for their crops and an extra premium to invest in their local community (e.g., schools, healthcare).",
+          "c) Limitations: Fairtrade products are often more expensive for consumers, the certification process is costly for farmers, and it only reaches a small percentage of global farmers."
+        ]
+      }
+    }
+  ]
+}

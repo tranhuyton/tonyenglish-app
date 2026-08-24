@@ -1,0 +1,85 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Put the following in order to show the steps to completing fieldwork:\n- analyse results\n- collect data\n- decide what data to collect and how to collect it\n- check results against hypothesis\n- make conclusions\n- form a hypothesis\n- present results",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Sequence the geographical enquiry process.",
+        "keywords_required": [
+          "1. form a hypothesis",
+          "2. decide what data to collect and how to collect it",
+          "3. collect data",
+          "4. present results",
+          "5. analyse results",
+          "6. check results against hypothesis",
+          "7. make conclusions"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Sort the following statements about setting an aim and formulating hypotheses into 'true' or 'false':\na) the aim should be simple\nb) the aim should be complex\nc) the aim should identify many questions\nd) the aim should identify one question\ne) a hypothesis is a prediction\nf) hypotheses are always proven to be correct",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify true/false statements about hypotheses.",
+        "keywords_required": [
+          "a) True",
+          "b) False",
+          "c) False",
+          "d) True",
+          "e) True",
+          "f) False"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "What makes a good hypothesis? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define a good hypothesis.",
+        "keywords_required": [
+          "It must be a clear, simple statement.",
+          "It must be testable (you can collect data to prove or disprove it)."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "How does investigator bias affect research outcomes? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Explain investigator bias.",
+        "keywords_required": [
+          "It means the researcher subjectively influences the results (e.g. only asking certain people).",
+          "This makes the data unreliable and the final conclusions invalid/inaccurate."
+        ]
+      }
+    }
+  ]
+}

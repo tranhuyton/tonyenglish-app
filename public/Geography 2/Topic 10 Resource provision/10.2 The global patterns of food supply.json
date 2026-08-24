@@ -1,0 +1,79 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Match the strategy (irrigation, genetically modified crops, agricultural machinery) with its purpose:\n1. provides water to dry areas\n2. increases crop resistance and yields\n3. improves efficiency in farming",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Match strategy to purpose.",
+        "keywords_required": [
+          "Irrigation - provides water to dry areas",
+          "Genetically modified crops - increases crop resistance and yields",
+          "Agricultural machinery - improves efficiency in farming"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "What does the 'globalisation of food supplies' mean? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define globalisation of food.",
+        "keywords_required": [
+          "The increasing integration and trade of food products worldwide.",
+          "Consumers can buy out-of-season and exotic foods sourced from all over the world, rather than just locally grown produce."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Justify the use of genetically modified (GM) crops to increase food supply. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and Exam Skills: Provide justification for GM crops.",
+        "keywords_required": [
+          "GM crops can be engineered to be resistant to pests/diseases, reducing crop loss.",
+          "They can be designed to withstand extreme weather like drought, which is vital due to climate change.",
+          "They produce higher yields per hectare, which is essential to feed a rapidly growing global population."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Study Figure 10.2 (calories map). Justify how increasing food production can help meet global demand. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Justify increasing production.",
+        "keywords_required": [
+          "The map shows clear regional disparities in calorie intake, with some LICs suffering from undernourishment.",
+          "Increasing production, especially locally in these deficit regions, ensures food security and reduces reliance on expensive imports.",
+          "As the global population approaches 10 billion, total caloric demand will skyrocket; production must increase to prevent widespread famine."
+        ]
+      }
+    }
+  ]
+}

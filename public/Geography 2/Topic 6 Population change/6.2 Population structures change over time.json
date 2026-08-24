@@ -1,0 +1,112 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Draw a population pyramid for:\na) an ageing population\nb) a youthful population.",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Sketch population structures.",
+        "keywords_required": [
+          "a) Ageing pyramid: Narrow base (low birth rate), wide top (long life expectancy), steep/vertical sides.",
+          "b) Youthful pyramid: Very wide base (high birth rate), rapidly narrowing to a pointed top (high death rate / low life expectancy)."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Give some examples of factors that could cause 'indentations' on a population pyramid.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Interpret anomalies in population pyramids.",
+        "keywords_required": [
+          "A war/conflict (causing high death rates in specific age/sex groups, usually young men).",
+          "An epidemic/disease outbreak or famine.",
+          "Out-migration (emigration) of young adults seeking work elsewhere.",
+          "A sudden drop in birth rates due to government policy (e.g. anti-natalist policy)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "RECALL AND CONNECT 2:\na) Define the following key terms: Evaporation, Transpiration, Interception, Percolation, Saltation, Traction.\nb) Using labelled diagrams, explain the formation of a waterfall.\nc) Identify two hazards of living near a river.",
+      "total_marks": 10,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Cross-topic river questions.",
+        "keywords_required": [
+          "a) Evaporation: water turning to gas. Transpiration: water lost from plant leaves. Interception: precipitation caught by leaves/branches. Percolation: water moving deep into rock. Saltation: pebbles bouncing along river bed. Traction: large boulders rolling along river bed.",
+          "b) Waterfall formation involves hard rock over soft rock, differential erosion (hydraulic action/abrasion), undercutting, collapse, and plunge pool formation.",
+          "c) Flooding (damage to property/crops) and waterborne diseases."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Define an ageing population. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Definition.",
+        "keywords_required": [
+          "A population where the proportion of older people (usually 65+) is increasing relative to other age groups."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Define population structure. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Definition.",
+        "keywords_required": [
+          "The composition of a population, usually broken down by age and sex."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Define natural increase. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Definition.",
+        "keywords_required": [
+          "The difference between the birth rate and the death rate (when birth rate is higher)."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "What is the difference between bar graphs, divided bar graphs and histograms? [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define graph types.",
+        "keywords_required": [
+          "Bar graphs show categorical data with gaps between the bars.",
+          "Divided (stacked) bar graphs show categories sub-divided into components.",
+          "Histograms show continuous numerical data grouped into ranges (bins) with no gaps between the bars."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "A class have been researching how many people in their local town work in the primary, secondary and tertiary sector. Suggest a suitable way to present this data. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Select data presentation method.",
+        "keywords_required": [
+          "Pie chart (or divided bar graph)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "A group of students have visited a local mine to identify how industry impacts the local environment. They have collected qualitative data in the form of words. Suggest how they could present this data. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Select qualitative data presentation.",
+        "keywords_required": [
+          "Word cloud, annotated photographs, or a quote bank."
+        ]
+      }
+    }
+  ]
+}

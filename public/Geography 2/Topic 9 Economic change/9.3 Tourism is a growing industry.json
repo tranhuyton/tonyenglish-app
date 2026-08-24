@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Explain how tourism can affect the environment of a region. [4]",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain environmental impacts of tourism.",
+        "keywords_required": [
+          "Negative: Construction of hotels/airports destroys natural habitats.",
+          "Air travel and increased traffic cause air pollution and carbon emissions.",
+          "Litter, plastic waste, and untreated sewage can pollute local waterways/beaches.",
+          "Positive: Income from tourism can be used to fund conservation (e.g. national parks, protecting endangered wildlife from poachers)."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Put the following words into the correct place on the Butler Model: Involvement, Decline, Consolidation.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Label Butler Model.",
+        "keywords_required": [
+          "1. Exploration -> 2. Involvement -> 3. Development -> 4. Consolidation -> 5. Stagnation -> 6. Decline (or Rejuvenation)"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Which stages of the Butler Model can be described as:\na) a major change in direction or focus that happens to attract a new type of tourist.\nb) the tourist destination is well-known but is no longer a destination of choice.",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify Butler stages.",
+        "keywords_required": [
+          "a) Rejuvenation",
+          "b) Decline (or Stagnation)"
+        ]
+      }
+    }
+  ]
+}

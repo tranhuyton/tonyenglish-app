@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Explain how overgrazing may cause desertification. [4]",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the process.",
+        "keywords_required": [
+          "Overgrazing occurs when too many livestock eat/trample the vegetation.",
+          "This removes the protective plant cover and roots that bind the soil together.",
+          "The bare, exposed soil is then easily eroded by wind or rain.",
+          "Without vegetation, transpiration drops, leading to less rainfall, turning the semi-arid area into a desert."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Describe three different characteristics of a coral reef. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Describe characteristics.",
+        "keywords_required": [
+          "They are made of calcium carbonate secreted by tiny living coral polyps.",
+          "They are very colourful due to the presence of symbiotic algae called zooxanthellae.",
+          "They have immense biodiversity, acting as a habitat for thousands of marine species."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Discuss how rivers can be managed to reduce flood risk. [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Discuss hard and soft engineering.",
+        "keywords_required": [
+          "Hard engineering involves building physical structures (e.g. dams/reservoirs hold back water, floodwalls increase channel capacity).",
+          "Channelisation straightens the river to move water away quickly, though it may increase flooding downstream.",
+          "Soft engineering works with nature (e.g. afforestation increases interception and reduces surface runoff).",
+          "Floodplain zoning restricts building in high-risk areas, minimizing economic damage.",
+          "A good discussion must evaluate the pros/cons (e.g. hard is expensive and harms environment, soft is cheaper but may not prevent extreme floods)."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Suggest reasons why earthquakes in a Low-Income Country (LIC) often have a greater impact than earthquakes in a High-Income Country (HIC). [4]",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Suggest reasons for differing impacts.",
+        "keywords_required": [
+          "Buildings in LICs are often poorly constructed and not earthquake-proof, leading to more collapses.",
+          "LICs have fewer emergency services and rescue teams, delaying life-saving treatment.",
+          "Poor infrastructure (roads/bridges) in LICs hinders the delivery of aid and medical supplies.",
+          "LICs may have a lack of public education/drills on what to do during an earthquake, leading to panic."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Predict how climate change may impact global food production. [4]",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Predict impacts on agriculture.",
+        "keywords_required": [
+          "Increased frequency of droughts will reduce water availability for crops, lowering yields.",
+          "Rising temperatures may make some equatorial/tropical regions too hot for traditional farming.",
+          "Conversely, some colder/northern regions (e.g. Canada/Russia) may experience longer growing seasons, boosting production.",
+          "More extreme weather events (floods, hurricanes) will physically destroy crops and disrupt supply chains."
+        ]
+      }
+    }
+  ]
+}

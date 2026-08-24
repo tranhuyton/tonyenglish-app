@@ -1,0 +1,100 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Calculate the net migration for a country if: Immigration = 18,948 and Emigration = 9,319. Show your working. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Calculate net migration.",
+        "keywords_required": [
+          "Formula: Immigration - Emigration",
+          "18,948 - 9,319 = 9,629"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Define the following types of migrant: economic migrant, asylum seeker, refugee. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define migrant types.",
+        "keywords_required": [
+          "Economic migrant: A person who moves to another country voluntarily to find work and improve their standard of living.",
+          "Asylum seeker: A person who has left their home country as a political refugee and is seeking legal protection/asylum in another country.",
+          "Refugee: A person who has been forced to leave their country in order to escape war, persecution, or natural disaster."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Evaluate the effectiveness of strategies used to manage urban growth. [5]",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate urban strategies.",
+        "keywords_required": [
+          "Building new affordable housing/greenfield sites reduces overcrowding and the spread of slums, but can lead to urban sprawl.",
+          "Improving public transport (e.g. metro systems) reduces traffic congestion and air pollution.",
+          "Creating green belts/spaces protects the environment but limits the area available for city expansion.",
+          "Evaluation: A combination of strict planning (zoning) and heavy investment in infrastructure is required; without funding (e.g. in LICs), strategies often fail."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "How far do you agree that the challenges of urbanisation outweigh its benefits in low-income countries? [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate urbanisation in LICs.",
+        "keywords_required": [
+          "Agree (Challenges): Rapid population growth outpaces infrastructure, leading to massive informal settlements (slums) with no clean water or sanitation.",
+          "High unemployment/underemployment due to lack of formal jobs leads to poverty and crime.",
+          "Disagree (Benefits): Cities still provide better access to healthcare and education than rural areas. The informal sector provides basic income.",
+          "Conclusion: Agree to a large extent; while cities are engines of economic growth, the sheer speed of urbanisation in LICs creates humanitarian and environmental crises that local governments cannot afford to manage."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Give three reasons why some people may object to building a new nuclear power station. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify objections to nuclear power.",
+        "keywords_required": [
+          "Fear of a catastrophic radiation leak/meltdown (e.g. Chernobyl, Fukushima).",
+          "The problem of safely storing highly radioactive nuclear waste for thousands of years.",
+          "The massive initial construction costs and the visual impact/destruction of habitats during building."
+        ]
+      }
+    }
+  ]
+}

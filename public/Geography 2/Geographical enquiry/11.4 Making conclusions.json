@@ -1,0 +1,58 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Put the following in order to show the steps taken to form a conclusion:\n- Use data clearly to support your argument.\n- Write a clear statement about the data that supports how strongly the hypothesis was found to be either true or false.\n- Acknowledge any unusual results and if possible, explain the reason for them.\n- Revisit the hypothesis to determine what you were testing.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Sequence conclusion steps.",
+        "keywords_required": [
+          "1. Revisit the hypothesis to determine what you were testing.",
+          "2. Write a clear statement about the data that supports how strongly the hypothesis was found to be true or false.",
+          "3. Use data clearly to support your argument.",
+          "4. Acknowledge any unusual results and if possible, explain the reason for them."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "A student is measuring the velocity of a river using a float method. At Site 3, the velocity is 0.5 m/s. Estimate how long it would take for the float to travel 1 metre at Site 3. Choose the closest estimate:\na) 0.5 seconds\nb) 1 second\nc) 2 seconds\nd) 5 seconds\n[1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Perform velocity calculation.",
+        "keywords_required": [
+          "c) 2 seconds (Time = Distance / Velocity = 1 / 0.5 = 2)"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "A student measured beach material size at 5 sites. Site 2 was 32mm and Site 4 was 14mm. Estimate the size of beach material at Site 3 from the options listed:\na) 37 mm\nb) 22 mm\nc) 9 mm\nd) 7 mm\n[1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Interpolate data.",
+        "keywords_required": [
+          "b) 22 mm (It must fall between 32mm and 14mm due to the trend of decreasing size)."
+        ]
+      }
+    }
+  ]
+}

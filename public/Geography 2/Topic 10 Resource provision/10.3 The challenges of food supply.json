@@ -1,0 +1,117 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Categorise the factors into 'human factors' and 'human and natural factors':\ntransport and storage, climate change, agricultural pests, war and political unrest, population growth, drought, demand for biofuel, land degradation.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Categorise factors affecting food supply.",
+        "keywords_required": [
+          "Human factors: transport and storage, war and political unrest, population growth, demand for biofuel.",
+          "Human and natural factors (complex): climate change, agricultural pests, drought, land degradation."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Give one cause of desertification. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify cause of desertification.",
+        "keywords_required": [
+          "Overgrazing, overcultivation, deforestation, OR climate change (drought)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Give two ways human activity can lead to food insecurity. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify human causes of food insecurity.",
+        "keywords_required": [
+          "Conflict/war disrupting farming and distribution.",
+          "Converting farmland to grow biofuels instead of food crops.",
+          "Overpopulation increasing demand beyond supply."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Justify the use of food aid in reducing food insecurity in low-income countries (LICs). [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Provide justification for food aid.",
+        "keywords_required": [
+          "It provides immediate, life-saving relief during acute crises (famines, natural disasters).",
+          "It prevents severe malnutrition and starvation in vulnerable populations (children, refugees).",
+          "It can stabilise a country socially and politically while they recover."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Justify the use of strategies that reduce soil erosion. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Justify soil conservation.",
+        "keywords_required": [
+          "Soil takes thousands of years to form; it is essential for growing crops.",
+          "Reducing erosion prevents the loss of nutrient-rich topsoil, maintaining high crop yields.",
+          "It prevents the long-term threat of desertification, keeping the land productive for future generations."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "RECALL AND CONNECT 1:\na) Describe the challenges that a country in Stage 2 of the DTM may face.\nb) What different challenges could a country in Stage 4 of the DTM face?\nc) Explain how a high fertility rate affects the natural increase of a population.\nd) Identify one reason why a country might have high fertility rates.\ne) Suggest a method that a government could use to address the challenges of a rapidly growing population.",
+      "total_marks": 8,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Cross-topic population questions.",
+        "keywords_required": [
+          "a) Rapid population growth strains food, water, schools, and healthcare.",
+          "b) Ageing population strains pension funds and elderly care services.",
+          "c) High fertility leads to a high birth rate. If death rates fall, the natural increase will be very high (rapid growth).",
+          "d) Lack of contraception, need for children to work on farms, high infant mortality.",
+          "e) Implementing an anti-natalist policy, promoting family planning, or investing in female education."
+        ]
+      }
+    }
+  ]
+}

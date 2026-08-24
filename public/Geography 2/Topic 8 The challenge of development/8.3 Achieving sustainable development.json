@@ -1,0 +1,119 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Are the following statements true or false?\na) The goals of the UN Sustainable Development Goals (SDGs) include ending poverty, addressing inequality and combating climate change.\nb) Aid guarantees positive outcomes for low-income countries.\nc) Trade contributes to development by driving economic growth and reducing poverty.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: True/False.",
+        "keywords_required": [
+          "a) True",
+          "b) False (Aid can lead to dependency or be lost to corruption).",
+          "c) True"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Evaluate the impact of rural-urban migration on the development of both rural and urban areas. [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Synoptic link - evaluate migration's impact.",
+        "keywords_required": [
+          "Urban impacts (Positive): Provides a large, cheap workforce to fuel industrial growth; multiculturalism.",
+          "Urban impacts (Negative): Overcrowding, strain on services (healthcare/education), growth of slums, traffic congestion.",
+          "Rural impacts (Positive): Migrants send remittances back home, which boosts the rural economy; less pressure on rural food supplies.",
+          "Rural impacts (Negative): 'Brain drain' as the youngest, most educated/able-bodied leave; an ageing population is left behind, leading to agricultural decline.",
+          "Conclusion: Weigh the overall benefit (often economically positive for cities but socially/demographically damaging for rural areas)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "To what extent does rapid economic development lead to environmental degradation? [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate economic vs environmental balance.",
+        "keywords_required": [
+          "Agree: Rapid industrialisation (especially in MICs) relies heavily on fossil fuels, leading to air pollution and carbon emissions.",
+          "Increased wealth leads to higher consumption (more cars, more waste) and deforestation for factories/housing.",
+          "Disagree (Counterargument): As countries reach HIC status, they often invest heavily in 'green' technology, renewable energy, and stricter environmental laws (Kuznets curve theory).",
+          "Conclusion: While the initial stages of rapid development almost always cause environmental harm, long-term development can eventually provide the wealth needed to protect the environment."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "RECALL AND CONNECT 3:\na) What is fertility rate?\nb) What is natural increase?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Definitions from Topic 6.",
+        "keywords_required": [
+          "a) The average number of children born to a woman during her childbearing years.",
+          "b) The difference between the birth rate and the death rate."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Sort the following strategies into 'Top-down' or 'Bottom-up' development strategies:\nmicrofinance, debt relief, NGO-led projects, UN Sustainable Development Goals.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Categorise development strategies.",
+        "keywords_required": [
+          "Top-down: Debt relief, UN Sustainable Development Goals.",
+          "Bottom-up: Microfinance, NGO-led projects."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Fill in the blanks, using three terms from below (bilateral, microfinance, debt, top-down, NGO):\n________ relief is where organisations or governments cut or cancel a country's debt.\n________ aid involves direct assistance from a donor country to a recipient country.\n________ development strategies involve decision-making by governments or large organisations, often for large-scale projects.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Gap fill.",
+        "keywords_required": [
+          "Debt",
+          "Bilateral",
+          "Top-down"
+        ]
+      }
+    }
+  ]
+}

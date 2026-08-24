@@ -1,0 +1,60 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "What is the difference between:\na) random sampling and systematic sampling?\nb) primary and secondary data?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define sampling and data types.",
+        "keywords_required": [
+          "a) Random sampling means every item/person has an equal chance of being selected (e.g. using a random number generator). Systematic sampling is taking samples at regular intervals (e.g. every 10 metres or every 5th person).",
+          "b) Primary data is collected firsthand by the researcher (e.g. fieldwork). Secondary data is pre-existing data collected by someone else (e.g. internet research, census data)."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Suggest a method to accurately measure the width and depth of a river at several points. [4]",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Fieldwork planning (river).",
+        "keywords_required": [
+          "Width: Stretch a measuring tape horizontally across the river from bank to bank, keeping it taut.",
+          "Depth: Use a metre ruler/ranging pole.",
+          "Measure the depth at regular systematic intervals across the width (e.g. every 0.5m).",
+          "Ensure the ruler is placed vertically on the river bed and read the depth where the water hits the ruler."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Read the scenario: A group of students is conducting fieldwork near a river. They are collecting data using transects and taking photographs. They notice the riverbank is steep, and one student has a bee allergy.\na) Identify three potential risks in this scenario.\nb) Suggest three ways the group can address these risks to ensure safety during their fieldwork.",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Risk assessment.",
+        "keywords_required": [
+          "a) Slipping on the steep bank, drowning/falling into the water, bee sting (anaphylactic shock).",
+          "b) Wear sturdy footwear with good grip, work in groups/never enter water alone, ensure the student carries an EpiPen/medication and others know how to use it."
+        ]
+      }
+    }
+  ]
+}

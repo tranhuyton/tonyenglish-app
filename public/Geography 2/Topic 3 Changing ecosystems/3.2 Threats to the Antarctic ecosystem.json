@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "RECALL AND CONNECT 2:\na) What are fossil fuels?\nb) What are the advantages and disadvantages of using fossil fuels?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Answer cross-topic questions on resource provision.",
+        "keywords_required": [
+          "a) Fossil fuels are non-renewable energy resources formed from the remains of dead plants and animals over millions of years (coal, oil, natural gas).",
+          "b) Advantages: Relatively cheap, reliable, produce large amounts of energy.",
+          "b) Disadvantages: Non-renewable (will run out), release greenhouse gases (CO2) causing global warming, release sulfur dioxide causing acid rain."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Copy the Antarctic food chain in Figure 3.1. Then, add the species listed below to the correct place in the flow diagram.\nBaleen whale, Smaller toothed whales, Phytoplankton, Penguins, Krill",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO3: Sequence the food chain from producer to apex predator.",
+        "keywords_required": [
+          "1. Phytoplankton (Producer)",
+          "2. Krill (Primary Consumer)",
+          "3. Penguins or Baleen Whale (Secondary Consumer)",
+          "4. Smaller toothed whales (Tertiary Consumer/Apex Predator)"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Under international agreements, which of the following activities are banned in Antarctica?\ncollecting scientific data, military operations, disposal of nuclear waste, tourism, commercial fishing, mining",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify activities banned by the Antarctic Treaty system.",
+        "keywords_required": [
+          "military operations",
+          "disposal of nuclear waste",
+          "mining"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Use the words below to fill in the gaps about international agreements to protect wildlife in Antarctica.\nInternational Association of Antarctic Tour Operators (IAATO), Polar Code, Marine Protected Areas (MPAs), International Whaling Commission (IWC)\n\nThe ________ imposed a quota system in the 1970s on all parties hunting whales. Two large ________ have been established in the Antarctic to protect biodiversity through protecting those areas from commercial activities. The International Maritime Organization implemented a ________ in 2017 that limits the operation of very large cruise ships in Antarctica. The ________ is working on putting laws in place to manage tourism to the region to limit harm caused by human activity.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Correctly place the organizations and agreements.",
+        "keywords_required": [
+          "1. International Whaling Commission (IWC)",
+          "2. Marine Protected Areas (MPAs)",
+          "3. Polar Code",
+          "4. International Association of Antarctic Tour Operators (IAATO)"
+        ]
+      }
+    }
+  ]
+}

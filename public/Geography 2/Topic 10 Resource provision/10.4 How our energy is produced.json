@@ -1,0 +1,97 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "a) What is one example of renewable energy?\nb) What is one example of non-renewable energy?\nc) Why are fossil fuels considered non-renewable?\nd) What is one advantage of wind energy?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify energy sources.",
+        "keywords_required": [
+          "a) Solar, wind, HEP, geothermal.",
+          "b) Coal, oil, natural gas, nuclear (uranium).",
+          "c) They take millions of years to form and cannot be replenished on a human timescale (they will run out).",
+          "d) It produces no greenhouse gases, it is free once built, and the resource (wind) is infinite."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Give two differences between renewable and non-renewable energy sources. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Differentiate energy types.",
+        "keywords_required": [
+          "Renewables can be naturally replenished (won't run out), whereas non-renewables are finite and will run out.",
+          "Non-renewables (fossil fuels) release carbon dioxide when burned, whereas renewables generally produce zero emissions."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Why is geothermal energy considered renewable energy? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain geothermal classification.",
+        "keywords_required": [
+          "It uses heat generated continuously from the Earth's core/mantle.",
+          "This heat is naturally occurring and inexhaustible, so it will never run out."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Why can fuelwood be considered either renewable or non-renewable? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain dual nature of fuelwood.",
+        "keywords_required": [
+          "It is renewable if trees are replanted at the same rate they are cut down (afforestation).",
+          "It becomes non-renewable if deforestation occurs faster than trees can naturally regrow."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Justify the use of renewable energy sources. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Provide justification.",
+        "keywords_required": [
+          "They do not emit greenhouse gases, helping to mitigate climate change.",
+          "They improve energy security because a country does not have to rely on importing finite fossil fuels.",
+          "The \"fuel\" (wind, sun) is free and infinite, leading to long-term sustainability."
+        ]
+      }
+    }
+  ]
+}

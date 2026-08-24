@@ -1,0 +1,152 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Label the layers of the Earth from outside to inside: crust, mantle, outer core, inner core.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify the correct order of the Earth's layers.",
+        "keywords_required": [
+          "1. Crust (Outermost layer)",
+          "2. Mantle",
+          "3. Outer core",
+          "4. Inner core (Innermost layer)"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "What is meant by the term lithosphere?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define lithosphere.",
+        "keywords_required": [
+          "The rigid outer part of the Earth.",
+          "It consists of the crust and upper mantle."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Copy and complete Table 4.1, giving the state of each layer of Earth: 'solid', 'semi-molten' or 'liquid'.\ncrust, mantle, outer core, inner core",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: State the physical state of each layer.",
+        "keywords_required": [
+          "Crust: Solid",
+          "Mantle: Semi-molten (or solid but plastic/flowing)",
+          "Outer core: Liquid",
+          "Inner core: Solid (due to immense pressure)"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "What are the two types of tectonic plates?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Name the two plate types.",
+        "keywords_required": [
+          "Oceanic plates (denser, thinner)",
+          "Continental plates (less dense, thicker)"
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Identify one tectonic hazard found at a convergent/destructive plate boundary. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify a relevant hazard.",
+        "keywords_required": [
+          "Earthquakes OR Volcanic eruptions (composite volcanoes) OR Tsunamis."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Suggest one reason an oceanic plate subducts beneath a continental plate. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain subduction based on density.",
+        "keywords_required": [
+          "The oceanic plate is denser (heavier) than the continental plate, so it sinks below it."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "Suggest one reason why there are no volcanoes at a transform plate boundary. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the lack of volcanic activity at transform faults.",
+        "keywords_required": [
+          "Because plates are sliding past each other, no crust is being destroyed (melted) or created to form magma."
+        ]
+      }
+    },
+    {
+      "question_number": "8",
+      "question_text": "RECALL AND CONNECT 1:\na) Add the correct key term (corrosion, attrition, hydraulic action, corrasion) to describe coastal erosion processes.\nb) Match coastal features (spit, stack, headland, cliff) to descriptions.\nc) What are two advantages and two disadvantages of hard engineering?\nd) Name two soft engineering management techniques used along coastlines.\ne) What are some of the threats to mangroves?",
+      "total_marks": 10,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Answer cross-topic coastal questions.",
+        "keywords_required": [
+          "a) Hydraulic action (air in cracks), Corrasion (pebbles grinding), Corrosion (acids dissolving), Attrition (fragments smashing).",
+          "b) Cliff (steep rock face), Spit (curved sandy landform), Headland (resistant rock jutting out), Stack (isolated pillar).",
+          "c) Advantages of hard engineering: very effective, reassuring to public. Disadvantages: expensive, visually intrusive, harms environment.",
+          "d) Soft engineering: Beach nourishment, managed retreat.",
+          "e) Threats to mangroves: Deforestation, aquaculture, coastal development, sea-level rise."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Match the definition, a-c, with the key term, 1-3.\n1. push factor\n2. remittances\n3. forced migration\n\na) The involuntary movement of people away from their home usually as a result of conflict or persecution.\nb) Negative factors that encourage or force people to move from a place.\nc) The money or goods that migrants send back to families and friends in origin countries.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Match terms to definitions.",
+        "keywords_required": [
+          "1. push factor - b",
+          "2. remittances - c",
+          "3. forced migration - a"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Copy and complete Table 6.3 by sorting the factors for migration into push factors or pull factors:\nwar and conflict, lack of education opportunities, better job opportunities, natural disasters, access to healthcare",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Categorize migration factors.",
+        "keywords_required": [
+          "Push factors: war and conflict, lack of education opportunities, natural disasters.",
+          "Pull factors: better job opportunities, access to healthcare."
+        ]
+      }
+    }
+  ]
+}

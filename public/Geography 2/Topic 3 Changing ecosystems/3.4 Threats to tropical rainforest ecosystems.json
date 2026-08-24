@@ -1,0 +1,121 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "What resources from tropical rainforests do humans use?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify key resources extracted from rainforests.",
+        "keywords_required": [
+          "Timber / hardwoods (e.g., mahogany) for furniture.",
+          "Minerals (e.g., iron ore, gold, bauxite) mined from beneath the forest.",
+          "Land for cattle ranching or growing cash crops (e.g., soya, palm oil).",
+          "Medicines (many pharmaceutical drugs are derived from rainforest plants)."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Use the statements below to create a flow diagram showing how soil erosion takes place in tropical rainforests.\nsoil is no longer protected from heavy rain, vegetation is removed, plants are not able to grow, soil erodes or washes away",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Correctly sequence the process of soil erosion after deforestation.",
+        "keywords_required": [
+          "1. vegetation is removed",
+          "2. soil is no longer protected from heavy rain",
+          "3. soil erodes, or washes away",
+          "4. plants are not able to grow"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "State whether this is a short-response or long-response question and why. Then answer it:\nState one technique that can be used to protect indigenous communities in rainforests. [1]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and Exam Skills: Identify question type and answer it.",
+        "keywords_required": [
+          "It is a short-response question because of the command word 'State' and it is only worth 1 mark.",
+          "Answer: Creating protected reserves/land rights for indigenous tribes."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "State whether this is a short-response or long-response question and why. Then answer it:\nCompare strategies and techniques for sustainably managing tropical rainforests. [4]",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and Exam Skills: Identify question type and provide comparison.",
+        "keywords_required": [
+          "It is a short- to medium-response question. 'Compare' requires examining similarities and differences, worth 4 marks.",
+          "Answer: Selective logging only cuts mature trees, keeping the canopy intact, whereas afforestation involves planting new trees to replace those cut down.",
+          "Both help maintain the forest, but selective logging prevents initial damage, while afforestation tries to repair it.",
+          "Ecotourism provides income without cutting trees, whereas agroforestry combines farming with trees; both provide sustainable livelihoods but in different sectors."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "State whether this is a short-response or long-response question and why. Then answer it:\nDiscuss how rainforests can be managed sustainably. [7]",
+      "total_marks": 8,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2, AO3 and Exam Skills: Identify question type and provide a detailed discussion.",
+        "keywords_required": [
+          "It is a long-response question because 'Discuss' requires a detailed explanation of multiple points, and it is worth 7 marks.",
+          "Answer: Rainforests can be managed through ecotourism, which brings in foreign currency and creates local jobs without destroying the habitat.",
+          "Selective logging ensures only valuable, mature trees are felled, preserving the overall forest structure and biodiversity.",
+          "International agreements like debt-for-nature swaps allow poorer countries to have their debt reduced in exchange for protecting their rainforests.",
+          "Educating local populations and providing alternative sustainable livelihoods (like agroforestry) reduces the need for destructive slash-and-burn farming."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "State whether this is a short-response or long-response question and why. Then answer it:\nGive one strategy to sustainably manage rainforests. [1]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and Exam Skills: Identify question type and provide one strategy.",
+        "keywords_required": [
+          "It is a short-response question ('Give', 1 mark).",
+          "Answer: Ecotourism (or selective logging, afforestation, debt-for-nature swaps, etc.)."
+        ]
+      }
+    }
+  ]
+}

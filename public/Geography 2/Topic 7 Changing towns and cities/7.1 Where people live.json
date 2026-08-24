@@ -1,0 +1,99 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Evaluate the extent to which push and pull factors contribute to urbanisation in LICs. [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Weigh the importance of push vs pull factors.",
+        "keywords_required": [
+          "Push factors (negative aspects of rural areas like poverty, lack of jobs, poor harvest, lack of services) force people to leave.",
+          "Pull factors (positive aspects of cities like perceived better jobs, schools, hospitals, bright lights effect) attract people.",
+          "In many LICs, rural poverty and agricultural mechanisation/failure are the stronger driving forces (push), but the pull factors dictate WHERE they go (to the cities).",
+          "Conclusion: Both work together (push creates the migrants, pull directs them), but push factors are often the more urgent catalyst in LICs."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Evaluate the challenges faced by cities in LICs due to rapid urban growth. [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Discuss severity of different challenges.",
+        "keywords_required": [
+          "Social challenges: Overcrowding leads to the rapid growth of squatter settlements (slums), increased crime rates, and disease spread due to lack of sanitation.",
+          "Economic challenges: High unemployment or underemployment as the job market cannot absorb the influx of migrants, leading to a large informal sector.",
+          "Environmental challenges: Severe air and water pollution, lack of waste management, and destruction of green spaces.",
+          "Evaluation/Conclusion: Discuss which challenge is the most difficult for governments to manage (e.g. providing clean water is arguably the most urgent to prevent disease, but economic poverty makes funding it difficult)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Copy the following text and complete by choosing the correct word in the brackets.\nIn 2024, (over/nearly) half of all people lived in cities. It is estimated that by 2050, (nearly/more than) seven out of every ten people will live in cities. The number of megacities, which are cities with over ten million people, is increasing. (Most/Few) megacities are now in Asia, Africa and Latin America.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Select correct stats.",
+        "keywords_required": [
+          "over",
+          "nearly (or more than depending on exact stat taught, but typically nearly 70%)",
+          "Most"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "What are two causes of urban growth in LICs?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify causes.",
+        "keywords_required": [
+          "Rural-to-urban migration.",
+          "Natural increase (birth rate is higher than death rate, especially since migrants are often young adults of childbearing age)."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Sort the key terms into two categories: push factors from rural areas and pull factors to urban areas.\nLack of healthcare and schools, Extreme weather events that can destroy crops, Jobs that offer a higher rate of pay, Poor infrastructure, Higher standard of living, The 'bright lights' effect.",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Categorise push and pull factors.",
+        "keywords_required": [
+          "Push factors: Lack of healthcare and schools, Extreme weather events, Poor infrastructure.",
+          "Pull factors: Jobs that offer a higher rate of pay, Higher standard of living, 'bright lights' effect."
+        ]
+      }
+    }
+  ]
+}

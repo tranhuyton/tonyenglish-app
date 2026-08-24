@@ -1,0 +1,62 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "'Globalisation brings positive economic impacts and negative environmental impacts.' How far do you agree with this statement? [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate impacts of globalisation.",
+        "keywords_required": [
+          "Agree (Economic): Globalisation brings foreign direct investment (FDI), creates jobs in LICs/MICs, and lowers prices for consumers.",
+          "Agree (Environmental): Increased global trade requires massive shipping/air freight, burning fossil fuels (CO2). TNCs often move to countries with weak environmental laws, leading to pollution.",
+          "Disagree/Counterargument: It can have negative economic impacts (loss of manufacturing jobs in HICs, exploitation/low wages in LICs) and positive environmental impacts (global sharing of green technology, international climate treaties).",
+          "Conclusion: Partially agree, acknowledging the complexity (there are economic losers and environmental winners too)."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "'Transnational corporations (TNCs) do not benefit low-income countries.' How far do you agree with this statement? [7]",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate TNCs in LICs.",
+        "keywords_required": [
+          "Disagree (Benefits): TNCs bring jobs, foreign investment, new technology, and improve local infrastructure (e.g. roads, ports). They increase the country's GDP through exports.",
+          "Agree (Drawbacks): The jobs are often low-skilled, poorly paid, and involve poor/unsafe working conditions (sweatshops).",
+          "Much of the profit (economic leakage) returns to the HIC where the TNC is headquartered, rather than staying in the LIC.",
+          "Conclusion: Disagree to an extent, as they DO provide essential initial industrialization and jobs, but the benefits are often unequal and exploitative."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "RECALL AND CONNECT 2:\na) How do TNCs impact a country's level of development?\nb) How can globalisation help to reduce global inequalities?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Link TNCs to development.",
+        "keywords_required": [
+          "a) They boost economic development by providing jobs, paying taxes, and improving infrastructure, which raises GNI.",
+          "b) By shifting manufacturing to LICs/MICs, globalisation brings wealth to poorer nations, lifting millions out of poverty (e.g. China, India) and narrowing the gap between HICs and LICs."
+        ]
+      }
+    }
+  ]
+}

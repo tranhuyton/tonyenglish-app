@@ -1,0 +1,189 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "What is population momentum?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define population momentum.",
+        "keywords_required": [
+          "The tendency for population growth to continue beyond the time that replacement-level fertility has been achieved.",
+          "This occurs because a high concentration of people are in their childbearing years."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Fill in the blanks with the correct word(s):\na) The number of live births per 1000 people in a year is called the ________ rate.\nb) When the death rate is higher than the birth rate, a population ________.\nc) Net migration is the balance between ________ and ________ numbers for a particular country.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Gap fill.",
+        "keywords_required": [
+          "a) crude birth",
+          "b) declines (or shrinks/decreases)",
+          "c) immigration, emigration"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Decide if the following statements are true or false:\na) The Demographic Transition Model (DTM) has four stages.\nb) High death rates are common in countries in Stage 1 of the DTM.\nc) A youthful population is associated with high fertility rates.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: True/False.",
+        "keywords_required": [
+          "a) False (It traditionally has 4, but a 5th stage is now widely accepted/used).",
+          "b) True",
+          "c) True"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "a) Describe the challenges that a country in Stage 2 of the DTM may face.\nb) What different challenges could a country in Stage 4 of the DTM face?",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Contrast challenges of rapid growth vs stable/ageing population.",
+        "keywords_required": [
+          "a) Stage 2: Rapid population growth creates a large youthful population, putting pressure on healthcare, education, food supply, and creating a lack of jobs/housing.",
+          "b) Stage 4: Low birth rates and increasing life expectancy lead to an ageing population, causing a shortage of workers, higher pension burdens, and pressure on elderly healthcare/social services."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "What is the main difference between a pro-natalist and an anti-natalist policy?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define both policies.",
+        "keywords_required": [
+          "A pro-natalist policy encourages people to have more children (e.g. via financial incentives) to increase the birth rate.",
+          "An anti-natalist policy discourages people from having children (e.g. China's former One-Child Policy) to reduce population growth."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "What is one strength and one weakness of the DTM?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Evaluate the Demographic Transition Model.",
+        "keywords_required": [
+          "Strength: It provides a useful generalization to compare countries and predict future population trends based on historical data.",
+          "Weakness: It is based entirely on the experience of industrialized European countries and may not fit LICs today; it also ignores migration."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "RECALL AND CONNECT 1:\na) What is the difference between Gross Domestic Product (GDP) and Gross National Income (GNI)?\nb) Why are birth rates and death rates not reliable indicators of development when used on their own?\nc) How can international aid help reduce the development gap?",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Development links.",
+        "keywords_required": [
+          "a) GDP is the total value of goods/services produced WITHIN a country. GNI includes GDP plus income earned from overseas investments.",
+          "b) A single indicator can hide inequalities; e.g. HICs might have high death rates purely because of an ageing population, not poor healthcare.",
+          "c) Aid can fund infrastructure (schools, hospitals, wells), improving education and health, leading to better economic productivity."
+        ]
+      }
+    },
+    {
+      "question_number": "8",
+      "question_text": "Using Table 6.1 (Crude birth rate = 16, Crude death rate = 10), calculate the natural increase for that country. You may give your answer as a fraction or a percentage. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3 and Exam Skills: Calculation.",
+        "keywords_required": [
+          "Formula: Birth Rate - Death Rate = Natural Increase.",
+          "16 - 10 = 6 per 1000",
+          "As a percentage: 6 / 1000 = 0.6%"
+        ]
+      }
+    },
+    {
+      "question_number": "9",
+      "question_text": "Table 6.2 shows world population growth over time.\na) Calculate how long it took to reach 2 billion people from the year 1800. [2]\nb) Calculate how long it took to reach 8 billion people from the year 2011. [2]",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Data extraction and calculation.",
+        "keywords_required": [
+          "a) Year 1927 - Year 1800 = 127 years.",
+          "b) Year 2022 - Year 2011 = 11 years."
+        ]
+      }
+    },
+    {
+      "question_number": "10",
+      "question_text": "A country's birth rate was 32 births per 1000 people in 2000. By 2020, the birth rate had decreased to 24 births per 1000 people. Calculate the percentage decrease in the birth rate over this period. Show your working. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Percentage decrease calculation.",
+        "keywords_required": [
+          "Difference = 32 - 24 = 8.",
+          "Percentage decrease = (Difference / Original) * 100 = (8 / 32) * 100",
+          "Answer: 25%"
+        ]
+      }
+    }
+  ]
+}

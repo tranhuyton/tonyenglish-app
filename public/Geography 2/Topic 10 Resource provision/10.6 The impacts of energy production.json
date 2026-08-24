@@ -1,0 +1,93 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Why is energy conservation important? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Explain importance of conservation.",
+        "keywords_required": [
+          "It reduces the demand for fossil fuels, thereby lowering carbon emissions and mitigating climate change.",
+          "It extends the lifespan of finite fossil fuel reserves."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "What is one way that individuals can save energy at home? [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify conservation method.",
+        "keywords_required": [
+          "Turning off lights/appliances, installing insulation, or using energy-efficient LED bulbs."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Give one positive impact of a secure energy supply. [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: State a positive impact.",
+        "keywords_required": [
+          "Economic stability (factories can run without blackouts) or improved standard of living."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Give two negative environmental impacts of renewable energy sources. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify negative impacts.",
+        "keywords_required": [
+          "Wind turbines can kill birds/bats and create visual/noise pollution.",
+          "HEP dams flood large valleys, destroying habitats and altering river ecosystems."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Justify the use of non-renewable energy sources. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Justify non-renewables.",
+        "keywords_required": [
+          "They provide a reliable, constant baseload of electricity (not dependent on weather/wind/sun).",
+          "They are extremely energy-dense, producing massive amounts of power from small amounts of fuel.",
+          "The existing global infrastructure (power plants, cars) is already built around them, making it cheaper and easier to continue using them in the short term."
+        ]
+      }
+    }
+  ]
+}

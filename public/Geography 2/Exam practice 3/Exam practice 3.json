@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Suggest a suitable hypothesis to investigate how the characteristics of a river change downstream (do not choose size of bedload or angle of slope). [1]",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Formulate a hypothesis.",
+        "keywords_required": [
+          "The channel width increases with distance downstream. (OR The river velocity increases downstream, OR The river depth increases downstream)."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Identify two advantages of doing a pilot study before beginning the main fieldwork. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify pilot study benefits.",
+        "keywords_required": [
+          "To practise the fieldwork techniques and ensure equipment works correctly.",
+          "To identify any potential safety hazards or flaws in the methodology before the real data collection."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Devise three suitable questions that students could use in a questionnaire to find out how successful the regeneration of a town centre has been. [3]",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Devise questionnaire.",
+        "keywords_required": [
+          "1. On a scale of 1-10, how satisfied are you with the new town centre?",
+          "2. Do you feel the new pedestrian zones have improved shopping access?",
+          "3. Has the regeneration improved the visual appearance of the town?"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Why is sampling a useful fieldwork technique? [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Explain sampling.",
+        "keywords_required": [
+          "It saves time and money, as it is impossible to measure every single item (e.g. every pebble) or ask every single person.",
+          "If done correctly (random or systematic), it provides a representative subset of data that reflects the whole population."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Suggest how students could make sure that their bi-polar survey results are reliable. [2]",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Ensure reliability.",
+        "keywords_required": [
+          "Have multiple students score the same site independently and then calculate an average score to reduce subjectivity/bias.",
+          "Conduct the survey at the same time of day at all sites so conditions (like traffic noise) are comparable."
+        ]
+      }
+    }
+  ]
+}

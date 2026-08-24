@@ -1,0 +1,65 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "RECALL AND CONNECT 1:\na) What is thermal expansion in relation to climate change?\nb) What are ice cores and how have they advanced knowledge about climate change?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Answer cross-topic questions on climate change.",
+        "keywords_required": [
+          "a) As the Earth's oceans warm due to climate change, the water expands, causing sea levels to rise.",
+          "b) Ice cores are cylinders of ice drilled from ice sheets/glaciers.",
+          "They trap air bubbles from thousands of years ago, allowing scientists to measure past atmospheric carbon dioxide levels and temperatures."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Sketch a diagram to explain why Antarctica experiences 24 hours of sunlight at certain times of the year.",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Diagram showing the Earth's tilt and its effect on polar sunlight.",
+        "keywords_required": [
+          "Diagram must show the Earth tilted on its axis (23.5 degrees).",
+          "Sun's rays pointing towards the Earth.",
+          "During the Southern Hemisphere's summer, the South Pole is tilted towards the Sun.",
+          "Because of this tilt, areas within the Antarctic Circle remain exposed to sunlight continuously as the Earth rotates.",
+          "Clear labels (Earth's axis, Sun's rays, South Pole)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Sketch a diagram to show why the air above Antarctica is usually cold and dry.",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Diagram showing atmospheric circulation at the poles.",
+        "keywords_required": [
+          "Diagram showing descending cold air at the South Pole (high pressure).",
+          "Cold air holds very little moisture, hence it is dry.",
+          "The white ice sheet has a high albedo, reflecting most of the sun's incoming solar radiation (insolation).",
+          "Low angle of the sun means heat is spread over a larger area.",
+          "Labels indicating descending air, high albedo, and high atmospheric pressure."
+        ]
+      }
+    }
+  ]
+}
