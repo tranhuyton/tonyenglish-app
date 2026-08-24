@@ -1,0 +1,467 @@
+{
+  "title": "Paper 23",
+  "qp_url": "/Geography/Past Papers/2025/2025 June/0460_s25_qp_23.pdf",
+  "in_url": "/Geography/Past Papers/2025/2025 June/0460_s25_in_23.pdf",
+  "i2_url": "/Geography/Past Papers/2025/2025 June/0460_s25_i2_23.pdf",
+  "questions": [
+    {
+      "question_number": "1(a)(i)",
+      "question_text": "Question 1(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Secondary road"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(ii)",
+      "question_text": "Question 1(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Tremeoc/Tremeog"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(iii)",
+      "question_text": "Question 1(a)(iii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "(Signposted) hiking trail/GR 34 (H)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(iv)",
+      "question_text": "Question 1(a)(iv) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "(Perennial) body of water/lake/reservoir/dam/storage of water/water resources"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(v)",
+      "question_text": "Question 1(a)(v) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "(Notable) chapel"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(vi)",
+      "question_text": "Question 1(a)(vi) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "52"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Nuclear/nucleated/clustered/radial"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)",
+      "question_text": "Question 1(c) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "River/watercourse/body of water/lake/reservoir/water supply;\nGentle slope/(relatively) flat;\nLow land;\n(Nearby) forest/wood;\nLimited (to the east) by land liable to flood/tidal area/wet sand;\nBridging point;\nDefensive;\nMany roads (in centre)/route focus/road junction;\nHarbour/anchorage/access to sea/port."
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)",
+      "question_text": "Question 1(d) (See PDF for details)",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 6",
+        "keywords_required": [
+          "Feature\nArea A\nArea B\nBoth areas\nNeither area\nharbour\n√\nbeacon\n√\nsignposted hiking trail\n√\nmuseum\n√\nnotable site\n√\ngolf course\n√"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)",
+      "question_text": "Question 1(e) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Wet sand/marshland/tidal area;\nMain river/De Pont-L’Abbé flows S/SE;\nWatercourses/intermittent streams/tributaries/confluences/underground canal;\nHigh drainage density;\nEstuary/delta/(river) mouth/flows to/links to sea;\nBody of water/lake/reservoir/etang;\nWater tower;\nFont;\nHarbour/anchorage."
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)(i)",
+      "question_text": "Question 1(f)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "4.9–5.2"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)(ii)",
+      "question_text": "Question 1(f)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "099277\n1\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)",
+      "question_text": "Question 2(a) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "D – modern factories\nC – high quality housing\nE – CBD\nB – poor quality permanent housing\n3–4 correct = 3 marks\n2 correct = 2 marks\n1 correct = 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)",
+      "question_text": "Question 2(b) (See PDF for details)",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 5",
+        "keywords_required": [
+          "Squatter settlement\nUnfavourable land/steep/terraced/hilly/swamps/wasteland;\nOnly available land/only unused space;\nClose to industry;\nOutskirts first point of arrival for migrants;\nLess regulation of houses on the outskirts.\nHigh quality housing\nExpensive land (surrounding CBD);\nClose to jobs/business/retail/entertainment/services;\nFormer colonial housing;\nFar from squatter settlements.\nModern factories\nFlat land;\nNext to/along/near transport routes;\nAccess to the CBD to supply goods;\nOn outskirts for space/where land is cheaper;\nRoom for expansion/large land;\nAccessible to workers from other zones/close to squatter settlements for\nworkers.\nNote: Reserve 1 mark for each section.\nRef to Figs 2.1 and 2.2 not required."
+        ]
+      }
+    },
+    {
+      "question_number": "3(a)(i)",
+      "question_text": "Question 3(a)(i) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Correct location of:\nOverhang/cliff\nUndercut(ting)/cave\nPlunge pool\n(Fallen/hard) rock(s)/boulder(s)."
+        ]
+      }
+    },
+    {
+      "question_number": "3(a)(ii)",
+      "question_text": "Question 3(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Undercut deepened/more erosion of soft rock;\nPlunge pool deeper;\nOverhang/hard rock collapses/breaks off;\nRetreat/moves back/moves upstream/headward erosion;\nForms gorge.\n1\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "3(b)",
+      "question_text": "Question 3(b) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Valley shape\nV-shaped/steep sides/deep/narrow.\nGradient of long profile\nSteep/high gradient/rapid decrease/vertical sections;\nDecreasing gradient along upper course.\nChannel width\nNarrow/thin/small.\nNote: Allow 1 mark for each."
+        ]
+      }
+    },
+    {
+      "question_number": "4(a)(i)",
+      "question_text": "Question 4(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Isobar 1008 joined in south of map"
+        ]
+      }
+    },
+    {
+      "question_number": "4(a)(ii)",
+      "question_text": "Question 4(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Area within isobar 1000 shaded"
+        ]
+      }
+    },
+    {
+      "question_number": "4(b)",
+      "question_text": "Question 4(b) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Lower temperature in New Delhi/higher temperature in Bengaluru\n12°C in New Delhi and 18 °C in Bengaluru;\nHigher pressure in New Delhi/lower pressure in Bengaluru\n1008/1009/1010 mb in New Delhi and 1006/1007/1008 mb in Bengaluru;\nWindier in New Delhi/less windy in Bengaluru\nNew Delhi is 3–7 knots and Bengaluru is 1–2 knots;\nLess cloudy/clearer sky in New Delhi/cloudier in Bengaluru\nNew Delhi is 1 okta and Bengaluru is 7 oktas;\nBengaluru has a NE/NNE wind and New Delhi has a SE wind.\nNote: Must be comparative.\nData mark can only be given if comparative statement has been credited.\nUnits must be used at least once per pair.\nCan extract from separate paragraphs.\nAllow differences in stats e.g. cloud cover in Bengaluru is 6 oktas higher = 2\n6\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "5(a)(i)",
+      "question_text": "Question 5(a)(i) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Mount Fuji strato/composite and Mauna Loa shield;\nMount Fuji is conical and Mauna Loa is dome-shaped;\nMount Fuji steep sides and Mauna Loa gentle sides/Mount Fuji steeper;\nMount Fuji narrower/smaller surface area/Mauna Loa wider/larger surface\narea;\nMount Fuji shorter/Mauna Loa taller;\nMount Fuji lava and ash and Mauna Loa just lava;\nMount Fuji has more layers/Mount Fuji has 10 layers and Mauna Loa has 6\nlayers;\nMount Fuji has more vents/pipes/craters /Mount Fuji has side vents/3\nvents/pipes/craters and Mauna Loa no side vents/1 vent/pipe/crater;\nMount Fuji smaller magma chamber/Mauna Loa larger magma chamber;\nMount Fuji has narrower pipe/vent/Mauna Loa has wider pipe/vent.\nNote: Must be comparative."
+        ]
+      }
+    },
+    {
+      "question_number": "5(a)(ii)",
+      "question_text": "Question 5(a)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Bar drawn at 3800 m\nDiagonal lines drawn"
+        ]
+      }
+    },
+    {
+      "question_number": "5(b)",
+      "question_text": "Question 5(b) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Fertile land/good for agriculture;\nFamily and friends live there/always lived there;\nRely on warning systems/think it won’t erupt/used to it/extinct;\nIncome/jobs from tourism;\nCan’t afford to leave;\nGeothermal power;\nHot springs;\nMinerals/mining;\nBuilding materials."
+        ]
+      }
+    },
+    {
+      "question_number": "6(a)(i)",
+      "question_text": "Question 6(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Will not run out/is replenished/can be reused/is infinite"
+        ]
+      }
+    },
+    {
+      "question_number": "6(a)(ii)",
+      "question_text": "Question 6(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Geothermal\nWind\nHEP/river\nWave/tidal/sea\nSolar/sun\nBiofuel/biomass/wood\n1\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "6(b)",
+      "question_text": "Question 6(b) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Uneven distribution/varies from low to high.\nHigh(er) levels/most renewable energy\nAlong the Equator;\nE/NE/centre of South America;\nCentral Africa/middle of Africa;\nSE Oceania;\nNE of North America.\nModerate levels/some renewable energy\nN of North America;\nN of South America/Central America;\nEurope.\nLow(er) levels/least renewable energy\nAsia;\nN Africa;\nOceania;\nS of North America;\nS of South America."
+        ]
+      }
+    },
+    {
+      "question_number": "6(c)",
+      "question_text": "Question 6(c) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Thermal power stations already built/operating;\nFossil fuels/non-renewables are available/cheaper;\nNot enough money/expensive to set up/distribute/repair/maintain/employ\nspecialist labour;\nUnreliable/unsuitable sites/limited by cloud cover/lack of sun/wind/water;\nVisual/noise pollution;\nDifficult/expensive to store;\nSmall-scale/cannot satisfy demand;\nCan lead to relocation of population;\nTakes up large quantities of land/lack of space;\nSome countries prioritise economy over environment."
+        ]
+      }
+    }
+  ]
+}

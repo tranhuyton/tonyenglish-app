@@ -1,0 +1,535 @@
+{
+  "title": "Paper 22",
+  "qp_url": "/Geography/Past Papers/2025/2025 June/0460_s25_qp_22.pdf",
+  "in_url": "/Geography/Past Papers/2025/2025 June/0460_s25_in_22.pdf",
+  "i2_url": "/Geography/Past Papers/2025/2025 June/0460_s25_i2_22.pdf",
+  "questions": [
+    {
+      "question_number": "1(a)(i)",
+      "question_text": "Question 1(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "car park/parking/parking area"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(ii)",
+      "question_text": "Question 1(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "secondary (road)/D26"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(iii)",
+      "question_text": "Question 1(a)(iii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "water tower"
+        ]
+      }
+    },
+    {
+      "question_number": "5(m)",
+      "question_text": "Question 5(m) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          ""
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "370 832"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)(i)",
+      "question_text": "Question 1(c)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "4650(m) (tolerance 4400–4900) Allow 4.4–4.9 km (km must be stated)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)(ii)",
+      "question_text": "Question 1(c)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "SSW"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)(iii)",
+      "question_text": "Question 1(c)(iii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "199° (tolerance 196–201°)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)",
+      "question_text": "Question 1(d) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Activity\nMap evidence\nCamping\nCampsite\nHorse riding\nHorseback riding centre\nSunbathing/relaxing/picnicking/\nBeach/sand/sand dunes/seaside\nresort/plage\nSwimming\nsea/body of water/seaside resort\nWalking/hiking\nFootpath/trails/woods\nVisiting/going to/studying\nMuseum\nVisiting/going to/sightseeing\nCastle/castle walls\nYachting/sailing/boating/water\nsports\nHarbour/port\nFishing\nHarbour/port/river\nLearning about the city/area\nTourist information centre\nNote: 1 mark per completed row.\nCandidates may interchange relevant map evidence with the activity."
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(i)",
+      "question_text": "Question 1(e)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Wood/brushwood"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(ii)",
+      "question_text": "Question 1(e)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "19–23 metres"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)",
+      "question_text": "Question 1(f) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "•\n(1st) mostly in the north;\n•\n(4th) more along the coast;\n•\n(5th) mostly in the east.\n3\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "1(g)",
+      "question_text": "Question 1(g) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "•\nbeach(es);\n•\nbeaches are wide/widest in middle/have variable width/wider in\nS/narrower in N/wet sand wider in S/wet sand narrower in N;\n•\nbeaches (largely) covered at high tide/more wet sand than dry sand\n(area)/mostly wet sand;\n•\nbeach/sand/wet sand along the (entire length of) coastline/la Grande\nPlage/ beach is long;\n•\nsand dunes;\n•\nmore dry sand/sand-dunes in the central part;\n•\nlow lying;\n•\nflat/quite flat/relatively flat;\n•\nrocks/rocky/rock outcrops/wave cut platform/rock extending into the\nsea/(more) rock in the north;\n•\ncoastline is slightly curved/sand has a recurved end (in the south)/spit.\nNote: allow reference to grid squares/named places instead of N/S and\ncentral.\n4\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(i)",
+      "question_text": "Question 2(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "17.5 million (allow 17.3–17.7 million)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(ii)",
+      "question_text": "Question 2(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "45 years"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)",
+      "question_text": "Question 2(b) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "•\npresence of beach/sea bathing;\n•\nworkers given annual holidays;\n•\nworkers given holidays with pay;\n•\nthe arrival/building of the railway;\n•\nthe opening of/advertising of new attractions/the pier/tower/theme park\n(max 2).\n3 or 4 correct = 2 marks\n1 or 2 correct = 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)",
+      "question_text": "Question 2(c) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Growth of package holidays (Reserve 1 mark)\n•\nmore people could afford to travel to other destinations/more disposable\nincome;\n•\ncheap(er) to go abroad (than holiday in the UK)/cheap(er)/cheap(er)\nairlines/airfares; Need to know what is cheap(er).\n•\nattraction of places they had not been to before/new market/experience\nsomething new/different/want to go somewhere more exotic;\n•\npeople could now access places with a warmer/tropical climate (than the\nUK);\n•\nbooking package holidays was a lot easier (via travel agencies);\n•\npackage holidays offered more activities than the resort;\n•\nmore leisure time so could stay away for longer.\nArea now run down (Reserve 1 mark)\n•\nresort loses its appeal/unattractive to many tourists/area/resort lost its\npopularity/dated/old fashioned/neglected;\n•\nvandalism/graffiti/facilities damaged/closed;\n•\nnoise pollution/many tourists looking for somewhere calmer/more\npeaceful;\n•\nless money coming in to spend on it;\n•\nresort had no new facilities/innovations;\n•\nits popularity for parties for the younger generation put off older\npeople/families/give resort a bad reputation.\nNote: no double credit.\nMarks must be credited in the correct section.\n4\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "3(a)",
+      "question_text": "Question 3(a) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "•\nplantation;\n•\nmonoculture/only one or two crops grown;\n•\ntea;\n•\nmass production (of crops)/large amount of crops/large scale/all\nland/large area of land is used/large fields;\n•\nintensive/densely packed/used to its full potential/organised;\n•\nmechanised/machinery;\n•\ntractor/vehicles for transport/delivery of products;\n•\nplanted in rows/strips/linear fields;\n•\ncrop planted amongst trees (to maximise space);\n•\nflat (land);\n•\nterracing/terraces (cut into slope/on hillside/to maximise use of land).\nNote: More than one mark can be scored in any sentence."
+        ]
+      }
+    },
+    {
+      "question_number": "3(b)",
+      "question_text": "Question 3(b) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "•\nsubsistence farming/farming just for the family;\n•\nno/lack of machinery/mechanisation;\n•\nsmall (scale)/small fields;\n•\nmixed farm(ing)/animals and crops/pastoral/livestock farm(ing)/animal\nfarm(ing)/dairy/beef farming/rearing;\n•\ncows/cattle;\n•\njungle/lush/rich/verdant trees/vegetation;\n•\npalm trees;\n•\ngrass/grazing land;\n•\nsome land is fallow/overgrown;\n•\nbarns/storage buildings/shelter for animals;\n•\nwith metal/thatch/straw(hay)/tin roofs/buildings;\n•\ndirt/earth tracks/paths;\n•\nvessel/container/bowl/tub/basin/trough/for cows to drink/eat from.\n4\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "4(a)(i)",
+      "question_text": "Question 4(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "258 (mm)"
+        ]
+      }
+    },
+    {
+      "question_number": "4(a)(ii)",
+      "question_text": "Question 4(a)(ii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "•\nuneven/seasonal/fluctuates/varies;\n•\nthere is rainfall every month;\n•\nrainy period lasts 9 months;\n•\ntwo peaks;\n•\nmost/more/highest/higher/very high rain in winter/Dec–Feb/\nJan–Feb/highest February;\n•\nleast/less/low rain/drier period in April–June/May–June/least in June;\n•\nlarge increase in July/mid–Summer/December;\n•\nlarge decrease in Spring/Autumn/April;\n•\nsteady/constant decrease from August to November/April to June;\n•\nwetter/high(er) rainfall from July through to March/high rainfall apart from\nApril–June.\nNote: Allow high Jan to March and July to December written in two separate\nparts of the answer. Must have whole period. Time periods must be as written\nin the mark scheme."
+        ]
+      }
+    },
+    {
+      "question_number": "4(b)",
+      "question_text": "Question 4(b) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "•\nsmall leaves (1) to reduce evaporation (1);\n•\nspines/thorns/spikes (1) to help reduce moisture loss/break up air\nflow/which can help reduce evaporation (1);\n•\nhairy leaves (1) to protect against heat/insulate against cold\ntemperatures/to reduce water loss (1);\n•\nplants lose/shed leaves/have no leaves/low number of stomata/close\nstomata/sunken stomata/leaf pores (1) to help reduce moisture\nloss/transpire less (1);\n•\nplants/seeds lay dormant/look dead (1) for long periods/until rain arrives\n(1);\n•\ncactus/succulents/large body/stems/fleshy/thick leaves (1) to store\nwater/for dry periods (1);\n•\ncactus have waxy surfaces/thick cuticle (1) reduce moisture\nloss/transpiration (1);\n•\nlow growing (1) to avoid exposure to intense sunlight/reduce water\nloss/reduce damage from wind (1);\n•\ndeep/long root systems (1) to tap into underground water/to reach/get to\nmore water (1);\n•\nshallow/horizontal root systems (1) to get/catch/collect/obtain water when\nit rains (1).\nNote: 2  2 marks – one for method and one for explanation.\nMust have the adaptation for explanation to be credited.\nDo not double credit the following terms for explanation i.e. evaporation,\nmoisture loss, transpiration and evapotranspiration; each can be credited\nonce. Where appropriate these terms can be used interchangeably.\n4\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "5(a)",
+      "question_text": "Question 5(a) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "•\n(1st) most earthquakes occur on or near to the coast;\n•\n(3rd) the Atlantic and Indian Ocean each have one earthquake;\n•\n(4th) the biggest concentration of earthquakes is in the South Pacific\nOcean."
+        ]
+      }
+    },
+    {
+      "question_number": "5(b)(i)",
+      "question_text": "Question 5(b)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Credit any valid statement and/or data that supports a weak relationship;\nassume that one would expect a strong positive relationship:\n•\nnumber of deaths and magnitude fluctuate;\n•\na positive relationship/correlation in some years but negative in other\nyears;\n•\ntwo peaks for number of deaths but varying magnitude/one shows a high\nmagnitude and the other shows a low magnitude;\n•\ntwo magnitude peaks, one has a high number of deaths and the other\nhas a low number of deaths;\n•\nmany years have no deaths, but the magnitude varies;\n•\nmagnitudes have a similar/narrow range, but death rates have a wide\nvariation;\n•\nUse of data that shows variation in deaths and/or magnitude.\nExamples\nAn earthquake with a high magnitude had no deaths = 1\nA magnitude of 8 had 0 deaths but a magnitude of 6.2 had 10000 deaths = 1\nA magnitude 7 earthquake (in 2010) caused 225 000 deaths whilst one of 9.1\nmagnitude only caused 25 500 deaths (in 2011).\nCheck data is correct using the following table: allow tolerance of +/-0.1 for\nmagnitude and +/– 5000 for deaths.\nDATE\nMAGNITUDE\nDEATHS\n1990\n7.4\n50000\n1991\n6.8\n0\n1992\n7.8\n0\n1993\n6.2\n10000\n1994\n6.8\n0\n1995\n6.9\n5000\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "5(b)(i)",
+      "question_text": "Question 5(b)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "DATE\nMAGNITUDE\nDEATHS\n1996\n6.6\n0\n1997\n7.2\n0\n1998\n6.6\n4000\n1999\n7.6\n15000\n2000\n7.9\n0\n2001\n7.7\n20000\n2002\n6.1\n0\n2003\n6.6\n30000\n2004\n9.0\n230000\n2005\n7.6\n80000\n2006\n6.3\n5000\n2007\n8.0\n0\n2008\n7.9\n85000\n2009\n7.5\n0\n2010\n7.0\n225000\n2011\n9.1\n25500\n2012\n6.4\n0\n2013\n7.7\n0\n2014\n6.1\n0\n2015\n7.8\n7500\n2016\n7.8\n0\n2017\n7.3\n0\n2018\n7.5\n4000\n2019\n6.4\n0\n2020\n7.0\n0\n2020\n7.0\n0\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "5(b)(ii)",
+      "question_text": "Question 5(b)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "•\nin the sea/away from the land;\n•\nearthquake/epicentre away from large areas of population/in unpopulated\nareas/rural areas/low population density;\n•\nearthquakes at deeper depths/deeper focus (so the seismic energy\ndissipates before reaching the surface);\n•\nsolid rock can absorb the intensity of shaking;\n•\nstrong construction methods/earthquake proofing of buildings or\nexamples 1 mark max."
+        ]
+      }
+    },
+    {
+      "question_number": "5(c)",
+      "question_text": "Question 5(c) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Convection\n1\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "6(a)(i)",
+      "question_text": "Question 6(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "no legal rights to land"
+        ]
+      }
+    },
+    {
+      "question_number": "6(a)(ii)",
+      "question_text": "Question 6(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "•\nsloping site;\n•\nair pollution;\n•\nland pollution/litter;\n•\nwater/river pollution;\n•\nuntreated sewage;\n•\nshortage of space/houses cramped together;\n•\nhouses made of recycled materials/corrugated iron etc.\n•\nhouses liable to collapse/unstable/flimsy/not sturdy."
+        ]
+      }
+    },
+    {
+      "question_number": "6(b)",
+      "question_text": "Question 6(b) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "•\nhigh/increasing BR/increase in population;\n•\nmigration (accept from any origin)/move from rural areas to cities/urban\nareas;\n•\nrelatives move in to be close to family;\n•\nunemployment/people lose their jobs/less job opportunities;\n•\nhigh levels/increase in levels of poverty or examples;\n•\nhouses in the city are unaffordable/can’t afford rent/shortage of\nhousing/competition for housing.\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "6(c)",
+      "question_text": "Question 6(c) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Advantages – (Reserve 1 mark)\n•\navailability of/access to/better/improved/more services/schools/children’s\nplay area/all services in one place/nearby/greater service provision than\nin a squatter settlement;\n•\ndrains/water supply/sewage/healthier environment/better sanitation;\n•\ncan choose a plot/house that suits their income/have control of what is\nincluded in their plot/house/different types of plots available;\n•\nlots of job opportunities/availability of jobs/named example of a job from\nthe key;\n•\nnear commercial area/shops;\n•\nsecurity of tenure/legal home/you have ownership over your home/won’t\nbe bulldozed;\n•\nlow cost/cheap materials for building;\n•\nsafe due to police station/fire station;\n•\nless air/land/litter/noise water pollution (than in the CBD).\nDisadvantages – (Reserve 1 mark)\n•\nloses sense of community/friends/being near relatives/won’t know\nanybody there;\n•\nmany migrants can’t afford to pay/can increase debts/higher cost than\nliving in squatter settlements/housing plots are expensive/people can’t\nafford them;\n•\nmay have to leave present job (in CBD)/can’t afford transport to job/a long\nway away from job/no longer in CBD where they work/distance to\nservices (in CBD) is greater;\n•\nencourages more migrants/just as crowded/may become overcrowded;\n•\npeople may not have construction skills/be physically fit enough to finish\nhouse/may not be completed to a high/safe standard;\n•\ndifferent levels of housing provision may reinforce inequalities;\n•\nno healthcare/clinics/doctors/hospitals provided;\n•\nNot enough/lack of green areas/open space.\nNote: no credit for features copied from the key without further comment."
+        ]
+      }
+    }
+  ]
+}

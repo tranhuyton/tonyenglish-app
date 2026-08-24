@@ -1,0 +1,416 @@
+{
+  "title": "Paper 42",
+  "qp_url": "/Geography/Past Papers/2025/2025 Feb-Mar/0460_m25_qp_42.pdf",
+  "in_url": "/Geography/Past Papers/2025/2025 Feb-Mar/0460_m25_in_42.pdf",
+  "i2_url": null,
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "question_text": "Question 1(a) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Rows 3 and 4\nThe river is shallow enough to stand safely in. (1)\nThe river channel is natural and not changed by people.(1)\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Examples\nAgree methodology / what measurements to take / where each student\nworks / know what to do (1)\nPractise fieldwork techniques / learn how to measure everything (1)\nTest equipment / make sure equipment works / know equipment to use /\nlearn how to use equipment (1)\nLearn to work as a team / to divide tasks / know what each student does (1)\nMinimise errors / mistakes before real study / change pre real study (1)\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)(i)",
+      "question_text": "Question 1(c)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Row 4: Tape measure and ranging poles"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)(ii)",
+      "question_text": "Question 1(c)(ii) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Credit 1 reserve mark for a diagram that shows measuring across a river\nor a cross-section.\nCredit 3 marks MAX for labelling and naming features in correct context\nMeasuring stick / pole / ruler in the water (1)\nVertical pole / ruler (1)\nPoles are equal distance apart (1)\nPole / ruler touches bed (1)\nWater level / river / water labelled (1)\nMeasure section which is wet (1)\nTape measure across river (1)\nWidth is divided into equal amounts of where to measure the depth (1)\nOne ranging pole on each bank (1)\n(1R + 1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(i)",
+      "question_text": "Question 1(d)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Completion of cross section and shading\n50cm at 3m (1P)\n35cm at 4m (1P)\n1 mark for each plot and 1 mark for shading and line (1SL)\n(2P + 1SL)\n3\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(ii)",
+      "question_text": "Question 1(d)(ii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "The hypothesis is true for width but not for depth – 1 mark reserve (HA)\nCredit 1 mark for any paired data from two sites showing wider channel\ndownstream\ne.g. Site 1 = 1.6 m and site 5 = 12.8 m width (1D)\n(For ref: S1 = 1.6, S2 = 3.6, S3 = 5.8, S4 = 9.6, S5 = 12.8)\nCredit 1 mark for paired data from sites 4 and 5 which shows deeper channel\nat site 4 ONLY\ne.g. Site 4 = 85 to 90 cm and Site 5 = 55 to 60 cm (1D) OR\ne.g. Site 4 is deeper than Site 5 (1S)\nHypothesis is true for both / true for depth but not for width / false for both = 0\n(XHA)\nIf HA decision incorrect credit relevant evidence that supports right answer.\n(1HA + 2D or 1D + 1S)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(i)",
+      "question_text": "Question 1(e)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Examples\nPebbles picked may not be typical of the pebbles at that site / anomaly / not\nrepresentative / may be outliers (1)\nAll pebbles may have been taken from same area of river bed / not across\nchannel / taken from same place (1)\nNot a fair / reliable sample / student chooses pebbles / bias / subjective (1)\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(ii)",
+      "question_text": "Question 1(e)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Systematic (sampling)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(iii)",
+      "question_text": "Question 1(e)(iii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Marks for plotting only- ignore shading\nPlot 301–600 mm = 8, 601–900 mm = 4, 901–1200 mm = 3,\n3 correct = 2 marks, 1 or 2 correct = 1 mark\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(iv)",
+      "question_text": "Question 1(e)(iv) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "No / do not agree / hypothesis is false (Tick HA Reserve)\nNo pattern to bedload / pebble size going downstream OR pebble size\nincreases downstream OR the size fluctuates downstream / varies /\ninconsistent / random (1S Reserve)\n1 mark for statement about variation in pebble numbers (any 2 sites)\ne.g. More smaller pebbles at Site 1 / 2 km than Site 3 / 12 km (1S)\ne.g. More larger pebbles at Site 5 than Site 1 (1S)\n1 mark for data showing hypothesis is wrong – increases downstream (any 2\nsites)\ne.g. Average size Site 1 = 471mm and av size at Site 3 = 938 mm (1D)\ne.g. 4 pebbles between 1201–1500 mm at Site 5 and 1 pebble at Site 1(1D)\nHypothesis is true / yes / agree / partly agree = 0 (XHA)\nIf HA decision incorrect credit relevant evidence that supports right answer\n(1HA + 1SR + 1S + 1D)\n4\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(v)",
+      "question_text": "Question 1(e)(v) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Examples (Note: Processes must be explained NOT just listed)\nPebbles are eroded (1)\nPebbles crash into each other / attrition so reduces size (1)\nPebbles crash into bed or banks / bounce along river bed / abrasion /\ncorrasion so reduces size (1)\nCorrosion / solution / dissolves pebbles (1)\nSmaller pebbles are moved further downstream because they are lighter\nto transport / longer duration of transport / longer time to be eroded / been in\nriver longer (1)\nDifferent sized pebbles are brought by tributaries / rock fall (1)\nRock type varies along course of river (1)\nSpeed decreases downstream so heavy material deposited earlier (1)\n(1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)",
+      "question_text": "Question 1(f) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Ideas such as: Note: Avoid double crediting on ‘checking’ answers.\nMeasuring width/depth across river mark\nMeasure width at more than one point at each site and calculate average (1)\nMeasure depth at smaller intervals across channel (less than 1m) (1)\nGet other students / group to check width / depth measurements (1)\nMeasuring the pebble size mark\nTwo students / groups measure the length / size of each pebble separately /\nanother student / group checks the measurements of length / size (1)\nUse callipers / pebbleometer (NOT ruler) to measure length /size of pebbles\n(1)\nMeasure / collect more pebbles at each site (1)\nMeasuring along the river mark\nMeasure / repeat at more sites (downstream / along the river) (1)\nMeasure at equal / regular intervals / downstream / along river (1)\n(1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(i)",
+      "question_text": "Question 2(a)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "A hairdressers and beauty salon D\nA jewellers A\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(ii)",
+      "question_text": "Question 2(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Comparison"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(iii)",
+      "question_text": "Question 2(a)(iii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Complete pie graph\nShops which provide services = 3% and shops which are restaurants = 17%\n1 mark for dividing line at 83% (61° left from top: tolerance 59°–63°)\n1 mark for shading in order of key\n(1P + 1Sh)\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(iv)",
+      "question_text": "Question 2(a)(iv) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Hypothesis is false – 1 mark reserve (✓HA) Note: Most = >50%\nStatement:\nLess than the majority / 50% / 40% / half / sell high order or specialist\nGoods / Type A (1S)\nOR\nMore than half / 50% / 60% / the majority do NOT sell high order or\nspecialist goods / Type C (1S)\nData:\ne.g. 38% OR 449 shops sell specialist goods / type A (1D)\ne.g. 62% OR 724 do NOT sell specialised goods / type C (1D)\nHypothesis is true / partially true = 0 (XHA)\nIf HA decision incorrect credit relevant evidence that supports right answer.\n(1HA + 1S + 1D)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(i)",
+      "question_text": "Question 2(b)(i) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Examples Avoid double counting ‘more chance of errors’.\n(Do pedestrian count by himself) – no-one checked figures / safety issues /\nmore chance of error / needs >1 recording data (1)\n(Stand at exit from car park ) – only count people who arrived in cars / miss\npeople coming by bus/train/walking to mall / may not travel by car (1)\n(Count ‘in your head’ ) – easy to lose count / easy to lose concentration /\ncount inaccurately / more chance of error (1)\n(Do the two counts on Wed and Sat) – different days / different times /\nweekday and weekend / should do counts on same day / same time / not\nmorning and afternoon (1)\n(1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(ii)",
+      "question_text": "Question 2(b)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Avoid double credit e.g. tally\nPlan pedestrian count:\nDecide on start time and end time / when to do the counts (1)\nDo the counts at the same time on both days / repeat on both days (1)\nDecide how many times in a day / e.g. do it 4 times in a day (1)\nDecide on time period / length of counts to be the same / how long to count /\ne.g. do them for 1 hour (1)\nDecide who will count / division of work / number of students per group\ne.g. do it in pairs or group (1)\nDecide where to count / agree to stand at all exits (1)\nDecide how to count e.g. tally / clicker / recording sheet (1)\nDo pedestrian count:\nApply tally method / ‘clicker’ / counter / note on recording sheet (1)\nUse watch / stopwatch / timer to time the counting period (1)\nJobs of student in each group e.g. two students do each count / count people\ngoing in different directions (1)\n(1 + 1 + 1 + 1)\n4\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(iii)",
+      "question_text": "Question 2(b)(iii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "1 mark per bar; ignore shading\nDraw bars at 21:00 – Wednesday = 100, Saturday = 165\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(iv)",
+      "question_text": "Question 2(b)(iv) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "No mark for conclusion. Accept Day 1/Day 2 as alternatives to Wed and\nSat\nThe hypothesis is true for both during the day and between the two days\nOR There are more on Saturday than Wednesday and different numbers\nat all times OR More at weekend than weekday (1S)\n1 mark for paired data to show variation during one day (any 2 times)\ne.g. Wednesday varies between 43 at 09.00 and 147 at 19.00 (1D)\ne.g. Saturday varies between 45 at 09.00 and 211 at 19.00 (1D)\n1 mark for paired data to show variation between the two days\ne.g. at 17:00 Wednesday = 143 and Saturday = 186 (1D)\ne.g. total visitors on Wednesday = 737 and on Saturday = 985 / 248 more\n(1D)\n(1S + 2D)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)",
+      "question_text": "Question 2(c) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Ideas such as:\nWork in pairs / not alone (1)\nDon’t block walkways / entrance to shops (1)\nBe polite to interviewees / thank them (1)\nAccept that some people won’t want to answer / check if people are willing to\ntalk / don’t force to answer / some uncomfortable / some busy (1)\nAsk a range of people / get a representative sample of age / gender / get a\nrandom sample / ask every 10th person (1)\nChoose a time when there are plenty of people shopping (1)\nExplain what survey is about / purpose / intention (1)\n(1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(i)",
+      "question_text": "Question 2(d)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Plotting bar for eat in a restaurant\n1 mark for dividing lines at 2, 6, 9\n1 mark for shading\n(1P + 1Sh)\nMax 1 if start @ 10 and is correct."
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(ii)",
+      "question_text": "Question 2(d)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Examples\nReserve mark for ref to comparative numbers\nMore people go for shopping (than entertainment) (1R)\nReserve mark for ref to specific frequency\nMost people go once a week for shopping and once a month for\nentertainment OR\nMore people go once a week / month for shopping (than entertainment) OR\nMore people go once a year / are first time visitors for entertainment (than\nshopping) (1R)\n(1R + 1R)\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(iii)",
+      "question_text": "Question 2(d)(iii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Examples Factors such as:\nDistance to travel / how long it will take to travel to shopping centre (1)\nLikely duration of visit / how long shoppers stay (1)\nWhat / how much they are buying / what they are buying / type of shop they\nvisit (1)\nAvailability of regular bus service / public transport / metro train / taxis (1)\nAvailability / cost of car parking (1)\nWeather conditions / weather forecast / more likely to travel by car if raining\n(1)\nLevel of car ownership / do shoppers own a car / can shoppers afford car / car\nsharing / can shopper afford petrol or bus fare / cost of transport (1)\nTraffic congestion / amount of traffic / avoid crowds on public transport (1)\nHow much time they have (1)\nRisk of crime / safer to drive / public transport unsafe / no pavements to walk\non (1)\nType of traveller e.g. old, disabled, disadvantaged (1)\nTravel on least polluting method if environmentally concerned (1)\n(1 + 1 + 1)"
+        ]
+      }
+    }
+  ]
+}

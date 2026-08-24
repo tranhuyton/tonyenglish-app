@@ -1,0 +1,501 @@
+{
+  "title": "Paper 42",
+  "qp_url": "/Geography/Past Papers/2026/2026 Feb-Mar/0460 Geography March 2026 Question Paper  42.pdf",
+  "in_url": "/Geography/Past Papers/2026/2026 Feb-Mar/0460 Geography March 2026 Insert  42.pdf",
+  "i2_url": null,
+  "questions": [
+    {
+      "question_number": "1(a)(i)",
+      "question_text": "Question 1(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Barometer\nTICK/CROSS"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(ii)",
+      "question_text": "Question 1(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Millibars\nTICK/CROSS"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(iii)",
+      "question_text": "Question 1(a)(iii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Moveable pointer: shows a previous AP / pressure 24 hours ago / day before\n/ can be moved to a previous pressure as reference / can compare with\ncurrent AP (1)\nMeasuring hand: shows current AP when reading data / shows change\n(rise/fall) from previous pressure / at the time (1)\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)(i)",
+      "question_text": "Question 1(b)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "No mark for choice. No need to compare\nAnemometer A: (numerical scale is) accurate / robust / easy to read / clear /\ndetailed (1) OR\nAnemometer B: easy to read / less breakable (1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)(ii)",
+      "question_text": "Question 1(b)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Examples. No need to compare\nGive instant readings / faster / saves time / quick (1)\nEasy / clear to read / easier to use / easier to measure (1)\nDon’t need to know how to read a traditional anemometer (1)\nExact figures / accurate / precise / recorded to several decimal places (1)\nLess chance of making mistake in reading / misreading (1)\nCan download to computer / store data (1)\nEasier to carry around / portable (1)\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)",
+      "question_text": "Question 1(c) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Examples:\nPut it in Stevenson Screen (1)\n(Look at the) indices/markers show the maximum temp on right (1)\n(Look at the) indices/markers show the minimum temp on left (1)\nRead off the bottom of the index / marker (MAX 1)\nRead at eye level (1)\n(Use) magnet / button to reset index / marker / reset for next day (1)\n(Read) temperatures in °C (1)\n(Read) temperature every 24 hours / fixed period of time / everyday (1)\nCurrent temperature is read off the mercury (1)\n(1 + 1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(i)",
+      "question_text": "Question 1(d)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Needs small crosses at two points on graph.\nTICKS/CROSSES\nPlot AP = 1012 mb and wind speed = 40 km / h on 11 September (1)\nPlot AP = 1015 mb and wind speed = 49 km / h on 21 September (1)\n(1 + 1)\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(ii)",
+      "question_text": "Question 1(d)(ii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Hypothesis is false / incorrect – 1 mark reserve (HA)\nThere is no relationship / correlation between AP and wind speed (1S).\nCredit 1 maximum / reserve for paired data showing hypothesis is false or no\nrelationship:\ne.g. at 1011 mb, wind speed is 28 km / hr but at 1016 mb speed is 54 km / hr\n(1D)\ne.g. at 1013 mb, wind speed varies from 23–49 km / hr (1D)\ne.g. at 49 km / hr, pressure is 1013 mb and 1015 mb (1D)\ne.g. at 1011 mb, wind speed varies from 28–60 km / hr (1D)\nHypothesis is true / partially true = 0 (XHA).\nCredit relevant evidence which supports the correct conclusion of false.\nIf no hypothesis conclusion ^HA and credit evidence which supports the\ncorrect conclusion of false.\n(1HA + 1S + 1DR)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(iii)",
+      "question_text": "Question 1(d)(iii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Need to plot two crosses and join them to other lines           TICKS/CROSSES\nPlot maximum temperature = 14 °C\nPlot minimum temperature = 11 °C\nCredit 2 marks if 2 correct plots and 2 correct / different lines (2)\nCredit 1 mark if partially correct / any one error (1)\n0 marks if > one error\n(2 or 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(iv)",
+      "question_text": "Question 1(d)(iv) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "20th September\nTICK/CROSS\n1\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(v)",
+      "question_text": "Question 1(d)(v) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Hypothesis is true / partially agree with hypothesis – 1 mark reserve (HA)\nMaximum and minimum temperature trends increase and decrease in a\nsimilar pattern / go up and down together / show positive OR direct correlation\n(1S)\ne.g. continuous increase from 15th to 19th (accept any two dates) (1S) OR\ne.g. continuous decrease from 12th to 13th (accept any two dates) (1S)\n1 or 2 marks for paired data to support dates used in true statement\ne.g. maximum temperature increases from 13 °C to 17 °C and minimum\ntemperature increases from 10 °C to 14 °C (1D)\ne.g. maximum temperature decreases from 14 °C to 12 °C and minimum\ntemperature decreases from 9 °C to 7 °C (1D)\nIF say partially true (1HA + 1S + 1D = MAX 3)\ne.g. maximum temperature decreases from 10th–11th but minimum\ntemperature increases from 10th–11th (1S)\ne.g.10th–11th maximum temperature decreases 14 °C–13 °C and minimum\ntemperature increases 10 °C–11 °C (1D)\nHypothesis is false / not agree = 0 (XHA).\nCredit relevant evidence which supports the correct conclusion of true / agree.\nIf no hypothesis conclusion – ^HA and credit evidence which supports the\ncorrect conclusion of true.\n(1HA + 1S + 2D) OR (1HA + 2S + 1D) OR (1HA + 1S + 1D)\n4\nOR\n3 maximum"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(i)",
+      "question_text": "Question 1(e)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "More data (to investigate hypotheses) / results / help to eliminate anomalies /\nclearer patterns OR trends could be identified / wider range of data (1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(ii)",
+      "question_text": "Question 1(e)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Compare two sets of results / can see patterns repeated or change (1)\nSee if there are any seasonal effects (1)\n1\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)",
+      "question_text": "Question 1(f) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Hypothesis must relate to collecting rainfall data. Can be a statement or\nquestion.\nDo not credit a topic or subject.\nExamples include:\nDaily rainfall increases as atmospheric pressure increases / decreases (1HA)\nIs the amount of daily rainfall related to maximum temperatures (1HA)\nRainfall increases during the next 15 days (1HA)\nDoes rainfall vary over several days / a month? (1HA)\nCredit 1 mark reserve TICK HA\nFieldwork method\nLocate rain gauge in open area / field / away from trees or buildings (1 MAX)\nStand rain gauge in ground / keep tip or lip above ground / 30 cm above\nground (1)\nPut funnel and jar or beaker in casing / gauge (1)\nPour collected water into measuring cylinder (1)\nRead scale OR measure in cm / mm / ml (1)\nEmpty rain gauge / cylinder / jar after measuring / drain away the water (1)\nTake reading every day / same time / fixed time period (at least 12 hours) / 24\nhours / specific time / end of day (1)\nOR\nFasten pluviometer to post (1)\nRain falls into / is collected in the funnel or container (1)\nMeasure water level in container (1)\nMeasure every day / daily / every 24 hours (1)\nMeasure at same time (1)\nEmpty container and replace (1)\nIf no hypothesis or inappropriate hypothesis credit method to 4 marks\nmaximum providing it relates to rainfall data; otherwise = 0.\n(1HA + 1 + 1 + 1 + 1)\n5\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(i)",
+      "question_text": "Question 2(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Central Business District\nTICK/CROSS"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(ii)",
+      "question_text": "Question 2(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Bus station\nTICK/CROSS"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(i)",
+      "question_text": "Question 2(b)(i) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Stratified (1R)\nGet a gender / age balance (1)\nRelated to population structure of town / socio-economic status (1)\nSystematic (1R)\nRegular / equal / specific intervals / pattern (1)\nEvery tenth / nth person (accept range 3rd to 10th person) (1)\nRandom (1R)\nAsk anybody / next person / no pattern (1)\nUse random number tables / pick numbers out of a hat to generate order to\nask people (1)\ne.g. if number 6 selected ask the 6th person (1)\nIf no name / incorrect name of method, credit appropriate description to\nmaximum 2 marks.\nIf name does not match description credit name only (e.g. if say systematic\nthen write about another method, credit 1 mark for the name).\n(1R + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(ii)",
+      "question_text": "Question 2(b)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Examples\nPeople refusing to answer questions / too busy / rude / aggressive /\nuncomfortable / no time to answer / not interested (1)\nNot enough people to complete the questionnaire (1)\nDifferent students asking the same people (1)\nPeople choosing too many answers / not completing some answers / not\nfilling them in properly (1)\nPeople asked don’t live in the town / don’t know about the supermarket / don’t\nvisit it / tourists or visitors / children in sample (1)\nCan’t read / understand the questions / language issues (1)\nMay not return questionnaires (1)\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)(i)",
+      "question_text": "Question 2(c)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Complete bar:\nTICKS/CROSSES\nAgree = 40, disagree = 20, strongly disagree = 9\n1 mark for dividing lines at 71 and 91 (1)\n1 mark for correct shading in order of key (1)\n(1 + 1)\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)(ii)",
+      "question_text": "Question 2(c)(ii) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Hypothesis is true – 1 mark reserve (HA)\nOver half / most agreed / strongly agreed with 3 of the 4 statements (1S) OR\nmajority / most agreed / more agreed than disagreed supermarket increases\nthe choice of goods and attracts people and provides more jobs (1S)\nCredit data if added row numbers together or paired to 2 marks maximum\nNot to credit column totals; just rows. Agree figure must be > disagree figure\ne.g. 64 agree that the supermarket has increased the choice of goods / 64\nagree with statement 1 (1D)\ne.g. 31 strongly agree and 40 agree / 71 agree that the supermarket attracts\npeople to the town centre more often (1D)\ne.g. 57 strongly agree that the supermarket provides more jobs (1D) OR\n94 agree that the supermarket provides more jobs (1D)\ne.g. 38 strongly agree and 3 strongly disagree with Statement 1 (1D)\n(1HA + 1S + 2D)\nHypothesis is false / partially true = 0 (XHA).\nCredit relevant evidence which supports the correct conclusion of true / mostly\ntrue.\nIf no hypothesis conclusion ^HA and credit evidence which supports the\ncorrect conclusion of true / mostly true."
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(i)",
+      "question_text": "Question 2(d)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "opinion\nScore\nstrongly agree\n96\nagree\n75\ndisagree\n76\nstrongly disagree\n13\nBoth correct for 1 mark\nTICK/CROSS"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(ii)",
+      "question_text": "Question 2(d)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Draw bar for statement 4 = 260. Ignore shading.\nTICK/CROSS"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(iii)",
+      "question_text": "Question 2(d)(iii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Statement 3\nTICK/CROSS"
+        ]
+      }
+    },
+    {
+      "question_number": "2(e)(i)",
+      "question_text": "Question 2(e)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Scoring is subjective and scores may vary between students:\nCarry out pilot study (1)\n(Work in groups and) discuss / agree / check score / compare scores (1)\nCalculate average score (from a group of students) / take majority score (1)\nOnly 1 student decides the scores (1)\nScore may vary at different times of day:\nMake sure surveys are done at same time / agree a time for survey (1)\nTake an average (1)\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(e)(ii)",
+      "question_text": "Question 2(e)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Draw bar to –4 (20 mm) at location E. Ignore shading.\nTICK/CROSS\n1\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(e)(iii)",
+      "question_text": "Question 2(e)(iii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "No credit for hypothesis decision – true\nHigher / high EQ scores / positive descriptions are nearest / near to\nsupermarket (1S)\nOR Lower / low EQ scores / negative descriptions are furthest from / away\nfrom / not near supermarket (1S)\nHighest scores at location C and D / lowest scores at B and E (1S)\nCredit contrasting paired data of total scores for 1 MAX\ne.g. C scores 5 and E scores –4 (1D)\ne.g. D scores 7 and B scores –6 (1D)\ne.g. C scores 5 and B scores –6 (1D\ne.g. D scores 7 and E scores –4 (1D)\n(1 + 1 + 1D)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(f)(i)",
+      "question_text": "Question 2(f)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Tally\nTICK/CROSS"
+        ]
+      }
+    },
+    {
+      "question_number": "2(f)(ii)",
+      "question_text": "Question 2(f)(ii) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Examples\nGet into groups / pairs / decide who surveys each location (1)\nOne student / one group on each side of the road / count vehicles coming in\ndifferent directions (1)\nDifferent students count different types of vehicles (1)\nOne / two student(s) count vehicles and another student records (1)\nUse clicker / tally (1)\nCircle road / circle time on recording sheet (1)\nGo to each site at the allocated / same time (1)\nMark on recording form every time a vehicle passes (1)\nStopwatch for timing / use phones for timing (1)\nAdd results to get totals (and write on recording form) (1)\n(1 + 1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(f)(iii)",
+      "question_text": "Question 2(f)(iii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Examples\nChoosing a safe place to count / finding somewhere safe near a road (1)\nHard to tally / count accurately because a busy time / too many vehicles at\nonce / vehicles too fast / vehicles may be hidden (1)\nTimings not synchronised between groups / do count at different times (1)\nStudents lose concentration (1)\n(Specific weather problem) – rainfall / sunstroke / too hot / snowing (1)\nBreathing difficulties / exhaust or vehicle fumes (1)\nWhich category to include some vehicles / some vehicles don’t fit into\ncategories / some vehicles fit into > 1 category (1)\n(1 + 1 + 1)"
+        ]
+      }
+    }
+  ]
+}

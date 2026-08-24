@@ -1,0 +1,399 @@
+{
+  "title": "Paper 42",
+  "qp_url": "/Geography/Past Papers/2025/2025 June/0460_s25_qp_42.pdf",
+  "in_url": "/Geography/Past Papers/2025/2025 June/0460_s25_in_42.pdf",
+  "i2_url": null,
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "question_text": "Question 1(a) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Screen is painted white (1F) so that it reflects heat or sunlight/reduces direct\nheating by the sun/does not absorb sunlight/heat/avoid heat conduction (1W);\nSides are made of slats/louvres/have spaces/gaps/not solid (1F) so that air\ncan circulate (1W);\nScreen/box is made of wood (1F) so that heat is not conducted into it (1W);\nRoof is made of a double layer of wood (1F) so that airspace provides\ninsulation (1W);\nScreen stands @ 1 m–1.5 m/raised on legs/has a stand/on sticks(1F) so that\ninstruments are not affected by heat from the ground (1W);\nScreen has a sloping roof (1F) so that rain runs off (1W);\n2  (1F + 1W)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Sunshine recorder (1)\nAnemometer (1)\nBoth instruments are outside – (1) mark for both correct.\n(1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)",
+      "question_text": "Question 1(c) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Measuring hand:\nThe (atmospheric) pressure OR millibars/mb at the time/current/now/\n(approx) 1012 mb/pressure being recorded OR is recording (1);\nMoveable pointer:\nThe (atmospheric) pressure on the previous day/previously OR indicates if\natmospheric pressure is rising or falling (1);\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(i)",
+      "question_text": "Question 1(d)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Plot 1012 mb and 10°C (day 7)\n1008mb and 5°C (day 15)\n(1+ 1)\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(ii)",
+      "question_text": "Question 1(d)(ii) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Hypothesis is  false – 1 mark reserve (HA)\nThere is no (direct/positive) relationship/correlation (between AP and\ntemperature) OR results are scattered/random/spread all over OR go up and\ndown/increase and decrease/not proportional (1);\nCredit 2 marks to show the hypothesis is false OR evidence for negative\nrelationship\ne.g. 1022 mb = 4° (1D MAX) (AP highest = lowest temp)\nNote: only use above figures once.\ne.g. Both 1012 mb and 1017 mb AP = 7°(1D) (Diff AP = same temp)\ne.g. 1017 mb = 5°and 7° (1D) (Same AP = diff temp)\ne.g. 1007 mb = 12°and 1017 mb = 5°(1D) (Negative rel.)\n(1HA + 1 + 2D)\nNote: Yes/hypothesis true/partially true = 0 (XHA). This conclusion is wrong\nbut credit any relevant evidence supporting the correct conclusion. If no\nhypothesis conclusion ^HA and credit evidence supporting correct conclusion."
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(i)",
+      "question_text": "Question 1(e)(i) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Examples\nSite features: in open area/away from buildings/unobstructed;\nStand rain gauge in ground/keep tip or lip above ground/above ground/raised\noff ground; Note: ignore refs to actual height e.g. 30cm\nMake sure rain gauge is empty (at start);\nPut funnel and jar or beaker in casing/gauge;\nPour collected water into measuring cylinder;\nRead the scale OR measure in cm/mm/ml;\nEmpty cylinder/jar after measuring (at end);\nTake reading every day/same time/fixed time period/24 hrs/particular time/\nspecific;\n(1 + 1 + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(ii)",
+      "question_text": "Question 1(e)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Trees: so that there is no interception of rainfall/blocks the rain;\nInaccurate if water falls from leaves;\nFalling leaves may block rain;\nFootpath: so rain gauge is not interfered with/knocked over/damaged;\nPossibility of rain splashing into gauge;\n(1T + 1P)"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)(i)",
+      "question_text": "Question 1(f)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Day 14"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)(ii)",
+      "question_text": "Question 1(f)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Plot 1007mb as cross AND line (1)\nPlot 4.1mm for day 1 as bar (1)\n(1 + 1)\n2\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)(iii)",
+      "question_text": "Question 1(f)(iii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Hypothesis is true/correct – 1 mark reserve (HA)\nHighest/high rainfall = lowest/low AP (1S)\nLowest/low OR no rainfall = highest / high AP (1S)\nCredit 1 reserve mark for paired data to show contrast – need 4 figures.\ne.g. 0 mm of rain = 1020 mb and 9.3 mm of rain = 1003 mb (1DR)\ne.g. 2.5 mm of rain = 1012 mb and 4.1 mm of rain = 1007 mb (1DR)\n(1HA + 1S + 1DR)\nNote: Hypothesis is false/partially true = 0 (XHA) This conclusion is wrong but\ncredit any relevant evidence supporting the correct conclusion. If no\nhypothesis conclusion ^HA and credit evidence supporting correct conclusion."
+        ]
+      }
+    },
+    {
+      "question_number": "1(g)",
+      "question_text": "Question 1(g) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Use a wind vane OR weather vane – 1 mark reserve (1R);\nPut it in an open area/on top of building/on roof/on tall pole/unobstructed/\naway from buildings/hold above head;\nArrow/pointer/vane  turns/spins round/pushed by wind;\nArrow/vane points to compass direction from which wind is blowing;\nOR\nUse a wind sock – 1 mark reserve (1R);\nPut it in open area/on top of building/on roof/on tall pole/unobstructed/away\nfrom buildings;\nSock points in direction wind blowing to;\nUse compass to work out direction;\n(1R + 1 + 1)\n3\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(i)",
+      "question_text": "Question 2(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Central Business District (1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(ii)",
+      "question_text": "Question 2(a)(ii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Note: No credit for emboldened headings below.\nConstruction: (Note: 1 reserve mark; can get all three marks here)\nHigh, tall, multi-storey (buildings) multiple-use buildings, skyscrapers;\nLots of glass/windows/concrete/steel;\nBuildings are tightly packed/clustered together;\nBuildings being built/modern/new;\nAdverts/hoardings;\nShopping: e.g. shops/specialist shops/department stores/high-order shops/\nhigh-end shops/shopping mall/precinct/markets;\nTourism: e.g. castle/museum/historical buildings/hotels;\nTransport: e.g. bus/railway station/public transport terminus/underground\ncar park/multi- storey car park;\nBusinesses: commercial/administration\ne.g. offices/finance/banks/town hall/clocktower/courtrooms/library;\nResidential: e.g. flats/apartments/penthouses;\nEntertainment: e.g. cinemas/theatres/restaurants/cafes;\nHealth/Education/cultural: e.g. schools/universities/religious buildings/\nhospitals;\n(1R + 1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(i)",
+      "question_text": "Question 2(b)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Ensure safety of students;\nTo divide up the tasks between them;\nTo work on different sites/roads;\nTo collect more data/cover more area/quicker data collection;\nCount separately and take average/check OR compare data;\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(ii)",
+      "question_text": "Question 2(b)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Recording sheet should include:\nLocation/place/sample point/site number/road number/distance;\nNumber of pedestrians/pedestrian count;\nExamples of tallying OR space for tallying/recording;\nTotal number/result of tally;\n(1 + 1 + 1)\n3\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(iii)",
+      "question_text": "Question 2(b)(iii) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Planning:\nWhen to do count/how many times to do count per day/whether to do count\non more than one day;\nHow long to do each count for/5–15 mins range/count for same length of\nTime;\nAll (groups) start to count at same time;\nCarrying out:\nTally method/‘clicker’;\nTiming of count/watch/timer;\nStudents do different jobs e.g. one counts–one records-one checks OR two\ncount people going in different directions-one records;\nMore than one/two/three students count then take average OR only 1 student\ncounts;\nNote: Credit either planning or carrying out – no reserved marks.\n(1 + 1 + 1 + 1"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(iv)",
+      "question_text": "Question 2(b)(iv) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "The hypothesis is true for some roads going from the centre to the edge of\nthe CBD. – 1 mark reserve (HA)\nIdentifies 1 road which shows decrease in pedestrians e.g.1, 2, 3, 4, 6, OR 8\n(1S);\nOR All roads support it except 5 and 7/5 and 7 don’t support it (1S);\nOnly credit stats from 175m and 875m (Centre to edge) NOT sites\n1 Reserve Data supporting True\ne.g. Number of pedestrians decreases from 388 to 25 on road 3; OR\ne.g. Number of pedestrians decreases from 222 to 75 on road 8 (1DR);\n1 Reserve Data supporting Not True\ne.g. Number of pedestrians increases from 165 to 197 on road 5; OR\ne.g. Number of pedestrians increases from 179 to 182 on road 7 (1DR);\n(1HA + 1S + 2DR)\nNote: Hypothesis is true for all roads / false for all roads = 0 (XHA). This\nconclusion is wrong but credit any relevant evidence supporting the correct\nconclusion. If no hypothesis conclusion ^HA and credit evidence supporting\ncorrect conclusion.\n4\n©"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)(i)",
+      "question_text": "Question 2(c)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Advantage:\nEasy/quick/time-efficient to count number of storeys;\nDifficult to measure actual height of tall buildings;\nEach storey is approximately same height;\nNo equipment needed;\nDisadvantage:\nDifficult to count high buildings/can’t see all storeys;\nStoreys may be different heights; Note: no double credit with advantage.\n(Students select buildings) not systematic sampling/may be bias/\nnot representative/small sample/get anomalies/choose single storey\nbuildings/only selected 5 buildings;\nHeight includes e.g. towers/spires/pitched roofs not just storeys;\n(1A + 1D)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)(ii)",
+      "question_text": "Question 2(c)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Secondary"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)(iii)",
+      "question_text": "Question 2(c)(iii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Shade 6 (4 to 8) storeys at 700m on road 8 (Crosses);\nShade 2 (less than 4) storeys at 875m on road 8 (Dots);\n(1 + 1)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(i)",
+      "question_text": "Question 2(d)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Road 3 evidence:\nNumber of storeys is more than 16 (at 175m) and 4–8 (storeys) (at 875m)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(ii)",
+      "question_text": "Question 2(d)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Credit evidence from either road 5 or road 6 – 1 mark for correct road\nRoad 5\nNumber of storeys is 13–16 at 175m/centre of CBD/near station and more\nthan 16 storeys at 875m/edge of CBD/furthest point;\nOR\nRoad 6\nNumber of storeys is more than 16 at 175m/centre of CBD/near station and\n875m/edge of CBD;\n(1R + 1E)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(e)(i)",
+      "question_text": "Question 2(e)(i) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Feature:\nis used rarely/less frequently;\nis expensive; Note: not expensive equipment.\nhas a large sphere of influence;\nhigh threshold population;\nExample: Airport/jewellers/hospital/university/solicitors/hi-tech or computer\nstore/theatre/opera house/lawyers/designer stores or e.g. Gucci stores/5-star\nhotel/banks/private clinic/fine dining;\n(1 + 1)\n2\n©\n2e(ii)\nMost/majority/many in centre/clustered or concentrated near CBD/station;\nSome/on roads 5 and 7 on the edge/north of CBD/furthest distance from CBD\n/two on the edge of CBD;\nSome/on roads 1 and 8 between the CBD and the edge;\nExamples with detail: 1 mark MAX/RES with specific sites/distances\ne.g. Located at 175m and 350m on road 1;\ne.g. One located at 875m/on edge of CBD on road 5;\ne.g. One at 175m and one at 875m on road 7;\ne.g. Located at 175, 350, 525 m on road 8;\ne.g. Road 8 has most/three within 525 m of centre;\ne.g. Seven at 175m around centre;\ne.g. Two located at 875 m from centre;\n(1 + 1 + 1R)"
+        ]
+      }
+    }
+  ]
+}

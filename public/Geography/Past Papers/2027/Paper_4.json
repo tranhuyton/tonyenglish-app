@@ -1,0 +1,450 @@
+{
+  "title": "Paper 4",
+  "qp_url": "/Geography/Past Papers/2027/718821-2027-specimen-paper-4.pdf",
+  "in_url": "/Geography/Past Papers/2027/718814-2027-specimen-paper-4-insert.pdf",
+  "i2_url": null,
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "question_text": "Question 1(a) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Which of the following statements are true about longshore drift?\nTick three answers.\nAO1: Knowledge and understanding\n•\nMovement of material up and down the beach is repeated with each\nwave.\n•\nThe prevailing wind influences the direction of longshore drift movement.\n•\nWaves approach the coastline at an angle.\n4 selected answers (maximum 2 marks)\n5 selected answers (maximum 1 mark)\n6 or more selected answers (0 marks)\n3 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Explain why their teacher gave the following advice about doing\nfieldwork safely on the beach.\nMake sure that their phone is fully charged.\nDo not go into the sea.\nAO2: Skills and analysis\nIdeas such as:\n•\nwould be able to communicate/call/use it if they got into difficulty/got\nseparated/in an emergency/if needed help\n•\ndangerous currents/rough sea/danger of drowning.\nAll valid material must be credited.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)",
+      "question_text": "Question 1(c) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "To investigate hypothesis 1 and 2, the students collected 10 pebbles at\neach of 15 sites along the beach.\nDescribe how they could use a quadrat to select pebbles at each site.\nAO1 Knowledge and understanding\nIdeas such as:\n•\nput quadrat on beach/onto ground\n•\nsample pebbles from within quadrat\n•\nuse random numbers to identify squares in quadrat and pick pebbles\nfrom identified squares/pick pebbles from different squares in quadrat.\nAll valid material must be credited.\n3 × 1 mark\n3\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(i)",
+      "question_text": "Question 1(d)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Describe how they could use this equipment to measure the length of\neach pebble.\nAO2: Skills and analysis\nIdeas such as:\n•\nput a pebble into ‘teeth’/prongs/gap (of callipers)/adjust callipers to hold\npebble\n•\nmeasure length on the scale/read or look at the number on scale/\nmeasure length of the gap between ‘teeth’ with a ruler.\nAll valid material must be credited.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(ii)",
+      "question_text": "Question 1(d)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "On Figure 1.2, plot the mean (average) length of the pebbles at site 6.\nAO2: Skills and analysis\n•\nplot 6.4 cm at 600 m"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)(iii)",
+      "question_text": "Question 1(d)(iii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "The students made the conclusion that Hypothesis 1: Pebbles become\nsmaller from west to east along the beach was generally true.\nGive evidence from Figure 1.2 and Table 1.1 to explain their conclusion.\nAO2: Skills and analysis\n•\n1 mark for paired data to show decrease in length\ne.g. site 1/0 m = 8.4 cm and site 15/1680 m = 5.1 cm OR decrease by\n3.3 cm between site 1 and site 15.\nCredit any two sites which show a decrease.\n•\n1 mark for identifying an anomaly to general decrease in length\ne.g. average length at site 8/840 m is longer than at site 7/720 m.\n•\nNo credit for hypothesis conclusion.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(i)",
+      "question_text": "Question 1(e)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Calculate the total roundness index score for Student B’s results and\nwrite the answer on Table 1.2.\nAO2: Skills and analysis\n•\ntotal roundness index score = 25\n1\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(ii)",
+      "question_text": "Question 1(e)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Suggest why the two students’ results of using the roundness index are\ndifferent and how they could agree a total roundness index score for\neach site.\nAO2: Skills and analysis\nIdeas such as:\n•\nindex scores are subjective/compared with diagram/measured by eye/\nestimated\n•\nstudents could average their different scores OR discuss the scores\nwhich they have given.\nAll valid material must be credited.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(iii)",
+      "question_text": "Question 1(e)(iii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "On Figure 1.4 plot the total roundness index score for site 15.\nAO2: Skills and analysis\n•\nplot site 15 = 41 on graph"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)(iv)",
+      "question_text": "Question 1(e)(iv) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "What conclusion should the students make about Hypothesis 2: Pebbles\nbecome rounder from west to east along the beach?\nJustify your decision with evidence from Figure 1.4 and Table 1.1.\nAO2: Skills and analysis\n•\nHypothesis is false/not true 1 mark reserve (HA).\n•\n1 mark for statement:\nthere is no clear pattern/trend/relationship/correlation OR\ntotal roundness index scores vary or fluctuate along beach.\n•\n1 mark for evidence from any three sites which disproves hypothesis:\ne.g. site 4/360 m = 58 and site 12/1320 m = 31 and\nsite 14/1560 m = 52.\nIncorrect hypothesis answer of true/partially false = 0 (XHA). This conclusion\nis wrong, but credit any relevant evidence which supports the correct\nconclusion.\nIf no hypothesis conclusion ^HA and credit evidence which supports the\ncorrect conclusion.\n3 × 1 mark\n3\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)(i)",
+      "question_text": "Question 1(f)(i) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Describe how the students could complete their bi-polar survey.\nAO2: Skills and analysis\nIdeas such as:\n•\nagree what each score/description/advantage and disadvantage means\n•\ncircle groynes, sea wall or rock armour on recording sheet\n•\nindividual student decides the score/pair of students agree the score/rate\nthe method\n•\nmark score on their form/tick the box to show the score\n•\nadd up the total\n•\ncomplete recording sheet for each defence/groynes, sea wall or rock\narmour.\n3 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)(ii)",
+      "question_text": "Question 1(f)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "On Figure 1.7, plot the score for how well the rock armour stops wave\nerosion using the results from Table 1.4.\nAO2: Skills and analysis\n•\nplot +3 (for how well rock armour stops wave erosion)\n1\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "1(f)(iii)",
+      "question_text": "Question 1(f)(iii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Use Figure 1.7 and Table 1.4 to decide which coastal defence is the best.\nUse data to justify your decision.\nAO3: Evaluation and decision-making\nUse Table A to mark candidate responses to this question.\nIdeas such as:\nDecision should be based upon and supported by evidence from Figure 1.7\nand Table 1.4, e.g. best coastal defence are groynes.\nReference is made to advantages and disadvantages of each coastal\ndefence:\n•\nsea wall and/or rock armour protects coast from erosion the most (+3)\n•\ngroynes only score +1 for coastal protection/does it stop wave erosion?\n•\nfor attractiveness all score low: groynes +1, sea wall –1, rock armour –2\n•\nfor access to the beach groynes score the highest +3, whereas sea wall\nand rock armour both score –3\n•\nall score low for is it safe to walk on: groynes –3, sea wall –2, rock\narmour –3.\nComparison between the positive and negative scores for the three\ndefences:\n•\ngroynes score positively for four features and sea wall/rock armour score\npositively for two features\n•\ngroynes: positive scores for attractiveness, access to beach, protect\ncoast, stop wave erosion\n•\nsea wall and rock armour: positive scores for protect coast, stop wave\nerosion.\nComparison between the total scores for the three defences:\ne.g. only groynes have a positive score/groynes have highest score/total\nscore for groynes = +3, for sea wall = 0, for rock armour = –3.\nConsideration of the different importance given to individual features of\neach defence:\ne.g. groynes score higher than the other methods/only positive score for\nattractiveness and access to beach:\n•\nattractiveness: groynes = +1, sea wall = –1, rock armour = –2\n•\naccess to beach: groynes = +3, sea wall = –3, rock armour = –3.\nHowever, groynes score lower than the other methods for protects coast and\nstops wave erosion:\n•\nprotects coast: groynes = +1, sea wall = +3, rock armour = +2\n•\nstops wave erosion: groynes = +1, sea wall = +3, rock armour = +3.\nSome evaluative comment as to which coastal defence is best with justification.\nAll valid material must be credited.\n6\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(i)",
+      "question_text": "Question 2(a)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Define the following terms.\nAO1 Knowledge and understanding\n•\neconomic migrant – a person who travels from one country or area\nto another in order to improve their standard of living/for jobs/for more\nmoney.\n•\nrefugee – a person who leaves their country of origin because of fear or\npersecution and asks for permission to stay in a different country.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(ii)",
+      "question_text": "Question 2(a)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Explain what is meant by push and pull factors. Do not give examples.\nAO1 Knowledge and understanding\n•\nPush factors: reasons/negative factors which make/encourage people to\nleave/go away from an area/country/emigrate.\n•\nPull factors: reasons/positive factors which attract/make people want to\ncome to an area/country/immigrate.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(i)",
+      "question_text": "Question 2(b)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Which of the following methods would be suitable to show this data?\nTick one answer.\nAO1 Knowledge and understanding\n•\npie graph"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(ii)",
+      "question_text": "Question 2(b)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "What name given to data or information researched from the internet or\nanother source, and not collected by the students themselves?\nAO1 Knowledge and understanding\n•\nsecondary (data)"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)(i)",
+      "question_text": "Question 2(c)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Describe how the students could use a random sampling method to\nselect 100 people to complete their questionnaire.\nAO2: Skills and analysis\nIdeas such as:\n•\nuse random number tables to generate order to ask people/pick numbers\nout of a hat\n•\nchoose people who fit the sequence identified\n•\nask anybody/next person/no pattern/don’t consider age/sex (maximum\n1 mark).\n2 × 1 mark\n2\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)(ii)",
+      "question_text": "Question 2(c)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Suggest why the students asked people ‘Have you moved to live in\nRome from abroad?’ before beginning the questionnaire.\nAO2: Skills and analysis\nIdeas such as:\n•\nto find out if they are migrants from abroad\n•\nstudents only want to ask people who have moved to live in Rome from\nabroad/make sure they are targeting the right people\n•\nno need to continue with the questionnaire if person is not a migrant/not\nwaste person’s or student’s time\n•\nresults will be unreliable/inaccurate/not valid/contain wrong information if\nnon-migrants are included\n•\nso that answers are relevant to hypothesis.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)(iii)",
+      "question_text": "Question 2(c)(iii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Suggest two other pieces of advice the teacher could give the students\nabout how to use the questionnaire.\nAO2: Skills and analysis\nIdeas such as:\n•\nwork in pairs/groups/don’t work alone\n•\nintroduce yourself/explain what the questionnaire is about\n•\nbe polite/respectful/thank interviewees\n•\nask if people are willing to answer/accept if people don’t want to answer/\ndon’t force people to answer\n•\ndon’t block pavement/doorways\n•\ngo to different parts of the area\n•\nchoose a time when there are people around/go to the area at different\ntimes.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(i)",
+      "question_text": "Question 2(d)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "On Figure 2.2, use the following data to plot the number of migrants\nborn in Mali and the Philippines.\nAO2: Skills and analysis\nDraw arrows from:\n•\nMali = 2\n•\nPhilippines = 11\nNB: Correct width of arrow from named country to Rome/Italy.\n2 × 1 mark\n2\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(ii)",
+      "question_text": "Question 2(d)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Why is a flow line map an appropriate method to show the data from\nQuestion 1 of the questionnaire?\nAO2: Skills and analysis\nIdeas such as:\n•\nshows by arrows where/the countries migrants came from\n•\nshows by width of arrow/scale the number of people coming from each\ncountry\n•\nshows where people come from/number of people coming from each\ncountry (maximum 1 mark).\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "2(d)(iii)",
+      "question_text": "Question 2(d)(iii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "What conclusion should the students make about Hypothesis 1:\nMost international migrants who live in Rome were born in Europe?\nSupport your answer with data from Table 2.1.\nAO2: Skills and analysis\nIdeas such as:\n•\nhypothesis is true – 1 mark reserve (HA)\n•\n54 migrants from Europe and 46 come from Africa, Asia and South\nAmerica/other continents\n•\n54 out of 100/54% come from Europe\n•\nif no hypothesis conclusion credit 1 mark for data.\nIncorrect hypothesis answer of false/partially true = 0 (XHA). This conclusion\nis wrong, but credit any relevant evidence which supports the correct\nconclusion.\nIf no hypothesis conclusion ^HA and credit evidence which supports the\ncorrect conclusion.\n2 × 1 mark"
+        ]
+      }
+    },
+    {
+      "question_number": "2(e)(i)",
+      "question_text": "Question 2(e)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Use the key to plot the results for push factors on the divided bar graph\nin Figure 2.3.\nAO2: Skills and analysis\nCompletion of divided bar graph for push factors:\n•\n1 mark for dividing line at 35\n•\n1 mark for dividing lines at 54 and 61\n•\n1 mark for correct shading using the key.\n3 × 1 mark\n3\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "2(e)(ii)",
+      "question_text": "Question 2(e)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "Does the data support Hypothesis 2:Pull factors affected the decision to\nmigrate to Rome more than push factors?\nUse evidence from Figure 2.3 and Table 2.2 to justify your decision.\nAO2: Skills and analysis\n•\nNo/Hypothesis is false – 1 mark reserve (HA)\n1 mark for a statement\n1 mark for data which must support a statement\nIdeas such as:\n•\npush factors are more important/there are more answers about push\nfactors/more migrants identify push factors\ntotal push factors = 65 and total pull factors = 35/30 more people give\npush factors in their answer\n•\nhighest scoring factor is war or conflict which is a push factor and it\nequals all the pull factors\nhighest scoring push factor/war or conflict and all pull factors = 35\n•\nhighest scoring push factor/war or conflict is more than highest scoring\npull factor/employment or higher wages\nhighest scoring push factor/war or conflict = 35 and highest scoring pull\nfactor/employment or higher wages = 18.\nHypothesis is true/partially false = 0 (XHA). This conclusion is wrong, but\ncredit any relevant evidence which supports the correct conclusion.\nIf no hypothesis conclusion ^HA and credit evidence.\n3 × 1 mark\n3\nFor examination\nSPECIMEN\b\nfrom 2027\n©Question"
+        ]
+      }
+    },
+    {
+      "question_number": "2(f)",
+      "question_text": "Question 2(f) (See PDF for details)",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 6",
+        "keywords_required": [
+          "Use the data in Table 2.3 to explain to what extent was the migrants’\nmove to Rome a success for the migrants.\nInclude statistics from Table 2.3 to justify your answer.\nAO3: Evaluation and decision-making\nUse Table A to mark candidate responses to this question.\nDon’t agree because:\n•\n(many) migrants regretted their decision to move to Rome\n•\nmigrants said that problems were greater than benefits, e.g. 420 answers\nfor problems and 280 answers for benefits\n•\nthe main problems identified was high cost of living which was higher\nscoring than the main benefit of opportunity to work, e.g. high cost of\nliving = 92 answers and opportunity to work = 67 answers\n•\nthe three main problems were all higher scoring than the main benefit,\ne.g. 92, 74, 69 answers compared with 67 answers\n•\nmore problems were identified than benefits, e.g. 8 problems and\n6 benefits.\nAgree/partially agree it was a success because:\n•\nmigrants can get jobs (67 out of 100)\n•\nchildren can go to school (64 out of 100)\n•\nthere is good healthcare (53 out of 100).\nDecision should be made based on and supported by evidence in Table 2.3.\nReference is made to benefits and problems identified in Table 2.3.\nComparison between the number of benefits and problems in Table 2.3.\nComparison between the number of answers identifying problems and\nbenefits in total in Table 2.3.\nConsideration of the different importance given to individual benefits and\nproblems identified in Table 2.3.\nOverall conclusion e.g. disagree because there are more problems identified\nthan benefits etc.\nAll valid material must be credited."
+        ]
+      }
+    }
+  ]
+}
