@@ -1,0 +1,193 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Describe how the velocity of a river changes as it flows downhill.",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 (Knowledge) and AO2 (Understanding): Describe the change in velocity.",
+        "keywords_required": [
+          "Velocity generally increases as a river flows downhill from the upper to the lower course.",
+          "Despite the gradient becoming gentler, the river becomes more efficient due to a smoother channel (less friction) and a larger volume of water."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Explain why the velocity of a river changes as it flows downhill.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Explain the reasons for the change in velocity.",
+        "keywords_required": [
+          "In the upper course, the channel is shallow and rocky, causing high friction which slows the water down.",
+          "Further downstream, tributaries join, increasing the volume of water (discharge).",
+          "The channel becomes wider, deeper, and smoother.",
+          "This reduces the proportion of water in contact with the bed and banks, lowering friction and increasing average velocity."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Figure 1.1 shows the water cycle, or hydrological cycle. Identify the key terms that correctly complete Boxes A, B and C.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 (Knowledge): Correctly identify the missing terms in the hydrological cycle diagram.",
+        "keywords_required": [
+          "Expect 3 terms such as Precipitation, Evaporation, Condensation, Transpiration, Surface runoff, or Groundwater flow depending on the diagram's blank boxes."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Copy the following text and complete the gaps using the words below:\nwatershed, tributary, upland, confluence\n\nA drainage basin is an area of land drained by a river and its tributaries. It moves water from ________ areas towards the sea. The ________ is the boundary between each drainage basin. A ________ is the meeting point between two rivers of similar size, and a ________ is a smaller river or stream that feeds into the main river channel.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Accurately place the key terms into the correct gaps.",
+        "keywords_required": [
+          "1. upland",
+          "2. watershed",
+          "3. confluence",
+          "4. tributary"
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "There are three main river processes: erosion, transportation and deposition. Sort the key terms from Table 1.1 into two categories: erosion processes and transportation processes.\n\ntraction, hydraulic action, saltation, abrasion, attrition, suspension",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Categorise the processes correctly into erosion and transportation.",
+        "keywords_required": [
+          "Erosion processes: hydraulic action, abrasion, attrition.",
+          "Transportation processes: traction, saltation, suspension."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Which processes of erosion and transportation are missing from Table 1.1?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify the missing processes from the standard lists of river processes.",
+        "keywords_required": [
+          "Missing erosion process: Solution (or Corrosion).",
+          "Missing transportation process: Solution."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "Explain how erosion, transportation and deposition work together in a river.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 (Understanding): Explain the continuous nature of river processes.",
+        "keywords_required": [
+          "Erosion breaks down material from the river bed and banks, providing sediment (load).",
+          "Transportation moves this eroded material downstream.",
+          "The material is transported as long as the river has enough energy.",
+          "Deposition occurs when the river's velocity and energy fall, causing it to drop the transported material."
+        ]
+      }
+    },
+    {
+      "question_number": "8",
+      "question_text": "Explain why vertical erosion is more likely to take place in the upper course of a river.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Give reasons for the dominance of vertical erosion in the upper course.",
+        "keywords_required": [
+          "In the upper course, the river is high above sea level (base level), giving it high potential energy.",
+          "The gradient is steep, so the water flows rapidly downwards.",
+          "The river uses its energy to cut downwards into the channel bed (vertical erosion) to reach base level.",
+          "The bedload is large and angular, which aids downward abrasion."
+        ]
+      }
+    },
+    {
+      "question_number": "9",
+      "question_text": "Figure 1.2 shows a lowland river. Explain why rivers in the lower course have a larger wetted perimeter.",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the reason for a larger wetted perimeter.",
+        "keywords_required": [
+          "Rivers in the lower course have a larger discharge due to many tributaries joining.",
+          "To hold this increased volume of water, the channel must be much wider and deeper, increasing the total length of the bed and banks in contact with the water (wetted perimeter)."
+        ]
+      }
+    },
+    {
+      "question_number": "10",
+      "question_text": "Explain why alluvium (deposited material) is often found in the middle and lower courses of a river.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the conditions leading to deposition.",
+        "keywords_required": [
+          "The gradient becomes gentler in the middle and lower courses, reducing the river's energy.",
+          "When the river floods over its banks onto the floodplain, friction increases rapidly.",
+          "This sudden increase in friction causes a sharp drop in velocity and energy.",
+          "As a result, the river can no longer transport its load and deposits the finer sediment (alluvium) across the floodplain."
+        ]
+      }
+    }
+  ]
+}

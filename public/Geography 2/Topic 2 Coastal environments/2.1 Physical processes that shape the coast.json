@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "Sort the following terms into 'erosion processes' or 'deposition processes'.\n\nhydraulic action, longshore drift, corrasion, a wave losing energy and dropping material on a beach, formation of a spit, corrosion",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Categorise the coastal processes. (Note: longshore drift is transportation, but if strictly forced into two categories, it often groups with depositional features like spits, or should be identified as transportation).",
+        "keywords_required": [
+          "Erosion processes: hydraulic action, corrasion, corrosion.",
+          "Deposition processes: a wave losing energy and dropping material on a beach, formation of a spit.",
+          "Transportation: longshore drift."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Decide if the following statements are true or false:\na) Swash carries sediment down the beach.\nb) Longshore drift is influenced by the direction of prevailing winds.\nc) Suspension involves large pebbles rolling along the seabed.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify correct statements.",
+        "keywords_required": [
+          "a) False (Swash carries sediment UP the beach; backwash carries it down).",
+          "b) True (Prevailing winds determine the angle waves hit the beach).",
+          "c) False (Suspension is fine material carried in the water; large pebbles rolling is traction)."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "How does wave refraction help to form headlands and bays?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the role of wave refraction.",
+        "keywords_required": [
+          "As waves approach a discordant coastline, the water gets shallower in front of the headland first.",
+          "This causes the wave to slow down, bend, and concentrate its energy on the headland, increasing erosion (forming cliffs/caves).",
+          "In the bay, the water is deeper, so the waves diverge and dissipate their energy.",
+          "This loss of energy leads to deposition in the bay, helping to form a beach."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Produce a labelled diagram of a destructive wave, showing its main characteristics.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Characteristics of a destructive wave.",
+        "keywords_required": [
+          "High wave height (amplitude) and steep wave.",
+          "Short wavelength and high frequency (10-15 per minute).",
+          "Weak swash and strong backwash.",
+          "Erodes the beach (plunging breaker)."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Describe how sediment is moved along the coast.",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Describe the process of longshore drift.",
+        "keywords_required": [
+          "Prevailing winds cause waves to approach the coast at an angle.",
+          "The swash carries sediment up the beach at this same angle.",
+          "The backwash carries sediment straight down the beach under the influence of gravity (at a right angle to the shoreline).",
+          "This creates a zig-zag movement of sediment along the beach.",
+          "This process is known as longshore drift."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Study Figure 2.1. Describe the impacts of installing groynes on this coastline shown in Figure 2.1.",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Describe the visual impacts from the figure.",
+        "keywords_required": [
+          "Sediment has built up on one side of the groyne (up-drift side).",
+          "This creates a wider, higher beach on that side.",
+          "On the other side of the groyne (down-drift side), there is less sand / the beach is narrower.",
+          "The groynes interrupt longshore drift, trapping sand.",
+          "This provides coastal protection by absorbing wave energy where the beach is wide."
+        ]
+      }
+    }
+  ]
+}

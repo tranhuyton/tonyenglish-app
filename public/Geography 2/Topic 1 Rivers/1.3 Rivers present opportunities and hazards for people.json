@@ -1,0 +1,174 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "List three opportunities that rivers can provide.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify three opportunities provided by rivers.",
+        "keywords_required": [
+          "Any three of: Water supply (domestic or industrial), irrigation for agriculture, transport, hydroelectric power (HEP), fishing, fertile soil (alluvium) for farming, tourism/recreation."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "How can agriculture contribute to river pollution?",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Explain the connection between farming activities and water pollution.",
+        "keywords_required": [
+          "Fertilisers and pesticides applied to crops can be washed into rivers by surface runoff.",
+          "Animal waste (slurry) from livestock farming can leak into watercourses.",
+          "These chemicals cause eutrophication, depleting oxygen and killing aquatic life."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Name one human cause of flooding and one natural cause of flooding.",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify one human and one natural cause.",
+        "keywords_required": [
+          "Human cause: Deforestation, urbanisation (increasing impermeable surfaces).",
+          "Natural cause: Heavy/prolonged rainfall, snowmelt, steep relief, impermeable rock."
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "Compare the impacts on people of river flooding and pollution.",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Compare the social and economic impacts of both hazards.",
+        "keywords_required": [
+          "Both flooding and pollution can cause severe health issues; flooding can spread waterborne diseases (like cholera), while pollution introduces toxic chemicals into drinking water.",
+          "Both can severely impact livelihoods; flooding destroys crops and businesses instantly, whereas pollution can slowly destroy fishing industries.",
+          "However, flooding causes immediate physical damage to homes and infrastructure, displacing people suddenly.",
+          "In contrast, pollution's impacts are often long-term and unseen initially, affecting health over time without destroying physical property."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Explain the economic impacts of flooding.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Detail the financial consequences of floods.",
+        "keywords_required": [
+          "Destruction of businesses and factories leads to loss of income and jobs.",
+          "Damage to infrastructure (roads, bridges) requires massive repair costs from the government.",
+          "Crops and livestock are destroyed, leading to financial ruin for farmers and potential food shortages.",
+          "Insurance premiums increase, or properties become uninsurable, reducing their value."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Compare the effectiveness of hard engineering and soft engineering techniques used in the management of flooding.",
+      "total_marks": 6,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Evaluate and compare both management approaches.",
+        "keywords_required": [
+          "Hard engineering (e.g., dams, levees) is often highly effective at preventing flooding in targeted areas immediately.",
+          "However, it is very expensive to build and maintain, and can be visually intrusive or harm the environment.",
+          "Soft engineering (e.g., afforestation, floodplain zoning) works with nature, making it cheaper and more environmentally friendly.",
+          "However, soft engineering is often less effective for immediate, large-scale flood prevention and requires large areas of land, which can cause conflicts with farmers or developers.",
+          "Overall, hard engineering offers stronger direct protection but at a high cost, while soft engineering is more sustainable but less robust."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "Explain how afforestation can help to prevent river flooding.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the mechanism by which trees reduce flood risk.",
+        "keywords_required": [
+          "Trees intercept rainfall with their leaves and branches, slowing the rate at which water reaches the ground.",
+          "Roots absorb water from the soil, reducing the amount of surface runoff.",
+          "This increases the lag time (the time between peak rainfall and peak river discharge), keeping the river level lower."
+        ]
+      }
+    },
+    {
+      "question_number": "8a",
+      "question_text": "How does hydroelectric power (HEP) use rivers to generate electricity?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Explain the basic mechanism of HEP.",
+        "keywords_required": [
+          "A dam is built across a river to trap water and create a reservoir.",
+          "The water flows through tunnels in the dam under high pressure, turning turbines which drive generators to produce electricity."
+        ]
+      }
+    },
+    {
+      "question_number": "8b",
+      "question_text": "Is HEP a renewable or non-renewable source of energy? Explain your answer.",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: State the classification and provide a reason.",
+        "keywords_required": [
+          "It is a renewable source of energy.",
+          "This is because the water used to generate the electricity is naturally replenished by the water cycle (rainfall) and will not run out."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "questions": [
+    {
+      "question_number": "1a",
+      "question_text": "Name two coastal landforms of erosion.",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify two coastal landforms of erosion.",
+        "keywords_required": [
+          "Any two of: Cliff, wave-cut platform, cave, arch, stack, stump, headland, bay."
+        ]
+      }
+    },
+    {
+      "question_number": "1b",
+      "question_text": "Explain how concordant coastlines differ from discordant coastlines.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Explain the difference in rock arrangement between the two coastlines.",
+        "keywords_required": [
+          "A concordant coastline has bands of different rock types running parallel to the coast.",
+          "A discordant coastline has bands of different rock types running perpendicular (at right angles) to the coast.",
+          "Discordant coastlines lead to the formation of headlands and bays due to differential erosion.",
+          "Concordant coastlines typically have straight cliffs with coves forming where the harder outer rock is breached."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Explain how waterfalls are formed, using labelled diagrams to support your answer.",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Explain the formation process of a waterfall.",
+        "keywords_required": [
+          "Waterfalls form where a band of hard rock overlies a band of softer rock.",
+          "The softer rock is eroded more quickly by processes like hydraulic action and abrasion.",
+          "This undercuts the hard rock, leaving an overhang.",
+          "Eventually, the overhang collapses due to lack of support and gravity.",
+          "The collapsed rock falls into the plunge pool and aids further abrasion, causing the waterfall to retreat upstream over time to form a gorge."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Which of the following landforms are found in the upper course of a river?\nwaterfall, oxbow lake, floodplain, rapids, delta, gorge",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify the upper course landforms.",
+        "keywords_required": [
+          "waterfall",
+          "rapids",
+          "gorge"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "How do levees form?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the depositional process of levee formation.",
+        "keywords_required": [
+          "Levees form in the lower course of a river when it floods.",
+          "As water spills over the banks onto the floodplain, friction increases and velocity suddenly drops.",
+          "This loss of energy causes the river to deposit its heaviest and coarsest load first, closest to the river banks.",
+          "Finer sediment (alluvium) is carried further across the floodplain.",
+          "After repeated floods, the coarse deposits build up to form raised embankments called levees along the river."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Compare the features of rapids and waterfalls.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3 (Skills): Identify similarities and differences between the two landforms.",
+        "keywords_required": [
+          "Both are found in the upper course of a river where there is alternating hard and soft rock.",
+          "Both feature turbulent, fast-flowing water.",
+          "However, a waterfall has a sudden, vertical drop, whereas rapids have a steep but uneven gradient without a sheer drop.",
+          "Waterfalls often have a plunge pool at the base, which rapids do not have."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Figure 1.3 shows a cross-section of a river meander. Compare the outside of the meander (A) with the inside of the meander (B).",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2 and AO3: Compare the characteristics of the inside and outside of a meander bend.",
+        "keywords_required": [
+          "The outside of the meander (A) is deeper, whereas the inside (B) is shallower.",
+          "The outside bend has a steeper bank (river cliff), while the inside bend has a gently sloping bank (slip-off slope).",
+          "The outside bend is characterized by faster flowing water and erosion, whereas the inside bend has slower flowing water and deposition."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "Figures 1.4 and 1.5 show two sections of the River Dove as it flows through Derbyshire and Staffordshire in the UK. Compare the characteristics of the river and its valley in the two locations.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Use visual evidence to compare the two river sections.",
+        "keywords_required": [
+          "In Figure 1.4 (Milldale), the valley is narrow and V-shaped, whereas in Figure 1.5 (Fauld), the valley is wide and flat.",
+          "The river channel in Figure 1.4 is narrow and shallow, while in Figure 1.5 it is much wider.",
+          "The gradient in Figure 1.4 is steeper compared to the gentle, flat gradient in Figure 1.5.",
+          "Figure 1.5 shows meanders and a floodplain, which are absent in Figure 1.4."
+        ]
+      }
+    }
+  ]
+}

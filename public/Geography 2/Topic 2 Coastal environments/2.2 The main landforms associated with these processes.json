@@ -1,0 +1,125 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "RECALL AND CONNECT 1:\na) What are the benefits of renewable energy?\nb) What are the drawbacks of renewable energy?\nc) Name three inputs used on a farm.\nd) What are some strategies that improve food supply?",
+      "total_marks": 8,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Answer cross-topic questions.",
+        "keywords_required": [
+          "a) Benefits: Sustainable (won't run out), produces little to no greenhouse gases/pollution.",
+          "b) Drawbacks: Often expensive to set up, can be unreliable (dependent on weather/wind/sun), visual/noise pollution.",
+          "c) Inputs: Capital, labour, seeds, fertilisers, machinery, pesticides, land/climate.",
+          "d) Strategies: High-yield varieties (HYVs), irrigation, mechanisation, use of agrochemicals (fertilisers), genetically modified (GM) crops."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Match the landform, a-d, with its description, 1-4.\na) headland\nb) bay\nc) stack\nd) arch\n\n1. A vertical column of rock that stands alone in the sea, detached from the mainland.\n2. A natural opening in a rock face where the sea has eroded through a headland.\n3. A curved indentation of the coastline between two headlands.\n4. A narrow piece of land that sticks out from the coastline into the sea.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Match definitions correctly.",
+        "keywords_required": [
+          "a) headland - 4",
+          "b) bay - 3",
+          "c) stack - 1",
+          "d) arch - 2"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Complete the gaps in these sentences about coastal landforms using the words below.\ndunes, wave-cut platform, direction, constructive waves, hook, cave, marsh, cliff, stack, beach, vegetation, bar\n\na) As a result of wave action at the base of a ________, a wave-cut notch can develop over time between the points at which low tide and high tide reach. As the cliff erodes, collapses and retreats over time, a ________ is left behind.\nb) A typical sequence for coastal erosional landforms is: crack, ________, arch, ________, stump.\nc) A ________ is a common landform of deposition and occurs in a sheltered area, such as a bay, where waves deposit sand or pebbles. ________ help build up a beach, as they have a greater swash than backwash.\nd) Coastal ________ are formed from loose sand that winds blow onshore. Debris on the beach slows the wind down, causing the wind to deposit the sand. Over time these sand mounds grow into larger dunes, as more sand is deposited and ________ stabilises them.\ne) A spit forms where there is a change in ________ of the coastline, such as at a headland. If the spit continues to grow and is influenced by changes in wave patterns or wind direction, it may curve at its outer end. This forms a ________. Often a ________ develops behind a spit. If a spit continues to grow across a bay and connects two headlands together, it forms a coastal ________.",
+      "total_marks": 11,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Fill in the correct terms.",
+        "keywords_required": [
+          "a) cliff, wave-cut platform",
+          "b) cave, stack",
+          "c) beach, constructive waves",
+          "d) dunes, vegetation",
+          "e) direction, hook, marsh, bar"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "What landforms may be formed along a discordant coastline and why?",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO2: Explain the formation of headlands and bays.",
+        "keywords_required": [
+          "Headlands and bays.",
+          "Discordant coastlines have alternating bands of hard and soft rock at right angles to the sea.",
+          "Differential erosion occurs because the soft rock erodes faster to form bays.",
+          "The harder rock is more resistant to erosion and is left sticking out as headlands."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "Describe a concordant coastline.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Describe the features of a concordant coast.",
+        "keywords_required": [
+          "Rock bands run parallel to the coast.",
+          "The outer rock is typically a hard, resistant rock.",
+          "If the outer rock is breached, the sea rapidly erodes the softer rock behind it to form coves (e.g. Lulworth Cove)."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Study Figure 2.2. Describe the landform labelled X in Figure 2.2.",
+      "total_marks": 5,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Describe the visual characteristics of the landform (likely an arch or a stack depending on the image).",
+        "keywords_required": [
+          "A vertical column or pillar of rock.",
+          "Detached from the mainland.",
+          "Steep sides.",
+          "Made of solid rock.",
+          "Surrounded by water/the sea."
+        ]
+      }
+    }
+  ]
+}

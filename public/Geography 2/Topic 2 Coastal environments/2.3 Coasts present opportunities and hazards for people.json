@@ -1,0 +1,180 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "question_text": "RECALL AND CONNECT 2:\na) What are the economic benefits of living near a volcano?\nb) Name three scales that are used to measure earthquakes.\nc) What is a lahar?\nd) Draw a labelled diagram to show the main features of a cinder cone volcano.",
+      "total_marks": 8,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Answer cross-topic questions on tectonic hazards.",
+        "keywords_required": [
+          "a) Fertile volcanic soils (good for agriculture), geothermal energy, tourism.",
+          "b) Richter scale, Mercalli scale, Moment Magnitude scale.",
+          "c) A destructive mudflow on the slopes of a volcano.",
+          "d) Diagram showing steep conical hill, bowl-shaped crater at the summit, built from volcanic ash/cinders."
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Copy and complete Tables 2.1 and 2.2.\nHard engineering: Sea wall, Groynes.\nSoft engineering: Beach nourishment, Managed retreat.\n(For each, provide: Description, Advantage, Disadvantage, Level of sustainability).",
+      "total_marks": 16,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Evaluate coastal management strategies.",
+        "keywords_required": [
+          "Sea wall: Concrete wall; prevents erosion and flooding; expensive and ugly; low sustainability.",
+          "Groynes: Wooden/stone fences built at right angles to the coast; traps sand to build beach; starves beaches down-drift of sand; moderate/low sustainability.",
+          "Beach nourishment: Adding sand to a beach; looks natural and cheap; needs constant replacing; moderate sustainability.",
+          "Managed retreat: Allowing the sea to flood low-value land; creates salt marshes and is cheap; loss of land/farmland; high sustainability."
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Decide if the following statements are true or false:\na) Rising sea levels can lead to increased flooding in coastal areas.\nb) Tourism always has a negative impact on coastal environments.\nc) Coastal defences can help reduce the risk of erosion and flooding.\nd) Living near the coast offers no economic benefits.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: True/False.",
+        "keywords_required": [
+          "a) True",
+          "b) False",
+          "c) True",
+          "d) False"
+        ]
+      }
+    },
+    {
+      "question_number": "4",
+      "question_text": "What is coral bleaching?",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Define coral bleaching.",
+        "keywords_required": [
+          "When water is too warm, corals expel the algae (zooxanthellae) living in their tissues.",
+          "This causes the coral to turn completely white and often die."
+        ]
+      }
+    },
+    {
+      "question_number": "5",
+      "question_text": "What are some threats to mangroves?",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: Identify threats to mangroves.",
+        "keywords_required": [
+          "Deforestation for timber and fuel.",
+          "Clearance for aquaculture (e.g. shrimp farming).",
+          "Coastal development and pollution.",
+          "Climate change and sea level rise."
+        ]
+      }
+    },
+    {
+      "question_number": "6",
+      "question_text": "Describe three impacts of a tropical storm.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1: List three impacts.",
+        "keywords_required": [
+          "Strong winds destroying buildings/infrastructure.",
+          "Storm surges causing severe coastal flooding.",
+          "Heavy rainfall leading to inland flooding and landslides.",
+          "Loss of life, destruction of crops."
+        ]
+      }
+    },
+    {
+      "question_number": "7",
+      "question_text": "Study Figure 2.3. Describe the distribution of coral reefs.",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO3: Describe the pattern from the map.",
+        "keywords_required": [
+          "Mainly found between the Tropics (Cancer and Capricorn) / near the Equator.",
+          "Found in shallow, warm waters.",
+          "Concentrations in South East Asia, the Caribbean, and off the east coast of Australia."
+        ]
+      }
+    },
+    {
+      "question_number": "8",
+      "question_text": "Describe two opportunities of living near the coast.",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Give two opportunities and describe them.",
+        "keywords_required": [
+          "Fishing (provides food and income).",
+          "Tourism (beautiful beaches attract visitors, creating jobs).",
+          "Ports/shipping (enables international trade).",
+          "Renewable energy (offshore wind farms, tidal energy)."
+        ]
+      }
+    },
+    {
+      "question_number": "9",
+      "question_text": "Using an example you have studied, describe the impacts of a tropical storm.",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án: "
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "AO1 and AO2: Case study detailing impacts.",
+        "keywords_required": [
+          "Must name a specific tropical storm (e.g. Typhoon Haiyan, Hurricane Katrina).",
+          "Detail primary impacts (e.g. winds destroyed X% of buildings, storm surge flooded Y city).",
+          "Detail secondary impacts (e.g. disease outbreaks due to contaminated water, economic losses, looting)."
+        ]
+      }
+    }
+  ]
+}
