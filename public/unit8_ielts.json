@@ -342,10 +342,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit8_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">MBA: More Bucks for Applicants</h1>\n  <p style=\"margin-bottom: 1rem;\">Compensation trends are changing, but the degree still brings rewards.</p>\n  <p style=\"margin-bottom: 1rem;\">So, you shelled out some serious cash to get that MBA. Was it a good investment? Apparently, the answer is yes—according to a new survey.</p>\n  <p style=\"margin-bottom: 1rem;\">Despite the current lousy economy, MBA-holders are still getting bigger paychecks than others in the work force, according to the 2002 Graduate Management Admission Council (GMAC) Corporate Recruiters Survey.</p>\n  <p style=\"margin-bottom: 1rem;\">Recruiters report they are offering an average base salary of $75,000 to individuals with MBAs. By comparison, recruiters say they're offering about $50,000 for holders of other post-graduate degrees, and $41,000 for those with undergraduate degrees. In addition, 69% indicate they will offer signing bonuses to MBAs.</p>\n  <p style=\"margin-bottom: 1rem;\">This said, the job market is now tipping in favor of the employer. Indeed, 68% of the respondents indicated the weak economy has created a \"buyer's market\" for their companies.</p>\n  <p style=\"margin-bottom: 1rem;\">Even so, recruiters still estimate that 30% of their 2002 hires will be MBAs, increasing to 35% in 2003.</p>\n  <p style=\"margin-bottom: 1rem;\">Which fields do MBA graduates head for? The most popular one is finance: 52% of the recruiters say graduates are seeking MBAs for finance careers. Marketing is a distant second (31%), followed by IT/MIS (25%) and consulting (24%).</p>\n  <p style=\"margin-bottom: 1rem;\">And what are the most important criteria recruiters consider when hiring somebody with an MBA? Surprisingly, it's not the school that the candidate attended.</p>\n  <p style=\"margin-bottom: 1rem;\">Internship and related work experience were deemed the most important criteria, selected by 70% of the respondents. Other key criteria included the candidate's history of increased job responsibility (66%); industry-related internship or work experience (61%) and MBA concentration of study (61%).</p>\n  <p style=\"margin-bottom: 1rem;\">Recruiters deemed internship and related work experience the most important criteria when evaluating MBA students.</p>\n  <p style=\"margin-bottom: 1rem;\">The reputation of the MBA school was only selected by 59% of the respondents, followed by history of leading teams (55%).</p>\n  <p style=\"margin-bottom: 1rem;\">Altogether, 550 recruitment professionals, representing 423 companies, participated in the GMAC survey.</p>\n  <p style=\"margin-bottom: 1rem;\">Other findings in the survey:</p>\n  <p style=\"margin-bottom: 1rem;\">Most recruiters (65%) in the health care and pharmaceutical industries say they have not altered their hiring plans. The economy's impact was felt most by recruiters for the consulting industry (86%), manufacturing (79%), energy and utilities (71%) and technology (69%).</p>\n  <p style=\"margin-bottom: 1rem;\">Three-quarters of recruiters said they did not rescind offers, lay off new MBA hires, delay job starts or move MBA hires into different departments in 2001.</p>\n  <p style=\"margin-bottom: 1rem;\">Just 4% of recruiters rescinded offers this year.</p>\n  <p style=\"margin-bottom: 1rem;\">The number of recruiters for US companies making job offers to MBAs three months or more prior to graduation dropped 10% in 2002. The number offering jobs within weeks of graduation rose slightly.</p>\n  <p style=\"margin-bottom: 1rem;\">A majority of respondents (76%) said the most important criteria in selecting schools at which to recruit are the school's reputation and their existing relationships at the school.</p>\n  <p style=\"margin-bottom: 1rem;\">Other school recruitment factors included the retention history of previous hires (50%) and a sufficiently large candidate pool (50%).</p>\n  <p style=\"margin-bottom: 1rem;\">The Graduate Management Admission Council is a not-for-profit education organization of graduate business schools worldwide. The organization sponsors the Graduate Management Admission Test (GMAT) used as part of the admissions process by graduate management programs around the world.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit8_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">MBA: More Bucks for Applicants</h1>\n  <p style=\"margin-bottom: 1rem;\"><b>Compensation</b> trends are changing, but the degree still brings rewards.</p>\n  <p style=\"margin-bottom: 1rem;\">So, you shelled out some serious cash to get that MBA. Was it a good investment? Apparently, the answer is yes—according to a new <b>survey</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Despite the <b>current</b> <b>lousy</b> economy, MBA-holders are still getting bigger paychecks than others in the <b>work force</b>, according to the 2002 Graduate Management Admission Council (GMAC) <b>Corporate</b> Recruiters <b>Survey</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Recruiters report they are offering an average base salary of $75,000 to individuals with MBAs. By comparison, recruiters say they're offering about $50,000 for holders of other <b>post-graduate</b> degrees, and $41,000 for those with <b>undergraduate</b> degrees. In addition, 69% indicate they will offer signing bonuses to MBAs.</p>\n  <p style=\"margin-bottom: 1rem;\">This said, the job market is now tipping in favor of the employer. Indeed, 68% of the respondents indicated the weak economy has created a \"buyer's market\" for their companies.</p>\n  <p style=\"margin-bottom: 1rem;\">Even so, recruiters still <b>estimate</b> that 30% of their 2002 hires will be MBAs, increasing to 35% in 2003.</p>\n  <p style=\"margin-bottom: 1rem;\">Which fields do MBA graduates <b>head for</b>? The most popular one is finance: 52% of the recruiters say graduates are seeking MBAs for finance careers. <b>Marketing</b> is a distant second (31%), followed by IT/MIS (25%) and consulting (24%).</p>\n  <p style=\"margin-bottom: 1rem;\">And what are the most important <b>criteria</b> recruiters consider when hiring somebody with an MBA? Surprisingly, it's not the school that the <b>candidate</b> attended.</p>\n  <p style=\"margin-bottom: 1rem;\"><b>Internship</b> and related work experience were deemed the most important <b>criteria</b>, selected by 70% of the respondents. Other key <b>criteria</b> included the <b>candidate</b>'s history of increased job responsibility (66%); industry-related <b>internship</b> or work experience (61%) and MBA concentration of study (61%).</p>\n  <p style=\"margin-bottom: 1rem;\">Recruiters deemed <b>internship</b> and related work experience the most important <b>criteria</b> when evaluating MBA students.</p>\n  <p style=\"margin-bottom: 1rem;\">The <b>reputation</b> of the MBA school was only selected by 59% of the respondents, followed by history of leading teams (55%).</p>\n  <p style=\"margin-bottom: 1rem;\">Altogether, 550 recruitment professionals, representing 423 companies, participated in the GMAC <b>survey</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Other findings in the <b>survey</b>:</p>\n  <p style=\"margin-bottom: 1rem;\">Most recruiters (65%) in the health care and <b>pharmaceutical</b> industries say they have not altered their hiring plans. The economy's <b>impact</b> was felt most by recruiters for the consulting industry (86%), manufacturing (79%), energy and <b>utilities</b> (71%) and technology (69%).</p>\n  <p style=\"margin-bottom: 1rem;\">Three-quarters of recruiters said they did not <b>rescind</b> offers, <b>lay off</b> new MBA hires, delay job starts or move MBA hires into different departments in 2001.</p>\n  <p style=\"margin-bottom: 1rem;\">Just 4% of recruiters rescinded offers this year.</p>\n  <p style=\"margin-bottom: 1rem;\">The number of recruiters for US companies making job offers to MBAs three months or more <b>prior to</b> graduation dropped 10% in 2002. The number offering jobs within weeks of graduation rose <b>slightly</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">A majority of respondents (76%) said the most important <b>criteria</b> in selecting schools at which to recruit are the school's <b>reputation</b> and their existing relationships at the school.</p>\n  <p style=\"margin-bottom: 1rem;\">Other school recruitment factors included the <b>retention</b> history of previous hires (50%) and a sufficiently large <b>candidate</b> <b>pool</b> (50%).</p>\n  <p style=\"margin-bottom: 1rem;\">The Graduate Management Admission Council is a not-for-<b>profit</b> education organization of graduate business schools worldwide. The organization sponsors the Graduate Management Admission Test (GMAT) used as part of the admissions process by graduate management programs around the world.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u8_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u8_kt_0",
+              "content": "1. He was paid a sum of money as a [ 1 ] for his loss in the fire.<br/><br/>2. The [ 2 ] towards accelerated government expenditure has got out of hand.<br/><br/>3. John is the [ 3 ] leader of the game.<br/><br/>4. All directors want to reorganize the [ 4 ] structure.<br/><br/>5. The house is still under [ 5 ].",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "compensation"
+            },
+            {
+              "id": "u8_kt_1",
+              "content": "1. He was paid a sum of money as a [ 1 ] for his loss in the fire.<br/><br/>2. The [ 2 ] towards accelerated government expenditure has got out of hand.<br/><br/>3. John is the [ 3 ] leader of the game.<br/><br/>4. All directors want to reorganize the [ 4 ] structure.<br/><br/>5. The house is still under [ 5 ].",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "trend"
+            },
+            {
+              "id": "u8_kt_2",
+              "content": "1. He was paid a sum of money as a [ 1 ] for his loss in the fire.<br/><br/>2. The [ 2 ] towards accelerated government expenditure has got out of hand.<br/><br/>3. John is the [ 3 ] leader of the game.<br/><br/>4. All directors want to reorganize the [ 4 ] structure.<br/><br/>5. The house is still under [ 5 ].",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "current"
+            },
+            {
+              "id": "u8_kt_3",
+              "content": "1. He was paid a sum of money as a [ 1 ] for his loss in the fire.<br/><br/>2. The [ 2 ] towards accelerated government expenditure has got out of hand.<br/><br/>3. John is the [ 3 ] leader of the game.<br/><br/>4. All directors want to reorganize the [ 4 ] structure.<br/><br/>5. The house is still under [ 5 ].",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "corporate"
+            },
+            {
+              "id": "u8_kt_4",
+              "content": "1. He was paid a sum of money as a [ 1 ] for his loss in the fire.<br/><br/>2. The [ 2 ] towards accelerated government expenditure has got out of hand.<br/><br/>3. John is the [ 3 ] leader of the game.<br/><br/>4. All directors want to reorganize the [ 4 ] structure.<br/><br/>5. The house is still under [ 5 ].",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "survey"
+            },
+            {
+              "id": "u8_kt_5",
+              "content": "6. He got a vacation [ 1 ].<br/><br/>7. A debater's highest [ 2 ] is reasoning.<br/><br/>8. There were three [ 3 ] for the vacancy.<br/><br/>9. The government [ 4 ] the country's future power needs more important.<br/><br/>10. The school has a good [ 5 ] for exam results.",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "bonus"
+            },
+            {
+              "id": "u8_kt_6",
+              "content": "6. He got a vacation [ 1 ].<br/><br/>7. A debater's highest [ 2 ] is reasoning.<br/><br/>8. There were three [ 3 ] for the vacancy.<br/><br/>9. The government [ 4 ] the country's future power needs more important.<br/><br/>10. The school has a good [ 5 ] for exam results.",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "criterion"
+            },
+            {
+              "id": "u8_kt_7",
+              "content": "6. He got a vacation [ 1 ].<br/><br/>7. A debater's highest [ 2 ] is reasoning.<br/><br/>8. There were three [ 3 ] for the vacancy.<br/><br/>9. The government [ 4 ] the country's future power needs more important.<br/><br/>10. The school has a good [ 5 ] for exam results.",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "candidates"
+            },
+            {
+              "id": "u8_kt_8",
+              "content": "6. He got a vacation [ 1 ].<br/><br/>7. A debater's highest [ 2 ] is reasoning.<br/><br/>8. There were three [ 3 ] for the vacancy.<br/><br/>9. The government [ 4 ] the country's future power needs more important.<br/><br/>10. The school has a good [ 5 ] for exam results.",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "deemed"
+            },
+            {
+              "id": "u8_kt_9",
+              "content": "6. He got a vacation [ 1 ].<br/><br/>7. A debater's highest [ 2 ] is reasoning.<br/><br/>8. There were three [ 3 ] for the vacancy.<br/><br/>9. The government [ 4 ] the country's future power needs more important.<br/><br/>10. The school has a good [ 5 ] for exam results.",
+              "options": [
+                "compensation",
+                "trend",
+                "current",
+                "corporate",
+                "survey",
+                "bonus",
+                "criterion",
+                "candidates",
+                "deemed",
+                "reputation"
+              ],
+              "correctAnswer": "reputation"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

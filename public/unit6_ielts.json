@@ -308,10 +308,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit6_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">But Is It Art?</h1>\n  <p style=\"margin-bottom: 1rem;\">A cave in South Africa may rewrite human history</p>\n  <p style=\"margin-bottom: 1rem;\">For the whole of the 19th and the first decades of the 20th centuries, archaeologists in the West denied that mankind had originated in Africa. The first humans, surely, must have been Europeans. That idea was disproved by Raymond Dart in the 1920s. He discovered fossil human bones in South Africa. These skeletons, though, were earlier species than Homo sapiens. Then, in the 1980s, genetic work by Allan Wilson showed that modern man, too, had an African genesis. But at least the Eurocentrics had cave paintings to comfort them. The oldest of these symbols of humanity's cultural pretensions were European. Therefore culture was invented in Europe. So there!</p>\n  <p style=\"margin-bottom: 1rem;\">Chris Henshilwood, a South African archaeologist, begs to differ. He is challenging the theory that artistic culture first developed in Europe about 35,000 years ago, after people had migrated out of Africa. He has dug up evidence which, he claims, shows that such behaviour evolved over 70,000 years ago—and in Africa.</p>\n  <p style=\"margin-bottom: 1rem;\">This evidence comes from a seaside cave called Blombos, two hours drive from Cape Town. Mr Henshilwood and his team have spent years scraping an impressive collection of artefacts out of this cave. In particular, Blombos was full of bits of ochre, a mineral that can be crushed and used to paint the skin for decoration, and for protection from the sun.</p>\n  <p style=\"margin-bottom: 1rem;\">That is not unusual; many African caves contain bits of ochre. But two stones found in recent years have patterns engraved on them. This, according to Mr Henshilwood, means they are \"intentional images and can be considered a complex geometric motif\". Tests on the sand they were buried in, using two different dating techniques (thermoluminescence and oxygen-isotope analysis), suggest they are between 70,000 and 80,000 years old. If that is right, they constitute the world's oldest works of art. In February, Thabo Mbeki, South Africa's president, opened parliament with the stones at his side, and said he was delighted to have proof that Africa gave birth to modern man.</p>\n  <p style=\"margin-bottom: 1rem;\">One African cave does not, of course, compare with the Neolithic cultural riches dug up across Western Europe. But there are, according to Mr Henshilwood, many more caves to explore and excavate near Blombos, so more art may turn up. Given that things can move between strata due to the activities of burrowing animals, a few more examples would certainly add to confidence that he is right about the date. On the other hand, according to Mr Henshilwood, \"No one has challenged our methods yet.\" Europe's pretensions may be pricked again, as the first artists turn out to have been African.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit6_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">But Is It Art?</h1>\n  <p style=\"margin-bottom: 1rem;\">A cave in South Africa may <b>rewrite</b> human history</p>\n  <p style=\"margin-bottom: 1rem;\">For the whole of the 19th and the first decades of the 20th centuries, archaeologists in the West denied that mankind had originated in Africa. The first humans, surely, must have been Europeans. That idea was disproved by Raymond Dart in the 1920s. He discovered <b>fossil</b> human bones in South Africa. These skeletons, <b>though</b>, were earlier <b>species</b> than <b>Homo sapiens</b>. Then, in the 1980s, <b>genetic</b> work by Allan Wilson showed that modern man, too, had an African <b>genesis</b>. But at least the <b>Eurocentrics</b> had cave paintings to <b>comfort</b> them. The oldest of these symbols of humanity's <b>cultural</b> pretensions were European. Therefore culture was invented in Europe. So there!</p>\n  <p style=\"margin-bottom: 1rem;\">Chris Henshilwood, a South African <b>archaeologist</b>, begs to differ. He is challenging the theory that <b>artistic</b> culture first developed in Europe about 35,000 years ago, after people had migrated out of Africa. He has dug up <b>evidence</b> which, he claims, shows that such behaviour evolved over 70,000 years ago—and in Africa.</p>\n  <p style=\"margin-bottom: 1rem;\">This <b>evidence</b> comes from a seaside cave called Blombos, two hours drive from Cape Town. Mr Henshilwood and his team have spent years scraping an <b>impressive</b> <b>collection</b> of artefacts out of this cave. In particular, Blombos was full of bits of <b>ochre</b>, a <b>mineral</b> that can be crushed and used to paint the skin for <b>decoration</b>, and for protection from the sun.</p>\n  <p style=\"margin-bottom: 1rem;\">That is not unusual; many African caves contain bits of <b>ochre</b>. But two stones found in recent years have patterns engraved on them. This, according to Mr Henshilwood, means they are \"<b>intentional</b> images and can be considered a complex <b>geometric</b> <b>motif</b>\". Tests on the sand they were buried in, using two different dating techniques (thermoluminescence and oxygen-isotope analysis), suggest they are between 70,000 and 80,000 years old. If that is right, they constitute the world's oldest works of art. In February, Thabo Mbeki, South Africa's president, opened parliament with the stones at his side, and said he was delighted to have proof that Africa gave birth to modern man.</p>\n  <p style=\"margin-bottom: 1rem;\">One African cave does not, of course, compare with the Neolithic <b>cultural</b> riches dug up across Western Europe. But there are, according to Mr Henshilwood, many more caves to explore and <b>excavate</b> near Blombos, so more art may <b>turn up</b>. <b>Given</b> that things can move between <b>strata</b> due to the activities of burrowing animals, a few more examples would certainly <b>add to</b> <b>confidence</b> that he is right about the <b>date</b>. On the other hand, according to Mr Henshilwood, \"No one has challenged our methods yet.\" Europe's pretensions may be pricked again, as the first artists <b>turn out</b> to have been African.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u6_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u6_kt_0",
+              "content": "1. She [ 1 ] any involvement in the robbery.<br/><br/>2. This TV series [ 2 ] from a short story.<br/><br/>3. The plant has [ 3 ] defects.<br/><br/>4. We cannot yet satisfactorily explain the [ 4 ] of the universe.<br/><br/>5. The dove is a [ 5 ] of peace.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "denies"
+            },
+            {
+              "id": "u6_kt_1",
+              "content": "1. She [ 1 ] any involvement in the robbery.<br/><br/>2. This TV series [ 2 ] from a short story.<br/><br/>3. The plant has [ 3 ] defects.<br/><br/>4. We cannot yet satisfactorily explain the [ 4 ] of the universe.<br/><br/>5. The dove is a [ 5 ] of peace.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "originated"
+            },
+            {
+              "id": "u6_kt_2",
+              "content": "1. She [ 1 ] any involvement in the robbery.<br/><br/>2. This TV series [ 2 ] from a short story.<br/><br/>3. The plant has [ 3 ] defects.<br/><br/>4. We cannot yet satisfactorily explain the [ 4 ] of the universe.<br/><br/>5. The dove is a [ 5 ] of peace.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "genetic"
+            },
+            {
+              "id": "u6_kt_3",
+              "content": "1. She [ 1 ] any involvement in the robbery.<br/><br/>2. This TV series [ 2 ] from a short story.<br/><br/>3. The plant has [ 3 ] defects.<br/><br/>4. We cannot yet satisfactorily explain the [ 4 ] of the universe.<br/><br/>5. The dove is a [ 5 ] of peace.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "origin"
+            },
+            {
+              "id": "u6_kt_4",
+              "content": "1. She [ 1 ] any involvement in the robbery.<br/><br/>2. This TV series [ 2 ] from a short story.<br/><br/>3. The plant has [ 3 ] defects.<br/><br/>4. We cannot yet satisfactorily explain the [ 4 ] of the universe.<br/><br/>5. The dove is a [ 5 ] of peace.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "symbol"
+            },
+            {
+              "id": "u6_kt_5",
+              "content": "6. I make no [ 1 ] to skill as an artist, but I enjoy painting.<br/><br/>7. One of the biggest [ 2 ] facing the present government is that of creating new jobs and new industries.<br/><br/>8. Some tribes [ 3 ] with their cattle in search of fresh grass.<br/><br/>9. When the police arrived, he had already destroyed the [ 4 ] of his guilt.<br/><br/>10. Some people believe that we [ 5 ] from the apes.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "pretensions"
+            },
+            {
+              "id": "u6_kt_6",
+              "content": "6. I make no [ 1 ] to skill as an artist, but I enjoy painting.<br/><br/>7. One of the biggest [ 2 ] facing the present government is that of creating new jobs and new industries.<br/><br/>8. Some tribes [ 3 ] with their cattle in search of fresh grass.<br/><br/>9. When the police arrived, he had already destroyed the [ 4 ] of his guilt.<br/><br/>10. Some people believe that we [ 5 ] from the apes.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "challenges"
+            },
+            {
+              "id": "u6_kt_7",
+              "content": "6. I make no [ 1 ] to skill as an artist, but I enjoy painting.<br/><br/>7. One of the biggest [ 2 ] facing the present government is that of creating new jobs and new industries.<br/><br/>8. Some tribes [ 3 ] with their cattle in search of fresh grass.<br/><br/>9. When the police arrived, he had already destroyed the [ 4 ] of his guilt.<br/><br/>10. Some people believe that we [ 5 ] from the apes.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "migrate"
+            },
+            {
+              "id": "u6_kt_8",
+              "content": "6. I make no [ 1 ] to skill as an artist, but I enjoy painting.<br/><br/>7. One of the biggest [ 2 ] facing the present government is that of creating new jobs and new industries.<br/><br/>8. Some tribes [ 3 ] with their cattle in search of fresh grass.<br/><br/>9. When the police arrived, he had already destroyed the [ 4 ] of his guilt.<br/><br/>10. Some people believe that we [ 5 ] from the apes.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "evidence"
+            },
+            {
+              "id": "u6_kt_9",
+              "content": "6. I make no [ 1 ] to skill as an artist, but I enjoy painting.<br/><br/>7. One of the biggest [ 2 ] facing the present government is that of creating new jobs and new industries.<br/><br/>8. Some tribes [ 3 ] with their cattle in search of fresh grass.<br/><br/>9. When the police arrived, he had already destroyed the [ 4 ] of his guilt.<br/><br/>10. Some people believe that we [ 5 ] from the apes.",
+              "options": [
+                "denies",
+                "originated",
+                "genetic",
+                "origin",
+                "symbol",
+                "pretensions",
+                "challenges",
+                "migrate",
+                "evidence",
+                "evolved"
+              ],
+              "correctAnswer": "evolved"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

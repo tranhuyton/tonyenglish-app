@@ -342,10 +342,138 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit27_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Next Society II</h1>\n<p style=\"margin-bottom: 1rem;\"><b>The new protectionism</b></p>\n<p style=\"margin-bottom: 1rem;\">Structurally, too, the next society is already diverging from the society almost all of us still live in. The 20th century saw the rapid decline of the sector that had dominated society for 10,000 years: agriculture. In volume terms, farm production now is at least four or five times what it was before the first world war. But in 1913 farm products accounted for 70% of world trade whereas now their share is at most 17%. In the early years of the 20th century, agriculture in most developed countries was the largest single contributor to GDP; now in rich countries its contribution has dwindled to the point of becoming marginal. And the farm population is down to a tiny proportion of the total.</p>\n<p style=\"margin-bottom: 1rem;\">Manufacturing has travelled a long way down the same road. Since the second world war, manufacturing output in the developed world has probably tripled in volume, but inflation adjusted manufacturing prices have fallen steadily, whereas the cost of prime knowledge products—health care and education—has tripled, again adjusted for inflation. The relative purchasing power of manufactured goods against knowledge products is now only one-fifth or one-sixth of what it was 50 years ago.</p>\n<p style=\"margin-bottom: 1rem;\">Manufacturing employment in America has fallen from 35% of the workforce in the 1950s to less than half that now, without causing much social disruption. But it may be too much to hope for an equally easy transition in countries such as Japan or Germany, where blue-collar manufacturing workers still make up 25-30% of the labour force.</p>\n<p style=\"margin-bottom: 1rem;\">The decline of farming as a producer of wealth and of livelihoods has allowed farm protectionism to spread to a degree that would have been unthinkable before the second world war. In the same way, the decline of manufacturing will trigger an explosion of manufacturing protectionism—even as lip service continues to be paid to free trade. This protectionism may not necessarily take the form of traditional tariffs, but of subsidies, quotas and regulations of all kinds. Even more likely, regional blocks will emerge that trade freely internally but are highly protectionist externally. The European Union and NAFTA already point in that direction.</p>\n<p style=\"margin-bottom: 1rem;\"><b>The future of the corporation</b></p>\n<p style=\"margin-bottom: 1rem;\">Statistically, multinational companies play much the same part in the world economy as they did in 1913. But they have become very different animals. Multinationals in 1913 were domestic firms with subsidiaries abroad, each of them self-contained, in charge of a politically defined territory, and highly autonomous.</p>\n<p style=\"margin-bottom: 1rem;\">Multinationals now tend to be organised globally along product or service lines. But like the multinationals of 1913, they are held together and controlled by ownership. By contrast, the multinationals of 2025 are likely to be held together and controlled by strategy. There will still be ownership, of course. But alliances, joint ventures, minority stakes, know-how agreements and contracts will increasingly be the building blocks of a confederation. This kind of organisation will need a new kind of top management.</p>\n<p style=\"margin-bottom: 1rem;\">In most countries, and even in a good many large and complex companies, top management is still seen as an extension of operation management. Tomorrow's top management, however, is likely to be a distinct and separate organ: it will stand for the company. One of the most important jobs ahead for the top management of the big company of tomorrow, and especially of the multinational, will be to balance the conflicting demands on business being made by the need for both short-term and long-term results, and by the corporation's various constituencies: customers, shareholders (especially institutional investors and pension funds), knowledge employees and communities.</p>\n<p style=\"margin-bottom: 1rem;\">Against that background, this survey will seek to answer two questions: what can and should managements do now to be ready for the next society? And what other big changes may lie ahead of which we are as yet unaware?</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit27_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Next Society II</h1>\n<p style=\"margin-bottom: 1rem;\"><b>The new <b>protectionism</b></b></p>\n<p style=\"margin-bottom: 1rem;\"><b>Structurally</b>, too, the next society is already diverging from the society almost all of us still live in. The 20th century saw the rapid decline of the <b>sector</b> that had dominated society for 10,000 years: agriculture. In volume terms, farm <b>production</b> now is at least four or five times what it was before the first world war. But in 1913 farm products accounted for 70% of world trade whereas now their share is <b>at most</b> 17%. In the early years of the 20th century, agriculture in most developed countries was the largest single contributor to GDP; now in rich countries its contribution has dwindled <b>to the point of</b> becoming <b>marginal</b>. And the farm population is down to a tiny <b>proportion</b> of the total.</p>\n<p style=\"margin-bottom: 1rem;\">Manufacturing has travelled a long way down the same road. Since the second world war, manufacturing <b>output</b> in the developed world has probably tripled in volume, but <b>inflation</b> adjusted manufacturing prices have fallen steadily, whereas the cost of <b>prime</b> knowledge products—health care and education—has tripled, again adjusted for <b>inflation</b>. The relative <b>purchasing power</b> of manufactured goods against knowledge products is now only one-fifth or one-sixth of what it was 50 years ago.</p>\n<p style=\"margin-bottom: 1rem;\">Manufacturing employment in America has fallen from 35% of the workforce in the 1950s to less than half that now, without causing much social <b>disruption</b>. But it may be too much to hope for an equally easy <b>transition</b> in countries such as Japan or Germany, where blue-collar manufacturing workers still <b>make up</b> 25-30% of the labour force.</p>\n<p style=\"margin-bottom: 1rem;\">The decline of farming as a producer of wealth and of livelihoods has allowed farm <b>protectionism</b> to spread <b>to a degree</b> that would have been unthinkable before the second world war. In the same way, the decline of manufacturing will <b>trigger</b> an <b>explosion</b> of manufacturing <b>protectionism</b>—even as lip service continues to be paid to free trade. This <b>protectionism</b> may not necessarily <b>take the form of</b> traditional tariffs, but of subsidies, quotas and regulations of all kinds. Even more likely, regional blocks will emerge that trade freely <b>internally</b> but are highly protectionist <b>externally</b>. The European Union and NAFTA already point in that direction.</p>\n<p style=\"margin-bottom: 1rem;\"><b>The future of the <b>corporation</b></b></p>\n<p style=\"margin-bottom: 1rem;\"><b>Statistically</b>, <b>multinational</b> companies play much the same part in the world economy as they did in 1913. But they have become very different animals. Multinationals in 1913 were domestic firms with subsidiaries abroad, each of them <b>self-contained</b>, in charge of a politically <b>defined</b> <b>territory</b>, and highly <b>autonomous</b>.</p>\n<p style=\"margin-bottom: 1rem;\">Multinationals now tend to be organised globally along product or service lines. But like the multinationals of 1913, they are held together and controlled by <b>ownership</b>. <b>By contrast</b>, the multinationals of 2025 are likely to be held together and controlled by <b>strategy</b>. There will still be <b>ownership</b>, of course. But alliances, joint ventures, <b>minority</b> stakes, <b>know-how</b> agreements and contracts will increasingly be the building blocks of a <b>confederation</b>. This kind of organisation will need a new kind of <b>top management</b>.</p>\n<p style=\"margin-bottom: 1rem;\">In most countries, and even in a good many large and complex companies, <b>top management</b> is still seen as an <b>extension</b> of operation management. Tomorrow's <b>top management</b>, however, is likely to be a <b>distinct</b> and separate <b>organ</b>: it will <b>stand for</b> the company. One of the most important jobs ahead for the <b>top management</b> of the big company of tomorrow, and especially of the <b>multinational</b>, will be to <b>balance</b> the <b>conflicting</b> demands on business being made by the need for both short-term and long-term results, and by the <b>corporation</b>'s various constituencies: customers, shareholders (especially institutional investors and pension funds), knowledge employees and communities.</p>\n<p style=\"margin-bottom: 1rem;\">Against that background, this <b>survey</b> will <b>seek</b> to answer two questions: what can and should managements do now to be ready for the next society? And what other big changes may lie ahead of which we are as yet unaware?</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u27_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u27_kt_0",
+              "content": "1. This is where our opinions [ 1 ] from each other.<br/><br/>2. The number of people who live on the island is rapidly [ 2 ].<br/><br/>3. The new law will have only a [ 3 ] effect on the lives of most people.<br/><br/>4. A [ 4 ] reason for our economic decline is lack of investment.<br/><br/>5. The trains run at 10 minute [ 5 ].",
+              "options": [
+                "diverge",
+                "dwindling",
+                "marginal",
+                "prime",
+                "intervals",
+                "detectable",
+                "bonus",
+                "sediment"
+              ],
+              "correctAnswer": "diverge"
+            },
+            {
+              "id": "u27_kt_1",
+              "content": "1. This is where our opinions [ 1 ] from each other.<br/><br/>2. The number of people who live on the island is rapidly [ 2 ].<br/><br/>3. The new law will have only a [ 3 ] effect on the lives of most people.<br/><br/>4. A [ 4 ] reason for our economic decline is lack of investment.<br/><br/>5. The trains run at 10 minute [ 5 ].",
+              "options": [
+                "diverge",
+                "dwindling",
+                "marginal",
+                "prime",
+                "intervals",
+                "detectable",
+                "bonus",
+                "sediment"
+              ],
+              "correctAnswer": "dwindling"
+            },
+            {
+              "id": "u27_kt_2",
+              "content": "1. This is where our opinions [ 1 ] from each other.<br/><br/>2. The number of people who live on the island is rapidly [ 2 ].<br/><br/>3. The new law will have only a [ 3 ] effect on the lives of most people.<br/><br/>4. A [ 4 ] reason for our economic decline is lack of investment.<br/><br/>5. The trains run at 10 minute [ 5 ].",
+              "options": [
+                "diverge",
+                "dwindling",
+                "marginal",
+                "prime",
+                "intervals",
+                "detectable",
+                "bonus",
+                "sediment"
+              ],
+              "correctAnswer": "marginal"
+            },
+            {
+              "id": "u27_kt_3",
+              "content": "1. This is where our opinions [ 1 ] from each other.<br/><br/>2. The number of people who live on the island is rapidly [ 2 ].<br/><br/>3. The new law will have only a [ 3 ] effect on the lives of most people.<br/><br/>4. A [ 4 ] reason for our economic decline is lack of investment.<br/><br/>5. The trains run at 10 minute [ 5 ].",
+              "options": [
+                "diverge",
+                "dwindling",
+                "marginal",
+                "prime",
+                "intervals",
+                "detectable",
+                "bonus",
+                "sediment"
+              ],
+              "correctAnswer": "prime"
+            },
+            {
+              "id": "u27_kt_4",
+              "content": "1. This is where our opinions [ 1 ] from each other.<br/><br/>2. The number of people who live on the island is rapidly [ 2 ].<br/><br/>3. The new law will have only a [ 3 ] effect on the lives of most people.<br/><br/>4. A [ 4 ] reason for our economic decline is lack of investment.<br/><br/>5. The trains run at 10 minute [ 5 ].",
+              "options": [
+                "diverge",
+                "dwindling",
+                "marginal",
+                "prime",
+                "intervals",
+                "detectable",
+                "bonus",
+                "sediment"
+              ],
+              "correctAnswer": "intervals"
+            },
+            {
+              "id": "u27_kt_5",
+              "content": "6. The poison is [ 1 ] in the blood.<br/><br/>7. She gets a [ 2 ] if she sells more than her target.<br/><br/>8. [ 3 ] had settled at the bottom of the bottle.",
+              "options": [
+                "diverge",
+                "dwindling",
+                "marginal",
+                "prime",
+                "intervals",
+                "detectable",
+                "bonus",
+                "sediment"
+              ],
+              "correctAnswer": "detectable"
+            },
+            {
+              "id": "u27_kt_6",
+              "content": "6. The poison is [ 1 ] in the blood.<br/><br/>7. She gets a [ 2 ] if she sells more than her target.<br/><br/>8. [ 3 ] had settled at the bottom of the bottle.",
+              "options": [
+                "diverge",
+                "dwindling",
+                "marginal",
+                "prime",
+                "intervals",
+                "detectable",
+                "bonus",
+                "sediment"
+              ],
+              "correctAnswer": "bonus"
+            },
+            {
+              "id": "u27_kt_7",
+              "content": "6. The poison is [ 1 ] in the blood.<br/><br/>7. She gets a [ 2 ] if she sells more than her target.<br/><br/>8. [ 3 ] had settled at the bottom of the bottle.",
+              "options": [
+                "diverge",
+                "dwindling",
+                "marginal",
+                "prime",
+                "intervals",
+                "detectable",
+                "bonus",
+                "sediment"
+              ],
+              "correctAnswer": "sediment"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

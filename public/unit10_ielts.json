@@ -342,10 +342,162 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit10_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Ruth Handler</h1>\n  <p style=\"margin-bottom: 1rem;\">Ruth Handler, creator of the Barbie doll, died on April 27th, aged 85.</p>\n  <p style=\"margin-bottom: 1rem;\">The Barbie doll is 43 this year, a great age for a toy. Most toys have cruelly short lives. Who now remembers the Cabbage Patch Kids, Tiny Tears, Thunderbirds? They lie discarded in the toy cupboards of the rich world. Barbie has outlived them all. No one has been able to say why, not even Ruth Handler, Barbie's creator. Longevity in toyland is as much a mystery as it is in real life. When pressed by reporters why Barbie had done so well Mrs Handler said, smilingly, \"I was a marketing genius.\" Perhaps she was. But no other products by Mattel, the firm she helped to found, did as well, and some were flops.</p>\n  <p style=\"margin-bottom: 1rem;\">Still, America is happy to celebrate success, whatever its mystery, and Barbie gained fame not simply as a product but as an icon. Andy Warhol produced an image of Barbie, to be applauded alongside that of Marilyn Monroe. At one time you could hardly switch on the radio in America without hearing the song \"Barbie Girl\", albeit by a Danish group, Aqua: \"Life in plastic/It's fantastic.\" A Barbie doll was buried in an American government time capsule as representative of life in the 20th century. Barbie was said to be \"the archetypal woman\", a modern Mona Lisa. On television feminists said Barbie was a bimbo and bad for children. Mrs Handler retorted that Barbie offered children choices of what to be when they grew up. Academe bent its mind to the Barbie phenomenon. Students on a sociology course were set the following exercise: \"What criticisms have been made of Barbie as a role model? Do you agree with this criticism? In your opinion, should the manufacturers be sensitive to this criticism? There are no 'right' answer to these questions, but you should develop a line of reasoning that reflects your values.\"</p>\n  <p style=\"margin-bottom: 1rem;\"><strong>A garage in California</strong></p>\n  <p style=\"margin-bottom: 1rem;\">Ruth Handler was herself a success story in an honoured American tradition. Her parents had arrived in the United States in a steamship, travelling steerage, the cheapest accommodation, and settled in Denver. Her father was a blacksmith who had brought his family from Poland so that he would not be conscripted into the Russian army. Mother never felt very well, exhausted after bearing ten children. But big families have a way of looking after themselves, and Ruth, the youngest, says she was well cared for.</p>\n  <p style=\"margin-bottom: 1rem;\">At the age of 19 she headed for Hollywood. She did not make it into the film business. She took a course in industrial design, met a boy on the same course and married him. Mattel was started in a garage, adding to another bit of American industrial lore. Ruth Handler and her husband at first made picture frames, then furniture for dolls' houses, then toys, including a child's guitar that found a market. The firm seems to have done reasonably well and in the 1950s Mrs Handler had a holiday in Europe. In Switzerland she came across a German-made doll about 11 in tall called Blonde Lilli, of improbable proportions, dressed in skimpy clothes, and presumably designed to raise the ambitions of young men.</p>\n  <p style=\"margin-bottom: 1rem;\">Suppressing her American blushes, Mrs Handler bought three and took them back to America. She said she had been thinking for some time of producing a \"grown-up\" doll for children, but the men in her firm said there would be no demand for one: what children liked was dolls that looked like babies. Inspired by Lilli, Mrs Handler designed a respectable American doll called Barbie (her daughter's name) with breasts but without nipples and wearing clothes that were pretty but non-provocative. The first dolls were made in Japan and in 1959 \"Barbie the teenage model\" made its debut at the American Toy Fair in New York. It was the success of the show, selling 350,000 Barbies in the first year. Since then more than a billion Barbies have been sold worldwide.</p>\n  <p style=\"margin-bottom: 1rem;\">According to Mattel, an American girl aged up to 11 is likely to own ten Barbie dolls. French children are said to own five. But several million grown-up women are also said to own Barbies. \"She is more than a doll to them, whatever their age,\" Mrs Handler said. \"She has become part of them.\" There are Barbie collectors of both sexes: a 1959 Barbie that sold for $3 is now said to be worth $5,000 in good condition.</p>\n  <p style=\"margin-bottom: 1rem;\">What apparently sustains demand for the doll is that Barbies come in all guises, as a dancer, a police officer, an astronaut, a physician, a talking Barbie that says, \"What to go shopping?\" There is a Chinese Barbie, an American Indian Barbie, a black Barbie, just about every sort of Barbie except its shameless forebear Lilli. Barbie retains an almost sexless body that can puzzle knowing children who wonder how Barbie was born without a belly button and has no obvious means of reproduction. \"Hey, Momma...?\" \"That's enough, dear, or I'll take Barbie away.\"</p>\n  <p style=\"margin-bottom: 1rem;\">In defending Barbie against the feminists Mrs Handler said her creation is a career woman and not at all empty headed. But Barbie has had so many careers, and at 43 marriage seems to be a declining prospect. There is a boyfriend called Ken, named after another of Mrs Handler's children. Barbie and Ken have been together for years. What are Ken's intentions? Barbie was born in the innocent 1950s, and may find the mores of these changeable times hard to cope with. Barbie's friends of all ages are concerned.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit10_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Ruth Handler</h1>\n  <p style=\"margin-bottom: 1rem;\">Ruth Handler, creator of the <b>Barbie doll</b>, died on April 27th, aged 85.</p>\n  <p style=\"margin-bottom: 1rem;\">The <b>Barbie doll</b> is 43 this year, a great age for a toy. Most toys have <b>cruelly</b> short lives. Who now remembers the <b>Cabbage</b> <b>Patch</b> Kids, Tiny Tears, Thunderbirds? They lie discarded in the toy cupboards of the rich world. Barbie has outlived them all. No one has been able to say why, not even Ruth Handler, Barbie's creator. <b>Longevity</b> in <b>toyland</b> is as much a mystery as it is in real life. When pressed by reporters why Barbie had done so well Mrs Handler said, smilingly, \"I was a marketing genius.\" Perhaps she was. But no other products by Mattel, the firm she helped to found, did as well, and some were flops.</p>\n  <p style=\"margin-bottom: 1rem;\">Still, America is happy to <b>celebrate</b> success, whatever its mystery, and Barbie gained <b>fame</b> not simply as a product but as an <b>icon</b>. Andy Warhol produced an image of Barbie, to be applauded alongside that of Marilyn Monroe. <b>At one time</b> you could hardly <b>switch on</b> the radio in America without hearing the song \"Barbie Girl\", <b>albeit</b> by a Danish group, Aqua: \"Life in plastic/It's <b>fantastic</b>.\" A <b>Barbie doll</b> was buried in an American government <b>time capsule</b> as <b>representative</b> of life in the 20th century. Barbie was said to be \"the <b>archetypal</b> woman\", a modern Mona Lisa. On television feminists said Barbie was a <b>bimbo</b> and bad for children. Mrs Handler retorted that Barbie offered children choices of what to be when they grew up. <b>Academe</b> bent its mind to the Barbie <b>phenomenon</b>. Students on a <b>sociology</b> course were <b>set</b> the following exercise: \"What criticisms have been made of Barbie as a <b>role model</b>? Do you agree with this criticism? In your opinion, should the manufacturers <b>be sensitive to</b> this criticism? There are no 'right' answer to these questions, but you should develop a <b><b>line</b> of reasoning</b> that reflects your values.\"</p>\n  <p style=\"margin-bottom: 1rem;\"><strong>A garage in California</strong></p>\n  <p style=\"margin-bottom: 1rem;\">Ruth Handler was herself a success story in an honoured American tradition. Her parents had arrived in the United States in a steamship, travelling <b>steerage</b>, the cheapest <b>accommodation</b>, and settled in Denver. Her father was a blacksmith who had brought his family from Poland so that he would not be conscripted into the Russian army. Mother never felt very well, exhausted after bearing ten children. But big families <b>have a way of</b> looking after themselves, and Ruth, the youngest, says she was well cared for.</p>\n  <p style=\"margin-bottom: 1rem;\">At the age of 19 she headed for Hollywood. She did not <b>make it</b> into the film business. She took a course in industrial design, met a boy on the same course and married him. Mattel was started in a garage, adding to another bit of American industrial <b>lore</b>. Ruth Handler and her husband at first made picture frames, then furniture for dolls' houses, then toys, including a child's guitar that found a market. The firm seems to have done <b>reasonably</b> well and in the 1950s Mrs Handler had a holiday in Europe. In Switzerland she came across a German-made doll about 11 in tall called Blonde Lilli, of <b>improbable</b> <b>proportions</b>, dressed in <b>skimpy</b> clothes, and <b>presumably</b> designed to raise the ambitions of young men.</p>\n  <p style=\"margin-bottom: 1rem;\">Suppressing her American blushes, Mrs Handler bought three and took them back to America. She said she had been thinking for some time of producing a \"grown-up\" doll for children, but the men in her firm said there would be no demand for one: what children liked was dolls that looked like babies. Inspired by Lilli, Mrs Handler designed a <b>respectable</b> American doll called Barbie (her daughter's name) with breasts but without nipples and wearing clothes that were pretty but <b>non-provocative</b>. The first dolls were made in Japan and in 1959 \"Barbie the teenage model\" made its <b>debut</b> at the American Toy Fair in New York. It was the success of the show, selling 350,000 Barbies in the first year. Since then <b>more than</b> a billion Barbies have been sold worldwide.</p>\n  <p style=\"margin-bottom: 1rem;\">According to Mattel, an American girl aged up to 11 is likely to own ten Barbie dolls. French children are said to own five. But several million grown-up women are also said to own Barbies. \"She is <b>more than</b> a doll to them, whatever their age,\" Mrs Handler said. \"She has become part of them.\" There are Barbie collectors of both sexes: a 1959 Barbie that sold for $3 is now said to be worth $5,000 <b>in good condition</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">What apparently sustains demand for the doll is that Barbies come in all guises, as a dancer, a police officer, an astronaut, a physician, a talking Barbie that says, \"What to go shopping?\" There is a Chinese Barbie, an American Indian Barbie, a black Barbie, just about every sort of Barbie except its <b>shameless</b> forebear Lilli. Barbie retains an almost sexless body that can puzzle <b>knowing</b> children who wonder how Barbie was born without a <b>belly button</b> and has no obvious means of <b>reproduction</b>. \"Hey, Momma...?\" \"That's enough, dear, or I'll take Barbie away.\"</p>\n  <p style=\"margin-bottom: 1rem;\">In defending Barbie against the feminists Mrs Handler said her creation is a <b>career woman</b> and not at all <b>empty headed</b>. But Barbie has had so many careers, and at 43 marriage seems to be a declining <b>prospect</b>. There is a boyfriend called Ken, named after another of Mrs Handler's children. Barbie and Ken have been together for years. What are Ken's intentions? Barbie was born in the <b>innocent</b> 1950s, and may find the <b>mores</b> of these <b>changeable</b> times hard to <b>cope with</b>. Barbie's friends of all ages are concerned.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u10_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u10_kt_0",
+              "content": "1. One cannot [ 1 ] his old friends.<br/><br/>2. The man [ 2 ] his wife.<br/><br/>3. I couldn't be present myself, but I sent my [ 3 ] to the meeting.<br/><br/>4. John is the [ 4 ] wealthy American tourist.<br/><br/>5. He [ 5 ] that it was all my fault.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "discard"
+            },
+            {
+              "id": "u10_kt_1",
+              "content": "1. One cannot [ 1 ] his old friends.<br/><br/>2. The man [ 2 ] his wife.<br/><br/>3. I couldn't be present myself, but I sent my [ 3 ] to the meeting.<br/><br/>4. John is the [ 4 ] wealthy American tourist.<br/><br/>5. He [ 5 ] that it was all my fault.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "outlived"
+            },
+            {
+              "id": "u10_kt_2",
+              "content": "1. One cannot [ 1 ] his old friends.<br/><br/>2. The man [ 2 ] his wife.<br/><br/>3. I couldn't be present myself, but I sent my [ 3 ] to the meeting.<br/><br/>4. John is the [ 4 ] wealthy American tourist.<br/><br/>5. He [ 5 ] that it was all my fault.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "representative"
+            },
+            {
+              "id": "u10_kt_3",
+              "content": "1. One cannot [ 1 ] his old friends.<br/><br/>2. The man [ 2 ] his wife.<br/><br/>3. I couldn't be present myself, but I sent my [ 3 ] to the meeting.<br/><br/>4. John is the [ 4 ] wealthy American tourist.<br/><br/>5. He [ 5 ] that it was all my fault.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "archetypal"
+            },
+            {
+              "id": "u10_kt_4",
+              "content": "1. One cannot [ 1 ] his old friends.<br/><br/>2. The man [ 2 ] his wife.<br/><br/>3. I couldn't be present myself, but I sent my [ 3 ] to the meeting.<br/><br/>4. John is the [ 4 ] wealthy American tourist.<br/><br/>5. He [ 5 ] that it was all my fault.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "retorted"
+            },
+            {
+              "id": "u10_kt_5",
+              "content": "6. The travel agent arranged our [ 1 ].<br/><br/>7. My sons were [ 2 ] in the last war.<br/><br/>8. The [ 3 ] of men to women in the population has changed in recent years.<br/><br/>9. If you've already eaten, you [ 4 ] won't want dinner.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "accommodation"
+            },
+            {
+              "id": "u10_kt_6",
+              "content": "6. The travel agent arranged our [ 1 ].<br/><br/>7. My sons were [ 2 ] in the last war.<br/><br/>8. The [ 3 ] of men to women in the population has changed in recent years.<br/><br/>9. If you've already eaten, you [ 4 ] won't want dinner.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "conscripted"
+            },
+            {
+              "id": "u10_kt_7",
+              "content": "6. The travel agent arranged our [ 1 ].<br/><br/>7. My sons were [ 2 ] in the last war.<br/><br/>8. The [ 3 ] of men to women in the population has changed in recent years.<br/><br/>9. If you've already eaten, you [ 4 ] won't want dinner.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "proportion"
+            },
+            {
+              "id": "u10_kt_8",
+              "content": "6. The travel agent arranged our [ 1 ].<br/><br/>7. My sons were [ 2 ] in the last war.<br/><br/>8. The [ 3 ] of men to women in the population has changed in recent years.<br/><br/>9. If you've already eaten, you [ 4 ] won't want dinner.",
+              "options": [
+                "discard",
+                "outlived",
+                "representative",
+                "archetypal",
+                "retorted",
+                "accommodation",
+                "conscripted",
+                "proportion",
+                "presumably"
+              ],
+              "correctAnswer": "presumably"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

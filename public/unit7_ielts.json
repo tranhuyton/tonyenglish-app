@@ -308,10 +308,246 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit7_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Chat Room Helps Lonely Kids</h1>\n  <p style=\"margin-bottom: 1rem;\">As the last days of summer wound down, I was not seeing much of my daughter Daniele. After some years of languishing socially, she suddenly found herself at the centre of a movable feast of friends. They seemed to spend every day with one another, biking and hiking around the city, catching matinees, sleeping over at one another's houses, and talking on the phone. And laughing, I have never heard so much laughing in my whole life.</p>\n  <p style=\"margin-bottom: 1rem;\">So the two of us were out celebrating her 14th birthday, and I asked her why this summer was the summer of a lifetime.</p>\n  <p style=\"margin-bottom: 1rem;\">She shrugged. \"It was the chat room.\"</p>\n  <p style=\"margin-bottom: 1rem;\">\"The chat room?\" I knew her class had a place on-line where they met and gabbed, but I never thought of it as pivotal.</p>\n  <p style=\"margin-bottom: 1rem;\">A chat room, in case you are not a kid, is a web-based bulletin board system that allows you to trade one-liners with others who know about the board. They can answer you in real time, or later, when they log on to see your remarks.</p>\n  <p style=\"margin-bottom: 1rem;\">They seem like very silly places, to outsiders. But to regulars, they are very fun and highly addictive.</p>\n  <p style=\"margin-bottom: 1rem;\">\"Sure. People I didn't think I maybe had much in common with during the school year, on-line we found we had lots in common.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Then I remembered my own experience using a BBS (Bulletin Board System). I have been logging onto the same two \"mom and pop\" bulletin boards for upwards of 13 years. I know exactly how much fun it is to communicate online, with neither a body nor a face—just mind to mind. You quickly achieve a level of comfort that in some ways surpasses relationships in the regular world. People don't judge you by your colour or accent or hairdo or number of tattoos.</p>\n  <p style=\"margin-bottom: 1rem;\">Daniele was able to find a group of like-minded girls because of the freedom and fun of on-line chat.</p>\n  <p style=\"margin-bottom: 1rem;\">This information is especially valuable to me, because my son Jon, 10, has just discovered he will not be sharing home room with some of his favourite friends, as hoped. So his school year looms as a time of prospective misery.</p>\n  <p style=\"margin-bottom: 1rem;\">If you don't have a kid in school these days, you need to know that many kids go through the system tied to best friends. Perhaps to provide a measure of security in our fast changing world, kids form long-term friendships that are almost like marriages. Then they lean on those relationships until they wear them out. Why? Because they seem safe, and other kids seem sort of scary.</p>\n  <p style=\"margin-bottom: 1rem;\">But this chat room idea has the potential to bypass the scariness. That is what Daniele found, and maybe the same thing will work for Jon. So I visited a web site called \"Be Seen\" and within five minutes created a chat room just for Jon's fifth grade class.</p>\n  <p style=\"margin-bottom: 1rem;\">My idea is to have Jon pass out a note to all the fifth graders at his school inviting them to use the chat room as a kind of electronic home room: a place to meet on-line, away from school and away from parents, and chew the fat—or whatever kids today call that.</p>\n  <p style=\"margin-bottom: 1rem;\">Chat rooms have their downside. If a bully, vulgarian, or other category of lamer decides to camp out on it, you pretty much have to tolerate him, or her. And they mop up hours of time. Many nights this summer, Daniele was up until the wee hours, gossiping. But it is so much fun, and the extreme alternative is going through school feeling too shy to peep.</p>\n  <p style=\"margin-bottom: 1rem;\">I asked her what she thought about the rapidly improving technology that will allow on-line video conferencing. Everyone will be able to see your hair, your braces, the pimple on your nose.</p>\n  <p style=\"margin-bottom: 1rem;\">She didn't like that. We both agreed that what drives the chat room is anonymity. Your friends quickly figure out who you are behind your phony handle, but the handle is still critical. It is a mask that, paradoxically, enables you to be yourself.</p>\n  <p style=\"margin-bottom: 1rem;\">As bandwidth expands, look for new ways to be anonymous. Kids with naturally curly hair may opt for the video image of themselves.</p>\n  <p style=\"margin-bottom: 1rem;\">So all the parents out there who are worrying how your kids will do socially this school year, check out the Internet and create a chat area for your kid's class. Or let your kids do it. It is reasonably safe and easy, and it goes a long way to loosening the social strictures that lead to loneliness, crummy self-esteem, depression and worse.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit7_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\"><b>Chat Room</b> Helps <b>Lonely</b> Kids</h1>\n  <p style=\"margin-bottom: 1rem;\">As the last days of summer wound down, I was not seeing much of my daughter Daniele. After some years of languishing <b>socially</b>, she suddenly found herself at the centre of <b>a movable feast</b> of friends. They seemed to spend every day with one another, biking and hiking around the city, catching matinees, sleeping over at one another's houses, and talking on the phone. And laughing, I have never heard so much laughing in my whole life.</p>\n  <p style=\"margin-bottom: 1rem;\">So the two of us were out celebrating her 14th birthday, and I asked her why this summer was the summer <b>of a lifetime</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">She shrugged. \"It was the <b>chat room</b>.\"</p>\n  <p style=\"margin-bottom: 1rem;\">\"The <b>chat room</b>?\" I knew her class had a place <b>on-line</b> where they met and gabbed, but I never thought of it as <b>pivotal</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">A <b>chat room</b>, <b>in case</b> you are not a kid, is a <b>web-based</b> <b>bulletin board system</b> that allows you to trade one-liners with others who know about the board. They can answer you in <b>real time</b>, or later, when they <b>log on</b> to see your remarks.</p>\n  <p style=\"margin-bottom: 1rem;\">They seem like very silly places, to outsiders. But to regulars, they are very fun and highly <b>addictive</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">\"Sure. People I didn't think I maybe had much in common with during the school year, <b>on-line</b> we found we had lots in common.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Then I remembered my own experience using a BBS (<b>Bulletin Board System</b>). I have been logging onto the same two \"<b>mom and pop</b>\" bulletin boards for <b>upwards of</b> 13 years. I know exactly how much fun it is to communicate online, with neither a body nor a face—just mind to mind. You quickly achieve a level of comfort that in some ways surpasses relationships in the <b>regular</b> world. People don't judge you by your colour or <b>accent</b> or <b>hairdo</b> or number of tattoos.</p>\n  <p style=\"margin-bottom: 1rem;\">Daniele was able to find a group of <b>like-minded</b> girls because of the freedom and fun of <b>on-line</b> chat.</p>\n  <p style=\"margin-bottom: 1rem;\">This information is especially <b>valuable</b> to me, because my son Jon, 10, has just discovered he will not be sharing home room with some of his favourite friends, as hoped. So his school year looms as a time of <b>prospective</b> <b>misery</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">If you don't have a kid in school these days, you need to know that many kids <b>go through</b> the system <b>tied to</b> best friends. Perhaps to provide <b>a measure of</b> <b>security</b> in our fast changing world, kids <b>form</b> <b>long-term</b> friendships that are almost like marriages. Then they <b>lean on</b> those relationships until they wear them out. Why? Because they seem safe, and other kids seem <b>sort of</b> <b>scary</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">But this <b>chat room</b> idea has the <b>potential</b> to <b>bypass</b> the scariness. That is what Daniele found, and maybe the same thing will work for Jon. So I visited a web site called \"Be Seen\" and within five minutes created a <b>chat room</b> just for Jon's fifth grade class.</p>\n  <p style=\"margin-bottom: 1rem;\">My idea is to have Jon <b>pass out</b> a <b>note</b> to all the fifth graders at his school inviting them to use the <b>chat room</b> as a kind of electronic home room: a place to meet <b>on-line</b>, away from school and away from parents, and <b>chew the fat</b>—or whatever kids today call that.</p>\n  <p style=\"margin-bottom: 1rem;\">Chat rooms have their <b>downside</b>. If a <b>bully</b>, <b>vulgarian</b>, or other <b>category</b> of <b>lamer</b> decides to <b>camp out on</b> it, you pretty much have to <b>tolerate</b> him, or her. And they <b>mop up</b> hours of time. Many nights this summer, Daniele was up until the <b>wee</b> hours, gossiping. But it is so much fun, and the <b>extreme</b> <b>alternative</b> is going through school feeling too shy to <b>peep</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">I asked her what she thought about the rapidly improving technology that will allow <b>on-line</b> <b>video conferencing</b>. Everyone will be able to see your hair, your braces, the <b>pimple</b> on your nose.</p>\n  <p style=\"margin-bottom: 1rem;\">She didn't like that. We both agreed that what drives the <b>chat room</b> is <b>anonymity</b>. Your friends quickly <b>figure out</b> who you are behind your <b>phony</b> <b>handle</b>, but the <b>handle</b> is still <b>critical</b>. It is a <b>mask</b> that, <b>paradoxically</b>, enables you to be yourself.</p>\n  <p style=\"margin-bottom: 1rem;\">As <b>bandwidth</b> expands, look for new ways to be <b>anonymous</b>. Kids with naturally <b>curly</b> hair may <b>opt for</b> the <b>video image</b> of themselves.</p>\n  <p style=\"margin-bottom: 1rem;\">So all the parents out there who are worrying how your kids will do <b>socially</b> this school year, <b>check out</b> the Internet and create a chat area for your kid's class. Or let your kids do it. It is <b>reasonably</b> safe and easy, and it goes a long way to loosening the social strictures that lead to loneliness, <b>crummy</b> <b>self-esteem</b>, <b>depression</b> and worse.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u7_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u7_kt_0",
+              "content": "1. One should drink within [ 1 ] acceptable limits.<br/><br/>2. This is a [ 2 ] event in the country's struggle for independence.<br/><br/>3. I [ 3 ] my radio for a typewriter.<br/><br/>4. Don't make rude [ 4 ] about her appearance.<br/><br/>5. The results [ 5 ] all our expectations.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "socially"
+            },
+            {
+              "id": "u7_kt_1",
+              "content": "1. One should drink within [ 1 ] acceptable limits.<br/><br/>2. This is a [ 2 ] event in the country's struggle for independence.<br/><br/>3. I [ 3 ] my radio for a typewriter.<br/><br/>4. Don't make rude [ 4 ] about her appearance.<br/><br/>5. The results [ 5 ] all our expectations.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "pivotal"
+            },
+            {
+              "id": "u7_kt_2",
+              "content": "1. One should drink within [ 1 ] acceptable limits.<br/><br/>2. This is a [ 2 ] event in the country's struggle for independence.<br/><br/>3. I [ 3 ] my radio for a typewriter.<br/><br/>4. Don't make rude [ 4 ] about her appearance.<br/><br/>5. The results [ 5 ] all our expectations.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "traded"
+            },
+            {
+              "id": "u7_kt_3",
+              "content": "1. One should drink within [ 1 ] acceptable limits.<br/><br/>2. This is a [ 2 ] event in the country's struggle for independence.<br/><br/>3. I [ 3 ] my radio for a typewriter.<br/><br/>4. Don't make rude [ 4 ] about her appearance.<br/><br/>5. The results [ 5 ] all our expectations.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "remarks"
+            },
+            {
+              "id": "u7_kt_4",
+              "content": "1. One should drink within [ 1 ] acceptable limits.<br/><br/>2. This is a [ 2 ] event in the country's struggle for independence.<br/><br/>3. I [ 3 ] my radio for a typewriter.<br/><br/>4. Don't make rude [ 4 ] about her appearance.<br/><br/>5. The results [ 5 ] all our expectations.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "surpassed"
+            },
+            {
+              "id": "u7_kt_5",
+              "content": "6. A figure [ 1 ] out of the mist.<br/><br/>7. Susan is a [ 2 ] buyer for the house.<br/><br/>8. Once the jewels were safely locked up in the bank he had no more anxieties about their [ 3 ].<br/><br/>9. This new invention has an enormous sales [ 4 ].<br/><br/>10. If we [ 5 ] the town we'll miss the rush hour traffic.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "loomed"
+            },
+            {
+              "id": "u7_kt_6",
+              "content": "6. A figure [ 1 ] out of the mist.<br/><br/>7. Susan is a [ 2 ] buyer for the house.<br/><br/>8. Once the jewels were safely locked up in the bank he had no more anxieties about their [ 3 ].<br/><br/>9. This new invention has an enormous sales [ 4 ].<br/><br/>10. If we [ 5 ] the town we'll miss the rush hour traffic.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "prospective"
+            },
+            {
+              "id": "u7_kt_7",
+              "content": "6. A figure [ 1 ] out of the mist.<br/><br/>7. Susan is a [ 2 ] buyer for the house.<br/><br/>8. Once the jewels were safely locked up in the bank he had no more anxieties about their [ 3 ].<br/><br/>9. This new invention has an enormous sales [ 4 ].<br/><br/>10. If we [ 5 ] the town we'll miss the rush hour traffic.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "security"
+            },
+            {
+              "id": "u7_kt_8",
+              "content": "6. A figure [ 1 ] out of the mist.<br/><br/>7. Susan is a [ 2 ] buyer for the house.<br/><br/>8. Once the jewels were safely locked up in the bank he had no more anxieties about their [ 3 ].<br/><br/>9. This new invention has an enormous sales [ 4 ].<br/><br/>10. If we [ 5 ] the town we'll miss the rush hour traffic.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "potential"
+            },
+            {
+              "id": "u7_kt_9",
+              "content": "6. A figure [ 1 ] out of the mist.<br/><br/>7. Susan is a [ 2 ] buyer for the house.<br/><br/>8. Once the jewels were safely locked up in the bank he had no more anxieties about their [ 3 ].<br/><br/>9. This new invention has an enormous sales [ 4 ].<br/><br/>10. If we [ 5 ] the town we'll miss the rush hour traffic.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "bypass"
+            },
+            {
+              "id": "u7_kt_10",
+              "content": "11. The voters fall into three main [ 1 ]: Republicans, Democrats and 'Don't Knows.'<br/><br/>12. I won't [ 2 ] your bad manners any longer.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "categories"
+            },
+            {
+              "id": "u7_kt_11",
+              "content": "11. The voters fall into three main [ 1 ]: Republicans, Democrats and 'Don't Knows.'<br/><br/>12. I won't [ 2 ] your bad manners any longer.",
+              "options": [
+                "socially",
+                "pivotal",
+                "traded",
+                "remarks",
+                "surpassed",
+                "loomed",
+                "prospective",
+                "security",
+                "potential",
+                "bypass",
+                "categories",
+                "tolerate"
+              ],
+              "correctAnswer": "tolerate"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
@@ -386,5 +622,6 @@
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40
-  }
+  },
+  "title": "Unit 7: Chat Room Helps Lonely Kids"
 }

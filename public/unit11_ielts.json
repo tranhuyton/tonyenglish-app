@@ -342,10 +342,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit11_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Positive Thinking Brings Rewards</h1>\n  <p style=\"margin-bottom: 1rem;\">Very often, we think of acquiring cash, cars, houses, credit cards and other materialistic things.</p>\n  <p style=\"margin-bottom: 1rem;\">How about acquiring optimism to build a life of real rewards and lasting fulfillment?</p>\n  <p style=\"margin-bottom: 1rem;\">No, I am not kidding. You can acquire optimism and become an optimist instead of a pessimist.</p>\n  <p style=\"margin-bottom: 1rem;\">Author and psychologist Martin E.P. Seligman believes that each of us can learn to be optimistic by rising above pessimism and the depression that often accompanies negative thoughts.</p>\n  <p style=\"margin-bottom: 1rem;\">In his book, \"Learned Optimism: How to change your mind and your life\", Seligman says learning to manage your life is as simple as remembering \"ABCDE\".</p>\n  <p style=\"margin-bottom: 1rem;\">\"A\" is for Adversity, \"B\" for Beliefs, \"C\" for Consequences, \"D\" for Disputation and \"E\" for Energization.</p>\n  <p style=\"margin-bottom: 1rem;\">In life, we are constantly facing small and major problems or Adversities which trigger responses in thoughts and feelings.</p>\n  <p style=\"margin-bottom: 1rem;\">These Adversities could be as follows: someone steals the parking space you are about to drive into; your playful children are not doing their homework as told; your best friend has not been returning your phone calls; you and your spouse have a fight; you invite a boyfriend over for dinner but he says he has other things to do; you receive a poor grade in your studies; and so on.</p>\n  <p style=\"margin-bottom: 1rem;\">For any Adversity, you think in a certain way because of your Beliefs. If you receive a poor grade in your studies, you might think that you did the worst in class, that you are stupid, that you are too old to be competing with younger students, or that you should give up.</p>\n  <p style=\"margin-bottom: 1rem;\">As a Consequence of your Beliefs, you feel totally dejected, useless and embarrassed and decide to withdraw from further studies.</p>\n  <p style=\"margin-bottom: 1rem;\">If you think and feel like this, then you are pessimistic and miserable. Seligman recommends that it would be worthwhile to counter such thoughts and feelings with Disputation, that is, by arguing against such negative ideas.</p>\n  <p style=\"margin-bottom: 1rem;\">Through Disputation, you gather evidence to prove that not everything is bad. You might not have a good grade, but you are probably not the worst. It does not mean you are stupid since you have better grades in other subjects.</p>\n  <p style=\"margin-bottom: 1rem;\">To counter the pessimism, you think of more optimistic ways to look at the situation. You think about possible causes or beliefs concerning the situation. Perhaps you have a family and a full-time job and you have been busy at work lately.</p>\n  <p style=\"margin-bottom: 1rem;\">Then you look at implications of the alternative causes or beliefs. If you have a full-time job, the implications for your part-time study with better grades could be spending less time with the family or being more efficient at work or being more effective in learning.</p>\n  <p style=\"margin-bottom: 1rem;\">Finally, Seligman advocates Energization. This is where you respond optimistically and calmly by thinking, feeling and doing positive things.</p>\n  <p style=\"margin-bottom: 1rem;\">Once you acquire the art of optimism, you may not require the full ABCDE approach. You could shorten it to ABC.</p>\n  <p style=\"margin-bottom: 1rem;\">When you face Adversity, ask yourself, \"What are my optimistic Beliefs about this situation?\" Then, ask yourself again, \"How can I feel and act optimistically so that, arising from my behaviour, there is no or little Consequence affecting myself or someone else?\"</p>\n  <p style=\"margin-bottom: 1rem;\">Be optimistic. Give the ABCDE or ABC a try and keep practising the method. You can be optimistic, positive, constructive, happy and successful in life.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit11_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\"><b>Positive</b> Thinking Brings Rewards</h1>\n  <p style=\"margin-bottom: 1rem;\">Very often, we think of acquiring cash, cars, houses, credit cards and other <b>materialistic</b> things.</p>\n  <p style=\"margin-bottom: 1rem;\">How about acquiring <b>optimism</b> to build a life of real rewards and <b>lasting</b> <b>fulfillment</b>?</p>\n  <p style=\"margin-bottom: 1rem;\">No, I am not kidding. You can <b>acquire</b> <b>optimism</b> and become an <b>optimist</b> instead of a pessimist.</p>\n  <p style=\"margin-bottom: 1rem;\">Author and <b>psychologist</b> Martin E.P. Seligman believes that each of us can learn to be <b>optimistic</b> by rising above <b>pessimism</b> and the <b>depression</b> that often accompanies <b>negative</b> thoughts.</p>\n  <p style=\"margin-bottom: 1rem;\">In his book, \"Learned <b>Optimism</b>: How to change your mind and your life\", Seligman says learning to manage your life is as simple as remembering \"ABCDE\".</p>\n  <p style=\"margin-bottom: 1rem;\">\"A\" is for <b>Adversity</b>, \"B\" for Beliefs, \"C\" for Consequences, \"D\" for <b>Disputation</b> and \"E\" for <b>Energization</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">In life, we are constantly facing small and major problems or Adversities which <b>trigger</b> responses in thoughts and feelings.</p>\n  <p style=\"margin-bottom: 1rem;\">These Adversities could be as follows: someone steals the parking space you are about to drive into; your <b>playful</b> children are not doing their homework as told; your best friend has not been returning your phone calls; you and your <b>spouse</b> have a fight; you invite a boyfriend over for dinner but he says he has other things to do; you receive a poor grade in your studies; and so on.</p>\n  <p style=\"margin-bottom: 1rem;\">For any <b>Adversity</b>, you think in a certain way because of your Beliefs. If you receive a poor grade in your studies, you might think that you did the worst in class, that you are stupid, that you are too old to be competing with younger students, or that you should give up.</p>\n  <p style=\"margin-bottom: 1rem;\">As a <b>Consequence</b> of your Beliefs, you feel totally <b>dejected</b>, useless and <b>embarrassed</b> and decide to <b>withdraw</b> from further studies.</p>\n  <p style=\"margin-bottom: 1rem;\">If you think and feel like this, then you are pessimistic and miserable. Seligman recommends that it would be <b>worthwhile</b> to <b>counter</b> such thoughts and feelings with <b>Disputation</b>, that is, by arguing against such <b>negative</b> ideas.</p>\n  <p style=\"margin-bottom: 1rem;\">Through <b>Disputation</b>, you gather <b>evidence</b> to prove that not everything is bad. You might not have a good grade, but you are probably not the worst. It does not mean you are stupid since you have better grades in other subjects.</p>\n  <p style=\"margin-bottom: 1rem;\">To <b>counter</b> the <b>pessimism</b>, you think of more <b>optimistic</b> ways to look at the situation. You think about possible causes or beliefs <b>concerning</b> the situation. Perhaps you have a family and a full-time job and you have been busy at work <b>lately</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Then you look at implications of the <b>alternative</b> causes or beliefs. If you have a full-time job, the implications for your part-time study with better grades could be spending less time with the family or being more <b>efficient</b> at work or being more effective in learning.</p>\n  <p style=\"margin-bottom: 1rem;\">Finally, Seligman advocates <b>Energization</b>. This is where you respond optimistically and calmly by thinking, feeling and doing <b>positive</b> things.</p>\n  <p style=\"margin-bottom: 1rem;\">Once you <b>acquire</b> the art of <b>optimism</b>, you may not require the full ABCDE <b>approach</b>. You could <b>shorten</b> it to ABC.</p>\n  <p style=\"margin-bottom: 1rem;\">When you face <b>Adversity</b>, ask yourself, \"What are my <b>optimistic</b> Beliefs about this situation?\" Then, ask yourself again, \"How can I feel and act optimistically so that, arising from my behaviour, there is no or little <b>Consequence</b> affecting myself or someone else?\"</p>\n  <p style=\"margin-bottom: 1rem;\">Be <b>optimistic</b>. Give the ABCDE or ABC a try and keep practising the method. You can be <b>optimistic</b>, <b>positive</b>, <b>constructive</b>, happy and successful in life.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u11_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u11_kt_0",
+              "content": "1. He takes a very [ 1 ] attitude when correcting pupils' mistakes.<br/><br/>2. We look to the future with [ 2 ].<br/><br/>3. Thunder [ 3 ] lightning.<br/><br/>4. I've had enough [ 4 ] advice—it only tells me what not to do!<br/><br/>5. This decision will have long-lasting [ 5 ].",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "positive"
+            },
+            {
+              "id": "u11_kt_1",
+              "content": "1. He takes a very [ 1 ] attitude when correcting pupils' mistakes.<br/><br/>2. We look to the future with [ 2 ].<br/><br/>3. Thunder [ 3 ] lightning.<br/><br/>4. I've had enough [ 4 ] advice—it only tells me what not to do!<br/><br/>5. This decision will have long-lasting [ 5 ].",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "optimism"
+            },
+            {
+              "id": "u11_kt_2",
+              "content": "1. He takes a very [ 1 ] attitude when correcting pupils' mistakes.<br/><br/>2. We look to the future with [ 2 ].<br/><br/>3. Thunder [ 3 ] lightning.<br/><br/>4. I've had enough [ 4 ] advice—it only tells me what not to do!<br/><br/>5. This decision will have long-lasting [ 5 ].",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "accompanies"
+            },
+            {
+              "id": "u11_kt_3",
+              "content": "1. He takes a very [ 1 ] attitude when correcting pupils' mistakes.<br/><br/>2. We look to the future with [ 2 ].<br/><br/>3. Thunder [ 3 ] lightning.<br/><br/>4. I've had enough [ 4 ] advice—it only tells me what not to do!<br/><br/>5. This decision will have long-lasting [ 5 ].",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "negative"
+            },
+            {
+              "id": "u11_kt_4",
+              "content": "1. He takes a very [ 1 ] attitude when correcting pupils' mistakes.<br/><br/>2. We look to the future with [ 2 ].<br/><br/>3. Thunder [ 3 ] lightning.<br/><br/>4. I've had enough [ 4 ] advice—it only tells me what not to do!<br/><br/>5. This decision will have long-lasting [ 5 ].",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "consequences"
+            },
+            {
+              "id": "u11_kt_5",
+              "content": "6. Large price increases could [ 1 ] demands for even larger wage increases.<br/><br/>7. She grew more and more melancholy and pale and [ 2 ].<br/><br/>8. They were accused of wasting public money, but they [ 3 ] this charge with the claim that they had wide public support.<br/><br/>9. The [ 4 ] of your statement is that I was wrong.<br/><br/>10. We returned by the [ 5 ] road.",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "trigger"
+            },
+            {
+              "id": "u11_kt_6",
+              "content": "6. Large price increases could [ 1 ] demands for even larger wage increases.<br/><br/>7. She grew more and more melancholy and pale and [ 2 ].<br/><br/>8. They were accused of wasting public money, but they [ 3 ] this charge with the claim that they had wide public support.<br/><br/>9. The [ 4 ] of your statement is that I was wrong.<br/><br/>10. We returned by the [ 5 ] road.",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "dejected"
+            },
+            {
+              "id": "u11_kt_7",
+              "content": "6. Large price increases could [ 1 ] demands for even larger wage increases.<br/><br/>7. She grew more and more melancholy and pale and [ 2 ].<br/><br/>8. They were accused of wasting public money, but they [ 3 ] this charge with the claim that they had wide public support.<br/><br/>9. The [ 4 ] of your statement is that I was wrong.<br/><br/>10. We returned by the [ 5 ] road.",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "countered"
+            },
+            {
+              "id": "u11_kt_8",
+              "content": "6. Large price increases could [ 1 ] demands for even larger wage increases.<br/><br/>7. She grew more and more melancholy and pale and [ 2 ].<br/><br/>8. They were accused of wasting public money, but they [ 3 ] this charge with the claim that they had wide public support.<br/><br/>9. The [ 4 ] of your statement is that I was wrong.<br/><br/>10. We returned by the [ 5 ] road.",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "implication"
+            },
+            {
+              "id": "u11_kt_9",
+              "content": "6. Large price increases could [ 1 ] demands for even larger wage increases.<br/><br/>7. She grew more and more melancholy and pale and [ 2 ].<br/><br/>8. They were accused of wasting public money, but they [ 3 ] this charge with the claim that they had wide public support.<br/><br/>9. The [ 4 ] of your statement is that I was wrong.<br/><br/>10. We returned by the [ 5 ] road.",
+              "options": [
+                "positive",
+                "optimism",
+                "accompanies",
+                "negative",
+                "consequences",
+                "trigger",
+                "dejected",
+                "countered",
+                "implication",
+                "alternative"
+              ],
+              "correctAnswer": "alternative"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
@@ -420,5 +598,6 @@
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40
-  }
+  },
+  "title": "Unit 11: Positive Thinking Brings Rewards"
 }

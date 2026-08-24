@@ -9,299 +9,237 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit13_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit13_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">anxiety</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æŋˈzaɪəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone has anxiety, they have a lot of worries and fear.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I have to climb to high places, I’m filled with anxiety.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">army</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɑːrmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An army is a large group of people who fight in wars.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The army protects all the people in the country.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">billion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbɪljən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A billion is a very large number: 1,000,000,000.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are billions of stars in outer space.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">carve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑːrv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To carve means to cut into something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father usually carves the turkey for Thanksgiving.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consult</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənˈsʌlt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To consult someone means to ask them for help.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I will consult my accountant to find a way to pay for my bills.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">emergency</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈmɜːrdʒənsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An emergency is a time when someone needs help right away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is a huge fire in my house! This is an emergency!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fortune</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfɔːrtʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone has good fortune, it means they have luck.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have good fortune when I play cards.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">guarantee</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌɡærənˈtiː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To guarantee means to know something will happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I guarantee that the sun will come up in the morning.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hike</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To hike means to walk in the mountains or forest.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I always bring plenty of equipment with me when I hike.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">initial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈnɪʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is initial, it is the first thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The initial step when writing a paper is to find a good topic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intense</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈtens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is intense, it is very strong.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The skunk made an intense odor that filled the air.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lend something is to give it to someone for a short time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister lost her pen, so I will lend her mine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">peak</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[piːk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The peak is the very top of a mountain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is snow on the peaks of those mountains.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">potential</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pəˈtenʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Potential means capable of being but not yet in existence.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I’ve thought of some potential problems with your idea.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pride</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[praɪd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you have pride, you are happy with yourself.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I take pride in getting good grades.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">proof</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pruːf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Proof is a fact that shows something is real.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They used his fingerprint as proof for the crime he committed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">quit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kwɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To quit something means to stop doing it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I quit running because I got tired.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To spin is to turn around in circles.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy kept spinning until he fell down.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tiny</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtaɪni]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people or things are tiny, they are very small.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A baby’s hand is tiny.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tutor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtuːtər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tutor is someone who gives lessons in a certain subject.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister is bad at math. So my mother hired a tutor to help her.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit13_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit13_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blood</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blAd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Blood is the red liquid in your body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I cut my finger and got blood on my shirt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">burn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bə:rn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To burn something is to set it on fire.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I burned some wood in the camp fire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cell</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cell is a small room where a person is locked in.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The jail cell was very small.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəntein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To contain something is to have it inside.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mailbox contained a letter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">correct</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kərekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be correct is to be right.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All of my answers on the test were correct.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crop</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[krap]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A crop is food that a farmer grows.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wheat is a crop that is made into bread.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">demand</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dimænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To demand something is to say strongly that you want it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The workers demanded to be paid more money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">equal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[i:kwəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be equal is to be the same.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Both students are equal in age.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">feed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fi:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To feed is to give food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mother feeds my baby brother everyday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hole</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[houl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hole is an opening in something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man was going to jump into the hole in the ice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">increase</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkri:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To increase something is to make it larger or more.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They've increased the price of gas by 15 cents!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lord</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔ:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Long ago, a lord was a man in charge of a town.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lord of the town was not kind.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">owe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To owe is to have to pay or give back something received from another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I owed him twenty dollars, so I paid him back.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">position</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pəziʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A position is the way something is placed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ How can you sit in that position?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">raise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To raise something is to lift it up.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We had to work together to raise the last piece.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">responsible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rispansəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person is responsible, they do the right things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I try to be responsible and save money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sight is something interesting to see.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw the pyramids of Egypt. What a sight!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spat]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spot is a place where something happens.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The kitchen is a good spot to eat meals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">structure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strʌktʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A structure is a building.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They just built a beautiful new structure downtown.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whole</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[houl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Whole means all of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I ate the whole pie. We don't have any more.</div></div></div></div></div></div>",
       "sections": [
         {
-          "id": "sec1",
-          "title": "Exercise 1: Choose the right definition for the given word.",
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. carve",
+              "content": "1. the liquid in your body",
               "options": [
-                "to know",
-                "to stop",
-                "to teach",
-                "to cut into"
+                "spot",
+                "blood",
+                "cell",
+                "owe"
               ],
-              "correctAnswer": "to cut into",
-              "explanation": "carve nghĩa là cắt vào vật gì đó (to cut into)."
+              "correctAnswer": "blood",
+              "explanation": "blood (máu) là chất lỏng trong cơ thể."
             },
             {
               "id": "2",
-              "content": "2. consult",
+              "content": "2. to set on fire",
               "options": [
-                "to stop",
-                "to ask for help",
-                "to give",
-                "to turn in circles"
+                "burn",
+                "increase",
+                "feed",
+                "contain"
               ],
-              "correctAnswer": "to ask for help",
-              "explanation": "consult nghĩa là hỏi ý kiến, tìm kiếm sự giúp đỡ (to ask for help)."
+              "correctAnswer": "burn",
+              "explanation": "burn (đốt cháy) là châm lửa vào thứ gì đó."
             },
             {
               "id": "3",
-              "content": "3. anxiety",
+              "content": "3. doing what you should do",
               "options": [
-                "very small",
-                "luck",
-                "worries",
-                "group of fighters"
+                "demand",
+                "raise",
+                "position",
+                "responsible"
               ],
-              "correctAnswer": "worries",
-              "explanation": "anxiety là sự lo âu (worries)."
+              "correctAnswer": "responsible",
+              "explanation": "responsible (có trách nhiệm) là làm những việc nên làm."
             },
             {
               "id": "4",
-              "content": "4. intense",
+              "content": "4. the same as something else",
               "options": [
-                "strong",
-                "first",
-                "bad",
-                "mountain top"
+                "hole",
+                "structure",
+                "lord",
+                "equal"
               ],
-              "correctAnswer": "strong",
-              "explanation": "intense nghĩa là mạnh mẽ, dữ dội (strong)."
+              "correctAnswer": "equal",
+              "explanation": "equal (bằng nhau) là giống với thứ khác."
             },
             {
               "id": "5",
-              "content": "5. proof",
+              "content": "5. something interesting to see",
               "options": [
-                "luck",
-                "facts",
-                "a large number",
-                "a group of fighters"
+                "sight",
+                "correct",
+                "whole",
+                "crop"
               ],
-              "correctAnswer": "facts",
-              "explanation": "proof là bằng chứng, sự thật (facts)."
-            },
-            {
-              "id": "6",
-              "content": "6. tutor",
-              "options": [
-                "a group of fighters",
-                "someone who gives lessons",
-                "to turn in circles",
-                "to stop"
-              ],
-              "correctAnswer": "someone who gives lessons",
-              "explanation": "tutor là người dạy kèm (someone who gives lessons)."
-            },
-            {
-              "id": "7",
-              "content": "7. lend",
-              "options": [
-                "to stop",
-                "to know",
-                "to give",
-                "to cut"
-              ],
-              "correctAnswer": "to give",
-              "explanation": "lend là cho mượn, đưa cho (to give)."
-            },
-            {
-              "id": "8",
-              "content": "8. initial",
-              "options": [
-                "first",
-                "mountain top",
-                "very small",
-                "strong"
-              ],
-              "correctAnswer": "first",
-              "explanation": "initial nghĩa là ban đầu (first)."
-            },
-            {
-              "id": "9",
-              "content": "9. hike",
-              "options": [
-                "to walk in the forest",
-                "to teach",
-                "to turn in circles",
-                "to ask for help"
-              ],
-              "correctAnswer": "to walk in the forest",
-              "explanation": "hike là đi bộ đường dài trong rừng/núi (to walk in the forest)."
-            },
-            {
-              "id": "10",
-              "content": "10. pride",
-              "options": [
-                "a group of fighters",
-                "able to happen",
-                "needing help",
-                "being happy with yourself"
-              ],
-              "correctAnswer": "being happy with yourself",
-              "explanation": "pride là niềm tự hào (being happy with yourself)."
+              "correctAnswer": "sight",
+              "explanation": "sight (cảnh tượng) là thứ thú vị để xem."
             }
           ]
         },
         {
-          "id": "sec2",
-          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. I left my coat in the (sp[6]) by the window.",
+              "correctAnswer": "spot",
+              "explanation": "spot (vị trí, chỗ)."
+            },
+            {
+              "id": "7",
+              "content": "2. The poor man had no money to (fe[7]) his family.",
+              "correctAnswer": "feed",
+              "explanation": "feed (cho ăn)."
+            },
+            {
+              "id": "8",
+              "content": "3. The robber was locked in a (ce[8]) for a year.",
+              "correctAnswer": "cell",
+              "explanation": "cell (phòng giam)."
+            },
+            {
+              "id": "9",
+              "content": "4. Did you read the (wh[9]) book or just part of it?",
+              "correctAnswer": "whole",
+              "explanation": "whole (toàn bộ)."
+            },
+            {
+              "id": "10",
+              "content": "5. If I get the answers (co[10]), I will pass the test.",
+              "correctAnswer": "correct",
+              "explanation": "correct (chính xác)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Check the better response to each question.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "1. Which sentence makes better sense?",
+              "content": "1. What did your father demand?",
               "options": [
-                "a. I should quit eating candy because it is bad for me.",
-                "b. The tiny tower stretched to the sky."
+                "He is not nice.",
+                "That I clean my room."
               ],
-              "correctAnswer": "a. I should quit eating candy because it is bad for me.",
-              "explanation": "quit (từ bỏ) hợp lý khi nói bỏ ăn kẹo vì nó không tốt."
+              "correctAnswer": "That I clean my room.",
+              "explanation": "demand (yêu cầu) phù hợp với việc phải dọn phòng."
             },
             {
               "id": "12",
-              "content": "2. Which sentence makes better sense?",
+              "content": "2. Will you help me raise this?",
               "options": [
-                "a. We ran far above the mountain peak.",
-                "b. I will need water if I'm going to hike the long trail."
+                "Yes. How high?",
+                "Yes, it goes lower."
               ],
-              "correctAnswer": "b. I will need water if I'm going to hike the long trail.",
-              "explanation": "hike (đi bộ đường dài) hợp lý khi cần nước uống."
+              "correctAnswer": "Yes. How high?",
+              "explanation": "raise (nâng lên) phù hợp với câu hỏi 'Cao bao nhiêu?'."
             },
             {
               "id": "13",
-              "content": "3. Which sentence makes better sense?",
+              "content": "3. What position were these in?",
               "options": [
-                "a. If I want to get better at sports, I should quit playing.",
-                "b. The tiny ant crawled in under the door."
+                "They were next to each other.",
+                "They came from the store."
               ],
-              "correctAnswer": "b. The tiny ant crawled in under the door.",
-              "explanation": "tiny (nhỏ bé) hợp lý khi mô tả con kiến."
+              "correctAnswer": "They were next to each other.",
+              "explanation": "position (vị trí) phù hợp với 'chúng ở cạnh nhau'."
             },
             {
               "id": "14",
-              "content": "4. Which sentence makes better sense?",
+              "content": "4. Does that bottle contain water?",
               "options": [
-                "a. The clouds look like they can touch the mountain peaks.",
-                "b. I have a great deal of pride when I lose a contest."
+                "Yes. What is inside it?",
+                "No, it has milk in it."
               ],
-              "correctAnswer": "a. The clouds look like they can touch the mountain peaks.",
-              "explanation": "peak (đỉnh núi) hợp lý khi nói mây chạm đến đỉnh núi."
+              "correctAnswer": "No, it has milk in it.",
+              "explanation": "contain (chứa đựng) phù hợp với câu trả lời 'không, nó có chứa sữa'."
             },
             {
               "id": "15",
-              "content": "5. Which sentence makes better sense?",
+              "content": "5. Did you hear that Jim's house burned down?",
               "options": [
-                "a. The boy was filled with pride when he learned how to read.",
-                "b. I hiked downstairs from my room."
+                "That is terrible!",
+                "Is it bigger now?"
               ],
-              "correctAnswer": "a. The boy was filled with pride when he learned how to read.",
-              "explanation": "pride (tự hào) hợp lý khi cậu bé học được cách đọc."
+              "correctAnswer": "That is terrible!",
+              "explanation": "burn down (cháy rụi) là chuyện kinh khủng (terrible)."
             }
           ]
         },
         {
-          "id": "sec3",
-          "title": "Exercise 3: Choose the word that is a better fit for each sentence.",
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Choose the word that is a better fit for each sentence.",
           "content": "",
-          "questionType": "Trắc nghiệm",
+          "questionType": "Điền từ",
           "questions": [
             {
               "id": "16",
-              "content": "1. There are ___ problems with her plan.",
-              "options": [
-                "guarantee",
-                "potential"
-              ],
-              "correctAnswer": "potential",
-              "explanation": "potential (tiềm năng/tiềm ẩn) hợp lý đi cùng problems."
+              "content": "1a. The bad guy sat on the floor of his (ce[16]).",
+              "correctAnswer": "cell",
+              "explanation": "cell (phòng giam)."
             },
             {
               "id": "17",
-              "content": "2. I ___ you that I'll get a good grade because I studied hard.",
-              "options": [
-                "guarantee",
-                "potential"
-              ],
-              "correctAnswer": "guarantee",
-              "explanation": "guarantee (đảm bảo) vì học chăm chỉ."
+              "content": "1b. Dad says the old (str[17]) is not safe.",
+              "correctAnswer": "structure",
+              "explanation": "structure (công trình)."
             },
             {
               "id": "18",
-              "content": "3. My mother ___ me her car when I need it.",
-              "options": [
-                "lends",
-                "tutor"
-              ],
-              "correctAnswer": "lends",
-              "explanation": "lends (cho mượn) xe."
+              "content": "2a. The (lo[18]) ruled over 100 people in the town.",
+              "correctAnswer": "lord",
+              "explanation": "lord (lãnh chúa)."
             },
             {
               "id": "19",
-              "content": "4. I work as a ___ during the summer to make money.",
-              "options": [
-                "lends",
-                "tutor"
-              ],
-              "correctAnswer": "tutor",
-              "explanation": "tutor (người dạy kèm) là công việc."
+              "content": "2b. I still (o[19]) the bank money for my university loan.",
+              "correctAnswer": "owe",
+              "explanation": "owe (nợ)."
             },
             {
               "id": "20",
-              "content": "5. My eyes hurt when I looked into the ___ light.",
-              "options": [
-                "billions",
-                "intense"
-              ],
-              "correctAnswer": "intense",
-              "explanation": "intense (cường độ mạnh) hợp lý khi mô tả ánh sáng."
+              "content": "3a. Won't your legs hurt if you stay in that (pos[20]) for long?",
+              "correctAnswer": "position",
+              "explanation": "position (vị trí/tư thế)."
             },
             {
               "id": "21",
-              "content": "6. There are ___ of people in the world.",
-              "options": [
-                "billions",
-                "intense"
-              ],
-              "correctAnswer": "billions",
-              "explanation": "billions (hàng tỷ) người trên thế giới."
+              "content": "3b. This is our favorite picnic (sp[21]).",
+              "correctAnswer": "spot",
+              "explanation": "spot (địa điểm)."
             },
             {
               "id": "22",
-              "content": "7. To cook noodles, the ___ step is to boil water.",
-              "options": [
-                "quit",
-                "initial"
-              ],
-              "correctAnswer": "initial",
-              "explanation": "initial (ban đầu) là bước đầu tiên."
+              "content": "4a. The (wh[22]) class was excited.",
+              "correctAnswer": "whole",
+              "explanation": "whole (toàn bộ)."
             },
             {
               "id": "23",
-              "content": "8. She ___ taking care of her plants, so they died.",
-              "options": [
-                "quit",
-                "initial"
-              ],
-              "correctAnswer": "quit",
-              "explanation": "quit (từ bỏ) việc chăm sóc cây."
+              "content": "4b. I dug a (ho[23]) to put a tree in.",
+              "correctAnswer": "hole",
+              "explanation": "hole (cái hố)."
             },
             {
               "id": "24",
-              "content": "9. I had a feeling of ___ when I thought the bully would hit me.",
-              "options": [
-                "emergency",
-                "anxiety"
-              ],
-              "correctAnswer": "anxiety",
-              "explanation": "anxiety (sự lo lắng) vì sợ bị đánh."
+              "content": "5a. Do not (fe[24]) any of the animals at the zoo.",
+              "correctAnswer": "feed",
+              "explanation": "feed (cho ăn)."
             },
             {
               "id": "25",
-              "content": "10. When the man stopped breathing, his wife knew it was an ___.",
-              "options": [
-                "emergency",
-                "anxiety"
-              ],
-              "correctAnswer": "emergency",
-              "explanation": "emergency (tình trạng khẩn cấp) khi ngừng thở."
+              "content": "5b. The farmer grew a (cr[25]) of potatoes.",
+              "correctAnswer": "crop",
+              "explanation": "crop (vụ mùa)."
             }
           ]
         }
@@ -310,74 +248,74 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Cat and the Fox</h1><p style=\"margin-bottom: 1rem;\">One day, a cat <b>hiked</b> on a mountain. When he reached the <b>peak</b>, he met a fox. They began talking about how they get away from their enemies.</p><p style=\"margin-bottom: 1rem;\">\"I am very smart. I have <b>billions</b> of ideas. I can <b>carve</b> a <b>tiny</b> hole in a tree, and then climb in,\" the fox said. He added, \"I have a lot of friends. If I am in trouble, I can call them to <b>lend</b> their help. I can escape an entire <b>army</b> if I have to!\"</p><p style=\"margin-bottom: 1rem;\">Then, the fox asked, \"What are your <b>potential</b> plans?\" The cat said, \"I have only one plan.\" The fox said, \"I hope you have good <b>fortune</b>, then! Do you want me to be your <b>tutor</b>? I can teach you many things.\" The cat said, \"I <b>guarantee</b> that my plan works every time. We can <b>quit</b> talking about it.\"</p><p style=\"margin-bottom: 1rem;\">Soon, they saw a group of wolves. It was an <b>emergency</b>. The cat quickly used her plan. She ran up a tree. The fox could not decide which plan to use. \"What should my <b>initial</b> move be? Should I <b>consult</b> my friends?\" The fox felt <b>intense</b> <b>anxiety</b>. All he could do was <b>spin</b> in a circle. The wolves caught the fox. The cat was full of <b>pride</b>. This is <b>proof</b> that having a good plan is better than having many bad plans.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">        <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Farmer and the Cats</h1>        <p style=\"margin-bottom: 1rem;\">Arthur was a <b>responsible</b> farmer, and Maria was a nice lady. But they were poor. They <b>owed</b> the town <b>lord</b> money for their land. One summer, their farm <b>burned</b>. One <b>structure</b> caught fire, and most of the animals ran away. Only the cats stayed. So Arthur and Maria had to bring in their <b>crops</b> without an animal's help.</p>    <p style=\"margin-bottom: 1rem;\">On a fall day, the lord <b>demanded</b> his money. Arthur asked if the lord could wait until he brought in his crops.</p>    <p style=\"margin-bottom: 1rem;\">The lord was angry. He <b>raised</b> his hands high and yelled, \"Pay me by the end of the week. If you don't, I will <b>increase</b> the money you have to pay. I might put you in a jail <b>cell</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">So Arthur and Maria worked until there was <b>blood</b> on their hands. They finished four lines of corn and went to bed.</p>    <p style=\"margin-bottom: 1rem;\">But the next morning, eight lines were finished! \"Maria, didn't we stop in this <b>spot</b> here?\" Arthur asked.</p>    <p style=\"margin-bottom: 1rem;\">\"Yes, that is <b>correct</b>. And the tools were in a different <b>position</b>, too,\" Maria said. They were surprised and happy. That day, they worked hard and finished five lines.</p>    <p style=\"margin-bottom: 1rem;\">But in the morning, ten lines were done! Each day they did a lot of work. Each night, someone else did an <b>equal</b> amount of work. In a week, the <b>whole</b> field was finished. \"Tomorrow I will sell the crops and pay the lord,\" Arthur said. But that morning, the crops were gone. A bag was in the middle of the field. It <b>contained</b> money.</p>    <p style=\"margin-bottom: 1rem;\">\"Maria, let's see who has helped us work.\" Through a <b>hole</b> in the wall, they saw a funny <b>sight</b>. The cats were dancing in the field and eating corn! Now Arthur knew what had happened. The cats had worked at night! After that, Arthur was very nice to his cats and <b>fed</b> them lots of corn.</p></div>",
       "imageUrl": "/unit13_story.png",
       "sections": [
         {
-          "id": "sec4",
+          "id": "sec5_reading",
           "title": "Answer the questions based on the story.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
-              "content": "1. What is this story about?",
+              "content": "1. What does Arthur do in the story?",
               "options": [
-                "Why cats have good fortune",
-                "How you make guarantees about plans",
-                "Why you need a good plan in an emergency",
-                "How foxes have the potential to make billions of plans"
+                "Put the lady in a jail cell",
+                "Raise his hands high",
+                "Demand money from people",
+                "Work until there is blood on his hands"
               ],
-              "correctAnswer": "Why you need a good plan in an emergency",
-              "explanation": "Câu chuyện cho thấy tại sao cần một kế hoạch tốt trong tình huống khẩn cấp (emergency)."
+              "correctAnswer": "Work until there is blood on his hands",
+              "explanation": "Câu chuyện có nói: 'So Arthur and Maria worked until there was blood on their hands.'"
             },
             {
               "id": "27",
-              "content": "2. Why did the fox feel intense anxiety?",
+              "content": "2. What is true of the cats in the story?",
               "options": [
-                "Because he tried to spin in circles",
-                "Because his army of friends did not lend their help",
-                "Because he did not know what his initial move should be",
-                "Because he could not find a tree in which to carve a tiny hole"
+                "They burn the farm and scare the animals.",
+                "They do work equal to Arthur's work.",
+                "They think Arthur is very responsible.",
+                "They put all the tools in one spot."
               ],
-              "correctAnswer": "Because he did not know what his initial move should be",
-              "explanation": "Cáo lo lắng dữ dội vì không biết bước đi đầu tiên (initial move) của mình nên là gì."
+              "correctAnswer": "They do work equal to Arthur's work.",
+              "explanation": "Bài đọc có đoạn: 'Each night, someone else did an equal amount of work.' (Những chú mèo làm lượng công việc tương đương)"
             },
             {
               "id": "28",
-              "content": "3. Why was the cat full of pride at the end of the story?",
+              "content": "3. What does the bag contain?",
               "options": [
-                "He hiked to the peak of the mountain.",
-                "He had proof that his plan was best.",
-                "He did not let the fox become his tutor.",
-                "He loved to hide in the trees."
+                "A gift for the lady",
+                "Corn to feed the animals",
+                "Money for the lord",
+                "A new kind of crop"
               ],
-              "correctAnswer": "He had proof that his plan was best.",
-              "explanation": "Mèo tự hào vì có bằng chứng (proof) rằng kế hoạch của nó là tốt nhất."
+              "correctAnswer": "Money for the lord",
+              "explanation": "Túi đó chứa tiền (money) để trả cho ngài lãnh chúa."
             },
             {
               "id": "29",
-              "content": "4. According to the passage, all the following are true EXCEPT___",
+              "content": "4. What sight did Maria and Arthur see in the morning?",
               "options": [
-                "the fox got caught by the wolves",
-                "the cat did not get caught by the wolves",
-                "the fox said he could consult his friends if he got into trouble",
-                "the fox decided to quit thinking of plans and just use one"
+                "A hole in the wall of their house",
+                "A whole new structure on the farm",
+                "The lord working in their fields",
+                "The cats dancing on the farm"
               ],
-              "correctAnswer": "the fox decided to quit thinking of plans and just use one",
-              "explanation": "Cáo không hề quyết định từ bỏ việc nghĩ kế hoạch và chỉ dùng một cái. Đó là lựa chọn sai (EXCEPT)."
+              "correctAnswer": "The cats dancing on the farm",
+              "explanation": "Họ nhìn thấy cảnh tượng: 'The cats were dancing in the field and eating corn!'"
             },
             {
               "id": "30",
-              "content": "5. What guarantee did the cat make to the fox?",
+              "content": "5. When will the lord increase the money that Arthur has to pay?",
               "options": [
-                "His plan works every time.",
-                "He will lend his friends to the fox.",
-                "He has billions of plans.",
-                "He will teach the fox how to hike."
+                "At the end of the month",
+                "At the end of the summer",
+                "At the end of the week",
+                "At the end of the year"
               ],
-              "correctAnswer": "His plan works every time.",
-              "explanation": "Mèo đảm bảo rằng kế hoạch của mình luôn luôn hoạt động (works every time)."
+              "correctAnswer": "At the end of the week",
+              "explanation": "Lãnh chúa nói: 'Pay me by the end of the week. If you don't, I will increase the money you have to pay.'"
             }
           ]
         }

@@ -342,10 +342,246 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit28_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Visible Man</h1>\n<p style=\"margin-bottom: 1rem;\">Part thriller, part campus novel, part satire, a new novel is the talk of America.</p>\n<p style=\"margin-bottom: 1rem;\">When Alfred Knopf paid a reported $4.2m for this thriller in a two-book deal, the publishing house gambled recklessly. The author, a professor of law at Yale, had written seven non-fiction books, including \"The Dissent of the Governed\", \"God's Name in Vain\" and \"The Culture of Disbelief\", but not a single word of publishable fiction. He was not even a particularly gifted writer. His non-fiction indicated, and \"The Emperor of Ocean Park\" now confirms, that his prose is competent rather than inspired.</p>\n<p style=\"margin-bottom: 1rem;\">But if enjoyment is the test, Stephen Carter earns his advance. He not merely holds your attention, he stimulates it for all 657 pages, though not for the expected reasons. This is a thriller without thrills. Its storyline is even more convoluted than the plots of John Le Carré's spy stories, and it is riddled with preposterous whodunit machinations involving a box secretly buried at night in a graveyard, a message hidden in a child's toy and clues embedded in chess stratagems. It is, frankly, hard to give a fig whether the hero-narrator, Talcott Garland, or his murderous rivals first solve the central mystery: the meaning of a death note left by Garland's father, a judge of rancid conservative views who dies in menacing circumstances sometimes after a public scandal puts paid to his nomination to the Supreme Court.</p>\n<p style=\"margin-bottom: 1rem;\">The novel's humour obliterates these faults. Much of the action takes place on campus, and Mr Carter is as witty as David Lodge about academic vendettas, and more venomous. His scholars ooze goodwill as they scheme to ruin their colleagues' careers, reputations and marriages. In a key incident, anonymous accusers expose a scholar in line for a coveted judicial post as a plagiarist.</p>\n<p style=\"margin-bottom: 1rem;\">There is a serious theme, too. The novel's narrator belongs, like its author, to the black upper-middle class. From this viewpoint, \"The Emperor of Ocean Park\" provides an unusual take on the enduring power of racial prejudice and racial stereotyping in the United States. Old-money African-Americans rarely write or appear as characters in fiction and, if this book is any guide, these affluent members of \"the darker nation\" feel not so much ignored as made invisible by \"the paler nation.\"</p>\n<p style=\"margin-bottom: 1rem;\">Mr Carter's denials that the book is in large part autobiographical fly in the face of the fictionalised facts. Consider the evidence. Talcott Garland, is a middle-aged, church-going, socially-conservative African-American, as is Mr Carter. He is, again like Mr Carter, a professor of law. The Ivy League University where Garland teaches resembles Yale. The town he lives in, Elm Harbour, could easily be New Haven. In short, Garland-Carter is part of the black American elite. His family and friends live in such urban enclaves as the Gold Coast neighbourhood in north-west Washington, DC. They own holiday homes on Martha's Vineyard. And, despite their success, they are racked by guilt and intense feelings of conflict.</p>\n<p style=\"margin-bottom: 1rem;\">Watching ambitious black law students sucking up to a managing director of Goldman Sachs, a Wall Street investment bank, Garland suddenly understands \"the passion of the many black nationalists of the 1960s who opposed affirmative action\" in the belief that it would \"strip the community of the best among its potential leaders\", send them off to the best colleges, and \"turn them into...well, into young corporate apparatchiks in Brooks Brothers suits, desperate for the favour of powerful white capitalists... fancy college degrees and fancier money for the few would supplant justice for the many.\"</p>\n<p style=\"margin-bottom: 1rem;\">White liberals should withhold their applause. They are presented throughout as bossy people far more comfortable telling blacks what they need than asking them what they want. Teachers at expensive private schools are particular objects of scorn. Those at the pre-school Garland's son attends encourage hugging between boys (little boys hugging little girls would, of course, be inappropriate behaviour). It is done \"in the service of some unarticulated ideological goal—making sure they don't grow up to be the kind of men who drop bombs on innocent civilians, perhaps. But I am not sure why the teachers bother.\" It goes on that these kids \"are far more likely to grow up to be the kind of men who sit in the White House ordering others to drop the bombs, in between hugging their constituents.\"</p>\n<p style=\"margin-bottom: 1rem;\">Just about everybody will be offended by something or other in \"The Emperor of Ocean Park.\" But the book will also make its readers think and laugh. Only the promised thrills are missing. Maybe Mr Carter will provide them in the second part of his $ 4.2m deal.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit28_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Visible Man</h1>\n<p style=\"margin-bottom: 1rem;\">Part <b>thriller</b>, part <b>campus novel</b>, part <b>satire</b>, a new novel is the talk of America.</p>\n<p style=\"margin-bottom: 1rem;\">When Alfred Knopf paid a <b>reported</b> $4.2m for this <b>thriller</b> in a two-book <b>deal</b>, the publishing house gambled <b>recklessly</b>. The author, a professor of law at Yale, had written seven <b>non-fiction</b> books, including \"The <b>Dissent</b> of the Governed\", \"God's Name <b>in Vain</b>\" and \"The Culture of Disbelief\", but not a single word of publishable fiction. He was not even a <b>particularly</b> <b>gifted</b> writer. His <b>non-fiction</b> indicated, and \"The Emperor of Ocean Park\" now confirms, that his <b>prose</b> is <b>competent</b> rather than <b>inspired</b>.</p>\n<p style=\"margin-bottom: 1rem;\">But if enjoyment is the test, Stephen Carter earns his <b>advance</b>. He not <b>merely</b> holds your attention, he stimulates it for all 657 pages, though not for the expected reasons. This is a <b>thriller</b> without thrills. Its <b>storyline</b> is even more <b>convoluted</b> than the plots of John Le Carré's spy stories, and it is riddled with <b>preposterous</b> <b>whodunit</b> machinations involving a box secretly buried at night in a graveyard, a message hidden in a child's toy and clues embedded in chess stratagems. It is, frankly, hard to <b>give a <b>fig</b></b> whether the hero-narrator, Talcott Garland, or his <b>murderous</b> rivals first solve the central mystery: the meaning of a death note left by Garland's father, a judge of <b>rancid</b> <b>conservative</b> views who dies in <b>menacing</b> circumstances sometimes after a public <b>scandal</b> puts paid to his <b>nomination</b> to <b>the Supreme Court</b>.</p>\n<p style=\"margin-bottom: 1rem;\">The novel's humour obliterates these faults. Much of the action takes place on campus, and Mr Carter is as <b>witty</b> as David Lodge about <b>academic</b> vendettas, and more <b>venomous</b>. His scholars <b>ooze</b> <b>goodwill</b> as they <b>scheme</b> to ruin their colleagues' careers, reputations and marriages. In a key <b>incident</b>, <b>anonymous</b> accusers expose a scholar <b>in line for</b> a coveted <b>judicial</b> post as a <b>plagiarist</b>.</p>\n<p style=\"margin-bottom: 1rem;\">There is a serious <b>theme</b>, too. The novel's narrator belongs, like its author, to the black upper-middle class. From this <b>viewpoint</b>, \"The Emperor of Ocean Park\" provides an unusual <b>take</b> on the <b>enduring</b> power of <b>racial</b> <b>prejudice</b> and <b>racial</b> stereotyping in the United States. <b>Old-money</b> African-Americans rarely write or appear as characters in fiction and, if this book is any guide, these <b>affluent</b> members of \"the darker nation\" feel not so much ignored as made invisible by \"the paler nation.\"</p>\n<p style=\"margin-bottom: 1rem;\">Mr Carter's denials that the book is <b>in large part</b> <b>autobiographical</b> <b>fly in the face of</b> the fictionalised facts. Consider the evidence. Talcott Garland, is a middle-aged, church-going, socially-<b>conservative</b> African-American, as is Mr Carter. He is, again like Mr Carter, a professor of law. The Ivy League University where Garland teaches resembles Yale. The town he lives in, Elm Harbour, could easily be New Haven. <b>In short</b>, Garland-Carter is part of the black American <b>elite</b>. His family and friends live in such urban enclaves as the Gold Coast neighbourhood in north-west Washington, DC. They own holiday homes on Martha's Vineyard. And, <b>despite</b> their success, they are racked by guilt and intense feelings of conflict.</p>\n<p style=\"margin-bottom: 1rem;\">Watching <b>ambitious</b> black law students sucking up to a managing director of Goldman Sachs, a Wall Street investment bank, Garland suddenly understands \"the <b>passion</b> of the many black nationalists of the 1960s who opposed <b>affirmative action</b>\" <b>in the belief</b> that it would \"strip the community of the best among its <b>potential</b> leaders\", send them off to the best colleges, and \"turn them into...well, into young <b>corporate</b> apparatchiks in Brooks Brothers suits, <b>desperate</b> for the <b>favour</b> of powerful white capitalists... <b>fancy</b> college degrees and fancier money for the few would <b>supplant</b> justice for the many.\"</p>\n<p style=\"margin-bottom: 1rem;\">White liberals should <b>withhold</b> their <b>applause</b>. They are presented throughout as <b>bossy</b> people far more comfortable telling blacks what they need than asking them what they want. Teachers at expensive private schools are particular objects of scorn. Those at the pre-school Garland's son attends encourage hugging between boys (little boys hugging little girls would, of course, be <b>inappropriate</b> behaviour). It is done \"<b>in the service of</b> some <b>unarticulated</b> <b>ideological</b> goal—making sure they don't grow up to be the kind of men who drop bombs on <b>innocent</b> civilians, perhaps. But I am not sure why the teachers <b>bother</b>.\" It goes on that these kids \"are far more likely to grow up to be the kind of men who sit in the White House ordering others to drop the bombs, <b>in between</b> hugging their constituents.\"</p>\n<p style=\"margin-bottom: 1rem;\">Just about everybody will be offended by something or other in \"The Emperor of Ocean Park.\" But the book will also make its readers think and laugh. Only the promised thrills are missing. Maybe Mr Carter will provide them in the second part of his $ 4.2m <b>deal</b>.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u28_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u28_kt_0",
+              "content": "1. His new play is a [ 1 ] of the fashion industry.<br/><br/>2. It was [ 2 ] of him to leave his job before he had another one.<br/><br/>3. This new evidence [ 3 ] my opinion that they are lying.<br/><br/>4. My secretary is perfectly [ 4 ], but she doesn't have much initiative.<br/><br/>5. Meeting the famous footballer was a great [ 5 ] for the children.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "satire"
+            },
+            {
+              "id": "u28_kt_1",
+              "content": "1. His new play is a [ 1 ] of the fashion industry.<br/><br/>2. It was [ 2 ] of him to leave his job before he had another one.<br/><br/>3. This new evidence [ 3 ] my opinion that they are lying.<br/><br/>4. My secretary is perfectly [ 4 ], but she doesn't have much initiative.<br/><br/>5. Meeting the famous footballer was a great [ 5 ] for the children.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "reckless"
+            },
+            {
+              "id": "u28_kt_2",
+              "content": "1. His new play is a [ 1 ] of the fashion industry.<br/><br/>2. It was [ 2 ] of him to leave his job before he had another one.<br/><br/>3. This new evidence [ 3 ] my opinion that they are lying.<br/><br/>4. My secretary is perfectly [ 4 ], but she doesn't have much initiative.<br/><br/>5. Meeting the famous footballer was a great [ 5 ] for the children.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "confirms"
+            },
+            {
+              "id": "u28_kt_3",
+              "content": "1. His new play is a [ 1 ] of the fashion industry.<br/><br/>2. It was [ 2 ] of him to leave his job before he had another one.<br/><br/>3. This new evidence [ 3 ] my opinion that they are lying.<br/><br/>4. My secretary is perfectly [ 4 ], but she doesn't have much initiative.<br/><br/>5. Meeting the famous footballer was a great [ 5 ] for the children.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "competent"
+            },
+            {
+              "id": "u28_kt_4",
+              "content": "1. His new play is a [ 1 ] of the fashion industry.<br/><br/>2. It was [ 2 ] of him to leave his job before he had another one.<br/><br/>3. This new evidence [ 3 ] my opinion that they are lying.<br/><br/>4. My secretary is perfectly [ 4 ], but she doesn't have much initiative.<br/><br/>5. Meeting the famous footballer was a great [ 5 ] for the children.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "thrill"
+            },
+            {
+              "id": "u28_kt_5",
+              "content": "6. Police have still found no [ 1 ] as to the whereabouts of the missing woman.<br/><br/>7. His [ 2 ] as chief executive was approved by the board.<br/><br/>8. The village was [ 3 ] in the bombing raid.<br/><br/>9. The flowers were sent by an [ 4 ] admirer.<br/><br/>10. He won the [ 5 ] Oscar award.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "clues"
+            },
+            {
+              "id": "u28_kt_6",
+              "content": "6. Police have still found no [ 1 ] as to the whereabouts of the missing woman.<br/><br/>7. His [ 2 ] as chief executive was approved by the board.<br/><br/>8. The village was [ 3 ] in the bombing raid.<br/><br/>9. The flowers were sent by an [ 4 ] admirer.<br/><br/>10. He won the [ 5 ] Oscar award.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "nomination"
+            },
+            {
+              "id": "u28_kt_7",
+              "content": "6. Police have still found no [ 1 ] as to the whereabouts of the missing woman.<br/><br/>7. His [ 2 ] as chief executive was approved by the board.<br/><br/>8. The village was [ 3 ] in the bombing raid.<br/><br/>9. The flowers were sent by an [ 4 ] admirer.<br/><br/>10. He won the [ 5 ] Oscar award.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "obliterated"
+            },
+            {
+              "id": "u28_kt_8",
+              "content": "6. Police have still found no [ 1 ] as to the whereabouts of the missing woman.<br/><br/>7. His [ 2 ] as chief executive was approved by the board.<br/><br/>8. The village was [ 3 ] in the bombing raid.<br/><br/>9. The flowers were sent by an [ 4 ] admirer.<br/><br/>10. He won the [ 5 ] Oscar award.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "anonymous"
+            },
+            {
+              "id": "u28_kt_9",
+              "content": "6. Police have still found no [ 1 ] as to the whereabouts of the missing woman.<br/><br/>7. His [ 2 ] as chief executive was approved by the board.<br/><br/>8. The village was [ 3 ] in the bombing raid.<br/><br/>9. The flowers were sent by an [ 4 ] admirer.<br/><br/>10. He won the [ 5 ] Oscar award.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "coveted"
+            },
+            {
+              "id": "u28_kt_10",
+              "content": "11. His stories are linked by the [ 1 ] of self-discovery.<br/><br/>12. The great person has established an [ 2 ] fame.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "theme"
+            },
+            {
+              "id": "u28_kt_11",
+              "content": "11. His stories are linked by the [ 1 ] of self-discovery.<br/><br/>12. The great person has established an [ 2 ] fame.",
+              "options": [
+                "satire",
+                "reckless",
+                "confirms",
+                "competent",
+                "thrill",
+                "clues",
+                "nomination",
+                "obliterated",
+                "anonymous",
+                "coveted",
+                "theme",
+                "enduring"
+              ],
+              "correctAnswer": "enduring"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

@@ -342,10 +342,348 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit25_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">British Public School</h1>\n<p style=\"margin-bottom: 1rem;\">All over the world mention of English education suggests a picture of the public schools, and it suggests in particular the names like Eton. Actually Eton is a public school. And the best known of the public schools are not really public at all, but independent and private secondary schools taking boys from the age of thirteen to eighteen years. The public schools in reality form a very small part of the whole system of secondary education; only about one out of forty English boys goes to a public school, and one out of 1,500 goes to Eton. However it is still true that if an English parent has enough money to pay the fees to send his children to an independent school he will most probably do so.</p>\n<p style=\"margin-bottom: 1rem;\">The private secondary schools, or public schools, are generally controlled by governing bodies, who are appointed as trustees to keep alive foundations originally begun by charitable institutions or by rich people. They do not make any financial profits, but only to balance their budgets.</p>\n<p style=\"margin-bottom: 1rem;\">It is difficult to make a precise definition of the term \"public school\". But it is safe to say that there are altogether about a hundred schools which would universally be regarded as \"public schools\". Within the group there are about thirty which can be regarded as \"leading public schools\". Most public schools, particularly the most eminent ones, are called by the name of the town or village in which they are situated. The four most famous of all are Eton College, Harrow School, Winchester College and Rugby School.</p>\n<p style=\"margin-bottom: 1rem;\">To send a boy to a leading public school costs about £900 to £1,100 a term, though some of the less famous schools may cost as little as £600. When a boy has been provisionally accepted, he must, when the time comes, present himself as a candidate for the Common Examination for Entrance to Public Schools. Some public schools accept only boys who have done very well in this examination, but some others deliberately prefer to have a mixture of clever and not-so-clever boys.</p>\n<p style=\"margin-bottom: 1rem;\">Every public school has many rules and customs peculiar to itself—uniform, special clothes, ties, hats, rituals and traditions. But the essential characteristics are more or less the same in them. A typical public school has about 500 boys. There may be some buildings which are three or four hundred years old. There are probably modern and well-equipped scientific laboratories.</p>\n<p style=\"margin-bottom: 1rem;\">Though teaching is arranged centrally for the school as a whole, the boys live in separate \"houses\". Usually a boy enters a house, and remains in the same house for the whole of his time as a pupil. A typical house has about fifty boys, and they are all under the special care of the housemaster and his wife. The house itself is a world in miniature. \"Fagging\" is a well-known public school institution. Not long ago the youngest boy had to perform personal services for the oldest ones, doing such jobs as cleaning their shoes and running errands for them. Now it is much diminished.</p>\n<p style=\"margin-bottom: 1rem;\">Much attention is paid to sport. And boys are often obliged to play football or cricket, or to row on a nearby river or to go out running or to play some other games, on most days of every week. But now there is also much encouragement for other forms of non-academic activity. Boys form their own societies for the pursuit of many and varied interests, and they learn a great deal from each other.</p>\n<p style=\"margin-bottom: 1rem;\">Religion plays an important part in the life of most public schools. In nearly every one there is a chapel which dominates the school buildings and is big enough to hold all the boys and masters. Until fifty years ago most headmasters were clergymen; this is now no longer so. But headmasters are still generally expected to be specially interested in religion in the school, and occasionally to preach sermons in the chapel on Sundays.</p>\n<p style=\"margin-bottom: 1rem;\">There may be one master for every ten boys, and the chases are small and flexible. As the boy grows older and reaches the Sixth Form he will be given great scope and encouragement to develop intellectually in his own way. Public schools do not claim to be more efficient at giving instruction than the grammar schools, but they do say that they try to create conditions in which the mind can develop in breadth as well as depth, and not only the mind but the whole personality as well.</p>\n<p style=\"margin-bottom: 1rem;\">Lessons can be planned so as to leave much time for sport and other outside activities. More important, the atmosphere of the house and school breeds a combination of loyalty and competitiveness. To the individual boy his progress through his house is like his future progress through life in the world outside. First he learns to take a humble part, respectful towards his superiors; and at the end, as a prefect, he learns responsibility and the art of leadership.</p>\n<p style=\"margin-bottom: 1rem;\">Through leaving home at an early age, boys learn to suppress their emotions—and sometimes it may seem that they learn to have no emotions at all. Certainly one quality they learn is an ability not to take themselves too seriously. Boys from public schools seem on the whole more sophisticated, mature and self-assured than others.</p>\n<p style=\"margin-bottom: 1rem;\">Why are the public schools so successful, both in having so many applicants for their limited places, and in seeing so many of their former pupils becoming leading figures in the nation's life? The answer is: to be successful in life, you must fit readily with those who are already at the top. Public schools help you to be that kind of person. Also, the best of them are very successful academically. This is why so many fathers want so much to send their sons to the famous schools.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit25_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">British <b>Public School</b></h1>\n<p style=\"margin-bottom: 1rem;\">All over the world <b>mention</b> of English education suggests a picture of the public schools, and it suggests <b>in particular</b> the names like Eton. Actually Eton is a <b>public school</b>. And the best known of the public schools are not really public at all, but <b>independent</b> and private secondary schools taking boys from the age of thirteen to eighteen years. The public schools <b>in reality</b> <b>form</b> a very small part of the whole system of secondary education; only about one out of forty English boys goes to a <b>public school</b>, and one out of 1,500 goes to Eton. However it is still true that if an English parent has enough money to pay the fees to send his children to an <b>independent</b> school he will most probably do so.</p>\n<p style=\"margin-bottom: 1rem;\">The private secondary schools, or public schools, are generally controlled by governing bodies, who are appointed as trustees to <b>keep alive</b> foundations <b>originally</b> begun by <b>charitable</b> institutions or by rich people. They do not make any <b>financial</b> profits, but <b>only to</b> <b>balance</b> their budgets.</p>\n<p style=\"margin-bottom: 1rem;\">It is difficult to make a <b>precise</b> <b>definition</b> of the <b>term</b> \"<b>public school</b>\". But it is safe to say that there are <b>altogether</b> about a hundred schools which would <b>universally</b> be regarded as \"public schools\". Within the group there are about thirty which can be regarded as \"leading public schools\". Most public schools, particularly the most <b>eminent</b> ones, are called by the name of the town or village in which they are situated. The four most famous of all are Eton College, Harrow School, Winchester College and Rugby School.</p>\n<p style=\"margin-bottom: 1rem;\">To send a boy to a leading <b>public school</b> costs about £900 to £1,100 a <b>term</b>, though some of the less famous schools may cost as little as £600. When a boy has been <b>provisionally</b> accepted, he must, when the time comes, present himself as a <b>candidate</b> for the <b>Common Examination for Entrance to Public Schools</b>. Some public schools accept only boys who have done very well in this examination, but some others <b>deliberately</b> prefer to have a <b>mixture</b> of clever and not-so-clever boys.</p>\n<p style=\"margin-bottom: 1rem;\">Every <b>public school</b> has many rules and customs <b>peculiar</b> to itself—uniform, special clothes, ties, hats, rituals and traditions. But the <b>essential</b> characteristics are <b>more or less</b> the same in them. A <b>typical</b> <b>public school</b> has about 500 boys. There may be some buildings which are three or four hundred years old. There are probably modern and <b>well-equipped</b> scientific laboratories.</p>\n<p style=\"margin-bottom: 1rem;\">Though teaching is arranged <b>centrally</b> for the school as a whole, the boys live in separate \"houses\". Usually a boy enters a house, and remains in the same house for the whole of his time as a pupil. A <b>typical</b> house has about fifty boys, and they are all under the special care of the <b>housemaster</b> and his wife. The house itself is a world in <b>miniature</b>. \"<b>Fagging</b>\" is a well-known <b>public school</b> <b>institution</b>. Not long ago the youngest boy had to <b>perform</b> personal services for the oldest ones, doing such jobs as cleaning their shoes and running errands for them. Now it is much diminished.</p>\n<p style=\"margin-bottom: 1rem;\">Much attention is paid to sport. And boys are often obliged to play football or <b>cricket</b>, or to <b>row</b> on a nearby river or to go out running or to play some other games, on most days of every week. But now there is also much encouragement for other forms of <b>non-academic</b> activity. Boys <b>form</b> their own societies for the <b>pursuit</b> of many and <b>varied</b> interests, and they learn a great deal from each other.</p>\n<p style=\"margin-bottom: 1rem;\"><b>Religion</b> plays an important part in the life of most public schools. In nearly every one there is a <b>chapel</b> which dominates the school buildings and is big enough to <b>hold</b> all the boys and masters. Until fifty years ago most headmasters were clergymen; this is now no longer so. But headmasters are still generally expected to be specially interested in <b>religion</b> in the school, and <b>occasionally</b> to <b>preach</b> sermons in the <b>chapel</b> on Sundays.</p>\n<p style=\"margin-bottom: 1rem;\">There may be one <b>master</b> for every ten boys, and the chases are small and <b>flexible</b>. As the boy grows older and reaches the <b>Sixth <b>Form</b></b> he will be given great <b>scope</b> and encouragement to develop <b>intellectually</b> in his own way. Public schools do not <b>claim</b> to be more <b>efficient</b> at giving <b>instruction</b> than the grammar schools, but they do say that they try to create conditions in which the mind can develop in <b>breadth</b> <b>as well</b> as depth, and not only the mind but the whole <b>personality</b> <b>as well</b>.</p>\n<p style=\"margin-bottom: 1rem;\">Lessons can be planned so as to leave much time for sport and other outside activities. More important, the atmosphere of the house and school breeds a combination of <b>loyalty</b> and <b>competitiveness</b>. To the <b>individual</b> boy his progress through his house is like his future progress through life in the world outside. First he learns to take a <b>humble</b> part, <b>respectful</b> towards his superiors; and at the end, as a <b>prefect</b>, he learns responsibility and the art of leadership.</p>\n<p style=\"margin-bottom: 1rem;\">Through leaving home at an early age, boys learn to <b>suppress</b> their emotions—and sometimes it may seem that they learn to have no emotions at all. Certainly one <b>quality</b> they learn is an ability not to take themselves too seriously. Boys from public schools seem <b>on the whole</b> more <b>sophisticated</b>, <b>mature</b> and <b>self-assured</b> than others.</p>\n<p style=\"margin-bottom: 1rem;\">Why are the public schools so successful, both in having so many applicants for their limited places, and in seeing so many of their <b>former</b> pupils becoming leading figures in the nation's life? The answer is: to be successful in life, you must <b>fit</b> <b>readily</b> with those who are already at the top. Public schools help you to be that kind of person. Also, the best of them are very successful <b>academically</b>. This is why so many fathers want so much to send their sons to the famous schools.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u25_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u25_kt_0",
+              "content": "1. She's been [ 1 ] as sales director.<br/><br/>2. It was [ 2 ] conceived as a biography, but became a novel.<br/><br/>3. There's very little [ 3 ] in selling newspapers at present.<br/><br/>4. When you learn to ride a bicycle you must learn to [ 4 ].<br/><br/>5. Our train leaves at about half past nine - 09:33 to be [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "appointed"
+            },
+            {
+              "id": "u25_kt_1",
+              "content": "1. She's been [ 1 ] as sales director.<br/><br/>2. It was [ 2 ] conceived as a biography, but became a novel.<br/><br/>3. There's very little [ 3 ] in selling newspapers at present.<br/><br/>4. When you learn to ride a bicycle you must learn to [ 4 ].<br/><br/>5. Our train leaves at about half past nine - 09:33 to be [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "originally"
+            },
+            {
+              "id": "u25_kt_2",
+              "content": "1. She's been [ 1 ] as sales director.<br/><br/>2. It was [ 2 ] conceived as a biography, but became a novel.<br/><br/>3. There's very little [ 3 ] in selling newspapers at present.<br/><br/>4. When you learn to ride a bicycle you must learn to [ 4 ].<br/><br/>5. Our train leaves at about half past nine - 09:33 to be [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "profit"
+            },
+            {
+              "id": "u25_kt_3",
+              "content": "1. She's been [ 1 ] as sales director.<br/><br/>2. It was [ 2 ] conceived as a biography, but became a novel.<br/><br/>3. There's very little [ 3 ] in selling newspapers at present.<br/><br/>4. When you learn to ride a bicycle you must learn to [ 4 ].<br/><br/>5. Our train leaves at about half past nine - 09:33 to be [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "balance"
+            },
+            {
+              "id": "u25_kt_4",
+              "content": "1. She's been [ 1 ] as sales director.<br/><br/>2. It was [ 2 ] conceived as a biography, but became a novel.<br/><br/>3. There's very little [ 3 ] in selling newspapers at present.<br/><br/>4. When you learn to ride a bicycle you must learn to [ 4 ].<br/><br/>5. Our train leaves at about half past nine - 09:33 to be [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "precise"
+            },
+            {
+              "id": "u25_kt_5",
+              "content": "6. An English person is British by [ 1 ].<br/><br/>7. The word 'moron' is a [ 2 ] of abuse.<br/><br/>8. This explanation is not yet [ 3 ] accepted.<br/><br/>9. All these measures are [ 4 ].<br/><br/>10. It was nobody's [ 5 ] fault.",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "definition"
+            },
+            {
+              "id": "u25_kt_6",
+              "content": "6. An English person is British by [ 1 ].<br/><br/>7. The word 'moron' is a [ 2 ] of abuse.<br/><br/>8. This explanation is not yet [ 3 ] accepted.<br/><br/>9. All these measures are [ 4 ].<br/><br/>10. It was nobody's [ 5 ] fault.",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "term"
+            },
+            {
+              "id": "u25_kt_7",
+              "content": "6. An English person is British by [ 1 ].<br/><br/>7. The word 'moron' is a [ 2 ] of abuse.<br/><br/>8. This explanation is not yet [ 3 ] accepted.<br/><br/>9. All these measures are [ 4 ].<br/><br/>10. It was nobody's [ 5 ] fault.",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "universally"
+            },
+            {
+              "id": "u25_kt_8",
+              "content": "6. An English person is British by [ 1 ].<br/><br/>7. The word 'moron' is a [ 2 ] of abuse.<br/><br/>8. This explanation is not yet [ 3 ] accepted.<br/><br/>9. All these measures are [ 4 ].<br/><br/>10. It was nobody's [ 5 ] fault.",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "provisional"
+            },
+            {
+              "id": "u25_kt_9",
+              "content": "6. An English person is British by [ 1 ].<br/><br/>7. The word 'moron' is a [ 2 ] of abuse.<br/><br/>8. This explanation is not yet [ 3 ] accepted.<br/><br/>9. All these measures are [ 4 ].<br/><br/>10. It was nobody's [ 5 ] fault.",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "deliberate"
+            },
+            {
+              "id": "u25_kt_10",
+              "content": "11. This style of cooking is [ 1 ] to the southwest of the country.<br/><br/>12. Food is [ 2 ] for the preservation of life.<br/><br/>13. This painting is fairly [ 3 ] of his early work.<br/><br/>14. The boy is a [ 4 ] of his father.<br/><br/>15. Giving presents at Christmas is an [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "peculiar"
+            },
+            {
+              "id": "u25_kt_11",
+              "content": "11. This style of cooking is [ 1 ] to the southwest of the country.<br/><br/>12. Food is [ 2 ] for the preservation of life.<br/><br/>13. This painting is fairly [ 3 ] of his early work.<br/><br/>14. The boy is a [ 4 ] of his father.<br/><br/>15. Giving presents at Christmas is an [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "essential"
+            },
+            {
+              "id": "u25_kt_12",
+              "content": "11. This style of cooking is [ 1 ] to the southwest of the country.<br/><br/>12. Food is [ 2 ] for the preservation of life.<br/><br/>13. This painting is fairly [ 3 ] of his early work.<br/><br/>14. The boy is a [ 4 ] of his father.<br/><br/>15. Giving presents at Christmas is an [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "typical"
+            },
+            {
+              "id": "u25_kt_13",
+              "content": "11. This style of cooking is [ 1 ] to the southwest of the country.<br/><br/>12. Food is [ 2 ] for the preservation of life.<br/><br/>13. This painting is fairly [ 3 ] of his early work.<br/><br/>14. The boy is a [ 4 ] of his father.<br/><br/>15. Giving presents at Christmas is an [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "miniature"
+            },
+            {
+              "id": "u25_kt_14",
+              "content": "11. This style of cooking is [ 1 ] to the southwest of the country.<br/><br/>12. Food is [ 2 ] for the preservation of life.<br/><br/>13. This painting is fairly [ 3 ] of his early work.<br/><br/>14. The boy is a [ 4 ] of his father.<br/><br/>15. Giving presents at Christmas is an [ 5 ].",
+              "options": [
+                "appointed",
+                "originally",
+                "profit",
+                "balance",
+                "precise",
+                "definition",
+                "term",
+                "universally",
+                "provisional",
+                "deliberate",
+                "peculiar",
+                "essential",
+                "typical",
+                "miniature",
+                "institution"
+              ],
+              "correctAnswer": "institution"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
@@ -420,5 +758,6 @@
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40
-  }
+  },
+  "title": "Unit 25: British Public School"
 }

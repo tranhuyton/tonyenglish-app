@@ -342,10 +342,348 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit13_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Two Different Forms of British Leisure Life</h1>\n  <p style=\"margin-bottom: 1rem;\">British people are always famous for their conservative nature. Nevertheless, they also have some interesting ways to enjoy themselves. Of course, because of their different positions, the social elite and common people demonstrate different tastes in this respect. If the organized leisure, the Club, is for the VIPs, then the amusement like the Pancake Race is for the commons.</p>\n  <p style=\"margin-bottom: 1rem;\">Club life started with coffee drinking which began around 1650. Among the most exclusive and famous clubs of London, the Other Club occupies a special position. It was founded in 1911 by Sir Winston Churchill and F. E. Smith. Members of this club gather for dinner once a month when Parliament is in session and their traditional meeting place is the Pirate Room of the Savoy Hotel. These meetings are very private and informal. The Club has only three rules: 1. The object is to dine, wine and talk; 2. Nothing in the intercourse of the members shall be allowed to interfere with the full rigorous pursuit of party politics; 3. The names of the members of the Executive Committee must remain to be unknown.</p>\n  <p style=\"margin-bottom: 1rem;\">Political antagonists, who may never be seen to say a word to each other in public, may dine side by side here and engage in unfettered and amicable conversation. The Other Club is rich in traditions. Many of them originated from Sir Winston Churchill. At his command, a large wooden and black cat was seated near him at dinner with a napkin tied around its neck. The name of the black cat is Kaspar. It was designed and carved from a piece of plain tree in 1926 and was placed near to Sir Winston whenever there were only thirteen at table.</p>\n  <p style=\"margin-bottom: 1rem;\">Limited to fifty, the list of membership includes prominent members of the Commons and the Lords and other distinguished people. It is a non-political club and was given the name the Other Club because it aims always to hear the other man's point of view.</p>\n  <p style=\"margin-bottom: 1rem;\">In contrast with the Other Club there is the popular Pancake Day. It is on the first day of Lent, and usually occurs between February 2 and March 8. It is believed to be a reminder of the days when the consumption of butter and eggs was forbidden during Lent and housewives were anxious to use up all they had left before the start of the frugal period.</p>\n  <p style=\"margin-bottom: 1rem;\">At Westminster School, London, the practice of tossing a pancake is carefully observed. Led by a verger, a pancake is carried in procession from Westminster Abbey to the school. The cook, all in white, tosses it high in the air over the heads of young competitors in the school hall and the boy getting hold of the largest portion of it in the scramble, receives a guinea from Abbey funds. The cook is given two guineas for his part.</p>\n  <p style=\"margin-bottom: 1rem;\">The most popular and most spectacular pancake custom is the annual Pancake Race at Olney, Buckinghamshire, which is said to have been held since 1450. At the starting line each woman holds a frying pan containing a sizzling pancake. These rules are strictly kept: 1. Competitors must be eighteen or more in age and they must have lived in Olney Parish or Warrington for at least six months prior to the race; 2. Each woman must wear an apron and cover her head with a hat or scarf; 3. Loose-fitting trousers are barred; 4. All competitors must toss their pancakes at least three times during the race, once at the start, once during the final spurt to the church path and once at an optional point during the race.</p>\n  <p style=\"margin-bottom: 1rem;\">The first to serve her pancake to the bell ringer at the church door receives from him a traditional kiss and is hailed as the year's Pancake Champion.</p>\n  <p style=\"margin-bottom: 1rem;\">If the Other Club is a way for a few political elite to enjoy their aristocratic taste of leisure, then the practice of the Pancake Race is purely a folk custom. Although they are different both in form and participants, both of them throw some light on the traditional culture of Britain.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit13_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Two Different Forms of British <b>Leisure</b> Life</h1>\n  <p style=\"margin-bottom: 1rem;\">British people are always famous for their <b>conservative</b> <b>nature</b>. Nevertheless, they also have some interesting ways to enjoy themselves. Of course, because of their different positions, the social <b>elite</b> and common people <b>demonstrate</b> different tastes in this <b>respect</b>. If the organized <b>leisure</b>, the Club, is for the VIPs, then the amusement like the <b>Pancake Race</b> is for <b>the commons</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Club life started with coffee drinking which began <b>around</b> 1650. Among the most <b>exclusive</b> and famous clubs of London, the Other Club occupies a special <b>position</b>. It was founded in 1911 by Sir Winston Churchill and F. E. Smith. Members of this club gather for dinner once a month when <b>Parliament</b> is <b>in session</b> and their <b>traditional</b> meeting place is the <b>Pirate</b> Room of the Savoy Hotel. These meetings are very private and <b>informal</b>. The Club has only three rules: 1. The <b>object</b> is to <b>dine</b>, <b>wine</b> and talk; 2. Nothing in the <b>intercourse</b> of the members shall be allowed to <b>interfere with</b> the full <b>rigorous</b> <b>pursuit</b> of party politics; 3. The names of the members of the <b>Executive Committee</b> must remain to be unknown.</p>\n  <p style=\"margin-bottom: 1rem;\">Political antagonists, who may never be seen to say a word to each other in public, may <b>dine</b> side by side here and <b>engage in</b> <b>unfettered</b> and <b>amicable</b> conversation. The Other Club is rich in traditions. Many of them originated from Sir Winston Churchill. At his command, a large wooden and black cat was seated near him at dinner with a <b>napkin</b> tied <b>around</b> its neck. The name of the black cat is Kaspar. It was designed and carved from a piece of <b>plain</b> tree in 1926 and was placed near to Sir Winston whenever there were only thirteen at table.</p>\n  <p style=\"margin-bottom: 1rem;\"><b>Limited to</b> fifty, the list of membership includes <b>prominent</b> members of <b>the Commons</b> and <b>the Lords</b> and other <b>distinguished</b> people. It is a non-political club and was given the name the Other Club because it aims always to hear the other man's <b>point of view</b>.</p>\n  <p style=\"margin-bottom: 1rem;\"><b>In contrast with</b> the Other Club there is the <b>popular</b> Pancake Day. It is on the first day of <b>Lent</b>, and usually occurs between February 2 and March 8. It is believed to be a <b>reminder</b> of the days when the <b>consumption</b> of butter and eggs was forbidden during <b>Lent</b> and housewives were anxious to <b>use up</b> all they had left before the start of the <b>frugal</b> period.</p>\n  <p style=\"margin-bottom: 1rem;\">At Westminster School, London, the practice of tossing a pancake is carefully observed. Led by a <b>verger</b>, a pancake is carried in <b>procession</b> from <b>Westminster Abbey</b> to the school. The cook, all in white, tosses it high in the air over the heads of young competitors in the school hall and the boy getting hold of the largest <b>portion</b> of it in the <b>scramble</b>, receives a <b>guinea</b> from Abbey funds. The cook is given two guineas for his part.</p>\n  <p style=\"margin-bottom: 1rem;\">The most <b>popular</b> and most <b>spectacular</b> pancake <b>custom</b> is the <b>annual</b> <b>Pancake Race</b> at Olney, Buckinghamshire, which is said to have been held since 1450. At the starting line each woman holds a <b>frying pan</b> containing a <b>sizzling</b> pancake. These rules are strictly kept: 1. Competitors must be eighteen or more in age and they must have lived in Olney <b>Parish</b> or Warrington for at least six months <b>prior to</b> the race; 2. Each woman must wear an <b>apron</b> and cover her head with a hat or <b>scarf</b>; 3. <b>Loose-fitting</b> trousers are barred; 4. All competitors must <b>toss</b> their pancakes at least three times during the race, once at the start, once during the final <b>spurt</b> to the church path and once at an <b>optional</b> point during the race.</p>\n  <p style=\"margin-bottom: 1rem;\">The first to <b>serve</b> her pancake to the bell ringer at the church door receives from him a <b>traditional</b> kiss and is hailed as the year's Pancake <b>Champion</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">If the Other Club is a way for a few political <b>elite</b> to enjoy their <b>aristocratic</b> taste of <b>leisure</b>, then the practice of the <b>Pancake Race</b> is <b>purely</b> a folk <b>custom</b>. Although they are different both in form and participants, both of them throw some light on the <b>traditional</b> culture of Britain.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u13_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u13_kt_0",
+              "content": "1. Reading is a pleasant way to spend one's [ 1 ].<br/><br/>2. Old people tend to be [ 2 ] in their attitudes.<br/><br/>3. Only the educational [ 3 ] goes to Oxford or Cambridge.<br/><br/>4. I will now [ 4 ] how the machine works.<br/><br/>5. This room is fine except in one [ 5 ]—what can I sit on?",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "leisure"
+            },
+            {
+              "id": "u13_kt_1",
+              "content": "1. Reading is a pleasant way to spend one's [ 1 ].<br/><br/>2. Old people tend to be [ 2 ] in their attitudes.<br/><br/>3. Only the educational [ 3 ] goes to Oxford or Cambridge.<br/><br/>4. I will now [ 4 ] how the machine works.<br/><br/>5. This room is fine except in one [ 5 ]—what can I sit on?",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "conservative"
+            },
+            {
+              "id": "u13_kt_2",
+              "content": "1. Reading is a pleasant way to spend one's [ 1 ].<br/><br/>2. Old people tend to be [ 2 ] in their attitudes.<br/><br/>3. Only the educational [ 3 ] goes to Oxford or Cambridge.<br/><br/>4. I will now [ 4 ] how the machine works.<br/><br/>5. This room is fine except in one [ 5 ]—what can I sit on?",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "elite"
+            },
+            {
+              "id": "u13_kt_3",
+              "content": "1. Reading is a pleasant way to spend one's [ 1 ].<br/><br/>2. Old people tend to be [ 2 ] in their attitudes.<br/><br/>3. Only the educational [ 3 ] goes to Oxford or Cambridge.<br/><br/>4. I will now [ 4 ] how the machine works.<br/><br/>5. This room is fine except in one [ 5 ]—what can I sit on?",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "demonstrate"
+            },
+            {
+              "id": "u13_kt_4",
+              "content": "1. Reading is a pleasant way to spend one's [ 1 ].<br/><br/>2. Old people tend to be [ 2 ] in their attitudes.<br/><br/>3. Only the educational [ 3 ] goes to Oxford or Cambridge.<br/><br/>4. I will now [ 4 ] how the machine works.<br/><br/>5. This room is fine except in one [ 5 ]—what can I sit on?",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "respect"
+            },
+            {
+              "id": "u13_kt_5",
+              "content": "6. This is an [ 1 ] boarding school catering to the children of the wealthy.<br/><br/>7. What's the [ 2 ] of this research?<br/><br/>8. The sound of the radio upstairs [ 3 ] with my work.<br/><br/>9. The examination is [ 4 ] in the extreme.<br/><br/>10. The whole magazine is produced and edited in the [ 5 ] of excellence.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "exclusive"
+            },
+            {
+              "id": "u13_kt_6",
+              "content": "6. This is an [ 1 ] boarding school catering to the children of the wealthy.<br/><br/>7. What's the [ 2 ] of this research?<br/><br/>8. The sound of the radio upstairs [ 3 ] with my work.<br/><br/>9. The examination is [ 4 ] in the extreme.<br/><br/>10. The whole magazine is produced and edited in the [ 5 ] of excellence.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "object"
+            },
+            {
+              "id": "u13_kt_7",
+              "content": "6. This is an [ 1 ] boarding school catering to the children of the wealthy.<br/><br/>7. What's the [ 2 ] of this research?<br/><br/>8. The sound of the radio upstairs [ 3 ] with my work.<br/><br/>9. The examination is [ 4 ] in the extreme.<br/><br/>10. The whole magazine is produced and edited in the [ 5 ] of excellence.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "interferes"
+            },
+            {
+              "id": "u13_kt_8",
+              "content": "6. This is an [ 1 ] boarding school catering to the children of the wealthy.<br/><br/>7. What's the [ 2 ] of this research?<br/><br/>8. The sound of the radio upstairs [ 3 ] with my work.<br/><br/>9. The examination is [ 4 ] in the extreme.<br/><br/>10. The whole magazine is produced and edited in the [ 5 ] of excellence.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "rigorous"
+            },
+            {
+              "id": "u13_kt_9",
+              "content": "6. This is an [ 1 ] boarding school catering to the children of the wealthy.<br/><br/>7. What's the [ 2 ] of this research?<br/><br/>8. The sound of the radio upstairs [ 3 ] with my work.<br/><br/>9. The examination is [ 4 ] in the extreme.<br/><br/>10. The whole magazine is produced and edited in the [ 5 ] of excellence.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "pursuit"
+            },
+            {
+              "id": "u13_kt_10",
+              "content": "11. We reached an [ 1 ] agreement.<br/><br/>12. Her book [ 2 ] from a short story.<br/><br/>13. Bach was a [ 3 ] musician.<br/><br/>14. He is [ 4 ] for his knowledge of economics.<br/><br/>15. [ 5 ] of oil has declined in recent years.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "amicable"
+            },
+            {
+              "id": "u13_kt_11",
+              "content": "11. We reached an [ 1 ] agreement.<br/><br/>12. Her book [ 2 ] from a short story.<br/><br/>13. Bach was a [ 3 ] musician.<br/><br/>14. He is [ 4 ] for his knowledge of economics.<br/><br/>15. [ 5 ] of oil has declined in recent years.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "originated"
+            },
+            {
+              "id": "u13_kt_12",
+              "content": "11. We reached an [ 1 ] agreement.<br/><br/>12. Her book [ 2 ] from a short story.<br/><br/>13. Bach was a [ 3 ] musician.<br/><br/>14. He is [ 4 ] for his knowledge of economics.<br/><br/>15. [ 5 ] of oil has declined in recent years.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "prominent"
+            },
+            {
+              "id": "u13_kt_13",
+              "content": "11. We reached an [ 1 ] agreement.<br/><br/>12. Her book [ 2 ] from a short story.<br/><br/>13. Bach was a [ 3 ] musician.<br/><br/>14. He is [ 4 ] for his knowledge of economics.<br/><br/>15. [ 5 ] of oil has declined in recent years.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "distinguished"
+            },
+            {
+              "id": "u13_kt_14",
+              "content": "11. We reached an [ 1 ] agreement.<br/><br/>12. Her book [ 2 ] from a short story.<br/><br/>13. Bach was a [ 3 ] musician.<br/><br/>14. He is [ 4 ] for his knowledge of economics.<br/><br/>15. [ 5 ] of oil has declined in recent years.",
+              "options": [
+                "leisure",
+                "conservative",
+                "elite",
+                "demonstrate",
+                "respect",
+                "exclusive",
+                "object",
+                "interferes",
+                "rigorous",
+                "pursuit",
+                "amicable",
+                "originated",
+                "prominent",
+                "distinguished",
+                "Consumption"
+              ],
+              "correctAnswer": "Consumption"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
@@ -420,5 +758,6 @@
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40
-  }
+  },
+  "title": "Unit 13: Two Different Forms of British Leisure Life"
 }

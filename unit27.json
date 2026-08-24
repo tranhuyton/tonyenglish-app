@@ -1,555 +1,696 @@
 {
-  "parts": [
+  "Unit 27 WL1": [
     {
-      "id": "part1",
-      "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit27_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit27_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adapt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədæpt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To adapt means to change in order to deal with a new situation or addition.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When he went to the new town, he had to adapt to all the weather changes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">biological</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baiəlɑdʒikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Biological describes the process of life and living things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In science, we learned about the biological process of bacterial growth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cellular</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[seljələr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is cellular, it relates to the cells of animals or plants.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She used a microscope to see the activity at a cellular level.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dynamic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dainæmik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people are dynamic, they are lively and have creative ideas.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new, dynamic employee came up with a good way to juggle his work load.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fantasy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæntəsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fantasy is a pleasant situation that people think about but is unlikely to happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Becoming an astronaut is a fantasy shared by many children.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">heredity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hirədəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Heredity is the process of passing on features from parents to children.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy's face is similar to his father's because of heredity.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">internal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intə:rnl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is internal, it exists or happens inside a person, object, or place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We removed the outer case to reveal the computer's internal wires.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">minimal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[miniməl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is minimal, it is very small.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My lazy husband does a minimal amount of work around the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pioneer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paiəniər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pioneer is a person who is the first to discover or be involved in something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was a pioneer of computer programming.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prescribe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[priskraib]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To prescribe medicine means to tell someone to take it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I was sick, the doctor prescribed me flu medicine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">respective</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rispektiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When things are respective, they relate separately to each person just mentioned.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boxers were told to return to their respective corners.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">revive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rivaiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To revive someone or something means to restore health or life to them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She revived the feeling of warmth in her leg by rubbing it softly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rigid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ridʒid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When rules or systems are rigid, they are severe because they cannot be changed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Societies often have rigid rules about the way that people are supposed to act.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sequence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[si:kwəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sequence is a number of events or things that come one after another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dominos fell in a sequence of one after another.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">substitute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌbstityu:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To substitute something or someone means to have them take the place of another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I ran out of juice, I had to substitute water to drink in the morning.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">surgeon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sə:rdʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A surgeon is a doctor who is trained to do surgery.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The surgeon operated on the old man's heart.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">therapy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θerəpi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Therapy is treatment for a particular physical or mental illness or condition.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After she broke her legs, she used physical therapy to learn how to walk again.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">transfer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trænsfə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To transfer something means to move it from one place to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The family transferred the groceries from the shopping cart to the car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">transition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trænziʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A transition is a process where there is a change from one form to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The weather gets colder during the transition from summer to autumn.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">transplant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trænsplænt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A transplant is an operation in which a damaged part of one's body is replaced.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sick child needed a heart transplant to live.</div></div></div></div></div></div>",
-      "sections": [
-        {
-          "id": "sec1",
-          "title": "Exercise 1: Choose the answer that best fits the question.",
-          "content": "",
-          "questions": [
-            {
-              "id": "ex1_1",
-              "content": "What thing is a result of heredity?",
-              "options": [
-                "Eye color",
-                "Clothing style",
-                "A haircut",
-                "A job"
-              ],
-              "explanation": "Màu mắt (Eye color) là kết quả của di truyền (heredity).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex1_2",
-              "content": "What process is biological?",
-              "options": [
-                "Walking to school",
-                "Taking a test",
-                "Producing tears",
-                "Getting dressed"
-              ],
-              "explanation": "Tiết nước mắt (Producing tears) là một quá trình sinh học (biological).",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "ex1_3",
-              "content": "What is something that is prescribed?",
-              "options": [
-                "A car",
-                "A report card",
-                "A cold medicine",
-                "An illness"
-              ],
-              "explanation": "Thuốc cảm lạnh (A cold medicine) là thứ được bác sĩ kê đơn (prescribed).",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "ex1_4",
-              "content": "What might be transplanted?",
-              "options": [
-                "A file",
-                "A liver",
-                "A can",
-                "A shoe"
-              ],
-              "explanation": "Gan (A liver) là một bộ phận có thể được cấy ghép (transplanted).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex1_5",
-              "content": "What does a surgeon wear?",
-              "options": [
-                "Gloves",
-                "Thick boots",
-                "A swimming suit",
-                "Goggles"
-              ],
-              "explanation": "Bác sĩ phẫu thuật (surgeon) đeo găng tay (Gloves) khi làm việc.",
-              "correctAnswer": "A"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec2",
-          "title": "Exercise 2: Choose the word that is similar in meaning to the underlined part.",
-          "content": "",
-          "questions": [
-            {
-              "id": "ex2_1",
-              "content": "The child received treatment for his mental condition after he became depressed.",
-              "options": [
-                "therapy",
-                "biological",
-                "fantasy",
-                "adapt"
-              ],
-              "explanation": "treatment for mental condition tương đương với liệu pháp tâm lý (therapy).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex2_2",
-              "content": "The medical students learned which processes were occurring inside living things.",
-              "options": [
-                "therapy",
-                "biological",
-                "fantasy",
-                "adapt"
-              ],
-              "explanation": "occurring inside living things (xảy ra trong sinh vật sống) tương đương với quá trình sinh học (biological).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex2_3",
-              "content": "Unicorns only exist in a situation people think about but will not happen.",
-              "options": [
-                "therapy",
-                "biological",
-                "fantasy",
-                "adapt"
-              ],
-              "explanation": "a situation people think about but will not happen tương đương với điều viển vông, ảo mộng (fantasy).",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "ex2_4",
-              "content": "When he begins his rule, people will have to change to the new situation.",
-              "options": [
-                "therapy",
-                "biological",
-                "fantasy",
-                "adapt"
-              ],
-              "explanation": "change to the new situation tương đương với thích nghi (adapt).",
-              "correctAnswer": "D"
-            },
-            {
-              "id": "ex2_5",
-              "content": "At the relating to cells level, plants and animals are quite similar.",
-              "options": [
-                "cellular",
-                "rigid",
-                "dynamic",
-                "pioneer"
-              ],
-              "explanation": "relating to cells tương đương với cấp độ tế bào (cellular).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex2_6",
-              "content": "We thought his rules were too severe because they cannot be changed.",
-              "options": [
-                "cellular",
-                "rigid",
-                "dynamic",
-                "pioneer"
-              ],
-              "explanation": "severe because they cannot be changed tương đương với cứng nhắc (rigid).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex2_7",
-              "content": "The lively and creative scientist invented a new formula to help stop aging.",
-              "options": [
-                "cellular",
-                "rigid",
-                "dynamic",
-                "pioneer"
-              ],
-              "explanation": "lively and creative (sống động và sáng tạo) tương đương với năng động (dynamic).",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "ex2_8",
-              "content": "The creative inventor was a first person to discover the process of electricity.",
-              "options": [
-                "cellular",
-                "rigid",
-                "dynamic",
-                "pioneer"
-              ],
-              "explanation": "first person to discover tương đương với người tiên phong (pioneer).",
-              "correctAnswer": "D"
-            },
-            {
-              "id": "ex2_9",
-              "content": "There is a specific number of events that come in an order in which to use the tools.",
-              "options": [
-                "sequence",
-                "revived",
-                "substitute",
-                "surgeon"
-              ],
-              "explanation": "number of events that come in an order tương đương với chuỗi/trình tự (sequence).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex2_10",
-              "content": "The brilliant doctor brought back to life the dead patient.",
-              "options": [
-                "sequence",
-                "revived",
-                "substitute",
-                "surgeon"
-              ],
-              "explanation": "brought back to life tương đương với làm sống lại, phục hồi (revived).",
-              "correctAnswer": "B"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec3",
-          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
-          "content": "",
-          "questions": [
-            {
-              "id": "ex3_1",
-              "content": "The surgeon made a small cut into the patient’s skin.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Bác sĩ phẫu thuật (surgeon) tạo một vết cắt nhỏ.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_2",
-              "content": "The building materials must be transferred to the new site.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Vật liệu xây dựng cần được chuyển (transferred) đến địa điểm mới.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_3",
-              "content": "The rigid rules were confusing because they changed all the time.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Rigid rules (luật cứng nhắc) thì không thể thay đổi liên tục.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_4",
-              "content": "The baby prescribed his mother to get a piece of candy.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Prescribe dùng cho bác sĩ kê đơn thuốc, không dùng để nói em bé đòi kẹo.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_5",
-              "content": "You can observe water’s transition into ice when the temperature gets cold.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Transition into ice (quá trình chuyển hoá thành đá).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_6",
-              "content": "Blood flow is a biological process.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Sự lưu thông máu là một quá trình sinh học (biological process).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_7",
-              "content": "I never want to get a new house, so I substitute the one I have.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Substitute có nghĩa là thay thế, không hợp ngữ cảnh này.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_8",
-              "content": "The dynamic teacher thought of new and exciting teaching methods.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Giáo viên năng động, sáng tạo (dynamic) nghĩ ra phương pháp mới.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_9",
-              "content": "Going to sleep at night is a fantasy.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Ngủ vào ban đêm là một việc bình thường, không phải là chuyện viễn tưởng (fantasy).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_10",
-              "content": "He needed plenty of rest after his liver transplant.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Transplant (ca phẫu thuật cấy ghép).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_11",
-              "content": "The pieces must be put on the machine in the correct sequence.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Sequence (theo trình tự chính xác).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_12",
-              "content": "I admired how often he chose to be respective.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Respective nghĩa là \"tương ứng\", thường bổ nghĩa cho danh từ, không đứng một mình miêu tả tính cách như respectful.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_13",
-              "content": "My new school is great. I can’t adapt to my classes.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Nếu trường mới tuyệt vời, thì đáng lẽ phải thích nghi (adapt) được, dùng can't adapt là mâu thuẫn.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_14",
-              "content": "Hot dogs are one of my favorite surgical foods to revive.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Surgical food (thực phẩm phẫu thuật) và revive (cứu sống) không hợp lý khi dùng với xúc xích (hot dogs).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_15",
-              "content": "The heredity expert can tell us how traits are passed on from a father.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Chuyên gia di truyền học (heredity expert) giải thích về đặc điểm di truyền.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_16",
-              "content": "Please take the big, cellular pieces to the recycling center.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Cellular (cấp độ tế bào) là những thứ rất nhỏ, không phải đồ vật lớn để mang đi tái chế.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_17",
-              "content": "The hours of therapy were worth it when I could move my arm again.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Trị liệu vật lý (therapy) giúp hồi phục cử động.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_18",
-              "content": "He’s always the last to understand a joke. He’s such a pioneer.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Người chậm hiểu trò đùa không thể gọi là người tiên phong (pioneer).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_19",
-              "content": "The internal roof got covered in snow after the storm.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Internal (bên trong). Mái nhà bên trong không thể bị phủ tuyết, phải là mái nhà bên ngoài (external).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_20",
-              "content": "I was still hungry because I only ate a minimal amount of food at dinner.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Ăn lượng thức ăn rất ít (minimal) nên vẫn đói.",
-              "correctAnswer": "A"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        }
-      ]
+      "word": "protectionism",
+      "pronunciation": "/prəˈtekʃənɪzəm/",
+      "pos": "noun",
+      "defEn": "The theory or practice of shielding a country's domestic industries from foreign competition.",
+      "defVi": "chủ nghĩa bảo hộ",
+      "exEn": "Protectionism can lead to higher prices for consumers.",
+      "exVi": "Chủ nghĩa bảo hộ có thể dẫn đến giá cả cao hơn cho người tiêu dùng.",
+      "emoji": "🛡️"
     },
     {
-      "id": "part2",
-      "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The First Organ Transplant</h1>        <p style=\"margin-bottom: 1rem;\">In 1954, a man named Richard was dying of kidney disease. He wouldn't survive for long unless he got a new kidney right away. Richard's twin brother, Robert, was willing to donate one of his kidneys to his dying brother. At the time, however, no doctor had ever performed a successful <b>internal</b> organ <b>transplant</b>. The idea of taking an organ out of one person and putting it into another was just a <b>fantasy</b>. But the brothers decided to be brave and found a doctor who could make organ transplants a reality.</p>    <p style=\"margin-bottom: 1rem;\">Since Richard and Robert were twins, their <b>heredity</b> was identical. They had the exact same <b>biological</b> traits. Even their kidneys were identical on the <b>cellular</b> level. Therefore, Robert's working kidney could be <b>substituted</b> for Richard's bad one. Richard's body could <b>adapt</b> to the new organ if the operation was done correctly.</p>    <p style=\"margin-bottom: 1rem;\">The twins went to Dr. Murray, who was a <b>pioneer</b> of new surgical methods. His <b>dynamic</b> team of <b>surgeons</b> performed the transplant. Dr. Murray made sure his surgeons followed a <b>rigid</b> <b>sequence</b> of directions so that no mistakes were made. First, they made a <b>minimal</b> cut in Richard's side and removed the bad kidney. Then, they made another small cut in Robert's side, removed his kidney, and <b>transferred</b> it into Richard's body. Finally, they sewed up the <b>respective</b> cuts. The entire operation only took about one hour.</p>    <p style=\"margin-bottom: 1rem;\">After the surgery, it was clear that both brothers were going to be OK. The operation was confirmed a success. Richard's new kidney worked great! Doctors <b>prescribed</b> medicine for the pain caused by the surgery. Since Richard was still weak, he used physical <b>therapy</b> to <b>revive</b> his strength. At last, Richard's <b>transition</b> into a healthy, happy person was complete.</p>    <p style=\"margin-bottom: 1rem;\">Dr. Murray became a hero in the medical world. His success gave other doctors confidence to try organ transplants themselves. Now, doctors perform life-saving transplants and surgeries every day.</p></div>",
-      "imageUrl": "/unit27_vol5_story.png",
-      "sections": [
-        {
-          "id": "sec4",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
-          "content": "",
-          "questions": [
-            {
-              "id": "sec4_1",
-              "content": "Internal organ transplants were a fantasy after 1954.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Sai. Cấy ghép nội tạng chỉ là một điều viển vông (fantasy) TRƯỚC năm 1954, không phải sau đó.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "sec4_2",
-              "content": "Robert was a pioneer of new surgical procedures.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Sai. Tiến sĩ Murray mới là người tiên phong (pioneer) về quy trình phẫu thuật mới, không phải Robert.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "sec4_3",
-              "content": "The twins’ kidneys were identical on the cellular level because of their heredity.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Đúng. Thận của hai anh em giống hệt nhau ở cấp độ tế bào nhờ vào yếu tố di truyền (heredity).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec4_4",
-              "content": "The dynamic surgeons followed a rigid sequence of directions to avoid mistakes.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Đúng. Các bác sĩ phẫu thuật phải tuân theo một trình tự nghiêm ngặt (rigid sequence) để tránh sai sót.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec4_5",
-              "content": "Richard’s body adapted to the kidney that was transferred from his brother.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Đúng. Cơ thể của Richard đã thích nghi được với quả thận được cấy ghép từ anh trai.",
-              "correctAnswer": "A"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec5",
-          "title": "Part B: Answer the questions.",
-          "content": "",
-          "questions": [
-            {
-              "id": "sec5_1",
-              "content": "What was substituted in the passage?",
-              "options": [
-                "Robert’s working kidney was substituted for Richard’s bad one.",
-                "Richard’s bad kidney was substituted for Robert’s working one.",
-                "Dr. Murray substituted the heart of a patient.",
-                "The liver was substituted."
-              ],
-              "explanation": "Quả thận khoẻ mạnh của Robert được dùng để thay thế (substituted) cho quả thận hỏng của Richard.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec5_2",
-              "content": "What was true of the twin’s biological traits?",
-              "options": [
-                "They had the exact same biological traits and cellular features.",
-                "They had different biological traits.",
-                "They had similar but not exact biological traits.",
-                "They had opposite biological traits."
-              ],
-              "explanation": "Họ có những đặc điểm sinh học và đặc điểm tế bào giống hệt nhau.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec5_3",
-              "content": "What did the doctors prescribe to revive Richard’s strength?",
-              "options": [
-                "Doctors prescribed physical therapy to revive Richard's strength.",
-                "Doctors prescribed more medicine.",
-                "Doctors prescribed a new diet.",
-                "Doctors prescribed daily exercise."
-              ],
-              "explanation": "Các bác sĩ chỉ định liệu pháp vật lý (physical therapy) để phục hồi sức mạnh cho Richard.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec5_4",
-              "content": "Where did the surgeons make minimal cuts in the respective bodies of each twin?",
-              "options": [
-                "The surgeons made minimal cuts in the twins’ sides.",
-                "The surgeons made minimal cuts in the twins’ backs.",
-                "The surgeons made minimal cuts in the twins’ chests.",
-                "The surgeons made minimal cuts in the twins’ legs."
-              ],
-              "explanation": "Các bác sĩ phẫu thuật rạch những đường cắt nhỏ ở phần hông (sides) của hai người.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec5_5",
-              "content": "What was the result of Richard’s transition after his therapy?",
-              "options": [
-                "Richard was a healthy, happy person.",
-                "Richard became a doctor.",
-                "Richard remained very weak.",
-                "Richard became a pioneer."
-              ],
-              "explanation": "Quá trình chuyển biến (transition) đã giúp Richard trở lại là một người khỏe mạnh và hạnh phúc.",
-              "correctAnswer": "A"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        }
-      ]
+      "word": "structurally",
+      "pronunciation": "/ˈstrʌktʃərəli/",
+      "pos": "adverb",
+      "defEn": "With regard to the arrangement of parts or elements.",
+      "defVi": "về mặt cấu trúc",
+      "exEn": "The building is structurally sound.",
+      "exVi": "Tòa nhà rất vững chắc về mặt cấu trúc.",
+      "emoji": "🏗️"
+    },
+    {
+      "word": "diverge",
+      "pronunciation": "/daɪˈvɜːdʒ/",
+      "pos": "verb",
+      "defEn": "To separate from another route or go in a different direction.",
+      "defVi": "rẽ ra, phân kỳ",
+      "exEn": "Their paths diverged after graduation.",
+      "exVi": "Con đường của họ rẽ ra sau khi tốt nghiệp.",
+      "emoji": "🔀"
+    },
+    {
+      "word": "sector",
+      "pronunciation": "/ˈsektər/",
+      "pos": "noun",
+      "defEn": "An area or portion that is distinct from others.",
+      "defVi": "khu vực, lĩnh vực",
+      "exEn": "The manufacturing sector is growing rapidly.",
+      "exVi": "Lĩnh vực sản xuất đang phát triển nhanh chóng.",
+      "emoji": "🏭"
+    },
+    {
+      "word": "in terms",
+      "pronunciation": "/ɪn tɜːmz/",
+      "pos": "phrase",
+      "defEn": "With regard to the particular aspect or subject specified.",
+      "defVi": "xét về mặt",
+      "exEn": "In terms of money, we are doing well.",
+      "exVi": "Xét về mặt tiền bạc, chúng ta đang làm tốt.",
+      "emoji": "📏"
+    },
+    {
+      "word": "production",
+      "pronunciation": "/prəˈdʌkʃn/",
+      "pos": "noun",
+      "defEn": "The action of making or manufacturing from components or raw materials.",
+      "defVi": "sự sản xuất",
+      "exEn": "Production of the new car will start next year.",
+      "exVi": "Sự sản xuất xe hơi mới sẽ bắt đầu vào năm tới.",
+      "emoji": "⚙️"
+    },
+    {
+      "word": "account for",
+      "pronunciation": "/əˈkaʊnt fɔːr/",
+      "pos": "phrasal verb",
+      "defEn": "To make up or form a particular amount or part of something.",
+      "defVi": "chiếm (tỷ lệ), giải thích",
+      "exEn": "Women account for half of the workforce.",
+      "exVi": "Phụ nữ chiếm một nửa lực lượng lao động.",
+      "emoji": "📊"
+    },
+    {
+      "word": "at most",
+      "pronunciation": "/æt məʊst/",
+      "pos": "phrase",
+      "defEn": "Not more than.",
+      "defVi": "tối đa",
+      "exEn": "The journey will take an hour at most.",
+      "exVi": "Chuyến đi sẽ mất tối đa một giờ.",
+      "emoji": "⏱️"
+    },
+    {
+      "word": "contributor to",
+      "pronunciation": "/kənˈtrɪbjətər tuː/",
+      "pos": "noun phrase",
+      "defEn": "A person or thing that contributes something.",
+      "defVi": "yếu tố đóng góp vào",
+      "exEn": "Stress is a major contributor to this disease.",
+      "exVi": "Căng thẳng là một yếu tố đóng góp lớn vào căn bệnh này.",
+      "emoji": "➕"
+    },
+    {
+      "word": "GDP(Gross Domestic Product)",
+      "pronunciation": "/ˌdʒiː diː ˈpiː/",
+      "pos": "noun",
+      "defEn": "The total value of goods produced and services provided in a country during one year.",
+      "defVi": "tổng sản phẩm quốc nội",
+      "exEn": "The country's GDP grew by 3%.",
+      "exVi": "Tổng sản phẩm quốc nội của quốc gia này đã tăng 3%.",
+      "emoji": "📈"
+    },
+    {
+      "word": "dwindle",
+      "pronunciation": "/ˈdwɪndl/",
+      "pos": "verb",
+      "defEn": "To diminish gradually in size, amount, or strength.",
+      "defVi": "suy giảm, nhỏ dần",
+      "exEn": "His savings dwindled away.",
+      "exVi": "Tiền tiết kiệm của anh ấy dần suy giảm.",
+      "emoji": "📉"
+    },
+    {
+      "word": "to the point of",
+      "pronunciation": "/tuː ðə pɔɪnt əv/",
+      "pos": "phrase",
+      "defEn": "To a degree that something happens or is true.",
+      "defVi": "đến mức độ",
+      "exEn": "He was rude to the point of being offensive.",
+      "exVi": "Anh ta thô lỗ đến mức xúc phạm.",
+      "emoji": "🎯"
+    },
+    {
+      "word": "marginal",
+      "pronunciation": "/ˈmɑːdʒɪnl/",
+      "pos": "adjective",
+      "defEn": "Minor and not important; not central.",
+      "defVi": "thứ yếu, không đáng kể",
+      "exEn": "The new policy had only a marginal effect.",
+      "exVi": "Chính sách mới chỉ có tác động không đáng kể.",
+      "emoji": "🤏"
+    },
+    {
+      "word": "proportion",
+      "pronunciation": "/prəˈpɔːʃn/",
+      "pos": "noun",
+      "defEn": "A part, share, or number considered in comparative relation to a whole.",
+      "defVi": "tỷ lệ, phần",
+      "exEn": "A large proportion of the students passed.",
+      "exVi": "Một phần lớn học sinh đã đậu.",
+      "emoji": "🍕"
+    },
+    {
+      "word": "output",
+      "pronunciation": "/ˈaʊtpʊt/",
+      "pos": "noun",
+      "defEn": "The amount of something produced by a person, machine, or industry.",
+      "defVi": "sản lượng, đầu ra",
+      "exEn": "Factory output has increased this year.",
+      "exVi": "Sản lượng nhà máy đã tăng trong năm nay.",
+      "emoji": "📦"
+    },
+    {
+      "word": "triple",
+      "pronunciation": "/ˈtrɪpl/",
+      "pos": "verb",
+      "defEn": "To become three times as much or as many.",
+      "defVi": "tăng gấp ba",
+      "exEn": "Our profits have tripled.",
+      "exVi": "Lợi nhuận của chúng tôi đã tăng gấp ba.",
+      "emoji": "3️⃣"
+    },
+    {
+      "word": "inflation",
+      "pronunciation": "/ɪnˈfleɪʃn/",
+      "pos": "noun",
+      "defEn": "A general increase in prices and fall in the purchasing value of money.",
+      "defVi": "sự lạm phát",
+      "exEn": "Inflation is currently running at 5%.",
+      "exVi": "Lạm phát hiện đang ở mức 5%.",
+      "emoji": "🎈"
+    },
+    {
+      "word": "adjust",
+      "pronunciation": "/əˈdʒʌst/",
+      "pos": "verb",
+      "defEn": "To alter or move something slightly in order to achieve the desired fit, appearance, or result.",
+      "defVi": "điều chỉnh",
+      "exEn": "You need to adjust your mirror before driving.",
+      "exVi": "Bạn cần điều chỉnh gương trước khi lái xe.",
+      "emoji": "🔧"
+    },
+    {
+      "word": "prime",
+      "pronunciation": "/praɪm/",
+      "pos": "adjective",
+      "defEn": "Of first importance; main.",
+      "defVi": "chủ yếu, hàng đầu",
+      "exEn": "Our prime concern is safety.",
+      "exVi": "Mối quan tâm hàng đầu của chúng tôi là an toàn.",
+      "emoji": "🥇"
+    },
+    {
+      "word": "purchasing power",
+      "pronunciation": "/ˈpɜːtʃəsɪŋ ˈpaʊər/",
+      "pos": "noun",
+      "defEn": "The financial ability to buy products and services.",
+      "defVi": "sức mua",
+      "exEn": "The decline in the purchasing power of the dollar.",
+      "exVi": "Sự suy giảm sức mua của đồng đô la.",
+      "emoji": "🛍️"
+    },
+    {
+      "word": "disruption",
+      "pronunciation": "/dɪsˈrʌpʃn/",
+      "pos": "noun",
+      "defEn": "Disturbance or problems which interrupt an event, activity, or process.",
+      "defVi": "sự gián đoạn",
+      "exEn": "The strike caused severe disruption.",
+      "exVi": "Cuộc đình công đã gây ra sự gián đoạn nghiêm trọng.",
+      "emoji": "🚧"
+    },
+    {
+      "word": "transition",
+      "pronunciation": "/trænˈzɪʃn/",
+      "pos": "noun",
+      "defEn": "The process or a period of changing from one state or condition to another.",
+      "defVi": "sự chuyển tiếp",
+      "exEn": "The transition from school to work can be hard.",
+      "exVi": "Sự chuyển tiếp từ trường học sang công việc có thể khó khăn.",
+      "emoji": "🔄"
+    },
+    {
+      "word": "make up",
+      "pronunciation": "/meɪk ʌp/",
+      "pos": "phrasal verb",
+      "defEn": "To form or constitute a part or whole.",
+      "defVi": "tạo thành, chiếm",
+      "exEn": "Women make up 40% of the board.",
+      "exVi": "Phụ nữ chiếm 40% hội đồng quản trị.",
+      "emoji": "🧩"
+    },
+    {
+      "word": "livelihood",
+      "pronunciation": "/ˈlaɪvlihʊd/",
+      "pos": "noun",
+      "defEn": "A means of securing the necessities of life.",
+      "defVi": "kế sinh nhai",
+      "exEn": "Many fishermen lost their livelihood.",
+      "exVi": "Nhiều ngư dân đã mất kế sinh nhai.",
+      "emoji": "🌾"
+    },
+    {
+      "word": "to a degree",
+      "pronunciation": "/tuː ə dɪˈɡriː/",
+      "pos": "phrase",
+      "defEn": "To some extent.",
+      "defVi": "đến một chừng mực nào đó",
+      "exEn": "I agree with you to a degree.",
+      "exVi": "Tôi đồng ý với bạn đến một chừng mực nào đó.",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "trigger",
+      "pronunciation": "/ˈtrɪɡər/",
+      "pos": "verb",
+      "defEn": "To cause an event or situation to happen or exist.",
+      "defVi": "kích hoạt, gây ra",
+      "exEn": "Certain foods can trigger an asthma attack.",
+      "exVi": "Một số thực phẩm có thể gây ra cơn hen suyễn.",
+      "emoji": "🔫"
+    },
+    {
+      "word": "explosion",
+      "pronunciation": "/ɪkˈspləʊʒn/",
+      "pos": "noun",
+      "defEn": "A sudden and rapid increase.",
+      "defVi": "sự bùng nổ",
+      "exEn": "There has been an explosion of interest in the topic.",
+      "exVi": "Đã có một sự bùng nổ về mối quan tâm đến chủ đề này.",
+      "emoji": "💥"
+    },
+    {
+      "word": "pay lip service to",
+      "pronunciation": "/peɪ lɪp ˈsɜːvɪs tuː/",
+      "pos": "idiom",
+      "defEn": "To express approval of or support for something insincerely.",
+      "defVi": "chỉ nói miệng, hứa suông",
+      "exEn": "Many companies pay lip service to environmental protection.",
+      "exVi": "Nhiều công ty chỉ hứa suông về bảo vệ môi trường.",
+      "emoji": "👄"
+    },
+    {
+      "word": "take the form of",
+      "pronunciation": "/teɪk ðə fɔːm əv/",
+      "pos": "phrase",
+      "defEn": "To appear as something.",
+      "defVi": "dưới hình thức",
+      "exEn": "The help can take the form of money.",
+      "exVi": "Sự giúp đỡ có thể dưới hình thức tiền bạc.",
+      "emoji": "🎭"
+    },
+    {
+      "word": "tariff",
+      "pronunciation": "/ˈtærɪf/",
+      "pos": "noun",
+      "defEn": "A tax or duty to be paid on a particular class of imports or exports.",
+      "defVi": "thuế quan",
+      "exEn": "The government imposed a tariff on imported steel.",
+      "exVi": "Chính phủ áp thuế quan lên thép nhập khẩu.",
+      "emoji": "🛃"
+    },
+    {
+      "word": "subsidy",
+      "pronunciation": "/ˈsʌbsədi/",
+      "pos": "noun",
+      "defEn": "A sum of money granted by the government to help an industry or business keep the price of a commodity or service low.",
+      "defVi": "tiền trợ cấp",
+      "exEn": "Agricultural subsidies help farmers survive.",
+      "exVi": "Tiền trợ cấp nông nghiệp giúp nông dân tồn tại.",
+      "emoji": "💸"
+    },
+    {
+      "word": "quota",
+      "pronunciation": "/ˈkwəʊtə/",
+      "pos": "noun",
+      "defEn": "A limited or fixed number or amount of people or things, in particular.",
+      "defVi": "hạn ngạch",
+      "exEn": "The country has an import quota on cars.",
+      "exVi": "Đất nước này có hạn ngạch nhập khẩu xe hơi.",
+      "emoji": "🔢"
+    },
+    {
+      "word": "block",
+      "pronunciation": "/blɒk/",
+      "pos": "verb",
+      "defEn": "To prevent movement or action.",
+      "defVi": "ngăn chặn",
+      "exEn": "A fallen tree blocked the road.",
+      "exVi": "Một cái cây đổ đã ngăn chặn con đường.",
+      "emoji": "🚫"
+    },
+    {
+      "word": "internally",
+      "pronunciation": "/ɪnˈtɜːnəli/",
+      "pos": "adverb",
+      "defEn": "With reference to the inner surface or structure of something.",
+      "defVi": "bên trong, nội bộ",
+      "exEn": "The company decided to promote internally.",
+      "exVi": "Công ty quyết định thăng chức trong nội bộ.",
+      "emoji": "🏢"
+    },
+    {
+      "word": "externally",
+      "pronunciation": "/ɪkˈstɜːnəli/",
+      "pos": "adverb",
+      "defEn": "With reference to the outer surface or structure of something.",
+      "defVi": "bên ngoài",
+      "exEn": "The building looks ugly externally.",
+      "exVi": "Tòa nhà trông xấu xí từ bên ngoài.",
+      "emoji": "🌍"
     }
   ],
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 27: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  }
+  "Unit 27 WL2": [
+    {
+      "word": "NAFTA = North American Free Trade Agreement",
+      "pronunciation": "/ˈnæftə/",
+      "pos": "noun",
+      "defEn": "An agreement among the US, Canada and Mexico designed to remove tariff barriers between the three countries.",
+      "defVi": "Hiệp định Thương mại Tự do Bắc Mỹ",
+      "exEn": "NAFTA has eliminated many tariffs.",
+      "exVi": "NAFTA đã loại bỏ nhiều thuế quan.",
+      "emoji": "🤝"
+    },
+    {
+      "word": "corporation",
+      "pronunciation": "/ˌkɔːpəˈreɪʃn/",
+      "pos": "noun",
+      "defEn": "A large company or group of companies authorized to act as a single entity.",
+      "defVi": "tập đoàn, công ty lớn",
+      "exEn": "She works for a large multinational corporation.",
+      "exVi": "Cô ấy làm việc cho một tập đoàn đa quốc gia lớn.",
+      "emoji": "🏢"
+    },
+    {
+      "word": "statistically",
+      "pronunciation": "/stəˈtɪstɪkli/",
+      "pos": "adverb",
+      "defEn": "In a way that relates to the use of statistics.",
+      "defVi": "về mặt thống kê",
+      "exEn": "The result is statistically significant.",
+      "exVi": "Kết quả này có ý nghĩa về mặt thống kê.",
+      "emoji": "📉"
+    },
+    {
+      "word": "multinational",
+      "pronunciation": "/ˌmʌltiˈnæʃnəl/",
+      "pos": "adjective",
+      "defEn": "Including or involving several countries or individuals of several nationalities.",
+      "defVi": "đa quốc gia",
+      "exEn": "It is a large multinational company.",
+      "exVi": "Đó là một công ty đa quốc gia lớn.",
+      "emoji": "🌍"
+    },
+    {
+      "word": "play part in",
+      "pronunciation": "/pleɪ pɑːt ɪn/",
+      "pos": "phrase",
+      "defEn": "To be involved in something.",
+      "defVi": "đóng vai trò trong",
+      "exEn": "She played a large part in organizing the event.",
+      "exVi": "Cô ấy đóng vai trò lớn trong việc tổ chức sự kiện.",
+      "emoji": "🎭"
+    },
+    {
+      "word": "subsidiary",
+      "pronunciation": "/səbˈsɪdiəri/",
+      "pos": "noun",
+      "defEn": "A company controlled by a holding company.",
+      "defVi": "công ty con",
+      "exEn": "The firm is a subsidiary of a larger parent company.",
+      "exVi": "Công ty này là công ty con của một công ty mẹ lớn hơn.",
+      "emoji": "🏢"
+    },
+    {
+      "word": "self-contained",
+      "pronunciation": "/ˌself kənˈteɪnd/",
+      "pos": "adjective",
+      "defEn": "Complete, or having all that is needed, in itself.",
+      "defVi": "độc lập, khép kín",
+      "exEn": "It is a self-contained unit.",
+      "exVi": "Đó là một đơn vị độc lập.",
+      "emoji": "📦"
+    },
+    {
+      "word": "defined",
+      "pronunciation": "/dɪˈfaɪnd/",
+      "pos": "adjective",
+      "defEn": "Having a definite outline or specification.",
+      "defVi": "được xác định, rõ ràng",
+      "exEn": "We have clearly defined roles.",
+      "exVi": "Chúng tôi có các vai trò được xác định rõ ràng.",
+      "emoji": "📌"
+    },
+    {
+      "word": "territory",
+      "pronunciation": "/ˈterətri/",
+      "pos": "noun",
+      "defEn": "An area of land under the jurisdiction of a ruler or state.",
+      "defVi": "lãnh thổ",
+      "exEn": "They captured new territory.",
+      "exVi": "Họ đã chiếm được lãnh thổ mới.",
+      "emoji": "🗺️"
+    },
+    {
+      "word": "autonomous",
+      "pronunciation": "/ɔːˈtɒnəməs/",
+      "pos": "adjective",
+      "defEn": "Having the freedom to govern itself or control its own affairs.",
+      "defVi": "tự trị, độc lập",
+      "exEn": "An autonomous region of the country.",
+      "exVi": "Một khu vực tự trị của đất nước.",
+      "emoji": "🤖"
+    },
+    {
+      "word": "by contrast",
+      "pronunciation": "/baɪ ˈkɒntrɑːst/",
+      "pos": "phrase",
+      "defEn": "Used to show that someone or something is completely different from someone or something else.",
+      "defVi": "ngược lại",
+      "exEn": "The first book is good; by contrast, the second is terrible.",
+      "exVi": "Cuốn sách đầu tiên hay; ngược lại, cuốn thứ hai rất tệ.",
+      "emoji": "↔️"
+    },
+    {
+      "word": "strategy",
+      "pronunciation": "/ˈstrætədʒi/",
+      "pos": "noun",
+      "defEn": "A plan of action designed to achieve a long-term or overall aim.",
+      "defVi": "chiến lược",
+      "exEn": "We need a new business strategy.",
+      "exVi": "Chúng ta cần một chiến lược kinh doanh mới.",
+      "emoji": "♟️"
+    },
+    {
+      "word": "ownership",
+      "pronunciation": "/ˈəʊnəʃɪp/",
+      "pos": "noun",
+      "defEn": "The act, state, or right of possessing something.",
+      "defVi": "quyền sở hữu",
+      "exEn": "The ownership of the land is disputed.",
+      "exVi": "Quyền sở hữu đất đang bị tranh chấp.",
+      "emoji": "🔑"
+    },
+    {
+      "word": "alliance",
+      "pronunciation": "/əˈlaɪəns/",
+      "pos": "noun",
+      "defEn": "A union or association formed for mutual benefit.",
+      "defVi": "liên minh",
+      "exEn": "The two countries formed a military alliance.",
+      "exVi": "Hai nước đã thành lập một liên minh quân sự.",
+      "emoji": "🤝"
+    },
+    {
+      "word": "joint venture",
+      "pronunciation": "/dʒɔɪnt ˈventʃər/",
+      "pos": "noun",
+      "defEn": "A commercial enterprise undertaken jointly by two or more parties.",
+      "defVi": "liên doanh",
+      "exEn": "The company was a joint venture between French and Japanese firms.",
+      "exVi": "Công ty là một liên doanh giữa các công ty Pháp và Nhật Bản.",
+      "emoji": "🏢"
+    },
+    {
+      "word": "minority",
+      "pronunciation": "/maɪˈnɒrəti/",
+      "pos": "noun",
+      "defEn": "The smaller number or part, especially a number or part representing less than half of the whole.",
+      "defVi": "thiểu số",
+      "exEn": "Only a minority of people support the new law.",
+      "exVi": "Chỉ một thiểu số người ủng hộ luật mới.",
+      "emoji": "📉"
+    },
+    {
+      "word": "stake",
+      "pronunciation": "/steɪk/",
+      "pos": "noun",
+      "defEn": "A share or an interest in an enterprise, especially a financial share.",
+      "defVi": "cổ phần",
+      "exEn": "He holds a 51% stake in the company.",
+      "exVi": "Anh ấy nắm giữ 51% cổ phần trong công ty.",
+      "emoji": "💼"
+    },
+    {
+      "word": "know-how",
+      "pronunciation": "/ˈnəʊ haʊ/",
+      "pos": "noun",
+      "defEn": "Practical knowledge or skill.",
+      "defVi": "bí quyết, kỹ năng thực tế",
+      "exEn": "We lack the technical know-how to complete the project.",
+      "exVi": "Chúng tôi thiếu bí quyết kỹ thuật để hoàn thành dự án.",
+      "emoji": "🧠"
+    },
+    {
+      "word": "building block",
+      "pronunciation": "/ˈbɪldɪŋ blɒk/",
+      "pos": "noun",
+      "defEn": "A basic unit from which something is built up.",
+      "defVi": "thành phần cơ bản",
+      "exEn": "Education is the building block of society.",
+      "exVi": "Giáo dục là thành phần cơ bản của xã hội.",
+      "emoji": "🧱"
+    },
+    {
+      "word": "confederation",
+      "pronunciation": "/kənˌfedəˈreɪʃn/",
+      "pos": "noun",
+      "defEn": "An organization which consists of a number of parties or groups united in an alliance or league.",
+      "defVi": "liên bang, liên minh",
+      "exEn": "A confederation of trade unions.",
+      "exVi": "Một liên minh các công đoàn.",
+      "emoji": "🌐"
+    },
+    {
+      "word": "top management",
+      "pronunciation": "/tɒp ˈmænɪdʒmənt/",
+      "pos": "noun phrase",
+      "defEn": "The highest ranking executives of a business.",
+      "defVi": "ban lãnh đạo cấp cao",
+      "exEn": "The decision was made by top management.",
+      "exVi": "Quyết định được đưa ra bởi ban lãnh đạo cấp cao.",
+      "emoji": "👔"
+    },
+    {
+      "word": "extension",
+      "pronunciation": "/ɪkˈstenʃn/",
+      "pos": "noun",
+      "defEn": "A part that is added to something to enlarge or prolong it.",
+      "defVi": "sự mở rộng, phần mở rộng",
+      "exEn": "They are building an extension to the hospital.",
+      "exVi": "Họ đang xây thêm một phần mở rộng cho bệnh viện.",
+      "emoji": "➕"
+    },
+    {
+      "word": "distinct",
+      "pronunciation": "/dɪˈstɪŋkt/",
+      "pos": "adjective",
+      "defEn": "Recognizably different in nature from something else of a similar type.",
+      "defVi": "khác biệt, riêng biệt",
+      "exEn": "There are two distinct types of this disease.",
+      "exVi": "Có hai loại riêng biệt của căn bệnh này.",
+      "emoji": "🌟"
+    },
+    {
+      "word": "organ",
+      "pronunciation": "/ˈɔːɡən/",
+      "pos": "noun",
+      "defEn": "A part of an organism that is typically self-contained and has a specific vital function.",
+      "defVi": "cơ quan (cơ thể, tổ chức)",
+      "exEn": "The heart is a vital organ.",
+      "exVi": "Trái tim là một cơ quan quan trọng.",
+      "emoji": "🫀"
+    },
+    {
+      "word": "stand for",
+      "pronunciation": "/stænd fɔːr/",
+      "pos": "phrasal verb",
+      "defEn": "To represent or mean.",
+      "defVi": "đại diện cho, viết tắt của",
+      "exEn": "What does UK stand for?",
+      "exVi": "UK là viết tắt của từ gì?",
+      "emoji": "🔤"
+    },
+    {
+      "word": "balance",
+      "pronunciation": "/ˈbæləns/",
+      "pos": "noun",
+      "defEn": "An even distribution of weight enabling someone or something to remain upright and steady.",
+      "defVi": "sự cân bằng",
+      "exEn": "It's important to maintain a healthy work-life balance.",
+      "exVi": "Duy trì sự cân bằng giữa công việc và cuộc sống là rất quan trọng.",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "conflicting",
+      "pronunciation": "/kənˈflɪktɪŋ/",
+      "pos": "adjective",
+      "defEn": "Incompatible or at variance.",
+      "defVi": "mâu thuẫn, đối lập",
+      "exEn": "There are conflicting reports about the incident.",
+      "exVi": "Có những báo cáo mâu thuẫn về vụ việc.",
+      "emoji": "⚔️"
+    },
+    {
+      "word": "constituency",
+      "pronunciation": "/kənˈstɪtʃuənsi/",
+      "pos": "noun",
+      "defEn": "A body of voters in a specified area who elect a representative to a legislative body.",
+      "defVi": "khu vực bầu cử, nhóm ủng hộ",
+      "exEn": "The politician addressed his constituency.",
+      "exVi": "Chính trị gia đã phát biểu trước nhóm cử tri của mình.",
+      "emoji": "🗳️"
+    },
+    {
+      "word": "shareholder",
+      "pronunciation": "/ˈʃeəhəʊldər/",
+      "pos": "noun",
+      "defEn": "An owner of shares in a company.",
+      "defVi": "cổ đông",
+      "exEn": "The company's shareholders approved the merger.",
+      "exVi": "Các cổ đông của công ty đã chấp thuận vụ sáp nhập.",
+      "emoji": "📈"
+    },
+    {
+      "word": "investor",
+      "pronunciation": "/ɪnˈvestər/",
+      "pos": "noun",
+      "defEn": "A person or organization that puts money into financial schemes, property, etc. with the expectation of achieving a profit.",
+      "defVi": "nhà đầu tư",
+      "exEn": "Foreign investors are showing interest in the project.",
+      "exVi": "Các nhà đầu tư nước ngoài đang tỏ ra quan tâm đến dự án.",
+      "emoji": "💰"
+    },
+    {
+      "word": "pension fund",
+      "pronunciation": "/ˈpenʃn fʌnd/",
+      "pos": "noun",
+      "defEn": "A fund from which pensions are paid.",
+      "defVi": "quỹ hưu trí",
+      "exEn": "He contributes to a pension fund every month.",
+      "exVi": "Anh ấy đóng góp vào quỹ hưu trí mỗi tháng.",
+      "emoji": "👴"
+    },
+    {
+      "word": "survey",
+      "pronunciation": "/ˈsɜːveɪ/",
+      "pos": "noun",
+      "defEn": "A general view, examination, or description of someone or something.",
+      "defVi": "cuộc khảo sát",
+      "exEn": "A recent survey showed that 80% of people agree.",
+      "exVi": "Một cuộc khảo sát gần đây cho thấy 80% mọi người đồng ý.",
+      "emoji": "📋"
+    },
+    {
+      "word": "seek",
+      "pronunciation": "/siːk/",
+      "pos": "verb",
+      "defEn": "To attempt to find (something).",
+      "defVi": "tìm kiếm",
+      "exEn": "They came here to seek a better life.",
+      "exVi": "Họ đến đây để tìm kiếm một cuộc sống tốt hơn.",
+      "emoji": "🔍"
+    },
+    {
+      "word": "be unaware of",
+      "pronunciation": "/biː ˌʌnəˈweər əv/",
+      "pos": "phrase",
+      "defEn": "Not knowing or realizing that something is happening or that something exists.",
+      "defVi": "không nhận thức được, không biết về",
+      "exEn": "I was unaware of the problem.",
+      "exVi": "Tôi đã không biết về vấn đề này.",
+      "emoji": "🤷"
+    }
+  ]
 }

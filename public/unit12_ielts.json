@@ -342,10 +342,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit12_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Latest Mating Strategy</h1>\n  <p style=\"margin-bottom: 1rem;\">TOKYO-Mika Matsui finds out on the first date. First two hours, maximum. There's no sense getting your hopes up if Mr Wonderful is the wrong blood type.</p>\n  <p style=\"margin-bottom: 1rem;\">Her last boyfriend was type O. Never again. O's are too needy. Type A's are too boring. B's are sweet, but they don't like her. So it's the AB man she's looking for because \"he's interesting to talk to, very kind and very nice.\"</p>\n  <p style=\"margin-bottom: 1rem;\">\"I don't believe in horoscopes, but I think blood type describes character most accurately,\" said Matsui, 29, a clerical worker for a large Tokyo company. \"Check it out yourself.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Japan has an obsession with blood types. The blood in your veins is supposed to determine how well you live and love, how well you manage money, whether you will succeed at marriage or sumo wrestling. Great marriages and lousy careers are both attributed to blood type.</p>\n  <p style=\"margin-bottom: 1rem;\">Newspaper and magazine profiles of major political candidates always include their blood type. Job applications often ask for blood type. During World War II, Japan's imperial army and navy are said to have formed battle groups by blood type. The manager of a Japanese major league baseball team studies his players' blood types. Japanese television this year carried a sitcom about the life of a businessman called \"I Am Type O.\"</p>\n  <p style=\"margin-bottom: 1rem;\">\"Telling a Japanese person you don't know your blood type invites suspicion,\" said Estelle Viskovish, a stylist at the Sin Den, a popular Tokyo beauty salon. She said: \"It's like you're withholding information.\"</p>\n  <p style=\"margin-bottom: 1rem;\">There are key chains and chewing gum, calendars, magazines and books, all geared toward the blood-type phenomenon. Some of Japan's biggest corporations have looked into increasing their productivity by creating single-type work groups.</p>\n  <p style=\"margin-bottom: 1rem;\">Toshitaka Nomi, whose 30 books on blood types have sold more than 6 million copies in Japan, has been asked to give more than 1,000 speeches at some of Japan's biggest corporations, including Hitachi, Toyota, Nissan and several major banks. Nomi gave many of the speeches at training seminars where his theories were being studied as a potential management tool.</p>\n  <p style=\"margin-bottom: 1rem;\">A person's blood type is determined by what kind of antigen, a type of protein, he has on the surface of his red blood cells. If a person has an A antigen, his blood is type A; if he has a B antigen, he's type B. People with both are type AB, and those with neither are type O. The most common type is O, followed by A, B and AB.</p>\n  <p style=\"margin-bottom: 1rem;\">There is not one molecule of solid scientific evidence that blood type is related to character. Scientists say blood type is about as relevant to personality as hair colour is to snorkeling ability.</p>\n  <p style=\"margin-bottom: 1rem;\">Japanese psychologists and social scientists have been proposing and exploring blood-type theories since the 1920s. The Japanese public has always been receptive, but it wasn't until Nomi's father came along that blood types became a national obsession.</p>\n  <p style=\"margin-bottom: 1rem;\">In 1971, Masahiko Nomi published a book on the subject based on 25 years of personal observations about blood type and character. When the book sold 1.2 million copies, the Nomi family got into the blood type business for good.</p>\n  <p style=\"margin-bottom: 1rem;\">They started sending out questionnaires, asking blood type and a series of questions designed to reveal personality traits. Since 1971 they have sent seven major questionnaires and elicited responses from nearly 250,000 people; those responses are the bricks and mortar of Toshitaka Nomi's writings. About 15 years ago, he said, he sent a questionnaire to every member of the Japanese diet, or parliament, and received responses from 98 per cent of them.</p>\n  <p style=\"margin-bottom: 1rem;\">\"I think the majority of the Japanese people take it seriously,\" Nomi said, \"I would say more than half the Japanese people are very interested in blood types, see some truth in it and are prepared to use it in their daily life.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Following are selected supposed traits of the blood types:<br>\n  <strong>Type A:</strong><br>\n  Positive traits: orderly, law-abiding, fastidious, soft-spoken, fashionable, calm.<br>\n  Negative traits: picky, selfish, secretive, pessimistic, inflexible, reckless when drunk.<br>\n  Suitable careers: accountant, librarian, economist, novelist, computer programmer, gossip columnist.<br>\n  <strong>Type B:</strong><br>\n  Positive: independent, flexible, candid, sensitive, passionate, persuasive.<br>\n  Negative: unpredictable, indiscreet, lazy, impatient, overbearing, can't wake up.<br>\n  Suitable careers: cook, hairdresser, military leader, talk show host, journalist, golfer.<br>\n  <strong>Type AB:</strong><br>\n  Positive: rational calculating, honest, diplomatic, organized, strong ESP.<br>\n  Negative: unforgiving, playboy, easily offended, too conservative, nitpicker, hard to know.<br>\n  Suitable careers: bartender, attorney, teacher, sales representative, social worker, witch.<br>\n  <strong>Type O:</strong><br>\n  Positive: healthy, idealistic, goal-oriented, clear-sighted, good at sports, sexy.<br>\n  Negative: status-seeking, jealous, greedy, unreliable, obsessive lover, can't shut up.<br>\n  Suitable careers: banker, politician, gambler, minister, investment broker, baseball player.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit12_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The <b>Latest</b> <b>Mating</b> <b>Strategy</b></h1>\n  <p style=\"margin-bottom: 1rem;\">TOKYO-Mika Matsui finds out on the first <b>date</b>. First two hours, <b>maximum</b>. There's no sense getting your hopes up if Mr Wonderful is the wrong <b>blood type</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Her last boyfriend was type O. Never again. O's are too <b>needy</b>. Type A's are too <b>boring</b>. B's are sweet, but they don't like her. So it's the AB man she's looking for because \"he's interesting to talk to, very kind and very nice.\"</p>\n  <p style=\"margin-bottom: 1rem;\">\"I don't believe in horoscopes, but I think <b>blood type</b> describes <b>character</b> most <b>accurately</b>,\" said Matsui, 29, a <b>clerical</b> worker for a large Tokyo company. \"Check it out yourself.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Japan has an <b>obsession</b> with blood types. The blood in your veins is <b>supposed</b> to determine how well you live and love, how well you manage money, whether you will succeed at marriage or <b>sumo wrestling</b>. Great marriages and lousy careers are both attributed to <b>blood type</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Newspaper and magazine profiles of major political candidates always include their <b>blood type</b>. Job applications often ask for <b>blood type</b>. During World War II, Japan's <b>imperial</b> army and navy are said to have formed battle groups by <b>blood type</b>. The manager of a Japanese major league baseball team studies his players' blood types. Japanese television this year carried a <b>sitcom</b> about the life of a businessman called \"I Am Type O.\"</p>\n  <p style=\"margin-bottom: 1rem;\">\"Telling a Japanese person you don't know your <b>blood type</b> invites <b>suspicion</b>,\" said Estelle Viskovish, a <b>stylist</b> at the Sin Den, a popular Tokyo <b>beauty salon</b>. She said: \"It's like you're withholding information.\"</p>\n  <p style=\"margin-bottom: 1rem;\">There are key chains and <b>chewing gum</b>, calendars, magazines and books, all geared toward the blood-type <b>phenomenon</b>. Some of Japan's biggest corporations have looked into increasing their <b>productivity</b> by creating <b>single-type</b> work groups.</p>\n  <p style=\"margin-bottom: 1rem;\">Toshitaka Nomi, whose 30 books on blood types have sold more than 6 million copies in Japan, has been asked to give more than 1,000 speeches at some of Japan's biggest corporations, including <b>Hitachi</b>, <b>Toyota</b>, <b>Nissan</b> and several major banks. Nomi gave many of the speeches at training seminars where his theories were being studied as a <b>potential</b> management tool.</p>\n  <p style=\"margin-bottom: 1rem;\">A person's <b>blood type</b> is determined by what kind of <b>antigen</b>, a type of <b>protein</b>, he has on the surface of his red blood cells. If a person has an A <b>antigen</b>, his blood is type A; if he has a B <b>antigen</b>, he's type B. People with both are type AB, and those with neither are type O. The most common type is O, followed by A, B and AB.</p>\n  <p style=\"margin-bottom: 1rem;\">There is not one <b>molecule</b> of <b>solid</b> scientific <b>evidence</b> that <b>blood type</b> is related to <b>character</b>. Scientists say <b>blood type</b> is about as <b>relevant</b> to <b>personality</b> as hair colour is to <b>snorkeling</b> ability.</p>\n  <p style=\"margin-bottom: 1rem;\">Japanese psychologists and social scientists have been proposing and exploring blood-type theories since the 1920s. The Japanese public has always been <b>receptive</b>, but it wasn't until Nomi's father came along that blood types became a national <b>obsession</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">In 1971, Masahiko Nomi published a book on the subject based on 25 years of personal observations about <b>blood type</b> and <b>character</b>. When the book sold 1.2 million copies, the Nomi family got into the <b>blood type</b> business <b>for good</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">They started sending out questionnaires, asking <b>blood type</b> and a series of questions <b>designed to</b> <b>reveal</b> <b>personality</b> traits. Since 1971 they have sent seven major questionnaires and elicited responses from nearly 250,000 people; those responses are the bricks and mortar of Toshitaka Nomi's writings. About 15 years ago, he said, he sent a <b>questionnaire</b> to every member of the Japanese <b>diet</b>, or <b>parliament</b>, and received responses from 98 per cent of them.</p>\n  <p style=\"margin-bottom: 1rem;\">\"I think the majority of the Japanese people take it seriously,\" Nomi said, \"I would say more than half the Japanese people are very interested in blood types, see some <b>truth</b> in it and are prepared to use it in their daily life.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Following are selected <b>supposed</b> traits of the blood types:<br>\n  <strong>Type A:</strong><br>\n  Positive traits: orderly, law-abiding, <b>fastidious</b>, soft-spoken, fashionable, calm.<br>\n  Negative traits: picky, selfish, secretive, pessimistic, inflexible, <b>reckless</b> when drunk.<br>\n  Suitable careers: accountant, librarian, economist, novelist, computer programmer, gossip <b>columnist</b>.<br>\n  <strong>Type B:</strong><br>\n  Positive: independent, flexible, <b>candid</b>, sensitive, passionate, persuasive.<br>\n  Negative: unpredictable, indiscreet, lazy, impatient, overbearing, can't wake up.<br>\n  Suitable careers: cook, hairdresser, military leader, talk show host, journalist, golfer.<br>\n  <strong>Type AB:</strong><br>\n  Positive: rational calculating, honest, diplomatic, organized, strong ESP.<br>\n  Negative: unforgiving, playboy, easily offended, too conservative, <b>nitpicker</b>, hard to know.<br>\n  Suitable careers: bartender, attorney, teacher, sales representative, social worker, witch.<br>\n  <strong>Type O:</strong><br>\n  Positive: healthy, idealistic, goal-oriented, clear-sighted, good at sports, sexy.<br>\n  Negative: status-seeking, jealous, greedy, unreliable, obsessive lover, can't shut up.<br>\n  Suitable careers: banker, politician, gambler, minister, investment broker, baseball player.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u12_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u12_kt_0",
+              "content": "1. Her [ 1 ] book is entitled Second Class Citizen.<br/><br/>2. What [ 2 ] do you use to teach a child to read?<br/><br/>3. The temperature reaches the [ 3 ] at noon.<br/><br/>4. He had an [ 4 ] for home.<br/><br/>5. The newspaper did a [ 5 ] on him.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "latest"
+            },
+            {
+              "id": "u12_kt_1",
+              "content": "1. Her [ 1 ] book is entitled Second Class Citizen.<br/><br/>2. What [ 2 ] do you use to teach a child to read?<br/><br/>3. The temperature reaches the [ 3 ] at noon.<br/><br/>4. He had an [ 4 ] for home.<br/><br/>5. The newspaper did a [ 5 ] on him.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "strategy"
+            },
+            {
+              "id": "u12_kt_2",
+              "content": "1. Her [ 1 ] book is entitled Second Class Citizen.<br/><br/>2. What [ 2 ] do you use to teach a child to read?<br/><br/>3. The temperature reaches the [ 3 ] at noon.<br/><br/>4. He had an [ 4 ] for home.<br/><br/>5. The newspaper did a [ 5 ] on him.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "maximum"
+            },
+            {
+              "id": "u12_kt_3",
+              "content": "1. Her [ 1 ] book is entitled Second Class Citizen.<br/><br/>2. What [ 2 ] do you use to teach a child to read?<br/><br/>3. The temperature reaches the [ 3 ] at noon.<br/><br/>4. He had an [ 4 ] for home.<br/><br/>5. The newspaper did a [ 5 ] on him.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "obsession"
+            },
+            {
+              "id": "u12_kt_4",
+              "content": "1. Her [ 1 ] book is entitled Second Class Citizen.<br/><br/>2. What [ 2 ] do you use to teach a child to read?<br/><br/>3. The temperature reaches the [ 3 ] at noon.<br/><br/>4. He had an [ 4 ] for home.<br/><br/>5. The newspaper did a [ 5 ] on him.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "profile"
+            },
+            {
+              "id": "u12_kt_5",
+              "content": "6. Divisions at home would [ 1 ] dangers from abroad.<br/><br/>7. The behavior of the stranger aroused our [ 2 ].<br/><br/>8. Families [ 3 ] rent and were evicted.<br/><br/>9. The employment problem tends to be a city [ 4 ].<br/><br/>10. His argument is based on good [ 5 ] reasoning.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "invite"
+            },
+            {
+              "id": "u12_kt_6",
+              "content": "6. Divisions at home would [ 1 ] dangers from abroad.<br/><br/>7. The behavior of the stranger aroused our [ 2 ].<br/><br/>8. Families [ 3 ] rent and were evicted.<br/><br/>9. The employment problem tends to be a city [ 4 ].<br/><br/>10. His argument is based on good [ 5 ] reasoning.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "suspicion"
+            },
+            {
+              "id": "u12_kt_7",
+              "content": "6. Divisions at home would [ 1 ] dangers from abroad.<br/><br/>7. The behavior of the stranger aroused our [ 2 ].<br/><br/>8. Families [ 3 ] rent and were evicted.<br/><br/>9. The employment problem tends to be a city [ 4 ].<br/><br/>10. His argument is based on good [ 5 ] reasoning.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "withheld"
+            },
+            {
+              "id": "u12_kt_8",
+              "content": "6. Divisions at home would [ 1 ] dangers from abroad.<br/><br/>7. The behavior of the stranger aroused our [ 2 ].<br/><br/>8. Families [ 3 ] rent and were evicted.<br/><br/>9. The employment problem tends to be a city [ 4 ].<br/><br/>10. His argument is based on good [ 5 ] reasoning.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "phenomenon"
+            },
+            {
+              "id": "u12_kt_9",
+              "content": "6. Divisions at home would [ 1 ] dangers from abroad.<br/><br/>7. The behavior of the stranger aroused our [ 2 ].<br/><br/>8. Families [ 3 ] rent and were evicted.<br/><br/>9. The employment problem tends to be a city [ 4 ].<br/><br/>10. His argument is based on good [ 5 ] reasoning.",
+              "options": [
+                "latest",
+                "strategy",
+                "maximum",
+                "obsession",
+                "profile",
+                "invite",
+                "suspicion",
+                "withheld",
+                "phenomenon",
+                "solid"
+              ],
+              "correctAnswer": "solid"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
@@ -420,5 +598,6 @@
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40
-  }
+  },
+  "title": "Unit 12: The Latest Mating Strategy"
 }

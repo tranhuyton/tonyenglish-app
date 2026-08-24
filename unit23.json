@@ -1,567 +1,327 @@
 {
-  "id": "dc0ce839-5e88-4ec3-948e-8f3114875ce2",
-  "folder_id": "0cfee4e0-5613-415d-9266-c234ddf5c7b8",
-  "title": "Unit 23: Volume 6",
-  "test_type": "SplitScreen (Standard)",
-  "content_json": {
-    "parts": [
-      {
-        "id": "part1",
-        "title": "Word List",
-        "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit23_vol6_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit23_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">allocate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aelakeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To allocate something means to put it aside for a certain purpose or person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The government allocated $100 million to aid the disaster relief effort.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">appetizing</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aepitaizirj]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When food is appetizing, it looks and smells very good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The appetizing plate of cookies was gone in half an hour.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blizzard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blizard]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A blizzard is a severe snow storm with strong winds.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We did not dare to go outside during the terrible blizzard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cavity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kaavati]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cavity is a hole or space in something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a small cavity in the wall of the cave where an animal lived.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">clockwise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klakwaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something moves clockwise, it moves in a circle in the same direction as a clock.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Turn the screw clockwise to tighten it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concentric</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kansentrik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When circles or rings are concentric, they have the same center.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The target was a series of concentric circles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">courtesy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ko:rtasi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Courtesy is the excellence of manners or social conduct.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jenna always behaves with great courtesy when people visit her home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crisp</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[krisp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When food is crisp, it is hard or has a hard surface in a way that is pleasant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My favorite snack is a bag of crisp, delicious potato chips.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">discord</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disko:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Discord is disagreement or fighting between people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was much discord between the experts on the talk show.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frigid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[frid3id]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is frigid, it is extremely cold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We decided not to go on the hike because the weather was too frigid.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">generate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[d3enareit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To generate something means to cause it to develop or begin.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mayor promised to generate new jobs and programs to help the poor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">glacial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gleijal]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is glacial, it relates to large masses of ice that move slowly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Penguins thrive in the glacial regions of Antarctica.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">interchange</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intartjeind3]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An interchange of ideas between people is a discussion of each person’s idea.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was an interchange of ideas between the groups.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">locker</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lakar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A locker is a small cabinet with a lock where people store their possessions.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I keep my school books in my locker.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">multicultural</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mAltikAltjaral]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is multicultural, it relates to many different cultures.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Everyone was welcomed to attend the multicultural celebration.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">omission</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[oumijen]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An omission is something that has been left out or not done.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mike was upset because of the omission of his name during the ceremony.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">oversee</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvarsi:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To oversee something means to make sure that it is being done properly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His job was to oversee the progress of the construction project.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pierce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[piars]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pierce something means to make a hole in it using a sharp object.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The arrow pierced the target in the very center.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">replicate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[replakeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To replicate something is to do it in the exact same way as someone before.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I would love to replicate my father’s achievements in school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wavy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[weivi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is wavy, it is not straight but has a series of curves.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The child drew wavy lines all over the piece of paper.</div></div></div></div></div></div>",
-        "sections": [
-          {
-            "id": "sec1_wordlist",
-            "title": "Exercise 1: Choose the one that is opposite in meaning to the given word.",
-            "content": "",
-            "questions": [
-              {
-                "id": "1",
-                "content": "1. frigid",
-                "options": [
-                  "happy",
-                  "hot",
-                  "open",
-                  "clear"
-                ],
-                "explanation": "frigid (extremely cold) is the opposite of hot.",
-                "correctAnswer": "B"
-              },
-              {
-                "id": "2",
-                "content": "2. wavy",
-                "options": [
-                  "straight",
-                  "pretty",
-                  "likely",
-                  "quick"
-                ],
-                "explanation": "wavy is the opposite of straight.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "3",
-                "content": "3. crisp",
-                "options": [
-                  "more",
-                  "slow",
-                  "nice",
-                  "soft"
-                ],
-                "explanation": "crisp (hard in a pleasant way) is the opposite of soft.",
-                "correctAnswer": "D"
-              },
-              {
-                "id": "4",
-                "content": "4. replicate",
-                "options": [
-                  "flight",
-                  "original",
-                  "friend",
-                  "agreement"
-                ],
-                "explanation": "replicate (to do it in the exact same way as someone before) is the opposite of original.",
-                "correctAnswer": "B"
-              },
-              {
-                "id": "5",
-                "content": "5. allocate",
-                "options": [
-                  "take away",
-                  "freeze",
-                  "close",
-                  "fight"
-                ],
-                "explanation": "allocate (put aside for a purpose) is the opposite of take away.",
-                "correctAnswer": "A"
-              }
-            ],
-            "questionType": "Trắc nghiệm"
-          },
-          {
-            "id": "sec2_wordlist",
-            "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
-            "content": "",
-            "questions": [
-              {
-                "id": "6",
-                "content": "1. No one else can open my <u><u>small cabinet with a lock</u>.</u>",
-                "options": [
-                  "locker",
-                  "blizzard",
-                  "discord",
-                  "cavity"
-                ],
-                "explanation": "locker (n): a small cabinet with a lock.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "7",
-                "content": "2. How can we prevent _argument and <u>disagreement_ in</u> the future?",
-                "options": [
-                  "discord",
-                  "courtesy",
-                  "frigid",
-                  "multicultural"
-                ],
-                "explanation": "discord (n): disagreement or fighting.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "8",
-                "content": "3. The brave travelers were not stopped by <u>the <u>snow storm with strong winds</u>.</u>",
-                "options": [
-                  "blizzard",
-                  "cavity",
-                  "locker",
-                  "omission"
-                ],
-                "explanation": "blizzard (n): a severe snow storm with strong winds.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "9",
-                "content": "4. The organizers made sure that the parade was <u><u>related to many different cultures</u>.</u>",
-                "options": [
-                  "multicultural",
-                  "clockwise",
-                  "appetizing",
-                  "glacial"
-                ],
-                "explanation": "multicultural (adj): relating to many different cultures.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "10",
-                "content": "5. The thief hid the money in a <u>small <u>hole</u> in the</u> wall.",
-                "options": [
-                  "cavity",
-                  "interchange",
-                  "discord",
-                  "locker"
-                ],
-                "explanation": "cavity (n): a hole or space in something.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "11",
-                "content": "6. I thought the hosts showed a <u>lot of _politeness and respect</u> for others_.",
-                "options": [
-                  "courtesy",
-                  "omission",
-                  "generate",
-                  "pierce"
-                ],
-                "explanation": "courtesy (n): excellence of manners or social conduct.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "12",
-                "content": "7. It was her job to <u><u>make sure everything was being done properly</u></u> on the project.",
-                "options": [
-                  "oversee",
-                  "replicate",
-                  "allocate",
-                  "generate"
-                ],
-                "explanation": "oversee (v): make sure that it is being done properly.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "13",
-                "content": "8. What can we do <u>to _cause the beginning</u> or development_ of interest in our product?",
-                "options": [
-                  "generate",
-                  "pierce",
-                  "replicate",
-                  "allocate"
-                ],
-                "explanation": "generate (v): to cause it to develop or begin.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "14",
-                "content": "9. People cannot withstand <u><u>extremely cold</u></u> temperatures without clothing and shelter.",
-                "options": [
-                  "frigid",
-                  "crisp",
-                  "wavy",
-                  "concentric"
-                ],
-                "explanation": "frigid (adj): extremely cold.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "15",
-                "content": "10. John used a knife to <u><u>make a hole</u> in the</u> thick rubber.",
-                "options": [
-                  "pierce",
-                  "oversee",
-                  "replicate",
-                  "generate"
-                ],
-                "explanation": "pierce (v): make a hole in it using a sharp object.",
-                "correctAnswer": "A"
-              }
-            ],
-            "questionType": "Trắc nghiệm"
-          },
-          {
-            "id": "sec3_wordlist",
-            "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
-            "content": "",
-            "questions": [
-              {
-                "id": "16",
-                "content": "1. This is a <u>multicultural</u> holiday. People from all over the world celebrate it.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "multicultural: relates to many different cultures.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "17",
-                "content": "2. The valuables are kept in a secure <u>locker</u>.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "locker: a small cabinet with a lock.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "18",
-                "content": "3. If things move <u>clockwise</u>, they move in reverse.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "clockwise: moves in a circle in the same direction as a clock, not reverse.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "19",
-                "content": "4. The doctor <u>pierced</u> his skin with the needle to draw blood.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "pierce: to make a hole in it using a sharp object.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "20",
-                "content": "5. The scientist tried to <u>replicate</u> the experiment and compare the results.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "replicate: to do it in the exact same way.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "21",
-                "content": "6. The <u>cavity</u> quickly traveled down the stream and to the lake.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "cavity: a hole or space, which doesn't travel down a stream.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "22",
-                "content": "7. The <u>frigid</u> soup burned my tongue!",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "frigid: extremely cold, so it wouldn't burn a tongue.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "23",
-                "content": "8. School was cancelled today because of the horrible <u>blizzard</u> outside.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "blizzard: a severe snow storm.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "24",
-                "content": "9. The <u>appetizing</u> scene made everyone in the theater cry.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "appetizing: looks and smells very good (for food), not related to a sad movie scene.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "25",
-                "content": "10. After a brief <u>interchange</u> of ideas, we were ready to begin the new project.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "interchange: a discussion of each person's idea.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "26",
-                "content": "11. Make sure to include an <u>omission</u> of our goals in the presentation.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "omission: something left out or not done, which contradicts 'include'.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "27",
-                "content": "12. The charity raised money for all of the <u>wavy</u> children in the city.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "wavy: not straight but has a series of curves, doesn't describe children.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "28",
-                "content": "13. Tim was chosen to <u>oversee</u> the progress of the building crew.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "oversee: make sure that it is being done properly.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "29",
-                "content": "14. The <u>glacial</u> dog loved to run and chase the ball in the park.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "glacial: relates to large masses of ice that move slowly, doesn't describe a running dog.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "30",
-                "content": "15. We need to <u>generate</u> a new plan because this one isn't going to work.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "generate: cause to develop or begin.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "31",
-                "content": "16. He was not pleased with the movie. He thought it was too <u>concentric</u>.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "concentric: having the same center, doesn't make sense for a movie.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "32",
-                "content": "17. The brothers cannot work together. There is always <u>discord</u> between them.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "discord: disagreement or fighting.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "33",
-                "content": "18. The <u>crisp</u> lettuce went well with the sandwich.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "crisp: hard or has a hard surface in a pleasant way.",
-                "correctAnswer": "C"
-              },
-              {
-                "id": "34",
-                "content": "19. The mother was disappointed with the extreme <u>courtesy</u> her children displayed.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "courtesy: excellence of manners, which a mother would not be disappointed by.",
-                "correctAnswer": "I"
-              },
-              {
-                "id": "35",
-                "content": "20. Seats will be <u>allocated</u> to the people who are the first to arrive.",
-                "options": [
-                  "I",
-                  "C"
-                ],
-                "explanation": "allocate: put aside for a certain purpose or person.",
-                "correctAnswer": "C"
-              }
-            ],
-            "questionType": "Trắc nghiệm"
-          }
-        ]
-      },
-      {
-        "id": "part2",
-        "title": "Comprehensive Reading",
-        "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Ice House</h1>        <p style=\"margin-bottom: 1rem;\">Last year, Erik constructed one of the world's strangest houses in the <b>glacial</b> landscape of northern Sweden. He called it the Ice House: a house made entirely of ice and snow. All of the beds, chairs, tables, and walls are cold, hard sculptures of ice.</p>    <p style=\"margin-bottom: 1rem;\">A group of architects and volunteers from all over the world traveled to the site of the Ice House and began its construction. The <b>multicultural</b> group journeyed through <b>blizzards</b> and <b>frigid</b> temperatures to reach the site. Once the builders arrived, there was an <b>interchange</b> of ideas, and tools were <b>allocated</b> to each worker. An expert was selected to <b>oversee</b> the building process to make sure there was no <b>discord</b> between the workers. Once a plan was <b>generated</b>, they got right to work. The design was very unique; the builders couldn't <b>replicate</b> the design from normal houses.</p>    <p style=\"margin-bottom: 1rem;\">The first step was to build the walls and ceiling. The builders used a metal frame to help them build the structure. After the ice was in place, the frame was removed. The builders then created furniture and art pieces. Designs were carved into each piece. One worker carved big <b>wavy</b> lines, and another made tiny <b>clockwise</b>, <b>concentric</b> circles. Finally, the workers carved small <b>cavities</b> in the roof and inserted colored lights. When the work was finished, the beautiful house was ready for a resident to enjoy.</p>    <p style=\"margin-bottom: 1rem;\">Living in the Ice House is an experience like no other. Erik stores his belongings in an ice <b>locker</b> and lays out a sleeping bag on his ice bed. At dinner, he dines on a delicious salad with <b>crisp</b> toppings. And for the main course, he enjoys <b>appetizing</b> fish caught from a nearby river. The fish are <b>pierced</b> with icicles and served on ice plates. After dinner, he gets ready for a cold night. The <b>omission</b> of heaters can be too much for his visitors sometimes. Luckily, there are warm rooms nearby, as a <b>courtesy</b> to people who get too cold.</p></div>",
-        "imageUrl": "/unit23_vol6_story.png",
-        "sections": [
-          {
-            "id": "sec4",
-            "title": "Part A: Mark each statement T for true or F for false.",
-            "content": "",
-            "questions": [
-              {
-                "id": "36",
-                "content": "1. A multicultural group traveled through blizzards and frigid temperatures to reach the site.",
-                "options": [
-                  "F",
-                  "T"
-                ],
-                "explanation": "T",
-                "correctAnswer": "T"
-              },
-              {
-                "id": "37",
-                "content": "2. Erik dines on crisp, appetizing fish that are pierced with icicles.",
-                "options": [
-                  "F",
-                  "T"
-                ],
-                "explanation": "T",
-                "correctAnswer": "T"
-              },
-              {
-                "id": "38",
-                "content": "3. The expert who oversaw the process made sure there wasn't discord in the glacial landscape.",
-                "options": [
-                  "F",
-                  "T"
-                ],
-                "explanation": "F: The expert who oversaw the process made sure there wasn't discord between the workers.",
-                "correctAnswer": "F"
-              },
-              {
-                "id": "39",
-                "content": "4. One worker carved big wavy lines, and another made tiny clockwise, concentric circles.",
-                "options": [
-                  "F",
-                  "T"
-                ],
-                "explanation": "T",
-                "correctAnswer": "T"
-              },
-              {
-                "id": "40",
-                "content": "5. The builders replicated the design from normal houses.",
-                "options": [
-                  "F",
-                  "T"
-                ],
-                "explanation": "F: The builders couldn't replicate the design from normal houses.",
-                "correctAnswer": "F"
-              }
-            ],
-            "questionType": "Trắc nghiệm"
-          },
-          {
-            "id": "sec5",
-            "title": "Part B: Answer the questions.",
-            "content": "",
-            "questions": [
-              {
-                "id": "41",
-                "content": "1. What was allocated to the workers after an interchange of ideas?",
-                "options": [
-                  "Tools were allocated to each worker.",
-                  "They got right to work.",
-                  "Colored lights were inserted in the cavities in the roof.",
-                  "Nearby warm rooms were a courtesy to people who got too cold."
-                ],
-                "explanation": "Tools were allocated to each worker.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "42",
-                "content": "2. What was put in cavities in the roof?",
-                "options": [
-                  "Colored lights were inserted in the cavities in the roof.",
-                  "Tools were allocated to each worker.",
-                  "They got right to work.",
-                  "Erik stores his belongings in his ice locker."
-                ],
-                "explanation": "Colored lights were inserted in the cavities in the roof.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "43",
-                "content": "3. What happened when a plan was generated?",
-                "options": [
-                  "They got right to work.",
-                  "Colored lights were inserted in the cavities in the roof.",
-                  "Tools were allocated to each worker.",
-                  "Erik stores his belongings in his ice locker."
-                ],
-                "explanation": "They got right to work.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "44",
-                "content": "4. What is provided as a courtesy when guests get too cold?",
-                "options": [
-                  "Nearby warm rooms were a courtesy to people who got too cold.",
-                  "They got right to work.",
-                  "Tools were allocated to each worker.",
-                  "Colored lights were inserted in the cavities in the roof."
-                ],
-                "explanation": "Nearby warm rooms were a courtesy to people who got too cold.",
-                "correctAnswer": "A"
-              },
-              {
-                "id": "45",
-                "content": "5. What did Erik put in his ice locker?",
-                "options": [
-                  "Erik stores his belongings in his ice locker.",
-                  "Tools were allocated to each worker.",
-                  "Colored lights were inserted in the cavities in the roof.",
-                  "Nearby warm rooms were a courtesy to people who got too cold."
-                ],
-                "explanation": "Erik stores his belongings in his ice locker.",
-                "correctAnswer": "A"
-              }
-            ],
-            "questionType": "Trắc nghiệm"
-          }
-        ]
-      }
-    ],
-    "basicInfo": {
-      "skill": "Standard-Reading",
-      "title": "Unit 23: Volume 6",
-      "category": "exercise",
-      "timeLimit": 0
-    }
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 23",
+    "category": "exercise",
+    "timeLimit": 0
   },
-  "is_published": true,
-  "created_at": "2026-06-17T20:25:30.947223+00:00",
-  "insert_pdf_url": null,
-  "json_config": null,
-  "course_id": "8c3bea0e-458c-4c18-ab60-44b432e71170",
-  "order_index": 0
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit23_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit23_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">advance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədˈvæns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To advance is to go forward.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He advanced up the ladder slowly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">athlete</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈæθliːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An athlete is a person who plays sports.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some athletes can play many sports very well.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">average</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈævərɪdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is average, it is at a normal level.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I’m not rich or poor; I’m average.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">behavior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɪˈheɪvjər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Your behavior is the way you act.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Their behavior was good this semester. They didn’t cause trouble.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">behind</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɪˈhaɪnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Behind means to be at the back of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The little girl was hiding behind a tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">course</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔːrs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A course is a class in school.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I took a P.E. course in school this year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lower</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈloʊər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lower something is to make it go down.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The chart shows how his production has lowered over the year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">match</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mætʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To match is to be the same or similar.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The two shoes matched. They looked the same.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">member</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmɛmbər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A member is a person who is part of a group.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Julie is the newest member of our team.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mental</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmɛntl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is mental, it has to do with your mind.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I made a mental picture of the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">passenger</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpæsəndʒər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A passenger is a person who rides in a car, train, or airplane.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ One passenger was standing in the subway train.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">personality</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌpɜːrsəˈnæləti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Your personality is what you are like and how you behave.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ John has a bad personality.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">poem</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpoʊəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A poem is a short kind of writing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ William Shakespeare wrote many poems.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pole</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[poʊl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pole is a long thin stick made of wood or metal that supports things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The flag was hanging from the flag pole.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">remove</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɪˈmuːv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To remove something is to take it away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I removed the nail from the board.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">safety</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈseɪfti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Safety means to be the condition of being safe and free from danger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ For his own safety, he was placed in a car seat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shoot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃuːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To shoot is to fire something like a bullet at someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hunter raised his gun to shoot at the target.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sound</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[saʊnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sound means to make a noise.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The alarm clock sounded and woke us all up.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">swim</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[swɪm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To swim is to move through water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I love to swim in the ocean.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">web</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wɛb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A web is a home made by a spider.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom cleaned the spider webs out of the garage.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. I need to find the other sock that is the same as this one. ma[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "matches"
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "content": "2. Please take away your feet from the table. rem[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "remove"
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "content": "3. This is a(an) very normal morning. Nothing bad has happened. ave[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "average"
+                }
+              ]
+            },
+            {
+              "id": "4",
+              "content": "4. The bell rattled, so we changed classes. so[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "sounded"
+                }
+              ]
+            },
+            {
+              "id": "5",
+              "content": "5. William wanted to go forward, but a wall stopped him. adv[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "advance"
+                }
+              ]
+            },
+            {
+              "id": "6",
+              "content": "6. Clara is a person in a group of the running club. me[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "member"
+                }
+              ]
+            },
+            {
+              "id": "7",
+              "content": "7. jesse is a very good sports player. at[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "athlete"
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "content": "8. What is your favorite class? c[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "course"
+                }
+              ]
+            },
+            {
+              "id": "9",
+              "content": "9. He was a person taking a ride on the ship. pa[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "passenger"
+                }
+              ]
+            },
+            {
+              "id": "10",
+              "content": "10. What kind of character does Ted have? P[1]",
+              "answers": [
+                {
+                  "id": "1",
+                  "answer": "personality"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. Which sentence makes better sense?",
+              "options": [
+                "a. I was behind the winner, so I won the race!",
+                "b. Webs are made by spiders."
+              ],
+              "correctAnswer": "b. Webs are made by spiders.",
+              "explanation": "Webs are made by spiders. is the logically correct sentence."
+            },
+            {
+              "id": "12",
+              "content": "2. Which sentence makes better sense?",
+              "options": [
+                "a. Reading increases your mental activity.",
+                "b. We removed the city last week."
+              ],
+              "correctAnswer": "a. Reading increases your mental activity.",
+              "explanation": "Reading increases your mental activity. is logical."
+            },
+            {
+              "id": "13",
+              "content": "3. Which sentence makes better sense?",
+              "options": [
+                "a. My shoes were behind the couch.",
+                "b. This mental exercise makes my arms tired."
+              ],
+              "correctAnswer": "a. My shoes were behind the couch.",
+              "explanation": "My shoes were behind the couch. is logical."
+            },
+            {
+              "id": "14",
+              "content": "4. Which sentence makes better sense?",
+              "options": [
+                "a. Have you ever found a bird's web?",
+                "b. I lowered the box onto the ground."
+              ],
+              "correctAnswer": "b. I lowered the box onto the ground.",
+              "explanation": "I lowered the box onto the ground. is logical."
+            },
+            {
+              "id": "15",
+              "content": "5. Which sentence makes better sense?",
+              "options": [
+                "a. Could you help me lower my seat please?",
+                "b. Be sure to remove the trash from the house."
+              ],
+              "correctAnswer": "b. Be sure to remove the trash from the house.",
+              "explanation": "The correct choice is b based on the answer key."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. to move through water",
+              "options": [
+                "a. lower",
+                "b. average",
+                "c. advance",
+                "d. swim"
+              ],
+              "correctAnswer": "d. swim",
+              "explanation": "swim nghĩa là to move through water."
+            },
+            {
+              "id": "17",
+              "content": "2. something nice to read",
+              "options": [
+                "a. poem",
+                "b. web",
+                "c. member",
+                "d. behind"
+              ],
+              "correctAnswer": "a. poem",
+              "explanation": "poem nghĩa là something nice to read (a short kind of writing)."
+            },
+            {
+              "id": "18",
+              "content": "3. the condition free from any danger",
+              "options": [
+                "a. shoot",
+                "b. safety",
+                "c. athlete",
+                "d. personality"
+              ],
+              "correctAnswer": "b. safety",
+              "explanation": "safety nghĩa là the condition free from any danger."
+            },
+            {
+              "id": "19",
+              "content": "4. a metal or wooden stick used to support things",
+              "options": [
+                "a. pole",
+                "b. remove",
+                "c. passenger",
+                "d. sound"
+              ],
+              "correctAnswer": "a. pole",
+              "explanation": "pole nghĩa là a metal or wooden stick used to support things."
+            },
+            {
+              "id": "20",
+              "content": "5. the way you act",
+              "options": [
+                "a. mental",
+                "b. match",
+                "c. course",
+                "d. behavior"
+              ],
+              "correctAnswer": "d. behavior",
+              "explanation": "behavior nghĩa là the way you act."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Camp</h1><p style=\"margin-bottom: 1rem;\">Stacie wanted to stay at a nice hotel for vacation. But her parents sent her to a terrible camp instead. For breakfast, Stacie liked fresh juice and chocolate milk, but she got water at the camp. In the afternoon she wanted to write <b>poems</b>, but she had to <b>swim</b>. The camp was near an airport with loud planes. Spider<b>webs</b> hung over her bed. To her, the kids' <b>average</b> <b>behavior</b> was very bad. No girl <b>matched</b> her <b>personality</b>. She hated it.</p><p style=\"margin-bottom: 1rem;\">One day, they had a class. <b>Mental</b> exercise <b>sounded</b> good to Stacie. But it was a <b>course</b> on water <b>safety</b>. They learned how to be safe <b>passengers</b> on a boat. Stacie didn't ever plan to go on a boat.</p><p style=\"margin-bottom: 1rem;\">The next day, they played a game. There were a red team and a blue team. Stacie was on the blue team. Each team had to try to <b>remove</b> the other team's flag from a <b>pole</b>. They also had to use water guns. \"I'm not much of an <b>athlete</b>,\" she said. But she still had to play.</p><p style=\"margin-bottom: 1rem;\">Stacie took a water gun and looked for somewhere to hide. A boy said, \"Stacie, you <b>advance</b> to the middle. I will go right. Those two will go left.\"</p><p style=\"margin-bottom: 1rem;\">Stacie still didn't want to play. She walked into the forest and saw a red team player coming. Stacie hid <b>behind</b> a tree and then jumped out and <b>shot</b> the other player. \"This is fun!\" Stacie thought.</p><p style=\"margin-bottom: 1rem;\">Several minutes after <b>advancing</b> further, Stacie saw the red flag. A red team <b>member</b> was watching over it. She <b>shot</b> him with her water gun. Then she <b>lowered</b> the flag and ran back to her team. \"I got it!\" she yelled. The blue team won!</p><p style=\"margin-bottom: 1rem;\">Stacie was the hero. For the rest of the week, Stacie had fun.</p></div>",
+      "imageUrl": "/unit23_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. How did Stacie win the game?",
+              "options": [
+                "a. She advanced to the right.",
+                "b. She lowered the red team's flag.",
+                "c. She hit the red team with her water gun.",
+                "d. She swam all afternoon."
+              ],
+              "correctAnswer": "b. She lowered the red team's flag.",
+              "explanation": "In the story, she lowered the red team's flag and ran back, making her team win."
+            },
+            {
+              "id": "22",
+              "content": "2. Because of her personality, what would Stacie likely NOT want to do?",
+              "options": [
+                "a. Read a poem",
+                "b. Play a mental game",
+                "c. Become an athlete",
+                "d. Stay at a nice hotel"
+              ],
+              "correctAnswer": "c. Become an athlete",
+              "explanation": "She says 'I'm not much of an athlete' in the story."
+            },
+            {
+              "id": "23",
+              "content": "3. Instead of camp, where did Stacie want to be?",
+              "options": [
+                "a. At a fancy hotel",
+                "b. At the airport",
+                "c. On a boat as a passenger",
+                "d. With an average student"
+              ],
+              "correctAnswer": "a. At a fancy hotel",
+              "explanation": "The story says she wanted to stay at a nice hotel for vacation."
+            },
+            {
+              "id": "24",
+              "content": "4. What did Stacie start to like about the camp?",
+              "options": [
+                "a. The other kids' behavior",
+                "b. Having chocolate milk",
+                "c. Spider webs over her bed",
+                "d. Beating the red team"
+              ],
+              "correctAnswer": "d. Beating the red team",
+              "explanation": "She thought shooting the other player was fun, and winning made her the hero."
+            },
+            {
+              "id": "25",
+              "content": "5. What was Stacie's course about?",
+              "options": [
+                "a. It was a course on water safety. They learned how to be safe passengers on a boat.",
+                "b. It was a mental exercise game.",
+                "c. It was a class about swimming.",
+                "d. It was a course on reading poems."
+              ],
+              "correctAnswer": "a. It was a course on water safety. They learned how to be safe passengers on a boat.",
+              "explanation": "The story explicitly says 'But it was a course on water safety. They learned how to be safe passengers on a boat.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,21 +1,18 @@
 const { createClient } = require('@supabase/supabase-js');
-const fs = require('fs');
+require('dotenv').config();
 
-function getEnv(key) {
-  try {
-    const envContent = fs.readFileSync('.env', 'utf-8');
-    const match = envContent.match(new RegExp(`^${key}=(.*)$`, 'm'));
-    return match ? match[1].trim() : null;
-  } catch (e) { return null; }
-}
-
-const supabaseUrl = getEnv('VITE_SUPABASE_URL');
-const supabaseKey = getEnv('VITE_SUPABASE_SERVICE_ROLE_KEY');
-
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(
+  process.env.VITE_SUPABASE_URL,
+  process.env.VITE_SUPABASE_ANON_KEY
+);
 
 async function run() {
-  const { data: folders } = await supabase.from('folders').select('id, title');
-  console.log('All Folders:', folders.map(f => f.title));
+  const { data: courses } = await supabase.from('courses').select('id, title').ilike('title', '%Geography%');
+  const courseId = courses[0].id;
+  
+  const { data: folders, error } = await supabase.from('folders').select('*').eq('course_id', courseId);
+  if (error) console.error(error);
+  else console.log(folders);
 }
+
 run();

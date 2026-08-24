@@ -342,10 +342,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit17_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Oxford Considers Future Roles</h1>\n  <p style=\"margin-bottom: 1rem;\">OXFORD - What is Oxford University's role in the age of the Internet?</p>\n  <p style=\"margin-bottom: 1rem;\">Like an examination question, the dilemma of combining the best of the old and the new is occupying Oxford's top brains.</p>\n  <p style=\"margin-bottom: 1rem;\">Founded in the 13th century, the university is conducting the first major inquiry into its future for 30 years and Vice-Chancellor Peter North sees international connections as vital in maintaining its relevance.</p>\n  <p style=\"margin-bottom: 1rem;\">\"I think we've only recaptured a more outward-looking role in the second half of this century.\" North, who is in charge of day-to-day running of the university, said in an interview.</p>\n  <p style=\"margin-bottom: 1rem;\">\"It is more like the 13th century in a way than the 18th because Europe was (then) a continent in which scholars moved around quite remarkably. Oxford went to sleep in the 18th century till the middle of the 19th century.\"</p>\n  <p style=\"margin-bottom: 1rem;\">The university's 15,000 students today make up more than 10 percent of the city's population. A third are doing post-graduate courses, and half of those come from abroad, which North believes is intellectually and politically important.</p>\n  <p style=\"margin-bottom: 1rem;\">Oxford, he says, learns from foreign students, as well as gaining their money in fees, while the understanding they acquire of Britain is vital in trade-political terms.</p>\n  <p style=\"margin-bottom: 1rem;\">The next task is to prepare for a future marked by \"exploding changes in information technology,\" he says.</p>\n  <p style=\"margin-bottom: 1rem;\">\"Will we actually have people in one continent teaching courses in another? Will we have satellite campuses linked by satellite?\" he mused.</p>\n  <p style=\"margin-bottom: 1rem;\">Rapid expansion of British higher education in recent years has been attacked for compromising quality.</p>\n  <p style=\"margin-bottom: 1rem;\">But Oxford chose moderate growth and North insists that it should keep its traditional strengths and not try to be the same as other universities, despite criticism that it is elitist.</p>\n  <p style=\"margin-bottom: 1rem;\">So far the university has decided to maintain a structure based on colleges, which are the focus of student life and work, rather than the campus, based systems of most universities.</p>\n  <p style=\"margin-bottom: 1rem;\">Colleges, not the university, are where the power lies.</p>\n  <p style=\"margin-bottom: 1rem;\">North also expects the costly, labour-intensive tutorial system of teaching in small groups to retain a key role, despite the pressures on all universities to cut costs.</p>\n  <p style=\"margin-bottom: 1rem;\">\"If we said OK, pack all the kids in, abandon tutorials, can't have people doing research because we need them to teach, it simply wouldn't be in the national interest,\" he says.</p>\n  <p style=\"margin-bottom: 1rem;\">The city of \"dreaming spires\" now has two universities—North's centuries-old one, which helped to educate Lawrence of Arabia and Oscar Wilde, Bill Clinton and Margaret Thatcher—and Oxford Brookes University, the former local polytechnic.</p>\n  <p style=\"margin-bottom: 1rem;\">North regularly meets his counterpart at Brookes but says the two institutions are complementary, with little overlap.</p>\n  <p style=\"margin-bottom: 1rem;\">\"We don't attempt to do accountancy, hotel catering or tourist management degrees, all of them are very important for the economy. They don't try to do high energy physics,\" he says.</p>\n  <p style=\"margin-bottom: 1rem;\">Oxford attracts a lot of research and other outside money and is less dependent on government finance than many universities, an advantage when public funds get tighter each year. It is also relatively rich, a legacy of its long past.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit17_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Oxford Considers Future Roles</h1>\n  <p style=\"margin-bottom: 1rem;\">OXFORD - What is Oxford University's <b>role</b> in the age of the <b>Internet</b>?</p>\n  <p style=\"margin-bottom: 1rem;\">Like an examination question, the <b>dilemma</b> of combining the best of the old and the new is occupying Oxford's top <b>brains</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Founded in the 13th century, the university is conducting the first major <b>inquiry</b> into its future for 30 years and Vice-<b>Chancellor</b> Peter North sees international connections as <b>vital</b> in maintaining its <b>relevance</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">\"I think we've only recaptured a more <b>outward-looking</b> <b>role</b> in the second half of this century.\" North, who is <b>in charge of</b> <b>day-to-day</b> running of the university, said in an interview.</p>\n  <p style=\"margin-bottom: 1rem;\">\"It is more like the 13th century <b>in a way</b> than the 18th because Europe was (then) a continent in which scholars moved around quite <b>remarkably</b>. Oxford went to sleep in the 18th century till the middle of the 19th century.\"</p>\n  <p style=\"margin-bottom: 1rem;\">The university's 15,000 students today <b>make up</b> more than 10 percent of the city's population. A third are doing <b>post-graduate</b> courses, and half of those come from abroad, which North believes is <b>intellectually</b> and politically important.</p>\n  <p style=\"margin-bottom: 1rem;\">Oxford, he says, learns from foreign students, as well as gaining their money in fees, while the understanding they <b>acquire</b> of Britain is <b>vital</b> in trade-political terms.</p>\n  <p style=\"margin-bottom: 1rem;\">The next task is to prepare for a future marked by \"<b>exploding</b> changes in information technology,\" he says.</p>\n  <p style=\"margin-bottom: 1rem;\">\"Will we actually have people in one continent teaching courses in another? Will we have satellite campuses linked by satellite?\" he mused.</p>\n  <p style=\"margin-bottom: 1rem;\">Rapid <b>expansion</b> of British higher education in recent years has been attacked for compromising quality.</p>\n  <p style=\"margin-bottom: 1rem;\">But Oxford chose <b>moderate</b> growth and North insists that it should keep its traditional strengths and not try to be the same as other universities, despite criticism that it is <b>elitist</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">So far the university has decided to <b>maintain</b> a structure based on colleges, which are the <b>focus</b> of student life and work, rather than the <b>campus</b>, based systems of most universities.</p>\n  <p style=\"margin-bottom: 1rem;\">Colleges, not the university, are where the power lies.</p>\n  <p style=\"margin-bottom: 1rem;\">North also expects the costly, labour-intensive <b><b>tutorial</b> system</b> of teaching in small groups to <b>retain</b> a key <b>role</b>, despite the pressures on all universities to cut costs.</p>\n  <p style=\"margin-bottom: 1rem;\">\"If we said OK, <b>pack</b> all the kids in, <b>abandon</b> tutorials, can't have people doing research because we need them to teach, it simply wouldn't be in the national interest,\" he says.</p>\n  <p style=\"margin-bottom: 1rem;\">The city of \"dreaming spires\" now has two universities—North's centuries-old one, which helped to educate Lawrence of Arabia and Oscar Wilde, Bill Clinton and Margaret Thatcher—and Oxford Brookes University, the <b>former</b> <b>local</b> <b>polytechnic</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">North regularly meets his <b>counterpart</b> at Brookes but says the two institutions are <b>complementary</b>, with little <b>overlap</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">\"We don't <b>attempt</b> to do <b>accountancy</b>, hotel <b>catering</b> or tourist management degrees, all of them are very important for the economy. They don't try to do <b>high energy</b> physics,\" he says.</p>\n  <p style=\"margin-bottom: 1rem;\">Oxford attracts a lot of research and other outside money and is less dependent on government <b>finance</b> than many universities, an <b>advantage</b> when public funds get tighter each year. It is also <b>relatively</b> rich, a <b>legacy</b> of its long past.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u17_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u17_kt_0",
+              "content": "1. The [ 1 ] the doctor faced was whether he should tell the patient the truth.<br/><br/>2. China has begun to [ 2 ] business with some European countries.<br/><br/>3. [ 3 ] of the operator will get you the right telephone number.<br/><br/>4. What you say has no [ 4 ] to what we're talking about.<br/><br/>5. The magazine has [ 5 ] a new market.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "dilemma"
+            },
+            {
+              "id": "u17_kt_1",
+              "content": "1. The [ 1 ] the doctor faced was whether he should tell the patient the truth.<br/><br/>2. China has begun to [ 2 ] business with some European countries.<br/><br/>3. [ 3 ] of the operator will get you the right telephone number.<br/><br/>4. What you say has no [ 4 ] to what we're talking about.<br/><br/>5. The magazine has [ 5 ] a new market.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "conduct"
+            },
+            {
+              "id": "u17_kt_2",
+              "content": "1. The [ 1 ] the doctor faced was whether he should tell the patient the truth.<br/><br/>2. China has begun to [ 2 ] business with some European countries.<br/><br/>3. [ 3 ] of the operator will get you the right telephone number.<br/><br/>4. What you say has no [ 4 ] to what we're talking about.<br/><br/>5. The magazine has [ 5 ] a new market.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "Inquiry"
+            },
+            {
+              "id": "u17_kt_3",
+              "content": "1. The [ 1 ] the doctor faced was whether he should tell the patient the truth.<br/><br/>2. China has begun to [ 2 ] business with some European countries.<br/><br/>3. [ 3 ] of the operator will get you the right telephone number.<br/><br/>4. What you say has no [ 4 ] to what we're talking about.<br/><br/>5. The magazine has [ 5 ] a new market.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "relevance"
+            },
+            {
+              "id": "u17_kt_4",
+              "content": "1. The [ 1 ] the doctor faced was whether he should tell the patient the truth.<br/><br/>2. China has begun to [ 2 ] business with some European countries.<br/><br/>3. [ 3 ] of the operator will get you the right telephone number.<br/><br/>4. What you say has no [ 4 ] to what we're talking about.<br/><br/>5. The magazine has [ 5 ] a new market.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "captured"
+            },
+            {
+              "id": "u17_kt_5",
+              "content": "6. This painting is of [ 1 ] quality.<br/><br/>7. One can [ 2 ] a good knowledge of English by careful study.<br/><br/>8. The rumor will [ 3 ] his reputation as a professor.<br/><br/>9. He is a man of [ 4 ] views.<br/><br/>10. She [ 5 ] a clear memory of her school days.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "remarkable"
+            },
+            {
+              "id": "u17_kt_6",
+              "content": "6. This painting is of [ 1 ] quality.<br/><br/>7. One can [ 2 ] a good knowledge of English by careful study.<br/><br/>8. The rumor will [ 3 ] his reputation as a professor.<br/><br/>9. He is a man of [ 4 ] views.<br/><br/>10. She [ 5 ] a clear memory of her school days.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "acquire"
+            },
+            {
+              "id": "u17_kt_7",
+              "content": "6. This painting is of [ 1 ] quality.<br/><br/>7. One can [ 2 ] a good knowledge of English by careful study.<br/><br/>8. The rumor will [ 3 ] his reputation as a professor.<br/><br/>9. He is a man of [ 4 ] views.<br/><br/>10. She [ 5 ] a clear memory of her school days.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "compromise"
+            },
+            {
+              "id": "u17_kt_8",
+              "content": "6. This painting is of [ 1 ] quality.<br/><br/>7. One can [ 2 ] a good knowledge of English by careful study.<br/><br/>8. The rumor will [ 3 ] his reputation as a professor.<br/><br/>9. He is a man of [ 4 ] views.<br/><br/>10. She [ 5 ] a clear memory of her school days.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "moderate"
+            },
+            {
+              "id": "u17_kt_9",
+              "content": "6. This painting is of [ 1 ] quality.<br/><br/>7. One can [ 2 ] a good knowledge of English by careful study.<br/><br/>8. The rumor will [ 3 ] his reputation as a professor.<br/><br/>9. He is a man of [ 4 ] views.<br/><br/>10. She [ 5 ] a clear memory of her school days.",
+              "options": [
+                "dilemma",
+                "conduct",
+                "Inquiry",
+                "relevance",
+                "captured",
+                "remarkable",
+                "acquire",
+                "compromise",
+                "moderate",
+                "retains"
+              ],
+              "correctAnswer": "retains"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

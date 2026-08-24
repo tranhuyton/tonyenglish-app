@@ -1,275 +1,98 @@
-const fs = require('fs');
+const generateUnit = require('./generate_all');
 
-const data = {
-  "unit": 10,
-  "words": [
-    { "word": "absence", "pos": "n.", "pron": "[æbsəns]", "def": "Absence is the state of something being away.", "ex": "There is an absence of sand in the hourglass." },
-    { "word": "aloud", "pos": "adv.", "pron": "[əlaud]", "def": "If you say something aloud, you say it so that others can hear you.", "ex": "My father often reads stories aloud to me and my sister." },
-    { "word": "bald", "pos": "adj.", "pron": "[bɔːld]", "def": "If someone is bald, they have no hair.", "ex": "My oldest brother is bald." },
-    { "word": "blanket", "pos": "n.", "pron": "[blæŋkit]", "def": "A blanket is a piece of cloth that you use to keep warm or to sit upon.", "ex": "I laid a blanket on the ground so that we could have a picnic." },
-    { "word": "creep", "pos": "v.", "pron": "[kriːp]", "def": "To creep is to move quietly and slowly.", "ex": "The cat slowly crept down the tree." },
-    { "word": "divorce", "pos": "n.", "pron": "[divɔːrs]", "def": "Divorce is an event in which a marriage is ended.", "ex": "Divorce rates have increased in the past twenty years." },
-    { "word": "imitate", "pos": "v.", "pron": "[imiteit]", "def": "To imitate someone is to do exactly what they do.", "ex": "He imitated his favorite superhero by putting on a costume." },
-    { "word": "infant", "pos": "n.", "pron": "[infənt]", "def": "An infant is a baby.", "ex": "The infant cried all night." },
-    { "word": "kidnap", "pos": "v.", "pron": "[kidnæp]", "def": "To kidnap someone is to take them illegally.", "ex": "She was terrified to find out her son was kidnapped." },
-    { "word": "nap", "pos": "n.", "pron": "[næp]", "def": "A nap is a short sleep, usually during the day.", "ex": "I took a short nap because I stayed up late last night." },
-    { "word": "nowhere", "pos": "adv.", "pron": "[nouhwɛər]", "def": "You use nowhere to say that a place or thing does not exist.", "ex": "Unfortunately, water was nowhere to be found." },
-    { "word": "pat", "pos": "v.", "pron": "[pæt]", "def": "To pat something is to hit it softly with your hand.", "ex": "I patted some lotion onto my face." },
-    { "word": "relief", "pos": "n.", "pron": "[riliːf]", "def": "Relief is a feeling you get when something bad or challenging ends.", "ex": "I felt a sense of relief when I heard the good news." },
-    { "word": "reproduce", "pos": "v.", "pron": "[riːprədjuːs]", "def": "To reproduce is to make something exactly how someone else did it.", "ex": "The children tried to reproduce their house using toy blocks." },
-    { "word": "rhyme", "pos": "n.", "pron": "[raim]", "def": "To rhyme is to have the same sounds at the end of a word.", "ex": "Humpty Dumpty is an old rhyme that children learn in school." },
-    { "word": "suck", "pos": "v.", "pron": "[sʌk]", "def": "To suck is to put something in your mouth and try to get flavor out of it.", "ex": "The baby sucked milk from her bottle." },
-    { "word": "urgent", "pos": "adj.", "pron": "[əːrdʒənt]", "def": "If something is urgent, it is important and needs to be done now.", "ex": "He had to leave now; it was urgent." },
-    { "word": "vanish", "pos": "v.", "pron": "[væniʃ]", "def": "To vanish is to go away suddenly.", "ex": "All the passengers vanished from the train station." },
-    { "word": "wagon", "pos": "n.", "pron": "[wægən]", "def": "A wagon is a cart you use to carry heavy things.", "ex": "He used his wagon to carry some of his gifts." },
-    { "word": "wrinkle", "pos": "n.", "pron": "[riŋkəl]", "def": "A wrinkle is a line on a person's face that happens as they get old.", "ex": "My grandfather has some wrinkles on his face." }
+const u = {
+  unit: 10,
+  title: 'Unit 10: Ruth Handler',
+  words: [
+    { word: 'Barbie doll', pos: '', defVi: 'búp bê Barbie' },
+    { word: 'cruelly', pos: 'ad.', defVi: 'cực kỳ' },
+    { word: 'cabbage', pos: 'n.', defVi: 'cải bắp, mẩu vải thừa' },
+    { word: 'patch', pos: 'n.', defVi: 'miếng vá' },
+    { word: 'thunderbird', pos: 'n.', defVi: 'chim sấm (hình tượng thần thoại)' },
+    { word: 'discard', pos: 'v.', defVi: 'loại bỏ, vứt bỏ' },
+    { word: 'cupboard', pos: 'n.', defVi: 'tủ chén' },
+    { word: 'outlive', pos: 'v.', defVi: 'sống lâu hơn' },
+    { word: 'longevity', pos: 'n.', defVi: 'sự trường thọ, tuổi thọ' },
+    { word: 'toyland', pos: 'n.', defVi: 'thế giới đồ chơi' },
+    { word: 'as much... as', pos: '', defVi: 'nhiều bằng' },
+    { word: 'press', pos: 'v.', defVi: 'thúc giục, nài ép' },
+    { word: 'flop', pos: 'n.', defVi: 'sự thất bại' },
+    { word: 'celebrate', pos: 'v.', defVi: 'tổ chức lễ kỷ niệm' },
+    { word: 'fame', pos: 'n.', defVi: 'danh tiếng' },
+    { word: 'icon', pos: 'n.', defVi: 'biểu trưng, hình tượng' },
+    { word: 'applaud', pos: 'v.', defVi: 'khen ngợi, tán thưởng' },
+    { word: 'at one time', pos: '', defVi: 'có thời' },
+    { word: 'switch on', pos: '', defVi: 'bật' },
+    { word: 'albeit', pos: 'conj.', defVi: 'mặc dù, dù' },
+    { word: 'fantastic', pos: 'a.', defVi: 'tuyệt vời' },
+    { word: 'time capsule', pos: '', defVi: 'hộp chứa một số vật thể tiêu biểu của một thời điểm nào đó để con người trong tương lai hiểu được cuộc sống như thế nào vào thời điểm đó' },
+    { word: 'representative', pos: 'n.', defVi: 'vật / người đại diện' },
+    { word: 'archetypal', pos: 'a.', defVi: 'thuộc nguyên mẫu' },
+    { word: 'feminist', pos: 'n.', defVi: 'người theo thuyết nam nữ bình quyền' },
+    { word: 'bimbo', pos: 'n.', defVi: 'người phụ nữ lẳng lơ, người phụ nữ hấp dẫn nhưng kém thông minh' },
+    { word: 'retort', pos: 'v.', defVi: 'cãi lại, đáp lại' },
+    { word: 'academe', pos: 'n.', defVi: 'trường đại học' },
+    { word: 'bend one\\\'s mind to sth.', pos: '', defVi: 'hướng ý nghĩ vào cái gì' },
+    { word: 'phenomenon', pos: 'n.', defVi: 'hiện tượng' },
+    { word: 'sociology', pos: 'n.', defVi: 'xã hội học' },
+    { word: 'set', pos: 'v.', defVi: 'nêu, giao, đặt' },
+    { word: 'role model', pos: '', defVi: 'thần tượng' },
+    { word: 'be sensitive to', pos: '', defVi: 'nhạy cảm với' },
+    { word: 'line', pos: 'n.', defVi: 'phương pháp, quy tắc, cách' },
+    { word: 'line of reasoning', pos: '', defVi: 'cách lý luận' },
+    { word: 'reflect', pos: 'v.', defVi: 'phản ánh' },
+    { word: 'honour', pos: 'v.', defVi: 'tôn kính, kính trọng' },
+    { word: 'steerage', pos: 'n.', defVi: 'khoang hạng chót' },
+    { word: 'accommodation', pos: 'n.', defVi: 'phòng ở' },
+    { word: 'conscript', pos: 'v.', defVi: 'bắt đi lính' },
+    { word: 'exhaust', pos: 'v.', defVi: 'làm kiệt quệ' },
+    { word: 'have a way of', pos: '', defVi: 'có cách (làm gì)' },
+    { word: 'head for', pos: '', defVi: 'hướng đến' },
+    { word: 'make it', pos: '', defVi: 'thực hiện thành công, làm được' },
+    { word: 'add to', pos: '', defVi: 'bổ sung thêm' },
+    { word: 'lore', pos: 'n.', defVi: 'truyền thuyết' },
+    { word: 'picture frame', pos: '', defVi: 'khung hình' },
+    { word: 'reasonably', pos: 'ad.', defVi: 'khá' },
+    { word: 'come across', pos: '', defVi: 'tình cờ gặp, bắt gặp' },
+    { word: 'improbable', pos: 'a.', defVi: 'không chắc có thực, khá kỳ lạ' },
+    { word: 'proportions', pos: 'n.', defVi: 'quy mô, kích thước' },
+    { word: 'skimpy', pos: 'a.', defVi: 'thiếu, không đủ, hở hang' },
+    { word: 'presumably', pos: 'ad.', defVi: 'có lẽ' },
+    { word: 'ambition', pos: 'n.', defVi: 'tham vọng' },
+    { word: 'suppress', pos: 'v.', defVi: 'kiềm chế, nén' },
+    { word: 'blush', pos: 'n.', defVi: 'sự đỏ mặt (vì hổ thẹn)' },
+    { word: 'inspire', pos: 'v.', defVi: 'truyền cảm hứng' },
+    { word: 'respectable', pos: 'a.', defVi: 'đáng trọng, đáng kính, đứng đắn' },
+    { word: 'non-provocative', pos: 'a.', defVi: 'không khêu gợi' },
+    { word: 'debut', pos: 'n.', defVi: 'sự xuất hiện lần đầu tiên trước công chúng' },
+    { word: 'more than', pos: '', defVi: 'hơn' },
+    { word: 'in good condition', pos: '', defVi: 'ở điều kiện tốt' },
+    { word: 'sustain', pos: 'v.', defVi: 'giữ vững được, kéo dài' },
+    { word: 'guise', pos: 'n.', defVi: 'lốt, vỏ, dáng vẻ' },
+    { word: 'shameless', pos: 'a.', defVi: 'vô liêm sỉ, trơ tráo, trơ trẽn' },
+    { word: 'retain', pos: 'v.', defVi: 'giữ lại' },
+    { word: 'knowing', pos: 'a.', defVi: 'hiểu biết, tinh khôn' },
+    { word: 'belly button', pos: '', defVi: 'rốn' },
+    { word: 'reproduction', pos: 'n.', defVi: 'sự sinh sản' },
+    { word: 'career woman', pos: '', defVi: 'người phụ nữ chuyên tâm vào sự nghiệp vì vậy không muốn lập gia đình và có con cái' },
+    { word: 'empty headed', pos: '', defVi: 'đầu óc trống rỗng' },
+    { word: 'prospect', pos: 'n.', defVi: 'triển vọng, viễn cảnh' },
+    { word: 'innocent', pos: 'a.', defVi: 'ngây thơ, vô tội' },
+    { word: 'mores', pos: 'n.', defVi: 'tập tục' },
+    { word: 'changeable', pos: 'a.', defVi: 'dễ thay đổi, hay thay đổi' },
+    { word: 'cope with', pos: '', defVi: 'đối phó, đương đầu' }
   ],
-  "story": {
-    "title": "Anna the Babysitter",
-    "paragraphs": [
-      "Since her parents got a divorce, Anna has had to help her mother. In her mother's absence, Anna takes care of Grace, the baby. At first, Anna thought it was an easy job.",
-      "One afternoon, Anna played with Grace. She meowed like a cat and Grace imitated her. In fact, Grace reproduced every sound that Anna made. She took her sister outside. She put Grace in the wagon, but there was nowhere for them to go. So they went back inside.",
-      "Anna put the infant on the floor and went into her room. But when she came back, Grace had vanished! Anna looked everywhere, but she could not find her sister. Maybe the baby had been kidnapped! \"Where are you?\" Anna called aloud.",
-      "The situation was becoming urgent. She wanted to call her mom, but she didn't want her to think Anna couldn't do the job. Anna sat down. What was she going to do?",
-      "But then, Anna heard something. It was coming from her room. \"Grace?\" She got down on her knees and looked under the bed. She could see Grace's bald head. Grace had followed Anna into her room and crept under the bed.",
-      "\"What a relief!\" Anna cried.",
-      "She picked up her sister and patted her on the head. Her head was soft and had no wrinkles. Grace was sucking on her thumb and looked tired. So, Anna wrapped her in a blanket and sang rhymes for her. Then she put Grace in bed for a nap.",
-      "After that afternoon, Anna knew that taking care of Grace was not an easy job. It takes a lot of work to take care of a baby!"
-    ]
-  },
-  "word_list_exercises": [
-    {
-      "title": "Exercise 1: Choose the right word for the given definition.",
-      "questions": [
-        {
-          "content": "1. not having any hair",
-          "options": ["bald", "urgent", "absence", "nowhere"],
-          "correctAnswer": "bald",
-          "explanation": "bald (hói) nghĩa là không có tóc."
-        },
-        {
-          "content": "2. a good feeling when something bad goes away",
-          "options": ["divorce", "pat", "roar", "relief"],
-          "correctAnswer": "relief",
-          "explanation": "relief (sự nhẹ nhõm) là cảm giác tốt khi điều tồi tệ qua đi. (Lưu ý: 'roar' là từ sai trong sách, nhưng được giữ nguyên làm lựa chọn sai)."
-        },
-        {
-          "content": "3. to put something in your mouth and get flavor from it",
-          "options": ["wrinkle", "suck", "rhyme", "nap"],
-          "correctAnswer": "suck",
-          "explanation": "suck (mút, ngậm) là hành động đặt một vật vào miệng để lấy hương vị."
-        },
-        {
-          "content": "4. to act like someone else",
-          "options": ["suck", "aloud", "creep", "imitate"],
-          "correctAnswer": "imitate",
-          "explanation": "imitate (bắt chước) là hành động giống người khác."
-        },
-        {
-          "content": "5. to go away suddenly",
-          "options": ["blanket", "kidnap", "vanish", "reproduce"],
-          "correctAnswer": "vanish",
-          "explanation": "vanish (biến mất) là biến mất một cách đột ngột."
-        }
-      ]
-    },
-    {
-      "title": "Exercise 2: Choose the answer that best fits the question.",
-      "questions": [
-        {
-          "content": "1. What is it called when you don't have something?",
-          "options": ["A nap", "An absence", "A divorce", "A pat"],
-          "correctAnswer": "An absence",
-          "explanation": "absence (sự thiếu vắng) là tình trạng không có cái gì đó."
-        },
-        {
-          "content": "2. This is another name for a baby.",
-          "options": ["Vanish", "Suck", "Creep", "Infant"],
-          "correctAnswer": "Infant",
-          "explanation": "infant (trẻ sơ sinh) là một tên gọi khác của baby."
-        },
-        {
-          "content": "3. What could you use to carry wood?",
-          "options": ["A wagon", "An infant", "A wrinkle", "A blanket"],
-          "correctAnswer": "A wagon",
-          "explanation": "wagon (xe kéo) dùng để chở đồ nặng như gỗ."
-        },
-        {
-          "content": "4. Which of the following actions is a crime?",
-          "options": ["To rhyme", "To kidnap", "To reproduce", "To pat"],
-          "correctAnswer": "To kidnap",
-          "explanation": "kidnap (bắt cóc) là một tội ác."
-        },
-        {
-          "content": "5. What is the following an example of: \"The cat and bat sat in a hat\"?",
-          "options": ["Bald", "Urgent", "Aloud", "Rhyme"],
-          "correctAnswer": "Rhyme",
-          "explanation": "rhyme (vần) là các từ kết thúc bằng âm giống nhau."
-        },
-        {
-          "content": "6. Which of the following could be urgent?",
-          "options": ["A soccer game", "An emergency phone call", "A trip to the park", "A birthday party"],
-          "correctAnswer": "An emergency phone call",
-          "explanation": "An emergency phone call (cuộc gọi khẩn cấp) là việc cấp bách (urgent)."
-        },
-        {
-          "content": "7. What happens when a couple gets divorced?",
-          "options": ["They vanish.", "They're not married anymore.", "Their pets are taken away.", "They copy others."],
-          "correctAnswer": "They're not married anymore.",
-          "explanation": "Khi ly hôn (divorced), họ không còn kết hôn nữa."
-        },
-        {
-          "content": "8. How would you creep?",
-          "options": ["Angrily", "Loudly", "Quickly", "Slowly"],
-          "correctAnswer": "Slowly",
-          "explanation": "creep (bò, trườn, đi rón rén) thường thực hiện một cách chậm rãi (slowly)."
-        },
-        {
-          "content": "9. Which of the following would you pat?",
-          "options": ["A fish", "A sock", "A dog", "A table"],
-          "correctAnswer": "A dog",
-          "explanation": "Bạn thường vỗ nhẹ (pat) một chú chó để âu yếm."
-        },
-        {
-          "content": "10. What could come from nowhere?",
-          "options": ["An idea", "A day", "A house", "A new year"],
-          "correctAnswer": "An idea",
-          "explanation": "Một ý tưởng (idea) có thể xuất hiện đột ngột từ hư không (from nowhere)."
-        }
-      ]
-    },
-    {
-      "title": "Exercise 3: Choose the word that is the better fit for each blank.",
-      "questions": [
-        {
-          "content": "1. I asked my mom ________ where she was going. She told me she was going ________. (aloud / nowhere)",
-          "options": ["aloud / nowhere", "nowhere / aloud", "aloud / aloud", "nowhere / nowhere"],
-          "correctAnswer": "aloud / nowhere",
-          "explanation": "aloud (lớn tiếng) phù hợp với 'asked' (hỏi), nowhere (không đi đâu) phù hợp với 'going' (đi)."
-        },
-        {
-          "content": "2. The ________ has perfect skin without any scars or ________. (infant / wrinkles)",
-          "options": ["infant / wrinkles", "wrinkles / infant", "infant / infant", "wrinkles / wrinkles"],
-          "correctAnswer": "infant / wrinkles",
-          "explanation": "infant (trẻ sơ sinh) có làn da hoàn hảo không có wrinkles (nếp nhăn)."
-        },
-        {
-          "content": "3. After my parents got ________, I was sad about my dad's ________ around the house. (absence / divorced)",
-          "options": ["divorced / absence", "absence / divorced", "divorced / divorced", "absence / absence"],
-          "correctAnswer": "divorced / absence",
-          "explanation": "divorced (ly hôn) đi với bố mẹ, absence (sự vắng mặt) đi với sự hiện diện của người bố."
-        },
-        {
-          "content": "4. My boss asked me to ________ the image for her customers. She said it was very ________. (urgent / reproduce)",
-          "options": ["reproduce / urgent", "urgent / reproduce", "reproduce / reproduce", "urgent / urgent"],
-          "correctAnswer": "reproduce / urgent",
-          "explanation": "reproduce (tái tạo, sao chép) hình ảnh, và việc đó rất urgent (cấp bách)."
-        },
-        {
-          "content": "5. After I fell, I ________ on my finger where I cut it. Then my mom ________ me on the back and told me to get up. (sucked / patted)",
-          "options": ["sucked / patted", "patted / sucked", "sucked / sucked", "patted / patted"],
-          "correctAnswer": "sucked / patted",
-          "explanation": "sucked (mút) ngón tay bị đứt, mẹ patted (vỗ nhẹ) vào lưng."
-        },
-        {
-          "content": "6. The ________ man on television entertained viewers by saying ________. (bald / rhymes)",
-          "options": ["bald / rhymes", "rhymes / bald", "bald / bald", "rhymes / rhymes"],
-          "correctAnswer": "bald / rhymes",
-          "explanation": "người đàn ông bald (hói đầu) giải trí bằng cách nói rhymes (vần điệu)."
-        },
-        {
-          "content": "7. Manuel's mom thought he had ________, but in reality he had just ________ under his bed. (crept / vanished)",
-          "options": ["vanished / crept", "crept / vanished", "vanished / vanished", "crept / crept"],
-          "correctAnswer": "vanished / crept",
-          "explanation": "mẹ tưởng cậu bé đã vanished (biến mất), nhưng thực ra cậu vừa crept (lẻn) dưới gầm giường."
-        },
-        {
-          "content": "8. I was scared when my big sister left me in the ________. I was afraid someone would ________ me. (wagon / kidnap)",
-          "options": ["wagon / kidnap", "kidnap / wagon", "wagon / wagon", "kidnap / kidnap"],
-          "correctAnswer": "wagon / kidnap",
-          "explanation": "để lại trong wagon (xe kéo), sợ ai đó sẽ kidnap (bắt cóc)."
-        },
-        {
-          "content": "9. It was such a ________ to be finished with the long exam. I was so tired afterward that I needed to take a ________. (nap / relief)",
-          "options": ["relief / nap", "nap / relief", "relief / relief", "nap / nap"],
-          "correctAnswer": "relief / nap",
-          "explanation": "hoàn thành bài thi là một sự relief (nhẹ nhõm), quá mệt nên cần một nap (giấc ngủ ngắn)."
-        },
-        {
-          "content": "10. Nellie wrapped a ________ around her and made funny sounds. She was ________ a ghost. (imitating / blanket)",
-          "options": ["blanket / imitating", "imitating / blanket", "blanket / blanket", "imitating / imitating"],
-          "correctAnswer": "blanket / imitating",
-          "explanation": "quấn blanket (chăn) và imitating (bắt chước) một con ma."
-        }
-      ]
-    }
-  ],
-  "story_exercise": {
-    "title": "Reading Comprehension",
-    "questions": [
-      {
-        "content": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.\n1. Anna took care of Grace in her mother's absence because her parents got a divorce.",
-        "options": ["True", "False", "Not Given", "None of the above"],
-        "correctAnswer": "True",
-        "explanation": "Đúng (T)."
-      },
-      {
-        "content": "2. Grace had a lot of hair and wrinkles.",
-        "options": ["True", "False", "Not Given", "None of the above"],
-        "correctAnswer": "False",
-        "explanation": "Sai (F). Câu sửa lại: Grace was bald and had no wrinkles."
-      },
-      {
-        "content": "3. Anna imitated a cat, and Grace reproduced the sounds she made.",
-        "options": ["True", "False", "Not Given", "None of the above"],
-        "correctAnswer": "True",
-        "explanation": "Đúng (T)."
-      },
-      {
-        "content": "4. Anna had nowhere to go with the wagon.",
-        "options": ["True", "False", "Not Given", "None of the above"],
-        "correctAnswer": "True",
-        "explanation": "Đúng (T)."
-      },
-      {
-        "content": "5. When Anna came back from her room, she found that the infant had been kidnapped.",
-        "options": ["True", "False", "Not Given", "None of the above"],
-        "correctAnswer": "False",
-        "explanation": "Sai (F). Câu sửa lại: When Anna came back from her room, she found that Grace had vanished."
-      },
-      {
-        "content": "6. Anna sang rhymes for Grace to try to find her more quickly.",
-        "options": ["True", "False", "Not Given", "None of the above"],
-        "correctAnswer": "False",
-        "explanation": "Sai (F). Câu sửa lại: Anna called aloud for Grace to find her."
-      },
-      {
-        "content": "Part B: Answer the questions.\n1. What did Anna feel when she finally found Grace?",
-        "options": ["Sleepy", "Urgent", "Relief", "Pleasant"],
-        "correctAnswer": "Relief",
-        "explanation": "Anna cảm thấy nhẹ nhõm (Relief) khi tìm thấy Grace."
-      },
-      {
-        "content": "2. How did Grace get under the bed?",
-        "options": ["She crept there.", "Anna put her there for her nap.", "She was kidnapped.", "Anna carried her in the blanket."],
-        "correctAnswer": "She crept there.",
-        "explanation": "Grace đã lén bò xuống đó (crept under the bed)."
-      },
-      {
-        "content": "3. Which is NOT something Anna did with Grace?",
-        "options": ["Go outside in the wagon", "Pat her on the head", "Read a book aloud", "Sing her rhymes"],
-        "correctAnswer": "Read a book aloud",
-        "explanation": "Đọc sách to không phải là việc Anna đã làm với Grace."
-      },
-      {
-        "content": "4. Why did Anna wrap Grace in a blanket?",
-        "options": ["So she would not cry", "So she could pat her", "So she could take a nap", "To keep her from sucking her thumb"],
-        "correctAnswer": "So she could take a nap",
-        "explanation": "Anna quấn chăn cho Grace để cô bé có thể ngủ trưa (take a nap)."
-      }
-    ]
-  }
+  story: `<h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Ruth Handler</h1>
+  <p style="margin-bottom: 1rem;">Ruth Handler, creator of the Barbie doll, died on April 27th, aged 85.</p>
+  <p style="margin-bottom: 1rem;">The Barbie doll is 43 this year, a great age for a toy. Most toys have cruelly short lives. Who now remembers the Cabbage Patch Kids, Tiny Tears, Thunderbirds? They lie discarded in the toy cupboards of the rich world. Barbie has outlived them all. No one has been able to say why, not even Ruth Handler, Barbie's creator. Longevity in toyland is as much a mystery as it is in real life. When pressed by reporters why Barbie had done so well Mrs Handler said, smilingly, "I was a marketing genius." Perhaps she was. But no other products by Mattel, the firm she helped to found, did as well, and some were flops.</p>
+  <p style="margin-bottom: 1rem;">Still, America is happy to celebrate success, whatever its mystery, and Barbie gained fame not simply as a product but as an icon. Andy Warhol produced an image of Barbie, to be applauded alongside that of Marilyn Monroe. At one time you could hardly switch on the radio in America without hearing the song "Barbie Girl", albeit by a Danish group, Aqua: "Life in plastic/It's fantastic." A Barbie doll was buried in an American government time capsule as representative of life in the 20th century. Barbie was said to be "the archetypal woman", a modern Mona Lisa. On television feminists said Barbie was a bimbo and bad for children. Mrs Handler retorted that Barbie offered children choices of what to be when they grew up. Academe bent its mind to the Barbie phenomenon. Students on a sociology course were set the following exercise: "What criticisms have been made of Barbie as a role model? Do you agree with this criticism? In your opinion, should the manufacturers be sensitive to this criticism? There are no 'right' answer to these questions, but you should develop a line of reasoning that reflects your values."</p>
+  <p style="margin-bottom: 1rem;"><strong>A garage in California</strong></p>
+  <p style="margin-bottom: 1rem;">Ruth Handler was herself a success story in an honoured American tradition. Her parents had arrived in the United States in a steamship, travelling steerage, the cheapest accommodation, and settled in Denver. Her father was a blacksmith who had brought his family from Poland so that he would not be conscripted into the Russian army. Mother never felt very well, exhausted after bearing ten children. But big families have a way of looking after themselves, and Ruth, the youngest, says she was well cared for.</p>
+  <p style="margin-bottom: 1rem;">At the age of 19 she headed for Hollywood. She did not make it into the film business. She took a course in industrial design, met a boy on the same course and married him. Mattel was started in a garage, adding to another bit of American industrial lore. Ruth Handler and her husband at first made picture frames, then furniture for dolls' houses, then toys, including a child's guitar that found a market. The firm seems to have done reasonably well and in the 1950s Mrs Handler had a holiday in Europe. In Switzerland she came across a German-made doll about 11 in tall called Blonde Lilli, of improbable proportions, dressed in skimpy clothes, and presumably designed to raise the ambitions of young men.</p>
+  <p style="margin-bottom: 1rem;">Suppressing her American blushes, Mrs Handler bought three and took them back to America. She said she had been thinking for some time of producing a "grown-up" doll for children, but the men in her firm said there would be no demand for one: what children liked was dolls that looked like babies. Inspired by Lilli, Mrs Handler designed a respectable American doll called Barbie (her daughter's name) with breasts but without nipples and wearing clothes that were pretty but non-provocative. The first dolls were made in Japan and in 1959 "Barbie the teenage model" made its debut at the American Toy Fair in New York. It was the success of the show, selling 350,000 Barbies in the first year. Since then more than a billion Barbies have been sold worldwide.</p>
+  <p style="margin-bottom: 1rem;">According to Mattel, an American girl aged up to 11 is likely to own ten Barbie dolls. French children are said to own five. But several million grown-up women are also said to own Barbies. "She is more than a doll to them, whatever their age," Mrs Handler said. "She has become part of them." There are Barbie collectors of both sexes: a 1959 Barbie that sold for $3 is now said to be worth $5,000 in good condition.</p>
+  <p style="margin-bottom: 1rem;">What apparently sustains demand for the doll is that Barbies come in all guises, as a dancer, a police officer, an astronaut, a physician, a talking Barbie that says, "What to go shopping?" There is a Chinese Barbie, an American Indian Barbie, a black Barbie, just about every sort of Barbie except its shameless forebear Lilli. Barbie retains an almost sexless body that can puzzle knowing children who wonder how Barbie was born without a belly button and has no obvious means of reproduction. "Hey, Momma...?" "That's enough, dear, or I'll take Barbie away."</p>
+  <p style="margin-bottom: 1rem;">In defending Barbie against the feminists Mrs Handler said her creation is a career woman and not at all empty headed. But Barbie has had so many careers, and at 43 marriage seems to be a declining prospect. There is a boyfriend called Ken, named after another of Mrs Handler's children. Barbie and Ken have been together for years. What are Ken's intentions? Barbie was born in the innocent 1950s, and may find the mores of these changeable times hard to cope with. Barbie's friends of all ages are concerned.</p>`
 };
 
-fs.writeFileSync('unit10_raw.json', JSON.stringify(data, null, 2));
-console.log('unit10_raw.json created');
+generateUnit(u);

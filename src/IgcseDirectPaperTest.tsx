@@ -460,6 +460,18 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
               details: []
           };
       }
+      
+      // BẮT BUỘC TÍNH LẠI ĐIỂM (LLM thường cộng dồn sai)
+      if (gradedData && Array.isArray(gradedData.details)) {
+          let trueStudentScore = 0;
+          let trueMaxScore = 0;
+          gradedData.details.forEach((d: any) => {
+              trueStudentScore += (Number(d.student_score) || 0);
+              trueMaxScore += (Number(d.max_score) || 0);
+          });
+          gradedData.total_student_score = trueStudentScore;
+          gradedData.total_max_score = trueMaxScore;
+      }
 
       setGradeResult(gradedData);
       setIsReviewMode(true);

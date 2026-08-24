@@ -342,10 +342,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit18_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Disparities at Harvard</h1>\n  <p style=\"margin-bottom: 1rem;\">Frank Morley seemed out of place in the crowd of young people moving excitedly to the loud music and the exhortations in Spanish at the rally in Harvard Yard. Mr. Morley is 60 years old and not particularly well educated, and he was dressed in the uniform of his trade, which is janitor.</p>\n  <p style=\"margin-bottom: 1rem;\">\"It amazes me,\" he said, raising his voice to be heard over the pounding of drums, \"that there are people who would do this for other people. For guys like me.\"</p>\n  <p style=\"margin-bottom: 1rem;\">The rally was just outside Massachusetts Hall, where about 40 students have been conducting a sit-in for nearly two weeks. Massachusetts Hall is where the school's president and provost have their offices. The sit-in is part of a long campaign to get the university to stop what the students feel is the relentless exploitation of Harvard's lowest-paid workers—the janitors, kitchen staff, guards and others who are there every day to keep the students, faculty and administrators clean, comfortable and safe.</p>\n  <p style=\"margin-bottom: 1rem;\">The problem, in the view of the students and many others, is that these workers and many others, is that these workers on the campus of America's greatest and richest university are paid unconscionably low wages. While they work hard to maintain the daily living conditions to which Harvard has become accustomed, they do not make enough money to keep their own families adequately housed and fed. They cater to the elite, but they are stuck in poverty themselves. And Harvard, which is sitting on an endowment of nearly $20 billion, has coldly turned its back on entreaties to pay the workers the few dollars more that would lift their pay to a so-called living wage.</p>\n  <p style=\"margin-bottom: 1rem;\">Frank Morley lives in Mansfield (he can't afford to live in Cambridge) and his daily commute is more than an hour each way. He takes home $309.46 for a 40-hour workweek, which is not enough to cover his expenses. For more than two years he worked a second job bagging groceries and stocking shelves at a supermarket. He got only four hours of sleep a night and was in a perpetual state of exhaustion. He recently gave up the second job.</p>\n  <p style=\"margin-bottom: 1rem;\">\"I'm in a hole,\" he said. \"I had to take money out of a retirement fund to pay debts. Pretty soon the retirement money will be gone. When I finally do retire, all I'll have is whatever Social Security, I guess.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Harvard students began the living-wage campaign in the fall of 1998. They wanted Harvard to adopt a policy, similar to one that was then being considered by the Cambridge City Council, establishing a \"living wage\" of $10.25 an hour as the minimum that could be paid to employees. The Cambridge Council passed its ordinance in 1999, but it does not apply to Harvard. More than 1,000 workers at Harvard—some working directly for the university and some for contractors hired by the university—earn less than $10.25 an hour.</p>\n  <p style=\"margin-bottom: 1rem;\">Porfiro Figueroa is one of them. He's 31 years old, has a wife and two young children and earns $9.40 an hour as a custodian. Speaking in Spanish, he explained through an interpreter that he has to work two jobs \"just to survive a little bit.\" But he doesn't get to see much of his kids. He sees his year-old daughter for a brief period in the middle of the day, during the break between jobs. But his other child, a 5-year-old boy, is in school. \"I only see my son on weekends and at night when he is sleeping,\" he said.</p>\n  <p style=\"margin-bottom: 1rem;\">Harvard's honchos have not been moved by the pleas of the students or the plight of workers trying to raise families on less than $20,000 a year. A committee appointed by the administration in 1999 studied the matter, and then rejected the idea of a wage standard for the university. Just two weeks ago a spokesman for the school said, \"We will not be adopting a living wage.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Don't bet on that. This is not a fight the school can easily win. Harvard University is not some soulless corporation that can get away with squeezing the last nickel out of its poorest workers. It's not an apparel company. It's a celebrated institution that craves the moral high ground.</p>\n  <p style=\"margin-bottom: 1rem;\">Instead of fading, as Harvard administrators had hoped, the living wage campaign has flourished. Harvard and its president, Rudenstine, need an exit strategy, fast.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit18_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Disparities at Harvard</h1>\n  <p style=\"margin-bottom: 1rem;\">Frank Morley seemed <b>out of place</b> in the crowd of young people moving excitedly to the loud music and the exhortations in Spanish at the <b>rally</b> in Harvard Yard. Mr. Morley is 60 years old and not particularly well educated, and he was dressed in the uniform of his trade, which is <b>janitor</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">\"It amazes me,\" he said, raising his voice to be heard over the pounding of drums, \"that there are people who would do this for other people. For guys like me.\"</p>\n  <p style=\"margin-bottom: 1rem;\">The <b>rally</b> was just outside Massachusetts Hall, where about 40 students have been conducting a <b>sit-in</b> for nearly two weeks. Massachusetts Hall is where the school's president and <b>provost</b> have their offices. The <b>sit-in</b> is part of a long campaign to get the university to stop what the students feel is the <b>relentless</b> <b>exploitation</b> of Harvard's lowest-paid workers—the janitors, kitchen staff, guards and others who are there every day to keep the students, faculty and administrators clean, comfortable and safe.</p>\n  <p style=\"margin-bottom: 1rem;\">The problem, in the view of the students and many others, is that these workers and many others, is that these workers on the <b>campus</b> of America's greatest and richest university are paid <b>unconscionably</b> low wages. While they work hard to maintain the daily living conditions to which Harvard has become accustomed, they do not make enough money to keep their own families adequately housed and fed. They <b>cater to</b> the <b>elite</b>, but they are stuck in poverty themselves. And Harvard, which is sitting on an <b>endowment</b> of nearly $20 billion, has coldly turned its back on entreaties to pay the workers the few dollars more that would lift their pay to a so-called <b>living wage</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Frank Morley lives in Mansfield (he can't afford to live in Cambridge) and his daily <b>commute</b> is more than an hour each way. He takes home $309.46 for a 40-hour workweek, which is not enough to <b>cover</b> his expenses. For more than two years he worked a second job bagging groceries and stocking shelves at a supermarket. He got only four hours of sleep a night and was in a <b>perpetual</b> state of <b>exhaustion</b>. He recently gave up the second job.</p>\n  <p style=\"margin-bottom: 1rem;\">\"I'm <b>in a hole</b>,\" he said. \"I had to take money out of a retirement fund to pay debts. Pretty soon the retirement money will be gone. When I finally do retire, all I'll have is whatever <b>Social Security</b>, I guess.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Harvard students began the living-wage campaign in the fall of 1998. They wanted Harvard to <b>adopt</b> a policy, similar to one that was then being considered by the Cambridge <b>City Council</b>, establishing a \"<b>living wage</b>\" of $10.25 an hour as the minimum that could be paid to employees. The Cambridge Council passed its <b>ordinance</b> in 1999, but it does not apply to Harvard. More than 1,000 workers at Harvard—some working directly for the university and some for contractors hired by the university—earn less than $10.25 an hour.</p>\n  <p style=\"margin-bottom: 1rem;\">Porfiro Figueroa is one of them. He's 31 years old, has a wife and two young children and earns $9.40 an hour as a <b>custodian</b>. Speaking in Spanish, he explained through an interpreter that he has to work two jobs \"just to <b>survive</b> a little bit.\" But he doesn't get to see much of his kids. He sees his year-old daughter for a <b>brief</b> period in the middle of the day, during the break between jobs. But his other child, a 5-year-old boy, is in school. \"I only see my son on weekends and at night when he is sleeping,\" he said.</p>\n  <p style=\"margin-bottom: 1rem;\">Harvard's honchos have not been moved by the pleas of the students or the <b>plight</b> of workers trying to raise families on less than $20,000 a year. A committee appointed by the <b>administration</b> in 1999 studied the matter, and then rejected the idea of a wage standard for the university. Just two weeks ago a spokesman for the school said, \"We will not be adopting a <b>living wage</b>.\"</p>\n  <p style=\"margin-bottom: 1rem;\">Don't <b>bet on</b> that. This is not a fight the school can easily win. Harvard University is not some <b>soulless</b> corporation that can <b>get away with</b> squeezing the last <b>nickel</b> out of its poorest workers. It's not an <b>apparel</b> company. It's a <b>celebrated</b> institution that craves the <b>moral high ground</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Instead of fading, as Harvard administrators had hoped, the <b>living wage</b> campaign has flourished. Harvard and its president, Rudenstine, need an <b>exit</b> <b>strategy</b>, fast.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u18_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u18_kt_0",
+              "content": "1. There is a considerable [ 1 ] in the rates of pay for men and women.<br/><br/>2. The general [ 2 ] his tired soldiers and they drove the enemy back.<br/><br/>3. It [ 3 ] me how many candidates eliminate themselves!<br/><br/>4. The company [ 4 ] a survey to find out local reaction to the leisure centre.<br/><br/>5. He beat the dog [ 5 ].",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "disparity"
+            },
+            {
+              "id": "u18_kt_1",
+              "content": "1. There is a considerable [ 1 ] in the rates of pay for men and women.<br/><br/>2. The general [ 2 ] his tired soldiers and they drove the enemy back.<br/><br/>3. It [ 3 ] me how many candidates eliminate themselves!<br/><br/>4. The company [ 4 ] a survey to find out local reaction to the leisure centre.<br/><br/>5. He beat the dog [ 5 ].",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "rallied"
+            },
+            {
+              "id": "u18_kt_2",
+              "content": "1. There is a considerable [ 1 ] in the rates of pay for men and women.<br/><br/>2. The general [ 2 ] his tired soldiers and they drove the enemy back.<br/><br/>3. It [ 3 ] me how many candidates eliminate themselves!<br/><br/>4. The company [ 4 ] a survey to find out local reaction to the leisure centre.<br/><br/>5. He beat the dog [ 5 ].",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "amazes"
+            },
+            {
+              "id": "u18_kt_3",
+              "content": "1. There is a considerable [ 1 ] in the rates of pay for men and women.<br/><br/>2. The general [ 2 ] his tired soldiers and they drove the enemy back.<br/><br/>3. It [ 3 ] me how many candidates eliminate themselves!<br/><br/>4. The company [ 4 ] a survey to find out local reaction to the leisure centre.<br/><br/>5. He beat the dog [ 5 ].",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "conducted"
+            },
+            {
+              "id": "u18_kt_4",
+              "content": "1. There is a considerable [ 1 ] in the rates of pay for men and women.<br/><br/>2. The general [ 2 ] his tired soldiers and they drove the enemy back.<br/><br/>3. It [ 3 ] me how many candidates eliminate themselves!<br/><br/>4. The company [ 4 ] a survey to find out local reaction to the leisure centre.<br/><br/>5. He beat the dog [ 5 ].",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "relentlessly"
+            },
+            {
+              "id": "u18_kt_5",
+              "content": "6. The city's water supply is no longer [ 1 ].<br/><br/>7. She refused to [ 2 ] his ridiculous demands.<br/><br/>8. All our [ 3 ] were in vain, and he was shot at dawn.<br/><br/>9. It's a long [ 4 ] from New York to Boston.<br/><br/>10. Will $10 [ 5 ] the cost of the damage?",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "adequate"
+            },
+            {
+              "id": "u18_kt_6",
+              "content": "6. The city's water supply is no longer [ 1 ].<br/><br/>7. She refused to [ 2 ] his ridiculous demands.<br/><br/>8. All our [ 3 ] were in vain, and he was shot at dawn.<br/><br/>9. It's a long [ 4 ] from New York to Boston.<br/><br/>10. Will $10 [ 5 ] the cost of the damage?",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "cater to"
+            },
+            {
+              "id": "u18_kt_7",
+              "content": "6. The city's water supply is no longer [ 1 ].<br/><br/>7. She refused to [ 2 ] his ridiculous demands.<br/><br/>8. All our [ 3 ] were in vain, and he was shot at dawn.<br/><br/>9. It's a long [ 4 ] from New York to Boston.<br/><br/>10. Will $10 [ 5 ] the cost of the damage?",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "entreaties"
+            },
+            {
+              "id": "u18_kt_8",
+              "content": "6. The city's water supply is no longer [ 1 ].<br/><br/>7. She refused to [ 2 ] his ridiculous demands.<br/><br/>8. All our [ 3 ] were in vain, and he was shot at dawn.<br/><br/>9. It's a long [ 4 ] from New York to Boston.<br/><br/>10. Will $10 [ 5 ] the cost of the damage?",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "commute"
+            },
+            {
+              "id": "u18_kt_9",
+              "content": "6. The city's water supply is no longer [ 1 ].<br/><br/>7. She refused to [ 2 ] his ridiculous demands.<br/><br/>8. All our [ 3 ] were in vain, and he was shot at dawn.<br/><br/>9. It's a long [ 4 ] from New York to Boston.<br/><br/>10. Will $10 [ 5 ] the cost of the damage?",
+              "options": [
+                "disparity",
+                "rallied",
+                "amazes",
+                "conducted",
+                "relentlessly",
+                "adequate",
+                "cater to",
+                "entreaties",
+                "commute",
+                "cover"
+              ],
+              "correctAnswer": "cover"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

@@ -1,555 +1,1136 @@
 {
-  "parts": [
+  "Unit 28 WL1": [
     {
-      "id": "part1",
-      "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit28_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit28_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aquarium</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkwɛəriəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An aquarium is a building where fish and underwater animals are kept.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We took a trip to the aquarium and saw a scary shark.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arbitrary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[a:rbitreri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is arbitrary, it is not based on any plan or system, so it seems random.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The classroom had many arbitrary rules that made me confused.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">autobiography</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:təbaiɑgrəfi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An autobiography is a true story of a person's life written by that person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I read an autobiography about my favorite entertainer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convention</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvenʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A convention is behavior that is considered to be common or polite.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the US, a popular convention is to shake hands when you meet someone.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gracious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[greiʃəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is gracious, then they are kind and helpful to those who need it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The operator was gracious enough to help me find his number.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">improve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impru:v]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To improve something means to make it better.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He studied hard to improve his test scores from the previous year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">insulate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[insəleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To insulate something means to protect it from heat, cold, or noise.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People can conserve energy by insulating their houses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intrigue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intri:g]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To intrigue means to cause an interest in something or someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her mysterious past intrigued her new friend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">longevity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɑndʒevəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Longevity is the ability to live for a long time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sea turtles have an amazing longevity.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">misplace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mispleis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To misplace something means to lose it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I misplaced my wallet, and I didn't find it until a week later.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">naughty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɔ:ti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When children are naughty, they behave badly or do not do what they are told.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy had to go to his room because he was being naughty.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">norm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɔ:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A norm is a way of behaving that is considered normal in a particular society.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wearing a heavy coat all summer is not considered a norm in the desert.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">orangutan</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:ræŋutæn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An orangutan is a large ape with red and brown hair and long arms.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Orangutans use their long arms to swing from trees.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overload</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvərloud]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To overload something means to put more things into it than it is meant to hold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you overload the truck, it might crash.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">philanthropy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[filænθrəpi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Philanthropy is the act of helping others, without wanting anything in return.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wealthy business owner is well known for his acts of philanthropy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">probe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[proub]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To probe into something means to ask questions to discover facts about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bank probed into his financial history to see if he qualified for a loan.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recipient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[risipiənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A recipient of something is the person who receives it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was the recipient of four phone calls today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reptile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reptail]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A reptile is a cold-blooded animal that lays eggs and has skin covered with scales.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Lizards are my favorite type of reptile.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thrive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θraiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To thrive means to do well and be successful, healthy, or strong.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He may be an old man, but he continues to thrive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ultimate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌltəmit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is ultimate, it is the final result or aim of a long series of events.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ By trying hard in school, I will reach my ultimate goal of becoming a doctor.</div></div></div></div></div></div>",
-      "sections": [
-        {
-          "id": "sec1",
-          "title": "Exercise 1: Choose the answer that best fits the question.",
-          "content": "",
-          "questions": [
-            {
-              "id": "ex1_1",
-              "content": "1. What would you find at an aquarium?",
-              "options": [
-                "A blanket",
-                "A squid",
-                "A cow",
-                "A coyote"
-              ],
-              "explanation": "Trong thủy cung (aquarium), bạn có thể tìm thấy một con mực (A squid).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex1_2",
-              "content": "2. What can you do to improve your grades?",
-              "options": [
-                "Copy them",
-                "Study more",
-                "Miss class",
-                "Get less sleep"
-              ],
-              "explanation": "Bạn có thể học nhiều hơn (Study more) để cải thiện điểm số.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex1_3",
-              "content": "3. What is the ultimate result of going to college?",
-              "options": [
-                "Signing up for classes",
-                "Taking many tests",
-                "Getting a degree",
-                "Dating"
-              ],
-              "explanation": "Kết quả cuối cùng (ultimate result) của việc học đại học là lấy được bằng cấp (Getting a degree).",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "ex1_4",
-              "content": "4. What happens if you insulate a house in the winter?",
-              "options": [
-                "Cold air stays outside.",
-                "Fires cannot be lit.",
-                "You can never get outside.",
-                "It will float."
-              ],
-              "explanation": "Cách nhiệt (insulate) cho ngôi nhà vào mùa đông giúp giữ không khí lạnh ở bên ngoài.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex1_5",
-              "content": "5. Who would most likely publish an autobiography?",
-              "options": [
-                "An important person",
-                "A five-year-old",
-                "A shy teenager",
-                "A dead person"
-              ],
-              "explanation": "Một người quan trọng (An important person) có khả năng cao xuất bản tự truyện (autobiography) của họ.",
-              "correctAnswer": "A"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec2",
-          "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
-          "content": "",
-          "questions": [
-            {
-              "id": "ex2_1",
-              "content": "1. recipient",
-              "options": [
-                "an attempt",
-                "a giver",
-                "a friend",
-                "a follower"
-              ],
-              "explanation": "recipient là người nhận, ngược lại là người cho (a giver).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex2_2",
-              "content": "2. misplace",
-              "options": [
-                "to try",
-                "to help",
-                "to find",
-                "to declare"
-              ],
-              "explanation": "misplace là làm mất, ngược lại là tìm thấy (to find).",
-              "correctAnswer": "C"
-            },
-            {
-              "id": "ex2_3",
-              "content": "3. naughty",
-              "options": [
-                "wanting more",
-                "over",
-                "lacking",
-                "behaving well"
-              ],
-              "explanation": "naughty là hư hỏng, nghịch ngợm, ngược lại là cư xử tốt (behaving well).",
-              "correctAnswer": "D"
-            },
-            {
-              "id": "ex2_4",
-              "content": "4. longevity",
-              "options": [
-                "short life",
-                "plans",
-                "answers",
-                "tallness"
-              ],
-              "explanation": "longevity là tuổi thọ cao, sống lâu, ngược lại là cuộc đời ngắn ngủi (short life).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex2_5",
-              "content": "5. thrive",
-              "options": [
-                "to create",
-                "to do bad",
-                "to agree",
-                "to move around"
-              ],
-              "explanation": "thrive là phát triển mạnh, làm tốt, ngược lại là làm tệ (to do bad).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex2_6",
-              "content": "6. gracious",
-              "options": [
-                "mean",
-                "silly",
-                "kind",
-                "smart"
-              ],
-              "explanation": "gracious là tử tế, tốt bụng, ngược lại là keo kiệt, xấu tính (mean).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex2_7",
-              "content": "7. norm",
-              "options": [
-                "abnormal",
-                "common",
-                "everyday",
-                "average"
-              ],
-              "explanation": "norm là chuẩn mực, bình thường, ngược lại là bất thường (abnormal).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex2_8",
-              "content": "8. intrigue",
-              "options": [
-                "to excite",
-                "to bore",
-                "to reassure",
-                "to trust"
-              ],
-              "explanation": "intrigue là gây hứng thú, tò mò, ngược lại là gây nhàm chán (to bore).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex2_9",
-              "content": "9. arbitrary",
-              "options": [
-                "accidental",
-                "solar",
-                "random",
-                "planned"
-              ],
-              "explanation": "arbitrary là ngẫu nhiên, tùy tiện, ngược lại là có kế hoạch (planned).",
-              "correctAnswer": "D"
-            },
-            {
-              "id": "ex2_10",
-              "content": "10. probe",
-              "options": [
-                "to touch",
-                "to open",
-                "to ignore",
-                "to build"
-              ],
-              "explanation": "probe là thăm dò, hỏi han, ngược lại là phớt lờ (to ignore).",
-              "correctAnswer": "C"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec3",
-          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
-          "content": "",
-          "questions": [
-            {
-              "id": "ex3_1",
-              "content": "1. Make sure to misplace your money so that you will always have it.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Misplace (làm mất) tiền sẽ khiến bạn không còn nó, chứ không phải luôn có nó.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_2",
-              "content": "2. The orangutans at the zoo swung so gracefully from the trees.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Đười ươi (orangutans) đu đưa trên cây.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_3",
-              "content": "3. The tigers in the aquarium loved to run and play.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Hổ (tigers) không sống trong thủy cung (aquarium).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_4",
-              "content": "4. The greedy man loved philanthropy. He never offered to help anybody.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Người tham lam không bao giờ giúp đỡ ai thì không thể yêu thích lòng bác ái (philanthropy).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_5",
-              "content": "5. The box broke when he overloaded it with books.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Chiếc hộp bị vỡ khi chất quá tải (overloaded) sách.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_6",
-              "content": "6. The mechanics of computers intrigue me.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Cơ chế của máy tính gây hứng thú (intrigue) cho tôi.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_7",
-              "content": "7. The longevity of the rat was fifty centimeters.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Longevity là tuổi thọ (thời gian sống), không đo bằng centimet (độ dài).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_8",
-              "content": "8. Plants will thrive if they are not given any water.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Cây sẽ không thể phát triển mạnh mẽ (thrive) nếu không được tưới nước.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_9",
-              "content": "9. The naughty girl always obeyed her mother.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Cô bé hư hỏng (naughty) thì không thể luôn vâng lời (obeyed) mẹ.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_10",
-              "content": "10. The ultimate result of the game was a win for the home team.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Kết quả cuối cùng (ultimate result).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_11",
-              "content": "11. Some people play the lottery in hopes that they will improve their lives.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Cải thiện (improve) cuộc sống.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_12",
-              "content": "12. Paying for gasoline before pumping it is a norm.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Trả tiền xăng trước khi bơm là một điều bình thường/chuẩn mực (norm).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_13",
-              "content": "13. I probed the audience because I didn’t want to hear what they had to say.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Probe là thăm dò, hỏi han. Nếu không muốn nghe thì sẽ không probe.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_14",
-              "content": "14. Waiting your turn in line is a social convention.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Xếp hàng chờ đến lượt là một quy ước xã hội (social convention).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_15",
-              "content": "15. My dog is a great reptile.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Chó là động vật có vú, không phải là loài bò sát (reptile).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_16",
-              "content": "16. I insulated my room with blankets to keep the loud noises out.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Cách âm (insulated) bằng chăn để ngăn tiếng ồn.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_17",
-              "content": "17. She was the recipient of the grand prize.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Người nhận (recipient) giải đặc biệt.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_18",
-              "content": "18. Someday, I will write my father’s autobiography.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "I (Incorrect). Autobiography là tự truyện (tự mình viết về mình). Nếu viết về bố thì gọi là biography (tiểu sử).",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "ex3_19",
-              "content": "19. I don’t want to play with you anymore. You make up arbitrary rules as we play.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Nghĩ ra những luật lệ tùy tiện (arbitrary rules).",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "ex3_20",
-              "content": "20. The store clerk was so gracious. He helped me find everything I was looking for.",
-              "options": [
-                "C",
-                "I"
-              ],
-              "explanation": "C (Correct). Nhân viên cửa hàng rất tử tế (gracious).",
-              "correctAnswer": "A"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        }
-      ]
+      "word": "thriller",
+      "pronunciation": "/ˈθrɪlər/",
+      "pos": "noun",
+      "defEn": "A novel, play, or film with an exciting plot, typically involving crime or espionage.",
+      "defVi": "tiểu thuyết/phim ly kỳ, giật gân",
+      "exEn": "It's a psychological thriller.",
+      "exVi": "Đó là một bộ phim giật gân tâm lý.",
+      "emoji": "😱"
     },
     {
-      "id": "part2",
-      "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lottery</h1>        <p style=\"margin-bottom: 1rem;\">Joe was watching television when he heard a knock at the door. He thought, \"Who could that be? It's probably one of the <b>naughty</b> neighborhood children.\" Joe stood up and walked to the door. When he opened it, he saw a beautiful woman.</p>    <p style=\"margin-bottom: 1rem;\">She said, \"Good morning, Joe! I have great news. You're the <b>recipient</b> of this check for one million dollars! You won the lottery!\"</p>    <p style=\"margin-bottom: 1rem;\">Joe couldn't believe it. His mind was <b>overloaded</b> with emotions. Joe said, \"Thank you! Thank you!\"</p>    <p style=\"margin-bottom: 1rem;\">After he calmed down, Joe made a photocopy of the check in case he <b>misplaced</b> the original one. He sat and thought about what he wanted to do with the money. He didn't want to spend it in an <b>arbitrary</b> way. Joe thought, \"I know there are others who need this money more than I do. I've always loved animals, so I think I'll buy things for the zoo!\"</p>    <p style=\"margin-bottom: 1rem;\">Joe knew that the zoo was in bad shape. The cages were too small, and they weren't <b>insulated</b> from the cold. Animals couldn't <b>thrive</b> in such conditions.</p>    <p style=\"margin-bottom: 1rem;\">He took out some stationery and wrote a letter to the zoo. He offered to help the zoo buy huge cages for the large mammals and <b>reptiles</b>. He offered to buy healthy food for the <b>orangutans</b> to increase their <b>longevity</b>. He even said that he would buy new glass walls for the <b>aquarium</b> because the old ones were cracked.</p>    <p style=\"margin-bottom: 1rem;\">Joe's act of <b>philanthropy</b> <b>intrigued</b> the zookeeper. He <b>probed</b> Joe to learn why he spent his money to <b>improve</b> the zoo. It wasn't a social <b>convention</b> for a person to be so <b>gracious</b>.</p>    <p style=\"margin-bottom: 1rem;\">Joe told the zookeeper, \"I know it's not the <b>norm</b>, but my <b>ultimate</b> decision to help these animals is better than anything I could have done for myself. If I ever write an <b>autobiography</b>, I will write that this was the happiest day of my life.\"</p></div>",
-      "imageUrl": "/unit28_vol5_story.png",
-      "sections": [
-        {
-          "id": "sec4",
-          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
-          "content": "",
-          "questions": [
-            {
-              "id": "sec4_1",
-              "content": "1. Joe was the recipient of a check because he won the lottery.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Đúng. Joe là người nhận tấm séc vì anh đã trúng xổ số.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec4_2",
-              "content": "2. He wanted to buy new glass walls for the aquarium because the old ones were cracked.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Đúng. Anh ấy muốn mua kính mới cho thuỷ cung vì những cái cũ đã bị nứt.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec4_3",
-              "content": "3. If Joe wrote an autobiography, he would write about the norms of the overloaded aquarium.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Sai. Nếu viết tự truyện (autobiography), anh ấy sẽ viết rằng ngày trúng số và giúp đỡ động vật là ngày hạnh phúc nhất đời anh.",
-              "correctAnswer": "B"
-            },
-            {
-              "id": "sec4_4",
-              "content": "4. Joe made a photocopy of the check in case he misplaced the original one.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Đúng. Anh ấy photo tấm séc phòng trường hợp làm mất (misplaced) bản gốc.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec4_5",
-              "content": "5. When Joe opened the door, he saw one of the naughty neighborhood children.",
-              "options": [
-                "True",
-                "False"
-              ],
-              "explanation": "Sai. Khi mở cửa, anh ấy nhìn thấy một người phụ nữ xinh đẹp mang theo tấm séc.",
-              "correctAnswer": "B"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        },
-        {
-          "id": "sec5",
-          "title": "Part B: Answer the questions.",
-          "content": "",
-          "questions": [
-            {
-              "id": "sec5_1",
-              "content": "1. What did Joe think the naughty children were doing to him?",
-              "options": [
-                "Joe thought the naughty neighborhood children were playing a trick on him.",
-                "Joe thought they were selling cookies.",
-                "Joe thought they wanted his money.",
-                "Joe thought they were lost."
-              ],
-              "explanation": "Joe nghĩ những đứa trẻ nghịch ngợm hàng xóm đang trêu đùa anh.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec5_2",
-              "content": "2. Why did Joe take out stationery?",
-              "options": [
-                "He took out some stationery to write a letter to the zoo.",
-                "He took out some stationery to write a book.",
-                "He took out some stationery to draw a picture.",
-                "He took out some stationery to write a check."
-              ],
-              "explanation": "Anh lấy giấy bút ra để viết một lá thư gửi cho sở thú.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec5_3",
-              "content": "3. What did Joe improve to help the orangutans increase their longevity?",
-              "options": [
-                "He bought healthy food for them.",
-                "He bought new toys for them.",
-                "He bought bigger trees for them.",
-                "He bought new cages for them."
-              ],
-              "explanation": "Anh ấy đã mua thức ăn tốt cho đười ươi để giúp chúng sống lâu hơn.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec5_4",
-              "content": "4. What was the purpose of the zookeeper wanting to probe Joe with questions?",
-              "options": [
-                "He probed Joe to learn why he spent his money on the zoo instead of on himself.",
-                "He probed Joe to see if he was rich.",
-                "He probed Joe to ask for more money.",
-                "He probed Joe to sell him a ticket."
-              ],
-              "explanation": "Nhân viên sở thú gạn hỏi để tìm hiểu lý do tại sao Joe dùng tiền cho sở thú thay vì cho bản thân.",
-              "correctAnswer": "A"
-            },
-            {
-              "id": "sec5_5",
-              "content": "5. If Joe were to write an autobiography, how would he describe this day?",
-              "options": [
-                "He would describe this day as the happiest day of his life.",
-                "He would describe this day as a normal day.",
-                "He would describe this day as the luckiest day.",
-                "He would describe this day as the most confusing day."
-              ],
-              "explanation": "Anh ấy sẽ miêu tả ngày hôm nay là ngày hạnh phúc nhất trong cuộc đời anh.",
-              "correctAnswer": "A"
-            }
-          ],
-          "questionType": "Trắc nghiệm"
-        }
-      ]
+      "word": "campus novel",
+      "pronunciation": "/ˈkæmpəs ˈnɒvl/",
+      "pos": "noun",
+      "defEn": "A novel whose main action is set in and around the campus of a university.",
+      "defVi": "tiểu thuyết học đường",
+      "exEn": "He wrote a famous campus novel.",
+      "exVi": "Ông ấy đã viết một cuốn tiểu thuyết học đường nổi tiếng.",
+      "emoji": "🏫"
+    },
+    {
+      "word": "satire",
+      "pronunciation": "/ˈsætaɪər/",
+      "pos": "noun",
+      "defEn": "The use of humour, irony, exaggeration, or ridicule to expose and criticize people's stupidity or vices.",
+      "defVi": "sự trào phúng, châm biếm",
+      "exEn": "The play is a satire on modern politics.",
+      "exVi": "Vở kịch là một sự châm biếm về chính trị hiện đại.",
+      "emoji": "😏"
+    },
+    {
+      "word": "reported",
+      "pronunciation": "/rɪˈpɔːtɪd/",
+      "pos": "adjective",
+      "defEn": "Made known or stated.",
+      "defVi": "được báo cáo, được cho là",
+      "exEn": "The reported costs were high.",
+      "exVi": "Chi phí được báo cáo là rất cao.",
+      "emoji": "📰"
+    },
+    {
+      "word": "deal",
+      "pronunciation": "/diːl/",
+      "pos": "verb",
+      "defEn": "To take part in commercial trading of a particular commodity.",
+      "defVi": "giao dịch, giải quyết",
+      "exEn": "They deal in antique furniture.",
+      "exVi": "Họ giao dịch đồ nội thất cổ.",
+      "emoji": "🤝"
+    },
+    {
+      "word": "gamble",
+      "pronunciation": "/ˈɡæmbl/",
+      "pos": "verb",
+      "defEn": "To play games of chance for money; to take risky action in the hope of a desired result.",
+      "defVi": "đánh bạc, cá cược",
+      "exEn": "He gambled all his money away.",
+      "exVi": "Anh ta đã đánh bạc hết sạch tiền.",
+      "emoji": "🎲"
+    },
+    {
+      "word": "recklessly",
+      "pronunciation": "/ˈrekləsli/",
+      "pos": "adverb",
+      "defEn": "Without regard to the danger or the consequences of one's actions.",
+      "defVi": "một cách liều lĩnh",
+      "exEn": "He was driving recklessly.",
+      "exVi": "Anh ta đã lái xe một cách liều lĩnh.",
+      "emoji": "⚠️"
+    },
+    {
+      "word": "non-fiction",
+      "pronunciation": "/nɒn ˈfɪkʃn/",
+      "pos": "noun",
+      "defEn": "Prose writing that is based on facts, real events, and real people.",
+      "defVi": "thể loại phi hư cấu",
+      "exEn": "She prefers reading non-fiction.",
+      "exVi": "Cô ấy thích đọc sách phi hư cấu hơn.",
+      "emoji": "📖"
+    },
+    {
+      "word": "dissent",
+      "pronunciation": "/dɪˈsent/",
+      "pos": "noun",
+      "defEn": "The holding or expression of opinions at variance with those previously or commonly held.",
+      "defVi": "sự bất đồng quan điểm",
+      "exEn": "There was no dissent from this view.",
+      "exVi": "Không có sự bất đồng nào với quan điểm này.",
+      "emoji": "🙅‍♂️"
+    },
+    {
+      "word": "in vain",
+      "pronunciation": "/ɪn veɪn/",
+      "pos": "phrase",
+      "defEn": "Without success or a result.",
+      "defVi": "vô ích, uổng công",
+      "exEn": "They tried in vain to save him.",
+      "exVi": "Họ đã cố gắng cứu anh ta trong vô vọng.",
+      "emoji": "🥀"
+    },
+    {
+      "word": "particularly",
+      "pronunciation": "/pəˈtɪkjələli/",
+      "pos": "adverb",
+      "defEn": "To a higher degree than is usual or average.",
+      "defVi": "đặc biệt, một cách đặc biệt",
+      "exEn": "I enjoyed the play, particularly the second half.",
+      "exVi": "Tôi thích vở kịch, đặc biệt là nửa sau.",
+      "emoji": "🌟"
+    },
+    {
+      "word": "gifted",
+      "pronunciation": "/ˈɡɪftɪd/",
+      "pos": "adjective",
+      "defEn": "Having exceptional talent or natural ability.",
+      "defVi": "có năng khiếu, tài năng",
+      "exEn": "She is a gifted musician.",
+      "exVi": "Cô ấy là một nhạc sĩ có năng khiếu.",
+      "emoji": "🎁"
+    },
+    {
+      "word": "indicate",
+      "pronunciation": "/ˈɪndɪkeɪt/",
+      "pos": "verb",
+      "defEn": "To point out; show.",
+      "defVi": "chỉ ra, biểu thị",
+      "exEn": "The map indicates the best route.",
+      "exVi": "Bản đồ chỉ ra tuyến đường tốt nhất.",
+      "emoji": "👉"
+    },
+    {
+      "word": "confirm",
+      "pronunciation": "/kənˈfɜːm/",
+      "pos": "verb",
+      "defEn": "To establish the truth or correctness of something.",
+      "defVi": "xác nhận",
+      "exEn": "Please confirm your reservation.",
+      "exVi": "Vui lòng xác nhận đặt chỗ của bạn.",
+      "emoji": "✅"
+    },
+    {
+      "word": "prose",
+      "pronunciation": "/prəʊz/",
+      "pos": "noun",
+      "defEn": "Written or spoken language in its ordinary form, without metrical structure.",
+      "defVi": "văn xuôi",
+      "exEn": "He writes beautiful prose.",
+      "exVi": "Ông ấy viết văn xuôi rất hay.",
+      "emoji": "📜"
+    },
+    {
+      "word": "competent",
+      "pronunciation": "/ˈkɒmpɪtənt/",
+      "pos": "adjective",
+      "defEn": "Having the necessary ability, knowledge, or skill to do something successfully.",
+      "defVi": "có năng lực, thành thạo",
+      "exEn": "She is a highly competent manager.",
+      "exVi": "Cô ấy là một người quản lý có năng lực cao.",
+      "emoji": "👍"
+    },
+    {
+      "word": "inspired",
+      "pronunciation": "/ɪnˈspaɪəd/",
+      "pos": "adjective",
+      "defEn": "Of extraordinary quality, as if arising from some external creative impulse.",
+      "defVi": "đầy cảm hứng, xuất thần",
+      "exEn": "It was an inspired performance.",
+      "exVi": "Đó là một màn trình diễn xuất thần.",
+      "emoji": "💡"
+    },
+    {
+      "word": "advance",
+      "pronunciation": "/ədˈvɑːns/",
+      "pos": "noun",
+      "defEn": "A forward movement; progress or an improvement.",
+      "defVi": "sự tiến bộ, tiền ứng trước",
+      "exEn": "Medical advances have saved many lives.",
+      "exVi": "Những tiến bộ y học đã cứu sống nhiều người.",
+      "emoji": "🚀"
+    },
+    {
+      "word": "merely",
+      "pronunciation": "/ˈmɪəli/",
+      "pos": "adverb",
+      "defEn": "Just; only.",
+      "defVi": "chỉ, đơn thuần",
+      "exEn": "He is merely a child.",
+      "exVi": "Cậu bé chỉ đơn thuần là một đứa trẻ.",
+      "emoji": "🤷"
+    },
+    {
+      "word": "stimulate",
+      "pronunciation": "/ˈstɪmjʊleɪt/",
+      "pos": "verb",
+      "defEn": "To encourage interest or activity in something.",
+      "defVi": "kích thích, khuyến khích",
+      "exEn": "The exhibition stimulated interest in his work.",
+      "exVi": "Triển lãm đã kích thích sự quan tâm đến tác phẩm của ông.",
+      "emoji": "⚡"
+    },
+    {
+      "word": "thrill",
+      "pronunciation": "/θrɪl/",
+      "pos": "noun",
+      "defEn": "A sudden feeling of excitement and pleasure.",
+      "defVi": "sự hồi hộp, cảm giác phấn khích",
+      "exEn": "It gave me a real thrill to see her again.",
+      "exVi": "Nó mang lại cho tôi cảm giác thực sự phấn khích khi gặp lại cô ấy.",
+      "emoji": "🎢"
+    },
+    {
+      "word": "storyline",
+      "pronunciation": "/ˈstɔːrilaɪn/",
+      "pos": "noun",
+      "defEn": "The plot of a novel, play, movie, or other narrative form.",
+      "defVi": "cốt truyện",
+      "exEn": "The film has a gripping storyline.",
+      "exVi": "Bộ phim có một cốt truyện hấp dẫn.",
+      "emoji": "🎬"
+    },
+    {
+      "word": "convoluted",
+      "pronunciation": "/ˈkɒnvəluːtɪd/",
+      "pos": "adjective",
+      "defEn": "Extremely complex and difficult to follow.",
+      "defVi": "phức tạp, rắc rối",
+      "exEn": "The plot was overly convoluted.",
+      "exVi": "Cốt truyện quá phức tạp.",
+      "emoji": "🌀"
+    },
+    {
+      "word": "be riddled with",
+      "pronunciation": "/bi ˈrɪdld wɪð/",
+      "pos": "phrase",
+      "defEn": "To be full of something undesirable.",
+      "defVi": "đầy rẫy (những thứ tồi tệ)",
+      "exEn": "The plan was riddled with errors.",
+      "exVi": "Kế hoạch đầy rẫy lỗi.",
+      "emoji": "🧀"
+    },
+    {
+      "word": "preposterous",
+      "pronunciation": "/prɪˈpɒstərəs/",
+      "pos": "adjective",
+      "defEn": "Contrary to reason or common sense; utterly absurd or ridiculous.",
+      "defVi": "phi lý, nực cười",
+      "exEn": "That is a preposterous suggestion.",
+      "exVi": "Đó là một gợi ý phi lý.",
+      "emoji": "🤪"
+    },
+    {
+      "word": "whodunit",
+      "pronunciation": "/huːˈdʌnɪt/",
+      "pos": "noun",
+      "defEn": "A story or play about a murder in which the identity of the murderer is not revealed until the end.",
+      "defVi": "truyện trinh thám (tìm thủ phạm)",
+      "exEn": "It's a classic whodunit.",
+      "exVi": "Đó là một câu chuyện trinh thám kinh điển.",
+      "emoji": "🕵️‍♂️"
+    },
+    {
+      "word": "machination",
+      "pronunciation": "/ˌmæʃɪˈneɪʃn/",
+      "pos": "noun",
+      "defEn": "A plot or scheme.",
+      "defVi": "âm mưu, mưu đồ",
+      "exEn": "I don't want to get involved in their political machinations.",
+      "exVi": "Tôi không muốn dính líu đến những âm mưu chính trị của họ.",
+      "emoji": "🕸️"
+    },
+    {
+      "word": "involve",
+      "pronunciation": "/ɪnˈvɒlv/",
+      "pos": "verb",
+      "defEn": "To include something as a necessary part or result.",
+      "defVi": "bao gồm, liên quan đến",
+      "exEn": "The job involves a lot of traveling.",
+      "exVi": "Công việc bao gồm rất nhiều việc đi lại.",
+      "emoji": "🔗"
+    },
+    {
+      "word": "clue",
+      "pronunciation": "/kluː/",
+      "pos": "noun",
+      "defEn": "A piece of evidence or information used in the detection of a crime or solving of a mystery.",
+      "defVi": "manh mối",
+      "exEn": "The police found a vital clue.",
+      "exVi": "Cảnh sát đã tìm thấy một manh mối quan trọng.",
+      "emoji": "🧩"
+    },
+    {
+      "word": "embed",
+      "pronunciation": "/ɪmˈbed/",
+      "pos": "verb",
+      "defEn": "To fix something firmly and deeply in a surrounding mass.",
+      "defVi": "tert, nhúng, gắn vào",
+      "exEn": "The bullet was embedded in the wall.",
+      "exVi": "Viên đạn bị găm sâu vào tường.",
+      "emoji": "📌"
+    },
+    {
+      "word": "stratagem",
+      "pronunciation": "/ˈstrætədʒəm/",
+      "pos": "noun",
+      "defEn": "A plan or scheme, especially one used to outwit an opponent or achieve an end.",
+      "defVi": "mưu mẹo, chiến lược",
+      "exEn": "A cunning stratagem to win the game.",
+      "exVi": "Một mưu mẹo khôn ngoan để giành chiến thắng trong trò chơi.",
+      "emoji": "♟️"
+    },
+    {
+      "word": "give a fig",
+      "pronunciation": "/ɡɪv ə fɪɡ/",
+      "pos": "idiom",
+      "defEn": "To care at all (usually used in the negative).",
+      "defVi": "quan tâm, để tâm (thường dùng ở dạng phủ định)",
+      "exEn": "I don't give a fig what he thinks.",
+      "exVi": "Tôi cóc thèm quan tâm anh ta nghĩ gì.",
+      "emoji": "🙄"
+    },
+    {
+      "word": "fig",
+      "pronunciation": "/fɪɡ/",
+      "pos": "noun",
+      "defEn": "A soft, sweet fruit full of small seeds / Used to mean something of little value.",
+      "defVi": "quả vả / thứ không có giá trị",
+      "exEn": "I don't care a fig.",
+      "exVi": "Tôi chẳng bận tâm chút nào.",
+      "emoji": "🍂"
+    },
+    {
+      "word": "murderous",
+      "pronunciation": "/ˈmɜːdərəs/",
+      "pos": "adjective",
+      "defEn": "Capable of or intending to murder; dangerously violent.",
+      "defVi": "tàn sát, giết người",
+      "exEn": "A murderous attack.",
+      "exVi": "Một cuộc tấn công tàn sát.",
+      "emoji": "🔪"
+    },
+    {
+      "word": "rancid",
+      "pronunciation": "/ˈrænsɪd/",
+      "pos": "adjective",
+      "defEn": "Smelling or tasting unpleasant as a result of being old and stale.",
+      "defVi": "ôi thiu, có mùi khét",
+      "exEn": "The butter has gone rancid.",
+      "exVi": "Bơ đã bị ôi thiu.",
+      "emoji": "🤢"
+    },
+    {
+      "word": "conservative",
+      "pronunciation": "/kənˈsɜːvətɪv/",
+      "pos": "adjective",
+      "defEn": "Averse to change or innovation and holding traditional values.",
+      "defVi": "bảo thủ",
+      "exEn": "Old people are usually more conservative.",
+      "exVi": "Người già thường bảo thủ hơn.",
+      "emoji": "🏛️"
+    },
+    {
+      "word": "menacing",
+      "pronunciation": "/ˈmenəsɪŋ/",
+      "pos": "adjective",
+      "defEn": "Suggesting the presence of danger; threatening.",
+      "defVi": "đe dọa, nguy hiểm",
+      "exEn": "A menacing look.",
+      "exVi": "Một cái nhìn đe dọa.",
+      "emoji": "😠"
+    },
+    {
+      "word": "circumstance",
+      "pronunciation": "/ˈsɜːkəmstɑːns/",
+      "pos": "noun",
+      "defEn": "A fact or condition connected with or relevant to an event or action.",
+      "defVi": "hoàn cảnh, tình huống",
+      "exEn": "I can't imagine a circumstance in which I would do that.",
+      "exVi": "Tôi không thể tưởng tượng một hoàn cảnh nào mà tôi sẽ làm điều đó.",
+      "emoji": "🌦️"
+    },
+    {
+      "word": "scandal",
+      "pronunciation": "/ˈskændl/",
+      "pos": "noun",
+      "defEn": "An action or event regarded as morally or legally wrong and causing general public outrage.",
+      "defVi": "vụ bê bối",
+      "exEn": "A political scandal ruined his career.",
+      "exVi": "Một vụ bê bối chính trị đã hủy hoại sự nghiệp của anh ấy.",
+      "emoji": "😱"
+    },
+    {
+      "word": "put paid to",
+      "pronunciation": "/pʊt peɪd tuː/",
+      "pos": "idiom",
+      "defEn": "To bring something to an end; destroy.",
+      "defVi": "chấm dứt, phá hủy",
+      "exEn": "The injury put paid to his chances of winning.",
+      "exVi": "Chấn thương đã chấm dứt cơ hội chiến thắng của anh ấy.",
+      "emoji": "🛑"
+    },
+    {
+      "word": "nomination",
+      "pronunciation": "/ˌnɒmɪˈneɪʃn/",
+      "pos": "noun",
+      "defEn": "The action of nominating or state of being nominated.",
+      "defVi": "sự đề cử",
+      "exEn": "He won the nomination for president.",
+      "exVi": "Ông ấy đã giành được sự đề cử cho chức tổng thống.",
+      "emoji": "🏅"
+    },
+    {
+      "word": "the Supreme Court",
+      "pronunciation": "/ðə sʊˈpriːm kɔːt/",
+      "pos": "noun",
+      "defEn": "The highest judicial court in a country or state.",
+      "defVi": "Tòa án Tối cao",
+      "exEn": "The Supreme Court will decide the case.",
+      "exVi": "Tòa án Tối cao sẽ quyết định vụ án.",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "obliterate",
+      "pronunciation": "/əˈblɪtəreɪt/",
+      "pos": "verb",
+      "defEn": "To destroy utterly; wipe out.",
+      "defVi": "xóa sổ, phá hủy hoàn toàn",
+      "exEn": "The building was completely obliterated by the bomb.",
+      "exVi": "Tòa nhà bị xóa sổ hoàn toàn bởi quả bom.",
+      "emoji": "💣"
+    },
+    {
+      "word": "fault",
+      "pronunciation": "/fɒlt/",
+      "pos": "noun",
+      "defEn": "An unattractive or unsatisfactory feature; a mistake.",
+      "defVi": "lỗi lầm, khuyết điểm",
+      "exEn": "It's my own fault.",
+      "exVi": "Đó là lỗi của chính tôi.",
+      "emoji": "❌"
+    },
+    {
+      "word": "witty",
+      "pronunciation": "/ˈwɪti/",
+      "pos": "adjective",
+      "defEn": "Showing or characterized by quick and inventive verbal humor.",
+      "defVi": "dí dỏm, hóm hỉnh",
+      "exEn": "He gave a witty speech.",
+      "exVi": "Anh ấy đã có một bài phát biểu dí dỏm.",
+      "emoji": "😜"
+    },
+    {
+      "word": "academic",
+      "pronunciation": "/ˌækəˈdemɪk/",
+      "pos": "adjective",
+      "defEn": "Relating to education and scholarship.",
+      "defVi": "mang tính học thuật",
+      "exEn": "He has a strong academic background.",
+      "exVi": "Anh ấy có nền tảng học thuật vững chắc.",
+      "emoji": "🎓"
+    },
+    {
+      "word": "vendetta",
+      "pronunciation": "/venˈdetə/",
+      "pos": "noun",
+      "defEn": "A prolonged bitter quarrel with or campaign against someone.",
+      "defVi": "mối thù truyền kiếp",
+      "exEn": "He has a personal vendetta against the journalist.",
+      "exVi": "Ông ta có một mối thù cá nhân với nhà báo đó.",
+      "emoji": "⚔️"
+    },
+    {
+      "word": "venomous",
+      "pronunciation": "/ˈvenəməs/",
+      "pos": "adjective",
+      "defEn": "Full of malice or spite.",
+      "defVi": "độc ác, hiểm độc",
+      "exEn": "She gave him a venomous look.",
+      "exVi": "Cô ấy nhìn anh ta bằng ánh mắt hiểm độc.",
+      "emoji": "🐍"
+    },
+    {
+      "word": "ooze",
+      "pronunciation": "/uːz/",
+      "pos": "verb",
+      "defEn": "To give a powerful impression of a quality.",
+      "defVi": "toát lên, rỉ ra",
+      "exEn": "He oozes confidence.",
+      "exVi": "Anh ấy toát lên sự tự tin.",
+      "emoji": "✨"
+    },
+    {
+      "word": "goodwill",
+      "pronunciation": "/ˌɡʊdˈwɪl/",
+      "pos": "noun",
+      "defEn": "Friendly, helpful, or cooperative feelings or attitude.",
+      "defVi": "thiện chí",
+      "exEn": "A gesture of goodwill.",
+      "exVi": "Một cử chỉ thiện chí.",
+      "emoji": "🤝"
+    },
+    {
+      "word": "scheme",
+      "pronunciation": "/skiːm/",
+      "pos": "noun",
+      "defEn": "A large-scale systematic plan or arrangement for attaining some particular object.",
+      "defVi": "kế hoạch, mưu đồ",
+      "exEn": "A scheme to avoid paying taxes.",
+      "exVi": "Một mưu đồ để trốn thuế.",
+      "emoji": "📝"
+    },
+    {
+      "word": "reputation",
+      "pronunciation": "/ˌrepjuˈteɪʃn/",
+      "pos": "noun",
+      "defEn": "The beliefs or opinions that are generally held about someone or something.",
+      "defVi": "danh tiếng",
+      "exEn": "She has a good reputation.",
+      "exVi": "Cô ấy có danh tiếng tốt.",
+      "emoji": "🌟"
+    },
+    {
+      "word": "incident",
+      "pronunciation": "/ˈɪnsɪdənt/",
+      "pos": "noun",
+      "defEn": "An event or occurrence.",
+      "defVi": "sự cố",
+      "exEn": "The incident happened at night.",
+      "exVi": "Sự cố xảy ra vào ban đêm.",
+      "emoji": "🚨"
+    },
+    {
+      "word": "anonymous",
+      "pronunciation": "/əˈnɒnɪməs/",
+      "pos": "adjective",
+      "defEn": "Not identified by name; of unknown name.",
+      "defVi": "vô danh, ẩn danh",
+      "exEn": "An anonymous caller.",
+      "exVi": "Một người gọi ẩn danh.",
+      "emoji": "👤"
+    },
+    {
+      "word": "accuser",
+      "pronunciation": "/əˈkjuːzər/",
+      "pos": "noun",
+      "defEn": "A person who claims that someone has committed an offence or done something wrong.",
+      "defVi": "người buộc tội",
+      "exEn": "He faced his accuser in court.",
+      "exVi": "Anh ta đã đối mặt với người buộc tội mình trước tòa.",
+      "emoji": "👉"
+    },
+    {
+      "word": "in line for",
+      "pronunciation": "/ɪn laɪn fɔːr/",
+      "pos": "phrase",
+      "defEn": "Likely to receive something.",
+      "defVi": "sắp được nhận (cái gì đó)",
+      "exEn": "She is in line for a promotion.",
+      "exVi": "Cô ấy sắp được thăng chức.",
+      "emoji": "📈"
+    },
+    {
+      "word": "covet",
+      "pronunciation": "/ˈkʌvət/",
+      "pos": "verb",
+      "defEn": "To yearn to possess something, especially something belonging to another.",
+      "defVi": "thèm muốn, thèm khát",
+      "exEn": "He had long coveted the chance to work with her.",
+      "exVi": "Anh ấy đã thèm khát cơ hội làm việc với cô ấy từ lâu.",
+      "emoji": "🤤"
     }
   ],
-  "basicInfo": {
-    "skill": "Standard-Reading",
-    "title": "Unit 28: Volume 5",
-    "category": "exercise",
-    "timeLimit": 0
-  }
+  "Unit 28 WL2": [
+    {
+      "word": "judicial",
+      "pronunciation": "/dʒuˈdɪʃl/",
+      "pos": "adjective",
+      "defEn": "Of, by, or appropriate to a court or judge.",
+      "defVi": "thuộc tòa án, tư pháp",
+      "exEn": "The judicial system is fair.",
+      "exVi": "Hệ thống tư pháp thì công bằng.",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "plagiarist",
+      "pronunciation": "/ˈpleɪdʒərɪst/",
+      "pos": "noun",
+      "defEn": "A person who uses another person's ideas or work and pretends that it is their own.",
+      "defVi": "kẻ đạo văn",
+      "exEn": "The author was exposed as a plagiarist.",
+      "exVi": "Tác giả đó đã bị vạch trần là một kẻ đạo văn.",
+      "emoji": "✍️"
+    },
+    {
+      "word": "theme",
+      "pronunciation": "/θiːm/",
+      "pos": "noun",
+      "defEn": "An idea that recurs in or pervades a work of art or literature.",
+      "defVi": "chủ đề",
+      "exEn": "Love is a central theme of the book.",
+      "exVi": "Tình yêu là một chủ đề trung tâm của cuốn sách.",
+      "emoji": "🎨"
+    },
+    {
+      "word": "viewpoint",
+      "pronunciation": "/ˈvjuːpɔɪnt/",
+      "pos": "noun",
+      "defEn": "A person's opinion or point of view.",
+      "defVi": "quan điểm",
+      "exEn": "From my viewpoint, it's a good idea.",
+      "exVi": "Theo quan điểm của tôi, đó là một ý tưởng hay.",
+      "emoji": "👁️"
+    },
+    {
+      "word": "take",
+      "pronunciation": "/teɪk/",
+      "pos": "noun",
+      "defEn": "A particular version of or approach to something.",
+      "defVi": "cách nhìn nhận, góc nhìn",
+      "exEn": "His take on the situation is interesting.",
+      "exVi": "Góc nhìn của anh ấy về tình huống này rất thú vị.",
+      "emoji": "🎬"
+    },
+    {
+      "word": "enduring",
+      "pronunciation": "/ɪnˈdjʊərɪŋ/",
+      "pos": "adjective",
+      "defEn": "Continuing or long-lasting.",
+      "defVi": "lâu dài, bền bỉ",
+      "exEn": "The enduring appeal of the cartoon.",
+      "exVi": "Sức hấp dẫn lâu dài của phim hoạt hình.",
+      "emoji": "⏳"
+    },
+    {
+      "word": "racial",
+      "pronunciation": "/ˈreɪʃl/",
+      "pos": "adjective",
+      "defEn": "Relating to the major groupings into which humankind is sometimes divided on the basis of physical characteristics.",
+      "defVi": "thuộc về chủng tộc",
+      "exEn": "Racial discrimination is illegal.",
+      "exVi": "Phân biệt chủng tộc là bất hợp pháp.",
+      "emoji": "🌍"
+    },
+    {
+      "word": "prejudice",
+      "pronunciation": "/ˈpredʒədɪs/",
+      "pos": "noun",
+      "defEn": "Preconceived opinion that is not based on reason or actual experience.",
+      "defVi": "thành kiến",
+      "exEn": "They faced racial prejudice.",
+      "exVi": "Họ đã phải đối mặt với thành kiến chủng tộc.",
+      "emoji": "🚫"
+    },
+    {
+      "word": "stereotype",
+      "pronunciation": "/ˈsteriətaɪp/",
+      "pos": "noun",
+      "defEn": "A widely held but fixed and oversimplified image or idea of a particular type of person or thing.",
+      "defVi": "khuôn mẫu, định kiến",
+      "exEn": "The film avoids the usual stereotypes.",
+      "exVi": "Bộ phim tránh những khuôn mẫu thông thường.",
+      "emoji": "🎭"
+    },
+    {
+      "word": "old-money",
+      "pronunciation": "/ˌəʊld ˈmʌni/",
+      "pos": "noun",
+      "defEn": "Wealth that has been inherited rather than earned.",
+      "defVi": "tầng lớp giàu có lâu đời",
+      "exEn": "He comes from an old-money family.",
+      "exVi": "Anh ấy xuất thân từ một gia đình giàu có lâu đời.",
+      "emoji": "🏰"
+    },
+    {
+      "word": "affluent",
+      "pronunciation": "/ˈæfluənt/",
+      "pos": "adjective",
+      "defEn": "Having a great deal of money; wealthy.",
+      "defVi": "giàu có, sung túc",
+      "exEn": "They live in an affluent neighborhood.",
+      "exVi": "Họ sống trong một khu phố giàu có.",
+      "emoji": "💸"
+    },
+    {
+      "word": "ignore",
+      "pronunciation": "/ɪɡˈnɔːr/",
+      "pos": "verb",
+      "defEn": "Refuse to take notice of or acknowledge.",
+      "defVi": "phớt lờ, làm ngơ",
+      "exEn": "She ignored my advice.",
+      "exVi": "Cô ấy đã phớt lờ lời khuyên của tôi.",
+      "emoji": "🙈"
+    },
+    {
+      "word": "not so much as",
+      "pronunciation": "/nɒt səʊ mʌtʃ æz/",
+      "pos": "phrase",
+      "defEn": "Not even.",
+      "defVi": "thậm chí không, không hề",
+      "exEn": "He left without not so much as a goodbye.",
+      "exVi": "Anh ta đã rời đi mà thậm chí không thèm chào tạm biệt.",
+      "emoji": "😶"
+    },
+    {
+      "word": "denial",
+      "pronunciation": "/dɪˈnaɪəl/",
+      "pos": "noun",
+      "defEn": "The action of declaring something to be untrue.",
+      "defVi": "sự phủ nhận",
+      "exEn": "He issued a flat denial of the charges.",
+      "exVi": "Ông ta đã đưa ra một sự phủ nhận hoàn toàn về các cáo buộc.",
+      "emoji": "🙅"
+    },
+    {
+      "word": "in large part",
+      "pronunciation": "/ɪn lɑːdʒ pɑːt/",
+      "pos": "phrase",
+      "defEn": "To a great extent.",
+      "defVi": "phần lớn",
+      "exEn": "The success was in large part due to her efforts.",
+      "exVi": "Thành công phần lớn là do nỗ lực của cô ấy.",
+      "emoji": "🍰"
+    },
+    {
+      "word": "autobiographical",
+      "pronunciation": "/ˌɔːtəˌbaɪəˈɡræfɪkl/",
+      "pos": "adjective",
+      "defEn": "Dealing with the writer's own life.",
+      "defVi": "có tính chất tự truyện",
+      "exEn": "The novel is largely autobiographical.",
+      "exVi": "Cuốn tiểu thuyết phần lớn mang tính tự truyện.",
+      "emoji": "📖"
+    },
+    {
+      "word": "fly in the face of",
+      "pronunciation": "/flaɪ ɪn ðə feɪs əv/",
+      "pos": "idiom",
+      "defEn": "To be completely opposed to what is expected or usual.",
+      "defVi": "hoàn toàn trái ngược với",
+      "exEn": "This decision flies in the face of logic.",
+      "exVi": "Quyết định này hoàn toàn trái ngược với logic.",
+      "emoji": "🦅"
+    },
+    {
+      "word": "fictionalise",
+      "pronunciation": "/ˈfɪkʃənəlaɪz/",
+      "pos": "verb",
+      "defEn": "To make into fiction; give a fictional version of.",
+      "defVi": "hư cấu hóa",
+      "exEn": "The movie fictionalizes her life story.",
+      "exVi": "Bộ phim hư cấu hóa câu chuyện cuộc đời của cô ấy.",
+      "emoji": "✍️"
+    },
+    {
+      "word": "resemble",
+      "pronunciation": "/rɪˈzembl/",
+      "pos": "verb",
+      "defEn": "To have qualities or features, especially those of appearance, in common with.",
+      "defVi": "giống với",
+      "exEn": "She closely resembles her mother.",
+      "exVi": "Cô ấy rất giống mẹ mình.",
+      "emoji": "👯"
+    },
+    {
+      "word": "in short",
+      "pronunciation": "/ɪn ʃɔːt/",
+      "pos": "phrase",
+      "defEn": "To sum up; briefly.",
+      "defVi": "nói tóm lại",
+      "exEn": "In short, we have to start again.",
+      "exVi": "Nói tóm lại, chúng ta phải bắt đầu lại.",
+      "emoji": "📝"
+    },
+    {
+      "word": "elite",
+      "pronunciation": "/eɪˈliːt/",
+      "pos": "noun",
+      "defEn": "A select group that is superior in terms of ability or qualities to the rest of a group or society.",
+      "defVi": "tầng lớp tinh hoa",
+      "exEn": "An elite group of students.",
+      "exVi": "Một nhóm học sinh tinh hoa.",
+      "emoji": "👑"
+    },
+    {
+      "word": "enclave",
+      "pronunciation": "/ˈenkleɪv/",
+      "pos": "noun",
+      "defEn": "A portion of territory within or surrounded by a larger territory whose inhabitants are culturally or ethnically distinct.",
+      "defVi": "vùng đất tách biệt, vùng đất của một nhóm người",
+      "exEn": "A wealthy enclave in the city.",
+      "exVi": "Một vùng đất của những người giàu có trong thành phố.",
+      "emoji": "🏡"
+    },
+    {
+      "word": "despite",
+      "pronunciation": "/dɪˈspaɪt/",
+      "pos": "preposition",
+      "defEn": "Without being affected by; in spite of.",
+      "defVi": "mặc dù",
+      "exEn": "He went to work despite his illness.",
+      "exVi": "Anh ấy đã đi làm mặc dù bị ốm.",
+      "emoji": "💪"
+    },
+    {
+      "word": "rack",
+      "pronunciation": "/ræk/",
+      "pos": "verb",
+      "defEn": "To cause extreme physical or mental pain to.",
+      "defVi": "tra tấn, làm đau đớn",
+      "exEn": "He was racked with guilt.",
+      "exVi": "Anh ta bị giày vò bởi cảm giác tội lỗi.",
+      "emoji": "😫"
+    },
+    {
+      "word": "ambitious",
+      "pronunciation": "/æmˈbɪʃəs/",
+      "pos": "adjective",
+      "defEn": "Having or showing a strong desire and determination to succeed.",
+      "defVi": "nhiều tham vọng",
+      "exEn": "She is highly ambitious and wants to be CEO.",
+      "exVi": "Cô ấy rất tham vọng và muốn trở thành CEO.",
+      "emoji": "🧗‍♀️"
+    },
+    {
+      "word": "suck up to",
+      "pronunciation": "/sʌk ʌp tuː/",
+      "pos": "phrasal verb",
+      "defEn": "To try to make someone in authority approve of you by doing and saying things that will please them.",
+      "defVi": "nịnh nọt",
+      "exEn": "He's always sucking up to the boss.",
+      "exVi": "Anh ta luôn nịnh nọt sếp.",
+      "emoji": "😘"
+    },
+    {
+      "word": "passion",
+      "pronunciation": "/ˈpæʃn/",
+      "pos": "noun",
+      "defEn": "Strong and barely controllable emotion.",
+      "defVi": "sự đam mê",
+      "exEn": "He spoke with passion.",
+      "exVi": "Anh ấy đã nói với sự đam mê.",
+      "emoji": "❤️"
+    },
+    {
+      "word": "nationalist",
+      "pronunciation": "/ˈnæʃnəlɪst/",
+      "pos": "noun",
+      "defEn": "A person who strongly identifies with their own nation.",
+      "defVi": "người theo chủ nghĩa dân tộc",
+      "exEn": "A Scottish nationalist.",
+      "exVi": "Một người theo chủ nghĩa dân tộc Scotland.",
+      "emoji": "🚩"
+    },
+    {
+      "word": "oppose",
+      "pronunciation": "/əˈpəʊz/",
+      "pos": "verb",
+      "defEn": "To disagree with and attempt to prevent, especially by argument.",
+      "defVi": "phản đối",
+      "exEn": "They strongly oppose the new plan.",
+      "exVi": "Họ kịch liệt phản đối kế hoạch mới.",
+      "emoji": "🛑"
+    },
+    {
+      "word": "affirmative action",
+      "pronunciation": "/əˌfɜːmətɪv ˈækʃn/",
+      "pos": "noun",
+      "defEn": "An active effort to improve the employment or educational opportunities of members of minority groups and women.",
+      "defVi": "hành động quả quyết (chính sách ưu tiên)",
+      "exEn": "The university has an affirmative action policy.",
+      "exVi": "Trường đại học có một chính sách ưu tiên.",
+      "emoji": "⚖️"
+    },
+    {
+      "word": "in the belief",
+      "pronunciation": "/ɪn ðə bɪˈliːf/",
+      "pos": "phrase",
+      "defEn": "Thinking or believing that something is true.",
+      "defVi": "với niềm tin",
+      "exEn": "He did it in the belief that it would help.",
+      "exVi": "Anh ấy đã làm điều đó với niềm tin rằng nó sẽ giúp ích.",
+      "emoji": "🙏"
+    },
+    {
+      "word": "stripof",
+      "pronunciation": "/strɪp əv/",
+      "pos": "phrasal verb",
+      "defEn": "To take away property or honors from someone.",
+      "defVi": "tước đoạt, lấy đi",
+      "exEn": "He was stripped of his title.",
+      "exVi": "Anh ta đã bị tước đoạt danh hiệu của mình.",
+      "emoji": "奪"
+    },
+    {
+      "word": "potential",
+      "pronunciation": "/pəˈtenʃl/",
+      "pos": "noun",
+      "defEn": "Latent qualities or abilities that may be developed.",
+      "defVi": "tiềm năng",
+      "exEn": "She has great potential as an artist.",
+      "exVi": "Cô ấy có tiềm năng lớn như một nghệ sĩ.",
+      "emoji": "🌱"
+    },
+    {
+      "word": "send sb. off",
+      "pronunciation": "/send ɒf/",
+      "pos": "phrasal verb",
+      "defEn": "To order a sports player to leave the field because they have broken the rules.",
+      "defVi": "đuổi (cầu thủ) ra khỏi sân",
+      "exEn": "The referee sent him off for a foul.",
+      "exVi": "Trọng tài đã đuổi anh ta ra khỏi sân vì phạm lỗi.",
+      "emoji": "🟥"
+    },
+    {
+      "word": "corporate",
+      "pronunciation": "/ˈkɔːpərət/",
+      "pos": "adjective",
+      "defEn": "Relating to a large company or group.",
+      "defVi": "thuộc về đoàn thể, công ty",
+      "exEn": "Corporate headquarters.",
+      "exVi": "Trụ sở công ty.",
+      "emoji": "🏢"
+    },
+    {
+      "word": "apparatchik",
+      "pronunciation": "/ˌæpəˈrætʃɪk/",
+      "pos": "noun",
+      "defEn": "An official in a large political organization.",
+      "defVi": "viên chức (của một bộ máy chính trị)",
+      "exEn": "A party apparatchik.",
+      "exVi": "Một viên chức của đảng.",
+      "emoji": "👔"
+    },
+    {
+      "word": "desperate",
+      "pronunciation": "/ˈdespərət/",
+      "pos": "adjective",
+      "defEn": "Feeling, showing, or involving a hopeless sense that a situation is so bad as to be impossible to deal with.",
+      "defVi": "tuyệt vọng, liều mạng",
+      "exEn": "A desperate cry for help.",
+      "exVi": "Một tiếng kêu cứu tuyệt vọng.",
+      "emoji": "😫"
+    },
+    {
+      "word": "favour",
+      "pronunciation": "/ˈfeɪvər/",
+      "pos": "verb",
+      "defEn": "To feel or show approval or preference for.",
+      "defVi": "thiên vị, ủng hộ",
+      "exEn": "The manager favors his own team.",
+      "exVi": "Người quản lý thiên vị đội của mình.",
+      "emoji": "👍"
+    },
+    {
+      "word": "fancy",
+      "pronunciation": "/ˈfænsi/",
+      "pos": "verb",
+      "defEn": "To feel a desire or liking for.",
+      "defVi": "thích, tưởng tượng",
+      "exEn": "Do you fancy going to a movie?",
+      "exVi": "Bạn có thích đi xem phim không?",
+      "emoji": "💭"
+    },
+    {
+      "word": "supplant",
+      "pronunciation": "/səˈplɑːnt/",
+      "pos": "verb",
+      "defEn": "To supersede and replace.",
+      "defVi": "thay thế",
+      "exEn": "Printed books may soon be supplanted by e-books.",
+      "exVi": "Sách in có thể sớm bị thay thế bởi sách điện tử.",
+      "emoji": "🔄"
+    },
+    {
+      "word": "liberal",
+      "pronunciation": "/ˈlɪbərəl/",
+      "pos": "adjective",
+      "defEn": "Open to new behavior or opinions and willing to discard traditional values.",
+      "defVi": "phóng khoáng, tự do",
+      "exEn": "They have more liberal views on marriage.",
+      "exVi": "Họ có quan điểm tự do hơn về hôn nhân.",
+      "emoji": "🕊️"
+    },
+    {
+      "word": "withhold",
+      "pronunciation": "/wɪðˈhəʊld/",
+      "pos": "verb",
+      "defEn": "To refuse to give something that is due to or is desired by another.",
+      "defVi": "từ chối đưa cho, giữ lại",
+      "exEn": "They decided to withhold payment.",
+      "exVi": "Họ quyết định giữ lại khoản thanh toán.",
+      "emoji": "✋"
+    },
+    {
+      "word": "applause",
+      "pronunciation": "/əˈplɔːz/",
+      "pos": "noun",
+      "defEn": "Approval or praise expressed by clapping.",
+      "defVi": "tiếng vỗ tay",
+      "exEn": "They gave him a loud round of applause.",
+      "exVi": "Họ dành cho anh ấy một tràng pháo tay lớn.",
+      "emoji": "👏"
+    },
+    {
+      "word": "present",
+      "pronunciation": "/prɪˈzent/",
+      "pos": "verb",
+      "defEn": "To give, provide, or make something known.",
+      "defVi": "trình bày, đưa ra",
+      "exEn": "She presented her ideas to the committee.",
+      "exVi": "Cô ấy đã trình bày các ý tưởng của mình với ủy ban.",
+      "emoji": "🎤"
+    },
+    {
+      "word": "bossy",
+      "pronunciation": "/ˈbɒsi/",
+      "pos": "adjective",
+      "defEn": "Fond of giving people orders; domineering.",
+      "defVi": "hách dịch, thích ra lệnh",
+      "exEn": "She was a bossy little girl.",
+      "exVi": "Cô ấy là một cô bé hách dịch.",
+      "emoji": "😠"
+    },
+    {
+      "word": "object of scorn",
+      "pronunciation": "/ˈɒbdʒɪkt əv skɔːn/",
+      "pos": "noun phrase",
+      "defEn": "Someone or something that is treated with contempt.",
+      "defVi": "đối tượng bị khinh miệt",
+      "exEn": "He became an object of scorn in the town.",
+      "exVi": "Anh ta trở thành một đối tượng bị khinh miệt trong thị trấn.",
+      "emoji": "👇"
+    },
+    {
+      "word": "inappropriate",
+      "pronunciation": "/ˌɪnəˈprəʊpriət/",
+      "pos": "adjective",
+      "defEn": "Not suitable or proper in the circumstances.",
+      "defVi": "không thích hợp",
+      "exEn": "His comments were highly inappropriate.",
+      "exVi": "Những bình luận của anh ấy cực kỳ không thích hợp.",
+      "emoji": "🙅"
+    },
+    {
+      "word": "in the service of",
+      "pronunciation": "/ɪn ðə ˈsɜːvɪs əv/",
+      "pos": "phrase",
+      "defEn": "To help or benefit something.",
+      "defVi": "phục vụ cho",
+      "exEn": "He lived his life in the service of others.",
+      "exVi": "Ông ấy đã sống cả đời để phục vụ cho người khác.",
+      "emoji": "🤲"
+    },
+    {
+      "word": "unarticulated",
+      "pronunciation": "/ˌʌnɑːˈtɪkjʊleɪtɪd/",
+      "pos": "adjective",
+      "defEn": "Not expressed or put into words.",
+      "defVi": "không được nói ra, không được diễn đạt rõ ràng",
+      "exEn": "He had unarticulated fears.",
+      "exVi": "Anh ấy có những nỗi sợ hãi không được nói ra.",
+      "emoji": "🤐"
+    },
+    {
+      "word": "ideological",
+      "pronunciation": "/ˌaɪdiəˈlɒdʒɪkl/",
+      "pos": "adjective",
+      "defEn": "Based on or relating to a system of ideas and ideals.",
+      "defVi": "thuộc về hệ tư tưởng",
+      "exEn": "There are ideological differences between the parties.",
+      "exVi": "Có những sự khác biệt về hệ tư tưởng giữa các đảng phái.",
+      "emoji": "🧠"
+    },
+    {
+      "word": "innocent",
+      "pronunciation": "/ˈɪnəsnt/",
+      "pos": "adjective",
+      "defEn": "Not guilty of a crime or offence.",
+      "defVi": "vô tội",
+      "exEn": "He is completely innocent.",
+      "exVi": "Anh ta hoàn toàn vô tội.",
+      "emoji": "😇"
+    },
+    {
+      "word": "civilian",
+      "pronunciation": "/səˈvɪliən/",
+      "pos": "noun",
+      "defEn": "A person not in the armed services or the police force.",
+      "defVi": "dân thường",
+      "exEn": "Many innocent civilians were killed.",
+      "exVi": "Nhiều dân thường vô tội đã bị giết.",
+      "emoji": "🚶"
+    },
+    {
+      "word": "bother",
+      "pronunciation": "/ˈbɒðər/",
+      "pos": "verb",
+      "defEn": "To take the trouble to do something.",
+      "defVi": "bận tâm, làm phiền",
+      "exEn": "Don't bother making the bed.",
+      "exVi": "Đừng bận tâm việc dọn giường.",
+      "emoji": "😒"
+    },
+    {
+      "word": "in between",
+      "pronunciation": "/ɪn bɪˈtwiːn/",
+      "pos": "phrase",
+      "defEn": "Between two points in time or space.",
+      "defVi": "ở giữa",
+      "exEn": "We had lunch and dinner, with a snack in between.",
+      "exVi": "Chúng tôi đã ăn trưa và ăn tối, với một bữa phụ ở giữa.",
+      "emoji": "↔️"
+    },
+    {
+      "word": "constituent",
+      "pronunciation": "/kənˈstɪtʃuənt/",
+      "pos": "noun",
+      "defEn": "Being a part of a whole.",
+      "defVi": "thành phần",
+      "exEn": "The constituent parts of an atom.",
+      "exVi": "Các thành phần của một nguyên tử.",
+      "emoji": "🧩"
+    },
+    {
+      "word": "offend",
+      "pronunciation": "/əˈfend/",
+      "pos": "verb",
+      "defEn": "To cause to feel upset, annoyed, or resentful.",
+      "defVi": "xúc phạm, làm mất lòng",
+      "exEn": "I'm sorry if I offended you.",
+      "exVi": "Tôi xin lỗi nếu tôi đã xúc phạm bạn.",
+      "emoji": "😡"
+    }
+  ]
 }

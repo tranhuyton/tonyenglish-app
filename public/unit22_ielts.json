@@ -342,10 +342,138 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit22_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Origin of the Modern Olympic Games</h1>\n  <p style=\"margin-bottom: 1rem;\">According to legend, the ancient Olympic Games were founded by Heracles (the Roman Hercules), a son of Zeus. Yet the first Olympic Games for which we still have written records were held in 776 BCE (though it is generally believed that the Games had been going on for many years already). At this Olympic Games, a naked runner, Coroebus (a cook from Elis), won the sole event at the Olympics, the stade—a run of approximately 192 metres (210 yards). This made Coroebus the very first Olympic champion in history.</p>\n  <p style=\"margin-bottom: 1rem;\">The ancient Olympic Games grew and continued to be played every four years for nearly 1,200 years. In 393 CE, the Roman emperor Theodosius I, a Christian, abolished the Games because of their pagan influences.</p>\n  <p style=\"margin-bottom: 1rem;\">Approximately 1,500 years later, a young Frenchman named Pierre de Coubertin began their revival. Coubertin is now known as le Rénovateur. Coubertin was a French aristocrat born on January 1, 1863. He was only seven years old when France was overrun by the Germans during the Franco-Prussian War of 1870. Some believe that Coubertin attributed the defeat of France not to its military skills but rather to the French soldiers' lack of vigor. After examining the education of the German, British, and American children, Coubertin decided that it was exercise, more specifically sports, that made a well-rounded and vigorous person.</p>\n  <p style=\"margin-bottom: 1rem;\">Coubertin's attempt to get France interested in sports was not met with enthusiasm. Still, Coubertin persisted. In 1890, he organized and founded a sports organization, Union des Sociétés Francaises de Sports Athlétiques (USFSA). Two years later, Coubertin first pitched his idea to revive the Olympic Games. At a meeting of the Union des Sports Athlétiques in Paris on November 25, 1892, Coubertin stated,</p>\n  <p style=\"margin-bottom: 1rem; margin-left: 1rem; font-style: italic;\">Let us export our oarsmen, our rulmers, our fencers into other lands. That is the true Free Trade of the future; and the day it is introduced into Europe the cause of Peace will have received a new and strong ally. It inspires me to touch upon another step I now propose and in it I shall ask that the help you have given me hitherto you will extend again, so that together we may attempt to realise, upon a basis suitable to the conditions of our modern life, the splendid and beneficent task of reviving the Olympic Games.</p>\n  <p style=\"margin-bottom: 1rem;\">His speech did not inspire action. Though Coubertin was not the first to propose the revival of the Olympic Games, he was certainly the most well-connected and persistent of those to do so. Two years later, Coubertin organized a meeting with 79 delegates who represented nine countries. He gathered these delegates in an auditorium that was decorated by neoclassical murals and similar additional points of ambiance. At this meeting, Coubertin eloquently spoke of the revival of the Olympic Games. This time, Coubertin aroused interest.</p>\n  <p style=\"margin-bottom: 1rem;\">The delegates at the conference voted unanimously for the Olympic Games. The delegates also decided to have Coubertin construct an international committee to organize the Games. This committee became the International Olympic Committee (IOC; Comité Internationale Olympique) and Demetrious Vikelas from Greece was selected to be its first president. Athens was chosen for the revival of the Olympic Games and the very first modern Olympic Games opened in the first week of April 1896.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit22_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\"><b>Origin</b> of the Modern <b>Olympic Games</b></h1>\n  <p style=\"margin-bottom: 1rem;\">According to <b>legend</b>, the <b>ancient</b> <b>Olympic Games</b> were founded by <b>Heracles</b> (the Roman Hercules), a son of <b>Zeus</b>. Yet the first <b>Olympic Games</b> for which we still have written records were held in 776 <b>BCE</b> (though it is generally believed that the Games had been going on for many years already). At this <b>Olympic Games</b>, a <b>naked</b> runner, Coroebus (a cook from Elis), won the sole <b>event</b> at the Olympics, the <b>stade</b>—a run of <b>approximately</b> 192 metres (210 yards). This made Coroebus the very first Olympic <b>champion</b> in history.</p>\n  <p style=\"margin-bottom: 1rem;\">The <b>ancient</b> <b>Olympic Games</b> grew and continued to be played every four years for nearly 1,200 years. In 393 <b>CE</b>, the Roman emperor Theodosius I, a Christian, abolished the Games because of their <b>pagan</b> influences.</p>\n  <p style=\"margin-bottom: 1rem;\"><b>Approximately</b> 1,500 years later, a young Frenchman named Pierre de Coubertin began their <b>revival</b>. Coubertin is now known as <b>le Rénovateur</b>. Coubertin was a French <b>aristocrat</b> born on January 1, 1863. He was only seven years old when France was <b>overrun</b> by the Germans during the <b>Franco-Prussian War</b> of 1870. Some believe that Coubertin attributed the defeat of France not to its military skills but rather to the French soldiers' lack of <b>vigor</b>. After examining the education of the German, British, and American children, Coubertin decided that it was exercise, more <b>specifically</b> sports, that made a <b>well-rounded</b> and <b>vigorous</b> person.</p>\n  <p style=\"margin-bottom: 1rem;\">Coubertin's attempt to get France interested in sports was not met with enthusiasm. Still, Coubertin persisted. In 1890, he organized and founded a sports organization, Union des Sociétés Francaises de Sports Athlétiques (<b>USFSA</b>). Two years later, Coubertin first pitched his idea to <b>revive</b> the <b>Olympic Games</b>. At a meeting of the Union des Sports Athlétiques in Paris on November 25, 1892, Coubertin stated,</p>\n  <p style=\"margin-bottom: 1rem; margin-left: 1rem; font-style: italic;\">Let us export our oarsmen, our rulmers, our fencers into other lands. That is the true Free Trade of the future; and the day it is introduced into Europe the cause of Peace will have received a new and strong <b>ally</b>. It inspires me to <b>touch upon</b> another step I now propose and in it I shall ask that the help you have given me <b>hitherto</b> you will <b>extend</b> again, so that together we may attempt to realise, upon a basis suitable to the conditions of our modern life, the splendid and <b>beneficent</b> task of reviving the <b>Olympic Games</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">His speech did not inspire action. Though Coubertin was not the first to propose the <b>revival</b> of the <b>Olympic Games</b>, he was certainly the most <b>well-connected</b> and <b>persistent</b> of those to do so. Two years later, Coubertin organized a meeting with 79 delegates who represented nine countries. He gathered these delegates in an <b>auditorium</b> that was decorated by <b>neoclassical</b> murals and similar additional points of <b>ambiance</b>. At this meeting, Coubertin <b>eloquently</b> spoke of the <b>revival</b> of the <b>Olympic Games</b>. This time, Coubertin aroused interest.</p>\n  <p style=\"margin-bottom: 1rem;\">The delegates at the conference voted <b>unanimously</b> for the <b>Olympic Games</b>. The delegates also decided to have Coubertin construct an international committee to organize the Games. This committee became the International Olympic Committee (<b>IOC</b>; Comité Internationale Olympique) and Demetrious Vikelas from Greece was selected to be its first president. <b>Athens</b> was chosen for the <b>revival</b> of the <b>Olympic Games</b> and the very first modern <b>Olympic Games</b> opened in the first week of April 1896.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u22_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u22_kt_0",
+              "content": "1. In the [ 1 ] of ancient Troy, the Greeks got into the city by hiding in a wooden horse.<br/><br/>2. My sister took a course in [ 2 ] Greece and Rome.<br/><br/>3. The plane will be landing in [ 3 ] 15 minutes.<br/><br/>4. Slavery was [ 4 ] in the US in the 19th century.<br/><br/>5. There has been a [ 5 ] of interest in this composer's music.",
+              "options": [
+                "legend",
+                "ancient",
+                "approximately",
+                "abolished",
+                "revival",
+                "attributes",
+                "vigor",
+                "specifically"
+              ],
+              "correctAnswer": "legend"
+            },
+            {
+              "id": "u22_kt_1",
+              "content": "1. In the [ 1 ] of ancient Troy, the Greeks got into the city by hiding in a wooden horse.<br/><br/>2. My sister took a course in [ 2 ] Greece and Rome.<br/><br/>3. The plane will be landing in [ 3 ] 15 minutes.<br/><br/>4. Slavery was [ 4 ] in the US in the 19th century.<br/><br/>5. There has been a [ 5 ] of interest in this composer's music.",
+              "options": [
+                "legend",
+                "ancient",
+                "approximately",
+                "abolished",
+                "revival",
+                "attributes",
+                "vigor",
+                "specifically"
+              ],
+              "correctAnswer": "ancient"
+            },
+            {
+              "id": "u22_kt_2",
+              "content": "1. In the [ 1 ] of ancient Troy, the Greeks got into the city by hiding in a wooden horse.<br/><br/>2. My sister took a course in [ 2 ] Greece and Rome.<br/><br/>3. The plane will be landing in [ 3 ] 15 minutes.<br/><br/>4. Slavery was [ 4 ] in the US in the 19th century.<br/><br/>5. There has been a [ 5 ] of interest in this composer's music.",
+              "options": [
+                "legend",
+                "ancient",
+                "approximately",
+                "abolished",
+                "revival",
+                "attributes",
+                "vigor",
+                "specifically"
+              ],
+              "correctAnswer": "approximately"
+            },
+            {
+              "id": "u22_kt_3",
+              "content": "1. In the [ 1 ] of ancient Troy, the Greeks got into the city by hiding in a wooden horse.<br/><br/>2. My sister took a course in [ 2 ] Greece and Rome.<br/><br/>3. The plane will be landing in [ 3 ] 15 minutes.<br/><br/>4. Slavery was [ 4 ] in the US in the 19th century.<br/><br/>5. There has been a [ 5 ] of interest in this composer's music.",
+              "options": [
+                "legend",
+                "ancient",
+                "approximately",
+                "abolished",
+                "revival",
+                "attributes",
+                "vigor",
+                "specifically"
+              ],
+              "correctAnswer": "abolished"
+            },
+            {
+              "id": "u22_kt_4",
+              "content": "1. In the [ 1 ] of ancient Troy, the Greeks got into the city by hiding in a wooden horse.<br/><br/>2. My sister took a course in [ 2 ] Greece and Rome.<br/><br/>3. The plane will be landing in [ 3 ] 15 minutes.<br/><br/>4. Slavery was [ 4 ] in the US in the 19th century.<br/><br/>5. There has been a [ 5 ] of interest in this composer's music.",
+              "options": [
+                "legend",
+                "ancient",
+                "approximately",
+                "abolished",
+                "revival",
+                "attributes",
+                "vigor",
+                "specifically"
+              ],
+              "correctAnswer": "revival"
+            },
+            {
+              "id": "u22_kt_5",
+              "content": "6. He [ 1 ] his success to hard work.<br/><br/>7. For a man of seventy he still has surprising [ 2 ].<br/><br/>8. Several countries, [ 3 ] the US, Britain, and France, have signed the agreement.",
+              "options": [
+                "legend",
+                "ancient",
+                "approximately",
+                "abolished",
+                "revival",
+                "attributes",
+                "vigor",
+                "specifically"
+              ],
+              "correctAnswer": "attributes"
+            },
+            {
+              "id": "u22_kt_6",
+              "content": "6. He [ 1 ] his success to hard work.<br/><br/>7. For a man of seventy he still has surprising [ 2 ].<br/><br/>8. Several countries, [ 3 ] the US, Britain, and France, have signed the agreement.",
+              "options": [
+                "legend",
+                "ancient",
+                "approximately",
+                "abolished",
+                "revival",
+                "attributes",
+                "vigor",
+                "specifically"
+              ],
+              "correctAnswer": "vigor"
+            },
+            {
+              "id": "u22_kt_7",
+              "content": "6. He [ 1 ] his success to hard work.<br/><br/>7. For a man of seventy he still has surprising [ 2 ].<br/><br/>8. Several countries, [ 3 ] the US, Britain, and France, have signed the agreement.",
+              "options": [
+                "legend",
+                "ancient",
+                "approximately",
+                "abolished",
+                "revival",
+                "attributes",
+                "vigor",
+                "specifically"
+              ],
+              "correctAnswer": "specifically"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
@@ -420,5 +548,6 @@
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40
-  }
+  },
+  "title": "Unit 22: Origin of the Modern Olympic Games"
 }

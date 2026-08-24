@@ -342,10 +342,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit19_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Unlucky Thirteen</h1>\n  <p style=\"margin-bottom: 1rem;\">One of our strongest taboos concerns the number 13.</p>\n  <p style=\"margin-bottom: 1rem;\">It is perhaps our most deep-seated superstition; it would be difficult to find a Western-educated person who did not fear or feel uneasy at the prospect of sitting 13 at table, or being allocated room 13 on the 13th floor of a hotel, and so on.</p>\n  <p style=\"margin-bottom: 1rem;\">There are also superstitions attached to other numbers; even those master rationalists, the ancient Greeks, believed that all numbers and their multiples had some mystical significance.</p>\n  <p style=\"margin-bottom: 1rem;\">Those numbers between one and 13 were thought in particular to exert a powerful influence over the affairs of men.</p>\n  <p style=\"margin-bottom: 1rem;\">The odd numbers three, seven, nine, and 13 appear in some superstitions still current today.</p>\n  <p style=\"margin-bottom: 1rem;\">For example, it is commonly said that luck, good or bad, comes in threes; if an accident happens, two more of the same kind may be expected soon afterward. The arrival of a letter will be followed by two others within a certain period.</p>\n  <p style=\"margin-bottom: 1rem;\">Another belief involving the number three has it that it is unlucky to light three cigarettes from the one match.</p>\n  <p style=\"margin-bottom: 1rem;\">If this happens, the bad luck that goes with the deed falls upon the person whose cigarette was the last to be lit.</p>\n  <p style=\"margin-bottom: 1rem;\">One popular (and logical) source for this belief comes from the time of the Boer War at the turn of the 20th century when South African settlers unsuccessfully fought the British.</p>\n  <p style=\"margin-bottom: 1rem;\">Soldiers had to take great precautions against enemy sharpshooters and a match kept alight for more than one or two cigarettes was asking for trouble.</p>\n  <p style=\"margin-bottom: 1rem;\">However, the ill-omen linked to the lighting of three things from one match or candle goes back to at least the 17th century and probably earlier.</p>\n  <p style=\"margin-bottom: 1rem;\">It was believed that three candles alight at the same time would be sure to bring bad luck; one, two, or four, were permissible, but never just three.</p>\n  <p style=\"margin-bottom: 1rem;\">\"Three\" can be good or bad; which form it takes is literally a matter of luck.</p>\n  <p style=\"margin-bottom: 1rem;\">The ancient astrologers taught that the universe was governed by seven planets; students of Shakespeare will recall that the life of man was divided into seven ages. Seven horseshoes nailed to a house will protect it from all evil.</p>\n  <p style=\"margin-bottom: 1rem;\">Cab-drivers, especially those in England, regard a seven in their registration plate as a particularly good omen.</p>\n  <p style=\"margin-bottom: 1rem;\">Nine is usually thought of as a lucky number because it is the product of three times three. It was much used by the Anglo-Saxons in their charms for healing.</p>\n  <p style=\"margin-bottom: 1rem;\">Another belief was that great changes occurred every 7th and 9th of a man's life.</p>\n  <p style=\"margin-bottom: 1rem;\">Consequently, the age of 63 (the product of nine and seven) was thought to be a very perilous time for him. If he survived his 63rd year he might hope to live to a ripe old age.</p>\n  <p style=\"margin-bottom: 1rem;\">Thirteen, as we well know, is regarded with great awe and fear.</p>\n  <p style=\"margin-bottom: 1rem;\">The common belief is that this derives from the fact that there were 13 people at Christ's Last Supper.</p>\n  <p style=\"margin-bottom: 1rem;\">This being the eve of his betrayal, it is not difficult to understand the significance given to the number by the early Christians.</p>\n  <p style=\"margin-bottom: 1rem;\">In more modern times 13 is an especially unlucky number for a dinner party; should this occur, it is believed that one of the 13 guests will, die within the year.</p>\n  <p style=\"margin-bottom: 1rem;\">Hotels will avoid numbering a floor the 13th; the progression is from 12 to 14, and no room is given the number 13. Many home owners will use 12 1/2 instead of 13 as their house number.</p>\n  <p style=\"margin-bottom: 1rem;\">Yet oddly enough, to be born on the 13th of the month is not regarded with any foreboding at all, which just goes to show how irrational we are in our superstitious beliefs.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit19_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Unlucky Thirteen</h1>\n  <p style=\"margin-bottom: 1rem;\">One of our strongest taboos concerns the <b>number</b> 13.</p>\n  <p style=\"margin-bottom: 1rem;\">It is perhaps our most <b>deep-seated</b> <b>superstition</b>; it would be difficult to find a Western-educated person who did not fear or feel <b>uneasy</b> <b>at the prospect of</b> sitting 13 at table, or being allocated room 13 on the 13th floor of a hotel, and so on.</p>\n  <p style=\"margin-bottom: 1rem;\">There are also superstitions attached to other numbers; even those master rationalists, the ancient Greeks, believed that all numbers and their multiples had some <b>mystical</b> <b>significance</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Those numbers between one and 13 were thought in particular to <b>exert</b> a powerful influence over the affairs of men.</p>\n  <p style=\"margin-bottom: 1rem;\">The odd numbers three, seven, nine, and 13 appear in some superstitions still <b>current</b> today.</p>\n  <p style=\"margin-bottom: 1rem;\">For example, it is commonly said that luck, good or bad, comes in threes; if an accident happens, two more of the same kind may be expected soon afterward. The arrival of a letter will be followed by two others within a certain period.</p>\n  <p style=\"margin-bottom: 1rem;\">Another belief involving the <b>number</b> three has it that it is unlucky to light three cigarettes from the one match.</p>\n  <p style=\"margin-bottom: 1rem;\">If this happens, the bad luck that goes with the deed falls upon the person whose cigarette was the last to be lit.</p>\n  <p style=\"margin-bottom: 1rem;\">One <b>popular</b> (and <b>logical</b>) <b>source</b> for this belief comes from the time of the <b>Boer War</b> at the turn of the 20th century when South African settlers unsuccessfully fought the British.</p>\n  <p style=\"margin-bottom: 1rem;\">Soldiers had to take great precautions against enemy sharpshooters and a match kept <b>alight</b> for more than one or two cigarettes was asking for trouble.</p>\n  <p style=\"margin-bottom: 1rem;\">However, the <b>ill-<b>omen</b></b> linked to the lighting of three things from one match or candle goes back to at least the 17th century and probably earlier.</p>\n  <p style=\"margin-bottom: 1rem;\">It was believed that three candles <b>alight</b> at the same time would be sure to bring bad luck; one, two, or four, were <b>permissible</b>, but never just three.</p>\n  <p style=\"margin-bottom: 1rem;\">\"Three\" can be good or bad; which form it takes is <b>literally</b> a matter of luck.</p>\n  <p style=\"margin-bottom: 1rem;\">The ancient astrologers taught that the universe was governed by seven planets; students of Shakespeare will recall that the life of man was divided into seven ages. Seven horseshoes nailed to a house will protect it from all evil.</p>\n  <p style=\"margin-bottom: 1rem;\">Cab-drivers, especially those in England, <b>regard</b> a seven in their <b>registration plate</b> as a particularly good <b>omen</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Nine is usually thought of as a lucky <b>number</b> because it is the <b>product</b> of three times three. It was much used by the Anglo-Saxons in their charms for healing.</p>\n  <p style=\"margin-bottom: 1rem;\">Another belief was that great changes occurred every 7th and 9th of a man's life.</p>\n  <p style=\"margin-bottom: 1rem;\"><b>Consequently</b>, the age of 63 (the <b>product</b> of nine and seven) was thought to be a very <b>perilous</b> time for him. If he survived his 63rd year he might hope to live to a <b>ripe</b> old age.</p>\n  <p style=\"margin-bottom: 1rem;\">Thirteen, as we well know, is regarded with great <b>awe</b> and fear.</p>\n  <p style=\"margin-bottom: 1rem;\">The common belief is that this derives from the fact that there were 13 people at <b>Christ's Last Supper</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">This being the eve of his <b>betrayal</b>, it is not difficult to understand the <b>significance</b> given to the <b>number</b> by the early Christians.</p>\n  <p style=\"margin-bottom: 1rem;\">In more modern times 13 is an especially unlucky <b>number</b> for a dinner party; should this <b>occur</b>, it is believed that one of the 13 guests will, die within the year.</p>\n  <p style=\"margin-bottom: 1rem;\">Hotels will avoid numbering a floor the 13th; the <b>progression</b> is from 12 to 14, and no room is given the <b>number</b> 13. Many home owners will use 12 1/2 instead of 13 as their house <b>number</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Yet <b>oddly</b> enough, to be born on the 13th of the month is not regarded with any <b>foreboding</b> at all, which just goes to show how <b>irrational</b> we are in our <b>superstitious</b> beliefs.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u19_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u19_kt_0",
+              "content": "1. Is there a [ 1 ] against sex before marriage in your society?<br/><br/>2. It's a common [ 2 ] that black cats are unlucky.<br/><br/>3. I don't see much [ 3 ] of this being finished before the weekend.<br/><br/>4. I got lost so I [ 4 ] myself to another party of tourists.<br/><br/>5. Some people dislike [ 5 ] ceremonies.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "taboo"
+            },
+            {
+              "id": "u19_kt_1",
+              "content": "1. Is there a [ 1 ] against sex before marriage in your society?<br/><br/>2. It's a common [ 2 ] that black cats are unlucky.<br/><br/>3. I don't see much [ 3 ] of this being finished before the weekend.<br/><br/>4. I got lost so I [ 4 ] myself to another party of tourists.<br/><br/>5. Some people dislike [ 5 ] ceremonies.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "superstition"
+            },
+            {
+              "id": "u19_kt_2",
+              "content": "1. Is there a [ 1 ] against sex before marriage in your society?<br/><br/>2. It's a common [ 2 ] that black cats are unlucky.<br/><br/>3. I don't see much [ 3 ] of this being finished before the weekend.<br/><br/>4. I got lost so I [ 4 ] myself to another party of tourists.<br/><br/>5. Some people dislike [ 5 ] ceremonies.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "prospect"
+            },
+            {
+              "id": "u19_kt_3",
+              "content": "1. Is there a [ 1 ] against sex before marriage in your society?<br/><br/>2. It's a common [ 2 ] that black cats are unlucky.<br/><br/>3. I don't see much [ 3 ] of this being finished before the weekend.<br/><br/>4. I got lost so I [ 4 ] myself to another party of tourists.<br/><br/>5. Some people dislike [ 5 ] ceremonies.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "attached"
+            },
+            {
+              "id": "u19_kt_4",
+              "content": "1. Is there a [ 1 ] against sex before marriage in your society?<br/><br/>2. It's a common [ 2 ] that black cats are unlucky.<br/><br/>3. I don't see much [ 3 ] of this being finished before the weekend.<br/><br/>4. I got lost so I [ 4 ] myself to another party of tourists.<br/><br/>5. Some people dislike [ 5 ] ceremonies.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "mystical"
+            },
+            {
+              "id": "u19_kt_5",
+              "content": "6. This new discovery of oil is of great [ 1 ] to the country's economy.<br/><br/>7. She couldn't open the door, even by [ 2 ] all her strength.<br/><br/>8. They are expecting profits of over $2 million in the [ 3 ] year.<br/><br/>9. It's [ 4 ] that people who earn more money should pay higher taxes.<br/><br/>10. It would be a wise [ 5 ] to lock all the doors.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "significance"
+            },
+            {
+              "id": "u19_kt_6",
+              "content": "6. This new discovery of oil is of great [ 1 ] to the country's economy.<br/><br/>7. She couldn't open the door, even by [ 2 ] all her strength.<br/><br/>8. They are expecting profits of over $2 million in the [ 3 ] year.<br/><br/>9. It's [ 4 ] that people who earn more money should pay higher taxes.<br/><br/>10. It would be a wise [ 5 ] to lock all the doors.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "exerting"
+            },
+            {
+              "id": "u19_kt_7",
+              "content": "6. This new discovery of oil is of great [ 1 ] to the country's economy.<br/><br/>7. She couldn't open the door, even by [ 2 ] all her strength.<br/><br/>8. They are expecting profits of over $2 million in the [ 3 ] year.<br/><br/>9. It's [ 4 ] that people who earn more money should pay higher taxes.<br/><br/>10. It would be a wise [ 5 ] to lock all the doors.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "current"
+            },
+            {
+              "id": "u19_kt_8",
+              "content": "6. This new discovery of oil is of great [ 1 ] to the country's economy.<br/><br/>7. She couldn't open the door, even by [ 2 ] all her strength.<br/><br/>8. They are expecting profits of over $2 million in the [ 3 ] year.<br/><br/>9. It's [ 4 ] that people who earn more money should pay higher taxes.<br/><br/>10. It would be a wise [ 5 ] to lock all the doors.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "logical"
+            },
+            {
+              "id": "u19_kt_9",
+              "content": "6. This new discovery of oil is of great [ 1 ] to the country's economy.<br/><br/>7. She couldn't open the door, even by [ 2 ] all her strength.<br/><br/>8. They are expecting profits of over $2 million in the [ 3 ] year.<br/><br/>9. It's [ 4 ] that people who earn more money should pay higher taxes.<br/><br/>10. It would be a wise [ 5 ] to lock all the doors.",
+              "options": [
+                "taboo",
+                "superstition",
+                "prospect",
+                "attached",
+                "mystical",
+                "significance",
+                "exerting",
+                "current",
+                "logical",
+                "precaution"
+              ],
+              "correctAnswer": "precaution"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

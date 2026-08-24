@@ -342,10 +342,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit26_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Next Society I</h1>\n<p style=\"margin-bottom: 1rem;\">Tomorrow is closer than you think. Peter Drucker explains how it will differ from today, and what needs to be done to prepare for it.</p>\n<p style=\"margin-bottom: 1rem;\">The new economy may or may not materialize, but there is no doubt that the next society will be with us shortly. In developed world, and probably in the emerging countries as well, this new society will be a good deal more important than the new economy (if any). It will be quite different from the society of the late 20th century, and also different from what most people expect. Much of it will be unprecedented. And most of it is already here, or is rapidly emerging.</p>\n<p style=\"margin-bottom: 1rem;\">In the developed countries, the dominant factor in the next society will be something to which most people are only just beginning to pay attention: the rapid growth in the older population and the rapid shrinking of the younger generation. Politicians everywhere still promise to save the existing pensions system, but they—and their constituents—know perfectly well that in another 25 years people will have to keep working until their mid-70s, health permitting.</p>\n<p style=\"margin-bottom: 1rem;\">What has not yet sunk in is that a growing number of older people—say those over 50—will not keep on working as traditional full-time nine-to-five employees, but will participate in the labour force in many new and different ways: as temporaries, as part-timers, as consultants, on special assignments and so on. What used to be personnel and are now known as human-resources departments still assume that those who work for an organization are full-time employees. Employment laws and regulations are based on the same assumption. Within 20 or 25 years,</p>\n<p style=\"margin-bottom: 1rem;\">however, perhaps as many as half the people who work for an organization will not be especially true for older people. New ways of working with people at arm's length will increasingly become the central managerial issue of employing organizations, and not just of businesses.</p>\n<p style=\"margin-bottom: 1rem;\">The shrinking of the younger population will cause an even greater upheaval, if only because nothing like this has happened since the dying centuries of the Roman empire. In every single developed country, but also in China and Brazil, the birth rate is now well below the replacement rate of 2.2 live births per woman of reproductive age. Politically, this means that immigration will become an important—and highly divisive—issue in all rich countries. It will cut across all traditional political alignments. Economically, the decline in the young population will change markets in fundamental ways. Growth in family formation has been the driving force of all domestic markets in the developed world, but the rate of family formation is certain to fall steadily unless bolstered by large-scale immigration of younger people. The homogeneous mass market that emerged in all rich countries after the second world war has been youth-determined from the start. It will now become middle-age-determined, or perhaps more likely it will split into two: a middle-age-determined mass market and a much smaller youth-determined one. And because the supply of young people will shrink, creating new employment patterns to attract and hold the growing number of older people (especially older educated people) will become increasingly important.</p>\n<p style=\"margin-bottom: 1rem;\"><b>Knowledge is all</b></p>\n<p style=\"margin-bottom: 1rem;\">The next society will be a knowledge society. Knowledge will be its key resource, and knowledge workers will be the dominant group in its workforce. Its three main characteristics will be:<br/>\n* Borderlessness, because knowledge travels even more effortlessly than money.<br/>\n* Upward mobility, available to everyone through easily acquired formal education.<br/>\n* The potential for failure as well as success. Anyone can acquire the \"means of production\", ie, the knowledge required for the job, but not everyone can win.</p>\n<p style=\"margin-bottom: 1rem;\">Together, those three characteristics will make the knowledge society a highly competitive one, for organisations and individuals alike. Information technology, although only one of many new features of the next society, is already having one hugely important effect: it is allowing knowledge to spread near instantly, and making it accessible to everyone. Given the ease and speed at which information travels, every institution in the knowledge society—not only businesses, but also schools, universities, hospitals and increasingly government agencies too—has to be globally competitive, even though most organisations will continue to be local in their activities and in their markets. This is because the Internet will keep customers everywhere informed on what is available anywhere in the world, and at what price.</p>\n<p style=\"margin-bottom: 1rem;\">The next society will rely heavily on knowledge workers. At present, this term is widely used to describe people with considerable theoretical knowledge and learning: doctors, lawyers, teachers, accountants, chemical engineers. But the most striking growth will be in \"knowledge technologists\": computer technicians, software designers, analysts in clinical labs, manufacturing technologists, paralegals. These people are as much manual workers as they are knowledge workers; in fact, they usually spend far more time working with their hands than with their</p>\n<p style=\"margin-bottom: 1rem;\">brains. But their manual work is based on a substantial amount of theoretical knowledge which can be acquired only through formal education, not through an apprenticeship. They are not, as a rule, much better paid than traditional skilled workers, but they see themselves as \"professionals\". Just as unskilled manual workers in manufacturing were the dominant social and political force in the 20th century, knowledge technologists are likely to become the dominant social—and perhaps also political—force over the next decades.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit26_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Next Society I</h1>\n<p style=\"margin-bottom: 1rem;\">Tomorrow is closer than you think. Peter Drucker explains how it will differ from today, and what needs to be done to prepare for it.</p>\n<p style=\"margin-bottom: 1rem;\">The new economy may or may not <b>materialize</b>, but there is no doubt that the next society will be with us <b>shortly</b>. In developed world, and probably in the emerging countries as well, this new society will be a good deal more important than the new economy (if any). It will be quite different from the society of the late 20th century, and also different from what most people expect. Much of it will be <b>unprecedented</b>. And most of it is already here, or is rapidly emerging.</p>\n<p style=\"margin-bottom: 1rem;\">In the developed countries, the <b>dominant</b> factor in the next society will be something to which most people are only just beginning to pay attention: the rapid growth in the older population and the rapid shrinking of the younger generation. Politicians everywhere still promise to save the existing pensions system, but they—and their constituents—know perfectly well that in another 25 years people will have to keep working until their mid-70s, <b>health permitting</b>.</p>\n<p style=\"margin-bottom: 1rem;\">What has not yet sunk in is that a growing number of older people—<b>say</b> those over 50—will not keep on working as traditional full-time nine-to-five employees, but will <b>participate</b> in the labour force in many new and different ways: as temporaries, as part-timers, as consultants, on special assignments and so on. What used to be <b>personnel</b> and are now known as human-resources departments still <b>assume</b> that those who work for an organization are full-time employees. Employment laws and regulations are based on the same <b>assumption</b>. Within 20 or 25 years,</p>\n<p style=\"margin-bottom: 1rem;\">however, perhaps as many as half the people who work for an organization will not be especially true for older people. New ways of working with people <b>at arm's length</b> will increasingly become the central <b>managerial</b> <b>issue</b> of employing organizations, and not just of businesses.</p>\n<p style=\"margin-bottom: 1rem;\">The shrinking of the younger population will cause an even greater <b>upheaval</b>, <b>if only because</b> nothing like this has happened since the <b>dying</b> centuries of the Roman empire. In every single developed country, but also in China and Brazil, the birth rate is now well below the <b>replacement rate</b> of 2.2 live births per woman of <b>reproductive</b> age. Politically, this means that <b>immigration</b> will become an important—and highly <b>divisive</b>—<b>issue</b> in all rich countries. It will <b>cut across</b> all traditional political alignments. Economically, the <b>decline</b> in the young population will change markets in <b>fundamental</b> ways. Growth in family formation has been the <b>driving force</b> of all <b>domestic</b> markets in the developed world, but the rate of family formation is certain to fall steadily unless bolstered by <b>large-scale</b> <b>immigration</b> of younger people. The <b>homogeneous</b> <b>mass market</b> that emerged in all rich countries after the second world war has been youth-determined <b>from the start</b>. It will now become middle-age-determined, or perhaps more likely it will <b>split</b> into two: a middle-age-determined <b>mass market</b> and a much smaller youth-determined one. And because the supply of young people will <b>shrink</b>, creating new employment patterns to attract and hold the growing number of older people (especially older educated people) will become increasingly important.</p>\n<p style=\"margin-bottom: 1rem;\"><b>Knowledge is all</b></p>\n<p style=\"margin-bottom: 1rem;\">The next society will be a knowledge society. Knowledge will be its key <b>resource</b>, and knowledge workers will be the <b>dominant</b> group in its <b>workforce</b>. Its three main characteristics will be:<br/>\n* Borderlessness, because knowledge travels even more <b>effortlessly</b> than money.<br/>\n* Upward <b>mobility</b>, <b>available</b> to everyone through easily acquired formal education.<br/>\n* The <b>potential</b> for failure as well as success. Anyone can <b>acquire</b> the \"<b>means of production</b>\", ie, the knowledge required for the job, but not everyone can win.</p>\n<p style=\"margin-bottom: 1rem;\">Together, those three characteristics will make the knowledge society a highly <b>competitive</b> one, for organisations and individuals <b>alike</b>. Information technology, although only one of many new features of the next society, is already having one <b>hugely</b> important effect: it is allowing knowledge to spread near <b>instantly</b>, and making it <b>accessible</b> to everyone. <b>Given</b> the <b>ease</b> and speed at which information travels, every <b>institution</b> in the knowledge society—not only businesses, but also schools, universities, hospitals and increasingly government agencies too—has to be globally <b>competitive</b>, <b>even though</b> most organisations will continue to be local in their activities and in their markets. This is because the Internet will keep customers everywhere informed on what is <b>available</b> anywhere in the world, and at what price.</p>\n<p style=\"margin-bottom: 1rem;\">The next society will rely heavily on knowledge workers. At present, this term is widely used to describe people with <b>considerable</b> <b>theoretical</b> knowledge and learning: doctors, lawyers, teachers, accountants, chemical engineers. But the most <b>striking</b> growth will be in \"knowledge technologists\": computer technicians, software designers, analysts in clinical labs, manufacturing technologists, paralegals. These people are as much manual workers as they are knowledge workers; in fact, they usually spend far more time working with their hands than with their</p>\n<p style=\"margin-bottom: 1rem;\">brains. But their manual work is based on a <b>substantial</b> amount of <b>theoretical</b> knowledge which can be acquired only through formal education, not through an <b>apprenticeship</b>. They are not, <b>as a rule</b>, much better paid than traditional skilled workers, but they see themselves as \"professionals\". Just as unskilled manual workers in manufacturing were the <b>dominant</b> social and political force in the 20th century, knowledge technologists are likely to become the <b>dominant</b> social—and perhaps also political—force over the next decades.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u26_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u26_kt_0",
+              "content": "1. He always wanted a large family, but his hopes never [ 1 ].<br/><br/>2. This year witnesses [ 2 ] price increases.<br/><br/>3. She went to the post office to draw her [ 3 ].<br/><br/>4. The results of the experiment shook the basic [ 4 ] of his theory.<br/><br/>5. What an [ 5 ] it was when we had to change office.",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "materialized"
+            },
+            {
+              "id": "u26_kt_1",
+              "content": "1. He always wanted a large family, but his hopes never [ 1 ].<br/><br/>2. This year witnesses [ 2 ] price increases.<br/><br/>3. She went to the post office to draw her [ 3 ].<br/><br/>4. The results of the experiment shook the basic [ 4 ] of his theory.<br/><br/>5. What an [ 5 ] it was when we had to change office.",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "unprecedented"
+            },
+            {
+              "id": "u26_kt_2",
+              "content": "1. He always wanted a large family, but his hopes never [ 1 ].<br/><br/>2. This year witnesses [ 2 ] price increases.<br/><br/>3. She went to the post office to draw her [ 3 ].<br/><br/>4. The results of the experiment shook the basic [ 4 ] of his theory.<br/><br/>5. What an [ 5 ] it was when we had to change office.",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "pension"
+            },
+            {
+              "id": "u26_kt_3",
+              "content": "1. He always wanted a large family, but his hopes never [ 1 ].<br/><br/>2. This year witnesses [ 2 ] price increases.<br/><br/>3. She went to the post office to draw her [ 3 ].<br/><br/>4. The results of the experiment shook the basic [ 4 ] of his theory.<br/><br/>5. What an [ 5 ] it was when we had to change office.",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "assumptions"
+            },
+            {
+              "id": "u26_kt_4",
+              "content": "1. He always wanted a large family, but his hopes never [ 1 ].<br/><br/>2. This year witnesses [ 2 ] price increases.<br/><br/>3. She went to the post office to draw her [ 3 ].<br/><br/>4. The results of the experiment shook the basic [ 4 ] of his theory.<br/><br/>5. What an [ 5 ] it was when we had to change office.",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "upheaval"
+            },
+            {
+              "id": "u26_kt_5",
+              "content": "6. There are strict controls on [ 1 ] into this country.<br/><br/>7. There has been a sharp [ 2 ] in profits this year.<br/><br/>8. The news attracted both [ 3 ] and international attention.<br/><br/>9. These price cuts are sure to [ 4 ] demand for their products.<br/><br/>10. The people of this country are [ 5 ].",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "immigration"
+            },
+            {
+              "id": "u26_kt_6",
+              "content": "6. There are strict controls on [ 1 ] into this country.<br/><br/>7. There has been a sharp [ 2 ] in profits this year.<br/><br/>8. The news attracted both [ 3 ] and international attention.<br/><br/>9. These price cuts are sure to [ 4 ] demand for their products.<br/><br/>10. The people of this country are [ 5 ].",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "decline"
+            },
+            {
+              "id": "u26_kt_7",
+              "content": "6. There are strict controls on [ 1 ] into this country.<br/><br/>7. There has been a sharp [ 2 ] in profits this year.<br/><br/>8. The news attracted both [ 3 ] and international attention.<br/><br/>9. These price cuts are sure to [ 4 ] demand for their products.<br/><br/>10. The people of this country are [ 5 ].",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "domestic"
+            },
+            {
+              "id": "u26_kt_8",
+              "content": "6. There are strict controls on [ 1 ] into this country.<br/><br/>7. There has been a sharp [ 2 ] in profits this year.<br/><br/>8. The news attracted both [ 3 ] and international attention.<br/><br/>9. These price cuts are sure to [ 4 ] demand for their products.<br/><br/>10. The people of this country are [ 5 ].",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "bolster"
+            },
+            {
+              "id": "u26_kt_9",
+              "content": "6. There are strict controls on [ 1 ] into this country.<br/><br/>7. There has been a sharp [ 2 ] in profits this year.<br/><br/>8. The news attracted both [ 3 ] and international attention.<br/><br/>9. These price cuts are sure to [ 4 ] demand for their products.<br/><br/>10. The people of this country are [ 5 ].",
+              "options": [
+                "materialized",
+                "unprecedented",
+                "pension",
+                "assumptions",
+                "upheaval",
+                "immigration",
+                "decline",
+                "domestic",
+                "bolster",
+                "homogeneous"
+              ],
+              "correctAnswer": "homogeneous"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

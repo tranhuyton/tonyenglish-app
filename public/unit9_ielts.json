@@ -342,10 +342,312 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit9_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Habits That Harmonize Life</h1>\n  <p style=\"margin-bottom: 1rem;\">Every now and then, I read a self-development book and then self-evaluate my achievements in life and my future goals. One book that really has me excited is Stephen R. Covey's \"The Seven Habits of Highly Effective People\".</p>\n  <p style=\"margin-bottom: 1rem;\">Covey founded an organization devoted to the development of principle-centred leadership. His best-selling book talks about three habits of Independence or Private Victory. It also discusses three habits of Interdependence or Public Victory and one habit of continuously renewing the key parts of our lives.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 1 is to \"be proactive.\" To Covey, being proactive means to be responsible for our own lives, to have the initiative and the responsibility to make things happen. Proactive people do not blame circumstances, conditions, social conditioning or feelings for their behaviour. Instead, they base their behaviour on their own set of character values.</p>\n  <p style=\"margin-bottom: 1rem;\">Proactive people control their responses to physical, social or psychological stimuli.</p>\n  <p style=\"margin-bottom: 1rem;\">That is why some people in prison or suffering from a terminal illness or a severe physical handicap maintain magnificent emotional strength. They are not \"imprisoned\" by conditions but are in control of their lives.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 2 is to \"begin with the end in mind.\" This is an intriguing concept whereby you imagine yourself attending your own funeral service and listening to your friends and family talk about you.</p>\n  <p style=\"margin-bottom: 1rem;\">What do you want each one of them to say about your character, your contributions to society and your achievements in life? You should focus on the way you want to be remembered when you depart this world.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 3 is to \"put first things first.\" It's effective self-management. Covey believes that we should spend more time on managing important activities that contribute to our mission, our values and our high priority goals.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 4 is to \"think win/win.\" That means you don't win arguments or negotiations all the time only to lose at long-term relationships. It means mutual benefit in all human interactions. In a win/win situation, every one feels good about the decision.</p>\n  <p style=\"margin-bottom: 1rem;\">Sometimes, some people go for a lose/win situation. For example, I might want to \"lose\" a discussion to give someone \"face\". However, the concept of win/win is generally a good philosophy in interdependent relationships. Your \"victory\" is not at the expense of another person.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 5 is to \"seek first to understand, then to be understood.\" As Covey says, listen with your ears, your eyes and your heart. Listen for feeling, for behaviour.</p>\n  <p style=\"margin-bottom: 1rem;\">We very often evaluate, interpret and advise somebody even before we fully understand the person. We want to be heard before hearing fully. We tend to ask leading questions from our own frame of reference. Hence, the habit of empathic listening is a better way.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 6 is to \"synergize.\" This means that the whole is greater than the sum of its parts. That means teamwork, team building and developing unity with other humans would create new and creative solutions.</p>\n  <p style=\"margin-bottom: 1rem;\">The essence of synergy is to value differences. We should respect them, build on their strengths and compensate for their weaknesses.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 7 is to \"sharpen the saw.\" This means to renew the four dimensions of our makeup - physical, spiritual, mental and social/emotional. These dimensions are interrelated. Your spiritual health affects your social/emotional strength. Your physical health affects your mental health.</p>\n  <p style=\"margin-bottom: 1rem;\">We need to eat the right food, exercise regularly and get sufficient rest. Spiritual renewal could be through daily prayers, meditation and visualization of events. This will allow us to see if we are living in harmony with our values.</p>\n  <p style=\"margin-bottom: 1rem;\">Mental renewal could be reading a book every month or every week. Covey believes that keeping a daily journal of our thoughts, feelings, ideas, and earnings does promote mental clarity, exactness and context.</p>\n  <p style=\"margin-bottom: 1rem;\">Social renewal can take the form of reflecting on how we interact with people. If you want to be a highly effective person, develop the seven habits suggested by Covey.</p>\n  <p style=\"margin-bottom: 1rem;\">Life is what you make of it.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n<p style=\"display: none;\">Comprehensive Reading</p>\n<img src=\"/unit9_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Habits That <b>Harmonize</b> Life</h1>\n  <p style=\"margin-bottom: 1rem;\">Every <b>now and then</b>, I read a self-development book and then <b>self-evaluate</b> my achievements in life and my future goals. One book that really has me excited is Stephen R. Covey's \"The Seven Habits of Highly Effective People\".</p>\n  <p style=\"margin-bottom: 1rem;\">Covey founded an organization devoted to the development of <b>principle</b>-centred leadership. His best-selling book talks about three habits of Independence or Private Victory. It also discusses three habits of <b>Interdependence</b> or Public Victory and one habit of continuously renewing the key parts of our lives.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 1 is to \"be <b>proactive</b>.\" To Covey, being <b>proactive</b> means to be responsible for our own lives, to have the <b>initiative</b> and the responsibility to make things happen. <b>Proactive</b> people do not <b>blame</b> circumstances, conditions, social <b>conditioning</b> or feelings for their behaviour. Instead, they base their behaviour on their own set of character values.</p>\n  <p style=\"margin-bottom: 1rem;\"><b>Proactive</b> people control their responses to physical, social or psychological <b>stimuli</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">That is why some people in prison or suffering from a <b>terminal</b> illness or a severe physical <b>handicap</b> <b>maintain</b> <b>magnificent</b> emotional <b>strength</b>. They are not \"imprisoned\" by conditions but are in control of their lives.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 2 is to \"begin with the end in mind.\" This is an <b>intriguing</b> <b>concept</b> <b>whereby</b> you imagine yourself attending your own <b>funeral service</b> and listening to your friends and family talk about you.</p>\n  <p style=\"margin-bottom: 1rem;\">What do you want each one of them to say about your character, your contributions to society and your achievements in life? You should <b>focus on</b> the way you want to be remembered when you <b>depart</b> this world.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 3 is to \"put <b>first things first</b>.\" It's effective self-management. Covey believes that we should spend more time on managing important activities that <b>contribute to</b> our <b>mission</b>, our values and our high <b>priority</b> goals.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 4 is to \"think <b>win/win</b>.\" That means you don't win arguments or negotiations all the time <b>only to</b> lose at <b>long-term</b> relationships. It means <b>mutual</b> <b>benefit</b> in all human interactions. In a <b>win/win</b> situation, every one feels good about the decision.</p>\n  <p style=\"margin-bottom: 1rem;\">Sometimes, some people <b>go for</b> a lose/win situation. For example, I might want to \"lose\" a discussion to give someone \"face\". However, the <b>concept</b> of <b>win/win</b> is generally a good <b>philosophy</b> in <b>interdependent</b> relationships. Your \"victory\" is not <b>at the expense of</b> another person.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 5 is to \"seek first to understand, then to be understood.\" As Covey says, listen with your ears, your eyes and your heart. Listen for feeling, for behaviour.</p>\n  <p style=\"margin-bottom: 1rem;\">We very often evaluate, <b>interpret</b> and advise somebody even before we fully understand the person. We want to be heard before hearing fully. We tend to ask leading questions from our own <b>frame of reference</b>. <b>Hence</b>, the habit of <b>empathic</b> listening is a better way.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 6 is to \"<b>synergize</b>.\" This means that the whole is greater than the sum of its parts. That means <b>teamwork</b>, team building and developing unity with other humans would create new and <b>creative</b> solutions.</p>\n  <p style=\"margin-bottom: 1rem;\">The <b>essence</b> of <b>synergy</b> is to <b>value</b> differences. We should respect them, <b>build on</b> their strengths and <b>compensate for</b> their weaknesses.</p>\n  <p style=\"margin-bottom: 1rem;\">Habit No. 7 is to \"<b>sharpen</b> the saw.\" This means to <b>renew</b> the four dimensions of our <b>makeup</b> - physical, spiritual, mental and social/emotional. These dimensions are <b>interrelated</b>. Your spiritual health affects your social/emotional <b>strength</b>. Your physical health affects your mental health.</p>\n  <p style=\"margin-bottom: 1rem;\">We need to eat the right food, exercise <b>regularly</b> and get <b>sufficient</b> rest. Spiritual <b>renewal</b> could be through <b>daily</b> prayers, <b>meditation</b> and <b>visualization</b> of events. This will allow us to see if we are living in <b>harmony</b> with our values.</p>\n  <p style=\"margin-bottom: 1rem;\">Mental <b>renewal</b> could be reading a book every month or every week. Covey believes that keeping a <b>daily</b> <b>journal</b> of our thoughts, feelings, ideas, and earnings does <b>promote</b> mental <b>clarity</b>, exactness and context.</p>\n  <p style=\"margin-bottom: 1rem;\">Social <b>renewal</b> can <b>take the form of</b> reflecting on how we <b>interact with</b> people. If you want to be a highly effective person, develop the seven habits suggested by Covey.</p>\n  <p style=\"margin-bottom: 1rem;\">Life is what you <b>make of</b> it.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u9_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u9_kt_0",
+              "content": "1. The colours don't seem to [ 1 ] with each other at all.<br/><br/>2. It was too early to [ 2 ] fairly his performance.<br/><br/>3. We [ 3 ] our strength in sleep.<br/><br/>4. If you show that you have [ 4 ], you will sooner or later be promoted.<br/><br/>5. The weather is a [ 5 ] to be taken into consideration.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "harmonize"
+            },
+            {
+              "id": "u9_kt_1",
+              "content": "1. The colours don't seem to [ 1 ] with each other at all.<br/><br/>2. It was too early to [ 2 ] fairly his performance.<br/><br/>3. We [ 3 ] our strength in sleep.<br/><br/>4. If you show that you have [ 4 ], you will sooner or later be promoted.<br/><br/>5. The weather is a [ 5 ] to be taken into consideration.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "evaluate"
+            },
+            {
+              "id": "u9_kt_2",
+              "content": "1. The colours don't seem to [ 1 ] with each other at all.<br/><br/>2. It was too early to [ 2 ] fairly his performance.<br/><br/>3. We [ 3 ] our strength in sleep.<br/><br/>4. If you show that you have [ 4 ], you will sooner or later be promoted.<br/><br/>5. The weather is a [ 5 ] to be taken into consideration.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "renew"
+            },
+            {
+              "id": "u9_kt_3",
+              "content": "1. The colours don't seem to [ 1 ] with each other at all.<br/><br/>2. It was too early to [ 2 ] fairly his performance.<br/><br/>3. We [ 3 ] our strength in sleep.<br/><br/>4. If you show that you have [ 4 ], you will sooner or later be promoted.<br/><br/>5. The weather is a [ 5 ] to be taken into consideration.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "initiative"
+            },
+            {
+              "id": "u9_kt_4",
+              "content": "1. The colours don't seem to [ 1 ] with each other at all.<br/><br/>2. It was too early to [ 2 ] fairly his performance.<br/><br/>3. We [ 3 ] our strength in sleep.<br/><br/>4. If you show that you have [ 4 ], you will sooner or later be promoted.<br/><br/>5. The weather is a [ 5 ] to be taken into consideration.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "circumstance"
+            },
+            {
+              "id": "u9_kt_5",
+              "content": "6. The promise of a bonus was a [ 1 ] to them.<br/><br/>7. She is in the [ 2 ] stages of cancer.<br/><br/>8. It is difficult to grasp the [ 3 ] of infinite space.<br/><br/>9. There is a way [ 4 ] he can be served.<br/><br/>10. Air pollution [ 5 ] to respiratory diseases.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "stimulus"
+            },
+            {
+              "id": "u9_kt_6",
+              "content": "6. The promise of a bonus was a [ 1 ] to them.<br/><br/>7. She is in the [ 2 ] stages of cancer.<br/><br/>8. It is difficult to grasp the [ 3 ] of infinite space.<br/><br/>9. There is a way [ 4 ] he can be served.<br/><br/>10. Air pollution [ 5 ] to respiratory diseases.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "terminal"
+            },
+            {
+              "id": "u9_kt_7",
+              "content": "6. The promise of a bonus was a [ 1 ] to them.<br/><br/>7. She is in the [ 2 ] stages of cancer.<br/><br/>8. It is difficult to grasp the [ 3 ] of infinite space.<br/><br/>9. There is a way [ 4 ] he can be served.<br/><br/>10. Air pollution [ 5 ] to respiratory diseases.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "concept"
+            },
+            {
+              "id": "u9_kt_8",
+              "content": "6. The promise of a bonus was a [ 1 ] to them.<br/><br/>7. She is in the [ 2 ] stages of cancer.<br/><br/>8. It is difficult to grasp the [ 3 ] of infinite space.<br/><br/>9. There is a way [ 4 ] he can be served.<br/><br/>10. Air pollution [ 5 ] to respiratory diseases.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "whereby"
+            },
+            {
+              "id": "u9_kt_9",
+              "content": "6. The promise of a bonus was a [ 1 ] to them.<br/><br/>7. She is in the [ 2 ] stages of cancer.<br/><br/>8. It is difficult to grasp the [ 3 ] of infinite space.<br/><br/>9. There is a way [ 4 ] he can be served.<br/><br/>10. Air pollution [ 5 ] to respiratory diseases.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "contributes"
+            },
+            {
+              "id": "u9_kt_10",
+              "content": "11. His [ 1 ] was to seek help.<br/><br/>12. Agriculture has become a [ 2 ] interest.<br/><br/>13. We got into an [ 3 ] about whether to go by sea or by air.<br/><br/>14. She is our [ 4 ] friend.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "mission"
+            },
+            {
+              "id": "u9_kt_11",
+              "content": "11. His [ 1 ] was to seek help.<br/><br/>12. Agriculture has become a [ 2 ] interest.<br/><br/>13. We got into an [ 3 ] about whether to go by sea or by air.<br/><br/>14. She is our [ 4 ] friend.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "priority"
+            },
+            {
+              "id": "u9_kt_12",
+              "content": "11. His [ 1 ] was to seek help.<br/><br/>12. Agriculture has become a [ 2 ] interest.<br/><br/>13. We got into an [ 3 ] about whether to go by sea or by air.<br/><br/>14. She is our [ 4 ] friend.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "argument"
+            },
+            {
+              "id": "u9_kt_13",
+              "content": "11. His [ 1 ] was to seek help.<br/><br/>12. Agriculture has become a [ 2 ] interest.<br/><br/>13. We got into an [ 3 ] about whether to go by sea or by air.<br/><br/>14. She is our [ 4 ] friend.",
+              "options": [
+                "harmonize",
+                "evaluate",
+                "renew",
+                "initiative",
+                "circumstance",
+                "stimulus",
+                "terminal",
+                "concept",
+                "whereby",
+                "contributes",
+                "mission",
+                "priority",
+                "argument",
+                "mutual"
+              ],
+              "correctAnswer": "mutual"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
@@ -420,5 +722,6 @@
     "category": "exercise",
     "courseId": "239a64f0-c106-40e5-a6e2-4e685a0d70fb",
     "timeLimit": 40
-  }
+  },
+  "title": "Unit 9: Habits That Harmonize Life"
 }

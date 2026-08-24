@@ -342,10 +342,188 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit16_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">British Universities: Cambridge and Oxford</h1>\n  <p style=\"margin-bottom: 1rem;\">There are more than forty universities in Britain. They are all private institutions. Each has its own governing council, including some local businessmen and local politicians as well as a few academics. Students have to pay fees and living costs, but every student may receive from the local authority of the place where he lives a personal grant which is enough to pay off his full costs, including lodging and food.</p>\n  <p style=\"margin-bottom: 1rem;\">Each university has its own syllabuses, and there are some quite important differences between one and another. In general, the Bachelor's degree is given to students who pass examinations at the end of three or four years of study. Bachelors' degrees are at two levels, Honours and Pass. In some cases the Honours degree is given for intensive study and examination in one, two or three related subjects while the Pass degree may be somewhat broader.</p>\n  <p style=\"margin-bottom: 1rem;\">The first post-graduate degree is normally that of Master, conferred for a thesis based on at least one year's full-time work; the time actually taken is usually more than a year. Oxford and Cambridge are peculiar in that they give the Master of Arts degree automatically to any Bachelor who pays the necessary fees at any time after the seventh year from his first admission to the university.</p>\n  <p style=\"margin-bottom: 1rem;\">Oxford and Cambridge resemble each other quite closely. They have a special preeminence, but they two no longer belong to the upper and upper-middle classes as the public schools do. They are both based on colleges. These colleges are parallel and equal institutions, and none of them is connected with any particular field of study. In order to become a member of the university, a student must first be accepted as a member of a college.</p>\n  <p style=\"margin-bottom: 1rem;\">Each college is governed by its Fellows. And most of them were founded before 1600, and the oldest three before 1300. The biggest and most magnificent is Christ Church. Its members, with wonderful arrogance, habitually call it \"The House\". It has educated many cabinet ministers. Colleges choose their new students mainly on academic merit, but some also admit a few men who are good at sports, or sons of eminent citizens or of millionaires.</p>\n  <p style=\"margin-bottom: 1rem;\">It is easy to see the advantages of an education at Oxford. The surroundings of the ancient buildings are infinitely pleasing. The teaching varies between good and bad, but the whole effect is highly stimulating. The libraries and bookshops are probably unequalled anywhere.</p>\n  <p style=\"margin-bottom: 1rem;\">Most of a man's contacts are with people in his own college, though the average student has many friends in other colleges too. But an Oxford college is a community, and its students feel very conscious of belonging to it. The inter-college rowing races in the summer provide Oxford with a great and colorful social occasion.</p>\n  <p style=\"margin-bottom: 1rem;\">Each Fellow in a college is a tutor in his own subject to the undergraduates who are studying it. Each student goes to his tutor's room for an hour every week to sit in an armchair and read out an essay which he and the tutor then discuss the system of teaching here encouraging independent thought and judgement.</p>\n  <p style=\"margin-bottom: 1rem;\">Oxford is more tolerant than Cambridge; and except Churchill, every Prime Minister from 1945 to 1974 was an Oxford graduate. But Cambridge is more developed than Oxford in scientific studies. The rivalry between the two universities at sports is a part of the national life.</p>\n  <p style=\"margin-bottom: 1rem;\">England had no other universities, apart from Oxford and Cambridge, until the nineteenth century. During the 19th century, institutions of higher education were founded in most of the biggest industrial towns. For a long time they could not give degrees themselves. But one by one, they grew bigger and became independent universities. Since 1960s, new forms of higher education were established, among which the Open University is the most interesting innovation. It gives courses through one of the BBC's television channels and by radio, and it developed prosperously all over the country.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit16_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">British Universities: Cambridge and Oxford</h1>\n  <p style=\"margin-bottom: 1rem;\">There are more than forty universities in Britain. They are all private institutions. Each has its own governing <b>council</b>, including some <b>local</b> businessmen and <b>local</b> politicians as well as a few academics. Students have to pay fees and living costs, but every student may receive from the <b>local</b> <b>authority</b> of the place where he lives a personal <b>grant</b> which is enough to pay off his full costs, including <b>lodging</b> and food.</p>\n  <p style=\"margin-bottom: 1rem;\">Each university has its own syllabuses, and there are some quite important differences between one and another. In general, the <b>Bachelor's degree</b> is given to students who <b>pass</b> examinations at the end of three or four years of study. Bachelors' degrees are at two levels, <b>Honours</b> and <b>Pass</b>. In some cases the <b>Honours</b> degree is given for <b>intensive</b> study and examination in one, two or three related subjects while the <b>Pass</b> degree may be somewhat broader.</p>\n  <p style=\"margin-bottom: 1rem;\">The first <b>post-graduate</b> degree is normally that of <b>Master</b>, conferred for a <b>thesis</b> based on at least one year's full-time work; the time actually taken is usually more than a year. Oxford and Cambridge are peculiar <b>in that</b> they give the <b>Master</b> of Arts degree <b>automatically</b> to any Bachelor who pays the necessary fees at any time after the seventh year from his first <b>admission</b> to the university.</p>\n  <p style=\"margin-bottom: 1rem;\">Oxford and Cambridge <b>resemble</b> each other quite <b>closely</b>. They have a special <b>preeminence</b>, but they two no longer belong to the upper and upper-middle classes as the public schools do. They are both based on colleges. These colleges are <b>parallel</b> and equal institutions, and none of them is connected with any <b>particular</b> field of study. In order to become a member of the university, a student must first be accepted as a member of a <b>college</b>.</p>\n  <p style=\"margin-bottom: 1rem;\">Each <b>college</b> is governed by its Fellows. And most of them were founded before 1600, and the oldest three before 1300. The biggest and most <b>magnificent</b> is Christ Church. Its members, with wonderful <b>arrogance</b>, <b>habitually</b> call it \"The House\". It has educated many <b>cabinet</b> ministers. Colleges choose their new students mainly on <b>academic</b> <b>merit</b>, but some also admit a few men who are good at sports, or sons of <b>eminent</b> citizens or of millionaires.</p>\n  <p style=\"margin-bottom: 1rem;\">It is easy to see the advantages of an education at Oxford. The surroundings of the <b>ancient</b> buildings are <b>infinitely</b> pleasing. The teaching varies between good and bad, but the whole effect is highly <b>stimulating</b>. The libraries and bookshops are probably <b>unequalled</b> anywhere.</p>\n  <p style=\"margin-bottom: 1rem;\">Most of a man's contacts are with people in his own <b>college</b>, though the <b>average</b> student has many friends in other colleges too. But an Oxford <b>college</b> is a <b>community</b>, and its students feel very <b>conscious</b> of belonging to it. The inter-<b>college</b> rowing races in the summer provide Oxford with a great and colorful social occasion.</p>\n  <p style=\"margin-bottom: 1rem;\">Each <b>Fellow</b> in a <b>college</b> is a <b>tutor</b> in his own subject to the undergraduates who are studying it. Each student goes to his <b>tutor</b>'s room for an hour every week to sit in an armchair and read out an essay which he and the <b>tutor</b> then discuss the system of teaching here encouraging independent thought and judgement.</p>\n  <p style=\"margin-bottom: 1rem;\">Oxford is more <b>tolerant</b> than Cambridge; and except Churchill, every Prime Minister from 1945 to 1974 was an Oxford graduate. But Cambridge is more developed than Oxford in scientific studies. The <b>rivalry</b> between the two universities at sports is a part of the national life.</p>\n  <p style=\"margin-bottom: 1rem;\">England had no other universities, apart from Oxford and Cambridge, until the nineteenth century. During the 19th century, institutions of <b>higher education</b> were founded in most of the biggest industrial towns. For a long time they could not give degrees themselves. But one by one, they grew bigger and became independent universities. Since 1960s, new forms of <b>higher education</b> were established, among which the Open University is the most interesting <b>innovation</b>. It gives courses through one of the BBC's television channels and by radio, and it developed <b>prosperously</b> all over the country.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u16_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u16_kt_0",
+              "content": "1. A church, school, university, hospital, asylum, or prison is an [ 1 ].<br/><br/>2. In Britain, the Queen is the formal head of state, but it is the prime minister or a cabinet that [ 2 ].<br/><br/>3. [ 3 ] efforts are being made to resolve the dispute.<br/><br/>4. An honorary degree was [ 4 ] on him by the university.<br/><br/>5. He is writing his doctoral [ 5 ] in electrical engineering.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "institution"
+            },
+            {
+              "id": "u16_kt_1",
+              "content": "1. A church, school, university, hospital, asylum, or prison is an [ 1 ].<br/><br/>2. In Britain, the Queen is the formal head of state, but it is the prime minister or a cabinet that [ 2 ].<br/><br/>3. [ 3 ] efforts are being made to resolve the dispute.<br/><br/>4. An honorary degree was [ 4 ] on him by the university.<br/><br/>5. He is writing his doctoral [ 5 ] in electrical engineering.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "governs"
+            },
+            {
+              "id": "u16_kt_2",
+              "content": "1. A church, school, university, hospital, asylum, or prison is an [ 1 ].<br/><br/>2. In Britain, the Queen is the formal head of state, but it is the prime minister or a cabinet that [ 2 ].<br/><br/>3. [ 3 ] efforts are being made to resolve the dispute.<br/><br/>4. An honorary degree was [ 4 ] on him by the university.<br/><br/>5. He is writing his doctoral [ 5 ] in electrical engineering.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "Intensive"
+            },
+            {
+              "id": "u16_kt_3",
+              "content": "1. A church, school, university, hospital, asylum, or prison is an [ 1 ].<br/><br/>2. In Britain, the Queen is the formal head of state, but it is the prime minister or a cabinet that [ 2 ].<br/><br/>3. [ 3 ] efforts are being made to resolve the dispute.<br/><br/>4. An honorary degree was [ 4 ] on him by the university.<br/><br/>5. He is writing his doctoral [ 5 ] in electrical engineering.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "conferred"
+            },
+            {
+              "id": "u16_kt_4",
+              "content": "1. A church, school, university, hospital, asylum, or prison is an [ 1 ].<br/><br/>2. In Britain, the Queen is the formal head of state, but it is the prime minister or a cabinet that [ 2 ].<br/><br/>3. [ 3 ] efforts are being made to resolve the dispute.<br/><br/>4. An honorary degree was [ 4 ] on him by the university.<br/><br/>5. He is writing his doctoral [ 5 ] in electrical engineering.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "thesis"
+            },
+            {
+              "id": "u16_kt_5",
+              "content": "6. He [ 1 ] his brother.<br/><br/>7. He's one of my [ 2 ] friends.<br/><br/>8. The road is [ 3 ] to the river.<br/><br/>9. Her singing is totally without [ 4 ].<br/><br/>10. Even the most [ 5 ] doctor could not cure him.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "resembles"
+            },
+            {
+              "id": "u16_kt_6",
+              "content": "6. He [ 1 ] his brother.<br/><br/>7. He's one of my [ 2 ] friends.<br/><br/>8. The road is [ 3 ] to the river.<br/><br/>9. Her singing is totally without [ 4 ].<br/><br/>10. Even the most [ 5 ] doctor could not cure him.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "closest"
+            },
+            {
+              "id": "u16_kt_7",
+              "content": "6. He [ 1 ] his brother.<br/><br/>7. He's one of my [ 2 ] friends.<br/><br/>8. The road is [ 3 ] to the river.<br/><br/>9. Her singing is totally without [ 4 ].<br/><br/>10. Even the most [ 5 ] doctor could not cure him.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "parallel"
+            },
+            {
+              "id": "u16_kt_8",
+              "content": "6. He [ 1 ] his brother.<br/><br/>7. He's one of my [ 2 ] friends.<br/><br/>8. The road is [ 3 ] to the river.<br/><br/>9. Her singing is totally without [ 4 ].<br/><br/>10. Even the most [ 5 ] doctor could not cure him.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "merit"
+            },
+            {
+              "id": "u16_kt_9",
+              "content": "6. He [ 1 ] his brother.<br/><br/>7. He's one of my [ 2 ] friends.<br/><br/>8. The road is [ 3 ] to the river.<br/><br/>9. Her singing is totally without [ 4 ].<br/><br/>10. Even the most [ 5 ] doctor could not cure him.",
+              "options": [
+                "institution",
+                "governs",
+                "Intensive",
+                "conferred",
+                "thesis",
+                "resembles",
+                "closest",
+                "parallel",
+                "merit",
+                "eminent"
+              ],
+              "correctAnswer": "eminent"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

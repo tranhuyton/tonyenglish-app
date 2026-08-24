@@ -126,7 +126,7 @@ table th {
   min-width: 200px;
   height: auto !important;
   display: block;
-  margin: 32px auto;
+  margin: 72px auto !important;
   border-radius: 6px;
 }
 

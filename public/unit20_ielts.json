@@ -342,10 +342,216 @@
     },
     {
       "title": "Comprehensive Reading",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit20_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Closing in for the Kill?</h1>\n  <p style=\"margin-bottom: 1rem;\">After a decade of quiet, ivory poaching has started again in Kenya.</p>\n  <p style=\"margin-bottom: 1rem;\">Heaped together, tail to trunk, ten dead elephants lie stinking in the Kenyan sun. Their last panicked huddle made them a convenient target. The poachers who killed them, though, had no such instinct. They left behind five dead men, scattered along a 150 km trail. The rest, including at least one who was badly wounded, limped back to Somalia, to report on the latest skirmish of the ivory war.</p>\n  <p style=\"margin-bottom: 1rem;\">This slaughter of man and beast, in Tsavo East National Park last month, was Kenya's bloodiest poaching incident since 1987. But there could soon be worse. After a decade of mostly negligible poaching, large numbers of elephants are again being killed in the country. The Kenya Wildlife Service (KWS) found 57 killed for their ivory last year, and 18 in the past month alone. Six black rhinos have also been taken in recent months—the first for over a decade. And these finds, the KWS admits, may represent less than 15% of the total.</p>\n  <p style=\"margin-bottom: 1rem;\">The international ivory trade has been illegal since 1989. Initially, that ban caused a market collapse. Now, the markets are recovering. The penchant of European tourists in Asia for ivory earrings is helping to fuel demand. According to a recent report by Save the Elephants, a Kenya-based research organisation and lobby group, up to 80% of Asian elephant populations have been poached in the past 14 years in order to carve such knick-knacks. Africa's herds are making up the shortfall. On camel-back and bare shoulders, tusks are being ferried along ancient caravan routes from central Africa to Khartoum's souks. There, ivory prices have reached a 13-year high.</p>\n  <p style=\"margin-bottom: 1rem;\">Such rising demand is one reason why poaching is picking up. Another is an expectation that the trade ban may be lifted, at least partly, at a meeting in November of the Convention on International Trade in Endangered Species (CITES), which governs such matters.</p>\n  <p style=\"margin-bottom: 1rem;\">Kenya's elephant population is still in a precarious state. The country's herds were cut from 167,000 in 1973 to 16,000 in 1989, and have recovered only a little since then. Those in Botswana, Namibia and South Africa, however, are booming. These countries, along with Zimbabwe, whose elephant herd is in a more questionable condition, are lobbying to start trading in elephant products (mainly ivory, but also skins and meat) once again.</p>\n  <p style=\"margin-bottom: 1rem;\">They are not asking for the ban to be lifted completely. Countries that wanted to keep their herds unculled could continue to shelter under the protection that CITES offers: it would still be illegal to trade in elephant products from such countries in any place that had signed the convention. Kenya nevertheless opposes the southern Africans. The Kenyans do not have surplus elephants to trade, and they want to keep those they do have to encourage tourism. The government's view—shared less vociferously by Tanzania—is that even a minimal legal trade would encourage a massive illegal trade.</p>\n  <p style=\"margin-bottom: 1rem;\">That belief is supported by anecdotal evidence, but it is difficult to prove. The failure of CITES to set up a proposed database known as MIKE (Monitoring the Illegal Killing of Elephants) leaves the matter open to debate. MIKE was supposed to include biennial surveys of all elephant populations and the routine collection of information such as number of elephants killed illegally in particular places. Softer information, such as estimates of the effect of civil strife, and the involvement of local people in conservation, was also supposed to be assessed.</p>\n  <p style=\"margin-bottom: 1rem;\">It was, however, the Kenyans themselves who criticised MIKE for being too expensive, and the whole project is in danger of running into the sand. Botswana, Namibia, South Africa and Zimbabwe, meanwhile, argue that branding and spot genetic testing (the DNA of southern African elephants is distinguishable from that of East African ones) will be enough to detect and root out illegal trading. Kenya, to put it charitably, has doubts about that.</p>\n  <p style=\"margin-bottom: 1rem;\">Whether a partial resumption of trade would finally do for Kenya's elephants remains to be seen. It may not be put to the test, for it is by no means certain that the southern African viewpoint will prevail at CITES. But the difficulty of bucking the market, whether legal or illegal, is well demonstrated by that pile of elephant corpses, and trail of human ones, in Tsavo. The KWS is famous for taking few prisoners. If even death is not a sufficient discouragement to poachers, it is difficult to see what else would be.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;\">\n  <p style=\"display: none;\">Comprehensive Reading</p>\n  <img src=\"/unit20_ielts_story.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" />\n  <div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Closing in for the Kill?</h1>\n  <p style=\"margin-bottom: 1rem;\">After a decade of quiet, <b>ivory</b> poaching has started again in Kenya.</p>\n  <p style=\"margin-bottom: 1rem;\">Heaped together, tail to trunk, ten dead elephants lie <b>stinking</b> in the Kenyan sun. Their last panicked <b>huddle</b> made them a <b>convenient</b> target. The poachers who killed them, though, had no such <b>instinct</b>. They left behind five dead men, scattered along a 150 km <b>trail</b>. The rest, including at least one who was badly wounded, limped back to <b>Somalia</b>, to report on the latest <b>skirmish</b> of the <b>ivory</b> war.</p>\n  <p style=\"margin-bottom: 1rem;\">This <b>slaughter</b> of man and beast, in Tsavo East National Park last month, was Kenya's bloodiest poaching incident since 1987. But there could soon be worse. After a decade of mostly <b>negligible</b> poaching, large numbers of elephants are again being killed in the country. The Kenya Wildlife Service (KWS) found 57 killed for their <b>ivory</b> last year, and 18 in the past month alone. Six black rhinos have also been taken in recent months—the first for over a decade. And these finds, the KWS admits, may <b>represent</b> less than 15% of the total.</p>\n  <p style=\"margin-bottom: 1rem;\">The international <b>ivory</b> trade has been illegal since 1989. <b>Initially</b>, that <b>ban</b> caused a market <b>collapse</b>. Now, the markets are recovering. The <b>penchant</b> of European tourists in Asia for <b>ivory</b> earrings is helping to <b>fuel</b> demand. According to a recent report by Save the Elephants, a Kenya-based research organisation and <b>lobby</b> group, up to 80% of Asian elephant populations have been poached in the past 14 years in order to carve such knick-knacks. Africa's herds are making up the <b>shortfall</b>. On camel-back and bare shoulders, tusks are being ferried along ancient <b>caravan</b> routes from central Africa to <b>Khartoum</b>'s souks. There, <b>ivory</b> prices have reached a 13-year high.</p>\n  <p style=\"margin-bottom: 1rem;\">Such rising demand is one reason why poaching is picking up. Another is an expectation that the trade <b>ban</b> may be lifted, at least partly, at a meeting in November of the <b>Convention</b> on International Trade in <b>Endangered</b> <b>Species</b> (CITES), which governs such matters.</p>\n  <p style=\"margin-bottom: 1rem;\">Kenya's elephant population is still in a <b>precarious</b> state. The country's herds were cut from 167,000 in 1973 to 16,000 in 1989, and have recovered only a little since then. Those in <b>Botswana</b>, <b>Namibia</b> and South Africa, however, are booming. These countries, along with <b>Zimbabwe</b>, whose elephant herd is in a more <b>questionable</b> condition, are lobbying to start trading in elephant products (mainly <b>ivory</b>, but also skins and meat) once again.</p>\n  <p style=\"margin-bottom: 1rem;\">They are not asking for the <b>ban</b> to be lifted completely. Countries that wanted to keep their herds <b>unculled</b> could continue to <b>shelter</b> under the protection that CITES offers: it would still be illegal to trade in elephant products from such countries in any place that had signed the <b>convention</b>. Kenya <b>nevertheless</b> opposes the southern Africans. The Kenyans do not have <b>surplus</b> elephants to trade, and they want to keep those they do have to encourage tourism. The government's view—shared less vociferously by <b>Tanzania</b>—is that even a <b>minimal</b> legal trade would encourage a massive illegal trade.</p>\n  <p style=\"margin-bottom: 1rem;\">That belief is supported by anecdotal evidence, but it is difficult to prove. The failure of CITES to <b>set up</b> a proposed <b>database</b> known as MIKE (Monitoring the Illegal Killing of Elephants) leaves the matter open to debate. MIKE was supposed to include <b>biennial</b> surveys of all elephant populations and the <b>routine</b> collection of information such as number of elephants killed illegally in particular places. Softer information, such as estimates of the effect of civil <b>strife</b>, and the involvement of local people in <b>conservation</b>, was also supposed to be assessed.</p>\n  <p style=\"margin-bottom: 1rem;\">It was, however, the Kenyans themselves who criticised MIKE for being too expensive, and the whole project is <b>in danger of</b> running into the sand. <b>Botswana</b>, <b>Namibia</b>, South Africa and <b>Zimbabwe</b>, <b>meanwhile</b>, argue that branding and <b>spot</b> <b>genetic</b> testing (the DNA of southern African elephants is <b>distinguishable</b> from that of East African ones) will be enough to <b>detect</b> and <b>root out</b> illegal trading. Kenya, <b>to put it charitably</b>, has doubts about that.</p>\n  <p style=\"margin-bottom: 1rem;\">Whether a <b>partial</b> <b>resumption</b> of trade would finally do for Kenya's elephants remains to be seen. It may not be <b>put to the test</b>, for it is <b>by no means</b> certain that the southern African viewpoint will <b>prevail</b> at CITES. But the difficulty of bucking the market, whether legal or illegal, is well demonstrated by that pile of elephant corpses, and <b>trail</b> of human ones, in Tsavo. The KWS is famous for taking few prisoners. If even death is not a sufficient discouragement to poachers, it is difficult to see what else would be.</p></div></div>",
       "sections": [
         {
-          "title": "Exercise 1: Reading Comprehension",
+          "id": "sec_u20_keotha",
+          "title": "Exercise 1: Fill in each blank with the appropriate word",
+          "content": "<p class='font-bold text-[16px] text-slate-800 mb-4'>Drag and drop the correct words into the blanks.</p>",
+          "questionType": "Kéo thả",
+          "questions": [
+            {
+              "id": "u20_kt_0",
+              "content": "1. The crowd [ 1 ] at the sound of the explosion.<br/><br/>2. Don't ask me; follow your [ 2 ] and do what you think is right.<br/><br/>3. The hunters followed the tiger's [ 3 ].<br/><br/>4. They have a [ 4 ] with a small group of the enemy.<br/><br/>5. The damage to my car is [ 5 ].",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "panicked"
+            },
+            {
+              "id": "u20_kt_1",
+              "content": "1. The crowd [ 1 ] at the sound of the explosion.<br/><br/>2. Don't ask me; follow your [ 2 ] and do what you think is right.<br/><br/>3. The hunters followed the tiger's [ 3 ].<br/><br/>4. They have a [ 4 ] with a small group of the enemy.<br/><br/>5. The damage to my car is [ 5 ].",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "instincts"
+            },
+            {
+              "id": "u20_kt_2",
+              "content": "1. The crowd [ 1 ] at the sound of the explosion.<br/><br/>2. Don't ask me; follow your [ 2 ] and do what you think is right.<br/><br/>3. The hunters followed the tiger's [ 3 ].<br/><br/>4. They have a [ 4 ] with a small group of the enemy.<br/><br/>5. The damage to my car is [ 5 ].",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "trail"
+            },
+            {
+              "id": "u20_kt_3",
+              "content": "1. The crowd [ 1 ] at the sound of the explosion.<br/><br/>2. Don't ask me; follow your [ 2 ] and do what you think is right.<br/><br/>3. The hunters followed the tiger's [ 3 ].<br/><br/>4. They have a [ 4 ] with a small group of the enemy.<br/><br/>5. The damage to my car is [ 5 ].",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "skirmish"
+            },
+            {
+              "id": "u20_kt_4",
+              "content": "1. The crowd [ 1 ] at the sound of the explosion.<br/><br/>2. Don't ask me; follow your [ 2 ] and do what you think is right.<br/><br/>3. The hunters followed the tiger's [ 3 ].<br/><br/>4. They have a [ 4 ] with a small group of the enemy.<br/><br/>5. The damage to my car is [ 5 ].",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "negligible"
+            },
+            {
+              "id": "u20_kt_5",
+              "content": "6. She [ 1 ] her fellow-workers at the union meeting.<br/><br/>7. [ 2 ] she opposed the plan, but later she changed her mind.<br/><br/>8. The bridge [ 3 ] under the weight of the train.<br/><br/>9. The car is being [ 4 ] in preparation for the race.<br/><br/>10. We ought to be doing our best to save [ 5 ] species.",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "represented"
+            },
+            {
+              "id": "u20_kt_6",
+              "content": "6. She [ 1 ] her fellow-workers at the union meeting.<br/><br/>7. [ 2 ] she opposed the plan, but later she changed her mind.<br/><br/>8. The bridge [ 3 ] under the weight of the train.<br/><br/>9. The car is being [ 4 ] in preparation for the race.<br/><br/>10. We ought to be doing our best to save [ 5 ] species.",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "Initially"
+            },
+            {
+              "id": "u20_kt_7",
+              "content": "6. She [ 1 ] her fellow-workers at the union meeting.<br/><br/>7. [ 2 ] she opposed the plan, but later she changed her mind.<br/><br/>8. The bridge [ 3 ] under the weight of the train.<br/><br/>9. The car is being [ 4 ] in preparation for the race.<br/><br/>10. We ought to be doing our best to save [ 5 ] species.",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "collapsed"
+            },
+            {
+              "id": "u20_kt_8",
+              "content": "6. She [ 1 ] her fellow-workers at the union meeting.<br/><br/>7. [ 2 ] she opposed the plan, but later she changed her mind.<br/><br/>8. The bridge [ 3 ] under the weight of the train.<br/><br/>9. The car is being [ 4 ] in preparation for the race.<br/><br/>10. We ought to be doing our best to save [ 5 ] species.",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "fuelled"
+            },
+            {
+              "id": "u20_kt_9",
+              "content": "6. She [ 1 ] her fellow-workers at the union meeting.<br/><br/>7. [ 2 ] she opposed the plan, but later she changed her mind.<br/><br/>8. The bridge [ 3 ] under the weight of the train.<br/><br/>9. The car is being [ 4 ] in preparation for the race.<br/><br/>10. We ought to be doing our best to save [ 5 ] species.",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "endangered"
+            },
+            {
+              "id": "u20_kt_10",
+              "content": "11. Our financial situation is still [ 1 ].",
+              "options": [
+                "panicked",
+                "instincts",
+                "trail",
+                "skirmish",
+                "negligible",
+                "represented",
+                "Initially",
+                "collapsed",
+                "fuelled",
+                "endangered",
+                "precarious"
+              ],
+              "correctAnswer": "precarious"
+            }
+          ]
+        },
+        {
+          "title": "Exercise 2: Reading Comprehension",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [

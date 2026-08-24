@@ -1,100 +1,102 @@
-const fs = require('fs');
+const generateUnit = require('./generate_all');
 
-const unit13 = {
-  basicInfo: {
-    skill: "Standard-Reading",
-    title: "Unit 13",
-    category: "exercise",
-    timeLimit: 0
-  },
-  parts: [
-    {
-      id: "part1",
-      title: "Word List",
-      content: `<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit13_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit13_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;"><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">blood</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[blAd]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Blood is the red liquid in your body.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I cut my finger and got blood on my shirt.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">burn</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[bə:rn]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To burn something is to set it on fire.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I burned some wood in the camp fire.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">cell</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[sel]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A cell is a small room where a person is locked in.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The jail cell was very small.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">contain</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[kəntein]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To contain something is to have it inside.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The mailbox contained a letter.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">correct</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[kərekt]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">adj.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To be correct is to be right.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ All of my answers on the test were correct.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">crop</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[krap]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A crop is food that a farmer grows.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Wheat is a crop that is made into bread.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">demand</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[dimænd]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To demand something is to say strongly that you want it.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The workers demanded to be paid more money.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">equal</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[i:kwəl]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">adj.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To be equal is to be the same.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Both students are equal in age.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">feed</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[fi:d]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To feed is to give food.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Mother feeds my baby brother everyday.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">hole</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[houl]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A hole is an opening in something.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The man was going to jump into the hole in the ice.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">increase</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[inkri:s]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To increase something is to make it larger or more.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ They've increased the price of gas by 15 cents!</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">lord</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[lɔ:rd]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Long ago, a lord was a man in charge of a town.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The lord of the town was not kind.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">owe</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[ou]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To owe is to have to pay or give back something received from another.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I owed him twenty dollars, so I paid him back.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">position</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[pəziʃən]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A position is the way something is placed.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ How can you sit in that position?</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">raise</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[reiz]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To raise something is to lift it up.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ We had to work together to raise the last piece.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">responsible</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[rispansəbəl]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">adj.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">If a person is responsible, they do the right things.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I try to be responsible and save money.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">sight</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[sait]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A sight is something interesting to see.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I saw the pyramids of Egypt. What a sight!</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">spot</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[spat]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A spot is a place where something happens.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The kitchen is a good spot to eat meals.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">structure</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[strʌktʃər]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A structure is a building.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ They just built a beautiful new structure downtown.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">whole</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[houl]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">adj.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Whole means all of something.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I ate the whole pie. We don't have any more.</div></div></div></div></div></div>`,
-      sections: [
-        {
-          id: "sec1_wordlist",
-          title: "Exercise 1: Choose the right word for the given definition.",
-          content: "",
-          questionType: "Trắc nghiệm",
-          questions: [
-            { id: "1", content: "1. the liquid in your body", options: ["spot", "blood", "cell", "owe"], correctAnswer: "blood", explanation: "blood (máu) là chất lỏng trong cơ thể." },
-            { id: "2", content: "2. to set on fire", options: ["burn", "increase", "feed", "contain"], correctAnswer: "burn", explanation: "burn (đốt cháy) là châm lửa vào thứ gì đó." },
-            { id: "3", content: "3. doing what you should do", options: ["demand", "raise", "position", "responsible"], correctAnswer: "responsible", explanation: "responsible (có trách nhiệm) là làm những việc nên làm." },
-            { id: "4", content: "4. the same as something else", options: ["hole", "structure", "lord", "equal"], correctAnswer: "equal", explanation: "equal (bằng nhau) là giống với thứ khác." },
-            { id: "5", content: "5. something interesting to see", options: ["sight", "correct", "whole", "crop"], correctAnswer: "sight", explanation: "sight (cảnh tượng) là thứ thú vị để xem." }
-          ]
-        },
-        {
-          id: "sec2_wordlist",
-          title: "Exercise 2: Fill in the blanks with the correct words from the word bank.",
-          content: "",
-          questionType: "Điền từ",
-          questions: [
-            { id: "6", content: "1. I left my coat in the (sp[6]) by the window.", correctAnswer: "spot", explanation: "spot (vị trí, chỗ)." },
-            { id: "7", content: "2. The poor man had no money to (fe[7]) his family.", correctAnswer: "feed", explanation: "feed (cho ăn)." },
-            { id: "8", content: "3. The robber was locked in a (ce[8]) for a year.", correctAnswer: "cell", explanation: "cell (phòng giam)." },
-            { id: "9", content: "4. Did you read the (wh[9]) book or just part of it?", correctAnswer: "whole", explanation: "whole (toàn bộ)." },
-            { id: "10", content: "5. If I get the answers (co[10]), I will pass the test.", correctAnswer: "correct", explanation: "correct (chính xác)." }
-          ]
-        },
-        {
-          id: "sec3_wordlist",
-          title: "Exercise 3: Check the better response to each question.",
-          content: "",
-          questionType: "Trắc nghiệm",
-          questions: [
-            { id: "11", content: "1. What did your father demand?", options: ["He is not nice.", "That I clean my room."], correctAnswer: "That I clean my room.", explanation: "demand (yêu cầu) phù hợp với việc phải dọn phòng." },
-            { id: "12", content: "2. Will you help me raise this?", options: ["Yes. How high?", "Yes, it goes lower."], correctAnswer: "Yes. How high?", explanation: "raise (nâng lên) phù hợp với câu hỏi 'Cao bao nhiêu?'." },
-            { id: "13", content: "3. What position were these in?", options: ["They were next to each other.", "They came from the store."], correctAnswer: "They were next to each other.", explanation: "position (vị trí) phù hợp với 'chúng ở cạnh nhau'." },
-            { id: "14", content: "4. Does that bottle contain water?", options: ["Yes. What is inside it?", "No, it has milk in it."], correctAnswer: "No, it has milk in it.", explanation: "contain (chứa đựng) phù hợp với câu trả lời 'không, nó có chứa sữa'." },
-            { id: "15", content: "5. Did you hear that Jim's house burned down?", options: ["That is terrible!", "Is it bigger now?"], correctAnswer: "That is terrible!", explanation: "burn down (cháy rụi) là chuyện kinh khủng (terrible)." }
-          ]
-        },
-        {
-          id: "sec4_wordlist",
-          title: "Exercise 4: Choose the word that is a better fit for each sentence.",
-          content: "",
-          questionType: "Điền từ",
-          questions: [
-            { id: "16", content: "1a. The bad guy sat on the floor of his (ce[16]).", correctAnswer: "cell", explanation: "cell (phòng giam)." },
-            { id: "17", content: "1b. Dad says the old (str[17]) is not safe.", correctAnswer: "structure", explanation: "structure (công trình)." },
-            { id: "18", content: "2a. The (lo[18]) ruled over 100 people in the town.", correctAnswer: "lord", explanation: "lord (lãnh chúa)." },
-            { id: "19", content: "2b. I still (o[19]) the bank money for my university loan.", correctAnswer: "owe", explanation: "owe (nợ)." },
-            { id: "20", content: "3a. Won't your legs hurt if you stay in that (pos[20]) for long?", correctAnswer: "position", explanation: "position (vị trí/tư thế)." },
-            { id: "21", content: "3b. This is our favorite picnic (sp[21]).", correctAnswer: "spot", explanation: "spot (địa điểm)." },
-            { id: "22", content: "4a. The (wh[22]) class was excited.", correctAnswer: "whole", explanation: "whole (toàn bộ)." },
-            { id: "23", content: "4b. I dug a (ho[23]) to put a tree in.", correctAnswer: "hole", explanation: "hole (cái hố)." },
-            { id: "24", content: "5a. Do not (fe[24]) any of the animals at the zoo.", correctAnswer: "feed", explanation: "feed (cho ăn)." },
-            { id: "25", content: "5b. The farmer grew a (cr[25]) of potatoes.", correctAnswer: "crop", explanation: "crop (vụ mùa)." }
-          ]
-        }
-      ]
-    },
-    {
-      id: "part2",
-      title: "Comprehensive Reading",
-      content: `<div style="font-family: Arial, sans-serif; ">        <h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">The Farmer and the Cats</h1>        <p style="margin-bottom: 1rem;">Arthur was a <b>responsible</b> farmer, and Maria was a nice lady. But they were poor. They <b>owed</b> the town <b>lord</b> money for their land. One summer, their farm <b>burned</b>. One <b>structure</b> caught fire, and most of the animals ran away. Only the cats stayed. So Arthur and Maria had to bring in their <b>crops</b> without an animal's help.</p>    <p style="margin-bottom: 1rem;">On a fall day, the lord <b>demanded</b> his money. Arthur asked if the lord could wait until he brought in his crops.</p>    <p style="margin-bottom: 1rem;">The lord was angry. He <b>raised</b> his hands high and yelled, "Pay me by the end of the week. If you don't, I will <b>increase</b> the money you have to pay. I might put you in a jail <b>cell</b>."</p>    <p style="margin-bottom: 1rem;">So Arthur and Maria worked until there was <b>blood</b> on their hands. They finished four lines of corn and went to bed.</p>    <p style="margin-bottom: 1rem;">But the next morning, eight lines were finished! "Maria, didn't we stop in this <b>spot</b> here?" Arthur asked.</p>    <p style="margin-bottom: 1rem;">"Yes, that is <b>correct</b>. And the tools were in a different <b>position</b>, too," Maria said. They were surprised and happy. That day, they worked hard and finished five lines.</p>    <p style="margin-bottom: 1rem;">But in the morning, ten lines were done! Each day they did a lot of work. Each night, someone else did an <b>equal</b> amount of work. In a week, the <b>whole</b> field was finished. "Tomorrow I will sell the crops and pay the lord," Arthur said. But that morning, the crops were gone. A bag was in the middle of the field. It <b>contained</b> money.</p>    <p style="margin-bottom: 1rem;">"Maria, let's see who has helped us work." Through a <b>hole</b> in the wall, they saw a funny <b>sight</b>. The cats were dancing in the field and eating corn! Now Arthur knew what had happened. The cats had worked at night! After that, Arthur was very nice to his cats and <b>fed</b> them lots of corn.</p></div>`,
-      imageUrl: "/unit13_story.png",
-      sections: [
-        {
-          id: "sec5_reading",
-          title: "Answer the questions based on the story.",
-          content: "",
-          questionType: "Trắc nghiệm",
-          questions: [
-            { id: "26", content: "1. What does Arthur do in the story?", options: ["Put the lady in a jail cell", "Raise his hands high", "Demand money from people", "Work until there is blood on his hands"], correctAnswer: "Work until there is blood on his hands", explanation: "Câu chuyện có nói: 'So Arthur and Maria worked until there was blood on their hands.'" },
-            { id: "27", content: "2. What is true of the cats in the story?", options: ["They burn the farm and scare the animals.", "They do work equal to Arthur's work.", "They think Arthur is very responsible.", "They put all the tools in one spot."], correctAnswer: "They do work equal to Arthur's work.", explanation: "Bài đọc có đoạn: 'Each night, someone else did an equal amount of work.' (Những chú mèo làm lượng công việc tương đương)" },
-            { id: "28", content: "3. What does the bag contain?", options: ["A gift for the lady", "Corn to feed the animals", "Money for the lord", "A new kind of crop"], correctAnswer: "Money for the lord", explanation: "Túi đó chứa tiền (money) để trả cho ngài lãnh chúa." },
-            { id: "29", content: "4. What sight did Maria and Arthur see in the morning?", options: ["A hole in the wall of their house", "A whole new structure on the farm", "The lord working in their fields", "The cats dancing on the farm"], correctAnswer: "The cats dancing on the farm", explanation: "Họ nhìn thấy cảnh tượng: 'The cats were dancing in the field and eating corn!'" },
-            { id: "30", content: "5. When will the lord increase the money that Arthur has to pay?", options: ["At the end of the month", "At the end of the summer", "At the end of the week", "At the end of the year"], correctAnswer: "At the end of the week", explanation: "Lãnh chúa nói: 'Pay me by the end of the week. If you don't, I will increase the money you have to pay.'" }
-          ]
-        }
-      ]
-    }
-  ]
+const u = {
+  unit: 13,
+  title: 'Unit 13: Two Different Forms of British Leisure Life',
+  words: [
+    { word: 'leisure', pos: 'n.', defVi: 'thời gian rảnh rỗi' },
+    { word: 'conservative', pos: 'a.', defVi: 'bảo thủ' },
+    { word: 'nature', pos: 'n.', defVi: 'bản chất' },
+    { word: 'position', pos: 'n.', defVi: 'vị trí, lập trường, quan điểm' },
+    { word: 'elite', pos: 'n.', defVi: 'nhóm tinh hoa' },
+    { word: 'demonstrate', pos: 'v.', defVi: 'bày tỏ, biểu lộ' },
+    { word: 'respect', pos: 'n.', defVi: 'khía cạnh' },
+    { word: 'VIP (very important person)', pos: '', defVi: 'nhân vật quan trọng' },
+    { word: 'Pancake Race', pos: '', defVi: 'cuộc thi vào ngày thứ ba trước tuần chay, ngày ăn bánh kếp theo truyền thống' },
+    { word: 'start with', pos: '', defVi: 'bắt đầu bằng' },
+    { word: 'around', pos: 'prep.', defVi: 'khoảng' },
+    { word: 'exclusive', pos: 'a.', defVi: 'dành riêng, đặc quyền' },
+    { word: 'parliament', pos: 'n.', defVi: 'nghị viện' },
+    { word: 'in session', pos: '', defVi: 'đang phiên họp' },
+    { word: 'traditional', pos: 'a.', defVi: 'thuộc truyền thống' },
+    { word: 'pirate', pos: 'n.', defVi: 'tên cướp biển' },
+    { word: 'informal', pos: 'a.', defVi: 'thân mật' },
+    { word: 'object', pos: 'n.', defVi: 'mục đích' },
+    { word: 'dine', pos: 'v.', defVi: 'ăn cơm, dùng bữa (trưa, chiều)' },
+    { word: 'wine', pos: 'v.', defVi: 'uống rượu' },
+    { word: 'intercourse', pos: 'n.', defVi: 'sự giao thiệp' },
+    { word: 'interfere with', pos: '', defVi: 'gây trở ngại, can thiệp' },
+    { word: 'rigorous', pos: 'a.', defVi: 'nghiêm khắc, nghiêm ngặt' },
+    { word: 'pursuit', pos: 'n.', defVi: 'sự theo đuổi' },
+    { word: 'Executive Committee', pos: '', defVi: 'Ban điều hành' },
+    { word: 'antagonist', pos: 'n.', defVi: 'người đối lập, người phản đối' },
+    { word: 'engage in', pos: '', defVi: 'tham gia vào' },
+    { word: 'unfettered', pos: 'a.', defVi: 'tự do, không bị ràng buộc' },
+    { word: 'amicable', pos: 'a.', defVi: 'thân ái, thân mật, thân tình' },
+    { word: 'tradition', pos: 'n.', defVi: 'truyền thống' },
+    { word: 'originate from', pos: '', defVi: 'bắt nguồn từ' },
+    { word: 'napkin', pos: 'n.', defVi: 'khăn ăn' },
+    { word: 'carve', pos: 'v.', defVi: 'chạm, khắc' },
+    { word: 'plain', pos: 'a.', defVi: 'giản dị, đơn sơ' },
+    { word: 'limited to', pos: '', defVi: 'giới hạn (ở số lượng)' },
+    { word: 'prominent', pos: 'a.', defVi: 'xuất chúng, lỗi lạc' },
+    { word: 'the Commons', pos: '', defVi: 'Hạ viện (Anh)' },
+    { word: 'the Lords', pos: '', defVi: 'Thượng viện (Anh)' },
+    { word: 'distinguished', pos: 'a.', defVi: 'ưu tú, xuất sắc, lỗi lạc' },
+    { word: 'point of view', pos: '', defVi: 'quan điểm' },
+    { word: 'in contrast with', pos: '', defVi: 'tương phản với' },
+    { word: 'popular', pos: 'a.', defVi: 'phổ biến' },
+    { word: 'Lent', pos: '', defVi: 'tuần chay' },
+    { word: 'occur', pos: 'v.', defVi: 'xảy ra' },
+    { word: 'reminder', pos: 'n.', defVi: 'điều nhắc nhở' },
+    { word: 'consumption', pos: 'n.', defVi: 'sự tiêu thụ' },
+    { word: 'use up', pos: '', defVi: 'sử dụng hết' },
+    { word: 'frugal', pos: 'a.', defVi: 'tiết kiệm, thanh đạm' },
+    { word: 'toss', pos: 'v.', defVi: 'ném' },
+    { word: 'observe', pos: 'v.', defVi: 'tuân thủ' },
+    { word: 'verger', pos: 'n.', defVi: 'người cai quản giáo đường, người cầm gậy giám mục' },
+    { word: 'procession', pos: 'n.', defVi: 'đám rước' },
+    { word: 'Westminster Abbey', pos: '', defVi: 'Tu viện Westminster' },
+    { word: 'competitor', pos: 'n.', defVi: 'người tham gia cuộc thi' },
+    { word: 'get hold of', pos: '', defVi: 'nắm, chộp' },
+    { word: 'portion', pos: 'n.', defVi: 'phần, phần chia' },
+    { word: 'scramble', pos: 'n.', defVi: 'sự tranh cướp, sự tranh giành' },
+    { word: 'guinea', pos: 'n.', defVi: 'đồng ghinê (đồng tiền vàng xưa của Anh, có giá trị tương đương 21 silinh)' },
+    { word: 'fund', pos: 'n.', defVi: 'quỹ' },
+    { word: 'for one\\\'s part', pos: '', defVi: 'về phần mình' },
+    { word: 'spectacular', pos: 'a.', defVi: 'ngoạn mục' },
+    { word: 'custom', pos: 'n.', defVi: 'tập quán, tập tục' },
+    { word: 'annual', pos: 'a.', defVi: 'hàng năm' },
+    { word: 'frying pan', pos: '', defVi: 'chảo chiên' },
+    { word: 'contain', pos: 'v.', defVi: 'chứa, đựng' },
+    { word: 'sizzling', pos: 'a.', defVi: 'nóng sôi xèo xèo' },
+    { word: 'keep', pos: 'v.', defVi: 'tuân theo' },
+    { word: 'parish', pos: 'n.', defVi: 'giáo khu' },
+    { word: 'prior to', pos: '', defVi: 'trước' },
+    { word: 'apron', pos: 'n.', defVi: 'tạp dề' },
+    { word: 'scarf', pos: 'n.', defVi: 'khăn quàng cổ' },
+    { word: 'loose-fitting', pos: 'a.', defVi: 'rộng thùng thình' },
+    { word: 'bar', pos: 'v.', defVi: 'cấm' },
+    { word: 'spurt', pos: 'n.', defVi: 'chặng nước rút' },
+    { word: 'optional', pos: 'a.', defVi: 'tùy chọn' },
+    { word: 'serve', pos: 'v.', defVi: 'phục vụ' },
+    { word: 'hail', pos: 'v.', defVi: 'hoan hô, hoan nghênh' },
+    { word: 'champion', pos: 'n.', defVi: 'nhà vô địch' },
+    { word: 'aristocratic', pos: 'a.', defVi: 'thuộc quý tộc' },
+    { word: 'purely', pos: 'ad.', defVi: 'thuần túy' },
+    { word: 'participant', pos: 'n.', defVi: 'người tham gia' },
+    { word: 'throw light on', pos: '', defVi: 'làm rõ thêm, làm sáng tỏ' }
+  ],
+  story: `<h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Two Different Forms of British Leisure Life</h1>
+  <p style="margin-bottom: 1rem;">British people are always famous for their conservative nature. Nevertheless, they also have some interesting ways to enjoy themselves. Of course, because of their different positions, the social elite and common people demonstrate different tastes in this respect. If the organized leisure, the Club, is for the VIPs, then the amusement like the Pancake Race is for the commons.</p>
+  <p style="margin-bottom: 1rem;">Club life started with coffee drinking which began around 1650. Among the most exclusive and famous clubs of London, the Other Club occupies a special position. It was founded in 1911 by Sir Winston Churchill and F. E. Smith. Members of this club gather for dinner once a month when Parliament is in session and their traditional meeting place is the Pirate Room of the Savoy Hotel. These meetings are very private and informal. The Club has only three rules: 1. The object is to dine, wine and talk; 2. Nothing in the intercourse of the members shall be allowed to interfere with the full rigorous pursuit of party politics; 3. The names of the members of the Executive Committee must remain to be unknown.</p>
+  <p style="margin-bottom: 1rem;">Political antagonists, who may never be seen to say a word to each other in public, may dine side by side here and engage in unfettered and amicable conversation. The Other Club is rich in traditions. Many of them originated from Sir Winston Churchill. At his command, a large wooden and black cat was seated near him at dinner with a napkin tied around its neck. The name of the black cat is Kaspar. It was designed and carved from a piece of plain tree in 1926 and was placed near to Sir Winston whenever there were only thirteen at table.</p>
+  <p style="margin-bottom: 1rem;">Limited to fifty, the list of membership includes prominent members of the Commons and the Lords and other distinguished people. It is a non-political club and was given the name the Other Club because it aims always to hear the other man's point of view.</p>
+  <p style="margin-bottom: 1rem;">In contrast with the Other Club there is the popular Pancake Day. It is on the first day of Lent, and usually occurs between February 2 and March 8. It is believed to be a reminder of the days when the consumption of butter and eggs was forbidden during Lent and housewives were anxious to use up all they had left before the start of the frugal period.</p>
+  <p style="margin-bottom: 1rem;">At Westminster School, London, the practice of tossing a pancake is carefully observed. Led by a verger, a pancake is carried in procession from Westminster Abbey to the school. The cook, all in white, tosses it high in the air over the heads of young competitors in the school hall and the boy getting hold of the largest portion of it in the scramble, receives a guinea from Abbey funds. The cook is given two guineas for his part.</p>
+  <p style="margin-bottom: 1rem;">The most popular and most spectacular pancake custom is the annual Pancake Race at Olney, Buckinghamshire, which is said to have been held since 1450. At the starting line each woman holds a frying pan containing a sizzling pancake. These rules are strictly kept: 1. Competitors must be eighteen or more in age and they must have lived in Olney Parish or Warrington for at least six months prior to the race; 2. Each woman must wear an apron and cover her head with a hat or scarf; 3. Loose-fitting trousers are barred; 4. All competitors must toss their pancakes at least three times during the race, once at the start, once during the final spurt to the church path and once at an optional point during the race.</p>
+  <p style="margin-bottom: 1rem;">The first to serve her pancake to the bell ringer at the church door receives from him a traditional kiss and is hailed as the year's Pancake Champion.</p>
+  <p style="margin-bottom: 1rem;">If the Other Club is a way for a few political elite to enjoy their aristocratic taste of leisure, then the practice of the Pancake Race is purely a folk custom. Although they are different both in form and participants, both of them throw some light on the traditional culture of Britain.</p>`
 };
 
-fs.writeFileSync('c:/Users/Tony/.gemini/antigravity/scratch/tonyenglish-app/unit13.json', JSON.stringify(unit13, null, 2));
-console.log('JSON generated successfully.');
+generateUnit(u);
