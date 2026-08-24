@@ -43,6 +43,12 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // 📎 Toggle PDF: Question Paper vs Insert
+  const [leftPdfView, setLeftPdfView] = useState<'question' | 'insert'>('question');
+  const questionPdfUrl = testData?.insert_pdf_url || testData?.pdf_url || testData?.content_json?.basicInfo?.insert_pdf_url || null;
+  const insertPdfUrl = testData?.resource_pdf_url || testData?.content_json?.basicInfo?.resource_pdf_url || null;
+  const hasInsertPdf = !!insertPdfUrl;
+
   // --- THUẬT TOÁN ĐỒNG HỒ ĐẾM NGƯỢC ---
   const [timeLeft, setTimeLeft] = useState(5400); 
   const isFinishingRef = useRef(false);
@@ -126,26 +132,22 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
     }
 
     try {
-      // 🚀 Chuyển sang dùng igcse-grader: AI đọc được PDF đề thi + Marking Scheme
-      const pdfUrl = testData.insert_pdf_url || testData.pdf_url || testData.content_json?.basicInfo?.insert_pdf_url || null;
-      
-      // Xây dựng absolute URL cho PDF (igcse-grader cần fetch được)
-      let fullPdfUrl = null;
-      if (pdfUrl) {
-        if (pdfUrl.startsWith('http')) {
-          fullPdfUrl = pdfUrl;
-        } else {
-          // Relative path → absolute URL (ví dụ: /Business Studies/2024 June/0450_s24_qp_11.pdf)
-          fullPdfUrl = `${window.location.origin}${pdfUrl.startsWith('/') ? '' : '/'}${pdfUrl}`;
-        }
-      }
+      // 🚀 AI đọc được PDF đề thi + Insert/Resource + JSON Marking Scheme
+      const resolveUrl = (url: string | null) => {
+        if (!url) return null;
+        if (url.startsWith('http')) return url;
+        return `${window.location.origin}${url.startsWith('/') ? '' : '/'}${url}`;
+      };
+      const fullPdfUrl = resolveUrl(questionPdfUrl);
+      const fullInsertPdfUrl = resolveUrl(insertPdfUrl);
 
       const { data, error } = await supabase.functions.invoke('igcse-grader', {
         body: { 
           testConfig: testData.json_config?.questions || [],
           textAnswers: currentAnswers,
           imageAnswers: [],
-          pdfUrl: fullPdfUrl
+          pdfUrl: fullPdfUrl,
+          insertPdfUrl: fullInsertPdfUrl
         }
       });
 
@@ -328,14 +330,33 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         {/* NỬA TRÁI: PDF */}
         <div style={{ width: `${leftWidth}%` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
           <div className="bg-[#323639] border-b border-[#202224] px-4 flex justify-between items-center h-10 shrink-0 shadow-sm">
-            <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">Tài liệu tham khảo</span>
+            {hasInsertPdf ? (
+              <div className="flex items-center gap-1">
+                <button 
+                  onClick={() => setLeftPdfView('question')} 
+                  className={`px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-wider transition-all ${leftPdfView === 'question' ? 'bg-[#1e88e5] text-white shadow-sm' : 'text-slate-400 hover:text-white hover:bg-white/10'}`}
+                >
+                  📝 Question Paper
+                </button>
+                <button 
+                  onClick={() => setLeftPdfView('insert')} 
+                  className={`px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-wider transition-all ${leftPdfView === 'insert' ? 'bg-amber-500 text-white shadow-sm' : 'text-slate-400 hover:text-white hover:bg-white/10'}`}
+                >
+                  📎 Insert
+                </button>
+              </div>
+            ) : (
+              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">Đề thi</span>
+            )}
           </div>
           <div className={`flex-1 w-full h-full ${isDragging ? 'pointer-events-none' : ''}`}>
-             {testData.insert_pdf_url ? (
-               <iframe src={`${testData.insert_pdf_url}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title="PDF Insert" />
-             ) : (
-               <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">📄<p className="font-bold">Không có tài liệu PDF đính kèm.</p></div>
-             )}
+             {(() => {
+               const activePdfUrl = leftPdfView === 'insert' && insertPdfUrl ? insertPdfUrl : questionPdfUrl;
+               if (activePdfUrl) {
+                 return <iframe key={activePdfUrl} src={`${activePdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title={leftPdfView === 'insert' ? 'PDF Insert' : 'PDF Question Paper'} />;
+               }
+               return <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">📄<p className="font-bold">Không có tài liệu PDF đính kèm.</p></div>;
+             })()}
           </div>
         </div>
 

@@ -860,17 +860,28 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
        folder_id: resolvedFolderId, 
        course_id: assignedCourseId, 
        is_published: true, 
-       insert_pdf_url: finalData.basicInfo?.insert_pdf_url || null 
+       insert_pdf_url: finalData.basicInfo?.insert_pdf_url || null,
+       resource_pdf_url: finalData.basicInfo?.resource_pdf_url || null 
     };
     
-    if (testId === 'new') {
-       payload.order_index = 0;
-       const { error } = await supabase.from('tests').insert([payload]);
-       if (error) { console.error(error); alert("Lỗi khi lưu: " + error.message); return; }
-    } else {
-       const { error } = await supabase.from('tests').update(payload).eq('id', testId);
-       if (error) { console.error(error); alert("Lỗi khi cập nhật: " + error.message); return; }
+    const savePayload = async (pl: any) => {
+      if (testId === 'new') {
+        pl.order_index = 0;
+        const { error } = await supabase.from('tests').insert([pl]);
+        return error;
+      } else {
+        const { error } = await supabase.from('tests').update(pl).eq('id', testId);
+        return error;
+      }
+    };
+    
+    let saveError = await savePayload(payload);
+    // Nếu lỗi do cột resource_pdf_url chưa tồn tại → thử lại không có cột đó (data đã lưu trong content_json)
+    if (saveError && saveError.message?.includes('resource_pdf_url')) {
+      delete payload.resource_pdf_url;
+      saveError = await savePayload(payload);
     }
+    if (saveError) { console.error(saveError); alert("Lỗi khi lưu: " + saveError.message); return; }
     
     setEditingTest(null); 
     fetchLibraryTests(); 
@@ -1030,6 +1041,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
        content_json: fullTest.content_json,
        json_config: fullTest.json_config,
        insert_pdf_url: fullTest.insert_pdf_url,
+       resource_pdf_url: fullTest.resource_pdf_url,
        is_published: false,
        order_index: libraryTests.length + 1 
     }]).select().single();

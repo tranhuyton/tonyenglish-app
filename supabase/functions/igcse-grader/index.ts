@@ -12,7 +12,7 @@ serve(async (req) => {
   }
 
   try {
-    const { testConfig, textAnswers, imageAnswers, pdfUrl, subjectHint, mode, image } = await req.json();
+    const { testConfig, textAnswers, imageAnswers, pdfUrl, insertPdfUrl, subjectHint, mode, image } = await req.json();
     const GEMINI_API_KEY = Deno.env.get('GEMINI_API_KEY');
 
     if (!GEMINI_API_KEY) {
@@ -55,27 +55,47 @@ serve(async (req) => {
     const parts: any[] = [];
     let pdfAttached = false;
 
-    // 1. Gửi PDF đề thi cho Gemini Vision (nếu có)
+    // 1. Gửi PDF đề thi (Question Paper) cho Gemini Vision (nếu có)
     if (pdfUrl) {
       try {
-        console.log(`[igcse-grader] Fetching exam PDF: ${pdfUrl}`);
+        console.log(`[igcse-grader] Fetching Question Paper PDF: ${pdfUrl}`);
         const pdfResponse = await fetch(pdfUrl);
         if (pdfResponse.ok) {
           const pdfBuffer = await pdfResponse.arrayBuffer();
           const pdfBase64 = base64Encode(new Uint8Array(pdfBuffer));
           
-          parts.push({ text: "\n[TÀI LIỆU THAM KHẢO (PDF) — ĐỌC KỸ TOÀN BỘ NỘI DUNG VĂN BẢN, HÌNH ẢNH, BẢNG BIỂU TRONG FILE NÀY. Đây là nguồn thông tin chính để đối chiếu khi chấm bài.]:" });
+          parts.push({ text: "\n[QUESTION PAPER (PDF) — ĐỌC KỸ TOÀN BỘ NỘI DUNG VĂN BẢN, HÌNH ẢNH, BẢNG BIỂU TRONG FILE NÀY. Đây là đề thi chính.]::" });
           parts.push({ inline_data: { mime_type: "application/pdf", data: pdfBase64 } });
           pdfAttached = true;
-          console.log(`[igcse-grader] PDF attached successfully: ${(pdfBuffer.byteLength / 1024).toFixed(0)} KB`);
+          console.log(`[igcse-grader] Question Paper attached: ${(pdfBuffer.byteLength / 1024).toFixed(0)} KB`);
         } else {
-          console.error(`[igcse-grader] Failed to fetch PDF: HTTP ${pdfResponse.status}`);
+          console.error(`[igcse-grader] Failed to fetch Question Paper: HTTP ${pdfResponse.status}`);
         }
       } catch (pdfErr) {
-        console.error("[igcse-grader] Error fetching PDF:", pdfErr);
+        console.error("[igcse-grader] Error fetching Question Paper:", pdfErr);
       }
     } else {
       console.log("[igcse-grader] No pdfUrl provided");
+    }
+
+    // 1b. Gửi PDF Insert / Resource Booklet (nếu có)
+    if (insertPdfUrl) {
+      try {
+        console.log(`[igcse-grader] Fetching Insert PDF: ${insertPdfUrl}`);
+        const insertResponse = await fetch(insertPdfUrl);
+        if (insertResponse.ok) {
+          const insertBuffer = await insertResponse.arrayBuffer();
+          const insertBase64 = base64Encode(new Uint8Array(insertBuffer));
+
+          parts.push({ text: "\n[INSERT / RESOURCE BOOKLET (PDF) — Đây là tài liệu bổ sung chứa dữ liệu, bảng biểu, biểu đồ, bản đồ mà học sinh cần tham khảo để trả lời câu hỏi. ĐỌC KỸ NỘI DUNG FILE NÀY và đối chiếu với bài làm của học sinh.]:" });
+          parts.push({ inline_data: { mime_type: "application/pdf", data: insertBase64 } });
+          console.log(`[igcse-grader] Insert PDF attached: ${(insertBuffer.byteLength / 1024).toFixed(0)} KB`);
+        } else {
+          console.error(`[igcse-grader] Failed to fetch Insert PDF: HTTP ${insertResponse.status}`);
+        }
+      } catch (insertErr) {
+        console.error("[igcse-grader] Error fetching Insert PDF:", insertErr);
+      }
     }
     
     // 2. Gửi ảnh bài làm của học sinh (nếu có)
