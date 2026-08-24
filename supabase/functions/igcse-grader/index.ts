@@ -12,7 +12,7 @@ serve(async (req) => {
   }
 
   try {
-    const { testConfig, textAnswers, imageAnswers, pdfUrl, insertPdfUrl, subjectHint, mode, image } = await req.json();
+    const { testConfig, textAnswers, imageAnswers, pdfUrl, insertPdfUrl, insertPdfUrl2, subjectHint, mode, image } = await req.json();
     const GEMINI_API_KEY = Deno.env.get('GEMINI_API_KEY');
 
     if (!GEMINI_API_KEY) {
@@ -78,23 +78,43 @@ serve(async (req) => {
       console.log("[igcse-grader] No pdfUrl provided");
     }
 
-    // 1b. Gửi PDF Insert / Resource Booklet (nếu có)
+    // 1b. Gửi PDF Insert 1 / Resource Booklet (nếu có)
     if (insertPdfUrl) {
       try {
-        console.log(`[igcse-grader] Fetching Insert PDF: ${insertPdfUrl}`);
+        console.log(`[igcse-grader] Fetching Insert 1 PDF: ${insertPdfUrl}`);
         const insertResponse = await fetch(insertPdfUrl);
         if (insertResponse.ok) {
           const insertBuffer = await insertResponse.arrayBuffer();
           const insertBase64 = base64Encode(new Uint8Array(insertBuffer));
 
-          parts.push({ text: "\n[INSERT / RESOURCE BOOKLET (PDF) — Đây là tài liệu bổ sung chứa dữ liệu, bảng biểu, biểu đồ, bản đồ mà học sinh cần tham khảo để trả lời câu hỏi. ĐỌC KỸ NỘI DUNG FILE NÀY và đối chiếu với bài làm của học sinh.]:" });
+          parts.push({ text: "\n[INSERT 1 / RESOURCE BOOKLET (PDF) — Tài liệu bổ sung chứa dữ liệu, bảng biểu, biểu đồ, bản đồ. ĐỌC KỸ và đối chiếu khi chấm bài.]:" });
           parts.push({ inline_data: { mime_type: "application/pdf", data: insertBase64 } });
-          console.log(`[igcse-grader] Insert PDF attached: ${(insertBuffer.byteLength / 1024).toFixed(0)} KB`);
+          console.log(`[igcse-grader] Insert 1 PDF attached: ${(insertBuffer.byteLength / 1024).toFixed(0)} KB`);
         } else {
-          console.error(`[igcse-grader] Failed to fetch Insert PDF: HTTP ${insertResponse.status}`);
+          console.error(`[igcse-grader] Failed to fetch Insert 1 PDF: HTTP ${insertResponse.status}`);
         }
       } catch (insertErr) {
-        console.error("[igcse-grader] Error fetching Insert PDF:", insertErr);
+        console.error("[igcse-grader] Error fetching Insert 1 PDF:", insertErr);
+      }
+    }
+
+    // 1c. Gửi PDF Insert 2 (nếu có)
+    if (insertPdfUrl2) {
+      try {
+        console.log(`[igcse-grader] Fetching Insert 2 PDF: ${insertPdfUrl2}`);
+        const insert2Response = await fetch(insertPdfUrl2);
+        if (insert2Response.ok) {
+          const insert2Buffer = await insert2Response.arrayBuffer();
+          const insert2Base64 = base64Encode(new Uint8Array(insert2Buffer));
+
+          parts.push({ text: "\n[INSERT 2 (PDF) — Tài liệu bổ sung thứ hai. ĐỌC KỸ NỘI DUNG FILE NÀY và đối chiếu với bài làm của học sinh.]:" });
+          parts.push({ inline_data: { mime_type: "application/pdf", data: insert2Base64 } });
+          console.log(`[igcse-grader] Insert 2 PDF attached: ${(insert2Buffer.byteLength / 1024).toFixed(0)} KB`);
+        } else {
+          console.error(`[igcse-grader] Failed to fetch Insert 2 PDF: HTTP ${insert2Response.status}`);
+        }
+      } catch (insert2Err) {
+        console.error("[igcse-grader] Error fetching Insert 2 PDF:", insert2Err);
       }
     }
     

@@ -22,6 +22,9 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
     if (testRecord.resource_pdf_url || basicInfo.resource_pdf_url) {
       basicInfo.resource_pdf_url = testRecord.resource_pdf_url || basicInfo.resource_pdf_url;
     }
+    if (testRecord.resource_pdf_url_2 || basicInfo.resource_pdf_url_2) {
+      basicInfo.resource_pdf_url_2 = testRecord.resource_pdf_url_2 || basicInfo.resource_pdf_url_2;
+    }
 
     // Tạo json_config_string từ json_config (ưu tiên) hoặc content_json
     let json_config_string = '';
@@ -171,10 +174,10 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
                 </div>
               )}
 
-              {/* 📎 FILE INSERT / RESOURCE (OPTIONAL) */}
+              {/* 📎 FILE INSERT 1 / RESOURCE (OPTIONAL) */}
               <div className="mt-6 pt-5 border-t border-slate-100">
-                <label className="text-[13px] font-bold text-slate-600 block mb-1">File PDF Insert / Resource <span className="text-slate-400 font-normal">(Tùy chọn)</span></label>
-                <p className="text-[11px] text-slate-400 mb-3">File tài liệu bổ sung (Insert, Resource Booklet) sẽ hiển thị ở cột trái khi bấm "View Insert".</p>
+                <label className="text-[13px] font-bold text-slate-600 block mb-1">File PDF Insert 1 <span className="text-slate-400 font-normal">(Tùy chọn)</span></label>
+                <p className="text-[11px] text-slate-400 mb-3">Tài liệu bổ sung (Insert, Resource Booklet).</p>
                 
                 <div className="flex items-center gap-3">
                   <label className="bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[12px] font-bold cursor-pointer hover:bg-slate-50 shadow-sm transition inline-flex items-center gap-2">
@@ -192,16 +195,48 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
                       } catch (err: any) { alert("Lỗi upload: " + err.message); }
                       finally { setUploading(false); }
                     }} />
-                    📎 {uploading ? 'Đang tải...' : 'Tải file Insert'}
+                    📎 {uploading ? 'Đang tải...' : 'Tải Insert 1'}
                   </label>
                   
                   {testData.basicInfo.resource_pdf_url && (
                     <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 flex-1 min-w-0">
                       <span className="text-amber-500 shrink-0">📎</span>
-                      <span className="text-[12px] font-bold text-amber-700 truncate">Insert đã tải!</span>
+                      <span className="text-[12px] font-bold text-amber-700 truncate">Insert 1 ✓</span>
                       <button onClick={() => setTestData({...testData, basicInfo: {...testData.basicInfo, resource_pdf_url: ''}})} className="text-red-400 hover:text-red-600 text-[11px] font-bold shrink-0 ml-auto">Xóa</button>
                     </div>
                   )}
+                </div>
+
+                {/* 📎 FILE INSERT 2 (OPTIONAL) */}
+                <div className="mt-4">
+                  <label className="text-[13px] font-bold text-slate-600 block mb-1">File PDF Insert 2 <span className="text-slate-400 font-normal">(Tùy chọn)</span></label>
+                  <div className="flex items-center gap-3">
+                    <label className="bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[12px] font-bold cursor-pointer hover:bg-slate-50 shadow-sm transition inline-flex items-center gap-2">
+                      <input type="file" className="hidden" accept=".pdf" onChange={async (e) => {
+                        const file = e.target.files?.[0];
+                        if (!file || file.type !== "application/pdf") return;
+                        setUploading(true);
+                        try {
+                          const fileExt = file.name.split('.').pop();
+                          const fileName = `insert2_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
+                          const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file);
+                          if (error) throw error;
+                          const url = supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
+                          setTestData({...testData, basicInfo: {...testData.basicInfo, resource_pdf_url_2: url}});
+                        } catch (err: any) { alert("Lỗi upload: " + err.message); }
+                        finally { setUploading(false); }
+                      }} />
+                      📎 {uploading ? 'Đang tải...' : 'Tải Insert 2'}
+                    </label>
+                    
+                    {testData.basicInfo.resource_pdf_url_2 && (
+                      <div className="flex items-center gap-2 bg-violet-50 border border-violet-200 rounded-lg px-3 py-2 flex-1 min-w-0">
+                        <span className="text-violet-500 shrink-0">📎</span>
+                        <span className="text-[12px] font-bold text-violet-700 truncate">Insert 2 ✓</span>
+                        <button onClick={() => setTestData({...testData, basicInfo: {...testData.basicInfo, resource_pdf_url_2: ''}})} className="text-red-400 hover:text-red-600 text-[11px] font-bold shrink-0 ml-auto">Xóa</button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

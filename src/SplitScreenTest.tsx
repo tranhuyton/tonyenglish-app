@@ -43,11 +43,14 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // 📎 Toggle PDF: Question Paper vs Insert
-  const [leftPdfView, setLeftPdfView] = useState<'question' | 'insert'>('question');
+  // 📎 Toggle PDF: Question Paper vs Insert 1 vs Insert 2
+  const [leftPdfView, setLeftPdfView] = useState<'question' | 'insert' | 'insert2'>('question');
   const questionPdfUrl = testData?.insert_pdf_url || testData?.pdf_url || testData?.content_json?.basicInfo?.insert_pdf_url || null;
   const insertPdfUrl = testData?.resource_pdf_url || testData?.content_json?.basicInfo?.resource_pdf_url || null;
+  const insert2PdfUrl = testData?.resource_pdf_url_2 || testData?.content_json?.basicInfo?.resource_pdf_url_2 || null;
   const hasInsertPdf = !!insertPdfUrl;
+  const hasInsert2Pdf = !!insert2PdfUrl;
+  const hasAnyInsert = hasInsertPdf || hasInsert2Pdf;
 
   // --- THUẬT TOÁN ĐỒNG HỒ ĐẾM NGƯỢC ---
   const [timeLeft, setTimeLeft] = useState(5400); 
@@ -140,6 +143,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
       };
       const fullPdfUrl = resolveUrl(questionPdfUrl);
       const fullInsertPdfUrl = resolveUrl(insertPdfUrl);
+      const fullInsert2PdfUrl = resolveUrl(insert2PdfUrl);
 
       const { data, error } = await supabase.functions.invoke('igcse-grader', {
         body: { 
@@ -147,7 +151,8 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
           textAnswers: currentAnswers,
           imageAnswers: [],
           pdfUrl: fullPdfUrl,
-          insertPdfUrl: fullInsertPdfUrl
+          insertPdfUrl: fullInsertPdfUrl,
+          insertPdfUrl2: fullInsert2PdfUrl
         }
       });
 
@@ -330,7 +335,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         {/* NỬA TRÁI: PDF */}
         <div style={{ width: `${leftWidth}%` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
           <div className="bg-[#323639] border-b border-[#202224] px-4 flex justify-between items-center h-10 shrink-0 shadow-sm">
-            {hasInsertPdf ? (
+            {hasAnyInsert ? (
               <div className="flex items-center gap-1">
                 <button 
                   onClick={() => setLeftPdfView('question')} 
@@ -338,12 +343,22 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                 >
                   📝 Question Paper
                 </button>
-                <button 
-                  onClick={() => setLeftPdfView('insert')} 
-                  className={`px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-wider transition-all ${leftPdfView === 'insert' ? 'bg-amber-500 text-white shadow-sm' : 'text-slate-400 hover:text-white hover:bg-white/10'}`}
-                >
-                  📎 Insert
-                </button>
+                {hasInsertPdf && (
+                  <button 
+                    onClick={() => setLeftPdfView('insert')} 
+                    className={`px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-wider transition-all ${leftPdfView === 'insert' ? 'bg-amber-500 text-white shadow-sm' : 'text-slate-400 hover:text-white hover:bg-white/10'}`}
+                  >
+                    📎 Insert{hasInsert2Pdf ? ' 1' : ''}
+                  </button>
+                )}
+                {hasInsert2Pdf && (
+                  <button 
+                    onClick={() => setLeftPdfView('insert2')} 
+                    className={`px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-wider transition-all ${leftPdfView === 'insert2' ? 'bg-violet-500 text-white shadow-sm' : 'text-slate-400 hover:text-white hover:bg-white/10'}`}
+                  >
+                    📎 Insert 2
+                  </button>
+                )}
               </div>
             ) : (
               <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">Đề thi</span>
@@ -351,9 +366,11 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
           </div>
           <div className={`flex-1 w-full h-full ${isDragging ? 'pointer-events-none' : ''}`}>
              {(() => {
-               const activePdfUrl = leftPdfView === 'insert' && insertPdfUrl ? insertPdfUrl : questionPdfUrl;
+               const activePdfUrl = leftPdfView === 'insert2' && insert2PdfUrl ? insert2PdfUrl 
+                 : leftPdfView === 'insert' && insertPdfUrl ? insertPdfUrl 
+                 : questionPdfUrl;
                if (activePdfUrl) {
-                 return <iframe key={activePdfUrl} src={`${activePdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title={leftPdfView === 'insert' ? 'PDF Insert' : 'PDF Question Paper'} />;
+                 return <iframe key={activePdfUrl} src={`${activePdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title={leftPdfView === 'insert2' ? 'PDF Insert 2' : leftPdfView === 'insert' ? 'PDF Insert 1' : 'PDF Question Paper'} />;
                }
                return <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">📄<p className="font-bold">Không có tài liệu PDF đính kèm.</p></div>;
              })()}
