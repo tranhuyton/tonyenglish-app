@@ -1,0 +1,108 @@
+{
+  "title": "Topic 1 Practice Questions",
+  "qp_url": "/Geography/Topical questions/Topic_1_Practice_Questions.pdf",
+  "questions": [
+    {
+      "question_number": "1(a)(i)",
+      "question_text": "Question 1(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "75 billion cumecs\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(ii)",
+      "question_text": "Question 1(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "24 billion cumecs\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "The rainfall pattern for the Blue Nile is very seasonal/monsoonal [1], with a peak flow in\nsummer and low flow in winter [1]. Award one mark for quantification, e.g. over 250 mm\nof rainfall in July, or about 800 mm of rainfall between June and September, or less than\n50 mm of rainfall in each month between October and February [1].\n[Max 3 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(i)",
+      "question_text": "Question 2(a)(i) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "c.7750 m3/s (accept 7600–7800 m3/s)\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(ii)",
+      "question_text": "Question 2(a)(ii) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "6000 m3/s (accept 6000–6250 m3/s)\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)",
+      "question_text": "Question 2(b) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "The flow of the Blue Nile without the GERD was very seasonal [1], with a peak flow in\nAugust/autumn [1], whereas the flow of the Blue Nile after the GERD was built was the\nsame year-round [1]. Award 1 mark for quantification.\n[Max 3 marks]"
+        ]
+      }
+    }
+  ]
+}

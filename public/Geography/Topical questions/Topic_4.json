@@ -1,0 +1,108 @@
+{
+  "title": "Topic 4 Practice Questions",
+  "qp_url": "/Geography/Topical questions/Topic_4_Practice_Questions.pdf",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "question_text": "Question 1(a) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Shallow-focus earthquakes are very widespread [1]. For example, they are found along\nthe Mid-Atlantic Ridge [1], the west coast of South America [1] and in much of southern\nEurope [1].\nDeep-focus earthquakes are much less common [1] and are found inland along the west\ncoast of South America [1] and in trenches, such as the Kuril, Philippine and Java Trenches\n[1].\n[Max 4 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Shallow-focus earthquakes are generally located along divergent/constructive\nboundaries [1] and along conservative/transform boundaries [1]. Deep-focus earthquakes\nare associated with subduction zones [1], where one plate subducts beneath\nanother [1].                                                                                                                  [Max 4 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)",
+      "question_text": "Question 2(a) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Cone [1], crater [1]\n[Max 2 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)",
+      "question_text": "Question 2(b) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Hazards associated with volcanoes include lava flows [1], which are slow-moving\n‘rivers’ of lava that may reach temperatures of up to 800–1200°C [1]. Volcanoes also\nproduce pyroclastic flows [1], which are clouds of volcanic debris, cinders, ash, pumice\nand gas [1] that travel at speeds of over 500 km/h and reach temperatures of up\nto 700°C [1].                                                                                                                 [Max 4 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)",
+      "question_text": "Question 2(c) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "People may live in areas at risk from volcanic activity as these areas produce fertile soils\n[1] that are good for farming. These areas also attract tourists [1] and so create jobs [1].\nOther advantages may include the creation of new land, mineral supply and geothermal\nenergy [1].\n[Max 4 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Question 3 (See PDF for details)",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 7",
+        "keywords_required": [
+          "Answers should examine a range of impacts of earthquakes, for example ground shaking,\nlandslides, destruction of buildings, injury and loss of life, loss of economic activity, etc.\nThe impacts will depend on the magnitude of the event – stronger earthquakes will\nrelease more energy than smaller ones. However, it is also important to assess the level of\ndevelopment of the area affected; the depth of the earthquakes; the nature of the area,\nwhether it is rural versus urban; the population density; the nature of buildings; the time\nof day or day of the week. In addition, there should be some assessment of attempts by\nthe government to manage the impacts of earthquake activity, such as through\nearthquake drills, building codes, search and rescue teams. If the answer to this question\ndoes not include examples, do not award more than 5 marks.\n[Max 7 marks]"
+        ]
+      }
+    }
+  ]
+}

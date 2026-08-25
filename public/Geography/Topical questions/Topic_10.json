@@ -1,0 +1,125 @@
+{
+  "title": "Topic 10 Practice Questions",
+  "qp_url": "/Geography/Topical questions/Topic_10_Practice_Questions.pdf",
+  "questions": [
+    {
+      "question_number": "1(a)(i)",
+      "question_text": "Question 1(a)(i) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "USA c.3800 kcal [1], Niger c.2600 kcal [1].\n[Max 2 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(a)(ii)",
+      "question_text": "Question 1(a)(ii) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "There is a positive relationship [1], i.e. as GDP per head increases calorie intake\nincreases [1]. For example, the USA has a GDP per head of about $60,000 and a\ncalorie intake of c.3800 kcal, whereas India has a GDP/head of less than $10,000\nand a calorie intake of c.2600 kcal [1]. Other anomalies include Kiribati and Niger,\nboth of which are low-income countries but have a higher-than-expected calorie\nintake [1].\n[Max 3 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)(i)",
+      "question_text": "Question 1(b)(i) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "A human factor that affects food supply is over-population/rapid population growth\n[1], which can lead to increased demand for food. This reduces the amount of food\navailable per person [1]. A physical factor is drought [1]. This reduces the amount of\nwater available to plants and so reduces growth [1].\n[Max 4 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)(ii)",
+      "question_text": "Question 1(b)(ii) (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "Food production can be increased by greater use of fertilisers [1]. This will increase\nthe amount of nutrients available to crops and enable greater growth [1]. Food\nproduction can also be increased by greater use of irrigation [1]. This is especially\nimportant in dry areas and places with limited water supplies as it enables plants to\ngrow despite the limited rainfall/water availability [1].\n[Max 4 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)",
+      "question_text": "Question 2(a) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "1970: 225 Tj [1], 2030: 575 Tj [1], an increase of 256% [1] (accept 250–260%).\n[Max 3 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)",
+      "question_text": "Question 2(b) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Increased the most in absolute size: accept oil and/or gas [1].\nIncreased the most in relative size: nuclear [1].\n[Max 2 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(c)",
+      "question_text": "Question 2(c) (See PDF for details)",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 7",
+        "keywords_required": [
+          "Types of energy sources include renewable and non-renewable sources. Renewable\nsources include HEP, solar, tidal/wave, wind, biomass and geothermal. Non-renewable\nsources include coal, oil, natural gas, shale oil and nuclear power. Although renewables\nare better for the environment they occur in limited locations and can be unreliable,\ne.g. wind. In contrast, although non-renewables are polluting and contribute to global\nwarming, they are widely used where there are large reserves of them and they are\nconsidered to be ‘convenient’. Answer should cover different energy sources and\nconsider their advantages and disadvantages. There should be an assessment, for\nexample, of which sources are best but why they might not be the most commonly\nused.\n[Max 7 marks]"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "title": "Topic 5 Practice Questions",
+  "qp_url": "/Geography/Topical questions/Topic_5_Practice_Questions.pdf",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "question_text": "Question 1(a) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "–0.4°C (+/– 0.02°C)\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "0.9°C (+/– 0.02°C)\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)",
+      "question_text": "Question 1(c) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "1900s and 1910s\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(d)",
+      "question_text": "Question 1(d) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "2010s\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(e)",
+      "question_text": "Question 1(e) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "1.4°C\n[2 marks]\nCambridge IGCSETM and O Level Geography\nFourth Edition\n© Hodder & Stoughton Ltd 2025"
+        ]
+      }
+    },
+    {
+      "question_number": "2",
+      "question_text": "Question 2 (See PDF for details)",
+      "total_marks": 4,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 4",
+        "keywords_required": [
+          "The greenhouse effect is a natural process [1] that benefits humanity [1]. It leads to the\npresence of greenhouse gases such as water vapour, carbon dioxide and methane in the\natmosphere [1]. These allow incoming short-wave radiation to pass through and reach the\nEarth, but they trap a proportion of the outgoing long-wave radiation. This raises the\ntemperature of the atmosphere [1]. As a result, the Earth is about 30°C warmer than it would\nbe if there were no greenhouse gases, and this allows humans to survive on Earth [1]. Global\nwarming is the increase in temperature of the Earth [1] as a result of increased amounts of\ngreenhouse gases in the Earth’s atmosphere [1]. These increased amounts of greenhouse\ngases are causing global warming, which is dangerous for people [1].                   [Max 4 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "3(a)",
+      "question_text": "Question 3(a) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Climate change mitigation means preventing global climate change [1]. Global climate\nchange adaptation means adapting to global climate change, in other words learning to\nlive with it rather than preventing it [1].\n[Max 2 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "3(b)",
+      "question_text": "Question 3(b) (See PDF for details)",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 7",
+        "keywords_required": [
+          "Answers are likely to distinguish between mitigation (trying to prevent climate\nchange) and adaptation (learning to live with climate change). Mitigation is better\nthan adaptation in the long term, as adaptation will not prevent climate change.\nHowever, the impacts of climate change may occur all over the world and not just\nin the countries that are causing global climate change. Answers may evaluate\ntechniques such as afforestation, using electric vehicles, building higher flood protection\nschemes, drought-resistant crops, desalination plants, making more anti-malarial drugs\navailable, geoengineering schemes, etc. Answers may also consider the trends in climate\nchange – the impacts of climate change will differ depending on whether temperatures\nrise by 1.5°C, 2°C or 4°C, for example. There must be some evaluation of specific\ntechniques/strategies. For answers that consider only mitigation or adaptation, do not\naward more than 5 marks.\n[Max 7 marks]"
+        ]
+      }
+    }
+  ]
+}

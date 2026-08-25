@@ -1,0 +1,142 @@
+{
+  "title": "Topic 2 Practice Questions",
+  "qp_url": "/Geography/Topical questions/Topic_2_Practice_Questions.pdf",
+  "questions": [
+    {
+      "question_number": "1(a)",
+      "question_text": "Question 1(a) (See PDF for details)",
+      "total_marks": 1,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 1",
+        "keywords_required": [
+          "A stack\n[1 mark]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(b)",
+      "question_text": "Question 1(b) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Tall [1]; thin/thinner just above the base than at the base [1]; relatively angular towards\nthe top [1].\n[Max 2 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "1(c)",
+      "question_text": "Question 1(c) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "On a headland, erosion will exploit any weakness, creating at first a cave [1]. Once the\ncave reaches both sides of the headland, an arch is formed [1]. A collapse of the top of the\narch forms a stack [1].\n[Max 3 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(i)",
+      "question_text": "Question 2(a)(i) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Mangroves are largely located along tropical coastlines [1], although they can extend\nas far north as South Korea and as far south as the southern tip of Australia [1]. They\nare located in tidal estuaries [1] and in areas of muddy waters that are rich with\nnutrients [1].\n[Max 3 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(a)(ii)",
+      "question_text": "Question 2(a)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Mangroves are salt tolerant, so they can exist in tidal estuaries and coastal zones [1].\nTidal estuaries are rich in nutrients from decaying wood and leaves, so provide a\nsource of nutrients for the mangroves [1].\n[Max 2 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(i)",
+      "question_text": "Question 2(b)(i) (See PDF for details)",
+      "total_marks": 3,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 3",
+        "keywords_required": [
+          "Mangroves are a rich source of food [1], fuel [1], building materials [1] and medicines\n[1]. They help reduce wind speeds during tropical cyclones [1]. They act as natural\nfilters, absorbing nutrients from farming and sewage disposal [1]. There should be a\nnamed example of a coastal area that provides examples of the importance of\nmangroves.\n[Max 3 marks]"
+        ]
+      }
+    },
+    {
+      "question_number": "2(b)(ii)",
+      "question_text": "Question 2(b)(ii) (See PDF for details)",
+      "total_marks": 2,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 2",
+        "keywords_required": [
+          "Many mangroves have been destroyed to make way for food production [1],\nespecially rice paddies and shrimp farms [1].\n[Max 2 marks]\nCambridge IGCSETM and O Level Geography\nFourth Edition\n© Hodder & Stoughton Ltd 2025"
+        ]
+      }
+    },
+    {
+      "question_number": "3",
+      "question_text": "Question 3 (See PDF for details)",
+      "total_marks": 7,
+      "inputs": [
+        {
+          "type": "textarea",
+          "label": "Nhập đáp án:"
+        }
+      ],
+      "marking_scheme": {
+        "rubric": "Total marks: 7",
+        "keywords_required": [
+          "There are many opportunities resulting from living in coastal areas, including employment in\nthe tourism and recreation, fishing and port industries. Many people feel ‘at home’ in coastal\nareas and derive health benefits and/or other environmental services (benefits) from the area\n[1]. Coastal areas also have milder climates than inland areas. Hazards in coastal areas include\nstorms, erosion and rising sea levels. Coastal erosion may cause some buildings to be\ndestroyed. Property prices can be quite high as many coastal areas attract retired and/or\nwealthy residents. Most developed answers are likely to have named and located supporting\nexamples. Both opportunities and hazards should be stated –if only one of these categories is\nstated, do not award more than 5 marks.\n[Max 7 marks]"
+        ]
+      }
+    }
+  ]
+}
