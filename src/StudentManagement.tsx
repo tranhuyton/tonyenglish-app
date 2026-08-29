@@ -809,7 +809,8 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                           )}
                           {taskPickerMode === 'test' && testBrowserCourseId && (() => {
                             const courseFolders = allFoldersForAssign.filter(f => f.course_id === testBrowserCourseId && !f.parent_id);
-                            const courseTests = allTestsForAssign.filter(t => t.course_id === testBrowserCourseId);
+                            const allCourseFolderIds = new Set(allFoldersForAssign.filter(f => f.course_id === testBrowserCourseId).map(f => f.id));
+                            const courseTests = allTestsForAssign.filter(t => t.course_id === testBrowserCourseId || (t.folder_id && allCourseFolderIds.has(t.folder_id)));
                             const rootTests = courseTests.filter(t => !t.folder_id);
                             
                             // Recursive: collect ALL test IDs under a folder (any depth)
