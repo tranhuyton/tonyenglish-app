@@ -196,7 +196,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, onRe
               return (
                 <button
                   key={i}
-                  onClick={() => day.isCurrentMonth ? setSelectedDate(isSelected ? null : day.date) : undefined}
+                  onClick={() => (hasTask || day.isCurrentMonth) ? setSelectedDate(isSelected ? null : day.date) : undefined}
                   className={`
                     aspect-square rounded-xl flex items-center justify-center text-[13px] font-semibold transition-all
                     ${!day.isCurrentMonth ? 'text-slate-300' : 'text-slate-700'}
