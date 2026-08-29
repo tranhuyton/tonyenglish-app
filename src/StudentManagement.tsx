@@ -118,26 +118,23 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const fetchStudentCoursesAndTests = async (userId: string) => {
     const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
     const courseIds = enrolls?.map(e => e.course_id) || [];
-    console.log('[v3] fetch courses:', courseIds.length);
     if (courseIds.length === 0) { setStudentCourses([]); return; }
     const { data: coursesData } = await supabase.from('courses').select('id, title, type').in('id', courseIds);
     setStudentCourses(coursesData || []);
-    const { data: folders } = await supabase.from('folders').select('id, course_id, parent_id, title, display_order').in('course_id', courseIds).order('display_order').limit(5000);
-    setAllFoldersForAssign(folders || []);
     
-    // Fetch tests - use .limit(5000) to avoid Supabase default 1000-row cap
-    const { data: testsByCourse } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('course_id', courseIds).order('order_index').limit(5000);
-    let allTests = testsByCourse || [];
+    // Fetch folders per course to bypass Supabase server-side max_rows=1000
+    const folderResults = await Promise.all(courseIds.map(cid =>
+      supabase.from('folders').select('id, course_id, parent_id, title, display_order').eq('course_id', cid).order('display_order').limit(1000)
+    ));
+    const allFolders = folderResults.flatMap(r => r.data || []);
+    setAllFoldersForAssign(allFolders);
     
-    // Also fetch tests by folder_id (some tests only have folder_id, not course_id)
-    const folderIds = (folders || []).map(f => f.id);
-    if (folderIds.length > 0) {
-      const { data: testsByFolder } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('folder_id', folderIds).order('order_index').limit(5000);
-      const existingIds = new Set(allTests.map(t => t.id));
-      (testsByFolder || []).forEach(t => { if (!existingIds.has(t.id)) allTests.push(t); });
-    }
+    // Fetch tests per course (each course < 1000 tests, so no truncation)
+    const testResults = await Promise.all(courseIds.map(cid =>
+      supabase.from('tests').select('id, title, test_type, folder_id, course_id').eq('course_id', cid).order('order_index').limit(1000)
+    ));
+    const allTests = testResults.flatMap(r => r.data || []);
     
-    console.log('[v3] total tests:', allTests.length);
     setAllTestsForAssign(allTests);
   };
 
@@ -814,17 +811,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                             const allCourseFolderIds = new Set(allFoldersForAssign.filter(f => f.course_id === testBrowserCourseId).map(f => f.id));
                             const courseTests = allTestsForAssign.filter(t => t.course_id === testBrowserCourseId || (t.folder_id && allCourseFolderIds.has(t.folder_id)));
                             const rootTests = courseTests.filter(t => !t.folder_id);
-                            console.log('[v3 RENDER] courseId:', testBrowserCourseId, 'folderIds:', allCourseFolderIds.size, 'courseTests:', courseTests.length);
-                            // Log Cambridge Test folder specifically
-                            const cambridgeFolder = courseFolders.find(f => f.title === 'Cambridge Test');
-                            if (cambridgeFolder) {
-                              const cambridgeChildren = allFoldersForAssign.filter(f => f.parent_id === cambridgeFolder.id);
-                              console.log('[v3 RENDER] Cambridge Test id:', cambridgeFolder.id, 'children:', cambridgeChildren.length, cambridgeChildren.map(f => f.title));
-                              cambridgeChildren.forEach(ch => {
-                                const chTests = courseTests.filter(t => t.folder_id === ch.id);
-                                console.log('[v3 RENDER]  ', ch.title, '→', chTests.length, 'tests');
-                              });
-                            }
+                            
                             // Recursive: collect ALL test IDs under a folder (any depth)
                             const getAllTestIdsUnder = (folderId: string): string[] => {
                               const direct = courseTests.filter(t => t.folder_id === folderId).map(t => t.id);
