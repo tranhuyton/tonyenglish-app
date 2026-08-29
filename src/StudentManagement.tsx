@@ -116,33 +116,26 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   };
 
   const fetchStudentCoursesAndTests = async (userId: string) => {
-    console.log('[DEBUG v2] fetchStudentCoursesAndTests called for userId:', userId);
     const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
     const courseIds = enrolls?.map(e => e.course_id) || [];
-    console.log('[DEBUG v2] courseIds:', courseIds);
     if (courseIds.length === 0) { setStudentCourses([]); return; }
     const { data: coursesData } = await supabase.from('courses').select('id, title, type').in('id', courseIds);
     setStudentCourses(coursesData || []);
-    console.log('[DEBUG v2] courses:', (coursesData||[]).map(c => c.title));
     const { data: folders } = await supabase.from('folders').select('id, course_id, parent_id, title, display_order').in('course_id', courseIds).order('display_order');
     setAllFoldersForAssign(folders || []);
-    console.log('[DEBUG v2] folders:', (folders||[]).length);
     
     // Fetch tests by course_id
-    const { data: testsByCourse, error: e1 } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('course_id', courseIds).order('order_index');
+    const { data: testsByCourse } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('course_id', courseIds).order('order_index');
     let allTests = testsByCourse || [];
-    console.log('[DEBUG v2] tests by course_id:', allTests.length, 'error:', e1?.message || 'none');
     
     // Also fetch tests by folder_id (some tests only have folder_id, not course_id)
     const folderIds = (folders || []).map(f => f.id);
     if (folderIds.length > 0) {
-      const { data: testsByFolder, error: e2 } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('folder_id', folderIds).order('order_index');
-      console.log('[DEBUG v2] tests by folder_id:', (testsByFolder||[]).length, 'error:', e2?.message || 'none');
+      const { data: testsByFolder } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('folder_id', folderIds).order('order_index');
       const existingIds = new Set(allTests.map(t => t.id));
       (testsByFolder || []).forEach(t => { if (!existingIds.has(t.id)) allTests.push(t); });
     }
     
-    console.log('[DEBUG v2] TOTAL tests loaded:', allTests.length);
     setAllTestsForAssign(allTests);
   };
 
@@ -819,10 +812,6 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                             const allCourseFolderIds = new Set(allFoldersForAssign.filter(f => f.course_id === testBrowserCourseId).map(f => f.id));
                             const courseTests = allTestsForAssign.filter(t => t.course_id === testBrowserCourseId || (t.folder_id && allCourseFolderIds.has(t.folder_id)));
                             const rootTests = courseTests.filter(t => !t.folder_id);
-                            console.log('[DEBUG v2 RENDER] testBrowserCourseId:', testBrowserCourseId);
-                            console.log('[DEBUG v2 RENDER] courseFolders (root):', courseFolders.map(f => f.title));
-                            console.log('[DEBUG v2 RENDER] allCourseFolderIds size:', allCourseFolderIds.size);
-                            console.log('[DEBUG v2 RENDER] courseTests:', courseTests.length, 'rootTests:', rootTests.length);
                             
                             // Recursive: collect ALL test IDs under a folder (any depth)
                             const getAllTestIdsUnder = (folderId: string): string[] => {
