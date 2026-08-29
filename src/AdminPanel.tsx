@@ -33,6 +33,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   // 🚀 TỐI ƯU MOBILE: State quản lý Sidebar trượt trên điện thoại
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [manualTaskTemplates, setManualTaskTemplates] = useState<any[]>([]);
+  const [courseTaskLinks, setCourseTaskLinks] = useState<any[]>([]);
+  const [expandedTemplateId, setExpandedTemplateId] = useState<string | null>(null);
 
   // --- DATABASE STATES ---
   const [courses, setCourses] = useState<any[]>([]);
@@ -182,6 +184,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     fetchNotifications();
     // Fetch manual task templates
     supabase.from('manual_task_templates').select('*').order('title').then(({ data }) => setManualTaskTemplates(data || []));
+    supabase.from('course_task_templates').select('*').then(({ data }) => setCourseTaskLinks(data || []));
 
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -1472,29 +1475,64 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <div className="p-8 text-center text-slate-400 text-[13px]">Chưa có mẫu việc thủ công nào. Bấm + Thêm để tạo.</div>
               ) : (
                 <div className="divide-y divide-slate-100">
-                  {manualTaskTemplates.map((tpl: any) => (
-                    <div key={tpl.id} className="px-5 py-3 flex items-center gap-4 hover:bg-slate-50">
-                      <span className="text-lg">📋</span>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
-                        {tpl.description && <p className="text-[11px] text-slate-400">{tpl.description}</p>}
+                  {manualTaskTemplates.map((tpl: any) => {
+                    const linkedCourseIds = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
+                    const linkedCourses = courses.filter(c => linkedCourseIds.includes(c.id));
+                    const isExpanded = expandedTemplateId === tpl.id;
+                    return (
+                    <div key={tpl.id} className="px-5 py-3 hover:bg-slate-50">
+                      <div className="flex items-center gap-4">
+                        <span className="text-lg">📋</span>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
+                          {tpl.description && <p className="text-[11px] text-slate-400">{tpl.description}</p>}
+                          {linkedCourses.length > 0 && (
+                            <div className="flex flex-wrap gap-1 mt-1">
+                              {linkedCourses.map(c => <span key={c.id} className="text-[10px] bg-sky-100 text-sky-700 px-1.5 py-0.5 rounded font-medium">{c.title}</span>)}
+                            </div>
+                          )}
+                        </div>
+                        <button onClick={() => setExpandedTemplateId(isExpanded ? null : tpl.id)} className={`text-slate-300 hover:text-[#0a5482] transition-colors ${isExpanded ? 'text-[#0a5482]' : ''}`} title="Gán vào khóa học">📚</button>
+                        <button onClick={async () => {
+                          const newTitle = prompt('Sửa tên công việc:', tpl.title);
+                          if (!newTitle?.trim()) return;
+                          const newDesc = prompt('Sửa mô tả (tùy chọn):', tpl.description || '');
+                          await supabase.from('manual_task_templates').update({ title: newTitle.trim(), description: (newDesc || '').trim() }).eq('id', tpl.id);
+                          const { data } = await supabase.from('manual_task_templates').select('*').order('title');
+                          setManualTaskTemplates(data || []);
+                        }} className="text-slate-300 hover:text-[#0a5482] transition-colors">✏️</button>
+                        <button onClick={async () => {
+                          if (!window.confirm(`Xóa "${tpl.title}"?`)) return;
+                          await supabase.from('manual_task_templates').delete().eq('id', tpl.id);
+                          const { data } = await supabase.from('manual_task_templates').select('*').order('title');
+                          setManualTaskTemplates(data || []);
+                        }} className="text-slate-300 hover:text-red-500 transition-colors">🗑</button>
                       </div>
-                      <button onClick={async () => {
-                        const newTitle = prompt('Sửa tên công việc:', tpl.title);
-                        if (!newTitle?.trim()) return;
-                        const newDesc = prompt('Sửa mô tả (tùy chọn):', tpl.description || '');
-                        await supabase.from('manual_task_templates').update({ title: newTitle.trim(), description: (newDesc || '').trim() }).eq('id', tpl.id);
-                        const { data } = await supabase.from('manual_task_templates').select('*').order('title');
-                        setManualTaskTemplates(data || []);
-                      }} className="text-slate-300 hover:text-[#0a5482] transition-colors">✏️</button>
-                      <button onClick={async () => {
-                        if (!window.confirm(`Xóa "${tpl.title}"?`)) return;
-                        await supabase.from('manual_task_templates').delete().eq('id', tpl.id);
-                        const { data } = await supabase.from('manual_task_templates').select('*').order('title');
-                        setManualTaskTemplates(data || []);
-                      }} className="text-slate-300 hover:text-red-500 transition-colors">🗑</button>
+                      {isExpanded && (
+                        <div className="mt-3 ml-10 p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                          <p className="text-[11px] font-bold text-slate-500 uppercase mb-2">Gán vào khóa học:</p>
+                          {courses.map(c => {
+                            const isLinked = linkedCourseIds.includes(c.id);
+                            return (
+                              <label key={c.id} className="flex items-center gap-2 p-1.5 rounded-lg cursor-pointer hover:bg-white">
+                                <input type="checkbox" checked={isLinked} onChange={async () => {
+                                  if (isLinked) {
+                                    await supabase.from('course_task_templates').delete().eq('course_id', c.id).eq('template_id', tpl.id);
+                                  } else {
+                                    await supabase.from('course_task_templates').insert([{ course_id: c.id, template_id: tpl.id }]);
+                                  }
+                                  const { data } = await supabase.from('course_task_templates').select('*');
+                                  setCourseTaskLinks(data || []);
+                                }} className="w-3.5 h-3.5 rounded accent-[#0a5482]" />
+                                <span className="text-[12px] text-slate-700">{c.title}</span>
+                              </label>
+                            );
+                          })}
+                        </div>
+                      )}
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>

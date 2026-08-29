@@ -37,6 +37,8 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const [taskPickerMode, setTaskPickerMode] = useState<'choose' | 'manual' | 'test'>('choose');
   const [manualTemplates, setManualTemplates] = useState<any[]>([]);
   const [selectedTemplates, setSelectedTemplates] = useState<Set<string>>(new Set());
+  const [courseTaskLinks, setCourseTaskLinks] = useState<any[]>([]);
+  const [manualBrowserCourseId, setManualBrowserCourseId] = useState<string | null>(null);
   
   // Test browser
   const [studentCourses, setStudentCourses] = useState<any[]>([]);
@@ -109,6 +111,8 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const fetchManualTemplates = async () => {
     const { data } = await supabase.from('manual_task_templates').select('*').order('title');
     setManualTemplates(data || []);
+    const { data: links } = await supabase.from('course_task_templates').select('*');
+    setCourseTaskLinks(links || []);
   };
 
   const fetchStudentCoursesAndTests = async (userId: string) => {
@@ -143,6 +147,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     setSelectedTemplates(new Set());
     setShowTaskPicker(false);
     setTaskPickerMode('choose');
+    setManualBrowserCourseId(null);
     setIsAddingAssignment(false);
     fetchAssignments(selectedStudent.id);
   };
@@ -705,13 +710,17 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                         <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
                           <div className="flex items-center gap-3">
                             {taskPickerMode !== 'choose' && (
-                              <button onClick={() => { setTaskPickerMode(testBrowserCourseId ? 'test' : 'choose'); setTestBrowserCourseId(null); }} className="text-slate-400 hover:text-slate-700 text-lg">←</button>
+                              <button onClick={() => { 
+                                if (taskPickerMode === 'manual' && manualBrowserCourseId) { setManualBrowserCourseId(null); }
+                                else if (taskPickerMode === 'test' && testBrowserCourseId) { setTestBrowserCourseId(null); }
+                                else { setTaskPickerMode('choose'); setTestBrowserCourseId(null); setManualBrowserCourseId(null); }
+                              }} className="text-slate-400 hover:text-slate-700 text-lg">←</button>
                             )}
                             <h3 className="font-black text-[#0a5482]">
-                              {taskPickerMode === 'choose' ? '+ Giao việc' : taskPickerMode === 'manual' ? '📋 Chọn việc thủ công' : testBrowserCourseId ? '📝 Chọn bài tập' : '📚 Chọn khóa học'}
+                              {taskPickerMode === 'choose' ? '+ Giao việc' : taskPickerMode === 'manual' ? (manualBrowserCourseId ? '📋 Chọn việc thủ công' : '📚 Chọn khóa học') : testBrowserCourseId ? '📝 Chọn bài tập' : '📚 Chọn khóa học'}
                             </h3>
                           </div>
-                          <button onClick={() => { setShowTaskPicker(false); setTaskPickerMode('choose'); }} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
+                          <button onClick={() => { setShowTaskPicker(false); setTaskPickerMode('choose'); setManualBrowserCourseId(null); }} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
                         </div>
                         <div className="flex-1 overflow-y-auto p-6">
                           {taskPickerMode === 'choose' && (
@@ -727,15 +736,37 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                               </button>
                             </div>
                           )}
-                          {taskPickerMode === 'manual' && (
+                          {taskPickerMode === 'manual' && !manualBrowserCourseId && (
                             <div className="space-y-2">
-                              {manualTemplates.length === 0 ? (
+                              {studentCourses.length === 0 ? (
+                                <div className="p-8 text-center text-slate-400 text-[13px]">Học sinh chưa được gán khóa học nào.</div>
+                              ) : studentCourses.map(c => {
+                                const templateCount = courseTaskLinks.filter(l => l.course_id === c.id).length;
+                                return (
+                                <button key={c.id} onClick={() => { setManualBrowserCourseId(c.id); setSelectedTemplates(new Set()); }} className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl hover:bg-sky-50 hover:border-[#0ea5e9] transition-all flex items-center gap-3 text-left">
+                                  <span className="text-xl">📚</span>
+                                  <div className="flex-1">
+                                    <p className="font-bold text-slate-800 text-[13px]">{c.title}</p>
+                                    <p className="text-[11px] text-slate-400">{templateCount} việc thủ công</p>
+                                  </div>
+                                  <span className="ml-auto text-slate-400">→</span>
+                                </button>
+                                );
+                              })}
+                            </div>
+                          )}
+                          {taskPickerMode === 'manual' && manualBrowserCourseId && (() => {
+                            const linkedTemplateIds = courseTaskLinks.filter(l => l.course_id === manualBrowserCourseId).map(l => l.template_id);
+                            const courseTemplates = manualTemplates.filter(t => linkedTemplateIds.includes(t.id));
+                            return (
+                            <div className="space-y-2">
+                              {courseTemplates.length === 0 ? (
                                 <div className="p-8 text-center text-slate-400 text-[13px]">
                                   <p className="text-4xl mb-3">📭</p>
-                                  <p className="font-bold">Chưa có danh mục việc thủ công</p>
-                                  <p className="text-[12px] mt-1">Vào Khóa học & Lớp → tab Danh mục việc thủ công để tạo.</p>
+                                  <p className="font-bold">Khóa học này chưa có việc thủ công</p>
+                                  <p className="text-[12px] mt-1">Vào Khóa học & Lớp → Danh mục Việc thủ công → 📚 để gán.</p>
                                 </div>
-                              ) : manualTemplates.map(tpl => (
+                              ) : courseTemplates.map(tpl => (
                                 <label key={tpl.id} className={`flex items-center gap-3 p-3 rounded-xl border cursor-pointer transition-all ${selectedTemplates.has(tpl.id) ? 'bg-sky-50 border-[#0ea5e9]' : 'border-slate-200 hover:bg-slate-50'}`}>
                                   <input type="checkbox" checked={selectedTemplates.has(tpl.id)} onChange={() => {
                                     const s = new Set(selectedTemplates);
@@ -749,7 +780,8 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                                 </label>
                               ))}
                             </div>
-                          )}
+                            );
+                          })()}
                           {taskPickerMode === 'test' && !testBrowserCourseId && (
                             <div className="space-y-2">
                               {studentCourses.length === 0 ? (
