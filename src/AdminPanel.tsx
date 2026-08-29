@@ -32,6 +32,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   
   // 🚀 TỐI ƯU MOBILE: State quản lý Sidebar trượt trên điện thoại
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [manualTaskTemplates, setManualTaskTemplates] = useState<any[]>([]);
 
   // --- DATABASE STATES ---
   const [courses, setCourses] = useState<any[]>([]);
@@ -179,6 +180,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     fetchGlobalLectures();
     fetchPdfFiles(); 
     fetchNotifications();
+    // Fetch manual task templates
+    supabase.from('manual_task_templates').select('*').order('title').then(({ data }) => setManualTaskTemplates(data || []));
 
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -1407,6 +1410,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           
           {/* VIEW: DANH SÁCH KHÓA HỌC */}
           {activeTab === 'courses' && (
+            <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
               {isLoadingCourses ? ( <div className="text-slate-400">Đang tải...</div> ) : (
                 courses.map(course => (
@@ -1443,6 +1447,50 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 ))
               )}
             </div>
+
+            {/* ========== DANH MỤC VIỆC THỦ CÔNG ========== */}
+            <div className="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+              <div className="px-5 py-4 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
+                <div>
+                  <h3 className="font-black text-sm text-[#0a5482]">📋 Danh mục Việc thủ công</h3>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Tạo sẵn danh sách việc để giao nhanh cho học sinh trong Lịch báo bài</p>
+                </div>
+                <button onClick={() => { 
+                  const title = prompt('Tên công việc:'); 
+                  if (!title?.trim()) return;
+                  const desc = prompt('Mô tả (tùy chọn):') || '';
+                  (async () => {
+                    const { data: { session } } = await supabase.auth.getSession();
+                    await supabase.from('manual_task_templates').insert([{ title: title.trim(), description: desc.trim(), created_by: session?.user?.id }]);
+                    // Refresh - trigger re-render
+                    const { data } = await supabase.from('manual_task_templates').select('*').order('title');
+                    setManualTaskTemplates(data || []);
+                  })();
+                }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Thêm</button>
+              </div>
+              {manualTaskTemplates.length === 0 ? (
+                <div className="p-8 text-center text-slate-400 text-[13px]">Chưa có mẫu việc thủ công nào. Bấm + Thêm để tạo.</div>
+              ) : (
+                <div className="divide-y divide-slate-100">
+                  {manualTaskTemplates.map((tpl: any) => (
+                    <div key={tpl.id} className="px-5 py-3 flex items-center gap-4 hover:bg-slate-50">
+                      <span className="text-lg">📋</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
+                        {tpl.description && <p className="text-[11px] text-slate-400">{tpl.description}</p>}
+                      </div>
+                      <button onClick={async () => {
+                        if (!window.confirm(`Xóa "${tpl.title}"?`)) return;
+                        await supabase.from('manual_task_templates').delete().eq('id', tpl.id);
+                        const { data } = await supabase.from('manual_task_templates').select('*').order('title');
+                        setManualTaskTemplates(data || []);
+                      }} className="text-slate-300 hover:text-red-500 transition-colors">🗑</button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            </>
           )}
 
           {/* VIEW: QUẢN LÝ TÀI LIỆU PDF */}
