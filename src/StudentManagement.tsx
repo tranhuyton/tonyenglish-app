@@ -121,17 +121,17 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     if (courseIds.length === 0) { setStudentCourses([]); return; }
     const { data: coursesData } = await supabase.from('courses').select('id, title, type').in('id', courseIds);
     setStudentCourses(coursesData || []);
-    const { data: folders } = await supabase.from('folders').select('id, course_id, parent_id, title, display_order').in('course_id', courseIds).order('display_order');
+    const { data: folders } = await supabase.from('folders').select('id, course_id, parent_id, title, display_order').in('course_id', courseIds).order('display_order').limit(5000);
     setAllFoldersForAssign(folders || []);
     
-    // Fetch tests by course_id
-    const { data: testsByCourse } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('course_id', courseIds).order('order_index');
+    // Fetch tests - use .limit(5000) to avoid Supabase default 1000-row cap
+    const { data: testsByCourse } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('course_id', courseIds).order('order_index').limit(5000);
     let allTests = testsByCourse || [];
     
     // Also fetch tests by folder_id (some tests only have folder_id, not course_id)
     const folderIds = (folders || []).map(f => f.id);
     if (folderIds.length > 0) {
-      const { data: testsByFolder } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('folder_id', folderIds).order('order_index');
+      const { data: testsByFolder } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('folder_id', folderIds).order('order_index').limit(5000);
       const existingIds = new Set(allTests.map(t => t.id));
       (testsByFolder || []).forEach(t => { if (!existingIds.has(t.id)) allTests.push(t); });
     }
