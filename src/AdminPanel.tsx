@@ -1480,6 +1480,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         {tpl.description && <p className="text-[11px] text-slate-400">{tpl.description}</p>}
                       </div>
                       <button onClick={async () => {
+                        const newTitle = prompt('Sửa tên công việc:', tpl.title);
+                        if (!newTitle?.trim()) return;
+                        const newDesc = prompt('Sửa mô tả (tùy chọn):', tpl.description || '');
+                        await supabase.from('manual_task_templates').update({ title: newTitle.trim(), description: (newDesc || '').trim() }).eq('id', tpl.id);
+                        const { data } = await supabase.from('manual_task_templates').select('*').order('title');
+                        setManualTaskTemplates(data || []);
+                      }} className="text-slate-300 hover:text-[#0a5482] transition-colors">✏️</button>
+                      <button onClick={async () => {
                         if (!window.confirm(`Xóa "${tpl.title}"?`)) return;
                         await supabase.from('manual_task_templates').delete().eq('id', tpl.id);
                         const { data } = await supabase.from('manual_task_templates').select('*').order('title');
