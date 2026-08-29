@@ -814,7 +814,17 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                             const allCourseFolderIds = new Set(allFoldersForAssign.filter(f => f.course_id === testBrowserCourseId).map(f => f.id));
                             const courseTests = allTestsForAssign.filter(t => t.course_id === testBrowserCourseId || (t.folder_id && allCourseFolderIds.has(t.folder_id)));
                             const rootTests = courseTests.filter(t => !t.folder_id);
-                            
+                            console.log('[v3 RENDER] courseId:', testBrowserCourseId, 'folderIds:', allCourseFolderIds.size, 'courseTests:', courseTests.length);
+                            // Log Cambridge Test folder specifically
+                            const cambridgeFolder = courseFolders.find(f => f.title === 'Cambridge Test');
+                            if (cambridgeFolder) {
+                              const cambridgeChildren = allFoldersForAssign.filter(f => f.parent_id === cambridgeFolder.id);
+                              console.log('[v3 RENDER] Cambridge Test id:', cambridgeFolder.id, 'children:', cambridgeChildren.length, cambridgeChildren.map(f => f.title));
+                              cambridgeChildren.forEach(ch => {
+                                const chTests = courseTests.filter(t => t.folder_id === ch.id);
+                                console.log('[v3 RENDER]  ', ch.title, '→', chTests.length, 'tests');
+                              });
+                            }
                             // Recursive: collect ALL test IDs under a folder (any depth)
                             const getAllTestIdsUnder = (folderId: string): string[] => {
                               const direct = courseTests.filter(t => t.folder_id === folderId).map(t => t.id);
