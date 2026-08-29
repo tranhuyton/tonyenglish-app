@@ -10,7 +10,7 @@ const authSupabase = createClient(
 
 let studentSearchTimer: any;
 
-export default function StudentManagement({ onStartTest, autoSelectUserId, autoTab, onAutoSelectDone }: { onStartTest?: any, autoSelectUserId?: string | null, autoTab?: 'courses' | 'history' | 'activity' | null, onAutoSelectDone?: () => void }) {
+export default function StudentManagement({ onStartTest, autoSelectUserId, autoTab, onAutoSelectDone }: { onStartTest?: any, autoSelectUserId?: string | null, autoTab?: 'courses' | 'history' | 'activity' | 'assignments' | null, onAutoSelectDone?: () => void }) {
   const [students, setStudents] = useState<any[]>([]);
   const [courses, setCourses] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -24,8 +24,17 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const [studentHistory, setStudentHistory] = useState<any[]>([]);
   const [studentEnrollments, setStudentEnrollments] = useState<any[]>([]);
   const [isLoadingDetails, setIsLoadingDetails] = useState(false);
-  const [activeDetailTab, setActiveDetailTab] = useState<'courses' | 'history' | 'activity'>('courses');
+  const [activeDetailTab, setActiveDetailTab] = useState<'courses' | 'history' | 'activity' | 'assignments'>('courses');
   const [studentActivities, setStudentActivities] = useState<any[]>([]);
+
+  const [studentAssignments, setStudentAssignments] = useState<any[]>([]);
+  const [assignNewDate, setAssignNewDate] = useState(new Date().toISOString().split('T')[0]);
+  const [assignTitle, setAssignTitle] = useState('');
+  const [assignDesc, setAssignDesc] = useState('');
+  const [assignType, setAssignType] = useState<'manual' | 'test'>('manual');
+  const [assignTestId, setAssignTestId] = useState('');
+  const [allTestsForAssign, setAllTestsForAssign] = useState<any[]>([]);
+  const [isAddingAssignment, setIsAddingAssignment] = useState(false);
 
   const [showAssignModal, setShowAssignModal] = useState(false);
   const [isAssigning, setIsAssigning] = useState(false);
@@ -81,6 +90,54 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const fetchCourses = async () => {
     const { data } = await supabase.from('courses').select('id, title, type').order('created_at', { ascending: false });
     setCourses(data || []);
+  };
+
+  const fetchAssignments = async (userId: string) => {
+    const { data } = await supabase.from('assignments').select('*').eq('user_id', userId).order('due_date', { ascending: true });
+    setStudentAssignments(data || []);
+  };
+
+  const fetchTestsForAssign = async () => {
+    const { data } = await supabase.from('tests').select('id, title, test_type').eq('is_published', true).order('title');
+    setAllTestsForAssign(data || []);
+  };
+
+  useEffect(() => {
+    if (activeDetailTab === 'assignments' && selectedStudent) {
+      fetchAssignments(selectedStudent.id);
+      fetchTestsForAssign();
+    }
+  }, [activeDetailTab, selectedStudent]);
+
+  const handleAddAssignment = async () => {
+    if (!selectedStudent || !assignTitle.trim()) return;
+    setIsAddingAssignment(true);
+    const { data: { session } } = await supabase.auth.getSession();
+    await supabase.from('assignments').insert([{
+      user_id: selectedStudent.id,
+      due_date: assignNewDate,
+      title: assignTitle.trim(),
+      description: assignDesc.trim(),
+      task_type: assignType,
+      test_id: assignType === 'test' && assignTestId ? assignTestId : null,
+      created_by: session?.user?.id || null
+    }]);
+    setAssignTitle('');
+    setAssignDesc('');
+    setAssignTestId('');
+    setIsAddingAssignment(false);
+    fetchAssignments(selectedStudent.id);
+  };
+
+  const handleApproveAssignment = async (id: string) => {
+    await supabase.from('assignments').update({ admin_approved: true, is_completed: true, updated_at: new Date().toISOString() }).eq('id', id);
+    if (selectedStudent) fetchAssignments(selectedStudent.id);
+  };
+
+  const handleDeleteAssignment = async (id: string) => {
+    if (!window.confirm('Xóa công việc này?')) return;
+    await supabase.from('assignments').delete().eq('id', id);
+    if (selectedStudent) fetchAssignments(selectedStudent.id);
   };
 
   const handleSelectStudent = async (student: any) => {
@@ -393,6 +450,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
               <button onClick={() => setActiveDetailTab('courses')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'courses' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📚 Khóa học</button>
               <button onClick={() => setActiveDetailTab('history')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'history' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📊 Lịch sử Điểm</button>
               <button onClick={() => setActiveDetailTab('activity')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'activity' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>👀 Nhật ký Truy cập</button>
+              <button onClick={() => setActiveDetailTab('assignments')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'assignments' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📅 Lịch báo bài</button>
             </div>
             
             <div className="p-6 flex-1 bg-white">
@@ -491,6 +549,89 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                       ))}
                     </div>
                   )}
+                </div>
+              ) : activeDetailTab === 'assignments' ? (
+                <div className="space-y-6">
+                  {/* FORM THÊM CÔNG VIỆC */}
+                  <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <h4 className="font-black text-sm text-[#0a5482] uppercase">+ Giao công việc mới</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="text-[12px] font-bold text-slate-600 block mb-1">Ngày hạn</label>
+                        <input type="date" value={assignNewDate} onChange={e => setAssignNewDate(e.target.value)} className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-[13px] outline-none focus:ring-2 focus:ring-[#0a5482]" />
+                      </div>
+                      <div>
+                        <label className="text-[12px] font-bold text-slate-600 block mb-1">Loại</label>
+                        <select value={assignType} onChange={e => setAssignType(e.target.value as any)} className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-[13px] outline-none">
+                          <option value="manual">📋 Việc thủ công</option>
+                          <option value="test">📝 Bài tập trong hệ thống</option>
+                        </select>
+                      </div>
+                    </div>
+                    {assignType === 'test' ? (
+                      <div>
+                        <label className="text-[12px] font-bold text-slate-600 block mb-1">Chọn bài tập</label>
+                        <select value={assignTestId} onChange={e => { setAssignTestId(e.target.value); const t = allTestsForAssign.find((x: any) => String(x.id) === String(e.target.value)); if (t) setAssignTitle(t.title); }} className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-[13px] outline-none">
+                          <option value="">-- Chọn đề --</option>
+                          {allTestsForAssign.map((t: any) => <option key={t.id} value={t.id}>{t.title} ({t.test_type})</option>)}
+                        </select>
+                      </div>
+                    ) : (
+                      <>
+                        <div>
+                          <label className="text-[12px] font-bold text-slate-600 block mb-1">Tên công việc</label>
+                          <input value={assignTitle} onChange={e => setAssignTitle(e.target.value)} placeholder="VD: Chép 3000 từ vựng trong sách" className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-[13px] outline-none focus:ring-2 focus:ring-[#0a5482]" />
+                        </div>
+                        <div>
+                          <label className="text-[12px] font-bold text-slate-600 block mb-1">Mô tả (tùy chọn)</label>
+                          <input value={assignDesc} onChange={e => setAssignDesc(e.target.value)} placeholder="Ghi chú thêm..." className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-[13px] outline-none" />
+                        </div>
+                      </>
+                    )}
+                    <button onClick={handleAddAssignment} disabled={!assignTitle.trim() || isAddingAssignment} className="bg-[#0a5482] text-white px-6 py-2.5 rounded-xl text-[13px] font-bold hover:bg-[#083d5e] disabled:opacity-50 transition-all">  
+                      {isAddingAssignment ? '⏳ Đang thêm...' : '+ Thêm công việc'}
+                    </button>
+                  </div>
+
+                  {/* DANH SÁCH ĐÃ GIAO */}
+                  <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div className="px-5 py-3 border-b border-slate-100 bg-slate-50">
+                      <h4 className="font-black text-sm text-slate-700">Danh sách công việc đã giao ({studentAssignments.length})</h4>
+                    </div>
+                    {studentAssignments.length === 0 ? (
+                      <div className="p-8 text-center text-slate-400 text-[13px]">Chưa giao công việc nào cho học sinh này.</div>
+                    ) : (
+                      <div className="divide-y divide-slate-100">
+                        {studentAssignments.map((a: any) => (
+                          <div key={a.id} className="px-5 py-3 flex items-center gap-4 hover:bg-slate-50">
+                            <div className={`w-3 h-3 rounded-full shrink-0 ${
+                              a.is_completed ? 'bg-emerald-500' :
+                              a.student_completed ? 'bg-amber-400' :
+                              new Date(a.due_date) < new Date(new Date().toISOString().split('T')[0]) ? 'bg-red-500' :
+                              'bg-[#0ea5e9]'
+                            }`}></div>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-[13px] font-bold text-slate-800 truncate">{a.title}</p>
+                              <p className="text-[11px] text-slate-400">
+                                {a.task_type === 'test' ? '📝 Bài tập' : '📋 Thủ công'} · Hạn: {new Date(a.due_date + 'T00:00:00').toLocaleDateString('vi-VN')}
+                                {a.description ? ` · ${a.description}` : ''}
+                              </p>
+                            </div>
+                            <div className="flex items-center gap-2 shrink-0">
+                              {a.is_completed && <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">✅ Hoàn thành</span>}
+                              {a.student_completed && !a.is_completed && a.task_type === 'manual' && (
+                                <button onClick={() => handleApproveAssignment(a.id)} className="text-[10px] font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full hover:bg-amber-200 transition-colors">
+                                  ⏳ Duyệt
+                                </button>
+                              )}
+                              {!a.is_completed && !a.student_completed && <span className="text-[10px] font-bold text-slate-400">Chờ</span>}
+                              <button onClick={() => handleDeleteAssignment(a.id)} className="text-slate-300 hover:text-red-500 transition-colors text-[14px]">🗑</button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               ) : null}
 

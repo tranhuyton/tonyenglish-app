@@ -357,6 +357,13 @@ const handleFinish = async () => {
           // 🚀 LƯU TRỮ TOÀN BỘ PHÂN TÍCH DẠNG BÀI VÀO DETAILS
           details: { test_id: safeTestData?.id, bandScore: band, userAnswers: currentAnswers, type_stats: questionTypeStats }
         }]);
+
+        // Auto-complete test-type assignments
+        await supabase.from('assignments')
+          .update({ is_completed: true, updated_at: new Date().toISOString() })
+          .eq('test_id', safeTestData?.id)
+          .eq('user_id', user.id)
+          .eq('task_type', 'test');
       
       // 🚀 ANH DÁN ĐOẠN CODE BẮN PHÁO HIỆU VÀO ĐÂY NHÉ:
       await supabase.from('activity_logs').insert([{

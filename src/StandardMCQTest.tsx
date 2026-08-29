@@ -537,6 +537,14 @@ const handleFinish = async () => {
               type_stats: questionTypeStats 
           }
         }]);
+        
+        // Auto-complete test-type assignments
+        await supabase.from('assignments')
+          .update({ is_completed: true, updated_at: new Date().toISOString() })
+          .eq('test_id', safeData?.id)
+          .eq('user_id', user.id)
+          .eq('task_type', 'test');
+
       await supabase.from('activity_logs').insert([{
         user_id: user.id, 
         action_type: 'finish_test',

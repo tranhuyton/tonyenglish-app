@@ -480,6 +480,13 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
             details: { test_id: testData.id, userAnswers: currentAnswers, aiFeedback: gradedData }
           }]);
+
+          // Auto-complete test-type assignments
+          await supabase.from('assignments')
+            .update({ is_completed: true, updated_at: new Date().toISOString() })
+            .eq('test_id', testData.id)
+            .eq('user_id', user.id)
+            .eq('task_type', 'test');
         }
       } catch (dbError) { console.error("DB save error:", dbError); }
 

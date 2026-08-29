@@ -203,6 +203,13 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
             details: { test_id: testData.id, userAnswers: currentAnswers, aiFeedback: gradedData }
           }]);
 
+          // Auto-complete test-type assignments
+          await supabase.from('assignments')
+            .update({ is_completed: true, updated_at: new Date().toISOString() })
+            .eq('test_id', testData.id)
+            .eq('user_id', user.id)
+            .eq('task_type', 'test');
+
           // Bắn thông báo Activity
           await supabase.from('activity_logs').insert([{
             user_id: user.id,

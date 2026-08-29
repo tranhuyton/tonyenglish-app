@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { supabase } from './supabase';
+import AssignmentCalendar from './AssignmentCalendar';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const FOLDER_IMAGES = [
@@ -82,10 +83,10 @@ const getCourseCover = (course: any) => {
 export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: any) {
   const [isLoading, setIsLoading] = useState(true);
   
-  const [activeTab, setActiveTab] = useState<'library'|'analytics'|'profile'>(() => {
+  const [activeTab, setActiveTab] = useState<'library'|'calendar'|'analytics'|'profile'>(() => {
     const saved = sessionStorage.getItem('lms_portal_tab');
-    if (saved === 'library' || saved === 'analytics' || saved === 'profile') {
-      return saved as 'library'|'analytics'|'profile';
+    if (saved === 'library' || saved === 'calendar' || saved === 'analytics' || saved === 'profile') {
+      return saved as 'library'|'calendar'|'analytics'|'profile';
     }
     return 'library';
   });
@@ -121,6 +122,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [userProfile, setUserProfile] = useState<any>(null);
   const [userClassIds, setUserClassIds] = useState<string[]>([]);
+  const [assignments, setAssignments] = useState<any[]>([]);
   
   const [targetIelts, setTargetIelts] = useState<string>(() => {
       try {
@@ -228,13 +230,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             { data: lp },
             { data: cStudents },
             { data: enrolls },
-            { data: hData }
+            { data: hData },
+            { data: assignData }
         ] = await Promise.all([
             supabase.from('profiles').select('*').eq('id', user.id).single(),
             supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id),
             supabase.from('class_students').select('class_id').eq('user_id', user.id),
             supabase.from('enrollments').select('course_id').eq('user_id', user.id),
-            supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000)
+            supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000),
+            supabase.from('assignments').select('*').eq('user_id', user.id).order('due_date', { ascending: true })
         ]);
 
         setUserProfile(profile);
@@ -251,6 +255,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         
         setLectureProgressData(lp || []);
         if (cStudents) setUserClassIds(cStudents.map(c => c.class_id));
+        setAssignments(assignData || []);
 
         const courseIds = enrolls?.map(e => e.course_id) || [];
         
@@ -967,6 +972,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <button 
                   onClick={() => {
                       resetWorkspaceAndChat(); 
+                      setActiveTab('calendar');
+                  }} 
+                  className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold text-[13px] transition-all duration-200 ${activeTab === 'calendar' ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
+              >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                  Lịch báo bài
+              </button>
+              <button 
+                  onClick={() => {
+                      resetWorkspaceAndChat(); 
                       setActiveTab('analytics');
                   }} 
                   className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold text-[13px] transition-all duration-200 ${activeTab === 'analytics' ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
@@ -1006,6 +1021,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                          setIsDropdownOpen(false); 
                      }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2 transition-colors">
                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg> Học tập
+                     </button>
+                     <button onClick={() => { 
+                         resetWorkspaceAndChat(); 
+                         setActiveTab('calendar'); 
+                         setIsDropdownOpen(false); 
+                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2 transition-colors">
+                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg> Lịch báo bài
                      </button>
                      <button onClick={() => { 
                          resetWorkspaceAndChat(); 
@@ -1431,6 +1453,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
               )}
             </div>
+          </div>
+        )}
+
+        {/* =====================================================================
+            📅 TRANG LỊCH BÁO BÀI (ASSIGNMENT CALENDAR)
+            ===================================================================== */}
+        {activeTab === 'calendar' && (
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 mx-2 md:mx-0 pb-8">
+            <AssignmentCalendar 
+              assignments={assignments} 
+              completedTestIds={completedTestIdsSet}
+              onRefresh={async () => {
+                if (!currentUser) return;
+                const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });
+                setAssignments(data || []);
+              }}
+              onStartTest={(testId) => {
+                const test = allTests.find(t => t.id === testId);
+                if (test) onStartTest(test.test_type, test);
+              }}
+            />
           </div>
         )}
 
