@@ -118,6 +118,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const fetchStudentCoursesAndTests = async (userId: string) => {
     const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
     const courseIds = enrolls?.map(e => e.course_id) || [];
+    console.log('[v3] fetch courses:', courseIds.length);
     if (courseIds.length === 0) { setStudentCourses([]); return; }
     const { data: coursesData } = await supabase.from('courses').select('id, title, type').in('id', courseIds);
     setStudentCourses(coursesData || []);
@@ -136,6 +137,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
       (testsByFolder || []).forEach(t => { if (!existingIds.has(t.id)) allTests.push(t); });
     }
     
+    console.log('[v3] total tests:', allTests.length);
     setAllTestsForAssign(allTests);
   };
 
