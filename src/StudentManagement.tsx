@@ -819,6 +819,10 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                             const allCourseFolderIds = new Set(allFoldersForAssign.filter(f => f.course_id === testBrowserCourseId).map(f => f.id));
                             const courseTests = allTestsForAssign.filter(t => t.course_id === testBrowserCourseId || (t.folder_id && allCourseFolderIds.has(t.folder_id)));
                             const rootTests = courseTests.filter(t => !t.folder_id);
+                            console.log('[DEBUG v2 RENDER] testBrowserCourseId:', testBrowserCourseId);
+                            console.log('[DEBUG v2 RENDER] courseFolders (root):', courseFolders.map(f => f.title));
+                            console.log('[DEBUG v2 RENDER] allCourseFolderIds size:', allCourseFolderIds.size);
+                            console.log('[DEBUG v2 RENDER] courseTests:', courseTests.length, 'rootTests:', rootTests.length);
                             
                             // Recursive: collect ALL test IDs under a folder (any depth)
                             const getAllTestIdsUnder = (folderId: string): string[] => {
