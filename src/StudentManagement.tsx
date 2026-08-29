@@ -123,8 +123,20 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     setStudentCourses(coursesData || []);
     const { data: folders } = await supabase.from('folders').select('id, course_id, parent_id, title, display_order').in('course_id', courseIds).order('display_order');
     setAllFoldersForAssign(folders || []);
-    const { data: tests } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('course_id', courseIds).eq('is_published', true).order('order_index');
-    setAllTestsForAssign(tests || []);
+    
+    // Fetch tests by course_id
+    const { data: testsByCourse } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('course_id', courseIds).order('order_index');
+    let allTests = testsByCourse || [];
+    
+    // Also fetch tests by folder_id (some tests only have folder_id, not course_id)
+    const folderIds = (folders || []).map(f => f.id);
+    if (folderIds.length > 0) {
+      const { data: testsByFolder } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').in('folder_id', folderIds).order('order_index');
+      const existingIds = new Set(allTests.map(t => t.id));
+      (testsByFolder || []).forEach(t => { if (!existingIds.has(t.id)) allTests.push(t); });
+    }
+    
+    setAllTestsForAssign(allTests);
   };
 
   useEffect(() => {
