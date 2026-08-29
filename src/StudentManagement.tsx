@@ -799,53 +799,50 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                             const courseFolders = allFoldersForAssign.filter(f => f.course_id === testBrowserCourseId && !f.parent_id);
                             const courseTests = allTestsForAssign.filter(t => t.course_id === testBrowserCourseId);
                             const rootTests = courseTests.filter(t => !t.folder_id);
+                            
+                            // Recursive: collect ALL test IDs under a folder (any depth)
+                            const getAllTestIdsUnder = (folderId: string): string[] => {
+                              const direct = courseTests.filter(t => t.folder_id === folderId).map(t => t.id);
+                              const children = allFoldersForAssign.filter(f => f.parent_id === folderId);
+                              const nested = children.flatMap(c => getAllTestIdsUnder(c.id));
+                              return [...direct, ...nested];
+                            };
+
+                            // Recursive render component
+                            const renderFolder = (folder: any, depth: number) => {
+                              const allTestIds = getAllTestIdsUnder(folder.id);
+                              const folderTests = courseTests.filter(t => t.folder_id === folder.id);
+                              const childFolders = allFoldersForAssign.filter(f => f.parent_id === folder.id);
+                              const allChecked = allTestIds.length > 0 && allTestIds.every(id => selectedTestIds.has(id));
+                              const someChecked = allTestIds.some(id => selectedTestIds.has(id));
+                              return (
+                                <div key={folder.id}>
+                                  <label className={`flex items-center gap-3 p-2.5 rounded-xl cursor-pointer transition-all ${someChecked ? 'bg-sky-50' : 'hover:bg-slate-50'}`} style={{ paddingLeft: `${depth * 20 + 10}px` }}>
+                                    <input type="checkbox" checked={allChecked} ref={el => { if (el) el.indeterminate = someChecked && !allChecked; }} onChange={() => {
+                                      const newSet = new Set(selectedTestIds);
+                                      allTestIds.forEach(id => allChecked ? newSet.delete(id) : newSet.add(id));
+                                      setSelectedTestIds(newSet);
+                                    }} className="w-4 h-4 rounded accent-[#0a5482]" />
+                                    <span className="text-[14px]">{depth === 0 ? '📁' : '📂'}</span>
+                                    <p className={`font-bold text-slate-700 ${depth === 0 ? 'text-[13px]' : 'text-[12px]'}`}>{folder.title}</p>
+                                    <span className="ml-auto text-[11px] text-slate-400">{allTestIds.length} đề</span>
+                                  </label>
+                                  <div>
+                                    {childFolders.map(cf => renderFolder(cf, depth + 1))}
+                                    {folderTests.map(t => (
+                                      <label key={t.id} className="flex items-center gap-3 p-1.5 rounded-lg cursor-pointer hover:bg-slate-50" style={{ paddingLeft: `${(depth + 1) * 20 + 10}px` }}>
+                                        <input type="checkbox" checked={selectedTestIds.has(t.id)} onChange={() => { const s = new Set(selectedTestIds); s.has(t.id) ? s.delete(t.id) : s.add(t.id); setSelectedTestIds(s); }} className="w-3.5 h-3.5 rounded accent-[#0a5482]" />
+                                        <p className="text-[12px] text-slate-600 truncate">{t.title}</p>
+                                      </label>
+                                    ))}
+                                  </div>
+                                </div>
+                              );
+                            };
+
                             return (
                               <div className="space-y-1">
-                                {courseFolders.map(folder => {
-                                  const folderTests = courseTests.filter(t => t.folder_id === folder.id);
-                                  const subFolders = allFoldersForAssign.filter(f => f.parent_id === folder.id);
-                                  const allFolderTestIds = [...folderTests.map(t => t.id), ...subFolders.flatMap(sf => courseTests.filter(t => t.folder_id === sf.id).map(t => t.id))];
-                                  const allChecked = allFolderTestIds.length > 0 && allFolderTestIds.every(id => selectedTestIds.has(id));
-                                  const someChecked = allFolderTestIds.some(id => selectedTestIds.has(id));
-                                  return (
-                                    <div key={folder.id}>
-                                      <label className={`flex items-center gap-3 p-2.5 rounded-xl cursor-pointer transition-all ${someChecked ? 'bg-sky-50' : 'hover:bg-slate-50'}`}>
-                                        <input type="checkbox" checked={allChecked} ref={el => { if (el) el.indeterminate = someChecked && !allChecked; }} onChange={() => toggleFolderSelection(folder.id)} className="w-4 h-4 rounded accent-[#0a5482]" />
-                                        <span className="text-[14px]">📁</span>
-                                        <p className="font-bold text-[13px] text-slate-700">{folder.title}</p>
-                                        <span className="ml-auto text-[11px] text-slate-400">{allFolderTestIds.length} đề</span>
-                                      </label>
-                                      <div className="ml-8 space-y-0.5">
-                                        {subFolders.map(sf => {
-                                          const sfTests = courseTests.filter(t => t.folder_id === sf.id);
-                                          return (
-                                            <div key={sf.id}>
-                                              <label className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-slate-50">
-                                                <input type="checkbox" checked={sfTests.length > 0 && sfTests.every(t => selectedTestIds.has(t.id))} onChange={() => toggleFolderSelection(sf.id)} className="w-3.5 h-3.5 rounded accent-[#0a5482]" />
-                                                <span className="text-[13px]">📂</span>
-                                                <p className="text-[12px] font-semibold text-slate-600">{sf.title}</p>
-                                              </label>
-                                              <div className="ml-7 space-y-0.5">
-                                                {sfTests.map(t => (
-                                                  <label key={t.id} className="flex items-center gap-3 p-1.5 rounded-lg cursor-pointer hover:bg-slate-50">
-                                                    <input type="checkbox" checked={selectedTestIds.has(t.id)} onChange={() => { const s = new Set(selectedTestIds); s.has(t.id) ? s.delete(t.id) : s.add(t.id); setSelectedTestIds(s); }} className="w-3.5 h-3.5 rounded accent-[#0a5482]" />
-                                                    <p className="text-[12px] text-slate-600 truncate">{t.title}</p>
-                                                  </label>
-                                                ))}
-                                              </div>
-                                            </div>
-                                          );
-                                        })}
-                                        {folderTests.map(t => (
-                                          <label key={t.id} className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-slate-50">
-                                            <input type="checkbox" checked={selectedTestIds.has(t.id)} onChange={() => { const s = new Set(selectedTestIds); s.has(t.id) ? s.delete(t.id) : s.add(t.id); setSelectedTestIds(s); }} className="w-3.5 h-3.5 rounded accent-[#0a5482]" />
-                                            <p className="text-[12px] text-slate-600 truncate">{t.title}</p>
-                                          </label>
-                                        ))}
-                                      </div>
-                                    </div>
-                                  );
-                                })}
+                                {courseFolders.map(folder => renderFolder(folder, 0))}
                                 {rootTests.map(t => (
                                   <label key={t.id} className="flex items-center gap-3 p-2.5 rounded-xl cursor-pointer hover:bg-slate-50">
                                     <input type="checkbox" checked={selectedTestIds.has(t.id)} onChange={() => { const s = new Set(selectedTestIds); s.has(t.id) ? s.delete(t.id) : s.add(t.id); setSelectedTestIds(s); }} className="w-4 h-4 rounded accent-[#0a5482]" />
