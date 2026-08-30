@@ -162,6 +162,58 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     fetchTestData();
   }, [dayPlanTestPickerFor, dayPlanCourseId]);
 
+  // 🚀 QUẢN LÝ BẢNG CÔNG VIỆC (TASK BOARD)
+  const [boardColumns, setBoardColumns] = useState<any[]>([]);
+  const [boardCards, setBoardCards] = useState<any[]>([]);
+  const [boardCardItems, setBoardCardItems] = useState<any[]>([]);
+  const [boardCourseId, setBoardCourseId] = useState<string>('');
+  const [expandedBoardCardId, setExpandedBoardCardId] = useState<string | null>(null);
+  const [boardTestPickerFor, setBoardTestPickerFor] = useState<string | null>(null); // card_id
+  const [boardTestSelectedIds, setBoardTestSelectedIds] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    if (!boardCourseId) {
+      setBoardColumns([]);
+      setBoardCards([]);
+      setBoardCardItems([]);
+      return;
+    }
+    const fetchBoard = async () => {
+      const { data: columns } = await supabase.from('board_columns').select('*').eq('course_id', boardCourseId).order('order_index', { ascending: true });
+      setBoardColumns(columns || []);
+      
+      if (columns && columns.length > 0) {
+        const colIds = columns.map(c => c.id);
+        const { data: cards } = await supabase.from('board_cards').select('*').in('column_id', colIds).order('order_index', { ascending: true });
+        setBoardCards(cards || []);
+        
+        if (cards && cards.length > 0) {
+          const cardIds = cards.map(c => c.id);
+          const { data: items } = await supabase.from('board_card_items').select('*').in('card_id', cardIds).order('order_index', { ascending: true });
+          setBoardCardItems(items || []);
+        } else {
+          setBoardCardItems([]);
+        }
+      } else {
+        setBoardCards([]);
+        setBoardCardItems([]);
+      }
+    };
+    fetchBoard();
+  }, [boardCourseId]);
+
+  // Fetch folders/tests when board test picker opens
+  useEffect(() => {
+    if (!boardTestPickerFor || !boardCourseId) return;
+    const fetchTestData = async () => {
+      const { data: folders } = await supabase.from('folders').select('id, course_id, parent_id, title, display_order').eq('course_id', boardCourseId).order('display_order').limit(1000);
+      setDayPlanFolders(folders || []);
+      const { data: tests } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').eq('course_id', boardCourseId).eq('is_published', true).order('order_index').limit(1000);
+      setDayPlanTests(tests || []);
+    };
+    fetchTestData();
+  }, [boardTestPickerFor, boardCourseId]);
+
   // 🚀 QUẢN LÝ CHUÔNG THÔNG BÁO TỪ HỌC VIÊN
   const [notifications, setNotifications] = useState<any[]>([]);
   const [showNotifications, setShowNotifications] = useState(false);
@@ -1814,6 +1866,245 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         setDayPlanSelectedTests(new Set());
                       }} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl text-[13px] font-bold transition-colors">
                         Thêm {dayPlanSelectedTests.size} bài tập
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* ========== BẢNG CÔNG VIỆC (TASK BOARD) ========== */}
+            <div className="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col min-h-[500px]">
+              <div className="px-5 py-4 border-b border-slate-100 bg-slate-50 flex flex-col md:flex-row md:items-center justify-between gap-4 shrink-0">
+                <div>
+                  <h3 className="font-black text-sm text-[#0a5482]">📋 Bảng Công việc (Task Board)</h3>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Tạo bảng công việc kiểu Trello cho học sinh theo dõi tiến độ</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <select 
+                    value={boardCourseId} 
+                    onChange={(e) => setBoardCourseId(e.target.value)}
+                    className="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-bold outline-none focus:border-[#0a5482] min-w-[200px]"
+                  >
+                    <option value="">-- Chọn Khóa học --</option>
+                    {courses.map(c => (
+                      <option key={c.id} value={c.id}>{c.title}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {boardCourseId ? (
+                <div className="flex-1 flex overflow-x-auto gap-4 p-4 custom-scrollbar bg-slate-100/50">
+                  {boardColumns.map(col => {
+                    const colCards = boardCards.filter(c => c.column_id === col.id);
+                    return (
+                      <div key={col.id} className="w-[280px] shrink-0 bg-slate-50/80 rounded-2xl p-3 border border-slate-200 flex flex-col max-h-full">
+                        <div className="flex items-center justify-between mb-3 px-1 shrink-0">
+                          <h4 className="font-black text-[13px] text-slate-700">{col.title} <span className="text-slate-400 font-normal text-[11px]">({colCards.length})</span></h4>
+                          <div className="flex gap-1">
+                            <button onClick={async () => {
+                              const newTitle = prompt('Đổi tên cột:', col.title);
+                              if (!newTitle?.trim()) return;
+                              await supabase.from('board_columns').update({ title: newTitle.trim() }).eq('id', col.id);
+                              setBoardColumns(boardColumns.map(c => c.id === col.id ? { ...c, title: newTitle.trim() } : c));
+                            }} className="text-slate-400 hover:text-[#0a5482] transition-colors p-1">✏️</button>
+                            <button onClick={async () => {
+                              if (!window.confirm(`Xóa cột "${col.title}" và tất cả thẻ bên trong?`)) return;
+                              await supabase.from('board_columns').delete().eq('id', col.id);
+                              setBoardColumns(boardColumns.filter(c => c.id !== col.id));
+                              setBoardCards(boardCards.filter(c => c.column_id !== col.id));
+                            }} className="text-slate-400 hover:text-red-500 transition-colors p-1">🗑</button>
+                          </div>
+                        </div>
+
+                        <div className="flex-1 overflow-y-auto space-y-2 min-h-[50px] custom-scrollbar pr-1">
+                          {colCards.map(card => {
+                            const cardItems = boardCardItems.filter(i => i.card_id === card.id);
+                            const isExpanded = expandedBoardCardId === card.id;
+                            
+                            return (
+                              <div key={card.id} className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:border-[#2bd6eb]/50">
+                                <div className="p-3 cursor-pointer group flex items-start gap-2" onClick={() => setExpandedBoardCardId(isExpanded ? null : card.id)}>
+                                  <div className="flex-1 min-w-0">
+                                    <h5 className="font-bold text-[13px] text-slate-700 leading-tight">{card.title}</h5>
+                                    {cardItems.length > 0 && (
+                                      <div className="mt-1.5 flex items-center gap-1 text-[10px] font-bold text-slate-400">
+                                        <span className="text-slate-300">☑</span> 0/{cardItems.length}
+                                      </div>
+                                    )}
+                                  </div>
+                                  <div className="flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button onClick={async (e) => {
+                                      e.stopPropagation();
+                                      const newTitle = prompt('Đổi tên thẻ:', card.title);
+                                      if (!newTitle?.trim()) return;
+                                      await supabase.from('board_cards').update({ title: newTitle.trim() }).eq('id', card.id);
+                                      setBoardCards(boardCards.map(c => c.id === card.id ? { ...c, title: newTitle.trim() } : c));
+                                    }} className="text-slate-300 hover:text-[#0a5482]">✏️</button>
+                                    <button onClick={async (e) => {
+                                      e.stopPropagation();
+                                      if (!window.confirm(`Xóa thẻ "${card.title}"?`)) return;
+                                      await supabase.from('board_cards').delete().eq('id', card.id);
+                                      setBoardCards(boardCards.filter(c => c.id !== card.id));
+                                    }} className="text-slate-300 hover:text-red-500">🗑</button>
+                                  </div>
+                                </div>
+                                
+                                {isExpanded && (
+                                  <div className="px-3 pb-3 pt-1 border-t border-slate-50 bg-slate-50/50">
+                                    <div className="space-y-1.5 mb-2">
+                                      {cardItems.map(item => (
+                                        <div key={item.id} className="flex items-start gap-2 bg-white p-2 rounded-lg border border-slate-100 shadow-sm">
+                                          <div className="text-sm mt-0.5">{item.task_type === 'test' ? '📝' : '📋'}</div>
+                                          <div className="flex-1 min-w-0">
+                                            <p className="text-[11px] font-bold text-slate-700 truncate">{item.title}</p>
+                                            <span className={`inline-block px-1.5 py-0.5 rounded text-[8px] font-black uppercase mt-1 ${item.task_type === 'test' ? 'bg-indigo-100 text-indigo-700' : 'bg-orange-100 text-orange-700'}`}>
+                                              {item.task_type === 'test' ? 'BÀI TẬP' : 'THỦ CÔNG'}
+                                            </span>
+                                          </div>
+                                          <button onClick={async () => {
+                                            if (!window.confirm('Xóa mục này?')) return;
+                                            await supabase.from('board_card_items').delete().eq('id', item.id);
+                                            setBoardCardItems(boardCardItems.filter(i => i.id !== item.id));
+                                          }} className="text-slate-300 hover:text-red-500 text-xs shrink-0">✕</button>
+                                        </div>
+                                      ))}
+                                    </div>
+                                    <div className="flex gap-2">
+                                      <button onClick={async () => {
+                                        const title = prompt('Tên công việc thủ công:');
+                                        if (!title?.trim()) return;
+                                        const nextOrder = cardItems.length > 0 ? Math.max(...cardItems.map(i => i.order_index || 0)) + 1 : 1;
+                                        const { data } = await supabase.from('board_card_items').insert([{
+                                          card_id: card.id, task_type: 'manual', title: title.trim(), order_index: nextOrder
+                                        }]).select();
+                                        if (data) setBoardCardItems([...boardCardItems, ...data]);
+                                      }} className="flex-1 py-1.5 border border-dashed border-slate-300 rounded-lg text-[10px] font-bold text-slate-500 hover:text-orange-600 hover:border-orange-300 hover:bg-orange-50 transition-colors">
+                                        + Thêm việc
+                                      </button>
+                                      <button onClick={() => { setBoardTestPickerFor(card.id); setBoardTestSelectedIds(new Set()); }} className="flex-1 py-1.5 border border-dashed border-slate-300 rounded-lg text-[10px] font-bold text-slate-500 hover:text-indigo-600 hover:border-indigo-300 hover:bg-indigo-50 transition-colors">
+                                        + Thêm bài tập
+                                      </button>
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                        
+                        <button onClick={async () => {
+                          const title = prompt('Tên thẻ mới:');
+                          if (!title?.trim()) return;
+                          const nextOrder = colCards.length > 0 ? Math.max(...colCards.map(c => c.order_index || 0)) + 1 : 1;
+                          const { data } = await supabase.from('board_cards').insert([{
+                            column_id: col.id, title: title.trim(), order_index: nextOrder
+                          }]).select();
+                          if (data) setBoardCards([...boardCards, ...data]);
+                        }} className="mt-2 w-full py-2 rounded-xl text-[12px] font-bold text-slate-500 hover:bg-slate-200/50 hover:text-[#0a5482] transition-colors shrink-0">
+                          + Thêm thẻ
+                        </button>
+                      </div>
+                    );
+                  })}
+                  
+                  <div className="w-[280px] shrink-0 h-12">
+                    <button onClick={async () => {
+                      const title = prompt('Tên cột (VD: Speaking, Reading...):');
+                      if (!title?.trim()) return;
+                      const nextOrder = boardColumns.length > 0 ? Math.max(...boardColumns.map(c => c.order_index || 0)) + 1 : 1;
+                      const { data } = await supabase.from('board_columns').insert([{
+                        course_id: boardCourseId, title: title.trim(), order_index: nextOrder
+                      }]).select();
+                      if (data) setBoardColumns([...boardColumns, ...data]);
+                    }} className="w-full h-full rounded-2xl border-2 border-dashed border-slate-300 text-[13px] font-bold text-slate-500 hover:border-[#2bd6eb] hover:text-[#0a5482] hover:bg-[#2bd6eb]/5 transition-all flex items-center justify-center gap-2">
+                      <span className="text-lg">+</span> Thêm cột
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="p-8 text-center text-slate-400 text-sm">Vui lòng chọn khóa học để xem Bảng Công việc.</div>
+              )}
+            </div>
+
+            {/* BOARD TEST PICKER MODAL */}
+            {boardTestPickerFor && (
+              <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setBoardTestPickerFor(null)}>
+                <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
+                  <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
+                    <h3 className="font-black text-[#0a5482]">📝 Chọn bài tập cho Bảng</h3>
+                    <button onClick={() => setBoardTestPickerFor(null)} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
+                  </div>
+                  <div className="flex-1 overflow-y-auto p-4">
+                    {dayPlanTests.length === 0 ? (
+                      <div className="p-8 text-center text-slate-400 text-[13px]">Đang tải bài tập...</div>
+                    ) : (() => {
+                      const rootFolders = dayPlanFolders.filter(f => !f.parent_id);
+                      const rootTests = dayPlanTests.filter(t => !t.folder_id);
+                      
+                      const renderFolder = (folder: any, depth: number = 0): React.ReactNode => {
+                        const children = dayPlanFolders.filter(f => f.parent_id === folder.id);
+                        const folderTests = dayPlanTests.filter(t => t.folder_id === folder.id);
+                        return (
+                          <div key={folder.id} style={{ marginLeft: depth * 16 }}>
+                            <div className="font-bold text-[12px] text-slate-600 py-1.5 flex items-center gap-1.5">
+                              <span className="text-amber-500">📁</span> {folder.title}
+                              <span className="text-[10px] text-slate-400 font-normal">{folderTests.length} đề</span>
+                            </div>
+                            {folderTests.map(test => (
+                              <label key={test.id} className="flex items-center gap-2 py-1 px-3 hover:bg-slate-50 rounded-lg cursor-pointer" style={{ marginLeft: 16 }}>
+                                <input type="checkbox" checked={boardTestSelectedIds.has(test.id)} onChange={() => {
+                                  const newSet = new Set(boardTestSelectedIds);
+                                  newSet.has(test.id) ? newSet.delete(test.id) : newSet.add(test.id);
+                                  setBoardTestSelectedIds(newSet);
+                                }} className="rounded" />
+                                <span className="text-[12px] text-slate-700">{test.title}</span>
+                              </label>
+                            ))}
+                            {children.map(ch => renderFolder(ch, depth + 1))}
+                          </div>
+                        );
+                      };
+                      
+                      return (
+                        <div className="space-y-1">
+                          {rootFolders.map(f => renderFolder(f))}
+                          {rootTests.map(test => (
+                            <label key={test.id} className="flex items-center gap-2 py-1.5 px-3 hover:bg-slate-50 rounded-lg cursor-pointer">
+                              <input type="checkbox" checked={boardTestSelectedIds.has(test.id)} onChange={() => {
+                                const newSet = new Set(boardTestSelectedIds);
+                                newSet.has(test.id) ? newSet.delete(test.id) : newSet.add(test.id);
+                                setBoardTestSelectedIds(newSet);
+                              }} className="rounded" />
+                              <span className="text-[12px] text-slate-700">{test.title}</span>
+                            </label>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                  {boardTestSelectedIds.size > 0 && (
+                    <div className="px-6 py-3 border-t border-slate-200 bg-slate-50 shrink-0">
+                      <button onClick={async () => {
+                        const cardItems = boardCardItems.filter(i => i.card_id === boardTestPickerFor);
+                        let nextOrder = cardItems.length > 0 ? Math.max(...cardItems.map(i => i.order_index || 0)) + 1 : 1;
+                        const newTasks = Array.from(boardTestSelectedIds).map(testId => {
+                          const test = dayPlanTests.find(t => t.id === testId);
+                          return {
+                            card_id: boardTestPickerFor,
+                            task_type: 'test',
+                            title: test?.title || '',
+                            test_id: testId,
+                            order_index: nextOrder++,
+                          };
+                        });
+                        const { data } = await supabase.from('board_card_items').insert(newTasks).select();
+                        if (data) setBoardCardItems([...boardCardItems, ...data]);
+                        setBoardTestPickerFor(null);
+                        setBoardTestSelectedIds(new Set());
+                      }} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl text-[13px] font-bold transition-colors">
+                        Thêm {boardTestSelectedIds.size} bài tập
                       </button>
                     </div>
                   )}

@@ -59,6 +59,12 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const [autoDistStartDate, setAutoDistStartDate] = useState<string>(new Date().toISOString().split('T')[0]);
   const [isAutoDistributing, setIsAutoDistributing] = useState(false);
 
+  const [showBoardAssign, setShowBoardAssign] = useState(false);
+  const [boardAssignCourseId, setBoardAssignCourseId] = useState<string | null>(null);
+  const [boardAssignColumns, setBoardAssignColumns] = useState<any[]>([]);
+  const [boardAssignCards, setBoardAssignCards] = useState<any[]>([]);
+  const [boardAssignItems, setBoardAssignItems] = useState<any[]>([]);
+  const [isBoardAssigning, setIsBoardAssigning] = useState(false);
 
   const [showCreateUserModal, setShowCreateUserModal] = useState(false);
   const [isCreatingUser, setIsCreatingUser] = useState(false);
@@ -213,6 +219,72 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
       setAutoDistSelectedDays(new Set());
     }
   }, [autoDistCourseId]);
+
+  useEffect(() => {
+    if (!boardAssignCourseId) {
+      setBoardAssignColumns([]);
+      setBoardAssignCards([]);
+      setBoardAssignItems([]);
+      return;
+    }
+    const fetchBoard = async () => {
+      const { data: cols } = await supabase.from('board_columns').select('*').eq('course_id', boardAssignCourseId).order('order_index', { ascending: true });
+      if (cols) setBoardAssignColumns(cols);
+
+      const { data: cards } = await supabase.from('board_cards').select('*').eq('course_id', boardAssignCourseId).order('order_index', { ascending: true });
+      if (cards) setBoardAssignCards(cards);
+
+      const { data: items } = await supabase.from('board_card_items').select('*').eq('course_id', boardAssignCourseId).order('order_index', { ascending: true });
+      if (items) setBoardAssignItems(items);
+    };
+    fetchBoard();
+  }, [boardAssignCourseId]);
+
+  const handleBoardAssignSubmit = async () => {
+    if (!selectedStudent || !boardAssignCourseId) return;
+    setIsBoardAssigning(true);
+    
+    try {
+      const inserts = [];
+      for (const col of boardAssignColumns) {
+        const colCards = boardAssignCards.filter(c => c.column_id === col.id);
+        for (const card of colCards) {
+          const cardItems = boardAssignItems.filter(i => i.card_id === card.id);
+          for (const item of cardItems) {
+            inserts.push({
+              user_id: selectedStudent.id,
+              title: item.title,
+              description: item.description,
+              task_type: item.task_type,
+              test_id: item.test_id,
+              category: col.title,
+              card_title: card.title,
+              card_order: card.order_index,
+              due_date: null
+            });
+          }
+        }
+      }
+      
+      if (inserts.length > 0) {
+        const { error } = await supabase.from('assignments').insert(inserts);
+        if (error) throw error;
+        
+        // Refresh assignments
+        const { data: updatedAssignments } = await supabase.from('assignments').select('*').eq('user_id', selectedStudent.id);
+        if (updatedAssignments) setStudentAssignments(updatedAssignments);
+      }
+      
+      setShowBoardAssign(false);
+      setBoardAssignCourseId(null);
+      alert('Đã giao thành công!');
+    } catch (err: any) {
+      console.error(err);
+      alert('Lỗi: ' + err.message);
+    } finally {
+      setIsBoardAssigning(false);
+    }
+  };
 
   const handleAutoDistribute = async () => {
     if (!selectedStudent || !autoDistCourseId || autoDistSelectedDays.size === 0) return;
@@ -791,6 +863,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                           <span className="text-slate-400 font-normal ml-2">({tasksForSelectedDate.length} việc)</span>
                         </h4>
                         <div className="flex items-center gap-2">
+                          <button onClick={() => setShowBoardAssign(true)} className="bg-violet-600 text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-violet-700 transition-all">📋 Giao Board</button>
                           <button onClick={() => setShowAutoDistribute(true)} className="bg-emerald-600 text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-emerald-700 transition-all">+ Tự động phân bổ</button>
                           <button onClick={() => { setShowTaskPicker(true); setTaskPickerMode('choose'); }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Giao việc</button>
                         </div>
@@ -1109,6 +1182,82 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                       <div className="px-6 py-3 border-t border-slate-200 shrink-0">
                         <button onClick={handleAutoDistribute} disabled={isAutoDistributing} className="w-full bg-emerald-600 text-white py-2.5 rounded-xl text-[13px] font-bold hover:bg-emerald-700 disabled:opacity-50 transition-all">
                           {isAutoDistributing ? '⏳ Đang phân bổ...' : `Xác nhận phân bổ`}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {showBoardAssign && (
+                <div className="fixed inset-0 bg-slate-900/60 flex items-center justify-center z-[100] p-4 backdrop-blur-sm">
+                  <div className="bg-white rounded-2xl shadow-xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-200">
+                    <div className="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                      <h3 className="font-black text-[15px] text-slate-800 flex items-center gap-2">
+                        <span className="text-xl">📋</span> {!boardAssignCourseId ? 'Chọn khóa học để Giao Board' : 'Xác nhận Giao Board'}
+                      </h3>
+                      <button onClick={() => { setShowBoardAssign(false); setBoardAssignCourseId(null); setBoardAssignColumns([]); setBoardAssignCards([]); setBoardAssignItems([]); }} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
+                    </div>
+
+                    <div className="flex-1 overflow-y-auto p-6">
+                      {!boardAssignCourseId ? (
+                        <div className="space-y-2">
+                          {studentCourses.length === 0 ? (
+                            <div className="p-8 text-center text-slate-400 text-[13px]">Học sinh chưa được gán khóa học nào.</div>
+                          ) : studentCourses.map(c => (
+                            <button key={c.id} onClick={() => setBoardAssignCourseId(c.id)} className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl hover:bg-violet-50 hover:border-violet-400 transition-all flex items-center gap-3 text-left">
+                              <span className="text-xl">📚</span>
+                              <p className="font-bold text-slate-800 text-[13px]">{c.title}</p>
+                              <span className="ml-auto text-slate-400">→</span>
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="space-y-6">
+                          <p className="text-[13px] text-slate-600 font-medium">Bản xem trước dữ liệu Board từ khóa học:</p>
+                          
+                          {boardAssignColumns.length === 0 ? (
+                            <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg text-center text-slate-500 text-[13px]">
+                              Khóa học này chưa có dữ liệu Board.
+                            </div>
+                          ) : (
+                            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-4 max-h-[300px] overflow-y-auto">
+                              <div className="flex items-center gap-2 mb-2">
+                                <span className="px-2 py-1 bg-violet-100 text-violet-700 rounded-md font-bold text-[12px]">Tổng cộng: {boardAssignItems.length} mục</span>
+                              </div>
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                {boardAssignColumns.map(col => {
+                                  const colCards = boardAssignCards.filter(c => c.column_id === col.id);
+                                  const cardIds = colCards.map(c => c.id);
+                                  const colItems = boardAssignItems.filter(i => cardIds.includes(i.card_id));
+                                  return (
+                                    <div key={col.id} className="bg-white border border-slate-200 rounded-md p-3">
+                                      <h4 className="font-bold text-[13px] text-slate-800 mb-1">{col.title}</h4>
+                                      <p className="text-[12px] text-slate-500">{colCards.length} thẻ / {colItems.length} mục việc</p>
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </div>
+                          )}
+
+                          <div className="bg-amber-50 border border-amber-200 p-3 rounded-lg flex items-start gap-2">
+                            <span className="text-amber-500 mt-0.5">⚠️</span>
+                            <p className="text-[12px] text-amber-700">Lưu ý: Tất cả các mục việc trong Board sẽ được giao cho học sinh dưới dạng bài tập không có ngày hạn.</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {boardAssignCourseId && (
+                      <div className="p-4 border-t border-slate-100 bg-slate-50 flex justify-end gap-2">
+                        <button onClick={() => setBoardAssignCourseId(null)} className="px-4 py-2 text-slate-500 hover:text-slate-800 font-semibold text-[13px] hover:bg-slate-200 rounded-lg transition-all" disabled={isBoardAssigning}>Quay lại</button>
+                        <button 
+                          onClick={handleBoardAssignSubmit}
+                          disabled={isBoardAssigning || boardAssignColumns.length === 0}
+                          className="px-6 py-2 bg-violet-600 text-white font-bold rounded-lg text-[13px] hover:bg-violet-700 transition-all disabled:opacity-50 flex items-center gap-2"
+                        >
+                          {isBoardAssigning ? 'Đang giao...' : 'Xác nhận Giao Board'}
                         </button>
                       </div>
                     )}

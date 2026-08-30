@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { supabase } from './supabase';
 import AssignmentCalendar from './AssignmentCalendar';
+import TaskBoard from './TaskBoard';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const FOLDER_IMAGES = [
@@ -83,10 +84,10 @@ const getCourseCover = (course: any) => {
 export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: any) {
   const [isLoading, setIsLoading] = useState(true);
   
-  const [activeTab, setActiveTab] = useState<'library'|'calendar'|'analytics'|'profile'>(() => {
+  const [activeTab, setActiveTab] = useState<'library'|'calendar'|'board'|'analytics'|'profile'>(() => {
     const saved = sessionStorage.getItem('lms_portal_tab');
-    if (saved === 'library' || saved === 'calendar' || saved === 'analytics' || saved === 'profile') {
-      return saved as 'library'|'calendar'|'analytics'|'profile';
+    if (saved === 'library' || saved === 'calendar' || saved === 'board' || saved === 'analytics' || saved === 'profile') {
+      return saved as 'library'|'calendar'|'board'|'analytics'|'profile';
     }
     return 'library';
   });
@@ -978,6 +979,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
                   Lịch báo bài
+              </button>
+              <button 
+                onClick={() => { resetWorkspaceAndChat(); setActiveTab('board'); }}
+                className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold text-[13px] transition-all duration-200 ${activeTab === 'board' ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+                Bảng công việc
               </button>
               <button 
                   onClick={() => {
