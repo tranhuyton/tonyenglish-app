@@ -191,6 +191,21 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     if (selectedStudent) fetchAssignments(selectedStudent.id);
   };
 
+  const handleReorderAssignment = async (taskId: string, direction: 'up' | 'down') => {
+    const tasks = studentAssignments.filter(a => a.due_date === assignSelectedDate).sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
+    const idx = tasks.findIndex(t => t.id === taskId);
+    const swapIdx = direction === 'up' ? idx - 1 : idx + 1;
+    if (swapIdx < 0 || swapIdx >= tasks.length) return;
+    const a = tasks[idx], b = tasks[swapIdx];
+    const aOrder = a.order_index ?? idx;
+    const bOrder = b.order_index ?? swapIdx;
+    await Promise.all([
+      supabase.from('assignments').update({ order_index: bOrder }).eq('id', a.id),
+      supabase.from('assignments').update({ order_index: aOrder }).eq('id', b.id),
+    ]);
+    if (selectedStudent) fetchAssignments(selectedStudent.id);
+  };
+
   const toggleFolderSelection = (folderId: string) => {
     const testsInFolder = allTestsForAssign.filter(t => t.folder_id === folderId);
     const allSelected = testsInFolder.every(t => selectedTestIds.has(t.id));
@@ -237,7 +252,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     const allDone = tasks.every(t => t.is_completed);
     assignDateStatus[date] = allDone ? 'green' : date < today ? 'red' : 'blue';
   });
-  const tasksForSelectedDate = studentAssignments.filter(a => a.due_date === assignSelectedDate);
+  const tasksForSelectedDate = studentAssignments.filter(a => a.due_date === assignSelectedDate).sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
 
   const handleSelectStudent = async (student: any) => {
     setSelectedStudent(student);
@@ -650,69 +665,93 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                   )}
                 </div>
               ) : activeDetailTab === 'assignments' ? (
-                <div className="space-y-5">
-                  {/* MINI CALENDAR */}
-                  <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100">
-                      <button onClick={() => setAssignCalMonth(new Date(assignCalMonth.getFullYear(), assignCalMonth.getMonth() - 1))} className="w-8 h-8 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-500">←</button>
-                      <h4 className="font-black text-sm text-[#0a5482] capitalize">{assignCalMonth.toLocaleDateString('vi-VN', { month: 'long', year: 'numeric' })}</h4>
-                      <button onClick={() => setAssignCalMonth(new Date(assignCalMonth.getFullYear(), assignCalMonth.getMonth() + 1))} className="w-8 h-8 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-500">→</button>
-                    </div>
-                    <div className="grid grid-cols-7 px-3 pt-2 pb-1">
-                      {['CN','T2','T3','T4','T5','T6','T7'].map(d => <div key={d} className="text-center text-[10px] font-bold text-slate-400 uppercase">{d}</div>)}
-                    </div>
-                    <div className="grid grid-cols-7 px-3 pb-3 gap-0.5">
-                      {assignCalDays.map((day, i) => {
-                        const status = assignDateStatus[day.date];
-                        const isSelected = assignSelectedDate === day.date;
-                        return (
-                          <button key={i} onClick={() => setAssignSelectedDate(day.date)}
-                            className={`relative aspect-square rounded-lg flex flex-col items-center justify-center text-[12px] font-semibold transition-all
-                              ${!day.isCurrentMonth ? 'text-slate-300' : 'text-slate-700'}
-                              ${day.isToday ? 'ring-1 ring-[#0ea5e9]' : ''}
-                              ${isSelected ? 'bg-[#0a5482] text-white scale-105 shadow' : 'hover:bg-slate-50'}
-                            `}>
-                            <span>{day.day}</span>
-                            {status && !isSelected && <span className={`absolute bottom-0.5 w-1.5 h-1.5 rounded-full ${status === 'green' ? 'bg-emerald-500' : status === 'red' ? 'bg-red-500' : 'bg-[#0ea5e9]'}`}></span>}
-                          </button>
-                        );
-                      })}
+                <div className="flex gap-5 items-start">
+                  {/* LEFT: MINI CALENDAR */}
+                  <div className="w-[320px] shrink-0">
+                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                      <div className="flex items-center justify-between px-4 py-2.5 border-b border-slate-100">
+                        <button onClick={() => setAssignCalMonth(new Date(assignCalMonth.getFullYear(), assignCalMonth.getMonth() - 1))} className="w-7 h-7 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-500">←</button>
+                        <h4 className="font-black text-[13px] text-[#0a5482] capitalize">{assignCalMonth.toLocaleDateString('vi-VN', { month: 'long', year: 'numeric' })}</h4>
+                        <button onClick={() => setAssignCalMonth(new Date(assignCalMonth.getFullYear(), assignCalMonth.getMonth() + 1))} className="w-7 h-7 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-500">→</button>
+                      </div>
+                      <div className="grid grid-cols-7 px-2 pt-2 pb-1">
+                        {['CN','T2','T3','T4','T5','T6','T7'].map(d => <div key={d} className="text-center text-[9px] font-bold text-slate-400 uppercase">{d}</div>)}
+                      </div>
+                      <div className="grid grid-cols-7 px-2 pb-2 gap-0.5">
+                        {assignCalDays.map((day, i) => {
+                          const status = assignDateStatus[day.date];
+                          const isSelected = assignSelectedDate === day.date;
+                          return (
+                            <button key={i} onClick={() => setAssignSelectedDate(day.date)}
+                              className={`aspect-square rounded-lg flex items-center justify-center text-[11px] font-semibold transition-all
+                                ${!day.isCurrentMonth ? 'text-slate-300' : 'text-slate-700'}
+                                ${day.isToday && !isSelected ? 'ring-1 ring-[#0ea5e9]' : ''}
+                                ${isSelected ? 'bg-[#0a5482] text-white scale-105 shadow' :
+                                  status === 'green' ? 'bg-emerald-100 text-emerald-800' :
+                                  status === 'red' ? 'bg-red-100 text-red-700' :
+                                  status === 'blue' ? 'bg-sky-100 text-sky-800' :
+                                  'hover:bg-slate-50'}
+                              `}>
+                              {day.day}
+                            </button>
+                          );
+                        })}
+                      </div>
+                      {/* LEGEND */}
+                      <div className="flex items-center justify-center gap-4 px-3 pb-2.5 text-[9px] text-slate-400">
+                        <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded bg-sky-100 border border-sky-300"></span> Chưa xong</span>
+                        <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded bg-emerald-100 border border-emerald-300"></span> Xong</span>
+                        <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded bg-red-100 border border-red-300"></span> Quá hạn</span>
+                      </div>
                     </div>
                   </div>
 
-                  {/* TASKS FOR SELECTED DATE */}
-                  <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div className="px-5 py-3 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
-                      <h4 className="font-black text-sm text-slate-700">
-                        📋 {new Date(assignSelectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })}
-                        <span className="text-slate-400 font-normal ml-2">({tasksForSelectedDate.length} việc)</span>
-                      </h4>
-                      <button onClick={() => { setShowTaskPicker(true); setTaskPickerMode('choose'); }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Giao việc</button>
-                    </div>
-                    {tasksForSelectedDate.length === 0 ? (
-                      <div className="p-8 text-center text-slate-400 text-[13px]">Chưa giao việc cho ngày này.</div>
-                    ) : (
-                      <div className="divide-y divide-slate-100">
-                        {tasksForSelectedDate.map((a: any) => (
-                          <div key={a.id} className="px-5 py-3 flex items-center gap-4 hover:bg-slate-50">
-                            <div className={`w-3 h-3 rounded-full shrink-0 ${a.is_completed ? 'bg-emerald-500' : a.student_completed ? 'bg-amber-400' : a.due_date < today ? 'bg-red-500' : 'bg-[#0ea5e9]'}`}></div>
-                            <div className="flex-1 min-w-0">
-                              <p className="text-[13px] font-bold text-slate-800 truncate">{a.title}</p>
-                              <p className="text-[11px] text-slate-400">{a.task_type === 'test' ? '📝 Bài tập' : '📋 Thủ công'}{a.description ? ` · ${a.description}` : ''}</p>
-                            </div>
-                            <div className="flex items-center gap-2 shrink-0">
-                              {a.is_completed && <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">✅ Hoàn thành</span>}
-                              {a.student_completed && !a.is_completed && a.task_type === 'manual' && (
-                                <button onClick={() => handleApproveAssignment(a.id)} className="text-[10px] font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full hover:bg-amber-200 transition-colors">⏳ Duyệt</button>
-                              )}
-                              {!a.is_completed && !a.student_completed && <span className="text-[10px] font-bold text-slate-400">Chờ</span>}
-                              <button onClick={() => handleDeleteAssignment(a.id)} className="text-slate-300 hover:text-red-500 transition-colors text-[14px]">🗑</button>
-                            </div>
-                          </div>
-                        ))}
+                  {/* RIGHT: TASKS FOR SELECTED DATE */}
+                  <div className="flex-1 min-w-0">
+                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                      <div className="px-5 py-3 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
+                        <h4 className="font-black text-sm text-slate-700">
+                          📋 {new Date(assignSelectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })}
+                          <span className="text-slate-400 font-normal ml-2">({tasksForSelectedDate.length} việc)</span>
+                        </h4>
+                        <button onClick={() => { setShowTaskPicker(true); setTaskPickerMode('choose'); }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Giao việc</button>
                       </div>
-                    )}
+                      {tasksForSelectedDate.length === 0 ? (
+                        <div className="p-8 text-center text-slate-400 text-[13px]">Chưa giao việc cho ngày này.</div>
+                      ) : (
+                        <div className="divide-y divide-slate-100 max-h-[500px] overflow-y-auto">
+                          {tasksForSelectedDate.map((a: any, idx: number) => (
+                            <div key={a.id} className="px-5 py-3 flex items-center gap-3 hover:bg-slate-50">
+                              {/* REORDER ARROWS */}
+                              <div className="flex flex-col gap-0.5 shrink-0">
+                                <button onClick={() => handleReorderAssignment(a.id, 'up')} disabled={idx === 0}
+                                  className={`w-5 h-5 rounded flex items-center justify-center text-[10px] transition-colors ${idx === 0 ? 'text-slate-200 cursor-default' : 'text-slate-400 hover:bg-slate-200 hover:text-slate-700'}`}>▲</button>
+                                <button onClick={() => handleReorderAssignment(a.id, 'down')} disabled={idx === tasksForSelectedDate.length - 1}
+                                  className={`w-5 h-5 rounded flex items-center justify-center text-[10px] transition-colors ${idx === tasksForSelectedDate.length - 1 ? 'text-slate-200 cursor-default' : 'text-slate-400 hover:bg-slate-200 hover:text-slate-700'}`}>▼</button>
+                              </div>
+                              {/* STATUS DOT */}
+                              <div className={`w-3 h-3 rounded-full shrink-0 ${a.is_completed ? 'bg-emerald-500' : a.student_completed ? 'bg-amber-400' : a.due_date < today ? 'bg-red-500' : 'bg-[#0ea5e9]'}`}></div>
+                              {/* CONTENT */}
+                              <div className="flex-1 min-w-0">
+                                <p className="text-[13px] font-bold text-slate-800 truncate">{a.title}</p>
+                                <p className="text-[11px] text-slate-400">{a.task_type === 'test' ? '📝 Bài tập' : '📋 Thủ công'}{a.description ? ` · ${a.description}` : ''}</p>
+                              </div>
+                              {/* ACTIONS */}
+                              <div className="flex items-center gap-2 shrink-0">
+                                {a.is_completed && <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">✅ Hoàn thành</span>}
+                                {a.student_completed && !a.is_completed && a.task_type === 'manual' && (
+                                  <button onClick={() => handleApproveAssignment(a.id)} className="text-[10px] font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full hover:bg-amber-200 transition-colors">⏳ Duyệt</button>
+                                )}
+                                {!a.is_completed && !a.student_completed && <span className="text-[10px] font-bold text-slate-400">Chờ</span>}
+                                <button onClick={() => handleDeleteAssignment(a.id)} className="text-slate-300 hover:text-red-500 transition-colors text-[14px]">🗑</button>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
+                </div>
 
                   {/* TASK PICKER MODAL */}
                   {showTaskPicker && (
