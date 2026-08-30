@@ -229,13 +229,24 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     }
     const fetchBoard = async () => {
       const { data: cols } = await supabase.from('board_columns').select('*').eq('course_id', boardAssignCourseId).order('order_index', { ascending: true });
-      if (cols) setBoardAssignColumns(cols);
+      setBoardAssignColumns(cols || []);
 
-      const { data: cards } = await supabase.from('board_cards').select('*').eq('course_id', boardAssignCourseId).order('order_index', { ascending: true });
-      if (cards) setBoardAssignCards(cards);
+      if (cols && cols.length > 0) {
+        const colIds = cols.map(c => c.id);
+        const { data: cards } = await supabase.from('board_cards').select('*').in('column_id', colIds).order('order_index', { ascending: true });
+        setBoardAssignCards(cards || []);
 
-      const { data: items } = await supabase.from('board_card_items').select('*').eq('course_id', boardAssignCourseId).order('order_index', { ascending: true });
-      if (items) setBoardAssignItems(items);
+        if (cards && cards.length > 0) {
+          const cardIds = cards.map(c => c.id);
+          const { data: items } = await supabase.from('board_card_items').select('*').in('card_id', cardIds).order('order_index', { ascending: true });
+          setBoardAssignItems(items || []);
+        } else {
+          setBoardAssignItems([]);
+        }
+      } else {
+        setBoardAssignCards([]);
+        setBoardAssignItems([]);
+      }
     };
     fetchBoard();
   }, [boardAssignCourseId]);
