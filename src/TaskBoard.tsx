@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase } from './supabaseClient';
+import { supabase } from './supabase';
 import { CheckCircle2, Circle, ChevronDown, ChevronUp, PenTool, LayoutTemplate } from 'lucide-react';
 
 interface Assignment {
@@ -40,16 +40,18 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
   const fetchAssignments = async () => {
     try {
       setLoading(true);
+      console.log('[TaskBoard] Fetching for userId:', userId);
       const { data, error } = await supabase
         .from('assignments')
         .select('*')
         .eq('user_id', userId)
         .not('category', 'is', null);
 
+      console.log('[TaskBoard] Result:', { data, error, count: data?.length });
       if (error) throw error;
       setAssignments(data || []);
     } catch (error) {
-      console.error('Error fetching assignments:', error);
+      console.error('[TaskBoard] Error fetching assignments:', error);
     } finally {
       setLoading(false);
     }
