@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { supabase } from './supabase';
-import { CheckCircle2, Circle, ChevronDown, ChevronUp, PenTool, LayoutTemplate } from 'lucide-react';
 
 interface Assignment {
   id: string;
@@ -96,7 +95,7 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
   if (assignments.length === 0) {
     return (
       <div className="p-12 text-center bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 m-6">
-        <LayoutTemplate className="w-16 h-16 text-slate-300 mx-auto mb-4" />
+        <span className="text-5xl block mb-4">📋</span>
         <h3 className="text-xl font-medium text-slate-700 mb-2">Chưa có bảng công việc nào</h3>
         <p className="text-slate-500">Liên hệ giáo viên để được giao bảng công việc.</p>
       </div>
@@ -155,7 +154,7 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
         {/* Header */}
         <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-6 mb-6 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
-            <LayoutTemplate className="w-8 h-8 opacity-90" />
+            <span className="text-2xl">📋</span>
             <h1 className="text-2xl font-bold tracking-tight">Bảng Công Việc</h1>
           </div>
           <div className="flex flex-col items-end">
@@ -203,9 +202,9 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
                         <div className="flex justify-between items-start mb-2">
                           <h3 className="font-semibold text-slate-800 text-sm leading-tight group-hover:text-[#0ea5e9] transition-colors">{card.title}</h3>
                           {isExpanded ? (
-                            <ChevronUp className="w-4 h-4 text-slate-400" />
+                            <span className="text-slate-400 text-xs">▲</span>
                           ) : (
-                            <ChevronDown className="w-4 h-4 text-slate-400" />
+                            <span className="text-slate-400 text-xs">▼</span>
                           )}
                         </div>
                         
@@ -239,13 +238,13 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
                                   <div className="mt-0.5 shrink-0">
                                     {item.task_type === 'manual' ? (
                                       isItemDone ? (
-                                        <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                                        <span className="text-emerald-500">✅</span>
                                       ) : (
-                                        <Circle className="w-4 h-4 text-slate-300" />
+                                        <span className="text-slate-300 text-sm">⭕</span>
                                       )
                                     ) : (
                                       isItemDone ? (
-                                        <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                                        <span className="text-emerald-500">✅</span>
                                       ) : (
                                         <button 
                                           onClick={(e) => {
@@ -255,7 +254,7 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
                                           className="p-1 -m-1 rounded-md hover:bg-[#e0f2fe] text-[#0ea5e9] transition-colors"
                                           title="Làm bài kiểm tra"
                                         >
-                                          <PenTool className="w-3.5 h-3.5" />
+                                          <span className="text-xs">📝</span>
                                         </button>
                                       )
                                     )}
