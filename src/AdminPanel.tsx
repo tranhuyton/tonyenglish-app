@@ -120,6 +120,32 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [selectedDeadlineTests, setSelectedDeadlineTests] = useState<string[]>([]);
   const [deadlineInput, setDeadlineInput] = useState('');
 
+  // 🚀 QUẢN LÝ KẾ HOẠCH NGÀY (DAY PLANS)
+  const [dayPlans, setDayPlans] = useState<any[]>([]);
+  const [dayPlanTasks, setDayPlanTasks] = useState<any[]>([]);
+  const [dayPlanCourseId, setDayPlanCourseId] = useState<string>('');
+  const [expandedDayPlanId, setExpandedDayPlanId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!dayPlanCourseId) {
+      setDayPlans([]);
+      setDayPlanTasks([]);
+      return;
+    }
+    const fetchDayPlans = async () => {
+      const { data: plans } = await supabase.from('course_day_plans').select('*').eq('course_id', dayPlanCourseId).order('day_number', { ascending: true });
+      setDayPlans(plans || []);
+      if (plans && plans.length > 0) {
+        const planIds = plans.map(p => p.id);
+        const { data: tasks } = await supabase.from('day_plan_tasks').select('*').in('day_plan_id', planIds).order('order_index', { ascending: true });
+        setDayPlanTasks(tasks || []);
+      } else {
+        setDayPlanTasks([]);
+      }
+    };
+    fetchDayPlans();
+  }, [dayPlanCourseId]);
+
   // 🚀 QUẢN LÝ CHUÔNG THÔNG BÁO TỪ HỌC VIÊN
   const [notifications, setNotifications] = useState<any[]>([]);
   const [showNotifications, setShowNotifications] = useState(false);
@@ -1531,6 +1557,161 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         </div>
                       )}
                     </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* ========== KẾ HOẠCH NGÀY (DAY PLANS) ========== */}
+            <div className="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+              <div className="px-5 py-4 border-b border-slate-100 bg-slate-50 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <h3 className="font-black text-sm text-[#0a5482]">📅 Kế hoạch Ngày (Day Plans)</h3>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Xây dựng lộ trình học tập theo từng ngày</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <select 
+                    value={dayPlanCourseId} 
+                    onChange={(e) => setDayPlanCourseId(e.target.value)}
+                    className="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-bold outline-none focus:border-[#0a5482] min-w-[200px]"
+                  >
+                    <option value="">-- Chọn Khóa học --</option>
+                    {courses.map(c => (
+                      <option key={c.id} value={c.id}>{c.title}</option>
+                    ))}
+                  </select>
+                  
+                  {dayPlanCourseId && (
+                    <button onClick={async () => {
+                      const title = prompt('Tên Ngày (VD: Day 1 - Grammar):');
+                      if (!title?.trim()) return;
+                      const durationStr = prompt('Số ngày dự kiến hoàn thành:', '1');
+                      const duration = parseInt(durationStr || '1', 10);
+                      if (isNaN(duration) || duration < 1) return;
+                      
+                      const nextDayNumber = dayPlans.length > 0 ? Math.max(...dayPlans.map(p => p.day_number || 0)) + 1 : 1;
+                      
+                      const { data } = await supabase.from('course_day_plans').insert([{
+                        course_id: dayPlanCourseId,
+                        day_number: nextDayNumber,
+                        title: title.trim(),
+                        duration_days: duration
+                      }]).select();
+                      
+                      if (data) setDayPlans([...dayPlans, ...data]);
+                    }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all whitespace-nowrap">
+                      + Thêm ngày
+                    </button>
+                  )}
+                </div>
+              </div>
+              
+              {!dayPlanCourseId ? (
+                <div className="p-8 text-center text-slate-400 text-[13px]">Vui lòng chọn khóa học để xem Kế hoạch ngày.</div>
+              ) : dayPlans.length === 0 ? (
+                <div className="p-8 text-center text-slate-400 text-[13px]">Khóa học này chưa có kế hoạch ngày nào. Bấm + Thêm ngày để tạo.</div>
+              ) : (
+                <div className="divide-y divide-slate-100">
+                  {dayPlans.map((plan: any) => {
+                    const isExpanded = expandedDayPlanId === plan.id;
+                    const planTasks = dayPlanTasks.filter(t => t.day_plan_id === plan.id);
+                    
+                    return (
+                      <div key={plan.id} className="px-5 py-3 hover:bg-slate-50 transition-colors">
+                        <div className="flex items-center gap-4">
+                          <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-700 font-black text-xs shrink-0">
+                            {plan.day_number}
+                          </div>
+                          
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2">
+                              <p className="text-[13px] font-bold text-slate-800">{plan.title}</p>
+                              <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 text-[10px] font-bold">
+                                {plan.duration_days} ngày
+                              </span>
+                            </div>
+                            <p className="text-[11px] text-slate-400 mt-0.5">{planTasks.length} nhiệm vụ</p>
+                          </div>
+                          
+                          <div className="flex gap-1 shrink-0">
+                            <button onClick={() => setExpandedDayPlanId(isExpanded ? null : plan.id)} className={`w-8 h-8 flex items-center justify-center rounded-lg hover:bg-slate-200 transition-colors ${isExpanded ? 'bg-slate-200 text-[#0a5482]' : 'text-slate-400'}`}>
+                              {isExpanded ? '🔽' : '▶️'}
+                            </button>
+                            <button onClick={async () => {
+                              const newTitle = prompt('Sửa tên ngày:', plan.title);
+                              if (!newTitle?.trim()) return;
+                              const newDurationStr = prompt('Sửa số ngày:', plan.duration_days.toString());
+                              const newDuration = parseInt(newDurationStr || '1', 10);
+                              
+                              await supabase.from('course_day_plans').update({ 
+                                title: newTitle.trim(),
+                                duration_days: isNaN(newDuration) ? plan.duration_days : newDuration 
+                              }).eq('id', plan.id);
+                              
+                              setDayPlans(dayPlans.map(p => p.id === plan.id ? { ...p, title: newTitle.trim(), duration_days: isNaN(newDuration) ? plan.duration_days : newDuration } : p));
+                            }} className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-slate-200 transition-colors text-slate-400">
+                              ✏️
+                            </button>
+                            <button onClick={async () => {
+                              if (!window.confirm(`Xóa vĩnh viễn Kế hoạch Ngày ${plan.day_number}: "${plan.title}"? Các nhiệm vụ bên trong cũng sẽ bị xóa.`)) return;
+                              await supabase.from('course_day_plans').delete().eq('id', plan.id);
+                              setDayPlans(dayPlans.filter(p => p.id !== plan.id));
+                              setDayPlanTasks(dayPlanTasks.filter(t => t.day_plan_id !== plan.id));
+                            }} className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-red-50 transition-colors text-slate-400 hover:text-red-500">
+                              🗑
+                            </button>
+                          </div>
+                        </div>
+                        
+                        {isExpanded && (
+                          <div className="mt-4 ml-12 border-l-2 border-slate-100 pl-4 py-2 space-y-2">
+                            {planTasks.length === 0 ? (
+                              <p className="text-[11px] text-slate-400 italic py-2">Chưa có nhiệm vụ nào.</p>
+                            ) : (
+                              planTasks.map((task: any) => (
+                                <div key={task.id} className="flex items-center gap-3 bg-white border border-slate-200 p-2.5 rounded-xl shadow-sm">
+                                  <div className="text-lg">{task.task_type === 'test' ? '📝' : '📋'}</div>
+                                  <div className="flex-1 min-w-0">
+                                    <p className="text-[12px] font-bold text-slate-700 truncate">{task.title}</p>
+                                    {task.description && <p className="text-[10px] text-slate-400 line-clamp-1">{task.description}</p>}
+                                  </div>
+                                  <span className={`px-2 py-0.5 rounded text-[9px] font-bold shrink-0 ${task.task_type === 'test' ? 'bg-indigo-100 text-indigo-700' : 'bg-orange-100 text-orange-700'}`}>
+                                    {task.task_type === 'test' ? 'BÀI TẬP' : 'THỦ CÔNG'}
+                                  </span>
+                                  <button onClick={async () => {
+                                    if (!window.confirm(`Xóa nhiệm vụ "${task.title}"?`)) return;
+                                    await supabase.from('day_plan_tasks').delete().eq('id', task.id);
+                                    setDayPlanTasks(dayPlanTasks.filter(t => t.id !== task.id));
+                                  }} className="text-slate-300 hover:text-red-500 transition-colors shrink-0 p-1">
+                                    🗑
+                                  </button>
+                                </div>
+                              ))
+                            )}
+                            
+                            <button onClick={async () => {
+                              const title = prompt('Tên nhiệm vụ thủ công:');
+                              if (!title?.trim()) return;
+                              const desc = prompt('Mô tả (tùy chọn):') || '';
+                              
+                              const nextOrder = planTasks.length > 0 ? Math.max(...planTasks.map(t => t.order_index || 0)) + 1 : 1;
+                              
+                              const { data } = await supabase.from('day_plan_tasks').insert([{
+                                day_plan_id: plan.id,
+                                task_type: 'manual',
+                                title: title.trim(),
+                                description: desc.trim(),
+                                order_index: nextOrder
+                              }]).select();
+                              
+                              if (data) setDayPlanTasks([...dayPlanTasks, ...data]);
+                            }} className="w-full mt-2 py-2 border-2 border-dashed border-slate-200 rounded-xl text-[11px] font-bold text-slate-400 hover:text-[#0a5482] hover:border-[#0a5482] hover:bg-slate-50 transition-all">
+                              + Thêm việc thủ công
+                            </button>
+                          </div>
+                        )}
+                      </div>
                     );
                   })}
                 </div>

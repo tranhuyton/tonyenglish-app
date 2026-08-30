@@ -50,6 +50,16 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const [showAssignModal, setShowAssignModal] = useState(false);
   const [isAssigning, setIsAssigning] = useState(false);
 
+  // Auto-distribute
+  const [showAutoDistribute, setShowAutoDistribute] = useState(false);
+  const [autoDistCourseId, setAutoDistCourseId] = useState<string | null>(null);
+  const [autoDistDayPlans, setAutoDistDayPlans] = useState<any[]>([]);
+  const [autoDistTasks, setAutoDistTasks] = useState<any[]>([]);
+  const [autoDistSelectedDays, setAutoDistSelectedDays] = useState<Set<string>>(new Set());
+  const [autoDistStartDate, setAutoDistStartDate] = useState<string>(new Date().toISOString().split('T')[0]);
+  const [isAutoDistributing, setIsAutoDistributing] = useState(false);
+
+
   const [showCreateUserModal, setShowCreateUserModal] = useState(false);
   const [isCreatingUser, setIsCreatingUser] = useState(false);
   const [newUserRole, setNewUserRole] = useState('student');
@@ -179,6 +189,71 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     setIsAddingAssignment(false);
     fetchAssignments(selectedStudent.id);
   };
+
+  useEffect(() => {
+    if (autoDistCourseId) {
+      const fetchDayPlans = async () => {
+        const { data: plans } = await supabase.from('course_day_plans').select('*').eq('course_id', autoDistCourseId).order('day_number', { ascending: true });
+        if (plans && plans.length > 0) {
+          setAutoDistDayPlans(plans);
+          const planIds = plans.map((p: any) => p.id);
+          const { data: tasks } = await supabase.from('day_plan_tasks').select('*').in('day_plan_id', planIds).order('order_index', { ascending: true });
+          setAutoDistTasks(tasks || []);
+          setAutoDistSelectedDays(new Set(planIds));
+        } else {
+          setAutoDistDayPlans([]);
+          setAutoDistTasks([]);
+          setAutoDistSelectedDays(new Set());
+        }
+      };
+      fetchDayPlans();
+    } else {
+      setAutoDistDayPlans([]);
+      setAutoDistTasks([]);
+      setAutoDistSelectedDays(new Set());
+    }
+  }, [autoDistCourseId]);
+
+  const handleAutoDistribute = async () => {
+    if (!selectedStudent || !autoDistCourseId || autoDistSelectedDays.size === 0) return;
+    setIsAutoDistributing(true);
+    const { data: { session } } = await supabase.auth.getSession();
+    
+    // Sort selected days
+    const selectedPlans = autoDistDayPlans.filter(p => autoDistSelectedDays.has(p.id)).sort((a, b) => a.day_number - b.day_number);
+    
+    let currentDate = new Date(autoDistStartDate);
+    const newAssignments: any[] = [];
+    
+    for (const plan of selectedPlans) {
+      const planTasks = autoDistTasks.filter(t => t.day_plan_id === plan.id).sort((a, b) => a.order_index - b.order_index);
+      const dueDate = currentDate.toISOString().split('T')[0];
+      
+      for (const task of planTasks) {
+        newAssignments.push({
+          user_id: selectedStudent.id,
+          due_date: dueDate,
+          title: task.title,
+          description: task.description || '',
+          task_type: task.task_type,
+          test_id: task.test_id,
+          created_by: session?.user?.id || null
+        });
+      }
+      
+      currentDate.setDate(currentDate.getDate() + (plan.duration_days || 1));
+    }
+    
+    if (newAssignments.length > 0) {
+      await supabase.from('assignments').insert(newAssignments);
+    }
+    
+    setShowAutoDistribute(false);
+    setAutoDistCourseId(null);
+    setIsAutoDistributing(false);
+    fetchAssignments(selectedStudent.id);
+  };
+
 
   const handleApproveAssignment = async (id: string) => {
     await supabase.from('assignments').update({ admin_approved: true, is_completed: true, updated_at: new Date().toISOString() }).eq('id', id);
@@ -715,7 +790,11 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                           📋 {new Date(assignSelectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })}
                           <span className="text-slate-400 font-normal ml-2">({tasksForSelectedDate.length} việc)</span>
                         </h4>
-                        <button onClick={() => { setShowTaskPicker(true); setTaskPickerMode('choose'); }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Giao việc</button>
+                        <div className="flex items-center gap-2">
+                          <button onClick={() => setShowAutoDistribute(true)} className="bg-emerald-600 text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-emerald-700 transition-all">+ Tự động phân bổ</button>
+                          <button onClick={() => { setShowTaskPicker(true); setTaskPickerMode('choose'); }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Giao việc</button>
+                        </div>
+
                       </div>
                       {tasksForSelectedDate.length === 0 ? (
                         <div className="p-8 text-center text-slate-400 text-[13px]">Chưa giao việc cho ngày này.</div>
@@ -924,6 +1003,118 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                   )}
                 </>
               ) : null}
+
+              {/* AUTO DISTRIBUTE MODAL */}
+              {showAutoDistribute && (
+                <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setShowAutoDistribute(false)}>
+                  <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
+                    <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
+                      <div className="flex items-center gap-3">
+                        {autoDistCourseId && (
+                          <button onClick={() => setAutoDistCourseId(null)} className="text-slate-400 hover:text-slate-700 text-lg">←</button>
+                        )}
+                        <h3 className="font-black text-emerald-600">
+                          {autoDistCourseId ? '🗓️ Cấu hình phân bổ' : '📚 Chọn khóa học để phân bổ'}
+                        </h3>
+                      </div>
+                      <button onClick={() => setShowAutoDistribute(false)} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
+                    </div>
+
+                    <div className="flex-1 overflow-y-auto p-6">
+                      {!autoDistCourseId ? (
+                        <div className="space-y-2">
+                          {studentCourses.length === 0 ? (
+                            <div className="p-8 text-center text-slate-400 text-[13px]">Học sinh chưa được gán khóa học nào.</div>
+                          ) : studentCourses.map(c => (
+                            <button key={c.id} onClick={() => setAutoDistCourseId(c.id)} className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl hover:bg-emerald-50 hover:border-emerald-400 transition-all flex items-center gap-3 text-left">
+                              <span className="text-xl">📚</span>
+                              <p className="font-bold text-slate-800 text-[13px]">{c.title}</p>
+                              <span className="ml-auto text-slate-400">→</span>
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="space-y-6">
+                          <div>
+                            <label className="text-[13px] font-bold text-slate-700 block mb-2">Ngày bắt đầu:</label>
+                            <input type="date" value={autoDistStartDate} onChange={(e) => setAutoDistStartDate(e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2 text-[14px] outline-none focus:border-emerald-500" />
+                          </div>
+                          
+                          <div>
+                            <h4 className="text-[13px] font-bold text-slate-700 mb-3 border-b pb-2">Chọn các Day để giao</h4>
+                            {autoDistDayPlans.length === 0 ? (
+                              <p className="text-[13px] text-slate-400 text-center py-4">Khóa học này chưa được thiết lập Course Plan.</p>
+                            ) : (
+                              <div className="space-y-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
+                                {autoDistDayPlans.map(plan => {
+                                  const tasksCount = autoDistTasks.filter(t => t.day_plan_id === plan.id).length;
+                                  return (
+                                    <label key={plan.id} className={`flex items-center gap-3 p-3 rounded-xl border cursor-pointer transition-all ${autoDistSelectedDays.has(plan.id) ? 'bg-emerald-50 border-emerald-400' : 'border-slate-200 hover:bg-slate-50'}`}>
+                                      <input type="checkbox" checked={autoDistSelectedDays.has(plan.id)} onChange={() => {
+                                        const s = new Set(autoDistSelectedDays);
+                                        s.has(plan.id) ? s.delete(plan.id) : s.add(plan.id);
+                                        setAutoDistSelectedDays(s);
+                                      }} className="w-4 h-4 rounded accent-emerald-600" />
+                                      <div className="flex-1 min-w-0">
+                                        <p className="text-[13px] font-bold text-slate-800">Day {plan.day_number}: {plan.title}</p>
+                                        <div className="flex items-center gap-2 mt-1">
+                                          <span className="bg-slate-200 text-slate-600 text-[10px] px-1.5 py-0.5 rounded font-semibold">{plan.duration_days} ngày</span>
+                                          <span className="text-[11px] text-slate-400">{tasksCount} việc</span>
+                                        </div>
+                                      </div>
+                                    </label>
+                                  );
+                                })}
+                              </div>
+                            )}
+                          </div>
+
+                          {autoDistSelectedDays.size > 0 && (
+                            <div>
+                              <h4 className="text-[13px] font-bold text-slate-700 mb-2">Xem trước lịch (Dự kiến):</h4>
+                              <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 space-y-2 max-h-40 overflow-y-auto text-[12px]">
+                                {(() => {
+                                  let current = new Date(autoDistStartDate);
+                                  const selectedPlans = autoDistDayPlans.filter(p => autoDistSelectedDays.has(p.id)).sort((a, b) => a.day_number - b.day_number);
+                                  return selectedPlans.map(plan => {
+                                    const startStr = current.toLocaleDateString('vi-VN');
+                                    let endStr = '';
+                                    if (plan.duration_days > 1) {
+                                      const end = new Date(current);
+                                      end.setDate(end.getDate() + plan.duration_days - 1);
+                                      endStr = ` → ${end.toLocaleDateString('vi-VN')}`;
+                                    }
+                                    const tCount = autoDistTasks.filter(t => t.day_plan_id === plan.id).length;
+                                    
+                                    const previewText = `Day ${plan.day_number} (${plan.duration_days} ngày): ${startStr}${endStr}`;
+                                    
+                                    current.setDate(current.getDate() + plan.duration_days);
+                                    
+                                    return (
+                                      <div key={plan.id} className="flex justify-between border-b border-slate-100 last:border-0 pb-1 last:pb-0">
+                                        <span className="font-semibold text-slate-600">{previewText}</span>
+                                        <span className="text-slate-400">[{tCount} việc]</span>
+                                      </div>
+                                    );
+                                  });
+                                })()}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {autoDistCourseId && autoDistSelectedDays.size > 0 && (
+                      <div className="px-6 py-3 border-t border-slate-200 shrink-0">
+                        <button onClick={handleAutoDistribute} disabled={isAutoDistributing} className="w-full bg-emerald-600 text-white py-2.5 rounded-xl text-[13px] font-bold hover:bg-emerald-700 disabled:opacity-50 transition-all">
+                          {isAutoDistributing ? '⏳ Đang phân bổ...' : `Xác nhận phân bổ`}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
 
             </div>
           </div>
