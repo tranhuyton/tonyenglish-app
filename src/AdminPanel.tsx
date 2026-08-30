@@ -125,6 +125,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [dayPlanTasks, setDayPlanTasks] = useState<any[]>([]);
   const [dayPlanCourseId, setDayPlanCourseId] = useState<string>('');
   const [expandedDayPlanId, setExpandedDayPlanId] = useState<string | null>(null);
+  const [dayPlanTestPickerFor, setDayPlanTestPickerFor] = useState<string | null>(null); // day_plan_id to add tests to
+  const [dayPlanFolders, setDayPlanFolders] = useState<any[]>([]);
+  const [dayPlanTests, setDayPlanTests] = useState<any[]>([]);
+  const [dayPlanSelectedTests, setDayPlanSelectedTests] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     if (!dayPlanCourseId) {
@@ -145,6 +149,18 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     };
     fetchDayPlans();
   }, [dayPlanCourseId]);
+
+  // Fetch folders/tests when day plan test picker opens
+  useEffect(() => {
+    if (!dayPlanTestPickerFor || !dayPlanCourseId) return;
+    const fetchTestData = async () => {
+      const { data: folders } = await supabase.from('folders').select('id, course_id, parent_id, title, display_order').eq('course_id', dayPlanCourseId).order('display_order').limit(1000);
+      setDayPlanFolders(folders || []);
+      const { data: tests } = await supabase.from('tests').select('id, title, test_type, folder_id, course_id').eq('course_id', dayPlanCourseId).eq('is_published', true).order('order_index').limit(1000);
+      setDayPlanTests(tests || []);
+    };
+    fetchTestData();
+  }, [dayPlanTestPickerFor, dayPlanCourseId]);
 
   // 🚀 QUẢN LÝ CHUÔNG THÔNG BÁO TỪ HỌC VIÊN
   const [notifications, setNotifications] = useState<any[]>([]);
@@ -1709,6 +1725,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             }} className="w-full mt-2 py-2 border-2 border-dashed border-slate-200 rounded-xl text-[11px] font-bold text-slate-400 hover:text-[#0a5482] hover:border-[#0a5482] hover:bg-slate-50 transition-all">
                               + Thêm việc thủ công
                             </button>
+                            <button onClick={() => { setDayPlanTestPickerFor(plan.id); setDayPlanSelectedTests(new Set()); }} className="w-full mt-1 py-2 border-2 border-dashed border-emerald-200 rounded-xl text-[11px] font-bold text-emerald-400 hover:text-emerald-700 hover:border-emerald-500 hover:bg-emerald-50 transition-all">
+                              + Thêm bài tập hệ thống
+                            </button>
                           </div>
                         )}
                       </div>
@@ -1717,6 +1736,90 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 </div>
               )}
             </div>
+
+            {/* DAY PLAN TEST PICKER MODAL */}
+            {dayPlanTestPickerFor && (
+              <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setDayPlanTestPickerFor(null)}>
+                <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
+                  <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
+                    <h3 className="font-black text-[#0a5482]">📝 Chọn bài tập hệ thống</h3>
+                    <button onClick={() => setDayPlanTestPickerFor(null)} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
+                  </div>
+                  <div className="flex-1 overflow-y-auto p-4">
+                    {dayPlanTests.length === 0 ? (
+                      <div className="p-8 text-center text-slate-400 text-[13px]">Đang tải bài tập...</div>
+                    ) : (() => {
+                      const rootFolders = dayPlanFolders.filter(f => !f.parent_id);
+                      const rootTests = dayPlanTests.filter(t => !t.folder_id);
+                      
+                      const renderFolder = (folder: any, depth: number = 0): React.ReactNode => {
+                        const children = dayPlanFolders.filter(f => f.parent_id === folder.id);
+                        const folderTests = dayPlanTests.filter(t => t.folder_id === folder.id);
+                        return (
+                          <div key={folder.id} style={{ marginLeft: depth * 16 }}>
+                            <div className="font-bold text-[12px] text-slate-600 py-1.5 flex items-center gap-1.5">
+                              <span className="text-amber-500">📁</span> {folder.title}
+                              <span className="text-[10px] text-slate-400 font-normal">{folderTests.length} đề</span>
+                            </div>
+                            {folderTests.map(test => (
+                              <label key={test.id} className="flex items-center gap-2 py-1 px-3 hover:bg-slate-50 rounded-lg cursor-pointer" style={{ marginLeft: 16 }}>
+                                <input type="checkbox" checked={dayPlanSelectedTests.has(test.id)} onChange={() => {
+                                  const newSet = new Set(dayPlanSelectedTests);
+                                  newSet.has(test.id) ? newSet.delete(test.id) : newSet.add(test.id);
+                                  setDayPlanSelectedTests(newSet);
+                                }} className="rounded" />
+                                <span className="text-[12px] text-slate-700">{test.title}</span>
+                              </label>
+                            ))}
+                            {children.map(ch => renderFolder(ch, depth + 1))}
+                          </div>
+                        );
+                      };
+                      
+                      return (
+                        <div className="space-y-1">
+                          {rootFolders.map(f => renderFolder(f))}
+                          {rootTests.map(test => (
+                            <label key={test.id} className="flex items-center gap-2 py-1.5 px-3 hover:bg-slate-50 rounded-lg cursor-pointer">
+                              <input type="checkbox" checked={dayPlanSelectedTests.has(test.id)} onChange={() => {
+                                const newSet = new Set(dayPlanSelectedTests);
+                                newSet.has(test.id) ? newSet.delete(test.id) : newSet.add(test.id);
+                                setDayPlanSelectedTests(newSet);
+                              }} className="rounded" />
+                              <span className="text-[12px] text-slate-700">{test.title}</span>
+                            </label>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                  {dayPlanSelectedTests.size > 0 && (
+                    <div className="px-6 py-3 border-t border-slate-200 bg-slate-50 shrink-0">
+                      <button onClick={async () => {
+                        const planTasks = dayPlanTasks.filter(t => t.day_plan_id === dayPlanTestPickerFor);
+                        let nextOrder = planTasks.length > 0 ? Math.max(...planTasks.map(t => t.order_index || 0)) + 1 : 1;
+                        const newTasks = Array.from(dayPlanSelectedTests).map(testId => {
+                          const test = dayPlanTests.find(t => t.id === testId);
+                          return {
+                            day_plan_id: dayPlanTestPickerFor,
+                            task_type: 'test',
+                            title: test?.title || '',
+                            test_id: testId,
+                            order_index: nextOrder++,
+                          };
+                        });
+                        const { data } = await supabase.from('day_plan_tasks').insert(newTasks).select();
+                        if (data) setDayPlanTasks([...dayPlanTasks, ...data]);
+                        setDayPlanTestPickerFor(null);
+                        setDayPlanSelectedTests(new Set());
+                      }} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl text-[13px] font-bold transition-colors">
+                        Thêm {dayPlanSelectedTests.size} bài tập
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
             </>
           )}
 
