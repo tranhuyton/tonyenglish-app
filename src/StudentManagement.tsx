@@ -665,6 +665,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                   )}
                 </div>
               ) : activeDetailTab === 'assignments' ? (
+                <>
                 <div className="flex gap-5 items-start">
                   {/* LEFT: MINI CALENDAR */}
                   <div className="w-[320px] shrink-0">
@@ -753,8 +754,8 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                   </div>
                 </div>
 
-                  {/* TASK PICKER MODAL */}
-                  {showTaskPicker && (
+                {/* TASK PICKER MODAL */}
+                {showTaskPicker && (
                     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => { setShowTaskPicker(false); setTaskPickerMode('choose'); }}>
                       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
                         <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
@@ -921,7 +922,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                       </div>
                     </div>
                   )}
-                </div>
+                </>
               ) : null}
 
             </div>
