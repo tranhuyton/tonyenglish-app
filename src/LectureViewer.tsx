@@ -804,12 +804,12 @@ export default function LectureViewer({
     }
   }, [activeLectureId, currentPage]);
 
-  // Persist current page to localStorage
-  useEffect(() => {
-    if (activeLectureId && currentPage > 0 && currentUser?.id) {
-      localStorage.setItem(`tony_last_page_${currentUser.id}_${activeLectureId}`, currentPage.toString());
+  // Helper: save page to localStorage (called from navigation handlers only)
+  const persistPage = (page: number) => {
+    if (activeLectureId && currentUser?.id) {
+      localStorage.setItem(`tony_last_page_${currentUser.id}_${activeLectureId}`, page.toString());
     }
-  }, [currentPage, activeLectureId, currentUser]);
+  };
 
   useEffect(() => {
     if (courseId && courseId !== '') {
@@ -1115,7 +1115,9 @@ export default function LectureViewer({
 
   const handleNextPage = () => {
     if (currentPage < pages.length) {
-        setCurrentPage(prev => prev + 1);
+        const nextP = currentPage + 1;
+        setCurrentPage(nextP);
+        persistPage(nextP);
     } else {
       const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
 
@@ -1133,7 +1135,9 @@ export default function LectureViewer({
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
-        setCurrentPage(prev => prev - 1);
+        const prevP = currentPage - 1;
+        setCurrentPage(prevP);
+        persistPage(prevP);
     } else {
        const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
 
@@ -1827,7 +1831,7 @@ export default function LectureViewer({
                              {Array.from({ length: totalPages }).map((_, i) => (
                                  <button 
                                      key={i+1} 
-                                     onClick={() => setCurrentPage(i+1)} 
+                                     onClick={() => { setCurrentPage(i+1); persistPage(i+1); }} 
                                      className={`w-10 h-10 rounded-lg flex items-center justify-center text-[14px] font-bold transition-all ${currentPage === i+1 ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`}
                                  >
                                      {i+1}
