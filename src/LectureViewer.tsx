@@ -936,6 +936,11 @@ export default function LectureViewer({
   };
 
   const handleSelectLecture = async (lectureId: string, userIdOverride?: string) => {
+    const targetUserId = userIdOverride || currentUser?.id;
+    // Read saved page BEFORE any state changes (persist effect would overwrite it)
+    const savedPageStr = localStorage.getItem(`tony_last_page_${targetUserId || ''}_${lectureId}`);
+    const savedPage = savedPageStr ? parseInt(savedPageStr) : 1;
+    
     try {
         setActiveLectureId(lectureId);
         setCurrentPage(1); 
@@ -947,7 +952,6 @@ export default function LectureViewer({
             setIsSidebarOpen(false);
         }
         
-        const targetUserId = userIdOverride || currentUser?.id;
         if (targetUserId) {
             localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
         }
@@ -970,8 +974,7 @@ export default function LectureViewer({
             }));
         setPages(visiblePages);
         
-        // Restore saved page from localStorage
-        const savedPage = parseInt(localStorage.getItem(`tony_last_page_${targetUserId || ''}_${lectureId}`) || '1');
+        // Restore saved page (read before state changes above)
         if (savedPage > 0 && savedPage <= visiblePages.length) {
           setCurrentPage(savedPage);
         } else {
