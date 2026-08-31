@@ -804,6 +804,13 @@ export default function LectureViewer({
     }
   }, [activeLectureId, currentPage]);
 
+  // Persist current page to localStorage
+  useEffect(() => {
+    if (activeLectureId && currentPage > 0 && currentUser?.id) {
+      localStorage.setItem(`tony_last_page_${currentUser.id}_${activeLectureId}`, currentPage.toString());
+    }
+  }, [currentPage, activeLectureId, currentUser]);
+
   useEffect(() => {
     if (courseId && courseId !== '') {
         fetchCourseData();
@@ -962,6 +969,14 @@ export default function LectureViewer({
                 page_number: idx + 1
             }));
         setPages(visiblePages);
+        
+        // Restore saved page from localStorage
+        const savedPage = parseInt(localStorage.getItem(`tony_last_page_${targetUserId || ''}_${lectureId}`) || '1');
+        if (savedPage > 0 && savedPage <= visiblePages.length) {
+          setCurrentPage(savedPage);
+        } else {
+          setCurrentPage(1);
+        }
         
         if (targetUserId && progressRes.data && progressRes.data.length > 0) {
            const pData = progressRes.data[0];
