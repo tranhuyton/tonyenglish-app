@@ -85,7 +85,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, onRe
         if (t.task_type === 'test' && t.test_id) {
           return t.is_completed || completedTestIds.has(t.test_id);
         }
-        return t.is_completed;
+        return t.is_completed || t.student_completed;
       });
 
       if (allCompleted) {
@@ -111,7 +111,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, onRe
         ...a,
         _effectiveCompleted: a.task_type === 'test' && a.test_id
           ? (a.is_completed || completedTestIds.has(a.test_id))
-          : a.is_completed
+          : (a.is_completed || a.student_completed)
       }));
   }, [selectedDate, assignments, completedTestIds]);
 

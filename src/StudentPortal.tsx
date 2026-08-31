@@ -238,7 +238,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id),
             supabase.from('class_students').select('class_id').eq('user_id', user.id),
             supabase.from('enrollments').select('course_id').eq('user_id', user.id),
-            supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000),
+            supabase.from('test_results').select('id, test_id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000),
             supabase.from('assignments').select('*').eq('user_id', user.id).order('due_date', { ascending: true })
         ]);
 
@@ -256,7 +256,34 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         
         setLectureProgressData(lp || []);
         if (cStudents) setUserClassIds(cStudents.map(c => c.class_id));
-        setAssignments(assignData || []);
+
+        let finalAssignments = assignData || [];
+        
+        if (hData && hData.length > 0 && finalAssignments.length > 0) {
+            const completedTestIds = new Set(hData.map((h: any) => {
+                let detailsObj = h.details || {};
+                if (typeof detailsObj === 'string') {
+                    try { detailsObj = JSON.parse(detailsObj); } catch(e) {}
+                }
+                return String(h.test_id || detailsObj.test_id);
+            }).filter((id) => id && id !== 'undefined'));
+            
+            const toUpdate = finalAssignments.filter((a: any) => a.task_type === 'test' && !a.is_completed && a.test_id && completedTestIds.has(String(a.test_id)));
+            
+            if (toUpdate.length > 0) {
+                toUpdate.forEach(async (a: any) => {
+                    await supabase.from('assignments')
+                        .update({ is_completed: true, updated_at: new Date().toISOString() })
+                        .eq('id', a.id);
+                });
+                
+                finalAssignments = finalAssignments.map((a: any) => 
+                    toUpdate.some((ua: any) => ua.id === a.id) ? { ...a, is_completed: true } : a
+                );
+            }
+        }
+
+        setAssignments(finalAssignments);
 
         const courseIds = enrolls?.map(e => e.course_id) || [];
         
@@ -1493,8 +1520,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 setAssignments(data || []);
               }}
               onStartTest={(testId) => {
-                const test = allTests.find(t => t.id === testId);
-                if (test) onStartTest(test.test_type, test);
+                const test = allTests.find(t => String(t.id) === String(testId));
+                if (test) handleStartTestClick(test);
               }}
             />
           </div>

@@ -129,9 +129,26 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [dayPlanFolders, setDayPlanFolders] = useState<any[]>([]);
   const [dayPlanTests, setDayPlanTests] = useState<any[]>([]);
   const [dayPlanSelectedTests, setDayPlanSelectedTests] = useState<Set<string>>(new Set());
+  const [dayPlanManualTaskPickerFor, setDayPlanManualTaskPickerFor] = useState<string | null>(null);
+  const [dayPlanSelectedManualTasks, setDayPlanSelectedManualTasks] = useState<Set<string>>(new Set());
+  const [boardManualTaskPickerFor, setBoardManualTaskPickerFor] = useState<string | null>(null);
+  const [boardSelectedManualTasks, setBoardSelectedManualTasks] = useState<Set<string>>(new Set());
 
   // 🚀 QUẢN LÝ GIAO BÀI CHI TIẾT
+  const [assignMgmtCourseId, setAssignMgmtCourseId] = useState<string>('');
   const [assignMgmtSubTab, setAssignMgmtSubTab] = useState<'templates' | 'dayplans' | 'board' | 'detail'>('templates');
+  
+  useEffect(() => {
+    if (assignMgmtCourseId) {
+      setDayPlanCourseId(assignMgmtCourseId);
+      setBoardCourseId(assignMgmtCourseId);
+      setDetailBoardCourseId(assignMgmtCourseId);
+    } else {
+      setDayPlanCourseId('');
+      setBoardCourseId('');
+      setDetailBoardCourseId(null);
+    }
+  }, [assignMgmtCourseId]);
   const [detailAssignStudent, setDetailAssignStudent] = useState<any>(null);
   const [detailAssignMode, setDetailAssignMode] = useState<'calendar' | 'board' | null>(null);
   const [detailCalMonth, setDetailCalMonth] = useState(new Date());
@@ -148,10 +165,22 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   // Fetch students for detail view
   useEffect(() => {
     if (activeTab === 'assignments-mgmt' && assignMgmtSubTab === 'detail') {
-      supabase.from('profiles').select('*').order('created_at', { ascending: false })
-        .then(({ data }) => setStudents(data || []));
+      if (assignMgmtCourseId) {
+        supabase.from('enrollments').select('user_id').eq('course_id', assignMgmtCourseId).then(({ data: enrollments }) => {
+          if (enrollments && enrollments.length > 0) {
+            const userIds = enrollments.map(e => e.user_id);
+            supabase.from('profiles').select('*').in('id', userIds).order('created_at', { ascending: false })
+              .then(({ data }) => setStudents(data || []));
+          } else {
+            setStudents([]);
+          }
+        });
+      } else {
+        supabase.from('profiles').select('*').order('created_at', { ascending: false })
+          .then(({ data }) => setStudents(data || []));
+      }
     }
-  }, [activeTab, assignMgmtSubTab]);
+  }, [activeTab, assignMgmtSubTab, assignMgmtCourseId]);
 
   // Fetch detail board data
   useEffect(() => {
@@ -332,8 +361,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     fetchGlobalLectures();
     fetchPdfFiles(); 
     fetchNotifications();
-    // Fetch manual task templates
-    supabase.from('manual_task_templates').select('*').order('title').then(({ data }) => setManualTaskTemplates(data || []));
+    supabase.from('manual_task_templates').select('*').order('order_index').then(({ data }) => setManualTaskTemplates(data || []));
     supabase.from('course_task_templates').select('*').then(({ data }) => setCourseTaskLinks(data || []));
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -1606,6 +1634,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
           {activeTab === 'assignments-mgmt' && (
             <div className="p-4 md:p-8 space-y-6 animate-in fade-in">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="font-bold text-sm text-slate-600">Lọc theo khóa:</span>
+                <select value={assignMgmtCourseId} onChange={e => setAssignMgmtCourseId(e.target.value)}
+                  className="border border-slate-200 rounded-xl px-4 py-2 text-sm font-semibold min-w-[200px] outline-none focus:border-[#0a5482]">
+                  <option value="">Tất cả khóa học</option>
+                  {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+                </select>
+              </div>
               <div className="flex flex-wrap gap-2 mb-6">
                 <button onClick={() => setAssignMgmtSubTab('templates')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'templates' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>📋 Danh mục Việc thủ công</button>
                 <button onClick={() => setAssignMgmtSubTab('dayplans')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'dayplans' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>📅 Kế hoạch Ngày</button>
@@ -1629,7 +1665,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     const { data: { session } } = await supabase.auth.getSession();
                     await supabase.from('manual_task_templates').insert([{ title: title.trim(), description: desc.trim(), created_by: session?.user?.id }]);
                     // Refresh - trigger re-render
-                    const { data } = await supabase.from('manual_task_templates').select('*').order('title');
+                    const { data } = await supabase.from('manual_task_templates').select('*').order('order_index');
                     setManualTaskTemplates(data || []);
                   })();
                 }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Thêm</button>
@@ -1638,36 +1674,66 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <div className="p-8 text-center text-slate-400 text-[13px]">Chưa có mẫu việc thủ công nào. Bấm + Thêm để tạo.</div>
               ) : (
                 <div className="divide-y divide-slate-100">
-                  {manualTaskTemplates.map((tpl: any) => {
-                    const linkedCourseIds = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
-                    const linkedCourses = courses.filter(c => linkedCourseIds.includes(c.id));
-                    const isExpanded = expandedTemplateId === tpl.id;
-                    return (
-                    <div key={tpl.id} className="px-5 py-3 hover:bg-slate-50">
-                      <div className="flex items-center gap-4">
-                        <span className="text-lg">📋</span>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
-                          {tpl.description && <p className="text-[11px] text-slate-400">{tpl.description}</p>}
-                          {linkedCourses.length > 0 && (
-                            <div className="flex flex-wrap gap-1 mt-1">
-                              {linkedCourses.map(c => <span key={c.id} className="text-[10px] bg-sky-100 text-sky-700 px-1.5 py-0.5 rounded font-medium">{c.title}</span>)}
-                            </div>
-                          )}
-                        </div>
-                        <button onClick={() => setExpandedTemplateId(isExpanded ? null : tpl.id)} className={`text-slate-300 hover:text-[#0a5482] transition-colors ${isExpanded ? 'text-[#0a5482]' : ''}`} title="Gán vào khóa học">📚</button>
+                  {(() => {
+                    let filtered = manualTaskTemplates;
+                    if (assignMgmtCourseId) {
+                      filtered = filtered.filter(tpl => {
+                        const linked = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
+                        return linked.includes(assignMgmtCourseId);
+                      });
+                    }
+                    return filtered.map((tpl: any, idx: number) => {
+                      const linkedCourseIds = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
+                      const linkedCourses = courses.filter(c => linkedCourseIds.includes(c.id));
+                      const isExpanded = expandedTemplateId === tpl.id;
+                      return (
+                      <div key={tpl.id} className="px-5 py-3 hover:bg-slate-50">
+                        <div className="flex items-center gap-4">
+                          <span className="text-lg flex flex-col items-center">
+                            <button onClick={async () => {
+                              const sorted = [...manualTaskTemplates].sort((a,b) => (a.order_index||0) - (b.order_index||0));
+                              const currentIdx = sorted.findIndex(t => t.id === tpl.id);
+                              if (currentIdx <= 0) return;
+                              const prev = sorted[currentIdx-1];
+                              await supabase.from('manual_task_templates').update({order_index: prev.order_index||0}).eq('id', tpl.id);
+                              await supabase.from('manual_task_templates').update({order_index: tpl.order_index||0}).eq('id', prev.id);
+                              const {data} = await supabase.from('manual_task_templates').select('*').order('order_index');
+                              if (data) setManualTaskTemplates(data);
+                            }} className="text-slate-400 hover:text-slate-700 leading-none">▲</button>
+                            📋
+                            <button onClick={async () => {
+                              const sorted = [...manualTaskTemplates].sort((a,b) => (a.order_index||0) - (b.order_index||0));
+                              const currentIdx = sorted.findIndex(t => t.id === tpl.id);
+                              if (currentIdx >= sorted.length - 1) return;
+                              const next = sorted[currentIdx+1];
+                              await supabase.from('manual_task_templates').update({order_index: next.order_index||0}).eq('id', tpl.id);
+                              await supabase.from('manual_task_templates').update({order_index: tpl.order_index||0}).eq('id', next.id);
+                              const {data} = await supabase.from('manual_task_templates').select('*').order('order_index');
+                              if (data) setManualTaskTemplates(data);
+                            }} className="text-slate-400 hover:text-slate-700 leading-none">▼</button>
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
+                            {tpl.description && <p className="text-[11px] text-slate-400">{tpl.description}</p>}
+                            {linkedCourses.length > 0 && (
+                              <div className="flex flex-wrap gap-1 mt-1">
+                                {linkedCourses.map(c => <span key={c.id} className="text-[10px] bg-sky-100 text-sky-700 px-1.5 py-0.5 rounded font-medium">{c.title}</span>)}
+                              </div>
+                            )}
+                          </div>
+                          <button onClick={() => setExpandedTemplateId(isExpanded ? null : tpl.id)} className={`text-slate-300 hover:text-[#0a5482] transition-colors ${isExpanded ? 'text-[#0a5482]' : ''}`} title="Gán vào khóa học">📚</button>
                         <button onClick={async () => {
                           const newTitle = prompt('Sửa tên công việc:', tpl.title);
                           if (!newTitle?.trim()) return;
                           const newDesc = prompt('Sửa mô tả (tùy chọn):', tpl.description || '');
                           await supabase.from('manual_task_templates').update({ title: newTitle.trim(), description: (newDesc || '').trim() }).eq('id', tpl.id);
-                          const { data } = await supabase.from('manual_task_templates').select('*').order('title');
+                      const { data } = await supabase.from('manual_task_templates').select('*').order('order_index');
                           setManualTaskTemplates(data || []);
                         }} className="text-slate-300 hover:text-[#0a5482] transition-colors">✏️</button>
                         <button onClick={async () => {
                           if (!window.confirm(`Xóa "${tpl.title}"?`)) return;
                           await supabase.from('manual_task_templates').delete().eq('id', tpl.id);
-                          const { data } = await supabase.from('manual_task_templates').select('*').order('title');
+                      const { data } = await supabase.from('manual_task_templates').select('*').order('order_index');
                           setManualTaskTemplates(data || []);
                         }} className="text-slate-300 hover:text-red-500 transition-colors">🗑</button>
                       </div>
@@ -1695,7 +1761,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       )}
                     </div>
                     );
-                  })}
+                  })})()}
                 </div>
               )}
             </div>
@@ -1711,17 +1777,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   <p className="text-[11px] text-slate-400 mt-0.5">Xây dựng lộ trình học tập theo từng ngày</p>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <select 
-                    value={dayPlanCourseId} 
-                    onChange={(e) => setDayPlanCourseId(e.target.value)}
-                    className="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-bold outline-none focus:border-[#0a5482] min-w-[200px]"
-                  >
-                    <option value="">-- Chọn Khóa học --</option>
-                    {courses.map(c => (
-                      <option key={c.id} value={c.id}>{c.title}</option>
-                    ))}
-                  </select>
-                  
+                  {/* Global filter controls this */}
                   {dayPlanCourseId && (
                     <button onClick={async () => {
                       const title = prompt('Tên Ngày (VD: Day 1 - Grammar):');
@@ -1760,8 +1816,30 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     return (
                       <div key={plan.id} className="px-5 py-3 hover:bg-slate-50 transition-colors">
                         <div className="flex items-center gap-4">
-                          <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-700 font-black text-xs shrink-0">
-                            {plan.day_number}
+                          <div className="flex flex-col gap-1 items-center">
+                            <button onClick={async () => {
+                              const sorted = [...dayPlans].sort((a,b) => (a.day_number||0) - (b.day_number||0));
+                              const currentIdx = sorted.findIndex(p => p.id === plan.id);
+                              if (currentIdx <= 0) return;
+                              const prev = sorted[currentIdx-1];
+                              await supabase.from('course_day_plans').update({day_number: prev.day_number||0}).eq('id', plan.id);
+                              await supabase.from('course_day_plans').update({day_number: plan.day_number||0}).eq('id', prev.id);
+                              const { data } = await supabase.from('course_day_plans').select('*').eq('course_id', dayPlanCourseId).order('day_number', { ascending: true });
+                              if (data) setDayPlans(data);
+                            }} className="text-slate-400 hover:text-slate-700 leading-none">▲</button>
+                            <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-700 font-black text-xs shrink-0">
+                              {plan.day_number}
+                            </div>
+                            <button onClick={async () => {
+                              const sorted = [...dayPlans].sort((a,b) => (a.day_number||0) - (b.day_number||0));
+                              const currentIdx = sorted.findIndex(p => p.id === plan.id);
+                              if (currentIdx >= sorted.length - 1) return;
+                              const next = sorted[currentIdx+1];
+                              await supabase.from('course_day_plans').update({day_number: next.day_number||0}).eq('id', plan.id);
+                              await supabase.from('course_day_plans').update({day_number: plan.day_number||0}).eq('id', next.id);
+                              const { data } = await supabase.from('course_day_plans').select('*').eq('course_id', dayPlanCourseId).order('day_number', { ascending: true });
+                              if (data) setDayPlans(data);
+                            }} className="text-slate-400 hover:text-slate-700 leading-none">▼</button>
                           </div>
                           
                           <div className="flex-1 min-w-0">
@@ -1830,23 +1908,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                               ))
                             )}
                             
-                            <button onClick={async () => {
-                              const title = prompt('Tên nhiệm vụ thủ công:');
-                              if (!title?.trim()) return;
-                              const desc = prompt('Mô tả (tùy chọn):') || '';
-                              
-                              const nextOrder = planTasks.length > 0 ? Math.max(...planTasks.map(t => t.order_index || 0)) + 1 : 1;
-                              
-                              const { data } = await supabase.from('day_plan_tasks').insert([{
-                                day_plan_id: plan.id,
-                                task_type: 'manual',
-                                title: title.trim(),
-                                description: desc.trim(),
-                                order_index: nextOrder
-                              }]).select();
-                              
-                              if (data) setDayPlanTasks([...dayPlanTasks, ...data]);
-                            }} className="w-full mt-2 py-2 border-2 border-dashed border-slate-200 rounded-xl text-[11px] font-bold text-slate-400 hover:text-[#0a5482] hover:border-[#0a5482] hover:bg-slate-50 transition-all">
+                            <button onClick={() => { setDayPlanManualTaskPickerFor(plan.id); setDayPlanSelectedManualTasks(new Set()); }} className="w-full mt-2 py-2 border-2 border-dashed border-slate-200 rounded-xl text-[11px] font-bold text-slate-400 hover:text-[#0a5482] hover:border-[#0a5482] hover:bg-slate-50 transition-all">
                               + Thêm việc thủ công
                             </button>
                             <button onClick={() => { setDayPlanTestPickerFor(plan.id); setDayPlanSelectedTests(new Set()); }} className="w-full mt-1 py-2 border-2 border-dashed border-emerald-200 rounded-xl text-[11px] font-bold text-emerald-400 hover:text-emerald-700 hover:border-emerald-500 hover:bg-emerald-50 transition-all">
@@ -1944,6 +2006,74 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 </div>
               </div>
             )}
+
+            {/* DAY PLAN MANUAL TASK PICKER MODAL */}
+            {dayPlanManualTaskPickerFor && (
+              <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setDayPlanManualTaskPickerFor(null)}>
+                <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
+                  <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
+                    <h3 className="font-black text-[#0a5482]">📝 Chọn việc thủ công</h3>
+                    <button onClick={() => setDayPlanManualTaskPickerFor(null)} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
+                  </div>
+                  <div className="p-6 overflow-y-auto flex-1 bg-slate-50 space-y-4">
+                    {(() => {
+                      const usedTemplateTitles = dayPlanTasks.filter(t => t.day_plan_id === dayPlanManualTaskPickerFor).map(t => t.title);
+                      const availableTemplates = manualTaskTemplates
+                        .filter(tpl => {
+                           const linked = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
+                           return !dayPlanCourseId || linked.includes(dayPlanCourseId) || linked.length === 0;
+                        })
+                        .filter(t => !usedTemplateTitles.includes(t.title));
+                        
+                      if (availableTemplates.length === 0) {
+                         return <p className="text-sm text-slate-500 italic">Không có việc thủ công nào có sẵn hoặc tất cả đã được thêm.</p>;
+                      }
+                      return availableTemplates.map(tpl => {
+                        const isSelected = dayPlanSelectedManualTasks.has(tpl.id);
+                        return (
+                          <label key={tpl.id} className={`flex items-start gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all ${isSelected ? 'border-[#0a5482] bg-sky-50' : 'border-transparent bg-white hover:border-slate-300 shadow-sm'}`}>
+                            <input type="checkbox" checked={isSelected} onChange={(e) => {
+                              const newSet = new Set(dayPlanSelectedManualTasks);
+                              if (e.target.checked) newSet.add(tpl.id);
+                              else newSet.delete(tpl.id);
+                              setDayPlanSelectedManualTasks(newSet);
+                            }} className="mt-1 w-4 h-4 accent-[#0a5482]" />
+                            <div className="flex-1 min-w-0">
+                              <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
+                              {tpl.description && <p className="text-[11px] text-slate-500 line-clamp-1">{tpl.description}</p>}
+                            </div>
+                          </label>
+                        );
+                      });
+                    })()}
+                  </div>
+                  {dayPlanSelectedManualTasks.size > 0 && (
+                    <div className="px-6 py-3 border-t border-slate-200 bg-slate-50 shrink-0">
+                      <button onClick={async () => {
+                        const planTasks = dayPlanTasks.filter(t => t.day_plan_id === dayPlanManualTaskPickerFor);
+                        let nextOrder = planTasks.length > 0 ? Math.max(...planTasks.map(t => t.order_index || 0)) + 1 : 1;
+                        const newTasks = Array.from(dayPlanSelectedManualTasks).map(tplId => {
+                          const tpl = manualTaskTemplates.find(t => t.id === tplId);
+                          return {
+                            day_plan_id: dayPlanManualTaskPickerFor,
+                            task_type: 'manual',
+                            title: tpl?.title || '',
+                            description: tpl?.description || '',
+                            order_index: nextOrder++,
+                          };
+                        });
+                        const { data } = await supabase.from('day_plan_tasks').insert(newTasks).select();
+                        if (data) setDayPlanTasks([...dayPlanTasks, ...data]);
+                        setDayPlanManualTaskPickerFor(null);
+                        setDayPlanSelectedManualTasks(new Set());
+                      }} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl text-[13px] font-bold transition-colors">
+                        Thêm {dayPlanSelectedManualTasks.size} việc
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
             </>
             )}
 
@@ -1957,16 +2087,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   <p className="text-[11px] text-slate-400 mt-0.5">Tạo bảng công việc kiểu Trello cho học sinh theo dõi tiến độ</p>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <select 
-                    value={boardCourseId} 
-                    onChange={(e) => setBoardCourseId(e.target.value)}
-                    className="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-bold outline-none focus:border-[#0a5482] min-w-[200px]"
-                  >
-                    <option value="">-- Chọn Khóa học --</option>
-                    {courses.map(c => (
-                      <option key={c.id} value={c.id}>{c.title}</option>
-                    ))}
-                  </select>
+                  {/* Global filter controls this */}
                 </div>
               </div>
 
@@ -2048,15 +2169,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                       ))}
                                     </div>
                                     <div className="flex gap-2">
-                                      <button onClick={async () => {
-                                        const title = prompt('Tên công việc thủ công:');
-                                        if (!title?.trim()) return;
-                                        const nextOrder = cardItems.length > 0 ? Math.max(...cardItems.map(i => i.order_index || 0)) + 1 : 1;
-                                        const { data } = await supabase.from('board_card_items').insert([{
-                                          card_id: card.id, task_type: 'manual', title: title.trim(), order_index: nextOrder
-                                        }]).select();
-                                        if (data) setBoardCardItems([...boardCardItems, ...data]);
-                                      }} className="flex-1 py-1.5 border border-dashed border-slate-300 rounded-lg text-[10px] font-bold text-slate-500 hover:text-orange-600 hover:border-orange-300 hover:bg-orange-50 transition-colors">
+                                      <button onClick={() => { setBoardManualTaskPickerFor(card.id); setBoardSelectedManualTasks(new Set()); }} className="flex-1 py-1.5 border border-dashed border-slate-300 rounded-lg text-[10px] font-bold text-slate-500 hover:text-orange-600 hover:border-orange-300 hover:bg-orange-50 transition-colors">
                                         + Thêm việc
                                       </button>
                                       <button onClick={() => { setBoardTestPickerFor(card.id); setBoardTestSelectedIds(new Set()); }} className="flex-1 py-1.5 border border-dashed border-slate-300 rounded-lg text-[10px] font-bold text-slate-500 hover:text-indigo-600 hover:border-indigo-300 hover:bg-indigo-50 transition-colors">
@@ -2181,6 +2294,73 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         setBoardTestSelectedIds(new Set());
                       }} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl text-[13px] font-bold transition-colors">
                         Thêm {boardTestSelectedIds.size} bài tập
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* BOARD MANUAL TASK PICKER MODAL */}
+            {boardManualTaskPickerFor && (
+              <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setBoardManualTaskPickerFor(null)}>
+                <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
+                  <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
+                    <h3 className="font-black text-[#0a5482]">📝 Chọn việc thủ công</h3>
+                    <button onClick={() => setBoardManualTaskPickerFor(null)} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
+                  </div>
+                  <div className="p-6 overflow-y-auto flex-1 bg-slate-50 space-y-4">
+                    {(() => {
+                      const usedTemplateTitles = boardCardItems.filter(i => i.card_id === boardManualTaskPickerFor).map(i => i.title);
+                      const availableTemplates = manualTaskTemplates
+                        .filter(tpl => {
+                           const linked = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
+                           return !boardCourseId || linked.includes(boardCourseId) || linked.length === 0;
+                        })
+                        .filter(t => !usedTemplateTitles.includes(t.title));
+                        
+                      if (availableTemplates.length === 0) {
+                         return <p className="text-sm text-slate-500 italic">Không có việc thủ công nào có sẵn hoặc tất cả đã được thêm.</p>;
+                      }
+                      return availableTemplates.map(tpl => {
+                        const isSelected = boardSelectedManualTasks.has(tpl.id);
+                        return (
+                          <label key={tpl.id} className={`flex items-start gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all ${isSelected ? 'border-[#0a5482] bg-sky-50' : 'border-transparent bg-white hover:border-slate-300 shadow-sm'}`}>
+                            <input type="checkbox" checked={isSelected} onChange={(e) => {
+                              const newSet = new Set(boardSelectedManualTasks);
+                              if (e.target.checked) newSet.add(tpl.id);
+                              else newSet.delete(tpl.id);
+                              setBoardSelectedManualTasks(newSet);
+                            }} className="mt-1 w-4 h-4 accent-[#0a5482]" />
+                            <div className="flex-1 min-w-0">
+                              <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
+                              {tpl.description && <p className="text-[11px] text-slate-500 line-clamp-1">{tpl.description}</p>}
+                            </div>
+                          </label>
+                        );
+                      });
+                    })()}
+                  </div>
+                  {boardSelectedManualTasks.size > 0 && (
+                    <div className="px-6 py-3 border-t border-slate-200 bg-slate-50 shrink-0">
+                      <button onClick={async () => {
+                        const cardItems = boardCardItems.filter(i => i.card_id === boardManualTaskPickerFor);
+                        let nextOrder = cardItems.length > 0 ? Math.max(...cardItems.map(i => i.order_index || 0)) + 1 : 1;
+                        const newTasks = Array.from(boardSelectedManualTasks).map(tplId => {
+                          const tpl = manualTaskTemplates.find(t => t.id === tplId);
+                          return {
+                            card_id: boardManualTaskPickerFor,
+                            task_type: 'manual',
+                            title: tpl?.title || '',
+                            order_index: nextOrder++,
+                          };
+                        });
+                        const { data } = await supabase.from('board_card_items').insert(newTasks).select();
+                        if (data) setBoardCardItems([...boardCardItems, ...data]);
+                        setBoardManualTaskPickerFor(null);
+                        setBoardSelectedManualTasks(new Set());
+                      }} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl text-[13px] font-bold transition-colors">
+                        Thêm {boardSelectedManualTasks.size} việc
                       </button>
                     </div>
                   )}
