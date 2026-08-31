@@ -130,6 +130,62 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [dayPlanTests, setDayPlanTests] = useState<any[]>([]);
   const [dayPlanSelectedTests, setDayPlanSelectedTests] = useState<Set<string>>(new Set());
 
+  // 🚀 QUẢN LÝ GIAO BÀI CHI TIẾT
+  const [assignMgmtSubTab, setAssignMgmtSubTab] = useState<'templates' | 'dayplans' | 'board' | 'detail'>('templates');
+  const [detailAssignStudent, setDetailAssignStudent] = useState<any>(null);
+  const [detailAssignMode, setDetailAssignMode] = useState<'calendar' | 'board' | null>(null);
+  const [detailCalMonth, setDetailCalMonth] = useState(new Date());
+  const [detailSelectedDate, setDetailSelectedDate] = useState<string>(new Date().toISOString().split('T')[0]);
+  const [detailAssignments, setDetailAssignments] = useState<any[]>([]);
+  const [detailShowTaskPicker, setDetailShowTaskPicker] = useState(false);
+  const [detailTaskPickerMode, setDetailTaskPickerMode] = useState<'choose' | 'manual' | 'test'>('choose');
+  const [detailBoardCourseId, setDetailBoardCourseId] = useState<string | null>(null);
+  const [detailBoardColumns, setDetailBoardColumns] = useState<any[]>([]);
+  const [detailBoardCards, setDetailBoardCards] = useState<any[]>([]);
+  const [detailBoardItems, setDetailBoardItems] = useState<any[]>([]);
+  const [students, setStudents] = useState<any[]>([]);
+
+  // Fetch students for detail view
+  useEffect(() => {
+    if (activeTab === 'assignments-mgmt' && assignMgmtSubTab === 'detail') {
+      supabase.from('profiles').select('*').order('created_at', { ascending: false })
+        .then(({ data }) => setStudents(data || []));
+    }
+  }, [activeTab, assignMgmtSubTab]);
+
+  // Fetch detail board data
+  useEffect(() => {
+    if (!detailBoardCourseId) {
+      setDetailBoardColumns([]); setDetailBoardCards([]); setDetailBoardItems([]);
+      return;
+    }
+    const fetchBoard = async () => {
+      const { data: cols } = await supabase.from('board_columns').select('*').eq('course_id', detailBoardCourseId).order('order_index');
+      setDetailBoardColumns(cols || []);
+      if (cols && cols.length > 0) {
+        const colIds = cols.map(c => c.id);
+        const { data: cards } = await supabase.from('board_cards').select('*').in('column_id', colIds).order('order_index');
+        setDetailBoardCards(cards || []);
+        if (cards && cards.length > 0) {
+          const cardIds = cards.map(c => c.id);
+          const { data: items } = await supabase.from('board_card_items').select('*').in('card_id', cardIds).order('order_index');
+          setDetailBoardItems(items || []);
+        } else setDetailBoardItems([]);
+      } else { setDetailBoardCards([]); setDetailBoardItems([]); }
+    };
+    fetchBoard();
+  }, [detailBoardCourseId]);
+
+  // Fetch detail assignments
+  useEffect(() => {
+    if (!detailAssignStudent || detailAssignMode !== 'calendar') return;
+    const fetchAssignments = async () => {
+      const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+      setDetailAssignments(data || []);
+    };
+    fetchAssignments();
+  }, [detailAssignStudent, detailAssignMode]);
+
   useEffect(() => {
     if (!dayPlanCourseId) {
       setDayPlans([]);
@@ -1550,10 +1606,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
           {activeTab === 'assignments-mgmt' && (
             <div className="p-4 md:p-8 space-y-6 animate-in fade-in">
-              <h2 className="text-lg font-black text-slate-800">📝 Quản lý Giao bài</h2>
-              <p className="text-sm text-slate-500 -mt-4">Tạo danh mục công việc, kế hoạch ngày, và bảng công việc kiểu Trello để giao cho học sinh</p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <button onClick={() => setAssignMgmtSubTab('templates')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'templates' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>📋 Danh mục Việc thủ công</button>
+                <button onClick={() => setAssignMgmtSubTab('dayplans')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'dayplans' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>📅 Kế hoạch Ngày</button>
+                <button onClick={() => setAssignMgmtSubTab('board')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'board' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>📋 Bảng Công việc</button>
+                <button onClick={() => setAssignMgmtSubTab('detail')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'detail' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>👤 Giao việc chi tiết</button>
+              </div>
 
             {/* ========== DANH MỤC VIỆC THỦ CÔNG ========== */}
+            {assignMgmtSubTab === 'templates' && (
             <div className="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
               <div className="px-5 py-4 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
                 <div>
@@ -1638,8 +1699,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 </div>
               )}
             </div>
+            )}
 
             {/* ========== KẾ HOẠCH NGÀY (DAY PLANS) ========== */}
+            {assignMgmtSubTab === 'dayplans' && (
+            <>
             <div className="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
               <div className="px-5 py-4 border-b border-slate-100 bg-slate-50 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
@@ -1880,8 +1944,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 </div>
               </div>
             )}
+            </>
+            )}
 
             {/* ========== BẢNG CÔNG VIỆC (TASK BOARD) ========== */}
+            {assignMgmtSubTab === 'board' && (
+            <>
             <div className="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col min-h-[500px]">
               <div className="px-5 py-4 border-b border-slate-100 bg-slate-50 flex flex-col md:flex-row md:items-center justify-between gap-4 shrink-0">
                 <div>
@@ -2116,6 +2184,63 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       </button>
                     </div>
                   )}
+                </div>
+              </div>
+            )}
+            </>
+            )}
+
+            {/* ========== GIAO VIỆC CHI TIẾT ========== */}
+            {assignMgmtSubTab === 'detail' && (
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div className="px-5 py-4 border-b border-slate-100 bg-slate-50">
+                  <h3 className="font-black text-sm text-[#0a5482]">👤 Giao việc chi tiết cho học sinh</h3>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Chọn học sinh để giao lịch báo bài hoặc board công việc</p>
+                </div>
+                <div className="p-4">
+                  {/* Student list table */}
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-slate-200 text-left">
+                        <th className="py-2 px-3 text-slate-500 font-bold text-xs w-12">STT</th>
+                        <th className="py-2 px-3 text-slate-500 font-bold text-xs">Học sinh</th>
+                        <th className="py-2 px-3 text-slate-500 font-bold text-xs hidden md:table-cell">Email</th>
+                        <th className="py-2 px-3 text-slate-500 font-bold text-xs text-right">Thao tác</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {/* Filter only active students from the students array */}
+                      {students.filter(s => s.status !== 'inactive').map((student, idx) => (
+                        <tr key={student.id} className="border-b border-slate-100 hover:bg-slate-50 transition">
+                          <td className="py-3 px-3 text-slate-400 font-bold text-xs">{idx + 1}</td>
+                          <td className="py-3 px-3">
+                            <div className="flex items-center gap-2">
+                              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#0ea5e9] to-[#38bdf8] flex items-center justify-center text-white font-bold text-xs shrink-0">
+                                {(student.full_name || student.email || '?')[0].toUpperCase()}
+                              </div>
+                              <span className="font-semibold text-slate-800 text-[13px]">{student.full_name || student.email}</span>
+                            </div>
+                          </td>
+                          <td className="py-3 px-3 text-slate-500 text-[12px] hidden md:table-cell">{student.email}</td>
+                          <td className="py-3 px-3 text-right">
+                            <div className="flex items-center justify-end gap-2">
+                              <button 
+                                onClick={() => { setDetailAssignStudent(student); setDetailAssignMode('calendar'); }}
+                                className="px-3 py-1.5 bg-[#0ea5e9] hover:bg-[#0284c7] text-white rounded-lg font-bold text-[11px] transition"
+                              >📅 Lịch báo bài</button>
+                              <button 
+                                onClick={() => { setDetailAssignStudent(student); setDetailAssignMode('board'); }}
+                                className="px-3 py-1.5 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-bold text-[11px] transition"
+                              >📋 Giao Board</button>
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                      {students.filter(s => s.status !== 'inactive').length === 0 && (
+                        <tr><td colSpan={4} className="py-8 text-center text-slate-400 text-sm">Chưa có học sinh nào</td></tr>
+                      )}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             )}
@@ -3119,6 +3244,224 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             onClose={() => setShowBatchJsonImport(false)}
             onSuccess={() => { fetchLibraryTests(); }}
           />
+        )}
+
+        {detailAssignStudent && detailAssignMode === 'calendar' && (
+          <div className="fixed inset-0 z-[100] bg-black/40 flex items-center justify-center p-4">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] overflow-y-auto">
+              <div className="sticky top-0 bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between rounded-t-2xl z-10">
+                <div>
+                  <h2 className="font-black text-lg text-[#0a5482]">📅 Lịch báo bài - {detailAssignStudent.full_name || detailAssignStudent.email}</h2>
+                </div>
+                <button onClick={() => { setDetailAssignStudent(null); setDetailAssignMode(null); }} className="text-2xl text-slate-400 hover:text-slate-700">&times;</button>
+              </div>
+              <div className="p-6">
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="md:w-[320px] shrink-0">
+                    <div className="flex items-center justify-between mb-3">
+                      <button onClick={() => setDetailCalMonth(new Date(detailCalMonth.getFullYear(), detailCalMonth.getMonth() - 1))} className="text-slate-400 hover:text-slate-700 font-bold">&larr;</button>
+                      <span className="font-bold text-sm text-slate-700">Tháng {detailCalMonth.getMonth() + 1} Năm {detailCalMonth.getFullYear()}</span>
+                      <button onClick={() => setDetailCalMonth(new Date(detailCalMonth.getFullYear(), detailCalMonth.getMonth() + 1))} className="text-slate-400 hover:text-slate-700 font-bold">&rarr;</button>
+                    </div>
+                    {(() => {
+                      const year = detailCalMonth.getFullYear();
+                      const month = detailCalMonth.getMonth();
+                      const firstDay = new Date(year, month, 1).getDay();
+                      const daysInMonth = new Date(year, month + 1, 0).getDate();
+                      const today = new Date().toISOString().split('T')[0];
+                      const days = [];
+                      for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) days.push(null);
+                      for (let d = 1; d <= daysInMonth; d++) days.push(d);
+                      return (
+                        <div className="grid grid-cols-7 gap-1 text-center">
+                          {['CN','T2','T3','T4','T5','T6','T7'].map(d => <div key={d} className="text-[10px] font-bold text-slate-400 py-1">{d}</div>)}
+                          {days.map((d, i) => {
+                            if (!d) return <div key={`e${i}`} />;
+                            const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+                            const dayTasks = detailAssignments.filter(a => a.due_date === dateStr);
+                            const isSelected = dateStr === detailSelectedDate;
+                            const isToday = dateStr === today;
+                            const hasCompleted = dayTasks.some(t => t.is_completed || t.student_completed);
+                            const hasPending = dayTasks.some(t => !t.is_completed && !t.student_completed);
+                            const hasOverdue = hasPending && dateStr < today;
+                            let bgClass = '';
+                            if (hasOverdue) bgClass = 'bg-red-100';
+                            else if (hasCompleted && !hasPending) bgClass = 'bg-emerald-100';
+                            else if (hasPending) bgClass = 'bg-sky-100';
+                            return (
+                              <button key={dateStr} onClick={() => setDetailSelectedDate(dateStr)}
+                                className={`w-full aspect-square rounded-lg text-[12px] font-semibold transition ${isSelected ? 'bg-[#0ea5e9] text-white' : bgClass || (isToday ? 'ring-2 ring-[#0ea5e9]' : 'hover:bg-slate-100')} ${isSelected ? '' : 'text-slate-700'}`}
+                              >{d}</button>
+                            );
+                          })}
+                        </div>
+                      );
+                    })()}
+                    <div className="flex gap-3 mt-3 text-[10px] text-slate-500">
+                      <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-sky-100"></span> Chưa xong</span>
+                      <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-emerald-100"></span> Xong</span>
+                      <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-red-100"></span> Quá hạn</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="font-bold text-sm text-slate-700">
+                        📅 {(() => { const d = new Date(detailSelectedDate + 'T00:00:00'); return d.toLocaleDateString('vi-VN', {weekday:'long', day:'numeric', month:'long'}); })()}
+                        <span className="ml-2 text-slate-400">({detailAssignments.filter(a => a.due_date === detailSelectedDate).length} việc)</span>
+                      </h3>
+                      <div className="flex gap-2">
+                        <button onClick={() => {
+                          setDetailAssignMode('board');
+                        }} className="px-3 py-1.5 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-bold text-[11px] transition">📋 Giao Board</button>
+                        <button onClick={() => {
+                          setDetailShowTaskPicker(true);
+                          setDetailTaskPickerMode('choose');
+                        }} className="px-3 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-bold text-[11px] transition">+ Giao việc</button>
+                      </div>
+                    </div>
+                    {detailAssignments.filter(a => a.due_date === detailSelectedDate).length === 0 ? (
+                      <div className="py-12 text-center text-slate-400 text-sm">Chưa giao việc cho ngày này.</div>
+                    ) : (
+                      <div className="space-y-2">
+                        {detailAssignments.filter(a => a.due_date === detailSelectedDate).sort((a,b) => (a.order_index||0) - (b.order_index||0)).map(task => (
+                          <div key={task.id} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <span className={`w-2 h-2 rounded-full shrink-0 ${task.is_completed || task.student_completed ? 'bg-emerald-500' : 'bg-sky-400'}`}></span>
+                            <div className="flex-1 min-w-0">
+                              <p className="font-semibold text-[13px] text-slate-800 truncate">{task.title}</p>
+                              <p className="text-[11px] text-slate-400">{task.task_type === 'test' ? '📝 Bài tập' : '✏️ Thủ công'} {task.is_completed || task.student_completed ? '✅ Hoàn thành' : ''}</p>
+                            </div>
+                            <button onClick={async () => {
+                              if (!window.confirm('Xóa việc này?')) return;
+                              await supabase.from('assignments').delete().eq('id', task.id);
+                              setDetailAssignments(prev => prev.filter(a => a.id !== task.id));
+                            }} className="text-slate-300 hover:text-red-500 text-lg">🗑</button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {detailAssignStudent && detailAssignMode === 'board' && (
+          <div className="fixed inset-0 z-[100] bg-black/40 flex items-center justify-center p-4">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto">
+              <div className="sticky top-0 bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between rounded-t-2xl z-10">
+                <h2 className="font-black text-lg text-[#0a5482]">📋 Giao Board - {detailAssignStudent.full_name || detailAssignStudent.email}</h2>
+                <button onClick={() => { setDetailAssignMode(null); }} className="text-2xl text-slate-400 hover:text-slate-700">&times;</button>
+              </div>
+              <div className="p-6">
+                <select 
+                  value={detailBoardCourseId || ''} 
+                  onChange={e => setDetailBoardCourseId(e.target.value || null)}
+                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm font-semibold mb-4"
+                >
+                  <option value="">-- Chọn Khóa học --</option>
+                  {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+                </select>
+                
+                {detailBoardColumns.length > 0 ? (
+                  <>
+                    <div className="mb-3">
+                      <span className="px-2 py-1 bg-violet-100 text-violet-700 rounded-md font-bold text-[12px]">Tổng cộng: {detailBoardItems.length} mục</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                      {detailBoardColumns.map(col => {
+                        const colCards = detailBoardCards.filter(c => c.column_id === col.id);
+                        const cardIds = colCards.map(c => c.id);
+                        const colItems = detailBoardItems.filter(i => cardIds.includes(i.card_id));
+                        return (
+                          <div key={col.id} className="border border-slate-200 rounded-xl p-3">
+                            <h4 className="font-bold text-sm text-slate-800">{col.title}</h4>
+                            <p className="text-[11px] text-slate-400">{colCards.length} thẻ / {colItems.length} mục việc</p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-[12px] text-amber-700 mb-4">
+                      ⚠️ Lưu ý: Tất cả các mục việc trong Board sẽ được giao cho học sinh dưới dạng bài tập không có ngày hạn.
+                    </div>
+                    <div className="flex justify-end gap-3">
+                      <button onClick={() => setDetailAssignMode(null)} className="px-4 py-2 text-slate-500 hover:text-slate-700 font-bold text-sm">Quay lại</button>
+                      <button 
+                        onClick={async () => {
+                          if (!detailAssignStudent) return;
+                          const inserts: any[] = [];
+                          for (const col of detailBoardColumns) {
+                            const colCards = detailBoardCards.filter(c => c.column_id === col.id);
+                            for (const card of colCards) {
+                              const cardItems = detailBoardItems.filter(i => i.card_id === card.id);
+                              for (const item of cardItems) {
+                                inserts.push({
+                                  user_id: detailAssignStudent.id,
+                                  title: item.title,
+                                  description: item.description || '',
+                                  task_type: item.task_type,
+                                  test_id: item.test_id || null,
+                                  category: col.title,
+                                  card_title: card.title,
+                                  card_order: card.order_index || 0,
+                                  due_date: null
+                                });
+                              }
+                            }
+                          }
+                          if (inserts.length > 0) {
+                            const { error } = await supabase.from('assignments').insert(inserts);
+                            if (error) { alert('Lỗi: ' + error.message); return; }
+                            alert('Đã giao thành công!');
+                            setDetailAssignMode(null);
+                          } else {
+                            alert('Không có mục việc nào để giao');
+                          }
+                        }}
+                        className="px-5 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-xl font-bold text-sm transition"
+                      >Xác nhận Giao Board</button>
+                    </div>
+                  </>
+                ) : detailBoardCourseId ? (
+                  <div className="py-8 text-center text-slate-400 text-sm">Khóa học này chưa có Board template</div>
+                ) : null}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {detailShowTaskPicker && detailAssignStudent && (
+          <div className="fixed inset-0 z-[110] bg-black/40 flex items-center justify-center p-4">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6">
+              <h3 className="font-black text-sm text-[#0a5482] mb-4">📝 Thêm việc cho {detailAssignStudent.full_name}</h3>
+              <div className="space-y-3">
+                <button onClick={async () => {
+                  const title = prompt('Tên công việc thủ công:');
+                  if (!title) return;
+                  const { error } = await supabase.from('assignments').insert({
+                    user_id: detailAssignStudent.id,
+                    title,
+                    task_type: 'manual',
+                    due_date: detailSelectedDate
+                  });
+                  if (!error) {
+                    const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+                    setDetailAssignments(data || []);
+                  }
+                  setDetailShowTaskPicker(false);
+                }} className="w-full p-3 border border-slate-200 rounded-xl hover:bg-slate-50 text-left font-semibold text-sm">
+                  ✏️ Thêm việc thủ công
+                </button>
+                <button onClick={() => {
+                  setDetailTaskPickerMode('manual');
+                }} className="w-full p-3 border border-slate-200 rounded-xl hover:bg-slate-50 text-left font-semibold text-sm">
+                  📋 Chọn từ danh mục việc thủ công
+                </button>
+              </div>
+              <button onClick={() => setDetailShowTaskPicker(false)} className="mt-4 w-full py-2 text-slate-400 hover:text-slate-700 font-bold text-sm">Đóng</button>
+            </div>
+          </div>
         )}
 
       </main>
