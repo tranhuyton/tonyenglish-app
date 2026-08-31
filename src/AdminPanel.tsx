@@ -1417,6 +1417,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           <button onClick={() => {setActiveTab('library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📚 Kho Đề thi & Bài tập</button>
           <button onClick={() => {setActiveTab('lectures-library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📖 Kho Bài giảng</button>
           <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>☁️ Quản lý Tài Liệu (PDF)</button>
+          <button onClick={() => {setActiveTab('assignments-mgmt'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'assignments-mgmt' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📝 Giao bài học viên</button>
           <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
         </div>
       </aside>
@@ -1429,7 +1430,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
              </button>
              <h1 className="text-[16px] md:text-xl font-black text-slate-800 uppercase tracking-tight truncate">
-               {activeTab === 'courses' ? 'Khóa học' : activeTab === 'course-detail' ? 'Chi tiết' : activeTab === 'lectures-library' ? 'Kho Bài Giảng' : activeTab === 'library' ? 'Kho Đề & Bài tập' : activeTab === 'documents' ? 'Tài Liệu Cloud' : 'Học viên'}
+               {activeTab === 'courses' ? 'Khóa học' : activeTab === 'course-detail' ? 'Chi tiết' : activeTab === 'lectures-library' ? 'Kho Bài Giảng' : activeTab === 'library' ? 'Kho Đề & Bài tập' : activeTab === 'documents' ? 'Tài Liệu Cloud' : activeTab === 'assignments-mgmt' ? 'Giao Bài Học Viên' : 'Học viên'}
              </h1>
           </div>
           
@@ -1544,6 +1545,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 ))
               )}
             </div>
+            </>
+          )}
+
+          {activeTab === 'assignments-mgmt' && (
+            <div className="p-4 md:p-8 space-y-6 animate-in fade-in">
+              <h2 className="text-lg font-black text-slate-800">📝 Quản lý Giao bài</h2>
+              <p className="text-sm text-slate-500 -mt-4">Tạo danh mục công việc, kế hoạch ngày, và bảng công việc kiểu Trello để giao cho học sinh</p>
 
             {/* ========== DANH MỤC VIỆC THỦ CÔNG ========== */}
             <div className="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
@@ -2111,7 +2119,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 </div>
               </div>
             )}
-            </>
+            </div>
           )}
 
           {/* VIEW: QUẢN LÝ TÀI LIỆU PDF */}
