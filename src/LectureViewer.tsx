@@ -416,9 +416,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
               max-width: 100%;
               height: auto; 
               display: block; 
-              border-radius: 12px; 
               margin: 1.5rem auto; 
-              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
           }
           iframe {
                width: 100% !important;
