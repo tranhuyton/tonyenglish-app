@@ -361,7 +361,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     fetchGlobalLectures();
     fetchPdfFiles(); 
     fetchNotifications();
-    supabase.from('manual_task_templates').select('*').order('order_index').then(({ data }) => setManualTaskTemplates(data || []));
+    supabase.from('manual_task_templates').select('*').order('order_index').then(({ data, error }) => { console.log('[AdminPanel] manual_task_templates init:', data?.length, error); setManualTaskTemplates(data || []); });
     supabase.from('course_task_templates').select('*').then(({ data }) => setCourseTaskLinks(data || []));
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -392,6 +392,17 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
         document.removeEventListener('visibilitychange', handleVisibility);
     }
   }, []);
+
+  // Re-fetch manual templates when assignments tab is activated
+  useEffect(() => {
+    if (activeTab === 'assignments-mgmt') {
+      supabase.from('manual_task_templates').select('*').order('order_index').then(({ data, error }) => {
+        console.log('[AdminPanel] re-fetch templates:', data?.length, error);
+        setManualTaskTemplates(data || []);
+      });
+      supabase.from('course_task_templates').select('*').then(({ data }) => setCourseTaskLinks(data || []));
+    }
+  }, [activeTab]);
 
   useEffect(() => {
     setLectureCurrentPage(1);
