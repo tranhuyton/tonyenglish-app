@@ -1663,26 +1663,32 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   const desc = prompt('Mô tả (tùy chọn):') || '';
                   (async () => {
                     const { data: { session } } = await supabase.auth.getSession();
-                    await supabase.from('manual_task_templates').insert([{ title: title.trim(), description: desc.trim(), created_by: session?.user?.id }]);
-                    // Refresh - trigger re-render
+                    const { data: inserted } = await supabase.from('manual_task_templates').insert([{ title: title.trim(), description: desc.trim(), created_by: session?.user?.id }]).select();
+                    // Auto-link to selected course
+                    if (assignMgmtCourseId && inserted && inserted[0]) {
+                      await supabase.from('course_task_templates').insert([{ course_id: assignMgmtCourseId, template_id: inserted[0].id }]);
+                      const { data: links } = await supabase.from('course_task_templates').select('*');
+                      setCourseTaskLinks(links || []);
+                    }
                     const { data } = await supabase.from('manual_task_templates').select('*').order('order_index');
                     setManualTaskTemplates(data || []);
                   })();
                 }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Thêm</button>
               </div>
-              {manualTaskTemplates.length === 0 ? (
-                <div className="p-8 text-center text-slate-400 text-[13px]">Chưa có mẫu việc thủ công nào. Bấm + Thêm để tạo.</div>
-              ) : (
+              {(() => {
+                let filtered = manualTaskTemplates;
+                if (assignMgmtCourseId) {
+                  filtered = filtered.filter(tpl => {
+                    const linked = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
+                    return linked.includes(assignMgmtCourseId);
+                  });
+                }
+                if (filtered.length === 0) {
+                  return <div className="p-8 text-center text-slate-400 text-[13px]">Chưa có mẫu việc thủ công nào. Bấm + Thêm để tạo.</div>;
+                }
+                return (
                 <div className="divide-y divide-slate-100">
-                  {(() => {
-                    let filtered = manualTaskTemplates;
-                    if (assignMgmtCourseId) {
-                      filtered = filtered.filter(tpl => {
-                        const linked = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
-                        return linked.includes(assignMgmtCourseId);
-                      });
-                    }
-                    return filtered.map((tpl: any, idx: number) => {
+                  {filtered.map((tpl: any, idx: number) => {
                       const linkedCourseIds = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
                       const linkedCourses = courses.filter(c => linkedCourseIds.includes(c.id));
                       const isExpanded = expandedTemplateId === tpl.id;
@@ -1761,9 +1767,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       )}
                     </div>
                     );
-                  })})()}
+                  })}
                 </div>
-              )}
+                );
+              })()}
             </div>
             )}
 
