@@ -155,7 +155,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   useEffect(() => {
     if (assignMgmtSubTab === 'approvals') {
       const fetchApprovals = async () => {
-        const { data } = await supabase.from('assignments').select('*, profiles!assignments_user_id_fkey(full_name, email)').eq('task_type', 'manual').eq('student_completed', true).order('updated_at', { ascending: false });
+        const { data, error } = await supabase.from('assignments').select('*').eq('task_type', 'manual').eq('student_completed', true).order('updated_at', { ascending: false });
+        console.log('[Approvals] fetch:', { data, error, count: data?.length });
         setPendingApprovals(data || []);
       };
       fetchApprovals();
