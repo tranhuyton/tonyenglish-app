@@ -151,13 +151,28 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       setDetailBoardCourseId(null);
     }
   }, [assignMgmtCourseId]);
+  const [approvalProfiles, setApprovalProfiles] = useState<any[]>([]);
+  const [approvalEnrollments, setApprovalEnrollments] = useState<any[]>([]);
   
   useEffect(() => {
     if (assignMgmtSubTab === 'approvals') {
       const fetchApprovals = async () => {
-        const { data, error } = await supabase.from('assignments').select('*').eq('task_type', 'manual').eq('student_completed', true).order('updated_at', { ascending: false });
-        console.log('[Approvals] fetch:', { data, error, count: data?.length });
-        setPendingApprovals(data || []);
+        // Fetch all completed manual assignments
+        const { data } = await supabase.from('assignments').select('*').eq('task_type', 'manual').eq('student_completed', true).order('updated_at', { ascending: false });
+        // Fetch all profiles for name lookup
+        const { data: profiles } = await supabase.from('profiles').select('id, full_name, email');
+        setApprovalProfiles(profiles || []);
+        // Fetch enrollments for course lookup
+        const { data: enrollments } = await supabase.from('enrollments').select('user_id, course_id, courses(title)');
+        setApprovalEnrollments(enrollments || []);
+        
+        let filtered = data || [];
+        // Filter by course if selected
+        if (assignMgmtCourseId) {
+          const enrolledUserIds = (enrollments || []).filter((e: any) => e.course_id === assignMgmtCourseId).map((e: any) => e.user_id);
+          filtered = filtered.filter(a => enrolledUserIds.includes(a.user_id));
+        }
+        setPendingApprovals(filtered);
       };
       fetchApprovals();
     }
@@ -1741,7 +1756,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <div>
                           <p className="font-bold text-sm text-slate-800">{a.title}</p>
                           <p className="text-[11px] text-slate-400">
-                            {a.profiles?.full_name || students.find(s => s.id === a.user_id)?.full_name || 'Unknown'} • {a.profiles?.email || students.find(s => s.id === a.user_id)?.email || 'Unknown'}
+                            👤 {approvalProfiles.find(p => p.id === a.user_id)?.full_name || 'Unknown'} • {approvalProfiles.find(p => p.id === a.user_id)?.email || ''}
+                            {(() => { const enr = approvalEnrollments.find((e: any) => e.user_id === a.user_id); return enr ? ` • 📚 ${(enr as any).courses?.title || ''}` : ''; })()}
                             {a.due_date && ` • Hạn: ${new Date(a.due_date + 'T00:00:00').toLocaleDateString('vi-VN')}`}
                           </p>
                           {a.due_date && new Date() > new Date(a.due_date + 'T23:59:59') && (
@@ -1767,7 +1783,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <div key={a.id} className="px-5 py-2 flex items-center justify-between bg-emerald-50/30">
                           <div>
                             <p className="text-sm text-slate-600 line-through">{a.title}</p>
-                            <p className="text-[11px] text-slate-400">{a.profiles?.full_name || students.find(s => s.id === a.user_id)?.full_name || 'Unknown'}</p>
+                            <p className="text-[11px] text-slate-400">👤 {approvalProfiles.find(p => p.id === a.user_id)?.full_name || 'Unknown'}{(() => { const enr = approvalEnrollments.find((e: any) => e.user_id === a.user_id); return enr ? ` • 📚 ${(enr as any).courses?.title || ''}` : ''; })()}</p>
                           </div>
                           <button onClick={async () => {
                             await supabase.from('assignments').update({ admin_approved: false }).eq('id', a.id);

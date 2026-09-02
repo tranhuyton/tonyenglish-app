@@ -83,9 +83,11 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
       if (error) throw error;
 
       // Also sync all matching assignments (same title, same user, same task_type)
+      const updatePayload: any = { student_completed: newStatus };
+      if (!newStatus) updatePayload.admin_approved = false; // Reset approval when un-completing
       await supabase
         .from('assignments')
-        .update({ student_completed: newStatus })
+        .update(updatePayload)
         .eq('user_id', userId)
         .eq('title', task.title)
         .eq('task_type', 'manual');
