@@ -3643,6 +3643,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                               <p className="text-[11px] text-slate-400">{task.task_type === 'test' ? '📝 Bài tập' : '✏️ Thủ công'} {task.is_completed || task.student_completed ? '✅ Hoàn thành' : ''}</p>
                             </div>
                             <button onClick={async () => {
+                              const newApproved = !task.admin_approved;
+                              await supabase.from('assignments').update({ admin_approved: newApproved }).eq('id', task.id);
+                              // Refresh the assignments list for this student
+                              const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+                              setDetailAssignments(data || []);
+                            }} className={`text-[11px] px-2 py-0.5 rounded-md font-bold ${task.admin_approved ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-500'}`}>
+                              {task.admin_approved ? '✅ Đã duyệt' : 'Duyệt'}
+                            </button>
+                            <button onClick={async () => {
                               if (!window.confirm('Xóa việc này?')) return;
                               await supabase.from('assignments').delete().eq('id', task.id);
                               setDetailAssignments(prev => prev.filter(a => a.id !== task.id));

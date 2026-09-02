@@ -126,10 +126,22 @@ export default function AssignmentCalendar({ assignments, completedTestIds, onRe
 
     setIsUpdating(task.id);
     const newVal = !task.student_completed;
+    
+    // Update this specific task
     await supabase.from('assignments').update({
       student_completed: newVal,
       updated_at: new Date().toISOString()
     }).eq('id', task.id);
+    
+    // Also sync all matching assignments (same title, same user, same task_type)
+    await supabase.from('assignments').update({
+      student_completed: newVal,
+      updated_at: new Date().toISOString()
+    })
+      .eq('user_id', task.user_id)
+      .eq('title', task.title)
+      .eq('task_type', 'manual');
+
     setIsUpdating(null);
     onRefresh();
   };

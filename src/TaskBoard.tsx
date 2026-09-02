@@ -71,6 +71,8 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
 
     try {
       const newStatus = !task.student_completed;
+      
+      // Update this specific task
       const { error } = await supabase
         .from('assignments')
         .update({ student_completed: newStatus })
@@ -78,8 +80,16 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
 
       if (error) throw error;
 
+      // Also sync all matching assignments (same title, same user, same task_type)
+      await supabase
+        .from('assignments')
+        .update({ student_completed: newStatus })
+        .eq('user_id', userId)
+        .eq('title', task.title)
+        .eq('task_type', 'manual');
+
       setAssignments(prev => prev.map(a => 
-        a.id === task.id ? { ...a, student_completed: newStatus } : a
+        (a.title === task.title && a.task_type === 'manual') ? { ...a, student_completed: newStatus } : a
       ));
     } catch (error) {
       console.error('Error updating task:', error);
