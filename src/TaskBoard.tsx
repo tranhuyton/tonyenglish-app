@@ -12,6 +12,8 @@ interface Assignment {
   task_type: 'manual' | 'test';
   test_id?: string;
   user_id: string;
+  board_template_id?: string;
+  board_template_title?: string;
 }
 
 interface CardData {
@@ -31,6 +33,8 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
   const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [loading, setLoading] = useState(true);
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
+  const [filterBoard, setFilterBoard] = useState<string>('');
+  const [boardOptions, setBoardOptions] = useState<string[]>([]);
 
   useEffect(() => {
     fetchAssignments();
@@ -49,6 +53,8 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
       console.log('[TaskBoard] Result:', { data, error, count: data?.length });
       if (error) throw error;
       setAssignments(data || []);
+      const boards = [...new Set((data || []).map(a => a.board_template_title).filter(Boolean))];
+      setBoardOptions(boards as string[]);
     } catch (error) {
       console.error('[TaskBoard] Error fetching assignments:', error);
     } finally {
@@ -103,9 +109,14 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
   }
 
   // Process data
+  let filtered = assignments;
+  if (filterBoard) {
+    filtered = assignments.filter(a => a.board_template_title === filterBoard);
+  }
+
   const columnsMap = new Map<string, Map<string, Assignment[]>>();
   
-  assignments.forEach(task => {
+  filtered.forEach(task => {
     if (!columnsMap.has(task.category)) {
       columnsMap.set(task.category, new Map());
     }
@@ -152,6 +163,16 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
       <div className="max-w-[1600px] mx-auto">
         
         {/* Header */}
+        {boardOptions.length > 1 && (
+          <div className="flex items-center gap-3 mb-4">
+            <span className="font-bold text-sm text-slate-600">Lọc theo:</span>
+            <select value={filterBoard} onChange={e => setFilterBoard(e.target.value)}
+              className="border border-slate-200 rounded-xl px-4 py-2 text-sm font-semibold">
+              <option value="">Tất cả</option>
+              {boardOptions.map(b => <option key={b} value={b}>{b}</option>)}
+            </select>
+          </div>
+        )}
         <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-6 mb-6 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
             <span className="text-2xl">📋</span>

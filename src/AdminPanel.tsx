@@ -157,10 +157,19 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [detailShowTaskPicker, setDetailShowTaskPicker] = useState(false);
   const [detailTaskPickerMode, setDetailTaskPickerMode] = useState<'choose' | 'manual' | 'test'>('choose');
   const [detailBoardCourseId, setDetailBoardCourseId] = useState<string | null>(null);
+  const [detailBoardTemplates, setDetailBoardTemplates] = useState<any[]>([]);
+  const [detailSelectedBoardId, setDetailSelectedBoardId] = useState<string | null>(null);
   const [detailBoardColumns, setDetailBoardColumns] = useState<any[]>([]);
   const [detailBoardCards, setDetailBoardCards] = useState<any[]>([]);
   const [detailBoardItems, setDetailBoardItems] = useState<any[]>([]);
+  const [detailExistingBoards, setDetailExistingBoards] = useState<any[]>([]);
   const [students, setStudents] = useState<any[]>([]);
+  
+  const [detailShowAutoDist, setDetailShowAutoDist] = useState(false);
+  const [detailAutoDistStartDate, setDetailAutoDistStartDate] = useState(new Date().toISOString().split('T')[0]);
+  const [detailAutoDistPlans, setDetailAutoDistPlans] = useState<any[]>([]);
+  const [detailAutoDistTasks, setDetailAutoDistTasks] = useState<any[]>([]);
+  const [detailAutoDistSelected, setDetailAutoDistSelected] = useState<Set<string>>(new Set());
 
   // Fetch students for detail view
   useEffect(() => {
@@ -182,14 +191,30 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     }
   }, [activeTab, assignMgmtSubTab, assignMgmtCourseId]);
 
-  // Fetch detail board data
+  // Fetch detail board templates
   useEffect(() => {
     if (!detailBoardCourseId) {
+      setDetailBoardTemplates([]);
+      setDetailSelectedBoardId(null);
+      return;
+    }
+    const fetchTemplates = async () => {
+      const { data: templates } = await supabase.from('board_templates').select('*').eq('course_id', detailBoardCourseId).order('created_at');
+      setDetailBoardTemplates(templates || []);
+      const active = templates?.find(t => t.is_active) || templates?.[0];
+      setDetailSelectedBoardId(active?.id || null);
+    };
+    fetchTemplates();
+  }, [detailBoardCourseId]);
+
+  // Fetch detail board data
+  useEffect(() => {
+    if (!detailSelectedBoardId) {
       setDetailBoardColumns([]); setDetailBoardCards([]); setDetailBoardItems([]);
       return;
     }
     const fetchBoard = async () => {
-      const { data: cols } = await supabase.from('board_columns').select('*').eq('course_id', detailBoardCourseId).order('order_index');
+      const { data: cols } = await supabase.from('board_columns').select('*').eq('board_template_id', detailSelectedBoardId).order('order_index');
       setDetailBoardColumns(cols || []);
       if (cols && cols.length > 0) {
         const colIds = cols.map(c => c.id);
@@ -203,14 +228,24 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       } else { setDetailBoardCards([]); setDetailBoardItems([]); }
     };
     fetchBoard();
-  }, [detailBoardCourseId]);
+  }, [detailSelectedBoardId]);
 
-  // Fetch detail assignments
+  // Fetch detail assignments and existing boards
   useEffect(() => {
-    if (!detailAssignStudent || detailAssignMode !== 'calendar') return;
+    if (!detailAssignStudent) return;
     const fetchAssignments = async () => {
       const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
       setDetailAssignments(data || []);
+      
+      const { data: boards } = await supabase.from('assignments')
+        .select('board_template_id, board_template_title')
+        .eq('user_id', detailAssignStudent.id)
+        .not('board_template_id', 'is', null);
+      if (boards) {
+        const uniqueBoards = Array.from(new Set(boards.map(b => b.board_template_id)))
+          .map(id => boards.find(b => b.board_template_id === id));
+        setDetailExistingBoards(uniqueBoards);
+      }
     };
     fetchAssignments();
   }, [detailAssignStudent, detailAssignMode]);
@@ -248,6 +283,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   }, [dayPlanTestPickerFor, dayPlanCourseId]);
 
   // 🚀 QUẢN LÝ BẢNG CÔNG VIỆC (TASK BOARD)
+  const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
+  const [activeBoardTemplateId, setActiveBoardTemplateId] = useState<string | null>(null);
   const [boardColumns, setBoardColumns] = useState<any[]>([]);
   const [boardCards, setBoardCards] = useState<any[]>([]);
   const [boardCardItems, setBoardCardItems] = useState<any[]>([]);
@@ -258,13 +295,27 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   useEffect(() => {
     if (!boardCourseId) {
+      setBoardTemplates([]);
+      setActiveBoardTemplateId(null);
+      return;
+    }
+    supabase.from('board_templates').select('*').eq('course_id', boardCourseId).order('created_at')
+      .then(({ data }) => {
+        setBoardTemplates(data || []);
+        const active = data?.find(b => b.is_active) || data?.[0];
+        setActiveBoardTemplateId(active?.id || null);
+      });
+  }, [boardCourseId]);
+
+  useEffect(() => {
+    if (!activeBoardTemplateId) {
       setBoardColumns([]);
       setBoardCards([]);
       setBoardCardItems([]);
       return;
     }
     const fetchBoard = async () => {
-      const { data: columns } = await supabase.from('board_columns').select('*').eq('course_id', boardCourseId).order('order_index', { ascending: true });
+      const { data: columns } = await supabase.from('board_columns').select('*').eq('board_template_id', activeBoardTemplateId).order('order_index', { ascending: true });
       setBoardColumns(columns || []);
       
       if (columns && columns.length > 0) {
@@ -285,7 +336,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       }
     };
     fetchBoard();
-  }, [boardCourseId]);
+  }, [activeBoardTemplateId]);
 
   // Fetch folders/tests when board test picker opens
   useEffect(() => {
@@ -2110,6 +2161,52 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
               </div>
 
               {boardCourseId ? (
+                <div className="p-4 bg-slate-50 border-b border-slate-100 flex flex-col gap-3">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    {boardTemplates.map(bt => (
+                      <button key={bt.id} onClick={() => setActiveBoardTemplateId(bt.id)}
+                        className={`px-4 py-2 rounded-xl font-bold text-[13px] border transition ${activeBoardTemplateId === bt.id ? 'bg-[#0a5482] text-white border-[#0a5482]' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'}`}>
+                        {bt.title} {bt.is_active && '⭐'}
+                      </button>
+                    ))}
+                    <button onClick={async () => {
+                      const title = prompt('Tên board mới:');
+                      if (!title?.trim()) return;
+                      await supabase.from('board_templates').insert({ course_id: boardCourseId, title: title.trim() });
+                      const { data } = await supabase.from('board_templates').select('*').eq('course_id', boardCourseId).order('created_at');
+                      setBoardTemplates(data || []);
+                      if (data?.length) setActiveBoardTemplateId(data[data.length-1].id);
+                    }} className="px-4 py-2 rounded-xl font-bold text-[13px] border border-dashed border-slate-300 text-slate-500 hover:bg-slate-50">+ Tạo Board mới</button>
+                  </div>
+                  {activeBoardTemplateId && (
+                    <div className="flex items-center gap-2">
+                      <button onClick={async () => {
+                        const bt = boardTemplates.find(b => b.id === activeBoardTemplateId);
+                        const newTitle = prompt('Đổi tên board:', bt?.title);
+                        if (!newTitle?.trim()) return;
+                        await supabase.from('board_templates').update({ title: newTitle.trim() }).eq('id', activeBoardTemplateId);
+                        const { data } = await supabase.from('board_templates').select('*').eq('course_id', boardCourseId).order('created_at');
+                        setBoardTemplates(data || []);
+                      }} className="text-slate-400 hover:text-slate-700 text-sm">✏️ Đổi tên</button>
+                      <button onClick={async () => {
+                        if (!window.confirm('Xóa board này và toàn bộ nội dung?')) return;
+                        await supabase.from('board_templates').delete().eq('id', activeBoardTemplateId);
+                        const { data } = await supabase.from('board_templates').select('*').eq('course_id', boardCourseId).order('created_at');
+                        setBoardTemplates(data || []);
+                        setActiveBoardTemplateId(data?.[0]?.id || null);
+                      }} className="text-red-400 hover:text-red-600 text-sm">🗑 Xóa board</button>
+                      <button onClick={async () => {
+                        await supabase.from('board_templates').update({ is_active: false }).eq('course_id', boardCourseId);
+                        await supabase.from('board_templates').update({ is_active: true }).eq('id', activeBoardTemplateId);
+                        const { data } = await supabase.from('board_templates').select('*').eq('course_id', boardCourseId).order('created_at');
+                        setBoardTemplates(data || []);
+                      }} className="text-emerald-500 hover:text-emerald-700 text-sm">⭐ Đặt làm active</button>
+                    </div>
+                  )}
+                </div>
+              ) : null}
+
+              {boardCourseId ? (
                 <div className="flex-1 flex overflow-x-auto gap-4 p-4 custom-scrollbar bg-slate-100/50">
                   {boardColumns.map(col => {
                     const colCards = boardCards.filter(c => c.column_id === col.id);
@@ -2218,11 +2315,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   
                   <div className="w-[280px] shrink-0 h-12">
                     <button onClick={async () => {
+                      if (!activeBoardTemplateId) {
+                        alert('Vui lòng chọn hoặc tạo Board trước');
+                        return;
+                      }
                       const title = prompt('Tên cột (VD: Speaking, Reading...):');
                       if (!title?.trim()) return;
                       const nextOrder = boardColumns.length > 0 ? Math.max(...boardColumns.map(c => c.order_index || 0)) + 1 : 1;
                       const { data } = await supabase.from('board_columns').insert([{
-                        course_id: boardCourseId, title: title.trim(), order_index: nextOrder
+                        board_template_id: activeBoardTemplateId, title: title.trim(), order_index: nextOrder
                       }]).select();
                       if (data) setBoardColumns([...boardColumns, ...data]);
                     }} className="w-full h-full rounded-2xl border-2 border-dashed border-slate-300 text-[13px] font-bold text-slate-500 hover:border-[#2bd6eb] hover:text-[#0a5482] hover:bg-[#2bd6eb]/5 transition-all flex items-center justify-center gap-2">
@@ -3512,6 +3613,18 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <button onClick={() => {
                           setDetailAssignMode('board');
                         }} className="px-3 py-1.5 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-bold text-[11px] transition">📋 Giao Board</button>
+                        <button onClick={async () => {
+                          if (!assignMgmtCourseId) { alert('Vui lòng chọn khóa học trước'); return; }
+                          const { data: plans } = await supabase.from('course_day_plans').select('*').eq('course_id', assignMgmtCourseId).order('day_number');
+                          setDetailAutoDistPlans(plans || []);
+                          if (plans?.length) {
+                            const planIds = plans.map(p => p.id);
+                            const { data: tasks } = await supabase.from('day_plan_tasks').select('*').in('day_plan_id', planIds).order('order_index');
+                            setDetailAutoDistTasks(tasks || []);
+                            setDetailAutoDistSelected(new Set(plans.map(p => p.id)));
+                          }
+                          setDetailShowAutoDist(true);
+                        }} className="px-3 py-1.5 bg-[#0a5482] hover:bg-[#084266] text-white rounded-lg font-bold text-[11px] transition">🚀 Tự động phân bổ</button>
                         <button onClick={() => {
                           setDetailShowTaskPicker(true);
                           setDetailTaskPickerMode('choose');
@@ -3562,7 +3675,29 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                 </select>
                 
-                {detailBoardColumns.length > 0 ? (
+                {detailBoardCourseId && (
+                  <div className="flex gap-2 flex-wrap mb-4">
+                    {detailBoardTemplates.map(bt => (
+                      <button key={bt.id} onClick={() => setDetailSelectedBoardId(bt.id)}
+                        className={`px-3 py-1.5 rounded-lg text-sm font-bold border ${detailSelectedBoardId === bt.id ? 'bg-[#0a5482] text-white border-[#0a5482]' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'}`}>
+                        {bt.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                
+                {detailSelectedBoardId && detailExistingBoards.some(b => b.board_template_id === detailSelectedBoardId) ? (
+                  <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl mb-4 text-center">
+                    <h4 className="font-bold text-emerald-800 text-lg mb-2">✅ Học sinh đã được giao Board này</h4>
+                    <p className="text-sm text-emerald-600 mb-4">Bạn có thể xóa toàn bộ việc thuộc board này nếu muốn giao lại.</p>
+                    <button onClick={async () => {
+                      if (!window.confirm('Xóa toàn bộ việc thuộc board này của học sinh?')) return;
+                      await supabase.from('assignments').delete().match({ user_id: detailAssignStudent.id, board_template_id: detailSelectedBoardId });
+                      alert('Đã xóa!');
+                      setDetailAssignMode(null);
+                    }} className="px-4 py-2 bg-red-100 hover:bg-red-200 text-red-700 rounded-lg font-bold text-sm">🗑 Xóa Board này</button>
+                  </div>
+                ) : detailBoardColumns.length > 0 ? (
                   <>
                     <div className="mb-3">
                       <span className="px-2 py-1 bg-violet-100 text-violet-700 rounded-md font-bold text-[12px]">Tổng cộng: {detailBoardItems.length} mục</span>
@@ -3587,7 +3722,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       <button onClick={() => setDetailAssignMode(null)} className="px-4 py-2 text-slate-500 hover:text-slate-700 font-bold text-sm">Quay lại</button>
                       <button 
                         onClick={async () => {
-                          if (!detailAssignStudent) return;
+                          if (!detailAssignStudent || !detailSelectedBoardId) return;
+                          const selectedTemplate = detailBoardTemplates.find(b => b.id === detailSelectedBoardId);
                           const inserts: any[] = [];
                           for (const col of detailBoardColumns) {
                             const colCards = detailBoardCards.filter(c => c.column_id === col.id);
@@ -3603,7 +3739,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                   category: col.title,
                                   card_title: card.title,
                                   card_order: card.order_index || 0,
-                                  due_date: null
+                                  due_date: null,
+                                  board_template_id: detailSelectedBoardId,
+                                  board_template_title: selectedTemplate?.title || 'Board'
                                 });
                               }
                             }
@@ -3622,8 +3760,68 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     </div>
                   </>
                 ) : detailBoardCourseId ? (
-                  <div className="py-8 text-center text-slate-400 text-sm">Khóa học này chưa có Board template</div>
+                  <div className="py-8 text-center text-slate-400 text-sm">Template này chưa có dữ liệu</div>
                 ) : null}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {detailShowAutoDist && detailAssignStudent && (
+          <div className="fixed inset-0 z-[120] bg-black/40 flex items-center justify-center p-4">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] overflow-y-auto p-6">
+              <h3 className="font-black text-lg text-[#0a5482] mb-4">📅 Tự động phân bổ - {detailAssignStudent.full_name}</h3>
+              <div className="mb-4">
+                <label className="text-sm font-bold text-slate-600 block mb-1">Ngày bắt đầu:</label>
+                <input type="date" value={detailAutoDistStartDate} onChange={e => setDetailAutoDistStartDate(e.target.value)}
+                  className="border border-slate-200 rounded-lg px-3 py-2 text-sm w-full" />
+              </div>
+              <div className="mb-4">
+                <label className="text-sm font-bold text-slate-600 block mb-2">Chọn ngày học:</label>
+                {detailAutoDistPlans.map(plan => {
+                  const planTasks = detailAutoDistTasks.filter(t => t.day_plan_id === plan.id);
+                  return (
+                    <label key={plan.id} className="flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
+                      <input type="checkbox" checked={detailAutoDistSelected.has(plan.id)}
+                        onChange={() => { const s = new Set(detailAutoDistSelected); s.has(plan.id) ? s.delete(plan.id) : s.add(plan.id); setDetailAutoDistSelected(s); }} />
+                      <span className="font-semibold text-sm">Day {plan.day_number}: {plan.title}</span>
+                      <span className="text-xs text-slate-400">({planTasks.length} việc, {plan.duration_days || 1} ngày)</span>
+                    </label>
+                  );
+                })}
+              </div>
+              <div className="flex justify-end gap-3">
+                <button onClick={() => setDetailShowAutoDist(false)} className="px-4 py-2 text-slate-500 font-bold text-sm">Đóng</button>
+                <button onClick={async () => {
+                  const { data: { session } } = await supabase.auth.getSession();
+                  const selectedPlans = detailAutoDistPlans.filter(p => detailAutoDistSelected.has(p.id)).sort((a,b) => a.day_number - b.day_number);
+                  let currentDate = new Date(detailAutoDistStartDate);
+                  const newAssignments: any[] = [];
+                  for (const plan of selectedPlans) {
+                    const planTasks = detailAutoDistTasks.filter(t => t.day_plan_id === plan.id).sort((a,b) => (a.order_index||0) - (b.order_index||0));
+                    const dueDate = currentDate.toISOString().split('T')[0];
+                    for (const task of planTasks) {
+                      newAssignments.push({
+                        user_id: detailAssignStudent.id,
+                        due_date: dueDate,
+                        title: task.title,
+                        description: task.description || '',
+                        task_type: task.task_type,
+                        test_id: task.test_id || null,
+                        created_by: session?.user?.id || null
+                      });
+                    }
+                    currentDate.setDate(currentDate.getDate() + (plan.duration_days || 1));
+                  }
+                  if (newAssignments.length > 0) {
+                    const { error } = await supabase.from('assignments').insert(newAssignments);
+                    if (error) { alert('Lỗi: ' + error.message); return; }
+                    alert(`Đã giao ${newAssignments.length} việc thành công!`);
+                    const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+                    setDetailAssignments(data || []);
+                  }
+                  setDetailShowAutoDist(false);
+                }} className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-sm">Xác nhận phân bổ</button>
               </div>
             </div>
           </div>
