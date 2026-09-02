@@ -3987,6 +3987,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     currentDate.setDate(currentDate.getDate() + (plan.duration_days || 1));
                   }
                   if (newAssignments.length > 0) {
+                    // Dedup: delete old manual assignments with same title for this user
+                    const manualTitles = [...new Set(newAssignments.filter(a => a.task_type === 'manual').map(a => a.title))];
+                    for (const t of manualTitles) {
+                      await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).eq('title', t).eq('task_type', 'manual');
+                    }
                     const { error } = await supabase.from('assignments').insert(newAssignments);
                     if (error) { alert('Lỗi: ' + error.message); return; }
                     alert(`Đã giao ${newAssignments.length} việc thành công!`);
@@ -4008,6 +4013,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <button onClick={async () => {
                   const title = prompt('Tên công việc thủ công:');
                   if (!title) return;
+                  // Dedup: delete old assignment with same title for this user
+                  await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).eq('title', title).eq('task_type', 'manual');
                   const { error } = await supabase.from('assignments').insert({
                     user_id: detailAssignStudent.id,
                     title,

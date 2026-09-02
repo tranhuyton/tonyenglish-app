@@ -328,6 +328,11 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     }
     
     if (newAssignments.length > 0) {
+      // Dedup: delete old manual assignments with same title for this user
+      const manualTitles = [...new Set(newAssignments.filter(a => a.task_type === 'manual').map(a => a.title))];
+      for (const t of manualTitles) {
+        await supabase.from('assignments').delete().eq('user_id', selectedStudent.id).eq('title', t).eq('task_type', 'manual');
+      }
       await supabase.from('assignments').insert(newAssignments);
     }
     
