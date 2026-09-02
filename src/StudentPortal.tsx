@@ -225,23 +225,29 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             return;
         }
 
-        // Step 1: Fetch user-specific records (profile, progress, enrollments, history)
-        const [
-            { data: profile },
-            { data: lp },
-            { data: cStudents },
-            { data: enrolls },
-            { data: hData }
-        ] = await Promise.all([
-            supabase.from('profiles').select('*').eq('id', user.id).single(),
-            supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id),
-            supabase.from('class_students').select('class_id').eq('user_id', user.id),
-            supabase.from('enrollments').select('course_id').eq('user_id', user.id),
-            supabase.from('test_results').select('id, test_id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000)
+        // Step 1: Fetch user-specific records — each query wrapped to prevent cascading failure
+        const safeQuery = async (name: string, queryFn: () => any) => {
+            try {
+                const result = await queryFn();
+                if (result.error) console.warn(`[${name}] error:`, result.error);
+                return result;
+            } catch (e) { console.error(`[${name}] CRASH:`, e); return { data: null, error: e }; }
+        };
+        const [profileRes, lpRes, cStudentsRes, enrollsRes, hDataRes, assignRes] = await Promise.all([
+            safeQuery('profiles', () => supabase.from('profiles').select('*').eq('id', user.id).single()),
+            safeQuery('lecture_progress', () => supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id).limit(5000)),
+            safeQuery('class_students', () => supabase.from('class_students').select('class_id').eq('user_id', user.id)),
+            safeQuery('enrollments', () => supabase.from('enrollments').select('course_id').eq('user_id', user.id)),
+            safeQuery('test_results', () => supabase.from('test_results').select('id, test_id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000)),
+            safeQuery('assignments', () => supabase.from('assignments').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(5000))
         ]);
-        // Fetch assignments separately to avoid 406 crashing the whole Promise.all
-        const { data: assignData, error: assignError } = await supabase.from('assignments').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(5000);
-        if (assignError) console.warn('[Assignments] fetch error:', assignError);
+        const profile = profileRes.data;
+        const lp = lpRes.data;
+        const cStudents = cStudentsRes.data;
+        const enrolls = enrollsRes.data;
+        const hData = hDataRes.data;
+        const assignData = assignRes.data;
+        console.log('[PORTAL INIT] profile:', !!profile, 'lp:', lp?.length, 'enrolls:', enrolls?.length, 'hData:', hData?.length, 'assigns:', assignData?.length);
 
         setUserProfile(profile);
         if (profile) {
