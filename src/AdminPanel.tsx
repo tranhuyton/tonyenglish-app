@@ -3688,19 +3688,55 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 
                 {detailSelectedBoardId && detailExistingBoards.some(b => b.board_template_id === detailSelectedBoardId) ? (
                   <div className="mb-4">
-                    <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl mb-3 flex items-center justify-between">
-                      <div>
-                        <h4 className="font-bold text-emerald-800 text-sm">✅ Học sinh đã được giao Board này</h4>
-                        <p className="text-[11px] text-emerald-600">Bạn có thể xóa để giao lại hoặc xem nội dung bên dưới.</p>
+                    <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl mb-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <div>
+                          <h4 className="font-bold text-emerald-800 text-sm">✅ Học sinh đã được giao Board này</h4>
+                          <p className="text-[11px] text-emerald-600">Cập nhật để đồng bộ nội dung mới từ template.</p>
+                        </div>
                       </div>
-                      <button onClick={async () => {
-                        if (!window.confirm('Xóa toàn bộ việc thuộc board này của học sinh?')) return;
-                        await supabase.from('assignments').delete().match({ user_id: detailAssignStudent.id, board_template_id: detailSelectedBoardId });
-                        alert('Đã xóa!');
-                        // Refresh existing boards
-                        const { data: eb } = await supabase.from('assignments').select('board_template_id, board_template_title').eq('user_id', detailAssignStudent.id).not('board_template_id', 'is', null);
-                        setDetailExistingBoards(eb || []);
-                      }} className="px-3 py-1.5 bg-red-100 hover:bg-red-200 text-red-700 rounded-lg font-bold text-[12px]">🗑 Xóa Board</button>
+                      <div className="flex gap-2">
+                        <button onClick={async () => {
+                          const selectedTemplate = detailBoardTemplates.find(b => b.id === detailSelectedBoardId);
+                          // Delete old assignments for this board
+                          await supabase.from('assignments').delete().match({ user_id: detailAssignStudent.id, board_template_id: detailSelectedBoardId });
+                          // Re-insert from current template
+                          const inserts: any[] = [];
+                          for (const col of detailBoardColumns) {
+                            const colCards = detailBoardCards.filter(c => c.column_id === col.id);
+                            for (const card of colCards) {
+                              const cardItems = detailBoardItems.filter(i => i.card_id === card.id);
+                              for (const item of cardItems) {
+                                inserts.push({
+                                  user_id: detailAssignStudent.id,
+                                  title: item.title,
+                                  description: item.description || '',
+                                  task_type: item.task_type,
+                                  test_id: item.test_id || null,
+                                  category: col.title,
+                                  card_title: card.title,
+                                  card_order: card.order_index || 0,
+                                  order_index: item.order_index || 0,
+                                  due_date: null,
+                                  board_template_id: detailSelectedBoardId,
+                                  board_template_title: selectedTemplate?.title || 'Board'
+                                });
+                              }
+                            }
+                          }
+                          if (inserts.length > 0) await supabase.from('assignments').insert(inserts);
+                          alert(`Đã cập nhật ${inserts.length} mục việc!`);
+                          const { data: eb } = await supabase.from('assignments').select('board_template_id, board_template_title').eq('user_id', detailAssignStudent.id).not('board_template_id', 'is', null);
+                          setDetailExistingBoards(eb || []);
+                        }} className="px-3 py-1.5 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-lg font-bold text-[12px]">🔄 Cập nhật Board</button>
+                        <button onClick={async () => {
+                          if (!window.confirm('Xóa toàn bộ việc thuộc board này của học sinh?')) return;
+                          await supabase.from('assignments').delete().match({ user_id: detailAssignStudent.id, board_template_id: detailSelectedBoardId });
+                          alert('Đã xóa!');
+                          const { data: eb } = await supabase.from('assignments').select('board_template_id, board_template_title').eq('user_id', detailAssignStudent.id).not('board_template_id', 'is', null);
+                          setDetailExistingBoards(eb || []);
+                        }} className="px-3 py-1.5 bg-red-100 hover:bg-red-200 text-red-700 rounded-lg font-bold text-[12px]">🗑 Xóa Board</button>
+                      </div>
                     </div>
                     {/* Show board content preview */}
                     <div className="grid grid-cols-2 gap-3 mb-3">
