@@ -3687,15 +3687,46 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 )}
                 
                 {detailSelectedBoardId && detailExistingBoards.some(b => b.board_template_id === detailSelectedBoardId) ? (
-                  <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl mb-4 text-center">
-                    <h4 className="font-bold text-emerald-800 text-lg mb-2">✅ Học sinh đã được giao Board này</h4>
-                    <p className="text-sm text-emerald-600 mb-4">Bạn có thể xóa toàn bộ việc thuộc board này nếu muốn giao lại.</p>
-                    <button onClick={async () => {
-                      if (!window.confirm('Xóa toàn bộ việc thuộc board này của học sinh?')) return;
-                      await supabase.from('assignments').delete().match({ user_id: detailAssignStudent.id, board_template_id: detailSelectedBoardId });
-                      alert('Đã xóa!');
-                      setDetailAssignMode(null);
-                    }} className="px-4 py-2 bg-red-100 hover:bg-red-200 text-red-700 rounded-lg font-bold text-sm">🗑 Xóa Board này</button>
+                  <div className="mb-4">
+                    <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl mb-3 flex items-center justify-between">
+                      <div>
+                        <h4 className="font-bold text-emerald-800 text-sm">✅ Học sinh đã được giao Board này</h4>
+                        <p className="text-[11px] text-emerald-600">Bạn có thể xóa để giao lại hoặc xem nội dung bên dưới.</p>
+                      </div>
+                      <button onClick={async () => {
+                        if (!window.confirm('Xóa toàn bộ việc thuộc board này của học sinh?')) return;
+                        await supabase.from('assignments').delete().match({ user_id: detailAssignStudent.id, board_template_id: detailSelectedBoardId });
+                        alert('Đã xóa!');
+                        // Refresh existing boards
+                        const { data: eb } = await supabase.from('assignments').select('board_template_id, board_template_title').eq('user_id', detailAssignStudent.id).not('board_template_id', 'is', null);
+                        setDetailExistingBoards(eb || []);
+                      }} className="px-3 py-1.5 bg-red-100 hover:bg-red-200 text-red-700 rounded-lg font-bold text-[12px]">🗑 Xóa Board</button>
+                    </div>
+                    {/* Show board content preview */}
+                    <div className="grid grid-cols-2 gap-3 mb-3">
+                      {detailBoardColumns.map(col => {
+                        const colCards = detailBoardCards.filter(c => c.column_id === col.id);
+                        const cardIds = colCards.map(c => c.id);
+                        const colItems = detailBoardItems.filter(i => cardIds.includes(i.card_id));
+                        return (
+                          <div key={col.id} className="border border-slate-200 rounded-xl p-3">
+                            <h4 className="font-bold text-sm text-slate-800 mb-1">{col.title}</h4>
+                            <p className="text-[11px] text-slate-400 mb-2">{colCards.length} thẻ / {colItems.length} mục việc</p>
+                            {colCards.map(card => {
+                              const items = detailBoardItems.filter(i => i.card_id === card.id);
+                              return (
+                                <div key={card.id} className="ml-2 mb-1">
+                                  <p className="text-[12px] font-semibold text-slate-600">{card.title}</p>
+                                  {items.map(item => (
+                                    <p key={item.id} className="text-[11px] text-slate-400 ml-2">• {item.title}</p>
+                                  ))}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 ) : detailBoardColumns.length > 0 ? (
                   <>

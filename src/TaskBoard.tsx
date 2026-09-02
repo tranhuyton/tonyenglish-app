@@ -55,6 +55,10 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
       setAssignments(data || []);
       const boards = [...new Set((data || []).map(a => a.board_template_title).filter(Boolean))];
       setBoardOptions(boards as string[]);
+      // Auto-select first board if available
+      if (boards.length > 0 && !filterBoard) {
+        setFilterBoard(boards[0] as string);
+      }
     } catch (error) {
       console.error('[TaskBoard] Error fetching assignments:', error);
     } finally {
