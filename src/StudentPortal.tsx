@@ -393,6 +393,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 return sc > 3.0;
             });
 
+            console.log('[REPORT DEBUG] hData raw count:', hData?.length, 'validHistory count:', validHistory.length);
             setHistoryData(validHistory.map((item: any) => {
                 let detailsObj = item.details || {};
                 if (typeof detailsObj === 'string') {
