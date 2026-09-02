@@ -14,6 +14,8 @@ interface Assignment {
   user_id: string;
   board_template_id?: string;
   board_template_title?: string;
+  admin_approved?: boolean;
+  due_date?: string;
 }
 
 interface CardData {
@@ -294,11 +296,31 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
                                       )
                                     )}
                                   </div>
-                                  <span className={`text-sm leading-tight pt-0.5 ${
-                                    isItemDone ? 'line-through text-slate-400' : 'text-slate-700'
-                                  }`}>
-                                    {item.title}
-                                  </span>
+                                  <div className="flex flex-col gap-0.5 w-full">
+                                    <div>
+                                      <span className={`text-sm leading-tight pt-0.5 ${
+                                        isItemDone ? 'line-through text-slate-400' : 'text-slate-700'
+                                      }`}>
+                                        {item.title}
+                                      </span>
+                                      {item.due_date && (
+                                        <span className="text-[10px] text-slate-400 ml-2 whitespace-nowrap">
+                                          {new Date(item.due_date + 'T00:00:00').toLocaleDateString('vi-VN', {day:'numeric', month:'short'})}
+                                        </span>
+                                      )}
+                                    </div>
+                                    <div className="mt-0.5 flex flex-wrap gap-1">
+                                      {isItemDone && (item.task_type === 'test' || item.admin_approved) && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-bold">✅ Đã hoàn thành</span>
+                                      )}
+                                      {isItemDone && !item.admin_approved && item.task_type === 'manual' && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 font-bold">⏳ Chờ giáo viên phê duyệt</span>
+                                      )}
+                                      {item.due_date && !isItemDone && new Date() > new Date(item.due_date + 'T23:59:59') && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded bg-red-100 text-red-600 font-bold">⚠️ Quá hạn</span>
+                                      )}
+                                    </div>
+                                  </div>
                                 </div>
                               );
                             })}

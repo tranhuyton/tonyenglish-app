@@ -136,7 +136,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   // 🚀 QUẢN LÝ GIAO BÀI CHI TIẾT
   const [assignMgmtCourseId, setAssignMgmtCourseId] = useState<string>('');
-  const [assignMgmtSubTab, setAssignMgmtSubTab] = useState<'templates' | 'dayplans' | 'board' | 'detail'>('templates');
+  const [assignMgmtSubTab, setAssignMgmtSubTab] = useState<'templates' | 'dayplans' | 'board' | 'detail' | 'approvals'>('templates');
+  const [pendingApprovals, setPendingApprovals] = useState<any[]>([]);
+  const [detailSortMode, setDetailSortMode] = useState<'name' | 'date'>('name');
   
   useEffect(() => {
     if (assignMgmtCourseId) {
@@ -149,6 +151,16 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       setDetailBoardCourseId(null);
     }
   }, [assignMgmtCourseId]);
+  
+  useEffect(() => {
+    if (assignMgmtSubTab === 'approvals') {
+      const fetchApprovals = async () => {
+        const { data } = await supabase.from('assignments').select('*, profiles!assignments_user_id_fkey(full_name, email)').eq('task_type', 'manual').eq('student_completed', true).order('updated_at', { ascending: false });
+        setPendingApprovals(data || []);
+      };
+      fetchApprovals();
+    }
+  }, [assignMgmtSubTab, assignMgmtCourseId]);
   const [detailAssignStudent, setDetailAssignStudent] = useState<any>(null);
   const [detailAssignMode, setDetailAssignMode] = useState<'calendar' | 'board' | null>(null);
   const [detailCalMonth, setDetailCalMonth] = useState(new Date());
@@ -1709,7 +1721,64 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <button onClick={() => setAssignMgmtSubTab('dayplans')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'dayplans' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>📅 Kế hoạch Ngày</button>
                 <button onClick={() => setAssignMgmtSubTab('board')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'board' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>📋 Bảng Công việc</button>
                 <button onClick={() => setAssignMgmtSubTab('detail')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'detail' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>👤 Giao việc chi tiết</button>
+                <button onClick={() => setAssignMgmtSubTab('approvals')} className={`px-4 py-2 rounded-full font-bold text-[13px] transition-all ${assignMgmtSubTab === 'approvals' ? 'bg-[#0a5482] text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>✅ Phê duyệt</button>
               </div>
+            
+            {/* ========== DANH SÁCH YÊU CẦU PHÊ DUYỆT ========== */}
+            {assignMgmtSubTab === 'approvals' && (
+              <div className="mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div className="px-5 py-4 border-b border-slate-100 bg-slate-50">
+                  <h3 className="font-black text-sm text-[#0a5482]">✅ Danh sách yêu cầu phê duyệt</h3>
+                  <p className="text-[11px] text-slate-400 mt-0.5">Các việc thủ công học sinh đã hoàn thành, chờ giáo viên duyệt</p>
+                </div>
+                {pendingApprovals.filter(a => !a.admin_approved).length === 0 ? (
+                  <div className="p-8 text-center text-slate-400 text-[13px]">Không có yêu cầu phê duyệt nào.</div>
+                ) : (
+                  <div className="divide-y divide-slate-100">
+                    {pendingApprovals.filter(a => !a.admin_approved).map(a => (
+                      <div key={a.id} className="px-5 py-3 flex items-center justify-between hover:bg-slate-50">
+                        <div>
+                          <p className="font-bold text-sm text-slate-800">{a.title}</p>
+                          <p className="text-[11px] text-slate-400">
+                            {a.profiles?.full_name || students.find(s => s.id === a.user_id)?.full_name || 'Unknown'} • {a.profiles?.email || students.find(s => s.id === a.user_id)?.email || 'Unknown'}
+                            {a.due_date && ` • Hạn: ${new Date(a.due_date + 'T00:00:00').toLocaleDateString('vi-VN')}`}
+                          </p>
+                          {a.due_date && new Date() > new Date(a.due_date + 'T23:59:59') && (
+                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-red-100 text-red-600 font-bold ml-2">⚠️ Quá hạn</span>
+                          )}
+                        </div>
+                        <button onClick={async () => {
+                          await supabase.from('assignments').update({ admin_approved: true }).eq('id', a.id);
+                          setPendingApprovals(prev => prev.map(p => p.id === a.id ? {...p, admin_approved: true} : p));
+                        }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold text-[12px]">✅ Duyệt</button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {/* Show already approved section */}
+                {pendingApprovals.filter(a => a.admin_approved).length > 0 && (
+                  <>
+                    <div className="px-5 py-2 bg-emerald-50 border-t border-emerald-100">
+                      <p className="text-[11px] font-bold text-emerald-700">Đã duyệt ({pendingApprovals.filter(a => a.admin_approved).length})</p>
+                    </div>
+                    <div className="divide-y divide-slate-100">
+                      {pendingApprovals.filter(a => a.admin_approved).map(a => (
+                        <div key={a.id} className="px-5 py-2 flex items-center justify-between bg-emerald-50/30">
+                          <div>
+                            <p className="text-sm text-slate-600 line-through">{a.title}</p>
+                            <p className="text-[11px] text-slate-400">{a.profiles?.full_name || students.find(s => s.id === a.user_id)?.full_name || 'Unknown'}</p>
+                          </div>
+                          <button onClick={async () => {
+                            await supabase.from('assignments').update({ admin_approved: false }).eq('id', a.id);
+                            setPendingApprovals(prev => prev.map(p => p.id === a.id ? {...p, admin_approved: false} : p));
+                          }} className="text-[11px] text-red-400 hover:text-red-600">❌ Bỏ duyệt</button>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
 
             {/* ========== DANH MỤC VIỆC THỦ CÔNG ========== */}
             {assignMgmtSubTab === 'templates' && (
@@ -2497,6 +2566,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   <p className="text-[11px] text-slate-400 mt-0.5">Chọn học sinh để giao lịch báo bài hoặc board công việc</p>
                 </div>
                 <div className="p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-[12px] font-bold text-slate-500">Sắp xếp:</span>
+                    <button onClick={() => setDetailSortMode('name')} className={`text-[12px] px-3 py-1 rounded-lg font-bold ${detailSortMode === 'name' ? 'bg-[#0a5482] text-white' : 'bg-slate-100 text-slate-600'}`}>Tên A-Z</button>
+                    <button onClick={() => setDetailSortMode('date')} className={`text-[12px] px-3 py-1 rounded-lg font-bold ${detailSortMode === 'date' ? 'bg-[#0a5482] text-white' : 'bg-slate-100 text-slate-600'}`}>Thời gian</button>
+                  </div>
                   {/* Student list table */}
                   <table className="w-full text-sm">
                     <thead>
@@ -2509,7 +2583,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     </thead>
                     <tbody>
                       {/* Filter only active students from the students array */}
-                      {students.filter(s => s.status !== 'inactive').map((student, idx) => (
+                      {students.filter(s => s.status !== 'inactive').sort((a, b) => {
+                        if (detailSortMode === 'name') {
+                          return (a.full_name || '').localeCompare(b.full_name || '', 'vi');
+                        } else {
+                          return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
+                        }
+                      }).map((student, idx) => (
                         <tr key={student.id} className="border-b border-slate-100 hover:bg-slate-50 transition">
                           <td className="py-3 px-3 text-slate-400 font-bold text-xs">{idx + 1}</td>
                           <td className="py-3 px-3">
