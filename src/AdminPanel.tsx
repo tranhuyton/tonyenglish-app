@@ -205,7 +205,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       setDetailSelectedBoardId(active?.id || null);
     };
     fetchTemplates();
-  }, [detailBoardCourseId]);
+  }, [detailBoardCourseId, detailAssignMode]);
 
   // Fetch detail board data
   useEffect(() => {
@@ -2323,7 +2323,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       if (!title?.trim()) return;
                       const nextOrder = boardColumns.length > 0 ? Math.max(...boardColumns.map(c => c.order_index || 0)) + 1 : 1;
                       const { data } = await supabase.from('board_columns').insert([{
-                        board_template_id: activeBoardTemplateId, title: title.trim(), order_index: nextOrder
+                        course_id: boardCourseId, board_template_id: activeBoardTemplateId, title: title.trim(), order_index: nextOrder
                       }]).select();
                       if (data) setBoardColumns([...boardColumns, ...data]);
                     }} className="w-full h-full rounded-2xl border-2 border-dashed border-slate-300 text-[13px] font-bold text-slate-500 hover:border-[#2bd6eb] hover:text-[#0a5482] hover:bg-[#2bd6eb]/5 transition-all flex items-center justify-center gap-2">
