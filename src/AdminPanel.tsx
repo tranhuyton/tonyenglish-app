@@ -184,6 +184,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [detailAssignments, setDetailAssignments] = useState<any[]>([]);
   const [detailShowTaskPicker, setDetailShowTaskPicker] = useState(false);
   const [detailTaskPickerMode, setDetailTaskPickerMode] = useState<'choose' | 'manual' | 'test'>('choose');
+  const [detailSelectedManualTemplates, setDetailSelectedManualTemplates] = useState<Set<string>>(new Set());
+  const [detailSelectedTests, setDetailSelectedTests] = useState<Set<string>>(new Set());
   const [detailBoardCourseId, setDetailBoardCourseId] = useState<string | null>(null);
   const [detailBoardTemplates, setDetailBoardTemplates] = useState<any[]>([]);
   const [detailSelectedBoardId, setDetailSelectedBoardId] = useState<string | null>(null);
@@ -4007,35 +4009,151 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
         {detailShowTaskPicker && detailAssignStudent && (
           <div className="fixed inset-0 z-[110] bg-black/40 flex items-center justify-center p-4">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-6">
-              <h3 className="font-black text-sm text-[#0a5482] mb-4">📝 Thêm việc cho {detailAssignStudent.full_name}</h3>
-              <div className="space-y-3">
-                <button onClick={async () => {
-                  const title = prompt('Tên công việc thủ công:');
-                  if (!title) return;
-                  // Dedup: delete old assignment with same title for this user
-                  await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).eq('title', title).eq('task_type', 'manual');
-                  const { error } = await supabase.from('assignments').insert({
-                    user_id: detailAssignStudent.id,
-                    title,
-                    task_type: 'manual',
-                    due_date: detailSelectedDate
-                  });
-                  if (!error) {
-                    const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
-                    setDetailAssignments(data || []);
-                  }
-                  setDetailShowTaskPicker(false);
-                }} className="w-full p-3 border border-slate-200 rounded-xl hover:bg-slate-50 text-left font-semibold text-sm">
-                  ✏️ Thêm việc thủ công
-                </button>
-                <button onClick={() => {
-                  setDetailTaskPickerMode('manual');
-                }} className="w-full p-3 border border-slate-200 rounded-xl hover:bg-slate-50 text-left font-semibold text-sm">
-                  📋 Chọn từ danh mục việc thủ công
-                </button>
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] flex flex-col">
+              <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
+                <h3 className="font-black text-sm text-[#0a5482]">
+                  {detailTaskPickerMode === 'choose' ? `📝 Thêm việc cho ${detailAssignStudent.full_name}` : 
+                   detailTaskPickerMode === 'manual' ? '📋 Chọn việc thủ công' : '📝 Chọn bài tập hệ thống'}
+                </h3>
+                <button onClick={() => { setDetailShowTaskPicker(false); setDetailTaskPickerMode('choose'); }} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
               </div>
-              <button onClick={() => setDetailShowTaskPicker(false)} className="mt-4 w-full py-2 text-slate-400 hover:text-slate-700 font-bold text-sm">Đóng</button>
+
+              {detailTaskPickerMode === 'choose' && (
+                <div className="p-6 space-y-3">
+                  <button onClick={async () => {
+                    const title = prompt('Tên công việc thủ công:');
+                    if (!title) return;
+                    await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).eq('title', title).eq('task_type', 'manual');
+                    const { error } = await supabase.from('assignments').insert({
+                      user_id: detailAssignStudent.id, title, task_type: 'manual', due_date: detailSelectedDate
+                    });
+                    if (!error) {
+                      const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+                      setDetailAssignments(data || []);
+                    }
+                    setDetailShowTaskPicker(false);
+                  }} className="w-full p-3 border border-slate-200 rounded-xl hover:bg-slate-50 text-left font-semibold text-sm">
+                    ✏️ Thêm việc thủ công (nhập tay)
+                  </button>
+                  <button onClick={() => { setDetailTaskPickerMode('manual'); setDetailSelectedManualTemplates(new Set()); }} className="w-full p-3 border border-slate-200 rounded-xl hover:bg-slate-50 text-left font-semibold text-sm">
+                    📋 Chọn từ danh mục việc thủ công
+                  </button>
+                  <button onClick={() => { setDetailTaskPickerMode('test'); setDetailSelectedTests(new Set()); }} className="w-full p-3 border border-emerald-200 rounded-xl hover:bg-emerald-50 text-left font-semibold text-sm text-emerald-700">
+                    📚 Thêm bài tập hệ thống
+                  </button>
+                </div>
+              )}
+
+              {detailTaskPickerMode === 'manual' && (
+                <div className="flex-1 overflow-y-auto p-4">
+                  <button onClick={() => setDetailTaskPickerMode('choose')} className="mb-3 text-[11px] text-slate-400 hover:text-[#0a5482] font-bold">← Quay lại</button>
+                  {(() => {
+                    const courseTemplateIds = courseTaskLinks.filter(l => l.course_id === assignMgmtCourseId).map(l => l.template_id);
+                    const available = manualTaskTemplates.filter(t => assignMgmtCourseId ? courseTemplateIds.includes(t.id) : true);
+                    if (available.length === 0) return <div className="p-8 text-center text-slate-400 text-[13px]">Chưa có danh mục việc thủ công nào cho khóa này.</div>;
+                    return (
+                      <div className="space-y-1">
+                        {available.map(tpl => (
+                          <label key={tpl.id} className="flex items-center gap-2 py-2 px-3 hover:bg-slate-50 rounded-lg cursor-pointer">
+                            <input type="checkbox" checked={detailSelectedManualTemplates.has(tpl.id)} onChange={() => {
+                              const s = new Set(detailSelectedManualTemplates);
+                              s.has(tpl.id) ? s.delete(tpl.id) : s.add(tpl.id);
+                              setDetailSelectedManualTemplates(s);
+                            }} className="rounded" />
+                            <span className="text-[13px] text-slate-700">{tpl.title}</span>
+                          </label>
+                        ))}
+                      </div>
+                    );
+                  })()}
+                  {detailSelectedManualTemplates.size > 0 && (
+                    <div className="mt-4 pt-3 border-t border-slate-200">
+                      <button onClick={async () => {
+                        const inserts = Array.from(detailSelectedManualTemplates).map(tplId => {
+                          const tpl = manualTaskTemplates.find(t => t.id === tplId);
+                          return { user_id: detailAssignStudent.id, title: tpl?.title || '', task_type: 'manual', due_date: detailSelectedDate };
+                        });
+                        // Dedup
+                        for (const ins of inserts) {
+                          await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).eq('title', ins.title).eq('task_type', 'manual');
+                        }
+                        await supabase.from('assignments').insert(inserts);
+                        const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+                        setDetailAssignments(data || []);
+                        setDetailShowTaskPicker(false); setDetailTaskPickerMode('choose');
+                      }} className="w-full bg-[#0a5482] hover:bg-[#083d5e] text-white py-2.5 rounded-xl text-[13px] font-bold">
+                        Thêm {detailSelectedManualTemplates.size} việc thủ công
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {detailTaskPickerMode === 'test' && (
+                <div className="flex-1 overflow-y-auto p-4">
+                  <button onClick={() => setDetailTaskPickerMode('choose')} className="mb-3 text-[11px] text-slate-400 hover:text-[#0a5482] font-bold">← Quay lại</button>
+                  {dayPlanTests.length === 0 ? (
+                    <div className="p-8 text-center text-slate-400 text-[13px]">Đang tải bài tập...</div>
+                  ) : (() => {
+                    const rootFolders = dayPlanFolders.filter(f => !f.parent_id);
+                    const rootTests = dayPlanTests.filter(t => !t.folder_id);
+                    const renderFolder = (folder: any, depth: number = 0): React.ReactNode => {
+                      const children = dayPlanFolders.filter(f => f.parent_id === folder.id);
+                      const folderTests = dayPlanTests.filter(t => t.folder_id === folder.id);
+                      return (
+                        <div key={folder.id} style={{ marginLeft: depth * 16 }}>
+                          <div className="font-bold text-[12px] text-slate-600 py-1.5 flex items-center gap-1.5">
+                            <span className="text-amber-500">📁</span> {folder.title}
+                            <span className="text-[10px] text-slate-400 font-normal">{folderTests.length} đề</span>
+                          </div>
+                          {folderTests.map(test => (
+                            <label key={test.id} className="flex items-center gap-2 py-1 px-3 hover:bg-slate-50 rounded-lg cursor-pointer" style={{ marginLeft: 16 }}>
+                              <input type="checkbox" checked={detailSelectedTests.has(test.id)} onChange={() => {
+                                const s = new Set(detailSelectedTests);
+                                s.has(test.id) ? s.delete(test.id) : s.add(test.id);
+                                setDetailSelectedTests(s);
+                              }} className="rounded" />
+                              <span className="text-[12px] text-slate-700">{test.title}</span>
+                            </label>
+                          ))}
+                          {children.map(ch => renderFolder(ch, depth + 1))}
+                        </div>
+                      );
+                    };
+                    return (
+                      <div className="space-y-1">
+                        {rootFolders.map(f => renderFolder(f))}
+                        {rootTests.map(test => (
+                          <label key={test.id} className="flex items-center gap-2 py-1.5 px-3 hover:bg-slate-50 rounded-lg cursor-pointer">
+                            <input type="checkbox" checked={detailSelectedTests.has(test.id)} onChange={() => {
+                              const s = new Set(detailSelectedTests);
+                              s.has(test.id) ? s.delete(test.id) : s.add(test.id);
+                              setDetailSelectedTests(s);
+                            }} className="rounded" />
+                            <span className="text-[12px] text-slate-700">{test.title}</span>
+                          </label>
+                        ))}
+                      </div>
+                    );
+                  })()}
+                  {detailSelectedTests.size > 0 && (
+                    <div className="mt-4 pt-3 border-t border-slate-200">
+                      <button onClick={async () => {
+                        const inserts = Array.from(detailSelectedTests).map(testId => {
+                          const test = dayPlanTests.find(t => t.id === testId);
+                          return { user_id: detailAssignStudent.id, title: test?.title || '', task_type: 'test', test_id: testId, due_date: detailSelectedDate };
+                        });
+                        await supabase.from('assignments').insert(inserts);
+                        const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+                        setDetailAssignments(data || []);
+                        setDetailShowTaskPicker(false); setDetailTaskPickerMode('choose');
+                      }} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl text-[13px] font-bold">
+                        Thêm {detailSelectedTests.size} bài tập
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         )}
