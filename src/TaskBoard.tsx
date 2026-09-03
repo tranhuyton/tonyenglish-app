@@ -31,8 +31,9 @@ interface ColumnData {
   cards: CardData[];
 }
 
-export default function TaskBoard({ userId, onStartTest }: { userId: string; onStartTest?: (testId: string) => void }) {
+export default function TaskBoard({ userId, filterCourseId = 'all', onStartTest }: { userId: string; filterCourseId?: string; onStartTest?: (testId: string) => void }) {
   const [assignments, setAssignments] = useState<Assignment[]>([]);
+  const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
   const [filterBoard, setFilterBoard] = useState<string>('');
@@ -45,28 +46,26 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
   const fetchAssignments = async () => {
     try {
       setLoading(true);
-      console.log('[TaskBoard] Fetching for userId:', userId);
+      
+      const { data: bData } = await supabase.from('board_templates').select('id, title, course_id');
+      setBoardTemplates(bData || []);
+
       const { data, error } = await supabase
         .from('assignments')
         .select('*')
         .eq('user_id', userId)
         .not('category', 'is', null);
 
-      console.log('[TaskBoard] Result:', { data, error, count: data?.length });
       if (error) throw error;
       setAssignments(data || []);
-      const boards = [...new Set((data || []).map(a => a.board_template_title).filter(Boolean))];
-      setBoardOptions(boards as string[]);
-      // Auto-select first board if available
-      if (boards.length > 0 && !filterBoard) {
-        setFilterBoard(boards[0] as string);
-      }
+      
     } catch (error) {
       console.error('[TaskBoard] Error fetching assignments:', error);
     } finally {
       setLoading(false);
     }
   };
+
 
   const toggleTask = async (task: Assignment) => {
     if (task.task_type !== 'manual') return;
@@ -112,119 +111,108 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
     });
   };
 
-  if (loading) {
-    return <div className="p-8 text-center text-slate-500">Đang tải dữ liệu...</div>;
-  }
+  const boardsData = useMemo(() => {
+    const boardTitles = [...new Set(assignments.map(a => a.board_template_title).filter(Boolean))] as string[];
+    
+    const filteredTitles = boardTitles.filter(bt => {
+      if (!filterCourseId || filterCourseId === 'all') return true;
+      const tpl = boardTemplates.find(t => t.title === bt);
+      return tpl && String(tpl.course_id) === String(filterCourseId);
+    });
 
-  if (assignments.length === 0) {
+    return filteredTitles.map(boardTitle => {
+      const boardAssignments = assignments.filter(a => a.board_template_title === boardTitle);
+      
+      const columnsMap = new Map<string, Map<string, Assignment[]>>();
+      boardAssignments.forEach(task => {
+        if (!columnsMap.has(task.category)) columnsMap.set(task.category, new Map());
+        const categoryMap = columnsMap.get(task.category)!;
+        if (!categoryMap.has(task.card_title)) categoryMap.set(task.card_title, []);
+        categoryMap.get(task.card_title)!.push(task);
+      });
+
+      let totalItems = 0;
+      let totalCompleted = 0;
+
+      const columns: ColumnData[] = Array.from(columnsMap.entries()).map(([category, cardsMap]) => {
+        const cards: CardData[] = Array.from(cardsMap.entries()).map(([cardTitle, items]) => {
+          const sortedItems = [...items].sort((a, b) => (a.card_order || 0) - (b.card_order || 0));
+          const completedCount = sortedItems.filter(i => 
+            i.task_type === 'test' ? i.is_completed : i.student_completed
+          ).length;
+          totalItems += sortedItems.length;
+          totalCompleted += completedCount;
+          return { title: cardTitle, order: sortedItems[0]?.card_order || 0, items: sortedItems, completedCount, totalCount: sortedItems.length };
+        }).sort((a, b) => a.order - b.order);
+        return { name: category, cards };
+      });
+
+      const overallProgress = totalItems > 0 ? Math.round((totalCompleted / totalItems) * 100) : 0;
+      
+      return { title: boardTitle, overallProgress, totalCompleted, totalItems, columns };
+    });
+  }, [assignments, filterCourseId, boardTemplates]);
+
+  if (loading) {
     return (
-      <div className="p-12 text-center bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 m-6">
-        <span className="text-5xl block mb-4">📋</span>
-        <h3 className="text-xl font-medium text-slate-700 mb-2">Chưa có bảng công việc nào</h3>
-        <p className="text-slate-500">Liên hệ giáo viên để được giao bảng công việc.</p>
+      <div className="min-h-screen bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#0ea5e9] border-t-transparent"></div>
       </div>
     );
   }
 
-  // Process data
-  let filtered = assignments;
-  if (filterBoard) {
-    filtered = assignments.filter(a => a.board_template_title === filterBoard);
+  if (boardsData.length === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 flex items-start justify-center">
+        <div className="p-12 text-center bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 m-6 mt-12 w-full max-w-lg">
+          <span className="text-5xl block mb-4">📋</span>
+          <h3 className="text-xl font-medium text-slate-700 mb-2">Chưa có bảng công việc nào</h3>
+          <p className="text-slate-500">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
+        </div>
+      </div>
+    );
   }
 
-  const columnsMap = new Map<string, Map<string, Assignment[]>>();
-  
-  filtered.forEach(task => {
-    if (!columnsMap.has(task.category)) {
-      columnsMap.set(task.category, new Map());
-    }
-    const categoryMap = columnsMap.get(task.category)!;
-    
-    if (!categoryMap.has(task.card_title)) {
-      categoryMap.set(task.card_title, []);
-    }
-    categoryMap.get(task.card_title)!.push(task);
-  });
-
-  let totalItems = 0;
-  let totalCompleted = 0;
-
-  const columns: ColumnData[] = Array.from(columnsMap.entries()).map(([category, cardsMap]) => {
-    const cards: CardData[] = Array.from(cardsMap.entries()).map(([cardTitle, items]) => {
-      const sortedItems = [...items].sort((a, b) => (a.card_order || 0) - (b.card_order || 0));
-      const completedCount = sortedItems.filter(i => 
-        i.task_type === 'test' ? i.is_completed : i.student_completed
-      ).length;
-      
-      totalItems += sortedItems.length;
-      totalCompleted += completedCount;
-
-      return {
-        title: cardTitle,
-        order: sortedItems[0]?.card_order || 0,
-        items: sortedItems,
-        completedCount,
-        totalCount: sortedItems.length
-      };
-    }).sort((a, b) => a.order - b.order);
-
-    return {
-      name: category,
-      cards
-    };
-  });
-
-  const overallProgress = totalItems > 0 ? Math.round((totalCompleted / totalItems) * 100) : 0;
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 text-slate-800">
-      <div className="max-w-[1600px] mx-auto">
-        
-        {/* Header */}
-        {boardOptions.length > 1 && (
-          <div className="flex items-center gap-3 mb-4">
-            <span className="font-bold text-sm text-slate-600">Lọc theo:</span>
-            <select value={filterBoard} onChange={e => setFilterBoard(e.target.value)}
-              className="border border-slate-200 rounded-xl px-4 py-2 text-sm font-semibold">
-              <option value="">Tất cả</option>
-              {boardOptions.map(b => <option key={b} value={b}>{b}</option>)}
-            </select>
-          </div>
-        )}
-        <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-6 mb-6 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-3">
-            <span className="text-2xl">📋</span>
-            <h1 className="text-2xl font-bold tracking-tight">Bảng Công Việc</h1>
-          </div>
-          <div className="flex flex-col items-end">
-            <div className="text-sm text-white/90 font-medium mb-1">
-              Tổng tiến độ: {overallProgress}%
-            </div>
-            <div className="w-48 h-2 bg-white/20 rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-white rounded-full transition-all duration-500"
-                style={{ width: `${overallProgress}%` }}
-              />
-            </div>
-            <div className="text-xs text-white/70 mt-1">
-              Đã hoàn thành {totalCompleted}/{totalItems}
-            </div>
-          </div>
-        </div>
-
-        {/* Board */}
-        <div className="flex flex-col md:flex-row gap-6 overflow-x-auto pb-8 snap-x">
-          {columns.map(col => (
-            <div 
-              key={col.name} 
-              className="flex-none w-full md:w-80 lg:w-[340px] bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 p-4 snap-start flex flex-col h-fit max-h-[calc(100vh-200px)]"
-            >
-              <div className="flex justify-between items-center mb-4 px-2">
-                <h2 className="font-bold text-lg text-slate-700">{col.name}</h2>
-                <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full">
-                  {col.cards.length} thẻ
-                </span>
+    <div className="min-h-[500px] bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 text-slate-800 rounded-3xl">
+      <div className="max-w-[1600px] mx-auto space-y-12">
+        {boardsData.map(board => (
+          <div key={board.title}>
+            {/* Header */}
+            <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-6 mb-6 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">📋</span>
+                <h1 className="text-xl font-bold tracking-tight">Bảng Công Việc - {board.title}</h1>
               </div>
+              <div className="flex flex-col items-end">
+                <div className="text-sm text-white/90 font-medium mb-1">
+                  Tổng tiến độ: {board.overallProgress}%
+                </div>
+                <div className="w-48 h-2 bg-white/20 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-white rounded-full transition-all duration-500"
+                    style={{ width: `${board.overallProgress}%` }}
+                  />
+                </div>
+                <div className="text-xs text-white/70 mt-1">
+                  Đã hoàn thành {board.totalCompleted}/{board.totalItems}
+                </div>
+              </div>
+            </div>
+
+            {/* Board */}
+            <div className="flex flex-col md:flex-row gap-6 overflow-x-auto pb-8 snap-x">
+              {board.columns.map(col => (
+                <div 
+                  key={col.name} 
+                  className="flex-none w-full md:w-80 lg:w-[340px] bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 p-4 snap-start flex flex-col h-fit max-h-[calc(100vh-200px)]"
+                >
+                  <div className="flex justify-between items-center mb-4 px-2">
+                    <h2 className="font-bold text-lg text-slate-700">{col.name}</h2>
+                    <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full">
+                      {col.cards.length} thẻ
+                    </span>
+                  </div>
               
               <div className="flex flex-col gap-3 overflow-y-auto pr-2 custom-scrollbar">
                 {col.cards.map(card => {
@@ -335,7 +323,9 @@ export default function TaskBoard({ userId, onStartTest }: { userId: string; onS
               </div>
             </div>
           ))}
-        </div>
+            </div>
+          </div>
+        ))}
       </div>
       <style>{`
         .custom-scrollbar::-webkit-scrollbar {

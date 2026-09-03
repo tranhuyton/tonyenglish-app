@@ -150,6 +150,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
   const [analyticsDropdownOpen, setAnalyticsDropdownOpen] = useState(false);
+  const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
+  const [filterCourse, setFilterCourse] = useState('all');
+  const [filterCourseDropdownOpen, setFilterCourseDropdownOpen] = useState(false);
   const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'standard'>('ielts');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
@@ -233,13 +236,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 return result;
             } catch (e) { console.error(`[${name}] CRASH:`, e); return { data: null, error: e }; }
         };
-        const [profileRes, lpRes, cStudentsRes, enrollsRes, hDataRes, assignRes] = await Promise.all([
+        const [profileRes, lpRes, cStudentsRes, enrollsRes, hDataRes, assignRes, boardTempRes] = await Promise.all([
             safeQuery('profiles', () => supabase.from('profiles').select('*').eq('id', user.id).single()),
             safeQuery('lecture_progress', () => supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id).limit(5000)),
             safeQuery('class_students', () => supabase.from('class_students').select('class_id').eq('user_id', user.id)),
             safeQuery('enrollments', () => supabase.from('enrollments').select('course_id').eq('user_id', user.id)),
             safeQuery('test_results', () => supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000)),
-            safeQuery('assignments', () => supabase.from('assignments').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(5000))
+            safeQuery('assignments', () => supabase.from('assignments').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(5000)),
+            safeQuery('board_templates', () => supabase.from('board_templates').select('id, title, course_id'))
         ]);
         const profile = profileRes.data;
         const lp = lpRes.data;
@@ -247,6 +251,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         const enrolls = enrollsRes.data;
         const hData = hDataRes.data;
         const assignData = assignRes.data;
+        setBoardTemplates(boardTempRes.data || []);
         console.log('[PORTAL INIT] profile:', !!profile, 'lp:', lp?.length, 'enrolls:', enrolls?.length, 'hData:', hData?.length, 'assigns:', assignData?.length);
 
         setUserProfile(profile);
@@ -1509,29 +1514,89 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         )}
 
         {/* =====================================================================
-            📅 TRANG LỊCH BÁO BÀI (ASSIGNMENT CALENDAR)
+            📅 TRANG LỊCH BÁO BÀI (ASSIGNMENT CALENDAR) VÀ BẢNG CÔNG VIỆC
             ===================================================================== */}
+        {(activeTab === 'board' || activeTab === 'calendar') && currentUser && (
+          <div className="w-full max-w-7xl mx-auto px-4 pt-6 pb-2">
+            <div className="flex justify-end relative w-full sm:w-64 ml-auto">
+              <div 
+                onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] shadow-sm"
+              >
+                <span className="font-bold text-[13px] text-slate-700 truncate pr-2">
+                  {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+                </span>
+                <span className={`text-slate-400 text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+              </div>
+              
+              {filterCourseDropdownOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                    <div 
+                      onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
+                      className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                    >
+                      Tất cả khóa học
+                    </div>
+                    {courses.map(course => (
+                      <div 
+                        key={course.id}
+                        onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
+                        className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                      >
+                        {course.title}
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        )}
+
         {activeTab === 'board' && currentUser && (
-          <div className="w-full max-w-7xl mx-auto px-4 py-6">
-            <TaskBoard userId={currentUser.id} onStartTest={(testId: string) => { setSelectedTestId(testId); setActiveView('test'); setActiveTab('library'); }} />
+          <div className="w-full max-w-7xl mx-auto px-4 pb-6">
+            <TaskBoard 
+              userId={currentUser.id} 
+              filterCourseId={filterCourse}
+              onStartTest={(testId: string) => { setSelectedTestId(testId); setActiveView('test'); setActiveTab('library'); }} 
+            />
           </div>
         )}
 
         {activeTab === 'calendar' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 mx-2 md:mx-0 pb-8">
-            <AssignmentCalendar 
-              assignments={assignments} 
-              completedTestIds={completedTestIdsSet}
-              onRefresh={async () => {
-                if (!currentUser) return;
-                const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });
-                setAssignments(data || []);
-              }}
-              onStartTest={(testId) => {
-                const test = allTests.find(t => String(t.id) === String(testId));
-                if (test) handleStartTestClick(test);
-              }}
-            />
+          <div className="animate-in fade-in slide-in-from-bottom-4 mx-2 md:mx-0 pb-8">
+            {(() => {
+              const calendarAssignments = filterCourse === 'all' ? assignments : assignments.filter(a => {
+                if (a.task_type === 'test') {
+                  const test = allTests.find(t => String(t.id) === String(a.test_id));
+                  return test && String(test.course_id) === String(filterCourse);
+                } else {
+                  if (a.board_template_title) {
+                    const tpl = boardTemplates.find(t => t.title === a.board_template_title);
+                    return tpl && String(tpl.course_id) === String(filterCourse);
+                  }
+                  return false;
+                }
+              });
+
+              return (
+                <AssignmentCalendar 
+                  assignments={calendarAssignments} 
+                  completedTestIds={completedTestIdsSet}
+                  onRefresh={async () => {
+                    if (!currentUser) return;
+                    const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });
+                    setAssignments(data || []);
+                  }}
+                  onStartTest={(testId) => {
+                    const test = allTests.find(t => String(t.id) === String(testId));
+                    if (test) handleStartTestClick(test);
+                  }}
+                />
+              );
+            })()}
           </div>
         )}
 
