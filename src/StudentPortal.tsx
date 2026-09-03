@@ -238,7 +238,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             safeQuery('lecture_progress', () => supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id).limit(5000)),
             safeQuery('class_students', () => supabase.from('class_students').select('class_id').eq('user_id', user.id)),
             safeQuery('enrollments', () => supabase.from('enrollments').select('course_id').eq('user_id', user.id)),
-            safeQuery('test_results', () => supabase.from('test_results').select('id, test_id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000)),
+            safeQuery('test_results', () => supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000)),
             safeQuery('assignments', () => supabase.from('assignments').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(5000))
         ]);
         const profile = profileRes.data;
