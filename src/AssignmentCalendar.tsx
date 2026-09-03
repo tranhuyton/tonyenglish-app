@@ -18,13 +18,14 @@ interface Assignment {
 interface Props {
   assignments: Assignment[];
   completedTestIds: Set<string>;
+  filterElement?: React.ReactNode;
   onRefresh: () => void;
   onStartTest?: (testId: string) => void;
 }
 
 const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 
-export default function AssignmentCalendar({ assignments, completedTestIds, onRefresh, onStartTest }: Props) {
+export default function AssignmentCalendar({ assignments, completedTestIds, filterElement, onRefresh, onStartTest }: Props) {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
@@ -164,18 +165,25 @@ export default function AssignmentCalendar({ assignments, completedTestIds, onRe
   // RENDER
   // ============================================
   return (
-    <div className="flex gap-6 items-start max-w-5xl mx-auto">
+    <div className="flex flex-col lg:flex-row gap-6 items-start max-w-5xl mx-auto">
       {/* ========== LEFT: CALENDAR ========== */}
-      <div className="w-[420px] shrink-0">
+      <div className="w-full lg:w-[420px] shrink-0">
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          <div className="bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] px-5 py-4 flex items-center justify-between">
-            <div>
-              <h2 className="text-white font-black text-lg">📅 Lịch Báo Bài</h2>
-              <p className="text-white/70 text-[11px] mt-0.5">Bấm vào ngày để xem công việc</p>
+          <div className="bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] px-5 py-4 flex flex-col gap-3">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-white font-black text-lg">📅 Lịch Báo Bài</h2>
+                <p className="text-white/70 text-[11px] mt-0.5">Bấm vào ngày để xem công việc</p>
+              </div>
+              <button onClick={goToday} className="bg-white/20 hover:bg-white/30 text-white text-[11px] font-bold px-3 py-1.5 rounded-full transition-all">
+                Hôm nay
+              </button>
             </div>
-            <button onClick={goToday} className="bg-white/20 hover:bg-white/30 text-white text-[11px] font-bold px-3 py-1.5 rounded-full transition-all">
-              Hôm nay
-            </button>
+            {filterElement && (
+              <div className="w-full relative z-30 mt-1">
+                {filterElement}
+              </div>
+            )}
           </div>
 
           {/* MONTH NAV */}

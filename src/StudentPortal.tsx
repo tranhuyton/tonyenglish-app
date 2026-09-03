@@ -1516,57 +1516,54 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         {/* =====================================================================
             📅 TRANG LỊCH BÁO BÀI (ASSIGNMENT CALENDAR) VÀ BẢNG CÔNG VIỆC
             ===================================================================== */}
-        {(activeTab === 'board' || activeTab === 'calendar') && currentUser && (
-          <div className="w-full max-w-7xl mx-auto px-4 pt-6 pb-2">
-            <div className="flex justify-end relative w-full sm:w-64 ml-auto">
-              <div 
-                onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-                className="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] shadow-sm"
-              >
-                <span className="font-bold text-[13px] text-slate-700 truncate pr-2">
-                  {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
-                </span>
-                <span className={`text-slate-400 text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
-              </div>
-              
-              {filterCourseDropdownOpen && (
-                <>
-                  <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
-                    <div 
-                      onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
-                      className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
-                    >
-                      Tất cả khóa học
-                    </div>
-                    {courses.map(course => (
-                      <div 
-                        key={course.id}
-                        onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
-                        className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
-                      >
-                        {course.title}
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        )}
-
         {activeTab === 'board' && currentUser && (
-          <div className="w-full max-w-7xl mx-auto px-4 pb-6">
+          <div className="w-full max-w-7xl mx-auto px-4 py-6">
             <TaskBoard 
               userId={currentUser.id} 
               filterCourseId={filterCourse}
+              filterElement={
+                <div className="relative w-full sm:w-64 z-40">
+                  <div 
+                    onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+                    className="w-full bg-white/80 backdrop-blur border border-sky-200 rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] hover:bg-white shadow-sm transition-all"
+                  >
+                    <span className="font-bold text-[13px] text-sky-800 truncate pr-2">
+                      {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+                    </span>
+                    <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                  </div>
+                  
+                  {filterCourseDropdownOpen && (
+                    <>
+                      <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+                      <div className="absolute top-full right-0 mt-2 w-64 bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                        <div 
+                          onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
+                          className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                        >
+                          Tất cả khóa học
+                        </div>
+                        {courses.map(course => (
+                          <div 
+                            key={course.id}
+                            onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
+                            className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                          >
+                            {course.title}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              }
               onStartTest={(testId: string) => { setSelectedTestId(testId); setActiveView('test'); setActiveTab('library'); }} 
             />
           </div>
         )}
 
         {activeTab === 'calendar' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 mx-2 md:mx-0 pb-8">
+          <div className="animate-in fade-in slide-in-from-bottom-4 mx-2 md:mx-0 pb-8 mt-6">
             {(() => {
               const calendarAssignments = filterCourse === 'all' ? assignments : assignments.filter(a => {
                 if (a.task_type === 'test') {
@@ -1585,6 +1582,42 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <AssignmentCalendar 
                   assignments={calendarAssignments} 
                   completedTestIds={completedTestIdsSet}
+                  filterElement={
+                    <div className="relative w-full z-40 mt-3">
+                      <div 
+                        onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+                        className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer hover:bg-white/20 transition-all"
+                      >
+                        <span className="font-bold text-[13px] text-white truncate pr-2">
+                          {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+                        </span>
+                        <span className={`text-white/70 text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                      </div>
+                      
+                      {filterCourseDropdownOpen && (
+                        <>
+                          <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+                          <div className="absolute top-full left-0 mt-2 w-full bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                            <div 
+                              onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
+                              className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                            >
+                              Tất cả khóa học
+                            </div>
+                            {courses.map(course => (
+                              <div 
+                                key={course.id}
+                                onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
+                                className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                              >
+                                {course.title}
+                              </div>
+                            ))}
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  }
                   onRefresh={async () => {
                     if (!currentUser) return;
                     const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });

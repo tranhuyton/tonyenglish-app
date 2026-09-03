@@ -31,13 +31,11 @@ interface ColumnData {
   cards: CardData[];
 }
 
-export default function TaskBoard({ userId, filterCourseId = 'all', onStartTest }: { userId: string; filterCourseId?: string; onStartTest?: (testId: string) => void }) {
+export default function TaskBoard({ userId, filterCourseId = 'all', filterElement, onStartTest }: { userId: string; filterCourseId?: string; filterElement?: React.ReactNode; onStartTest?: (testId: string) => void }) {
   const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
-  const [filterBoard, setFilterBoard] = useState<string>('');
-  const [boardOptions, setBoardOptions] = useState<string[]>([]);
 
   useEffect(() => {
     fetchAssignments();
@@ -91,11 +89,13 @@ export default function TaskBoard({ userId, filterCourseId = 'all', onStartTest 
         .eq('title', task.title)
         .eq('task_type', 'manual');
 
+      // Update local state
       setAssignments(prev => prev.map(a => 
         (a.title === task.title && a.task_type === 'manual') ? { ...a, student_completed: newStatus } : a
       ));
     } catch (error) {
-      console.error('Error updating task:', error);
+      console.error('Error toggling task:', error);
+      alert('Không thể cập nhật trạng thái công việc. Vui lòng thử lại.');
     }
   };
 
@@ -163,8 +163,11 @@ export default function TaskBoard({ userId, filterCourseId = 'all', onStartTest 
 
   if (boardsData.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 flex items-start justify-center">
-        <div className="p-12 text-center bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 m-6 mt-12 w-full max-w-lg">
+      <div className="min-h-screen bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 flex flex-col items-start justify-start rounded-3xl">
+        <div className="w-full max-w-[1600px] mx-auto flex justify-end mb-4 relative z-40">
+          {filterElement}
+        </div>
+        <div className="p-12 mx-auto text-center bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 m-6 mt-12 w-full max-w-lg relative z-10">
           <span className="text-5xl block mb-4">📋</span>
           <h3 className="text-xl font-medium text-slate-700 mb-2">Chưa có bảng công việc nào</h3>
           <p className="text-slate-500">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
@@ -174,8 +177,13 @@ export default function TaskBoard({ userId, filterCourseId = 'all', onStartTest 
   }
 
   return (
-    <div className="min-h-[500px] bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 text-slate-800 rounded-3xl">
+    <div className="min-h-[500px] bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 text-slate-800 rounded-3xl relative">
       <div className="max-w-[1600px] mx-auto space-y-12">
+        {filterElement && (
+          <div className="flex justify-end mb-[-1.5rem] relative z-40">
+            {filterElement}
+          </div>
+        )}
         {boardsData.map(board => (
           <div key={board.title}>
             {/* Header */}
