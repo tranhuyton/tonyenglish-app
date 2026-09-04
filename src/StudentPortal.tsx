@@ -1267,75 +1267,92 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <p className="text-slate-500 font-medium max-w-sm">Vui lòng liên hệ trung tâm để được cấp quyền truy cập vào các bài giảng nhé!</p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-8">
-                {(filterCourse === 'all' ? courses : courses.filter(c => String(c.id) === String(filterCourse))).map(course => {
-                  const cover = getCourseCover(course);
-                  const stats = courseStats[course.id] || { testCount: 0, lecCount: 0, completedTestIds: new Set(), completedLecIds: new Set() };
-                  
-                  const testProgress = stats.testCount > 0 ? Math.min(100, Math.round((stats.completedTestIds.size / stats.testCount) * 100)) : 0;
-                  const lecProgress = stats.lecCount > 0 ? Math.min(100, Math.round((stats.completedLecIds.size / stats.lecCount) * 100)) : 0;
-                  const overallProgress = Math.round((testProgress + lecProgress) / 2);
+              (() => {
+                const filteredCourses = filterCourse === 'all' ? courses : courses.filter(c => String(c.id) === String(filterCourse));
+                const isSingle = filteredCourses.length === 1;
 
+                if (filteredCourses.length === 0) {
                   return (
-                    <div key={course.id} className="bg-white rounded-[2rem] border border-slate-200 overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col mx-2 md:mx-0 group">
-                      
-                      {/* Image Top Half */}
-                      <div className="w-full h-[180px] md:h-[220px] relative overflow-hidden bg-slate-100 cursor-pointer" onClick={() => handleOpenCourse(course)}>
-                         <img src={cover.image} loading="lazy" alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                         
-                         <div className={`absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest ${cover.color} shadow-sm`}>
-                             {cover.badge}
-                         </div>
-                         <h4 className="absolute bottom-4 left-5 right-5 font-black text-xl md:text-2xl text-white leading-snug drop-shadow-md">
-                             {course.title}
-                         </h4>
-                      </div>
-                      
-                      {/* Content Bottom Half */}
-                      <div className="flex-1 p-6 md:p-8 flex flex-col justify-between bg-white">
-                        
-                        {/* Overall Progress */}
-                        <div className="mb-6">
-                            <div className="flex justify-between items-end mb-2">
-                                <span className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ chung</span>
-                                <span className="text-[18px] font-black text-[#0ea5e9]">{overallProgress}%</span>
-                            </div>
-                            <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                                <div className="h-full bg-gradient-to-r from-sky-400 to-[#0ea5e9] rounded-full transition-all duration-1000" style={{ width: `${overallProgress}%` }}></div>
-                            </div>
-                        </div>
-
-                        {/* Detailed Stats */}
-                        <div className="flex items-center gap-6 mb-8 bg-slate-50 p-4 rounded-xl border border-slate-100">
-                          <div className="flex-1">
-                              <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1"><span className="text-emerald-500">📚</span> Lý thuyết</span>
-                              <div className="font-black text-slate-700 text-[15px]">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-medium text-slate-400">bài</span></div>
-                          </div>
-                          <div className="w-px h-10 bg-slate-200"></div>
-                          <div className="flex-1">
-                              <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1"><span className="text-blue-500">📝</span> Thực hành</span>
-                              <div className="font-black text-slate-700 text-[15px]">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-medium text-slate-400">đề</span></div>
-                          </div>
-                        </div>
-                        
-                        {/* Actions */}
-                        <div className="flex gap-3">
-                           <button onClick={() => {
-                               resetWorkspaceAndChat(); 
-                               if(onOpenLecture) onOpenLecture(course.id);
-                           }} className="flex-1 bg-white border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 font-bold text-[13px] py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2 uppercase tracking-wide">
-                               📖 Lý thuyết
-                           </button>
-                           <button onClick={() => handleOpenCourse(course)} className="flex-[1.5] bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-bold text-[13px] py-3.5 rounded-xl transition-colors shadow-md shadow-blue-500/20 flex items-center justify-center gap-2 uppercase tracking-wide">
-                               📝 Vào làm bài
-                           </button>
-                        </div>
-                      </div>
+                    <div className="bg-white border border-slate-200 rounded-2xl py-24 text-center shadow-sm mx-2 flex flex-col items-center">
+                      <div className="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔍</div>
+                      <h3 className="font-bold text-slate-700 text-xl mb-2">Không tìm thấy khóa học</h3>
+                      <p className="text-slate-500 font-medium max-w-sm">Không có khóa học nào khớp với lựa chọn của bạn.</p>
                     </div>
-                  )
-                })}
-              </div>
+                  );
+                }
+
+                return (
+                  <div className={`grid ${isSingle ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'} gap-6 xl:gap-8`}>
+                    {filteredCourses.map(course => {
+                      const cover = getCourseCover(course);
+                      const stats = courseStats[course.id] || { testCount: 0, lecCount: 0, completedTestIds: new Set(), completedLecIds: new Set() };
+                      
+                      const testProgress = stats.testCount > 0 ? Math.min(100, Math.round((stats.completedTestIds.size / stats.testCount) * 100)) : 0;
+                      const lecProgress = stats.lecCount > 0 ? Math.min(100, Math.round((stats.completedLecIds.size / stats.lecCount) * 100)) : 0;
+                      const overallProgress = Math.round((testProgress + lecProgress) / 2);
+
+                      return (
+                        <div key={course.id} className={`bg-white rounded-[2rem] border border-slate-200 overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 mx-2 md:mx-0 group flex ${isSingle ? 'flex-col md:flex-row' : 'flex-col'}`}>
+                          
+                          {/* Image Top/Left Half */}
+                          <div className={`relative overflow-hidden bg-slate-100 cursor-pointer ${isSingle ? 'w-full md:w-[45%] h-[250px] md:h-auto min-h-[320px]' : 'w-full h-[180px] md:h-[220px]'}`} onClick={() => handleOpenCourse(course)}>
+                             <img src={cover.image} loading="lazy" alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                             
+                             <div className={`absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest ${cover.color} shadow-sm`}>
+                                 {cover.badge}
+                             </div>
+                             <h4 className={`absolute bottom-4 left-5 right-5 font-black ${isSingle ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} text-white leading-snug drop-shadow-md`}>
+                                 {course.title}
+                             </h4>
+                          </div>
+                          
+                          {/* Content Bottom/Right Half */}
+                          <div className={`flex-1 flex flex-col justify-center bg-white ${isSingle ? 'p-6 md:p-10' : 'p-6 md:p-8'}`}>
+                            
+                            {/* Overall Progress */}
+                            <div className="mb-6">
+                                <div className="flex justify-between items-end mb-2">
+                                    <span className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ chung</span>
+                                    <span className="text-[18px] font-black text-[#0ea5e9]">{overallProgress}%</span>
+                                </div>
+                                <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                                    <div className="h-full bg-gradient-to-r from-sky-400 to-[#0ea5e9] rounded-full transition-all duration-1000" style={{ width: `${overallProgress}%` }}></div>
+                                </div>
+                            </div>
+
+                            {/* Detailed Stats */}
+                            <div className="flex items-center gap-6 mb-8 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                              <div className="flex-1">
+                                  <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1"><span className="text-emerald-500">📚</span> Lý thuyết</span>
+                                  <div className="font-black text-slate-700 text-[15px]">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-medium text-slate-400">bài</span></div>
+                              </div>
+                              <div className="w-px h-10 bg-slate-200"></div>
+                              <div className="flex-1">
+                                  <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1"><span className="text-blue-500">📝</span> Thực hành</span>
+                                  <div className="font-black text-slate-700 text-[15px]">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-medium text-slate-400">đề</span></div>
+                              </div>
+                            </div>
+                            
+                            {/* Actions */}
+                            <div className={`flex gap-3 ${isSingle ? 'mt-4' : 'mt-auto'}`}>
+                               <button onClick={() => {
+                                   resetWorkspaceAndChat(); 
+                                   if(onOpenLecture) onOpenLecture(course.id);
+                               }} className="flex-1 bg-white border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 font-bold text-[13px] py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2 uppercase tracking-wide">
+                                   📖 Lý thuyết
+                               </button>
+                               <button onClick={() => handleOpenCourse(course)} className="flex-[1.5] bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-bold text-[13px] py-3.5 rounded-xl transition-colors shadow-md shadow-blue-500/20 flex items-center justify-center gap-2 uppercase tracking-wide">
+                                   🚀 Vào làm bài
+                               </button>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                );
+              })()
             )}
           </div>
         )}
