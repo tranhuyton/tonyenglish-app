@@ -151,8 +151,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
   const [analyticsDropdownOpen, setAnalyticsDropdownOpen] = useState(false);
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
-  const [filterCourse, setFilterCourse] = useState('all');
+  const [filterCourse, setFilterCourse] = useState(() => localStorage.getItem('portal_filter_course') || 'all');
   const [filterCourseDropdownOpen, setFilterCourseDropdownOpen] = useState(false);
+  
+  useEffect(() => {
+    localStorage.setItem('portal_filter_course', filterCourse);
+  }, [filterCourse]);
+
   const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'standard'>('ielts');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
@@ -1207,7 +1212,43 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
             )}
 
-            <h2 className="font-black text-2xl md:text-3xl text-slate-800 mb-6 px-2 tracking-tight">Khóa học của tôi</h2>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 px-2">
+                <h2 className="font-black text-2xl md:text-3xl text-slate-800 tracking-tight m-0">Khóa học của tôi</h2>
+                <div className="relative w-full sm:w-64 z-30">
+                    <div 
+                        onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] shadow-sm transition-all"
+                    >
+                        <span className="font-bold text-[13px] text-slate-700 truncate pr-2">
+                        {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+                        </span>
+                        <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                    </div>
+                    
+                    {filterCourseDropdownOpen && (
+                        <>
+                        <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+                        <div className="absolute top-full right-0 mt-2 w-full sm:w-64 bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                            <div 
+                            onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
+                            className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                            >
+                            Tất cả khóa học
+                            </div>
+                            {courses.map(course => (
+                            <div 
+                                key={course.id}
+                                onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
+                                className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                            >
+                                {course.title}
+                            </div>
+                            ))}
+                        </div>
+                        </>
+                    )}
+                </div>
+            </div>
             
             {isLoading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1227,7 +1268,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-8">
-                {courses.map(course => {
+                {(filterCourse === 'all' ? courses : courses.filter(c => String(c.id) === String(filterCourse))).map(course => {
                   const cover = getCourseCover(course);
                   const stats = courseStats[course.id] || { testCount: 0, lecCount: 0, completedTestIds: new Set(), completedLecIds: new Set() };
                   
