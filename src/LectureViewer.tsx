@@ -1288,6 +1288,7 @@ export default function LectureViewer({
           translation,
           alternatives: matches.map((m: any) => m.translation),
         });
+      } else {
         // ENGLISH → VIETNAMESE: Gọi song song Free Dictionary + MyMemory
         const [dictRes, transRes] = await Promise.allSettled([
           fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed)}`),
