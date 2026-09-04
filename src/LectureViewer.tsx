@@ -1170,7 +1170,7 @@ export default function LectureViewer({
     Promise.allSettled([
         fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`)
             .then(r => r.ok ? r.json() : Promise.reject()),
-        fetchWithTimeout(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|vi`)
+        fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=${encodeURIComponent(word)}`)
             .then(r => r.ok ? r.json() : Promise.reject())
     ]).then(([enRes, viRes]) => {
          let phonetics = '';
@@ -1182,8 +1182,8 @@ export default function LectureViewer({
             audio = enRes.value[0].phonetics?.find((p:any) => p.audio)?.audio || '';
          }
         
-         if (viRes.status === 'fulfilled' && viRes.value?.responseData?.translatedText) {
-            translation = viRes.value.responseData.translatedText;
+         if (viRes.status === 'fulfilled' && viRes.value?.[0]?.[0]?.[0]) {
+            translation = viRes.value[0][0][0];
          }
         
          setDictPopup(prev => prev ? { 
@@ -1274,25 +1274,22 @@ export default function LectureViewer({
       const isVi = isVietnamese(trimmed);
 
       if (isVi) {
-        // VIETNAMESE → ENGLISH: Dùng MyMemory API
-        const res = await fetchWithTimeout(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(trimmed)}&langpair=vi|en`);
+        // VIETNAMESE → ENGLISH: Dùng Google API
+        const res = await fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=vi&tl=en&dt=t&q=${encodeURIComponent(trimmed)}`);
         const data = await res.json();
-        const translation = data?.responseData?.translatedText || '';
-        const matches = (data?.matches || [])
-          .filter((m: any) => m.translation && m.translation.toLowerCase() !== trimmed.toLowerCase())
-          .slice(0, 5);
+        const translation = data?.[0]?.[0]?.[0] || '';
 
         setDictResults({
           type: 'vi-en',
           word: trimmed,
           translation,
-          alternatives: matches.map((m: any) => m.translation),
+          alternatives: [],
         });
       } else {
-        // ENGLISH → VIETNAMESE: Gọi song song Free Dictionary + MyMemory
+        // ENGLISH → VIETNAMESE: Gọi song song Free Dictionary + Google API
         const [dictRes, transRes] = await Promise.allSettled([
           fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed)}`),
-          fetchWithTimeout(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(trimmed)}&langpair=en|vi`),
+          fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=${encodeURIComponent(trimmed)}`),
         ]);
 
         let definitions: any[] = [];
@@ -1318,7 +1315,7 @@ export default function LectureViewer({
         let viTranslation = '';
         if (transRes.status === 'fulfilled' && transRes.value.ok) {
           const transData = await transRes.value.json();
-          viTranslation = transData?.responseData?.translatedText || '';
+          viTranslation = transData?.[0]?.[0]?.[0] || '';
         }
 
         setDictResults({

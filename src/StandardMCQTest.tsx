@@ -760,18 +760,18 @@ const handleFinish = async () => {
     Promise.allSettled([
       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`)
         .then(r => r.ok ? r.json() : Promise.reject()),
-      fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|vi`)
-        .then(r => r.json())
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=${encodeURIComponent(word)}`)
+        .then(r => r.ok ? r.json() : Promise.reject())
     ]).then(([enRes, viRes]) => {
       let phonetics = '';
       let audio = '';
-      let translation = 'Không tìm thấy bản dịch.';
-      if (enRes.status === 'fulfilled' && enRes.value[0]) {
+      let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
+      if (enRes.status === 'fulfilled' && enRes.value?.[0]) {
         phonetics = enRes.value[0].phonetics?.find((p:any) => p.text)?.text || '';
         audio = enRes.value[0].phonetics?.find((p:any) => p.audio)?.audio || '';
       }
-      if (viRes.status === 'fulfilled' && viRes.value?.responseData?.translatedText) {
-        translation = viRes.value.responseData.translatedText;
+      if (viRes.status === 'fulfilled' && viRes.value?.[0]?.[0]?.[0]) {
+        translation = viRes.value[0][0][0];
       }
       setDictPopup(prev => prev ? { ...prev, data: { phonetics, audio, translation }, isLoading: false } : null);
     });
