@@ -1322,15 +1322,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             </div>
 
                             {/* Detailed Stats */}
-                            <div className="flex items-center gap-6 mb-8 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div className="flex items-center gap-4 md:gap-6 mb-8 bg-slate-50 p-4 rounded-xl border border-slate-100">
                               <div className="flex-1">
-                                  <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1"><span className="text-emerald-500">📚</span> Lý thuyết</span>
-                                  <div className="font-black text-slate-700 text-[15px]">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-medium text-slate-400">bài</span></div>
+                                  <div className="flex items-center justify-between mb-1">
+                                      <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider"><span className="text-emerald-500">📚</span> Lý thuyết</span>
+                                      <span className="font-black text-emerald-600 text-[12px]">{lecProgress}%</span>
+                                  </div>
+                                  <div className="font-black text-slate-700 text-[14px] mb-2">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-medium text-slate-400">bài</span></div>
+                                  <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
+                                      <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${lecProgress}%` }}></div>
+                                  </div>
                               </div>
-                              <div className="w-px h-10 bg-slate-200"></div>
+                              <div className="w-px h-12 bg-slate-200"></div>
                               <div className="flex-1">
-                                  <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1"><span className="text-blue-500">📝</span> Thực hành</span>
-                                  <div className="font-black text-slate-700 text-[15px]">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-medium text-slate-400">đề</span></div>
+                                  <div className="flex items-center justify-between mb-1">
+                                      <span className="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider"><span className="text-blue-500">📝</span> Thực hành</span>
+                                      <span className="font-black text-blue-600 text-[12px]">{testProgress}%</span>
+                                  </div>
+                                  <div className="font-black text-slate-700 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-medium text-slate-400">đề</span></div>
+                                  <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
+                                      <div className="h-full bg-blue-500 rounded-full transition-all duration-1000" style={{ width: `${testProgress}%` }}></div>
+                                  </div>
                               </div>
                             </div>
                             
