@@ -1151,20 +1151,33 @@ export default function LectureViewer({
     }
   };
 
+  const fetchWithTimeout = async (url: string, ms = 4000) => {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), ms);
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      clearTimeout(id);
+      return response;
+    } catch (err) {
+      clearTimeout(id);
+      throw err;
+    }
+  };
+
   const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
     setDictPopup({ show: true, word, x, y, rectTop, data: null, isLoading: true });
     
     Promise.allSettled([
-        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`)
+        fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`)
             .then(r => r.ok ? r.json() : Promise.reject()),
-        fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|vi`)
-            .then(r => r.json())
+        fetchWithTimeout(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|vi`)
+            .then(r => r.ok ? r.json() : Promise.reject())
     ]).then(([enRes, viRes]) => {
          let phonetics = '';
          let audio = '';
-         let translation = 'Không tìm thấy bản dịch.';
+         let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
         
-         if (enRes.status === 'fulfilled' && enRes.value[0]) {
+         if (enRes.status === 'fulfilled' && enRes.value && enRes.value[0]) {
             phonetics = enRes.value[0].phonetics?.find((p:any) => p.text)?.text || '';
             audio = enRes.value[0].phonetics?.find((p:any) => p.audio)?.audio || '';
          }
@@ -1262,7 +1275,7 @@ export default function LectureViewer({
 
       if (isVi) {
         // VIETNAMESE → ENGLISH: Dùng MyMemory API
-        const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(trimmed)}&langpair=vi|en`);
+        const res = await fetchWithTimeout(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(trimmed)}&langpair=vi|en`);
         const data = await res.json();
         const translation = data?.responseData?.translatedText || '';
         const matches = (data?.matches || [])
@@ -1275,11 +1288,10 @@ export default function LectureViewer({
           translation,
           alternatives: matches.map((m: any) => m.translation),
         });
-      } else {
         // ENGLISH → VIETNAMESE: Gọi song song Free Dictionary + MyMemory
         const [dictRes, transRes] = await Promise.allSettled([
-          fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed)}`),
-          fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(trimmed)}&langpair=en|vi`),
+          fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed)}`),
+          fetchWithTimeout(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(trimmed)}&langpair=en|vi`),
         ]);
 
         let definitions: any[] = [];
