@@ -1168,9 +1168,9 @@ export default function LectureViewer({
     setDictPopup({ show: true, word, x, y, rectTop, data: null, isLoading: true });
     
     Promise.allSettled([
-        fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`)
+        fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word.toLowerCase())}`)
             .then(r => r.ok ? r.json() : Promise.reject()),
-        fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=${encodeURIComponent(word)}`)
+        fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&q=${encodeURIComponent(word)}`)
             .then(r => r.ok ? r.json() : Promise.reject())
     ]).then(([enRes, viRes]) => {
          let phonetics = '';
@@ -1178,9 +1178,24 @@ export default function LectureViewer({
          let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
         
          if (enRes.status === 'fulfilled' && enRes.value && enRes.value[0]) {
-            phonetics = enRes.value[0].phonetics?.find((p:any) => p.text)?.text || '';
-            audio = enRes.value[0].phonetics?.find((p:any) => p.audio)?.audio || '';
-         }
+        const phs = enRes.value[0].phonetics || [];
+        const ukPh = phs.find((p:any) => p.audio && p.audio.includes('-uk.mp3')) || phs.find((p:any) => p.text && p.text.includes('uk'));
+        const usPh = phs.find((p:any) => p.audio && p.audio.includes('-us.mp3'));
+        const anyPh = phs.find((p:any) => p.text);
+        phonetics = ukPh?.text || anyPh?.text || enRes.value[0].phonetic || '';
+        audio = ukPh?.audio || usPh?.audio || phs.find((p:any) => p.audio)?.audio || '';
+        if (phonetics && !phonetics.includes('UK')) {
+             phonetics = 'UK ' + phonetics;
+        }
+      }
+      
+      // Fallback to Google phonetics if dictionary api failed
+      if (viRes.status === 'fulfilled' && viRes.value) {
+          if (!phonetics) {
+              const ggPh = viRes.value?.[0]?.[1]?.[3];
+              if (ggPh) phonetics = '/' + ggPh + '/';
+          }
+      }
         
          if (viRes.status === 'fulfilled' && viRes.value?.[0]?.[0]?.[0]) {
             translation = viRes.value[0][0][0];
@@ -1288,8 +1303,8 @@ export default function LectureViewer({
       } else {
         // ENGLISH → VIETNAMESE: Gọi song song Free Dictionary + Google API
         const [dictRes, transRes] = await Promise.allSettled([
-          fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed)}`),
-          fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=${encodeURIComponent(trimmed)}`),
+          fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed.toLowerCase())}`),
+          fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&q=${encodeURIComponent(trimmed)}`),
         ]);
 
         let definitions: any[] = [];
@@ -1300,8 +1315,15 @@ export default function LectureViewer({
           const dictData = await dictRes.value.json();
           if (Array.isArray(dictData) && dictData.length > 0) {
             const entry = dictData[0];
-            phonetic = entry.phonetic || entry.phonetics?.find((p: any) => p.text)?.text || '';
-            audioUrl = entry.phonetics?.find((p: any) => p.audio)?.audio || '';
+            const phs = entry.phonetics || [];
+            const ukPh = phs.find((p: any) => p.audio && p.audio.includes('-uk.mp3')) || phs.find((p:any) => p.text && p.text.includes('uk'));
+            const usPh = phs.find((p: any) => p.audio && p.audio.includes('-us.mp3'));
+            const anyPh = phs.find((p: any) => p.text);
+            phonetic = ukPh?.text || anyPh?.text || entry.phonetic || '';
+            audioUrl = ukPh?.audio || usPh?.audio || phs.find((p: any) => p.audio)?.audio || '';
+            if (phonetic && !phonetic.includes('UK')) {
+                phonetic = 'UK ' + phonetic;
+            }
             definitions = (entry.meanings || []).slice(0, 3).map((m: any) => ({
               partOfSpeech: m.partOfSpeech,
               defs: (m.definitions || []).slice(0, 2).map((d: any) => ({
@@ -1316,6 +1338,10 @@ export default function LectureViewer({
         if (transRes.status === 'fulfilled' && transRes.value.ok) {
           const transData = await transRes.value.json();
           viTranslation = transData?.[0]?.[0]?.[0] || '';
+          if (!phonetic) {
+              const ggPh = transData?.[0]?.[1]?.[3];
+              if (ggPh) phonetic = '/' + ggPh + '/';
+          }
         }
 
         setDictResults({

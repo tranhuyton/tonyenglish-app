@@ -751,17 +751,32 @@ const handleFinish = async () => {
   const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
     setDictPopup({ show: true, word, x, y, rectTop, data: null, isLoading: true });
     Promise.allSettled([
-      fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`)
-        .then(r => r.ok ? r.json() : Promise.reject()),
-      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&q=${encodeURIComponent(word)}`)
-        .then(r => r.ok ? r.json() : Promise.reject())
+        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word.toLowerCase())}`)
+            .then(r => r.ok ? r.json() : Promise.reject()),
+        fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&q=${encodeURIComponent(word)}`)
+            .then(r => r.ok ? r.json() : Promise.reject())
     ]).then(([enRes, viRes]) => {
       let phonetics = '';
       let audio = '';
       let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
-      if (enRes.status === 'fulfilled' && enRes.value?.[0]) {
-        phonetics = enRes.value[0].phonetics?.find((p:any) => p.text)?.text || '';
-        audio = enRes.value[0].phonetics?.find((p:any) => p.audio)?.audio || '';
+      if (enRes.status === 'fulfilled' && enRes.value && enRes.value[0]) {
+        const phs = enRes.value[0].phonetics || [];
+        const ukPh = phs.find((p:any) => p.audio && p.audio.includes('-uk.mp3')) || phs.find((p:any) => p.text && p.text.includes('uk'));
+        const usPh = phs.find((p:any) => p.audio && p.audio.includes('-us.mp3'));
+        const anyPh = phs.find((p:any) => p.text);
+        phonetics = ukPh?.text || anyPh?.text || enRes.value[0].phonetic || '';
+        audio = ukPh?.audio || usPh?.audio || phs.find((p:any) => p.audio)?.audio || '';
+        if (phonetics && !phonetics.includes('UK')) {
+             phonetics = 'UK ' + phonetics;
+        }
+      }
+      
+      // Fallback to Google phonetics if dictionary api failed
+      if (viRes.status === 'fulfilled' && viRes.value) {
+          if (!phonetics) {
+              const ggPh = viRes.value?.[0]?.[1]?.[3];
+              if (ggPh) phonetics = '/' + ggPh + '/';
+          }
       }
       if (viRes.status === 'fulfilled' && viRes.value?.[0]?.[0]?.[0]) {
         translation = viRes.value[0][0][0];
