@@ -1295,10 +1295,10 @@ export default function LectureViewer({
       const isVi = isVietnamese(trimmed);
 
       if (isVi) {
-        // VIETNAMESE → ENGLISH: Dùng Google API
-        const res = await fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=vi&tl=en&dt=t&q=${encodeURIComponent(trimmed)}`);
+        // VIETNAMESE → ENGLISH
+        const res = await fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=vi&tl=en&dt=t&dj=1&q=${encodeURIComponent(trimmed)}`);
         const data = await res.json();
-        const translation = data?.[0]?.[0]?.[0] || '';
+        const translation = data?.sentences?.find((s: any) => s.trans)?.trans || data?.[0]?.[0]?.[0] || '';
 
         setDictResults({
           type: 'vi-en',
@@ -1307,10 +1307,10 @@ export default function LectureViewer({
           alternatives: [],
         });
       } else {
-        // ENGLISH → VIETNAMESE: Gọi song song Free Dictionary + Google API
+        // ENGLISH → VIETNAMESE
         const [dictRes, transRes] = await Promise.allSettled([
           fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed.toLowerCase())}`),
-          fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&q=${encodeURIComponent(trimmed)}`),
+          fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(trimmed)}`),
         ]);
 
         let definitions: any[] = [];
@@ -1342,11 +1342,14 @@ export default function LectureViewer({
 
         let viTranslation = '';
         if (transRes.status === 'fulfilled' && transRes.value.ok) {
-          const transData = await transRes.value.json();
-          viTranslation = transData?.[0]?.[0]?.[0] || '';
+          const data = await transRes.value.json();
+          viTranslation = data.sentences?.find((s: any) => s.trans)?.trans || data?.[0]?.[0]?.[0] || '';
           if (!phonetic) {
-              const ggPh = transData?.[0]?.[1]?.[3];
+              const ggPh = data.sentences?.find((s: any) => s.src_translit)?.src_translit || data?.[0]?.[1]?.[3];
               if (ggPh) phonetic = '/' + ggPh + '/';
+          }
+          if (!audioUrl) {
+              audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(trimmed)}&tl=en&client=tw-ob`;
           }
         }
 
@@ -1359,11 +1362,14 @@ export default function LectureViewer({
           definitions,
         });
       }
-    } catch (err) {
-      setDictResults({ type: 'error', word: trimmed, message: 'Không thể tra từ. Vui lòng thử lại.' });
-    } finally {
-      setIsDictLoading(false);
+    } catch (error) {
+      setDictResults({
+        type: 'error',
+        word: trimmed,
+        message: 'Lỗi kết nối từ điển',
+      });
     }
+    setIsDictLoading(false);
   }, []);
 
   const handleDictInput = (value: string) => {
