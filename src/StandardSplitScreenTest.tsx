@@ -749,39 +749,53 @@ const handleFinish = async () => {
   // TỪ ĐIỂN BÔI ĐEN TRA TỪ (Dictionary Lookup)
   // =========================================================================================
   const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
-    setDictPopup({ show: true, word, x, y, rectTop, data: null, isLoading: true });
+    const cleanWord = word.trim();
+    if (!cleanWord) return;
+    setDictPopup({ show: true, word: cleanWord, x, y, rectTop, data: null, isLoading: true });
+    
     Promise.allSettled([
-        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word.toLowerCase())}`)
+        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord.toLowerCase())}`)
             .then(r => r.ok ? r.json() : Promise.reject()),
-        fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&q=${encodeURIComponent(word)}`)
+        fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(cleanWord)}`)
             .then(r => r.ok ? r.json() : Promise.reject())
     ]).then(([enRes, viRes]) => {
-      let phonetics = '';
-      let audio = '';
-      let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
-      if (enRes.status === 'fulfilled' && enRes.value && enRes.value[0]) {
-        const phs = enRes.value[0].phonetics || [];
-        const ukPh = phs.find((p:any) => p.audio && p.audio.includes('-uk.mp3')) || phs.find((p:any) => p.text && p.text.includes('uk'));
-        const usPh = phs.find((p:any) => p.audio && p.audio.includes('-us.mp3'));
-        const anyPh = phs.find((p:any) => p.text);
-        phonetics = ukPh?.text || anyPh?.text || enRes.value[0].phonetic || '';
-        audio = ukPh?.audio || usPh?.audio || phs.find((p:any) => p.audio)?.audio || '';
-        if (phonetics && !phonetics.includes('UK')) {
-             phonetics = 'UK ' + phonetics;
-        }
-      }
+         let phonetics = '';
+         let audio = '';
+         let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
+        
+         if (enRes.status === 'fulfilled' && enRes.value && enRes.value[0]) {
+             const phs = enRes.value[0].phonetics || [];
+             const ukPh = phs.find((p:any) => p.audio && p.audio.includes('-uk.mp3')) || phs.find((p:any) => p.text && p.text.includes('uk'));
+             const usPh = phs.find((p:any) => p.audio && p.audio.includes('-us.mp3'));
+             const anyPh = phs.find((p:any) => p.text);
+             phonetics = ukPh?.text || anyPh?.text || enRes.value[0].phonetic || '';
+             audio = ukPh?.audio || usPh?.audio || phs.find((p:any) => p.audio)?.audio || '';
+             if (phonetics && !phonetics.includes('UK')) {
+                  phonetics = 'UK ' + phonetics;
+             }
+         }
       
-      // Fallback to Google phonetics if dictionary api failed
-      if (viRes.status === 'fulfilled' && viRes.value) {
-          if (!phonetics) {
-              const ggPh = viRes.value?.[0]?.[1]?.[3];
-              if (ggPh) phonetics = '/' + ggPh + '/';
-          }
-      }
-      if (viRes.status === 'fulfilled' && viRes.value?.[0]?.[0]?.[0]) {
-        translation = viRes.value[0][0][0];
-      }
-      setDictPopup(prev => prev ? { ...prev, data: { phonetics, audio, translation }, isLoading: false } : null);
+         // Fallback to Google phonetics and audio
+         if (viRes.status === 'fulfilled' && viRes.value) {
+             const data = viRes.value;
+             if (!phonetics) {
+                 const ggPh = data.sentences?.find((s: any) => s.src_translit)?.src_translit;
+                 if (ggPh) phonetics = '/' + ggPh + '/';
+             }
+             if (!audio) {
+                 audio = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(cleanWord)}&tl=en&client=tw-ob`;
+             }
+             const transStr = data.sentences?.find((s: any) => s.trans)?.trans;
+             if (transStr) {
+                 translation = transStr;
+             }
+         }
+        
+         setDictPopup(prev => prev ? { 
+            ...prev, 
+            data: { phonetics, audio, translation }, 
+            isLoading: false 
+         } : null);
     });
   }, []);
 
