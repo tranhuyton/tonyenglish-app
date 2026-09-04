@@ -765,9 +765,9 @@ const handleFinish = async () => {
             .then(r => r.ok ? r.json() : Promise.reject()),
         fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(cleanWord)}`)
             .then(r => r.ok ? r.json() : Promise.reject()),
-        fetch(`https://api.datamuse.com/words?sp=${encodeURIComponent(cleanWord)}&md=r&ipa=1&max=1`)
-            .then(r => r.ok ? r.json() : Promise.reject())
-    ]).then(([enRes, viRes, dmRes]) => {
+        fetch(`https://en.wiktionary.org/api/rest_v1/page/html/${encodeURIComponent(cleanWord.toLowerCase())}`)
+            .then(r => r.ok ? r.text() : Promise.reject())
+    ]).then(([enRes, viRes, wikRes]) => {
          let phonetics = '';
          let audio = '';
          let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
@@ -779,8 +779,16 @@ const handleFinish = async () => {
              const anyPh = phs.find((p:any) => p.text);
              phonetics = ukPh?.text || anyPh?.text || enRes.value[0].phonetic || '';
              audio = ukPh?.audio || usPh?.audio || phs.find((p:any) => p.audio)?.audio || '';
-             if (phonetics && !phonetics.includes('UK')) {
+             if (phonetics && !phonetics.includes('UK') && phonetics.includes('/')) {
                   phonetics = 'UK ' + phonetics;
+             }
+         }
+         
+         // Fallback to Wiktionary for true UK IPA
+         if (!phonetics && wikRes.status === 'fulfilled' && wikRes.value) {
+             const ipaMatches = [...wikRes.value.matchAll(/"wt":"(\/[^/]+\/)"/g)];
+             if (ipaMatches.length > 0) {
+                 phonetics = 'UK ' + ipaMatches[0][1];
              }
          }
       
@@ -797,14 +805,6 @@ const handleFinish = async () => {
              const transStr = data.sentences?.find((s: any) => s.trans)?.trans;
              if (transStr) {
                  translation = transStr;
-             }
-         }
-         
-         // Fallback to Datamuse if STILL no phonetics (e.g. plurals, or Google omitted it)
-         if (!phonetics && dmRes.status === 'fulfilled' && dmRes.value && dmRes.value[0]?.tags) {
-             const ipaTag = dmRes.value[0].tags.find((t: string) => t.startsWith('ipa_pron:'));
-             if (ipaTag) {
-                 phonetics = '/' + ipaTag.replace('ipa_pron:', '') + '/';
              }
          }
         

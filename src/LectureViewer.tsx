@@ -1174,9 +1174,9 @@ export default function LectureViewer({
             .then(r => r.ok ? r.json() : Promise.reject()),
         fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(cleanWord)}`)
             .then(r => r.ok ? r.json() : Promise.reject()),
-        fetchWithTimeout(`https://api.datamuse.com/words?sp=${encodeURIComponent(cleanWord)}&md=r&ipa=1&max=1`)
-            .then(r => r.ok ? r.json() : Promise.reject())
-    ]).then(([enRes, viRes, dmRes]) => {
+        fetchWithTimeout(`https://en.wiktionary.org/api/rest_v1/page/html/${encodeURIComponent(cleanWord.toLowerCase())}`)
+            .then(r => r.ok ? r.text() : Promise.reject())
+    ]).then(([enRes, viRes, wikRes]) => {
          let phonetics = '';
          let audio = '';
          let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
@@ -1188,8 +1188,16 @@ export default function LectureViewer({
              const anyPh = phs.find((p:any) => p.text);
              phonetics = ukPh?.text || anyPh?.text || enRes.value[0].phonetic || '';
              audio = ukPh?.audio || usPh?.audio || phs.find((p:any) => p.audio)?.audio || '';
-             if (phonetics && !phonetics.includes('UK')) {
+             if (phonetics && !phonetics.includes('UK') && phonetics.includes('/')) {
                   phonetics = 'UK ' + phonetics;
+             }
+         }
+         
+         // Fallback to Wiktionary for true UK IPA
+         if (!phonetics && wikRes.status === 'fulfilled' && wikRes.value) {
+             const ipaMatches = [...wikRes.value.matchAll(/"wt":"(\/[^/]+\/)"/g)];
+             if (ipaMatches.length > 0) {
+                 phonetics = 'UK ' + ipaMatches[0][1];
              }
          }
       
@@ -1206,14 +1214,6 @@ export default function LectureViewer({
              const transStr = data.sentences?.find((s: any) => s.trans)?.trans;
              if (transStr) {
                  translation = transStr;
-             }
-         }
-         
-         // Fallback to Datamuse if STILL no phonetics (e.g. plurals, or Google omitted it)
-         if (!phonetics && dmRes.status === 'fulfilled' && dmRes.value && dmRes.value[0]?.tags) {
-             const ipaTag = dmRes.value[0].tags.find((t: string) => t.startsWith('ipa_pron:'));
-             if (ipaTag) {
-                 phonetics = '/' + ipaTag.replace('ipa_pron:', '') + '/';
              }
          }
         
@@ -1318,10 +1318,10 @@ export default function LectureViewer({
         });
       } else {
         // ENGLISH → VIETNAMESE
-        const [dictRes, transRes, dmRes] = await Promise.allSettled([
+        const [dictRes, transRes, wikRes] = await Promise.allSettled([
           fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed.toLowerCase())}`),
           fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(trimmed)}`),
-          fetchWithTimeout(`https://api.datamuse.com/words?sp=${encodeURIComponent(trimmed)}&md=r&ipa=1&max=1`)
+          fetchWithTimeout(`https://en.wiktionary.org/api/rest_v1/page/html/${encodeURIComponent(trimmed.toLowerCase())}`)
         ]);
 
         let definitions: any[] = [];
@@ -1338,7 +1338,7 @@ export default function LectureViewer({
             const anyPh = phs.find((p: any) => p.text);
             phonetic = ukPh?.text || anyPh?.text || entry.phonetic || '';
             audioUrl = ukPh?.audio || usPh?.audio || phs.find((p: any) => p.audio)?.audio || '';
-            if (phonetic && !phonetic.includes('UK')) {
+            if (phonetic && !phonetic.includes('UK') && phonetic.includes('/')) {
                 phonetic = 'UK ' + phonetic;
             }
             definitions = (entry.meanings || []).slice(0, 3).map((m: any) => ({
@@ -1349,6 +1349,14 @@ export default function LectureViewer({
               })),
             }));
           }
+        }
+        
+        // Wiktionary Fallback for true UK IPA
+        if (!phonetic && wikRes.status === 'fulfilled' && wikRes.value) {
+             const ipaMatches = [...wikRes.value.matchAll(/"wt":"(\/[^/]+\/)"/g)];
+             if (ipaMatches.length > 0) {
+                 phonetic = 'UK ' + ipaMatches[0][1];
+             }
         }
 
         let viTranslation = '';
@@ -1362,17 +1370,6 @@ export default function LectureViewer({
           if (!audioUrl) {
               audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(trimmed)}&tl=en&client=tw-ob`;
           }
-        }
-        
-        // Datamuse Fallback
-        if (!phonetic && dmRes.status === 'fulfilled' && dmRes.value.ok) {
-             const data = await dmRes.value.json();
-             if (data && data[0]?.tags) {
-                 const ipaTag = data[0].tags.find((t: string) => t.startsWith('ipa_pron:'));
-                 if (ipaTag) {
-                     phonetic = '/' + ipaTag.replace('ipa_pron:', '') + '/';
-                 }
-             }
         }
 
         setDictResults({
