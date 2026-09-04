@@ -764,8 +764,10 @@ const handleFinish = async () => {
         fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord.toLowerCase())}`)
             .then(r => r.ok ? r.json() : Promise.reject()),
         fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(cleanWord)}`)
+            .then(r => r.ok ? r.json() : Promise.reject()),
+        fetch(`https://api.datamuse.com/words?sp=${encodeURIComponent(cleanWord)}&md=r&ipa=1&max=1`)
             .then(r => r.ok ? r.json() : Promise.reject())
-    ]).then(([enRes, viRes]) => {
+    ]).then(([enRes, viRes, dmRes]) => {
          let phonetics = '';
          let audio = '';
          let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
@@ -795,6 +797,14 @@ const handleFinish = async () => {
              const transStr = data.sentences?.find((s: any) => s.trans)?.trans;
              if (transStr) {
                  translation = transStr;
+             }
+         }
+         
+         // Fallback to Datamuse if STILL no phonetics (e.g. plurals, or Google omitted it)
+         if (!phonetics && dmRes.status === 'fulfilled' && dmRes.value && dmRes.value[0]?.tags) {
+             const ipaTag = dmRes.value[0].tags.find((t: string) => t.startsWith('ipa_pron:'));
+             if (ipaTag) {
+                 phonetics = '/' + ipaTag.replace('ipa_pron:', '') + '/';
              }
          }
         

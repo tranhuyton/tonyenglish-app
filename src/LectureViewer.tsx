@@ -1173,8 +1173,10 @@ export default function LectureViewer({
         fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord.toLowerCase())}`)
             .then(r => r.ok ? r.json() : Promise.reject()),
         fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(cleanWord)}`)
+            .then(r => r.ok ? r.json() : Promise.reject()),
+        fetchWithTimeout(`https://api.datamuse.com/words?sp=${encodeURIComponent(cleanWord)}&md=r&ipa=1&max=1`)
             .then(r => r.ok ? r.json() : Promise.reject())
-    ]).then(([enRes, viRes]) => {
+    ]).then(([enRes, viRes, dmRes]) => {
          let phonetics = '';
          let audio = '';
          let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
@@ -1204,6 +1206,14 @@ export default function LectureViewer({
              const transStr = data.sentences?.find((s: any) => s.trans)?.trans;
              if (transStr) {
                  translation = transStr;
+             }
+         }
+         
+         // Fallback to Datamuse if STILL no phonetics (e.g. plurals, or Google omitted it)
+         if (!phonetics && dmRes.status === 'fulfilled' && dmRes.value && dmRes.value[0]?.tags) {
+             const ipaTag = dmRes.value[0].tags.find((t: string) => t.startsWith('ipa_pron:'));
+             if (ipaTag) {
+                 phonetics = '/' + ipaTag.replace('ipa_pron:', '') + '/';
              }
          }
         
@@ -1308,9 +1318,10 @@ export default function LectureViewer({
         });
       } else {
         // ENGLISH → VIETNAMESE
-        const [dictRes, transRes] = await Promise.allSettled([
+        const [dictRes, transRes, dmRes] = await Promise.allSettled([
           fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed.toLowerCase())}`),
           fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(trimmed)}`),
+          fetchWithTimeout(`https://api.datamuse.com/words?sp=${encodeURIComponent(trimmed)}&md=r&ipa=1&max=1`)
         ]);
 
         let definitions: any[] = [];
@@ -1351,6 +1362,17 @@ export default function LectureViewer({
           if (!audioUrl) {
               audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(trimmed)}&tl=en&client=tw-ob`;
           }
+        }
+        
+        // Datamuse Fallback
+        if (!phonetic && dmRes.status === 'fulfilled' && dmRes.value.ok) {
+             const data = await dmRes.value.json();
+             if (data && data[0]?.tags) {
+                 const ipaTag = data[0].tags.find((t: string) => t.startsWith('ipa_pron:'));
+                 if (ipaTag) {
+                     phonetic = '/' + ipaTag.replace('ipa_pron:', '') + '/';
+                 }
+             }
         }
 
         setDictResults({
