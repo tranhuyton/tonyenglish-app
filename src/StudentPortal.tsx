@@ -158,7 +158,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     localStorage.setItem('portal_filter_course', filterCourse);
   }, [filterCourse]);
 
-  const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'standard'>('ielts');
+  const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'ielts-standard' | 'standard'>('ielts');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
   
@@ -745,13 +745,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
          const ft = allTests.find(t => String(t.id) === String(h.testId));
          return (ft?.content_json?.basicInfo?.category || 'test') === analyticsCategory;
       }).filter(h => {
-         if (!isIeltsCourseSelected) return true;
+         if (!isIeltsCourseSelected) return true; // Standard only course selected
+         
+         const course = courses.find(c => String(c.id) === String(h.courseId));
+         const isCourseIelts = course ? ((course.title||'').toLowerCase().includes('ielts') || course.type === 'IELTS') : false;
+         
          const type = String(h.details?.test_type || h.name).toLowerCase();
          const isIeltsTest = type.includes('ielts') || h.details?.bandScore !== undefined;
-         if (analyticsTestType === 'ielts') return isIeltsTest;
-         return !isIeltsTest;
+         
+         if (analyticsTestType === 'ielts') {
+            return isCourseIelts && isIeltsTest;
+         }
+         if (analyticsTestType === 'ielts-standard') {
+            return isCourseIelts && !isIeltsTest;
+         }
+         if (analyticsTestType === 'standard') {
+            return !isCourseIelts;
+         }
+         return true;
       }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  }, [historyData, analyticsCourse, analyticsCategory, allTests, isIeltsContext, analyticsTestType]);
+  }, [historyData, analyticsCourse, analyticsCategory, allTests, isIeltsCourseSelected, analyticsTestType, courses]);
 
   // TÍNH TOÁN DỮ LIỆU CHO 4 AREA CHART TỔNG QUAN THEO NGÀY
   const aggregatedByDate = useMemo(() => {
@@ -1717,19 +1730,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
               <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
                 {isIeltsCourseSelected && (
-                    <div className="flex bg-slate-100/80 p-1 rounded-xl w-full sm:w-fit border border-slate-200/50 backdrop-blur-sm">
+                    <div className="flex flex-wrap bg-slate-100/80 p-1 rounded-xl w-full sm:w-fit border border-slate-200/50 backdrop-blur-sm gap-1">
                         <button
                             onClick={() => setAnalyticsTestType('ielts')}
-                            className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'ielts' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
+                            className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'ielts' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
                         >
                             <span>🎯</span> Luyện thi IELTS
                         </button>
                         <button
-                            onClick={() => setAnalyticsTestType('standard')}
-                            className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'standard' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
+                            onClick={() => setAnalyticsTestType('ielts-standard')}
+                            className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'ielts-standard' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
                         >
                             <span>📝</span> Bài Tập Bổ Trợ
                         </button>
+                        {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
+                            <button
+                                onClick={() => setAnalyticsTestType('standard')}
+                                className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'standard' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
+                            >
+                                <span>📚</span> Bài tập khóa khác
+                            </button>
+                        )}
                     </div>
                 )}
                 <div className="relative w-full sm:w-64">
