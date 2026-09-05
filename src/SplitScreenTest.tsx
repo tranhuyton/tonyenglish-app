@@ -339,7 +339,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
       {/* WORKSPACE - SPLIT SCREEN */}
       <div ref={containerRef} className="flex-1 flex overflow-hidden w-full select-none bg-[#525659]">
         
-        {/* NỬA TRÁI: PDF */}
+        {/* NỬA TRÁI: PDF HOẶC TEXT */}
         <div style={{ width: `${leftWidth}%` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
           <div className="bg-[#323639] border-b border-[#202224] px-4 flex justify-between items-center h-10 shrink-0 shadow-sm">
             {hasAnyInsert ? (
@@ -371,15 +371,27 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
               <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">Đề thi</span>
             )}
           </div>
-          <div className={`flex-1 w-full h-full ${isDragging ? 'pointer-events-none' : ''}`}>
+          <div className={`flex-1 w-full h-full overflow-hidden ${isDragging ? 'pointer-events-none' : ''}`}>
              {(() => {
+               // Ưu tiên hiển thị text nếu đang xem Question Paper và có cấu hình text
+               if (leftPdfView === 'question' && testData?.content_json?.basicInfo?.leftPaneType === 'text') {
+                 return (
+                   <div className="w-full h-full bg-white overflow-y-auto p-8 custom-scrollbar">
+                     <div 
+                       className="prose max-w-none prose-slate"
+                       dangerouslySetInnerHTML={{ __html: testData.content_json.basicInfo.left_text_content || '' }}
+                     />
+                   </div>
+                 );
+               }
+
                const activePdfUrl = leftPdfView === 'insert2' && insert2PdfUrl ? insert2PdfUrl 
                  : leftPdfView === 'insert' && insertPdfUrl ? insertPdfUrl 
                  : questionPdfUrl;
                if (activePdfUrl) {
                  return <iframe key={activePdfUrl} src={`${activePdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title={leftPdfView === 'insert2' ? 'PDF Insert 2' : leftPdfView === 'insert' ? 'PDF Insert 1' : 'PDF Question Paper'} />;
                }
-               return <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">📄<p className="font-bold">Không có tài liệu PDF đính kèm.</p></div>;
+               return <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">📄<p className="font-bold">Không có tài liệu đính kèm.</p></div>;
              })()}
           </div>
         </div>

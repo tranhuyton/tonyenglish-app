@@ -1,7 +1,30 @@
 import React, { useState } from 'react';
 import { supabase } from './supabase';
+import JoditEditor from 'jodit-react';
+import { setupListIndent } from './utils/joditFix';
 
 export default function CaseStudyEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
+
+const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
+  const editorRef = React.useRef(null);
+  const editorRefCallback = React.useCallback((jodit: any) => { if (jodit) setupListIndent(jodit); }, []);
+  const editorConfig = React.useMemo(() => ({
+    readonly: false, height: 500, allowResizeY: true, statusbar: false, toolbarSticky: false, placeholder: placeholder || "Nhập nội dung vào đây...",
+    tabAction: 'indent', tabIndex: -1, tab: { tabInsideLiInsertNewList: true },
+    buttons: ['source', 'fullsize', '|', 'bold', 'italic', 'underline', 'strikethrough', '|', 'superscript', 'subscript', '|', 'ul', 'ol', 'outdent', 'indent', '|', 'font', 'fontsize', 'brush', '|', 'image', 'table', 'link', '|', 'align', 'valign', 'undo', 'redo', '|', 'eraser'],
+    extraButtons: ['source', 'fullsize'],
+    defaultActionOnPaste: 'insert_as_html', askBeforePasteHTML: false, askBeforePasteFromWord: false, uploader: { insertImageAsBase64URI: true }, safeMode: false, htmlParseBrowser: false, cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false, replaceNBSP: true, removeOnError: false }
+  }), [placeholder]);
+
+  return (
+    <div className="flex flex-col py-3 border-b border-slate-100 last:border-0 gap-2">
+      <div className="flex justify-between items-center"><label className="text-[13px] font-bold text-slate-600">{label}</label></div>
+      <div className="bg-white rounded-lg border border-slate-200 shadow-sm relative z-0">
+         <JoditEditor ref={editorRef} editorRef={editorRefCallback} value={value || ''} config={editorConfig} onBlur={(newContent) => onChange({ target: { value: newContent } })} />
+      </div>
+    </div>
+  );
+};
   const getInitialData = () => {
     const basicInfo = testRecord.content_json?.basicInfo || {};
     
@@ -13,6 +36,7 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
     if (!basicInfo.mode) basicInfo.mode = 'Đề thi';
     if (!basicInfo.timeLimit) basicInfo.timeLimit = '90';
     if (!basicInfo.scoreType) basicInfo.scoreType = 'IGCSE Grading';
+    if (!basicInfo.leftPaneType) basicInfo.leftPaneType = 'pdf';
     
     // Gắn insert_pdf_url từ record gốc (nếu có)
     if (testRecord.insert_pdf_url) {
@@ -147,10 +171,27 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-              <h3 className="font-black text-[#0a5482] border-b border-slate-100 pb-3 mb-4 uppercase text-sm">2. Tài liệu đính kèm</h3>
-              <label className="text-[13px] font-bold text-slate-600 block mb-2">File PDF Đề thi / Question Paper <span className="text-red-500">*</span></label>
+              <h3 className="font-black text-[#0a5482] border-b border-slate-100 pb-3 mb-4 uppercase text-sm">2. Cấu hình cột bên trái (Đề bài)</h3>
               
-              <div 
+              <div className="mb-6">
+                <label className="text-[13px] font-bold text-slate-600 block mb-1">Phương thức hiển thị</label>
+                <select value={testData.basicInfo.leftPaneType || 'pdf'} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, leftPaneType: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none text-[14px] focus:ring-2 focus:ring-[#0a5482]">
+                  <option value="pdf">Sử dụng file PDF đính kèm</option>
+                  <option value="text">Soạn thảo trực tiếp (Văn bản/HTML)</option>
+                </select>
+              </div>
+
+              {testData.basicInfo.leftPaneType === 'text' ? (
+                <JoditEditorRow 
+                  label="Nội dung đề bài (Văn bản / HTML)" 
+                  value={testData.basicInfo.left_text_content} 
+                  onChange={(e: any) => setTestData({...testData, basicInfo: {...testData.basicInfo, left_text_content: e.target.value}})} 
+                />
+              ) : (
+                <>
+                  <label className="text-[13px] font-bold text-slate-600 block mb-2">File PDF Đề thi / Question Paper <span className="text-red-500">*</span></label>
+                  
+                  <div 
                 className={`w-full mt-2 border-2 border-dashed rounded-xl p-8 flex flex-col items-center justify-center transition-colors ${isDragging ? 'border-[#0a5482] bg-blue-50' : 'border-slate-300 bg-slate-50 hover:bg-slate-100'}`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
@@ -239,6 +280,8 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
                   </div>
                 </div>
               </div>
+              </>
+              )}
             </div>
           </div>
 
