@@ -1963,9 +1963,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <div className="bg-slate-900 rounded-[2rem] border border-amber-500/50 shadow-[0_10px_30px_rgba(245,158,11,0.15)] p-6 flex flex-col justify-center text-center relative overflow-hidden group hover:border-amber-400 transition-colors">
                     <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent"></div>
                     <div className="absolute -right-2 -bottom-2 text-6xl opacity-10 pointer-events-none group-hover:scale-110 transition-transform">🎯</div>
-                    <h4 className="font-bold text-amber-300/80 text-[11px] uppercase tracking-widest mb-2 relative z-10">
-                        {isIeltsContext ? 'Mục tiêu IELTS' : 'Mục tiêu Điểm'}
-                    </h4>
+                    <h4 className="font-bold text-amber-300/80 text-[11px] uppercase tracking-widest mb-1 relative z-10">Mục tiêu Điểm</h4>
                     {isIeltsContext ? (
                       <input 
                           type="number" step="0.5" min="0" max="9.0" 
@@ -1977,32 +1975,37 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       />
                     ) : analyticsCourse !== 'all' ? (
                       <div className="relative z-10">
-                        <select 
-                          value={getTargetForCourse(analyticsCourse, false) || ''} 
-                          onChange={(e) => handleUpdateTarget(analyticsCourse, e.target.value)}
-                          className="font-black text-amber-400 text-3xl bg-transparent w-full text-center outline-none cursor-pointer appearance-none relative z-10 drop-shadow-md focus:scale-105 transition-transform border-none"
-                          style={{ WebkitAppearance: 'none', MozAppearance: 'none', textAlignLast: 'center', background: 'transparent' }}
-                        >
-                          <option value="" className="bg-slate-800 text-slate-400 text-base">-- Chọn mục tiêu --</option>
-                          <option value="A*" className="bg-slate-800 text-white text-base">A* (90-100%)</option>
-                          <option value="A" className="bg-slate-800 text-white text-base">A (80-89%)</option>
-                          <option value="B" className="bg-slate-800 text-white text-base">B (70-79%)</option>
-                          <option value="C" className="bg-slate-800 text-white text-base">C (60-69%)</option>
-                          <option value="D" className="bg-slate-800 text-white text-base">D (50-59%)</option>
-                          <option value="E" className="bg-slate-800 text-white text-base">E (40-49%)</option>
-                        </select>
-                        {getTargetForCourse(analyticsCourse, false) && (
-                          <p className="text-[10px] text-amber-200/40 mt-1">≥ {gradeToMinPercent(getTargetForCourse(analyticsCourse, false))}%</p>
-                        )}
+                        <div className="relative inline-block">
+                          <select 
+                            value={getTargetForCourse(analyticsCourse, false) || ''} 
+                            onChange={(e) => handleUpdateTarget(analyticsCourse, e.target.value)}
+                            className="font-black text-amber-400 text-4xl bg-transparent text-center outline-none cursor-pointer appearance-none relative z-10 drop-shadow-md border-none pr-6 pl-2"
+                            style={{ WebkitAppearance: 'none', MozAppearance: 'none', textAlignLast: 'center', background: 'transparent' }}
+                          >
+                            <option value="" className="bg-slate-800 text-slate-400 text-sm">--</option>
+                            <option value="A*" className="bg-slate-800 text-white text-sm">A*</option>
+                            <option value="A" className="bg-slate-800 text-white text-sm">A</option>
+                            <option value="B" className="bg-slate-800 text-white text-sm">B</option>
+                            <option value="C" className="bg-slate-800 text-white text-sm">C</option>
+                            <option value="D" className="bg-slate-800 text-white text-sm">D</option>
+                            <option value="E" className="bg-slate-800 text-white text-sm">E</option>
+                          </select>
+                          <span className="absolute right-0 top-1/2 -translate-y-1/2 text-amber-400/50 pointer-events-none text-xs">▼</span>
+                        </div>
+                        <p className="text-[11px] text-amber-200/50 mt-1 font-semibold">
+                          {getTargetForCourse(analyticsCourse, false) 
+                            ? `≥ ${gradeToMinPercent(getTargetForCourse(analyticsCourse, false))}%` 
+                            : 'Chọn mục tiêu'}
+                        </p>
                       </div>
                     ) : (
                       <div className="relative z-10">
-                        <span className="font-black text-amber-400/40 text-2xl">--</span>
-                        <p className="text-[10px] text-amber-200/40 mt-1">Chọn 1 khóa học cụ thể</p>
+                        <span className="font-black text-amber-400/30 text-3xl">--</span>
+                        <p className="text-[11px] text-amber-200/40 mt-1">Chọn 1 khóa cụ thể</p>
                       </div>
                     )}
-                    <p className="text-[11px] text-amber-200/50 mt-2 font-medium relative z-10 group-hover:text-amber-200 transition-colors">
-                      {isIeltsContext ? 'Click vào số để sửa' : analyticsCourse !== 'all' ? 'Chọn thang điểm mục tiêu' : 'để đặt mục tiêu điểm'}
+                    <p className="text-[10px] text-amber-200/30 mt-1.5 font-medium relative z-10 group-hover:text-amber-200/60 transition-colors">
+                      {isIeltsContext ? 'Click số để sửa' : analyticsCourse !== 'all' ? 'Click để đổi' : ''}
                     </p>
                   </div>
 
@@ -2019,8 +2022,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   );
                   if (!comment.text) return null;
                   return (
-                    <div className={`mx-2 md:mx-0 mt-4 md:mt-5 bg-white rounded-2xl border border-slate-200 shadow-sm px-6 py-4 flex items-start gap-3 animate-in fade-in`}>
-                      <span className="text-2xl shrink-0 mt-0.5">{comment.emoji}</span>
+                    <div className={`mx-2 md:mx-0 mt-4 md:mt-5 bg-white rounded-2xl border border-slate-200 shadow-sm px-6 py-4 flex items-center justify-center gap-3 text-center animate-in fade-in`}>
+                      <span className="text-2xl shrink-0">{comment.emoji}</span>
                       <p className={`text-[14px] font-semibold ${comment.color} leading-relaxed`}>{comment.text}</p>
                     </div>
                   );
