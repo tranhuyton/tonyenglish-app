@@ -125,11 +125,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [userClassIds, setUserClassIds] = useState<string[]>([]);
   const [assignments, setAssignments] = useState<any[]>([]);
   
-  const [targetIelts, setTargetIelts] = useState<string>(() => {
+  const [courseTargets, setCourseTargets] = useState<Record<string, string>>(() => {
       try {
-          return localStorage.getItem('tony_target_ielts') || '6.5';
+          const raw = localStorage.getItem('tony_course_targets');
+          if (raw) return JSON.parse(raw);
+          // Migrate from legacy single-value format
+          const legacy = localStorage.getItem('tony_target_ielts');
+          if (legacy) return { ielts: legacy };
+          return { ielts: '6.5' };
       } catch (e) {
-          return '6.5';
+          return { ielts: '6.5' };
       }
   });
   
@@ -263,11 +268,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         if (profile) {
             if (!newFullName) setNewFullName(profile.full_name || '');
             if (profile.avatar_url) {
-                const targetScore = profile.avatar_url.toString();
-                setTargetIelts(targetScore);
                 try {
-                    localStorage.setItem('tony_target_ielts', targetScore);
-                } catch (e) {}
+                    const parsed = JSON.parse(profile.avatar_url);
+                    if (typeof parsed === 'object' && parsed !== null) {
+                        setCourseTargets(parsed);
+                        try { localStorage.setItem('tony_course_targets', JSON.stringify(parsed)); } catch(e) {}
+                    }
+                } catch(e) {
+                    // Legacy single-value format: treat as IELTS target
+                    const legacy = profile.avatar_url.toString();
+                    const migrated = { ielts: legacy };
+                    setCourseTargets(migrated);
+                    try { localStorage.setItem('tony_course_targets', JSON.stringify(migrated)); } catch(e2) {}
+                }
             }
         }
         
@@ -470,17 +483,67 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     }
   };
 
-  const handleUpdateTarget = async (newVal: string) => {
-      setTargetIelts(newVal);
-      try {
-          localStorage.setItem('tony_target_ielts', newVal);
-      } catch (e) {}
+  // ====== GRADE CONVERSION HELPERS ======
+  const GRADE_SCALE = [
+    { grade: 'A*', min: 90, color: 'text-emerald-400' },
+    { grade: 'A',  min: 80, color: 'text-emerald-300' },
+    { grade: 'B',  min: 70, color: 'text-sky-300' },
+    { grade: 'C',  min: 60, color: 'text-yellow-300' },
+    { grade: 'D',  min: 50, color: 'text-orange-300' },
+    { grade: 'E',  min: 40, color: 'text-red-300' },
+    { grade: 'U',  min: 0,  color: 'text-slate-400' },
+  ];
+  const percentToGrade = (p: number): string => {
+    for (const g of GRADE_SCALE) { if (p >= g.min) return g.grade; }
+    return 'U';
+  };
+  const gradeToMinPercent = (grade: string): number => {
+    return GRADE_SCALE.find(g => g.grade === grade)?.min ?? 0;
+  };
+
+  const getTargetForCourse = (courseId: string | null, isIelts: boolean): string => {
+    if (isIelts) return courseTargets.ielts || '6.5';
+    if (!courseId || courseId === 'all') return '';
+    return courseTargets[courseId] || '';
+  };
+
+  const handleUpdateTarget = async (courseKey: string, newVal: string) => {
+      const updated = { ...courseTargets, [courseKey]: newVal };
+      setCourseTargets(updated);
+      try { localStorage.setItem('tony_course_targets', JSON.stringify(updated)); } catch(e) {}
       if (userProfile) {
-          setUserProfile({ ...userProfile, avatar_url: newVal });
+          setUserProfile({ ...userProfile, avatar_url: JSON.stringify(updated) });
       }
       if (currentUser?.id) {
-          await supabase.from('profiles').update({ avatar_url: newVal }).eq('id', currentUser.id);
+          await supabase.from('profiles').update({ avatar_url: JSON.stringify(updated) }).eq('id', currentUser.id);
       }
+  };
+
+  // ====== MOTIVATIONAL COMMENT GENERATOR ======
+  const getMotivationalComment = (avgPercent: number, targetGrade: string, isIelts: boolean, ieltsAvg: number, ieltsTarget: number): { emoji: string; text: string; color: string } => {
+    if (isIelts) {
+      if (ieltsAvg <= 0) return { emoji: '📝', text: 'Hãy hoàn thành thêm bài thi để xem phân tích chi tiết nhé!', color: 'text-slate-400' };
+      const diff = ieltsAvg - ieltsTarget;
+      if (diff >= 1.0) return { emoji: '🏆', text: `Xuất sắc! Em đã vượt mục tiêu ${ieltsTarget} tận ${diff.toFixed(1)} band! Hãy thử thách bản thân với mục tiêu cao hơn nào!`, color: 'text-emerald-500' };
+      if (diff >= 0.5) return { emoji: '🎉', text: `Tuyệt vời! Em đã vượt mục tiêu ${ieltsTarget}! Cứ giữ phong độ này nhé, mục tiêu tiếp theo trong tầm tay rồi!`, color: 'text-emerald-500' };
+      if (diff >= 0) return { emoji: '✅', text: `Chúc mừng em đã đạt mục tiêu IELTS ${ieltsTarget}! Hãy tiếp tục ôn luyện để giữ vững phong độ nhé!`, color: 'text-emerald-500' };
+      if (diff >= -0.5) return { emoji: '💪', text: `Gần lắm rồi! Chỉ cần thêm ${Math.abs(diff).toFixed(1)} band nữa là chạm mục tiêu ${ieltsTarget}. Cố lên em nhé!`, color: 'text-amber-500' };
+      if (diff >= -1.0) return { emoji: '📈', text: `Em đang tiến bộ tốt! Khoảng cách đến mục tiêu ${ieltsTarget} chỉ còn ${Math.abs(diff).toFixed(1)} band. Luyện đều đặn mỗi ngày sẽ đạt thôi!`, color: 'text-amber-500' };
+      return { emoji: '🌟', text: `Mục tiêu ${ieltsTarget} là thử thách lớn, nhưng kiên trì là chìa khóa! Hãy tập trung vào từng kỹ năng yếu nhất trước nhé.`, color: 'text-sky-500' };
+    }
+    // Standard courses
+    if (avgPercent <= 0) return { emoji: '📝', text: 'Hãy hoàn thành thêm bài tập để xem phân tích chi tiết nhé!', color: 'text-slate-400' };
+    if (!targetGrade) return { emoji: '🎯', text: 'Hãy đặt mục tiêu điểm cho khóa học này để theo dõi tiến độ nhé!', color: 'text-sky-400' };
+    const targetMin = gradeToMinPercent(targetGrade);
+    const currentGrade = percentToGrade(avgPercent);
+    const diff = avgPercent - targetMin;
+    const gradeIdx = GRADE_SCALE.findIndex(g => g.grade === currentGrade);
+    const targetIdx = GRADE_SCALE.findIndex(g => g.grade === targetGrade);
+    if (gradeIdx < targetIdx) return { emoji: '🏆', text: `Xuất sắc! Điểm trung bình ${currentGrade} đã vượt xa mục tiêu ${targetGrade}! Em đang thể hiện rất tốt, hãy giữ phong độ này nhé!`, color: 'text-emerald-500' };
+    if (gradeIdx === targetIdx && diff >= 5) return { emoji: '🎉', text: `Tuyệt vời! Em đã đạt và vượt mục tiêu ${targetGrade} rồi! Cứ duy trì đà này là ổn!`, color: 'text-emerald-500' };
+    if (gradeIdx === targetIdx) return { emoji: '✅', text: `Chúc mừng! Em đang ở đúng mục tiêu ${targetGrade}. Tiếp tục ôn luyện để giữ vững và nâng cao thêm nhé!`, color: 'text-emerald-500' };
+    if (gradeIdx === targetIdx + 1) return { emoji: '💪', text: `Gần lắm rồi! Chỉ cần cải thiện thêm một chút nữa là chạm mục tiêu ${targetGrade}. Cố lên em!`, color: 'text-amber-500' };
+    return { emoji: '🌟', text: `Mục tiêu ${targetGrade} đang chờ em phía trước! Hãy tập trung ôn luyện đều đặn, mỗi ngày một chút thôi là sẽ tiến bộ rõ rệt!`, color: 'text-sky-500' };
   };
 
   const handleLogout = async () => {
@@ -814,7 +877,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       }).slice(-14); 
   }, [processedHistory]);
 
-  const { analyticsTotalTestsDone, analyticsTotalTimeHours, avgScore, avgIelts } = useMemo(() => {
+  const { analyticsTotalTestsDone, analyticsTotalTimeHours, avgScore, avgScoreRaw, avgIelts, avgIeltsRaw } = useMemo(() => {
       const total = processedHistory.length;
       const hours = (processedHistory.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1);
       
@@ -839,10 +902,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }
       });
 
-      const score = stdCount > 0 ? (stdSum / stdCount).toFixed(1) + '%' : '0%';
-      const ielts = bandCount > 0 ? (bandSum / bandCount).toFixed(1) : '0.0';
+      const rawStd = stdCount > 0 ? stdSum / stdCount : 0;
+      const rawIelts = bandCount > 0 ? bandSum / bandCount : 0;
+      const score = stdCount > 0 ? rawStd.toFixed(1) + '%' : '0%';
+      const ielts = bandCount > 0 ? rawIelts.toFixed(1) : '0.0';
       
-      return { analyticsTotalTestsDone: total, analyticsTotalTimeHours: hours, avgScore: score, avgIelts: ielts };
+      return { analyticsTotalTestsDone: total, analyticsTotalTimeHours: hours, avgScore: score, avgScoreRaw: rawStd, avgIelts: ielts, avgIeltsRaw: rawIelts };
   }, [processedHistory, historyData]);
 
   // TÍNH TOÁN DỮ LIỆU CHO LINE CHART: 4 KỸ NĂNG IELTS
@@ -1877,9 +1942,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <h4 className="font-bold text-slate-400 text-[11px] uppercase tracking-widest mb-2 relative z-10">
                         {isIeltsContext ? 'IELTS Average' : 'Điểm Trung Bình'}
                     </h4>
-                    <span className="font-black text-white text-4xl relative z-10 drop-shadow-md">
-                        {isIeltsContext ? avgIelts : avgScore}
-                    </span>
+                    {isIeltsContext ? (
+                      <span className="font-black text-white text-4xl relative z-10 drop-shadow-md">{avgIelts}</span>
+                    ) : (
+                      <div className="relative z-10">
+                        <span className="font-black text-white text-3xl drop-shadow-md">{avgScore}</span>
+                        {avgScoreRaw > 0 && (
+                          <span className={`block text-2xl font-black mt-1 ${GRADE_SCALE.find(g => avgScoreRaw >= g.min)?.color || 'text-slate-400'}`}>
+                            {percentToGrade(avgScoreRaw)}
+                          </span>
+                        )}
+                      </div>
+                    )}
                     <p className="text-[11px] text-slate-500 mt-2 font-medium relative z-10">
                         {isIeltsContext ? '(Dựa trên 4 bài gần nhất)' : '(Toàn bộ hệ thống)'}
                     </p>
@@ -1892,18 +1966,65 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <h4 className="font-bold text-amber-300/80 text-[11px] uppercase tracking-widest mb-2 relative z-10">
                         {isIeltsContext ? 'Mục tiêu IELTS' : 'Mục tiêu Điểm'}
                     </h4>
-                    <input 
-                        type="number" step="0.5" min="0" max={isIeltsContext ? "9.0" : "100"} 
-                        value={targetIelts || ''} 
-                        onChange={(e) => handleUpdateTarget(e.target.value)}
-                        placeholder="N/A"
-                        className="font-black text-amber-400 text-4xl bg-transparent w-full text-center outline-none cursor-pointer placeholder:text-amber-400/30 relative z-10 drop-shadow-md focus:scale-110 transition-transform"
-                        title="Click để sửa"
-                    />
-                    <p className="text-[11px] text-amber-200/50 mt-2 font-medium relative z-10 group-hover:text-amber-200 transition-colors">Click vào số để sửa</p>
+                    {isIeltsContext ? (
+                      <input 
+                          type="number" step="0.5" min="0" max="9.0" 
+                          value={getTargetForCourse(analyticsCourse, true) || ''} 
+                          onChange={(e) => handleUpdateTarget('ielts', e.target.value)}
+                          placeholder="N/A"
+                          className="font-black text-amber-400 text-4xl bg-transparent w-full text-center outline-none cursor-pointer placeholder:text-amber-400/30 relative z-10 drop-shadow-md focus:scale-110 transition-transform"
+                          title="Click để sửa"
+                      />
+                    ) : analyticsCourse !== 'all' ? (
+                      <div className="relative z-10">
+                        <select 
+                          value={getTargetForCourse(analyticsCourse, false) || ''} 
+                          onChange={(e) => handleUpdateTarget(analyticsCourse, e.target.value)}
+                          className="font-black text-amber-400 text-3xl bg-transparent w-full text-center outline-none cursor-pointer appearance-none relative z-10 drop-shadow-md focus:scale-105 transition-transform border-none"
+                          style={{ WebkitAppearance: 'none', MozAppearance: 'none', textAlignLast: 'center', background: 'transparent' }}
+                        >
+                          <option value="" className="bg-slate-800 text-slate-400 text-base">-- Chọn mục tiêu --</option>
+                          <option value="A*" className="bg-slate-800 text-white text-base">A* (90-100%)</option>
+                          <option value="A" className="bg-slate-800 text-white text-base">A (80-89%)</option>
+                          <option value="B" className="bg-slate-800 text-white text-base">B (70-79%)</option>
+                          <option value="C" className="bg-slate-800 text-white text-base">C (60-69%)</option>
+                          <option value="D" className="bg-slate-800 text-white text-base">D (50-59%)</option>
+                          <option value="E" className="bg-slate-800 text-white text-base">E (40-49%)</option>
+                        </select>
+                        {getTargetForCourse(analyticsCourse, false) && (
+                          <p className="text-[10px] text-amber-200/40 mt-1">≥ {gradeToMinPercent(getTargetForCourse(analyticsCourse, false))}%</p>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="relative z-10">
+                        <span className="font-black text-amber-400/40 text-2xl">--</span>
+                        <p className="text-[10px] text-amber-200/40 mt-1">Chọn 1 khóa học cụ thể</p>
+                      </div>
+                    )}
+                    <p className="text-[11px] text-amber-200/50 mt-2 font-medium relative z-10 group-hover:text-amber-200 transition-colors">
+                      {isIeltsContext ? 'Click vào số để sửa' : analyticsCourse !== 'all' ? 'Chọn thang điểm mục tiêu' : 'để đặt mục tiêu điểm'}
+                    </p>
                   </div>
 
                 </div>
+
+                {/* MOTIVATIONAL COMMENT */}
+                {(() => {
+                  const currentTarget = isIeltsContext 
+                    ? getTargetForCourse(analyticsCourse, true) 
+                    : getTargetForCourse(analyticsCourse, false);
+                  const comment = getMotivationalComment(
+                    avgScoreRaw, currentTarget, isIeltsContext, 
+                    avgIeltsRaw, parseFloat(currentTarget) || 0
+                  );
+                  if (!comment.text) return null;
+                  return (
+                    <div className={`mx-2 md:mx-0 mt-4 md:mt-5 bg-white rounded-2xl border border-slate-200 shadow-sm px-6 py-4 flex items-start gap-3 animate-in fade-in`}>
+                      <span className="text-2xl shrink-0 mt-0.5">{comment.emoji}</span>
+                      <p className={`text-[14px] font-semibold ${comment.color} leading-relaxed`}>{comment.text}</p>
+                    </div>
+                  );
+                })()}
 
                 {/* KHU VỰC BIỂU ĐỒ IELTS CHI TIẾT */}
                 {isIeltsContext && (
@@ -2083,7 +2204,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 
                 <div className="space-y-2">
                   <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Mục tiêu IELTS</label>
-                  <input type="text" value={targetIelts} onChange={e => handleUpdateTarget(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 font-semibold text-slate-800 focus:border-amber-500 focus:bg-white focus:ring-4 focus:ring-amber-500/10 outline-none transition-all text-[15px] shadow-sm" placeholder="Ví dụ: 7.0" />
+                  <input type="text" value={courseTargets.ielts || ''} onChange={e => handleUpdateTarget('ielts', e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 font-semibold text-slate-800 focus:border-amber-500 focus:bg-white focus:ring-4 focus:ring-amber-500/10 outline-none transition-all text-[15px] shadow-sm" placeholder="Ví dụ: 7.0" />
                 </div>
                 
                 <div className="space-y-2">
