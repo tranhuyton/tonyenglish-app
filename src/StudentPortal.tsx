@@ -66,16 +66,17 @@ const getCourseCover = (course: any) => {
   if (course.thumbnail) return { image: course.thumbnail, badge: course.type || 'Khóa học', color: 'text-indigo-600' };
 
   const t = (course.title || '').toLowerCase();
-  if (t.includes('biology')) return { image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=800', badge: 'Biology', color: 'text-emerald-600' };
-  if (t.includes('chemistry')) return { image: 'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/covers/chem_course_cover.png', badge: 'Chemistry', color: 'text-cyan-600' };
-  if (t.includes('physics')) return { image: 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?auto=format&fit=crop&q=80&w=800', badge: 'Physics', color: 'text-indigo-600' };
+  if (t.includes('biology')) return { image: '/images/biology_cover.jpg', badge: 'Biology', color: 'text-emerald-600' };
+  if (t.includes('chemistry')) return { image: '/images/chemistry_cover.jpg', badge: 'Chemistry', color: 'text-cyan-600' };
+  if (t.includes('physics')) return { image: '/images/physics_cover.jpg', badge: 'Physics', color: 'text-indigo-600' };
+  if (t.includes('geography')) return { image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800', badge: 'Geography', color: 'text-amber-600' };
   if (t.includes('science')) return { image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800', badge: 'Science', color: 'text-teal-600' };
   if (t.includes('math')) return { image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
   if (t.includes('econ')) return { image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800', badge: 'Economics', color: 'text-amber-600' };
   if (t.includes('business')) return { image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800', badge: 'Business', color: 'text-blue-600' };
   if (t.includes('pronunciation') || t.includes('phát âm')) return { image: 'https://images.unsplash.com/photo-1590402494587-44b71d7772f6?auto=format&fit=crop&q=80&w=800', badge: 'Pronunciation', color: 'text-rose-500' };
   if (t.includes('reflex') || t.includes('phản ứng') || t.includes('phản xạ')) return { image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800', badge: 'Comm. Reflex', color: 'text-orange-500' };
-  if (t.includes('communication') || t.includes('giao tiếp')) return { image: 'https://images.unsplash.com/photo-1577563908411-50cb989766a3?auto=format&fit=crop&q=80&w=800', badge: 'Communication', color: 'text-pink-600' };
+  if (t.includes('communication') || t.includes('giao tiếp')) return { image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800', badge: 'Communication', color: 'text-pink-600' };
   if (t.includes('esl') || t.includes('english')) return { image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800', badge: 'ESL Program', color: 'text-rose-600' };
   if (t.includes('ielts') || course.type === 'IELTS') return { image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800', badge: 'IELTS Mastery', color: 'text-blue-600' };
   return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
