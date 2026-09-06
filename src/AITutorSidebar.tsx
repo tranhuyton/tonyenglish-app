@@ -281,7 +281,7 @@ export default function AITutorSidebar({
         return '';
     }
     const doc = new DOMParser().parseFromString(htmlContent, 'text/html');
-    return (doc.body.textContent || '').substring(0, 15000);
+    return (doc.body.textContent || '').substring(0, 40000);
   }, [htmlContent, mode]);
 
   useEffect(() => { 

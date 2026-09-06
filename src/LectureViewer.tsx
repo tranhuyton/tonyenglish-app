@@ -461,6 +461,29 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
             font-style: italic; 
             color: #475569;
          }
+          
+          /* Vietnamese translation style */
+          .vi { 
+              color: #64748b; 
+              font-style: italic; 
+              font-size: 15px; 
+              margin-top: 6px; 
+              margin-bottom: 16px; 
+              border-left: 3px solid #cbd5e1; 
+              padding-left: 12px; 
+          }
+          ul.vi, ol.vi { 
+              padding-left: 32px !important; 
+              margin-top: 4px !important; 
+          }
+          .vi ul, .vi ol { 
+              padding-left: 24px !important; 
+              margin: 4px 0 4px 0; 
+          }
+          .vi li, ul.vi li, ol.vi li { 
+              margin-bottom: 4px; 
+          }
+          
          table { 
              border-collapse: collapse;
              width: 100% !important; 
@@ -774,16 +797,24 @@ export default function LectureViewer({
       }
   }, [viewedPages, pages.length, activeLectureId, currentUser, activeLecture, completedLectures]);
 
+  const fullHtmlContent = useMemo(() => {
+      if (!pages || pages.length === 0) return '';
+      return [...pages]
+          .sort((a, b) => a.page_number - b.page_number)
+          .map(p => p.content_html || '')
+          .join('\n\n');
+  }, [pages]);
+
   useEffect(() => {
-    if (activeLecture && currentHtmlContent) {
+    if (activeLecture && fullHtmlContent) {
       window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
         detail: {
           title: activeLecture.title, 
-          html: currentHtmlContent 
+          html: fullHtmlContent 
         }
       }));
     }
-  }, [activeLecture, currentHtmlContent]);
+  }, [activeLecture, fullHtmlContent]);
 
   useEffect(() => {
     if (containerRef.current) {
