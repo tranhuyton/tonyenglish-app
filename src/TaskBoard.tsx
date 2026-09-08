@@ -212,8 +212,8 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
         if (norm.includes('exam practice') || norm.includes('past paper') || norm.includes('đề thi')) {
           return 999999;
         }
-        // Topic 1 to 10 in numeric order
-        const match = norm.match(/topic\s*(\d+)/i);
+        // Topic / Section 1 to 10 in numeric order
+        const match = norm.match(/(?:topic|section)\s*(\d+)/i);
         if (match) {
           return parseInt(match[1], 10);
         }
