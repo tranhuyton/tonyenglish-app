@@ -1,11 +1,11 @@
 {
-  "title": "Topic 3 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_3_Practice_Questions.pdf",
+  "title": "Topic 3 Changing ecosystems - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_3_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)(i)",
-      "question_text": "Question 1(a)(i) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Figure 3.23 shows a food web for the sea around Antarctica. Identify the main source of energy for this ecosystem.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,21 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "Solar energy / the Sun [1]"
+        ],
+        "rubric": "Award 1 mark for Solar energy or the Sun.",
         "keywords_required": [
-          "Solar energy\n[1 mark]"
+          "Solar energy",
+          "Sun",
+          "sunlight"
         ]
       }
     },
     {
       "question_number": "1(a)(ii)",
-      "question_text": "Question 1(a)(ii) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Identify the organism that feeds on phytoplankton.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +35,20 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "Zooplankton (or krill) [1]"
+        ],
+        "rubric": "Award 1 mark for Zooplankton.",
         "keywords_required": [
-          "Zooplankton\n[1 mark]"
+          "Zooplankton",
+          "krill"
         ]
       }
     },
     {
       "question_number": "1(a)(iii)",
-      "question_text": "Question 1(a)(iii) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "State the organism that feeds on birds.",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +56,20 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "Seals (or Leopard seals) [1]"
+        ],
+        "rubric": "Award 1 mark for Seals.",
         "keywords_required": [
-          "Seals\n[1 mark]"
+          "Seals",
+          "Leopard seals"
         ]
       }
     },
     {
       "question_number": "1(a)(iv)",
-      "question_text": "Question 1(a)(iv) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "State the top carnivore in the Antarctic marine ecosystem.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +77,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "Toothed whales (or Killer whales / Orcas) [1]"
+        ],
+        "rubric": "Award 1 mark for Toothed whales.",
         "keywords_required": [
-          "Toothed whales\n[1 mark]"
+          "Toothed whales",
+          "Killer whales",
+          "Orca",
+          "whales"
         ]
       }
     },
     {
       "question_number": "1(b)",
-      "question_text": "Question 1(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Explain why Antarctica's ecosystems are largely marine-based rather than land-based.",
       "inputs": [
         {
           "type": "textarea",
@@ -81,16 +100,30 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "The land is covered in ice and too cold for almost all plant growth [1]",
+          "There is negligible terrestrial vegetation/soil, so the land cannot support herbivorous animals [1]",
+          "It is dark for much of the winter, severely limiting land photosynthesis [1]",
+          "The surrounding Southern Ocean is nutrient-rich due to upwelling currents, supporting enormous blooms of phytoplankton and krill [1]",
+          "Terrestrial land is used mainly as breeding ground (penguins, seals) free from land predators [1]"
+        ],
+        "rubric": "Award up to 3 marks for explaining why land cannot support life vs why the ocean is rich in nutrients.",
         "keywords_required": [
-          "The land is too cold for much of the year [1]. It does not support much vegetation so\ncannot support many herbivorous animals [1]. It is too dark for much of the year, so\nphotosynthesis is limited [1]. However, some animals, such as penguins and seals, may\nuse Antarctica for breeding purposes, as it is largely safe from predators [1].    [Max 3\nmarks]"
+          "cold",
+          "ice",
+          "no vegetation",
+          "dark",
+          "marine upwelling",
+          "phytoplankton",
+          "krill",
+          "rich sea"
         ]
       }
     },
     {
       "question_number": "2(a)",
-      "question_text": "Question 2(a) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "View Figure 3.16 on page 80 which shows an area of tropical rainforest. Identify how this area of rainforest is being used.",
       "inputs": [
         {
           "type": "textarea",
@@ -98,16 +131,23 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "Agriculture / commercial farming / cattle ranching / plantation (oil palm / soya) [1]"
+        ],
+        "rubric": "Award 1 mark for agriculture, farming, cattle ranching, or plantation.",
         "keywords_required": [
-          "Agriculture/farming\n[1 mark]"
+          "Agriculture",
+          "farming",
+          "cattle ranching",
+          "plantation",
+          "cleared for crops"
         ]
       }
     },
     {
       "question_number": "2(b)",
-      "question_text": "Question 2(b) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Compare the characteristics of the vegetation in the rainforest with that of the cleared area.",
       "inputs": [
         {
           "type": "textarea",
@@ -115,16 +155,25 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "The rainforest has high biodiversity with dense, stratified layers of trees (canopy, emergent, undercanopy) [1]",
+          "The cleared area has very low biodiversity, consisting of monoculture / grass / bare soil / single crop species [1]",
+          "Trees are tall and evergreen in rainforest, whereas the cleared area has short grasses or low crops [1]"
+        ],
+        "rubric": "Award up to 2 marks for comparative statements between rainforest vegetation and cleared area.",
         "keywords_required": [
-          "The rainforest has a higher biodiversity [1]. Most of the vegetation is trees rather\nthan grasses [1]. Rainforests have many layers of vegetation, unlike the\ngrasses [1].\n[Max 2 marks]"
+          "high biodiversity vs low",
+          "tall trees vs grass",
+          "canopy vs monoculture",
+          "dense vs open",
+          "stratified"
         ]
       }
     },
     {
       "question_number": "2(c)",
-      "question_text": "Question 2(c) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Explain two reasons why tropical rainforests are being destroyed by human activities.",
       "inputs": [
         {
           "type": "textarea",
@@ -132,16 +181,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Reason 1: Commercial agriculture and cattle ranching (e.g. Amazon basin) to produce beef and soya for export [1], requiring clear-felling of large tracts of forest [1]",
+          "Reason 2: Logging for valuable tropical hardwoods (e.g. mahogany, teak) or pulp [1], opening up roads into pristine forest [1]",
+          "Other valid reasons: Mineral extraction / mining (e.g. Carajás iron ore); Hydroelectric power (HEP) dam construction flooding valleys; Infrastructure / road building (e.g. Trans-Amazonian Highway) [1-2 marks each]"
+        ],
+        "rubric": "Award 2 marks for each well-explained reason (1 mark identification, 1 mark elaboration). Maximum 4 marks.",
         "keywords_required": [
-          "Rainforests are being destroyed for many reasons. Many trees are burned to create\nfarmland [1], especially by new settlers or those without employment [1]. Areas may be\ndrowned by lakes [1] for hydroelectric power schemes [1]. Trees may be cut for timber\nproducts [1], and many trees may have to be cut down in order to remove the ‘target’\ntrees [1]. Two reasons are required with some development of each reason to gain full\nmarks.\n[Max 4 marks]"
+          "cattle ranching",
+          "logging",
+          "timber",
+          "mining",
+          "soya",
+          "commercial farming",
+          "HEP",
+          "roads"
         ]
       }
     },
     {
       "question_number": "2(d)",
-      "question_text": "Question 2(d) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Explain the consequences of the deforestation of tropical rainforests.",
       "inputs": [
         {
           "type": "textarea",
@@ -149,9 +210,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Loss of biodiversity and habitat: extinction of unique plant and animal species and loss of potential medicinal plants [1]",
+          "Soil erosion and nutrient leaching: removal of tree canopy exposes topsoil to intense tropical rainfall, washing away nutrients and silting rivers [1]",
+          "Contribution to climate change / enhanced greenhouse effect: burning trees releases stored CO₂, and loss of trees reduces carbon sink capacity [1]",
+          "Disruption of local water cycle: less transpiration leads to reduced rainfall, drier local climate, and increased flash flooding risk [1]",
+          "Impact on indigenous tribes: displacement and loss of traditional livelihoods and culture [1]"
+        ],
+        "rubric": "Award up to 4 marks for explaining ecological, climatic, or social consequences of deforestation.",
         "keywords_required": [
-          "The consequences of deforestation include disruption to the circulation and storage of\nnutrients [1]; surface erosion and compaction of soils [1]; increased flood levels and\nsediment content of rivers [1]; climate change [1]; loss of biodiversity [1]; shorter time\nlags for floods [1]; greater turbidity (murkiness) in rivers in dry seasons [1]; increased bed\nload [1] and more silt/clay carried in suspension [1].\n[Max 4 marks]\nCambridge IGCSETM and O Level Geography\nFourth Edition\n© Hodder & Stoughton Ltd 2025"
+          "biodiversity loss",
+          "soil erosion",
+          "climate change",
+          "carbon release",
+          "less transpiration",
+          "indigenous people",
+          "flooding"
         ]
       }
     }

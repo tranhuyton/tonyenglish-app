@@ -1,11 +1,11 @@
 {
-  "title": "Topic 1 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_1_Practice_Questions.pdf",
+  "title": "Topic 1 Rivers - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_1_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)(i)",
-      "question_text": "Question 1(a)(i) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Figure 1.47 shows the inflows and outflows on the Nile water and rainfall graphs for the source areas. State the amount of water that initially comes from the White Nile.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "75 billion cumecs (or 75 billion m³) [1]"
+        ],
+        "rubric": "Award 1 mark for stating 75 billion cumecs / m³.",
         "keywords_required": [
-          "75 billion cumecs\n[1 mark]"
+          "75 billion",
+          "cumecs",
+          "75 billion cumecs",
+          "75 billion m3"
         ]
       }
     },
     {
       "question_number": "1(a)(ii)",
-      "question_text": "Question 1(a)(ii) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "State the amount of water that joins the Blue Nile.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +36,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "24 billion cumecs (or 24 billion m³) [1]"
+        ],
+        "rubric": "Award 1 mark for stating 24 billion cumecs / m³.",
         "keywords_required": [
-          "24 billion cumecs\n[1 mark]"
+          "24 billion",
+          "cumecs",
+          "24 billion cumecs",
+          "24 billion m3"
         ]
       }
     },
     {
       "question_number": "1(b)",
-      "question_text": "Question 1(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Describe the rainfall pattern for the source of the Blue Nile.",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +59,27 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "The rainfall pattern for the Blue Nile is very seasonal / monsoonal [1]",
+          "Peak flow / heavy rainfall in summer (June to September) [1]",
+          "Low flow / dry period in winter (October to February / March) [1]",
+          "Data quantification: e.g. over 250 mm of rainfall in July, about 800 mm between June and September, or less than 50 mm/month between October and February [1]"
+        ],
+        "rubric": "Award up to 3 marks: 1 mark for seasonal/monsoonal nature, 1 mark for peak in summer/low in winter, 1 mark for quantification with figures.",
         "keywords_required": [
-          "The rainfall pattern for the Blue Nile is very seasonal/monsoonal [1], with a peak flow in\nsummer and low flow in winter [1]. Award one mark for quantification, e.g. over 250 mm\nof rainfall in July, or about 800 mm of rainfall between June and September, or less than\n50 mm of rainfall in each month between October and February [1].\n[Max 3 marks]"
+          "seasonal",
+          "monsoonal",
+          "peak summer",
+          "low winter",
+          "July",
+          "quantification"
         ]
       }
     },
     {
       "question_number": "2(a)(i)",
-      "question_text": "Question 2(a)(i) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Figure 1.48 shows the changes in the flow of water in the Nile before and after the building of the Grand Ethiopian Renaissance Dam (GERD), completed in 2020. State the maximum flow in the Nile without the GERD.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +87,24 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "c. 7750 m³/s (accept 7600–7800 m³/s) [1]"
+        ],
+        "rubric": "Award 1 mark for stating approximately 7750 m³/s (acceptable range 7600–7800 m³/s).",
         "keywords_required": [
-          "c.7750 m3/s (accept 7600–7800 m3/s)\n[1 mark]"
+          "7750",
+          "7600",
+          "7700",
+          "7800",
+          "m3/s",
+          "cumecs"
         ]
       }
     },
     {
       "question_number": "2(a)(ii)",
-      "question_text": "Question 2(a)(ii) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "State the maximum flow in the Nile with the GERD.",
       "inputs": [
         {
           "type": "textarea",
@@ -81,16 +112,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "6000 m³/s (accept 6000–6250 m³/s) [1 mark]"
+        ],
+        "rubric": "Award 1 mark for 6000 m³/s (accept 6000–6250 m³/s).",
         "keywords_required": [
-          "6000 m3/s (accept 6000–6250 m3/s)\n[1 mark]"
+          "6000",
+          "6250",
+          "6000 m3/s",
+          "6000–6250 m3/s"
         ]
       }
     },
     {
       "question_number": "2(b)",
-      "question_text": "Question 2(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Compare the flow of the Blue Nile without the GERD and with the GERD.",
       "inputs": [
         {
           "type": "textarea",
@@ -98,9 +135,20 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "The flow of the Blue Nile without the GERD was very seasonal [1]",
+          "Peak flow in August / autumn without the GERD [1]",
+          "The flow of the Blue Nile after the GERD was built was the same year-round [1]",
+          "Award 1 mark for quantification (e.g. peak of ~7750 m³/s vs regulated flow) [1]"
+        ],
+        "rubric": "Award up to 3 marks: The flow of the Blue Nile without the GERD was very seasonal [1], with a peak flow in August/autumn [1], whereas the flow of the Blue Nile after the GERD was built was the same year-round [1]. Award 1 mark for quantification.",
         "keywords_required": [
-          "The flow of the Blue Nile without the GERD was very seasonal [1], with a peak flow in\nAugust/autumn [1], whereas the flow of the Blue Nile after the GERD was built was the\nsame year-round [1]. Award 1 mark for quantification.\n[Max 3 marks]"
+          "seasonal",
+          "peak in August",
+          "autumn",
+          "same year-round",
+          "regulated",
+          "quantification"
         ]
       }
     }

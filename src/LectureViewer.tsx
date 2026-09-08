@@ -1010,27 +1010,82 @@ export default function LectureViewer({
           setCurrentPage(1);
         }
         
+        let initialCompletedTasks: string[] = [];
+        let isLectureCompleted = false;
+
         if (targetUserId && progressRes.data && progressRes.data.length > 0) {
            const pData = progressRes.data[0];
            if (pData && Array.isArray(pData.completed_tasks)) {
-               setCompletedTasks(pData.completed_tasks);
-               setAllLectureProgress(prev => ({
-                   ...prev, 
-                   [lectureId]: pData.completed_tasks
-               }));
+               initialCompletedTasks = pData.completed_tasks;
+               isLectureCompleted = !!pData.is_completed;
            }
-           
-           if (pData.is_completed) {
-               setCompletedLectures(prev => new Set(prev).add(lectureId));
-           }
-           
-        } else if (targetUserId) { 
-           setCompletedTasks([]);
-           setCompletedLectures(prev => {
-               const newSet = new Set(prev);
-               newSet.delete(lectureId);
-               return newSet;
-           });
+        }
+        
+        // --- ASSIGNMENT RECONCILIATION ---
+        if (targetUserId) {
+            // Fetch lecture's task_list to reconcile
+            const { data: currentLec } = await supabase.from('lectures').select('title, task_list').eq('id', lectureId).single();
+            const taskList = currentLec?.task_list || [];
+            
+            if (taskList.length > 0) {
+                const { data: assignments } = await supabase.from('assignments').select('title, test_id, is_completed, student_completed, task_type').eq('user_id', targetUserId);
+                if (assignments) {
+                    let mergedCompletedTasks = [...initialCompletedTasks];
+                    let changed = false;
+                    
+                    taskList.forEach((t: any) => {
+                        let isCompletedInAssignment = false;
+                        if (t.type === 'manual') {
+                            const syncTitle = `${currentLec?.title || ''} : ${t.text}`;
+                            const assign = assignments.find(a => 
+                                a.task_type === 'manual' && (
+                                    a.title === syncTitle || 
+                                    a.title === t.text || 
+                                    a.title === `[Bài giảng] ${t.text}`
+                                )
+                            );
+                            if (assign && assign.student_completed) isCompletedInAssignment = true;
+                        } else if (t.type === 'exercise' && t.test_id) {
+                            const assign = assignments.find(a => a.test_id === t.test_id);
+                            if (assign && assign.is_completed) isCompletedInAssignment = true;
+                        }
+                        
+                        if (isCompletedInAssignment && !mergedCompletedTasks.includes(t.id)) {
+                            mergedCompletedTasks.push(t.id);
+                            changed = true;
+                        }
+                    });
+                    
+                    if (changed) {
+                        initialCompletedTasks = mergedCompletedTasks;
+                        isLectureCompleted = initialCompletedTasks.length === taskList.length;
+                        
+                        if (progressRes.data && progressRes.data.length > 0) {
+                             supabase.from('lecture_progress').update({ completed_tasks: initialCompletedTasks, is_completed: isLectureCompleted }).eq('id', progressRes.data[0].id).then();
+                        } else {
+                             supabase.from('lecture_progress').insert({ user_id: targetUserId, lecture_id: lectureId, completed_tasks: initialCompletedTasks, is_completed: isLectureCompleted }).then();
+                        }
+                    }
+                }
+            }
+        }
+        
+        if (targetUserId) {
+            setCompletedTasks(initialCompletedTasks);
+            setAllLectureProgress(prev => ({
+                ...prev, 
+                [lectureId]: initialCompletedTasks
+            }));
+            
+            if (isLectureCompleted) {
+                setCompletedLectures(prev => new Set(prev).add(lectureId));
+            } else {
+                setCompletedLectures(prev => {
+                    const newSet = new Set(prev);
+                    newSet.delete(lectureId);
+                    return newSet;
+                });
+            }
         }
     } catch (err) {
         console.error(err);
@@ -1051,8 +1106,33 @@ export default function LectureViewer({
       const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
       
       setCompletedTasks(prev => {
-         const newCompleted = prev.includes(taskId) ? prev.filter(id => id !== taskId) : [...prev, taskId];
+         const isNowCompleted = !prev.includes(taskId);
+         const newCompleted = isNowCompleted ? [...prev, taskId] : prev.filter(id => id !== taskId);
          const isCompleted = safeLectureTasks.length > 0 && newCompleted.length === safeLectureTasks.length;
+         
+         // Đồng bộ với Assignment
+         const taskObj = safeLectureTasks.find((t: any) => t.id === taskId);
+         if (taskObj) {
+             if (taskObj.type === 'manual') {
+                 const syncTitle = `${activeLecture?.title || ''} : ${taskObj.text}`;
+                 const payload: any = { student_completed: isNowCompleted, updated_at: new Date().toISOString() };
+                 if (!isNowCompleted) payload.admin_approved = false;
+                 
+                 supabase.from('assignments')
+                     .update(payload)
+                     .eq('user_id', currentUser.id)
+                     .eq('task_type', 'manual')
+                     .in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text])
+                     .then();
+             } else if (taskObj.type === 'exercise' && taskObj.test_id) {
+                 supabase.from('assignments')
+                     .update({ is_completed: isNowCompleted, student_completed: isNowCompleted, updated_at: new Date().toISOString() })
+                     .eq('user_id', currentUser.id)
+                     .eq('task_type', 'test')
+                     .eq('test_id', taskObj.test_id)
+                     .then();
+             }
+         }
          
          supabase.from('lecture_progress')
              .select('id')

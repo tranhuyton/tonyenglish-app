@@ -52,6 +52,11 @@ Các agent khi làm việc với cấu trúc dữ liệu JSON của bài test tr
 - Khi khởi tạo dữ liệu câu hỏi trong JSON, thuộc tính `id` của mỗi câu hỏi (`questions[i].id`) BẮT BUỘC phải là số hoặc chuỗi chứa số thuần túy (ví dụ: "1", "1000", Date.now().toString()).
 - TUYỆT ĐỐI KHÔNG được sử dụng chuỗi ngẫu nhiên (UUID, hex, v.v.) làm ID, vì điều này sẽ gây lỗi hiển thị số thứ tự câu hỏi lộn xộn trên giao diện (do UI dùng hàm `parseInt()`).
 
+## 10. Dạng bài Checkbox (Chọn nhiều đáp án)
+- Với các bài tập yêu cầu chọn nhiều đáp án cùng lúc (VD: "Select THREE answer choices", câu Summary), bắt buộc phải gộp chúng vào MỘT Section duy nhất có `questionType: "Checkbox"`.
+- BẮT BUỘC thiết lập thuộc tính `content` của tất cả các câu hỏi con bên trong section này thành chuỗi rỗng (`""`).
+- Lý do: Giao diện UI (`StandardMCQTest.tsx`) sử dụng logic gộp nhóm (`buildCheckboxCombos`). Nếu các câu hỏi con có `content` khác nhau (VD: "Chọn đáp án 1", "Chọn đáp án 2"), UI sẽ tách chúng thành các khối riêng lẻ. Chỉ khi `content` hoàn toàn giống nhau (hoặc rỗng), UI mới gom chúng lại thành MỘT khối duy nhất (VD: Câu 13-15) cho phép người dùng tick chọn nhiều ô cùng lúc và chấm điểm chính xác theo tổ hợp.
+
 # QUY TẮC TRÍCH XUẤT VÀ HIGHLIGHT OCR CHO BÀI TẬP ĐỌC HIỂU
 Các agent khi thực hiện trích xuất nội dung văn bản (OCR) từ hình ảnh để đưa vào Supabase (content_json) **PHẢI** tuân thủ nghiêm ngặt các bước sau để tránh việc làm rác dữ liệu:
 
@@ -60,7 +65,16 @@ Các agent khi thực hiện trích xuất nội dung văn bản (OCR) từ hìn
 3. **Phân đoạn văn (Paragraphing)**: Các dòng văn bản phải được merge (nối) cẩn thận thành các đoạn văn hoàn chỉnh. Dựa vào dấu chấm kết thúc câu và chữ cái viết hoa đầu dòng để nhận diện xuống khổ. Gắn thẻ `<p>` với style có `text-indent` và `margin-bottom` để văn bản hiển thị đẹp mắt.
 4. **Highlight Highlighted Sentence**: Khi thực hiện bôi đậm câu được tô sáng (highlighted sentence) từ yêu cầu của câu hỏi, không được dùng chuỗi string khớp hoàn toàn vì OCR có thể làm sai khác khoảng trắng hoặc dấu câu. Thay vào đó, trích xuất 5 từ đầu và 5 từ cuối của câu, sau đó dùng Regex để tìm và bọc thẻ highlight thật an toàn.
 
-## 10. Dạng bài Checkbox (Chọn nhiều đáp án)
-- Với các bài tập yêu cầu chọn nhiều đáp án cùng lúc (VD: "Select THREE answer choices", câu Summary), bắt buộc phải gộp chúng vào MỘT Section duy nhất có `questionType: "Checkbox"`.
-- BẮT BUỘC thiết lập thuộc tính `content` của tất cả các câu hỏi con bên trong section này thành chuỗi rỗng (`""`).
-- Lý do: Giao diện UI (`StandardMCQTest.tsx`) sử dụng logic gộp nhóm (`buildCheckboxCombos`). Nếu các câu hỏi con có `content` khác nhau (VD: "Chọn đáp án 1", "Chọn đáp án 2"), UI sẽ tách chúng thành các khối riêng lẻ. Chỉ khi `content` hoàn toàn giống nhau (hoặc rỗng), UI mới gom chúng lại thành MỘT khối duy nhất (VD: Câu 13-15) cho phép người dùng tick chọn nhiều ô cùng lúc và chấm điểm chính xác theo tổ hợp.
+# QUY TẮC CẮT ẢNH TỪ SÁCH GIÁO KHOA (IMAGE CROPPING)
+Các agent khi thực hiện dùng Python PIL để cắt ảnh (cropping) từ các file PDF/Ảnh chụp SGK **BẮT BUỘC** phải ghi nhớ những kinh nghiệm xương máu sau:
+
+1. **HIỂU RÕ KÍCH THƯỚC ẢNH GỐC (ABSOLUTE DIMENSIONS):** 
+   - Tuyệt đối không được "đoán" hoặc dùng mắt ước lượng toạ độ (x, y) trên các ảnh preview bị thu nhỏ. Việc vẽ đường kẻ đỏ test trên ảnh bị thu nhỏ (VD: `img.resize(...)`) sẽ dẫn đến việc chọn toạ độ bị sai lệch hoàn toàn so với ảnh gốc (có thể làm mất một nửa bức ảnh mà không hề hay biết). 
+   - LUÔN LUÔN dùng lệnh `im.size` để kiểm tra chính xác chiều cao và chiều rộng của ảnh gốc nguyên bản trước khi chốt toạ độ cắt.
+2. **XỬ LÝ CHỮ RÁC DÍNH VÀO BIỂU ĐỒ BẰNG TẨY TRẮNG (WHITE-OUT):**
+   - Khi một đoạn text (VD: "Source C:", "Figure 1") nằm ngang hàng (chồng chéo toạ độ Y) với phần mép của biểu đồ bên cạnh, **TUYỆT ĐỐI KHÔNG** được cắt lẹm (crop) phần mép dưới của biểu đồ chỉ để loại bỏ đoạn text đó. 
+   - Thay vào đó, BẮT BUỘC phải mở rộng toạ độ crop `(x1, y1, x2, y2)` bao trọn hoàn toàn biểu đồ, sau đó dùng `ImageDraw.Draw(im).rectangle(..., fill='white')` để vẽ một hộp màu trắng đè gọn gàng lên phần chữ rác (white-out) nhằm bảo toàn 100% hình ảnh.
+3. **CẨN TRỌNG VỚI CÁC MÉP ẢNH / BIỂU ĐỒ ẨN:**
+   - Cần chừa lề (margin) an toàn để không vô tình cắt mất các chi tiết nhỏ nhưng quan trọng: Ví dụ nét võng xuống của lòng sông, phần gạch chân của một biểu đồ, hay các nét chữ kéo dài xuống dưới như chữ `y, g, p`.
+4. **KHÔNG TỰ SUY DIỄN DO ẢNH GỐC BỊ CẮT:**
+   - Đôi khi hình ảnh trong sách giáo khoa nguyên bản bị dàn trang làm cắt cụt một cách đột ngột. Nếu người dùng phàn nàn "ảnh bị thiếu", agent cần phải crop thử một vùng rất lớn của ảnh gốc để kiểm tra xem bên dưới thật sự có nội dung hay không. Đừng hoảng hốt chỉnh lại toạ độ nếu chính bản PDF gốc đã bị cắt ngang ở đúng vị trí đó.

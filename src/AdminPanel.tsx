@@ -2296,25 +2296,63 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
               {boardCourseId ? (
                 <div className="flex-1 flex overflow-x-auto gap-4 p-4 custom-scrollbar bg-slate-100/50">
-                  {boardColumns.map(col => {
+                  {boardColumns.map((col, colIdx) => {
                     const colCards = boardCards.filter(c => c.column_id === col.id);
                     return (
                       <div key={col.id} className="w-[280px] shrink-0 bg-slate-50/80 rounded-2xl p-3 border border-slate-200 flex flex-col max-h-full">
                         <div className="flex items-center justify-between mb-3 px-1 shrink-0">
-                          <h4 className="font-black text-[13px] text-slate-700">{col.title} <span className="text-slate-400 font-normal text-[11px]">({colCards.length})</span></h4>
-                          <div className="flex gap-1">
+                          <h4 className="font-black text-[13px] text-slate-700 truncate mr-1" title={col.title}>{col.title} <span className="text-slate-400 font-normal text-[11px]">({colCards.length})</span></h4>
+                          <div className="flex items-center gap-0.5 shrink-0">
+                            <button 
+                              disabled={colIdx === 0}
+                              onClick={async () => {
+                                const newCols = [...boardColumns];
+                                const targetIdx = colIdx - 1;
+                                const temp = newCols[colIdx];
+                                newCols[colIdx] = newCols[targetIdx];
+                                newCols[targetIdx] = temp;
+                                const updated = newCols.map((c, idx) => ({ ...c, order_index: idx + 1 }));
+                                setBoardColumns(updated);
+                                for (const c of updated) {
+                                  await supabase.from('board_columns').update({ order_index: c.order_index }).eq('id', c.id);
+                                }
+                              }} 
+                              className="text-slate-400 hover:text-[#0a5482] disabled:opacity-20 disabled:hover:text-slate-400 transition-colors p-1 text-xs font-bold"
+                              title="Di chuyển sang trái"
+                            >
+                              ←
+                            </button>
+                            <button 
+                              disabled={colIdx === boardColumns.length - 1}
+                              onClick={async () => {
+                                const newCols = [...boardColumns];
+                                const targetIdx = colIdx + 1;
+                                const temp = newCols[colIdx];
+                                newCols[colIdx] = newCols[targetIdx];
+                                newCols[targetIdx] = temp;
+                                const updated = newCols.map((c, idx) => ({ ...c, order_index: idx + 1 }));
+                                setBoardColumns(updated);
+                                for (const c of updated) {
+                                  await supabase.from('board_columns').update({ order_index: c.order_index }).eq('id', c.id);
+                                }
+                              }} 
+                              className="text-slate-400 hover:text-[#0a5482] disabled:opacity-20 disabled:hover:text-slate-400 transition-colors p-1 text-xs font-bold"
+                              title="Di chuyển sang phải"
+                            >
+                              →
+                            </button>
                             <button onClick={async () => {
                               const newTitle = prompt('Đổi tên cột:', col.title);
                               if (!newTitle?.trim()) return;
                               await supabase.from('board_columns').update({ title: newTitle.trim() }).eq('id', col.id);
                               setBoardColumns(boardColumns.map(c => c.id === col.id ? { ...c, title: newTitle.trim() } : c));
-                            }} className="text-slate-400 hover:text-[#0a5482] transition-colors p-1">✏️</button>
+                            }} className="text-slate-400 hover:text-[#0a5482] transition-colors p-1" title="Đổi tên">✏️</button>
                             <button onClick={async () => {
                               if (!window.confirm(`Xóa cột "${col.title}" và tất cả thẻ bên trong?`)) return;
                               await supabase.from('board_columns').delete().eq('id', col.id);
                               setBoardColumns(boardColumns.filter(c => c.id !== col.id));
                               setBoardCards(boardCards.filter(c => c.column_id !== col.id));
-                            }} className="text-slate-400 hover:text-red-500 transition-colors p-1">🗑</button>
+                            }} className="text-slate-400 hover:text-red-500 transition-colors p-1" title="Xóa">🗑</button>
                           </div>
                         </div>
 

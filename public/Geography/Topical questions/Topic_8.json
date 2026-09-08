@@ -1,11 +1,11 @@
 {
-  "title": "Topic 8 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_8_Practice_Questions.pdf",
+  "title": "Topic 8 The challenge of development - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_8_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)",
-      "question_text": "Question 1(a) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Figure 8.31 shows the world's least-developed countries. Identify the least developed country in the Americas.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,19 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
-        "keywords_required": [
+        "points": [
           "Haiti [1]"
+        ],
+        "rubric": "Award 1 mark for Haiti.",
+        "keywords_required": [
+          "Haiti"
         ]
       }
     },
     {
       "question_number": "1(b)",
-      "question_text": "Question 1(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Describe the distribution of the least developed countries as shown in Figure 8.31.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +33,25 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "The majority of least developed countries (33 out of 46) are concentrated in Sub-Saharan Africa [1]",
+          "About one-fifth are located in Asia (e.g. Afghanistan, Yemen, Myanmar, Cambodia) [1]",
+          "There are isolated small island developing states in the Pacific (e.g. Kiribati, Tuvalu, Solomon Islands) and one in the Americas (Haiti) [1]"
+        ],
+        "rubric": "Award up to 3 marks for describing Africa majority, Asian cluster, and Pacific islands.",
         "keywords_required": [
-          "The majority of the least developed countries (33/46) are in Sub-Saharan\nAfrica [1], while about one-fifth are in Asia [1]. There are also small islands in the\nPacific [1].\n[Max 3 marks]"
+          "Sub-Saharan Africa",
+          "majority",
+          "Asia",
+          "Pacific islands",
+          "Haiti"
         ]
       }
     },
     {
       "question_number": "1(c)",
-      "question_text": "Question 1(c) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Suggest why islands such as Kiribati and Tuvalu are among the least developed countries.",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +59,27 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "Small domestic market and population size, severely limiting domestic trade and economies of scale [1]",
+          "Extremely remote geographic location far from global trade routes and markets, leading to high shipping and transport costs [1]",
+          "Very limited land area and natural resources / raw materials for industrial production [1]",
+          "High vulnerability to climate change, sea-level rise, and extreme storms destroying limited infrastructure [1]"
+        ],
+        "rubric": "Award up to 3 marks for explaining isolation, small size, resource scarcity, and natural hazard vulnerability.",
         "keywords_required": [
-          "They are very small so they have a limited market to sell goods [1]; they may have very\nlimited natural resources [1]; they are far from the main international markets [1];\ntransport costs to the main markets are high [1].\n[Max 3 marks]"
+          "small market",
+          "remote",
+          "high transport costs",
+          "limited resources",
+          "climate vulnerability",
+          "sea level rise"
         ]
       }
     },
     {
       "question_number": "2(a)",
-      "question_text": "Question 2(a) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Table 8.11 shows life expectancy (years) for selected countries. Calculate the difference in life expectancy between the country with the highest life expectancy and the country with the lowest life expectancy.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +87,23 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Calculation: Monaco (89.4 years) – Central African Republic (54.4 years) [1]",
+          "Difference: 35.0 years [1]"
+        ],
+        "rubric": "Award up to 2 marks: 1 mark for reading 89.4 and 54.4, 1 mark for final answer 35 years.",
         "keywords_required": [
-          "89.4 years – 54.4 years [1] = 35 years [1] [Max 2 marks]"
+          "35",
+          "35.0",
+          "35 years",
+          "89.4 - 54.4"
         ]
       }
     },
     {
       "question_number": "2(b)",
-      "question_text": "Question 2(b) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Compare the characteristics of countries with high life expectancy with those with low life expectancy.",
       "inputs": [
         {
           "type": "textarea",
@@ -81,16 +111,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Economic status: Countries with high life expectancy are HICs / high-income (e.g. Monaco, Japan, Switzerland), whereas low life expectancy countries are LICs (e.g. Central African Republic, Chad, Nigeria) [1]",
+          "Geographic location: High life expectancy countries are all located in Europe and East Asia, while low life expectancy countries are all in Sub-Saharan Africa [1]",
+          "Healthcare and sanitation: HICs have advanced universal healthcare, high doctor-patient ratios, clean piped water, and modern sanitation, whereas LICs suffer from severe shortages of medical supplies, malnutrition, and infectious diseases [1-2]",
+          "Living standards: HICs have high literacy, better nutrition, and elderly social security, whereas LICs face high infant mortality and poverty [1]"
+        ],
+        "rubric": "Award up to 4 marks for comparative analysis covering income level, geography, healthcare infrastructure, and living conditions.",
         "keywords_required": [
-          "Countries with a high life expectancy are HICs [1] and all are located in either Asia or\nEurope [1]. In contrast, countries with a low life expectancy are mainly LICs [1] and all are\nin Africa [1].\n[Max 4 marks]"
+          "HIC vs LIC",
+          "Europe/Asia vs Africa",
+          "healthcare access",
+          "sanitation",
+          "water",
+          "nutrition",
+          "infant mortality"
         ]
       }
     },
     {
       "question_number": "3(a)",
-      "question_text": "Question 3(a) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Identify two economic indicators of development.",
       "inputs": [
         {
           "type": "textarea",
@@ -98,16 +140,24 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Any two from: Gross Domestic Product (GDP) per capita [1]; Gross National Income (GNI) per capita [1]; Gross National Product (GNP) [1]; Employment structure / percentage in primary industries [1]; Energy consumption per capita [1]"
+        ],
+        "rubric": "Award 1 mark each for two valid economic indicators of development. Max 2 marks.",
         "keywords_required": [
-          "Any two from: GDP (gross domestic product) [1]; GNP (gross national product) [1]; GNI\n(gross national income) [1].\n[Max 2 marks]"
+          "GDP",
+          "GNI",
+          "GNP",
+          "Gross Domestic Product",
+          "Gross National Income",
+          "per capita"
         ]
       }
     },
     {
       "question_number": "3(b)",
-      "question_text": "Question 3(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Suggest how improving levels of literacy may raise levels of development.",
       "inputs": [
         {
           "type": "textarea",
@@ -115,26 +165,49 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "Skilled employment: Literate individuals can secure formal, higher-skilled jobs, earning higher wages and boosting tax revenues and national GDP [1]",
+          "Health and hygiene: Literate parents understand healthcare, hygiene, and medical advice, drastically reducing infant mortality rates [1]",
+          "Female empowerment: Female education leads to knowledge of family planning, lower birth rates, delayed marriage, and greater workforce participation [1]"
+        ],
+        "rubric": "Award up to 3 marks for linking literacy to higher income, better health/sanitation, and female empowerment.",
         "keywords_required": [
-          "People with higher levels of literacy are able to secure better jobs, which provide a better\nincome [1] and allow a higher standard of living [1]. There is a very strong relationship\nbetween levels of female literacy and infant mortality rates [1]. People who are literate\nare much more able to access medical and other information that will help them achieve\na higher quality of life than are those who are illiterate [1]. Female literacy is the key to\nlower fertility [1]. Female education increases knowledge of birth control and creates\ngreater social awareness and opportunities for employment [1].                   [Max 3 marks]\nCambridge IGCSETM and O Level Geography\nFourth Edition\n© Hodder & Stoughton Ltd 2025"
+          "higher skilled jobs",
+          "higher income",
+          "health information",
+          "lower infant mortality",
+          "female education",
+          "family planning"
         ]
       }
     },
     {
       "question_number": "4",
-      "question_text": "Question 4 (See PDF for details)",
       "total_marks": 7,
+      "question_text": "Using named examples, evaluate ways in which uneven development may be reduced.",
       "inputs": [
         {
           "type": "textarea",
-          "label": "Nhập đáp án:"
+          "label": "Nhập bài làm Case Study (7 marks):"
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 7",
+        "points": [
+          "Strategies: Fair trade and international trade agreements; Bilateral and multilateral official aid; Debt relief (e.g. HIPC initiative); Foreign direct investment (FDI); Intermediate / appropriate technology; National regional policies (e.g. enterprise zones, transport corridors) [2-3 marks]",
+          "Strengths and weaknesses: Aid provides immediate relief but can cause long-term dependency and corruption; debt relief frees up government funds for education/health but may encourage fiscal irresponsibility; trade provides sustainable growth but requires fair market access [2-3 marks]",
+          "Named examples: e.g. Fairtrade coffee in Uganda/Ethiopia, Jubilee 2000 debt relief in Mozambique, or regional development policies in Italy (Mezzogiorno) or UK [1-2 marks]",
+          "Evaluation: Judging which strategies are most sustainable and concluding on the need for combined economic and political reform [1 mark]"
+        ],
+        "rubric": "Level 1 (1-3 marks): Simple descriptions of ways to help poor countries without evaluation. Level 2 (4-6 marks): Explains advantages and disadvantages of two or more strategies with named examples. Level 3 (7 marks): Sophisticated evaluation assessing effectiveness and trade-offs of multiple development strategies, supported by specific country examples, arriving at a well-reasoned conclusion.",
         "keywords_required": [
-          "There are many ways that uneven development may be reduced. These include trade,\ninternational aid, debt relief and government projects to reduce regional inequalities within a\ncountry. Debt relief may reduce financial pressures on a country but may lead to dependency\nand conditions of repayment/high interest rates. Trade is potentially long term and may help\na country develop from import substitution to export orientation. Answers should outline\nadvantages and disadvantages of two or more ways to reduce uneven development. Answers\nshould also refer to named examples. These may be between countries and/or within\ncountries. If the answer to this question does not include an evaluation, do not award more\nthan 5 marks.\n[Max 7 marks]"
+          "fair trade",
+          "foreign aid",
+          "debt relief",
+          "FDI",
+          "dependency",
+          "intermediate technology",
+          "named examples",
+          "evaluation"
         ]
       }
     }

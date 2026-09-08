@@ -607,13 +607,45 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     try {
       let currentLectureId = lectureData.id;
       
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      // Đồng bộ manual tasks sang Danh mục việc thủ công (manual_task_templates)
+      const updatedTaskList = [...taskList];
+      for (let i = 0; i < updatedTaskList.length; i++) {
+          const task = updatedTaskList[i];
+          if (task.type === 'manual' && !task.template_id) {
+             const templateTitle = `${title} : ${task.text}`;
+             const { data: inserted } = await supabase.from('manual_task_templates')
+                 .insert([{ 
+                     title: templateTitle, 
+                     description: `Được tạo tự động từ bài giảng: ${title}`, 
+                     created_by: session?.user?.id 
+                 }]).select();
+                 
+             if (inserted && inserted[0]) {
+                 updatedTaskList[i] = { ...task, template_id: inserted[0].id };
+                 if (courseId) {
+                     await supabase.from('course_task_templates').insert([{ 
+                         course_id: courseId, 
+                         template_id: inserted[0].id 
+                     }]);
+                 }
+             }
+          } else if (task.type === 'manual' && task.template_id) {
+             const templateTitle = `${title} : ${task.text}`;
+             await supabase.from('manual_task_templates')
+                 .update({ title: templateTitle, description: `Được tạo tự động từ bài giảng: ${title}` })
+                 .eq('id', task.template_id);
+          }
+      }
+      
       // Khởi tạo Payload, bao gồm cả biến tutor_context
       const lecPayload: any = { 
          title, 
          course_id: courseId, 
          module_id: moduleId || null, 
          is_published: true, 
-         task_list: taskList,
+         task_list: updatedTaskList,
          tutor_context: tutorContext.trim() || null
       };
       

@@ -1,11 +1,11 @@
 {
-  "title": "Topic 6 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_6_Practice_Questions.pdf",
+  "title": "Topic 6 Population change - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_6_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)",
-      "question_text": "Question 1(a) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Figure 6.32 shows global birth rates in 2023. Define the term ‘birth rate’.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "The number of live births per 1000 people per year [1]"
+        ],
+        "rubric": "Award 1 mark for 'number of live births per 1000 people per year'.",
         "keywords_required": [
-          "The number of live births per 1000 people per year.\n[1 mark]"
+          "live births",
+          "per 1000",
+          "per year",
+          "per annum"
         ]
       }
     },
     {
       "question_number": "1(b)",
-      "question_text": "Question 1(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Describe the pattern of global birth rates in 2023 as shown in Figure 6.32.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +36,25 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "The highest birth rates (over 30.01 per thousand) are concentrated in Sub-Saharan Africa (e.g. Niger, Mali, Chad, DRC) and parts of Afghanistan [1]",
+          "The lowest birth rates (less than 10 per thousand) are found in East Asia (South Korea, Japan, China) and parts of Southern and Eastern Europe [1]",
+          "Moderate to relatively high birth rates (20.01–30 per thousand) occur in North Africa, parts of South Asia, and the Middle East, while North America, Australasia, and Western Europe have low rates (10–15 per thousand) [1]"
+        ],
+        "rubric": "Award up to 3 marks for describing high, low, and medium regions with accurate geographical references.",
         "keywords_required": [
-          "The highest birth rates (over 30.01 per thousand) are mostly in Sub-Saharan Africa [1].\nAn exception is Afghanistan [1]. The lowest levels (less than 10 per thousand) are\nfound in Russia, China and Eastern and Southern Europe [1]. Relatively high rates\n(20.01–30 per thousand) are found in other parts of Africa and parts of the Middle\nEast [1], whereas much of North America, Western Europe and the Middle East have\nrelatively low rates [1].\n[Max 3 marks]"
+          "highest Sub-Saharan Africa",
+          "lowest Europe",
+          "East Asia",
+          "moderate",
+          "spatial pattern"
         ]
       }
     },
     {
       "question_number": "1(c)",
-      "question_text": "Question 1(c) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Suggest reasons for the high birth rates in your answer to (b).",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +62,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "Youthful population structure with a high proportion of people in their reproductive years [1]",
+          "Agrarian rural economy where children provide manual labour on family farms and generate income [1]",
+          "High infant mortality rate encouraging parents to have multiple children to ensure some survive to adulthood [1]",
+          "Lack of access to contraception / family planning education, and cultural/religious traditions favoring large families [1]",
+          "Lack of female education and early marriage leading to extended childbearing years [1]"
+        ],
+        "rubric": "Award up to 3 marks for giving distinct demographic, economic, and social reasons.",
         "keywords_required": [
-          "High birth rates are mainly found in populations with a youthful age structure [1],\nin rural households [1] where children may be seen as an asset to work on the land [1],\nand/or where there is limited access to family planning measures/contraceptives [1].\n[Max 3 marks]"
+          "youthful population",
+          "farm labour",
+          "infant mortality",
+          "lack of contraception",
+          "female education",
+          "tradition"
         ]
       }
     },
     {
       "question_number": "2(a)",
-      "question_text": "Question 2(a) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Figure 6.33 shows the global pattern of death rates in 2023. Define the term ‘death rate’.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +91,21 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "The number of deaths per 1000 people per year [1]"
+        ],
+        "rubric": "Award 1 mark for 'number of deaths per 1000 people per year'.",
         "keywords_required": [
-          "The number of deaths per 1000 people per year.\n[1 mark]"
+          "deaths",
+          "per 1000",
+          "per year"
         ]
       }
     },
     {
       "question_number": "2(b)",
-      "question_text": "Question 2(b) (See PDF for details)",
-      "total_marks": 1,
+      "total_marks": 3,
+      "question_text": "Describe the global pattern of death rates in 2023 as shown in Figure 6.33.",
       "inputs": [
         {
           "type": "textarea",
@@ -81,16 +113,24 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "The highest death rates (12 per thousand and over) are found in Eastern Europe, Russia, and parts of Central and Southern Africa [1]",
+          "Moderate death rates (8–11.99 per thousand) occur across North America, Western Europe, and parts of South America [1]",
+          "The lowest death rates (less than 6 per thousand) are located in the Middle East (e.g. Qatar, UAE, Saudi Arabia) and parts of Latin America and Northern Africa [1]"
+        ],
+        "rubric": "Award up to 3 marks for identifying high, low, and moderate regions.",
         "keywords_required": [
-          "The highest death rates (12 per thousand and over) are found in Russia and Eastern\nEurope [1]. Afghanistan is an exception [1]. The lowest death rates are found in North\nCambridge IGCSETM and O Level Geography\nFourth Edition\n© Hodder & Stoughton Ltd 2025"
+          "highest Eastern Europe",
+          "Africa",
+          "lowest Middle East",
+          "moderate Western Europe"
         ]
       }
     },
     {
-      "question_number": "5",
-      "question_text": "Question 5 (See PDF for details)",
+      "question_number": "2(c)",
       "total_marks": 3,
+      "question_text": "Suggest reasons for the high death rates in your answer to (b).",
       "inputs": [
         {
           "type": "textarea",
@@ -98,33 +138,25 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "In Eastern Europe/Russia: Ageing population structure with a high proportion of elderly residents who naturally have higher mortality rates, exacerbated by lifestyle factors (alcoholism, smoking, cardiovascular disease) [1-2]",
+          "In Sub-Saharan Africa: Inadequate healthcare infrastructure, infectious diseases (HIV/AIDS, malaria, tuberculosis), malnutrition, and lack of clean water and sanitation [1-2]"
+        ],
+        "rubric": "Award up to 3 marks: credit contrasting reasons between ageing MEDCs/NICs (high proportion of elderly) and developing LEDCs (disease, healthcare access).",
         "keywords_required": [
-          "Africa and the Middle East [1], parts of East Africa and West Africa [1], and parts of\nCentral and South America [1].\n[Max 3 marks]"
-        ]
-      }
-    },
-    {
-      "question_number": "5(c)",
-      "question_text": "Question 5(c) (See PDF for details)",
-      "total_marks": 3,
-      "inputs": [
-        {
-          "type": "textarea",
-          "label": "Nhập đáp án:"
-        }
-      ],
-      "marking_scheme": {
-        "rubric": "Total marks: 3",
-        "keywords_required": [
-          "One major reason for high death rates is the number/percentage of elderly people in a\npopulation [1]. As a population ages, the death rate increases [1]. Countries with youthful\nage structures generally have lower death rates, such as many parts of North and East\nAfrica [1]. Afghanistan is an exception – the high death rate there is likely to be due\ndirectly/indirectly to conflict [1]. The Central African Republic also has a high death rate,\nand this may be due to poverty and the spread of infectious disease [1].       [Max 3 marks]"
+          "ageing population",
+          "elderly proportion",
+          "diseases",
+          "malnutrition",
+          "poor healthcare",
+          "water sanitation"
         ]
       }
     },
     {
       "question_number": "3(a)",
-      "question_text": "Question 3(a) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Define the term ‘population structure’.",
       "inputs": [
         {
           "type": "textarea",
@@ -132,16 +164,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "The composition of a population usually in terms of age and sex / gender (often shown on a population pyramid) [1]"
+        ],
+        "rubric": "Award 1 mark for defining population structure by age and sex.",
         "keywords_required": [
-          "The proportion of young people, adults and elderly in a population.\n[1 mark]"
+          "age and sex",
+          "age and gender",
+          "composition",
+          "population pyramid"
         ]
       }
     },
     {
       "question_number": "3(b)",
-      "question_text": "Question 3(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Explain how rural-to-urban migration causes changes in population structure.",
       "inputs": [
         {
           "type": "textarea",
@@ -149,26 +187,47 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "Rural areas of origin: Lose economically active young adults (predominantly aged 18–35), leaving an elderly and dependent population, shifting the sex ratio if migration is gender-selective [1-2]",
+          "Urban destination areas: Gain young adults, bulging the economically active middle bands on urban population pyramids, increasing future birth rates due to reproductive age concentration [1-2]"
+        ],
+        "rubric": "Award up to 3 marks for explaining impacts on both the rural source area and the urban destination area.",
         "keywords_required": [
-          "Most rural migrants are young adults [1], so when they leave a rural area the\npopulation age structure becomes more elderly [1]. In contrast, as those migrants\nmove to urban areas, those areas show a higher proportion of young adults [1]. Younger\nadults may lead to an increase in the birth rate, making the urban age structure even\nyounger [1].\n[Max 3 marks]"
+          "young adults move",
+          "economically active",
+          "rural ageing",
+          "urban young bulge",
+          "dependency ratio"
         ]
       }
     },
     {
       "question_number": "4",
-      "question_text": "Question 4 (See PDF for details)",
       "total_marks": 7,
+      "question_text": "Assess the advantages and disadvantages of ageing populations.",
       "inputs": [
         {
           "type": "textarea",
-          "label": "Nhập đáp án:"
+          "label": "Nhập bài làm Case Study (7 marks):"
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 7",
+        "points": [
+          "Advantages: Grandparents provide valuable childcare enabling parents to work; volunteerism and community leadership; high disposable wealth and consumer spending in tourism/leisure ('grey pound / silver economy'); lower crime rates [2-3 marks]",
+          "Disadvantages: High old-age dependency ratio; increased healthcare and long-term care costs (dementia, chronic diseases); strain on state pensions and social security; labour shortages and shrinking tax base; economic stagnation [2-3 marks]",
+          "Named case study: e.g. Japan (29% over 65) or Germany / UK; policies to manage (raising retirement age, robotic care, pro-natalist incentives, immigration) [1-2 marks]",
+          "Assessment / Evaluation: Weighing whether economic costs outweigh social benefits and concluding on the need for proactive government reform [1 mark]"
+        ],
+        "rubric": "Level 1 (1-3 marks): Simple list of problems or benefits of having older people. Level 2 (4-6 marks): Detailed explanation of both advantages (childcare, silver economy, volunteering) and disadvantages (pensions, healthcare, labour shortages) with case study reference (e.g. Japan). Level 3 (7 marks): Comprehensive assessment weighing costs against benefits, supported by demographic data and named examples, concluding with an evaluative judgement.",
         "keywords_required": [
-          "There are many advantages and disadvantages of ageing populations. Much will depend on\nthe health and age of the people concerned. Disadvantages are likely to include the cost of\nhealth care, pensions (in some countries), subsidised transport and a declining workforce.\nAdvantages can include the size of the ‘grey market’, the skills/knowledge that many elderly\npeople have, the care provided by elderly people for the young. The age of the elderly is a\nfactor – those aged 65–75 years may provide more benefits whereas those aged over 85 years\nmay be more in need of support. Answers should refer to places (countries/areas within a\ncountry) with a large proportion of elderly people. Do not award more than 5 marks in the\nfollowing instances: if the answer only includes advantages or disadvantages; if the answer\ndoes not include any named areas; if the answer has no evaluation.     [Max 7 marks]"
+          "dependency ratio",
+          "healthcare costs",
+          "pensions",
+          "grey economy",
+          "childcare",
+          "Japan",
+          "labour shortage",
+          "evaluation"
         ]
       }
     }

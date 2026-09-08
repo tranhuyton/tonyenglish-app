@@ -1,11 +1,11 @@
 {
-  "title": "Topic 9 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_9_Practice_Questions.pdf",
+  "title": "Topic 9 Economic change - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_9_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)(i)",
-      "question_text": "Question 1(a)(i) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Table 9.13 shows changes in South Korea's economy between 1970 and 2022. Define the term: Secondary industries.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "Manufacturing and processing industries that change raw materials into finished or semi-finished goods [1]"
+        ],
+        "rubric": "Award 1 mark for definition of secondary industries as manufacturing/processing.",
         "keywords_required": [
-          "Secondary industries are manufacturing industries [1] that change raw materials into\nfinished or semi-finished products [1].\n[Max 1 mark]"
+          "manufacturing",
+          "processing",
+          "raw materials into finished goods",
+          "construction"
         ]
       }
     },
     {
       "question_number": "1(a)(ii)",
-      "question_text": "Question 1(a)(ii) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Define the term: Tertiary industries.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +36,24 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "Industries that provide commercial, personal, and professional services to people and businesses (e.g. retail, finance, education, health) [1]"
+        ],
+        "rubric": "Award 1 mark for definition of tertiary industries as service-providing.",
         "keywords_required": [
-          "Tertiary industries are those that provide services to people and businesses [1], such\nas retailing/education/healthcare/banking [1].\n[Max 1 mark]"
+          "services",
+          "providing services",
+          "retail",
+          "healthcare",
+          "banking",
+          "education"
         ]
       }
     },
     {
       "question_number": "1(b)",
-      "question_text": "Question 1(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Describe the changes in South Korea's employment structure between 1970 and 2022 as shown in Table 9.13.",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +61,26 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "Primary industries saw a dramatic decline of almost 90%, falling from 50.4% in 1970 to only 5.4% in 2022 [1]",
+          "Secondary industries increased from 14.3% in 1970 to 24.5% in 2022 (an increase of over 70%) [1]",
+          "Tertiary industries doubled, surging from 35.3% in 1970 to 70.1% in 2022, becoming the dominant sector [1]"
+        ],
+        "rubric": "Award up to 3 marks: 1 mark each for describing trends in primary, secondary, and tertiary sectors with figures.",
         "keywords_required": [
-          "Primary industries declined by almost 90 per cent, from over 50 per cent to just over 5 per\ncent [1]. Secondary industries increased by over a half, from about 14 per cent to about\n24 per cent [1]. Tertiary employment doubled, from about 35 per cent to about 70 per\ncent [1].\n[Max 3 marks]"
+          "primary declined",
+          "50.4% to 5.4%",
+          "secondary increased",
+          "14.3% to 24.5%",
+          "tertiary doubled",
+          "35.3% to 70.1%"
         ]
       }
     },
     {
       "question_number": "1(c)",
-      "question_text": "Question 1(c) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Suggest reasons for the change in employment structure in South Korea between 1970 and 2022.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +88,27 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "Agricultural mechanisation and modern technology reduced the need for farm labour, pushing workers off the land [1]",
+          "Government industrial policy and foreign investment heavily promoted export-oriented manufacturing (e.g. ship building, automobiles, electronics like Samsung/Hyundai) [1]",
+          "Rising household incomes and living standards created huge consumer demand for domestic services (retailing, leisure, finance, personal services) [1]",
+          "Higher levels of education and technology produced a skilled workforce suited for high-end tertiary and quaternary service sectors [1]"
+        ],
+        "rubric": "Award up to 3 marks for explaining mechanisation of farming, industrial growth, and expansion of service economy.",
         "keywords_required": [
-          "Changes in employment structure may have occurred due to: greater access to\ntechnology allowing the country to move away from primary industries [1]; a more skilled\nworkforce [1]; government incentives to develop manufacturing and services [1];\ndevelopment of export-oriented industries, e.g. vehicle manufacturing [1] rather than\nindustries for the domestic market, e.g. food and drink industries [1].\n[Max 3 marks]"
+          "mechanisation",
+          "government policy",
+          "export manufacturing",
+          "higher incomes",
+          "education",
+          "skilled labour"
         ]
       }
     },
     {
       "question_number": "2(a)",
-      "question_text": "Question 2(a) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Define the term 'globalisation'.",
       "inputs": [
         {
           "type": "textarea",
@@ -81,16 +116,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "The increasing interconnectedness and interdependence of the world through economic, cultural, technological, and political links [1]"
+        ],
+        "rubric": "Award 1 mark for definition of globalisation as increasing interconnectedness/interdependence.",
         "keywords_required": [
-          "The increasing interconnectedness of the world through economic, cultural and political\nlinks.\n[1 mark]"
+          "interconnectedness",
+          "interdependence",
+          "global links",
+          "flows of trade"
         ]
       }
     },
     {
       "question_number": "2(b)",
-      "question_text": "Question 2(b) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Explain how TNCs influence globalisation.",
       "inputs": [
         {
           "type": "textarea",
@@ -98,16 +139,26 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "TNCs establish global supply chains, offshoring manufacturing to LICs/MICs while keeping R&D and headquarters in HICs [1]",
+          "They drive Foreign Direct Investment (FDI), transferring capital, modern technology, and management practices worldwide [1]",
+          "They spread global brands, consumer goods, and Western culture (e.g. McDonald's, Apple, Nike) across continents [1]"
+        ],
+        "rubric": "Award up to 3 marks for explaining supply chains, FDI/technology transfer, and global branding.",
         "keywords_required": [
-          "TNCs have operations in many countries [1]. Often, their research and development is\nlocated in HICs, but their assembly plants are located in LICs/MICs [1]. They may use LICs\nfor sources of cheap labour and raw materials [1], but many of the products are sold in\nHICs as these countries have more profitable markets than in LICs [1].         [Max 3 marks]"
+          "global supply chain",
+          "FDI",
+          "offshoring",
+          "cheap labour",
+          "technology transfer",
+          "global brands"
         ]
       }
     },
     {
       "question_number": "3",
-      "question_text": "Question 3 (See PDF for details)",
       "total_marks": 5,
+      "question_text": "Assess the impact of globalisation at a local scale.",
       "inputs": [
         {
           "type": "textarea",
@@ -115,43 +166,49 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 5",
+        "points": [
+          "Positive impacts: Influx of foreign investment and employment creation with higher wages; wider consumer choice of imported goods and cuisines; improved local transport infrastructure [1-2]",
+          "Negative impacts: Local small businesses and domestic craftsmen fail to compete against multinational corporations; sudden closure or relocation of TNC factories creates massive local unemployment; erosion of local cultural heritage and traditions [1-2]",
+          "Social impacts: Increased cultural diversity through migration, but potential social friction or brain drain of skilled local youth [1]"
+        ],
+        "rubric": "Award up to 5 marks for balanced assessment of positive and negative local impacts.",
         "keywords_required": [
-          "The impact of globalisation at a local scale may include: small businesses may find it\nhard to compete with major global companies [1]; closure of a TNC branch plant can cause\nlocal unemployment [1]; the population of local communities may become multicultural [1];\nconsumers may have a greater choice of goods, e.g. food [1]; families are more likely to\nspread to other countries due to migration [1]; the cost of overseas travel may be\nreduced [1].\n[Max 5 marks]"
+          "employment",
+          "cheaper goods",
+          "small businesses closure",
+          "unemployment",
+          "cultural loss",
+          "infrastructure"
         ]
       }
     },
     {
       "question_number": "4",
-      "question_text": "Question 4 (See PDF for details)",
-      "total_marks": 1,
-      "inputs": [
-        {
-          "type": "textarea",
-          "label": "Nhập đáp án:"
-        }
-      ],
-      "marking_scheme": {
-        "rubric": "Total marks: 1",
-        "keywords_required": [
-          "Positive aspects of TNCs on host countries may include the creation of jobs/provision\nof more wages in a community; an inflow of capital to promote economic growth; the\ntransfer of technological skills; more revenue for the government from taxes and royalties.\nNegative impacts of TNCs may include economic dependence on the TNC; flows of\ngovernment funding away from other sectors in order to provide incentives for TNCs;\nCambridge IGCSETM and O Level Geography\nFourth Edition\n© Hodder & Stoughton Ltd 2025"
-        ]
-      }
-    },
-    {
-      "question_number": "8",
-      "question_text": "Question 8 (See PDF for details)",
       "total_marks": 7,
+      "question_text": "Using named examples, evaluate the impacts of TNCs on host countries.",
       "inputs": [
         {
           "type": "textarea",
-          "label": "Nhập đáp án:"
+          "label": "Nhập bài làm Case Study (7 marks):"
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 7",
+        "points": [
+          "Positive impacts: Creation of direct and indirect employment (multiplier effect); capital inflow and government tax revenues; technology transfer and workforce training; export earnings boosting GDP [2-3 marks]",
+          "Negative impacts: Profit repatriation where profits flow back to HIC headquarters rather than host economy; exploitation of cheap labour with poor working conditions / sweatshops; environmental pollution and resource depletion (e.g. oil spills); overdependence on a foreign firm that may leave for cheaper locations [2-3 marks]",
+          "Named examples: e.g. Nike / Samsung in Vietnam, Shell in Nigeria, Foxconn / Apple in China [1-2 marks]",
+          "Evaluation: Weighing economic development against social and environmental costs, noting that effective host government regulation is critical to maximizing benefits [1 mark]"
+        ],
+        "rubric": "Level 1 (1-3 marks): Simple points about multinational companies without balance or named examples. Level 2 (4-6 marks): Explains both benefits (jobs, capital) and drawbacks (sweatshops, environmental damage, profit leakage) with named example. Level 3 (7 marks): Comprehensive evaluation assessing net impact on host country, supported by specific named case study details, concluding with a nuanced judgement.",
         "keywords_required": [
-          "exploitation of labour; environmental damage; erosion of national culture/westernisation\nof attitudes. Answers should cover both positive and negative aspects. There should be\nsome named support. There should be some evaluation of the impact of TNCs on a named\ncountry/countries. If the answer to this question does not include an evaluation, do not\naward more than 5 marks.\n[Max 7 marks]"
+          "multiplier effect",
+          "tax revenues",
+          "profit repatriation",
+          "sweatshops",
+          "pollution",
+          "Shell Nigeria",
+          "Nike Vietnam",
+          "evaluation"
         ]
       }
     }

@@ -1,11 +1,11 @@
 {
-  "title": "Topic 10 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_10_Practice_Questions.pdf",
+  "title": "Topic 10 Resource provision - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_10_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)(i)",
-      "question_text": "Question 1(a)(i) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Figure 10.40 shows the daily supply of calories in relation to GNP. State the approximate calorie intake for the USA and for Niger.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,23 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "USA: c. 3800 kcal (accept 3700–3900 kcal) [1]",
+          "Niger: c. 2600 kcal (accept 2500–2700 kcal) [1]"
+        ],
+        "rubric": "Award 1 mark each for USA (c. 3800 kcal) and Niger (c. 2600 kcal). Max 2 marks.",
         "keywords_required": [
-          "USA c.3800 kcal [1], Niger c.2600 kcal [1].\n[Max 2 marks]"
+          "USA 3800",
+          "Niger 2600",
+          "kcal",
+          "calories"
         ]
       }
     },
     {
       "question_number": "1(a)(ii)",
-      "question_text": "Question 1(a)(ii) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Describe the relationship between calorie intake and GDP per capita as shown on the graph.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +37,26 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "There is a positive relationship / correlation: as GDP per capita increases, daily calorie intake increases [1]",
+          "Comparative evidence: USA has high GDP per head (c. $60,000) and high calorie intake (c. 3800 kcal), whereas low GDP countries like India (GDP < $10,000) have lower intake (c. 2500–2600 kcal) [1]",
+          "Anomalies exist: e.g. Kiribati and Niger have low GDP per capita but higher-than-expected calorie intake, or intake plateaus at high income levels [1]"
+        ],
+        "rubric": "Award up to 3 marks: 1 mark for stating positive correlation, 1 mark for supporting data/examples, 1 mark for identifying anomalies.",
         "keywords_required": [
-          "There is a positive relationship [1], i.e. as GDP per head increases calorie intake\nincreases [1]. For example, the USA has a GDP per head of about $60,000 and a\ncalorie intake of c.3800 kcal, whereas India has a GDP/head of less than $10,000\nand a calorie intake of c.2600 kcal [1]. Other anomalies include Kiribati and Niger,\nboth of which are low-income countries but have a higher-than-expected calorie\nintake [1].\n[Max 3 marks]"
+          "positive relationship",
+          "increases",
+          "USA high GDP high calorie",
+          "India low",
+          "anomalies",
+          "Niger"
         ]
       }
     },
     {
       "question_number": "1(b)(i)",
-      "question_text": "Question 1(b)(i) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Explain one human factor and one physical factor that negatively affects food supply.",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +64,26 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Human factor: Rapid population growth / overpopulation increasing food demand beyond local agricultural capacity [1], leading to food shortages and unequal distribution [1]; OR: War / armed conflict displacing farmers, destroying crops, and blocking food transport routes [1-2]; OR: Poverty preventing farmers from purchasing fertilisers, seeds, and machinery [1-2]",
+          "Physical factor: Drought / erratic rainfall depriving crops of moisture, causing crop failure and livestock death [1-2]; OR: Extreme pests / diseases (e.g. locust swarms, fungal blight) wiping out harvests [1-2]; OR: Soil degradation / desertification reducing arable land fertility [1-2]"
+        ],
+        "rubric": "Award 2 marks for the human factor (1 mark identification, 1 mark explanation) and 2 marks for the physical factor. Max 4 marks.",
         "keywords_required": [
-          "A human factor that affects food supply is over-population/rapid population growth\n[1], which can lead to increased demand for food. This reduces the amount of food\navailable per person [1]. A physical factor is drought [1]. This reduces the amount of\nwater available to plants and so reduces growth [1].\n[Max 4 marks]"
+          "conflict",
+          "overpopulation",
+          "poverty",
+          "drought",
+          "pests",
+          "soil erosion",
+          "climate"
         ]
       }
     },
     {
       "question_number": "1(b)(ii)",
-      "question_text": "Question 1(b)(ii) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Explain two ways in which food production can be increased.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +91,26 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Way 1: Increased use of synthetic or organic fertilisers to replenish essential soil nutrients (nitrogen, phosphorus), accelerating plant growth and multiplying crop yields [2]",
+          "Way 2: Modern irrigation systems (e.g. drip irrigation, center-pivot) supplying reliable water to crops in arid regions or during dry seasons, allowing multiple harvests per year [2]",
+          "Alternative ways: Genetically modified (GM) or High-Yielding Variety (HYV) seeds bred for pest/drought resistance; Mechanisation (tractors, combine harvesters) increasing farming efficiency; Hydroponics / vertical farming [2 marks each]"
+        ],
+        "rubric": "Award 2 marks for each well-explained method (1 mark identification, 1 mark explanation of how it increases yield). Max 4 marks.",
         "keywords_required": [
-          "Food production can be increased by greater use of fertilisers [1]. This will increase\nthe amount of nutrients available to crops and enable greater growth [1]. Food\nproduction can also be increased by greater use of irrigation [1]. This is especially\nimportant in dry areas and places with limited water supplies as it enables plants to\ngrow despite the limited rainfall/water availability [1].\n[Max 4 marks]"
+          "fertilisers",
+          "irrigation",
+          "HYV seeds",
+          "GM crops",
+          "mechanisation",
+          "yields"
         ]
       }
     },
     {
       "question_number": "2(a)",
-      "question_text": "Question 2(a) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Figure 10.41 shows the world's different fuel sources. Calculate the change in the size of the world's fuel sources between 1970 and 2030 (predicted).",
       "inputs": [
         {
           "type": "textarea",
@@ -81,16 +118,25 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "1970 total: approximately 225 Tj (accept 200–240 Tj) [1]",
+          "2030 total: approximately 575 Tj (accept 550–600 Tj) [1]",
+          "Overall increase: an increase of 350 Tj (or an increase of c. 256%, accept 240–265%) [1]"
+        ],
+        "rubric": "Award up to 3 marks: 1 mark for 1970 figure, 1 mark for 2030 figure, 1 mark for calculation of difference or percentage increase.",
         "keywords_required": [
-          "1970: 225 Tj [1], 2030: 575 Tj [1], an increase of 256% [1] (accept 250–260%).\n[Max 3 marks]"
+          "225",
+          "575",
+          "350 Tj",
+          "256%",
+          "increase"
         ]
       }
     },
     {
       "question_number": "2(b)",
-      "question_text": "Question 2(b) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Identify the fuel source that is predicted to have increased most in absolute size, and the fuel source that is predicted to have increased most in relative size between 1970 and 2030.",
       "inputs": [
         {
           "type": "textarea",
@@ -98,26 +144,47 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Increased most in absolute size: Oil (or natural gas) [1]",
+          "Increased most in relative size / percentage growth: Nuclear power [1]"
+        ],
+        "rubric": "Award 1 mark for absolute increase (oil/gas) and 1 mark for relative increase (nuclear). Max 2 marks.",
         "keywords_required": [
-          "Increased the most in absolute size: accept oil and/or gas [1].\nIncreased the most in relative size: nuclear [1].\n[Max 2 marks]"
+          "absolute oil",
+          "gas",
+          "relative nuclear"
         ]
       }
     },
     {
       "question_number": "2(c)",
-      "question_text": "Question 2(c) (See PDF for details)",
       "total_marks": 7,
+      "question_text": "Assess the advantages and disadvantages of different types of energy sources.",
       "inputs": [
         {
           "type": "textarea",
-          "label": "Nhập đáp án:"
+          "label": "Nhập bài làm Case Study (7 marks):"
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 7",
+        "points": [
+          "Non-renewable fossil fuels (coal, oil, gas): Advantages — high energy density, reliable base-load power, existing transport and generation infrastructure. Disadvantages — finite/depleting reserves, greenhouse gas emissions driving climate change, air pollution (SO₂, particulate smog) [2-3 marks]",
+          "Renewable energy (solar, wind, HEP, geothermal): Advantages — inexhaustible/sustainable, zero operational greenhouse gas emissions, falling technology costs. Disadvantages — intermittent/weather-dependent, geographic restrictions, visual and noise impacts, high initial capital investment [2-3 marks]",
+          "Nuclear power: High energy output with low direct emissions, but produces hazardous radioactive waste and carries catastrophic risk (Chernobyl, Fukushima) [1-2 marks]",
+          "Assessment / Evaluation: Judging the future energy transition mix, concluding that while non-renewables currently dominate, a diversified transition to renewables supported by smart grids and storage is essential [1 mark]"
+        ],
+        "rubric": "Level 1 (1-3 marks): Simple descriptions of energy types without clear categorization of pros and cons. Level 2 (4-6 marks): Detailed explanation of advantages and disadvantages of both renewable and non-renewable sources with examples. Level 3 (7 marks): Comprehensive and balanced assessment comparing energy sources, weighing environmental impacts against economic reliability, supported by named examples, arriving at a well-reasoned conclusion.",
         "keywords_required": [
-          "Types of energy sources include renewable and non-renewable sources. Renewable\nsources include HEP, solar, tidal/wave, wind, biomass and geothermal. Non-renewable\nsources include coal, oil, natural gas, shale oil and nuclear power. Although renewables\nare better for the environment they occur in limited locations and can be unreliable,\ne.g. wind. In contrast, although non-renewables are polluting and contribute to global\nwarming, they are widely used where there are large reserves of them and they are\nconsidered to be ‘convenient’. Answer should cover different energy sources and\nconsider their advantages and disadvantages. There should be an assessment, for\nexample, of which sources are best but why they might not be the most commonly\nused.\n[Max 7 marks]"
+          "non-renewable",
+          "fossil fuels",
+          "renewable",
+          "solar",
+          "wind",
+          "HEP",
+          "nuclear",
+          "intermittent",
+          "emissions",
+          "evaluation"
         ]
       }
     }

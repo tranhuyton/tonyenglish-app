@@ -1,11 +1,11 @@
 {
-  "title": "Topic 2 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_2_Practice_Questions.pdf",
+  "title": "Topic 2 Coastal environments - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_2_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)",
-      "question_text": "Question 1(a) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Figure 2.43 shows a coastal landform. Identify the coastal landform.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,20 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "A stack / sea stack [1]"
+        ],
+        "rubric": "Award 1 mark for stack or sea stack.",
         "keywords_required": [
-          "A stack\n[1 mark]"
+          "stack",
+          "sea stack"
         ]
       }
     },
     {
       "question_number": "1(b)",
-      "question_text": "Question 1(b) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Describe the main characteristics of the landform shown in Figure 2.43.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +34,29 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Tall / steep-sided / vertical pillar of rock [1]",
+          "Thinner / notched just above the base due to wave attack than at the wider base [1]",
+          "Relatively angular / flat towards the top [1]",
+          "Isolated / detached from the headland [1]"
+        ],
+        "rubric": "Award up to 2 marks for descriptive characteristics of the stack shown.",
         "keywords_required": [
-          "Tall [1]; thin/thinner just above the base than at the base [1]; relatively angular towards\nthe top [1].\n[Max 2 marks]"
+          "tall",
+          "pillar",
+          "column",
+          "thinner above base",
+          "notch",
+          "angular top",
+          "isolated",
+          "detached"
         ]
       }
     },
     {
       "question_number": "1(c)",
-      "question_text": "Question 1(c) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Explain how this landform was formed.",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +64,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "On a headland, marine erosion (hydraulic action and abrasion) exploits lines of weakness / joints / faults to create a sea cave [1]",
+          "Erosion continues and cuts through both sides of the headland to form a sea arch [1]",
+          "Weathering weakens the arch roof and wave undercutting causes the arch roof to collapse under gravity, leaving an isolated stack [1]"
+        ],
+        "rubric": "Award up to 3 marks for the sequence: fault/weakness -> cave -> arch -> roof collapse leaving a stack.",
         "keywords_required": [
-          "On a headland, erosion will exploit any weakness, creating at first a cave [1]. Once the\ncave reaches both sides of the headland, an arch is formed [1]. A collapse of the top of the\narch forms a stack [1].\n[Max 3 marks]"
+          "cave",
+          "arch",
+          "collapse",
+          "roof collapse",
+          "hydraulic action",
+          "abrasion",
+          "headland",
+          "fault"
         ]
       }
     },
     {
       "question_number": "2(a)(i)",
-      "question_text": "Question 2(a)(i) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Figure 2.44 shows the global distribution of mangrove forests. Describe the distribution of mangrove forests as shown on the map.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +93,27 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "Mangroves are largely located along tropical coastlines / between the Tropics of Cancer and Capricorn (23.5°N and 23.5°S) [1]",
+          "They are concentrated along the coasts of Southeast Asia, South Asia, Central America, northern South America, and parts of East and West Africa [1]",
+          "They extend into warm temperate waters / subtropics in a few places (e.g. Florida, southern Japan, Australia, New Zealand) [1]",
+          "They are absent from cold temperate and polar coastlines / west coasts of South America and Southern Africa due to cold ocean currents [1]"
+        ],
+        "rubric": "Award up to 3 marks for describing global pattern, key concentrations, and limits/anomalies.",
         "keywords_required": [
-          "Mangroves are largely located along tropical coastlines [1], although they can extend\nas far north as South Korea and as far south as the southern tip of Australia [1]. They\nare located in tidal estuaries [1] and in areas of muddy waters that are rich with\nnutrients [1].\n[Max 3 marks]"
+          "tropical",
+          "equator",
+          "Southeast Asia",
+          "low latitudes",
+          "warm waters",
+          "between tropics"
         ]
       }
     },
     {
       "question_number": "2(a)(ii)",
-      "question_text": "Question 2(a)(ii) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Explain why mangroves occur in tidal estuaries.",
       "inputs": [
         {
           "type": "textarea",
@@ -81,16 +121,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Tidal estuaries provide sheltered waters protected from strong wave action [1]",
+          "Rivers deposit fine silt and mud, creating soft, nutrient-rich muddy sediment for roots to anchor in [1]",
+          "Intertidal zone has fluctuating brackish water (mix of fresh and salt water) to which mangrove prop roots / pneumatophores are adapted [1]"
+        ],
+        "rubric": "Award up to 2 marks for explaining sheltered conditions and accumulation of mud/silt.",
         "keywords_required": [
-          "Mangroves are salt tolerant, so they can exist in tidal estuaries and coastal zones [1].\nTidal estuaries are rich in nutrients from decaying wood and leaves, so provide a\nsource of nutrients for the mangroves [1].\n[Max 2 marks]"
+          "sheltered",
+          "calm water",
+          "low wave energy",
+          "mud",
+          "silt",
+          "sediment",
+          "brackish",
+          "tidal"
         ]
       }
     },
     {
       "question_number": "2(b)(i)",
-      "question_text": "Question 2(b)(i) (See PDF for details)",
       "total_marks": 3,
+      "question_text": "Figure 2.45 shows part of a mangrove forest at low tide. Explain the importance of mangroves in a coastal area that you have studied.",
       "inputs": [
         {
           "type": "textarea",
@@ -98,16 +150,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 3",
+        "points": [
+          "Coastal protection: dense prop root systems dissipate wave energy, protecting coastlines from storm surges, tsunamis, and coastal erosion [1]",
+          "Biodiversity / nursery habitat: provides breeding and nursery grounds for commercially valuable fish, crabs, and prawns, supporting local livelihoods [1]",
+          "Ecosystem services: traps sediment to keep offshore coral reefs clear, and acts as a significant carbon sink (blue carbon) [1]"
+        ],
+        "rubric": "Award up to 3 marks for explaining at least two distinct benefits (protection, nursery/biodiversity, sediment trapping/carbon sink).",
         "keywords_required": [
-          "Mangroves are a rich source of food [1], fuel [1], building materials [1] and medicines\n[1]. They help reduce wind speeds during tropical cyclones [1]. They act as natural\nfilters, absorbing nutrients from farming and sewage disposal [1]. There should be a\nnamed example of a coastal area that provides examples of the importance of\nmangroves.\n[Max 3 marks]"
+          "coastal protection",
+          "absorb wave energy",
+          "nursery",
+          "fish breeding",
+          "biodiversity",
+          "trap sediment",
+          "carbon sink",
+          "storm surge"
         ]
       }
     },
     {
       "question_number": "2(b)(ii)",
-      "question_text": "Question 2(b)(ii) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Explain one pressure on mangroves.",
       "inputs": [
         {
           "type": "textarea",
@@ -115,26 +179,53 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Clearing for aquaculture (e.g. shrimp / prawn farming) removes large areas of mangrove swamps [1] which also contaminates surrounding waters with chemicals [1]",
+          "OR: Coastal urban development / tourism infrastructure clearing land for resorts, ports, and housing [1-2]",
+          "OR: Deforestation for timber, charcoal, and firewood [1-2]",
+          "OR: Pollution from oil spills, agricultural runoff, and plastic waste suffocating root pneumatophores [1-2]"
+        ],
+        "rubric": "Award 1 mark for identifying the pressure, and 1 mark for developed explanation.",
         "keywords_required": [
-          "Many mangroves have been destroyed to make way for food production [1],\nespecially rice paddies and shrimp farms [1].\n[Max 2 marks]\nCambridge IGCSETM and O Level Geography\nFourth Edition\n© Hodder & Stoughton Ltd 2025"
+          "shrimp farming",
+          "aquaculture",
+          "clearing",
+          "urban development",
+          "timber",
+          "charcoal",
+          "pollution",
+          "sea level rise"
         ]
       }
     },
     {
       "question_number": "3",
-      "question_text": "Question 3 (See PDF for details)",
       "total_marks": 7,
+      "question_text": "Assess the opportunities and hazards of living in coastal areas.",
       "inputs": [
         {
           "type": "textarea",
-          "label": "Nhập đáp án:"
+          "label": "Nhập bài làm Case Study (7 marks):"
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 7",
+        "points": [
+          "Opportunities: Ports and global trade routes; commercial fishing and aquaculture; tourism and recreation (hotels, beaches, watersports); fertile agricultural land on deltaic plains; renewable energy (offshore wind, tidal, wave) [1-3 marks]",
+          "Hazards: Coastal erosion destroying properties and infrastructure; coastal flooding from storm surges and tropical cyclones; sea-level rise due to climate change; tsunami risk in tectonically active zones [1-3 marks]",
+          "Named case study support: e.g. Holderness Coast (UK - erosion), Bangladesh / Maldives (coastal flooding and sea-level rise), or Southeast Asia [1-2 marks]",
+          "Assessment / Evaluation: Weighing whether opportunities outweigh hazards or how management strategies mitigate risks [1 mark]"
+        ],
+        "rubric": "Level 1 (1-3 marks): Simple description of coastal opportunities or hazards without balance or examples. Level 2 (4-6 marks): Detailed explanation of both opportunities (tourism, fishing, trade) and hazards (erosion, flooding, storms) with some geographic examples. Level 3 (7 marks): Comprehensive and balanced assessment evaluating opportunities vs hazards, supported by named examples/case study, concluding with a clear judgement.",
         "keywords_required": [
-          "There are many opportunities resulting from living in coastal areas, including employment in\nthe tourism and recreation, fishing and port industries. Many people feel ‘at home’ in coastal\nareas and derive health benefits and/or other environmental services (benefits) from the area\n[1]. Coastal areas also have milder climates than inland areas. Hazards in coastal areas include\nstorms, erosion and rising sea levels. Coastal erosion may cause some buildings to be\ndestroyed. Property prices can be quite high as many coastal areas attract retired and/or\nwealthy residents. Most developed answers are likely to have named and located supporting\nexamples. Both opportunities and hazards should be stated –if only one of these categories is\nstated, do not award more than 5 marks.\n[Max 7 marks]"
+          "tourism",
+          "ports",
+          "fishing",
+          "coastal erosion",
+          "flooding",
+          "storm surge",
+          "sea level rise",
+          "tsunami",
+          "evaluation"
         ]
       }
     }

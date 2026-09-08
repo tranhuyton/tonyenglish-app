@@ -1,11 +1,11 @@
 {
-  "title": "Topic 5 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_5_Practice_Questions.pdf",
+  "title": "Topic 5 Climate change - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_5_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)",
-      "question_text": "Question 1(a) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Figure 5.14 shows annual global surface temperature change for land and ocean, compared to the 1901-2000 average. Estimate the largest negative temperature difference from the twentieth-century average.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "–0.4°C (accept –0.38°C to –0.42°C) [1]"
+        ],
+        "rubric": "Award 1 mark for –0.4°C (+/– 0.02°C).",
         "keywords_required": [
-          "–0.4°C (+/– 0.02°C)\n[1 mark]"
+          "-0.4",
+          "-0.4°C",
+          "-0.38",
+          "-0.42"
         ]
       }
     },
     {
       "question_number": "1(b)",
-      "question_text": "Question 1(b) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Estimate the largest positive temperature difference from the twentieth-century average.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +36,23 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "0.9°C (accept 0.88°C to 0.92°C, or up to 1.0°C) [1]"
+        ],
+        "rubric": "Award 1 mark for 0.9°C (+/– 0.02°C).",
         "keywords_required": [
-          "0.9°C (+/– 0.02°C)\n[1 mark]"
+          "0.9",
+          "0.9°C",
+          "0.88",
+          "0.92",
+          "1.0"
         ]
       }
     },
     {
       "question_number": "1(c)",
-      "question_text": "Question 1(c) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Identify the decades when temperatures were lowest.",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +60,22 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "1900s and 1910s (or around 1905–1915) [1]"
+        ],
+        "rubric": "Award 1 mark for 1900s and 1910s.",
         "keywords_required": [
-          "1900s and 1910s\n[1 mark]"
+          "1900s",
+          "1910s",
+          "1905",
+          "1910"
         ]
       }
     },
     {
       "question_number": "1(d)",
-      "question_text": "Question 1(d) (See PDF for details)",
       "total_marks": 1,
+      "question_text": "Identify the decade when temperatures were highest.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +83,20 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 1",
+        "points": [
+          "2010s [1]"
+        ],
+        "rubric": "Award 1 mark for 2010s.",
         "keywords_required": [
-          "2010s\n[1 mark]"
+          "2010s",
+          "2010-2020"
         ]
       }
     },
     {
       "question_number": "1(e)",
-      "question_text": "Question 1(e) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Estimate the increase in temperature between the decades with the lowest temperatures and the decade with the highest temperatures.",
       "inputs": [
         {
           "type": "textarea",
@@ -81,16 +104,24 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Calculation: 0.9°C – (–0.5°C) = 1.4°C (accept 1.3°C to 1.5°C) [1]",
+          "1 mark for showing working/values, 1 mark for correct final answer of 1.4°C [1]"
+        ],
+        "rubric": "Award up to 2 marks: 1.4°C (accept 1.3–1.5°C). 1 mark for correct method/reading, 1 mark for accurate answer.",
         "keywords_required": [
-          "1.4°C\n[2 marks]\nCambridge IGCSETM and O Level Geography\nFourth Edition\n© Hodder & Stoughton Ltd 2025"
+          "1.4",
+          "1.4°C",
+          "1.3",
+          "1.5",
+          "working"
         ]
       }
     },
     {
       "question_number": "2",
-      "question_text": "Question 2 (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Distinguish between the greenhouse effect and global warming.",
       "inputs": [
         {
           "type": "textarea",
@@ -98,16 +129,26 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "The greenhouse effect is a natural process where greenhouse gases (water vapour, CO₂, CH₄) in the atmosphere trap outgoing long-wave infrared radiation [1], keeping the Earth warm enough to support life (c. +15°C average) [1]",
+          "Global warming is the gradual increase in average global surface temperatures caused primarily by human activities (burning fossil fuels, deforestation) [1] which increase atmospheric concentrations of greenhouse gases, enhancing the natural greenhouse effect [1]"
+        ],
+        "rubric": "Award up to 4 marks. 2 marks for explaining the natural greenhouse effect, and 2 marks for explaining human-induced global warming.",
         "keywords_required": [
-          "The greenhouse effect is a natural process [1] that benefits humanity [1]. It leads to the\npresence of greenhouse gases such as water vapour, carbon dioxide and methane in the\natmosphere [1]. These allow incoming short-wave radiation to pass through and reach the\nEarth, but they trap a proportion of the outgoing long-wave radiation. This raises the\ntemperature of the atmosphere [1]. As a result, the Earth is about 30°C warmer than it would\nbe if there were no greenhouse gases, and this allows humans to survive on Earth [1]. Global\nwarming is the increase in temperature of the Earth [1] as a result of increased amounts of\ngreenhouse gases in the Earth’s atmosphere [1]. These increased amounts of greenhouse\ngases are causing global warming, which is dangerous for people [1].                   [Max 4 marks]"
+          "natural process",
+          "infrared radiation",
+          "trapping heat",
+          "human activities",
+          "fossil fuels",
+          "temperature rise",
+          "enhanced greenhouse effect"
         ]
       }
     },
     {
       "question_number": "3(a)",
-      "question_text": "Question 3(a) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Define climate change mitigation and climate change adaptation.",
       "inputs": [
         {
           "type": "textarea",
@@ -115,26 +156,48 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Mitigation: Strategies and actions aimed at reducing or preventing the emission of greenhouse gases, or enhancing carbon sinks, to tackle the root cause of climate change (e.g. renewable energy, afforestation) [1]",
+          "Adaptation: Actions taken to adjust to the actual or expected impacts and consequences of climate change to reduce vulnerability and harm (e.g. building sea walls, planting drought-resistant crops) [1]"
+        ],
+        "rubric": "Award 1 mark for definition of mitigation and 1 mark for definition of adaptation.",
         "keywords_required": [
-          "Climate change mitigation means preventing global climate change [1]. Global climate\nchange adaptation means adapting to global climate change, in other words learning to\nlive with it rather than preventing it [1].\n[Max 2 marks]"
+          "mitigation",
+          "reduce emissions",
+          "root cause",
+          "adaptation",
+          "adjust",
+          "respond to impacts",
+          "resilience"
         ]
       }
     },
     {
       "question_number": "3(b)",
-      "question_text": "Question 3(b) (See PDF for details)",
       "total_marks": 7,
+      "question_text": "Evaluate techniques of climate change mitigation and adaptation.",
       "inputs": [
         {
           "type": "textarea",
-          "label": "Nhập đáp án:"
+          "label": "Nhập bài làm Case Study (7 marks):"
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 7",
+        "points": [
+          "Mitigation techniques: Transition to renewable energy (solar, wind, HEP); carbon capture and storage (CCS); afforestation and reforestation; international agreements (Paris Accord, COP targets); carbon taxes [2-3 marks]",
+          "Adaptation techniques: Coastal defenses (sea walls, mangrove restoration); water management (drip irrigation, rainwater harvesting); agricultural adjustments (flood/drought-resistant seeds); climate-resilient building design (elevated homes on stilts in Bangladesh) [2-3 marks]",
+          "Evaluation / Case Study: Contrast costs, feasibility, and timeframes. Mitigation addresses the long-term cause but requires global cooperation and massive capital; adaptation is immediately necessary for vulnerable communities (e.g. Bangladesh, Tuvalu) but does not stop warming. Both must be implemented concurrently [1-2 marks]"
+        ],
+        "rubric": "Level 1 (1-3 marks): Simple descriptions of methods to fight climate change without distinguishing clearly between mitigation and adaptation. Level 2 (4-6 marks): Explains specific mitigation and adaptation techniques with case study examples and some discussion of effectiveness. Level 3 (7 marks): Comprehensive evaluation comparing the strengths and limitations of both mitigation and adaptation, supported by named examples, concluding that both are vital and interdependent.",
         "keywords_required": [
-          "Answers are likely to distinguish between mitigation (trying to prevent climate\nchange) and adaptation (learning to live with climate change). Mitigation is better\nthan adaptation in the long term, as adaptation will not prevent climate change.\nHowever, the impacts of climate change may occur all over the world and not just\nin the countries that are causing global climate change. Answers may evaluate\ntechniques such as afforestation, using electric vehicles, building higher flood protection\nschemes, drought-resistant crops, desalination plants, making more anti-malarial drugs\navailable, geoengineering schemes, etc. Answers may also consider the trends in climate\nchange – the impacts of climate change will differ depending on whether temperatures\nrise by 1.5°C, 2°C or 4°C, for example. There must be some evaluation of specific\ntechniques/strategies. For answers that consider only mitigation or adaptation, do not\naward more than 5 marks.\n[Max 7 marks]"
+          "renewables",
+          "afforestation",
+          "carbon capture",
+          "sea walls",
+          "drought-resistant crops",
+          "Bangladesh",
+          "evaluation",
+          "global cooperation"
         ]
       }
     }

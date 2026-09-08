@@ -1,11 +1,11 @@
 {
-  "title": "Topic 4 Practice Questions",
-  "qp_url": "/Geography/Topical questions/Topic_4_Practice_Questions.pdf",
+  "title": "Topic 4 Tectonic hazards - Hodder practice questions",
+  "qp_url": "https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/Geography/Topical_Questions/Topic_4_Practice_Questions.pdf",
   "questions": [
     {
       "question_number": "1(a)",
-      "question_text": "Question 1(a) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Figure 4.26 shows the distribution of shallow-, intermediate- and deep-focus earthquakes. Describe the distribution of shallow-focus and deep-focus earthquakes.",
       "inputs": [
         {
           "type": "textarea",
@@ -13,16 +13,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Shallow-focus earthquakes are very widespread along almost all plate boundaries [1]",
+          "Found along divergent boundaries such as the Mid-Atlantic Ridge, transform boundaries like the San Andreas Fault, and destructive boundaries [1]",
+          "Deep-focus earthquakes are much less common and more restricted in distribution [1]",
+          "Deep-focus earthquakes occur almost exclusively along subduction zones at destructive plate boundaries, found inland/dip under continental plates (e.g. west coast of South America / Andes) and in island arc oceanic trenches (e.g. Kuril, Philippine, Java, Mariana Trenches) [1]"
+        ],
+        "rubric": "Award up to 4 marks. Max 2 for shallow-focus and max 2 for deep-focus descriptions with named locations.",
         "keywords_required": [
-          "Shallow-focus earthquakes are very widespread [1]. For example, they are found along\nthe Mid-Atlantic Ridge [1], the west coast of South America [1] and in much of southern\nEurope [1].\nDeep-focus earthquakes are much less common [1] and are found inland along the west\ncoast of South America [1] and in trenches, such as the Kuril, Philippine and Java Trenches\n[1].\n[Max 4 marks]"
+          "shallow widespread",
+          "Mid-Atlantic Ridge",
+          "deep less common",
+          "subduction zones",
+          "destructive",
+          "trenches",
+          "Andes"
         ]
       }
     },
     {
       "question_number": "1(b)",
-      "question_text": "Question 1(b) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Suggest reasons to explain the distribution of shallow-focus and deep-focus earthquakes.",
       "inputs": [
         {
           "type": "textarea",
@@ -30,16 +42,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Shallow-focus earthquakes occur near the surface where brittle crust fractures under tension (divergent boundaries) or horizontal shearing (transform boundaries) [1-2]",
+          "Deep-focus earthquakes occur only where dense oceanic crust subducts beneath another plate into the hot asthenosphere/mantle [1]",
+          "As the oceanic slab plunges deeper (the Wadati-Benioff zone), friction and phase changes in minerals create deep tectonic stress up to 700 km depth [1]",
+          "Below 700 km, mantle rocks are too hot and plastic to fracture, so no earthquakes occur [1]"
+        ],
+        "rubric": "Award up to 4 marks: 2 marks for shallow-focus reasons and 2 marks for deep-focus subduction/Benioff zone reasons.",
         "keywords_required": [
-          "Shallow-focus earthquakes are generally located along divergent/constructive\nboundaries [1] and along conservative/transform boundaries [1]. Deep-focus earthquakes\nare associated with subduction zones [1], where one plate subducts beneath\nanother [1].                                                                                                                  [Max 4 marks]"
+          "brittle crust",
+          "surface friction",
+          "subduction",
+          "oceanic slab",
+          "Benioff zone",
+          "mantle",
+          "plastic deformation"
         ]
       }
     },
     {
       "question_number": "2(a)",
-      "question_text": "Question 2(a) (See PDF for details)",
       "total_marks": 2,
+      "question_text": "Figure 4.27 shows the summit of Mount Etna in Sicily. Identify two features of the volcano shown on the photograph.",
       "inputs": [
         {
           "type": "textarea",
@@ -47,16 +71,28 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 2",
+        "points": [
+          "Craters / summit caldera / vents [1]",
+          "Steep slopes / volcanic cone / strato-volcano profile [1]",
+          "Steam / gas plume / volcanic gases emitting from vent [1]",
+          "Dark volcanic ash / tephra / lava flows / snow-covered upper flanks [1]"
+        ],
+        "rubric": "Award 1 mark each for two correct visual features shown in the photograph. Max 2 marks.",
         "keywords_required": [
-          "Cone [1], crater [1]\n[Max 2 marks]"
+          "crater",
+          "vent",
+          "cone",
+          "steam",
+          "ash",
+          "lava flows",
+          "slopes"
         ]
       }
     },
     {
       "question_number": "2(b)",
-      "question_text": "Question 2(b) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Describe two hazards related to volcanoes.",
       "inputs": [
         {
           "type": "textarea",
@@ -64,16 +100,26 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Hazard 1: Pyroclastic flows — fast-moving currents of superheated gas, ash, and rock travelling down slopes at over 100 km/h, destroying everything in their path and causing asphyxiation/fatal burns [2]",
+          "Hazard 2: Lahars (volcanic mudflows) — mixture of volcanic ash and water (melted snow/heavy rainfall) rushing down river valleys at high speed, burying towns and infrastructure [2]",
+          "Alternative hazards: Ash fall (collapsing roofs, disrupting air traffic, respiratory damage), Lava flows (destroying farmland and buildings), Toxic volcanic gases (SO₂, CO₂ causing poisoning/acid rain) [2 marks each]"
+        ],
+        "rubric": "Award 2 marks for each hazard described in detail (1 mark identification, 1 mark effect/impact). Max 4 marks.",
         "keywords_required": [
-          "Hazards associated with volcanoes include lava flows [1], which are slow-moving\n‘rivers’ of lava that may reach temperatures of up to 800–1200°C [1]. Volcanoes also\nproduce pyroclastic flows [1], which are clouds of volcanic debris, cinders, ash, pumice\nand gas [1] that travel at speeds of over 500 km/h and reach temperatures of up\nto 700°C [1].                                                                                                                 [Max 4 marks]"
+          "pyroclastic flow",
+          "lahar",
+          "ash fall",
+          "lava flow",
+          "toxic gas",
+          "acid rain"
         ]
       }
     },
     {
       "question_number": "2(c)",
-      "question_text": "Question 2(c) (See PDF for details)",
       "total_marks": 4,
+      "question_text": "Explain two reasons why people live in areas at risk from volcanic activity.",
       "inputs": [
         {
           "type": "textarea",
@@ -81,26 +127,51 @@
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 4",
+        "points": [
+          "Reason 1: Fertile volcanic soils (andisols) — weathered volcanic ash and basalt are extremely rich in nutrients (potassium, phosphorus), supporting intensive farming and high crop yields (e.g. vineyards on slopes of Mt Etna, rice paddies in Indonesia) [2]",
+          "Reason 2: Geothermal energy — geothermal heat from magma reservoirs provides clean, cheap electricity and domestic heating (e.g. Iceland, New Zealand, Italy) [2]",
+          "Alternative reasons: Tourism and recreation (attracting tourists for trekking, scenery, creating jobs in hospitality); Valuable mineral extraction (sulphur, pumice, gold, copper); Family ties and poverty (inability to afford moving) [2 marks each]"
+        ],
+        "rubric": "Award 2 marks for each developed reason (1 mark point, 1 mark development). Max 4 marks.",
         "keywords_required": [
-          "People may live in areas at risk from volcanic activity as these areas produce fertile soils\n[1] that are good for farming. These areas also attract tourists [1] and so create jobs [1].\nOther advantages may include the creation of new land, mineral supply and geothermal\nenergy [1].\n[Max 4 marks]"
+          "fertile soil",
+          "nutrients",
+          "geothermal energy",
+          "tourism",
+          "minerals",
+          "jobs",
+          "farming"
         ]
       }
     },
     {
       "question_number": "3",
-      "question_text": "Question 3 (See PDF for details)",
       "total_marks": 7,
+      "question_text": "Assess the extent to which the impacts of earthquakes can be managed.",
       "inputs": [
         {
           "type": "textarea",
-          "label": "Nhập đáp án:"
+          "label": "Nhập bài làm Case Study (7 marks):"
         }
       ],
       "marking_scheme": {
-        "rubric": "Total marks: 7",
+        "points": [
+          "Prediction: Extremely difficult; no reliable method exists to predict exact time, location, and magnitude, although seismic gap theory and animal behaviour/radon gas monitoring provide minor clues [1-2 marks]",
+          "Preparation and Protection: Highly effective in HICs through earthquake-resistant engineering (aseismic design, base isolators, counterweights, reinforced concrete, flexible gas mains), strict building codes, regular public drills (e.g. Japan Disaster Prevention Day), and early warning systems (EEW) [2-3 marks]",
+          "Contrast with LICs / Inequality: LICs lack capital to enforce building codes; shoddy construction and dense informal settlements lead to catastrophic collapse and high death tolls (e.g. Haiti 2010 vs Japan 2011) [1-2 marks]",
+          "Overall Assessment: Earthquakes cannot be prevented or predicted, but their impacts can be substantially mitigated in wealthy nations with robust preparation and building design, whereas poor nations remain acutely vulnerable [1 mark]"
+        ],
+        "rubric": "Level 1 (1-3 marks): Simple points about managing earthquakes (e.g. building stronger houses, drills) with little detail or evaluation. Level 2 (4-6 marks): Explains specific management methods (prediction limits, aseismic building design, education, emergency response) with contrasting examples (e.g. Japan vs Haiti). Level 3 (7 marks): Comprehensive assessment evaluating both the strengths and limitations of earthquake management, explicitly linking success to level of economic development and governance, supported by specific named case studies.",
         "keywords_required": [
-          "Answers should examine a range of impacts of earthquakes, for example ground shaking,\nlandslides, destruction of buildings, injury and loss of life, loss of economic activity, etc.\nThe impacts will depend on the magnitude of the event – stronger earthquakes will\nrelease more energy than smaller ones. However, it is also important to assess the level of\ndevelopment of the area affected; the depth of the earthquakes; the nature of the area,\nwhether it is rural versus urban; the population density; the nature of buildings; the time\nof day or day of the week. In addition, there should be some assessment of attempts by\nthe government to manage the impacts of earthquake activity, such as through\nearthquake drills, building codes, search and rescue teams. If the answer to this question\ndoes not include examples, do not award more than 5 marks.\n[Max 7 marks]"
+          "prediction",
+          "preparation",
+          "aseismic design",
+          "building codes",
+          "drills",
+          "Japan",
+          "Haiti",
+          "HIC vs LIC",
+          "assessment"
         ]
       }
     }
