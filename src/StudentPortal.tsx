@@ -1706,7 +1706,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   )}
                 </div>
               }
-              onStartTest={(testId: string) => { setSelectedTestId(testId); setActiveView('test'); setActiveTab('library'); }} 
+              onStartTest={(testId: string) => {
+                const test = allTests.find(t => String(t.id) === String(testId));
+                handleStartTestClick(test || { id: testId });
+              }} 
             />
           </div>
         )}

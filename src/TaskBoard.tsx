@@ -36,6 +36,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
   const [boardColumns, setBoardColumns] = useState<any[]>([]);
   const [completedTestIds, setCompletedTestIds] = useState<Set<string>>(new Set());
+  const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number }>>(new Map());
   const [inProgressTestIds, setInProgressTestIds] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
@@ -52,22 +53,39 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
         supabase.from('board_templates').select('id, title, course_id'),
         supabase.from('board_columns').select('*').order('order_index', { ascending: true }),
         supabase.from('assignments').select('*').eq('user_id', userId).not('category', 'is', null),
-        supabase.from('test_results').select('test_id, details').eq('user_id', userId)
+        supabase.from('test_results').select('id, test_title, score, total_score, created_at, details').eq('user_id', userId).order('created_at', { ascending: false })
       ]);
 
       setBoardTemplates(bRes.data || []);
       setBoardColumns(colRes.data || []);
 
       const cSet = new Set<string>();
+      const scoreMap = new Map<string, { score: number; total_score: number; percent: number }>();
       (trRes.data || []).forEach((r: any) => {
-        if (r.test_id) cSet.add(String(r.test_id));
         let d = r.details;
         if (typeof d === 'string') {
           try { d = JSON.parse(d); } catch (e) {}
         }
-        if (d?.test_id) cSet.add(String(d.test_id));
+        const testId = d?.test_id ? String(d.test_id) : (r.test_id ? String(r.test_id) : null);
+        const testTitle = r.test_title ? r.test_title.trim().toLowerCase() : null;
+
+        if (testId) cSet.add(testId);
+
+        const scoreObj = {
+          score: r.score != null ? r.score : 0,
+          total_score: r.total_score != null ? r.total_score : 0,
+          percent: (r.total_score && r.total_score > 0) ? Math.round((r.score / r.total_score) * 100) : (r.score || 0)
+        };
+
+        if (testId && !scoreMap.has(testId)) {
+          scoreMap.set(testId, scoreObj);
+        }
+        if (testTitle && !scoreMap.has(testTitle)) {
+          scoreMap.set(testTitle, scoreObj);
+        }
       });
       setCompletedTestIds(cSet);
+      setLatestTestScores(scoreMap);
 
       const inProg = new Set<string>();
       try {
@@ -332,6 +350,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                                 ? (item.is_completed || (item.test_id && completedTestIds.has(String(item.test_id))))
                                 : item.student_completed;
                               const isItemInProgress = isTest && !isItemDone && item.test_id && inProgressTestIds.has(String(item.test_id));
+                              const testScore = isTest ? (item.test_id ? latestTestScores.get(String(item.test_id)) : (item.title ? latestTestScores.get(item.title.trim().toLowerCase()) : null)) : null;
 
                               if (isTest) {
                                 return (
@@ -375,9 +394,20 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                                         <div className="mt-2.5 flex items-center justify-between gap-2 flex-wrap">
                                           <div>
                                             {isItemDone ? (
-                                              <span className="inline-flex items-center text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">
-                                                ✓ Hoàn thành
-                                              </span>
+                                              <div className="flex items-center gap-1.5 flex-wrap">
+                                                <span className="inline-flex items-center text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">
+                                                  ✓ Hoàn thành
+                                                </span>
+                                                {testScore && (
+                                                  <span 
+                                                    className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full bg-sky-100 text-[#0284c7] font-black border border-sky-200 shadow-sm"
+                                                    title={`Điểm làm gần đây nhất: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
+                                                  >
+                                                    🎯 {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score}
+                                                    <span className="text-[10px] font-bold text-sky-600">({testScore.percent}%)</span>
+                                                  </span>
+                                                )}
+                                              </div>
                                             ) : isItemInProgress ? (
                                               <span className="inline-flex items-center text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">
                                                 ⏳ Đang làm dở
