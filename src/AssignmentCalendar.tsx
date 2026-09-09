@@ -170,7 +170,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, filt
       {/* ========== LEFT: CALENDAR ========== */}
       <div className="w-full lg:w-[420px] shrink-0">
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          <div className="bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] px-5 py-4 flex flex-col gap-3">
+          <div className={`bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] px-5 py-4 ${filterElement ? 'flex flex-col gap-3' : ''}`}>
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-white font-black text-lg">📅 Lịch Báo Bài</h2>
