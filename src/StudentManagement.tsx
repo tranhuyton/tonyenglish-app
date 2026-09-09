@@ -298,48 +298,66 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   };
 
   const handleAutoDistribute = async () => {
-    if (!selectedStudent || !autoDistCourseId || autoDistSelectedDays.size === 0) return;
+    if (!selectedStudent || !autoDistCourseId || autoDistSelectedDays.size === 0 || isAutoDistributing) return;
     setIsAutoDistributing(true);
-    const { data: { session } } = await supabase.auth.getSession();
-    
-    // Sort selected days
-    const selectedPlans = autoDistDayPlans.filter(p => autoDistSelectedDays.has(p.id)).sort((a, b) => a.day_number - b.day_number);
-    
-    let currentDate = new Date(autoDistStartDate);
-    const newAssignments: any[] = [];
-    
-    for (const plan of selectedPlans) {
-      const planTasks = autoDistTasks.filter(t => t.day_plan_id === plan.id).sort((a, b) => a.order_index - b.order_index);
-      const dueDate = currentDate.toISOString().split('T')[0];
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
       
-      for (const task of planTasks) {
-        newAssignments.push({
-          user_id: selectedStudent.id,
-          due_date: dueDate,
-          title: task.title,
-          description: task.description || '',
-          task_type: task.task_type,
-          test_id: task.test_id,
-          created_by: session?.user?.id || null
+      // Sort selected days
+      const selectedPlans = autoDistDayPlans.filter(p => autoDistSelectedDays.has(p.id)).sort((a, b) => a.day_number - b.day_number);
+      
+      let currentDate = new Date(autoDistStartDate);
+      const newAssignments: any[] = [];
+      
+      for (const plan of selectedPlans) {
+        const planTasks = autoDistTasks.filter(t => t.day_plan_id === plan.id).sort((a, b) => a.order_index - b.order_index);
+        const dueDate = currentDate.toISOString().split('T')[0];
+        
+        for (const task of planTasks) {
+          newAssignments.push({
+            user_id: selectedStudent.id,
+            due_date: dueDate,
+            title: task.title,
+            description: task.description || '',
+            task_type: task.task_type,
+            test_id: task.test_id,
+            created_by: session?.user?.id || null
+          });
+        }
+        
+        currentDate.setDate(currentDate.getDate() + (plan.duration_days || 1));
+      }
+      
+      if (newAssignments.length > 0) {
+        // Deduplicate within newAssignments itself (by due_date + title)
+        const seenKey = new Set<string>();
+        const uniqueNewAssignments = newAssignments.filter(a => {
+          const key = `${a.due_date}___${a.title}`;
+          if (seenKey.has(key)) return false;
+          seenKey.add(key);
+          return true;
         });
+
+        // Delete existing assignments for this student matching these titles (1 fast batch query)
+        const allTitles = [...new Set(uniqueNewAssignments.map(a => a.title))];
+        if (allTitles.length > 0) {
+          await supabase.from('assignments').delete().eq('user_id', selectedStudent.id).in('title', allTitles);
+        }
+
+        const { error } = await supabase.from('assignments').insert(uniqueNewAssignments);
+        if (error) throw error;
+        alert(`Đã phân bổ ${uniqueNewAssignments.length} việc thành công!`);
       }
       
-      currentDate.setDate(currentDate.getDate() + (plan.duration_days || 1));
+      setShowAutoDistribute(false);
+      setAutoDistCourseId(null);
+      fetchAssignments(selectedStudent.id);
+    } catch (err: any) {
+      console.error('Error during auto-distribute:', err);
+      alert('Lỗi: ' + (err?.message || err));
+    } finally {
+      setIsAutoDistributing(false);
     }
-    
-    if (newAssignments.length > 0) {
-      // Dedup: delete old manual assignments with same title for this user
-      const manualTitles = [...new Set(newAssignments.filter(a => a.task_type === 'manual').map(a => a.title))];
-      for (const t of manualTitles) {
-        await supabase.from('assignments').delete().eq('user_id', selectedStudent.id).eq('title', t).eq('task_type', 'manual');
-      }
-      await supabase.from('assignments').insert(newAssignments);
-    }
-    
-    setShowAutoDistribute(false);
-    setAutoDistCourseId(null);
-    setIsAutoDistributing(false);
-    fetchAssignments(selectedStudent.id);
   };
 
 
@@ -874,14 +892,38 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                   <div className="flex-1 min-w-0">
                     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
                       <div className="px-5 py-3 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
-                        <h4 className="font-black text-sm text-slate-700">
-                          📋 {new Date(assignSelectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })}
-                          <span className="text-slate-400 font-normal ml-2">({tasksForSelectedDate.length} việc)</span>
-                        </h4>
+                        <div className="flex items-center gap-2">
+                          <h4 className="font-black text-sm text-slate-700">
+                            📋 {new Date(assignSelectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long' })}
+                            <span className="text-slate-400 font-normal ml-2">({tasksForSelectedDate.length} việc)</span>
+                          </h4>
+                          {tasksForSelectedDate.length > 0 && (
+                            <button onClick={async () => {
+                              if (!window.confirm(`Xóa toàn bộ ${tasksForSelectedDate.length} nhiệm vụ của ngày ${assignSelectedDate}?`)) return;
+                              const taskIds = tasksForSelectedDate.map((t: any) => t.id);
+                              await supabase.from('assignments').delete().in('id', taskIds);
+                              if (selectedStudent) fetchAssignments(selectedStudent.id);
+                            }} className="text-red-500 hover:text-red-700 text-[10px] font-bold bg-red-50 hover:bg-red-100 px-2 py-0.5 rounded border border-red-200 transition" title="Xóa toàn bộ việc của ngày đang chọn">
+                              🗑️ Xóa ngày này
+                            </button>
+                          )}
+                        </div>
                         <div className="flex items-center gap-2">
                           <button onClick={() => setShowBoardAssign(true)} className="bg-violet-600 text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-violet-700 transition-all">📋 Giao Board</button>
                           <button onClick={() => setShowAutoDistribute(true)} className="bg-emerald-600 text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-emerald-700 transition-all">+ Tự động phân bổ</button>
                           <button onClick={() => { setShowTaskPicker(true); setTaskPickerMode('choose'); }} className="bg-[#0a5482] text-white px-4 py-1.5 rounded-lg text-[12px] font-bold hover:bg-[#083d5e] transition-all">+ Giao việc</button>
+                          {studentAssignments.some(a => a.due_date) && (
+                            <button onClick={async () => {
+                              if (!selectedStudent) return;
+                              if (!window.confirm(`Xóa TOÀN BỘ lịch báo bài của học sinh ${selectedStudent.full_name || ''}? Thao tác này sẽ xóa tất cả nhiệm vụ có ngày hẹn.`)) return;
+                              const { error } = await supabase.from('assignments').delete().eq('user_id', selectedStudent.id).not('due_date', 'is', null);
+                              if (error) { alert('Lỗi: ' + error.message); return; }
+                              fetchAssignments(selectedStudent.id);
+                              alert('Đã xóa toàn bộ lịch báo bài.');
+                            }} className="px-2.5 py-1.5 bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 rounded-lg font-bold text-[12px] transition" title="Xóa toàn bộ nhiệm vụ trên lịch">
+                              🧹 Xóa toàn bộ lịch
+                            </button>
+                          )}
                         </div>
 
                       </div>

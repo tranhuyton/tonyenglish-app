@@ -200,6 +200,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [detailAutoDistPlans, setDetailAutoDistPlans] = useState<any[]>([]);
   const [detailAutoDistTasks, setDetailAutoDistTasks] = useState<any[]>([]);
   const [detailAutoDistSelected, setDetailAutoDistSelected] = useState<Set<string>>(new Set());
+  const [isDetailAutoDistributing, setIsDetailAutoDistributing] = useState(false);
 
   // Fetch students for detail view
   useEffect(() => {
@@ -3742,10 +3743,23 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-3">
-                      <h3 className="font-bold text-sm text-slate-700">
-                        📅 {(() => { const d = new Date(detailSelectedDate + 'T00:00:00'); return d.toLocaleDateString('vi-VN', {weekday:'long', day:'numeric', month:'long'}); })()}
-                        <span className="ml-2 text-slate-400">({detailAssignments.filter(a => a.due_date === detailSelectedDate).length} việc)</span>
-                      </h3>
+                      <div className="flex items-center gap-2">
+                        <h3 className="font-bold text-sm text-slate-700">
+                          📅 {(() => { const d = new Date(detailSelectedDate + 'T00:00:00'); return d.toLocaleDateString('vi-VN', {weekday:'long', day:'numeric', month:'long'}); })()}
+                          <span className="ml-2 text-slate-400">({detailAssignments.filter(a => a.due_date === detailSelectedDate).length} việc)</span>
+                        </h3>
+                        {detailAssignments.filter(a => a.due_date === detailSelectedDate).length > 0 && (
+                          <button onClick={async () => {
+                            const tasksForDate = detailAssignments.filter(a => a.due_date === detailSelectedDate);
+                            if (!window.confirm(`Xóa toàn bộ ${tasksForDate.length} nhiệm vụ của ngày ${detailSelectedDate}?`)) return;
+                            const taskIds = tasksForDate.map(t => t.id);
+                            await supabase.from('assignments').delete().in('id', taskIds);
+                            setDetailAssignments(prev => prev.filter(a => !taskIds.includes(a.id)));
+                          }} className="text-red-500 hover:text-red-700 text-[10px] font-bold bg-red-50 hover:bg-red-100 px-2 py-0.5 rounded border border-red-200 transition" title="Xóa toàn bộ việc của ngày đang chọn">
+                            🗑️ Xóa ngày này
+                          </button>
+                        )}
+                      </div>
                       <div className="flex gap-2">
                         <button onClick={() => {
                           setDetailAssignMode('board');
@@ -3766,6 +3780,18 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                           setDetailShowTaskPicker(true);
                           setDetailTaskPickerMode('choose');
                         }} className="px-3 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-bold text-[11px] transition">+ Giao việc</button>
+                        {detailAssignments.some(a => a.due_date) && (
+                          <button onClick={async () => {
+                            if (!window.confirm(`Xóa TOÀN BỘ lịch báo bài của học sinh ${detailAssignStudent.full_name || ''}? Thao tác này sẽ xóa tất cả nhiệm vụ có ngày hẹn.`)) return;
+                            const { error } = await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).not('due_date', 'is', null);
+                            if (error) { alert('Lỗi: ' + error.message); return; }
+                            const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+                            setDetailAssignments(data || []);
+                            alert('Đã xóa toàn bộ lịch báo bài.');
+                          }} className="px-2.5 py-1.5 bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 rounded-lg font-bold text-[11px] transition" title="Xóa toàn bộ nhiệm vụ trên lịch của học sinh này">
+                            🧹 Xóa toàn bộ lịch
+                          </button>
+                        )}
                       </div>
                     </div>
                     {detailAssignments.filter(a => a.due_date === detailSelectedDate).length === 0 ? (
@@ -4005,41 +4031,66 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
               </div>
               <div className="flex justify-end gap-3">
                 <button onClick={() => setDetailShowAutoDist(false)} className="px-4 py-2 text-slate-500 font-bold text-sm">Đóng</button>
-                <button onClick={async () => {
-                  const { data: { session } } = await supabase.auth.getSession();
-                  const selectedPlans = detailAutoDistPlans.filter(p => detailAutoDistSelected.has(p.id)).sort((a,b) => a.day_number - b.day_number);
-                  let currentDate = new Date(detailAutoDistStartDate);
-                  const newAssignments: any[] = [];
-                  for (const plan of selectedPlans) {
-                    const planTasks = detailAutoDistTasks.filter(t => t.day_plan_id === plan.id).sort((a,b) => (a.order_index||0) - (b.order_index||0));
-                    const dueDate = currentDate.toISOString().split('T')[0];
-                    for (const task of planTasks) {
-                      newAssignments.push({
-                        user_id: detailAssignStudent.id,
-                        due_date: dueDate,
-                        title: task.title,
-                        description: task.description || '',
-                        task_type: task.task_type,
-                        test_id: task.test_id || null,
-                        created_by: session?.user?.id || null
-                      });
+                <button 
+                  disabled={isDetailAutoDistributing}
+                  onClick={async () => {
+                    if (isDetailAutoDistributing) return;
+                    setIsDetailAutoDistributing(true);
+                    try {
+                      const { data: { session } } = await supabase.auth.getSession();
+                      const selectedPlans = detailAutoDistPlans.filter(p => detailAutoDistSelected.has(p.id)).sort((a,b) => a.day_number - b.day_number);
+                      let currentDate = new Date(detailAutoDistStartDate);
+                      const newAssignments: any[] = [];
+                      for (const plan of selectedPlans) {
+                        const planTasks = detailAutoDistTasks.filter(t => t.day_plan_id === plan.id).sort((a,b) => (a.order_index||0) - (b.order_index||0));
+                        const dueDate = currentDate.toISOString().split('T')[0];
+                        for (const task of planTasks) {
+                          newAssignments.push({
+                            user_id: detailAssignStudent.id,
+                            due_date: dueDate,
+                            title: task.title,
+                            description: task.description || '',
+                            task_type: task.task_type,
+                            test_id: task.test_id || null,
+                            created_by: session?.user?.id || null
+                          });
+                        }
+                        currentDate.setDate(currentDate.getDate() + (plan.duration_days || 1));
+                      }
+                      if (newAssignments.length > 0) {
+                        // Deduplicate within newAssignments itself (by due_date + title)
+                        const seenKey = new Set<string>();
+                        const uniqueNewAssignments = newAssignments.filter(a => {
+                          const key = `${a.due_date}___${a.title}`;
+                          if (seenKey.has(key)) return false;
+                          seenKey.add(key);
+                          return true;
+                        });
+
+                        // Delete existing assignments for this student that match these titles (1 fast batch query)
+                        const allTitles = [...new Set(uniqueNewAssignments.map(a => a.title))];
+                        if (allTitles.length > 0) {
+                          await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).in('title', allTitles);
+                        }
+
+                        const { error } = await supabase.from('assignments').insert(uniqueNewAssignments);
+                        if (error) { alert('Lỗi: ' + error.message); return; }
+                        alert(`Đã giao ${uniqueNewAssignments.length} việc thành công!`);
+                        const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+                        setDetailAssignments(data || []);
+                      }
+                      setDetailShowAutoDist(false);
+                    } catch (err: any) {
+                      console.error('Error during auto-distribute:', err);
+                      alert('Lỗi khi phân bổ: ' + (err?.message || err));
+                    } finally {
+                      setIsDetailAutoDistributing(false);
                     }
-                    currentDate.setDate(currentDate.getDate() + (plan.duration_days || 1));
-                  }
-                  if (newAssignments.length > 0) {
-                    // Dedup: delete old manual assignments with same title for this user
-                    const manualTitles = [...new Set(newAssignments.filter(a => a.task_type === 'manual').map(a => a.title))];
-                    for (const t of manualTitles) {
-                      await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).eq('title', t).eq('task_type', 'manual');
-                    }
-                    const { error } = await supabase.from('assignments').insert(newAssignments);
-                    if (error) { alert('Lỗi: ' + error.message); return; }
-                    alert(`Đã giao ${newAssignments.length} việc thành công!`);
-                    const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
-                    setDetailAssignments(data || []);
-                  }
-                  setDetailShowAutoDist(false);
-                }} className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-sm">Xác nhận phân bổ</button>
+                  }} 
+                  className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-xl font-bold text-sm transition"
+                >
+                  {isDetailAutoDistributing ? '⏳ Đang phân bổ...' : 'Xác nhận phân bổ'}
+                </button>
               </div>
             </div>
           </div>

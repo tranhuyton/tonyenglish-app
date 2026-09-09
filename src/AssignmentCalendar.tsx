@@ -19,13 +19,14 @@ interface Props {
   assignments: Assignment[];
   completedTestIds: Set<string>;
   filterElement?: React.ReactNode;
+  rightActions?: React.ReactNode;
   onRefresh: () => void;
   onStartTest?: (testId: string) => void;
 }
 
 const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 
-export default function AssignmentCalendar({ assignments, completedTestIds, filterElement, onRefresh, onStartTest }: Props) {
+export default function AssignmentCalendar({ assignments, completedTestIds, filterElement, rightActions, onRefresh, onStartTest }: Props) {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
@@ -241,7 +242,13 @@ export default function AssignmentCalendar({ assignments, completedTestIds, filt
       </div>
 
       {/* ========== RIGHT: TASKS PANEL ========== */}
-      <div className="flex-1 min-w-0">
+      <div className="flex-1 min-w-0 flex flex-col gap-4">
+        {rightActions && (
+          <div className="flex items-center justify-end gap-2.5">
+            {rightActions}
+          </div>
+        )}
+
         {selectedDate && selectedTasks.length > 0 ? (
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
             <div className="px-5 py-4 border-b border-slate-100">

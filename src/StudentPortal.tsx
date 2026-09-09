@@ -1828,32 +1828,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           </div>
                         </>
                       )}
-
-                      {/* 🚀 2 NÚT BÀI GIẢNG LÝ THUYẾT & KHO ĐỀ */}
-                      <div className="flex items-center gap-2 mt-2.5">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleGoToLecture();
-                          }}
-                          className="flex-1 bg-white/15 hover:bg-white/25 active:scale-95 text-white border border-white/25 rounded-xl py-2 px-3 text-[12px] font-bold transition-all flex items-center justify-center gap-1.5 shadow-sm hover:shadow cursor-pointer"
-                          title="Mở bài giảng lý thuyết"
-                        >
-                          <span>📖</span> <span className="truncate">Bài giảng lý thuyết</span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleGoToTestBank();
-                          }}
-                          className="flex-1 bg-white/15 hover:bg-white/25 active:scale-95 text-white border border-white/25 rounded-xl py-2 px-3 text-[12px] font-bold transition-all flex items-center justify-center gap-1.5 shadow-sm hover:shadow cursor-pointer"
-                          title="Mở kho đề của khóa học"
-                        >
-                          <span>📚</span> <span className="truncate">Kho đề</span>
-                        </button>
-                      </div>
+                    </div>
+                  }
+                  rightActions={
+                    <div className="flex items-center gap-2.5">
+                      <button
+                        type="button"
+                        onClick={() => handleGoToLecture()}
+                        className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[13px] px-4 py-2 rounded-xl shadow-sm transition-all flex items-center gap-2 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                        title="Mở bài giảng lý thuyết"
+                      >
+                        <span className="text-base">📖</span> <span>Bài giảng lý thuyết</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => handleGoToTestBank()}
+                        className="bg-white hover:bg-sky-50 text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-[#0ea5e9] font-bold text-[13px] px-4 py-2 rounded-xl shadow-sm transition-all flex items-center gap-2 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                        title="Mở kho đề"
+                      >
+                        <span className="text-base">📚</span> <span>Kho đề</span>
+                      </button>
                     </div>
                   }
                   onRefresh={async () => {
