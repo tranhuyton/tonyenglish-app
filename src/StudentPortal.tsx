@@ -1360,7 +1360,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     {filterCourseDropdownOpen && (
                         <>
                         <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-                        <div className="absolute top-full right-0 mt-2 w-full sm:w-64 bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                        <div className="absolute top-full right-0 mt-2 w-full sm:w-64 max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar">
                             <div 
                             onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
                             className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
@@ -1756,7 +1756,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     {filterCourseDropdownOpen && (
                       <>
                         <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-                        <div className="absolute top-full right-0 mt-2 w-64 bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                        <div className="absolute top-full right-0 mt-2 w-full sm:w-64 max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar">
                           <div 
                             onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
                             className={`px-4 py-3 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
@@ -1846,7 +1846,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         {filterCourseDropdownOpen && (
                           <>
                             <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-                            <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-80 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2 custom-scrollbar">
+                            <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar">
                               <div 
                                 onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
                                 className={`px-4 py-2.5 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}

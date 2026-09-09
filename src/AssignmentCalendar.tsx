@@ -18,7 +18,6 @@ interface Assignment {
 interface Props {
   assignments: Assignment[];
   completedTestIds: Set<string>;
-  filterElement?: React.ReactNode;
   rightActions?: React.ReactNode;
   onRefresh: () => void;
   onStartTest?: (testId: string) => void;
@@ -26,7 +25,7 @@ interface Props {
 
 const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 
-export default function AssignmentCalendar({ assignments, completedTestIds, filterElement, rightActions, onRefresh, onStartTest }: Props) {
+export default function AssignmentCalendar({ assignments, completedTestIds, rightActions, onRefresh, onStartTest }: Props) {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
@@ -170,7 +169,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, filt
       {/* ========== LEFT: CALENDAR ========== */}
       <div className="w-full lg:w-[420px] shrink-0">
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          <div className={`bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] px-5 py-4 ${filterElement ? 'flex flex-col gap-3' : ''}`}>
+          <div className="bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] px-5 py-4">
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-white font-black text-lg">📅 Lịch Báo Bài</h2>
@@ -180,11 +179,6 @@ export default function AssignmentCalendar({ assignments, completedTestIds, filt
                 Hôm nay
               </button>
             </div>
-            {filterElement && (
-              <div className="w-full relative z-30 mt-1">
-                {filterElement}
-              </div>
-            )}
           </div>
 
           {/* MONTH NAV */}
