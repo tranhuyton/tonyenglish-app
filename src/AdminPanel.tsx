@@ -4038,6 +4038,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     setIsDetailAutoDistributing(true);
                     try {
                       const { data: { session } } = await supabase.auth.getSession();
+                      const { data: bTpl } = assignMgmtCourseId 
+                        ? await supabase.from('board_templates').select('id, title').eq('course_id', assignMgmtCourseId).order('created_at').limit(1).maybeSingle()
+                        : { data: null };
                       const selectedPlans = detailAutoDistPlans.filter(p => detailAutoDistSelected.has(p.id)).sort((a,b) => a.day_number - b.day_number);
                       let currentDate = new Date(detailAutoDistStartDate);
                       const newAssignments: any[] = [];
@@ -4052,6 +4055,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             description: task.description || '',
                             task_type: task.task_type,
                             test_id: task.test_id || null,
+                            board_template_id: bTpl?.id || null,
+                            board_template_title: bTpl?.title || null,
                             created_by: session?.user?.id || null
                           });
                         }
@@ -4112,9 +4117,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   <button onClick={async () => {
                     const title = prompt('Tên công việc thủ công:');
                     if (!title) return;
+                    const { data: bTpl } = assignMgmtCourseId 
+                      ? await supabase.from('board_templates').select('id, title').eq('course_id', assignMgmtCourseId).order('created_at').limit(1).maybeSingle() 
+                      : { data: null };
                     await supabase.from('assignments').delete().eq('user_id', detailAssignStudent.id).eq('title', title).eq('task_type', 'manual');
                     const { error } = await supabase.from('assignments').insert({
-                      user_id: detailAssignStudent.id, title, task_type: 'manual', due_date: detailSelectedDate
+                      user_id: detailAssignStudent.id, title, task_type: 'manual', due_date: detailSelectedDate,
+                      board_template_id: bTpl?.id || null,
+                      board_template_title: bTpl?.title || null
                     });
                     if (!error) {
                       const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
@@ -4158,9 +4168,19 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   {detailSelectedManualTemplates.size > 0 && (
                     <div className="mt-4 pt-3 border-t border-slate-200">
                       <button onClick={async () => {
+                        const { data: bTpl } = assignMgmtCourseId 
+                          ? await supabase.from('board_templates').select('id, title').eq('course_id', assignMgmtCourseId).order('created_at').limit(1).maybeSingle() 
+                          : { data: null };
                         const inserts = Array.from(detailSelectedManualTemplates).map(tplId => {
                           const tpl = manualTaskTemplates.find(t => t.id === tplId);
-                          return { user_id: detailAssignStudent.id, title: tpl?.title || '', task_type: 'manual', due_date: detailSelectedDate };
+                          return { 
+                            user_id: detailAssignStudent.id, 
+                            title: tpl?.title || '', 
+                            task_type: 'manual', 
+                            due_date: detailSelectedDate,
+                            board_template_id: bTpl?.id || null,
+                            board_template_title: bTpl?.title || null
+                          };
                         });
                         // Dedup
                         for (const ins of inserts) {
@@ -4228,9 +4248,20 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   {detailSelectedTests.size > 0 && (
                     <div className="mt-4 pt-3 border-t border-slate-200">
                       <button onClick={async () => {
+                        const { data: bTpl } = assignMgmtCourseId 
+                          ? await supabase.from('board_templates').select('id, title').eq('course_id', assignMgmtCourseId).order('created_at').limit(1).maybeSingle() 
+                          : { data: null };
                         const inserts = Array.from(detailSelectedTests).map(testId => {
                           const test = dayPlanTests.find(t => t.id === testId);
-                          return { user_id: detailAssignStudent.id, title: test?.title || '', task_type: 'test', test_id: testId, due_date: detailSelectedDate };
+                          return { 
+                            user_id: detailAssignStudent.id, 
+                            title: test?.title || '', 
+                            task_type: 'test', 
+                            test_id: testId, 
+                            due_date: detailSelectedDate,
+                            board_template_id: bTpl?.id || null,
+                            board_template_title: bTpl?.title || null
+                          };
                         });
                         await supabase.from('assignments').insert(inserts);
                         const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');

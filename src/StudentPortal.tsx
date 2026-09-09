@@ -157,6 +157,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
   const [analyticsDropdownOpen, setAnalyticsDropdownOpen] = useState(false);
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
+  const [dayPlanTaskCourseMap, setDayPlanTaskCourseMap] = useState<Record<string, string>>({});
   const [filterCourse, setFilterCourse] = useState(() => localStorage.getItem('portal_filter_course') || 'all');
   const [filterCourseDropdownOpen, setFilterCourseDropdownOpen] = useState(false);
   
@@ -263,14 +264,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 return result;
             } catch (e) { console.error(`[${name}] CRASH:`, e); return { data: null, error: e }; }
         };
-        const [profileRes, lpRes, cStudentsRes, enrollsRes, hDataRes, assignRes, boardTempRes] = await Promise.all([
+        const [profileRes, lpRes, cStudentsRes, enrollsRes, hDataRes, assignRes, boardTempRes, dayPlanTasksRes] = await Promise.all([
             safeQuery('profiles', () => supabase.from('profiles').select('*').eq('id', user.id).single()),
             safeQuery('lecture_progress', () => supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id).limit(5000)),
             safeQuery('class_students', () => supabase.from('class_students').select('class_id').eq('user_id', user.id)),
             safeQuery('enrollments', () => supabase.from('enrollments').select('course_id').eq('user_id', user.id)),
             safeQuery('test_results', () => supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000)),
             safeQuery('assignments', () => supabase.from('assignments').select('*').eq('user_id', user.id).order('due_date', { ascending: true }).limit(5000)),
-            safeQuery('board_templates', () => supabase.from('board_templates').select('id, title, course_id'))
+            safeQuery('board_templates', () => supabase.from('board_templates').select('id, title, course_id')),
+            safeQuery('day_plan_tasks', () => supabase.from('day_plan_tasks').select('title, course_day_plans(course_id)'))
         ]);
         const profile = profileRes.data;
         const lp = lpRes.data;
@@ -279,6 +281,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         const hData = hDataRes.data;
         const assignData = assignRes.data;
         setBoardTemplates(boardTempRes.data || []);
+        if (dayPlanTasksRes.data) {
+          const map: Record<string, string> = {};
+          dayPlanTasksRes.data.forEach((item: any) => {
+            const cId = item.course_day_plans?.course_id;
+            if (cId && item.title) {
+              map[item.title.trim()] = String(cId);
+            }
+          });
+          setDayPlanTaskCourseMap(map);
+        }
         console.log('[PORTAL INIT] profile:', !!profile, 'lp:', lp?.length, 'enrolls:', enrolls?.length, 'hData:', hData?.length, 'assigns:', assignData?.length);
 
         setUserProfile(profile);
@@ -1778,16 +1790,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <div className="animate-in fade-in slide-in-from-bottom-4 mx-2 md:mx-0 pb-8 mt-6">
             {(() => {
               const calendarAssignments = filterCourse === 'all' ? assignments : assignments.filter(a => {
-                if (a.task_type === 'test') {
-                  const test = allTests.find(t => String(t.id) === String(a.test_id));
-                  return test && String(test.course_id) === String(filterCourse);
-                } else {
-                  if (a.board_template_title) {
-                    const tpl = boardTemplates.find(t => t.title === a.board_template_title);
-                    return tpl && String(tpl.course_id) === String(filterCourse);
-                  }
-                  return false;
+                if (a.board_template_id) {
+                  const tpl = boardTemplates.find(t => String(t.id) === String(a.board_template_id));
+                  if (tpl && String(tpl.course_id) === String(filterCourse)) return true;
                 }
+                if (a.board_template_title) {
+                  const tpl = boardTemplates.find(t => t.title === a.board_template_title);
+                  if (tpl && String(tpl.course_id) === String(filterCourse)) return true;
+                }
+                if (a.task_type === 'test' && a.test_id) {
+                  const test = allTests.find(t => String(t.id) === String(a.test_id));
+                  if (test && String(test.course_id) === String(filterCourse)) return true;
+                }
+                if (a.title && dayPlanTaskCourseMap[a.title.trim()] === String(filterCourse)) {
+                  return true;
+                }
+                return false;
               });
 
               return (

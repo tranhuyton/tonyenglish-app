@@ -166,9 +166,21 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     if (!selectedStudent || selectedTemplates.size === 0) return;
     setIsAddingAssignment(true);
     const { data: { session } } = await supabase.auth.getSession();
+    const { data: bTpl } = manualBrowserCourseId
+      ? await supabase.from('board_templates').select('id, title').eq('course_id', manualBrowserCourseId).order('created_at').limit(1).maybeSingle()
+      : { data: null };
     const tasks = Array.from(selectedTemplates).map(tplId => {
       const tpl = manualTemplates.find(t => t.id === tplId);
-      return { user_id: selectedStudent.id, due_date: assignSelectedDate, title: tpl?.title || '', description: tpl?.description || '', task_type: 'manual', created_by: session?.user?.id || null };
+      return { 
+        user_id: selectedStudent.id, 
+        due_date: assignSelectedDate, 
+        title: tpl?.title || '', 
+        description: tpl?.description || '', 
+        task_type: 'manual', 
+        board_template_id: bTpl?.id || null,
+        board_template_title: bTpl?.title || null,
+        created_by: session?.user?.id || null 
+      };
     });
     await supabase.from('assignments').insert(tasks);
     setSelectedTemplates(new Set());
@@ -183,9 +195,21 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     if (!selectedStudent || selectedTestIds.size === 0) return;
     setIsAddingAssignment(true);
     const { data: { session } } = await supabase.auth.getSession();
+    const { data: bTpl } = testBrowserCourseId
+      ? await supabase.from('board_templates').select('id, title').eq('course_id', testBrowserCourseId).order('created_at').limit(1).maybeSingle()
+      : { data: null };
     const tasks = Array.from(selectedTestIds).map(testId => {
       const test = allTestsForAssign.find(t => t.id === testId);
-      return { user_id: selectedStudent.id, due_date: assignSelectedDate, title: test?.title || '', task_type: 'test', test_id: testId, created_by: session?.user?.id || null };
+      return { 
+        user_id: selectedStudent.id, 
+        due_date: assignSelectedDate, 
+        title: test?.title || '', 
+        task_type: 'test', 
+        test_id: testId, 
+        board_template_id: bTpl?.id || null,
+        board_template_title: bTpl?.title || null,
+        created_by: session?.user?.id || null 
+      };
     });
     await supabase.from('assignments').insert(tasks);
     setSelectedTestIds(new Set());
@@ -256,6 +280,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     setIsBoardAssigning(true);
     
     try {
+      const { data: bTpl } = await supabase.from('board_templates').select('id, title').eq('course_id', boardAssignCourseId).order('created_at').limit(1).maybeSingle();
       const inserts = [];
       for (const col of boardAssignColumns) {
         const colCards = boardAssignCards.filter(c => c.column_id === col.id);
@@ -271,7 +296,9 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
               category: col.title,
               card_title: card.title,
               card_order: card.order_index,
-              due_date: null
+              due_date: null,
+              board_template_id: bTpl?.id || null,
+              board_template_title: bTpl?.title || null
             });
           }
         }
@@ -302,6 +329,9 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     setIsAutoDistributing(true);
     try {
       const { data: { session } } = await supabase.auth.getSession();
+      const { data: bTpl } = autoDistCourseId
+        ? await supabase.from('board_templates').select('id, title').eq('course_id', autoDistCourseId).order('created_at').limit(1).maybeSingle()
+        : { data: null };
       
       // Sort selected days
       const selectedPlans = autoDistDayPlans.filter(p => autoDistSelectedDays.has(p.id)).sort((a, b) => a.day_number - b.day_number);
@@ -321,6 +351,8 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
             description: task.description || '',
             task_type: task.task_type,
             test_id: task.test_id,
+            board_template_id: bTpl?.id || null,
+            board_template_title: bTpl?.title || null,
             created_by: session?.user?.id || null
           });
         }
