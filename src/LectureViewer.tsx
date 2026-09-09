@@ -651,13 +651,21 @@ export default function LectureViewer({
     courseId, 
     onBack, 
     onStartTest, 
-    onOpenAI 
+    onOpenAI,
+    onCourseChange
 }: { 
     courseId: string, 
     onBack: () => void, 
     onStartTest?: (type: string, data: any) => void, 
-    onOpenAI?: (passedMode?: string, topic?: string, image?: string, task?: string) => void 
+    onOpenAI?: (passedMode?: string, topic?: string, image?: string, task?: string) => void,
+    onCourseChange?: (newCourseId: string) => void
 }) {
+  const [currentCourseId, setCurrentCourseId] = useState<string>(courseId);
+  const [availableCourses, setAvailableCourses] = useState<any[]>([]);
+  const [isCourseDropdownOpen, setIsCourseDropdownOpen] = useState<boolean>(false);
+  const [courseFilterQuery, setCourseFilterQuery] = useState<string>('');
+  const courseDropdownRef = useRef<HTMLDivElement>(null);
+
   const [course, setCourse] = useState<any>(null);
   const [modules, setModules] = useState<any[]>([]);
   const [lectures, setLectures] = useState<any[]>([]);
@@ -841,13 +849,19 @@ export default function LectureViewer({
   };
 
   useEffect(() => {
-    if (courseId && courseId !== '') {
-        fetchCourseData();
+    if (courseId && courseId !== currentCourseId) {
+      setCurrentCourseId(courseId);
+    }
+  }, [courseId]);
+
+  useEffect(() => {
+    if (currentCourseId && currentCourseId !== '') {
+        fetchCourseData(currentCourseId);
     } else { 
         setErrorMessage("Không tìm thấy mã Khóa học."); 
         setIsLoading(false); 
     }
-  }, [courseId]);
+  }, [currentCourseId]);
 
   useEffect(() => {
     const handleFullscreenChange = () => {
@@ -873,27 +887,91 @@ export default function LectureViewer({
        if (taskMenuRef.current && !taskMenuRef.current.contains(e.target as Node)) {
            setIsTaskMenuOpen(false);
        }
+       if (courseDropdownRef.current && !courseDropdownRef.current.contains(e.target as Node)) {
+           setIsCourseDropdownOpen(false);
+       }
     };
     
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const fetchCourseData = async () => {
+  const fetchAvailableCourses = useCallback(async (userId?: string) => {
+    try {
+      let targetCourses: any[] = [];
+      if (userId) {
+        const { data: profile } = await supabase.from('profiles').select('role').eq('id', userId).single();
+        if (profile?.role === 'admin') {
+          const { data: allC } = await supabase.from('courses').select('id, title, order_index').order('order_index');
+          targetCourses = allC || [];
+        } else {
+          const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
+          const courseIds = enrolls?.map(e => e.course_id) || [];
+          if (courseIds.length > 0) {
+            const { data: userC } = await supabase.from('courses').select('id, title, order_index').in('id', courseIds).order('order_index');
+            targetCourses = userC || [];
+          } else {
+            const { data: allC } = await supabase.from('courses').select('id, title, order_index').order('order_index');
+            targetCourses = allC || [];
+          }
+        }
+      } else {
+        const { data: allC } = await supabase.from('courses').select('id, title, order_index').order('order_index');
+        targetCourses = allC || [];
+      }
+      setAvailableCourses(targetCourses);
+    } catch (err) {
+      console.error('Error fetching available courses:', err);
+    }
+  }, []);
+
+  const handleSelectCourse = (newCourseId: string) => {
+    if (newCourseId === currentCourseId) {
+      setIsCourseDropdownOpen(false);
+      return;
+    }
+    setIsCourseDropdownOpen(false);
+    setCourseFilterQuery('');
+    setUploadedBoardImage(null);
+    setCurrentCourseId(newCourseId);
+    
+    try {
+      sessionStorage.setItem('lms_active_course_id', newCourseId);
+      sessionStorage.setItem('portal_selected_course_id', newCourseId);
+      sessionStorage.setItem('portal_filter_course', newCourseId);
+      localStorage.setItem('portal_filter_course', newCourseId);
+      window.dispatchEvent(new CustomEvent('tony-change-course', { detail: newCourseId }));
+    } catch(e) {}
+    
+    if (onCourseChange) {
+      onCourseChange(newCourseId);
+    }
+  };
+
+  const filteredAvailableCourses = useMemo(() => {
+    if (!courseFilterQuery.trim()) return availableCourses;
+    const q = courseFilterQuery.toLowerCase().trim();
+    return availableCourses.filter(c => (c.title || '').toLowerCase().includes(q));
+  }, [availableCourses, courseFilterQuery]);
+
+  const fetchCourseData = async (targetCourseIdOverride?: string) => {
+    const activeId = targetCourseIdOverride || currentCourseId;
+    if (!activeId) return;
     setIsLoading(true);
     setErrorMessage(null);
     try {
       const { data: { user } } = await supabase.auth.getUser();
       setCurrentUser(user);
+      fetchAvailableCourses(user?.id);
 
       const [
           { data: courseData, error: courseErr },
           { data: modData },
           { data: lecData }
       ] = await Promise.all([
-          supabase.from('courses').select('*').eq('id', courseId).single(),
-          supabase.from('lecture_modules').select('*').eq('course_id', courseId).order('order_index'),
-          supabase.from('lectures').select('*').eq('course_id', courseId).eq('is_published', true)
+          supabase.from('courses').select('*').eq('id', activeId).single(),
+          supabase.from('lecture_modules').select('*').eq('course_id', activeId).order('order_index'),
+          supabase.from('lectures').select('*').eq('course_id', activeId).eq('is_published', true)
       ]);
 
       if (courseErr || !courseData) {
@@ -901,6 +979,12 @@ export default function LectureViewer({
       }
       
       setCourse(courseData);
+      setAvailableCourses(prev => {
+        if (!prev.some(c => c.id === courseData.id)) {
+          return [courseData, ...prev];
+        }
+        return prev;
+      });
       
       const safeModData = modData || [];
       setModules(safeModData);
@@ -946,7 +1030,7 @@ export default function LectureViewer({
       }
 
       if (validLectures && validLectures.length > 0) {
-         const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${courseId}`);
+         const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${activeId}`);
          const targetLecture = validLectures.find(l => l.id === savedLectureId) || validLectures[0];
          if (targetLecture.module_id) {
              setExpandedModules([targetLecture.module_id]);
@@ -982,7 +1066,7 @@ export default function LectureViewer({
         }
         
         if (targetUserId) {
-            localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
+            localStorage.setItem(`tony_last_lec_${targetUserId}_${currentCourseId}`, lectureId);
         }
 
         const [
@@ -1565,14 +1649,108 @@ export default function LectureViewer({
                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h7" /></svg>
             </button>
             
-            <div className="flex flex-col min-w-0 ml-1">
-               <h1 className="text-[15px] md:text-[17px] font-semibold leading-tight truncate tracking-tight">{course?.title}</h1>
-               <div className="hidden sm:flex items-center gap-2 mt-0.5">
-                   <div className="w-24 h-1.5 bg-black/20 rounded-full overflow-hidden">
-                       <div className="h-full bg-emerald-400 rounded-full" style={{ width: `${courseProgress}%` }}></div>
-                   </div>
-                   <span className="text-[10px] font-medium opacity-80">{courseProgress}%</span>
-               </div>
+            {/* 🎓 THANH LỌC / CHUYỂN KHÓA HỌC */}
+            <div className="relative shrink-0" ref={courseDropdownRef}>
+               <button 
+                  type="button"
+                  onClick={() => setIsCourseDropdownOpen(!isCourseDropdownOpen)}
+                  className="flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 transition-all text-left shadow-sm hover:shadow-md hover:border-white/40 group max-w-[160px] xs:max-w-[200px] sm:max-w-[260px] md:max-w-[320px]"
+                  title="Bấm để lọc / chuyển khóa học khác"
+               >
+                  <div className="flex flex-col min-w-0 flex-1">
+                     <div className="flex items-center gap-1.5">
+                        <span className="text-[13px] sm:text-[15px] font-bold text-white truncate leading-tight tracking-tight">
+                           {course?.title || 'Đang tải khóa học...'}
+                        </span>
+                        <span className={`text-[10px] text-white/80 transition-transform duration-200 shrink-0 ${isCourseDropdownOpen ? 'rotate-180' : ''}`}>
+                           ▼
+                        </span>
+                     </div>
+                     <div className="hidden sm:flex items-center gap-2 mt-0.5">
+                        <div className="w-20 sm:w-24 h-1.5 bg-black/20 rounded-full overflow-hidden">
+                           <div className="h-full bg-emerald-400 rounded-full transition-all duration-300" style={{ width: `${courseProgress}%` }}></div>
+                        </div>
+                        <span className="text-[10px] font-medium opacity-80">{courseProgress}%</span>
+                     </div>
+                  </div>
+               </button>
+
+               {/* DROPDOWN DANH SÁCH KHÓA HỌC */}
+               {isCourseDropdownOpen && (
+                  <div className="fixed top-[68px] left-3 right-3 sm:left-auto sm:right-auto sm:absolute sm:top-full sm:left-0 sm:mt-2 w-auto sm:w-[320px] max-h-[420px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-slate-100 overflow-hidden z-[110] animate-in fade-in slide-in-from-top-2 duration-200 text-slate-800 flex flex-col">
+                     <div className="p-3 bg-slate-50 border-b border-slate-100">
+                        <div className="flex items-center justify-between mb-2">
+                           <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                              <span>📚</span> Chọn khóa học
+                           </span>
+                           <span className="text-[11px] font-semibold text-[#0ea5e9] bg-[#0ea5e9]/10 px-2 py-0.5 rounded-full">
+                              {availableCourses.length} khóa
+                           </span>
+                        </div>
+                        {availableCourses.length > 3 && (
+                           <div className="relative">
+                              <input
+                                 type="text"
+                                 placeholder="Tìm khóa học..."
+                                 value={courseFilterQuery}
+                                 onChange={(e) => setCourseFilterQuery(e.target.value)}
+                                 className="w-full px-3 py-1.5 pl-8 text-[13px] bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#0ea5e9] focus:ring-2 focus:ring-[#0ea5e9]/20 text-slate-800 placeholder-slate-400"
+                                 onClick={(e) => e.stopPropagation()}
+                                 autoFocus
+                              />
+                              <svg className="w-4 h-4 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                              </svg>
+                              {courseFilterQuery && (
+                                 <button 
+                                    onClick={() => setCourseFilterQuery('')}
+                                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs"
+                                 >
+                                    ✕
+                                 </button>
+                              )}
+                           </div>
+                        )}
+                     </div>
+
+                     <div className="overflow-y-auto p-1.5 custom-scrollbar flex-1 space-y-1 max-h-[300px]">
+                        {filteredAvailableCourses.length === 0 ? (
+                           <div className="p-6 text-center text-slate-400 text-[13px]">
+                              Không tìm thấy khóa học nào
+                           </div>
+                        ) : (
+                           filteredAvailableCourses.map((c: any) => {
+                              const isSelected = c.id === currentCourseId;
+                              return (
+                                 <button
+                                    key={c.id}
+                                    onClick={() => handleSelectCourse(c.id)}
+                                    className={`w-full text-left px-3.5 py-2.5 rounded-xl text-[13px] font-medium transition-all flex items-center justify-between gap-3 group ${
+                                       isSelected 
+                                          ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold border border-[#0ea5e9]/20' 
+                                          : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 border border-transparent'
+                                    }`}
+                                 >
+                                    <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                                       <span className="text-base shrink-0">{isSelected ? '📖' : '📘'}</span>
+                                       <span className="truncate">{c.title}</span>
+                                    </div>
+                                    {isSelected ? (
+                                       <span className="text-[11px] font-bold bg-[#0ea5e9] text-white px-2 py-0.5 rounded-full shrink-0 shadow-sm">
+                                          Đang học
+                                       </span>
+                                    ) : (
+                                       <span className="opacity-0 group-hover:opacity-100 text-[11px] text-[#0ea5e9] font-semibold shrink-0 transition-opacity">
+                                          Chọn ➜
+                                       </span>
+                                    )}
+                                 </button>
+                              );
+                           })
+                        )}
+                     </div>
+                  </div>
+               )}
             </div>
             
             {safeLectureTasks.length > 0 && (
@@ -1762,8 +1940,8 @@ export default function LectureViewer({
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2">
              <button
                  onClick={() => {
-                     localStorage.setItem('portal_filter_course', courseId);
-                     sessionStorage.setItem('portal_filter_course', courseId);
+                     localStorage.setItem('portal_filter_course', currentCourseId);
+                     sessionStorage.setItem('portal_filter_course', currentCourseId);
                      sessionStorage.setItem('lms_portal_tab', 'calendar');
                      onBack();
                  }}
@@ -1775,8 +1953,8 @@ export default function LectureViewer({
              </button>
              <button
                  onClick={() => {
-                     localStorage.setItem('portal_filter_course', courseId);
-                     sessionStorage.setItem('portal_filter_course', courseId);
+                     localStorage.setItem('portal_filter_course', currentCourseId);
+                     sessionStorage.setItem('portal_filter_course', currentCourseId);
                      sessionStorage.setItem('lms_portal_tab', 'board');
                      onBack();
                  }}
@@ -1788,7 +1966,7 @@ export default function LectureViewer({
              </button>
              <button
                  onClick={() => {
-                     sessionStorage.setItem('portal_selected_course_id', courseId);
+                     sessionStorage.setItem('portal_selected_course_id', currentCourseId);
                      sessionStorage.setItem('portal_active_view', 'course');
                      sessionStorage.setItem('portal_current_folder_id', '');
                      sessionStorage.setItem('lms_portal_tab', 'library');

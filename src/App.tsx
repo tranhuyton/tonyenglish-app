@@ -115,8 +115,19 @@ export default function App() {
          try { sessionStorage.setItem('lms_current_view', view); } catch(err) {}
       }
     };
+    const handleChangeCourse = (e: any) => {
+      const newCourseId = e.detail;
+      if (newCourseId) {
+        setActiveCourseId(newCourseId);
+        try { sessionStorage.setItem('lms_active_course_id', newCourseId); } catch(err) {}
+      }
+    };
     window.addEventListener('tony-navigate', handleCustomNavigate);
-    return () => window.removeEventListener('tony-navigate', handleCustomNavigate);
+    window.addEventListener('tony-change-course', handleChangeCourse);
+    return () => {
+      window.removeEventListener('tony-navigate', handleCustomNavigate);
+      window.removeEventListener('tony-change-course', handleChangeCourse);
+    };
   }, [liveTutorState]);
 
   const [currentTestData, setCurrentTestData] = useState<any>(() => {
@@ -259,6 +270,10 @@ export default function App() {
           <LectureViewer 
             courseId={activeCourseId} 
             onBack={() => handleNavigate('portal')} 
+            onCourseChange={(newId: string) => {
+              setActiveCourseId(newId);
+              try { sessionStorage.setItem('lms_active_course_id', newId); } catch(e) {}
+            }}
             onStartTest={handleStartTest}
             onOpenAI={(passedMode?: string, topic?: string, image?: string, task?: string) => { 
               if (passedMode === 'ielts' || topic) {
