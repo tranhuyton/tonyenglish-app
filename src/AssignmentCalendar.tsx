@@ -18,14 +18,16 @@ interface Assignment {
 interface Props {
   assignments: Assignment[];
   completedTestIds: Set<string>;
+  topActions?: React.ReactNode;
   rightActions?: React.ReactNode;
+  courseTitle?: string;
   onRefresh: () => void;
   onStartTest?: (testId: string) => void;
 }
 
 const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 
-export default function AssignmentCalendar({ assignments, completedTestIds, rightActions, onRefresh, onStartTest }: Props) {
+export default function AssignmentCalendar({ assignments, completedTestIds, topActions, rightActions, courseTitle, onRefresh, onStartTest }: Props) {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
@@ -164,188 +166,242 @@ export default function AssignmentCalendar({ assignments, completedTestIds, righ
   // ============================================
   // RENDER
   // ============================================
+  const headerActions = topActions || rightActions;
+
+  const selectedDateFormatted = selectedDate 
+    ? new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'long' })
+    : null;
+
+  const dayProgressPercent = selectedTasks.length > 0 
+    ? Math.round((completedCount / selectedTasks.length) * 100) 
+    : 0;
+
   return (
-    <div className="flex flex-col lg:flex-row gap-6 items-start max-w-5xl mx-auto">
-      {/* ========== LEFT: CALENDAR ========== */}
-      <div className="w-full lg:w-[420px] shrink-0">
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          <div className="bg-gradient-to-r from-[#0ea5e9] to-[#0284c7] px-5 py-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <h2 className="text-white font-black text-lg">📅 Lịch Báo Bài</h2>
-                <p className="text-white/70 text-[11px] mt-0.5">Bấm vào ngày để xem công việc</p>
-              </div>
-              <button onClick={goToday} className="bg-white/20 hover:bg-white/30 text-white text-[11px] font-bold px-3 py-1.5 rounded-full transition-all">
-                Hôm nay
-              </button>
-            </div>
-          </div>
-
-          {/* MONTH NAV */}
-          <div className="flex items-center justify-between px-5 py-3 border-b border-slate-100">
-            <button onClick={prevMonth} className="w-8 h-8 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-500 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
-            </button>
-            <h3 className="font-black text-slate-800 text-[15px] capitalize">{monthLabel}</h3>
-            <button onClick={nextMonth} className="w-8 h-8 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-500 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
-            </button>
-          </div>
-
-          {/* WEEKDAY HEADERS */}
-          <div className="grid grid-cols-7 px-3 pt-3 pb-1">
-            {WEEKDAYS.map(d => (
-              <div key={d} className="text-center text-[11px] font-bold text-slate-400 uppercase">{d}</div>
-            ))}
-          </div>
-
-          {/* CALENDAR GRID */}
-          <div className="grid grid-cols-7 px-3 pb-3 gap-1">
-            {calendarDays.map((day, i) => {
-              const status = dateStatusMap[day.date];
-              const hasTask = !!status;
-              const isSelected = selectedDate === day.date;
-              const cellBg = getCellBg(status, isSelected);
-
-              return (
-                <button
-                  key={i}
-                  onClick={() => (hasTask || day.isCurrentMonth) ? setSelectedDate(isSelected ? null : day.date) : undefined}
-                  className={`
-                    aspect-square rounded-xl flex items-center justify-center text-[13px] font-semibold transition-all
-                    ${!day.isCurrentMonth ? 'text-slate-300' : 'text-slate-700'}
-                    ${day.isToday && !isSelected ? 'ring-2 ring-[#0ea5e9] ring-offset-1' : ''}
-                    ${cellBg}
-                    ${day.isCurrentMonth && !isSelected ? 'hover:bg-slate-100 cursor-pointer' : ''}
-                    ${!day.isCurrentMonth ? 'cursor-default' : ''}
-                  `}
-                >
-                  {day.day}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* LEGEND */}
-          <div className="flex items-center justify-center gap-5 px-4 pb-3 text-[10px] text-slate-400">
-            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-sky-100 border border-sky-300"></span> Chưa xong</span>
-            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-emerald-100 border border-emerald-300"></span> Hoàn thành</span>
-            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-red-100 border border-red-300"></span> Quá hạn</span>
-          </div>
-        </div>
-      </div>
-
-      {/* ========== RIGHT: TASKS PANEL ========== */}
-      <div className="flex-1 min-w-0 flex flex-col gap-4">
-        {rightActions && (
-          <div className="flex items-center justify-end gap-2.5">
-            {rightActions}
+    <div className="min-h-[500px] bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 text-slate-800 rounded-3xl relative">
+      <div className="max-w-[1600px] mx-auto space-y-6">
+        {headerActions && (
+          <div className="flex justify-end relative z-40 mb-2">
+            {headerActions}
           </div>
         )}
 
-        {selectedDate && selectedTasks.length > 0 ? (
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-            <div className="px-5 py-4 border-b border-slate-100">
-              <h3 className="font-black text-slate-800 text-[15px]">
-                📋 Công việc ngày {new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'long' })}
-              </h3>
-              <p className="text-[12px] text-slate-400 mt-0.5">
-                Hoàn thành: <span className={`font-bold ${completedCount === selectedTasks.length ? 'text-emerald-600' : 'text-[#0ea5e9]'}`}>{completedCount}/{selectedTasks.length}</span>
+        {/* UNIFIED BLUE HEADER BANNER - Trải dài từ phần lịch đến nội dung công việc */}
+        <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-6 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">📅</span>
+            <div>
+              <h1 className="text-xl md:text-2xl font-bold tracking-tight">
+                Lịch Báo Bài{courseTitle ? ` - ${courseTitle}` : ''}
+              </h1>
+              <p className="text-white/80 text-xs md:text-sm mt-0.5">
+                Bấm vào ngày để xem và cập nhật tiến độ công việc
               </p>
             </div>
+          </div>
 
-            <div className="divide-y divide-slate-100 max-h-[500px] overflow-y-auto">
-              {selectedTasks.map(task => (
-                <div key={task.id} className={`px-5 py-4 flex items-start gap-3 transition-colors ${task._effectiveCompleted ? 'bg-emerald-50/50' : ''}`}>
-                  {/* CHECKBOX / STATUS */}
-                  <div className="pt-0.5 shrink-0">
-                    {task.task_type === 'manual' ? (
-                      <button
-                        onClick={() => handleToggleComplete(task)}
-                        disabled={task.is_completed || isUpdating === task.id}
-                        className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all ${
-                          task.is_completed ? 'bg-emerald-500 border-emerald-500 text-white' :
-                          task.student_completed ? 'bg-amber-100 border-amber-400 text-amber-600' :
-                          'border-slate-300 hover:border-[#0ea5e9] text-transparent hover:text-slate-300'
-                        } ${isUpdating === task.id ? 'animate-pulse' : ''}`}
-                      >
-                        {task.is_completed ? '✓' : task.student_completed ? '⏳' : '✓'}
-                      </button>
-                    ) : (
-                      <div className={`w-6 h-6 rounded-lg flex items-center justify-center text-[12px] ${
-                        task._effectiveCompleted ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-slate-400'
-                      }`}>
-                        {task._effectiveCompleted ? '✓' : '📝'}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* CONTENT */}
-                  <div className="flex-1 min-w-0">
-                    <p className={`text-[14px] font-bold ${task._effectiveCompleted ? 'text-slate-400 line-through' : 'text-slate-800'}`}>
-                      {task.title}
-                    </p>
-                    {task.description && (
-                      <p className="text-[12px] text-slate-400 mt-0.5">{task.description}</p>
-                    )}
-                    {/* Status badge */}
-                    <div className="mt-2 flex items-center gap-2">
-                      {task.task_type === 'manual' && (
-                        <>
-                          {task.is_completed && (
-                            <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">✅ Đã duyệt</span>
-                          )}
-                          {task.student_completed && !task.is_completed && (
-                            <span className="text-[10px] font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">⏳ Chờ giáo viên duyệt</span>
-                          )}
-                          {!task.student_completed && !task.is_completed && (
-                            <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Chưa hoàn thành</span>
-                          )}
-                        </>
-                      )}
-                      {task.task_type === 'test' && (
-                        <>
-                          {task._effectiveCompleted ? (
-                            <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">✅ Đã nộp bài</span>
-                          ) : (
-                            <button 
-                              onClick={() => task.test_id && onStartTest?.(task.test_id)}
-                              className="text-[10px] font-bold bg-[#0ea5e9]/10 text-[#0ea5e9] px-3 py-1 rounded-full hover:bg-[#0ea5e9]/20 transition-colors"
-                            >
-                              📝 Vào làm bài →
-                            </button>
-                          )}
-                        </>
-                      )}
-                    </div>
-                  </div>
+          <div className="flex flex-col sm:flex-row items-center sm:items-end gap-3 sm:gap-4 w-full md:w-auto justify-between md:justify-end">
+            {selectedDate && selectedTasks.length > 0 ? (
+              <div className="flex flex-col items-center sm:items-end">
+                <div className="text-sm text-white/90 font-medium mb-1">
+                  Tiến độ ngày {selectedDateFormatted}: {completedCount}/{selectedTasks.length} ({dayProgressPercent}%)
                 </div>
-              ))}
+                <div className="w-48 h-2 bg-white/20 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-white rounded-full transition-all duration-500"
+                    style={{ width: `${dayProgressPercent}%` }}
+                  />
+                </div>
+              </div>
+            ) : selectedDate ? (
+              <div className="text-xs text-white/80 font-medium">
+                Ngày {selectedDateFormatted}: Không có công việc
+              </div>
+            ) : (
+              <div className="text-xs text-white/80 font-medium">
+                Bấm vào một ngày trên lịch để xem công việc
+              </div>
+            )}
+
+            <button 
+              onClick={goToday} 
+              className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+              title="Xem công việc hôm nay"
+            >
+              <span>🎯</span> <span>Hôm nay</span>
+            </button>
+          </div>
+        </div>
+
+        {/* 2-COLUMN CONTENT: CALENDAR & TASKS */}
+        <div className="flex flex-col lg:flex-row gap-6 items-start">
+          {/* ========== LEFT: CALENDAR ========== */}
+          <div className="w-full lg:w-[420px] shrink-0">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+              {/* MONTH NAV */}
+              <div className="flex items-center justify-between px-5 py-3.5 border-b border-slate-100 bg-slate-50/70">
+                <button onClick={prevMonth} className="w-8 h-8 rounded-full hover:bg-white border border-transparent hover:border-slate-200 flex items-center justify-center text-slate-500 transition-all shadow-sm cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                </button>
+                <h3 className="font-black text-slate-800 text-[15px] capitalize tracking-tight flex items-center gap-1.5">
+                  <span>🗓️</span> {monthLabel}
+                </h3>
+                <button onClick={nextMonth} className="w-8 h-8 rounded-full hover:bg-white border border-transparent hover:border-slate-200 flex items-center justify-center text-slate-500 transition-all shadow-sm cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                </button>
+              </div>
+
+              {/* WEEKDAY HEADERS */}
+              <div className="grid grid-cols-7 px-3 pt-3 pb-1">
+                {WEEKDAYS.map(d => (
+                  <div key={d} className="text-center text-[11px] font-bold text-slate-400 uppercase">{d}</div>
+                ))}
+              </div>
+
+              {/* CALENDAR GRID */}
+              <div className="grid grid-cols-7 px-3 pb-3 gap-1">
+                {calendarDays.map((day, i) => {
+                  const status = dateStatusMap[day.date];
+                  const hasTask = !!status;
+                  const isSelected = selectedDate === day.date;
+                  const cellBg = getCellBg(status, isSelected);
+
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => (hasTask || day.isCurrentMonth) ? setSelectedDate(isSelected ? null : day.date) : undefined}
+                      className={`
+                        aspect-square rounded-xl flex items-center justify-center text-[13px] font-semibold transition-all
+                        ${!day.isCurrentMonth ? 'text-slate-300' : 'text-slate-700'}
+                        ${day.isToday && !isSelected ? 'ring-2 ring-[#0ea5e9] ring-offset-1' : ''}
+                        ${cellBg}
+                        ${day.isCurrentMonth && !isSelected ? 'hover:bg-slate-100 cursor-pointer' : ''}
+                        ${!day.isCurrentMonth ? 'cursor-default' : ''}
+                      `}
+                    >
+                      {day.day}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* LEGEND */}
+              <div className="flex items-center justify-center gap-5 px-4 py-3 bg-slate-50/50 border-t border-slate-100 text-[10px] text-slate-400">
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-sky-100 border border-sky-300"></span> Chưa xong</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-emerald-100 border border-emerald-300"></span> Hoàn thành</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-red-100 border border-red-300"></span> Quá hạn</span>
+              </div>
             </div>
           </div>
-        ) : selectedDate ? (
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
-            <span className="text-4xl block mb-3">📭</span>
-            <h3 className="font-bold text-slate-500 text-[14px] mb-1">Không có công việc</h3>
-            <p className="text-[12px] text-slate-400">
-              Ngày {new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'long' })} chưa có bài tập nào
-            </p>
-          </div>
-        ) : (
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
-            <span className="text-4xl block mb-3">👈</span>
-            <h3 className="font-bold text-slate-500 text-[14px]">Chọn ngày trên lịch để xem công việc</h3>
-          </div>
-        )}
 
-        {/* EMPTY STATE - no assignments at all */}
-        {assignments.length === 0 && (
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
-            <span className="text-4xl block mb-3">📭</span>
-            <h3 className="font-bold text-slate-600 text-[15px] mb-1">Chưa có bài tập nào được giao</h3>
-            <p className="text-[12px] text-slate-400">Giáo viên sẽ giao bài cho bạn trên lịch này. Hãy kiểm tra thường xuyên nhé!</p>
+          {/* ========== RIGHT: TASKS PANEL ========== */}
+          <div className="flex-1 min-w-0">
+            {selectedDate && selectedTasks.length > 0 ? (
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div className="px-5 py-4 border-b border-slate-100 bg-slate-50/50 flex items-center justify-between">
+                  <div>
+                    <h3 className="font-black text-slate-800 text-[15px]">
+                      📋 Công việc ngày {new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'long' })}
+                    </h3>
+                    <p className="text-[12px] text-slate-400 mt-0.5">
+                      Hoàn thành: <span className={`font-bold ${completedCount === selectedTasks.length ? 'text-emerald-600' : 'text-[#0ea5e9]'}`}>{completedCount}/{selectedTasks.length}</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="divide-y divide-slate-100 max-h-[500px] overflow-y-auto custom-scrollbar">
+                  {selectedTasks.map(task => (
+                    <div key={task.id} className={`px-5 py-4 flex items-start gap-3 transition-colors ${task._effectiveCompleted ? 'bg-emerald-50/50' : ''}`}>
+                      {/* CHECKBOX / STATUS */}
+                      <div className="pt-0.5 shrink-0">
+                        {task.task_type === 'manual' ? (
+                          <button
+                            onClick={() => handleToggleComplete(task)}
+                            disabled={task.is_completed || isUpdating === task.id}
+                            className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all ${
+                              task.is_completed ? 'bg-emerald-500 border-emerald-500 text-white' :
+                              task.student_completed ? 'bg-amber-100 border-amber-400 text-amber-600' :
+                              'border-slate-300 hover:border-[#0ea5e9] text-transparent hover:text-slate-300 cursor-pointer'
+                            } ${isUpdating === task.id ? 'animate-pulse' : ''}`}
+                          >
+                            {task.is_completed ? '✓' : task.student_completed ? '⏳' : '✓'}
+                          </button>
+                        ) : (
+                          <div className={`w-6 h-6 rounded-lg flex items-center justify-center text-[12px] ${
+                            task._effectiveCompleted ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-slate-400'
+                          }`}>
+                            {task._effectiveCompleted ? '✓' : '📝'}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* CONTENT */}
+                      <div className="flex-1 min-w-0">
+                        <p className={`text-[14px] font-bold ${task._effectiveCompleted ? 'text-slate-400 line-through' : 'text-slate-800'}`}>
+                          {task.title}
+                        </p>
+                        {task.description && (
+                          <p className="text-[12px] text-slate-400 mt-0.5">{task.description}</p>
+                        )}
+                        {/* Status badge */}
+                        <div className="mt-2 flex items-center gap-2">
+                          {task.task_type === 'manual' && (
+                            <>
+                              {task.is_completed && (
+                                <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">✅ Đã duyệt</span>
+                              )}
+                              {task.student_completed && !task.is_completed && (
+                                <span className="text-[10px] font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">⏳ Chờ giáo viên duyệt</span>
+                              )}
+                              {!task.student_completed && !task.is_completed && (
+                                <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Chưa hoàn thành</span>
+                              )}
+                            </>
+                          )}
+                          {task.task_type === 'test' && (
+                            <>
+                              {task._effectiveCompleted ? (
+                                <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">✅ Đã nộp bài</span>
+                              ) : (
+                                <button 
+                                  onClick={() => task.test_id && onStartTest?.(task.test_id)}
+                                  className="text-[10px] font-bold bg-[#0ea5e9]/10 text-[#0ea5e9] px-3 py-1 rounded-full hover:bg-[#0ea5e9]/20 transition-colors cursor-pointer"
+                                >
+                                  📝 Vào làm bài →
+                                </button>
+                              )}
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : selectedDate ? (
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
+                <span className="text-4xl block mb-3">📭</span>
+                <h3 className="font-bold text-slate-500 text-[14px] mb-1">Không có công việc</h3>
+                <p className="text-[12px] text-slate-400">
+                  Ngày {new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'long' })} chưa có bài tập nào
+                </p>
+              </div>
+            ) : (
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
+                <span className="text-4xl block mb-3">👈</span>
+                <h3 className="font-bold text-slate-500 text-[14px]">Chọn ngày trên lịch để xem công việc</h3>
+              </div>
+            )}
+
+            {/* EMPTY STATE - no assignments at all */}
+            {assignments.length === 0 && (
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center mt-4">
+                <span className="text-4xl block mb-3">📭</span>
+                <h3 className="font-bold text-slate-600 text-[15px] mb-1">Chưa có bài tập nào được giao</h3>
+                <p className="text-[12px] text-slate-400">Giáo viên sẽ giao bài cho bạn trên lịch này. Hãy kiểm tra thường xuyên nhé!</p>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

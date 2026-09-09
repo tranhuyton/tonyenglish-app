@@ -1812,12 +1812,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <AssignmentCalendar 
                   assignments={calendarAssignments} 
                   completedTestIds={completedTestIdsSet}
-                  rightActions={
+                  courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
+                  topActions={
                     <div className="flex flex-wrap items-center justify-end gap-2.5">
                       <button
                         type="button"
                         onClick={() => handleGoToLecture()}
-                        className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                        className="bg-white/90 hover:bg-white text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer"
                         title="Mở bài giảng lý thuyết"
                       >
                         <span className="text-base">📖</span> <span>Bài giảng lý thuyết</span>
@@ -1825,7 +1826,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <button
                         type="button"
                         onClick={() => handleGoToTestBank()}
-                        className="bg-white hover:bg-sky-50 text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-[#0ea5e9] font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                        className="bg-white/90 hover:bg-white text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-[#0ea5e9] font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer"
                         title="Mở kho đề"
                       >
                         <span className="text-base">📚</span> <span>Kho đề</span>
@@ -1835,7 +1836,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <div className="relative w-full sm:w-64 z-40">
                         <div 
                           onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-                          className="w-full bg-white border border-sky-200 rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] shadow-sm transition-all"
+                          className="w-full bg-white/80 backdrop-blur border border-sky-200 rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] hover:bg-white shadow-sm transition-all"
                         >
                           <span className="font-bold text-[13px] text-sky-800 truncate pr-2">
                             {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
