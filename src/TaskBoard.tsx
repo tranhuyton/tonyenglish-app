@@ -131,19 +131,23 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
       if (error) throw error;
 
-      // Also sync all matching assignments (same title, same user, same task_type)
+      // Also sync all matching assignments (same title, same user, same task_type, scoped to card)
       const updatePayload: any = { student_completed: newStatus };
       if (!newStatus) updatePayload.admin_approved = false; // Reset approval when un-completing
-      await supabase
+      let query = supabase
         .from('assignments')
         .update(updatePayload)
         .eq('user_id', userId)
         .eq('title', task.title)
         .eq('task_type', 'manual');
+      if (task.card_title) {
+        query = query.eq('card_title', task.card_title);
+      }
+      await query;
 
       // Update local state
       setAssignments(prev => prev.map(a => 
-        (a.title === task.title && a.task_type === 'manual') ? { ...a, student_completed: newStatus } : a
+        (a.title === task.title && a.task_type === 'manual' && (!task.card_title || a.card_title === task.card_title)) ? { ...a, student_completed: newStatus } : a
       ));
     } catch (error) {
       console.error('Error toggling task:', error);

@@ -14,6 +14,24 @@ interface AITutorProps {
   isCallActive?: boolean;
 }
 
+const UNICODE_FORMAT_INSTRUCTION = `
+[QUY TẮC ĐỊNH DẠNG BẮT BUỘC - BẢO ĐẢM HIỂN THỊ CHUẨN UNICODE]:
+- TUYỆT ĐỐI KHÔNG SỬ DỤNG MÃ LATEX HOẶC KÝ TỰ LATEX (CẤM dùng dấu $, $$, \\rightarrow, \\to, \\frac, \\pm, \\sqrt, ^{...}, _{...}, v.v.).
+- BẮT BUỘC sử dụng ký tự UNICODE tiêu chuẩn trực tiếp trong câu trả lời:
+  + Mũi tên phản ứng hóa học: dùng mũi tên Unicode → (hoặc ⇌, ↑, ↓). CẤM viết \\rightarrow.
+  + Số mũ / Chỉ số ion trên (superscript): dùng các ký tự Unicode ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁺ ⁻ ⁿ (Ví dụ: Cu²⁺, Fe³⁺, SO₄²⁻, Zn²⁺, 2e⁻, x², cm³, 10⁻³). CẤM viết Cu^{2+}, SO_4^{2-}.
+  + Chỉ số hóa học dưới (subscript): dùng các ký tự Unicode ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ (Ví dụ: H₂O, CO₂, O₂, CuSO₄, ZnSO₄, H₂SO₄, Fe₂O₃, Ca(OH)₂). CẤM viết O_2, CuSO_4.
+  + Trạng thái chất trong hóa học: viết thường trong ngoặc đơn thông thường: (s), (l), (g), (aq).
+  + Phương trình hóa học ví dụ chuẩn:
+    2Mg (s) + O₂ (g) → 2MgO (s)
+    Zn (s) + CuSO₄ (aq) → ZnSO₄ (aq) + Cu (s)
+    Zn (s) + Cu²⁺ (aq) → Zn²⁺ (aq) + Cu (s)
+    Zn → Zn²⁺ + 2e⁻
+    Cu²⁺ + 2e⁻ → Cu
+  + Ký hiệu toán học & khoa học: dùng ±, ×, ÷, √, °, ℃, ≈, ≠, ≤, ≥, Δ, π, α, β, θ, λ, Ω, μ.
+  + Để nhấn mạnh công thức hoặc tên chất, hãy dùng in đậm **...** hoặc backtick \`...\`, tuyệt đối không bọc bằng dấu $.
+- Trình bày mạch lạc, phân tách rõ ràng bằng gạch đầu dòng, các tiêu đề dùng in đậm **...** để dễ đọc.`;
+
 const TUTOR_PROMPTS = [
   "Tóm tắt bài học", 
   "Giải thích khái niệm khó", 
@@ -481,18 +499,16 @@ export default function AITutorSidebar({
             ${topicTitle}
             """
             Dựa vào 2 thông tin trên, hãy trả lời câu hỏi sau của học sinh bằng tiếng Việt một cách chi tiết, dễ hiểu, phân tích lý do đúng/sai và BẮT BUỘC trích dẫn câu văn/đoạn văn chứa bằng chứng trong BÀI ĐỌC:
-            "${userMsg}"`;
+            "${userMsg}"
+            ${UNICODE_FORMAT_INSTRUCTION}`;
             
             payload = { 
                 prompt: systemPrompt, 
                 taskType: 'tutor' 
             }; 
          } else {
-             const unicodeInstruction = (taskType === 'math' || taskType === 'Science') 
-                 ? `\n\n[QUAN TRỌNG VỀ ĐỊNH DẠNG]: TUYỆT ĐỐI KHÔNG SỬ DỤNG MÃ LATEX HAY KATEX (NHƯ \\frac, \\pm, \\sqrt, v.v.). BẠN PHẢI SỬ DỤNG CÁC KÝ TỰ UNICODE THÔNG THƯỜNG NHƯ x², ½, ⅓, √, ±, ∫, π, α, β, θ... ĐỂ HỌC SINH DỄ ĐỌC. SỬ DỤNG DẤU \` ĐỂ BỌC CÔNG THỨC VÀ BIẾN SỐ.` 
-                 : '';
              payload = { 
-                content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}${unicodeInstruction}`,
+                content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}\n\n${UNICODE_FORMAT_INSTRUCTION}`,
                 imageUrl: currentImage || topicImage,
                 imageUrls: currentImage ? [currentImage] : (topicImage ? [topicImage] : []),
                 taskType: taskType 
@@ -500,7 +516,7 @@ export default function AITutorSidebar({
          }
       } else {
          const subjectRule = courseTitle ? `\n[KỶ LUẬT CHUYÊN MÔN]: Đây là lớp học môn: "${courseTitle}". Nếu câu hỏi không liên quan đến môn học này, bạn PHẢI TỪ CHỐI KHÉO LÉO.` : '';
-         const systemPrompt = `Bạn là gia sư AI. Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". ${subjectRule}\nHãy trả lời học sinh: "${userMsg}"`;
+         const systemPrompt = `Bạn là gia sư AI tận tâm, chuyên nghiệp. Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". ${subjectRule}\n${UNICODE_FORMAT_INSTRUCTION}\nHãy trả lời học sinh: "${userMsg}"`;
          
          payload = { 
              prompt: systemPrompt, 
@@ -537,13 +553,169 @@ export default function AITutorSidebar({
       }
   };
 
+  const convertLatexToUnicode = (text: string): string => {
+    if (!text) return '';
+
+    let r = text;
+
+    // 1. Chuyển đổi các lệnh LaTeX phổ biến sang ký tự Unicode
+    const symbolMap: [RegExp, string][] = [
+      // Mũi tên phản ứng & logic
+      [/\\rightleftharpoons/g, '⇌'],
+      [/\\leftrightarrow/g, '⇌'],
+      [/\\longrightarrow/g, '→'],
+      [/\\rightarrow/g, '→'],
+      [/\\to\b/g, '→'],
+      [/\\longleftarrow/g, '←'],
+      [/\\leftarrow/g, '←'],
+      [/\\uparrow/g, '↑'],
+      [/\\downarrow/g, '↓'],
+      [/\\Rightarrow/g, '⇒'],
+      [/\\Leftarrow/g, '⇐'],
+      [/\\Leftrightarrow/g, '⇔'],
+
+      // Ký hiệu toán - lý - hóa
+      [/\\%/g, '%'],
+      [/\\pm/g, '±'],
+      [/\\mp/g, '∓'],
+      [/\\times/g, '×'],
+      [/\\cdot/g, '·'],
+      [/\\div/g, '÷'],
+      [/\\approx/g, '≈'],
+      [/\\neq/g, '≠'],
+      [/\\leq/g, '≤'],
+      [/\\geq/g, '≥'],
+      [/\\le\b/g, '≤'],
+      [/\\ge\b/g, '≥'],
+      [/\\equiv/g, '≡'],
+      [/\\infty/g, '∞'],
+      [/\\degree/g, '°'],
+      [/\\\^\\circ/g, '°'],
+      [/\^\{\\circ\}/g, '°'],
+      [/\^\\circ/g, '°'],
+      [/\\circ\b/g, '°'],
+
+      // Chữ cái Hy Lạp
+      [/\\alpha/g, 'α'],
+      [/\\beta/g, 'β'],
+      [/\\gamma/g, 'γ'],
+      [/\\delta/g, 'δ'],
+      [/\\theta/g, 'θ'],
+      [/\\lambda/g, 'λ'],
+      [/\\mu/g, 'μ'],
+      [/\\pi/g, 'π'],
+      [/\\sigma/g, 'σ'],
+      [/\\omega/g, 'ω'],
+      [/\\Omega/g, 'Ω'],
+      [/\\Delta\s*(?=[A-Za-z])/g, 'Δ'],
+      [/\\Delta/g, 'Δ'],
+      [/\\Sigma/g, 'Σ'],
+
+      // Cấu trúc toán / hóa
+      [/\\sqrt\{([^}]+)\}/g, '√($1)'],
+      [/\\sqrt\b/g, '√'],
+      [/\\frac\{([^}]+)\}\{([^}]+)\}/g, '($1)/($2)'],
+      [/\\mathrm\{([^}]+)\}/g, '$1'],
+      [/\\text\{([^}]+)\}/g, '$1'],
+      [/\\mathbf\{([^}]+)\}/g, '**$1**'],
+      [/\\left/g, ''],
+      [/\\right/g, ''],
+    ];
+
+    for (const [pattern, repl] of symbolMap) {
+      r = r.replace(pattern, repl);
+    }
+
+    // 2. Chuyển đổi số mũ & điện tích ion (superscript: Cu^{2+}, SO_4^{2-}, x^2...)
+    const supMap: Record<string, string> = {
+      '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
+      '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
+      '+': '⁺', '-': '⁻', '=': '⁼', '(': '⁽', ')': '⁾',
+      'n': 'ⁿ', 'i': 'ⁱ', 'x': 'ˣ', 'y': 'ʸ'
+    };
+
+    const toSup = (chars: string) => {
+      let allMapped = true;
+      for (const c of chars) {
+        if (!supMap[c]) {
+          allMapped = false;
+          break;
+        }
+      }
+      if (allMapped) {
+        return chars.split('').map(c => supMap[c]).join('');
+      }
+      return `<sup>${chars}</sup>`;
+    };
+
+    r = r.replace(/\^\{([^}]+)\}/g, (_, inner) => toSup(inner));
+    r = r.replace(/\^([0-9+\-n])/g, (_, char) => supMap[char] || `<sup>${char}</sup>`);
+
+    // 3. Chuyển đổi chỉ số hóa học dưới (subscript: O_2, CuSO_4, H_2O...)
+    const subMap: Record<string, string> = {
+      '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄',
+      '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉',
+      '+': '₊', '-': '₋', '=': '₌', '(': '₍', ')': '₎',
+      'a': 'ₐ', 'e': 'ₑ', 'o': 'ₒ', 'x': 'ₓ', 'h': 'ₕ',
+      'k': 'ₖ', 'l': 'ₗ', 'm': 'ₘ', 'n': 'ₙ', 'p': 'ₚ',
+      's': 'ₛ', 't': 'ₜ'
+    };
+
+    const toSub = (chars: string) => {
+      let allMapped = true;
+      for (const c of chars) {
+        if (!subMap[c]) {
+          allMapped = false;
+          break;
+        }
+      }
+      if (allMapped) {
+        return chars.split('').map(c => subMap[c]).join('');
+      }
+      return `<sub>${chars}</sub>`;
+    };
+
+    r = r.replace(/_\{([^}]+)\}/g, (_, inner) => toSub(inner));
+    r = r.replace(/_([0-9+\-])/g, (_, char) => subMap[char] || `<sub>${char}</sub>`);
+
+    // 4. Bóc tách dấu bọc $ ... $ và $$ ... $$
+    r = r.replace(/\$\$([^$]+)\$\$/g, '$1');
+    r = r.replace(/\$([^$\n]+)\$/g, '$1');
+
+    // 5. Loại bỏ dấu gạch chéo ngược LaTeX thừa trước các từ thông thường
+    r = r.replace(/\\([a-zA-Z]+)/g, '$1');
+
+    return r;
+  };
+
   const formatMarkdown = (text: string) => {
     if (!text) return '';
-    return text
-        .replace(/\*\*(.*?)\*\*/g, '<b class="font-bold text-slate-800">$1</b>')
-        .replace(/\*(.*?)\*/g, '<i class="italic">$1</i>')
-        .replace(/`([^`]+)`/g, '<span class="italic text-[#0ea5e9] font-medium px-1">$1</span>')
-        .replace(/\n/g, '<br/>');
+    // 1. Tự động chuyển toàn bộ mã LaTeX / công thức toán-lý-hóa về Unicode
+    let formatted = convertLatexToUnicode(text);
+
+    // 2. Format tiêu đề Markdown (###, ##, #)
+    formatted = formatted.replace(/^### (.*$)/gim, '<h3 class="font-bold text-slate-800 text-[15px] mt-3 mb-1">$1</h3>');
+    formatted = formatted.replace(/^## (.*$)/gim, '<h2 class="font-bold text-slate-800 text-[16px] mt-3.5 mb-1.5">$1</h2>');
+    formatted = formatted.replace(/^# (.*$)/gim, '<h1 class="font-bold text-slate-900 text-[17px] mt-4 mb-2">$1</h1>');
+
+    // 3. Format đường kẻ phân cách (---)
+    formatted = formatted.replace(/^---$/gim, '<hr class="my-2.5 border-slate-200" />');
+
+    // 4. Format gạch đầu dòng (* item hoặc - item)
+    formatted = formatted.replace(/^[*\-] (.*$)/gim, '<div class="flex items-start my-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 mr-2 shrink-0"></span><span>$1</span></div>');
+
+    // 5. In đậm và in nghiêng
+    formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<b class="font-bold text-slate-800">$1</b>');
+    formatted = formatted.replace(/(?<!\*)\*(?!\s)([^*]+?)(?<!\s)\*(?!\*)/g, '<i class="italic">$1</i>');
+
+    // 6. Code inline
+    formatted = formatted.replace(/`([^`]+)`/g, '<span class="italic text-[#0ea5e9] font-medium px-1 bg-sky-50 rounded">$1</span>');
+
+    // 7. Dọn dẹp khoảng trống thừa trước khi xuống dòng
+    formatted = formatted.replace(/(<\/h[1-3]>|<\/div>|<hr[^>]*>)\n+/gi, '$1');
+    formatted = formatted.replace(/\n/g, '<br/>');
+
+    return formatted;
   };
 
   if (!isOpen) {

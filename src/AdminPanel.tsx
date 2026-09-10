@@ -7,6 +7,7 @@ import LectureEditorModal from './LectureEditorModal';
 import IgcseTestEditorModal from './IgcseTestEditorModal';
 import BatchImportModal from './BatchImportModal';
 import BatchImportJsonModal from './BatchImportJsonModal';
+import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorSelector } from './moduleTheme';
 import './tailwind.css';
 
 let adminSearchTimer: any;
@@ -87,6 +88,20 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   // Modals
   const [showModuleModal, setShowModuleModal] = useState(false);
+  const [moduleModalConfig, setModuleModalConfig] = useState<{
+    show: boolean;
+    mode: 'create' | 'edit';
+    moduleId?: string;
+    title: string;
+    bg: string;
+    text: string;
+  }>({
+    show: false,
+    mode: 'create',
+    title: '',
+    bg: '#f8fafc',
+    text: '#1e293b',
+  });
   const [showClassModal, setShowClassModal] = useState(false);
   const [showAssignClassModuleModal, setShowAssignClassModuleModal] = useState(false);
   const [editingLecture, setEditingLecture] = useState<any>(null);
@@ -902,6 +917,33 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     await supabase.from('lecture_modules').update({ title: newTitle }).eq('id', moduleId);
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     setEditingModuleId(null);
+  };
+
+  const handleSaveLectureModuleModal = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!selectedCourse) return;
+    const cleanTitle = moduleModalConfig.title.trim();
+    if (!cleanTitle) return;
+
+    const formattedTitle = formatModuleTitleWithColor(cleanTitle, moduleModalConfig.bg, moduleModalConfig.text);
+
+    if (moduleModalConfig.mode === 'create') {
+      const { data } = await supabase.from('lecture_modules').insert([{
+        course_id: selectedCourse.id,
+        title: formattedTitle,
+        order_index: lectureModules.length + 1
+      }]).select();
+      if (data) {
+        fetchCourseDetailsData(selectedCourse.id);
+        setModuleModalConfig(prev => ({ ...prev, show: false }));
+      }
+    } else if (moduleModalConfig.mode === 'edit' && moduleModalConfig.moduleId) {
+      await supabase.from('lecture_modules').update({
+        title: formattedTitle
+      }).eq('id', moduleModalConfig.moduleId);
+      fetchCourseDetailsData(selectedCourse.id);
+      setModuleModalConfig(prev => ({ ...prev, show: false }));
+    }
   };
 
   const handleCreateLectureModule = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -2932,29 +2974,57 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <div className="bg-white rounded-2xl md:rounded-3xl border border-slate-200 overflow-hidden shadow-sm animate-in fade-in">
                   <div className="p-4 md:p-6 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                     <p className="font-black text-slate-600 text-[11px] md:text-xs uppercase tracking-widest">Giáo trình Khóa học</p>
-                    <button onClick={() => setShowModuleModal(true)} className="bg-[#0a5482] hover:bg-[#084266] transition text-white px-4 md:px-6 py-2 md:py-2.5 rounded-xl font-black text-[11px] md:text-xs shadow-sm">+ THÊM HỌC PHẦN</button>
+                    <button onClick={() => setModuleModalConfig({ show: true, mode: 'create', title: '', bg: '#f8fafc', text: '#1e293b' })} className="bg-[#0a5482] hover:bg-[#084266] transition text-white px-4 md:px-6 py-2 md:py-2.5 rounded-xl font-black text-[11px] md:text-xs shadow-sm">+ THÊM HỌC PHẦN</button>
                   </div>
                   <div className="p-4 md:p-8">
                      {lectureModules.length === 0 ? <div className="text-center py-10 md:py-12 border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-medium text-[13px] md:text-base">Khóa học này chưa có Học phần nào.</div> : (
                         lectureModules.map(mod => {
                            const moduleLectures = lectures.filter(l => l.module_id === mod.id);
+                           const theme = parseModuleTheme(mod.title, mod);
                            return (
-                             <div key={mod.id} className="border border-slate-200 rounded-2xl overflow-hidden shadow-sm mb-6 group/mod">
-                                <div className="bg-slate-50 px-4 md:px-6 py-3 md:py-4 border-b border-slate-200 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-3 lg:gap-0">
+                             <div key={mod.id} className="border rounded-2xl overflow-hidden shadow-sm mb-6 group/mod transition-all" style={{ borderColor: theme.border }}>
+                                <div 
+                                   className="px-4 md:px-6 py-3 md:py-4 border-b flex flex-col lg:flex-row justify-between items-start lg:items-center gap-3 lg:gap-0 transition-colors"
+                                   style={{ backgroundColor: theme.bg, borderColor: theme.border }}
+                                >
                                    <div className="flex flex-wrap items-center gap-3 w-full lg:flex-1 lg:mr-4">
                                       {editingModuleId === mod.id ? (
                                          <form className="flex-1 flex gap-2 w-full" onClick={(e) => e.stopPropagation()} onSubmit={(e) => { e.preventDefault(); e.stopPropagation(); handleUpdateModuleName(mod.id, new FormData(e.currentTarget).get('title') as string); }}>
-                                            <input name="title" autoFocus defaultValue={mod.title} className="flex-1 border border-slate-300 rounded-lg px-2 md:px-3 py-1 font-black text-[13px] md:text-[15px] outline-none focus:border-[#0a5482]" />
+                                            <input name="title" autoFocus defaultValue={theme.cleanTitle} className="flex-1 border border-slate-300 rounded-lg px-2 md:px-3 py-1 font-black text-[13px] md:text-[15px] outline-none focus:border-[#0a5482]" />
                                             <button type="submit" className="text-[11px] md:text-xs font-bold text-white bg-emerald-500 px-2 md:px-3 py-1 rounded">Lưu</button>
                                             <button type="button" onClick={() => setEditingModuleId(null)} className="text-[11px] md:text-xs font-bold bg-slate-100 px-2 md:px-3 py-1 rounded border border-slate-200 text-slate-600">Hủy</button>
                                          </form>
                                       ) : (
                                         <>
                                            <div className="flex items-center gap-2 md:gap-3 flex-1 min-w-0">
-                                              <h3 className="font-black text-slate-800 text-[14px] md:text-[16px] flex items-center gap-2 truncate">📑 {mod.title}</h3>
-                                              <button onClick={() => setEditingModuleId(mod.id)} className="text-blue-500 hover:text-blue-700 transition-colors text-[10px] md:text-[11px] font-bold bg-blue-50 hover:bg-blue-100 px-2 py-1 rounded border border-blue-200 shadow-sm shrink-0">✏️ Sửa</button>
+                                              <span 
+                                                className="font-bold text-xs px-2 py-0.5 rounded-md shrink-0 shadow-sm"
+                                                style={theme.hasColor ? { backgroundColor: 'rgba(255,255,255,0.7)', color: theme.text, border: `1px solid ${theme.border}` } : { backgroundColor: '#e2e8f0', color: '#475569' }}
+                                              >
+                                                 {(mod.order_index || 0).toString().padStart(2, '0')}
+                                              </span>
+                                              <h3 className="font-black text-[14px] md:text-[16px] flex items-center gap-2 truncate" style={{ color: theme.text }}>
+                                                 📑 {theme.cleanTitle}
+                                              </h3>
+                                              <button 
+                                                onClick={() => setModuleModalConfig({
+                                                   show: true,
+                                                   mode: 'edit',
+                                                   moduleId: mod.id,
+                                                   title: theme.cleanTitle,
+                                                   bg: theme.bg,
+                                                   text: theme.text,
+                                                })} 
+                                                className="text-blue-600 hover:text-blue-800 transition-colors text-[10px] md:text-[11px] font-bold bg-white/85 hover:bg-white px-2.5 py-1 rounded border border-blue-200 shadow-sm shrink-0 flex items-center gap-1"
+                                                title="Chỉnh sửa tên và đổi màu học phần"
+                                              >
+                                                <span>🎨</span> Sửa Màu & Tên
+                                              </button>
                                            </div>
-                                           <div className="flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200 shrink-0"><span className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase">TT:</span><input type="number" defaultValue={mod.order_index || 0} onBlur={e => handleUpdateModuleOrder(mod.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 text-center text-[11px] md:text-xs font-bold outline-none" /></div>
+                                           <div className="flex items-center gap-1 bg-white/90 px-2 py-1 rounded border border-slate-200 shrink-0">
+                                              <span className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase">TT:</span>
+                                              <input type="number" defaultValue={mod.order_index || 0} onBlur={e => handleUpdateModuleOrder(mod.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 text-center text-[11px] md:text-xs font-bold outline-none bg-transparent" />
+                                           </div>
                                         </>
                                       )}
                                    </div>
@@ -3574,15 +3644,56 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             </div> 
         )}
         
-        {/* Modal Module */}
-        {showModuleModal && ( 
+        {/* Modal Thêm / Sửa Học Phần với Chọn Màu */}
+        {moduleModalConfig.show && ( 
             <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
-                <form onSubmit={handleCreateLectureModule} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl">
-                    <h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Thêm Học Phần Mới</h2>
-                    <input name="title" required autoFocus placeholder="VD: Lesson 1: Grammar..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" />
-                    <div className="flex gap-3 md:gap-4">
-                        <button type="button" onClick={() => setShowModuleModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button>
-                        <button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO MỚI</button>
+                <form onSubmit={handleSaveLectureModuleModal} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-lg p-6 md:p-8 space-y-5 animate-in zoom-in-95 shadow-2xl">
+                    <div className="flex justify-between items-center border-b border-slate-100 pb-3">
+                        <h2 className="text-base md:text-lg font-black uppercase text-[#0a5482] flex items-center gap-2">
+                           <span>🎨</span>
+                           <span>{moduleModalConfig.mode === 'create' ? 'Thêm Học Phần Mới' : 'Sửa Học Phần & Đổi Màu'}</span>
+                        </h2>
+                        <button 
+                            type="button" 
+                            onClick={() => setModuleModalConfig(prev => ({ ...prev, show: false }))}
+                            className="text-slate-400 hover:text-slate-600 text-lg font-bold"
+                        >
+                            ✕
+                        </button>
+                    </div>
+
+                    <div>
+                        <label className="block text-xs font-bold text-slate-700 mb-1">Tên học phần:</label>
+                        <input 
+                            value={moduleModalConfig.title} 
+                            onChange={(e) => setModuleModalConfig(prev => ({ ...prev, title: e.target.value }))}
+                            required 
+                            autoFocus 
+                            placeholder="VD: 01 IGCSE Coordinated Sciences: Biology" 
+                            className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" 
+                        />
+                    </div>
+
+                    <ModuleColorSelector 
+                        selectedBg={moduleModalConfig.bg}
+                        selectedText={moduleModalConfig.text}
+                        onChange={(bg, text) => setModuleModalConfig(prev => ({ ...prev, bg, text }))}
+                    />
+
+                    <div className="flex gap-3 md:gap-4 pt-2 border-t border-slate-100">
+                        <button 
+                            type="button" 
+                            onClick={() => setModuleModalConfig(prev => ({ ...prev, show: false }))} 
+                            className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base"
+                        >
+                            Hủy
+                        </button>
+                        <button 
+                            type="submit" 
+                            className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base"
+                        >
+                            {moduleModalConfig.mode === 'create' ? 'TẠO MỚI' : 'LƯU THAY ĐỔI'}
+                        </button>
                     </div>
                 </form>
             </div> 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { supabase } from './supabase';
+import { parseModuleTheme } from './moduleTheme';
 
 // =========================================================================================
 // THƯ VIỆN ĐỌC PDF - TÍCH HỢP JUMP TO PAGE & VISION AI
@@ -1122,7 +1123,8 @@ export default function LectureViewer({
                         if (t.type === 'manual') {
                             const syncTitle = `${currentLec?.title || ''} : ${t.text}`;
                             const assign = assignments.find(a => 
-                                a.task_type === 'manual' && (
+                                a.task_type === 'manual' && 
+                                (!currentLec?.title || !a.card_title || a.card_title === currentLec.title) && (
                                     a.title === syncTitle || 
                                     a.title === t.text || 
                                     a.title === `[Bài giảng] ${t.text}`
@@ -1202,12 +1204,14 @@ export default function LectureViewer({
                  const payload: any = { student_completed: isNowCompleted, updated_at: new Date().toISOString() };
                  if (!isNowCompleted) payload.admin_approved = false;
                  
-                 supabase.from('assignments')
-                     .update(payload)
-                     .eq('user_id', currentUser.id)
-                     .eq('task_type', 'manual')
-                     .in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text])
-                     .then();
+                  let query = supabase.from('assignments')
+                      .update(payload)
+                      .eq('user_id', currentUser.id)
+                      .eq('task_type', 'manual');
+                  if (activeLecture?.title) {
+                      query = query.eq('card_title', activeLecture.title);
+                  }
+                  query.in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text]).then();
              } else if (taskObj.type === 'exercise' && taskObj.test_id) {
                  supabase.from('assignments')
                      .update({ is_completed: isNowCompleted, student_completed: isNowCompleted, updated_at: new Date().toISOString() })
@@ -2060,6 +2064,7 @@ export default function LectureViewer({
                 modules.map((mod, index) => {
                   const moduleLectures = lectures.filter(l => l.module_id === mod.id);
                   const isExpanded = expandedModules.includes(mod.id);
+                  const theme = parseModuleTheme(mod.title, mod);
                   
                   return (
                     <div key={mod.id} id={`module-container-${mod.id}`} className="border-b border-slate-100 last:border-0">
@@ -2076,23 +2081,50 @@ export default function LectureViewer({
                                   }, 310);
                               }
                           }} 
-                          className={`w-full text-left px-5 py-4 transition-colors flex justify-between items-center ${isExpanded ? 'bg-slate-50/50' : 'hover:bg-slate-50'}`}
+                          style={theme.hasColor ? {
+                              backgroundColor: theme.bg,
+                              borderColor: theme.border,
+                          } : {}}
+                          className={`w-full text-left px-5 py-3.5 transition-all flex justify-between items-center ${
+                              theme.hasColor 
+                                ? 'hover:brightness-95' 
+                                : isExpanded ? 'bg-slate-50/70' : 'hover:bg-slate-50'
+                          }`}
                       >
-                        <div className="flex items-start gap-3">
-                            <span className="text-slate-300 font-medium text-sm mt-0.5">
+                        <div className="flex items-center gap-3 min-w-0 pr-2">
+                            <span 
+                                className="font-bold text-xs px-2 py-0.5 rounded-md shrink-0 shadow-sm"
+                                style={theme.hasColor ? { 
+                                    backgroundColor: 'rgba(255,255,255,0.7)', 
+                                    color: theme.text,
+                                    border: `1px solid ${theme.border}`
+                                } : { 
+                                    backgroundColor: '#f1f5f9',
+                                    color: '#64748b' 
+                                }}
+                            >
                                 {(index+1).toString().padStart(2, '0')}
                             </span>
-                            <h4 className="text-[14px] font-semibold text-slate-800 leading-snug">
-                                {mod.title}
+                            <h4 
+                                className="text-[13.5px] md:text-[14px] font-bold leading-snug truncate"
+                                style={theme.hasColor ? { color: theme.text } : { color: '#1e293b' }}
+                            >
+                                {theme.cleanTitle}
                             </h4>
                         </div>
-                        <span className={`text-[10px] text-slate-400 transition-transform duration-200 shrink-0 ml-2 ${isExpanded ? 'rotate-180' : ''}`}>
+                        <span 
+                            className={`text-[10px] transition-transform duration-200 shrink-0 ml-2 ${isExpanded ? 'rotate-180' : ''}`}
+                            style={theme.hasColor ? { color: theme.text, opacity: 0.8 } : { color: '#94a3b8' }}
+                        >
                             ▼
                         </span>
                       </button>
                       
                       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="pb-3 bg-white flex flex-col gap-0.5 px-2">
+                        <div 
+                            className="py-2 bg-white flex flex-col gap-0.5 px-2"
+                            style={theme.hasColor ? { borderLeft: `3px solid ${theme.border}`, marginLeft: '8px', marginRight: '4px' } : {}}
+                        >
                           {moduleLectures.map((lec) => {
                              const isActive = activeLectureId === lec.id;
                              const totalTasks = Array.isArray(lec.task_list) ? lec.task_list.length : 0;

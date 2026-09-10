@@ -136,13 +136,17 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
       updated_at: new Date().toISOString()
     }).eq('id', task.id);
     
-    // Also sync all matching assignments (same title, same user, same task_type)
+    // Also sync all matching assignments (same title, same user, same task_type, scoped to card)
     const syncPayload: any = { student_completed: newVal, updated_at: new Date().toISOString() };
     if (!newVal) syncPayload.admin_approved = false; // Reset approval when un-completing
-    await supabase.from('assignments').update(syncPayload)
+    let syncQuery = supabase.from('assignments').update(syncPayload)
       .eq('user_id', task.user_id)
       .eq('title', task.title)
       .eq('task_type', 'manual');
+    if (task.card_title) {
+      syncQuery = syncQuery.eq('card_title', task.card_title);
+    }
+    await syncQuery;
 
     setIsUpdating(null);
     onRefresh();

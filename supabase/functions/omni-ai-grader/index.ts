@@ -17,6 +17,24 @@ serve(async (req) => {
     const geminiApiKey = Deno.env.get('GEMINI_API_KEY');
 
     // 2. KHO TÀNG PROMPT & PHÂN LUỒNG MODEL TỰ ĐỘNG
+    const UNICODE_INSTRUCTION = `
+[QUY TẮC ĐỊNH DẠNG BẮT BUỘC - HIỂN THỊ CHUẨN UNICODE]:
+- TUYỆT ĐỐI KHÔNG SỬ DỤNG MÃ LATEX HOẶC KÝ TỰ LATEX (CẤM dùng dấu $, $$, \\rightarrow, \\to, \\frac, \\pm, \\sqrt, ^{...}, _{...}, v.v.).
+- BẮT BUỘC dùng ký tự UNICODE tiêu chuẩn trực tiếp trong câu trả lời:
+  + Mũi tên phản ứng hóa học: dùng mũi tên Unicode → (hoặc ⇌, ↑, ↓). CẤM viết \\rightarrow.
+  + Số mũ / Chỉ số ion trên (superscript): dùng các ký tự Unicode ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁺ ⁻ ⁿ (Ví dụ: Cu²⁺, Fe³⁺, SO₄²⁻, Zn²⁺, 2e⁻, x², cm³, 10⁻³). CẤM viết Cu^{2+}, SO_4^{2-}.
+  + Chỉ số hóa học dưới (subscript): dùng các ký tự Unicode ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ (Ví dụ: H₂O, CO₂, O₂, CuSO₄, ZnSO₄, H₂SO₄, Fe₂O₃, Ca(OH)₂). CẤM viết O_2, CuSO_4.
+  + Trạng thái chất trong hóa học: viết thường trong ngoặc đơn thông thường: (s), (l), (g), (aq).
+  + Phương trình hóa học mẫu chuẩn:
+    2Mg (s) + O₂ (g) → 2MgO (s)
+    Zn (s) + CuSO₄ (aq) → ZnSO₄ (aq) + Cu (s)
+    Zn (s) + Cu²⁺ (aq) → Zn²⁺ (aq) + Cu (s)
+    Zn → Zn²⁺ + 2e⁻
+    Cu²⁺ + 2e⁻ → Cu
+  + Ký hiệu toán học & khoa học: dùng ±, ×, ÷, √, °, ℃, ≈, ≠, ≤, ≥, Δ, π, α, β, θ, λ, Ω, μ.
+  + Nhấn mạnh công thức hoặc tên chất bằng cách dùng in đậm **...** hoặc thẻ code \`...\`, tuyệt đối không bọc bằng dấu $.
+- Trình bày mạch lạc, phân tách rõ ràng, các tiêu đề dùng in đậm **...** để dễ đọc.`;
+
     let systemPrompt = "";
     let targetModel = "gemini-2.5-flash"; // Mặc định dùng Flash cho mọi tác vụ vì bản 2.5 cực mạnh và không có bản Pro
     let finalPromptText = "";
@@ -390,13 +408,13 @@ To sum up, ... [Tóm tắt ngắn gọn câu trả lời 1] and ... [Tóm tắt 
             finalPromptText = `${systemPrompt}\n\n[LƯU Ý ĐẶC BIỆT]: Nếu 'Nội dung từ học sinh' chứa một đề bài hoàn toàn mới, hãy bỏ qua 'Đề bài' hiện tại và viết/chấm theo đề bài mới của học sinh.\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
         case 'math':
-            systemPrompt = `Bạn là gia sư Toán IGCSE 0580, 0606 và Toán Alevel. Hãy nhìn vào hình vẽ hình học hoặc phương trình (nếu có) và giải thích từng bước giải cho học sinh. Nếu học sinh làm sai, hãy chỉ rõ lỗi sai. Không đưa đáp án cộc lốc.`;
+            systemPrompt = `Bạn là gia sư Toán IGCSE 0580, 0606 và Toán Alevel. Hãy nhìn vào hình vẽ hình học hoặc phương trình (nếu có) và giải thích từng bước giải cho học sinh. Nếu học sinh làm sai, hãy chỉ rõ lỗi sai. Không đưa đáp án cộc lốc.\n\n${UNICODE_INSTRUCTION}`;
             targetModel = "gemini-2.5-flash";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
         case 'Science':
-            systemPrompt = `Bạn là gia sư hệ Science của IGCSE và Alevel. Hãy nhìn vào hình vẽ hình học hoặc phương trình (nếu có) và giải thích từng bước giải cho học sinh. Nếu học sinh làm sai, hãy chỉ rõ lỗi sai. Không đưa đáp án cộc lốc.`;
+            systemPrompt = `Bạn là gia sư hệ Science của IGCSE và Alevel. Hãy nhìn vào hình vẽ hình học hoặc phương trình (nếu có) và giải thích từng bước giải cho học sinh. Nếu học sinh làm sai, hãy chỉ rõ lỗi sai. Không đưa đáp án cộc lốc.\n\n${UNICODE_INSTRUCTION}`;
             targetModel = "gemini-2.5-flash";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
@@ -555,7 +573,9 @@ Stage 4: To me, they are a true role model for a successful marriage. If it hadn
         default:
             // 🚀 Sửa lỗi cho chế độ Tutor: Nếu có biến prompt (từ frontend chứa nội dung bài giảng), ta dùng nó
             targetModel = "gemini-2.5-flash"; // 🚀 Tutor cần tốc độ nhả chữ chớp nhoáng
-            finalPromptText = prompt || `Bạn là Trợ lý AI giáo dục tại TonyEnglish.vn. Hãy hỗ trợ học sinh giải đáp các thắc mắc một cách ngắn gọn, dễ hiểu: ${content}`;
+            finalPromptText = prompt 
+                ? (prompt.includes('HIỂN THỊ CHUẨN UNICODE') ? prompt : `${prompt}\n\n${UNICODE_INSTRUCTION}`)
+                : `Bạn là Trợ lý AI giáo dục tại TonyEnglish.vn. Hãy hỗ trợ học sinh giải đáp các thắc mắc một cách ngắn gọn, dễ hiểu: ${content}\n\n${UNICODE_INSTRUCTION}`;
             break;
     }
 
