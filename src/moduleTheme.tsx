@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export interface ModuleColorPreset {
   id: string;
@@ -272,6 +272,82 @@ export const ModuleColorSelector: React.FC<{
             <span className="truncate">Tên Học Phần Xem Trước</span>
           </div>
           <span className="text-[10px] opacity-70">▼</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/**
+ * Reusable modal for picking theme color presets or custom colors
+ */
+export const ModuleColorModal: React.FC<{
+  isOpen: boolean;
+  title: string;
+  initialBg?: string;
+  initialText?: string;
+  onSave: (bg: string, text: string) => void;
+  onClose: () => void;
+}> = ({ isOpen, title, initialBg, initialText, onSave, onClose }) => {
+  const [bg, setBg] = useState(initialBg || '#f8fafc');
+  const [text, setText] = useState(initialText || '#1e293b');
+
+  useEffect(() => {
+    setBg(initialBg || '#f8fafc');
+    setText(initialText || '#1e293b');
+  }, [initialBg, initialText, isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
+      <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden flex flex-col animate-in zoom-in-95 duration-150">
+        <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+          <div>
+            <h3 className="font-bold text-slate-800 text-base">🎨 Chọn màu sắc</h3>
+            <p className="text-xs text-slate-500 truncate max-w-xs">{title}</p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition"
+          >
+            ✕
+          </button>
+        </div>
+        <div className="p-6">
+          <ModuleColorSelector
+            selectedBg={bg}
+            selectedText={text}
+            onChange={(newBg, newText) => {
+              setBg(newBg);
+              setText(newText);
+            }}
+          />
+        </div>
+        <div className="px-6 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-end gap-2">
+          <button
+            type="button"
+            onClick={onClose}
+            className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-200 transition"
+          >
+            Hủy
+          </button>
+          <button
+            type="button"
+            onClick={() => onSave(bg, text)}
+            className="px-5 py-2 rounded-xl text-xs font-bold bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-sm transition"
+          >
+            Lưu màu sắc
+          </button>
         </div>
       </div>
     </div>

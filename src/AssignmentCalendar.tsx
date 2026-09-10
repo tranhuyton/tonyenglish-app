@@ -300,8 +300,8 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
           {/* ========== RIGHT: TASKS PANEL ========== */}
           <div className="flex-1 min-w-0">
             {selectedDate && selectedTasks.length > 0 ? (
-              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                <div className="px-5 py-4 border-b border-slate-100 bg-slate-50/50 flex items-center justify-between">
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col max-h-[calc(100vh-220px)] min-h-[420px]">
+                <div className="px-5 py-4 border-b border-slate-100 bg-slate-50/50 flex items-center justify-between shrink-0">
                   <div>
                     <h3 className="font-black text-slate-800 text-[15px]">
                       📋 Công việc ngày {new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'long' })}
@@ -312,7 +312,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                   </div>
                 </div>
 
-                <div className="divide-y divide-slate-100 max-h-[500px] overflow-y-auto custom-scrollbar">
+                <div className="divide-y divide-slate-100 flex-1 overflow-y-auto custom-scrollbar">
                   {selectedTasks.map(task => (
                     <div key={task.id} className={`px-5 py-4 flex items-start gap-3 transition-colors ${task._effectiveCompleted ? 'bg-emerald-50/50' : ''}`}>
                       {/* CHECKBOX / STATUS */}

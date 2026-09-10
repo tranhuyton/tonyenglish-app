@@ -1719,7 +1719,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             📅 TRANG LỊCH BÁO BÀI (ASSIGNMENT CALENDAR) VÀ BẢNG CÔNG VIỆC
             ===================================================================== */}
         {activeTab === 'board' && currentUser && (
-          <div className="w-full max-w-7xl mx-auto px-4 py-6">
+          <div className="w-full px-2 sm:px-4 md:px-6 py-4">
             <TaskBoard 
               userId={currentUser.id} 
               filterCourseId={filterCourse}

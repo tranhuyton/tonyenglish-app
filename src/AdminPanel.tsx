@@ -7,7 +7,7 @@ import LectureEditorModal from './LectureEditorModal';
 import IgcseTestEditorModal from './IgcseTestEditorModal';
 import BatchImportModal from './BatchImportModal';
 import BatchImportJsonModal from './BatchImportJsonModal';
-import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorSelector } from './moduleTheme';
+import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorSelector, ModuleColorModal } from './moduleTheme';
 import './tailwind.css';
 
 let adminSearchTimer: any;
@@ -338,6 +338,21 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [expandedBoardCardId, setExpandedBoardCardId] = useState<string | null>(null);
   const [boardTestPickerFor, setBoardTestPickerFor] = useState<string | null>(null); // card_id
   const [boardTestSelectedIds, setBoardTestSelectedIds] = useState<Set<string>>(new Set());
+  const [columnColorTarget, setColumnColorTarget] = useState<{ id: string; title: string } | null>(null);
+
+  const handleSaveAdminColumnColor = async (bg: string, text: string) => {
+    if (!columnColorTarget) return;
+    const clean = parseModuleTheme(columnColorTarget.title).cleanTitle;
+    const newTitle = formatModuleTitleWithColor(clean, bg, text);
+    try {
+      await supabase.from('board_columns').update({ title: newTitle }).eq('id', columnColorTarget.id);
+      setBoardColumns(prev => prev.map(c => c.id === columnColorTarget.id ? { ...c, title: newTitle } : c));
+    } catch (e) {
+      console.error('Error updating admin column color:', e);
+    } finally {
+      setColumnColorTarget(null);
+    }
+  };
 
   useEffect(() => {
     if (!boardCourseId) {
@@ -2341,10 +2356,27 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <div className="flex-1 flex overflow-x-auto gap-4 p-4 custom-scrollbar bg-slate-100/50">
                   {boardColumns.map((col, colIdx) => {
                     const colCards = boardCards.filter(c => c.column_id === col.id);
+                    const colTheme = parseModuleTheme(col.title);
                     return (
-                      <div key={col.id} className="w-[280px] shrink-0 bg-slate-50/80 rounded-2xl p-3 border border-slate-200 flex flex-col max-h-full">
-                        <div className="flex items-center justify-between mb-3 px-1 shrink-0">
-                          <h4 className="font-black text-[13px] text-slate-700 truncate mr-1" title={col.title}>{col.title} <span className="text-slate-400 font-normal text-[11px]">({colCards.length})</span></h4>
+                      <div 
+                        key={col.id} 
+                        className="w-[280px] shrink-0 rounded-2xl p-3 border flex flex-col max-h-full transition-all shadow-xs"
+                        style={{
+                          backgroundColor: colTheme.hasColor ? `${colTheme.bg}60` : 'rgba(248, 250, 252, 0.8)',
+                          borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0'
+                        }}
+                      >
+                        <div 
+                          className="flex items-center justify-between mb-3 px-2 py-1.5 rounded-xl border shrink-0 shadow-2xs"
+                          style={{
+                            backgroundColor: colTheme.hasColor ? colTheme.bg : '#ffffff',
+                            borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
+                            color: colTheme.hasColor ? colTheme.text : '#334155'
+                          }}
+                        >
+                          <h4 className="font-black text-[13px] truncate mr-1" title={colTheme.cleanTitle}>
+                            {colTheme.cleanTitle} <span className="opacity-60 font-normal text-[11px]">({colCards.length})</span>
+                          </h4>
                           <div className="flex items-center gap-0.5 shrink-0">
                             <button 
                               disabled={colIdx === 0}
@@ -2384,14 +2416,22 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             >
                               →
                             </button>
+                            <button 
+                              onClick={() => setColumnColorTarget({ id: col.id, title: col.title })}
+                              className="text-slate-400 hover:text-blue-600 transition-colors p-1" 
+                              title="Đổi màu cột"
+                            >
+                              🎨
+                            </button>
                             <button onClick={async () => {
-                              const newTitle = prompt('Đổi tên cột:', col.title);
+                              const newTitle = prompt('Đổi tên cột:', colTheme.cleanTitle);
                               if (!newTitle?.trim()) return;
-                              await supabase.from('board_columns').update({ title: newTitle.trim() }).eq('id', col.id);
-                              setBoardColumns(boardColumns.map(c => c.id === col.id ? { ...c, title: newTitle.trim() } : c));
+                              const updatedTitle = formatModuleTitleWithColor(newTitle.trim(), colTheme.bg, colTheme.text);
+                              await supabase.from('board_columns').update({ title: updatedTitle }).eq('id', col.id);
+                              setBoardColumns(boardColumns.map(c => c.id === col.id ? { ...c, title: updatedTitle } : c));
                             }} className="text-slate-400 hover:text-[#0a5482] transition-colors p-1" title="Đổi tên">✏️</button>
                             <button onClick={async () => {
-                              if (!window.confirm(`Xóa cột "${col.title}" và tất cả thẻ bên trong?`)) return;
+                              if (!window.confirm(`Xóa cột "${colTheme.cleanTitle}" và tất cả thẻ bên trong?`)) return;
                               await supabase.from('board_columns').delete().eq('id', col.id);
                               setBoardColumns(boardColumns.filter(c => c.id !== col.id));
                               setBoardCards(boardCards.filter(c => c.column_id !== col.id));
@@ -2504,6 +2544,21 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <div className="p-8 text-center text-slate-400 text-sm">Vui lòng chọn khóa học để xem Bảng Công việc.</div>
               )}
             </div>
+
+            {/* BOARD COLUMN COLOR PICKER MODAL */}
+            {columnColorTarget && (() => {
+              const theme = parseModuleTheme(columnColorTarget.title);
+              return (
+                <ModuleColorModal
+                  isOpen={true}
+                  title={theme.cleanTitle}
+                  initialBg={theme.bg}
+                  initialText={theme.text}
+                  onSave={handleSaveAdminColumnColor}
+                  onClose={() => setColumnColorTarget(null)}
+                />
+              );
+            })()}
 
             {/* BOARD TEST PICKER MODAL */}
             {boardTestPickerFor && (

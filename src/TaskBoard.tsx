@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
+import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorModal } from './moduleTheme';
 
 interface Assignment {
   id: string;
@@ -31,6 +32,12 @@ interface ColumnData {
   cards: CardData[];
 }
 
+interface ActiveModalCard {
+  card: CardData;
+  colName: string;
+  boardTitle: string;
+}
+
 export default function TaskBoard({ userId, filterCourseId = 'all', filterElement, onStartTest }: { userId: string; filterCourseId?: string; filterElement?: React.ReactNode; onStartTest?: (testId: string) => void }) {
   const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
@@ -39,11 +46,21 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
   const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number }>>(new Map());
   const [inProgressTestIds, setInProgressTestIds] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
-  const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
+  const [activeModalCard, setActiveModalCard] = useState<ActiveModalCard | null>(null);
+  const [colorPickerTarget, setColorPickerTarget] = useState<{ colId?: string; colTitle: string } | null>(null);
 
   useEffect(() => {
     fetchAssignments();
   }, [userId]);
+
+  useEffect(() => {
+    if (!activeModalCard) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveModalCard(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeModalCard]);
 
   const fetchAssignments = async () => {
     try {
@@ -149,22 +166,52 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
       setAssignments(prev => prev.map(a => 
         (a.title === task.title && a.task_type === 'manual' && (!task.card_title || a.card_title === task.card_title)) ? { ...a, student_completed: newStatus } : a
       ));
+
+      // Also sync activeModalCard if currently open
+      setActiveModalCard(prev => {
+        if (!prev) return null;
+        const updatedItems = prev.card.items.map(a => 
+          (a.title === task.title && a.task_type === 'manual' && (!task.card_title || a.card_title === task.card_title)) ? { ...a, student_completed: newStatus } : a
+        );
+        const compCount = updatedItems.filter(i => {
+          if (i.task_type === 'test') {
+            return i.is_completed || (i.test_id && completedTestIds.has(String(i.test_id)));
+          }
+          return i.student_completed;
+        }).length;
+        return {
+          ...prev,
+          card: {
+            ...prev.card,
+            items: updatedItems,
+            completedCount: compCount
+          }
+        };
+      });
     } catch (error) {
       console.error('Error toggling task:', error);
       alert('Không thể cập nhật trạng thái công việc. Vui lòng thử lại.');
     }
   };
 
-  const toggleCardExpand = (cardId: string) => {
-    setExpandedCards(prev => {
-      const next = new Set(prev);
-      if (next.has(cardId)) {
-        next.delete(cardId);
-      } else {
-        next.add(cardId);
+  const handleSaveColumnColor = async (bg: string, text: string) => {
+    if (!colorPickerTarget) return;
+    const clean = parseModuleTheme(colorPickerTarget.colTitle).cleanTitle;
+    const newTitle = formatModuleTitleWithColor(clean, bg, text);
+
+    try {
+      if (colorPickerTarget.colId) {
+        await supabase.from('board_columns').update({ title: newTitle }).eq('id', colorPickerTarget.colId);
+        setBoardColumns(prev => prev.map(c => c.id === colorPickerTarget.colId ? { ...c, title: newTitle } : c));
       }
-      return next;
-    });
+
+      await supabase.from('assignments').update({ category: newTitle }).eq('category', colorPickerTarget.colTitle);
+      setAssignments(prev => prev.map(a => a.category === colorPickerTarget.colTitle ? { ...a, category: newTitle } : a));
+    } catch (e) {
+      console.error('Error updating column color:', e);
+    } finally {
+      setColorPickerTarget(null);
+    }
   };
 
   const boardsData = useMemo(() => {
@@ -211,7 +258,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
       // Sort columns: Topic 1 -> 10 strictly, then Exam practice ALWAYS at the very end
       const getColumnWeight = (catName: string) => {
-        const norm = catName.trim().toLowerCase();
+        const norm = parseModuleTheme(catName).cleanTitle.trim().toLowerCase();
         // Exam practice & Past papers ALWAYS at the very end
         if (norm.includes('exam practice') || norm.includes('past paper') || norm.includes('đề thi')) {
           return 999999;
@@ -222,7 +269,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
           return parseInt(match[1], 10);
         }
         // Matching board_columns order_index
-        const bc = boardColumns.find(c => c.title && c.title.trim().toLowerCase() === norm);
+        const bc = boardColumns.find(c => parseModuleTheme(c.title).cleanTitle.trim().toLowerCase() === norm);
         if (bc && bc.order_index != null) {
           return 1000 + bc.order_index;
         }
@@ -261,10 +308,10 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
   }
 
   return (
-    <div className="min-h-[500px] bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 text-slate-800 rounded-3xl relative">
-      <div className="max-w-[1600px] mx-auto space-y-12">
+    <div className="w-full min-h-[600px] bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-3 sm:p-5 md:p-6 text-slate-800 rounded-3xl relative">
+      <div className="w-full space-y-10">
         {filterElement && (
-          <div className="flex justify-end mb-[-1.5rem] relative z-40">
+          <div className="flex justify-end mb-[-1rem] relative z-40">
             {filterElement}
           </div>
         )}
@@ -292,239 +339,426 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
               </div>
             </div>
 
-            {/* Board */}
-            <div className="flex flex-col md:flex-row gap-6 overflow-x-auto pb-8 snap-x items-start">
-              {board.columns.map(col => (
-                <div 
-                  key={col.name} 
-                  className="flex-none w-full md:w-80 lg:w-[350px] bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 p-4 snap-start flex flex-col h-fit"
-                >
-                  <div className="flex justify-between items-center mb-4 px-2">
-                    <h2 className="font-bold text-lg text-slate-700">{col.name}</h2>
-                    <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2.5 py-1 rounded-full">
-                      {col.cards.length} thẻ
-                    </span>
-                  </div>
-              
-              <div className="flex flex-col gap-3">
-                {col.cards.map(card => {
-                  const cardId = `${col.name}-${card.title}`;
-                  const isExpanded = expandedCards.has(cardId);
-                  const progressPct = card.totalCount > 0 ? Math.round((card.completedCount / card.totalCount) * 100) : 0;
+            {/* Board - Horizontal Scroll like Trello */}
+            <div className="flex flex-row gap-5 overflow-x-auto pb-6 pt-1 custom-scrollbar items-start w-full">
+              {board.columns.map(col => {
+                const matchingCol = boardColumns.find(bc => {
+                  const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
+                  const t2 = parseModuleTheme(col.name).cleanTitle.trim().toLowerCase();
+                  return t1 === t2 || (bc.id && col.name === bc.id);
+                });
+                const colTheme = matchingCol ? parseModuleTheme(matchingCol.title) : parseModuleTheme(col.name);
 
-                  return (
-                    <div key={card.title} className="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-                      <div 
-                        className="p-4 cursor-pointer select-none group"
-                        onClick={() => toggleCardExpand(cardId)}
-                      >
-                        <div className="flex justify-between items-start mb-2">
-                          <h3 className="font-semibold text-slate-800 text-sm leading-tight group-hover:text-[#0ea5e9] transition-colors">{card.title}</h3>
-                          {isExpanded ? (
-                            <span className="text-slate-400 text-xs">▲</span>
-                          ) : (
-                            <span className="text-slate-400 text-xs">▼</span>
-                          )}
-                        </div>
-                        
-                        <div className="flex items-center gap-2">
-                          <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                            <div 
-                              className="h-full bg-emerald-500 rounded-full transition-all duration-300"
-                              style={{ width: `${progressPct}%` }}
-                            />
-                          </div>
-                          <div className="flex items-center gap-1 shrink-0">
-                            <span className="text-xs font-bold text-emerald-600">
-                              {progressPct}%
-                            </span>
-                            <span className="text-[11px] font-medium text-slate-400">
-                              ({card.completedCount}/{card.totalCount})
-                            </span>
-                          </div>
-                        </div>
+                return (
+                  <div 
+                    key={col.name} 
+                    className="flex-none w-[340px] md:w-[360px] rounded-2xl shadow-sm border p-3.5 flex flex-col max-h-[calc(100vh-220px)] min-h-[420px] transition-all"
+                    style={{
+                      backgroundColor: colTheme.hasColor ? `${colTheme.bg}40` : 'rgba(255, 255, 255, 0.85)',
+                      borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0'
+                    }}
+                  >
+                    {/* Column Header */}
+                    <div 
+                      className="flex justify-between items-center p-3 rounded-xl mb-3 border shadow-xs transition-colors shrink-0"
+                      style={{
+                        backgroundColor: colTheme.hasColor ? colTheme.bg : '#ffffff',
+                        borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
+                        color: colTheme.hasColor ? colTheme.text : '#1e293b'
+                      }}
+                    >
+                      <div className="flex items-center gap-2 min-w-0">
+                        <h2 className="font-extrabold text-[15px] truncate" title={colTheme.cleanTitle}>
+                          {colTheme.cleanTitle}
+                        </h2>
                       </div>
-
-                      {isExpanded && (
-                        <div className="px-4 pb-4 border-t border-slate-50 bg-slate-50/50">
-                          <div className="mt-3 flex flex-col gap-2">
-                            {card.items.map(item => {
-                              const isTest = item.task_type === 'test';
-                              const isItemDone = isTest 
-                                ? (item.is_completed || (item.test_id && completedTestIds.has(String(item.test_id))))
-                                : item.student_completed;
-                              const isItemInProgress = isTest && !isItemDone && item.test_id && inProgressTestIds.has(String(item.test_id));
-                              const testScore = isTest ? (item.test_id ? latestTestScores.get(String(item.test_id)) : (item.title ? latestTestScores.get(item.title.trim().toLowerCase()) : null)) : null;
-
-                              if (isTest) {
-                                return (
-                                  <div 
-                                    key={item.id} 
-                                    className={`p-3 rounded-xl border transition-all cursor-pointer select-none ${
-                                      isItemDone 
-                                        ? 'bg-emerald-50/50 border-emerald-200 hover:border-emerald-300' 
-                                        : isItemInProgress 
-                                          ? 'bg-amber-50/50 border-amber-200 hover:border-amber-300 shadow-sm' 
-                                          : 'bg-white border-slate-200 hover:border-sky-300 hover:bg-sky-50/20 shadow-sm'
-                                    }`}
-                                    onClick={() => {
-                                      if (item.test_id && onStartTest) onStartTest(item.test_id);
-                                    }}
-                                  >
-                                    <div className="flex items-start gap-2.5">
-                                      <div className="mt-0.5 shrink-0 text-base">
-                                        {isItemDone ? (
-                                          <span className="text-emerald-500 font-bold">✅</span>
-                                        ) : isItemInProgress ? (
-                                          <span className="text-amber-500">⏳</span>
-                                        ) : (
-                                          <span className="text-sky-500">📝</span>
-                                        )}
-                                      </div>
-                                      <div className="flex-1 min-w-0">
-                                        <div className="flex items-baseline justify-between gap-1">
-                                          <p className={`text-xs font-bold leading-snug ${
-                                            isItemDone ? 'text-slate-600' : 'text-slate-800'
-                                          }`}>
-                                            {item.title}
-                                          </p>
-                                          {item.due_date && (
-                                            <span className="text-[10px] text-slate-400 shrink-0 ml-2">
-                                              {new Date(item.due_date + 'T00:00:00').toLocaleDateString('vi-VN', {day:'numeric', month:'short'})}
-                                            </span>
-                                          )}
-                                        </div>
-
-                                        <div className="mt-2.5 flex items-center justify-between gap-2 flex-wrap">
-                                          <div>
-                                            {isItemDone ? (
-                                              <div className="flex items-center gap-1.5 flex-wrap">
-                                                <span className="inline-flex items-center text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">
-                                                  ✓ Hoàn thành
-                                                </span>
-                                                {testScore && (
-                                                  <span 
-                                                    className="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full bg-sky-100 text-[#0284c7] font-black border border-sky-200 shadow-sm"
-                                                    title={`Điểm làm gần đây nhất: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
-                                                  >
-                                                    🎯 {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score}
-                                                    <span className="text-[10px] font-bold text-sky-600">({testScore.percent}%)</span>
-                                                  </span>
-                                                )}
-                                              </div>
-                                            ) : isItemInProgress ? (
-                                              <span className="inline-flex items-center text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">
-                                                ⏳ Đang làm dở
-                                              </span>
-                                            ) : (
-                                              <span className="inline-flex items-center text-[10px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 font-medium">
-                                                Chưa làm
-                                              </span>
-                                            )}
-                                          </div>
-
-                                          {isItemDone ? (
-                                            <button 
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                if (item.test_id && onStartTest) onStartTest(item.test_id);
-                                              }}
-                                              className="text-[11px] font-bold px-3 py-1 rounded-lg bg-emerald-100 hover:bg-emerald-200 text-emerald-800 transition-colors flex items-center gap-1 shrink-0 shadow-sm"
-                                              title="Làm lại bài thi này"
-                                            >
-                                              <span>🔄</span> Làm lại
-                                            </button>
-                                          ) : isItemInProgress ? (
-                                            <button 
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                if (item.test_id && onStartTest) onStartTest(item.test_id);
-                                              }}
-                                              className="text-[11px] font-bold px-3 py-1 rounded-lg bg-amber-500 hover:bg-amber-600 text-white shadow-sm transition-all flex items-center gap-1 shrink-0"
-                                              title="Làm tiếp bài đang làm dở"
-                                            >
-                                              Làm tiếp ➜
-                                            </button>
-                                          ) : (
-                                            <button 
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                if (item.test_id && onStartTest) onStartTest(item.test_id);
-                                              }}
-                                              className="text-[11px] font-bold px-3 py-1 rounded-lg bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-sm transition-all flex items-center gap-1 shrink-0"
-                                              title="Bắt đầu làm bài"
-                                            >
-                                              Bắt đầu làm bài ➜
-                                            </button>
-                                          )}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                );
-                              }
-
-                              return (
-                                <div 
-                                  key={item.id} 
-                                  className={`flex items-start gap-3 p-2.5 rounded-xl border transition-all cursor-pointer select-none ${
-                                    isItemDone 
-                                      ? 'bg-slate-50/70 border-slate-200/80 opacity-75' 
-                                      : 'bg-white border-slate-200 hover:border-sky-300 hover:bg-sky-50/20 shadow-sm'
-                                  }`}
-                                  onClick={() => toggleTask(item)}
-                                >
-                                  <div className="mt-0.5 shrink-0">
-                                    {isItemDone ? (
-                                      <div className="w-5 h-5 rounded-md bg-emerald-500 text-white flex items-center justify-center text-xs font-black shadow-sm">
-                                        ✓
-                                      </div>
-                                    ) : (
-                                      <div className="w-5 h-5 rounded-md border-2 border-slate-300 bg-white hover:border-[#0ea5e9] hover:bg-sky-50 transition-all flex items-center justify-center shadow-sm">
-                                      </div>
-                                    )}
-                                  </div>
-                                  <div className="flex flex-col gap-0.5 w-full min-w-0">
-                                    <div className="flex items-baseline justify-between gap-1">
-                                      <span className={`text-xs font-semibold leading-snug ${
-                                        isItemDone ? 'line-through text-slate-400' : 'text-slate-700'
-                                      }`}>
-                                        {item.title}
-                                      </span>
-                                      {item.due_date && (
-                                        <span className="text-[10px] text-slate-400 shrink-0 whitespace-nowrap">
-                                          {new Date(item.due_date + 'T00:00:00').toLocaleDateString('vi-VN', {day:'numeric', month:'short'})}
-                                        </span>
-                                      )}
-                                    </div>
-                                    <div className="mt-1 flex flex-wrap gap-1">
-                                      {isItemDone && item.admin_approved && (
-                                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">✅ Đã hoàn thành</span>
-                                      )}
-                                      {isItemDone && !item.admin_approved && (
-                                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">⏳ Chờ giáo viên phê duyệt</span>
-                                      )}
-                                      {item.due_date && !isItemDone && new Date() > new Date(item.due_date + 'T23:59:59') && (
-                                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-bold">⚠️ Quá hạn</span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      )}
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <span 
+                          className="text-xs font-bold px-2 py-0.5 rounded-full border"
+                          style={{
+                            backgroundColor: 'white',
+                            borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
+                            color: colTheme.hasColor ? colTheme.text : '#64748b'
+                          }}
+                        >
+                          {col.cards.length} thẻ
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setColorPickerTarget({ colId: matchingCol?.id, colTitle: matchingCol?.title || col.name })}
+                          className="w-7 h-7 rounded-lg bg-white/80 hover:bg-white border border-black/10 hover:border-black/20 flex items-center justify-center text-xs transition cursor-pointer shadow-xs"
+                          title="Chọn màu cột này"
+                        >
+                          🎨
+                        </button>
+                      </div>
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+                
+                    {/* Cards List inside column with vertical scroll */}
+                    <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 flex flex-col gap-3 min-h-0 pt-1">
+                      {col.cards.map(card => {
+                        const progressPct = card.totalCount > 0 ? Math.round((card.completedCount / card.totalCount) * 100) : 0;
+                        const testCount = card.items.filter(i => i.task_type === 'test').length;
+                        const manualCount = card.items.filter(i => i.task_type === 'manual').length;
+                        const isCardAllDone = card.totalCount > 0 && card.completedCount === card.totalCount;
+                        const hasOverdue = card.items.some(i => {
+                          const isItemDone = i.task_type === 'test' 
+                            ? (i.is_completed || (i.test_id && completedTestIds.has(String(i.test_id))))
+                            : i.student_completed;
+                          return i.due_date && !isItemDone && new Date() > new Date(i.due_date + 'T23:59:59');
+                        });
+
+                        return (
+                          <div 
+                            key={card.title} 
+                            onClick={() => setActiveModalCard({ card, colName: col.name, boardTitle: board.title })}
+                            className="bg-white rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 hover:-translate-y-0.5 transition-all p-3.5 cursor-pointer select-none group"
+                          >
+                            <div className="flex justify-between items-start gap-2 mb-2">
+                              <h3 className="font-bold text-slate-800 text-sm leading-snug group-hover:text-[#0ea5e9] transition-colors">
+                                {card.title}
+                              </h3>
+                              <span className="text-slate-300 group-hover:text-[#0ea5e9] text-xs transition-colors shrink-0">
+                                ➜
+                              </span>
+                            </div>
+                            
+                            {/* Progress bar */}
+                            <div className="flex items-center gap-2 mb-2.5">
+                              <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div 
+                                  className={`h-full rounded-full transition-all duration-300 ${isCardAllDone ? 'bg-emerald-500' : 'bg-[#0ea5e9]'}`}
+                                  style={{ width: `${progressPct}%` }}
+                                />
+                              </div>
+                              <div className="flex items-center gap-1 shrink-0">
+                                <span className={`text-xs font-bold ${isCardAllDone ? 'text-emerald-600' : 'text-[#0284c7]'}`}>
+                                  {progressPct}%
+                                </span>
+                                <span className="text-[11px] font-medium text-slate-400">
+                                  ({card.completedCount}/{card.totalCount})
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Card badges */}
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              {testCount > 0 && (
+                                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-sky-50 text-sky-700 border border-sky-100">
+                                  📝 {testCount} đề thi
+                                </span>
+                              )}
+                              {manualCount > 0 && (
+                                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-slate-50 text-slate-600 border border-slate-200/70">
+                                  ☑️ {manualCount} việc
+                                </span>
+                              )}
+                              {isCardAllDone && (
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-700">
+                                  ✓ Xong
+                                </span>
+                              )}
+                              {hasOverdue && (
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-red-100 text-red-600">
+                                  ⚠️ Quá hạn
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}
       </div>
+
+      {/* ================= CARD DETAIL POPUP MODAL ================= */}
+      {activeModalCard && (() => {
+        const matchingCol = boardColumns.find(bc => {
+          const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
+          const t2 = parseModuleTheme(activeModalCard.colName).cleanTitle.trim().toLowerCase();
+          return t1 === t2 || (bc.id && activeModalCard.colName === bc.id);
+        });
+        const modalTheme = matchingCol ? parseModuleTheme(matchingCol.title) : parseModuleTheme(activeModalCard.colName);
+        const currentCard = activeModalCard.card;
+        const progressPct = currentCard.totalCount > 0 ? Math.round((currentCard.completedCount / currentCard.totalCount) * 100) : 0;
+        const isCardAllDone = currentCard.totalCount > 0 && currentCard.completedCount === currentCard.totalCount;
+
+        return (
+          <div 
+            className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
+            onClick={() => setActiveModalCard(null)}
+          >
+            <div 
+              className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col max-h-[88vh] overflow-hidden animate-in zoom-in-95 duration-150"
+              onClick={e => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div 
+                className="px-6 py-5 border-b flex items-start justify-between gap-4 transition-colors shrink-0"
+                style={{
+                  backgroundColor: modalTheme.hasColor ? modalTheme.bg : '#f8fafc',
+                  borderColor: modalTheme.hasColor ? modalTheme.border : '#e2e8f0'
+                }}
+              >
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap mb-1.5">
+                    <span 
+                      className="text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-lg border shadow-xs"
+                      style={{
+                        backgroundColor: 'white',
+                        color: modalTheme.hasColor ? modalTheme.text : '#0284c7',
+                        borderColor: modalTheme.hasColor ? modalTheme.border : '#bae6fd'
+                      }}
+                    >
+                      {modalTheme.cleanTitle}
+                    </span>
+                    <span className="text-xs text-slate-500 font-medium">• {activeModalCard.boardTitle}</span>
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+                    {currentCard.title}
+                  </h2>
+                  
+                  {/* Progress bar in header */}
+                  <div className="mt-3 flex items-center gap-3">
+                    <div className="flex-1 h-2 bg-black/10 rounded-full overflow-hidden">
+                      <div 
+                        className={`h-full rounded-full transition-all duration-300 ${isCardAllDone ? 'bg-emerald-500' : 'bg-[#0ea5e9]'}`}
+                        style={{ width: `${progressPct}%` }}
+                      />
+                    </div>
+                    <span className="text-xs font-bold shrink-0" style={{ color: modalTheme.hasColor ? modalTheme.text : '#0f172a' }}>
+                      {progressPct}% ({currentCard.completedCount}/{currentCard.totalCount} hoàn thành)
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setActiveModalCard(null)}
+                  className="w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all shadow-xs shrink-0 border border-slate-200/80 cursor-pointer"
+                  title="Đóng (ESC)"
+                >
+                  ✕
+                </button>
+              </div>
+
+              {/* Modal Body - Scrollable Items */}
+              <div className="flex-1 overflow-y-auto custom-scrollbar p-5 sm:p-6 space-y-3 bg-slate-50/50">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                    Danh sách bài tập ({currentCard.items.length} mục)
+                  </span>
+                  <span className="text-xs font-medium text-slate-400">
+                    {currentCard.completedCount}/{currentCard.totalCount} đã xong
+                  </span>
+                </div>
+
+                {currentCard.items.map(item => {
+                  const isTest = item.task_type === 'test';
+                  const isItemDone = isTest 
+                    ? (item.is_completed || (item.test_id && completedTestIds.has(String(item.test_id))))
+                    : item.student_completed;
+                  const isItemInProgress = isTest && !isItemDone && item.test_id && inProgressTestIds.has(String(item.test_id));
+                  const testScore = isTest ? (item.test_id ? latestTestScores.get(String(item.test_id)) : (item.title ? latestTestScores.get(item.title.trim().toLowerCase()) : null)) : null;
+
+                  if (isTest) {
+                    return (
+                      <div 
+                        key={item.id} 
+                        className={`p-3.5 rounded-2xl border transition-all select-none ${
+                          isItemDone 
+                            ? 'bg-emerald-50/50 border-emerald-200' 
+                            : isItemInProgress 
+                              ? 'bg-amber-50/50 border-amber-200 shadow-xs' 
+                              : 'bg-white border-slate-200 hover:border-sky-300 shadow-xs'
+                        }`}
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="mt-0.5 shrink-0 text-lg">
+                            {isItemDone ? (
+                              <span className="text-emerald-500 font-bold">✅</span>
+                            ) : isItemInProgress ? (
+                              <span className="text-amber-500">⏳</span>
+                            ) : (
+                              <span className="text-sky-500">📝</span>
+                            )}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-baseline justify-between gap-2">
+                              <p className={`text-sm font-bold leading-snug ${
+                                isItemDone ? 'text-slate-600' : 'text-slate-800'
+                              }`}>
+                                {item.title}
+                              </p>
+                              {item.due_date && (
+                                <span className="text-[11px] text-slate-400 shrink-0 ml-2">
+                                  Hạn: {new Date(item.due_date + 'T00:00:00').toLocaleDateString('vi-VN', {day:'numeric', month:'short'})}
+                                </span>
+                              )}
+                            </div>
+
+                            <div className="mt-2.5 flex items-center justify-between gap-2 flex-wrap">
+                              <div>
+                                {isItemDone ? (
+                                  <div className="flex items-center gap-1.5 flex-wrap">
+                                    <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">
+                                      ✓ Hoàn thành
+                                    </span>
+                                    {testScore && (
+                                      <span 
+                                        className="inline-flex items-center gap-1 text-[11px] px-2.5 py-0.5 rounded-full bg-sky-100 text-[#0284c7] font-black border border-sky-200 shadow-xs"
+                                        title={`Điểm làm gần đây nhất: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
+                                      >
+                                        🎯 {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score}
+                                        <span className="text-[10px] font-bold text-sky-600">({testScore.percent}%)</span>
+                                      </span>
+                                    )}
+                                  </div>
+                                ) : isItemInProgress ? (
+                                  <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">
+                                    ⏳ Đang làm dở
+                                  </span>
+                                ) : (
+                                  <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-500 font-medium">
+                                    Chưa làm
+                                  </span>
+                                )}
+                              </div>
+
+                              {isItemDone ? (
+                                <button 
+                                  onClick={() => {
+                                    if (item.test_id && onStartTest) {
+                                      onStartTest(item.test_id);
+                                      setActiveModalCard(null);
+                                    }
+                                  }}
+                                  className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-800 transition-colors flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer"
+                                  title="Làm lại bài thi này"
+                                >
+                                  <span>🔄</span> Làm lại
+                                </button>
+                              ) : isItemInProgress ? (
+                                <button 
+                                  onClick={() => {
+                                    if (item.test_id && onStartTest) {
+                                      onStartTest(item.test_id);
+                                      setActiveModalCard(null);
+                                    }
+                                  }}
+                                  className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
+                                  title="Làm tiếp bài đang làm dở"
+                                >
+                                  Làm tiếp ➜
+                                </button>
+                              ) : (
+                                <button 
+                                  onClick={() => {
+                                    if (item.test_id && onStartTest) {
+                                      onStartTest(item.test_id);
+                                      setActiveModalCard(null);
+                                    }
+                                  }}
+                                  className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
+                                  title="Bắt đầu làm bài"
+                                >
+                                  Bắt đầu làm bài ➜
+                                </button>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div 
+                      key={item.id} 
+                      className={`flex items-start gap-3 p-3.5 rounded-2xl border transition-all cursor-pointer select-none ${
+                        isItemDone 
+                          ? 'bg-slate-50/80 border-slate-200/80 opacity-80' 
+                          : 'bg-white border-slate-200 hover:border-sky-300 shadow-xs'
+                      }`}
+                      onClick={() => toggleTask(item)}
+                    >
+                      <div className="mt-0.5 shrink-0">
+                        {isItemDone ? (
+                          <div className="w-5 h-5 rounded-md bg-emerald-500 text-white flex items-center justify-center text-xs font-black shadow-xs">
+                            ✓
+                          </div>
+                        ) : (
+                          <div className="w-5 h-5 rounded-md border-2 border-slate-300 bg-white hover:border-[#0ea5e9] hover:bg-sky-50 transition-all flex items-center justify-center shadow-xs">
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex flex-col gap-1 w-full min-w-0">
+                        <div className="flex items-baseline justify-between gap-2">
+                          <span className={`text-sm font-semibold leading-snug ${
+                            isItemDone ? 'line-through text-slate-400' : 'text-slate-800'
+                          }`}>
+                            {item.title}
+                          </span>
+                          {item.due_date && (
+                            <span className="text-[11px] text-slate-400 shrink-0 whitespace-nowrap">
+                              Hạn: {new Date(item.due_date + 'T00:00:00').toLocaleDateString('vi-VN', {day:'numeric', month:'short'})}
+                            </span>
+                          )}
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {isItemDone && item.admin_approved && (
+                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">✅ Đã hoàn thành</span>
+                          )}
+                          {isItemDone && !item.admin_approved && (
+                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">⏳ Chờ giáo viên phê duyệt</span>
+                          )}
+                          {item.due_date && !isItemDone && new Date() > new Date(item.due_date + 'T23:59:59') && (
+                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-bold">⚠️ Quá hạn</span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Modal Footer */}
+              <div className="px-6 py-4 border-t border-slate-100 bg-white flex items-center justify-between shrink-0">
+                <div className="text-xs text-slate-400">
+                  {isCardAllDone ? '🎉 Bạn đã hoàn thành toàn bộ công việc trong thẻ này!' : '💡 Nhấp vào bài để bắt đầu làm hoặc tick chọn việc đã làm'}
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setActiveModalCard(null)}
+                  className="px-5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer"
+                >
+                  Đóng
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* ================= COLUMN COLOR PICKER MODAL ================= */}
+      {colorPickerTarget && (() => {
+        const theme = parseModuleTheme(colorPickerTarget.colTitle);
+        return (
+          <ModuleColorModal
+            isOpen={true}
+            title={theme.cleanTitle}
+            initialBg={theme.bg}
+            initialText={theme.text}
+            onSave={handleSaveColumnColor}
+            onClose={() => setColorPickerTarget(null)}
+          />
+        );
+      })()}
       <style>{`
         .custom-scrollbar::-webkit-scrollbar {
           width: 4px;
