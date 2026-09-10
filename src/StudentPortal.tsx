@@ -1116,7 +1116,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     <div className="min-h-[100dvh] bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full flex flex-col">
       {/* HEADER: Glassmorphism */}
       <header className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-40 shadow-sm">
-        <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
+        <div className={`${activeTab === 'board' ? 'w-full px-4 md:px-8' : 'max-w-[1200px] w-full mx-auto px-4 md:px-6'} py-3 flex items-center justify-between transition-all`}>
           
           <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => {
               resetWorkspaceAndChat(); 
@@ -1256,7 +1256,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       </header>
 
-      <main className="flex-1 w-full max-w-[1200px] mx-auto p-4 md:p-8 overflow-y-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
+      <main className={`flex-1 w-full ${activeTab === 'board' ? 'max-w-none px-3 sm:px-5 md:px-8 py-4' : 'max-w-[1200px] mx-auto p-4 md:p-8'} overflow-y-auto custom-scrollbar`} style={{ WebkitOverflowScrolling: 'touch' }}>
         
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-500">
@@ -1719,7 +1719,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             📅 TRANG LỊCH BÁO BÀI (ASSIGNMENT CALENDAR) VÀ BẢNG CÔNG VIỆC
             ===================================================================== */}
         {activeTab === 'board' && currentUser && (
-          <div className="w-full px-2 sm:px-4 md:px-6 py-4">
+          <div className="w-full">
             <TaskBoard 
               userId={currentUser.id} 
               filterCourseId={filterCourse}
