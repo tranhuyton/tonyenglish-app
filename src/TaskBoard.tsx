@@ -48,6 +48,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
   const [loading, setLoading] = useState(true);
   const [activeModalCard, setActiveModalCard] = useState<ActiveModalCard | null>(null);
   const [colorPickerTarget, setColorPickerTarget] = useState<{ colId?: string; colTitle: string } | null>(null);
+  const [activeBoardIndex, setActiveBoardIndex] = useState(0);
 
   useEffect(() => {
     fetchAssignments();
@@ -286,7 +287,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] flex items-center justify-center">
+      <div className="w-full flex-1 min-h-0 h-full flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#0ea5e9] border-t-transparent"></div>
       </div>
     );
@@ -294,53 +295,41 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
   if (boardsData.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-4 md:p-6 flex flex-col items-start justify-start rounded-3xl">
-        <div className="w-full max-w-[1600px] mx-auto flex justify-end mb-4 relative z-40">
-          {filterElement}
-        </div>
-        <div className="p-12 mx-auto text-center bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-slate-200 m-6 mt-12 w-full max-w-lg relative z-10">
-          <span className="text-5xl block mb-4">📋</span>
-          <h3 className="text-xl font-medium text-slate-700 mb-2">Chưa có bảng công việc nào</h3>
-          <p className="text-slate-500">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
+      <div className="w-full flex-1 min-h-0 h-full flex flex-col items-center justify-center p-6 bg-white/60 backdrop-blur rounded-2xl border border-dashed border-slate-200">
+        <div className="p-8 text-center bg-white rounded-2xl shadow-sm border border-slate-200 max-w-md">
+          <span className="text-4xl block mb-3">📋</span>
+          <h3 className="text-lg font-bold text-slate-800 mb-1">Chưa có bảng công việc nào</h3>
+          <p className="text-sm text-slate-500">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="w-full min-h-[600px] bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-3 sm:p-5 md:p-6 text-slate-800 rounded-3xl relative">
-      <div className="w-full space-y-10">
-        {filterElement && (
-          <div className="flex justify-end mb-[-1rem] relative z-40">
-            {filterElement}
-          </div>
-        )}
-        {boardsData.map(board => (
-          <div key={board.title}>
-            {/* Header */}
-            <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-6 mb-6 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">📋</span>
-                <h1 className="text-xl font-bold tracking-tight">Bảng Công Việc - {board.title}</h1>
-              </div>
-              <div className="flex flex-col items-end">
-                <div className="text-sm text-white/90 font-medium mb-1">
-                  Tổng tiến độ: {board.overallProgress}%
-                </div>
-                <div className="w-48 h-2 bg-white/20 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-white rounded-full transition-all duration-500"
-                    style={{ width: `${board.overallProgress}%` }}
-                  />
-                </div>
-                <div className="text-xs text-white/70 mt-1">
-                  Đã hoàn thành {board.totalCompleted}/{board.totalItems}
-                </div>
-              </div>
-            </div>
+    <div className="w-full flex-1 min-h-0 h-full flex flex-col relative">
+      {/* If multiple boards exist, show switch tabs */}
+      {boardsData.length > 1 && (
+        <div className="flex items-center gap-2 mb-2.5 shrink-0 overflow-x-auto custom-scrollbar pb-1">
+          {boardsData.map((b, idx) => (
+            <button
+              key={b.title}
+              onClick={() => setActiveBoardIndex(idx)}
+              className={`px-3 py-1.5 rounded-xl font-bold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-[#0ea5e9] text-white shadow-sm' : 'bg-white/80 hover:bg-white text-slate-600 border border-slate-200'}`}
+            >
+              📋 {b.title}
+            </button>
+          ))}
+        </div>
+      )}
 
+      {(() => {
+        const board = boardsData[activeBoardIndex] || boardsData[0];
+        if (!board) return null;
+
+        return (
+          <div key={board.title} className="w-full flex-1 min-h-0 h-full flex flex-col">
             {/* Board - Horizontal Scroll like Trello */}
-            <div className="flex flex-row gap-5 overflow-x-auto pb-6 pt-1 custom-scrollbar items-start w-full">
+            <div className="flex-1 min-h-0 h-full flex flex-row gap-4 overflow-x-auto overflow-y-hidden pb-1 pt-0.5 custom-scrollbar items-stretch w-full">
               {board.columns.map(col => {
                 const matchingCol = boardColumns.find(bc => {
                   const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
@@ -352,7 +341,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                 return (
                   <div 
                     key={col.name} 
-                    className="flex-none w-[340px] md:w-[360px] rounded-2xl shadow-sm border p-3.5 flex flex-col max-h-[calc(100vh-220px)] min-h-[420px] transition-all"
+                    className="flex-none w-[340px] md:w-[360px] rounded-2xl shadow-sm border p-3 flex flex-col h-full max-h-full transition-all"
                     style={{
                       backgroundColor: colTheme.hasColor ? `${colTheme.bg}40` : 'rgba(255, 255, 255, 0.85)',
                       borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0'
@@ -360,7 +349,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                   >
                     {/* Column Header */}
                     <div 
-                      className="flex justify-between items-center p-3 rounded-xl mb-3 border shadow-xs transition-colors shrink-0"
+                      className="flex justify-between items-center p-2.5 rounded-xl mb-2.5 border shadow-xs transition-colors shrink-0"
                       style={{
                         backgroundColor: colTheme.hasColor ? colTheme.bg : '#ffffff',
                         borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
@@ -395,7 +384,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                     </div>
                 
                     {/* Cards List inside column with vertical scroll */}
-                    <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 flex flex-col gap-3 min-h-0 pt-1">
+                    <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 flex flex-col gap-3 min-h-0 pt-0.5">
                       {col.cards.map(card => {
                         const progressPct = card.totalCount > 0 ? Math.round((card.completedCount / card.totalCount) * 100) : 0;
                         const testCount = card.items.filter(i => i.task_type === 'test').length;
@@ -449,8 +438,8 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                                 </span>
                               )}
                               {manualCount > 0 && (
-                                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-slate-50 text-slate-600 border border-slate-200/70">
-                                  ☑️ {manualCount} việc
+                                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-100">
+                                  ✓ {manualCount} việc
                                 </span>
                               )}
                               {isCardAllDone && (
@@ -473,8 +462,8 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
               })}
             </div>
           </div>
-        ))}
-      </div>
+        );
+      })()}
 
       {/* ================= CARD DETAIL POPUP MODAL ================= */}
       {activeModalCard && (() => {
