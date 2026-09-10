@@ -676,6 +676,7 @@ export default function LectureViewer({
   const [activeLectureId, setActiveLectureId] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
+  const [testScoresMap, setTestScoresMap] = useState<Map<string, { score: number; total: number; percent: number; isPassed: boolean }>>(new Map());
   const [allLectureProgress, setAllLectureProgress] = useState<Record<string, string[]>>({});
   
   const [completedLectures, setCompletedLectures] = useState<Set<string>>(new Set());
@@ -1072,13 +1073,59 @@ export default function LectureViewer({
 
         const [
             { data: pageData },
-            progressRes
+            progressRes,
+            trRes
         ] = await Promise.all([
             supabase.from('lecture_pages').select('*').eq('lecture_id', lectureId).order('page_number'),
             targetUserId 
                 ? supabase.from('lecture_progress').select('*').eq('lecture_id', lectureId).eq('user_id', targetUserId) 
+                : Promise.resolve({ data: null }),
+            targetUserId
+                ? supabase.from('test_results').select('id, test_title, score, total_score, details, created_at').eq('user_id', targetUserId).order('created_at', { ascending: false }).limit(2000)
                 : Promise.resolve({ data: null })
         ]);
+
+        const scoreMap = new Map<string, { score: number; total: number; percent: number; isPassed: boolean }>();
+        if (trRes && trRes.data) {
+            trRes.data.forEach((r: any) => {
+                let d = r.details;
+                if (typeof d === 'string') {
+                    try { d = JSON.parse(d); } catch (e) {}
+                }
+                const testId = d?.test_id ? String(d.test_id) : (r.test_id ? String(r.test_id) : null);
+                const testTitle = r.test_title ? r.test_title.trim().toLowerCase() : null;
+
+                const score = parseFloat(r.score != null ? r.score : 0);
+                const total = parseFloat(r.total_score != null ? r.total_score : 0);
+                const percent = total > 0 ? Math.round((score / total) * 100) : (score >= 5 ? 100 : Math.round(score * 10));
+
+                let isPassed = false;
+                if (d?.bandScore != null && !isNaN(parseFloat(d.bandScore))) {
+                    isPassed = parseFloat(d.bandScore) >= 4.0;
+                } else if (total > 0) {
+                    isPassed = (score / total) >= 0.5; // Cần đạt từ 50% trở lên
+                } else {
+                    isPassed = score >= 5.0;
+                }
+
+                const item = { score, total, percent, isPassed };
+
+                const registerKey = (key: string) => {
+                    const existing = scoreMap.get(key);
+                    if (!existing) {
+                        scoreMap.set(key, item);
+                    } else if (!existing.isPassed && isPassed) {
+                        scoreMap.set(key, item);
+                    } else if (item.percent > existing.percent) {
+                        scoreMap.set(key, item);
+                    }
+                };
+
+                if (testId) registerKey(testId);
+                if (testTitle) registerKey(testTitle);
+            });
+        }
+        setTestScoresMap(scoreMap);
 
         const visiblePages = (pageData || [])
             .filter((p: any) => !String(p.content_html || '').startsWith('<!-- hidden -->'))
@@ -1106,7 +1153,7 @@ export default function LectureViewer({
            }
         }
         
-        // --- ASSIGNMENT RECONCILIATION ---
+        // --- ASSIGNMENT & TEST RECONCILIATION ---
         if (targetUserId) {
             // Fetch lecture's task_list to reconcile
             const { data: currentLec } = await supabase.from('lectures').select('title, task_list').eq('id', lectureId).single();
@@ -1114,44 +1161,44 @@ export default function LectureViewer({
             
             if (taskList.length > 0) {
                 const { data: assignments } = await supabase.from('assignments').select('title, test_id, is_completed, student_completed, task_type').eq('user_id', targetUserId);
-                if (assignments) {
-                    let mergedCompletedTasks = [...initialCompletedTasks];
-                    let changed = false;
-                    
-                    taskList.forEach((t: any) => {
-                        let isCompletedInAssignment = false;
-                        if (t.type === 'manual') {
-                            const syncTitle = `${currentLec?.title || ''} : ${t.text}`;
-                            const assign = assignments.find(a => 
-                                a.task_type === 'manual' && 
-                                (!currentLec?.title || !a.card_title || a.card_title === currentLec.title) && (
-                                    a.title === syncTitle || 
-                                    a.title === t.text || 
-                                    a.title === `[Bài giảng] ${t.text}`
-                                )
-                            );
-                            if (assign && assign.student_completed) isCompletedInAssignment = true;
-                        } else if (t.type === 'exercise' && t.test_id) {
-                            const assign = assignments.find(a => a.test_id === t.test_id);
-                            if (assign && assign.is_completed) isCompletedInAssignment = true;
+                let reconciledCompletedTasks: string[] = [];
+                
+                taskList.forEach((t: any) => {
+                    if (t.type === 'manual') {
+                        const syncTitle = `${currentLec?.title || ''} : ${t.text}`;
+                        const assign = assignments?.find(a => 
+                            a.task_type === 'manual' && 
+                            (!currentLec?.title || !a.card_title || a.card_title === currentLec.title) && (
+                                a.title === syncTitle || 
+                                a.title === t.text || 
+                                a.title === `[Bài giảng] ${t.text}`
+                            )
+                        );
+                        if (initialCompletedTasks.includes(t.id) || assign?.student_completed) {
+                            reconciledCompletedTasks.push(t.id);
                         }
+                    } else if (t.type === 'exercise') {
+                        // 🎯 Bài tập trong kho: PHẢI nộp bài và ĐẠT TỪ 50% ĐIỂM mới được tính hoàn thành!
+                        const testKey = t.test_id ? String(t.test_id) : null;
+                        const titleKey = t.text ? t.text.trim().toLowerCase() : null;
                         
-                        if (isCompletedInAssignment && !mergedCompletedTasks.includes(t.id)) {
-                            mergedCompletedTasks.push(t.id);
-                            changed = true;
-                        }
-                    });
-                    
-                    if (changed) {
-                        initialCompletedTasks = mergedCompletedTasks;
-                        isLectureCompleted = initialCompletedTasks.length === taskList.length;
+                        const scoreInfo = (testKey && scoreMap.get(testKey)) || 
+                                          (titleKey && scoreMap.get(titleKey)) || 
+                                          (titleKey && Array.from(scoreMap.entries()).find(([k]) => titleKey.includes(k) || k.includes(titleKey))?.[1]);
                         
-                        if (progressRes.data && progressRes.data.length > 0) {
-                             supabase.from('lecture_progress').update({ completed_tasks: initialCompletedTasks, is_completed: isLectureCompleted }).eq('id', progressRes.data[0].id).then();
-                        } else {
-                             supabase.from('lecture_progress').insert({ user_id: targetUserId, lecture_id: lectureId, completed_tasks: initialCompletedTasks, is_completed: isLectureCompleted }).then();
+                        if (scoreInfo?.isPassed) {
+                            reconciledCompletedTasks.push(t.id);
                         }
                     }
+                });
+                
+                initialCompletedTasks = reconciledCompletedTasks;
+                isLectureCompleted = taskList.length > 0 && initialCompletedTasks.length === taskList.length;
+                
+                if (progressRes.data && progressRes.data.length > 0) {
+                     supabase.from('lecture_progress').update({ completed_tasks: initialCompletedTasks, is_completed: isLectureCompleted }).eq('id', progressRes.data[0].id).then();
+                } else {
+                     supabase.from('lecture_progress').insert({ user_id: targetUserId, lecture_id: lectureId, completed_tasks: initialCompletedTasks, is_completed: isLectureCompleted }).then();
                 }
             }
         }
@@ -1178,6 +1225,28 @@ export default function LectureViewer({
     }
   };
 
+  // 🔄 Tự động làm mới điểm và trạng thái hoàn thành khi học sinh quay lại tab hoặc nộp bài xong
+  useEffect(() => {
+    const handleRefresh = () => {
+      if (activeLectureId && currentUser?.id) {
+        handleSelectLecture(activeLectureId, currentUser.id);
+      }
+    };
+    window.addEventListener('focus', handleRefresh);
+    window.addEventListener('tony-refresh-lecture-progress', handleRefresh);
+    const handleVisibility = () => {
+      if (!document.hidden && activeLectureId && currentUser?.id) {
+        handleSelectLecture(activeLectureId, currentUser.id);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+    return () => {
+      window.removeEventListener('focus', handleRefresh);
+      window.removeEventListener('tony-refresh-lecture-progress', handleRefresh);
+      document.removeEventListener('visibilitychange', handleVisibility);
+    };
+  }, [activeLectureId, currentUser]);
+
   const toggleModule = (modId: string) => {
       setExpandedModules(prev => 
           prev.includes(modId) ? prev.filter(id => id !== modId) : [...prev, modId]
@@ -1190,6 +1259,12 @@ export default function LectureViewer({
       }
       
       const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+      const taskObj = safeLectureTasks.find((t: any) => t.id === taskId);
+      
+      // 🔒 CẤM học sinh tick thủ công bài tập trong kho! Bài tập phải làm và đạt từ 50% mới tự động hoàn thành!
+      if (taskObj?.type === 'exercise') {
+          return;
+      }
       
       setCompletedTasks(prev => {
          const isNowCompleted = !prev.includes(taskId);
@@ -1197,29 +1272,19 @@ export default function LectureViewer({
          const isCompleted = safeLectureTasks.length > 0 && newCompleted.length === safeLectureTasks.length;
          
          // Đồng bộ với Assignment
-         const taskObj = safeLectureTasks.find((t: any) => t.id === taskId);
-         if (taskObj) {
-             if (taskObj.type === 'manual') {
-                 const syncTitle = `${activeLecture?.title || ''} : ${taskObj.text}`;
-                 const payload: any = { student_completed: isNowCompleted, updated_at: new Date().toISOString() };
-                 if (!isNowCompleted) payload.admin_approved = false;
-                 
-                  let query = supabase.from('assignments')
-                      .update(payload)
-                      .eq('user_id', currentUser.id)
-                      .eq('task_type', 'manual');
-                  if (activeLecture?.title) {
-                      query = query.eq('card_title', activeLecture.title);
-                  }
-                  query.in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text]).then();
-             } else if (taskObj.type === 'exercise' && taskObj.test_id) {
-                 supabase.from('assignments')
-                     .update({ is_completed: isNowCompleted, student_completed: isNowCompleted, updated_at: new Date().toISOString() })
-                     .eq('user_id', currentUser.id)
-                     .eq('task_type', 'test')
-                     .eq('test_id', taskObj.test_id)
-                     .then();
-             }
+         if (taskObj && taskObj.type === 'manual') {
+             const syncTitle = `${activeLecture?.title || ''} : ${taskObj.text}`;
+             const payload: any = { student_completed: isNowCompleted, updated_at: new Date().toISOString() };
+             if (!isNowCompleted) payload.admin_approved = false;
+             
+              let query = supabase.from('assignments')
+                  .update(payload)
+                  .eq('user_id', currentUser.id)
+                  .eq('task_type', 'manual');
+              if (activeLecture?.title) {
+                  query = query.eq('card_title', activeLecture.title);
+              }
+              query.in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text]).then();
          }
          
          supabase.from('lecture_progress')
@@ -1274,10 +1339,6 @@ export default function LectureViewer({
          if (error || !testData) { 
              alert("Bài tập này hiện không khả dụng. Vui lòng liên hệ Admin.");
              return; 
-         }
-         
-         if (!completedTasks.includes(task.id)) {
-             handleToggleTask(task.id);
          }
          
          const type = String(testData.test_type || '').toLowerCase();
@@ -1782,36 +1843,90 @@ export default function LectureViewer({
                           </div>
                        </div>
                        
-                       <div className="max-h-[60vh] overflow-y-auto p-3 custom-scrollbar flex flex-col gap-2 bg-slate-50/50">
-                          {safeLectureTasks.map((task: any) => {
-                             const isCompleted = safeCompletedTasks.includes(task.id);
-                             return (
-                                <div key={task.id} className={`flex items-start gap-3 p-4 rounded-xl transition-all border ${isCompleted ? 'bg-white border-emerald-200 shadow-sm' : 'bg-white border-slate-200 hover:border-[#0ea5e9]/50 hover:shadow-md'}`}>
-                                   <button 
-                                       onClick={() => handleToggleTask(task.id)} 
-                                       className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 transition-all ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white' : 'bg-slate-50 border-slate-300 hover:border-[#0ea5e9]'}`}
-                                   >
-                                       {isCompleted && (
-                                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
+                        <div className="max-h-[60vh] overflow-y-auto p-3 custom-scrollbar flex flex-col gap-2 bg-slate-50/50">
+                           {safeLectureTasks.map((task: any) => {
+                              const isCompleted = safeCompletedTasks.includes(task.id);
+                              const isExercise = task.type === 'exercise';
+                              
+                              const testKey = task.test_id ? String(task.test_id) : null;
+                              const titleKey = task.text ? task.text.trim().toLowerCase() : null;
+                              const scoreInfo = isExercise ? (
+                                (testKey && testScoresMap.get(testKey)) || 
+                                (titleKey && testScoresMap.get(titleKey)) || 
+                                (titleKey && Array.from(testScoresMap.entries()).find(([k]) => titleKey.includes(k) || k.includes(titleKey))?.[1])
+                              ) : null;
+
+                              return (
+                                 <div key={task.id} className={`flex items-start gap-3 p-3.5 rounded-xl transition-all border ${isCompleted ? 'bg-white border-emerald-200 shadow-sm' : 'bg-white border-slate-200 hover:border-[#0ea5e9]/50 hover:shadow-md'}`}>
+                                    {/* Nút tick cho nhiệm vụ chép bài / Đèn trạng thái cho bài tập trong kho */}
+                                    {!isExercise ? (
+                                       <button 
+                                           onClick={() => handleToggleTask(task.id)} 
+                                           className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 transition-all cursor-pointer ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 hover:border-[#0ea5e9]'}`}
+                                           title={isCompleted ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
+                                       >
+                                           {isCompleted && (
+                                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
+                                           )}
+                                       </button>
+                                    ) : (
+                                       <div 
+                                           className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 select-none ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 text-slate-400'}`}
+                                           title={isCompleted ? "Bài tập đã nộp và đạt điểm yêu cầu (≥ 50%)" : "Bài tập này cần làm, nộp và đạt từ 50% để hoàn thành"}
+                                       >
+                                           {isCompleted ? (
+                                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
+                                           ) : (
+                                               <span className="text-[10px]">📝</span>
+                                           )}
+                                       </div>
+                                    )}
+
+                                    <div className="flex-1 min-w-0 flex flex-col items-start gap-2">
+                                       <span className={`text-[13.5px] leading-snug transition-colors ${isCompleted ? 'text-slate-500 line-through' : 'text-slate-800 font-medium'}`}>
+                                           {task.text}
+                                       </span>
+
+                                       {/* Hiển thị điểm thi nếu là bài tập */}
+                                       {isExercise && (
+                                          <div className="flex items-center gap-2 flex-wrap">
+                                            {scoreInfo ? (
+                                              scoreInfo.isPassed ? (
+                                                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-lg flex items-center gap-1">
+                                                  <span>✓</span> Đã đạt: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%)
+                                                </span>
+                                              ) : (
+                                                <span className="text-[11px] font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2.5 py-0.5 rounded-lg flex items-center gap-1">
+                                                  <span>⚠️</span> Chưa đạt: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%) • Cần đạt ≥ 50%
+                                                </span>
+                                              )
+                                            ) : (
+                                              <span className="text-[10.5px] font-medium text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
+                                                Cần nộp bài đạt từ 50% điểm
+                                              </span>
+                                            )}
+                                          </div>
                                        )}
-                                   </button>
-                                   <div className="flex-1 min-w-0 flex flex-col items-start gap-2.5">
-                                      <span className={`text-[14px] font-medium leading-relaxed transition-colors ${isCompleted ? 'text-slate-500 line-through' : 'text-slate-800'}`}>
-                                          {task.text}
-                                      </span>
-                                      {task.type === 'exercise' && (
-                                         <button 
-                                           onClick={() => handleStartTaskExercise(task)} 
-                                           className={`text-[12px] font-semibold px-4 py-2 rounded-lg transition-all ${isCompleted ? 'bg-slate-100 text-slate-500 hover:bg-slate-200' : 'bg-[#0ea5e9] text-white shadow-sm shadow-blue-500/30 hover:bg-[#0284c7] hover:shadow-md active:scale-95'}`}
-                                         >
-                                           {isCompleted ? 'Làm lại bài' : 'Bắt đầu làm bài ➜'}
-                                         </button>
-                                      )}
-                                   </div>
-                                </div>
-                             )
-                          })}
-                       </div>
+
+                                       {isExercise && (
+                                          <button 
+                                            onClick={() => handleStartTaskExercise(task)} 
+                                            className={`text-[12px] font-semibold px-4 py-1.5 rounded-lg transition-all cursor-pointer ${
+                                              isCompleted 
+                                                ? 'bg-slate-100 text-slate-600 hover:bg-slate-200' 
+                                                : scoreInfo && !scoreInfo.isPassed 
+                                                  ? 'bg-amber-500 hover:bg-amber-600 text-white shadow-sm shadow-amber-500/30' 
+                                                  : 'bg-[#0ea5e9] text-white shadow-sm shadow-blue-500/30 hover:bg-[#0284c7] active:scale-95'
+                                            }`}
+                                          >
+                                            {isCompleted ? 'Làm lại bài' : scoreInfo && !scoreInfo.isPassed ? 'Làm lại để đạt điểm ➜' : 'Bắt đầu làm bài ➜'}
+                                          </button>
+                                       )}
+                                    </div>
+                                 </div>
+                              )
+                           })}
+                        </div>
                     </div>
                  )}
                </div>

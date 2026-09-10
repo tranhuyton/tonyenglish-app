@@ -234,7 +234,12 @@ export default function App() {
     } catch (error) {}
   };
   const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
-  const handleReturnFromTest = () => handleNavigate(returnView);
+  const handleReturnFromTest = () => {
+    handleNavigate(returnView);
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
+    }, 150);
+  };
 
   const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'mixed-paper', 'standard', 'standard-splitscreen', 'case-study', 'igcse', 'igcse-direct', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
 

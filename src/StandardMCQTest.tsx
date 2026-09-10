@@ -538,12 +538,16 @@ const handleFinish = async () => {
           }
         }]);
         
-        // Auto-complete test-type assignments
-        await supabase.from('assignments')
-          .update({ is_completed: true, updated_at: new Date().toISOString() })
-          .eq('test_id', safeData?.id)
-          .eq('user_id', user.id)
-          .eq('task_type', 'test');
+        // Auto-complete test-type assignments (Chỉ hoàn thành nếu đạt từ 50% điểm trở lên)
+        const isPassed = total > 0 ? (score / total) >= 0.5 : (score >= 5.0);
+        if (isPassed) {
+          await supabase.from('assignments')
+            .update({ is_completed: true, updated_at: new Date().toISOString() })
+            .eq('test_id', safeData?.id)
+            .eq('user_id', user.id)
+            .eq('task_type', 'test');
+        }
+        window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
 
       await supabase.from('activity_logs').insert([{
         user_id: user.id, 

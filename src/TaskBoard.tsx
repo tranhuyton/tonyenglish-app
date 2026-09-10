@@ -43,7 +43,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
   const [boardColumns, setBoardColumns] = useState<any[]>([]);
   const [completedTestIds, setCompletedTestIds] = useState<Set<string>>(new Set());
-  const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number }>>(new Map());
+  const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number; isPassed: boolean }>>(new Map());
   const [inProgressTestIds, setInProgressTestIds] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
   const [activeModalCard, setActiveModalCard] = useState<ActiveModalCard | null>(null);
@@ -52,6 +52,13 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
   useEffect(() => {
     fetchAssignments();
+    const handleRefresh = () => fetchAssignments();
+    window.addEventListener('tony-refresh-lecture-progress', handleRefresh);
+    window.addEventListener('focus', handleRefresh);
+    return () => {
+      window.removeEventListener('tony-refresh-lecture-progress', handleRefresh);
+      window.removeEventListener('focus', handleRefresh);
+    };
   }, [userId]);
 
   useEffect(() => {
@@ -78,7 +85,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
       setBoardColumns(colRes.data || []);
 
       const cSet = new Set<string>();
-      const scoreMap = new Map<string, { score: number; total_score: number; percent: number }>();
+      const scoreMap = new Map<string, { score: number; total_score: number; percent: number; isPassed: boolean }>();
       (trRes.data || []).forEach((r: any) => {
         let d = r.details;
         if (typeof d === 'string') {
@@ -87,20 +94,41 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
         const testId = d?.test_id ? String(d.test_id) : (r.test_id ? String(r.test_id) : null);
         const testTitle = r.test_title ? r.test_title.trim().toLowerCase() : null;
 
-        if (testId) cSet.add(testId);
+        const score = parseFloat(r.score != null ? r.score : 0);
+        const total = parseFloat(r.total_score != null ? r.total_score : 0);
+        const percent = total > 0 ? Math.round((score / total) * 100) : (score >= 5 ? 100 : Math.round(score * 10));
+
+        let isPassed = false;
+        if (d?.bandScore != null && !isNaN(parseFloat(d.bandScore))) {
+          isPassed = parseFloat(d.bandScore) >= 4.0;
+        } else if (total > 0) {
+          isPassed = (score / total) >= 0.5; // Cần đạt từ 50% trở lên
+        } else {
+          isPassed = score >= 5.0;
+        }
+
+        if (testId && isPassed) cSet.add(testId);
 
         const scoreObj = {
-          score: r.score != null ? r.score : 0,
-          total_score: r.total_score != null ? r.total_score : 0,
-          percent: (r.total_score && r.total_score > 0) ? Math.round((r.score / r.total_score) * 100) : (r.score || 0)
+          score,
+          total_score: total,
+          percent,
+          isPassed
         };
 
-        if (testId && !scoreMap.has(testId)) {
-          scoreMap.set(testId, scoreObj);
-        }
-        if (testTitle && !scoreMap.has(testTitle)) {
-          scoreMap.set(testTitle, scoreObj);
-        }
+        const registerScore = (key: string) => {
+          const existing = scoreMap.get(key);
+          if (!existing) {
+            scoreMap.set(key, scoreObj);
+          } else if (!existing.isPassed && isPassed) {
+            scoreMap.set(key, scoreObj);
+          } else if (percent > existing.percent) {
+            scoreMap.set(key, scoreObj);
+          }
+        };
+
+        if (testId) registerScore(testId);
+        if (testTitle) registerScore(testTitle);
       });
       setCompletedTestIds(cSet);
       setLatestTestScores(scoreMap);
@@ -612,9 +640,13 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                                   <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">
                                     ⏳ Đang làm dở
                                   </span>
+                                ) : testScore ? (
+                                  <span className="inline-flex items-center gap-1 text-[10px] px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold border border-rose-200">
+                                    ⚠️ Chưa đạt: {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score} ({testScore.percent}%) • Cần ≥ 50%
+                                  </span>
                                 ) : (
                                   <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-500 font-medium">
-                                    Chưa làm
+                                    Chưa làm (Cần đạt ≥ 50%)
                                   </span>
                                 )}
                               </div>
@@ -644,6 +676,19 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                                   title="Làm tiếp bài đang làm dở"
                                 >
                                   Làm tiếp ➜
+                                </button>
+                              ) : testScore ? (
+                                <button 
+                                  onClick={() => {
+                                    if (item.test_id && onStartTest) {
+                                      onStartTest(item.test_id);
+                                      setActiveModalCard(null);
+                                    }
+                                  }}
+                                  className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
+                                  title="Làm lại để đạt điểm yêu cầu (≥ 50%)"
+                                >
+                                  Làm lại để đạt điểm ➜
                                 </button>
                               ) : (
                                 <button 

@@ -319,15 +319,31 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         let finalAssignments = assignData || [];
         
         if (hData && hData.length > 0 && finalAssignments.length > 0) {
-            const completedTestIds = new Set(hData.map((h: any) => {
+            const passedTestIds = new Set<string>();
+            hData.forEach((h: any) => {
                 let detailsObj = h.details || {};
                 if (typeof detailsObj === 'string') {
                     try { detailsObj = JSON.parse(detailsObj); } catch(e) {}
                 }
-                return String(h.test_id || detailsObj.test_id);
-            }).filter((id) => id && id !== 'undefined'));
+                const testId = String(h.test_id || detailsObj?.test_id || '');
+                if (!testId || testId === 'undefined') return;
+
+                const score = parseFloat(h.score != null ? h.score : 0);
+                const total = parseFloat(h.total_score != null ? h.total_score : 0);
+                let isPassed = false;
+                if (detailsObj?.bandScore != null && !isNaN(parseFloat(detailsObj.bandScore))) {
+                    isPassed = parseFloat(detailsObj.bandScore) >= 4.0;
+                } else if (total > 0) {
+                    isPassed = (score / total) >= 0.5;
+                } else {
+                    isPassed = score >= 5.0;
+                }
+                if (isPassed) {
+                    passedTestIds.add(testId);
+                }
+            });
             
-            const toUpdate = finalAssignments.filter((a: any) => a.task_type === 'test' && !a.is_completed && a.test_id && completedTestIds.has(String(a.test_id)));
+            const toUpdate = finalAssignments.filter((a: any) => a.task_type === 'test' && !a.is_completed && a.test_id && passedTestIds.has(String(a.test_id)));
             
             if (toUpdate.length > 0) {
                 toUpdate.forEach(async (a: any) => {

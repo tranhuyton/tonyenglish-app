@@ -481,12 +481,18 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             details: { test_id: testData.id, userAnswers: currentAnswers, aiFeedback: gradedData }
           }]);
 
-          // Auto-complete test-type assignments
-          await supabase.from('assignments')
-            .update({ is_completed: true, updated_at: new Date().toISOString() })
-            .eq('test_id', testData.id)
-            .eq('user_id', user.id)
-            .eq('task_type', 'test');
+          // Auto-complete test-type assignments (Chỉ hoàn thành nếu đạt từ 50% điểm trở lên)
+          const isPassed = gradedData.total_max_score > 0 
+            ? (gradedData.total_student_score / gradedData.total_max_score) >= 0.5 
+            : (gradedData.total_student_score >= 5.0);
+          if (isPassed) {
+            await supabase.from('assignments')
+              .update({ is_completed: true, updated_at: new Date().toISOString() })
+              .eq('test_id', testData.id)
+              .eq('user_id', user.id)
+              .eq('task_type', 'test');
+          }
+          window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
         }
       } catch (dbError) { console.error("DB save error:", dbError); }
 
