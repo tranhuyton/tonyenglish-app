@@ -27,6 +27,7 @@ HTML_CONTENT = """<!DOCTYPE html>
   li { margin-bottom: 6px; }
   /* Vietnamese translation style */
   .vi { color: #64748b; font-style: italic; font-size: 15px; margin-top: 6px; margin-bottom: 16px; border-left: 3px solid #cbd5e1; padding-left: 12px; }
+  ul.vi, ol.vi { padding-left: 32px !important; margin-top: 4px; }
   .vi ul { margin: 4px 0 4px 16px; }
   .vi li { margin-bottom: 4px; }
   /* Interactive SVG */

@@ -39,7 +39,7 @@ export const MODULE_COLOR_PRESETS: ModuleColorPreset[] = [
   },
   {
     id: 'sky',
-    name: 'Xanh dương nhạt',
+    name: 'Xanh dương nhạt (Past Papers)',
     bg: '#e0f2fe',
     text: '#0369a1',
     border: '#bae6fd',
@@ -123,6 +123,11 @@ export function parseModuleTheme(rawTitle?: string, modObj?: any): ModuleTheme {
       bg = '#f3e8ff';
       text = '#7e22ce';
       border = '#e9d5ff';
+      hasExplicitColor = true;
+    } else if (lower.includes('past paper') || lower.includes('past papers') || lower.includes('luyện đề') || lower.includes('đề thi')) {
+      bg = '#e0f2fe';
+      text = '#0369a1';
+      border = '#bae6fd';
       hasExplicitColor = true;
     }
   }

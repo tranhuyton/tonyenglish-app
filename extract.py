@@ -1,18 +1,17 @@
+import PyPDF2
+import sys
 import json
 
-def extract_vocab(filename):
-    with open(filename, 'r', encoding='utf-8') as f:
-        d = json.load(f)
-    print(f"File: {filename}")
-    for i, part in enumerate(d.get('parts', [])):
-        if part.get('title', '').startswith('Word List'):
-            content = part.get('content', '')
-            words = []
-            parts = content.split('color: #65a30d;">')[1:]
-            for p in parts:
-                w = p.split('</span>')[0].split('>')[-1]
-                words.append(w)
-            print(f"Part {i} ({part['title']}): {words}")
+def extract_text(pdf_path, out_path):
+    with open(pdf_path, 'rb') as f:
+        reader = PyPDF2.PdfReader(f)
+        text = ''
+        for i in range(len(reader.pages)):
+            text += f"\n--- PAGE {i+1} ---\n"
+            text += reader.pages[i].extract_text()
+    
+    with open(out_path, 'w', encoding='utf-8') as f:
+        f.write(text)
 
-extract_vocab('public/unit6_ielts.json')
-extract_vocab('public/unit7_ielts.json')
+if __name__ == '__main__':
+    extract_text('public/Geography/09_TOPIC_9_Changing_economies.pdf', 'scratch/topic_9_text.txt')
