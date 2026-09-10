@@ -1330,7 +1330,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       </header>
 
-      <main className={`flex-1 w-full min-h-0 ${activeTab === 'board' ? 'max-w-none p-2.5 sm:p-3 md:p-4 overflow-hidden flex flex-col h-full' : 'max-w-[1200px] mx-auto p-4 md:p-8 overflow-y-auto custom-scrollbar'}`} style={{ WebkitOverflowScrolling: 'touch' }}>
+      <main className={`flex-1 w-full min-h-0 ${
+        activeTab === 'board' 
+          ? 'max-w-none p-2.5 sm:p-3 md:p-4 overflow-hidden flex flex-col h-full' 
+          : activeTab === 'calendar'
+            ? 'max-w-none p-2.5 sm:p-3 md:p-4 overflow-y-auto custom-scrollbar flex flex-col'
+            : 'max-w-[1200px] mx-auto p-4 md:p-8 overflow-y-auto custom-scrollbar'
+      }`} style={{ WebkitOverflowScrolling: 'touch' }}>
         
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-500">
@@ -1806,7 +1812,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         )}
 
         {activeTab === 'calendar' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 mx-2 md:mx-0 pb-8 mt-6">
+          <div className="animate-in fade-in slide-in-from-bottom-4 w-full flex-1 flex flex-col pb-6">
             {(() => {
               const calendarAssignments = filterCourse === 'all' ? assignments : assignments.filter(a => {
                 if (a.board_template_id) {
