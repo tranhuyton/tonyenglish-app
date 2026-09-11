@@ -323,11 +323,11 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
   if (boardsData.length === 0) {
     return (
-      <div className="w-full flex-1 min-h-0 h-full flex flex-col items-center justify-center p-6 bg-white/60 backdrop-blur rounded-2xl border border-dashed border-slate-200">
-        <div className="p-8 text-center bg-white rounded-2xl shadow-sm border border-slate-200 max-w-md">
-          <span className="text-4xl block mb-3">📋</span>
-          <h3 className="text-lg font-bold text-slate-800 mb-1">Chưa có bảng công việc nào</h3>
-          <p className="text-sm text-slate-500">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
+      <div className="w-full flex-1 min-h-0 h-full flex flex-col items-center justify-center p-6">
+        <div className="p-10 text-center bg-white rounded-[2rem] shadow-sm border border-slate-200 max-w-md">
+          <span className="text-5xl block mb-4 opacity-40 grayscale">📋</span>
+          <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">Chưa có bảng công việc nào</h3>
+          <p className="text-[14px] text-slate-500 font-medium">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
         </div>
       </div>
     );
@@ -337,12 +337,12 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
     <div className="w-full flex-1 min-h-0 h-full flex flex-col relative">
       {/* If multiple boards exist, show switch tabs */}
       {boardsData.length > 1 && (
-        <div className="flex items-center gap-2 mb-2.5 shrink-0 overflow-x-auto custom-scrollbar pb-1">
+        <div className="flex items-center gap-1.5 mb-3 shrink-0 overflow-x-auto custom-scrollbar pb-1 bg-white/80 backdrop-blur-sm p-1.5 rounded-2xl border border-slate-200/80 shadow-sm w-fit">
           {boardsData.map((b, idx) => (
             <button
               key={b.title}
               onClick={() => setActiveBoardIndex(idx)}
-              className={`px-3 py-1.5 rounded-xl font-bold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-[#0ea5e9] text-white shadow-sm' : 'bg-white/80 hover:bg-white text-slate-600 border border-slate-200'}`}
+              className={`px-4 py-2 rounded-xl font-bold text-[13px] transition-all duration-300 whitespace-nowrap cursor-pointer flex items-center gap-2 ${activeBoardIndex === idx ? 'bg-[#0ea5e9] text-white shadow-md ring-1 ring-sky-300/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100/80'}`}
             >
               📋 {b.title}
             </button>
@@ -369,29 +369,29 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                 return (
                   <div 
                     key={col.name} 
-                    className="flex-none w-[340px] md:w-[360px] rounded-2xl shadow-sm border p-3 flex flex-col h-full max-h-full transition-all"
+                    className="flex-none w-[340px] md:w-[360px] rounded-[1.5rem] border p-3.5 flex flex-col h-full max-h-full transition-all duration-300 shadow-sm hover:shadow-md"
                     style={{
-                      backgroundColor: colTheme.hasColor ? `${colTheme.bg}40` : 'rgba(255, 255, 255, 0.85)',
-                      borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0'
+                      backgroundColor: colTheme.hasColor ? `${colTheme.bg}15` : 'rgba(255, 255, 255, 0.92)',
+                      borderColor: colTheme.hasColor ? `${colTheme.border}80` : '#e2e8f0'
                     }}
                   >
                     {/* Column Header */}
                     <div 
-                      className="flex justify-between items-center p-2.5 rounded-xl mb-2.5 border shadow-xs transition-colors shrink-0"
+                      className="flex justify-between items-center p-3 rounded-2xl mb-3 border shadow-sm transition-colors shrink-0"
                       style={{
                         backgroundColor: colTheme.hasColor ? colTheme.bg : '#ffffff',
                         borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
                         color: colTheme.hasColor ? colTheme.text : '#1e293b'
                       }}
                     >
-                      <div className="flex items-center gap-2 min-w-0">
-                        <h2 className="font-extrabold text-[15px] truncate" title={colTheme.cleanTitle}>
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <h2 className="font-black text-[15px] truncate tracking-tight" title={colTheme.cleanTitle}>
                           {colTheme.cleanTitle}
                         </h2>
                       </div>
                       <div className="flex items-center gap-1.5 shrink-0">
                         <span 
-                          className="text-xs font-bold px-2 py-0.5 rounded-full border"
+                          className="text-[11px] font-black px-2.5 py-1 rounded-lg border shadow-xs"
                           style={{
                             backgroundColor: 'white',
                             borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
@@ -403,7 +403,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                         <button
                           type="button"
                           onClick={() => setColorPickerTarget({ colId: matchingCol?.id, colTitle: matchingCol?.title || col.name })}
-                          className="w-7 h-7 rounded-lg bg-white/80 hover:bg-white border border-black/10 hover:border-black/20 flex items-center justify-center text-xs transition cursor-pointer shadow-xs"
+                          className="w-7 h-7 rounded-lg bg-white/90 hover:bg-white border border-black/10 hover:border-black/20 flex items-center justify-center text-xs transition-all cursor-pointer shadow-xs hover:shadow-sm hover:scale-105"
                           title="Chọn màu cột này"
                         >
                           🎨
@@ -429,30 +429,34 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                           <div 
                             key={card.title} 
                             onClick={() => setActiveModalCard({ card, colName: col.name, boardTitle: board.title })}
-                            className="bg-white rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md hover:border-sky-300 hover:-translate-y-0.5 transition-all p-3.5 cursor-pointer select-none group"
+                            className={`bg-white rounded-2xl border shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 p-4 cursor-pointer select-none group ${
+                              isCardAllDone 
+                                ? 'border-emerald-200/80 bg-gradient-to-br from-white to-emerald-50/30' 
+                                : 'border-slate-200/90 hover:border-sky-300'
+                            }`}
                           >
-                            <div className="flex justify-between items-start gap-2 mb-2">
-                              <h3 className="font-bold text-slate-800 text-sm leading-snug group-hover:text-[#0ea5e9] transition-colors">
+                            <div className="flex justify-between items-start gap-2 mb-2.5">
+                              <h3 className="font-black text-slate-800 text-[14px] leading-snug group-hover:text-[#0ea5e9] transition-colors tracking-tight">
                                 {card.title}
                               </h3>
-                              <span className="text-slate-300 group-hover:text-[#0ea5e9] text-xs transition-colors shrink-0">
+                              <span className="text-slate-300 group-hover:text-[#0ea5e9] text-xs transition-colors shrink-0 mt-0.5">
                                 ➜
                               </span>
                             </div>
                             
                             {/* Progress bar */}
-                            <div className="flex items-center gap-2 mb-2.5">
-                              <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                            <div className="flex items-center gap-2.5 mb-3">
+                              <div className="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
                                 <div 
-                                  className={`h-full rounded-full transition-all duration-300 ${isCardAllDone ? 'bg-emerald-500' : 'bg-[#0ea5e9]'}`}
+                                  className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-gradient-to-r from-emerald-400 to-emerald-500' : 'bg-gradient-to-r from-sky-400 to-[#0ea5e9]'}`}
                                   style={{ width: `${progressPct}%` }}
                                 />
                               </div>
                               <div className="flex items-center gap-1 shrink-0">
-                                <span className={`text-xs font-bold ${isCardAllDone ? 'text-emerald-600' : 'text-[#0284c7]'}`}>
+                                <span className={`text-[13px] font-black ${isCardAllDone ? 'text-emerald-600' : 'text-[#0284c7]'}`}>
                                   {progressPct}%
                                 </span>
-                                <span className="text-[11px] font-medium text-slate-400">
+                                <span className="text-[11px] font-semibold text-slate-400">
                                   ({card.completedCount}/{card.totalCount})
                                 </span>
                               </div>
@@ -461,22 +465,22 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                             {/* Card badges */}
                             <div className="flex items-center gap-1.5 flex-wrap">
                               {testCount > 0 && (
-                                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-sky-50 text-sky-700 border border-sky-100">
+                                <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-100">
                                   📝 {testCount} đề thi
                                 </span>
                               )}
                               {manualCount > 0 && (
-                                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-100">
+                                <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100">
                                   ✓ {manualCount} việc
                                 </span>
                               )}
                               {isCardAllDone && (
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-700">
+                                <span className="text-[10px] font-black px-2.5 py-0.5 rounded-lg bg-emerald-100 text-emerald-700 border border-emerald-200">
                                   ✓ Xong
                                 </span>
                               )}
                               {hasOverdue && (
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-red-100 text-red-600">
+                                <span className="text-[10px] font-black px-2.5 py-0.5 rounded-lg bg-red-50 text-red-600 border border-red-200">
                                   ⚠️ Quá hạn
                                 </span>
                               )}
@@ -507,11 +511,11 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
         return (
           <div 
-            className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
+            className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
             onClick={() => setActiveModalCard(null)}
           >
             <div 
-              className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col max-h-[88vh] overflow-hidden animate-in zoom-in-95 duration-150"
+              className="relative w-full max-w-2xl bg-white rounded-[2rem] shadow-2xl border border-slate-200 flex flex-col max-h-[88vh] overflow-hidden animate-in zoom-in-95 duration-200"
               onClick={e => e.stopPropagation()}
             >
               {/* Modal Header */}
@@ -534,21 +538,21 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                     >
                       {modalTheme.cleanTitle}
                     </span>
-                    <span className="text-xs text-slate-500 font-medium">• {activeModalCard.boardTitle}</span>
+                    <span className="text-xs text-slate-500 font-semibold">• {activeModalCard.boardTitle}</span>
                   </div>
-                  <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+                  <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight tracking-tight">
                     {currentCard.title}
                   </h2>
                   
                   {/* Progress bar in header */}
                   <div className="mt-3 flex items-center gap-3">
-                    <div className="flex-1 h-2 bg-black/10 rounded-full overflow-hidden">
+                    <div className="flex-1 h-2.5 bg-black/10 rounded-full overflow-hidden">
                       <div 
-                        className={`h-full rounded-full transition-all duration-300 ${isCardAllDone ? 'bg-emerald-500' : 'bg-[#0ea5e9]'}`}
+                        className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-gradient-to-r from-emerald-400 to-emerald-500' : 'bg-gradient-to-r from-sky-400 to-[#0ea5e9]'}`}
                         style={{ width: `${progressPct}%` }}
                       />
                     </div>
-                    <span className="text-xs font-bold shrink-0" style={{ color: modalTheme.hasColor ? modalTheme.text : '#0f172a' }}>
+                    <span className="text-[13px] font-black shrink-0" style={{ color: modalTheme.hasColor ? modalTheme.text : '#0f172a' }}>
                       {progressPct}% ({currentCard.completedCount}/{currentCard.totalCount} hoàn thành)
                     </span>
                   </div>
@@ -557,7 +561,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                 <button
                   type="button"
                   onClick={() => setActiveModalCard(null)}
-                  className="w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all shadow-xs shrink-0 border border-slate-200/80 cursor-pointer"
+                  className="w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all shadow-sm shrink-0 border border-slate-200/80 cursor-pointer hover:scale-105"
                   title="Đóng (ESC)"
                 >
                   ✕
@@ -566,11 +570,11 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
               {/* Modal Body - Scrollable Items */}
               <div className="flex-1 overflow-y-auto custom-scrollbar p-5 sm:p-6 space-y-3 bg-slate-50/50">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[11px] font-black text-slate-400 uppercase tracking-widest">
                     Danh sách bài tập ({currentCard.items.length} mục)
                   </span>
-                  <span className="text-xs font-medium text-slate-400">
+                  <span className="text-[11px] font-semibold text-slate-400">
                     {currentCard.completedCount}/{currentCard.totalCount} đã xong
                   </span>
                 </div>
@@ -763,13 +767,13 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
               {/* Modal Footer */}
               <div className="px-6 py-4 border-t border-slate-100 bg-white flex items-center justify-between shrink-0">
-                <div className="text-xs text-slate-400">
+                <div className="text-[13px] text-slate-400 font-medium">
                   {isCardAllDone ? '🎉 Bạn đã hoàn thành toàn bộ công việc trong thẻ này!' : '💡 Nhấp vào bài để bắt đầu làm hoặc tick chọn việc đã làm'}
                 </div>
                 <button
                   type="button"
                   onClick={() => setActiveModalCard(null)}
-                  className="px-5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition cursor-pointer"
+                  className="px-5 py-2.5 rounded-2xl text-[13px] font-black bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all cursor-pointer hover:shadow-sm"
                 >
                   Đóng
                 </button>
