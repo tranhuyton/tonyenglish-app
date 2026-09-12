@@ -1225,27 +1225,96 @@ export default function LectureViewer({
     }
   };
 
-  // 🔄 Tự động làm mới điểm và trạng thái hoàn thành khi học sinh quay lại tab hoặc nộp bài xong
+  // 🔄 Tự động làm mới điểm và trạng thái hoàn thành khi học sinh nộp bài xong
+  // CHỈ cập nhật scores + progress, KHÔNG clear trang/content (tránh reload toàn bộ bài giảng khi alt-tab)
+  const refreshScoresOnly = useCallback(async () => {
+    if (!activeLectureId || !currentUser?.id) return;
+    try {
+      const [trRes, progressRes] = await Promise.all([
+        supabase.from('test_results').select('id, test_title, score, total_score, details, created_at').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(2000),
+        supabase.from('lecture_progress').select('*').eq('lecture_id', activeLectureId).eq('user_id', currentUser.id)
+      ]);
+
+      // Update score map
+      const scoreMap = new Map<string, { score: number; total: number; percent: number; isPassed: boolean }>();
+      if (trRes.data) {
+        trRes.data.forEach((r: any) => {
+          let d = r.details;
+          if (typeof d === 'string') { try { d = JSON.parse(d); } catch (e) {} }
+          const testId = d?.test_id ? String(d.test_id) : (r.test_id ? String(r.test_id) : null);
+          const testTitle = r.test_title ? r.test_title.trim().toLowerCase() : null;
+          const score = parseFloat(r.score != null ? r.score : 0);
+          const total = parseFloat(r.total_score != null ? r.total_score : 0);
+          const percent = total > 0 ? Math.round((score / total) * 100) : (score >= 5 ? 100 : Math.round(score * 10));
+          let isPassed = false;
+          if (d?.bandScore != null && !isNaN(parseFloat(d.bandScore))) { isPassed = parseFloat(d.bandScore) >= 4.0; }
+          else if (total > 0) { isPassed = (score / total) >= 0.5; }
+          else { isPassed = score >= 5.0; }
+          const item = { score, total, percent, isPassed };
+          const registerKey = (key: string) => {
+            const existing = scoreMap.get(key);
+            if (!existing) { scoreMap.set(key, item); }
+            else if (!existing.isPassed && isPassed) { scoreMap.set(key, item); }
+            else if (item.percent > existing.percent) { scoreMap.set(key, item); }
+          };
+          if (testId) registerKey(testId);
+          if (testTitle) registerKey(testTitle);
+        });
+      }
+      setTestScoresMap(scoreMap);
+
+      // Update completed tasks from progress (reconcile with scores)
+      const currentLec = lectures.find(l => l.id === activeLectureId);
+      const taskList = currentLec?.task_list || [];
+      if (taskList.length > 0 && progressRes.data && progressRes.data.length > 0) {
+        const pData = progressRes.data[0];
+        let initialCompletedTasks = pData?.completed_tasks || [];
+        
+        const { data: assignments } = await supabase.from('assignments').select('title, test_id, is_completed, student_completed, task_type').eq('user_id', currentUser.id);
+        let reconciledCompletedTasks: string[] = [];
+        taskList.forEach((t: any) => {
+          if (t.type === 'manual') {
+            const syncTitle = `${currentLec?.title || ''} : ${t.text}`;
+            const assign = assignments?.find((a: any) => 
+              a.task_type === 'manual' && 
+              (!currentLec?.title || !a.card_title || a.card_title === currentLec.title) && (
+                a.title === syncTitle || a.title === t.text || a.title === `[Bài giảng] ${t.text}`
+              )
+            );
+            if (initialCompletedTasks.includes(t.id) || assign?.student_completed) {
+              reconciledCompletedTasks.push(t.id);
+            }
+          } else if (t.type === 'exercise') {
+            const testKey = t.test_id ? String(t.test_id) : null;
+            const titleKey = t.text ? t.text.trim().toLowerCase() : null;
+            const scoreInfo = (testKey && scoreMap.get(testKey)) || 
+                              (titleKey && scoreMap.get(titleKey)) || 
+                              (titleKey && Array.from(scoreMap.entries()).find(([k]) => titleKey.includes(k) || k.includes(titleKey))?.[1]);
+            if (scoreInfo?.isPassed) { reconciledCompletedTasks.push(t.id); }
+          }
+        });
+
+        const isLectureCompleted = taskList.length > 0 && reconciledCompletedTasks.length === taskList.length;
+        setCompletedTasks(reconciledCompletedTasks);
+        setAllLectureProgress(prev => ({ ...prev, [activeLectureId]: reconciledCompletedTasks }));
+        if (isLectureCompleted) {
+          setCompletedLectures(prev => new Set(prev).add(activeLectureId));
+        }
+        // Persist reconciled data
+        supabase.from('lecture_progress').update({ completed_tasks: reconciledCompletedTasks, is_completed: isLectureCompleted }).eq('id', pData.id).then();
+      }
+    } catch (err) {
+      console.error('[LectureViewer] Error refreshing scores:', err);
+    }
+  }, [activeLectureId, currentUser, lectures]);
+
   useEffect(() => {
-    const handleRefresh = () => {
-      if (activeLectureId && currentUser?.id) {
-        handleSelectLecture(activeLectureId, currentUser.id);
-      }
-    };
-    window.addEventListener('focus', handleRefresh);
-    window.addEventListener('tony-refresh-lecture-progress', handleRefresh);
-    const handleVisibility = () => {
-      if (!document.hidden && activeLectureId && currentUser?.id) {
-        handleSelectLecture(activeLectureId, currentUser.id);
-      }
-    };
-    document.addEventListener('visibilitychange', handleVisibility);
+    // Khi nộp bài xong → cập nhật scores (lightweight, không reload nội dung)
+    window.addEventListener('tony-refresh-lecture-progress', refreshScoresOnly);
     return () => {
-      window.removeEventListener('focus', handleRefresh);
-      window.removeEventListener('tony-refresh-lecture-progress', handleRefresh);
-      document.removeEventListener('visibilitychange', handleVisibility);
+      window.removeEventListener('tony-refresh-lecture-progress', refreshScoresOnly);
     };
-  }, [activeLectureId, currentUser]);
+  }, [refreshScoresOnly]);
 
   const toggleModule = (modId: string) => {
       setExpandedModules(prev => 
