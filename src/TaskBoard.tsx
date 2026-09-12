@@ -54,10 +54,8 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
     fetchAssignments();
     const handleRefresh = () => fetchAssignments();
     window.addEventListener('tony-refresh-lecture-progress', handleRefresh);
-    window.addEventListener('focus', handleRefresh);
     return () => {
       window.removeEventListener('tony-refresh-lecture-progress', handleRefresh);
-      window.removeEventListener('focus', handleRefresh);
     };
   }, [userId]);
 
