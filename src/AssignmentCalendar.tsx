@@ -31,6 +31,7 @@ const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 export default function AssignmentCalendar({ assignments, completedTestIds, topActions, rightActions, courseTitle, onRefresh, onStartTest }: Props) {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
+  const [calendarMode, setCalendarMode] = useState<'day' | 'month' | 'all'>('day');
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
   const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number; isPassed: boolean }>>(new Map());
 
@@ -87,10 +88,8 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
     fetchScores();
     const handleRefresh = () => fetchScores();
     window.addEventListener('tony-refresh-lecture-progress', handleRefresh);
-    window.addEventListener('focus', handleRefresh);
     return () => {
       window.removeEventListener('tony-refresh-lecture-progress', handleRefresh);
-      window.removeEventListener('focus', handleRefresh);
     };
   }, [assignments]);
 
@@ -168,13 +167,25 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
   }, [assignments, completedTestIds, latestTestScores]);
 
   // ============================================
-  // TASKS CHO NGÀY ĐANG CHỌN
+  // TASKS CHO KHOẢNG THỜI GIAN ĐANG CHỌN (day/month/all)
   // ============================================
   const selectedTasks = useMemo(() => {
-    if (!selectedDate) return [];
-    return assignments
-      .filter(a => a.due_date === selectedDate)
-      .map(a => {
+    let filtered: Assignment[];
+    
+    if (calendarMode === 'day') {
+      if (!selectedDate) return [];
+      filtered = assignments.filter(a => a.due_date === selectedDate);
+    } else if (calendarMode === 'month') {
+      const year = currentMonth.getFullYear();
+      const month = currentMonth.getMonth() + 1;
+      const prefix = `${year}-${String(month).padStart(2, '0')}`;
+      filtered = assignments.filter(a => a.due_date && a.due_date.startsWith(prefix));
+    } else {
+      // 'all' mode: show everything
+      filtered = [...assignments];
+    }
+
+    return filtered.map(a => {
         let isDone = false;
         if (a.task_type === 'test') {
           const testKey = a.test_id ? String(a.test_id) : null;
@@ -190,9 +201,9 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
           _effectiveCompleted: isDone
         };
       });
-  }, [selectedDate, assignments, completedTestIds, latestTestScores]);
+  }, [selectedDate, calendarMode, currentMonth, assignments, completedTestIds, latestTestScores]);
 
-  // Tách thành 2 mảng riêng biệt: Cột Công việc (Manual) và Cột Bài tập (Test)
+  // Tách thành 2 mảng riêng biệt: Danh sách Công việc (Manual) và Danh sách Bài tập (Test)
   const selectedManualTasks = useMemo(() => {
     return selectedTasks.filter(t => t.task_type === 'manual');
   }, [selectedTasks]);
@@ -239,7 +250,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
 
   const prevMonth = () => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1));
   const nextMonth = () => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1));
-  const goToday = () => { setCurrentMonth(new Date()); setSelectedDate(new Date().toISOString().split('T')[0]); };
+  const goToday = () => { setCalendarMode('day'); setCurrentMonth(new Date()); setSelectedDate(new Date().toISOString().split('T')[0]); };
 
   const monthLabel = currentMonth.toLocaleDateString('vi-VN', { month: 'long', year: 'numeric' });
 
@@ -258,7 +269,13 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
     ? new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'long' })
     : null;
 
-  const dayProgressPercent = selectedTasks.length > 0 
+  const rangeLabel = calendarMode === 'day' 
+    ? (selectedDateFormatted ? `Ngày ${selectedDateFormatted}` : 'Chưa chọn ngày')
+    : calendarMode === 'month'
+      ? monthLabel
+      : 'Toàn bộ thời gian';
+
+  const progressPercent = selectedTasks.length > 0 
     ? Math.round((completedTotalCount / selectedTasks.length) * 100) 
     : 0;
 
@@ -286,35 +303,57 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
           </div>
 
           <div className="flex flex-col sm:flex-row items-center sm:items-end gap-3 sm:gap-4 w-full md:w-auto justify-between md:justify-end">
-            {selectedDate && selectedTasks.length > 0 ? (
+            {selectedTasks.length > 0 ? (
               <div className="flex flex-col items-center sm:items-end">
                 <div className="text-sm text-white/90 font-medium mb-1">
-                  Tiến độ ngày {selectedDateFormatted}: {completedTotalCount}/{selectedTasks.length} ({dayProgressPercent}%)
+                  Tiến độ {rangeLabel}: {completedTotalCount}/{selectedTasks.length} ({progressPercent}%)
                 </div>
                 <div className="w-48 h-2 bg-white/20 rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-white rounded-full transition-all duration-500"
-                    style={{ width: `${dayProgressPercent}%` }}
+                    style={{ width: `${progressPercent}%` }}
                   />
                 </div>
               </div>
-            ) : selectedDate ? (
-              <div className="text-xs text-white/80 font-medium">
-                Ngày {selectedDateFormatted}: Không có công việc & bài tập
-              </div>
             ) : (
               <div className="text-xs text-white/80 font-medium">
-                Bấm vào một ngày trên lịch để xem công việc
+                {calendarMode === 'day' && !selectedDate 
+                  ? 'Bấm vào một ngày trên lịch để xem công việc'
+                  : `${rangeLabel}: Không có công việc & bài tập`
+                }
               </div>
             )}
 
-            <button 
-              onClick={goToday} 
-              className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
-              title="Xem công việc hôm nay"
-            >
-              <span>🎯</span> <span>Hôm nay</span>
-            </button>
+            <div className="flex items-center gap-2 shrink-0">
+              {/* MODE FILTER */}
+              <div className="flex bg-white/15 rounded-xl p-0.5 gap-0.5">
+                {([
+                  { key: 'day' as const, label: 'Ngày' },
+                  { key: 'month' as const, label: 'Tháng' },
+                  { key: 'all' as const, label: 'Tất cả' },
+                ]).map(m => (
+                  <button
+                    key={m.key}
+                    onClick={() => setCalendarMode(m.key)}
+                    className={`text-[12px] font-bold px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                      calendarMode === m.key
+                        ? 'bg-white text-[#0ea5e9] shadow-sm'
+                        : 'text-white/80 hover:bg-white/10 hover:text-white'
+                    }`}
+                  >
+                    {m.label}
+                  </button>
+                ))}
+              </div>
+
+              <button 
+                onClick={goToday} 
+                className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                title="Xem công việc hôm nay"
+              >
+                <span>🎯</span> <span>Hôm nay</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -380,7 +419,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
             </div>
           </div>
 
-          {/* ========== RIGHT: 2 COLUMNS (CỘT CÔNG VIỆC & CỘT BÀI TẬP) ========== */}
+          {/* ========== RIGHT: 2 COLUMNS (DANH SÁCH CÔNG VIỆC & DANH SÁCH BÀI TẬP) ========== */}
           <div className="flex-1 min-w-0 w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
             
             {/* ========== CỘT 1: CỘT CÔNG VIỆC (MANUAL TASKS) ========== */}
@@ -393,7 +432,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-black text-slate-800 text-[14.5px] leading-tight truncate">
-                      Cột Công Việc
+                      Danh sách Công Việc
                     </h3>
                     <p className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">
                       Nhiệm vụ tự học, chép bài, tài liệu
@@ -407,7 +446,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
 
               {/* Nội dung danh sách công việc (Scrollable giống Trello) */}
               <div className="flex-1 overflow-y-auto custom-scrollbar p-3 sm:p-4 space-y-2.5 bg-slate-50/40">
-                {!selectedDate ? (
+                {calendarMode === 'day' && !selectedDate ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">👈</span>
                     <p className="text-xs font-semibold">Chọn một ngày trên lịch để xem công việc</p>
@@ -416,7 +455,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">📭</span>
                     <p className="text-xs font-bold text-slate-600 mb-0.5">Không có công việc nào</p>
-                    <p className="text-[11px] text-slate-400">Ngày {selectedDateFormatted} không có nhiệm vụ chép bài nào</p>
+                    <p className="text-[11px] text-slate-400">{rangeLabel} không có nhiệm vụ chép bài nào</p>
                   </div>
                 ) : (
                   selectedManualTasks.map(task => (
@@ -490,7 +529,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-black text-slate-800 text-[14.5px] leading-tight truncate">
-                      Cột Bài Tập
+                      Danh sách Bài Tập
                     </h3>
                     <p className="text-[11px] text-slate-500 font-medium mt-0.5 truncate">
                       Bài tập trong kho (Cần đạt ≥ 50%)
@@ -504,7 +543,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
 
               {/* Nội dung danh sách bài tập (Scrollable giống Trello) */}
               <div className="flex-1 overflow-y-auto custom-scrollbar p-3 sm:p-4 space-y-2.5 bg-slate-50/40">
-                {!selectedDate ? (
+                {calendarMode === 'day' && !selectedDate ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">👈</span>
                     <p className="text-xs font-semibold">Chọn một ngày trên lịch để xem bài tập</p>
@@ -513,7 +552,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">📭</span>
                     <p className="text-xs font-bold text-slate-600 mb-0.5">Không có bài tập nào</p>
-                    <p className="text-[11px] text-slate-400">Ngày {selectedDateFormatted} không có bài tập trong kho</p>
+                    <p className="text-[11px] text-slate-400">{rangeLabel} không có bài tập trong kho</p>
                   </div>
                 ) : (
                   selectedTestTasks.map(task => {
