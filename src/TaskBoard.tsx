@@ -49,6 +49,51 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
   const [activeModalCard, setActiveModalCard] = useState<ActiveModalCard | null>(null);
   const [colorPickerTarget, setColorPickerTarget] = useState<{ colId?: string; colTitle: string } | null>(null);
   const [activeBoardIndex, setActiveBoardIndex] = useState(0);
+  const [draggedColName, setDraggedColName] = useState<string | null>(null);
+  const [dragOverColName, setDragOverColName] = useState<string | null>(null);
+  const [customColOrders, setCustomColOrders] = useState<Record<string, string[]>>(() => {
+    try {
+      const saved = localStorage.getItem(`tony_taskboard_col_orders_${userId}`);
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+
+  const handleReorderColumns = (boardTitle: string, sourceColName: string, targetColName: string) => {
+    if (!sourceColName || !targetColName || sourceColName === targetColName) return;
+
+    setCustomColOrders(prev => {
+      const board = boardsData.find(b => b.title === boardTitle);
+      const currentCols = board ? board.columns.map(c => c.name) : (prev[boardTitle] || []);
+      const fromIdx = currentCols.indexOf(sourceColName);
+      const toIdx = currentCols.indexOf(targetColName);
+      if (fromIdx === -1 || toIdx === -1) return prev;
+
+      const newOrder = [...currentCols];
+      const [moved] = newOrder.splice(fromIdx, 1);
+      newOrder.splice(toIdx, 0, moved);
+
+      const next = { ...prev, [boardTitle]: newOrder };
+      try {
+        localStorage.setItem(`tony_taskboard_col_orders_${userId}`, JSON.stringify(next));
+      } catch (e) {
+        console.error('[TaskBoard] Error saving column order:', e);
+      }
+      return next;
+    });
+  };
+
+  const handleResetColumnOrder = (boardTitle: string) => {
+    setCustomColOrders(prev => {
+      const next = { ...prev };
+      delete next[boardTitle];
+      try {
+        localStorage.setItem(`tony_taskboard_col_orders_${userId}`, JSON.stringify(next));
+      } catch (e) {}
+      return next;
+    });
+  };
 
   useEffect(() => {
     fetchAssignments();
@@ -283,33 +328,46 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
         return { name: category, cards };
       });
 
-      // Sort columns: Topic 1 -> 10 strictly, then Exam practice ALWAYS at the very end
+      // Sort columns: Topic 1 -> 21 strictly, then Exam practice & Past papers ALWAYS at the very end
       const getColumnWeight = (catName: string) => {
         const norm = parseModuleTheme(catName).cleanTitle.trim().toLowerCase();
         // Exam practice & Past papers ALWAYS at the very end
         if (norm.includes('exam practice') || norm.includes('past paper') || norm.includes('đề thi')) {
           return 999999;
         }
-        // Topic / Section 1 to 10 in numeric order
+        // Matching board_columns order_index first
+        const bc = boardColumns.find(c => parseModuleTheme(c.title).cleanTitle.trim().toLowerCase() === norm);
+        if (bc && bc.order_index != null) {
+          return bc.order_index;
+        }
+        // Topic / Section 1 to 21 in numeric order
         const match = norm.match(/(?:topic|section)\s*(\d+)/i);
         if (match) {
           return parseInt(match[1], 10);
         }
-        // Matching board_columns order_index
-        const bc = boardColumns.find(c => parseModuleTheme(c.title).cleanTitle.trim().toLowerCase() === norm);
-        if (bc && bc.order_index != null) {
-          return 1000 + bc.order_index;
-        }
         return 50000;
       };
 
-      columns.sort((a, b) => getColumnWeight(a.name) - getColumnWeight(b.name));
+      const customOrder = customColOrders[boardTitle];
+      const isCustomOrderValid = customOrder && Array.isArray(customOrder) &&
+        customOrder.length === columns.length &&
+        columns.every(col => customOrder.includes(col.name));
+
+      if (isCustomOrderValid) {
+        columns.sort((a, b) => {
+          const idxA = customOrder.indexOf(a.name);
+          const idxB = customOrder.indexOf(b.name);
+          return idxA - idxB;
+        });
+      } else {
+        columns.sort((a, b) => getColumnWeight(a.name) - getColumnWeight(b.name));
+      }
 
       const overallProgress = totalItems > 0 ? Math.round((totalCompleted / totalItems) * 100) : 0;
       
       return { title: boardTitle, overallProgress, totalCompleted, totalItems, columns };
     });
-  }, [assignments, filterCourseId, boardTemplates, boardColumns, completedTestIds]);
+  }, [assignments, filterCourseId, boardTemplates, boardColumns, completedTestIds, customColOrders]);
 
   if (loading) {
     return (
@@ -333,20 +391,41 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
   return (
     <div className="w-full flex-1 min-h-0 h-full flex flex-col relative">
-      {/* If multiple boards exist, show switch tabs */}
-      {boardsData.length > 1 && (
-        <div className="flex items-center gap-1.5 mb-3 shrink-0 overflow-x-auto custom-scrollbar pb-1 bg-white/80 backdrop-blur-sm p-1.5 rounded-2xl border border-slate-200/80 shadow-sm w-fit">
-          {boardsData.map((b, idx) => (
-            <button
-              key={b.title}
-              onClick={() => setActiveBoardIndex(idx)}
-              className={`px-4 py-2 rounded-xl font-bold text-[13px] transition-all duration-300 whitespace-nowrap cursor-pointer flex items-center gap-2 ${activeBoardIndex === idx ? 'bg-[#0ea5e9] text-white shadow-md ring-1 ring-sky-300/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100/80'}`}
-            >
-              📋 {b.title}
-            </button>
-          ))}
+      {/* Top Board Bar with Switch Tabs and Reset Order Button */}
+      <div className="flex items-center justify-between gap-3 mb-2 shrink-0">
+        <div className="flex items-center gap-1.5 overflow-x-auto custom-scrollbar pb-1">
+          {boardsData.length > 1 && (
+            <div className="flex items-center gap-1.5 bg-white/80 backdrop-blur-sm p-1.5 rounded-2xl border border-slate-200/80 shadow-sm w-fit">
+              {boardsData.map((b, idx) => (
+                <button
+                  key={b.title}
+                  onClick={() => setActiveBoardIndex(idx)}
+                  className={`px-4 py-2 rounded-xl font-bold text-[13px] transition-all duration-300 whitespace-nowrap cursor-pointer flex items-center gap-2 ${activeBoardIndex === idx ? 'bg-[#0ea5e9] text-white shadow-md ring-1 ring-sky-300/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100/80'}`}
+                >
+                  📋 {b.title}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
-      )}
+
+        {(() => {
+          const currentBoard = boardsData[activeBoardIndex] || boardsData[0];
+          if (currentBoard && customColOrders[currentBoard.title]?.length > 0) {
+            return (
+              <button
+                type="button"
+                onClick={() => handleResetColumnOrder(currentBoard.title)}
+                className="text-xs font-bold text-slate-500 hover:text-slate-800 bg-white/90 hover:bg-white border border-slate-200 hover:border-slate-300 rounded-xl px-3 py-1.5 shadow-xs transition-all flex items-center gap-1.5 cursor-pointer shrink-0 ml-auto"
+                title="Khôi phục thứ tự các cột ban đầu"
+              >
+                <span>↺</span> <span>Đặt lại thứ tự cột</span>
+              </button>
+            );
+          }
+          return null;
+        })()}
+      </div>
 
       {(() => {
         const board = boardsData[activeBoardIndex] || boardsData[0];
@@ -364,10 +443,56 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                 });
                 const colTheme = matchingCol ? parseModuleTheme(matchingCol.title) : parseModuleTheme(col.name);
 
+                const isDragging = draggedColName === col.name;
+                const isDragOver = dragOverColName === col.name && draggedColName !== col.name;
+
                 return (
                   <div 
                     key={col.name} 
-                    className="flex-none w-[340px] md:w-[360px] rounded-[1.5rem] border p-3.5 flex flex-col h-full max-h-full transition-all duration-300 shadow-sm hover:shadow-md"
+                    draggable={true}
+                    onDragStart={(e) => {
+                      const target = e.target as HTMLElement;
+                      if (target.closest('button, input, textarea, .task-card-item')) {
+                        e.preventDefault();
+                        return;
+                      }
+                      setDraggedColName(col.name);
+                      e.dataTransfer.setData('text/plain', col.name);
+                      e.dataTransfer.effectAllowed = 'move';
+                    }}
+                    onDragOver={(e) => {
+                      e.preventDefault();
+                      e.dataTransfer.dropEffect = 'move';
+                      if (draggedColName && draggedColName !== col.name && dragOverColName !== col.name) {
+                        setDragOverColName(col.name);
+                      }
+                    }}
+                    onDragLeave={(e) => {
+                      if (e.currentTarget.contains(e.relatedTarget as Node)) return;
+                      if (dragOverColName === col.name) {
+                        setDragOverColName(null);
+                      }
+                    }}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      const sourceColName = e.dataTransfer.getData('text/plain') || draggedColName;
+                      if (sourceColName && sourceColName !== col.name) {
+                        handleReorderColumns(board.title, sourceColName, col.name);
+                      }
+                      setDraggedColName(null);
+                      setDragOverColName(null);
+                    }}
+                    onDragEnd={() => {
+                      setDraggedColName(null);
+                      setDragOverColName(null);
+                    }}
+                    className={`flex-none w-[340px] md:w-[360px] rounded-[1.5rem] border p-3.5 flex flex-col h-full max-h-full transition-all duration-200 shadow-sm ${
+                      isDragging 
+                        ? 'opacity-30 scale-95 border-dashed border-2 border-[#0ea5e9] bg-sky-50/50' 
+                        : isDragOver
+                          ? 'ring-4 ring-[#0ea5e9]/50 scale-[1.01] border-[#0ea5e9] shadow-xl'
+                          : 'hover:shadow-md'
+                    }`}
                     style={{
                       backgroundColor: colTheme.hasColor ? `${colTheme.bg}15` : 'rgba(255, 255, 255, 0.92)',
                       borderColor: colTheme.hasColor ? `${colTheme.border}80` : '#e2e8f0'
@@ -375,14 +500,18 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                   >
                     {/* Column Header */}
                     <div 
-                      className="flex justify-between items-center p-3 rounded-2xl mb-3 border shadow-sm transition-colors shrink-0"
+                      className="column-drag-handle flex justify-between items-center p-3 rounded-2xl mb-3 border shadow-sm transition-colors shrink-0 cursor-grab active:cursor-grabbing select-none"
+                      title="Nhấp và kéo để đổi vị trí cột"
                       style={{
                         backgroundColor: colTheme.hasColor ? colTheme.bg : '#ffffff',
                         borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
                         color: colTheme.hasColor ? colTheme.text : '#1e293b'
                       }}
                     >
-                      <div className="flex items-center gap-2.5 min-w-0">
+                      <div className="flex items-center gap-2 min-w-0 flex-1">
+                        <span className="text-current opacity-35 hover:opacity-75 transition-opacity shrink-0 text-sm leading-none select-none cursor-grab" title="Kéo thả cột">
+                          ⠿
+                        </span>
                         <h2 className="font-black text-[15px] truncate tracking-tight" title={colTheme.cleanTitle}>
                           {colTheme.cleanTitle}
                         </h2>
@@ -400,7 +529,10 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                         </span>
                         <button
                           type="button"
-                          onClick={() => setColorPickerTarget({ colId: matchingCol?.id, colTitle: matchingCol?.title || col.name })}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setColorPickerTarget({ colId: matchingCol?.id, colTitle: matchingCol?.title || col.name });
+                          }}
                           className="w-7 h-7 rounded-lg bg-white/90 hover:bg-white border border-black/10 hover:border-black/20 flex items-center justify-center text-xs transition-all cursor-pointer shadow-xs hover:shadow-sm hover:scale-105"
                           title="Chọn màu cột này"
                         >
@@ -427,7 +559,7 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
                           <div 
                             key={card.title} 
                             onClick={() => setActiveModalCard({ card, colName: col.name, boardTitle: board.title })}
-                            className={`bg-white rounded-2xl border shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 p-4 cursor-pointer select-none group ${
+                            className={`task-card-item bg-white rounded-2xl border shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 p-4 cursor-pointer select-none group ${
                               isCardAllDone 
                                 ? 'border-emerald-200/80 bg-gradient-to-br from-white to-emerald-50/30' 
                                 : 'border-slate-200/90 hover:border-sky-300'
