@@ -38,10 +38,117 @@ interface ActiveModalCard {
   boardTitle: string;
 }
 
+export interface BoardTheme {
+  id: string;
+  name: string;
+  boardBg: string;
+  titleBg: string;
+  titleText?: string;
+  isDark?: boolean;
+}
+
+export const DEFAULT_BOARD_THEME: BoardTheme = {
+  id: 'light-blue',
+  name: 'Xanh nhạt (Mặc định)',
+  boardBg: '#e0f2fe',
+  titleBg: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+  titleText: '#ffffff'
+};
+
+export const BOARD_THEMES: BoardTheme[] = [
+  {
+    id: 'light-blue',
+    name: 'Xanh nhạt (Mặc định)',
+    boardBg: '#e0f2fe',
+    titleBg: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+    titleText: '#ffffff'
+  },
+  {
+    id: 'sky-soft',
+    name: 'Xanh lam êm dịu',
+    boardBg: '#dbeafe',
+    titleBg: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
+    titleText: '#ffffff'
+  },
+  {
+    id: 'trello-ocean',
+    name: 'Xanh Trello kinh điển',
+    boardBg: '#0079bf',
+    titleBg: 'linear-gradient(135deg, #005a9c 0%, #004377 100%)',
+    titleText: '#ffffff',
+    isDark: true
+  },
+  {
+    id: 'teal-mint',
+    name: 'Xanh ngọc / Bạc hà',
+    boardBg: '#ccfbf1',
+    titleBg: 'linear-gradient(135deg, #0f766e 0%, #115e59 100%)',
+    titleText: '#ffffff'
+  },
+  {
+    id: 'purple-lavender',
+    name: 'Tím Lavender',
+    boardBg: '#ede9fe',
+    titleBg: 'linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)',
+    titleText: '#ffffff'
+  },
+  {
+    id: 'sunset-orange',
+    name: 'Cam hoàng hôn',
+    boardBg: '#ffedd5',
+    titleBg: 'linear-gradient(135deg, #ea580c 0%, #c2410c 100%)',
+    titleText: '#ffffff'
+  },
+  {
+    id: 'rose-pastel',
+    name: 'Hồng phấn Pastel',
+    boardBg: '#ffe4e6',
+    titleBg: 'linear-gradient(135deg, #e11d48 0%, #be123c 100%)',
+    titleText: '#ffffff'
+  },
+  {
+    id: 'emerald-leaf',
+    name: 'Xanh lá tươi mát',
+    boardBg: '#dcfce7',
+    titleBg: 'linear-gradient(135deg, #16a34a 0%, #15803d 100%)',
+    titleText: '#ffffff'
+  },
+  {
+    id: 'slate-modern',
+    name: 'Xám hiện đại',
+    boardBg: '#e2e8f0',
+    titleBg: 'linear-gradient(135deg, #334155 0%, #1e293b 100%)',
+    titleText: '#ffffff'
+  },
+  {
+    id: 'midnight-dark',
+    name: 'Đêm đen huyền bí',
+    boardBg: '#0f172a',
+    titleBg: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+    titleText: '#ffffff',
+    isDark: true
+  }
+];
+
+function getDarkerShade(hex: string, percent = 30): string {
+  let c = hex.replace('#', '');
+  if (c.length === 3) c = c.split('').map(x => x + x).join('');
+  const num = parseInt(c, 16);
+  if (isNaN(num)) return '#0284c7';
+  let r = (num >> 16);
+  let g = ((num >> 8) & 0x00FF);
+  let b = (num & 0x0000FF);
+  r = Math.max(0, Math.min(255, Math.floor(r * (1 - percent / 100))));
+  g = Math.max(0, Math.min(255, Math.floor(g * (1 - percent / 100))));
+  b = Math.max(0, Math.min(255, Math.floor(b * (1 - percent / 100))));
+  return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+}
+
 export default function TaskBoard({ 
   userId, 
   filterCourseId = 'all', 
   topActions,
+  bottomActions,
   courseTitle,
   filterElement, 
   onStartTest 
@@ -49,6 +156,7 @@ export default function TaskBoard({
   userId: string; 
   filterCourseId?: string; 
   topActions?: React.ReactNode;
+  bottomActions?: React.ReactNode;
   courseTitle?: string;
   filterElement?: React.ReactNode; 
   onStartTest?: (testId: string) => void 
@@ -62,7 +170,36 @@ export default function TaskBoard({
   const [inProgressTestIds, setInProgressTestIds] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
   const [activeModalCard, setActiveModalCard] = useState<ActiveModalCard | null>(null);
-  const [colorPickerTarget, setColorPickerTarget] = useState<{ colId?: string; colTitle: string } | null>(null);
+  const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
+  const [boardTheme, setBoardTheme] = useState<BoardTheme>(() => {
+    try {
+      const saved = localStorage.getItem(`tony_taskboard_theme_${userId}`);
+      if (saved) return JSON.parse(saved);
+    } catch (e) {}
+    return DEFAULT_BOARD_THEME;
+  });
+
+  const handleSelectTheme = (theme: BoardTheme) => {
+    setBoardTheme(theme);
+    try {
+      localStorage.setItem(`tony_taskboard_theme_${userId}`, JSON.stringify(theme));
+    } catch (e) {
+      console.error('[TaskBoard] Error saving theme:', e);
+    }
+  };
+
+  const handleApplyCustomColor = (hex: string) => {
+    const darker = getDarkerShade(hex, 28);
+    const darker2 = getDarkerShade(darker, 15);
+    const newTheme: BoardTheme = {
+      id: 'custom',
+      name: 'Màu tùy chọn',
+      boardBg: hex,
+      titleBg: `linear-gradient(135deg, ${darker} 0%, ${darker2} 100%)`,
+      titleText: '#ffffff'
+    };
+    handleSelectTheme(newTheme);
+  };
   const [activeBoardIndex, setActiveBoardIndex] = useState(0);
   const [draggedColName, setDraggedColName] = useState<string | null>(null);
   const [dragOverColName, setDragOverColName] = useState<string | null>(null);
@@ -386,7 +523,10 @@ export default function TaskBoard({
 
   if (loading) {
     return (
-      <div className="w-full flex-1 min-h-0 h-full flex items-center justify-center">
+      <div 
+        className="w-full flex-1 min-h-0 h-full flex items-center justify-center transition-colors duration-300"
+        style={{ backgroundColor: boardTheme.boardBg }}
+      >
         <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#0ea5e9] border-t-transparent"></div>
       </div>
     );
@@ -394,7 +534,10 @@ export default function TaskBoard({
 
   if (boardsData.length === 0) {
     return (
-      <div className="w-full flex-1 min-h-0 h-full flex flex-col p-2">
+      <div 
+        className="w-full flex-1 min-h-0 h-full flex flex-col p-4 transition-colors duration-300"
+        style={{ backgroundColor: boardTheme.boardBg }}
+      >
         {headerActions && (
           <div className="flex justify-end relative z-40 mb-3 shrink-0">
             {headerActions}
@@ -414,70 +557,88 @@ export default function TaskBoard({
   const currentBoard = boardsData[activeBoardIndex] || boardsData[0];
 
   return (
-    <div className="w-full flex-1 min-h-0 h-full flex flex-col relative">
+    <div 
+      className="w-full flex-1 min-h-0 h-full flex flex-col relative transition-colors duration-300"
+      style={{ backgroundColor: boardTheme.boardBg }}
+    >
       {/* Top Actions Row */}
       {headerActions && (
-        <div className="flex justify-end relative z-40 mb-2.5 shrink-0">
+        <div className="flex justify-end relative z-40 mb-2 px-3 pt-2 shrink-0">
           {headerActions}
         </div>
       )}
 
-      {/* UNIFIED BLUE HEADER BANNER */}
-      <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-3 sm:p-4 md:p-5 mb-2.5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-3 shrink-0">
-        <div className="flex items-center gap-3">
-          <span className="text-2xl sm:text-3xl">📋</span>
-          <div>
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
-              Bảng Công Việc{courseTitle ? ` - ${courseTitle}` : (currentBoard?.title ? ` - ${currentBoard.title}` : '')}
-            </h1>
-            <p className="text-white/80 text-xs md:text-sm mt-0.5">
-              Theo dõi tiến độ bài học và làm bài tập theo từng chuyên đề
-            </p>
+      {/* UNIFIED HEADER BANNER - DARKER BLUE OR THEME TITLE BG */}
+      <div className="px-3 pt-2.5 pb-2 shrink-0">
+        <div 
+          className="rounded-2xl p-3 sm:p-4 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-3 transition-all duration-300"
+          style={{ background: boardTheme.titleBg }}
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-2xl sm:text-3xl">📋</span>
+            <div>
+              <h1 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-white">
+                Bảng Công Việc{courseTitle ? ` - ${courseTitle}` : (currentBoard?.title ? ` - ${currentBoard.title}` : '')}
+              </h1>
+              <p className="text-white/85 text-xs md:text-sm mt-0.5">
+                Theo dõi tiến độ bài học và làm bài tập theo từng chuyên đề
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 w-full md:w-auto justify-between md:justify-end">
-          {/* Switch tabs if multiple boards exist (e.g. Co-ordinated Science: Biology / Chemistry / Physics) */}
-          {boardsData.length > 1 && (
-            <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm p-1 rounded-xl">
-              {boardsData.map((b, idx) => (
-                <button
-                  key={b.title}
-                  onClick={() => setActiveBoardIndex(idx)}
-                  className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
-                >
-                  {b.title}
-                </button>
-              ))}
-            </div>
-          )}
-
-          {/* Progress bar */}
-          {currentBoard && currentBoard.totalItems > 0 && (
-            <div className="flex flex-col items-center sm:items-end">
-              <div className="text-xs sm:text-sm text-white/90 font-medium mb-1">
-                Tiến độ: {currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full md:w-auto justify-between md:justify-end">
+            {/* Switch tabs if multiple boards exist */}
+            {boardsData.length > 1 && (
+              <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm p-1 rounded-xl">
+                {boardsData.map((b, idx) => (
+                  <button
+                    key={b.title}
+                    onClick={() => setActiveBoardIndex(idx)}
+                    className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-white text-slate-800 shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
+                  >
+                    {b.title}
+                  </button>
+                ))}
               </div>
-              <div className="w-36 sm:w-44 h-2 bg-white/20 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-white rounded-full transition-all duration-500"
-                  style={{ width: `${currentBoard.overallProgress}%` }}
-                />
-              </div>
-            </div>
-          )}
+            )}
 
-          {/* Reset column order button */}
-          {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
+            {/* Progress bar */}
+            {currentBoard && currentBoard.totalItems > 0 && (
+              <div className="flex flex-col items-center sm:items-end">
+                <div className="text-xs sm:text-sm text-white/90 font-medium mb-1">
+                  Tiến độ: {currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)
+                </div>
+                <div className="w-32 sm:w-40 h-2 bg-white/25 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-white rounded-full transition-all duration-500"
+                    style={{ width: `${currentBoard.overallProgress}%` }}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Reset column order button */}
+            {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
+              <button
+                type="button"
+                onClick={() => handleResetColumnOrder(currentBoard.title)}
+                className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3 py-1.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                title="Khôi phục thứ tự các cột ban đầu"
+              >
+                <span>↺</span> <span>Đặt lại thứ tự cột</span>
+              </button>
+            )}
+
+            {/* Đổi màu nền bảng làm việc */}
             <button
               type="button"
-              onClick={() => handleResetColumnOrder(currentBoard.title)}
+              onClick={() => setIsThemeModalOpen(true)}
               className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3 py-1.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
-              title="Khôi phục thứ tự các cột ban đầu"
+              title="Đổi màu nền bảng làm việc giống Trello"
             >
-              <span>↺</span> <span>Đặt lại thứ tự cột</span>
+              <span>🎨</span> <span>Đổi màu nền</span>
             </button>
-          )}
+          </div>
         </div>
       </div>
 
@@ -486,17 +647,14 @@ export default function TaskBoard({
         if (!board) return null;
 
         return (
-          <div key={board.title} className="w-full flex-1 min-h-0 h-full flex flex-col">
+          <div key={board.title} className="w-full flex-1 min-h-0 h-full flex flex-col relative overflow-hidden">
             {/* Board - Horizontal Scroll like Trello */}
-            <div className="flex-1 min-h-0 h-full flex flex-row gap-4 overflow-x-auto overflow-y-hidden pb-1 pt-0.5 custom-scrollbar items-stretch w-full">
+            <div 
+              className={`flex-1 min-h-0 h-full flex flex-row gap-3 overflow-x-auto overflow-y-hidden pb-16 pt-0.5 board-horizontal-scrollbar items-stretch w-full px-3 ${
+                boardTheme.isDark ? 'dark-theme' : ''
+              }`}
+            >
               {board.columns.map(col => {
-                const matchingCol = boardColumns.find(bc => {
-                  const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
-                  const t2 = parseModuleTheme(col.name).cleanTitle.trim().toLowerCase();
-                  return t1 === t2 || (bc.id && col.name === bc.id);
-                });
-                const colTheme = matchingCol ? parseModuleTheme(matchingCol.title) : parseModuleTheme(col.name);
-
                 const isDragging = draggedColName === col.name;
                 const isDragOver = dragOverColName === col.name && draggedColName !== col.name;
 
@@ -540,55 +698,43 @@ export default function TaskBoard({
                       setDraggedColName(null);
                       setDragOverColName(null);
                     }}
-                    className={`flex-none w-[340px] md:w-[360px] rounded-[1.5rem] border p-3.5 flex flex-col h-full max-h-full transition-all duration-200 shadow-sm ${
+                    className={`flex-none w-[275px] sm:w-[280px] rounded-[1.25rem] border p-2.5 sm:p-3 flex flex-col h-full max-h-full transition-all duration-200 shadow-sm ${
                       isDragging 
-                        ? 'opacity-30 scale-95 border-dashed border-2 border-[#0ea5e9] bg-sky-50/50' 
+                        ? 'opacity-30 scale-95 border-dashed border-2 border-sky-400 bg-sky-50/50' 
                         : isDragOver
-                          ? 'ring-4 ring-[#0ea5e9]/50 scale-[1.01] border-[#0ea5e9] shadow-xl'
+                          ? 'ring-4 ring-sky-400/50 scale-[1.01] border-sky-400 shadow-xl'
                           : 'hover:shadow-md'
                     }`}
                     style={{
-                      backgroundColor: colTheme.hasColor ? `${colTheme.bg}15` : 'rgba(255, 255, 255, 0.92)',
-                      borderColor: colTheme.hasColor ? `${colTheme.border}80` : '#e2e8f0'
+                      backgroundColor: 'rgba(255, 255, 255, 0.90)',
+                      borderColor: '#cbd5e1'
                     }}
                   >
                     {/* Column Header */}
                     <div 
-                      className="column-drag-handle flex justify-between items-center p-3 rounded-2xl mb-3 border shadow-sm transition-colors shrink-0 cursor-grab active:cursor-grabbing select-none"
+                      className="column-drag-handle flex justify-between items-center p-2.5 rounded-xl mb-2.5 bg-slate-100/90 border border-slate-200/80 shadow-xs transition-colors shrink-0 cursor-grab active:cursor-grabbing select-none"
                       title="Nhấp và kéo để đổi vị trí cột"
-                      style={{
-                        backgroundColor: colTheme.hasColor ? colTheme.bg : '#ffffff',
-                        borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
-                        color: colTheme.hasColor ? colTheme.text : '#1e293b'
-                      }}
                     >
-                      <div className="flex items-center gap-2 min-w-0 flex-1">
-                        <span className="text-current opacity-35 hover:opacity-75 transition-opacity shrink-0 text-sm leading-none select-none cursor-grab" title="Kéo thả cột">
+                      <div className="flex items-center gap-1.5 min-w-0 flex-1">
+                        <span className="text-slate-400 hover:text-slate-600 transition-opacity shrink-0 text-sm leading-none select-none cursor-grab" title="Kéo thả cột">
                           ⠿
                         </span>
-                        <h2 className="font-black text-[15px] truncate tracking-tight" title={colTheme.cleanTitle}>
-                          {colTheme.cleanTitle}
+                        <h2 className="font-bold text-[14px] truncate tracking-tight text-slate-800" title={col.name}>
+                          {col.name}
                         </h2>
                       </div>
                       <div className="flex items-center gap-1.5 shrink-0">
-                        <span 
-                          className="text-[11px] font-black px-2.5 py-1 rounded-lg border shadow-xs"
-                          style={{
-                            backgroundColor: 'white',
-                            borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
-                            color: colTheme.hasColor ? colTheme.text : '#64748b'
-                          }}
-                        >
+                        <span className="text-[11px] font-bold px-2 py-0.5 rounded-lg bg-white border border-slate-200 text-slate-600 shadow-xs">
                           {col.cards.length} thẻ
                         </span>
                         <button
                           type="button"
                           onClick={(e) => {
                             e.stopPropagation();
-                            setColorPickerTarget({ colId: matchingCol?.id, colTitle: matchingCol?.title || col.name });
+                            setIsThemeModalOpen(true);
                           }}
-                          className="w-7 h-7 rounded-lg bg-white/90 hover:bg-white border border-black/10 hover:border-black/20 flex items-center justify-center text-xs transition-all cursor-pointer shadow-xs hover:shadow-sm hover:scale-105"
-                          title="Chọn màu cột này"
+                          className="w-6 h-6 rounded-lg bg-white hover:bg-slate-50 border border-slate-200 flex items-center justify-center text-xs transition-all cursor-pointer shadow-xs hover:scale-105"
+                          title="Đổi màu nền bảng"
                         >
                           🎨
                         </button>
@@ -596,7 +742,7 @@ export default function TaskBoard({
                     </div>
                 
                     {/* Cards List inside column with vertical scroll */}
-                    <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 flex flex-col gap-3 min-h-0 pt-0.5">
+                    <div className="flex-1 overflow-y-auto column-cards-scrollbar pr-1 flex flex-col gap-2.5 min-h-0 pt-0.5">
                       {col.cards.map(card => {
                         const progressPct = card.totalCount > 0 ? Math.round((card.completedCount / card.totalCount) * 100) : 0;
                         const testCount = card.items.filter(i => i.task_type === 'test').length;
@@ -613,58 +759,58 @@ export default function TaskBoard({
                           <div 
                             key={card.title} 
                             onClick={() => setActiveModalCard({ card, colName: col.name, boardTitle: board.title })}
-                            className={`task-card-item bg-white rounded-2xl border shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 p-4 cursor-pointer select-none group ${
+                            className={`task-card-item bg-white rounded-xl border shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 p-3 cursor-pointer select-none group ${
                               isCardAllDone 
-                                ? 'border-emerald-200/80 bg-gradient-to-br from-white to-emerald-50/30' 
+                                ? 'border-emerald-300 bg-gradient-to-br from-white to-emerald-50/40' 
                                 : 'border-slate-200/90 hover:border-sky-300'
                             }`}
                           >
-                            <div className="flex justify-between items-start gap-2 mb-2.5">
-                              <h3 className="font-black text-slate-800 text-[14px] leading-snug group-hover:text-[#0ea5e9] transition-colors tracking-tight">
+                            <div className="flex justify-between items-start gap-2 mb-2">
+                              <h3 className="font-bold text-slate-800 text-[13px] leading-snug group-hover:text-sky-600 transition-colors tracking-tight">
                                 {card.title}
                               </h3>
-                              <span className="text-slate-300 group-hover:text-[#0ea5e9] text-xs transition-colors shrink-0 mt-0.5">
+                              <span className="text-slate-300 group-hover:text-sky-500 text-xs transition-colors shrink-0 mt-0.5">
                                 ➜
                               </span>
                             </div>
                             
                             {/* Progress bar */}
-                            <div className="flex items-center gap-2.5 mb-3">
-                              <div className="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
+                            <div className="flex items-center gap-2 mb-2.5">
+                              <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
                                 <div 
-                                  className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-gradient-to-r from-emerald-400 to-emerald-500' : 'bg-gradient-to-r from-sky-400 to-[#0ea5e9]'}`}
+                                  className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-gradient-to-r from-emerald-400 to-emerald-500' : 'bg-gradient-to-r from-sky-400 to-sky-600'}`}
                                   style={{ width: `${progressPct}%` }}
                                 />
                               </div>
                               <div className="flex items-center gap-1 shrink-0">
-                                <span className={`text-[13px] font-black ${isCardAllDone ? 'text-emerald-600' : 'text-[#0284c7]'}`}>
+                                <span className={`text-[12px] font-bold ${isCardAllDone ? 'text-emerald-600' : 'text-sky-600'}`}>
                                   {progressPct}%
                                 </span>
-                                <span className="text-[11px] font-semibold text-slate-400">
+                                <span className="text-[10px] font-medium text-slate-400">
                                   ({card.completedCount}/{card.totalCount})
                                 </span>
                               </div>
                             </div>
 
                             {/* Card badges */}
-                            <div className="flex items-center gap-1.5 flex-wrap">
+                            <div className="flex items-center gap-1 flex-wrap">
                               {testCount > 0 && (
-                                <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-100">
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-100">
                                   📝 {testCount} đề thi
                                 </span>
                               )}
                               {manualCount > 0 && (
-                                <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100">
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100">
                                   ✓ {manualCount} việc
                                 </span>
                               )}
                               {isCardAllDone && (
-                                <span className="text-[10px] font-black px-2.5 py-0.5 rounded-lg bg-emerald-100 text-emerald-700 border border-emerald-200">
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-emerald-100 text-emerald-800 border border-emerald-200">
                                   ✓ Xong
                                 </span>
                               )}
                               {hasOverdue && (
-                                <span className="text-[10px] font-black px-2.5 py-0.5 rounded-lg bg-red-50 text-red-600 border border-red-200">
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-rose-50 text-rose-600 border border-rose-200">
                                   ⚠️ Quá hạn
                                 </span>
                               )}
@@ -677,6 +823,15 @@ export default function TaskBoard({
                 );
               })}
             </div>
+
+            {/* Floating Bottom Controls centered above scrollbar */}
+            {bottomActions && (
+              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+                <div className="pointer-events-auto">
+                  {bottomActions}
+                </div>
+              </div>
+            )}
           </div>
         );
       })()}
@@ -967,23 +1122,75 @@ export default function TaskBoard({
         );
       })()}
 
-      {/* ================= COLUMN COLOR PICKER MODAL ================= */}
-      {colorPickerTarget && (() => {
-        const theme = parseModuleTheme(colorPickerTarget.colTitle);
-        return (
-          <ModuleColorModal
-            isOpen={true}
-            title={theme.cleanTitle}
-            initialBg={theme.bg}
-            initialText={theme.text}
-            onSave={handleSaveColumnColor}
-            onClose={() => setColorPickerTarget(null)}
-          />
-        );
-      })()}
+      {/* ================= BOARD BACKGROUND THEME MODAL (TRELLO STYLE) ================= */}
+      <BoardThemeModal
+        isOpen={isThemeModalOpen}
+        currentTheme={boardTheme}
+        onSelectTheme={handleSelectTheme}
+        onApplyCustomColor={handleApplyCustomColor}
+        onClose={() => setIsThemeModalOpen(false)}
+      />
+
       <style>{`
+        /* Horizontal scrollbar for the board at bottom - 14px thick, easy to grab like Trello */
+        .board-horizontal-scrollbar {
+          scrollbar-width: auto;
+          scrollbar-color: rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.08);
+        }
+        .board-horizontal-scrollbar::-webkit-scrollbar {
+          height: 14px;
+        }
+        .board-horizontal-scrollbar::-webkit-scrollbar-track {
+          background: rgba(0, 0, 0, 0.08);
+          border-radius: 9999px;
+          margin: 0 16px 2px 16px;
+        }
+        .board-horizontal-scrollbar::-webkit-scrollbar-thumb {
+          background-color: rgba(0, 0, 0, 0.32);
+          border-radius: 9999px;
+          border: 2px solid transparent;
+          background-clip: padding-box;
+          cursor: grab;
+        }
+        .board-horizontal-scrollbar::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(0, 0, 0, 0.55);
+        }
+        .board-horizontal-scrollbar::-webkit-scrollbar-thumb:active {
+          background-color: rgba(0, 0, 0, 0.75);
+          cursor: grabbing;
+        }
+
+        /* Dark theme scrollbar */
+        .board-horizontal-scrollbar.dark-theme {
+          scrollbar-color: rgba(255, 255, 255, 0.45) rgba(255, 255, 255, 0.12);
+        }
+        .board-horizontal-scrollbar.dark-theme::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.12);
+        }
+        .board-horizontal-scrollbar.dark-theme::-webkit-scrollbar-thumb {
+          background-color: rgba(255, 255, 255, 0.45);
+        }
+        .board-horizontal-scrollbar.dark-theme::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* Column cards vertical scrollbar */
+        .column-cards-scrollbar::-webkit-scrollbar {
+          width: 5px;
+        }
+        .column-cards-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .column-cards-scrollbar::-webkit-scrollbar-thumb {
+          background-color: #cbd5e1;
+          border-radius: 9999px;
+        }
+        .column-cards-scrollbar::-webkit-scrollbar-thumb:hover {
+          background-color: #94a3b8;
+        }
+
         .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
+          width: 5px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
           background: transparent;
@@ -993,6 +1200,162 @@ export default function TaskBoard({
           border-radius: 20px;
         }
       `}</style>
+    </div>
+  );
+}
+
+function BoardThemeModal({
+  isOpen,
+  currentTheme,
+  onSelectTheme,
+  onApplyCustomColor,
+  onClose
+}: {
+  isOpen: boolean;
+  currentTheme: BoardTheme;
+  onSelectTheme: (theme: BoardTheme) => void;
+  onApplyCustomColor: (hex: string) => void;
+  onClose: () => void;
+}) {
+  const [customHex, setCustomHex] = useState(currentTheme.boardBg.startsWith('#') ? currentTheme.boardBg : '#e0f2fe');
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/45 backdrop-blur-xs p-4 animate-in fade-in duration-200">
+      <div 
+        className="fixed inset-0" 
+        onClick={onClose}
+      />
+      <div className="relative bg-white rounded-3xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden flex flex-col z-10 animate-in zoom-in-95 duration-200">
+        {/* Header */}
+        <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
+          <div className="flex items-center gap-2.5">
+            <span className="text-2xl">🎨</span>
+            <div>
+              <h3 className="font-bold text-slate-800 text-base">Đổi màu nền bảng (Trello Style)</h3>
+              <p className="text-slate-400 text-xs mt-0.5">Chọn màu nền yêu thích cho toàn bộ không gian làm việc</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="w-8 h-8 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-500 flex items-center justify-center font-bold text-sm transition-all cursor-pointer shadow-xs"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Body */}
+        <div className="p-6 space-y-5 max-h-[70vh] overflow-y-auto custom-scrollbar">
+          {/* Preset Palettes */}
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-3">
+              Bảng màu gợi ý
+            </label>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {BOARD_THEMES.map((theme) => {
+                const isSelected = currentTheme.id === theme.id || currentTheme.boardBg === theme.boardBg;
+                return (
+                  <button
+                    key={theme.id}
+                    type="button"
+                    onClick={() => {
+                      onSelectTheme(theme);
+                      onClose();
+                    }}
+                    className={`rounded-2xl p-2.5 border text-left transition-all cursor-pointer flex flex-col gap-2 group hover:scale-[1.02] hover:shadow-md ${
+                      isSelected 
+                        ? 'border-sky-500 ring-2 ring-sky-400/40 shadow-sm bg-sky-50/20' 
+                        : 'border-slate-200 hover:border-slate-300 bg-white'
+                    }`}
+                  >
+                    {/* Mini board preview */}
+                    <div 
+                      className="w-full h-14 rounded-xl border border-black/5 p-1.5 flex flex-col justify-between shadow-inner"
+                      style={{ background: theme.boardBg }}
+                    >
+                      {/* Mini Title bar */}
+                      <div 
+                        className="h-2.5 w-full rounded-md shadow-2xs"
+                        style={{ background: theme.titleBg }}
+                      />
+                      {/* Mini Columns */}
+                      <div className="flex gap-1 h-6">
+                        <div className="w-1/3 bg-white/90 rounded-sm shadow-2xs" />
+                        <div className="w-1/3 bg-white/90 rounded-sm shadow-2xs" />
+                        <div className="w-1/3 bg-white/90 rounded-sm shadow-2xs" />
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between px-0.5">
+                      <span className="font-bold text-xs text-slate-700 truncate group-hover:text-sky-600">
+                        {theme.name}
+                      </span>
+                      {isSelected && (
+                        <span className="text-[11px] font-black text-sky-600 shrink-0">✓</span>
+                      )}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Custom Color Picker */}
+          <div className="pt-4 border-t border-slate-100">
+            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2.5">
+              Hoặc chọn mã màu tùy thích
+            </label>
+            <div className="flex items-center gap-3">
+              <input
+                type="color"
+                value={customHex}
+                onChange={(e) => setCustomHex(e.target.value)}
+                className="w-11 h-10 rounded-xl cursor-pointer border border-slate-200 p-0.5 bg-white shadow-xs shrink-0"
+              />
+              <input
+                type="text"
+                value={customHex}
+                onChange={(e) => setCustomHex(e.target.value)}
+                placeholder="#e0f2fe"
+                className="flex-1 px-3.5 py-2 text-xs font-mono font-bold rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-sky-500 outline-none uppercase"
+              />
+              <button
+                type="button"
+                onClick={() => {
+                  onApplyCustomColor(customHex);
+                  onClose();
+                }}
+                className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-sky-600 hover:bg-sky-700 transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
+              >
+                Áp dụng
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="px-6 py-3.5 border-t border-slate-100 bg-slate-50/70 flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => {
+              onSelectTheme(DEFAULT_BOARD_THEME);
+              onClose();
+            }}
+            className="text-xs font-bold text-slate-500 hover:text-sky-600 transition-colors cursor-pointer"
+          >
+            ↺ Khôi phục mặc định (Xanh nhạt)
+          </button>
+          <button
+            type="button"
+            onClick={onClose}
+            className="px-4 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 transition-all cursor-pointer shadow-xs"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

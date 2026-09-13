@@ -1416,7 +1416,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       <main className={`flex-1 w-full min-h-0 ${
         activeTab === 'board' 
-          ? 'max-w-none p-2.5 sm:p-3 md:p-4 overflow-hidden flex flex-col h-full' 
+          ? 'max-w-none p-0 overflow-hidden flex flex-col h-full' 
           : activeTab === 'calendar'
             ? 'max-w-none p-2.5 sm:p-3 md:p-4 overflow-y-auto custom-scrollbar flex flex-col'
             : 'max-w-[1200px] mx-auto p-4 md:p-8 overflow-y-auto custom-scrollbar'
@@ -1884,18 +1884,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             ===================================================================== */}
         {activeTab === 'board' && currentUser && (
           <div className="w-full flex-1 min-h-0 h-full flex flex-col animate-in fade-in duration-500 relative">
-            <div className="flex-1 min-h-0 w-full overflow-hidden">
-              <TaskBoard 
-                userId={currentUser.id} 
-                filterCourseId={filterCourse}
-                courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
-                onStartTest={(testId: string) => {
-                  const test = allTests.find(t => String(t.id) === String(testId));
-                  handleStartTestClick(test || { id: testId });
-                }} 
-              />
-            </div>
-            {renderBottomControls}
+            <TaskBoard 
+              userId={currentUser.id} 
+              filterCourseId={filterCourse}
+              courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
+              bottomActions={renderBottomControls}
+              onStartTest={(testId: string) => {
+                const test = allTests.find(t => String(t.id) === String(testId));
+                handleStartTestClick(test || { id: testId });
+              }} 
+            />
           </div>
         )}
 
