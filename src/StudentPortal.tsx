@@ -1194,7 +1194,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   );
 
   const renderBottomControls = (
-    <div className="shrink-0 py-2 px-4 flex items-center justify-center z-30">
+    <div className="shrink-0 p-0 flex items-center justify-center z-30">
       <div className="bg-white/95 backdrop-blur-md border border-slate-200 shadow-md rounded-2xl px-3 sm:px-4 py-1.5 flex flex-wrap items-center justify-center gap-2 sm:gap-3 transition-all hover:shadow-lg ring-1 ring-black/5">
         {/* NÚT BÀI GIẢNG */}
         <button

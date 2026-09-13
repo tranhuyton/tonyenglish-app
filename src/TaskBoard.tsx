@@ -766,7 +766,7 @@ export default function TaskBoard({
           <div key={board.title} className="w-full flex-1 min-h-0 h-full flex flex-col relative overflow-hidden">
             {/* Board - Horizontal Scroll like Trello */}
             <div 
-              className={`flex-1 min-h-0 h-full flex flex-row gap-3 overflow-x-auto overflow-y-hidden pb-16 pt-0.5 board-horizontal-scrollbar items-stretch w-full px-3 ${
+              className={`flex-1 min-h-0 h-full flex flex-row gap-3 overflow-x-auto overflow-y-hidden pb-20 sm:pb-[82px] pt-1 board-horizontal-scrollbar items-start w-full px-3 sm:px-4 ${
                 boardTheme.isDark ? 'dark-theme' : ''
               }`}
             >
@@ -826,7 +826,7 @@ export default function TaskBoard({
                       setDraggedColName(null);
                       setDragOverColName(null);
                     }}
-                    className={`flex-none w-[275px] sm:w-[280px] rounded-[1.25rem] border p-2.5 sm:p-3 flex flex-col h-full max-h-full transition-all duration-200 shadow-sm ${
+                    className={`flex-none w-[275px] sm:w-[280px] rounded-[1.25rem] border p-2.5 sm:p-3 flex flex-col max-h-full min-h-0 transition-all duration-200 shadow-sm ${
                       isDragging 
                         ? 'opacity-30 scale-95 border-dashed border-2 border-sky-400 bg-sky-50/50' 
                         : isDragOver
@@ -835,7 +835,8 @@ export default function TaskBoard({
                     }`}
                     style={{
                       backgroundColor: effectiveBg,
-                      borderColor: effectiveBorder
+                      borderColor: effectiveBorder,
+                      maxHeight: '100%'
                     }}
                   >
                     {/* Column Header */}
@@ -968,7 +969,7 @@ export default function TaskBoard({
 
             {/* Floating Bottom Controls centered above scrollbar */}
             {bottomActions && (
-              <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+              <div className="absolute bottom-2.5 sm:bottom-3 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
                 <div className="pointer-events-auto">
                   {bottomActions}
                 </div>
