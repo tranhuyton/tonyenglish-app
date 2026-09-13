@@ -580,9 +580,12 @@ export default function TaskBoard({
       const columns: ColumnData[] = Array.from(columnsMap.entries()).map(([category, cardsMap]) => {
         const cards: CardData[] = Array.from(cardsMap.entries()).map(([cardTitle, items]) => {
           const sortedItems = [...items].sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
-          const cardOrder = (items[0]?.card_order != null && items[0]?.card_order !== 0) 
-            ? items[0].card_order 
-            : (cardTitle.toLowerCase().startsWith('công việc') ? 1 : cardTitle.toLowerCase().startsWith('bài tập') ? 2 : 3);
+          const topicMatch = cardTitle.match(/Topic\s*(\d+)/i);
+          const cardOrder = topicMatch 
+            ? parseInt(topicMatch[1], 10)
+            : ((items[0]?.card_order != null && items[0]?.card_order !== 0) 
+                ? items[0].card_order 
+                : (cardTitle.toLowerCase().startsWith('công việc') ? 1 : cardTitle.toLowerCase().startsWith('bài tập') ? 2 : 3));
           const completedCount = sortedItems.filter(i => {
             if (i.task_type === 'test') {
               return i.is_completed || (i.test_id && completedTestIds.has(String(i.test_id)));
@@ -596,7 +599,7 @@ export default function TaskBoard({
         return { name: category, cards };
       });
 
-      // Sort columns: Topic 1 -> 21 strictly, then Exam practice & Past papers ALWAYS at the very end
+      // Sort columns: Year 1 -> Year 2 -> ... -> Exam practice & Past papers ALWAYS at the very end
       const getColumnWeight = (catName: string) => {
         const norm = parseModuleTheme(catName).cleanTitle.trim().toLowerCase();
         // Exam practice & Past papers ALWAYS at the very end
@@ -607,6 +610,11 @@ export default function TaskBoard({
         const bc = boardColumns.find(c => parseModuleTheme(c.title).cleanTitle.trim().toLowerCase() === norm);
         if (bc && bc.order_index != null) {
           return bc.order_index;
+        }
+        // Year 1, Year 2 in order
+        const yearMatch = norm.match(/year\s*(\d+)/i);
+        if (yearMatch) {
+          return parseInt(yearMatch[1], 10);
         }
         // Topic / Section 1 to 21 in numeric order
         const match = norm.match(/(?:topic|section)\s*(\d+)/i);
