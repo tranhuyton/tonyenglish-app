@@ -172,17 +172,20 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
   const selectedTasks = useMemo(() => {
     let filtered: Assignment[];
     
+    // Chỉ lấy assignment CÓ NGÀY GIAO (due_date) - bỏ qua task từ bảng công việc không có ngày
+    const withDate = assignments.filter(a => a.due_date && a.due_date.trim() !== '');
+
     if (calendarMode === 'day') {
       if (!selectedDate) return [];
-      filtered = assignments.filter(a => a.due_date === selectedDate);
+      filtered = withDate.filter(a => a.due_date === selectedDate);
     } else if (calendarMode === 'month') {
       const year = currentMonth.getFullYear();
       const month = currentMonth.getMonth() + 1;
       const prefix = `${year}-${String(month).padStart(2, '0')}`;
-      filtered = assignments.filter(a => a.due_date && a.due_date.startsWith(prefix));
+      filtered = withDate.filter(a => a.due_date.startsWith(prefix));
     } else {
-      // 'all' mode: show everything
-      filtered = [...assignments];
+      // 'all' mode: tất cả assignment CÓ NGÀY GIAO
+      filtered = withDate;
     }
 
     return filtered.map(a => {
