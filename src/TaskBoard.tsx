@@ -144,6 +144,90 @@ function getDarkerShade(hex: string, percent = 30): string {
   return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
 }
 
+export interface ColumnColorPreset {
+  id: string;
+  name: string;
+  bg: string;
+  headerBg: string;
+  text: string;
+  border: string;
+}
+
+export const COLUMN_COLOR_PRESETS: ColumnColorPreset[] = [
+  {
+    id: 'default',
+    name: 'Mặc định (Xám nhạt / Trắng)',
+    bg: '#f1f2f4',
+    headerBg: 'rgba(255, 255, 255, 0.65)',
+    text: '#1e293b',
+    border: '#cbd5e1'
+  },
+  {
+    id: 'green',
+    name: 'Xanh lá (To do - Mint)',
+    bg: '#dcfce7',
+    headerBg: 'rgba(255, 255, 255, 0.55)',
+    text: '#14532d',
+    border: '#86efac'
+  },
+  {
+    id: 'yellow',
+    name: 'Vàng tươi (Testing / Review)',
+    bg: '#fef9c3',
+    headerBg: 'rgba(255, 255, 255, 0.55)',
+    text: '#713f12',
+    border: '#fde047'
+  },
+  {
+    id: 'peach',
+    name: 'Hồng đào / Cam nhạt (In progress)',
+    bg: '#fee2e2',
+    headerBg: 'rgba(255, 255, 255, 0.55)',
+    text: '#7f1d1d',
+    border: '#fca5a5'
+  },
+  {
+    id: 'sky',
+    name: 'Xanh dương nhạt',
+    bg: '#e0f2fe',
+    headerBg: 'rgba(255, 255, 255, 0.55)',
+    text: '#0c4a6e',
+    border: '#7dd3fc'
+  },
+  {
+    id: 'purple',
+    name: 'Tím Lavender',
+    bg: '#f3e8ff',
+    headerBg: 'rgba(255, 255, 255, 0.55)',
+    text: '#581c87',
+    border: '#d8b4fe'
+  },
+  {
+    id: 'orange',
+    name: 'Cam hoàng hôn',
+    bg: '#ffedd5',
+    headerBg: 'rgba(255, 255, 255, 0.55)',
+    text: '#7c2d12',
+    border: '#fdba74'
+  },
+  {
+    id: 'teal',
+    name: 'Xanh ngọc bích',
+    bg: '#ccfbf1',
+    headerBg: 'rgba(255, 255, 255, 0.55)',
+    text: '#134e4a',
+    border: '#5eead4'
+  },
+  {
+    id: 'rose',
+    name: 'Hồng phấn Pastel',
+    bg: '#ffe4e6',
+    headerBg: 'rgba(255, 255, 255, 0.55)',
+    text: '#881337',
+    border: '#fda4af'
+  }
+];
+
 export default function TaskBoard({ 
   userId, 
   filterCourseId = 'all', 
@@ -178,6 +262,38 @@ export default function TaskBoard({
     } catch (e) {}
     return DEFAULT_BOARD_THEME;
   });
+
+  const [customColColors, setCustomColColors] = useState<Record<string, { bg: string; text: string; border: string }>>(() => {
+    try {
+      const saved = localStorage.getItem(`tony_taskboard_col_colors_${userId}`);
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+  const [activeColumnColorModal, setActiveColumnColorModal] = useState<{ colName: string; colId?: string } | null>(null);
+
+  const handleSaveColColor = async (colName: string, bg: string, text: string, border: string, colId?: string) => {
+    const nextColors = { ...customColColors, [colName]: { bg, text, border } };
+    setCustomColColors(nextColors);
+    try {
+      localStorage.setItem(`tony_taskboard_col_colors_${userId}`, JSON.stringify(nextColors));
+    } catch (e) {
+      console.error('[TaskBoard] Error saving column color locally:', e);
+    }
+
+    if (colId) {
+      try {
+        const clean = parseModuleTheme(colName).cleanTitle;
+        const newTitle = formatModuleTitleWithColor(clean, bg, text);
+        await supabase.from('board_columns').update({ title: newTitle }).eq('id', colId);
+        setBoardColumns(prev => prev.map(c => c.id === colId ? { ...c, title: newTitle } : c));
+      } catch (e) {
+        console.error('[TaskBoard] Error updating column color in DB:', e);
+      }
+    }
+    setActiveColumnColorModal(null);
+  };
 
   const handleSelectTheme = (theme: BoardTheme) => {
     setBoardTheme(theme);
@@ -655,6 +771,18 @@ export default function TaskBoard({
               }`}
             >
               {board.columns.map(col => {
+                const matchingCol = boardColumns.find(bc => {
+                  const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
+                  const t2 = parseModuleTheme(col.name).cleanTitle.trim().toLowerCase();
+                  return t1 === t2 || (bc.id && col.name === bc.id);
+                });
+                const dbTheme = parseModuleTheme(matchingCol?.title || col.name);
+                const userColColor = customColColors[col.name];
+                const effectiveBg = userColColor?.bg || (dbTheme.hasColor ? dbTheme.bg : '#f1f2f4');
+                const effectiveBorder = userColColor?.border || (dbTheme.hasColor ? dbTheme.border : '#cbd5e1');
+                const effectiveText = userColColor?.text || (dbTheme.hasColor ? dbTheme.text : '#1e293b');
+                const cleanColTitle = dbTheme.cleanTitle;
+
                 const isDragging = draggedColName === col.name;
                 const isDragOver = dragOverColName === col.name && draggedColName !== col.name;
 
@@ -706,35 +834,49 @@ export default function TaskBoard({
                           : 'hover:shadow-md'
                     }`}
                     style={{
-                      backgroundColor: 'rgba(255, 255, 255, 0.90)',
-                      borderColor: '#cbd5e1'
+                      backgroundColor: effectiveBg,
+                      borderColor: effectiveBorder
                     }}
                   >
                     {/* Column Header */}
                     <div 
-                      className="column-drag-handle flex justify-between items-center p-2.5 rounded-xl mb-2.5 bg-slate-100/90 border border-slate-200/80 shadow-xs transition-colors shrink-0 cursor-grab active:cursor-grabbing select-none"
+                      className="column-drag-handle flex justify-between items-center p-2.5 rounded-xl mb-2.5 shadow-xs transition-colors shrink-0 cursor-grab active:cursor-grabbing select-none"
+                      style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.65)',
+                        borderColor: effectiveBorder,
+                        borderWidth: '1px',
+                        color: effectiveText
+                      }}
                       title="Nhấp và kéo để đổi vị trí cột"
                     >
                       <div className="flex items-center gap-1.5 min-w-0 flex-1">
-                        <span className="text-slate-400 hover:text-slate-600 transition-opacity shrink-0 text-sm leading-none select-none cursor-grab" title="Kéo thả cột">
+                        <span className="opacity-40 hover:opacity-80 transition-opacity shrink-0 text-sm leading-none select-none cursor-grab" title="Kéo thả cột">
                           ⠿
                         </span>
-                        <h2 className="font-bold text-[14px] truncate tracking-tight text-slate-800" title={col.name}>
-                          {col.name}
+                        <h2 className="font-bold text-[14px] truncate tracking-tight" title={cleanColTitle}>
+                          {cleanColTitle}
                         </h2>
                       </div>
                       <div className="flex items-center gap-1.5 shrink-0">
-                        <span className="text-[11px] font-bold px-2 py-0.5 rounded-lg bg-white border border-slate-200 text-slate-600 shadow-xs">
+                        <span 
+                          className="text-[11px] font-bold px-2 py-0.5 rounded-lg border shadow-2xs"
+                          style={{
+                            backgroundColor: 'white',
+                            borderColor: effectiveBorder,
+                            color: effectiveText
+                          }}
+                        >
                           {col.cards.length} thẻ
                         </span>
                         <button
                           type="button"
                           onClick={(e) => {
                             e.stopPropagation();
-                            setIsThemeModalOpen(true);
+                            setActiveColumnColorModal({ colName: col.name, colId: matchingCol?.id });
                           }}
-                          className="w-6 h-6 rounded-lg bg-white hover:bg-slate-50 border border-slate-200 flex items-center justify-center text-xs transition-all cursor-pointer shadow-xs hover:scale-105"
-                          title="Đổi màu nền bảng"
+                          className="w-6 h-6 rounded-lg bg-white hover:bg-slate-50 border flex items-center justify-center text-xs transition-all cursor-pointer shadow-2xs hover:scale-105"
+                          style={{ borderColor: effectiveBorder }}
+                          title="Đổi màu nền cột này (Trello style)"
                         >
                           🎨
                         </button>
@@ -1131,6 +1273,18 @@ export default function TaskBoard({
         onClose={() => setIsThemeModalOpen(false)}
       />
 
+      {/* ================= INDIVIDUAL COLUMN COLOR MODAL (TRELLO STYLE) ================= */}
+      {activeColumnColorModal && (
+        <ColumnColorModal
+          isOpen={true}
+          colName={activeColumnColorModal.colName}
+          colId={activeColumnColorModal.colId}
+          currentColor={customColColors[activeColumnColorModal.colName]}
+          onSave={handleSaveColColor}
+          onClose={() => setActiveColumnColorModal(null)}
+        />
+      )}
+
       <style>{`
         /* Horizontal scrollbar for the board at bottom - 14px thick, easy to grab like Trello */
         .board-horizontal-scrollbar {
@@ -1346,6 +1500,164 @@ function BoardThemeModal({
             className="text-xs font-bold text-slate-500 hover:text-sky-600 transition-colors cursor-pointer"
           >
             ↺ Khôi phục mặc định (Xanh nhạt)
+          </button>
+          <button
+            type="button"
+            onClick={onClose}
+            className="px-4 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 transition-all cursor-pointer shadow-xs"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ColumnColorModal({
+  isOpen,
+  colName,
+  colId,
+  currentColor,
+  onSave,
+  onClose
+}: {
+  isOpen: boolean;
+  colName: string;
+  colId?: string;
+  currentColor?: { bg: string; text: string; border: string };
+  onSave: (colName: string, bg: string, text: string, border: string, colId?: string) => void;
+  onClose: () => void;
+}) {
+  const cleanName = parseModuleTheme(colName).cleanTitle;
+  const initialBg = currentColor?.bg || '#f1f2f4';
+  const initialText = currentColor?.text || '#1e293b';
+  const initialBorder = currentColor?.border || '#cbd5e1';
+
+  const [selectedBg, setSelectedBg] = useState(initialBg);
+  const [selectedText, setSelectedText] = useState(initialText);
+  const [selectedBorder, setSelectedBorder] = useState(initialBorder);
+  const [customHex, setCustomHex] = useState(initialBg.startsWith('#') ? initialBg : '#dcfce7');
+
+  if (!isOpen) return null;
+
+  const handleApplyPreset = (preset: ColumnColorPreset) => {
+    setSelectedBg(preset.bg);
+    setSelectedText(preset.text);
+    setSelectedBorder(preset.border);
+    onSave(colName, preset.bg, preset.text, preset.border, colId);
+  };
+
+  const handleApplyCustom = (hex: string) => {
+    const darker = getDarkerShade(hex, 35);
+    const border = getDarkerShade(hex, 15);
+    onSave(colName, hex, darker, border, colId);
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/45 backdrop-blur-xs p-4 animate-in fade-in duration-200">
+      <div className="fixed inset-0" onClick={onClose} />
+      <div className="relative bg-white rounded-3xl shadow-2xl border border-slate-200 w-full max-w-md overflow-hidden flex flex-col z-10 animate-in zoom-in-95 duration-200">
+        {/* Header */}
+        <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
+          <div className="flex items-center gap-2.5 min-w-0 pr-2">
+            <span className="text-xl shrink-0">🎨</span>
+            <div className="min-w-0">
+              <h3 className="font-bold text-slate-800 text-sm truncate">Đổi màu cột: {cleanName}</h3>
+              <p className="text-slate-400 text-xs mt-0.5">Các thẻ bên trong cột vẫn sẽ giữ nền trắng</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="w-7 h-7 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-500 flex items-center justify-center font-bold text-xs transition-all cursor-pointer shadow-xs shrink-0"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Body */}
+        <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto custom-scrollbar">
+          <div>
+            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2.5">
+              Chọn màu cột (Trello Style)
+            </label>
+            <div className="grid grid-cols-2 gap-2.5">
+              {COLUMN_COLOR_PRESETS.map((preset) => {
+                const isSelected = selectedBg.toLowerCase() === preset.bg.toLowerCase();
+                return (
+                  <button
+                    key={preset.id}
+                    type="button"
+                    onClick={() => handleApplyPreset(preset)}
+                    className={`rounded-2xl p-2.5 border text-left transition-all cursor-pointer flex flex-col gap-1.5 hover:scale-[1.02] hover:shadow-md ${
+                      isSelected 
+                        ? 'ring-2 ring-sky-500 shadow-sm' 
+                        : 'border-slate-200 hover:border-slate-300'
+                    }`}
+                    style={{ backgroundColor: preset.bg, borderColor: isSelected ? preset.text : preset.border }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-xs truncate" style={{ color: preset.text }}>
+                        {preset.name}
+                      </span>
+                      {isSelected && (
+                        <span className="text-xs font-black" style={{ color: preset.text }}>✓</span>
+                      )}
+                    </div>
+                    {/* Mini cards preview */}
+                    <div className="flex flex-col gap-1 w-full pt-1">
+                      <div className="h-3.5 bg-white rounded-md shadow-2xs w-full flex items-center px-1">
+                        <div className="h-1 w-12 bg-slate-200 rounded-full" />
+                      </div>
+                      <div className="h-3.5 bg-white rounded-md shadow-2xs w-full flex items-center px-1">
+                        <div className="h-1 w-8 bg-slate-200 rounded-full" />
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Custom Hex Color Picker */}
+          <div className="pt-3 border-t border-slate-100">
+            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">
+              Hoặc chọn màu tùy thích
+            </label>
+            <div className="flex items-center gap-2.5">
+              <input
+                type="color"
+                value={customHex}
+                onChange={(e) => setCustomHex(e.target.value)}
+                className="w-10 h-9 rounded-xl cursor-pointer border border-slate-200 p-0.5 bg-white shadow-xs shrink-0"
+              />
+              <input
+                type="text"
+                value={customHex}
+                onChange={(e) => setCustomHex(e.target.value)}
+                placeholder="#dcfce7"
+                className="flex-1 px-3 py-1.5 text-xs font-mono font-bold rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-sky-500 outline-none uppercase"
+              />
+              <button
+                type="button"
+                onClick={() => handleApplyCustom(customHex)}
+                className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-sky-600 hover:bg-sky-700 transition-all cursor-pointer shadow-xs shrink-0 active:scale-95"
+              >
+                Áp dụng
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="px-5 py-3 border-t border-slate-100 bg-slate-50/70 flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => handleApplyPreset(COLUMN_COLOR_PRESETS[0])}
+            className="text-xs font-bold text-slate-500 hover:text-sky-600 transition-colors cursor-pointer"
+          >
+            ↺ Mặc định
           </button>
           <button
             type="button"
