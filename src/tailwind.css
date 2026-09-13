@@ -26,6 +26,12 @@
 
 body {
   background-color: #f8fafc;
+  caret-color: transparent;
+}
+
+/* Giữ con trỏ nhấp nháy cho các trường nhập liệu thực sự */
+input, textarea, [contenteditable="true"] {
+  caret-color: auto;
 }
 
 
