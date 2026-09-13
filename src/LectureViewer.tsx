@@ -2229,8 +2229,12 @@ export default function LectureViewer({
                                         {lec.title}
                                     </span>
                                     {totalTasks > 0 && (
-                                       <span className={`text-[10px] w-fit px-1.5 py-0.5 rounded font-medium ${isLecCompleted ? 'bg-emerald-50 text-emerald-600' : 'bg-slate-100 text-slate-500'}`}>
-                                           {completedCount}/{totalTasks} bài tập
+                                       <span 
+                                         onClick={(e) => { e.stopPropagation(); if (isActive) { setIsTaskMenuOpen(!isTaskMenuOpen); } else { handleSelectLecture(lec.id); setTimeout(() => setIsTaskMenuOpen(true), 300); } }}
+                                         className={`text-[10px] w-fit px-1.5 py-0.5 rounded font-medium cursor-pointer transition-all ${isLecCompleted ? 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100' : isActive ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] hover:bg-[#0ea5e9]/20' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}`}
+                                         title="Bấm để xem nhiệm vụ bài học"
+                                       >
+                                           🎯 {completedCount}/{totalTasks} bài tập
                                        </span>
                                     )}
                                  </div>
@@ -2478,153 +2482,122 @@ export default function LectureViewer({
          </div>
        )}
 
-      {/* 🎯 FLOATING TASK BUTTON - GÓC DƯỚI TRÁI */}
-      {safeLectureTasks.length > 0 && (
+      {/* 🎯 POPUP NHIỆM VỤ - KHI BẤM VÀO BADGE BÀI TẬP TRONG SIDEBAR */}
+      {isTaskMenuOpen && safeLectureTasks.length > 0 && (
         <>
-          {/* Backdrop khi popup mở */}
-          {isTaskMenuOpen && (
-            <div 
-              className="fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[80] animate-in fade-in duration-200" 
-              onClick={() => setIsTaskMenuOpen(false)} 
-            />
-          )}
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[80] animate-in fade-in duration-200" 
+            onClick={() => setIsTaskMenuOpen(false)} 
+          />
 
-          {/* Nút floating nhỏ */}
-          <div className="fixed bottom-5 left-5 z-[85]" ref={taskMenuRef}>
-            <button 
-              onClick={() => setIsTaskMenuOpen(!isTaskMenuOpen)} 
-              className={`group relative flex items-center gap-2 pl-3.5 pr-4 py-2.5 rounded-2xl text-[13px] font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 border ${
-                isAllTasksDone 
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-emerald-400/50 shadow-emerald-500/25' 
-                  : 'bg-white text-slate-700 border-slate-200 hover:border-[#0ea5e9]/40 shadow-slate-300/40'
-              }`}
-              title="Xem nhiệm vụ bài học"
-            >
-              <span className="text-lg">{isAllTasksDone ? '🏆' : '🎯'}</span>
-              <span className="hidden sm:inline">{isAllTasksDone ? 'Hoàn thành' : 'Nhiệm vụ'}</span>
-              <span className={`px-1.5 py-0.5 rounded-lg text-[11px] font-black ${
-                isAllTasksDone 
-                  ? 'bg-white/25 text-white' 
-                  : 'bg-[#0ea5e9]/10 text-[#0ea5e9]'
-              }`}>{safeCompletedTasks.length}/{safeLectureTasks.length}</span>
-              {!isAllTasksDone && (
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#0ea5e9] rounded-full animate-ping opacity-75"></span>
-              )}
-              {!isAllTasksDone && (
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#0ea5e9] rounded-full"></span>
-              )}
-            </button>
+          {/* Popup task list - centered */}
+          <div ref={taskMenuRef} className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-[420px] max-h-[75vh] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-slate-100 overflow-hidden z-[90] animate-in zoom-in-95 fade-in duration-200 flex flex-col">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-slate-50 to-white px-5 py-4 border-b border-slate-100 shrink-0">
+               <div className="flex justify-between items-center mb-2.5">
+                 <h4 className="font-bold text-slate-800 text-[15px] flex items-center gap-2">
+                   <span>{isAllTasksDone ? '🏆' : '🎯'}</span>
+                   Nhiệm vụ bài học
+                 </h4>
+                 <div className="flex items-center gap-2">
+                   <span className={`font-bold text-[13px] px-2.5 py-1 rounded-full ${isAllTasksDone ? 'bg-emerald-100 text-emerald-700' : 'bg-[#0ea5e9]/10 text-[#0ea5e9]'}`}>
+                     {Math.round((safeCompletedTasks.length / safeLectureTasks.length) * 100)}%
+                   </span>
+                   <button 
+                     onClick={() => setIsTaskMenuOpen(false)} 
+                     className="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors text-xs"
+                   >✕</button>
+                 </div>
+               </div>
+               <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                 <div className={`h-full rounded-full transition-all duration-500 ${isAllTasksDone ? 'bg-gradient-to-r from-emerald-400 to-teal-500' : 'bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8]'}`} style={{ width: `${(safeCompletedTasks.length / safeLectureTasks.length) * 100}%` }}></div>
+               </div>
+            </div>
 
-            {/* Popup task list */}
-            {isTaskMenuOpen && (
-              <div className="absolute bottom-full left-0 mb-3 w-[340px] sm:w-[400px] max-h-[70vh] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-slate-100 overflow-hidden z-[90] animate-in slide-in-from-bottom-3 fade-in duration-200 flex flex-col">
-                {/* Header */}
-                <div className="bg-gradient-to-r from-slate-50 to-white px-5 py-4 border-b border-slate-100 shrink-0">
-                   <div className="flex justify-between items-center mb-2.5">
-                     <h4 className="font-bold text-slate-800 text-[15px] flex items-center gap-2">
-                       <span>{isAllTasksDone ? '🏆' : '🎯'}</span>
-                       Nhiệm vụ bài học
-                     </h4>
-                     <div className="flex items-center gap-2">
-                       <span className={`font-bold text-[13px] px-2.5 py-1 rounded-full ${isAllTasksDone ? 'bg-emerald-100 text-emerald-700' : 'bg-[#0ea5e9]/10 text-[#0ea5e9]'}`}>
-                         {Math.round((safeCompletedTasks.length / safeLectureTasks.length) * 100)}%
-                       </span>
-                       <button 
-                         onClick={() => setIsTaskMenuOpen(false)} 
-                         className="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors text-xs"
-                       >✕</button>
+            {/* Task list */}
+            <div className="flex-1 overflow-y-auto p-3 custom-scrollbar flex flex-col gap-2">
+               {safeLectureTasks.map((task: any) => {
+                  const isCompleted = safeCompletedTasks.includes(task.id);
+                  const isExercise = task.type === 'exercise';
+                  
+                  const testKey = task.test_id ? String(task.test_id) : null;
+                  const titleKey = task.text ? task.text.trim().toLowerCase() : null;
+                  const scoreInfo = isExercise ? (
+                    (testKey && testScoresMap.get(testKey)) || 
+                    (titleKey && testScoresMap.get(titleKey)) || 
+                    (titleKey && Array.from(testScoresMap.entries()).find(([k]) => titleKey.includes(k) || k.includes(titleKey))?.[1])
+                  ) : null;
+
+                  return (
+                     <div key={task.id} className={`flex items-start gap-3 p-3.5 rounded-xl transition-all border ${isCompleted ? 'bg-emerald-50/50 border-emerald-200 shadow-sm' : 'bg-white border-slate-200 hover:border-[#0ea5e9]/50 hover:shadow-md'}`}>
+                        {!isExercise ? (
+                           <button 
+                               onClick={() => handleToggleTask(task.id)} 
+                               className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 transition-all cursor-pointer ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 hover:border-[#0ea5e9]'}`}
+                               title={isCompleted ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
+                           >
+                               {isCompleted && (
+                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
+                               )}
+                           </button>
+                        ) : (
+                           <div 
+                               className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 select-none ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 text-slate-400'}`}
+                               title={isCompleted ? "Đã đạt ≥ 50%" : "Cần nộp bài đạt từ 50%"}
+                           >
+                               {isCompleted ? (
+                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
+                               ) : (
+                                   <span className="text-[10px]">📝</span>
+                               )}
+                           </div>
+                        )}
+
+                        <div className="flex-1 min-w-0 flex flex-col items-start gap-2">
+                           <span className={`text-[13.5px] leading-snug transition-colors ${isCompleted ? 'text-slate-500 line-through' : 'text-slate-800 font-medium'}`}>
+                               {task.text}
+                           </span>
+
+                           {isExercise && (
+                              <div className="flex items-center gap-2 flex-wrap">
+                                {scoreInfo ? (
+                                  scoreInfo.isPassed ? (
+                                    <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-lg flex items-center gap-1">
+                                      <span>✓</span> Đã đạt: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%)
+                                    </span>
+                                  ) : (
+                                    <span className="text-[11px] font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2.5 py-0.5 rounded-lg flex items-center gap-1">
+                                      <span>⚠️</span> Chưa đạt: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%) • Cần ≥ 50%
+                                    </span>
+                                  )
+                                ) : (
+                                  <span className="text-[10.5px] font-medium text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
+                                    Cần nộp bài đạt từ 50% điểm
+                                  </span>
+                                )}
+                              </div>
+                           )}
+
+                           {isExercise && (
+                              <button 
+                                onClick={() => handleStartTaskExercise(task)} 
+                                className={`text-[12px] font-semibold px-4 py-1.5 rounded-lg transition-all cursor-pointer ${
+                                  isCompleted 
+                                    ? 'bg-slate-100 text-slate-600 hover:bg-slate-200' 
+                                    : scoreInfo && !scoreInfo.isPassed 
+                                      ? 'bg-amber-500 hover:bg-amber-600 text-white shadow-sm shadow-amber-500/30' 
+                                      : 'bg-[#0ea5e9] text-white shadow-sm shadow-blue-500/30 hover:bg-[#0284c7] active:scale-95'
+                                }`}
+                              >
+                                {isCompleted ? 'Làm lại bài' : scoreInfo && !scoreInfo.isPassed ? 'Làm lại để đạt điểm ➜' : 'Bắt đầu làm bài ➜'}
+                              </button>
+                           )}
+                        </div>
                      </div>
-                   </div>
-                   <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-                     <div className={`h-full rounded-full transition-all duration-500 ${isAllTasksDone ? 'bg-gradient-to-r from-emerald-400 to-teal-500' : 'bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8]'}`} style={{ width: `${(safeCompletedTasks.length / safeLectureTasks.length) * 100}%` }}></div>
-                   </div>
-                </div>
-
-                {/* Task list */}
-                <div className="flex-1 overflow-y-auto p-3 custom-scrollbar flex flex-col gap-2">
-                   {safeLectureTasks.map((task: any) => {
-                      const isCompleted = safeCompletedTasks.includes(task.id);
-                      const isExercise = task.type === 'exercise';
-                      
-                      const testKey = task.test_id ? String(task.test_id) : null;
-                      const titleKey = task.text ? task.text.trim().toLowerCase() : null;
-                      const scoreInfo = isExercise ? (
-                        (testKey && testScoresMap.get(testKey)) || 
-                        (titleKey && testScoresMap.get(titleKey)) || 
-                        (titleKey && Array.from(testScoresMap.entries()).find(([k]) => titleKey.includes(k) || k.includes(titleKey))?.[1])
-                      ) : null;
-
-                      return (
-                         <div key={task.id} className={`flex items-start gap-3 p-3.5 rounded-xl transition-all border ${isCompleted ? 'bg-emerald-50/50 border-emerald-200 shadow-sm' : 'bg-white border-slate-200 hover:border-[#0ea5e9]/50 hover:shadow-md'}`}>
-                            {!isExercise ? (
-                               <button 
-                                   onClick={() => handleToggleTask(task.id)} 
-                                   className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 transition-all cursor-pointer ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 hover:border-[#0ea5e9]'}`}
-                                   title={isCompleted ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
-                               >
-                                   {isCompleted && (
-                                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
-                                   )}
-                               </button>
-                            ) : (
-                               <div 
-                                   className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 select-none ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 text-slate-400'}`}
-                                   title={isCompleted ? "Đã đạt ≥ 50%" : "Cần nộp bài đạt từ 50%"}
-                               >
-                                   {isCompleted ? (
-                                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
-                                   ) : (
-                                       <span className="text-[10px]">📝</span>
-                                   )}
-                               </div>
-                            )}
-
-                            <div className="flex-1 min-w-0 flex flex-col items-start gap-2">
-                               <span className={`text-[13.5px] leading-snug transition-colors ${isCompleted ? 'text-slate-500 line-through' : 'text-slate-800 font-medium'}`}>
-                                   {task.text}
-                               </span>
-
-                               {isExercise && (
-                                  <div className="flex items-center gap-2 flex-wrap">
-                                    {scoreInfo ? (
-                                      scoreInfo.isPassed ? (
-                                        <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-lg flex items-center gap-1">
-                                          <span>✓</span> Đã đạt: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%)
-                                        </span>
-                                      ) : (
-                                        <span className="text-[11px] font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2.5 py-0.5 rounded-lg flex items-center gap-1">
-                                          <span>⚠️</span> Chưa đạt: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%) • Cần ≥ 50%
-                                        </span>
-                                      )
-                                    ) : (
-                                      <span className="text-[10.5px] font-medium text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
-                                        Cần nộp bài đạt từ 50% điểm
-                                      </span>
-                                    )}
-                                  </div>
-                               )}
-
-                               {isExercise && (
-                                  <button 
-                                    onClick={() => handleStartTaskExercise(task)} 
-                                    className={`text-[12px] font-semibold px-4 py-1.5 rounded-lg transition-all cursor-pointer ${
-                                      isCompleted 
-                                        ? 'bg-slate-100 text-slate-600 hover:bg-slate-200' 
-                                        : scoreInfo && !scoreInfo.isPassed 
-                                          ? 'bg-amber-500 hover:bg-amber-600 text-white shadow-sm shadow-amber-500/30' 
-                                          : 'bg-[#0ea5e9] text-white shadow-sm shadow-blue-500/30 hover:bg-[#0284c7] active:scale-95'
-                                    }`}
-                                  >
-                                    {isCompleted ? 'Làm lại bài' : scoreInfo && !scoreInfo.isPassed ? 'Làm lại để đạt điểm ➜' : 'Bắt đầu làm bài ➜'}
-                                  </button>
-                               )}
-                            </div>
-                         </div>
-                      )
-                   })}
-                </div>
-              </div>
-            )}
+                  )
+               })}
+            </div>
           </div>
         </>
       )}
