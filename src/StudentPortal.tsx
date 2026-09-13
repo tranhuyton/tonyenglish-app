@@ -1128,11 +1128,76 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     );
   };
 
+  const renderTopControls = (
+    <div className="flex flex-wrap items-center justify-end gap-2.5">
+      <button
+        type="button"
+        onClick={() => handleGoToLecture()}
+        className="bg-white/90 hover:bg-white text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+        title="Mở bài giảng lý thuyết"
+      >
+        <span className="text-base">📖</span> <span>Bài giảng lý thuyết</span>
+      </button>
+      <button
+        type="button"
+        onClick={() => handleGoToTestBank()}
+        className="bg-white/90 hover:bg-white text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-[#0ea5e9] font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+        title="Mở kho đề"
+      >
+        <span className="text-base">📚</span> <span>Kho đề</span>
+      </button>
+
+      {/* DROPDOWN CHỌN KHÓA HỌC */}
+      <div className="relative w-full sm:w-64 z-40">
+        <div 
+          onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+          className="w-full bg-white/90 hover:bg-white backdrop-blur border border-sky-200 rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] shadow-sm transition-all"
+        >
+          <span className="font-bold text-[13px] text-sky-800 truncate pr-2">
+            {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+          </span>
+          <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+        </div>
+        
+        {filterCourseDropdownOpen && (
+          <>
+            <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+            <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1">
+              <div 
+                onClick={() => {
+                  setFilterCourse('all');
+                  setAnalyticsCourse('all');
+                  setFilterCourseDropdownOpen(false);
+                }}
+                className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+              >
+                🌟 Tất cả khóa học
+              </div>
+              {courses.map(course => (
+                <div 
+                  key={course.id}
+                  onClick={() => {
+                    setFilterCourse(course.id);
+                    setAnalyticsCourse(course.id);
+                    setFilterCourseDropdownOpen(false);
+                  }}
+                  className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                >
+                  📖 {course.title}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <div className={`${activeTab === 'board' ? 'h-screen max-h-screen overflow-hidden' : 'min-h-[100dvh]'} bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full flex flex-col`}>
       {/* HEADER: Glassmorphism */}
       <header className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-40 shadow-sm shrink-0">
-        <div className={`${activeTab === 'board' ? 'w-full px-4 md:px-6' : 'max-w-[1200px] w-full mx-auto px-4 md:px-6'} py-2.5 flex items-center justify-between gap-3 transition-all`}>
+        <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 py-2.5 flex items-center justify-between gap-3 transition-all">
           
           <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity shrink-0" onClick={() => {
               resetWorkspaceAndChat(); 
@@ -1748,77 +1813,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <TaskBoard 
                 userId={currentUser.id} 
                 filterCourseId={filterCourse}
+                courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
+                topActions={renderTopControls}
                 onStartTest={(testId: string) => {
                   const test = allTests.find(t => String(t.id) === String(testId));
                   handleStartTestClick(test || { id: testId });
                 }} 
               />
-            </div>
-
-            {/* 🎯 THANH ĐIỀU HƯỚNG DƯỚI CÙNG (TRELLO STYLE BOTTOM CENTER CONTROLS) */}
-            <div className="shrink-0 py-2 sm:py-2.5 px-4 flex items-center justify-center z-30">
-              <div className="bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-lg rounded-2xl px-3 sm:px-4 py-1.5 flex flex-wrap items-center justify-center gap-2 sm:gap-3 transition-all hover:shadow-xl ring-1 ring-black/5">
-                {/* NÚT BÀI GIẢNG */}
-                <button
-                  type="button"
-                  onClick={() => handleGoToLecture()}
-                  className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-300 font-bold text-xs sm:text-[13px] px-3.5 py-1.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer shrink-0 hover:shadow hover:scale-[1.02] active:scale-95"
-                  title="Mở bài giảng lý thuyết"
-                >
-                  <span className="text-base">📖</span> <span>Bài giảng lý thuyết</span>
-                </button>
-
-                {/* NÚT KHO ĐỀ */}
-                <button
-                  type="button"
-                  onClick={() => handleGoToTestBank()}
-                  className="bg-sky-50 hover:bg-sky-100 text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-sky-300 font-bold text-xs sm:text-[13px] px-3.5 py-1.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer shrink-0 hover:shadow hover:scale-[1.02] active:scale-95"
-                  title="Mở kho đề"
-                >
-                  <span className="text-base">📚</span> <span>Kho đề</span>
-                </button>
-
-                <div className="h-5 w-px bg-slate-200 hidden sm:block"></div>
-
-                {/* DROPDOWN CHỌN KHÓA HỌC */}
-                <div className="relative w-48 sm:w-60 z-50">
-                  <div 
-                    onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-                    className="w-full bg-slate-50 hover:bg-sky-50/50 border border-slate-200 hover:border-[#0ea5e9] rounded-xl px-3 py-1.5 flex items-center justify-between cursor-pointer shadow-xs transition-all"
-                  >
-                    <div className="flex items-center gap-1.5 min-w-0 pr-2">
-                      <span className="text-slate-400 text-xs">🎓</span>
-                      <span className="font-bold text-xs text-slate-800 truncate">
-                        {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
-                      </span>
-                    </div>
-                    <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▲</span>
-                  </div>
-                  
-                  {filterCourseDropdownOpen && (
-                    <>
-                      <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 animate-in fade-in slide-in-from-bottom-2 custom-scrollbar p-1">
-                        <div 
-                          onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
-                          className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
-                        >
-                          🌟 Tất cả khóa học
-                        </div>
-                        {courses.map(course => (
-                          <div 
-                            key={course.id}
-                            onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
-                            className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
-                          >
-                            📖 {course.title}
-                          </div>
-                        ))}
-                      </div>
-                    </>
-                  )}
-                </div>
-              </div>
             </div>
           </div>
         )}
@@ -1850,62 +1851,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   assignments={calendarAssignments} 
                   completedTestIds={completedTestIdsSet}
                   courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
-                  topActions={
-                    <div className="flex flex-wrap items-center justify-end gap-2.5">
-                      <button
-                        type="button"
-                        onClick={() => handleGoToLecture()}
-                        className="bg-white/90 hover:bg-white text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer"
-                        title="Mở bài giảng lý thuyết"
-                      >
-                        <span className="text-base">📖</span> <span>Bài giảng lý thuyết</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => handleGoToTestBank()}
-                        className="bg-white/90 hover:bg-white text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-[#0ea5e9] font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer"
-                        title="Mở kho đề"
-                      >
-                        <span className="text-base">📚</span> <span>Kho đề</span>
-                      </button>
-
-                      {/* DROPDOWN CHỌN KHÓA HỌC */}
-                      <div className="relative w-full sm:w-64 z-40">
-                        <div 
-                          onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-                          className="w-full bg-white/80 backdrop-blur border border-sky-200 rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] hover:bg-white shadow-sm transition-all"
-                        >
-                          <span className="font-bold text-[13px] text-sky-800 truncate pr-2">
-                            {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
-                          </span>
-                          <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
-                        </div>
-                        
-                        {filterCourseDropdownOpen && (
-                          <>
-                            <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-                            <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar">
-                              <div 
-                                onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
-                                className={`px-4 py-2.5 text-[13px] font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
-                              >
-                                Tất cả khóa học
-                              </div>
-                              {courses.map(course => (
-                                <div 
-                                  key={course.id}
-                                  onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
-                                  className={`px-4 py-2.5 text-[13px] font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
-                                >
-                                  {course.title}
-                                </div>
-                              ))}
-                            </div>
-                          </>
-                        )}
-                      </div>
-                    </div>
-                  }
+                  topActions={renderTopControls}
                   onRefresh={async () => {
                     if (!currentUser) return;
                     const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });
@@ -1927,74 +1873,50 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         {activeTab === 'analytics' && (
           <div className="space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             
-            {/* Bộ lọc báo cáo */}
-            <div className="bg-white px-6 py-6 rounded-[2rem] border border-slate-200 shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 mx-2 md:mx-0">
-              <div>
-                <h2 className="text-[22px] md:text-[24px] font-black text-slate-800 tracking-tight">Hiệu Suất Học Tập</h2>
-                <p className="text-[14px] text-slate-500 font-medium mt-1">Phân tích kết quả và biểu đồ kỹ năng</p>
+            {/* TOP ACTIONS */}
+            <div className="flex justify-end relative z-40">
+              {renderTopControls}
+            </div>
+
+            {/* UNIFIED BLUE HEADER BANNER */}
+            <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">📊</span>
+                <div>
+                  <h1 className="text-xl md:text-2xl font-bold tracking-tight">
+                    Báo Cáo Hiệu Suất{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` - ${courses.find(c => String(c.id) === String(filterCourse))?.title}` : ''}
+                  </h1>
+                  <p className="text-white/80 text-xs md:text-sm mt-0.5">
+                    Phân tích kết quả học tập, kỹ năng và biểu đồ tiến độ
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
-                {isIeltsCourseSelected && (
-                    <div className="flex flex-wrap bg-slate-100/80 p-1 rounded-xl w-full sm:w-fit border border-slate-200/50 backdrop-blur-sm gap-1">
-                        <button
-                            onClick={() => setAnalyticsTestType('ielts')}
-                            className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'ielts' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
-                        >
-                            <span>🎯</span> Luyện thi IELTS
-                        </button>
-                        <button
-                            onClick={() => setAnalyticsTestType('ielts-standard')}
-                            className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'ielts-standard' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
-                        >
-                            <span>📝</span> Bài Tập Bổ Trợ
-                        </button>
-                        {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
-                            <button
-                                onClick={() => setAnalyticsTestType('standard')}
-                                className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'standard' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
-                            >
-                                <span>📚</span> Bài tập khóa khác
-                            </button>
-                        )}
-                    </div>
-                )}
-                <div className="relative w-full sm:w-64">
-                  <div 
-                    onClick={() => setAnalyticsDropdownOpen(!analyticsDropdownOpen)}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] hover:bg-white transition-all shadow-sm"
+
+              {/* IELTS / TEST TYPE SWITCHER */}
+              {isIeltsCourseSelected && (
+                <div className="flex flex-wrap bg-white/20 backdrop-blur-md p-1 rounded-xl border border-white/20 gap-1 shrink-0">
+                  <button
+                    onClick={() => setAnalyticsTestType('ielts')}
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'ielts' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
                   >
-                    <span className="font-bold text-[13px] text-slate-700 truncate pr-2">
-                      {analyticsCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(analyticsCourse))?.title || 'Tất cả khóa học'}
-                    </span>
-                    <span className={`text-slate-400 text-[10px] transition-transform duration-300 ${analyticsDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
-                  </div>
-                  
-                  {analyticsDropdownOpen && (
-                    <>
-                      <div className="fixed inset-0 z-40" onClick={() => setAnalyticsDropdownOpen(false)}></div>
-                      <div className="absolute z-50 mt-2 w-full bg-white border border-slate-200 rounded-xl shadow-xl max-h-72 overflow-y-auto py-2 animate-in fade-in slide-in-from-top-2 duration-200 custom-scrollbar">
-                        <div 
-                          onClick={() => { setAnalyticsCourse('all'); setAnalyticsDropdownOpen(false); }}
-                          className={`px-5 py-3 cursor-pointer text-[13px] font-bold transition-colors ${analyticsCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9]' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
-                        >
-                          Tất cả khóa học
-                        </div>
-                        {courses.length > 0 && courses.map(course => (
-                          <div 
-                            key={course.id}
-                            onClick={() => { setAnalyticsCourse(course.id); setAnalyticsDropdownOpen(false); }}
-                            className={`px-5 py-3 cursor-pointer text-[13px] font-bold truncate transition-colors ${String(analyticsCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9]' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
-                            title={course.title}
-                          >
-                            {course.title}
-                          </div>
-                        ))}
-                      </div>
-                    </>
+                    <span>🎯</span> Luyện thi IELTS
+                  </button>
+                  <button
+                    onClick={() => setAnalyticsTestType('ielts-standard')}
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                  >
+                    <span>📝</span> Bài Tập Bổ Trợ
+                  </button>
+                  {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
+                    <button
+                      onClick={() => setAnalyticsTestType('standard')}
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    >
+                      <span>📚</span> Bài tập khóa khác
+                    </button>
                   )}
                 </div>
-
-              </div>
+              )}
             </div>
 
             {analyticsTotalTestsDone === 0 ? (

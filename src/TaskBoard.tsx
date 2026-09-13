@@ -38,7 +38,22 @@ interface ActiveModalCard {
   boardTitle: string;
 }
 
-export default function TaskBoard({ userId, filterCourseId = 'all', filterElement, onStartTest }: { userId: string; filterCourseId?: string; filterElement?: React.ReactNode; onStartTest?: (testId: string) => void }) {
+export default function TaskBoard({ 
+  userId, 
+  filterCourseId = 'all', 
+  topActions,
+  courseTitle,
+  filterElement, 
+  onStartTest 
+}: { 
+  userId: string; 
+  filterCourseId?: string; 
+  topActions?: React.ReactNode;
+  courseTitle?: string;
+  filterElement?: React.ReactNode; 
+  onStartTest?: (testId: string) => void 
+}) {
+  const headerActions = topActions || filterElement;
   const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
   const [boardColumns, setBoardColumns] = useState<any[]>([]);
@@ -379,52 +394,91 @@ export default function TaskBoard({ userId, filterCourseId = 'all', filterElemen
 
   if (boardsData.length === 0) {
     return (
-      <div className="w-full flex-1 min-h-0 h-full flex flex-col items-center justify-center p-6">
-        <div className="p-10 text-center bg-white rounded-[2rem] shadow-sm border border-slate-200 max-w-md">
-          <span className="text-5xl block mb-4 opacity-40 grayscale">📋</span>
-          <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">Chưa có bảng công việc nào</h3>
-          <p className="text-[14px] text-slate-500 font-medium">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
+      <div className="w-full flex-1 min-h-0 h-full flex flex-col p-2">
+        {headerActions && (
+          <div className="flex justify-end relative z-40 mb-3 shrink-0">
+            {headerActions}
+          </div>
+        )}
+        <div className="flex-1 flex flex-col items-center justify-center">
+          <div className="p-10 text-center bg-white rounded-[2rem] shadow-sm border border-slate-200 max-w-md">
+            <span className="text-5xl block mb-4 opacity-40 grayscale">📋</span>
+            <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">Chưa có bảng công việc nào</h3>
+            <p className="text-[14px] text-slate-500 font-medium">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
+          </div>
         </div>
       </div>
     );
   }
 
+  const currentBoard = boardsData[activeBoardIndex] || boardsData[0];
+
   return (
     <div className="w-full flex-1 min-h-0 h-full flex flex-col relative">
-      {/* Top Board Bar with Switch Tabs and Reset Order Button */}
-      <div className="flex items-center justify-between gap-3 mb-2 shrink-0">
-        <div className="flex items-center gap-1.5 overflow-x-auto custom-scrollbar pb-1">
+      {/* Top Actions Row */}
+      {headerActions && (
+        <div className="flex justify-end relative z-40 mb-2.5 shrink-0">
+          {headerActions}
+        </div>
+      )}
+
+      {/* UNIFIED BLUE HEADER BANNER */}
+      <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-3 sm:p-4 md:p-5 mb-2.5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-3 shrink-0">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl sm:text-3xl">📋</span>
+          <div>
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
+              Bảng Công Việc{courseTitle ? ` - ${courseTitle}` : (currentBoard?.title ? ` - ${currentBoard.title}` : '')}
+            </h1>
+            <p className="text-white/80 text-xs md:text-sm mt-0.5">
+              Theo dõi tiến độ bài học và làm bài tập theo từng chuyên đề
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 w-full md:w-auto justify-between md:justify-end">
+          {/* Switch tabs if multiple boards exist (e.g. Co-ordinated Science: Biology / Chemistry / Physics) */}
           {boardsData.length > 1 && (
-            <div className="flex items-center gap-1.5 bg-white/80 backdrop-blur-sm p-1.5 rounded-2xl border border-slate-200/80 shadow-sm w-fit">
+            <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm p-1 rounded-xl">
               {boardsData.map((b, idx) => (
                 <button
                   key={b.title}
                   onClick={() => setActiveBoardIndex(idx)}
-                  className={`px-4 py-2 rounded-xl font-bold text-[13px] transition-all duration-300 whitespace-nowrap cursor-pointer flex items-center gap-2 ${activeBoardIndex === idx ? 'bg-[#0ea5e9] text-white shadow-md ring-1 ring-sky-300/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100/80'}`}
+                  className={`px-3 py-1.5 rounded-lg font-bold text-xs transition-all whitespace-nowrap cursor-pointer ${activeBoardIndex === idx ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
                 >
-                  📋 {b.title}
+                  {b.title}
                 </button>
               ))}
             </div>
           )}
-        </div>
 
-        {(() => {
-          const currentBoard = boardsData[activeBoardIndex] || boardsData[0];
-          if (currentBoard && customColOrders[currentBoard.title]?.length > 0) {
-            return (
-              <button
-                type="button"
-                onClick={() => handleResetColumnOrder(currentBoard.title)}
-                className="text-xs font-bold text-slate-500 hover:text-slate-800 bg-white/90 hover:bg-white border border-slate-200 hover:border-slate-300 rounded-xl px-3 py-1.5 shadow-xs transition-all flex items-center gap-1.5 cursor-pointer shrink-0 ml-auto"
-                title="Khôi phục thứ tự các cột ban đầu"
-              >
-                <span>↺</span> <span>Đặt lại thứ tự cột</span>
-              </button>
-            );
-          }
-          return null;
-        })()}
+          {/* Progress bar */}
+          {currentBoard && currentBoard.totalItems > 0 && (
+            <div className="flex flex-col items-center sm:items-end">
+              <div className="text-xs sm:text-sm text-white/90 font-medium mb-1">
+                Tiến độ: {currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)
+              </div>
+              <div className="w-36 sm:w-44 h-2 bg-white/20 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-white rounded-full transition-all duration-500"
+                  style={{ width: `${currentBoard.overallProgress}%` }}
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Reset column order button */}
+          {currentBoard && customColOrders[currentBoard.title]?.length > 0 && (
+            <button
+              type="button"
+              onClick={() => handleResetColumnOrder(currentBoard.title)}
+              className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3 py-1.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+              title="Khôi phục thứ tự các cột ban đầu"
+            >
+              <span>↺</span> <span>Đặt lại thứ tự cột</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {(() => {
