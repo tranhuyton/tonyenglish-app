@@ -1193,6 +1193,81 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     </div>
   );
 
+  const renderBottomControls = (
+    <div className="shrink-0 py-2 px-4 flex items-center justify-center z-30">
+      <div className="bg-white/95 backdrop-blur-md border border-slate-200 shadow-md rounded-2xl px-3 sm:px-4 py-1.5 flex flex-wrap items-center justify-center gap-2 sm:gap-3 transition-all hover:shadow-lg ring-1 ring-black/5">
+        {/* NÚT BÀI GIẢNG */}
+        <button
+          type="button"
+          onClick={() => handleGoToLecture()}
+          className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-300 hover:border-emerald-400 font-bold text-xs sm:text-[13px] px-3.5 py-1.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer shrink-0 hover:scale-[1.02] active:scale-95"
+          title="Mở bài giảng lý thuyết"
+        >
+          <span className="text-base">📖</span> <span>Bài giảng lý thuyết</span>
+        </button>
+
+        {/* NÚT KHO ĐỀ */}
+        <button
+          type="button"
+          onClick={() => handleGoToTestBank()}
+          className="bg-white hover:bg-sky-50 text-[#0ea5e9] hover:text-[#0284c7] border border-sky-300 hover:border-sky-400 font-bold text-xs sm:text-[13px] px-3.5 py-1.5 rounded-xl shadow-xs transition-all flex items-center gap-2 cursor-pointer shrink-0 hover:scale-[1.02] active:scale-95"
+          title="Mở kho đề"
+        >
+          <span className="text-base">📚</span> <span>Kho đề</span>
+        </button>
+
+        <div className="h-5 w-px bg-slate-200 hidden sm:block"></div>
+
+        {/* DROPDOWN CHỌN KHÓA HỌC */}
+        <div className="relative w-48 sm:w-60 z-50">
+          <div 
+            onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+            className="w-full bg-white hover:bg-sky-50/50 border border-sky-300 hover:border-[#0ea5e9] rounded-xl px-3 py-1.5 flex items-center justify-between cursor-pointer shadow-xs transition-all"
+          >
+            <div className="flex items-center gap-1.5 min-w-0 pr-2">
+              <span className="text-slate-400 text-xs">🎓</span>
+              <span className="font-bold text-xs text-sky-900 truncate">
+                {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+              </span>
+            </div>
+            <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▲</span>
+          </div>
+          
+          {filterCourseDropdownOpen && (
+            <>
+              <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 animate-in fade-in slide-in-from-bottom-2 custom-scrollbar p-1">
+                <div 
+                  onClick={() => {
+                    setFilterCourse('all');
+                    setAnalyticsCourse('all');
+                    setFilterCourseDropdownOpen(false);
+                  }}
+                  className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                >
+                  🌟 Tất cả khóa học
+                </div>
+                {courses.map(course => (
+                  <div 
+                    key={course.id}
+                    onClick={() => {
+                      setFilterCourse(course.id);
+                      setAnalyticsCourse(course.id);
+                      setFilterCourseDropdownOpen(false);
+                    }}
+                    className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                  >
+                    📖 {course.title}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className={`${activeTab === 'board' ? 'h-screen max-h-screen overflow-hidden' : 'min-h-[100dvh]'} bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full flex flex-col`}>
       {/* HEADER: Glassmorphism */}
@@ -1814,18 +1889,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 userId={currentUser.id} 
                 filterCourseId={filterCourse}
                 courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
-                topActions={renderTopControls}
                 onStartTest={(testId: string) => {
                   const test = allTests.find(t => String(t.id) === String(testId));
                   handleStartTestClick(test || { id: testId });
                 }} 
               />
             </div>
+            {renderBottomControls}
           </div>
         )}
 
         {activeTab === 'calendar' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 w-full flex-1 flex flex-col pb-6">
+          <div className="animate-in fade-in slide-in-from-bottom-4 w-full flex-1 flex flex-col pb-2 relative">
             {(() => {
               const calendarAssignments = filterCourse === 'all' ? assignments : assignments.filter(a => {
                 if (a.board_template_id) {
@@ -1847,21 +1922,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               });
 
               return (
-                <AssignmentCalendar 
-                  assignments={calendarAssignments} 
-                  completedTestIds={completedTestIdsSet}
-                  courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
-                  topActions={renderTopControls}
-                  onRefresh={async () => {
-                    if (!currentUser) return;
-                    const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });
-                    setAssignments(data || []);
-                  }}
-                  onStartTest={(testId) => {
-                    const test = allTests.find(t => String(t.id) === String(testId));
-                    if (test) handleStartTestClick(test);
-                  }}
-                />
+                <>
+                  <div className="flex-1 min-h-0 w-full">
+                    <AssignmentCalendar 
+                      assignments={calendarAssignments} 
+                      completedTestIds={completedTestIdsSet}
+                      courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
+                      onRefresh={async () => {
+                        if (!currentUser) return;
+                        const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });
+                        setAssignments(data || []);
+                      }}
+                      onStartTest={(testId) => {
+                        const test = allTests.find(t => String(t.id) === String(testId));
+                        if (test) handleStartTestClick(test);
+                      }}
+                    />
+                  </div>
+                  <div className="sticky bottom-2 z-30 mt-3">
+                    {renderBottomControls}
+                  </div>
+                </>
               );
             })()}
           </div>
