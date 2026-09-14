@@ -925,20 +925,19 @@ export default function TaskBoard({
                             )}
 
                             {/* Card badges (Trello-style checklist boxes) */}
-                            <div className="flex items-center gap-1.5 flex-wrap">
+                            <div className="flex items-center gap-2 flex-wrap">
                               {manualTotal > 0 && (
                                 <span 
-                                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] transition-all select-none ${
+                                  className={`inline-flex items-center gap-1.5 text-[11px] transition-all select-none ${
                                     isManualDone 
-                                      ? 'bg-emerald-500 text-white font-bold shadow-2xs' 
-                                      : manualCompleted > 0 
-                                        ? 'bg-sky-50 text-sky-700 border border-sky-200 font-semibold' 
-                                        : 'bg-slate-100 text-slate-500 border border-slate-200/80 font-medium'
+                                      ? 'bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-md shadow-xs' 
+                                      : 'text-slate-600 font-medium hover:text-slate-900 px-1 py-0.5 rounded'
                                   }`}
                                   title={`Công việc: ${manualCompleted}/${manualTotal} đã hoàn thành`}
                                 >
                                   <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
-                                    <path fillRule="evenodd" d="M2.5 1A1.5 1.5 0 001 2.5v11A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0013.5 1h-11zm9.854 4.854a.5.5 0 00-.708-.708L6.5 10.293 4.854 8.646a.5.5 0 10-.708.708l2 2a.5.5 0 00.708 0l5.5-5.5z" clipRule="evenodd" />
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
                                   </svg>
                                   <span>{manualCompleted}/{manualTotal} việc</span>
                                 </span>
@@ -946,12 +945,10 @@ export default function TaskBoard({
 
                               {testTotal > 0 && (
                                 <span 
-                                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] transition-all select-none ${
+                                  className={`inline-flex items-center gap-1.5 text-[11px] transition-all select-none ${
                                     isTestDone 
-                                      ? 'bg-emerald-500 text-white font-bold shadow-2xs' 
-                                      : testCompleted > 0 
-                                        ? 'bg-sky-50 text-sky-700 border border-sky-200 font-semibold' 
-                                        : 'bg-slate-100 text-slate-500 border border-slate-200/80 font-medium'
+                                      ? 'bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-md shadow-xs' 
+                                      : 'text-slate-600 font-medium hover:text-slate-900 px-1 py-0.5 rounded'
                                   }`}
                                   title={`Bài tập: ${testCompleted}/${testTotal} đã làm`}
                                 >
