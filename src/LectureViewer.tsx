@@ -1898,7 +1898,16 @@ export default function LectureViewer({
                   </div>
                )}
             </div>
-            
+             
+            {/* 🎨 NÚT ĐỔI MÀU NỀN BÊN PHẢI NÚT CHUYỂN KHÓA HỌC */}
+            <button
+              type="button"
+              onClick={() => setIsLectureThemeModalOpen(true)}
+              className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:scale-105 active:scale-95 shrink-0"
+              title="Đổi màu nền bài giảng"
+            >
+              <span className="text-sm sm:text-base">🎨</span>
+            </button>
           </div>
 
 
@@ -2027,13 +2036,6 @@ export default function LectureViewer({
          </div>
 
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2">
-             <button
-               onClick={() => setIsLectureThemeModalOpen(true)}
-               className="flex items-center justify-center w-10 h-10 rounded-full transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
-               title="Đổi màu nền bài giảng"
-             >
-               🎨
-             </button>
              <button
                  onClick={() => {
                      localStorage.setItem('portal_filter_course', currentCourseId);

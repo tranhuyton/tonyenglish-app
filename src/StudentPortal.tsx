@@ -171,14 +171,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
 
   const [analyticsView, setAnalyticsView] = useState<'scores'|'activity'>('scores');
-  const [analyticsTheme, setAnalyticsTheme] = useState<BoardTheme>(() => loadTheme(`tony_analytics_theme_${currentUser?.id}`));
+  const [analyticsTheme, setAnalyticsTheme] = useState<BoardTheme>(() => loadTheme(`tony_analytics_theme_${currentUser?.id}`, 'tony_analytics_theme'));
   const [isAnalyticsThemeModalOpen, setIsAnalyticsThemeModalOpen] = useState(false);
   const [studentActivities, setStudentActivities] = useState<any[]>([]);
 
-  // Reload theme when currentUser becomes available (it's undefined on first render)
+  // Reload theme when currentUser becomes available
   useEffect(() => {
     if (currentUser?.id) {
-      setAnalyticsTheme(loadTheme(`tony_analytics_theme_${currentUser.id}`));
+      setAnalyticsTheme(loadTheme(`tony_analytics_theme_${currentUser.id}`, 'tony_analytics_theme'));
     }
   }, [currentUser?.id]);
 
@@ -191,7 +191,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const handleSelectAnalyticsTheme = (theme: BoardTheme) => {
     setAnalyticsTheme(theme);
-    saveTheme(`tony_analytics_theme_${currentUser?.id}`, theme);
+    saveTheme(`tony_analytics_theme_${currentUser?.id}`, theme, 'tony_analytics_theme');
   };
   const handleApplyCustomAnalyticsColor = (hex: string) => {
     handleSelectAnalyticsTheme(createCustomTheme(hex));
@@ -1445,7 +1445,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       <main className={`flex-1 w-full min-h-0 ${
         activeTab === 'board' 
           ? 'max-w-none p-0 overflow-hidden flex flex-col h-full' 
-          : activeTab === 'calendar'
+          : activeTab === 'calendar' || activeTab === 'analytics'
             ? 'max-w-none p-2.5 sm:p-3 md:p-4 overflow-y-auto custom-scrollbar flex flex-col'
             : 'max-w-[1200px] mx-auto p-4 md:p-8 overflow-y-auto custom-scrollbar'
       }`} style={{ WebkitOverflowScrolling: 'touch' }}>
@@ -1951,6 +1951,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <>
                   <div className="flex-1 min-h-0 w-full">
                     <AssignmentCalendar 
+                      userId={currentUser?.id}
                       assignments={calendarAssignments} 
                       completedTestIds={completedTestIdsSet}
                       courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
@@ -1978,17 +1979,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             🚀 TRANG BÁO CÁO (ANALYTICS) VỚI CÁC AREA CHART TUYỆT ĐẸP VÀ CHUẨN XÁC
             ===================================================================== */}
         {activeTab === 'analytics' && (
-          <div className="space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ backgroundColor: analyticsTheme.boardBg }}>
-            
+          <div 
+            className="w-full min-h-[500px] p-3 sm:p-4 md:p-5 text-slate-800 rounded-3xl relative flex-1 flex flex-col space-y-4 md:space-y-6 animate-in fade-in duration-300" 
+            style={{ backgroundColor: analyticsTheme.boardBg }}
+          >
             {/* TOP ACTIONS */}
             <div className="flex justify-end relative z-40">
               {renderTopControls}
             </div>
 
-            {/* UNIFIED BLUE HEADER BANNER - FULL WIDTH */}
-            <div className="p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4 -mx-4 md:-mx-6 lg:-mx-8" style={{ background: analyticsTheme.titleBg || 'linear-gradient(to right, #0ea5e9, #38bdf8)' }}>
-              {/* LEFT COLUMN */}
-              <div className="flex flex-col md:flex-row items-center gap-4">
+            {/* UNIFIED BLUE HEADER BANNER - FULL WIDTH & 2 COLUMNS */}
+            <div 
+              className="w-full rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 transition-all" 
+              style={{ background: analyticsTheme.titleBg || 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)' }}
+            >
+              {/* CỘT 1 (BÊN TRÁI): PHÂN TÍCH */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-wrap">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">📊</span>
                   <div>
@@ -2005,21 +2011,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 {isIeltsCourseSelected && (
                   <div className="flex flex-wrap bg-white/20 backdrop-blur-md p-1 rounded-xl border border-white/20 gap-1 shrink-0">
                     <button
+                      type="button"
                       onClick={() => setAnalyticsTestType('ielts')}
-                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'ielts' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
                     >
                       <span>🎯</span> Luyện thi IELTS
                     </button>
                     <button
+                      type="button"
                       onClick={() => setAnalyticsTestType('ielts-standard')}
-                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
                     >
                       <span>📝</span> Bài Tập Bổ Trợ
                     </button>
                     {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
                       <button
+                        type="button"
                         onClick={() => setAnalyticsTestType('standard')}
-                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
                       >
                         <span>📚</span> Bài tập khóa khác
                       </button>
@@ -2028,28 +2037,34 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 )}
               </div>
 
-              {/* RIGHT COLUMN */}
-              <div className="flex items-center gap-2 shrink-0">
-                <div className="flex bg-white/15 backdrop-blur-md rounded-xl p-0.5 gap-0.5">
+              {/* CỘT 2 (BÊN PHẢI): 2 NÚT FILTER & NÚT ĐỔI MÀU NỀN */}
+              <div className="flex items-center gap-2 sm:gap-3 shrink-0 self-end lg:self-center">
+                {/* 2 NÚT FILTER: LỊCH SỬ ĐIỂM & NHẬT KÝ TRUY CẬP */}
+                <div className="flex bg-white/15 backdrop-blur-md rounded-xl p-1 gap-1 border border-white/20">
                   <button
+                    type="button"
                     onClick={() => setAnalyticsView('scores')}
-                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-[13px] transition-all cursor-pointer ${analyticsView === 'scores' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsView === 'scores' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
                   >
                     <span>📋</span> Lịch sử điểm
                   </button>
                   <button
+                    type="button"
                     onClick={() => setAnalyticsView('activity')}
-                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-[13px] transition-all cursor-pointer ${analyticsView === 'activity' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsView === 'activity' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
                   >
                     <span>👀</span> Nhật ký truy cập
                   </button>
                 </div>
+
+                {/* NÚT ĐỔI MÀU NỀN */}
                 <button 
+                  type="button"
                   onClick={() => setIsAnalyticsThemeModalOpen(true)} 
-                  className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-3 py-1.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                  className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/20"
                   title="Đổi màu nền"
                 >
-                  <span>🎨</span>
+                  <span>🎨</span> <span className="hidden sm:inline">Đổi màu nền</span>
                 </button>
               </div>
             </div>

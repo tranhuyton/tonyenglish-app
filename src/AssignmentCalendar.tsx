@@ -25,12 +25,13 @@ interface Props {
   courseTitle?: string;
   onRefresh: () => void;
   onStartTest?: (testId: string) => void;
+  userId?: string;
 }
 
 const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 
-export default function AssignmentCalendar({ assignments, completedTestIds, topActions, rightActions, courseTitle, onRefresh, onStartTest }: Props) {
-  const userId = assignments.length > 0 ? assignments[0].user_id : 'default';
+export default function AssignmentCalendar({ assignments, completedTestIds, topActions, rightActions, courseTitle, onRefresh, onStartTest, userId: propUserId }: Props) {
+  const userId = propUserId || (assignments.length > 0 ? assignments[0].user_id : 'default');
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
   const [calendarMode, setCalendarMode] = useState<'day' | 'month' | 'all'>('day');
@@ -38,11 +39,11 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
   const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number; isPassed: boolean }>>(new Map());
 
   const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
-  const [calendarTheme, setCalendarTheme] = useState<BoardTheme>(() => loadTheme(`tony_calendar_theme_${userId}`));
+  const [calendarTheme, setCalendarTheme] = useState<BoardTheme>(() => loadTheme(`tony_calendar_theme_${userId}`, 'tony_calendar_theme'));
 
   useEffect(() => {
-    if (userId !== 'default') {
-      setCalendarTheme(loadTheme(`tony_calendar_theme_${userId}`));
+    if (userId && userId !== 'default') {
+      setCalendarTheme(loadTheme(`tony_calendar_theme_${userId}`, 'tony_calendar_theme'));
     }
   }, [userId]);
 
@@ -268,7 +269,7 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
 
   const handleSelectCalendarTheme = (theme: BoardTheme) => {
     setCalendarTheme(theme);
-    saveTheme(`tony_calendar_theme_${userId}`, theme);
+    saveTheme(`tony_calendar_theme_${userId}`, theme, 'tony_calendar_theme');
   };
 
   const handleApplyCustomCalendarColor = (hex: string) => {

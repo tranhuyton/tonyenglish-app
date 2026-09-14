@@ -111,19 +111,26 @@ export function getDarkerShade(hex: string, percent = 30): string {
   return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
 }
 
-/** Load theme from localStorage for a given key prefix + userId */
-export function loadTheme(storageKey: string): BoardTheme {
+/** Load theme from localStorage for a given key prefix + userId with optional fallbackKey */
+export function loadTheme(storageKey: string, fallbackKey?: string): BoardTheme {
   try {
     const saved = localStorage.getItem(storageKey);
     if (saved) return JSON.parse(saved);
+    if (fallbackKey) {
+      const fbSaved = localStorage.getItem(fallbackKey);
+      if (fbSaved) return JSON.parse(fbSaved);
+    }
   } catch (e) {}
   return DEFAULT_BOARD_THEME;
 }
 
-/** Save theme to localStorage */
-export function saveTheme(storageKey: string, theme: BoardTheme): void {
+/** Save theme to localStorage with optional fallbackKey */
+export function saveTheme(storageKey: string, theme: BoardTheme, fallbackKey?: string): void {
   try {
     localStorage.setItem(storageKey, JSON.stringify(theme));
+    if (fallbackKey) {
+      localStorage.setItem(fallbackKey, JSON.stringify(theme));
+    }
   } catch (e) {}
 }
 
