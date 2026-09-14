@@ -92,40 +92,52 @@ export default function AITutorSidebar({
     } else if (mode === 'ielts') {
       if (taskType === 'reading') {
         welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n**${topicTitle}**\n\nEm muốn hỏi thêm thầy điều gì?`;
+      } else if (taskType === 'speaking') {
+        welcomeText = `Chào em! Thầy là trợ lý Speaking.\n\n`;
+        if (topicTitle) {
+          welcomeText += `🎙️ **Chủ đề đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện chủ đề trên! Em có thể bấm chọn gợi ý bên dưới để nhờ thầy **Tư vấn kịch bản (Lego)**, **Gợi ý từ vựng Band 8+**, hoặc cùng thầy luyện tập trả lời nhé!`;
+        } else {
+          welcomeText += `Em gửi đề bài hoặc paste câu hỏi vào đây, thầy sẽ tư vấn Kịch bản Lego, gợi ý từ vựng Band 8+ hoặc cùng em luyện tập trả lời nhé!`;
+        }
+      } else if (taskType === 'task1') {
+        welcomeText = `Chào em! Thầy là trợ lý Writing Task 1.\n\n`;
+        if (topicTitle) {
+          welcomeText += `📋 **Đề bài đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện đề bài này! Em có thể bấm chọn gợi ý bên dưới để nhờ thầy **Phân tích biểu đồ**, **Lập dàn ý**, hoặc dán bài viết của em vào đây để thầy **Chấm điểm & sửa lỗi** nhé!`;
+        } else {
+          welcomeText += `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ phân tích biểu đồ, lập dàn ý, hoặc chấm điểm bài viết cho em nhé!`;
+        }
+      } else if (taskType === 'task2') {
+        welcomeText = `Chào em! Thầy là trợ lý Writing Task 2.\n\n`;
+        if (topicTitle) {
+          welcomeText += `📋 **Đề bài đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện đề bài này! Em hãy bấm chọn các nút gợi ý bên dưới để nhờ thầy **Lập dàn ý (Pillars)**, **Gợi ý từ vựng Band 8.0+**, hoặc dán bài viết của em vào đây để thầy **Chấm điểm & sửa lỗi** chi tiết nhé!`;
+        } else {
+          welcomeText += `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ lập dàn ý, gợi ý từ vựng, hoặc chấm điểm bài làm cho em nhé!`;
+        }
       } else {
-          if (taskType === 'speaking') {
-              welcomeText = `Chào em! Thầy là trợ lý Speaking.\n\n`;
-              welcomeText += `Em gửi đề bài hoặc paste câu hỏi vào đây, thầy sẽ tư vấn Kịch bản Lego, gợi ý từ vựng Band 8+ hoặc cùng em luyện tập trả lời nhé!`;
-          } else if (taskType === 'task1') {
-              welcomeText = `Chào em! Thầy là trợ lý Writing Task 1.\n\n`;
-              welcomeText += `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ phân tích biểu đồ, lập dàn ý, hoặc chấm điểm bài viết cho em nhé!`;
-          } else if (taskType === 'task2') {
-              welcomeText = `Chào em! Thầy là trợ lý Writing Task 2.\n\n`;
-              welcomeText += `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ lập dàn ý, gợi ý từ vựng, hoặc chấm điểm bài làm cho em nhé!`;
-          } else {
-              welcomeText = `Chào em! Thầy đã sẵn sàng hỗ trợ.\n\n`;
-              if (topicTitle) welcomeText += `**💡 Chủ đề:** "${topicTitle}"\n\n`;
-              welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
-          }
-          if (topicImage) welcomeText += `\n\n*(📷 Thầy đã nhận được hình ảnh/biểu đồ kèm theo)*`;
+        welcomeText = `Chào em! Thầy đã sẵn sàng hỗ trợ.\n\n`;
+        if (topicTitle) welcomeText += `📋 **Đề bài / Câu hỏi:**\n*"${topicTitle}"*\n\n`;
+        welcomeText += `Em gửi câu hỏi hoặc chọn các gợi ý bên dưới để thầy hỗ trợ nhé!`;
       }
+      if (topicImage) welcomeText += `\n\n*(📷 Thầy đã nhận được hình ảnh/biểu đồ kèm theo)*`;
     } else {
       welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em có thể chat hỏi bài hoặc **Paste (Ctrl+V) / Tải ảnh lên** để thầy giải đáp nhé!`;
     }
     return [{ role: 'ai' as const, text: welcomeText }];
   };
 
-  // 🚀 AUTO-RESET: Xóa chat cũ khi user chuyển sang câu hỏi/bài giảng khác
-  const contextKey = `${topicTitle || ''}|${lectureTitle || ''}`;
-  const prevContextRef = useRef(contextKey);
+  // 🚀 AUTO-RESET: Cập nhật / reset chat khi đổi topic, đổi bài giảng hoặc mở lên
+  const prevContextRef = useRef({ topic: topicTitle, lecture: lectureTitle, mode, taskType });
   useEffect(() => {
-    const newKey = `${topicTitle || ''}|${lectureTitle || ''}`;
-    if (isOpen && newKey !== prevContextRef.current && prevContextRef.current !== '|') {
-      // Đặt welcome message mới NGAY LẬP (không phụ thuộc effect khác)
-      setMessages(generateWelcome());
+    if (isOpen) {
+      const prev = prevContextRef.current;
+      const contextChanged = prev.topic !== topicTitle || prev.lecture !== lectureTitle || prev.mode !== mode || prev.taskType !== taskType;
+      
+      if (contextChanged || messages.length === 0) {
+        setMessages(generateWelcome());
+      }
+      prevContextRef.current = { topic: topicTitle, lecture: lectureTitle, mode, taskType };
     }
-    prevContextRef.current = newKey;
-  }, [topicTitle, lectureTitle, taskType, isOpen]);
+  }, [topicTitle, lectureTitle, taskType, mode, isOpen]);
 
   const theme = useMemo(() => {
     if (mode === 'parent_mode') {
