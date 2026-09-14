@@ -580,12 +580,15 @@ export default function TaskBoard({
       const columns: ColumnData[] = Array.from(columnsMap.entries()).map(([category, cardsMap]) => {
         const cards: CardData[] = Array.from(cardsMap.entries()).map(([cardTitle, items]) => {
           const sortedItems = [...items].sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
-          const topicMatch = cardTitle.match(/Topic\s*(\d+)/i);
-          const cardOrder = topicMatch 
-            ? parseInt(topicMatch[1], 10)
-            : ((items[0]?.card_order != null && items[0]?.card_order !== 0) 
-                ? items[0].card_order 
-                : (cardTitle.toLowerCase().startsWith('công việc') ? 1 : cardTitle.toLowerCase().startsWith('bài tập') ? 2 : 3));
+          const numPrefixMatch = cardTitle.match(/^\s*(\d+)\./);
+          const entityMatch = cardTitle.match(/(?:Topic|Unit|Chapter|Cambridge)\s*(\d+)/i);
+          const cardOrder = numPrefixMatch
+            ? parseInt(numPrefixMatch[1], 10)
+            : (entityMatch
+                ? parseInt(entityMatch[1], 10)
+                : ((items[0]?.card_order != null && items[0]?.card_order !== 0) 
+                    ? items[0].card_order 
+                    : (cardTitle.toLowerCase().startsWith('công việc') ? 1 : cardTitle.toLowerCase().startsWith('bài tập') ? 2 : 999)));
           const completedCount = sortedItems.filter(i => {
             if (i.task_type === 'test') {
               return i.is_completed || (i.test_id && completedTestIds.has(String(i.test_id)));
@@ -599,17 +602,17 @@ export default function TaskBoard({
         return { name: category, cards };
       });
 
-      // Sort columns: Year 1 -> Year 2 -> ... -> Exam practice & Past papers ALWAYS at the very end
+      // Sort columns: Prioritize board_columns order_index -> Year 1 -> Year 2 -> ... -> Exam practice & Past papers ALWAYS at the very end
       const getColumnWeight = (catName: string) => {
         const norm = parseModuleTheme(catName).cleanTitle.trim().toLowerCase();
-        // Exam practice & Past papers ALWAYS at the very end
-        if (norm.includes('exam practice') || norm.includes('past paper') || norm.includes('đề thi')) {
-          return 999999;
-        }
         // Matching board_columns order_index first
         const bc = boardColumns.find(c => parseModuleTheme(c.title).cleanTitle.trim().toLowerCase() === norm);
         if (bc && bc.order_index != null) {
           return bc.order_index;
+        }
+        // Exam practice & Past papers ALWAYS at the very end
+        if (norm.includes('exam practice') || norm.includes('past paper') || norm.includes('đề thi')) {
+          return 999999;
         }
         // Year 1, Year 2 in order
         const yearMatch = norm.match(/year\s*(\d+)/i);
