@@ -685,6 +685,7 @@ export default function LectureViewer({
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
   const [isTaskMenuOpen, setIsTaskMenuOpen] = useState(false);
+  const [currentLectureAssignments, setCurrentLectureAssignments] = useState<any[]>([]);
   const taskMenuRef = useRef<HTMLDivElement>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -1022,10 +1023,20 @@ export default function LectureViewer({
 
       if (user && validLectures.length > 0) {
          const lectureIds = validLectures.map(l => l.id);
-         const { data: allProg } = await supabase.from('lecture_progress')
-             .select('lecture_id, completed_tasks, is_completed')
-             .eq('user_id', user.id)
-             .in('lecture_id', lectureIds);
+         const [allProgRes, allAssignRes] = await Promise.all([
+             supabase.from('lecture_progress')
+                 .select('lecture_id, completed_tasks, is_completed')
+                 .eq('user_id', user.id)
+                 .in('lecture_id', lectureIds),
+             supabase.from('assignments')
+                 .select('title, card_title, student_completed, task_type')
+                 .eq('user_id', user.id)
+                 .eq('task_type', 'manual')
+                 .eq('student_completed', true)
+         ]);
+
+         const allProg = allProgRes.data;
+         const completedAssignments = allAssignRes.data || [];
 
          const pMap: Record<string, string[]> = {};
          const compSet = new Set<string>();
@@ -1038,6 +1049,28 @@ export default function LectureViewer({
                  }
              });
          }
+
+         // Reconcile manual assignments into pMap for each lecture
+         validLectures.forEach(lec => {
+             const taskList = Array.isArray(lec.task_list) ? lec.task_list : [];
+             if (taskList.length > 0) {
+                 const curTasks = new Set<string>(pMap[lec.id] || []);
+                 taskList.forEach((t: any) => {
+                     if (t.type === 'manual') {
+                         const syncTitle = `${lec.title || ''} : ${t.text}`;
+                         const isDone = completedAssignments.some((a: any) => 
+                             a.card_title === lec.title && 
+                             (a.title === syncTitle || a.title === t.text || a.title === `[Bài giảng] ${t.text}`)
+                         );
+                         if (isDone) curTasks.add(t.id);
+                     }
+                 });
+                 pMap[lec.id] = Array.from(curTasks);
+                 if (pMap[lec.id].length === taskList.length && taskList.length > 0) {
+                     compSet.add(lec.id);
+                 }
+             }
+         });
          
          setAllLectureProgress(pMap);
          setCompletedLectures(compSet);
@@ -1172,7 +1205,13 @@ export default function LectureViewer({
             const taskList = currentLec?.task_list || [];
             
             if (taskList.length > 0) {
-                const { data: assignments } = await supabase.from('assignments').select('title, test_id, is_completed, student_completed, task_type').eq('user_id', targetUserId);
+                const { data: assignments } = await supabase.from('assignments').select('id, title, test_id, is_completed, student_completed, task_type, card_title, admin_approved').eq('user_id', targetUserId);
+                
+                const matchedAssigns = assignments?.filter((a: any) => 
+                    a.task_type === 'manual' && (!currentLec?.title || a.card_title === currentLec.title)
+                ) || [];
+                setCurrentLectureAssignments(matchedAssigns);
+
                 let reconciledCompletedTasks: string[] = [];
                 
                 taskList.forEach((t: any) => {
@@ -1180,7 +1219,7 @@ export default function LectureViewer({
                         const syncTitle = `${currentLec?.title || ''} : ${t.text}`;
                         const assign = assignments?.find(a => 
                             a.task_type === 'manual' && 
-                            (!currentLec?.title || !a.card_title || a.card_title === currentLec.title) && (
+                            (!currentLec?.title || a.card_title === currentLec.title) && (
                                 a.title === syncTitle || 
                                 a.title === t.text || 
                                 a.title === `[Bài giảng] ${t.text}`
@@ -1209,9 +1248,11 @@ export default function LectureViewer({
                 
                 if (progressRes.data && progressRes.data.length > 0) {
                      supabase.from('lecture_progress').update({ completed_tasks: initialCompletedTasks, is_completed: isLectureCompleted }).eq('id', progressRes.data[0].id).then();
-                } else {
+                } else if (initialCompletedTasks.length > 0) {
                      supabase.from('lecture_progress').insert({ user_id: targetUserId, lecture_id: lectureId, completed_tasks: initialCompletedTasks, is_completed: isLectureCompleted }).then();
                 }
+            } else {
+                setCurrentLectureAssignments([]);
             }
         }
         
@@ -1278,18 +1319,24 @@ export default function LectureViewer({
       // Update completed tasks from progress (reconcile with scores)
       const currentLec = lectures.find(l => l.id === activeLectureId);
       const taskList = currentLec?.task_list || [];
-      if (taskList.length > 0 && progressRes.data && progressRes.data.length > 0) {
-        const pData = progressRes.data[0];
+      if (taskList.length > 0) {
+        const pData = (progressRes.data && progressRes.data.length > 0) ? progressRes.data[0] : null;
         let initialCompletedTasks = pData?.completed_tasks || [];
         
-        const { data: assignments } = await supabase.from('assignments').select('title, test_id, is_completed, student_completed, task_type').eq('user_id', currentUser.id);
+        const { data: assignments } = await supabase.from('assignments').select('id, title, test_id, is_completed, student_completed, task_type, card_title, admin_approved').eq('user_id', currentUser.id);
+        
+        const matchedAssigns = assignments?.filter((a: any) => 
+          a.task_type === 'manual' && (!currentLec?.title || a.card_title === currentLec.title)
+        ) || [];
+        setCurrentLectureAssignments(matchedAssigns);
+
         let reconciledCompletedTasks: string[] = [];
         taskList.forEach((t: any) => {
           if (t.type === 'manual') {
             const syncTitle = `${currentLec?.title || ''} : ${t.text}`;
             const assign = assignments?.find((a: any) => 
               a.task_type === 'manual' && 
-              (!currentLec?.title || !a.card_title || a.card_title === currentLec.title) && (
+              (!currentLec?.title || a.card_title === currentLec.title) && (
                 a.title === syncTitle || a.title === t.text || a.title === `[Bài giảng] ${t.text}`
               )
             );
@@ -1311,9 +1358,19 @@ export default function LectureViewer({
         setAllLectureProgress(prev => ({ ...prev, [activeLectureId]: reconciledCompletedTasks }));
         if (isLectureCompleted) {
           setCompletedLectures(prev => new Set(prev).add(activeLectureId));
+        } else {
+          setCompletedLectures(prev => {
+            const next = new Set(prev);
+            next.delete(activeLectureId);
+            return next;
+          });
         }
         // Persist reconciled data
-        supabase.from('lecture_progress').update({ completed_tasks: reconciledCompletedTasks, is_completed: isLectureCompleted }).eq('id', pData.id).then();
+        if (pData) {
+          supabase.from('lecture_progress').update({ completed_tasks: reconciledCompletedTasks, is_completed: isLectureCompleted }).eq('id', pData.id).then();
+        } else if (reconciledCompletedTasks.length > 0) {
+          supabase.from('lecture_progress').insert({ user_id: currentUser.id, lecture_id: activeLectureId, completed_tasks: reconciledCompletedTasks, is_completed: isLectureCompleted }).then();
+        }
       }
     } catch (err) {
       console.error('[LectureViewer] Error refreshing scores:', err);
@@ -1352,20 +1409,37 @@ export default function LectureViewer({
          const newCompleted = isNowCompleted ? [...prev, taskId] : prev.filter(id => id !== taskId);
          const isCompleted = safeLectureTasks.length > 0 && newCompleted.length === safeLectureTasks.length;
          
+         // Cập nhật currentLectureAssignments local state ngay lập tức
+         setCurrentLectureAssignments(cur => {
+             const syncTitle = `${activeLecture?.title || ''} : ${taskObj?.text || ''}`;
+             return cur.map(a => {
+                 if (a.title === syncTitle || a.title === taskObj?.text || a.title === `[Bài giảng] ${taskObj?.text}`) {
+                     return {
+                         ...a,
+                         student_completed: isNowCompleted,
+                         admin_approved: isNowCompleted ? a.admin_approved : false
+                     };
+                 }
+                 return a;
+             });
+         });
+
          // Đồng bộ với Assignment
          if (taskObj && taskObj.type === 'manual') {
              const syncTitle = `${activeLecture?.title || ''} : ${taskObj.text}`;
              const payload: any = { student_completed: isNowCompleted, updated_at: new Date().toISOString() };
              if (!isNowCompleted) payload.admin_approved = false;
              
-              let query = supabase.from('assignments')
-                  .update(payload)
-                  .eq('user_id', currentUser.id)
-                  .eq('task_type', 'manual');
-              if (activeLecture?.title) {
-                  query = query.eq('card_title', activeLecture.title);
-              }
-              query.in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text]).then();
+             let query = supabase.from('assignments')
+                 .update(payload)
+                 .eq('user_id', currentUser.id)
+                 .eq('task_type', 'manual');
+             if (activeLecture?.title) {
+                 query = query.eq('card_title', activeLecture.title);
+             }
+             query.in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text]).then(() => {
+                 window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
+             });
          }
          
          supabase.from('lecture_progress')
@@ -2518,32 +2592,59 @@ export default function LectureViewer({
           {/* Popup task list - centered */}
           <div ref={taskMenuRef} className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-[420px] max-h-[75vh] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-slate-100 overflow-hidden z-[90] animate-in zoom-in-95 fade-in duration-200 flex flex-col">
             {/* Header */}
-            <div className="bg-gradient-to-r from-slate-50 to-white px-5 py-4 border-b border-slate-100 shrink-0">
-               <div className="flex justify-between items-center mb-2.5">
-                 <h4 className="font-bold text-slate-800 text-[15px] flex items-center gap-2">
-                   <span>{isAllTasksDone ? '🏆' : '🎯'}</span>
-                   Nhiệm vụ bài học
-                 </h4>
-                 <div className="flex items-center gap-2">
-                   <span className={`font-bold text-[13px] px-2.5 py-1 rounded-full ${isAllTasksDone ? 'bg-emerald-100 text-emerald-700' : 'bg-[#0ea5e9]/10 text-[#0ea5e9]'}`}>
-                     {Math.round((safeCompletedTasks.length / safeLectureTasks.length) * 100)}%
-                   </span>
-                   <button 
-                     onClick={() => setIsTaskMenuOpen(false)} 
-                     className="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors text-xs"
-                   >✕</button>
-                 </div>
-               </div>
-               <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-                 <div className={`h-full rounded-full transition-all duration-500 ${isAllTasksDone ? 'bg-gradient-to-r from-emerald-400 to-teal-500' : 'bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8]'}`} style={{ width: `${(safeCompletedTasks.length / safeLectureTasks.length) * 100}%` }}></div>
-               </div>
-            </div>
+            {(() => {
+              const displayCompletedCount = safeLectureTasks.filter((t: any) => {
+                if (t.type === 'exercise') return safeCompletedTasks.includes(t.id);
+                const a = currentLectureAssignments.find((assign: any) => 
+                  assign.task_type === 'manual' && (
+                    assign.title === t.text || 
+                    assign.title === `${activeLecture?.title || ''} : ${t.text}` || 
+                    assign.title === `[Bài giảng] ${t.text}`
+                  )
+                );
+                return safeCompletedTasks.includes(t.id) || !!a?.student_completed;
+              }).length;
+              const isModalAllDone = safeLectureTasks.length > 0 && displayCompletedCount === safeLectureTasks.length;
+              const displayPct = safeLectureTasks.length > 0 ? Math.round((displayCompletedCount / safeLectureTasks.length) * 100) : 0;
+
+              return (
+                <div className="bg-gradient-to-r from-slate-50 to-white px-5 py-4 border-b border-slate-100 shrink-0">
+                   <div className="flex justify-between items-center mb-2.5">
+                     <h4 className="font-bold text-slate-800 text-[15px] flex items-center gap-2">
+                       <span>{isModalAllDone ? '🏆' : '🎯'}</span>
+                       Nhiệm vụ bài học
+                     </h4>
+                     <div className="flex items-center gap-2">
+                       <span className={`font-bold text-[13px] px-2.5 py-1 rounded-full ${isModalAllDone ? 'bg-emerald-100 text-emerald-700' : 'bg-[#0ea5e9]/10 text-[#0ea5e9]'}`}>
+                         {displayPct}%
+                       </span>
+                       <button 
+                         onClick={() => setIsTaskMenuOpen(false)} 
+                         className="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors text-xs"
+                       >✕</button>
+                     </div>
+                   </div>
+                   <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                     <div className={`h-full rounded-full transition-all duration-500 ${isModalAllDone ? 'bg-gradient-to-r from-emerald-400 to-teal-500' : 'bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8]'}`} style={{ width: `${displayPct}%` }}></div>
+                   </div>
+                </div>
+              );
+            })()}
 
             {/* Task list */}
             <div className="flex-1 overflow-y-auto p-3 custom-scrollbar flex flex-col gap-2">
                {safeLectureTasks.map((task: any) => {
-                  const isCompleted = safeCompletedTasks.includes(task.id);
                   const isExercise = task.type === 'exercise';
+                  const assign = currentLectureAssignments.find((a: any) => 
+                    a.task_type === 'manual' && (
+                      a.title === task.text || 
+                      a.title === `${activeLecture?.title || ''} : ${task.text}` || 
+                      a.title === `[Bài giảng] ${task.text}`
+                    )
+                  );
+                  const isTaskChecked = isExercise 
+                    ? safeCompletedTasks.includes(task.id) 
+                    : (safeCompletedTasks.includes(task.id) || !!assign?.student_completed);
                   
                   const testKey = task.test_id ? String(task.test_id) : null;
                   const titleKey = task.text ? task.text.trim().toLowerCase() : null;
@@ -2554,23 +2655,23 @@ export default function LectureViewer({
                   ) : null;
 
                   return (
-                     <div key={task.id} className={`flex items-start gap-3 p-3.5 rounded-xl transition-all border ${isCompleted ? 'bg-emerald-50/50 border-emerald-200 shadow-sm' : 'bg-white border-slate-200 hover:border-[#0ea5e9]/50 hover:shadow-md'}`}>
+                     <div key={task.id} className={`flex items-start gap-3 p-3.5 rounded-xl transition-all border ${isTaskChecked ? 'bg-emerald-50/50 border-emerald-200 shadow-sm' : 'bg-white border-slate-200 hover:border-[#0ea5e9]/50 hover:shadow-md'}`}>
                         {!isExercise ? (
                            <button 
                                onClick={() => handleToggleTask(task.id)} 
-                               className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 transition-all cursor-pointer ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 hover:border-[#0ea5e9]'}`}
-                               title={isCompleted ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
+                               className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 transition-all cursor-pointer ${isTaskChecked ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 hover:border-[#0ea5e9]'}`}
+                               title={isTaskChecked ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
                            >
-                               {isCompleted && (
+                               {isTaskChecked && (
                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
                                )}
                            </button>
                         ) : (
                            <div 
-                               className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 select-none ${isCompleted ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 text-slate-400'}`}
-                               title={isCompleted ? "Đã đạt ≥ 50%" : "Cần nộp bài đạt từ 50%"}
+                               className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 select-none ${isTaskChecked ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 text-slate-400'}`}
+                               title={isTaskChecked ? "Đã đạt ≥ 50%" : "Cần nộp bài đạt từ 50%"}
                            >
-                               {isCompleted ? (
+                               {isTaskChecked ? (
                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
                                ) : (
                                    <span className="text-[10px]">📝</span>
@@ -2578,10 +2679,24 @@ export default function LectureViewer({
                            </div>
                         )}
 
-                        <div className="flex-1 min-w-0 flex flex-col items-start gap-2">
-                           <span className={`text-[13.5px] leading-snug transition-colors ${isCompleted ? 'text-slate-500 line-through' : 'text-slate-800 font-medium'}`}>
+                        <div className="flex-1 min-w-0 flex flex-col items-start gap-1">
+                           <span className={`text-[13.5px] leading-snug transition-colors ${isTaskChecked ? 'text-slate-500 line-through' : 'text-slate-800 font-medium'}`}>
                                {task.text}
                            </span>
+
+                           {!isExercise && isTaskChecked && (
+                             <div className="flex flex-wrap gap-1.5 mt-0.5">
+                               {assign?.admin_approved ? (
+                                 <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center gap-1">
+                                   <span>✅</span> Đã hoàn thành
+                                 </span>
+                               ) : (
+                                 <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center gap-1">
+                                   <span>⏳</span> Chờ giáo viên phê duyệt
+                                 </span>
+                               )}
+                             </div>
+                           )}
 
                            {isExercise && (
                               <div className="flex items-center gap-2 flex-wrap">

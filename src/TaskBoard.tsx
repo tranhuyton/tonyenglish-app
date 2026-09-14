@@ -381,16 +381,17 @@ export default function TaskBoard({
       const newStatus = !task.student_completed;
       
       // Update this specific task
+      const updatePayload: any = { student_completed: newStatus };
+      if (!newStatus) updatePayload.admin_approved = false; // Reset approval when un-completing
+      
       const { error } = await supabase
         .from('assignments')
-        .update({ student_completed: newStatus })
+        .update(updatePayload)
         .eq('id', task.id);
 
       if (error) throw error;
 
       // Also sync all matching assignments (same title, same user, same task_type, scoped to card)
-      const updatePayload: any = { student_completed: newStatus };
-      if (!newStatus) updatePayload.admin_approved = false; // Reset approval when un-completing
       let query = supabase
         .from('assignments')
         .update(updatePayload)
@@ -402,16 +403,88 @@ export default function TaskBoard({
       }
       await query;
 
+      // Sync with lecture_progress
+      try {
+        const cardTitle = task.card_title;
+        if (cardTitle) {
+          const { data: lec } = await supabase
+            .from('lectures')
+            .select('id, title, task_list')
+            .eq('title', cardTitle)
+            .maybeSingle();
+
+          if (lec && Array.isArray(lec.task_list)) {
+            const taskObj = lec.task_list.find((t: any) => 
+              t.text === task.title || 
+              `${cardTitle} : ${t.text}` === task.title || 
+              `[Bài giảng] ${t.text}` === task.title ||
+              task.title.endsWith(t.text)
+            );
+
+            if (taskObj) {
+              const { data: progList } = await supabase
+                .from('lecture_progress')
+                .select('id, completed_tasks')
+                .eq('user_id', userId)
+                .eq('lecture_id', lec.id);
+
+              let currentCompleted: string[] = [];
+              let progId: string | null = null;
+              if (progList && progList.length > 0) {
+                progId = progList[0].id;
+                currentCompleted = progList[0].completed_tasks || [];
+              }
+
+              let nextCompleted: string[];
+              if (newStatus) {
+                nextCompleted = currentCompleted.includes(taskObj.id) 
+                  ? currentCompleted 
+                  : [...currentCompleted, taskObj.id];
+              } else {
+                nextCompleted = currentCompleted.filter(id => id !== taskObj.id);
+              }
+
+              const isLecDone = lec.task_list.length > 0 && nextCompleted.length === lec.task_list.length;
+
+              if (progId) {
+                await supabase
+                  .from('lecture_progress')
+                  .update({ completed_tasks: nextCompleted, is_completed: isLecDone })
+                  .eq('id', progId);
+              } else {
+                await supabase
+                  .from('lecture_progress')
+                  .insert({
+                    user_id: userId,
+                    lecture_id: lec.id,
+                    completed_tasks: nextCompleted,
+                    is_completed: isLecDone
+                  });
+              }
+
+              // Dispatch event to notify LectureViewer or any other open components
+              window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
+            }
+          }
+        }
+      } catch (syncErr) {
+        console.error('Error syncing to lecture_progress:', syncErr);
+      }
+
       // Update local state
       setAssignments(prev => prev.map(a => 
-        (a.title === task.title && a.task_type === 'manual' && (!task.card_title || a.card_title === task.card_title)) ? { ...a, student_completed: newStatus } : a
+        (a.title === task.title && a.task_type === 'manual' && (!task.card_title || a.card_title === task.card_title)) 
+          ? { ...a, student_completed: newStatus, admin_approved: newStatus ? a.admin_approved : false } 
+          : a
       ));
 
       // Also sync activeModalCard if currently open
       setActiveModalCard(prev => {
         if (!prev) return null;
         const updatedItems = prev.card.items.map(a => 
-          (a.title === task.title && a.task_type === 'manual' && (!task.card_title || a.card_title === task.card_title)) ? { ...a, student_completed: newStatus } : a
+          (a.title === task.title && a.task_type === 'manual' && (!task.card_title || a.card_title === task.card_title)) 
+            ? { ...a, student_completed: newStatus, admin_approved: newStatus ? a.admin_approved : false } 
+            : a
         );
         const compCount = updatedItems.filter(i => {
           if (i.task_type === 'test') {
