@@ -2026,7 +2026,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5 flex flex-col justify-between hover:border-purple-400 hover:shadow-md transition-all duration-300 group">
                         <div className="flex justify-between items-center mb-3 relative z-10">
                           <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-purple-400"></span><span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider group-hover:text-purple-600 transition-colors">Lượt làm</span></div>
-                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalAttempts}</span>
+                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalTestsDone}</span>
                         </div>
                         <div className="h-16 w-full -mx-1 -mb-1">
                           <ResponsiveContainer width="99%" height="100%">
@@ -2049,7 +2049,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5 flex flex-col justify-between hover:border-orange-400 hover:shadow-md transition-all duration-300 group">
                         <div className="flex justify-between items-center mb-3 relative z-10">
                           <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-orange-400"></span><span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider group-hover:text-orange-600 transition-colors">Giờ học</span></div>
-                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalHours}h</span>
+                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalTimeHours}h</span>
                         </div>
                         <div className="h-16 w-full -mx-1 -mb-1">
                           <ResponsiveContainer width="99%" height="100%">
@@ -2074,11 +2074,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           <span className="text-[10px] font-bold tracking-widest text-slate-400 uppercase block mb-1">
                             {isIeltsContext ? 'IELTS AVERAGE' : 'ĐIỂM TRUNG BÌNH'}
                           </span>
-                          <div className="font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mt-1">
-                            {analyticsAverageScore}
-                          </div>
+                          {isIeltsContext ? (
+                            <div className="font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mt-1">
+                              {avgIelts}
+                            </div>
+                          ) : (
+                            <div className="mt-1">
+                              <span className="font-black text-2xl sm:text-3xl text-white tracking-tight leading-none">{avgScore}</span>
+                              {avgScoreRaw > 0 && (
+                                <span className={`block text-base font-black mt-0.5 ${GRADE_SCALE.find(g => avgScoreRaw >= g.min)?.color || 'text-slate-400'}`}>
+                                  {percentToGrade(avgScoreRaw)}
+                                </span>
+                              )}
+                            </div>
+                          )}
                           <span className="text-[11px] font-medium text-slate-400 mt-2 block">
-                            (Dựa trên 4 bài gần nhất)
+                            {isIeltsContext ? '(Dựa trên 4 bài gần nhất)' : '(Toàn bộ hệ thống)'}
                           </span>
                         </div>
                         <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-sky-500/10 rounded-full blur-xl group-hover:bg-sky-500/20 transition-all pointer-events-none"></div>
@@ -2092,34 +2103,42 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           </span>
                           <div className="mt-1">
                             {isIeltsContext ? (
-                              <div className="relative inline-block w-full">
-                                <select 
-                                  value={getTargetForCourse(analyticsCourse, true)} 
-                                  onChange={(e) => updateTargetForCourse(analyticsCourse, e.target.value)}
-                                  className="w-full bg-transparent font-black text-2xl sm:text-3xl text-amber-400 tracking-tight leading-none border-none outline-none cursor-pointer appearance-none pr-6 hover:text-amber-300 transition-colors"
-                                  title="Bấm để chọn band điểm mục tiêu"
-                                >
-                                  {['5.0', '5.5', '6.0', '6.5', '7.0', '7.5', '8.0', '8.5', '9.0'].map(b => (
-                                    <option key={b} value={b} className="bg-slate-900 text-white text-base font-bold">Band {b}</option>
-                                  ))}
-                                </select>
-                                <span className="absolute right-0 top-1/2 -translate-y-1/2 text-amber-400 text-xs pointer-events-none">▼</span>
+                              <input 
+                                type="number" step="0.5" min="0" max="9.0" 
+                                value={getTargetForCourse(analyticsCourse, true) || ''} 
+                                onChange={(e) => handleUpdateTarget('ielts', e.target.value)}
+                                placeholder="N/A"
+                                className="font-black text-amber-400 text-2xl sm:text-3xl bg-transparent w-full outline-none cursor-pointer placeholder:text-amber-400/30 relative z-10"
+                                title="Click để sửa"
+                              />
+                            ) : analyticsCourse !== 'all' ? (
+                              <div className="relative z-10">
+                                <div className="relative inline-block w-full">
+                                  <select 
+                                    value={getTargetForCourse(analyticsCourse, false) || ''} 
+                                    onChange={(e) => handleUpdateTarget(analyticsCourse, e.target.value)}
+                                    className="font-black text-amber-400 text-2xl sm:text-3xl bg-transparent outline-none cursor-pointer appearance-none relative z-10 border-none pr-6"
+                                  >
+                                    <option value="" className="bg-slate-800 text-slate-400 text-sm">--</option>
+                                    <option value="A*" className="bg-slate-800 text-white text-sm">A*</option>
+                                    <option value="A" className="bg-slate-800 text-white text-sm">A</option>
+                                    <option value="B" className="bg-slate-800 text-white text-sm">B</option>
+                                    <option value="C" className="bg-slate-800 text-white text-sm">C</option>
+                                    <option value="D" className="bg-slate-800 text-white text-sm">D</option>
+                                    <option value="E" className="bg-slate-800 text-white text-sm">E</option>
+                                  </select>
+                                  <span className="absolute right-0 top-1/2 -translate-y-1/2 text-amber-400 text-xs pointer-events-none">▼</span>
+                                </div>
                               </div>
                             ) : (
-                              <div className="flex items-center">
-                                <input 
-                                  type="text" 
-                                  defaultValue={getTargetForCourse(analyticsCourse, false)} 
-                                  onBlur={(e) => updateTargetForCourse(analyticsCourse, e.target.value)}
-                                  onKeyDown={(e) => { if (e.key === 'Enter') { updateTargetForCourse(analyticsCourse, (e.target as any).value); (e.target as any).blur(); } }}
-                                  className="w-full bg-transparent font-black text-2xl sm:text-3xl text-amber-400 tracking-tight leading-none border-b border-dashed border-amber-500/50 outline-none hover:border-amber-400 focus:border-amber-400 transition-colors"
-                                  title="Nhập mục tiêu (VD: 80%, A*, A) rồi ấn Enter"
-                                />
+                              <div className="relative z-10">
+                                <span className="font-black text-amber-400/30 text-2xl sm:text-3xl">--</span>
+                                <p className="text-[10px] text-amber-200/40 mt-1">Chọn 1 khóa cụ thể</p>
                               </div>
                             )}
                           </div>
                           <span className="text-[10px] font-medium text-slate-500 mt-2 block">
-                            Click số để sửa
+                            {isIeltsContext ? 'Click số để sửa' : analyticsCourse !== 'all' ? 'Click để đổi' : ''}
                           </span>
                         </div>
                         <div className="absolute right-1 bottom-1 text-4xl opacity-10 pointer-events-none">🎯</div>
