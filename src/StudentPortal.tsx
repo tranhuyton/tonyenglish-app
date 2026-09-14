@@ -1266,23 +1266,25 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   };
 
   const renderTopControls = (
-    <div className="flex flex-wrap items-center justify-end gap-2.5">
-      <button
-        type="button"
-        onClick={() => handleGoToLecture()}
-        className="bg-white/90 hover:bg-white text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
-        title="Mở bài giảng lý thuyết"
-      >
-        <span className="text-base">📖</span> <span>Bài giảng lý thuyết</span>
-      </button>
-      <button
-        type="button"
-        onClick={() => handleGoToTestBank()}
-        className="bg-white/90 hover:bg-white text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-[#0ea5e9] font-bold text-[13px] px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
-        title="Mở kho đề"
-      >
-        <span className="text-base">📚</span> <span>Kho đề</span>
-      </button>
+    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-2 sm:gap-2.5 w-full sm:w-auto">
+      <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center">
+        <button
+          type="button"
+          onClick={() => handleGoToLecture()}
+          className="bg-white/90 hover:bg-white text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+          title="Mở bài giảng lý thuyết"
+        >
+          <span className="text-base">📖</span> <span className="truncate">Bài giảng</span>
+        </button>
+        <button
+          type="button"
+          onClick={() => handleGoToTestBank()}
+          className="bg-white/90 hover:bg-white text-[#0ea5e9] hover:text-[#0284c7] border border-sky-200 hover:border-[#0ea5e9] font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+          title="Mở kho đề"
+        >
+          <span className="text-base">📚</span> <span>Kho đề</span>
+        </button>
+      </div>
 
       {/* DROPDOWN CHỌN KHÓA HỌC */}
       <div className="relative w-full sm:w-64 z-40">
@@ -1406,7 +1408,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   );
 
   return (
-    <div className={`${activeTab === 'board' ? 'h-screen max-h-screen overflow-hidden' : 'min-h-[100dvh]'} bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full flex flex-col`}>
+    <div className={`${activeTab === 'board' ? 'h-screen max-h-screen overflow-hidden' : 'min-h-[100dvh]'} bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 md:pb-0`}>
       {/* HEADER: Glassmorphism */}
       <header className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-40 shadow-sm shrink-0">
         <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 py-2.5 flex items-center justify-between gap-3 transition-all">
@@ -1805,9 +1807,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         {/* 🚀 COURSE VIEW (Danh sách Folders & Tests) */}
         {activeTab === 'library' && activeView === 'course' && selectedCourse && (
           <div className="animate-in fade-in slide-in-from-right-8 duration-500">
-            {/* Breadcrumb Header */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 bg-white p-4 md:p-5 rounded-2xl border border-slate-200 shadow-sm mx-2 md:mx-0">
-                <div className="flex flex-wrap items-center gap-2 text-[14px] font-semibold text-slate-500">
+                <div className="flex items-center gap-1.5 sm:gap-2 text-[13px] sm:text-[14px] font-semibold text-slate-500 overflow-x-auto whitespace-nowrap max-w-full pb-1 custom-scrollbar">
                     <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); }} className="hover:text-[#0ea5e9] transition-colors p-1 rounded-md hover:bg-sky-50">
                         Khóa học
                     </button>
@@ -2893,6 +2894,96 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         </div>
       )}
+
+      {/* 📱 STICKY MOBILE BOTTOM NAVIGATION BAR */}
+      <nav 
+        aria-label="Mobile Navigation"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-lg border-t border-slate-200/90 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-2 py-1 flex items-center justify-around"
+        style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 6px)' }}
+      >
+        <button
+          type="button"
+          onClick={() => {
+            resetWorkspaceAndChat();
+            setActiveTab('library');
+            setActiveView('dashboard');
+            setSelectedCourseId(null);
+            setCurrentFolderId(null);
+          }}
+          className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
+            activeTab === 'library'
+              ? 'text-[#0ea5e9] font-bold scale-105'
+              : 'text-slate-400 hover:text-slate-600 font-medium'
+          }`}
+        >
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'library' ? 'bg-[#0ea5e9]/10' : ''}`}>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'library' ? 2.5 : 2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <span className="text-[10px] tracking-tight mt-0.5">Học tập</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            resetWorkspaceAndChat();
+            setActiveTab('calendar');
+          }}
+          className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
+            activeTab === 'calendar'
+              ? 'text-[#0ea5e9] font-bold scale-105'
+              : 'text-slate-400 hover:text-slate-600 font-medium'
+          }`}
+        >
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'calendar' ? 'bg-[#0ea5e9]/10' : ''}`}>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'calendar' ? 2.5 : 2} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+            </svg>
+          </div>
+          <span className="text-[10px] tracking-tight mt-0.5">Lịch báo bài</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            resetWorkspaceAndChat();
+            setActiveTab('board');
+          }}
+          className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
+            activeTab === 'board'
+              ? 'text-[#0ea5e9] font-bold scale-105'
+              : 'text-slate-400 hover:text-slate-600 font-medium'
+          }`}
+        >
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'board' ? 'bg-[#0ea5e9]/10' : ''}`}>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'board' ? 2.5 : 2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+          </div>
+          <span className="text-[10px] tracking-tight mt-0.5">Bảng việc</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            resetWorkspaceAndChat();
+            setActiveTab('analytics');
+          }}
+          className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
+            activeTab === 'analytics'
+              ? 'text-[#0ea5e9] font-bold scale-105'
+              : 'text-slate-400 hover:text-slate-600 font-medium'
+          }`}
+        >
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'analytics' ? 'bg-[#0ea5e9]/10' : ''}`}>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'analytics' ? 2.5 : 2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <span className="text-[10px] tracking-tight mt-0.5">Báo cáo</span>
+        </button>
+      </nav>
     </div>
   );
 }

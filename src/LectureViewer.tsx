@@ -523,8 +523,19 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
              margin-bottom: 1.5rem; 
              font-size: 0.9rem;
          }
-         
-         #content-wrapper { display: flow-root; width: 100%; padding-bottom: 2rem; }
+          @media (max-width: 640px) {
+              body { font-size: 15px; }
+              h1 { font-size: 1.4rem; }
+              h2 { font-size: 1.25rem; }
+              h3 { font-size: 1.1rem; }
+              table th, table td { 
+                  padding: 0.5rem 0.65rem !important; 
+                  font-size: 13.5px; 
+              }
+              pre { padding: 0.75rem; font-size: 0.8rem; }
+          }
+          
+          #content-wrapper { display: flow-root; width: 100%; padding-bottom: 2rem; }
        </style>
      </head>
      <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
@@ -703,6 +714,7 @@ export default function LectureViewer({
 
   const [isLectureThemeModalOpen, setIsLectureThemeModalOpen] = useState(false);
   const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleSelectLectureTheme = (theme: BoardTheme) => {
     setLectureTheme(theme);
@@ -720,6 +732,15 @@ export default function LectureViewer({
   const activeLecture = useMemo(() => {
       return lectures.find(l => l.id === activeLectureId);
   }, [lectures, activeLectureId]);
+
+  const currentSafeTasks = useMemo(() => {
+      return Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+  }, [activeLecture]);
+
+  const currentLectureDoneCount = useMemo(() => {
+      if (!activeLectureId) return 0;
+      return allLectureProgress[activeLectureId]?.length || 0;
+  }, [allLectureProgress, activeLectureId]);
 
   const totalPages = pages.length;
 
@@ -1880,7 +1901,7 @@ export default function LectureViewer({
                <button 
                   type="button"
                   onClick={() => setIsCourseDropdownOpen(!isCourseDropdownOpen)}
-                  className="flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 transition-all text-left shadow-sm hover:shadow-md hover:border-white/40 group max-w-[160px] xs:max-w-[200px] sm:max-w-[260px] md:max-w-[320px]"
+                  className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 transition-all text-left shadow-sm hover:shadow-md hover:border-white/40 group max-w-[110px] xs:max-w-[150px] sm:max-w-[260px] md:max-w-[320px]"
                   title="Bấm để lọc / chuyển khóa học khác"
                >
                   <div className="flex flex-col min-w-0 flex-1">
@@ -2115,59 +2136,127 @@ export default function LectureViewer({
            </div>
          </div>
 
-         <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2">
-             <button
-                 onClick={() => {
-                     localStorage.setItem('portal_filter_course', currentCourseId);
-                     sessionStorage.setItem('portal_filter_course', currentCourseId);
-                     sessionStorage.setItem('lms_portal_tab', 'calendar');
-                     onBack();
-                 }}
-                 className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
-                 title="Đi đến Lịch báo bài của khóa học"
-             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                <span className="hidden sm:inline">Lịch báo bài</span>
-             </button>
-             <button
-                 onClick={() => {
-                     localStorage.setItem('portal_filter_course', currentCourseId);
-                     sessionStorage.setItem('portal_filter_course', currentCourseId);
-                     sessionStorage.setItem('lms_portal_tab', 'board');
-                     onBack();
-                 }}
-                 className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
-                 title="Đi đến Bảng công việc của khóa học"
-             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
-                <span className="hidden sm:inline">Bảng công việc</span>
-             </button>
-             <button
-                 onClick={() => {
-                     sessionStorage.setItem('portal_selected_course_id', currentCourseId);
-                     sessionStorage.setItem('portal_active_view', 'course');
-                     sessionStorage.setItem('portal_current_folder_id', '');
-                     sessionStorage.setItem('lms_portal_tab', 'library');
-                     onBack();
-                 }}
-                 className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
-                 title="Đi đến kho đề của khóa học"
-             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
-                <span className="hidden sm:inline">Kho đề</span>
-             </button>
-             {!(course?.title || '').toLowerCase().includes('ielts') && (
-                 <button 
-                     onClick={() => { 
-                         if(onOpenAI) {
-                             onOpenAI('tutor'); 
-                         }
-                     }} 
-                     className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-amber-950 shadow-md border border-amber-300/50 hover:shadow-lg hover:-translate-y-0.5"
-                 >
-                    <span className="animate-bounce">✨</span> <span className="hidden sm:inline">Hỏi AI Tutor</span>
-                 </button>
-             )}
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0 ml-2">
+              {/* 📱 NÚT MENU THAO TÁC NHANH CHO DI ĐỘNG (< sm) */}
+              <div className="relative sm:hidden">
+                <button
+                  type="button"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="w-9 h-9 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/25 text-white font-black text-base transition-all active:scale-95 border border-white/20 shadow-xs"
+                  title="Menu chức năng"
+                >
+                  ⋯
+                </button>
+
+                {isMobileMenuOpen && (
+                  <>
+                    <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)} />
+                    <div className="absolute right-0 top-full mt-2 w-52 bg-white rounded-2xl shadow-2xl border border-slate-100 py-1.5 z-50 text-slate-800 animate-in fade-in slide-in-from-top-2 duration-150">
+                      <button
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          localStorage.setItem('portal_filter_course', currentCourseId);
+                          sessionStorage.setItem('portal_filter_course', currentCourseId);
+                          sessionStorage.setItem('lms_portal_tab', 'calendar');
+                          onBack();
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2.5 transition-colors"
+                      >
+                        <span>📅</span> Lịch báo bài
+                      </button>
+                      <button
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          localStorage.setItem('portal_filter_course', currentCourseId);
+                          sessionStorage.setItem('portal_filter_course', currentCourseId);
+                          sessionStorage.setItem('lms_portal_tab', 'board');
+                          onBack();
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2.5 transition-colors"
+                      >
+                        <span>📋</span> Bảng công việc
+                      </button>
+                      <button
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          sessionStorage.setItem('portal_selected_course_id', currentCourseId);
+                          sessionStorage.setItem('portal_active_view', 'course');
+                          sessionStorage.setItem('portal_current_folder_id', '');
+                          sessionStorage.setItem('lms_portal_tab', 'library');
+                          onBack();
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2.5 transition-colors"
+                      >
+                        <span>📚</span> Kho đề bài tập
+                      </button>
+                      <div className="h-px bg-slate-100 my-1" />
+                      <button
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsLectureThemeModalOpen(true);
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-purple-50 hover:text-purple-600 flex items-center gap-2.5 transition-colors"
+                      >
+                        <span>🎨</span> Đổi màu nền bài giảng
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* 🖥️ CÁC NÚT ĐIỀU HƯỚNG TRÊN MÀN HÌNH LỚN (>= sm) */}
+              <button
+                  onClick={() => {
+                      localStorage.setItem('portal_filter_course', currentCourseId);
+                      sessionStorage.setItem('portal_filter_course', currentCourseId);
+                      sessionStorage.setItem('lms_portal_tab', 'calendar');
+                      onBack();
+                  }}
+                  className="hidden sm:flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                  title="Đi đến Lịch báo bài của khóa học"
+              >
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                 <span className="hidden sm:inline">Lịch báo bài</span>
+              </button>
+              <button
+                  onClick={() => {
+                      localStorage.setItem('portal_filter_course', currentCourseId);
+                      sessionStorage.setItem('portal_filter_course', currentCourseId);
+                      sessionStorage.setItem('lms_portal_tab', 'board');
+                      onBack();
+                  }}
+                  className="hidden sm:flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                  title="Đi đến Bảng công việc của khóa học"
+              >
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
+                 <span className="hidden sm:inline">Bảng công việc</span>
+              </button>
+              <button
+                  onClick={() => {
+                      sessionStorage.setItem('portal_selected_course_id', currentCourseId);
+                      sessionStorage.setItem('portal_active_view', 'course');
+                      sessionStorage.setItem('portal_current_folder_id', '');
+                      sessionStorage.setItem('lms_portal_tab', 'library');
+                      onBack();
+                  }}
+                  className="hidden sm:flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                  title="Đi đến kho đề của khóa học"
+              >
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                 <span className="hidden sm:inline">Kho đề</span>
+              </button>
+              {!(course?.title || '').toLowerCase().includes('ielts') && (
+                  <button 
+                      onClick={() => { 
+                          if(onOpenAI) {
+                              onOpenAI('tutor'); 
+                          }
+                      }} 
+                      className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 md:px-4 md:h-10 rounded-full text-xs sm:text-[13px] md:text-[14px] font-semibold transition-all bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-amber-950 shadow-md border border-amber-300/50 hover:shadow-lg hover:-translate-y-0.5"
+                  >
+                     <span className="animate-bounce">✨</span> <span className="hidden xs:inline">Hỏi AI Tutor</span>
+                  </button>
+              )}
              {(course?.title || '').toLowerCase().includes('ielts') && (
                  <>
                  <button 
@@ -2219,7 +2308,16 @@ export default function LectureViewer({
             ${isSidebarOpen && !isTeacherBoardOpen ? 'translate-x-0 w-[300px] md:w-[340px]' : '-translate-x-full w-[300px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
            
            <div className="p-5 border-b border-slate-100 shrink-0 bg-slate-50/50">
-              <h3 className="font-bold text-slate-800 text-[16px] mb-3">Nội dung khóa học</h3>
+              <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-bold text-slate-800 text-[16px]">Nội dung khóa học</h3>
+                  <button 
+                      onClick={() => setIsSidebarOpen(false)} 
+                      className="md:hidden w-8 h-8 rounded-full bg-slate-200/60 hover:bg-slate-200 flex items-center justify-center font-bold text-slate-500 hover:text-slate-700 text-sm transition-colors"
+                      title="Đóng danh sách"
+                  >
+                      ✕
+                  </button>
+              </div>
               <div className="flex flex-col gap-1.5">
                   <div className="flex justify-between text-[12px] font-medium text-slate-500">
                       <span>Tiến độ</span>
@@ -2411,39 +2509,39 @@ export default function LectureViewer({
                   )}
                </div>
                
-               {activeLectureId && (
-                   <div className={`max-w-[1050px] w-full flex justify-between items-center px-4 sm:px-0 pb-16 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-6 md:flex-row' : ''}`}>
-                      <button 
-                          onClick={handlePrevPage} 
-                          disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} 
-                          className="flex items-center gap-2 text-slate-500 font-semibold text-[14px] hover:text-[#0ea5e9] hover:bg-white disabled:opacity-30 transition-all bg-transparent px-5 py-3 rounded-xl disabled:hover:bg-transparent"
-                      >
-                         <span>←</span> Bài trước
-                      </button>
-                      
-                      {totalPages > 1 && (
-                         <div className="flex gap-2 bg-white px-2 py-2 rounded-xl shadow-sm border border-slate-200">
-                             {Array.from({ length: totalPages }).map((_, i) => (
-                                 <button 
-                                     key={i+1} 
-                                     onClick={() => { setCurrentPage(i+1); persistPage(i+1); }} 
-                                     className={`w-10 h-10 rounded-lg flex items-center justify-center text-[14px] font-bold transition-all ${currentPage === i+1 ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`}
-                                 >
-                                     {i+1}
-                                 </button>
-                           ))}
-                         </div>
-                      )}
+                {activeLectureId && (
+                    <div className={`max-w-[1050px] w-full flex justify-between items-center px-2 sm:px-0 pb-20 sm:pb-16 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-6 md:flex-row' : ''}`}>
+                       <button 
+                           onClick={handlePrevPage} 
+                           disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} 
+                           className="flex items-center gap-1.5 sm:gap-2 text-slate-500 font-semibold text-xs sm:text-[14px] hover:text-[#0ea5e9] hover:bg-white disabled:opacity-30 transition-all bg-transparent px-3 sm:px-5 py-2.5 sm:py-3 rounded-xl disabled:hover:bg-transparent shrink-0"
+                       >
+                          <span>←</span> <span className="hidden xs:inline">Bài trước</span><span className="xs:hidden">Trước</span>
+                       </button>
+                       
+                       {totalPages > 1 && (
+                          <div className="flex gap-1.5 sm:gap-2 bg-white px-2 py-1.5 sm:py-2 rounded-xl shadow-sm border border-slate-200 overflow-x-auto max-w-[140px] xs:max-w-[200px] sm:max-w-none custom-scrollbar shrink">
+                              {Array.from({ length: totalPages }).map((_, i) => (
+                                  <button 
+                                      key={i+1} 
+                                      onClick={() => { setCurrentPage(i+1); persistPage(i+1); }} 
+                                      className={`w-8 h-8 sm:w-10 sm:h-10 shrink-0 rounded-lg flex items-center justify-center text-xs sm:text-[14px] font-bold transition-all ${currentPage === i+1 ? 'bg-[#0ea5e9] text-white shadow-md' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`}
+                                  >
+                                      {i+1}
+                                  </button>
+                            ))}
+                          </div>
+                       )}
 
-                      <button 
-                          onClick={handleNextPage} 
-                          disabled={isLastLectureAndPage} 
-                          className="flex items-center gap-2 text-white font-semibold text-[14px] transition-all bg-[#0ea5e9] hover:bg-[#0284c7] disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed shadow-md shadow-blue-500/20 px-6 py-3 rounded-xl"
-                      >
-                         {currentPage < pages.length ? 'Trang sau' : 'Bài tiếp theo'} <span>→</span>
-                      </button>
-                  </div>
-               )}
+                       <button 
+                           onClick={handleNextPage} 
+                           disabled={isLastLectureAndPage} 
+                           className="flex items-center gap-1.5 sm:gap-2 text-white font-semibold text-xs sm:text-[14px] transition-all bg-[#0ea5e9] hover:bg-[#0284c7] disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed shadow-md shadow-blue-500/20 px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-xl shrink-0"
+                       >
+                          <span>{currentPage < pages.length ? 'Trang sau' : 'Bài tiếp'}</span> <span>→</span>
+                       </button>
+                   </div>
+                )}
              </div>
          </main>
       </div>
@@ -2746,6 +2844,18 @@ export default function LectureViewer({
             </div>
           </div>
         </>
+      )}
+
+      {activeLectureId && currentSafeTasks.length > 0 && !isSidebarOpen && !isTaskMenuOpen && !isTeacherBoardOpen && (
+        <button 
+          onClick={() => setIsTaskMenuOpen(true)} 
+          className="md:hidden fixed bottom-5 right-4 z-30 bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-2xl rounded-full px-3.5 py-2 flex items-center gap-2 text-slate-800 text-xs font-bold hover:scale-105 active:scale-95 transition-all"
+        >
+          <span>🎯</span>
+          <span className={`px-2 py-0.5 rounded-full text-[11px] font-black ${currentLectureDoneCount === currentSafeTasks.length ? 'bg-emerald-100 text-emerald-700' : 'bg-[#0ea5e9]/10 text-[#0ea5e9]'}`}>
+            {currentLectureDoneCount}/{currentSafeTasks.length} việc
+          </span>
+        </button>
       )}
 
       <BoardThemeModal

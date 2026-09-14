@@ -688,7 +688,7 @@ export default function TaskBoard({
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full md:w-auto justify-between md:justify-end">
             {/* Switch tabs if multiple boards exist */}
             {boardsData.length > 1 && (
-              <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm p-1 rounded-xl">
+              <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm p-1 rounded-xl overflow-x-auto max-w-full custom-scrollbar">
                 {boardsData.map((b, idx) => (
                   <button
                     key={b.title}
@@ -747,9 +747,9 @@ export default function TaskBoard({
 
         return (
           <div key={board.title} className="w-full flex-1 min-h-0 h-full flex flex-col relative overflow-hidden">
-            {/* Board - Horizontal Scroll like Trello */}
+            {/* Board - Horizontal Scroll like Trello with smooth mobile snap */}
             <div 
-              className={`flex-1 min-h-0 h-full flex flex-row gap-3 overflow-x-auto overflow-y-hidden pb-20 sm:pb-[82px] pt-1 board-horizontal-scrollbar items-start w-full px-3 sm:px-4 ${
+              className={`flex-1 min-h-0 h-full flex flex-row gap-3 overflow-x-auto overflow-y-hidden pb-32 sm:pb-[82px] pt-1 board-horizontal-scrollbar items-start w-full px-3 sm:px-4 snap-x snap-mandatory sm:snap-none ${
                 boardTheme.isDark ? 'dark-theme' : ''
               }`}
             >
@@ -809,7 +809,7 @@ export default function TaskBoard({
                       setDraggedColName(null);
                       setDragOverColName(null);
                     }}
-                    className={`flex-none w-[275px] sm:w-[280px] rounded-[1.25rem] border p-2.5 sm:p-3 flex flex-col max-h-full min-h-0 transition-all duration-200 shadow-sm ${
+                    className={`flex-none w-[82vw] max-w-[285px] sm:w-[280px] snap-center sm:snap-align-none rounded-[1.25rem] border p-2.5 sm:p-3 flex flex-col max-h-full min-h-0 transition-all duration-200 shadow-sm ${
                       isDragging 
                         ? 'opacity-30 scale-95 border-dashed border-2 border-sky-400 bg-sky-50/50' 
                         : isDragOver
@@ -973,9 +973,9 @@ export default function TaskBoard({
               })}
             </div>
 
-            {/* Floating Bottom Controls centered above scrollbar */}
+            {/* Floating Bottom Controls centered above scrollbar and above mobile bottom nav */}
             {bottomActions && (
-              <div className="absolute bottom-2.5 sm:bottom-3 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+              <div className="absolute bottom-16 sm:bottom-3 left-1/2 -translate-x-1/2 z-30 pointer-events-none w-full max-w-[95vw] px-2 flex justify-center">
                 <div className="pointer-events-auto">
                   {bottomActions}
                 </div>
