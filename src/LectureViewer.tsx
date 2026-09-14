@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { supabase } from './supabase';
 import { parseModuleTheme } from './moduleTheme';
+import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 
 // =========================================================================================
 // THƯ VIỆN ĐỌC PDF - TÍCH HỢP JUMP TO PAGE & VISION AI
@@ -697,6 +698,17 @@ export default function LectureViewer({
   const [isTeacherBoardOpen, setIsTeacherBoardOpen] = useState(false);
   const [boardWidthVw, setBoardWidthVw] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const [isLectureThemeModalOpen, setIsLectureThemeModalOpen] = useState(false);
+  const [lectureTheme, setLectureTheme] = useState<BoardTheme>(() => loadTheme('tony_lecture_theme'));
+
+  const handleSelectLectureTheme = (theme: BoardTheme) => {
+    setLectureTheme(theme);
+    saveTheme('tony_lecture_theme', theme);
+  };
+  const handleApplyCustomLectureColor = (hex: string) => {
+    handleSelectLectureTheme(createCustomTheme(hex));
+  };
 
   const courseProgress = useMemo(() => {
       if (lectures.length === 0) return 0;
@@ -2016,6 +2028,13 @@ export default function LectureViewer({
 
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2">
              <button
+               onClick={() => setIsLectureThemeModalOpen(true)}
+               className="flex items-center justify-center w-10 h-10 rounded-full transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+               title="Đổi màu nền bài giảng"
+             >
+               🎨
+             </button>
+             <button
                  onClick={() => {
                      localStorage.setItem('portal_filter_course', currentCourseId);
                      sessionStorage.setItem('portal_filter_course', currentCourseId);
@@ -2251,8 +2270,11 @@ export default function LectureViewer({
          </aside>
 
          <main 
-             className={`flex-1 overflow-y-auto bg-slate-50 custom-scrollbar relative lecture-content transition-all duration-500 ease-in-out`} 
-             style={isTeacherBoardOpen ? { paddingRight: `${boardWidthVw}vw` } : undefined}
+             className={`flex-1 overflow-y-auto custom-scrollbar relative lecture-content transition-all duration-500 ease-in-out`} 
+             style={{
+                 ...(isTeacherBoardOpen ? { paddingRight: `${boardWidthVw}vw` } : {}),
+                 backgroundColor: lectureTheme.boardBg
+             }}
              ref={containerRef} 
              onMouseUp={handleTextSelection}
              onScroll={(e) => {
@@ -2602,6 +2624,13 @@ export default function LectureViewer({
         </>
       )}
 
+      <BoardThemeModal
+        isOpen={isLectureThemeModalOpen}
+        currentTheme={lectureTheme}
+        onSelectTheme={handleSelectLectureTheme}
+        onApplyCustomColor={handleApplyCustomLectureColor}
+        onClose={() => setIsLectureThemeModalOpen(false)}
+      />
     </div>
   );
 }

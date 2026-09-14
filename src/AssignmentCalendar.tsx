@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
+import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 
 interface Assignment {
   id: string;
@@ -29,11 +30,21 @@ interface Props {
 const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 
 export default function AssignmentCalendar({ assignments, completedTestIds, topActions, rightActions, courseTitle, onRefresh, onStartTest }: Props) {
+  const userId = assignments.length > 0 ? assignments[0].user_id : 'default';
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
   const [calendarMode, setCalendarMode] = useState<'day' | 'month' | 'all'>('day');
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
   const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number; isPassed: boolean }>>(new Map());
+
+  const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
+  const [calendarTheme, setCalendarTheme] = useState<BoardTheme>(() => loadTheme(`tony_calendar_theme_${userId}`));
+
+  useEffect(() => {
+    if (userId !== 'default') {
+      setCalendarTheme(loadTheme(`tony_calendar_theme_${userId}`));
+    }
+  }, [userId]);
 
   // Tải điểm thi thực tế từ test_results
   useEffect(() => {
@@ -255,6 +266,15 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
   const nextMonth = () => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1));
   const goToday = () => { setCalendarMode('day'); setCurrentMonth(new Date()); setSelectedDate(new Date().toISOString().split('T')[0]); };
 
+  const handleSelectCalendarTheme = (theme: BoardTheme) => {
+    setCalendarTheme(theme);
+    saveTheme(`tony_calendar_theme_${userId}`, theme);
+  };
+
+  const handleApplyCustomCalendarColor = (hex: string) => {
+    handleSelectCalendarTheme(createCustomTheme(hex));
+  };
+
   const monthLabel = currentMonth.toLocaleDateString('vi-VN', { month: 'long', year: 'numeric' });
 
   // Helper: get cell background based on status
@@ -283,7 +303,10 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
     : 0;
 
   return (
-    <div className="w-full min-h-[500px] bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] p-3 sm:p-4 md:p-5 text-slate-800 rounded-3xl relative">
+    <div 
+      className="w-full min-h-[500px] p-3 sm:p-4 md:p-5 text-slate-800 rounded-3xl relative"
+      style={{ backgroundColor: calendarTheme.boardBg }}
+    >
       <div className="w-full space-y-4">
         {headerActions && (
           <div className="flex justify-end relative z-40 mb-2">
@@ -292,7 +315,10 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
         )}
 
         {/* UNIFIED BLUE HEADER BANNER */}
-        <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
+        <div 
+          className="rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4"
+          style={{ background: calendarTheme.titleBg }}
+        >
           <div className="flex items-center gap-3">
             <span className="text-3xl">📅</span>
             <div>
@@ -355,6 +381,14 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                 title="Xem công việc hôm nay"
               >
                 <span>🎯</span> <span>Hôm nay</span>
+              </button>
+              
+              <button 
+                onClick={() => setIsThemeModalOpen(true)} 
+                className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                title="Đổi màu nền"
+              >
+                <span>🎨</span> <span>Đổi màu nền</span>
               </button>
             </div>
           </div>
@@ -667,6 +701,14 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
           </div>
         </div>
       </div>
+      
+      <BoardThemeModal
+        isOpen={isThemeModalOpen}
+        currentTheme={calendarTheme}
+        onSelectTheme={handleSelectCalendarTheme}
+        onApplyCustomColor={handleApplyCustomCalendarColor}
+        onClose={() => setIsThemeModalOpen(false)}
+      />
     </div>
   );
 }

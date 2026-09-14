@@ -3,6 +3,7 @@ import { supabase } from './supabase';
 import AssignmentCalendar from './AssignmentCalendar';
 import TaskBoard from './TaskBoard';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 
 const FOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800', 
@@ -168,6 +169,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'ielts-standard' | 'standard'>('ielts');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
+
+  const [analyticsView, setAnalyticsView] = useState<'scores'|'activity'>('scores');
+  const [analyticsTheme, setAnalyticsTheme] = useState<BoardTheme>(() => loadTheme(`tony_analytics_theme_${currentUser?.id}`));
+  const [isAnalyticsThemeModalOpen, setIsAnalyticsThemeModalOpen] = useState(false);
+  const [studentActivities, setStudentActivities] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (analyticsView === 'activity' && currentUser?.id) {
+      supabase.from('activity_logs').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(100)
+        .then(({ data }) => setStudentActivities(data || []));
+    }
+  }, [analyticsView, currentUser?.id]);
+
+  const handleSelectAnalyticsTheme = (theme: BoardTheme) => {
+    setAnalyticsTheme(theme);
+    saveTheme(`tony_analytics_theme_${currentUser?.id}`, theme);
+  };
+  const handleApplyCustomAnalyticsColor = (hex: string) => {
+    handleSelectAnalyticsTheme(createCustomTheme(hex));
+  };
   
   const [showModeSelection, setShowModeSelection] = useState(false);
   const [testToStart, setTestToStart] = useState<any>(null);
@@ -1950,7 +1971,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             🚀 TRANG BÁO CÁO (ANALYTICS) VỚI CÁC AREA CHART TUYỆT ĐẸP VÀ CHUẨN XÁC
             ===================================================================== */}
         {activeTab === 'analytics' && (
-          <div className="space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ backgroundColor: analyticsTheme.boardBg }}>
             
             {/* TOP ACTIONS */}
             <div className="flex justify-end relative z-40">
@@ -1958,47 +1979,75 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </div>
 
             {/* UNIFIED BLUE HEADER BANNER */}
-            <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex items-center gap-3">
-                <span className="text-3xl">📊</span>
-                <div>
-                  <h1 className="text-xl md:text-2xl font-bold tracking-tight">
-                    Báo Cáo Hiệu Suất{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` - ${courses.find(c => String(c.id) === String(filterCourse))?.title}` : ''}
-                  </h1>
-                  <p className="text-white/80 text-xs md:text-sm mt-0.5">
-                    Phân tích kết quả học tập, kỹ năng và biểu đồ tiến độ
-                  </p>
+            <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4" style={{ background: analyticsTheme.titleBg }}>
+              {/* LEFT COLUMN */}
+              <div className="flex flex-col md:flex-row items-center gap-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">📊</span>
+                  <div>
+                    <h1 className="text-xl md:text-2xl font-bold tracking-tight">
+                      Báo Cáo Hiệu Suất{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` - ${courses.find(c => String(c.id) === String(filterCourse))?.title}` : ''}
+                    </h1>
+                    <p className="text-white/80 text-xs md:text-sm mt-0.5">
+                      Phân tích kết quả học tập, kỹ năng và biểu đồ tiến độ
+                    </p>
+                  </div>
                 </div>
+
+                {/* IELTS / TEST TYPE SWITCHER */}
+                {isIeltsCourseSelected && (
+                  <div className="flex flex-wrap bg-white/20 backdrop-blur-md p-1 rounded-xl border border-white/20 gap-1 shrink-0">
+                    <button
+                      onClick={() => setAnalyticsTestType('ielts')}
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'ielts' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    >
+                      <span>🎯</span> Luyện thi IELTS
+                    </button>
+                    <button
+                      onClick={() => setAnalyticsTestType('ielts-standard')}
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    >
+                      <span>📝</span> Bài Tập Bổ Trợ
+                    </button>
+                    {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
+                      <button
+                        onClick={() => setAnalyticsTestType('standard')}
+                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                      >
+                        <span>📚</span> Bài tập khóa khác
+                      </button>
+                    )}
+                  </div>
+                )}
               </div>
 
-              {/* IELTS / TEST TYPE SWITCHER */}
-              {isIeltsCourseSelected && (
-                <div className="flex flex-wrap bg-white/20 backdrop-blur-md p-1 rounded-xl border border-white/20 gap-1 shrink-0">
+              {/* RIGHT COLUMN */}
+              <div className="flex items-center gap-2 shrink-0">
+                <div className="flex bg-white/15 backdrop-blur-md rounded-xl p-0.5 gap-0.5">
                   <button
-                    onClick={() => setAnalyticsTestType('ielts')}
-                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'ielts' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    onClick={() => setAnalyticsView('scores')}
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-[13px] transition-all cursor-pointer ${analyticsView === 'scores' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
                   >
-                    <span>🎯</span> Luyện thi IELTS
+                    <span>📋</span> Lịch sử điểm
                   </button>
                   <button
-                    onClick={() => setAnalyticsTestType('ielts-standard')}
-                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    onClick={() => setAnalyticsView('activity')}
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-[13px] transition-all cursor-pointer ${analyticsView === 'activity' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
                   >
-                    <span>📝</span> Bài Tập Bổ Trợ
+                    <span>👀</span> Nhật ký truy cập
                   </button>
-                  {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
-                    <button
-                      onClick={() => setAnalyticsTestType('standard')}
-                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all ${analyticsTestType === 'standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
-                    >
-                      <span>📚</span> Bài tập khóa khác
-                    </button>
-                  )}
                 </div>
-              )}
+                <button 
+                  onClick={() => setIsAnalyticsThemeModalOpen(true)} 
+                  className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-3 py-1.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                  title="Đổi màu nền"
+                >
+                  <span>🎨</span>
+                </button>
+              </div>
             </div>
 
-            {analyticsTotalTestsDone === 0 ? (
+            {analyticsView === 'scores' && (analyticsTotalTestsDone === 0 ? (
               <div className="bg-white rounded-[2rem] border border-slate-200 py-24 text-center shadow-sm flex flex-col items-center justify-center mx-2 md:mx-0">
                 <div className="text-6xl mb-6 opacity-40 grayscale block">📊</div>
                 <h3 className="text-xl md:text-2xl font-black text-slate-700 mb-2">Chưa có dữ liệu làm bài hợp lệ</h3>
@@ -2318,7 +2367,59 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   {renderPagination(historyPage, totalHistoryPages, setHistoryPage)}
                 </div>
               </>
+            ))}
+
+            {analyticsView === 'activity' && (
+              <div className="mt-6 bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden mx-2 md:mx-0">
+                <div className="px-6 md:px-8 py-5 md:py-6 border-b border-slate-200 bg-white">
+                  <h3 className="font-black text-[18px] md:text-xl text-slate-800 tracking-tight flex items-center gap-2">
+                    <span>👀</span> Nhật Ký Truy Cập & Hành Vi
+                  </h3>
+                </div>
+                <div className="p-6 md:p-8">
+                  {studentActivities.length === 0 ? (
+                    <div className="text-center py-16">
+                      <p className="text-6xl mb-4">📭</p>
+                      <p className="text-slate-500 font-bold text-lg">Chưa có hoạt động nào được ghi nhận</p>
+                    </div>
+                  ) : (
+                    <div className="relative before:absolute before:left-1/2 before:-translate-x-1/2 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
+                      {studentActivities.map((act: any, idx: number) => {
+                        const isLeft = idx % 2 === 0;
+                        const icon = act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : '📖';
+                        const title = act.action_type === 'login' ? 'ĐĂNG NHẬP HỆ THỐNG' : act.action_type === 'finish_test' ? 'NỘP BÀI KIỂM TRA' : act.action_type === 'call_tutor' ? 'GỌI GIA SƯ AI' : 'HOÀN THÀNH BÀI GIẢNG';
+                        const desc = typeof act.details === 'string' ? act.details : (act.details?.message || act.details?.title || JSON.stringify(act.details || ''));
+                        const dateStr = new Date(act.created_at).toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+                        return (
+                          <div key={act.id || idx} className={`flex items-start gap-4 mb-8 ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
+                            <div className={`w-[45%] ${isLeft ? 'text-right' : 'text-left'}`}>
+                              <div className={`inline-block bg-white border border-slate-200 rounded-2xl p-4 shadow-sm max-w-md ${isLeft ? 'ml-auto' : 'mr-auto'}`}>
+                                <p className="font-black text-[13px] text-slate-800 uppercase tracking-wider mb-1">{title}</p>
+                                <p className="text-[13px] text-slate-600 leading-relaxed">{desc}</p>
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-center shrink-0 z-10">
+                              <div className="w-10 h-10 rounded-full bg-sky-100 border-2 border-white shadow-md flex items-center justify-center text-lg">{icon}</div>
+                            </div>
+                            <div className={`w-[45%] flex items-center ${isLeft ? '' : 'justify-end'}`}>
+                              <span className="text-xs font-bold text-sky-500 bg-sky-50 px-3 py-1 rounded-full border border-sky-100">{dateStr}</span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              </div>
             )}
+
+            <BoardThemeModal
+              isOpen={isAnalyticsThemeModalOpen}
+              currentTheme={analyticsTheme}
+              onSelectTheme={handleSelectAnalyticsTheme}
+              onApplyCustomColor={handleApplyCustomAnalyticsColor}
+              onClose={() => setIsAnalyticsThemeModalOpen(false)}
+            />
           </div>
         )}
 
