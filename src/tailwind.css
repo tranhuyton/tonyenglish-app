@@ -102,6 +102,24 @@ div[class*="jodit-ui-dialog__footer"] button:first-child {
     background: rgba(100, 116, 139, 0.6);
   }
 
+  /* Thanh cuộn dọc danh sách thẻ kiểu Trello / StudentPortal */
+  .column-cards-scrollbar {
+    -webkit-overflow-scrolling: touch;
+  }
+  .column-cards-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+  .column-cards-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .column-cards-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 9999px;
+  }
+  .column-cards-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+  }
+
 u { text-decoration: underline !important; }
 i, em { font-style: italic !important; }
 b, strong { font-weight: bold !important; }

@@ -2385,17 +2385,18 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
               ) : null}
 
               {boardCourseId ? (
-                <div className="flex-1 flex overflow-x-auto gap-4 p-4 custom-scrollbar bg-slate-100/50">
+                <div className="flex-1 flex overflow-x-auto gap-4 p-4 custom-scrollbar bg-slate-100/50 items-start">
                   {boardColumns.map((col, colIdx) => {
                     const colCards = boardCards.filter(c => c.column_id === col.id);
                     const colTheme = parseModuleTheme(col.title);
                     return (
                       <div 
                         key={col.id} 
-                        className="w-[280px] shrink-0 rounded-2xl p-3 border flex flex-col max-h-full transition-all shadow-xs"
+                        className="w-[280px] shrink-0 rounded-2xl p-3 border flex flex-col min-h-0 transition-all shadow-xs"
                         style={{
                           backgroundColor: colTheme.hasColor ? `${colTheme.bg}60` : 'rgba(248, 250, 252, 0.8)',
-                          borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0'
+                          borderColor: colTheme.hasColor ? colTheme.border : '#e2e8f0',
+                          maxHeight: 'clamp(460px, calc(100vh - 280px), 640px)'
                         }}
                       >
                         <div 
@@ -2471,7 +2472,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                           </div>
                         </div>
 
-                        <div className="flex-1 overflow-y-auto space-y-2 min-h-[50px] custom-scrollbar pr-1">
+                        <div className="flex-1 min-h-[40px] overflow-y-auto space-y-2 column-cards-scrollbar custom-scrollbar pr-1.5 pt-0.5">
                           {colCards.map(card => {
                             const cardItems = boardCardItems.filter(i => i.card_id === card.id);
                             const isExpanded = expandedBoardCardId === card.id;

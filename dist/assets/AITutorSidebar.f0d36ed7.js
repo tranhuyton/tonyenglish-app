@@ -1,4 +1,4 @@
-import{r as h}from"./vendor.6c2ee01e.js";import{j as s,a as t,F as J,s as u1}from"./index.2af6e46e.js";const R=`
+import{r as h}from"./vendor.6c2ee01e.js";import{j as s,a as t,F as J,s as u1}from"./index.76b994d6.js";const R=`
 [QUY T\u1EAEC \u0110\u1ECANH D\u1EA0NG B\u1EAET BU\u1ED8C - B\u1EA2O \u0110\u1EA2M HI\u1EC2N TH\u1ECA CHU\u1EA8N UNICODE]:
 - TUY\u1EC6T \u0110\u1ED0I KH\xD4NG S\u1EEC D\u1EE4NG M\xC3 LATEX HO\u1EB6C K\xDD T\u1EF0 LATEX (C\u1EA4M d\xF9ng d\u1EA5u $, $$, \\rightarrow, \\to, \\frac, \\pm, \\sqrt, ^{...}, _{...}, v.v.).
 - B\u1EAET BU\u1ED8C s\u1EED d\u1EE5ng k\xFD t\u1EF1 UNICODE ti\xEAu chu\u1EA9n tr\u1EF1c ti\u1EBFp trong c\xE2u tr\u1EA3 l\u1EDDi:
