@@ -1,3 +1,14 @@
-backups/
-public/*.pdf
-dist/*.pdf
+node_modules
+.git
+output.txt
+unit*.json
+*.py
+*.log
+dist
+.gemini
+extract.py
+fix_*.js
+generate_*.js
+check_folders.js
+test_gemini.js
+update_*.js
