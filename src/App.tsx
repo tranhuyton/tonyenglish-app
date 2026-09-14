@@ -2,26 +2,27 @@ import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { supabase } from './supabase';
 import Home from './Home';
 import StudentPortal from './StudentPortal';
+import { lazyWithRetry, AppErrorBoundary } from './chunkReload';
 
-// 🚀 CODE SPLITTING: Lazy load các component nặng — chỉ tải khi cần
-const ComputerTest = React.lazy(() => import('./ComputerTest'));
-const PaperTest = React.lazy(() => import('./PaperTest'));
-const StandardMCQTest = React.lazy(() => import('./StandardMCQTest'));
-const StandardSplitScreenTest = React.lazy(() => import('./StandardSplitScreenTest'));
-const AdminPanel = React.lazy(() => import('./AdminPanel'));
-const AdminLogin = React.lazy(() => import('./AdminLogin'));
-const IeltsWriting = React.lazy(() => import('./IeltsWriting'));
-const IeltsSpeaking = React.lazy(() => import('./IeltsSpeaking'));
-const SplitScreenTest = React.lazy(() => import('./SplitScreenTest'));
-const LectureViewer = React.lazy(() => import('./LectureViewer'));
-const SiegeGame = React.lazy(() => import('./SiegeGame'));
-const NinjaSurvival = React.lazy(() => import('./NinjaSurvival'));
-const VocabRacing = React.lazy(() => import('./VocabRacing'));
-const IgcsePaperTest = React.lazy(() => import('./IgcsePaperTest'));
-const IgcseDirectPaperTest = React.lazy(() => import('./IgcseDirectPaperTest'));
-const AITutorSidebar = React.lazy(() => import('./AITutorSidebar'));
-const LiveSpeakingTest = React.lazy(() => import('./LiveSpeakingTest'));
-const MixedPaperTest = React.lazy(() => import('./MixedPaperTest'));
+// 🚀 CODE SPLITTING: Lazy load các component nặng có cơ chế tự động phục hồi khi có bản cập nhật mới
+const ComputerTest = lazyWithRetry(() => import('./ComputerTest'));
+const PaperTest = lazyWithRetry(() => import('./PaperTest'));
+const StandardMCQTest = lazyWithRetry(() => import('./StandardMCQTest'));
+const StandardSplitScreenTest = lazyWithRetry(() => import('./StandardSplitScreenTest'));
+const AdminPanel = lazyWithRetry(() => import('./AdminPanel'));
+const AdminLogin = lazyWithRetry(() => import('./AdminLogin'));
+const IeltsWriting = lazyWithRetry(() => import('./IeltsWriting'));
+const IeltsSpeaking = lazyWithRetry(() => import('./IeltsSpeaking'));
+const SplitScreenTest = lazyWithRetry(() => import('./SplitScreenTest'));
+const LectureViewer = lazyWithRetry(() => import('./LectureViewer'));
+const SiegeGame = lazyWithRetry(() => import('./SiegeGame'));
+const NinjaSurvival = lazyWithRetry(() => import('./NinjaSurvival'));
+const VocabRacing = lazyWithRetry(() => import('./VocabRacing'));
+const IgcsePaperTest = lazyWithRetry(() => import('./IgcsePaperTest'));
+const IgcseDirectPaperTest = lazyWithRetry(() => import('./IgcseDirectPaperTest'));
+const AITutorSidebar = lazyWithRetry(() => import('./AITutorSidebar'));
+const LiveSpeakingTest = lazyWithRetry(() => import('./LiveSpeakingTest'));
+const MixedPaperTest = lazyWithRetry(() => import('./MixedPaperTest'));
 
 // Loading fallback khi đang tải component
 const LoadingFallback = () => (
@@ -138,7 +139,9 @@ export default function App() {
   });
 
   const [activeCourseId, setActiveCourseId] = useState<string | null>(() => {
-    try { return sessionStorage.getItem('lms_active_course_id') || null; } catch(e) { return null; }
+    try { 
+      return sessionStorage.getItem('lms_active_course_id') || sessionStorage.getItem('portal_selected_course_id') || null; 
+    } catch(e) { return null; }
   });
 
   const [activeCourseTitle, setActiveCourseTitle] = useState<string>("");
@@ -249,83 +252,85 @@ export default function App() {
       {currentView === 'home' && <Home onNavigate={handleNavigate} onStartTest={handleStartTest} />}
       {currentView === 'portal' && <StudentPortal onNavigate={handleNavigate} onStartTest={handleStartTest} onOpenLecture={handleOpenLecture} />}
       
-      {/* Lazy-loaded components (chỉ tải khi cần) */}
-      <Suspense fallback={<LoadingFallback />}>
-        {currentView === 'admin-login' && <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />}
-        
-        {/* 🚀 ĐÃ NỐI CẦU ONSTARTTEST VÀO ADMIN PANEL */}
-        {currentView === 'admin' && <AdminPanel onNavigate={handleNavigate} onStartTest={handleStartTest} />}
-        
-        {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
-        {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
-        
-        {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
-        {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
-        {currentView === 'mixed-paper' && <MixedPaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
-        {currentView === 'standard' && <StandardMCQTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
-        {currentView === 'standard-splitscreen' && <StandardSplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
-        {currentView === 'case-study' && <SplitScreenTest key={`split-${currentTestData?.id || ''}`} onBack={handleReturnFromTest} testData={currentTestData} />}
-        {currentView === 'igcse' && <IgcsePaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
-        {currentView === 'igcse-direct' && <IgcseDirectPaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
-        {currentView === 'siege-game' && <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />}
-        {currentView === 'ninja-survival' && <NinjaSurvival onBack={handleReturnFromTest} testData={currentTestData} />}
-        {currentView === 'vocab-racing' && <VocabRacing onBack={handleReturnFromTest} testData={currentTestData} />}
-        
-        {currentView === 'lecture' && activeCourseId && (
-          <LectureViewer 
-            courseId={activeCourseId} 
-            onBack={() => handleNavigate('portal')} 
-            onCourseChange={(newId: string) => {
-              setActiveCourseId(newId);
-              try { sessionStorage.setItem('lms_active_course_id', newId); } catch(e) {}
-            }}
-            onStartTest={handleStartTest}
-            onOpenAI={(passedMode?: string, topic?: string, image?: string, task?: string) => { 
-              if (passedMode === 'ielts' || topic) {
-                 setAiMode('ielts');
-                 if (topic) setIeltsTopic(topic);
-                 if (image) setIeltsImage(image);
-                 if (task) setIeltsTaskType(task);
-              } else {
-                 setAiMode('tutor'); 
-              }
-              setIsAISidebarOpen(true); 
-            }}
-          />
-        )}
-
-        <AITutorSidebar 
-          isOpen={isAISidebarOpen}
-          onClose={() => setIsAISidebarOpen(false)}
-          mode={aiMode}
-          topicTitle={ieltsTopic}
-          topicImage={ieltsImage} 
-          taskType={ieltsTaskType}
-          lectureTitle={currentLectureTitle}
-          htmlContent={currentHtmlContent}
-          courseTitle={activeCourseTitle}
-          isCallActive={liveTutorState !== 'CLOSED'}
-        />
-
-        {/* 🚀 GLOBAL WIDGET: HIỂN THỊ ĐÈ LÊN TRÊN BÀI THI/BÀI GIẢNG */}
-        {liveTutorState !== 'CLOSED' && (
-          <LiveSpeakingTest 
-             viewState={liveTutorState}
-             onMinimize={() => setLiveTutorState('MINIMIZED')}
-             onMaximize={() => setLiveTutorState('FULLSCREEN')}
-             onClose={() => setLiveTutorState('CLOSED')}
-             courseTitle={activeCourseTitle}
-             onOpenAI={() => {
-                const topic = sessionStorage.getItem('tony_live_topic') || '';
-                if (topic) {
+      {/* Lazy-loaded components (chỉ tải khi cần) bọc trong AppErrorBoundary chống sập màn hình trắng */}
+      <AppErrorBoundary>
+        <Suspense fallback={<LoadingFallback />}>
+          {currentView === 'admin-login' && <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />}
+          
+          {/* 🚀 ĐÃ NỐI CẦU ONSTARTTEST VÀO ADMIN PANEL */}
+          {currentView === 'admin' && <AdminPanel onNavigate={handleNavigate} onStartTest={handleStartTest} />}
+          
+          {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
+          {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
+          
+          {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
+          {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
+          {currentView === 'mixed-paper' && <MixedPaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
+          {currentView === 'standard' && <StandardMCQTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
+          {currentView === 'standard-splitscreen' && <StandardSplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
+          {currentView === 'case-study' && <SplitScreenTest key={`split-${currentTestData?.id || ''}`} onBack={handleReturnFromTest} testData={currentTestData} />}
+          {currentView === 'igcse' && <IgcsePaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
+          {currentView === 'igcse-direct' && <IgcseDirectPaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
+          {currentView === 'siege-game' && <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />}
+          {currentView === 'ninja-survival' && <NinjaSurvival onBack={handleReturnFromTest} testData={currentTestData} />}
+          {currentView === 'vocab-racing' && <VocabRacing onBack={handleReturnFromTest} testData={currentTestData} />}
+          
+          {currentView === 'lecture' && (
+            <LectureViewer 
+              courseId={activeCourseId || (typeof window !== 'undefined' ? (sessionStorage.getItem('lms_active_course_id') || sessionStorage.getItem('portal_selected_course_id') || '') : '')} 
+              onBack={() => handleNavigate('portal')} 
+              onCourseChange={(newId: string) => {
+                setActiveCourseId(newId);
+                try { sessionStorage.setItem('lms_active_course_id', newId); } catch(e) {}
+              }}
+              onStartTest={handleStartTest}
+              onOpenAI={(passedMode?: string, topic?: string, image?: string, task?: string) => { 
+                if (passedMode === 'ielts' || topic) {
                    setAiMode('ielts');
-                   setIeltsTopic(topic);
+                   if (topic) setIeltsTopic(topic);
+                   if (image) setIeltsImage(image);
+                   if (task) setIeltsTaskType(task);
+                } else {
+                   setAiMode('tutor'); 
                 }
-                setIsAISidebarOpen(true);
-             }}
+                setIsAISidebarOpen(true); 
+              }}
+            />
+          )}
+
+          <AITutorSidebar 
+            isOpen={isAISidebarOpen}
+            onClose={() => setIsAISidebarOpen(false)}
+            mode={aiMode}
+            topicTitle={ieltsTopic}
+            topicImage={ieltsImage} 
+            taskType={ieltsTaskType}
+            lectureTitle={currentLectureTitle}
+            htmlContent={currentHtmlContent}
+            courseTitle={activeCourseTitle}
+            isCallActive={liveTutorState !== 'CLOSED'}
           />
-        )}
-      </Suspense>
+
+          {/* 🚀 GLOBAL WIDGET: HIỂN THỊ ĐÈ LÊN TRÊN BÀI THI/BÀI GIẢNG */}
+          {liveTutorState !== 'CLOSED' && (
+            <LiveSpeakingTest 
+               viewState={liveTutorState}
+               onMinimize={() => setLiveTutorState('MINIMIZED')}
+               onMaximize={() => setLiveTutorState('FULLSCREEN')}
+               onClose={() => setLiveTutorState('CLOSED')}
+               courseTitle={activeCourseTitle}
+               onOpenAI={() => {
+                  const topic = sessionStorage.getItem('tony_live_topic') || '';
+                  if (topic) {
+                     setAiMode('ielts');
+                     setIeltsTopic(topic);
+                  }
+                  setIsAISidebarOpen(true);
+               }}
+            />
+          )}
+        </Suspense>
+      </AppErrorBoundary>
 
       {!validViews.includes(currentView) && (
         <div className="h-screen bg-red-50 flex flex-col items-center justify-center p-8 text-center font-sans">

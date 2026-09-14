@@ -278,6 +278,10 @@ export default function TaskBoard({
 
   const fetchAssignments = async () => {
     try {
+      if (!userId || userId === 'default') {
+        setLoading(false);
+        return;
+      }
       setLoading(true);
       
       const [bRes, colRes, assignRes, trRes] = await Promise.all([
