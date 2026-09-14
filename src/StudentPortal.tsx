@@ -175,6 +175,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [isAnalyticsThemeModalOpen, setIsAnalyticsThemeModalOpen] = useState(false);
   const [studentActivities, setStudentActivities] = useState<any[]>([]);
 
+  // Reload theme when currentUser becomes available (it's undefined on first render)
+  useEffect(() => {
+    if (currentUser?.id) {
+      setAnalyticsTheme(loadTheme(`tony_analytics_theme_${currentUser.id}`));
+    }
+  }, [currentUser?.id]);
+
   useEffect(() => {
     if (analyticsView === 'activity' && currentUser?.id) {
       supabase.from('activity_logs').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(100)
@@ -1978,8 +1985,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               {renderTopControls}
             </div>
 
-            {/* UNIFIED BLUE HEADER BANNER */}
-            <div className="bg-gradient-to-r from-[#0ea5e9] to-[#38bdf8] p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4" style={{ background: analyticsTheme.titleBg }}>
+            {/* UNIFIED BLUE HEADER BANNER - FULL WIDTH */}
+            <div className="p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4 -mx-4 md:-mx-6 lg:-mx-8" style={{ background: analyticsTheme.titleBg || 'linear-gradient(to right, #0ea5e9, #38bdf8)' }}>
               {/* LEFT COLUMN */}
               <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="flex items-center gap-3">
