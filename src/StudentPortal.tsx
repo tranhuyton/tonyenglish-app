@@ -2096,7 +2096,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {/* UNIFIED BLUE / THEME HEADER BANNER */}
             <div 
               className="w-full rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 transition-all" 
-              style={{ background: analyticsTheme.titleBg || 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)' }}
+              style={{ background: analyticsTheme.titleBg || 'linear-gradient(135deg, #005a9c 0%, #004377 100%)' }}
             >
               {/* CỘT 1 (BÊN TRÁI): TIÊU ĐỀ + 3 NÚT FILTER */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-wrap">

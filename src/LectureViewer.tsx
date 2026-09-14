@@ -1855,7 +1855,7 @@ export default function LectureViewer({
       <header 
          className="h-[64px] backdrop-blur-md text-white flex items-center px-4 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-white/20 transition-all duration-300"
          style={{
-            background: lectureTheme?.titleBg || 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+             background: lectureTheme?.titleBg || 'linear-gradient(135deg, #005a9c 0%, #004377 100%)',
             color: lectureTheme?.titleText || '#ffffff'
          }}
       >

@@ -15,17 +15,26 @@ export interface BoardTheme {
 }
 
 export const DEFAULT_BOARD_THEME: BoardTheme = {
-  id: 'light-blue',
-  name: 'Xanh nhạt (Mặc định)',
-  boardBg: '#e0f2fe',
-  titleBg: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
-  titleText: '#ffffff'
+  id: 'trello-ocean',
+  name: 'Xanh Trello (Mặc định)',
+  boardBg: '#0079bf',
+  titleBg: 'linear-gradient(135deg, #005a9c 0%, #004377 100%)',
+  titleText: '#ffffff',
+  isDark: true
 };
 
 export const BOARD_THEMES: BoardTheme[] = [
   {
-    id: 'light-blue',
-    name: 'Xanh nhạt (Mặc định)',
+    id: 'trello-ocean',
+    name: 'Xanh Trello (Mặc định)',
+    boardBg: '#0079bf',
+    titleBg: 'linear-gradient(135deg, #005a9c 0%, #004377 100%)',
+    titleText: '#ffffff',
+    isDark: true
+  },
+  {
+    id: 'light-blue-palette',
+    name: 'Xanh nhạt',
     boardBg: '#e0f2fe',
     titleBg: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
     titleText: '#ffffff'
@@ -36,14 +45,6 @@ export const BOARD_THEMES: BoardTheme[] = [
     boardBg: '#dbeafe',
     titleBg: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
     titleText: '#ffffff'
-  },
-  {
-    id: 'trello-ocean',
-    name: 'Xanh Trello kinh điển',
-    boardBg: '#0079bf',
-    titleBg: 'linear-gradient(135deg, #005a9c 0%, #004377 100%)',
-    titleText: '#ffffff',
-    isDark: true
   },
   {
     id: 'teal-mint',
@@ -114,11 +115,24 @@ export function getDarkerShade(hex: string, percent = 30): string {
 /** Load theme from localStorage for a given key prefix + userId with optional fallbackKey */
 export function loadTheme(storageKey: string, fallbackKey?: string): BoardTheme {
   try {
+    const parseOrMigrate = (raw: string | null): BoardTheme | null => {
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      // Auto-migrate legacy default 'light-blue' to new default 'trello-ocean'
+      if (parsed?.id === 'light-blue') {
+        return DEFAULT_BOARD_THEME;
+      }
+      return parsed;
+    };
+
     const saved = localStorage.getItem(storageKey);
-    if (saved) return JSON.parse(saved);
+    const theme = parseOrMigrate(saved);
+    if (theme) return theme;
+
     if (fallbackKey) {
       const fbSaved = localStorage.getItem(fallbackKey);
-      if (fbSaved) return JSON.parse(fbSaved);
+      const fbTheme = parseOrMigrate(fbSaved);
+      if (fbTheme) return fbTheme;
     }
   } catch (e) {}
   return DEFAULT_BOARD_THEME;
@@ -164,7 +178,7 @@ export function BoardThemeModal({
   onApplyCustomColor: (hex: string) => void;
   onClose: () => void;
 }) {
-  const [customHex, setCustomHex] = useState(currentTheme.boardBg.startsWith('#') ? currentTheme.boardBg : '#e0f2fe');
+  const [customHex, setCustomHex] = useState(currentTheme.boardBg.startsWith('#') ? currentTheme.boardBg : '#0079bf');
 
   if (!isOpen) return null;
 
@@ -265,7 +279,7 @@ export function BoardThemeModal({
                 type="text"
                 value={customHex}
                 onChange={(e) => setCustomHex(e.target.value)}
-                placeholder="#e0f2fe"
+                placeholder="#0079bf"
                 className="flex-1 px-3.5 py-2 text-xs font-mono font-bold rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-sky-500 outline-none uppercase"
               />
               <button
@@ -292,7 +306,7 @@ export function BoardThemeModal({
             }}
             className="text-xs font-bold text-slate-500 hover:text-sky-600 transition-colors cursor-pointer"
           >
-            ↺ Khôi phục mặc định (Xanh nhạt)
+            ↺ Khôi phục mặc định (Xanh Trello)
           </button>
           <button
             type="button"

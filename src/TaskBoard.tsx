@@ -38,7 +38,7 @@ interface ActiveModalCard {
   boardTitle: string;
 }
 
-import { BoardTheme, DEFAULT_BOARD_THEME, BOARD_THEMES, getDarkerShade, BoardThemeModal, createCustomTheme } from './ThemeModal';
+import { BoardTheme, DEFAULT_BOARD_THEME, BOARD_THEMES, getDarkerShade, BoardThemeModal, createCustomTheme, loadTheme } from './ThemeModal';
 
 export type { BoardTheme };
 export { DEFAULT_BOARD_THEME, BOARD_THEMES };
@@ -155,13 +155,7 @@ export default function TaskBoard({
   const [loading, setLoading] = useState(true);
   const [activeModalCard, setActiveModalCard] = useState<ActiveModalCard | null>(null);
   const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
-  const [boardTheme, setBoardTheme] = useState<BoardTheme>(() => {
-    try {
-      const saved = localStorage.getItem(`tony_taskboard_theme_${userId}`);
-      if (saved) return JSON.parse(saved);
-    } catch (e) {}
-    return DEFAULT_BOARD_THEME;
-  });
+  const [boardTheme, setBoardTheme] = useState<BoardTheme>(() => loadTheme(`tony_taskboard_theme_${userId}`));
 
   const [customColColors, setCustomColColors] = useState<Record<string, { bg: string; text: string; border: string }>>(() => {
     try {
@@ -265,6 +259,7 @@ export default function TaskBoard({
 
   useEffect(() => {
     fetchAssignments();
+    setBoardTheme(loadTheme(`tony_taskboard_theme_${userId}`));
     const handleRefresh = () => fetchAssignments();
     window.addEventListener('tony-refresh-lecture-progress', handleRefresh);
     return () => {
