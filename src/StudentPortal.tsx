@@ -154,6 +154,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     sessionStorage.setItem('portal_test_page', testPage.toString());
   }, [testPage]);
   const [historyPage, setHistoryPage] = useState(1);
+  const [activityPage, setActivityPage] = useState(1);
 
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
   const [analyticsDropdownOpen, setAnalyticsDropdownOpen] = useState(false);
@@ -1123,6 +1124,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const totalHistoryPages = Math.ceil(processedHistory.length / HISTORY_PER_PAGE);
   const paginatedHistory = useMemo(() => processedHistory.slice((historyPage - 1) * HISTORY_PER_PAGE, historyPage * HISTORY_PER_PAGE), [processedHistory, historyPage]);
+
+  const totalActivityPages = Math.ceil(studentActivities.length / HISTORY_PER_PAGE);
+  const paginatedActivities = useMemo(() => studentActivities.slice((activityPage - 1) * HISTORY_PER_PAGE, activityPage * HISTORY_PER_PAGE), [studentActivities, activityPage]);
 
   const inProgressTestId = Array.from(inProgressIds)[0];
   const inProgressTest = useMemo(() => allTests.find(t => String(t.id) === inProgressTestId), [allTests, inProgressTestId]);
@@ -2230,73 +2234,76 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                     {/* KHU VỰC BIỂU ĐỒ IELTS CHI TIẾT */}
                     {isIeltsContext && (
-                      <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden p-5 sm:p-6 md:p-8 space-y-8">
-                        {/* CHART 1: BIỂU ĐỒ 4 KỸ NĂNG IELTS */}
-                        <div className="w-full">
-                          <div className="flex items-center gap-2.5 mb-4">
-                            <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg">📈</div>
-                            <h3 className="font-black text-base sm:text-lg text-slate-800 tracking-tight">Biểu đồ 4 Kỹ Năng</h3>
+                      <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden p-5 sm:p-6 md:p-8 space-y-6">
+                        {/* 2 BIỂU ĐỒ ĐỨNG CẠNH NHAU */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
+                          {/* CHART 1: BIỂU ĐỒ 4 KỸ NĂNG IELTS */}
+                          <div className="w-full flex flex-col">
+                            <div className="flex items-center gap-2.5 mb-3">
+                              <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base">📈</div>
+                              <h3 className="font-black text-sm sm:text-base text-slate-800 tracking-tight">Biểu đồ 4 Kỹ Năng</h3>
+                            </div>
+                            <div className="w-full h-[260px] sm:h-[280px] bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100 flex-1">
+                              <ResponsiveContainer width="100%" height="100%">
+                                <LineChart data={ieltsSkillChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                                  <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} dy={10} />
+                                  <YAxis domain={[0, 9]} ticks={[0, 3, 5, 7, 9]} axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} />
+                                  <Tooltip labelFormatter={(label) => `Ngày ${label}`} contentStyle={{ borderRadius: '12px', fontSize: '11px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                                  <Legend iconType="circle" wrapperStyle={{ fontSize: '11px', fontWeight: 'bold', paddingTop: '10px' }} />
+                                  
+                                  <Line type="monotone" dataKey="Nghe" name="Listening" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Nói" name="Speaking" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Đọc" name="Reading" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Viết" name="Writing" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                </LineChart>
+                              </ResponsiveContainer>
+                            </div>
                           </div>
-                          <div className="w-full h-[280px] sm:h-[300px] bg-slate-50/50 rounded-2xl p-3 sm:p-4 border border-slate-100">
-                            <ResponsiveContainer width="100%" height="100%">
-                              <LineChart data={ieltsSkillChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b', fontWeight: 600 }} dy={10} />
-                                <YAxis domain={[0, 9]} ticks={[0, 3, 5, 7, 9]} axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b', fontWeight: 600 }} />
-                                <Tooltip labelFormatter={(label) => `Ngày ${label}`} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
-                                <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', fontWeight: 'bold', paddingTop: '15px' }} />
-                                
-                                <Line type="monotone" dataKey="Nghe" name="Listening" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
-                                <Line type="monotone" dataKey="Nói" name="Speaking" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
-                                <Line type="monotone" dataKey="Đọc" name="Reading" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
-                                <Line type="monotone" dataKey="Viết" name="Writing" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
-                              </LineChart>
-                            </ResponsiveContainer>
-                          </div>
-                        </div>
-                        
-                        {/* CHART 2: BIỂU ĐỒ TỶ LỆ THEO DẠNG BÀI */}
-                        <div className="w-full">
-                          <div className="flex items-center gap-2.5 mb-4">
-                            <div className="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg">🎯</div>
-                            <h3 className="font-black text-base sm:text-lg text-slate-800 tracking-tight">Tỷ Lệ Đúng Từng Dạng (%)</h3>
-                          </div>
-                          <div className="w-full h-[280px] sm:h-[300px] bg-slate-50/50 rounded-2xl p-3 sm:p-4 border border-slate-100">
-                            <ResponsiveContainer width="100%" height="100%">
-                              <LineChart data={ieltsTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b', fontWeight: 600 }} dy={10} />
-                                <YAxis domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b', fontWeight: 600 }} />
-                                <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any, name: string) => [`${value}%`, name]} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
-                                <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', fontWeight: 'bold', paddingTop: '15px' }} />
-                                
-                                <Line type="monotone" dataKey="Điền từ" name="Điền từ" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
-                                <Line type="monotone" dataKey="Nhận định" name="T/F/NG" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
-                                <Line type="monotone" dataKey="Trắc nghiệm" name="MCQ/Checkbox" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
-                                <Line type="monotone" dataKey="Matching" name="Matching" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
-                              </LineChart>
-                            </ResponsiveContainer>
+                          
+                          {/* CHART 2: BIỂU ĐỒ TỶ LỆ THEO DẠNG BÀI */}
+                          <div className="w-full flex flex-col">
+                            <div className="flex items-center gap-2.5 mb-3">
+                              <div className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-base">🎯</div>
+                              <h3 className="font-black text-sm sm:text-base text-slate-800 tracking-tight">Tỷ Lệ Đúng Từng Dạng (%)</h3>
+                            </div>
+                            <div className="w-full h-[260px] sm:h-[280px] bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100 flex-1">
+                              <ResponsiveContainer width="100%" height="100%">
+                                <LineChart data={ieltsTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                                  <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} dy={10} />
+                                  <YAxis domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} />
+                                  <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any, name: string) => [`${value}%`, name]} contentStyle={{ borderRadius: '12px', fontSize: '11px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                                  <Legend iconType="circle" wrapperStyle={{ fontSize: '11px', fontWeight: 'bold', paddingTop: '10px' }} />
+                                  
+                                  <Line type="monotone" dataKey="Điền từ" name="Điền từ" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Nhận định" name="T/F/NG" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Trắc nghiệm" name="MCQ/Checkbox" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Matching" name="Matching" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                </LineChart>
+                              </ResponsiveContainer>
+                            </div>
                           </div>
                         </div>
 
-                        {/* THANH PROGRESS BAR NẰM NGANG */}
-                        <div className="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-100">
-                          <h3 className="font-black text-[14px] sm:text-[15px] text-slate-800 uppercase tracking-tight mb-4 flex items-center gap-2">
+                        {/* THANH PROGRESS BAR NẰM NGANG - 4 CARD TRÊN 1 DÒNG */}
+                        <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-100">
+                          <h3 className="font-black text-xs sm:text-[13px] text-slate-800 uppercase tracking-tight mb-3 flex items-center gap-2">
                             <span className="text-emerald-500">🏆</span> Tỷ lệ đúng tích lũy
                           </h3>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
                             {Object.entries(ieltsTypeStats).map(([key, data]) => {
                               const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
                               return (
-                                <div key={key} className="bg-white border border-slate-200 rounded-xl p-3.5 hover:border-[#0ea5e9] hover:shadow-xs transition-all">
-                                  <div className="flex justify-between items-end mb-2">
-                                    <span className="font-bold text-slate-700 text-xs">{key}</span>
-                                    <span className="font-black text-[#0ea5e9] text-[15px]">{percent}%</span>
+                                <div key={key} className="bg-white border border-slate-200 rounded-xl p-3 hover:border-[#0ea5e9] hover:shadow-xs transition-all flex flex-col justify-between">
+                                  <div className="flex justify-between items-start mb-1.5 gap-1">
+                                    <span className="font-bold text-slate-700 text-[11px] sm:text-xs truncate" title={key}>{key}</span>
+                                    <span className="font-black text-[#0ea5e9] text-[13px] sm:text-[14px] shrink-0">{percent}%</span>
                                   </div>
-                                  <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-1.5 border border-slate-200/50">
+                                  <div className="w-full h-1.5 sm:h-2 bg-slate-100 rounded-full overflow-hidden mb-1 border border-slate-200/50">
                                     <div className="h-full bg-gradient-to-r from-sky-400 to-[#0ea5e9] rounded-full transition-all duration-1000" style={{width: `${percent}%`}}></div>
                                   </div>
-                                  <p className="text-[10px] text-slate-400 font-bold text-right tracking-wider">{data.correct} / {data.total} câu</p>
+                                  <p className="text-[10px] text-slate-400 font-bold text-right tracking-wider">{data.correct}/{data.total} câu</p>
                                 </div>
                               );
                             })}
@@ -2418,86 +2425,89 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       {renderPagination(historyPage, totalHistoryPages, setHistoryPage)}
                     </>
                   ) : (
-                    <div className="p-5 sm:p-6 max-h-[850px] overflow-y-auto custom-scrollbar">
-                      {studentActivities.length === 0 ? (
-                        <div className="text-center py-16">
-                          <p className="text-5xl mb-3">📭</p>
-                          <p className="text-slate-500 font-bold text-sm">Chưa có hoạt động nào được ghi nhận</p>
-                        </div>
-                      ) : (
-                        <div className="relative pl-6 space-y-4 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
-                          {studentActivities.map((act: any, idx: number) => {
-                            let details: any = act.details;
-                            if (typeof details === 'string') {
-                              try {
-                                details = JSON.parse(details);
-                              } catch (e) {
-                                // plain string, keep as is
+                    <>
+                      <div className="p-4 sm:p-5">
+                        {paginatedActivities.length === 0 ? (
+                          <div className="text-center py-16">
+                            <p className="text-5xl mb-3">📭</p>
+                            <p className="text-slate-500 font-bold text-sm">Chưa có hoạt động nào được ghi nhận</p>
+                          </div>
+                        ) : (
+                          <div className="relative pl-6 space-y-3 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
+                            {paginatedActivities.map((act: any, idx: number) => {
+                              let details: any = act.details;
+                              if (typeof details === 'string') {
+                                try {
+                                  details = JSON.parse(details);
+                                } catch (e) {
+                                  // plain string, keep as is
+                                }
                               }
-                            }
 
-                            let icon = '📖';
-                            let title = 'HOÀN THÀNH BÀI GIẢNG';
-                            let desc = '';
+                              let icon = '📖';
+                              let title = 'HOÀN THÀNH BÀI GIẢNG';
+                              let desc = '';
 
-                            if (act.action_type === 'login') {
-                              icon = '🔑';
-                              title = 'ĐĂNG NHẬP HỆ THỐNG';
-                              desc = details?.message || 'Học sinh đăng nhập thành công vào LMS Tony English.';
-                            } else if (act.action_type === 'finish_test') {
-                              icon = '📝';
-                              title = 'NỘP BÀI KIỂM TRA';
-                              const testName = details?.test_title || details?.title || details?.name || 'Bài kiểm tra';
-                              const scorePart = (details?.score !== undefined && details?.total !== undefined)
-                                ? ` • Điểm số: ${details.score}/${details.total}`
-                                : details?.score !== undefined
-                                  ? ` • Điểm: ${details.score}`
-                                  : '';
-                              desc = `Đã hoàn thành: "${testName}"${scorePart}`;
-                            } else if (act.action_type === 'call_tutor') {
-                              icon = '📞';
-                              title = 'HỎI ĐÁP GIA SƯ AI / VOICE';
-                              const durPart = details?.duration ? `Thời lượng: ${details.duration} giây` : '';
-                              const topicPart = details?.topic ? `Chủ đề: "${details.topic}"` : '';
-                              desc = [durPart, topicPart].filter(Boolean).join(' • ') || details?.message || 'Đã đàm thoại với gia sư AI.';
-                            } else if (act.action_type === 'finish_lecture') {
-                              icon = '📖';
-                              title = 'HOÀN THÀNH BÀI GIẢNG';
-                              const lecName = details?.lecture_title || details?.title || details?.name || (typeof details === 'string' ? details : 'Bài giảng');
-                              desc = `Đã học xong: "${lecName}"`;
-                            } else {
-                              icon = '📌';
-                              title = (act.action_type || 'HOẠT ĐỘNG').toUpperCase();
-                              if (details && typeof details === 'object') {
-                                desc = details.lecture_title 
-                                  ? `Đã học xong: "${details.lecture_title}"`
-                                  : details.test_title 
-                                    ? `Đã hoàn thành: "${details.test_title}"`
-                                    : details.message || details.title || '';
+                              if (act.action_type === 'login') {
+                                icon = '🔑';
+                                title = 'ĐĂNG NHẬP HỆ THỐNG';
+                                desc = details?.message || 'Học sinh đăng nhập thành công vào LMS Tony English.';
+                              } else if (act.action_type === 'finish_test') {
+                                icon = '📝';
+                                title = 'NỘP BÀI KIỂM TRA';
+                                const testName = details?.test_title || details?.title || details?.name || 'Bài kiểm tra';
+                                const scorePart = (details?.score !== undefined && details?.total !== undefined)
+                                  ? ` • Điểm số: ${details.score}/${details.total}`
+                                  : details?.score !== undefined
+                                    ? ` • Điểm: ${details.score}`
+                                    : '';
+                                desc = `Đã hoàn thành: "${testName}"${scorePart}`;
+                              } else if (act.action_type === 'call_tutor') {
+                                icon = '📞';
+                                title = 'HỎI ĐÁP GIA SƯ AI / VOICE';
+                                const durPart = details?.duration ? `Thời lượng: ${details.duration} giây` : '';
+                                const topicPart = details?.topic ? `Chủ đề: "${details.topic}"` : '';
+                                desc = [durPart, topicPart].filter(Boolean).join(' • ') || details?.message || 'Đã đàm thoại với gia sư AI.';
+                              } else if (act.action_type === 'finish_lecture') {
+                                icon = '📖';
+                                title = 'HOÀN THÀNH BÀI GIẢNG';
+                                const lecName = details?.lecture_title || details?.title || details?.name || (typeof details === 'string' ? details : 'Bài giảng');
+                                desc = `Đã học xong: "${lecName}"`;
                               } else {
-                                desc = typeof details === 'string' ? details : '';
+                                icon = '📌';
+                                title = (act.action_type || 'HOẠT ĐỘNG').toUpperCase();
+                                if (details && typeof details === 'object') {
+                                  desc = details.lecture_title 
+                                    ? `Đã học xong: "${details.lecture_title}"`
+                                    : details.test_title 
+                                      ? `Đã hoàn thành: "${details.test_title}"`
+                                      : details.message || details.title || '';
+                                } else {
+                                  desc = typeof details === 'string' ? details : '';
+                                }
                               }
-                            }
 
-                            const dateStr = new Date(act.created_at).toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
-                            return (
-                              <div key={act.id || idx} className="relative group">
-                                <div className="absolute -left-[27px] top-1.5 w-6 h-6 rounded-full bg-white border-2 border-sky-400 flex items-center justify-center text-xs shadow-xs group-hover:scale-110 transition-transform">
-                                  {icon}
-                                </div>
-                                <div className="bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl p-3.5 transition-all shadow-2xs">
-                                  <div className="flex items-center justify-between gap-2 mb-1">
-                                    <span className="font-bold text-xs sm:text-[13px] text-slate-800 uppercase tracking-wide">{title}</span>
-                                    <span className="text-[11px] font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded-md shrink-0 border border-sky-100">{dateStr}</span>
+                              const dateStr = new Date(act.created_at).toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+                              return (
+                                <div key={act.id || idx} className="relative group">
+                                  <div className="absolute -left-[27px] top-1.5 w-6 h-6 rounded-full bg-white border-2 border-sky-400 flex items-center justify-center text-xs shadow-xs group-hover:scale-110 transition-transform">
+                                    {icon}
                                   </div>
-                                  {desc && <p className="text-xs text-slate-600 leading-relaxed line-clamp-2" title={desc}>{desc}</p>}
+                                  <div className="bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl p-3.5 transition-all shadow-2xs">
+                                    <div className="flex items-center justify-between gap-2 mb-1">
+                                      <span className="font-bold text-xs sm:text-[13px] text-slate-800 uppercase tracking-wide">{title}</span>
+                                      <span className="text-[11px] font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded-md shrink-0 border border-sky-100">{dateStr}</span>
+                                    </div>
+                                    {desc && <p className="text-xs text-slate-600 leading-relaxed line-clamp-2" title={desc}>{desc}</p>}
+                                  </div>
                                 </div>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                      {renderPagination(activityPage, totalActivityPages, setActivityPage)}
+                    </>
                   )}
                 </div>
               </div>
