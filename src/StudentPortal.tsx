@@ -1983,457 +1983,382 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             className="w-full min-h-[500px] p-3 sm:p-4 md:p-5 text-slate-800 rounded-3xl relative flex-1 flex flex-col space-y-4 md:space-y-6 animate-in fade-in duration-300" 
             style={{ backgroundColor: analyticsTheme.boardBg }}
           >
-            {/* TOP ACTIONS */}
-            <div className="flex justify-end relative z-40">
-              {renderTopControls}
-            </div>
-
-            {/* UNIFIED BLUE HEADER BANNER - FULL WIDTH & 2 COLUMNS */}
-            <div 
-              className="w-full rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 transition-all" 
-              style={{ background: analyticsTheme.titleBg || 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)' }}
-            >
-              {/* CỘT 1 (BÊN TRÁI): PHÂN TÍCH */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-wrap">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">📊</span>
-                  <div>
-                    <h1 className="text-xl md:text-2xl font-bold tracking-tight">
-                      Báo Cáo Hiệu Suất{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` - ${courses.find(c => String(c.id) === String(filterCourse))?.title}` : ''}
-                    </h1>
-                    <p className="text-white/80 text-xs md:text-sm mt-0.5">
-                      Phân tích kết quả học tập, kỹ năng và biểu đồ tiến độ
-                    </p>
+            {/* 2-COLUMN LAYOUT: CỘT TRÁI PHÂN TÍCH & BIỂU ĐỒ, CỘT PHẢI LỊCH SỬ / NHẬT KÝ */}
+            <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 md:gap-6 items-start">
+              {/* ========================================================= */}
+              {/* CỘT TRÁI (XL:COL-SPAN-7): CÁC BIỂU ĐỒ VÀ PHÂN TÍCH        */}
+              {/* ========================================================= */}
+              <div className="xl:col-span-7 space-y-5 md:space-y-6">
+                {analyticsTotalTestsDone === 0 ? (
+                  <div className="bg-white rounded-[2rem] border border-slate-200 py-20 text-center shadow-sm flex flex-col items-center justify-center p-6">
+                    <div className="text-5xl mb-4 opacity-40 grayscale block">📊</div>
+                    <h3 className="text-lg md:text-xl font-black text-slate-700 mb-2">Chưa có dữ liệu làm bài hợp lệ</h3>
+                    <p className="text-slate-500 font-medium text-[13px] md:text-[14px] max-w-md">Hệ thống chỉ tính những bài đạt trên 3.0 điểm (hoặc IELTS Band &gt; 3.0) để đảm bảo phân tích của AI chính xác nhất.</p>
                   </div>
-                </div>
-
-                {/* IELTS / TEST TYPE SWITCHER */}
-                {isIeltsCourseSelected && (
-                  <div className="flex flex-wrap bg-white/20 backdrop-blur-md p-1 rounded-xl border border-white/20 gap-1 shrink-0">
-                    <button
-                      type="button"
-                      onClick={() => setAnalyticsTestType('ielts')}
-                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
-                    >
-                      <span>🎯</span> Luyện thi IELTS
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setAnalyticsTestType('ielts-standard')}
-                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
-                    >
-                      <span>📝</span> Bài Tập Bổ Trợ
-                    </button>
-                    {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
-                      <button
-                        type="button"
-                        onClick={() => setAnalyticsTestType('standard')}
-                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
-                      >
-                        <span>📚</span> Bài tập khóa khác
-                      </button>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              {/* CỘT 2 (BÊN PHẢI): 2 NÚT FILTER & NÚT ĐỔI MÀU NỀN */}
-              <div className="flex items-center gap-2 sm:gap-3 shrink-0 self-end lg:self-center">
-                {/* 2 NÚT FILTER: LỊCH SỬ ĐIỂM & NHẬT KÝ TRUY CẬP */}
-                <div className="flex bg-white/15 backdrop-blur-md rounded-xl p-1 gap-1 border border-white/20">
-                  <button
-                    type="button"
-                    onClick={() => setAnalyticsView('scores')}
-                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsView === 'scores' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
-                  >
-                    <span>📋</span> Lịch sử điểm
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setAnalyticsView('activity')}
-                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsView === 'activity' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
-                  >
-                    <span>👀</span> Nhật ký truy cập
-                  </button>
-                </div>
-
-                {/* NÚT ĐỔI MÀU NỀN */}
-                <button 
-                  type="button"
-                  onClick={() => setIsAnalyticsThemeModalOpen(true)} 
-                  className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/20"
-                  title="Đổi màu nền"
-                >
-                  <span>🎨</span> <span className="hidden sm:inline">Đổi màu nền</span>
-                </button>
-              </div>
-            </div>
-
-            {analyticsView === 'scores' && (analyticsTotalTestsDone === 0 ? (
-              <div className="bg-white rounded-[2rem] border border-slate-200 py-24 text-center shadow-sm flex flex-col items-center justify-center mx-2 md:mx-0">
-                <div className="text-6xl mb-6 opacity-40 grayscale block">📊</div>
-                <h3 className="text-xl md:text-2xl font-black text-slate-700 mb-2">Chưa có dữ liệu làm bài hợp lệ</h3>
-                <p className="text-slate-500 font-medium text-[14px] md:text-[15px] max-w-md">Hệ thống chỉ tính những bài đạt trên 3.0 điểm (hoặc IELTS Band &gt; 3.0) để đảm bảo phân tích của AI chính xác nhất.</p>
-              </div>
-            ) : (
-              <>
-                <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mx-2 md:mx-0`}>
-                  
-                  {/* CARD 1: BÀI HOÀN THÀNH */}
-                  <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm p-6 flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all duration-300 group">
-                    <div className="flex justify-between items-center mb-4 relative z-10">
-                      <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-emerald-400"></span><span className="font-bold text-slate-500 text-[12px] uppercase tracking-widest group-hover:text-emerald-600 transition-colors">Đã làm</span></div>
-                      <span className="font-black text-slate-800 text-2xl">{analyticsTotalTestsDone}</span>
-                    </div>
-                    <div className="h-20 w-full -mx-2 -mb-2">
-                        <ResponsiveContainer width="99%" height="100%">
-                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
-                                <defs>
-                                    <linearGradient id="colorDone" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#10b981" stopOpacity={0.3}/>
-                                        <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
-                                    </linearGradient>
-                                </defs>
-                                <XAxis dataKey="name" hide />
-                                <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} bài`, 'Tổng số bài']} contentStyle={{ borderRadius: '12px', fontSize: '13px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
-                                <Area type="monotone" dataKey="cumulativeDone" stroke="#10b981" strokeWidth={3} fill="url(#colorDone)" activeDot={{ r: 6, fill: '#10b981', stroke: '#fff', strokeWidth: 3 }} />
-                            </AreaChart>
-                        </ResponsiveContainer>
-                    </div>
-                  </div>
-
-                  {/* CARD 2: LƯỢT LÀM BÀI */}
-                  <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm p-6 flex flex-col justify-between hover:border-purple-400 hover:shadow-md transition-all duration-300 group">
-                    <div className="flex justify-between items-center mb-4 relative z-10">
-                      <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-purple-400"></span><span className="font-bold text-slate-500 text-[12px] uppercase tracking-widest group-hover:text-purple-600 transition-colors">Lượt làm</span></div>
-                      <span className="font-black text-slate-800 text-2xl">{analyticsTotalTestsDone}</span>
-                    </div>
-                    <div className="h-20 w-full -mx-2 -mb-2">
-                        <ResponsiveContainer width="99%" height="100%">
-                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
-                                <defs>
-                                    <linearGradient id="colorAttempts" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#a855f7" stopOpacity={0.3}/>
-                                        <stop offset="95%" stopColor="#a855f7" stopOpacity={0}/>
-                                    </linearGradient>
-                                </defs>
-                                <XAxis dataKey="name" hide />
-                                <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} lượt`, 'Trong ngày']} contentStyle={{ borderRadius: '12px', fontSize: '13px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
-                                <Area type="monotone" dataKey="attempts" stroke="#a855f7" strokeWidth={3} fill="url(#colorAttempts)" activeDot={{ r: 6, fill: '#a855f7', stroke: '#fff', strokeWidth: 3 }} />
-                            </AreaChart>
-                        </ResponsiveContainer>
-                    </div>
-                  </div>
-
-                  {/* CARD 3: GIỜ HỌC */}
-                  <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm p-6 flex flex-col justify-between hover:border-orange-400 hover:shadow-md transition-all duration-300 group">
-                    <div className="flex justify-between items-center mb-4 relative z-10">
-                      <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-orange-400"></span><span className="font-bold text-slate-500 text-[12px] uppercase tracking-widest group-hover:text-orange-600 transition-colors">Giờ học</span></div>
-                      <span className="font-black text-slate-800 text-2xl">{analyticsTotalTimeHours}h</span>
-                    </div>
-                    <div className="h-20 w-full -mx-2 -mb-2">
-                        <ResponsiveContainer width="99%" height="100%">
-                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
-                                <defs>
-                                    <linearGradient id="colorTime" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#f97316" stopOpacity={0.3}/>
-                                        <stop offset="95%" stopColor="#f97316" stopOpacity={0}/>
-                                    </linearGradient>
-                                </defs>
-                                <XAxis dataKey="name" hide />
-                                <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} giờ`, 'Thời gian']} contentStyle={{ borderRadius: '12px', fontSize: '13px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
-                                <Area type="monotone" dataKey="time" stroke="#f97316" strokeWidth={3} fill="url(#colorTime)" activeDot={{ r: 6, fill: '#f97316', stroke: '#fff', strokeWidth: 3 }} />
-                            </AreaChart>
-                        </ResponsiveContainer>
-                    </div>
-                  </div>
-
-                  {/* CARD 4: DARK CARD (AVERAGE) */}
-                  <div className="bg-slate-900 rounded-[2rem] border border-slate-800 shadow-[0_10px_30px_rgba(15,23,42,0.3)] p-6 flex flex-col justify-center text-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent"></div>
-                    <h4 className="font-bold text-slate-400 text-[11px] uppercase tracking-widest mb-2 relative z-10">
-                        {isIeltsContext ? 'IELTS Average' : 'Điểm Trung Bình'}
-                    </h4>
-                    {isIeltsContext ? (
-                      <span className="font-black text-white text-4xl relative z-10 drop-shadow-md">{avgIelts}</span>
-                    ) : (
-                      <div className="relative z-10">
-                        <span className="font-black text-white text-3xl drop-shadow-md">{avgScore}</span>
-                        {avgScoreRaw > 0 && (
-                          <span className={`block text-2xl font-black mt-1 ${GRADE_SCALE.find(g => avgScoreRaw >= g.min)?.color || 'text-slate-400'}`}>
-                            {percentToGrade(avgScoreRaw)}
-                          </span>
-                        )}
-                      </div>
-                    )}
-                    <p className="text-[11px] text-slate-500 mt-2 font-medium relative z-10">
-                        {isIeltsContext ? '(Dựa trên 4 bài gần nhất)' : '(Toàn bộ hệ thống)'}
-                    </p>
-                  </div>
-                  
-                  {/* CARD 5: DARK CARD (TARGET) */}
-                  <div className="bg-slate-900 rounded-[2rem] border border-amber-500/50 shadow-[0_10px_30px_rgba(245,158,11,0.15)] p-6 flex flex-col justify-center text-center relative overflow-hidden group hover:border-amber-400 transition-colors">
-                    <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent"></div>
-                    <div className="absolute -right-2 -bottom-2 text-6xl opacity-10 pointer-events-none group-hover:scale-110 transition-transform">🎯</div>
-                    <h4 className="font-bold text-amber-300/80 text-[11px] uppercase tracking-widest mb-1 relative z-10">Mục tiêu Điểm</h4>
-                    {isIeltsContext ? (
-                      <input 
-                          type="number" step="0.5" min="0" max="9.0" 
-                          value={getTargetForCourse(analyticsCourse, true) || ''} 
-                          onChange={(e) => handleUpdateTarget('ielts', e.target.value)}
-                          placeholder="N/A"
-                          className="font-black text-amber-400 text-4xl bg-transparent w-full text-center outline-none cursor-pointer placeholder:text-amber-400/30 relative z-10 drop-shadow-md focus:scale-110 transition-transform"
-                          title="Click để sửa"
-                      />
-                    ) : analyticsCourse !== 'all' ? (
-                      <div className="relative z-10">
-                        <div className="relative inline-block">
-                          <select 
-                            value={getTargetForCourse(analyticsCourse, false) || ''} 
-                            onChange={(e) => handleUpdateTarget(analyticsCourse, e.target.value)}
-                            className="font-black text-amber-400 text-4xl bg-transparent text-center outline-none cursor-pointer appearance-none relative z-10 drop-shadow-md border-none pr-6 pl-2"
-                            style={{ WebkitAppearance: 'none', MozAppearance: 'none', textAlignLast: 'center', background: 'transparent' }}
-                          >
-                            <option value="" className="bg-slate-800 text-slate-400 text-sm">--</option>
-                            <option value="A*" className="bg-slate-800 text-white text-sm">A*</option>
-                            <option value="A" className="bg-slate-800 text-white text-sm">A</option>
-                            <option value="B" className="bg-slate-800 text-white text-sm">B</option>
-                            <option value="C" className="bg-slate-800 text-white text-sm">C</option>
-                            <option value="D" className="bg-slate-800 text-white text-sm">D</option>
-                            <option value="E" className="bg-slate-800 text-white text-sm">E</option>
-                          </select>
-                          <span className="absolute right-0 top-1/2 -translate-y-1/2 text-amber-400/50 pointer-events-none text-xs">▼</span>
+                ) : (
+                  <>
+                    {/* 5 THẺ KPI THỐNG KÊ */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 gap-3 sm:gap-4">
+                      {/* CARD 1: BÀI HOÀN THÀNH */}
+                      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5 flex flex-col justify-between hover:border-emerald-400 hover:shadow-md transition-all duration-300 group">
+                        <div className="flex justify-between items-center mb-3 relative z-10">
+                          <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span><span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider group-hover:text-emerald-600 transition-colors">Đã làm</span></div>
+                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalTestsDone}</span>
                         </div>
-                        <p className="text-[11px] text-amber-200/50 mt-1 font-semibold">
-                          {getTargetForCourse(analyticsCourse, false) 
-                            ? `≥ ${gradeToMinPercent(getTargetForCourse(analyticsCourse, false))}%` 
-                            : 'Chọn mục tiêu'}
-                        </p>
+                        <div className="h-16 w-full -mx-1 -mb-1">
+                          <ResponsiveContainer width="99%" height="100%">
+                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
+                              <defs>
+                                <linearGradient id="colorDone" x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="5%" stopColor="#10b981" stopOpacity={0.3}/>
+                                  <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
+                                </linearGradient>
+                              </defs>
+                              <XAxis dataKey="name" hide />
+                              <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} bài`, 'Tổng số bài']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                              <Area type="monotone" dataKey="cumulativeDone" stroke="#10b981" strokeWidth={2.5} fill="url(#colorDone)" activeDot={{ r: 5, fill: '#10b981', stroke: '#fff', strokeWidth: 2 }} />
+                            </AreaChart>
+                          </ResponsiveContainer>
+                        </div>
                       </div>
-                    ) : (
-                      <div className="relative z-10">
-                        <span className="font-black text-amber-400/30 text-3xl">--</span>
-                        <p className="text-[11px] text-amber-200/40 mt-1">Chọn 1 khóa cụ thể</p>
+
+                      {/* CARD 2: LƯỢT LÀM */}
+                      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5 flex flex-col justify-between hover:border-purple-400 hover:shadow-md transition-all duration-300 group">
+                        <div className="flex justify-between items-center mb-3 relative z-10">
+                          <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-purple-400"></span><span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider group-hover:text-purple-600 transition-colors">Lượt làm</span></div>
+                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalAttempts}</span>
+                        </div>
+                        <div className="h-16 w-full -mx-1 -mb-1">
+                          <ResponsiveContainer width="99%" height="100%">
+                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
+                              <defs>
+                                <linearGradient id="colorAttempts" x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="5%" stopColor="#a855f7" stopOpacity={0.3}/>
+                                  <stop offset="95%" stopColor="#a855f7" stopOpacity={0}/>
+                                </linearGradient>
+                              </defs>
+                              <XAxis dataKey="name" hide />
+                              <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} lượt`, 'Tổng số lượt']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                              <Area type="monotone" dataKey="attempts" stroke="#a855f7" strokeWidth={2.5} fill="url(#colorAttempts)" activeDot={{ r: 5, fill: '#a855f7', stroke: '#fff', strokeWidth: 2 }} />
+                            </AreaChart>
+                          </ResponsiveContainer>
+                        </div>
                       </div>
-                    )}
-                    <p className="text-[10px] text-amber-200/30 mt-1.5 font-medium relative z-10 group-hover:text-amber-200/60 transition-colors">
-                      {isIeltsContext ? 'Click số để sửa' : analyticsCourse !== 'all' ? 'Click để đổi' : ''}
-                    </p>
-                  </div>
 
-                </div>
+                      {/* CARD 3: THỜI GIAN HỌC */}
+                      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5 flex flex-col justify-between hover:border-orange-400 hover:shadow-md transition-all duration-300 group">
+                        <div className="flex justify-between items-center mb-3 relative z-10">
+                          <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-orange-400"></span><span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider group-hover:text-orange-600 transition-colors">Giờ học</span></div>
+                          <span className="font-black text-slate-800 text-xl sm:text-2xl">{analyticsTotalHours}h</span>
+                        </div>
+                        <div className="h-16 w-full -mx-1 -mb-1">
+                          <ResponsiveContainer width="99%" height="100%">
+                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
+                              <defs>
+                                <linearGradient id="colorTime" x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="5%" stopColor="#f97316" stopOpacity={0.3}/>
+                                  <stop offset="95%" stopColor="#f97316" stopOpacity={0}/>
+                                </linearGradient>
+                              </defs>
+                              <XAxis dataKey="name" hide />
+                              <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} giờ`, 'Thời gian học']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                              <Area type="monotone" dataKey="time" stroke="#f97316" strokeWidth={2.5} fill="url(#colorTime)" activeDot={{ r: 5, fill: '#f97316', stroke: '#fff', strokeWidth: 2 }} />
+                            </AreaChart>
+                          </ResponsiveContainer>
+                        </div>
+                      </div>
 
-                {/* MOTIVATIONAL COMMENT */}
-                {(() => {
-                  const currentTarget = isIeltsContext 
-                    ? getTargetForCourse(analyticsCourse, true) 
-                    : getTargetForCourse(analyticsCourse, false);
-                  const comment = getMotivationalComment(
-                    avgScoreRaw, currentTarget, isIeltsContext, 
-                    avgIeltsRaw, parseFloat(currentTarget) || 0
-                  );
-                  if (!comment.text) return null;
-                  return (
-                    <div className={`mx-2 md:mx-0 mt-4 md:mt-5 bg-white rounded-2xl border border-slate-200 shadow-sm px-6 py-4 flex items-center justify-center gap-3 text-center animate-in fade-in`}>
-                      <span className="text-2xl shrink-0">{comment.emoji}</span>
-                      <p className={`text-[14px] font-semibold ${comment.color} leading-relaxed`}>{comment.text}</p>
+                      {/* CARD 4: ĐIỂM TRUNG BÌNH */}
+                      <div className="bg-slate-900 rounded-2xl border border-slate-800 shadow-sm p-4 sm:p-5 flex flex-col justify-between text-white relative overflow-hidden group hover:border-slate-700 transition-all">
+                        <div className="relative z-10">
+                          <span className="text-[10px] font-bold tracking-widest text-slate-400 uppercase block mb-1">
+                            {isIeltsContext ? 'IELTS AVERAGE' : 'ĐIỂM TRUNG BÌNH'}
+                          </span>
+                          <div className="font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mt-1">
+                            {analyticsAverageScore}
+                          </div>
+                          <span className="text-[11px] font-medium text-slate-400 mt-2 block">
+                            (Dựa trên 4 bài gần nhất)
+                          </span>
+                        </div>
+                        <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-sky-500/10 rounded-full blur-xl group-hover:bg-sky-500/20 transition-all pointer-events-none"></div>
+                      </div>
+
+                      {/* CARD 5: MỤC TIÊU ĐIỂM */}
+                      <div className="bg-slate-900 rounded-2xl border border-amber-500/50 shadow-sm p-4 sm:p-5 flex flex-col justify-between text-white relative overflow-hidden group hover:border-amber-400 transition-all">
+                        <div className="relative z-10 flex-1 flex flex-col justify-between">
+                          <span className="text-[10px] font-bold tracking-widest text-amber-400 uppercase block mb-1">
+                            MỤC TIÊU ĐIỂM
+                          </span>
+                          <div className="mt-1">
+                            {isIeltsContext ? (
+                              <div className="relative inline-block w-full">
+                                <select 
+                                  value={getTargetForCourse(analyticsCourse, true)} 
+                                  onChange={(e) => updateTargetForCourse(analyticsCourse, e.target.value)}
+                                  className="w-full bg-transparent font-black text-2xl sm:text-3xl text-amber-400 tracking-tight leading-none border-none outline-none cursor-pointer appearance-none pr-6 hover:text-amber-300 transition-colors"
+                                  title="Bấm để chọn band điểm mục tiêu"
+                                >
+                                  {['5.0', '5.5', '6.0', '6.5', '7.0', '7.5', '8.0', '8.5', '9.0'].map(b => (
+                                    <option key={b} value={b} className="bg-slate-900 text-white text-base font-bold">Band {b}</option>
+                                  ))}
+                                </select>
+                                <span className="absolute right-0 top-1/2 -translate-y-1/2 text-amber-400 text-xs pointer-events-none">▼</span>
+                              </div>
+                            ) : (
+                              <div className="flex items-center">
+                                <input 
+                                  type="text" 
+                                  defaultValue={getTargetForCourse(analyticsCourse, false)} 
+                                  onBlur={(e) => updateTargetForCourse(analyticsCourse, e.target.value)}
+                                  onKeyDown={(e) => { if (e.key === 'Enter') { updateTargetForCourse(analyticsCourse, (e.target as any).value); (e.target as any).blur(); } }}
+                                  className="w-full bg-transparent font-black text-2xl sm:text-3xl text-amber-400 tracking-tight leading-none border-b border-dashed border-amber-500/50 outline-none hover:border-amber-400 focus:border-amber-400 transition-colors"
+                                  title="Nhập mục tiêu (VD: 80%, A*, A) rồi ấn Enter"
+                                />
+                              </div>
+                            )}
+                          </div>
+                          <span className="text-[10px] font-medium text-slate-500 mt-2 block">
+                            Click số để sửa
+                          </span>
+                        </div>
+                        <div className="absolute right-1 bottom-1 text-4xl opacity-10 pointer-events-none">🎯</div>
+                      </div>
                     </div>
-                  );
-                })()}
 
-                {/* KHU VỰC BIỂU ĐỒ IELTS CHI TIẾT */}
-                {isIeltsContext && (
-                  <div className="mt-8 md:mt-10 bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden mx-2 md:mx-0 p-6 md:p-10">
-                     <div className="flex flex-col xl:flex-row gap-10 xl:gap-16 mb-12">
-                        
+                    {/* BANNER KHÍCH LỆ */}
+                    {(() => {
+                      const currentTarget = isIeltsContext 
+                        ? getTargetForCourse(analyticsCourse, true)
+                        : getTargetForCourse(analyticsCourse, false);
+                      const comment = getMotivationalComment(
+                        avgScoreRaw, currentTarget, isIeltsContext, 
+                        avgIeltsRaw, parseFloat(currentTarget) || 0
+                      );
+                      if (!comment.text) return null;
+                      return (
+                        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm px-5 py-3.5 flex items-center justify-center gap-3 text-center animate-in fade-in">
+                          <span className="text-2xl shrink-0">{comment.emoji}</span>
+                          <p className={`text-[13px] sm:text-[14px] font-semibold ${comment.color} leading-relaxed`}>{comment.text}</p>
+                        </div>
+                      );
+                    })()}
+
+                    {/* KHU VỰC BIỂU ĐỒ IELTS CHI TIẾT */}
+                    {isIeltsContext && (
+                      <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden p-5 sm:p-6 md:p-8 space-y-8">
                         {/* CHART 1: BIỂU ĐỒ 4 KỸ NĂNG IELTS */}
-                        <div className="flex-1 w-full">
-                           <div className="flex items-center gap-3 mb-6">
-                               <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl">📈</div>
-                               <h3 className="font-black text-lg md:text-xl text-slate-800 tracking-tight">Biểu đồ 4 Kỹ Năng</h3>
-                           </div>
-                           <div className="w-full h-[320px] bg-slate-50/50 rounded-2xl p-4 border border-slate-100">
-                              <ResponsiveContainer width="100%" height="100%">
-                                  <LineChart data={ieltsSkillChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                                      <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                                      <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b', fontWeight: 600 }} dy={10} />
-                                      <YAxis domain={[0, 9]} ticks={[0, 3, 5, 7, 9]} axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b', fontWeight: 600 }} />
-                                      <Tooltip labelFormatter={(label) => `Ngày ${label}`} contentStyle={{ borderRadius: '12px', fontSize: '13px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
-                                      <Legend iconType="circle" wrapperStyle={{ fontSize: '13px', fontWeight: 'bold', paddingTop: '20px' }} />
-                                      
-                                      <Line type="monotone" dataKey="Nghe" name="Listening" stroke="#10b981" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 7 }} connectNulls={true} />
-                                      <Line type="monotone" dataKey="Nói" name="Speaking" stroke="#f97316" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 7 }} connectNulls={true} />
-                                      <Line type="monotone" dataKey="Đọc" name="Reading" stroke="#3b82f6" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 7 }} connectNulls={true} />
-                                      <Line type="monotone" dataKey="Viết" name="Writing" stroke="#d946ef" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 7 }} connectNulls={true} />
-                                  </LineChart>
-                              </ResponsiveContainer>
-                           </div>
+                        <div className="w-full">
+                          <div className="flex items-center gap-2.5 mb-4">
+                            <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg">📈</div>
+                            <h3 className="font-black text-base sm:text-lg text-slate-800 tracking-tight">Biểu đồ 4 Kỹ Năng</h3>
+                          </div>
+                          <div className="w-full h-[280px] sm:h-[300px] bg-slate-50/50 rounded-2xl p-3 sm:p-4 border border-slate-100">
+                            <ResponsiveContainer width="100%" height="100%">
+                              <LineChart data={ieltsSkillChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b', fontWeight: 600 }} dy={10} />
+                                <YAxis domain={[0, 9]} ticks={[0, 3, 5, 7, 9]} axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b', fontWeight: 600 }} />
+                                <Tooltip labelFormatter={(label) => `Ngày ${label}`} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                                <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', fontWeight: 'bold', paddingTop: '15px' }} />
+                                
+                                <Line type="monotone" dataKey="Nghe" name="Listening" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                <Line type="monotone" dataKey="Nói" name="Speaking" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                <Line type="monotone" dataKey="Đọc" name="Reading" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                <Line type="monotone" dataKey="Viết" name="Writing" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                              </LineChart>
+                            </ResponsiveContainer>
+                          </div>
                         </div>
                         
                         {/* CHART 2: BIỂU ĐỒ TỶ LỆ THEO DẠNG BÀI */}
-                        <div className="flex-1 w-full">
-                           <div className="flex items-center gap-3 mb-6">
-                               <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl">🎯</div>
-                               <h3 className="font-black text-lg md:text-xl text-slate-800 tracking-tight">Tỷ Lệ Đúng Từng Dạng (%)</h3>
-                           </div>
-                           <div className="w-full h-[320px] bg-slate-50/50 rounded-2xl p-4 border border-slate-100">
-                              <ResponsiveContainer width="100%" height="100%">
-                                  <LineChart data={ieltsTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                                      <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                                      <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b', fontWeight: 600 }} dy={10} />
-                                      <YAxis domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748b', fontWeight: 600 }} />
-                                      <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any, name: string) => [`${value}%`, name]} contentStyle={{ borderRadius: '12px', fontSize: '13px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
-                                      <Legend iconType="circle" wrapperStyle={{ fontSize: '13px', fontWeight: 'bold', paddingTop: '20px' }} />
-                                      
-                                      <Line type="monotone" dataKey="Điền từ" name="Điền từ" stroke="#10b981" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 7 }} connectNulls={true} />
-                                      <Line type="monotone" dataKey="Nhận định" name="T/F/NG" stroke="#f97316" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 7 }} connectNulls={true} />
-                                      <Line type="monotone" dataKey="Trắc nghiệm" name="MCQ/Checkbox" stroke="#3b82f6" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 7 }} connectNulls={true} />
-                                      <Line type="monotone" dataKey="Matching" name="Matching" stroke="#d946ef" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 7 }} connectNulls={true} />
-                                  </LineChart>
-                              </ResponsiveContainer>
-                           </div>
+                        <div className="w-full">
+                          <div className="flex items-center gap-2.5 mb-4">
+                            <div className="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg">🎯</div>
+                            <h3 className="font-black text-base sm:text-lg text-slate-800 tracking-tight">Tỷ Lệ Đúng Từng Dạng (%)</h3>
+                          </div>
+                          <div className="w-full h-[280px] sm:h-[300px] bg-slate-50/50 rounded-2xl p-3 sm:p-4 border border-slate-100">
+                            <ResponsiveContainer width="100%" height="100%">
+                              <LineChart data={ieltsTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b', fontWeight: 600 }} dy={10} />
+                                <YAxis domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b', fontWeight: 600 }} />
+                                <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any, name: string) => [`${value}%`, name]} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                                <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', fontWeight: 'bold', paddingTop: '15px' }} />
+                                
+                                <Line type="monotone" dataKey="Điền từ" name="Điền từ" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                <Line type="monotone" dataKey="Nhận định" name="T/F/NG" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                <Line type="monotone" dataKey="Trắc nghiệm" name="MCQ/Checkbox" stroke="#3b82f6" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                <Line type="monotone" dataKey="Matching" name="Matching" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3.5, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                              </LineChart>
+                            </ResponsiveContainer>
+                          </div>
                         </div>
 
-                     </div>
-
-                     {/* THANH PROGRESS BAR NẰM NGANG */}
-                     <div className="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-100">
-                         <h3 className="font-black text-[16px] md:text-lg text-slate-800 uppercase tracking-tight mb-6 flex items-center gap-2">
-                             <span className="text-emerald-500">🏆</span> Tỷ lệ đúng tích lũy
-                         </h3>
-                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                           {Object.entries(ieltsTypeStats).map(([key, data]) => {
+                        {/* THANH PROGRESS BAR NẰM NGANG */}
+                        <div className="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-100">
+                          <h3 className="font-black text-[14px] sm:text-[15px] text-slate-800 uppercase tracking-tight mb-4 flex items-center gap-2">
+                            <span className="text-emerald-500">🏆</span> Tỷ lệ đúng tích lũy
+                          </h3>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                            {Object.entries(ieltsTypeStats).map(([key, data]) => {
                               const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
                               return (
-                                <div key={key} className="bg-white border border-slate-200 rounded-xl p-5 hover:border-[#0ea5e9] hover:shadow-md transition-all duration-300">
-                                    <div className="flex justify-between items-end mb-3">
-                                        <span className="font-bold text-slate-700 text-[13px]">{key}</span>
-                                        <span className="font-black text-[#0ea5e9] text-[18px]">{percent}%</span>
-                                    </div>
-                                    <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden mb-2 border border-slate-200/50">
-                                        <div className="h-full bg-gradient-to-r from-sky-400 to-[#0ea5e9] rounded-full transition-all duration-1000" style={{width: `${percent}%`}}></div>
-                                    </div>
-                                    <p className="text-[11px] text-slate-400 font-bold text-right tracking-widest">{data.correct} / {data.total} câu</p>
+                                <div key={key} className="bg-white border border-slate-200 rounded-xl p-3.5 hover:border-[#0ea5e9] hover:shadow-xs transition-all">
+                                  <div className="flex justify-between items-end mb-2">
+                                    <span className="font-bold text-slate-700 text-xs">{key}</span>
+                                    <span className="font-black text-[#0ea5e9] text-[15px]">{percent}%</span>
+                                  </div>
+                                  <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-1.5 border border-slate-200/50">
+                                    <div className="h-full bg-gradient-to-r from-sky-400 to-[#0ea5e9] rounded-full transition-all duration-1000" style={{width: `${percent}%`}}></div>
+                                  </div>
+                                  <p className="text-[10px] text-slate-400 font-bold text-right tracking-wider">{data.correct} / {data.total} câu</p>
                                 </div>
                               );
-                           })}
-                         </div>
-                     </div>
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+
+              {/* ========================================================= */}
+              {/* CỘT PHẢI (XL:COL-SPAN-5): LỊCH SỬ ĐIỂM / NHẬT KÝ TRUY CẬP */}
+              {/* ========================================================= */}
+              <div className="xl:col-span-5 space-y-4 md:space-y-6">
+                {analyticsView === 'scores' ? (
+                  /* BẢNG LỊCH SỬ */
+                  <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+                    <div className="px-5 sm:px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-white">
+                      <h3 className="font-black text-base sm:text-lg text-slate-800 tracking-tight flex items-center gap-2">
+                        <span className="text-blue-500">📋</span> Lịch sử làm bài
+                      </h3>
+                      <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
+                        {historyData.length} bài
+                      </span>
+                    </div>
+                    <div className="overflow-x-auto custom-scrollbar bg-slate-50/50" style={{ WebkitOverflowScrolling: 'touch' }}>
+                      <table className="w-full text-left border-collapse min-w-[460px]">
+                        <thead>
+                          <tr className="border-b border-slate-200 text-[11px] text-slate-500 uppercase tracking-widest">
+                            <th className="px-4 sm:px-5 py-3.5 font-bold">Tên bài kiểm tra</th>
+                            <th className="px-3 sm:px-4 py-3.5 font-bold text-center">Ngày</th>
+                            <th className="px-3 sm:px-4 py-3.5 font-bold text-center">Điểm số</th>
+                            <th className="px-4 sm:px-5 py-3.5 font-bold text-right">Chi tiết</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100 bg-white">
+                          {paginatedHistory.length === 0 ? (
+                            <tr>
+                              <td colSpan={4} className="text-center py-12 text-slate-400 font-medium text-sm">
+                                Chưa có bài kiểm tra nào được hoàn thành
+                              </td>
+                            </tr>
+                          ) : (
+                            paginatedHistory.map(history => {
+                              const isHigh = history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0;
+                              return (
+                                <tr key={history.id} className="hover:bg-slate-50 transition-colors group">
+                                  <td className="px-4 sm:px-5 py-3.5">
+                                    <div className="font-bold text-[13px] text-slate-800 leading-snug group-hover:text-[#0ea5e9] transition-colors line-clamp-2">
+                                      {history.name}
+                                    </div>
+                                  </td>
+                                  <td className="px-3 sm:px-4 py-3.5 text-center shrink-0">
+                                    <div className="font-bold text-[12px] text-slate-700">{formatDate(history.date).split(' ')[0]}</div>
+                                    <div className="text-[10px] font-medium text-slate-400 mt-0.5">{formatDate(history.date).split(' ')[1]}</div>
+                                  </td>
+                                  <td className="px-3 sm:px-4 py-3.5 text-center shrink-0">
+                                    <span className={`inline-flex items-center justify-center px-2.5 py-1 rounded-lg text-[12px] font-black border ${isHigh ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-slate-50 text-slate-700 border-slate-200'}`}>
+                                      {(() => {
+                                        const isIelts = String(history.details?.test_type || history.name).toLowerCase().includes('ielts') || history.details?.bandScore !== undefined;
+                                        if (isIelts) {
+                                          return `${history.scoreObj.value}/${history.scoreObj.total} • Band ${history.details?.bandScore || '0.0'}`;
+                                        } else {
+                                          const p = history.scoreObj.total > 0 ? (history.scoreObj.value / history.scoreObj.total) * 100 : 0;
+                                          let grade = 'U';
+                                          if (p >= 90) grade = 'A*';
+                                          else if (p >= 80) grade = 'A';
+                                          else if (p >= 70) grade = 'B';
+                                          else if (p >= 60) grade = 'C';
+                                          else if (p >= 50) grade = 'D';
+                                          else if (p >= 40) grade = 'E';
+                                          return `${Math.round(p)}% • ${grade}`;
+                                        }
+                                      })()}
+                                    </span>
+                                  </td>
+                                  <td className="px-4 sm:px-5 py-3.5 text-right shrink-0">
+                                    <button 
+                                      type="button"
+                                      onClick={() => setViewingHistoryDetail(history)} 
+                                      className="inline-flex items-center bg-white border border-slate-200 text-slate-600 font-bold px-3 py-1.5 rounded-xl hover:border-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white transition-all text-[11px] uppercase tracking-wider shadow-2xs cursor-pointer"
+                                    >
+                                      Chi tiết
+                                    </button>
+                                  </td>
+                                </tr>
+                              );
+                            })
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                    {renderPagination(historyPage, totalHistoryPages, setHistoryPage)}
+                  </div>
+                ) : (
+                  /* NHẬT KÝ TRUY CẬP */
+                  <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+                    <div className="px-5 sm:px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-white">
+                      <h3 className="font-black text-base sm:text-lg text-slate-800 tracking-tight flex items-center gap-2">
+                        <span>👀</span> Nhật Ký Truy Cập & Hành Vi
+                      </h3>
+                      <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
+                        {studentActivities.length} hoạt động
+                      </span>
+                    </div>
+                    <div className="p-5 sm:p-6 max-h-[850px] overflow-y-auto custom-scrollbar">
+                      {studentActivities.length === 0 ? (
+                        <div className="text-center py-16">
+                          <p className="text-5xl mb-3">📭</p>
+                          <p className="text-slate-500 font-bold text-sm">Chưa có hoạt động nào được ghi nhận</p>
+                        </div>
+                      ) : (
+                        <div className="relative pl-6 space-y-4 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
+                          {studentActivities.map((act: any, idx: number) => {
+                            const icon = act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : '📖';
+                            const title = act.action_type === 'login' ? 'ĐĂNG NHẬP HỆ THỐNG' : act.action_type === 'finish_test' ? 'NỘP BÀI KIỂM TRA' : act.action_type === 'call_tutor' ? 'GỌI GIA SƯ AI' : 'HOÀN THÀNH BÀI GIẢNG';
+                            const desc = typeof act.details === 'string' ? act.details : (act.details?.message || act.details?.title || JSON.stringify(act.details || ''));
+                            const dateStr = new Date(act.created_at).toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+                            return (
+                              <div key={act.id || idx} className="relative group">
+                                <div className="absolute -left-[27px] top-1.5 w-6 h-6 rounded-full bg-white border-2 border-sky-400 flex items-center justify-center text-xs shadow-xs group-hover:scale-110 transition-transform">
+                                  {icon}
+                                </div>
+                                <div className="bg-slate-50/80 hover:bg-slate-100/80 border border-slate-200/70 rounded-xl p-3.5 transition-all shadow-2xs">
+                                  <div className="flex items-center justify-between gap-2 mb-1">
+                                    <span className="font-bold text-xs sm:text-[13px] text-slate-800 uppercase tracking-wide">{title}</span>
+                                    <span className="text-[11px] font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded-md shrink-0 border border-sky-100">{dateStr}</span>
+                                  </div>
+                                  {desc && <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">{desc}</p>}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
-
-                {/* BẢNG LỊCH SỬ */}
-                <div className="mt-8 md:mt-10 bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden mx-2 md:mx-0">
-                  <div className="px-6 md:px-8 py-5 md:py-6 border-b border-slate-200 flex justify-between items-center bg-white">
-                     <h3 className="font-black text-[18px] md:text-xl text-slate-800 tracking-tight flex items-center gap-2">
-                         <span className="text-blue-500">📋</span> Lịch sử làm bài
-                     </h3>
-                  </div>
-                  <div className="overflow-x-auto custom-scrollbar bg-slate-50/50" style={{ WebkitOverflowScrolling: 'touch' }}>
-                    <table className="w-full text-left border-collapse min-w-[700px]">
-                      <thead>
-                        <tr className="border-b border-slate-200 text-[12px] text-slate-500 uppercase tracking-widest">
-                          <th className="px-6 md:px-8 py-5 font-bold w-2/5">Tên bài kiểm tra</th>
-                          <th className="px-6 md:px-8 py-5 font-bold text-center">Ngày làm bài</th>
-                          <th className="px-6 md:px-8 py-5 font-bold text-center">Điểm số</th>
-                          <th className="px-6 md:px-8 py-5 font-bold text-right">Thao tác</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-slate-100 bg-white">
-                        {paginatedHistory.map(history => {
-                          const isHigh = history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0;
-                          return (
-                          <tr key={history.id} className="hover:bg-slate-50 transition-colors group">
-                            <td className="px-6 md:px-8 py-5">
-                              <div className="font-bold text-[15px] text-slate-800 mb-2 leading-snug group-hover:text-[#0ea5e9] transition-colors">
-                                 {history.name}
-                              </div>
-                              <div className="flex items-center gap-2">
-
-                              </div>
-                            </td>
-                            <td className="px-6 md:px-8 py-5 text-center">
-                              <div className="font-bold text-[14px] text-slate-700">{formatDate(history.date).split(' ')[0]}</div>
-                              <div className="text-[12px] font-medium text-slate-400 mt-1">{formatDate(history.date).split(' ')[1]}</div>
-                            </td>
-                            <td className="px-6 md:px-8 py-5 text-center">
-                              <span className={`inline-flex items-center justify-center px-4 py-2 rounded-lg text-[14px] font-black border ${isHigh ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-slate-50 text-slate-700 border-slate-200'}`}>
-                                {(() => {
-                                   const isIelts = String(history.details?.test_type || history.name).toLowerCase().includes('ielts') || history.details?.bandScore !== undefined;
-                                   if (isIelts) {
-                                       return `${history.scoreObj.value}/${history.scoreObj.total} - Band ${history.details?.bandScore || '0.0'}`;
-                                   } else {
-                                       const p = history.scoreObj.total > 0 ? (history.scoreObj.value / history.scoreObj.total) * 100 : 0;
-                                       let grade = 'U';
-                                       if (p >= 90) grade = 'A*';
-                                       else if (p >= 80) grade = 'A';
-                                       else if (p >= 70) grade = 'B';
-                                       else if (p >= 60) grade = 'C';
-                                       else if (p >= 50) grade = 'D';
-                                       else if (p >= 40) grade = 'E';
-                                       return `${Math.round(p)}% - ${grade}`;
-                                   }
-                                })()}
-                              </span>
-                            </td>
-                            <td className="px-6 md:px-8 py-5 text-right">
-                              <button onClick={() => setViewingHistoryDetail(history)} className="inline-flex items-center bg-white border-2 border-slate-200 text-slate-600 font-bold px-5 py-2.5 rounded-xl hover:border-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white transition-all text-[12px] uppercase tracking-wider shadow-sm">
-                                Chi tiết
-                              </button>
-                            </td>
-                          </tr>
-                        )})}
-                      </tbody>
-                    </table>
-                  </div>
-                  {renderPagination(historyPage, totalHistoryPages, setHistoryPage)}
-                </div>
-              </>
-            ))}
-
-            {analyticsView === 'activity' && (
-              <div className="mt-6 bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden mx-2 md:mx-0">
-                <div className="px-6 md:px-8 py-5 md:py-6 border-b border-slate-200 bg-white">
-                  <h3 className="font-black text-[18px] md:text-xl text-slate-800 tracking-tight flex items-center gap-2">
-                    <span>👀</span> Nhật Ký Truy Cập & Hành Vi
-                  </h3>
-                </div>
-                <div className="p-6 md:p-8">
-                  {studentActivities.length === 0 ? (
-                    <div className="text-center py-16">
-                      <p className="text-6xl mb-4">📭</p>
-                      <p className="text-slate-500 font-bold text-lg">Chưa có hoạt động nào được ghi nhận</p>
-                    </div>
-                  ) : (
-                    <div className="relative before:absolute before:left-1/2 before:-translate-x-1/2 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
-                      {studentActivities.map((act: any, idx: number) => {
-                        const isLeft = idx % 2 === 0;
-                        const icon = act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : '📖';
-                        const title = act.action_type === 'login' ? 'ĐĂNG NHẬP HỆ THỐNG' : act.action_type === 'finish_test' ? 'NỘP BÀI KIỂM TRA' : act.action_type === 'call_tutor' ? 'GỌI GIA SƯ AI' : 'HOÀN THÀNH BÀI GIẢNG';
-                        const desc = typeof act.details === 'string' ? act.details : (act.details?.message || act.details?.title || JSON.stringify(act.details || ''));
-                        const dateStr = new Date(act.created_at).toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
-                        return (
-                          <div key={act.id || idx} className={`flex items-start gap-4 mb-8 ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
-                            <div className={`w-[45%] ${isLeft ? 'text-right' : 'text-left'}`}>
-                              <div className={`inline-block bg-white border border-slate-200 rounded-2xl p-4 shadow-sm max-w-md ${isLeft ? 'ml-auto' : 'mr-auto'}`}>
-                                <p className="font-black text-[13px] text-slate-800 uppercase tracking-wider mb-1">{title}</p>
-                                <p className="text-[13px] text-slate-600 leading-relaxed">{desc}</p>
-                              </div>
-                            </div>
-                            <div className="flex flex-col items-center shrink-0 z-10">
-                              <div className="w-10 h-10 rounded-full bg-sky-100 border-2 border-white shadow-md flex items-center justify-center text-lg">{icon}</div>
-                            </div>
-                            <div className={`w-[45%] flex items-center ${isLeft ? '' : 'justify-end'}`}>
-                              <span className="text-xs font-bold text-sky-500 bg-sky-50 px-3 py-1 rounded-full border border-sky-100">{dateStr}</span>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
               </div>
-            )}
+            </div>
+
+            {/* STICKY BOTTOM NAVIGATION DOCK (Bộ 3 nút nằm giữa bên dưới giống Lịch báo bài & Bảng công việc) */}
+            <div className="sticky bottom-2 z-30 mt-4 flex justify-center">
+              {renderBottomControls}
+            </div>
 
             <BoardThemeModal
               isOpen={isAnalyticsThemeModalOpen}
