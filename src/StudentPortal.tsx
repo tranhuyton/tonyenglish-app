@@ -429,7 +429,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 { data: cData }
             ] = await Promise.all([
                 fetchAllPages((from, to) => supabase.from('folders').select('id, title, course_id, display_order, thumbnail_url, parent_id').in('course_id', courseIds).order('id').range(from, to)),
-                fetchAllPages((from, to) => supabase.from('lectures').select('id, title, course_id, module_id, order_index, is_published').eq('is_published', true).in('course_id', courseIds).order('id').range(from, to)),
+                fetchAllPages((from, to) => supabase.from('lectures').select('id, title, course_id, module_id, task_list, order_index, is_published').eq('is_published', true).in('course_id', courseIds).order('id').range(from, to)),
                 fetchAllPages((from, to) => supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.join(',')}),course_id.is.null`).order('id').range(from, to)),
                 supabase.from('courses').select('*').in('id', courseIds).limit(100)
             ]);
@@ -657,11 +657,20 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     sessionStorage.removeItem('portal_current_folder_id');
   };
 
-  const handleGoToLecture = (courseId?: string) => {
-    const targetCourseId = courseId || (filterCourse !== 'all' ? filterCourse : (selectedCourseId || courses[0]?.id));
+  const handleGoToLecture = (courseId?: string, lectureId?: string) => {
+    let targetCourseId = courseId;
+    if (!targetCourseId || targetCourseId === 'all') {
+      if (lectureId && allLectures.length > 0) {
+        const found = allLectures.find((l: any) => String(l.id) === String(lectureId));
+        if (found?.course_id) targetCourseId = found.course_id;
+      }
+    }
+    if (!targetCourseId || targetCourseId === 'all') {
+      targetCourseId = filterCourse !== 'all' ? filterCourse : (selectedCourseId || courses[0]?.id);
+    }
     if (targetCourseId && onOpenLecture) {
       resetWorkspaceAndChat();
-      onOpenLecture(targetCourseId);
+      onOpenLecture(targetCourseId, lectureId);
     } else {
       setActiveView('dashboard');
       setSelectedCourseId(null);
@@ -2027,6 +2036,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               filterCourseId={filterCourse}
               courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
               bottomActions={renderBottomControls}
+              lectures={allLectures}
+              onOpenLecture={handleGoToLecture}
               onStartTest={(testId: string) => {
                 const test = allTests.find(t => String(t.id) === String(testId));
                 handleStartTestClick(test || { id: testId });
@@ -2066,6 +2077,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       assignments={calendarAssignments} 
                       completedTestIds={completedTestIdsSet}
                       courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
+                      lectures={allLectures}
+                      onOpenLecture={handleGoToLecture}
                       onRefresh={async () => {
                         if (!currentUser) return;
                         const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });

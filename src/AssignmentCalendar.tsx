@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
+import { parseLectureFromItem, getDisplayDescription } from './lectureTaskUtils';
 
 interface Assignment {
   id: string;
@@ -23,6 +24,8 @@ interface Props {
   topActions?: React.ReactNode;
   rightActions?: React.ReactNode;
   courseTitle?: string;
+  lectures?: any[];
+  onOpenLecture?: (courseId?: string, lectureId?: string) => void;
   onRefresh: () => void;
   onStartTest?: (testId: string) => void;
   userId?: string;
@@ -41,8 +44,29 @@ const formatDateVN = (dateStr?: string | null) => {
   return dateStr;
 };
 
-export default function AssignmentCalendar({ assignments, completedTestIds, topActions, rightActions, courseTitle, onRefresh, onStartTest, userId: propUserId }: Props) {
+export default function AssignmentCalendar({ 
+  assignments, 
+  completedTestIds, 
+  topActions, 
+  rightActions, 
+  courseTitle, 
+  lectures,
+  onOpenLecture,
+  onRefresh, 
+  onStartTest, 
+  userId: propUserId 
+}: Props) {
   const userId = propUserId || (assignments.length > 0 ? assignments[0].user_id : 'default');
+  const [internalLectures, setInternalLectures] = useState<any[]>([]);
+  useEffect(() => {
+    if (!lectures || lectures.length === 0) {
+      supabase.from('lectures').select('id, title, course_id, task_list').then(({ data }) => {
+        if (data) setInternalLectures(data);
+      });
+    }
+  }, [lectures]);
+  const effectiveLectures = (lectures && lectures.length > 0) ? lectures : internalLectures;
+
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
   const [calendarMode, setCalendarMode] = useState<'day' | 'month' | 'all'>('day');
@@ -618,11 +642,14 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                           }`}>
                             {task.title}
                           </p>
-                          {task.description && (
-                            <p className="text-[11.5px] text-slate-500 mt-1 leading-relaxed">
-                              {task.description}
-                            </p>
-                          )}
+                          {(() => {
+                            const displayDesc = getDisplayDescription(task.description);
+                            return displayDesc ? (
+                              <p className="text-[11.5px] text-slate-500 mt-1 leading-relaxed">
+                                {displayDesc}
+                              </p>
+                            ) : null;
+                          })()}
 
                           {/* Thông tin ngày giao bài */}
                           {task._effectiveDueDate && (
@@ -639,23 +666,44 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                             </div>
                           )}
 
-                          <div className="mt-2.5 flex items-center gap-2 flex-wrap">
-                            {task.is_completed && (
-                              <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
-                                ✅ Đã duyệt
-                              </span>
-                            )}
-                            {task.student_completed && !task.is_completed && (
-                              <span className="text-[10px] font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
-                                ⏳ Chờ giáo viên duyệt
-                              </span>
-                            )}
-                            {!task.student_completed && !task.is_completed && (
-                              <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">
-                                Chưa hoàn thành
-                              </span>
-                            )}
-                          </div>
+                          {(() => {
+                            const lecMeta = parseLectureFromItem(task, task.card_title, effectiveLectures);
+                            return (
+                              <div className="mt-2.5 flex items-center justify-between gap-2 flex-wrap">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  {task.is_completed && (
+                                    <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
+                                      ✅ Đã duyệt
+                                    </span>
+                                  )}
+                                  {task.student_completed && !task.is_completed && (
+                                    <span className="text-[10px] font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">
+                                      ⏳ Chờ giáo viên duyệt
+                                    </span>
+                                  )}
+                                  {!task.student_completed && !task.is_completed && (
+                                    <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">
+                                      Chưa hoàn thành
+                                    </span>
+                                  )}
+                                </div>
+                                {lecMeta.isLecture && (
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      onOpenLecture?.(lecMeta.courseId || undefined, lecMeta.lectureId || undefined);
+                                    }}
+                                    className="text-[11px] font-bold px-3 py-1 rounded-xl bg-sky-50 text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white border border-sky-200 transition-all flex items-center gap-1.5 shrink-0 cursor-pointer shadow-2xs active:scale-95 ml-auto"
+                                    title="Đi tới bài giảng này"
+                                  >
+                                    <span>📖</span>
+                                    <span>Đến bài giảng ➜</span>
+                                  </button>
+                                )}
+                              </div>
+                            );
+                          })()}
                         </div>
                       </div>
                     </div>

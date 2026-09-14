@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorModal } from './moduleTheme';
+import { parseLectureFromItem } from './lectureTaskUtils';
 
 interface Assignment {
   id: string;
@@ -8,6 +9,7 @@ interface Assignment {
   card_title: string;
   card_order: number;
   title: string;
+  description?: string;
   student_completed: boolean;
   is_completed: boolean;
   task_type: 'manual' | 'test';
@@ -135,6 +137,8 @@ export default function TaskBoard({
   bottomActions,
   courseTitle,
   filterElement, 
+  lectures,
+  onOpenLecture,
   onStartTest 
 }: { 
   userId: string; 
@@ -143,9 +147,21 @@ export default function TaskBoard({
   bottomActions?: React.ReactNode;
   courseTitle?: string;
   filterElement?: React.ReactNode; 
+  lectures?: any[];
+  onOpenLecture?: (courseId?: string, lectureId?: string) => void;
   onStartTest?: (testId: string) => void 
 }) {
   const headerActions = topActions || filterElement;
+  const [internalLectures, setInternalLectures] = useState<any[]>([]);
+  useEffect(() => {
+    if (!lectures || lectures.length === 0) {
+      supabase.from('lectures').select('id, title, course_id, task_list').then(({ data }) => {
+        if (data) setInternalLectures(data);
+      });
+    }
+  }, [lectures]);
+  const effectiveLectures = (lectures && lectures.length > 0) ? lectures : internalLectures;
+
   const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
   const [boardColumns, setBoardColumns] = useState<any[]>([]);
@@ -1028,9 +1044,30 @@ export default function TaskBoard({
                     </span>
                     <span className="text-xs text-slate-500 font-semibold">• {activeModalCard.boardTitle}</span>
                   </div>
-                  <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight tracking-tight">
-                    {currentCard.title}
-                  </h2>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight tracking-tight">
+                      {currentCard.title}
+                    </h2>
+                    {(() => {
+                      const cardLecMeta = parseLectureFromItem({ title: currentCard.title }, currentCard.title, effectiveLectures);
+                      if (cardLecMeta.isLecture) {
+                        return (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setActiveModalCard(null);
+                              onOpenLecture?.(cardLecMeta.courseId || undefined, cardLecMeta.lectureId || undefined);
+                            }}
+                            className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-xl bg-sky-100 text-[#0284c7] hover:bg-[#0ea5e9] hover:text-white transition-all cursor-pointer shadow-2xs shrink-0 active:scale-95 border border-sky-200"
+                            title="Mở bài giảng này"
+                          >
+                            <span>📖</span> Mở bài giảng ➜
+                          </button>
+                        );
+                      }
+                      return null;
+                    })()}
+                  </div>
                   
                   {/* Progress bar in header */}
                   <div className="mt-3 flex items-center gap-3">
@@ -1203,6 +1240,8 @@ export default function TaskBoard({
                     );
                   }
 
+                  const lecMeta = parseLectureFromItem(item, currentCard.title, effectiveLectures);
+
                   return (
                     <div 
                       key={item.id} 
@@ -1236,15 +1275,32 @@ export default function TaskBoard({
                             </span>
                           )}
                         </div>
-                        <div className="flex flex-wrap gap-1.5">
-                          {isItemDone && item.admin_approved && (
-                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">✅ Đã hoàn thành</span>
-                          )}
-                          {isItemDone && !item.admin_approved && (
-                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">⏳ Chờ giáo viên phê duyệt</span>
-                          )}
-                          {item.due_date && !isItemDone && new Date() > new Date(item.due_date + 'T23:59:59') && (
-                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-bold">⚠️ Quá hạn</span>
+                        <div className="flex items-center justify-between gap-2 mt-1 flex-wrap">
+                          <div className="flex flex-wrap gap-1.5">
+                            {isItemDone && item.admin_approved && (
+                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">✅ Đã hoàn thành</span>
+                            )}
+                            {isItemDone && !item.admin_approved && (
+                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">⏳ Chờ giáo viên phê duyệt</span>
+                            )}
+                            {item.due_date && !isItemDone && new Date() > new Date(item.due_date + 'T23:59:59') && (
+                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-bold">⚠️ Quá hạn</span>
+                            )}
+                          </div>
+                          {lecMeta.isLecture && (
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setActiveModalCard(null);
+                                onOpenLecture?.(lecMeta.courseId || undefined, lecMeta.lectureId || undefined);
+                              }}
+                              className="text-[11px] font-bold px-3 py-1 rounded-xl bg-sky-50 text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white border border-sky-200 transition-all flex items-center gap-1.5 shrink-0 cursor-pointer shadow-2xs active:scale-95 ml-auto"
+                              title="Đi tới bài giảng này"
+                            >
+                              <span>📖</span>
+                              <span>Đến bài giảng ➜</span>
+                            </button>
                           )}
                         </div>
                       </div>

@@ -809,6 +809,24 @@ export default function LectureViewer({
   }, [isTeacherBoardOpen, uploadedBoardImage]);
 
   useEffect(() => {
+    const handleTargetLectureEvent = (e: any) => {
+      const targetLecId = e.detail || sessionStorage.getItem('tony_target_lecture_id');
+      if (targetLecId && lectures.length > 0) {
+        sessionStorage.removeItem('tony_target_lecture_id');
+        const found = lectures.find(l => l.id === targetLecId);
+        if (found) {
+          if (found.module_id) {
+            setExpandedModules(prev => [...new Set([...prev, found.module_id])]);
+          }
+          handleSelectLecture(found.id, currentUser?.id);
+        }
+      }
+    };
+    window.addEventListener('tony-open-target-lecture', handleTargetLectureEvent);
+    return () => window.removeEventListener('tony-open-target-lecture', handleTargetLectureEvent);
+  }, [lectures, currentUser]);
+
+  useEffect(() => {
       if (!currentUser || !activeLectureId || pages.length === 0) return;
       
       const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
@@ -1099,8 +1117,12 @@ export default function LectureViewer({
       }
 
       if (validLectures && validLectures.length > 0) {
+         const targetLecId = sessionStorage.getItem('tony_target_lecture_id');
+         if (targetLecId) {
+           sessionStorage.removeItem('tony_target_lecture_id');
+         }
          const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${activeId}`);
-         const targetLecture = validLectures.find(l => l.id === savedLectureId) || validLectures[0];
+         const targetLecture = (targetLecId && validLectures.find(l => l.id === targetLecId)) || validLectures.find(l => l.id === savedLectureId) || validLectures[0];
          if (targetLecture.module_id) {
              setExpandedModules([targetLecture.module_id]);
          }

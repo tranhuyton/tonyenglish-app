@@ -8,6 +8,7 @@ import IgcseTestEditorModal from './IgcseTestEditorModal';
 import BatchImportModal from './BatchImportModal';
 import BatchImportJsonModal from './BatchImportJsonModal';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorSelector, ModuleColorModal } from './moduleTheme';
+import { parseLectureFromItem, formatLectureTaskDescription } from './lectureTaskUtils';
 import './tailwind.css';
 
 let adminSearchTimer: any;
@@ -339,6 +340,37 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [boardTestPickerFor, setBoardTestPickerFor] = useState<string | null>(null); // card_id
   const [boardTestSelectedIds, setBoardTestSelectedIds] = useState<Set<string>>(new Set());
   const [columnColorTarget, setColumnColorTarget] = useState<{ id: string; title: string } | null>(null);
+
+  // 📖 QUẢN LÝ VIỆC TỪ BÀI GIẢNG TRONG BẢNG CÔNG VIỆC
+  const [boardCourseLectures, setBoardCourseLectures] = useState<any[]>([]);
+  const [boardCourseModules, setBoardCourseModules] = useState<any[]>([]);
+  const [boardManualTaskTab, setBoardManualTaskTab] = useState<'template' | 'lecture'>('template');
+  const [boardSelectedLectureTasks, setBoardSelectedLectureTasks] = useState<Map<string, { lectureId: string; lectureTitle: string; taskId: string; taskText: string }>>(new Map());
+  const [boardLectureSearch, setBoardLectureSearch] = useState<string>('');
+  const [expandedBoardLectureIds, setExpandedBoardLectureIds] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    if (!boardCourseId) {
+      setBoardCourseLectures([]);
+      setBoardCourseModules([]);
+      return;
+    }
+    const fetchBoardLectures = async () => {
+      const [{ data: lecs }, { data: mods }] = await Promise.all([
+        supabase.from('lectures')
+          .select('id, title, course_id, module_id, task_list, order_index')
+          .eq('course_id', boardCourseId)
+          .order('order_index', { ascending: true }),
+        supabase.from('modules')
+          .select('id, title, course_id, order_index')
+          .eq('course_id', boardCourseId)
+          .order('order_index', { ascending: true })
+      ]);
+      setBoardCourseLectures(lecs || []);
+      setBoardCourseModules(mods || []);
+    };
+    fetchBoardLectures();
+  }, [boardCourseId]);
 
   const handleSaveAdminColumnColor = async (bg: string, text: string) => {
     if (!columnColorTarget) return;
@@ -2472,36 +2504,80 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                   </div>
                                 </div>
                                 
-                                {isExpanded && (
-                                  <div className="px-3 pb-3 pt-1 border-t border-slate-50 bg-slate-50/50">
-                                    <div className="space-y-1.5 mb-2">
-                                      {cardItems.map(item => (
-                                        <div key={item.id} className="flex items-start gap-2 bg-white p-2 rounded-lg border border-slate-100 shadow-sm">
-                                          <div className="text-sm mt-0.5">{item.task_type === 'test' ? '📝' : '📋'}</div>
-                                          <div className="flex-1 min-w-0">
-                                            <p className="text-[11px] font-bold text-slate-700 truncate">{item.title}</p>
-                                            <span className={`inline-block px-1.5 py-0.5 rounded text-[8px] font-black uppercase mt-1 ${item.task_type === 'test' ? 'bg-indigo-100 text-indigo-700' : 'bg-orange-100 text-orange-700'}`}>
-                                              {item.task_type === 'test' ? 'BÀI TẬP' : 'THỦ CÔNG'}
-                                            </span>
-                                          </div>
-                                          <button onClick={async () => {
-                                            if (!window.confirm('Xóa mục này?')) return;
-                                            await supabase.from('board_card_items').delete().eq('id', item.id);
-                                            setBoardCardItems(boardCardItems.filter(i => i.id !== item.id));
-                                          }} className="text-slate-300 hover:text-red-500 text-xs shrink-0">✕</button>
-                                        </div>
-                                      ))}
+                                  {isExpanded && (
+                                    <div className="px-3 pb-3 pt-1 border-t border-slate-50 bg-slate-50/50">
+                                      <div className="space-y-1.5 mb-2">
+                                        {cardItems.map(item => {
+                                          const lecMeta = parseLectureFromItem(item, card.title, boardCourseLectures);
+                                          const isLectureTask = item.task_type !== 'test' && lecMeta.isLecture;
+                                          return (
+                                            <div key={item.id} className="flex items-start gap-2 bg-white p-2 rounded-lg border border-slate-100 shadow-sm">
+                                              <div className="text-sm mt-0.5">{item.task_type === 'test' ? '📝' : isLectureTask ? '📖' : '📋'}</div>
+                                              <div className="flex-1 min-w-0">
+                                                <p className="text-[11px] font-bold text-slate-700 truncate" title={item.title}>{item.title}</p>
+                                                {item.task_type === 'test' ? (
+                                                  <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-black uppercase mt-1 bg-indigo-100 text-indigo-700">
+                                                    BÀI TẬP
+                                                  </span>
+                                                ) : isLectureTask ? (
+                                                  <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-black uppercase mt-1 bg-amber-100 text-amber-800 border border-amber-300">
+                                                    THỦ CÔNG + BÀI GIẢNG
+                                                  </span>
+                                                ) : (
+                                                  <span className="inline-block px-1.5 py-0.5 rounded text-[8px] font-black uppercase mt-1 bg-orange-100 text-orange-700">
+                                                    THỦ CÔNG
+                                                  </span>
+                                                )}
+                                              </div>
+                                              <button onClick={async () => {
+                                                if (!window.confirm('Xóa mục này?')) return;
+                                                await supabase.from('board_card_items').delete().eq('id', item.id);
+                                                setBoardCardItems(boardCardItems.filter(i => i.id !== item.id));
+                                              }} className="text-slate-300 hover:text-red-500 text-xs shrink-0">✕</button>
+                                            </div>
+                                          );
+                                        })}
+                                      </div>
+                                      <div className="grid grid-cols-3 gap-1.5">
+                                        <button 
+                                          onClick={() => { 
+                                            setBoardManualTaskPickerFor(card.id); 
+                                            setBoardManualTaskTab('template');
+                                            setBoardSelectedManualTasks(new Set()); 
+                                            setBoardSelectedLectureTasks(new Map());
+                                            setBoardLectureSearch('');
+                                          }} 
+                                          className="py-1.5 px-1 border border-dashed border-slate-300 rounded-lg text-[9.5px] font-bold text-slate-600 hover:text-orange-600 hover:border-orange-300 hover:bg-orange-50 transition-colors truncate text-center"
+                                          title="Thêm từ danh mục việc thủ công mẫu"
+                                        >
+                                          + Việc mẫu
+                                        </button>
+                                        <button 
+                                          onClick={() => { 
+                                            setBoardManualTaskPickerFor(card.id); 
+                                            setBoardManualTaskTab('lecture');
+                                            setBoardSelectedManualTasks(new Set()); 
+                                            setBoardSelectedLectureTasks(new Map());
+                                            setBoardLectureSearch('');
+                                          }} 
+                                          className="py-1.5 px-1 border border-dashed border-amber-300 bg-amber-50/50 rounded-lg text-[9.5px] font-bold text-amber-800 hover:text-amber-900 hover:border-amber-500 hover:bg-amber-100 transition-colors truncate text-center"
+                                          title="Thêm từ danh mục việc được giao trong bài giảng"
+                                        >
+                                          + Việc bài giảng
+                                        </button>
+                                        <button 
+                                          onClick={() => { 
+                                            setBoardTestPickerFor(card.id); 
+                                            setBoardTestSelectedIds(new Set()); 
+                                          }} 
+                                          className="py-1.5 px-1 border border-dashed border-slate-300 rounded-lg text-[9.5px] font-bold text-slate-600 hover:text-indigo-600 hover:border-indigo-300 hover:bg-indigo-50 transition-colors truncate text-center"
+                                          title="Thêm bài tập"
+                                        >
+                                          + Bài tập
+                                        </button>
+                                      </div>
                                     </div>
-                                    <div className="flex gap-2">
-                                      <button onClick={() => { setBoardManualTaskPickerFor(card.id); setBoardSelectedManualTasks(new Set()); }} className="flex-1 py-1.5 border border-dashed border-slate-300 rounded-lg text-[10px] font-bold text-slate-500 hover:text-orange-600 hover:border-orange-300 hover:bg-orange-50 transition-colors">
-                                        + Thêm việc
-                                      </button>
-                                      <button onClick={() => { setBoardTestPickerFor(card.id); setBoardTestSelectedIds(new Set()); }} className="flex-1 py-1.5 border border-dashed border-slate-300 rounded-lg text-[10px] font-bold text-slate-500 hover:text-indigo-600 hover:border-indigo-300 hover:bg-indigo-50 transition-colors">
-                                        + Thêm bài tập
-                                      </button>
-                                    </div>
-                                  </div>
-                                )}
+                                  )}
                               </div>
                             );
                           })}
@@ -2647,65 +2723,322 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             {/* BOARD MANUAL TASK PICKER MODAL */}
             {boardManualTaskPickerFor && (
               <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setBoardManualTaskPickerFor(null)}>
-                <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
-                  <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0">
-                    <h3 className="font-black text-[#0a5482]">📝 Chọn việc thủ công</h3>
-                    <button onClick={() => setBoardManualTaskPickerFor(null)} className="text-slate-400 hover:text-red-500 text-xl font-bold">✕</button>
-                  </div>
-                  <div className="p-6 overflow-y-auto flex-1 bg-slate-50 space-y-4">
-                    {(() => {
-                      const usedTemplateTitles = boardCardItems.filter(i => i.card_id === boardManualTaskPickerFor).map(i => i.title);
-                      const availableTemplates = manualTaskTemplates
-                        .filter(tpl => {
-                           const linked = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
-                           return !boardCourseId || linked.includes(boardCourseId) || linked.length === 0;
-                        })
-                        .filter(t => !usedTemplateTitles.includes(t.title));
-                        
-                      if (availableTemplates.length === 0) {
-                         return <p className="text-sm text-slate-500 italic">Không có việc thủ công nào có sẵn hoặc tất cả đã được thêm.</p>;
-                      }
-                      return availableTemplates.map(tpl => {
-                        const isSelected = boardSelectedManualTasks.has(tpl.id);
-                        return (
-                          <label key={tpl.id} className={`flex items-start gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all ${isSelected ? 'border-[#0a5482] bg-sky-50' : 'border-transparent bg-white hover:border-slate-300 shadow-sm'}`}>
-                            <input type="checkbox" checked={isSelected} onChange={(e) => {
-                              const newSet = new Set(boardSelectedManualTasks);
-                              if (e.target.checked) newSet.add(tpl.id);
-                              else newSet.delete(tpl.id);
-                              setBoardSelectedManualTasks(newSet);
-                            }} className="mt-1 w-4 h-4 accent-[#0a5482]" />
-                            <div className="flex-1 min-w-0">
-                              <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
-                              {tpl.description && <p className="text-[11px] text-slate-500 line-clamp-1">{tpl.description}</p>}
-                            </div>
-                          </label>
-                        );
-                      });
-                    })()}
-                  </div>
-                  {boardSelectedManualTasks.size > 0 && (
-                    <div className="px-6 py-3 border-t border-slate-200 bg-slate-50 shrink-0">
-                      <button onClick={async () => {
-                        const cardItems = boardCardItems.filter(i => i.card_id === boardManualTaskPickerFor);
-                        let nextOrder = cardItems.length > 0 ? Math.max(...cardItems.map(i => i.order_index || 0)) + 1 : 1;
-                        const newTasks = Array.from(boardSelectedManualTasks).map(tplId => {
-                          const tpl = manualTaskTemplates.find(t => t.id === tplId);
-                          return {
-                            card_id: boardManualTaskPickerFor,
-                            task_type: 'manual',
-                            title: tpl?.title || '',
-                            order_index: nextOrder++,
-                          };
-                        });
-                        const { data } = await supabase.from('board_card_items').insert(newTasks).select();
-                        if (data) setBoardCardItems([...boardCardItems, ...data]);
-                        setBoardManualTaskPickerFor(null);
-                        setBoardSelectedManualTasks(new Set());
-                      }} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl text-[13px] font-bold transition-colors">
-                        Thêm {boardSelectedManualTasks.size} việc
-                      </button>
+                <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden" onClick={e => e.stopPropagation()}>
+                  {/* Modal Header */}
+                  <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0 bg-white">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-lg bg-sky-100 text-[#0a5482] flex items-center justify-center font-bold text-sm">
+                        📋
+                      </div>
+                      <div>
+                        <h3 className="font-black text-[#0a5482] text-[15px] leading-tight">Thêm việc thủ công vào thẻ</h3>
+                        <p className="text-[11px] text-slate-500 mt-0.5">
+                          Thẻ: <strong className="text-slate-700">{boardCards.find(c => c.id === boardManualTaskPickerFor)?.title || ''}</strong>
+                        </p>
+                      </div>
                     </div>
+                    <button onClick={() => setBoardManualTaskPickerFor(null)} className="text-slate-400 hover:text-red-500 text-xl font-bold p-1">✕</button>
+                  </div>
+
+                  {/* Tabs */}
+                  <div className="flex border-b border-slate-200 bg-slate-50 px-6 pt-2.5 gap-2 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => setBoardManualTaskTab('template')}
+                      className={`pb-2.5 px-3 font-bold text-xs border-b-2 transition-all cursor-pointer flex items-center gap-1.5 ${
+                        boardManualTaskTab === 'template'
+                          ? 'border-[#0a5482] text-[#0a5482]'
+                          : 'border-transparent text-slate-500 hover:text-slate-700'
+                      }`}
+                    >
+                      <span>📋</span> Danh mục việc thủ công
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setBoardManualTaskTab('lecture')}
+                      className={`pb-2.5 px-3 font-bold text-xs border-b-2 transition-all cursor-pointer flex items-center gap-1.5 ${
+                        boardManualTaskTab === 'lecture'
+                          ? 'border-amber-600 text-amber-800'
+                          : 'border-transparent text-slate-500 hover:text-slate-700'
+                      }`}
+                    >
+                      <span>📖</span> Việc được giao trong bài giảng
+                      {boardCourseLectures.length > 0 && (
+                        <span className="ml-1 px-1.5 py-0.5 rounded-full text-[10px] bg-amber-100 text-amber-800 font-black">
+                          {boardCourseLectures.filter(l => Array.isArray(l.task_list) && l.task_list.length > 0).length} bài
+                        </span>
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Tab 1: Danh mục việc thủ công mẫu */}
+                  {boardManualTaskTab === 'template' && (
+                    <>
+                      <div className="p-6 overflow-y-auto flex-1 bg-slate-50 space-y-3">
+                        {(() => {
+                          const usedTemplateTitles = boardCardItems.filter(i => i.card_id === boardManualTaskPickerFor).map(i => i.title);
+                          const availableTemplates = manualTaskTemplates
+                            .filter(tpl => {
+                               const linked = courseTaskLinks.filter(l => l.template_id === tpl.id).map(l => l.course_id);
+                               return !boardCourseId || linked.includes(boardCourseId) || linked.length === 0;
+                            })
+                            .filter(t => !usedTemplateTitles.includes(t.title));
+                            
+                          if (availableTemplates.length === 0) {
+                             return <p className="text-sm text-slate-500 italic py-6 text-center">Không có việc thủ công nào có sẵn hoặc tất cả đã được thêm.</p>;
+                          }
+                          return availableTemplates.map(tpl => {
+                            const isSelected = boardSelectedManualTasks.has(tpl.id);
+                            return (
+                              <label key={tpl.id} className={`flex items-start gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all ${isSelected ? 'border-[#0a5482] bg-sky-50' : 'border-transparent bg-white hover:border-slate-300 shadow-sm'}`}>
+                                <input type="checkbox" checked={isSelected} onChange={(e) => {
+                                  const newSet = new Set(boardSelectedManualTasks);
+                                  if (e.target.checked) newSet.add(tpl.id);
+                                  else newSet.delete(tpl.id);
+                                  setBoardSelectedManualTasks(newSet);
+                                }} className="mt-1 w-4 h-4 accent-[#0a5482]" />
+                                <div className="flex-1 min-w-0">
+                                  <p className="text-[13px] font-bold text-slate-800">{tpl.title}</p>
+                                  {tpl.description && <p className="text-[11px] text-slate-500 line-clamp-1">{tpl.description}</p>}
+                                </div>
+                              </label>
+                            );
+                          });
+                        })()}
+                      </div>
+                      {boardSelectedManualTasks.size > 0 && (
+                        <div className="px-6 py-3 border-t border-slate-200 bg-white shrink-0 flex items-center justify-between">
+                          <span className="text-xs font-bold text-slate-600">
+                            Đã chọn: <strong className="text-[#0a5482]">{boardSelectedManualTasks.size}</strong> việc
+                          </span>
+                          <button onClick={async () => {
+                            const cardItems = boardCardItems.filter(i => i.card_id === boardManualTaskPickerFor);
+                            let nextOrder = cardItems.length > 0 ? Math.max(...cardItems.map(i => i.order_index || 0)) + 1 : 1;
+                            const newTasks = Array.from(boardSelectedManualTasks).map(tplId => {
+                              const tpl = manualTaskTemplates.find(t => t.id === tplId);
+                              return {
+                                card_id: boardManualTaskPickerFor,
+                                task_type: 'manual',
+                                title: tpl?.title || '',
+                                description: tpl?.description || '',
+                                order_index: nextOrder++,
+                              };
+                            });
+                            const { data, error } = await supabase.from('board_card_items').insert(newTasks).select();
+                            if (error) { alert('Lỗi: ' + error.message); return; }
+                            if (data) setBoardCardItems([...boardCardItems, ...data]);
+                            setBoardManualTaskPickerFor(null);
+                            setBoardSelectedManualTasks(new Set());
+                          }} className="bg-emerald-600 hover:bg-emerald-700 text-white py-2 px-4 rounded-xl text-xs font-bold transition-colors">
+                            Thêm {boardSelectedManualTasks.size} việc
+                          </button>
+                        </div>
+                      )}
+                    </>
+                  )}
+
+                  {/* Tab 2: Việc được giao trong bài giảng */}
+                  {boardManualTaskTab === 'lecture' && (
+                    <>
+                      <div className="px-6 py-3 bg-slate-50 border-b border-slate-200 shrink-0">
+                        <input
+                          type="text"
+                          value={boardLectureSearch}
+                          onChange={e => setBoardLectureSearch(e.target.value)}
+                          placeholder="🔍 Tìm kiếm theo tên bài giảng hoặc nội dung việc..."
+                          className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
+                        />
+                      </div>
+                      <div className="p-6 overflow-y-auto flex-1 bg-slate-50 space-y-4">
+                        {(() => {
+                          const usedCardTaskKeys = new Set(
+                            boardCardItems
+                              .filter(i => i.card_id === boardManualTaskPickerFor)
+                              .map(i => (i.title || '').trim().toLowerCase())
+                          );
+
+                          const lecturesWithTasks = boardCourseLectures.filter(lec => {
+                            const tasks = Array.isArray(lec.task_list) ? lec.task_list : [];
+                            if (tasks.length === 0) return false;
+                            if (!boardLectureSearch.trim()) return true;
+                            const q = boardLectureSearch.toLowerCase();
+                            const mod = boardCourseModules.find(m => m.id === lec.module_id);
+                            const modTitle = (mod?.title || '').toLowerCase();
+                            const lecTitle = (lec.title || '').toLowerCase();
+                            if (lecTitle.includes(q) || modTitle.includes(q)) return true;
+                            return tasks.some((t: any) => ((t.text || t.title || '').toLowerCase().includes(q)));
+                          });
+
+                          if (lecturesWithTasks.length === 0) {
+                            return (
+                              <div className="text-center py-12 text-slate-500">
+                                <p className="text-3xl mb-2">📖</p>
+                                <p className="text-xs font-bold">Không tìm thấy bài giảng nào có công việc được giao</p>
+                                <p className="text-[11px] text-slate-400 mt-1">Các bài giảng trong khóa học chưa có task_list hoặc không khớp từ khóa tìm kiếm.</p>
+                              </div>
+                            );
+                          }
+
+                          return lecturesWithTasks.map(lec => {
+                            const tasks = (Array.isArray(lec.task_list) ? lec.task_list : []).filter((t: any) => {
+                              const text = (t.text || t.title || '').trim();
+                              if (!text) return false;
+                              if (!boardLectureSearch.trim()) return true;
+                              const q = boardLectureSearch.toLowerCase();
+                              const mod = boardCourseModules.find(m => m.id === lec.module_id);
+                              return (lec.title || '').toLowerCase().includes(q) || 
+                                     (mod?.title || '').toLowerCase().includes(q) ||
+                                     text.toLowerCase().includes(q);
+                            });
+                            if (tasks.length === 0) return null;
+
+                            const mod = boardCourseModules.find(m => m.id === lec.module_id);
+                            const selectableTasks = tasks.filter((t: any) => {
+                              const txt = (t.text || t.title || '').trim().toLowerCase();
+                              return txt && !usedCardTaskKeys.has(txt);
+                            });
+                            const allLectureSelected = selectableTasks.length > 0 && selectableTasks.every((t: any, idx: number) => {
+                              const taskKey = `${lec.id}_${t.id || idx}_${(t.text || t.title || '').trim()}`;
+                              return boardSelectedLectureTasks.has(taskKey);
+                            });
+
+                            return (
+                              <div key={lec.id} className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs">
+                                <div className="px-4 py-2.5 bg-amber-50/60 border-b border-amber-100 flex items-center justify-between gap-3">
+                                  <div className="flex items-center gap-2 min-w-0">
+                                    <span className="text-amber-700 font-bold text-sm">📖</span>
+                                    <div className="min-w-0">
+                                      <h4 className="font-bold text-xs text-slate-800 truncate" title={lec.title}>{lec.title}</h4>
+                                      {mod && <span className="text-[10px] text-amber-800/80 font-medium block truncate">{mod.title}</span>}
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center gap-2 shrink-0">
+                                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">
+                                      {tasks.length} việc
+                                    </span>
+                                    {selectableTasks.length > 0 && (
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          const nextMap = new Map(boardSelectedLectureTasks);
+                                          if (allLectureSelected) {
+                                            selectableTasks.forEach((t: any, idx: number) => {
+                                              const taskKey = `${lec.id}_${t.id || idx}_${(t.text || t.title || '').trim()}`;
+                                              nextMap.delete(taskKey);
+                                            });
+                                          } else {
+                                            selectableTasks.forEach((t: any, idx: number) => {
+                                              const taskKey = `${lec.id}_${t.id || idx}_${(t.text || t.title || '').trim()}`;
+                                              nextMap.set(taskKey, {
+                                                lectureId: lec.id,
+                                                lectureTitle: lec.title,
+                                                taskId: t.id || `task_${idx}`,
+                                                taskText: (t.text || t.title || '').trim()
+                                              });
+                                            });
+                                          }
+                                          setBoardSelectedLectureTasks(nextMap);
+                                        }}
+                                        className={`text-[11px] font-bold px-2 py-0.5 rounded transition-all cursor-pointer ${
+                                          allLectureSelected ? 'bg-amber-200 text-amber-900' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
+                                        }`}
+                                      >
+                                        {allLectureSelected ? '✓ Bỏ chọn hết' : '+ Chọn tất cả'}
+                                      </button>
+                                    )}
+                                  </div>
+                                </div>
+                                <div className="p-3 space-y-2">
+                                  {tasks.map((task: any, tIdx: number) => {
+                                    const taskText = (task.text || task.title || '').trim();
+                                    const taskKey = `${lec.id}_${task.id || tIdx}_${taskText}`;
+                                    const isAlreadyInCard = usedCardTaskKeys.has(taskText.toLowerCase());
+                                    const isSelected = boardSelectedLectureTasks.has(taskKey);
+                                    return (
+                                      <label
+                                        key={taskKey}
+                                        className={`flex items-start gap-2.5 p-2 rounded-lg border transition-all ${
+                                          isAlreadyInCard
+                                            ? 'bg-slate-50 border-slate-200 text-slate-400 cursor-not-allowed'
+                                            : isSelected
+                                            ? 'bg-amber-50/80 border-amber-300 text-amber-900 shadow-xs cursor-pointer'
+                                            : 'bg-white border-slate-100 hover:border-amber-200 text-slate-700 cursor-pointer'
+                                        }`}
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          disabled={isAlreadyInCard}
+                                          checked={isSelected || isAlreadyInCard}
+                                          onChange={(e) => {
+                                            if (isAlreadyInCard) return;
+                                            const nextMap = new Map(boardSelectedLectureTasks);
+                                            if (e.target.checked) {
+                                              nextMap.set(taskKey, {
+                                                lectureId: lec.id,
+                                                lectureTitle: lec.title,
+                                                taskId: task.id || `task_${tIdx}`,
+                                                taskText: taskText
+                                              });
+                                            } else {
+                                              nextMap.delete(taskKey);
+                                            }
+                                            setBoardSelectedLectureTasks(nextMap);
+                                          }}
+                                          className="mt-0.5 rounded accent-amber-600 w-3.5 h-3.5"
+                                        />
+                                        <div className="flex-1 min-w-0">
+                                          <p className="text-[11.5px] leading-snug">{taskText}</p>
+                                          {isAlreadyInCard && (
+                                            <span className="text-[9.5px] text-slate-400 italic mt-0.5 block">(Đã có trong thẻ)</span>
+                                          )}
+                                        </div>
+                                      </label>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            );
+                          });
+                        })()}
+                      </div>
+                      {boardSelectedLectureTasks.size > 0 && (
+                        <div className="px-6 py-3 border-t border-slate-200 bg-white shrink-0 flex items-center justify-between">
+                          <span className="text-xs font-bold text-amber-900">
+                            Đã chọn: <strong className="text-amber-800">{boardSelectedLectureTasks.size}</strong> việc từ bài giảng
+                          </span>
+                          <button
+                            type="button"
+                            onClick={async () => {
+                              const cardItems = boardCardItems.filter(i => i.card_id === boardManualTaskPickerFor);
+                              let nextOrder = cardItems.length > 0 ? Math.max(...cardItems.map(i => i.order_index || 0)) + 1 : 1;
+                              const newTasks = Array.from(boardSelectedLectureTasks.values()).map(item => ({
+                                card_id: boardManualTaskPickerFor,
+                                task_type: 'manual',
+                                title: item.taskText,
+                                description: formatLectureTaskDescription({
+                                  lectureId: item.lectureId,
+                                  lectureTitle: item.lectureTitle,
+                                  courseId: boardCourseId,
+                                  taskId: item.taskId
+                                }),
+                                order_index: nextOrder++,
+                              }));
+                              const { data, error } = await supabase.from('board_card_items').insert(newTasks).select();
+                              if (error) {
+                                alert('Lỗi: ' + error.message);
+                                return;
+                              }
+                              if (data) setBoardCardItems([...boardCardItems, ...data]);
+                              setBoardManualTaskPickerFor(null);
+                              setBoardSelectedLectureTasks(new Map());
+                            }}
+                            className="bg-amber-600 hover:bg-amber-700 active:scale-95 text-white py-2 px-4 rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
+                          >
+                            <span>➕</span> Thêm {boardSelectedLectureTasks.size} việc bài giảng
+                          </button>
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               </div>

@@ -236,7 +236,17 @@ export default function App() {
       handleNavigate(targetView); sessionStorage.setItem('lms_current_test', JSON.stringify(data));
     } catch (error) {}
   };
-  const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
+  const handleOpenLecture = (courseId: string, lectureId?: string) => { 
+    setActiveCourseId(courseId); 
+    try { 
+      sessionStorage.setItem('lms_active_course_id', courseId); 
+      if (lectureId) {
+        sessionStorage.setItem('tony_target_lecture_id', lectureId);
+        window.dispatchEvent(new CustomEvent('tony-open-target-lecture', { detail: lectureId }));
+      }
+    } catch(e) {} 
+    handleNavigate('lecture'); 
+  };
   const handleReturnFromTest = () => {
     handleNavigate(returnView);
     setTimeout(() => {
