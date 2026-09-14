@@ -16,6 +16,7 @@ const FOLDER_IMAGES = [
 
 const ITEMS_PER_PAGE = 16;
 const HISTORY_PER_PAGE = 10;
+const ACTIVITIES_PER_PAGE = 8;
 
 const formatDate = (isoString: string) => {
   if (!isoString) return '';
@@ -156,7 +157,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [historyPage, setHistoryPage] = useState(1);
   const [activityPage, setActivityPage] = useState(1);
 
-  const [analyticsCourse, setAnalyticsCourse] = useState('all');
+  const [analyticsCourse, setAnalyticsCourse] = useState(() => localStorage.getItem('portal_filter_course') || 'all');
   const [analyticsDropdownOpen, setAnalyticsDropdownOpen] = useState(false);
   const [boardTemplates, setBoardTemplates] = useState<any[]>([]);
   const [dayPlanTaskCourseMap, setDayPlanTaskCourseMap] = useState<Record<string, string>>({});
@@ -165,7 +166,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   
   useEffect(() => {
     localStorage.setItem('portal_filter_course', filterCourse);
+    if (analyticsCourse !== filterCourse) {
+      setAnalyticsCourse(filterCourse);
+    }
+    setActivityPage(1);
   }, [filterCourse]);
+
+  useEffect(() => {
+    setActivityPage(1);
+  }, [analyticsCourse]);
 
   const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'ielts-standard' | 'standard'>('ielts');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
@@ -185,7 +194,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   useEffect(() => {
     if ((analyticsView === 'activity' || activeTab === 'analytics') && currentUser?.id) {
-      supabase.from('activity_logs').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(100)
+      supabase.from('activity_logs').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(200)
         .then(({ data }) => setStudentActivities(data || []));
     }
   }, [analyticsView, activeTab, currentUser?.id]);
@@ -1125,8 +1134,101 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const totalHistoryPages = Math.ceil(processedHistory.length / HISTORY_PER_PAGE);
   const paginatedHistory = useMemo(() => processedHistory.slice((historyPage - 1) * HISTORY_PER_PAGE, historyPage * HISTORY_PER_PAGE), [processedHistory, historyPage]);
 
-  const totalActivityPages = Math.ceil(studentActivities.length / HISTORY_PER_PAGE);
-  const paginatedActivities = useMemo(() => studentActivities.slice((activityPage - 1) * HISTORY_PER_PAGE, activityPage * HISTORY_PER_PAGE), [studentActivities, activityPage]);
+  // LỌC LỊCH SỬ HOẠT ĐỘNG THEO KHÓA HỌC ĐƯỢC CHỌN
+  const filteredActivities = useMemo(() => {
+    const activeCourseId = filterCourse !== 'all' ? filterCourse : analyticsCourse;
+    // Nếu chọn tất cả khóa học thì mới hiện tất cả hoạt động
+    if (activeCourseId === 'all') {
+      return studentActivities;
+    }
+
+    const targetCourseIdStr = String(activeCourseId);
+
+    return studentActivities.filter(act => {
+      let details = act.details;
+      if (typeof details === 'string') {
+        try { details = JSON.parse(details); } catch {}
+      }
+
+      // 1. Khớp trực tiếp course_id trong details hoặc act
+      if (details?.course_id && String(details.course_id) === targetCourseIdStr) return true;
+      if (act.course_id && String(act.course_id) === targetCourseIdStr) return true;
+
+      // 2. Bài giảng (finish_lecture)
+      if (act.action_type === 'finish_lecture') {
+        const lecId = details?.lecture_id;
+        const lecTitle = details?.lecture_title || details?.title || details?.name || (typeof details === 'string' ? details : '');
+        if (lecId) {
+          const l = allLectures.find(lec => String(lec.id) === String(lecId));
+          if (l && String(l.course_id) === targetCourseIdStr) return true;
+        }
+        if (lecTitle) {
+          const clean = String(lecTitle).trim().toLowerCase();
+          const exact = allLectures.find(l => l.title && l.title.trim().toLowerCase() === clean);
+          if (exact) return String(exact.course_id) === targetCourseIdStr;
+
+          const norm = clean.replace(/[^a-z0-9]/g, '');
+          const normMatch = allLectures.find(l => l.title && l.title.toLowerCase().replace(/[^a-z0-9]/g, '') === norm);
+          if (normMatch) return String(normMatch.course_id) === targetCourseIdStr;
+
+          const partial = allLectures.find(l => l.title && (l.title.trim().toLowerCase().includes(clean) || clean.includes(l.title.trim().toLowerCase())));
+          if (partial) return String(partial.course_id) === targetCourseIdStr;
+        }
+        return false;
+      }
+
+      // 3. Bài kiểm tra (finish_test)
+      if (act.action_type === 'finish_test') {
+        const testId = details?.test_id;
+        const testTitle = details?.test_title || details?.title || details?.name || '';
+        if (testId) {
+          const t = allTests.find(test => String(test.id) === String(testId));
+          if (t && String(t.course_id) === targetCourseIdStr) return true;
+        }
+        if (testTitle) {
+          const clean = String(testTitle).trim().toLowerCase();
+          const exact = allTests.find(t => t.title && t.title.trim().toLowerCase() === clean);
+          if (exact) return String(exact.course_id) === targetCourseIdStr;
+
+          const norm = clean.replace(/[^a-z0-9]/g, '');
+          const normMatch = allTests.find(t => t.title && t.title.toLowerCase().replace(/[^a-z0-9]/g, '') === norm);
+          if (normMatch) return String(normMatch.course_id) === targetCourseIdStr;
+
+          const partial = allTests.find(t => t.title && (t.title.trim().toLowerCase().includes(clean) || clean.includes(t.title.trim().toLowerCase())));
+          if (partial) return String(partial.course_id) === targetCourseIdStr;
+
+          const hMatch = historyData.find(h => 
+            (h.name && h.name.trim().toLowerCase() === clean) ||
+            (h.details?.test_title && String(h.details.test_title).trim().toLowerCase() === clean)
+          );
+          if (hMatch) return String(hMatch.courseId) === targetCourseIdStr;
+        }
+        return false;
+      }
+
+      // 4. Gia sư AI / Luyện nói (call_tutor)
+      if (act.action_type === 'call_tutor') {
+        const topic = details?.topic || '';
+        if (topic) {
+          const cleanTopic = String(topic).trim().toLowerCase();
+          const selectedCourseObj = courses.find(c => String(c.id) === targetCourseIdStr);
+          const isSelectedIelts = selectedCourseObj ? ((selectedCourseObj.title||'').toLowerCase().includes('ielts') || selectedCourseObj.type === 'IELTS') : false;
+          if (isSelectedIelts && (cleanTopic.includes('ielts') || cleanTopic.includes('speaking') || cleanTopic.includes('luyện nói') || cleanTopic.includes('voice'))) {
+            return true;
+          }
+          if (selectedCourseObj?.title && cleanTopic.includes(selectedCourseObj.title.toLowerCase())) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      return false;
+    });
+  }, [studentActivities, filterCourse, analyticsCourse, allLectures, allTests, historyData, courses]);
+
+  const totalActivityPages = Math.max(1, Math.ceil(filteredActivities.length / ACTIVITIES_PER_PAGE));
+  const paginatedActivities = useMemo(() => filteredActivities.slice((activityPage - 1) * ACTIVITIES_PER_PAGE, activityPage * ACTIVITIES_PER_PAGE), [filteredActivities, activityPage]);
 
   const inProgressTestId = Array.from(inProgressIds)[0];
   const inProgressTest = useMemo(() => allTests.find(t => String(t.id) === inProgressTestId), [allTests, inProgressTestId]);
@@ -2349,7 +2451,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     </div>
 
                     <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
-                      {analyticsView === 'scores' ? `${processedHistory.length} bài` : `${studentActivities.length} hoạt động`}
+                      {analyticsView === 'scores' ? `${processedHistory.length} bài` : `${filteredActivities.length} hoạt động`}
                     </span>
                   </div>
 
