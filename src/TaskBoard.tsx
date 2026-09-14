@@ -872,8 +872,16 @@ export default function TaskBoard({
                     <div className="flex-1 overflow-y-auto column-cards-scrollbar pr-1 flex flex-col gap-2.5 min-h-0 pt-0.5">
                       {col.cards.map(card => {
                         const progressPct = card.totalCount > 0 ? Math.round((card.completedCount / card.totalCount) * 100) : 0;
-                        const testCount = card.items.filter(i => i.task_type === 'test').length;
-                        const manualCount = card.items.filter(i => i.task_type === 'manual').length;
+                        const manualItems = card.items.filter(i => i.task_type === 'manual');
+                        const manualTotal = manualItems.length;
+                        const manualCompleted = manualItems.filter(i => i.student_completed).length;
+                        const isManualDone = manualTotal > 0 && manualCompleted === manualTotal;
+
+                        const testItems = card.items.filter(i => i.task_type === 'test');
+                        const testTotal = testItems.length;
+                        const testCompleted = testItems.filter(i => i.is_completed || (i.test_id && completedTestIds.has(String(i.test_id)))).length;
+                        const isTestDone = testTotal > 0 && testCompleted === testTotal;
+
                         const isCardAllDone = card.totalCount > 0 && card.completedCount === card.totalCount;
                         const hasOverdue = card.items.some(i => {
                           const isItemDone = i.task_type === 'test' 
@@ -901,44 +909,62 @@ export default function TaskBoard({
                               </span>
                             </div>
                             
-                            {/* Progress bar */}
-                            <div className="flex items-center gap-2 mb-2.5">
-                              <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                                <div 
-                                  className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-gradient-to-r from-emerald-400 to-emerald-500' : 'bg-gradient-to-r from-sky-400 to-sky-600'}`}
-                                  style={{ width: `${progressPct}%` }}
-                                />
-                              </div>
-                              <div className="flex items-center gap-1 shrink-0">
-                                <span className={`text-[12px] font-bold ${isCardAllDone ? 'text-emerald-600' : 'text-sky-600'}`}>
+                            {/* Progress bar: only show sleek bar when there is progress (> 0%) */}
+                            {progressPct > 0 && (
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                  <div 
+                                    className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-emerald-500' : 'bg-gradient-to-r from-sky-400 to-sky-600'}`}
+                                    style={{ width: `${progressPct}%` }}
+                                  />
+                                </div>
+                                <span className={`text-[11px] font-bold shrink-0 ${isCardAllDone ? 'text-emerald-600' : 'text-sky-600'}`}>
                                   {progressPct}%
                                 </span>
-                                <span className="text-[10px] font-medium text-slate-400">
-                                  ({card.completedCount}/{card.totalCount})
-                                </span>
                               </div>
-                            </div>
+                            )}
 
-                            {/* Card badges */}
-                            <div className="flex items-center gap-1 flex-wrap">
-                              {testCount > 0 && (
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-100">
-                                  📝 {testCount} đề thi
+                            {/* Card badges (Trello-style checklist boxes) */}
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              {manualTotal > 0 && (
+                                <span 
+                                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] transition-all select-none ${
+                                    isManualDone 
+                                      ? 'bg-emerald-500 text-white font-bold shadow-2xs' 
+                                      : manualCompleted > 0 
+                                        ? 'bg-sky-50 text-sky-700 border border-sky-200 font-semibold' 
+                                        : 'bg-slate-100 text-slate-500 border border-slate-200/80 font-medium'
+                                  }`}
+                                  title={`Công việc: ${manualCompleted}/${manualTotal} đã hoàn thành`}
+                                >
+                                  <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                                    <path fillRule="evenodd" d="M2.5 1A1.5 1.5 0 001 2.5v11A1.5 1.5 0 002.5 15h11a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0013.5 1h-11zm9.854 4.854a.5.5 0 00-.708-.708L6.5 10.293 4.854 8.646a.5.5 0 10-.708.708l2 2a.5.5 0 00.708 0l5.5-5.5z" clipRule="evenodd" />
+                                  </svg>
+                                  <span>{manualCompleted}/{manualTotal} việc</span>
                                 </span>
                               )}
-                              {manualCount > 0 && (
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100">
-                                  ✓ {manualCount} việc
+
+                              {testTotal > 0 && (
+                                <span 
+                                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] transition-all select-none ${
+                                    isTestDone 
+                                      ? 'bg-emerald-500 text-white font-bold shadow-2xs' 
+                                      : testCompleted > 0 
+                                        ? 'bg-sky-50 text-sky-700 border border-sky-200 font-semibold' 
+                                        : 'bg-slate-100 text-slate-500 border border-slate-200/80 font-medium'
+                                  }`}
+                                  title={`Bài tập: ${testCompleted}/${testTotal} đã làm`}
+                                >
+                                  <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                                    <path fillRule="evenodd" d="M4 1.5A1.5 1.5 0 002.5 3v10A1.5 1.5 0 004 14.5h8a1.5 1.5 0 001.5-1.5V5.414A1.5 1.5 0 0013.086 4.35l-2.436-2.436A1.5 1.5 0 009.586 1.5H4zm5 1.707L12.293 6H10a1 1 0 01-1-1V3.207zM5 8.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 8.5zm0 2.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 11z" clipRule="evenodd" />
+                                  </svg>
+                                  <span>{testCompleted}/{testTotal} bài tập</span>
                                 </span>
                               )}
-                              {isCardAllDone && (
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-emerald-100 text-emerald-800 border border-emerald-200">
-                                  ✓ Xong
-                                </span>
-                              )}
+
                               {hasOverdue && (
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-rose-50 text-rose-600 border border-rose-200">
-                                  ⚠️ Quá hạn
+                                <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-rose-50 text-rose-600 border border-rose-200">
+                                  <span>⚠️</span> Quá hạn
                                 </span>
                               )}
                             </div>
