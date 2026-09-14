@@ -30,13 +30,24 @@ interface Props {
 
 const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 
+const formatDateVN = (dateStr?: string | null) => {
+  if (!dateStr) return '';
+  const clean = dateStr.split('T')[0];
+  const parts = clean.split('-');
+  if (parts.length === 3) {
+    const [y, m, d] = parts;
+    return `${d.padStart(2, '0')}/${m.padStart(2, '0')}/${y}`;
+  }
+  return dateStr;
+};
+
 export default function AssignmentCalendar({ assignments, completedTestIds, topActions, rightActions, courseTitle, onRefresh, onStartTest, userId: propUserId }: Props) {
   const userId = propUserId || (assignments.length > 0 ? assignments[0].user_id : 'default');
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
   const [calendarMode, setCalendarMode] = useState<'day' | 'month' | 'all'>('day');
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
-  const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number; isPassed: boolean }>>(new Map());
+  const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number; isPassed: boolean; completedAt: string | null }>>(new Map());
 
   const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
   const [calendarTheme, setCalendarTheme] = useState<BoardTheme>(() => loadTheme(`tony_calendar_theme_${userId}`, 'tony_calendar_theme'));
@@ -53,11 +64,11 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
       const { data } = await supabase.from('test_results')
-        .select('id, test_title, score, total_score, created_at, details')
+        .select('id, test_id, test_title, score, total_score, created_at, details')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false });
 
-      const scoreMap = new Map<string, { score: number; total_score: number; percent: number; isPassed: boolean }>();
+      const scoreMap = new Map<string, { score: number; total_score: number; percent: number; isPassed: boolean; completedAt: string | null }>();
       (data || []).forEach((r: any) => {
         let d = r.details;
         if (typeof d === 'string') {
@@ -79,13 +90,19 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
           isPassed = score >= 5.0;
         }
 
-        const scoreObj = { score, total_score: total, percent, isPassed };
+        const completedAt = r.created_at ? r.created_at.split('T')[0] : null;
+        const scoreObj = { score, total_score: total, percent, isPassed, completedAt };
         const registerScore = (key: string) => {
           const existing = scoreMap.get(key);
           if (!existing) {
             scoreMap.set(key, scoreObj);
           } else if (!existing.isPassed && isPassed) {
             scoreMap.set(key, scoreObj);
+          } else if (isPassed && existing.isPassed) {
+            // Lưu lại ngày hoàn thành sớm nhất đạt yêu cầu
+            if (completedAt && existing.completedAt && completedAt < existing.completedAt) {
+              scoreMap.set(key, { ...existing, completedAt });
+            }
           } else if (percent > existing.percent) {
             scoreMap.set(key, scoreObj);
           }
@@ -143,24 +160,86 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
   }, [currentMonth]);
 
   // ============================================
+  // QUY TẮC XÁC ĐỊNH NGÀY GIAO BÀI (EFFECTIVE DUE DATE):
+  // "Nếu ngày hoàn thành trước ngày giao bài thì lấy ngày hoàn thành làm ngày giao bài."
+  // ============================================
+  const getEffectiveDueDate = useMemo(() => {
+    return (a: Assignment): string | null => {
+      const originalDue = a.due_date ? a.due_date.trim() : null;
+      if (!originalDue) return null;
+
+      let completionDate: string | null = null;
+      if (a.task_type === 'test') {
+        const testKey = a.test_id ? String(a.test_id) : null;
+        const titleKey = a.title ? a.title.trim().toLowerCase() : null;
+        const scoreInfo = (testKey && latestTestScores.get(testKey)) || 
+                          (titleKey && latestTestScores.get(titleKey));
+        const isDone = a.is_completed || (testKey && completedTestIds.has(testKey)) || !!scoreInfo?.isPassed;
+        if (isDone) {
+          if (scoreInfo?.completedAt) {
+            completionDate = scoreInfo.completedAt;
+          } else if (a.updated_at) {
+            completionDate = a.updated_at.split('T')[0];
+          } else if (a.created_at) {
+            completionDate = a.created_at.split('T')[0];
+          }
+        }
+      } else {
+        const isDone = a.is_completed || a.student_completed;
+        if (isDone) {
+          if (a.updated_at) {
+            completionDate = a.updated_at.split('T')[0];
+          } else if (a.created_at) {
+            completionDate = a.created_at.split('T')[0];
+          }
+        }
+      }
+
+      if (completionDate && completionDate < originalDue) {
+        return completionDate;
+      }
+      return originalDue;
+    };
+  }, [latestTestScores, completedTestIds]);
+
+  // Đồng bộ ngày giao bài vào Database nếu hoàn thành trước hạn
+  useEffect(() => {
+    if (latestTestScores.size === 0 || assignments.length === 0) return;
+    assignments.forEach(async (a) => {
+      if (!a.due_date) return;
+      const eff = getEffectiveDueDate(a);
+      if (eff && eff < a.due_date) {
+        await supabase.from('assignments').update({
+          due_date: eff,
+          updated_at: new Date().toISOString()
+        }).eq('id', a.id);
+      }
+    });
+  }, [assignments, latestTestScores, getEffectiveDueDate]);
+
+  // ============================================
   // TRẠNG THÁI TỪNG NGÀY
   // ============================================
   const dateStatusMap = useMemo(() => {
     const map: Record<string, 'blue' | 'green' | 'red'> = {};
     const today = new Date().toISOString().split('T')[0];
 
-    // Group assignments by date
+    // Group assignments by effective date
     const byDate: Record<string, Assignment[]> = {};
     assignments.forEach(a => {
-      if (!byDate[a.due_date]) byDate[a.due_date] = [];
-      byDate[a.due_date].push(a);
+      const effDate = getEffectiveDueDate(a);
+      if (!effDate) return;
+      if (!byDate[effDate]) byDate[effDate] = [];
+      byDate[effDate].push(a);
     });
 
     Object.entries(byDate).forEach(([date, tasks]) => {
       const allCompleted = tasks.every(t => {
         if (t.task_type === 'test') {
           const testKey = t.test_id ? String(t.test_id) : null;
-          const scoreInfo = testKey ? latestTestScores.get(testKey) : null;
+          const titleKey = t.title ? t.title.trim().toLowerCase() : null;
+          const scoreInfo = (testKey && latestTestScores.get(testKey)) || 
+                            (titleKey && latestTestScores.get(titleKey));
           return t.is_completed || (testKey && completedTestIds.has(testKey)) || !!scoreInfo?.isPassed;
         }
         return t.is_completed || t.student_completed;
@@ -176,31 +255,17 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
     });
 
     return map;
-  }, [assignments, completedTestIds, latestTestScores]);
+  }, [assignments, completedTestIds, latestTestScores, getEffectiveDueDate]);
 
   // ============================================
   // TASKS CHO KHOẢNG THỜI GIAN ĐANG CHỌN (day/month/all)
   // ============================================
   const selectedTasks = useMemo(() => {
-    let filtered: Assignment[];
-    
     // Chỉ lấy assignment CÓ NGÀY GIAO (due_date) - bỏ qua task từ bảng công việc không có ngày
-    const withDate = assignments.filter(a => a.due_date && a.due_date.trim() !== '');
-
-    if (calendarMode === 'day') {
-      if (!selectedDate) return [];
-      filtered = withDate.filter(a => a.due_date === selectedDate);
-    } else if (calendarMode === 'month') {
-      const year = currentMonth.getFullYear();
-      const month = currentMonth.getMonth() + 1;
-      const prefix = `${year}-${String(month).padStart(2, '0')}`;
-      filtered = withDate.filter(a => a.due_date.startsWith(prefix));
-    } else {
-      // 'all' mode: tất cả assignment CÓ NGÀY GIAO
-      filtered = withDate;
-    }
-
-    return filtered.map(a => {
+    const withDate = assignments
+      .filter(a => a.due_date && a.due_date.trim() !== '')
+      .map(a => {
+        const effDate = getEffectiveDueDate(a);
         let isDone = false;
         if (a.task_type === 'test') {
           const testKey = a.test_id ? String(a.test_id) : null;
@@ -213,10 +278,28 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
         }
         return {
           ...a,
+          _effectiveDueDate: effDate,
           _effectiveCompleted: isDone
         };
       });
-  }, [selectedDate, calendarMode, currentMonth, assignments, completedTestIds, latestTestScores]);
+
+    let filtered: typeof withDate;
+
+    if (calendarMode === 'day') {
+      if (!selectedDate) return [];
+      filtered = withDate.filter(a => a._effectiveDueDate === selectedDate);
+    } else if (calendarMode === 'month') {
+      const year = currentMonth.getFullYear();
+      const month = currentMonth.getMonth() + 1;
+      const prefix = `${year}-${String(month).padStart(2, '0')}`;
+      filtered = withDate.filter(a => a._effectiveDueDate?.startsWith(prefix));
+    } else {
+      // 'all' mode: tất cả assignment CÓ NGÀY GIAO
+      filtered = withDate;
+    }
+
+    return filtered.sort((a, b) => (a._effectiveDueDate || '').localeCompare(b._effectiveDueDate || ''));
+  }, [selectedDate, calendarMode, currentMonth, assignments, completedTestIds, latestTestScores, getEffectiveDueDate]);
 
   // Tách thành 2 mảng riêng biệt: Danh sách Công việc (Manual) và Danh sách Bài tập (Test)
   const selectedManualTasks = useMemo(() => {
@@ -240,15 +323,23 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
 
     setIsUpdating(task.id);
     const newVal = !task.student_completed;
+    const today = new Date().toISOString().split('T')[0];
+    
+    // Nếu hoàn thành sớm hơn ngày giao thì lấy ngày hoàn thành làm ngày giao
+    let targetDueDate = task.due_date;
+    if (newVal && task.due_date && today < task.due_date) {
+      targetDueDate = today;
+    }
     
     // Update this specific task
     await supabase.from('assignments').update({
       student_completed: newVal,
+      due_date: targetDueDate,
       updated_at: new Date().toISOString()
     }).eq('id', task.id);
     
     // Also sync all matching assignments
-    const syncPayload: any = { student_completed: newVal, updated_at: new Date().toISOString() };
+    const syncPayload: any = { student_completed: newVal, due_date: targetDueDate, updated_at: new Date().toISOString() };
     if (!newVal) syncPayload.admin_approved = false;
     let syncQuery = supabase.from('assignments').update(syncPayload)
       .eq('user_id', task.user_id)
@@ -532,6 +623,22 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                               {task.description}
                             </p>
                           )}
+
+                          {/* Thông tin ngày giao bài */}
+                          {task._effectiveDueDate && (
+                            <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium mt-1.5">
+                              <span className="text-slate-400">📅 Ngày giao:</span>
+                              <span className="font-semibold text-slate-700">
+                                {formatDateVN(task._effectiveDueDate)}
+                              </span>
+                              {task._effectiveDueDate !== task.due_date && (
+                                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
+                                  Đã hoàn thành sớm
+                                </span>
+                              )}
+                            </div>
+                          )}
+
                           <div className="mt-2.5 flex items-center gap-2 flex-wrap">
                             {task.is_completed && (
                               <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
@@ -632,6 +739,21 @@ export default function AssignmentCalendar({ assignments, completedTestIds, topA
                               <p className="text-[11.5px] text-slate-500 mt-1 leading-relaxed">
                                 {task.description}
                               </p>
+                            )}
+
+                            {/* Thông tin ngày giao bài */}
+                            {task._effectiveDueDate && (
+                              <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium mt-1.5">
+                                <span className="text-slate-400">📅 Ngày giao:</span>
+                                <span className="font-semibold text-slate-700">
+                                  {formatDateVN(task._effectiveDueDate)}
+                                </span>
+                                {task._effectiveDueDate !== task.due_date && (
+                                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
+                                    Đã hoàn thành sớm
+                                  </span>
+                                )}
+                              </div>
                             )}
 
                             {/* Badge điểm thi & Nút hành động */}

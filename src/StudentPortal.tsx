@@ -1944,8 +1944,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   const tpl = boardTemplates.find(t => t.title === a.board_template_title);
                   if (tpl && String(tpl.course_id) === String(filterCourse)) return true;
                 }
-                if (a.task_type === 'test' && a.test_id) {
-                  const test = allTests.find(t => String(t.id) === String(a.test_id));
+                if (a.task_type === 'test') {
+                  const test = (a.test_id ? allTests.find(t => String(t.id) === String(a.test_id)) : null) ||
+                               (a.title ? allTests.find(t => t.title && t.title.trim().toLowerCase() === a.title.trim().toLowerCase()) : null);
                   if (test && String(test.course_id) === String(filterCourse)) return true;
                 }
                 if (a.title && dayPlanTaskCourseMap[a.title.trim()] === String(filterCourse)) {
@@ -2243,8 +2244,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base">📈</div>
                               <h3 className="font-black text-sm sm:text-base text-slate-800 tracking-tight">Biểu đồ 4 Kỹ Năng</h3>
                             </div>
-                            <div className="w-full bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100" style={{ height: 280, minHeight: 280 }}>
-                              <ResponsiveContainer width="100%" height="100%">
+                            <div className="w-full bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100 flex items-center justify-center" style={{ minHeight: 280 }}>
+                              <ResponsiveContainer width="99%" height={260}>
                                 <LineChart data={ieltsSkillChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                   <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} dy={10} />
@@ -2267,8 +2268,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-base">🎯</div>
                               <h3 className="font-black text-sm sm:text-base text-slate-800 tracking-tight">Tỷ Lệ Đúng Từng Dạng (%)</h3>
                             </div>
-                            <div className="w-full bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100" style={{ height: 280, minHeight: 280 }}>
-                              <ResponsiveContainer width="100%" height="100%">
+                            <div className="w-full bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100 flex items-center justify-center" style={{ minHeight: 280 }}>
+                              <ResponsiveContainer width="99%" height={260}>
                                 <LineChart data={ieltsTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                   <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} dy={10} />
