@@ -2238,12 +2238,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         {/* 2 BIỂU ĐỒ ĐỨNG CẠNH NHAU */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
                           {/* CHART 1: BIỂU ĐỒ 4 KỸ NĂNG IELTS */}
-                          <div className="w-full flex flex-col">
+                          <div className="w-full min-w-0">
                             <div className="flex items-center gap-2.5 mb-3">
                               <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base">📈</div>
                               <h3 className="font-black text-sm sm:text-base text-slate-800 tracking-tight">Biểu đồ 4 Kỹ Năng</h3>
                             </div>
-                            <div className="w-full h-[260px] sm:h-[280px] bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100 flex-1">
+                            <div className="w-full bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100" style={{ height: 280, minHeight: 280 }}>
                               <ResponsiveContainer width="100%" height="100%">
                                 <LineChart data={ieltsSkillChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
@@ -2262,12 +2262,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           </div>
                           
                           {/* CHART 2: BIỂU ĐỒ TỶ LỆ THEO DẠNG BÀI */}
-                          <div className="w-full flex flex-col">
+                          <div className="w-full min-w-0">
                             <div className="flex items-center gap-2.5 mb-3">
                               <div className="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-base">🎯</div>
                               <h3 className="font-black text-sm sm:text-base text-slate-800 tracking-tight">Tỷ Lệ Đúng Từng Dạng (%)</h3>
                             </div>
-                            <div className="w-full h-[260px] sm:h-[280px] bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100 flex-1">
+                            <div className="w-full bg-slate-50/50 rounded-2xl p-2.5 sm:p-3.5 border border-slate-100" style={{ height: 280, minHeight: 280 }}>
                               <ResponsiveContainer width="100%" height="100%">
                                 <LineChart data={ieltsTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
