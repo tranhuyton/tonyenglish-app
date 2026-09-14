@@ -2142,12 +2142,85 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 )}
               </div>
 
-              {/* BÊN PHẢI BANNER: NÚT ĐỔI MÀU NỀN */}
-              <div className="flex items-center gap-2 shrink-0 self-end lg:self-center">
+              {/* BÊN PHẢI BANNER: BỘ 3 NÚT (BÀI GIẢNG, KHO ĐỀ, CHỌN KHÓA HỌC) + NÚT ĐỔI MÀU NỀN */}
+              <div className="flex flex-wrap items-center gap-2.5 shrink-0 self-end lg:self-center">
+                {/* DOCK BỘ 3 NÚT */}
+                <div className="bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-xs rounded-2xl px-2.5 sm:px-3 py-1 flex flex-wrap items-center gap-2 shrink-0">
+                  {/* NÚT BÀI GIẢNG */}
+                  <button
+                    type="button"
+                    onClick={() => handleGoToLecture()}
+                    className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-300 hover:border-emerald-400 font-bold text-xs sm:text-[13px] px-3 py-1.5 rounded-xl shadow-2xs transition-all flex items-center gap-1.5 cursor-pointer shrink-0 hover:scale-[1.02] active:scale-95"
+                    title="Mở bài giảng lý thuyết"
+                  >
+                    <span className="text-base">📖</span> <span>Bài giảng lý thuyết</span>
+                  </button>
+
+                  {/* NÚT KHO ĐỀ */}
+                  <button
+                    type="button"
+                    onClick={() => handleGoToTestBank()}
+                    className="bg-white hover:bg-sky-50 text-[#0ea5e9] hover:text-[#0284c7] border border-sky-300 hover:border-sky-400 font-bold text-xs sm:text-[13px] px-3 py-1.5 rounded-xl shadow-2xs transition-all flex items-center gap-1.5 cursor-pointer shrink-0 hover:scale-[1.02] active:scale-95"
+                    title="Mở kho đề"
+                  >
+                    <span className="text-base">📚</span> <span>Kho đề</span>
+                  </button>
+
+                  <div className="h-4 w-px bg-slate-200 hidden sm:block"></div>
+
+                  {/* DROPDOWN CHỌN KHÓA HỌC */}
+                  <div className="relative w-44 sm:w-56 z-50">
+                    <div 
+                      onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
+                      className="w-full bg-white hover:bg-sky-50/50 border border-sky-300 hover:border-[#0ea5e9] rounded-xl px-3 py-1.5 flex items-center justify-between cursor-pointer shadow-2xs transition-all"
+                    >
+                      <div className="flex items-center gap-1.5 min-w-0 pr-1.5">
+                        <span className="text-slate-400 text-xs">🎓</span>
+                        <span className="font-bold text-xs text-sky-900 truncate">
+                          {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+                        </span>
+                      </div>
+                      <span className={`text-[#0ea5e9] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                    </div>
+                    
+                    {filterCourseDropdownOpen && (
+                      <>
+                        <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
+                        <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1">
+                          <div 
+                            onClick={() => {
+                              setFilterCourse('all');
+                              setAnalyticsCourse('all');
+                              setFilterCourseDropdownOpen(false);
+                            }}
+                            className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                          >
+                            🌟 Tất cả khóa học
+                          </div>
+                          {courses.map(course => (
+                            <div 
+                              key={course.id}
+                              onClick={() => {
+                                setFilterCourse(course.id);
+                                setAnalyticsCourse(course.id);
+                                setFilterCourseDropdownOpen(false);
+                              }}
+                              className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                            >
+                              📖 {course.title}
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+
+                {/* NÚT ĐỔI MÀU NỀN */}
                 <button 
                   type="button"
                   onClick={() => setIsAnalyticsThemeModalOpen(true)} 
-                  className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/20"
+                  className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/20 h-[38px]"
                   title="Đổi màu nền"
                 >
                   <span>🎨</span> <span className="hidden sm:inline">Đổi màu nền</span>
@@ -2616,10 +2689,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             </div>
 
-            {/* STICKY BOTTOM NAVIGATION DOCK (Bộ 3 nút nằm giữa bên dưới giống Lịch báo bài & Bảng công việc) */}
-            <div className="sticky bottom-2 z-30 mt-4 flex justify-center">
-              {renderBottomControls}
-            </div>
 
             <BoardThemeModal
               isOpen={isAnalyticsThemeModalOpen}
