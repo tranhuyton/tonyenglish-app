@@ -634,6 +634,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
    return (
      <div className={`w-full animate-in fade-in duration-700 relative ${isIframeOnly ? 'h-[85vh]' : ''}`}>
        <iframe
+         key={cleanedHtml ? `${cleanedHtml.length}_${cleanedHtml.substring(0, 32)}` : 'empty'}
          ref={iframeRef}
          srcDoc={iframeContent}
          style={{ width: '100%', height: isIframeOnly ? '100%' : `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
@@ -1100,10 +1101,11 @@ export default function LectureViewer({
     // Read saved page BEFORE any state changes (persist effect would overwrite it)
     const savedPageStr = localStorage.getItem(`tony_last_page_${targetUserId || ''}_${lectureId}`);
     const savedPage = savedPageStr ? parseInt(savedPageStr) : 1;
+    const targetPage = savedPage > 0 ? savedPage : 1;
     
     try {
         setActiveLectureId(lectureId);
-        setCurrentPage(1); 
+        setCurrentPage(targetPage); 
         setPages([]); 
         setCompletedTasks([]);
         setViewedPages(new Set());
@@ -1181,11 +1183,9 @@ export default function LectureViewer({
         setPages(visiblePages);
         
         // Restore saved page (read before state changes above)
-        if (savedPage > 0 && savedPage <= visiblePages.length) {
-          setCurrentPage(savedPage);
-        } else {
-          setCurrentPage(1);
-        }
+        const validTargetPage = (targetPage > 0 && targetPage <= visiblePages.length) ? targetPage : 1;
+        setPages(visiblePages);
+        setCurrentPage(validTargetPage);
         
         let initialCompletedTasks: string[] = [];
         let isLectureCompleted = false;
@@ -1852,7 +1852,13 @@ export default function LectureViewer({
   return (
     <div className="flex flex-col h-[100dvh] w-full bg-[#f8fafc] font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
-      <header className="h-[64px] bg-[#0ea5e9]/95 backdrop-blur-md text-white flex items-center px-4 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-[#0284c7]/50 transition-all">
+      <header 
+         className="h-[64px] backdrop-blur-md text-white flex items-center px-4 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-white/20 transition-all duration-300"
+         style={{
+            background: lectureTheme?.titleBg || 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+            color: lectureTheme?.titleText || '#ffffff'
+         }}
+      >
          <div className="flex items-center gap-2 md:gap-4 min-w-0 flex-1">
             <button 
                 onClick={onBack} 
@@ -2394,6 +2400,7 @@ export default function LectureViewer({
                            {activeLecture?.title}
                        </h2>
                        <StaticLectureContent 
+                           key={`${activeLectureId}_page_${currentPage}`}
                            html={currentHtmlContent} 
                            isIframeOnly={isIframeOnly}
                            onOpenPopup={setPopupUrl} 
