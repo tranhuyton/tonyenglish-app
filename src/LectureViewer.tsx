@@ -286,85 +286,129 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(100);
 
-   // Bỏ các style padding inline cứng có chứa !important do Jodit sinh ra, 
-   // và các height/width gán cứng vào table/td/th để tránh bị lỗi hiển thị
-   // CHÚ Ý: Chỉ xóa width/height bên trong thẻ <table>, <td>, <th> — KHÔNG xóa tràn lan toàn bộ HTML
-   const cleanedHtml = (html || '')
-       .replace(/padding(?:-left|-right|-top|-bottom)?:\s*0(?:px)?\s*!important;?/gi, '')
-       .replace(/(<(?:table|td|th)\b[^>]*style="[^"]*?)height:\s*\d+px;?\s*/gi, '$1')
-       .replace(/(<(?:table|td|th)\b[^>]*style="[^"]*?)width:\s*\d+(?:\.\d+)?px;?\s*/gi, '$1');
+    // Bỏ các style padding inline cứng có chứa !important do Jodit sinh ra, 
+    // và các height/width gán cứng vào table/td/th để tránh bị lỗi hiển thị
+    // CHÚ Ý: Chỉ xóa width/height bên trong thẻ <table>, <td>, <th> — KHÔNG xóa tràn lan toàn bộ HTML
+    const cleanedHtml = (html || '')
+        .replace(/padding(?:-left|-right|-top|-bottom)?:\s*0(?:px)?\s*!important;?/gi, '')
+        .replace(/(<(?:table|td|th)\b[^>]*style="[^"]*?)height:\s*\d+px;?\s*/gi, '$1')
+        .replace(/(<(?:table|td|th)\b[^>]*style="[^"]*?)width:\s*\d+(?:\.\d+)?px;?\s*/gi, '$1')
+        .replace(/<div\b[^>]*class=["']audi["'][^>]*>[\s\S]*?<\/div>/gi, '')
+        .replace(/width:\s*(?:1086\.59|1771\.65)px;?/gi, 'max-width: 960px; width: 100%;');
 
-   useEffect(() => { 
-       setIframeHeight(10); 
-   }, [html]);
+    const playBritishPronunciation = useCallback((word: string) => {
+      const cleanWord = word.trim().toLowerCase().replace(/[^a-z]/g, '');
+      if (!cleanWord) return;
 
-   useEffect(() => {
-     const handleMessage = (e: MessageEvent) => {
-       if (e.data?.type === 'LECTURE_LINK_CLICK') {
-         let href = e.data.href;
-         if (href.startsWith('/')) {
-             href = window.location.origin + href;
-         }
+      const localUrl = `/audio/pronunciation/${cleanWord}.mp3`;
+      const audio = new Audio(localUrl);
 
-         if (href.includes('tonyenglish.vn/uploads') || 
-             href.includes('youtube.com') || 
-             href.includes('youtu.be') || 
-             href.toLowerCase().includes('.pdf')) {
-             onOpenPopup(href);
-         } else { 
-             window.open(href, '_blank', 'noopener,noreferrer');
-         }
-       } else if (e.data?.type === 'LECTURE_RESIZE') {
-         const h = e.data.height;
-         if (h) {
-             setIframeHeight(Math.max(100, h + 40));
-         }
-       } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
-         if (iframeRef.current) {
-            const rect = iframeRef.current.getBoundingClientRect();
-            onOpenDict(e.data.word, rect.left + e.data.x, rect.top + e.data.y, rect.top + e.data.rectTop);
-         }
-       } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
-         onCloseDict();
-       } else if (e.data?.type === 'OPEN_IELTS_AI') {
-         const fakeBtn = document.createElement('button');
-         fakeBtn.className = 'btn-ai-trigger hidden'; 
-         
-         if (e.data.topic) {
-             fakeBtn.setAttribute('data-topic', e.data.topic);
-         }
-         if (e.data.image) {
-             fakeBtn.setAttribute('data-image', e.data.image);
-         }
-         if (e.data.task) {
-             fakeBtn.setAttribute('data-task', e.data.task);
-         }
-         
-         document.body.appendChild(fakeBtn);
-         fakeBtn.click();
-         setTimeout(() => { 
-             fakeBtn.remove(); 
-         }, 100);
-       } 
-       else if (e.data?.type === 'OPEN_LIVE_SPEAKING') {
-         const fakeLiveBtn = document.createElement('button');
-         fakeLiveBtn.className = 'btn-live-trigger hidden';
-         
-         if (e.data.topic) {
-             fakeLiveBtn.setAttribute('data-topic', e.data.topic);
-         }
-         
-         document.body.appendChild(fakeLiveBtn);
-         fakeLiveBtn.click();
-         setTimeout(() => { 
-             fakeLiveBtn.remove(); 
-         }, 100);
-       }
-     };
-     
-     window.addEventListener('message', handleMessage);
-     return () => window.removeEventListener('message', handleMessage);
-   }, [onOpenPopup, onOpenDict, onCloseDict]);
+      const playFallbackCloud = () => {
+         const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/pronunciation/${cleanWord}.mp3`;
+         const cloudAudio = new Audio(cloudUrl);
+         cloudAudio.play().catch(() => {
+            if ('speechSynthesis' in window) {
+               window.speechSynthesis.cancel();
+               const utter = new SpeechSynthesisUtterance(cleanWord);
+               utter.lang = 'en-GB';
+               const voices = window.speechSynthesis.getVoices();
+               const gbMaleVoice = voices.find(v => 
+                  v.lang.toLowerCase().startsWith('en-gb') && 
+                  (v.name.toLowerCase().includes('male') || 
+                   v.name.toLowerCase().includes('george') || 
+                   v.name.toLowerCase().includes('ryan') || 
+                   v.name.toLowerCase().includes('thomas') ||
+                   v.name.toLowerCase().includes('daniel') ||
+                   v.name.toLowerCase().includes('oliver'))
+               ) || voices.find(v => v.lang.toLowerCase().startsWith('en-gb'));
+               if (gbMaleVoice) {
+                  utter.voice = gbMaleVoice;
+               }
+               utter.rate = 0.85;
+               window.speechSynthesis.speak(utter);
+            }
+         });
+      };
+
+      audio.play().catch(() => {
+         playFallbackCloud();
+      });
+    }, []);
+
+    useEffect(() => { 
+        setIframeHeight(10); 
+    }, [html]);
+
+    useEffect(() => {
+      const handleMessage = (e: MessageEvent) => {
+        if (e.data?.type === 'LECTURE_LINK_CLICK') {
+          let href = e.data.href;
+          if (href.startsWith('/')) {
+              href = window.location.origin + href;
+          }
+
+          if (href.includes('tonyenglish.vn/uploads') || 
+              href.includes('youtube.com') || 
+              href.includes('youtu.be') || 
+              href.toLowerCase().includes('.pdf')) {
+              onOpenPopup(href);
+          } else { 
+              window.open(href, '_blank', 'noopener,noreferrer');
+          }
+        } else if (e.data?.type === 'LECTURE_PLAY_WORD') {
+          const rawWord = e.data.word || '';
+          playBritishPronunciation(rawWord);
+        } else if (e.data?.type === 'LECTURE_RESIZE') {
+          const h = e.data.height;
+          if (h) {
+              setIframeHeight(Math.max(100, h + 40));
+          }
+        } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
+          if (iframeRef.current) {
+             const rect = iframeRef.current.getBoundingClientRect();
+             onOpenDict(e.data.word, rect.left + e.data.x, rect.top + e.data.y, rect.top + e.data.rectTop);
+          }
+        } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
+          onCloseDict();
+        } else if (e.data?.type === 'OPEN_IELTS_AI') {
+          const fakeBtn = document.createElement('button');
+          fakeBtn.className = 'btn-ai-trigger hidden'; 
+          
+          if (e.data.topic) {
+              fakeBtn.setAttribute('data-topic', e.data.topic);
+          }
+          if (e.data.image) {
+              fakeBtn.setAttribute('data-image', e.data.image);
+          }
+          if (e.data.task) {
+              fakeBtn.setAttribute('data-task', e.data.task);
+          }
+          
+          document.body.appendChild(fakeBtn);
+          fakeBtn.click();
+          setTimeout(() => { 
+              fakeBtn.remove(); 
+          }, 100);
+        } 
+        else if (e.data?.type === 'OPEN_LIVE_SPEAKING') {
+          const fakeLiveBtn = document.createElement('button');
+          fakeLiveBtn.className = 'btn-live-trigger hidden';
+          
+          if (e.data.topic) {
+              fakeLiveBtn.setAttribute('data-topic', e.data.topic);
+          }
+          
+          document.body.appendChild(fakeLiveBtn);
+          fakeLiveBtn.click();
+          setTimeout(() => { 
+              fakeLiveBtn.remove(); 
+          }, 100);
+        }
+      };
+      
+      window.addEventListener('message', handleMessage);
+      return () => window.removeEventListener('message', handleMessage);
+    }, [onOpenPopup, onOpenDict, onCloseDict, playBritishPronunciation]);
 
    const iframeContent = `
      <!DOCTYPE html>
@@ -536,6 +580,17 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
           }
           
           #content-wrapper { display: flow-root; width: 100%; padding-bottom: 2rem; }
+          .audi { display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
+          #lib_content { width: 100% !important; max-width: 960px !important; margin: 0 auto !important; box-sizing: border-box !important; }
+          .audiolink a, [data-word] {
+              cursor: pointer !important;
+              transition: all 0.2s ease !important;
+              display: inline-block;
+          }
+          .audiolink a:hover, [data-word]:hover {
+              color: #0284c7 !important;
+              text-decoration: underline !important;
+          }
        </style>
      </head>
      <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
@@ -543,12 +598,49 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
            <div id="content-wrapper">${cleanedHtml ? cleanedHtml.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
        </div>
        <script>
+         window.playWord = function(w) {
+           if (w) window.parent.postMessage({ type: 'LECTURE_PLAY_WORD', word: w }, '*');
+         };
+         window.playaudio = function(w) {
+           if (w) {
+             var clean = w.replace(/.*[\/\\]([^\/\\]+)\.mp3$/i, '$1').replace(/[^a-zA-Z]/g, '');
+             window.parent.postMessage({ type: 'LECTURE_PLAY_WORD', word: clean || w }, '*');
+           }
+         };
+
          document.addEventListener('click', function(e) {
            var target = e.target;
            
+           // 1. Intercept pronunciation links
+           var audioTarget = target.closest('.audiolink a, [data-word], a[onclick*="playaudio"], a[onclick*="playWord"]');
+           if (audioTarget) {
+               e.preventDefault();
+               e.stopPropagation();
+               var word = audioTarget.getAttribute('data-word') || audioTarget.textContent.trim();
+               word = word.replace(/[^a-zA-Z]/g, '');
+               if (word) {
+                   audioTarget.style.transition = 'all 0.2s ease';
+                   var origBg = audioTarget.style.backgroundColor;
+                   var origColor = audioTarget.style.color;
+                   audioTarget.style.backgroundColor = '#dbeafe';
+                   audioTarget.style.color = '#0284c7';
+                   audioTarget.style.borderRadius = '4px';
+                   audioTarget.style.padding = '1px 5px';
+                   setTimeout(function() {
+                       audioTarget.style.backgroundColor = origBg || 'transparent';
+                       audioTarget.style.color = origColor || '';
+                       audioTarget.style.padding = '';
+                   }, 500);
+                   window.parent.postMessage({ type: 'LECTURE_PLAY_WORD', word: word }, '*');
+               }
+               return false;
+           }
+
            var anchor = target.closest('a');
            if (anchor && 
                anchor.hasAttribute('href') && 
+               !anchor.getAttribute('href').startsWith('javascript:') &&
+               anchor.getAttribute('href') !== '#' &&
                !anchor.outerHTML.includes('openIELTSAssessor') && 
                !anchor.classList.contains('btn-ielts-trigger') && 
                !anchor.classList.contains('btn-ai-trigger') && 
