@@ -482,7 +482,12 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
 
       // 🚀 FETCH NHẬT KÝ HOẠT ĐỘNG
       const { data: actData } = await supabase.from('activity_logs').select('*').eq('user_id', student.id).order('created_at', { ascending: false });
-      setStudentActivities(actData || []);
+      setStudentActivities((actData || []).map((a: any) => {
+        if (typeof a.details === 'string') {
+          try { a.details = JSON.parse(a.details); } catch(e) {}
+        }
+        return a;
+      }));
       
     } catch (err: any) {
       console.error("Lỗi tải chi tiết:", err.message);

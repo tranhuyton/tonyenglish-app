@@ -2427,9 +2427,58 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       ) : (
                         <div className="relative pl-6 space-y-4 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
                           {studentActivities.map((act: any, idx: number) => {
-                            const icon = act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : '📖';
-                            const title = act.action_type === 'login' ? 'ĐĂNG NHẬP HỆ THỐNG' : act.action_type === 'finish_test' ? 'NỘP BÀI KIỂM TRA' : act.action_type === 'call_tutor' ? 'GỌI GIA SƯ AI' : 'HOÀN THÀNH BÀI GIẢNG';
-                            const desc = typeof act.details === 'string' ? act.details : (act.details?.message || act.details?.title || JSON.stringify(act.details || ''));
+                            let details: any = act.details;
+                            if (typeof details === 'string') {
+                              try {
+                                details = JSON.parse(details);
+                              } catch (e) {
+                                // plain string, keep as is
+                              }
+                            }
+
+                            let icon = '📖';
+                            let title = 'HOÀN THÀNH BÀI GIẢNG';
+                            let desc = '';
+
+                            if (act.action_type === 'login') {
+                              icon = '🔑';
+                              title = 'ĐĂNG NHẬP HỆ THỐNG';
+                              desc = details?.message || 'Học sinh đăng nhập thành công vào LMS Tony English.';
+                            } else if (act.action_type === 'finish_test') {
+                              icon = '📝';
+                              title = 'NỘP BÀI KIỂM TRA';
+                              const testName = details?.test_title || details?.title || details?.name || 'Bài kiểm tra';
+                              const scorePart = (details?.score !== undefined && details?.total !== undefined)
+                                ? ` • Điểm số: ${details.score}/${details.total}`
+                                : details?.score !== undefined
+                                  ? ` • Điểm: ${details.score}`
+                                  : '';
+                              desc = `Đã hoàn thành: "${testName}"${scorePart}`;
+                            } else if (act.action_type === 'call_tutor') {
+                              icon = '📞';
+                              title = 'HỎI ĐÁP GIA SƯ AI / VOICE';
+                              const durPart = details?.duration ? `Thời lượng: ${details.duration} giây` : '';
+                              const topicPart = details?.topic ? `Chủ đề: "${details.topic}"` : '';
+                              desc = [durPart, topicPart].filter(Boolean).join(' • ') || details?.message || 'Đã đàm thoại với gia sư AI.';
+                            } else if (act.action_type === 'finish_lecture') {
+                              icon = '📖';
+                              title = 'HOÀN THÀNH BÀI GIẢNG';
+                              const lecName = details?.lecture_title || details?.title || details?.name || (typeof details === 'string' ? details : 'Bài giảng');
+                              desc = `Đã học xong: "${lecName}"`;
+                            } else {
+                              icon = '📌';
+                              title = (act.action_type || 'HOẠT ĐỘNG').toUpperCase();
+                              if (details && typeof details === 'object') {
+                                desc = details.lecture_title 
+                                  ? `Đã học xong: "${details.lecture_title}"`
+                                  : details.test_title 
+                                    ? `Đã hoàn thành: "${details.test_title}"`
+                                    : details.message || details.title || '';
+                              } else {
+                                desc = typeof details === 'string' ? details : '';
+                              }
+                            }
+
                             const dateStr = new Date(act.created_at).toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
                             return (
                               <div key={act.id || idx} className="relative group">
@@ -2441,7 +2490,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                     <span className="font-bold text-xs sm:text-[13px] text-slate-800 uppercase tracking-wide">{title}</span>
                                     <span className="text-[11px] font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded-md shrink-0 border border-sky-100">{dateStr}</span>
                                   </div>
-                                  {desc && <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">{desc}</p>}
+                                  {desc && <p className="text-xs text-slate-600 leading-relaxed line-clamp-2" title={desc}>{desc}</p>}
                                 </div>
                               </div>
                             );
