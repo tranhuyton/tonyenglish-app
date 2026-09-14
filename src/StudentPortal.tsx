@@ -183,11 +183,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   }, [currentUser?.id]);
 
   useEffect(() => {
-    if (analyticsView === 'activity' && currentUser?.id) {
+    if ((analyticsView === 'activity' || activeTab === 'analytics') && currentUser?.id) {
       supabase.from('activity_logs').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(100)
         .then(({ data }) => setStudentActivities(data || []));
     }
-  }, [analyticsView, currentUser?.id]);
+  }, [analyticsView, activeTab, currentUser?.id]);
 
   const handleSelectAnalyticsTheme = (theme: BoardTheme) => {
     setAnalyticsTheme(theme);
@@ -896,7 +896,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const isIeltsCourseSelected = analyticsCourse === 'all' 
       ? courses.some(c => (c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')
-      : courses.find(c => String(c.id) === String(analyticsCourse))?.title.toLowerCase().includes('ielts');
+      : (() => {
+          const c = courses.find(course => String(course.id) === String(analyticsCourse));
+          return (c?.title || '').toLowerCase().includes('ielts') || c?.type === 'IELTS';
+        })();
   const isIeltsContext = isIeltsCourseSelected && analyticsTestType === 'ielts';
 
   // CHUẨN BỊ DỮ LIỆU BÁO CÁO TỪ HISTORY ĐÃ LỌC
@@ -1983,6 +1986,68 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             className="w-full min-h-[500px] p-3 sm:p-4 md:p-5 text-slate-800 rounded-3xl relative flex-1 flex flex-col space-y-4 md:space-y-6 animate-in fade-in duration-300" 
             style={{ backgroundColor: analyticsTheme.boardBg }}
           >
+            {/* UNIFIED BLUE / THEME HEADER BANNER */}
+            <div 
+              className="w-full rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 transition-all" 
+              style={{ background: analyticsTheme.titleBg || 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)' }}
+            >
+              {/* CỘT 1 (BÊN TRÁI): TIÊU ĐỀ + 3 NÚT FILTER */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 flex-wrap">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">📊</span>
+                  <div>
+                    <h1 className="text-xl md:text-2xl font-bold tracking-tight">
+                      Báo Cáo Hiệu Suất{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` - ${courses.find(c => String(c.id) === String(filterCourse))?.title}` : ''}
+                    </h1>
+                    <p className="text-white/80 text-xs md:text-sm mt-0.5">
+                      Phân tích kết quả học tập, kỹ năng và biểu đồ tiến độ
+                    </p>
+                  </div>
+                </div>
+
+                {/* 3 NÚT FILTER: Luyện thi IELTS, Bài tập bổ trợ, Bài tập khóa khác */}
+                {isIeltsCourseSelected && (
+                  <div className="flex flex-wrap bg-white/20 backdrop-blur-md p-1 rounded-xl border border-white/20 gap-1 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => { setAnalyticsTestType('ielts'); setHistoryPage(1); }}
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    >
+                      <span>🎯</span> Luyện thi IELTS
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => { setAnalyticsTestType('ielts-standard'); setHistoryPage(1); }}
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                    >
+                      <span>📝</span> Bài Tập Bổ Trợ
+                    </button>
+                    {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
+                      <button
+                        type="button"
+                        onClick={() => { setAnalyticsTestType('standard'); setHistoryPage(1); }}
+                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0ea5e9] shadow-sm' : 'text-white/90 hover:text-white hover:bg-white/10'}`}
+                      >
+                        <span>📚</span> Bài tập khóa khác
+                      </button>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              {/* BÊN PHẢI BANNER: NÚT ĐỔI MÀU NỀN */}
+              <div className="flex items-center gap-2 shrink-0 self-end lg:self-center">
+                <button 
+                  type="button"
+                  onClick={() => setIsAnalyticsThemeModalOpen(true)} 
+                  className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/20"
+                  title="Đổi màu nền"
+                >
+                  <span>🎨</span> <span className="hidden sm:inline">Đổi màu nền</span>
+                </button>
+              </div>
+            </div>
+
             {/* 2-COLUMN LAYOUT: CỘT TRÁI PHÂN TÍCH & BIỂU ĐỒ, CỘT PHẢI LỊCH SỬ / NHẬT KÝ */}
             <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 md:gap-6 items-start">
               {/* ========================================================= */}
@@ -2247,97 +2312,112 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               {/* CỘT PHẢI (XL:COL-SPAN-5): LỊCH SỬ ĐIỂM / NHẬT KÝ TRUY CẬP */}
               {/* ========================================================= */}
               <div className="xl:col-span-5 space-y-4 md:space-y-6">
-                {analyticsView === 'scores' ? (
-                  /* BẢNG LỊCH SỬ */
-                  <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-                    <div className="px-5 sm:px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-white">
-                      <h3 className="font-black text-base sm:text-lg text-slate-800 tracking-tight flex items-center gap-2">
-                        <span className="text-blue-500">📋</span> Lịch sử làm bài
-                      </h3>
-                      <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
-                        {historyData.length} bài
-                      </span>
+                <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+                  {/* CARD HEADER VỚI 2 NÚT CHUYỂN ĐỔI: LỊCH SỬ LÀM BÀI / LỊCH SỬ HOẠT ĐỘNG */}
+                  <div className="px-4 sm:px-6 py-3.5 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2 bg-white">
+                    <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
+                      <button
+                        type="button"
+                        onClick={() => setAnalyticsView('scores')}
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${
+                          analyticsView === 'scores' 
+                            ? 'bg-white text-[#0ea5e9] shadow-xs' 
+                            : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
+                        }`}
+                      >
+                        <span>📋</span> Lịch sử làm bài
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setAnalyticsView('activity')}
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer ${
+                          analyticsView === 'activity' 
+                            ? 'bg-white text-[#0ea5e9] shadow-xs' 
+                            : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
+                        }`}
+                      >
+                        <span>👀</span> Lịch sử hoạt động
+                      </button>
                     </div>
-                    <div className="overflow-x-auto custom-scrollbar bg-slate-50/50" style={{ WebkitOverflowScrolling: 'touch' }}>
-                      <table className="w-full text-left border-collapse min-w-[460px]">
-                        <thead>
-                          <tr className="border-b border-slate-200 text-[11px] text-slate-500 uppercase tracking-widest">
-                            <th className="px-4 sm:px-5 py-3.5 font-bold">Tên bài kiểm tra</th>
-                            <th className="px-3 sm:px-4 py-3.5 font-bold text-center">Ngày</th>
-                            <th className="px-3 sm:px-4 py-3.5 font-bold text-center">Điểm số</th>
-                            <th className="px-4 sm:px-5 py-3.5 font-bold text-right">Chi tiết</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-100 bg-white">
-                          {paginatedHistory.length === 0 ? (
-                            <tr>
-                              <td colSpan={4} className="text-center py-12 text-slate-400 font-medium text-sm">
-                                Chưa có bài kiểm tra nào được hoàn thành
-                              </td>
-                            </tr>
-                          ) : (
-                            paginatedHistory.map(history => {
-                              const isHigh = history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0;
-                              return (
-                                <tr key={history.id} className="hover:bg-slate-50 transition-colors group">
-                                  <td className="px-4 sm:px-5 py-3.5">
-                                    <div className="font-bold text-[13px] text-slate-800 leading-snug group-hover:text-[#0ea5e9] transition-colors line-clamp-2">
-                                      {history.name}
-                                    </div>
-                                  </td>
-                                  <td className="px-3 sm:px-4 py-3.5 text-center shrink-0">
-                                    <div className="font-bold text-[12px] text-slate-700">{formatDate(history.date).split(' ')[0]}</div>
-                                    <div className="text-[10px] font-medium text-slate-400 mt-0.5">{formatDate(history.date).split(' ')[1]}</div>
-                                  </td>
-                                  <td className="px-3 sm:px-4 py-3.5 text-center shrink-0">
-                                    <span className={`inline-flex items-center justify-center px-2.5 py-1 rounded-lg text-[12px] font-black border ${isHigh ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-slate-50 text-slate-700 border-slate-200'}`}>
-                                      {(() => {
-                                        const isIelts = String(history.details?.test_type || history.name).toLowerCase().includes('ielts') || history.details?.bandScore !== undefined;
-                                        if (isIelts) {
-                                          return `${history.scoreObj.value}/${history.scoreObj.total} • Band ${history.details?.bandScore || '0.0'}`;
-                                        } else {
-                                          const p = history.scoreObj.total > 0 ? (history.scoreObj.value / history.scoreObj.total) * 100 : 0;
-                                          let grade = 'U';
-                                          if (p >= 90) grade = 'A*';
-                                          else if (p >= 80) grade = 'A';
-                                          else if (p >= 70) grade = 'B';
-                                          else if (p >= 60) grade = 'C';
-                                          else if (p >= 50) grade = 'D';
-                                          else if (p >= 40) grade = 'E';
-                                          return `${Math.round(p)}% • ${grade}`;
-                                        }
-                                      })()}
-                                    </span>
-                                  </td>
-                                  <td className="px-4 sm:px-5 py-3.5 text-right shrink-0">
-                                    <button 
-                                      type="button"
-                                      onClick={() => setViewingHistoryDetail(history)} 
-                                      className="inline-flex items-center bg-white border border-slate-200 text-slate-600 font-bold px-3 py-1.5 rounded-xl hover:border-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white transition-all text-[11px] uppercase tracking-wider shadow-2xs cursor-pointer"
-                                    >
-                                      Chi tiết
-                                    </button>
-                                  </td>
-                                </tr>
-                              );
-                            })
-                          )}
-                        </tbody>
-                      </table>
-                    </div>
-                    {renderPagination(historyPage, totalHistoryPages, setHistoryPage)}
+
+                    <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
+                      {analyticsView === 'scores' ? `${processedHistory.length} bài` : `${studentActivities.length} hoạt động`}
+                    </span>
                   </div>
-                ) : (
-                  /* NHẬT KÝ TRUY CẬP */
-                  <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-                    <div className="px-5 sm:px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-white">
-                      <h3 className="font-black text-base sm:text-lg text-slate-800 tracking-tight flex items-center gap-2">
-                        <span>👀</span> Nhật Ký Truy Cập & Hành Vi
-                      </h3>
-                      <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
-                        {studentActivities.length} hoạt động
-                      </span>
-                    </div>
+
+                  {/* NỘI DUNG CARD: BẢNG LỊCH SỬ HOẶC DÒNG THỜI GIAN HOẠT ĐỘNG */}
+                  {analyticsView === 'scores' ? (
+                    <>
+                      <div className="overflow-x-auto custom-scrollbar bg-slate-50/50" style={{ WebkitOverflowScrolling: 'touch' }}>
+                        <table className="w-full text-left border-collapse min-w-[460px]">
+                          <thead>
+                            <tr className="border-b border-slate-200 text-[11px] text-slate-500 uppercase tracking-widest">
+                              <th className="px-4 sm:px-5 py-3.5 font-bold">Tên bài kiểm tra</th>
+                              <th className="px-3 sm:px-4 py-3.5 font-bold text-center">Ngày</th>
+                              <th className="px-3 sm:px-4 py-3.5 font-bold text-center">Điểm số</th>
+                              <th className="px-4 sm:px-5 py-3.5 font-bold text-right">Chi tiết</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-100 bg-white">
+                            {paginatedHistory.length === 0 ? (
+                              <tr>
+                                <td colSpan={4} className="text-center py-12 text-slate-400 font-medium text-sm">
+                                  Chưa có bài kiểm tra nào được hoàn thành
+                                </td>
+                              </tr>
+                            ) : (
+                              paginatedHistory.map(history => {
+                                const isHigh = history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0;
+                                return (
+                                  <tr key={history.id} className="hover:bg-slate-50 transition-colors group">
+                                    <td className="px-4 sm:px-5 py-3.5">
+                                      <div className="font-bold text-[13px] text-slate-800 leading-snug group-hover:text-[#0ea5e9] transition-colors line-clamp-2">
+                                        {history.name}
+                                      </div>
+                                    </td>
+                                    <td className="px-3 sm:px-4 py-3.5 text-center shrink-0">
+                                      <div className="font-bold text-[12px] text-slate-700">{formatDate(history.date).split(' ')[0]}</div>
+                                      <div className="text-[10px] font-medium text-slate-400 mt-0.5">{formatDate(history.date).split(' ')[1]}</div>
+                                    </td>
+                                    <td className="px-3 sm:px-4 py-3.5 text-center shrink-0">
+                                      <span className={`inline-flex items-center justify-center px-2.5 py-1 rounded-lg text-[12px] font-black border ${isHigh ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-slate-50 text-slate-700 border-slate-200'}`}>
+                                        {(() => {
+                                          const isIelts = String(history.details?.test_type || history.name).toLowerCase().includes('ielts') || history.details?.bandScore !== undefined;
+                                          if (isIelts) {
+                                            return `${history.scoreObj.value}/${history.scoreObj.total} • Band ${history.details?.bandScore || '0.0'}`;
+                                          } else {
+                                            const p = history.scoreObj.total > 0 ? (history.scoreObj.value / history.scoreObj.total) * 100 : 0;
+                                            let grade = 'U';
+                                            if (p >= 90) grade = 'A*';
+                                            else if (p >= 80) grade = 'A';
+                                            else if (p >= 70) grade = 'B';
+                                            else if (p >= 60) grade = 'C';
+                                            else if (p >= 50) grade = 'D';
+                                            else if (p >= 40) grade = 'E';
+                                            return `${Math.round(p)}% • ${grade}`;
+                                          }
+                                        })()}
+                                      </span>
+                                    </td>
+                                    <td className="px-4 sm:px-5 py-3.5 text-right shrink-0">
+                                      <button 
+                                        type="button"
+                                        onClick={() => setViewingHistoryDetail(history)} 
+                                        className="inline-flex items-center bg-white border border-slate-200 text-slate-600 font-bold px-3 py-1.5 rounded-xl hover:border-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white transition-all text-[11px] uppercase tracking-wider shadow-2xs cursor-pointer"
+                                      >
+                                        Chi tiết
+                                      </button>
+                                    </td>
+                                  </tr>
+                                );
+                              })
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
+                      {renderPagination(historyPage, totalHistoryPages, setHistoryPage)}
+                    </>
+                  ) : (
                     <div className="p-5 sm:p-6 max-h-[850px] overflow-y-auto custom-scrollbar">
                       {studentActivities.length === 0 ? (
                         <div className="text-center py-16">
@@ -2369,8 +2449,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         </div>
                       )}
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
 
