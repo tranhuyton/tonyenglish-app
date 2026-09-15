@@ -373,9 +373,228 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
       });
     }, []);
 
+    const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+    const audioChunksRef = useRef<Blob[]>([]);
+    const activeRecordingCardIdRef = useRef<string | null>(null);
+    const activeTargetSentenceRef = useRef<string | null>(null);
+    const autoStopTimerRef = useRef<any>(null);
+    const audioStreamRef = useRef<MediaStream | null>(null);
+
+    const playChimeSound = useCallback((isSuccess: boolean) => {
+      try {
+        const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        
+        if (isSuccess) {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+          osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.12); // E5
+          osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.24); // G5
+          gain.gain.setValueAtTime(0.12, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.5);
+        } else {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(329.63, ctx.currentTime); // E4
+          osc.frequency.setValueAtTime(261.63, ctx.currentTime + 0.15); // C4
+          gain.gain.setValueAtTime(0.1, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.4);
+        }
+      } catch (e) {
+        // Ignore audio context error
+      }
+    }, []);
+
+    const stopRecordingAndEvaluate = useCallback(() => {
+      if (autoStopTimerRef.current) {
+        clearTimeout(autoStopTimerRef.current);
+        autoStopTimerRef.current = null;
+      }
+      const cardId = activeRecordingCardIdRef.current;
+      const targetSentence = activeTargetSentenceRef.current;
+      
+      if (!cardId || !mediaRecorderRef.current || mediaRecorderRef.current.state === 'inactive') {
+        return;
+      }
+
+      iframeRef.current?.contentWindow?.postMessage({
+        type: 'PRONUNCIATION_STATUS',
+        cardId: cardId,
+        status: 'EVALUATING'
+      }, '*');
+
+      mediaRecorderRef.current.onstop = async () => {
+        if (audioStreamRef.current) {
+          audioStreamRef.current.getTracks().forEach(t => t.stop());
+          audioStreamRef.current = null;
+        }
+
+        const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+        audioChunksRef.current = [];
+
+        try {
+          const reader = new FileReader();
+          reader.readAsDataURL(audioBlob);
+          reader.onloadend = async () => {
+            const base64Data = (reader.result as string)?.split(',')[1];
+            if (!base64Data) {
+              iframeRef.current?.contentWindow?.postMessage({
+                type: 'PRONUNCIATION_ERROR',
+                cardId: cardId,
+                error: 'Không ghi nhận được âm thanh. Vui lòng thử lại!'
+              }, '*');
+              return;
+            }
+
+            const prompt = `You are a friendly and accurate English pronunciation checker for an English learner.
+The student is trying to speak the following target sentence:
+"${targetSentence}"
+
+Please listen to the attached student audio recording:
+1. Determine what words the student actually spoke.
+2. Check whether the pronunciation matches the target sentence accurately.
+3. If they missed words or pronounced words noticeably wrong, specify them.
+4. If it's correct (or naturally close with acceptable accent), mark is_correct as true. Otherwise false.
+
+Respond ONLY with valid JSON in this exact schema:
+{
+  "is_correct": boolean,
+  "accuracy_score": number, // 0 to 100
+  "recognized_text": string,
+  "mispronounced_words": string[],
+  "feedback": string // in Vietnamese, short, friendly, encouraging, max 2 sentences
+}`;
+
+            const { data, error } = await supabase.functions.invoke('ai-grader', {
+              body: {
+                prompt,
+                base64Audio: base64Data,
+                model: 'gemini-2.5-flash'
+              }
+            });
+
+            if (error) {
+              throw new Error(error.message);
+            }
+
+            let resultData: any = null;
+            if (data?.result && typeof data.result === 'string') {
+              try {
+                const cleanedJson = data.result.replace(/```(?:json)?/gi, '').replace(/```/g, '').trim();
+                resultData = JSON.parse(cleanedJson);
+              } catch (parseErr) {
+                resultData = {
+                  is_correct: false,
+                  accuracy_score: 50,
+                  recognized_text: targetSentence || '',
+                  mispronounced_words: [],
+                  feedback: data.result || 'Hãy thử đọc lại rõ ràng hơn nhé!'
+                };
+              }
+            } else if (data?.result && typeof data.result === 'object') {
+              resultData = data.result;
+            } else if (typeof data === 'object') {
+              resultData = data;
+            }
+
+            if (resultData) {
+              playChimeSound(resultData.is_correct);
+              iframeRef.current?.contentWindow?.postMessage({
+                type: 'PRONUNCIATION_RESULT',
+                cardId: cardId,
+                result: resultData
+              }, '*');
+            }
+          };
+        } catch (err: any) {
+          console.error('Lỗi khi chấm phát âm:', err);
+          iframeRef.current?.contentWindow?.postMessage({
+            type: 'PRONUNCIATION_ERROR',
+            cardId: cardId,
+            error: 'Có lỗi khi kết nối với AI chấm phát âm. Vui lòng thử lại!'
+          }, '*');
+        } finally {
+          activeRecordingCardIdRef.current = null;
+          activeTargetSentenceRef.current = null;
+        }
+      };
+
+      mediaRecorderRef.current.stop();
+    }, [playChimeSound]);
+
+    const startRecordingSentence = useCallback(async (cardId: string, targetSentence: string) => {
+      if (activeRecordingCardIdRef.current && mediaRecorderRef.current?.state !== 'inactive') {
+        stopRecordingAndEvaluate();
+      }
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        audioStreamRef.current = stream;
+        activeRecordingCardIdRef.current = cardId;
+        activeTargetSentenceRef.current = targetSentence;
+        audioChunksRef.current = [];
+
+        let mimeType = 'audio/webm';
+        if (!MediaRecorder.isTypeSupported('audio/webm')) {
+          mimeType = MediaRecorder.isTypeSupported('audio/mp4') ? 'audio/mp4' : '';
+        }
+
+        const mediaRecorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+        mediaRecorderRef.current = mediaRecorder;
+
+        mediaRecorder.ondataavailable = (event) => {
+          if (event.data.size > 0) {
+            audioChunksRef.current.push(event.data);
+          }
+        };
+
+        mediaRecorder.start(250);
+
+        iframeRef.current?.contentWindow?.postMessage({
+          type: 'PRONUNCIATION_STATUS',
+          cardId: cardId,
+          status: 'RECORDING'
+        }, '*');
+
+        autoStopTimerRef.current = setTimeout(() => {
+          stopRecordingAndEvaluate();
+        }, 6000);
+
+      } catch (err: any) {
+        console.error('Lỗi truy cập micro:', err);
+        iframeRef.current?.contentWindow?.postMessage({
+          type: 'PRONUNCIATION_ERROR',
+          cardId: cardId,
+          error: 'Không thể truy cập Micro. Vui lòng cấp quyền Micro cho trình duyệt để kiểm tra phát âm!'
+        }, '*');
+        activeRecordingCardIdRef.current = null;
+        activeTargetSentenceRef.current = null;
+      }
+    }, [stopRecordingAndEvaluate]);
+
     useEffect(() => { 
         setIframeHeight(10); 
     }, [html]);
+
+    useEffect(() => {
+      return () => {
+        if (autoStopTimerRef.current) clearTimeout(autoStopTimerRef.current);
+        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+          mediaRecorderRef.current.stop();
+        }
+        if (audioStreamRef.current) {
+          audioStreamRef.current.getTracks().forEach(t => t.stop());
+        }
+      };
+    }, []);
 
     useEffect(() => {
       const handleMessage = (e: MessageEvent) => {
@@ -398,6 +617,10 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
           playBritishPronunciation(rawWord);
         } else if (e.data?.type === 'LECTURE_PLAY_SENTENCE') {
           playBritishSentence(e.data.sentence || '', e.data.audioKey || '');
+        } else if (e.data?.type === 'LECTURE_START_RECORDING') {
+          startRecordingSentence(e.data.cardId, e.data.targetSentence);
+        } else if (e.data?.type === 'LECTURE_STOP_RECORDING') {
+          stopRecordingAndEvaluate();
         } else if (e.data?.type === 'LECTURE_RESIZE') {
           const h = e.data.height;
           if (h) {
@@ -448,7 +671,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
       
       window.addEventListener('message', handleMessage);
       return () => window.removeEventListener('message', handleMessage);
-    }, [onOpenPopup, onOpenDict, onCloseDict, playBritishPronunciation, playBritishSentence]);
+    }, [onOpenPopup, onOpenDict, onCloseDict, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate]);
 
    const iframeContent = `
      <!DOCTYPE html>
@@ -654,6 +877,68 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
               background-color: #e0f2fe !important;
               border-left-color: #0284c7 !important;
           }
+          .card-actions {
+              display: inline-flex !important;
+              align-items: center !important;
+              gap: 8px !important;
+              margin-left: 8px !important;
+              flex-shrink: 0 !important;
+          }
+          .sentence-mic-btn {
+              display: inline-flex !important;
+              align-items: center !important;
+              justify-content: center !important;
+              width: 28px !important;
+              height: 28px !important;
+              border-radius: 50% !important;
+              background: #ffffff !important;
+              border: 1px solid #cbd5e1 !important;
+              cursor: pointer !important;
+              font-size: 13px !important;
+              line-height: 1 !important;
+              padding: 0 !important;
+              transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+              position: relative !important;
+              user-select: none !important;
+              outline: none !important;
+              box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+          }
+          .sentence-mic-btn:hover {
+              background: #f0f9ff !important;
+              border-color: #38bdf8 !important;
+              transform: scale(1.12) !important;
+              box-shadow: 0 2px 5px rgba(2, 132, 199, 0.2) !important;
+          }
+          .sentence-mic-btn.is-recording {
+              background: #ef4444 !important;
+              border-color: #dc2626 !important;
+              color: #ffffff !important;
+              animation: pulse-mic 1.1s infinite ease-in-out !important;
+          }
+          .sentence-mic-btn.is-evaluating {
+              background: #f59e0b !important;
+              border-color: #d97706 !important;
+              color: #ffffff !important;
+              animation: spin-mic 1s infinite linear !important;
+          }
+          @keyframes pulse-mic {
+              0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); transform: scale(1.05); }
+              70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); transform: scale(1.15); }
+              100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); transform: scale(1.05); }
+          }
+          @keyframes spin-mic {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+          }
+          .pronunciation-feedback {
+              width: 100% !important;
+              box-sizing: border-box !important;
+              animation: feedback-slide-down 0.25s ease-out !important;
+          }
+          @keyframes feedback-slide-down {
+              from { opacity: 0; transform: translateY(-4px); }
+              to { opacity: 1; transform: translateY(0); }
+          }
        </style>
      </head>
      <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
@@ -676,9 +961,243 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
            }
          };
 
+         function enhanceSentenceCards() {
+           var cards = document.querySelectorAll('.sentence-audio-card');
+           cards.forEach(function(card, idx) {
+               var sentence = card.getAttribute('data-sentence');
+               if (!sentence) return;
+
+               var cardId = card.getAttribute('data-card-id');
+               if (!cardId) {
+                   cardId = 'card_sc_' + idx;
+                   card.setAttribute('data-card-id', cardId);
+               }
+
+               var existingMic = card.querySelector('.sentence-mic-btn');
+               if (!existingMic) {
+                   var spkIcon = card.querySelector('.speaker-icon');
+                   var micBtn = document.createElement('button');
+                   micBtn.className = 'sentence-mic-btn';
+                   micBtn.setAttribute('type', 'button');
+                   micBtn.setAttribute('data-card-id', cardId);
+                   micBtn.setAttribute('data-sentence', sentence);
+                   micBtn.title = 'Kiểm tra phát âm bằng AI (Gemini Flash)';
+                   micBtn.innerHTML = '🎙️';
+
+                   if (spkIcon && spkIcon.parentNode) {
+                       var p = spkIcon.parentNode;
+                       if (!p.classList.contains('card-actions')) {
+                           var wrap = document.createElement('div');
+                           wrap.className = 'card-actions';
+                           p.insertBefore(wrap, spkIcon);
+                           wrap.appendChild(spkIcon);
+                           wrap.appendChild(micBtn);
+                       } else {
+                           p.appendChild(micBtn);
+                       }
+                   } else {
+                       card.appendChild(micBtn);
+                   }
+               }
+
+               var existingFb = card.querySelector('.pronunciation-feedback');
+               if (!existingFb) {
+                   var fb = document.createElement('div');
+                   fb.className = 'pronunciation-feedback';
+                   fb.setAttribute('id', 'fb_' + cardId);
+                   fb.style.display = 'none';
+                   card.appendChild(fb);
+               }
+           });
+         }
+
+         if (document.readyState === 'loading') {
+             document.addEventListener('DOMContentLoaded', enhanceSentenceCards);
+         } else {
+             enhanceSentenceCards();
+         }
+         setTimeout(enhanceSentenceCards, 200);
+         setTimeout(enhanceSentenceCards, 1000);
+
+         window.handleMicClick = function(micBtn) {
+           var cardId = micBtn.getAttribute('data-card-id');
+           var sentence = micBtn.getAttribute('data-sentence');
+           var card = micBtn.closest('.sentence-audio-card');
+           var fb = card ? card.querySelector('.pronunciation-feedback') : null;
+
+           if (micBtn.classList.contains('is-recording')) {
+               micBtn.classList.remove('is-recording');
+               micBtn.classList.add('is-evaluating');
+               micBtn.innerHTML = '⏳';
+               micBtn.title = 'AI đang chấm...';
+
+               if (fb) {
+                   fb.style.display = 'block';
+                   fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>Gemini AI đang lắng nghe và chấm phát âm...</strong> Vui lòng đợi trong giây lát</span></div>';
+               }
+
+               window.parent.postMessage({ type: 'LECTURE_STOP_RECORDING', cardId: cardId }, '*');
+           } else {
+               document.querySelectorAll('.sentence-mic-btn.is-recording').forEach(function(m) {
+                   m.classList.remove('is-recording');
+                   m.innerHTML = '🎙️';
+               });
+
+               micBtn.classList.add('is-recording');
+               micBtn.innerHTML = '⏹️';
+               micBtn.title = 'Đang thu âm... Bấm vào đây để dừng và chấm điểm';
+
+               if (fb) {
+                   fb.style.display = 'block';
+                   fb.innerHTML = '<div style="display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: #b91c1c; background: #fef2f2; padding: 10px 14px; border-radius: 8px; border: 1px solid #fecaca; margin-top: 10px;">' +
+                       '<div style="display: flex; align-items: center; gap: 8px;">' +
+                           '<span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ef4444; animation: pulse-mic 1s infinite;"></span>' +
+                           '<span><strong>Đang nghe:</strong> Hãy đọc câu trên vào mic...</span>' +
+                       '</div>' +
+                       '<span style="font-size: 12px; color: #991b1b; font-weight: bold; cursor: pointer; text-decoration: underline;">Bấm ⏹️ để chấm</span>' +
+                   '</div>';
+               }
+
+               window.parent.postMessage({ type: 'LECTURE_START_RECORDING', cardId: cardId, targetSentence: sentence }, '*');
+           }
+         };
+
+         window.addEventListener('message', function(e) {
+           if (e.data?.type === 'PRONUNCIATION_STATUS') {
+               var cardId = e.data.cardId;
+               var status = e.data.status;
+               var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
+               var card = mic ? mic.closest('.sentence-audio-card') : null;
+               var fb = card ? card.querySelector('.pronunciation-feedback') : null;
+
+               if (status === 'EVALUATING') {
+                   if (mic) {
+                       mic.classList.remove('is-recording');
+                       mic.classList.add('is-evaluating');
+                       mic.innerHTML = '⏳';
+                       mic.title = 'AI đang chấm...';
+                   }
+                   if (fb) {
+                       fb.style.display = 'block';
+                       fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>Gemini AI đang lắng nghe và chấm phát âm...</strong></span></div>';
+                   }
+               }
+           } else if (e.data?.type === 'PRONUNCIATION_RESULT') {
+               var cardId = e.data.cardId;
+               var res = e.data.result || {};
+               var isCorrect = !!res.is_correct;
+               var score = res.accuracy_score !== undefined ? res.accuracy_score : (isCorrect ? 100 : 50);
+               var recognized = res.recognized_text || '';
+               var feedback = res.feedback || (isCorrect ? 'Phát âm rất chuẩn xác!' : 'Hãy cố gắng luyện tập lại nhé!');
+               var mispronounced = res.mispronounced_words || [];
+
+               var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
+               var card = mic ? mic.closest('.sentence-audio-card') : null;
+               var fb = card ? card.querySelector('.pronunciation-feedback') : null;
+
+               if (mic) {
+                   mic.classList.remove('is-recording');
+                   mic.classList.remove('is-evaluating');
+                   mic.innerHTML = isCorrect ? '✅' : '🎙️';
+                   mic.title = isCorrect ? 'Đã phát âm đúng!' : 'Kiểm tra lại phát âm';
+                   setTimeout(function() {
+                       if (mic && !mic.classList.contains('is-recording')) {
+                           mic.innerHTML = '🎙️';
+                       }
+                   }, 3500);
+               }
+
+               if (card) {
+                   if (isCorrect) {
+                       card.style.borderLeftColor = '#22c55e';
+                       card.style.backgroundColor = '#f0fdf4';
+                   } else {
+                       card.style.borderLeftColor = '#ef4444';
+                       card.style.backgroundColor = '#fef2f2';
+                   }
+               }
+
+               if (fb) {
+                   fb.style.display = 'block';
+                   var bg = isCorrect ? '#f0fdf4' : '#fef2f2';
+                   var border = isCorrect ? '#86efac' : '#fca5a5';
+                   var textColor = isCorrect ? '#15803d' : '#991b1b';
+                   var badgeBg = isCorrect ? '#dcfce7' : '#fee2e2';
+                   var badgeText = isCorrect ? '#166534' : '#b91c1c';
+                   var statusTitle = isCorrect ? '✅ Phát âm rất chuẩn!' : '❌ Chưa chuẩn lắm';
+
+                   var misHtml = '';
+                   if (!isCorrect && mispronounced.length > 0) {
+                       misHtml = '<div style="margin-top: 4px; font-size: 12px; color: #b91c1c;"><span>Từ cần chú ý: </span>' +
+                           mispronounced.map(function(w) {
+                               return '<span style="background: #fecaca; color: #991b1b; padding: 1px 6px; border-radius: 4px; font-weight: bold; margin-right: 4px;">' + w + '</span>';
+                           }).join('') + '</div>';
+                   }
+
+                   var retryHtml = !isCorrect ? '<button type="button" class="retry-pronunciation-btn" style="font-size: 12px; font-weight: bold; color: #b91c1c; background: #ffffff; border: 1px solid #f87171; padding: 4px 10px; border-radius: 6px; cursor: pointer; transition: all 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.05);" onmouseover="this.style.backgroundColor=\'#fee2e2\'" onmouseout="this.style.backgroundColor=\'#ffffff\'">🔄 Thử lại</button>' : '';
+
+                   fb.innerHTML = '<div style="background: ' + bg + '; border: 1px solid ' + border + '; padding: 12px 14px; border-radius: 8px; margin-top: 10px;">' +
+                       '<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">' +
+                           '<div style="display: flex; align-items: center; gap: 6px;">' +
+                               '<span style="font-weight: bold; font-size: 14px; color: ' + textColor + ';">' + statusTitle + '</span>' +
+                               '<span style="background: ' + badgeBg + '; color: ' + badgeText + '; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">' + score + '%</span>' +
+                           '</div>' +
+                           retryHtml +
+                       '</div>' +
+                       (recognized ? '<div style="font-size: 13px; color: #334155; margin-bottom: 4px;"><span style="color: #64748b;">AI nghe được: </span><strong style="color: ' + textColor + ';">"' + recognized + '"</strong></div>' : '') +
+                       misHtml +
+                       (feedback ? '<div style="font-size: 13px; color: #475569; margin-top: 4px;">💡 ' + feedback + '</div>' : '') +
+                   '</div>';
+               }
+           } else if (e.data?.type === 'PRONUNCIATION_ERROR') {
+               var cardId = e.data.cardId;
+               var errMsg = e.data.error || 'Có lỗi xảy ra.';
+               var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
+               var card = mic ? mic.closest('.sentence-audio-card') : null;
+               var fb = card ? card.querySelector('.pronunciation-feedback') : null;
+
+               if (mic) {
+                   mic.classList.remove('is-recording');
+                   mic.classList.remove('is-evaluating');
+                   mic.innerHTML = '🎙️';
+               }
+               if (fb) {
+                   fb.style.display = 'block';
+                   fb.innerHTML = '<div style="background: #fffbeb; border: 1px solid #fcd34d; padding: 10px 14px; border-radius: 8px; margin-top: 10px; font-size: 13px; color: #92400e; display: flex; justify-content: space-between; align-items: center;">' +
+                       '<span>⚠️ ' + errMsg + '</span>' +
+                       '<button type="button" class="retry-pronunciation-btn" style="font-size: 12px; font-weight: bold; color: #92400e; background: #ffffff; border: 1px solid #fbbf24; padding: 3px 8px; border-radius: 4px; cursor: pointer;">Thử lại</button>' +
+                   '</div>';
+               }
+           }
+         });
+
          document.addEventListener('click', function(e) {
            var target = e.target;
            
+           // 0. Intercept mic button for pronunciation checking
+           var micTarget = target.closest('.sentence-mic-btn');
+           if (micTarget) {
+               e.preventDefault();
+               e.stopPropagation();
+               window.handleMicClick && window.handleMicClick(micTarget);
+               return false;
+           }
+
+           // 0.1 Intercept retry button inside pronunciation feedback
+           var retryTarget = target.closest('.retry-pronunciation-btn');
+           if (retryTarget) {
+               e.preventDefault();
+               e.stopPropagation();
+               var card = retryTarget.closest('.sentence-audio-card');
+               if (card) {
+                   var mic = card.querySelector('.sentence-mic-btn');
+                   if (mic) {
+                       window.handleMicClick && window.handleMicClick(mic);
+                   }
+               }
+               return false;
+           }
+
            // 1. Intercept sentence audio cards
            var cardTarget = target.closest('.sentence-audio-card, [data-audio-key]');
            if (cardTarget) {
@@ -825,6 +1344,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          srcDoc={iframeContent}
          style={{ width: '100%', height: isIframeOnly ? '100%' : `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
          sandbox="allow-scripts allow-same-origin allow-popups"
+         allow="microphone; camera; clipboard-read; clipboard-write;"
          scrolling="no"
          allowFullScreen
        />
