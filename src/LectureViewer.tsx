@@ -1465,7 +1465,12 @@ export default function LectureViewer({
   }, [lectures, activeLectureId]);
 
   const currentSafeTasks = useMemo(() => {
-      return Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+      const raw = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+      return [...raw].sort((a: any, b: any) => {
+        const isExA = a.type === 'exercise' ? 1 : 0;
+        const isExB = b.type === 'exercise' ? 1 : 0;
+        return isExA - isExB;
+      });
   }, [activeLecture]);
 
   const currentLectureDoneCount = useMemo(() => {
@@ -2467,7 +2472,14 @@ export default function LectureViewer({
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
   };
 
-  const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+  const safeLectureTasks = useMemo(() => {
+    const raw = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+    return [...raw].sort((a: any, b: any) => {
+      const isExA = a.type === 'exercise' ? 1 : 0;
+      const isExB = b.type === 'exercise' ? 1 : 0;
+      return isExA - isExB;
+    });
+  }, [activeLecture]);
   const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
   const isLastLectureAndPage = (totalPages === 0 || currentPage === totalPages) && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
 
