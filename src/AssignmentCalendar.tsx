@@ -74,6 +74,7 @@ export default function AssignmentCalendar({
   const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number; isPassed: boolean; completedAt: string | null }>>(new Map());
 
   const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [calendarTheme, setCalendarTheme] = useState<BoardTheme>(() => loadTheme(`tony_calendar_theme_${userId}`, 'tony_calendar_theme'));
 
   useEffect(() => {
@@ -432,28 +433,75 @@ export default function AssignmentCalendar({
 
         {/* UNIFIED BLUE HEADER BANNER */}
         <div 
-          className="rounded-2xl p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-4"
+          className="rounded-2xl p-3.5 sm:p-4 md:p-5 shadow-sm text-white flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 relative"
           style={{ background: calendarTheme.titleBg }}
         >
-          <div className="flex items-center gap-3">
-            <span className="text-3xl">📅</span>
-            <div>
-              <h1 className="text-xl md:text-2xl font-bold tracking-tight">
-                Lịch Báo Bài{courseTitle ? ` - ${courseTitle}` : ''}
-              </h1>
-              <p className="text-white/80 text-xs md:text-sm mt-0.5">
-                Bấm vào ngày để xem và cập nhật tiến độ công việc
-              </p>
+          <div className="flex items-center justify-between w-full md:w-auto gap-3">
+            <div className="flex items-center gap-2.5 sm:gap-3">
+              <span className="text-2xl sm:text-3xl">📅</span>
+              <div>
+                <h1 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
+                  Lịch Báo Bài{courseTitle ? ` - ${courseTitle}` : ''}
+                </h1>
+                <p className="text-white/80 text-[11px] sm:text-xs md:text-sm mt-0.5">
+                  Bấm vào ngày để xem và cập nhật tiến độ
+                </p>
+              </div>
+            </div>
+
+            {/* Mobile More Button in Top Header */}
+            <div className="sm:hidden relative">
+              <button
+                type="button"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="w-8 h-8 rounded-xl bg-white/20 hover:bg-white/30 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
+                title="Tùy chọn khác"
+              >
+                ⋯
+              </button>
+
+              {isMobileMenuOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
+                  <div className="absolute right-0 top-full mt-2 w-52 bg-white rounded-2xl shadow-2xl border border-slate-200 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150 text-slate-800">
+                    <button
+                      type="button"
+                      onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
+                      className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
+                    >
+                      <span className="text-base">🎨</span> Đổi màu nền lịch
+                    </button>
+                    {onOpenLecture && (
+                      <button
+                        type="button"
+                        onClick={() => { onOpenLecture(); setIsMobileMenuOpen(false); }}
+                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-emerald-50 text-emerald-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                      >
+                        <span className="text-base">📖</span> Bài giảng lý thuyết
+                      </button>
+                    )}
+                    {onStartTest && (
+                      <button
+                        type="button"
+                        onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
+                        className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0ea5e9] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                      >
+                        <span className="text-base">📚</span> Mở kho đề
+                      </button>
+                    )}
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center sm:items-end gap-3 sm:gap-4 w-full md:w-auto justify-between md:justify-end">
+          <div className="flex flex-col sm:flex-row items-center sm:items-end gap-2.5 sm:gap-4 w-full md:w-auto justify-between md:justify-end">
             {selectedTasks.length > 0 ? (
-              <div className="flex flex-col items-center sm:items-end">
-                <div className="text-sm text-white/90 font-medium mb-1">
+              <div className="flex flex-col items-start sm:items-end w-full sm:w-auto">
+                <div className="text-xs sm:text-sm text-white/90 font-medium mb-1">
                   Tiến độ {rangeLabel}: {completedTotalCount}/{selectedTasks.length} ({progressPercent}%)
                 </div>
-                <div className="w-48 h-2 bg-white/20 rounded-full overflow-hidden">
+                <div className="w-full sm:w-48 h-2 bg-white/20 rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-white rounded-full transition-all duration-500"
                     style={{ width: `${progressPercent}%` }}
@@ -461,7 +509,7 @@ export default function AssignmentCalendar({
                 </div>
               </div>
             ) : (
-              <div className="text-xs text-white/80 font-medium">
+              <div className="text-[11px] sm:text-xs text-white/80 font-medium self-start sm:self-auto">
                 {calendarMode === 'day' && !selectedDate 
                   ? 'Bấm vào một ngày trên lịch để xem công việc'
                   : `${rangeLabel}: Không có công việc & bài tập`
@@ -469,7 +517,7 @@ export default function AssignmentCalendar({
               </div>
             )}
 
-            <div className="flex items-center gap-2 shrink-0">
+            <div className="flex items-center justify-between sm:justify-end w-full sm:w-auto gap-2 shrink-0">
               {/* MODE FILTER */}
               <div className="flex bg-white/15 rounded-xl p-0.5 gap-0.5">
                 {([
@@ -480,7 +528,7 @@ export default function AssignmentCalendar({
                   <button
                     key={m.key}
                     onClick={() => setCalendarMode(m.key)}
-                    className={`text-[12px] font-bold px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                    className={`text-[12px] font-bold px-2.5 sm:px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
                       calendarMode === m.key
                         ? 'bg-white text-[#0ea5e9] shadow-sm'
                         : 'text-white/80 hover:bg-white/10 hover:text-white'
@@ -491,17 +539,19 @@ export default function AssignmentCalendar({
                 ))}
               </div>
 
+              {/* NÚT HÔM NAY */}
               <button 
                 onClick={goToday} 
-                className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
                 title="Xem công việc hôm nay"
               >
                 <span>🎯</span> <span>Hôm nay</span>
               </button>
               
+              {/* NÚT ĐỔI MÀU NỀN (desktop only, mobile hides it into ⋯) */}
               <button 
                 onClick={() => setIsThemeModalOpen(true)} 
-                className="bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                className="hidden sm:flex bg-white/20 hover:bg-white/30 active:scale-95 text-white text-[13px] font-bold px-4 py-2 rounded-xl transition-all shadow-sm items-center gap-1.5 cursor-pointer shrink-0"
                 title="Đổi màu nền"
               >
                 <span>🎨</span> <span>Đổi màu nền</span>

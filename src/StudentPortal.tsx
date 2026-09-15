@@ -2090,7 +2090,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       }}
                     />
                   </div>
-                  <div className="sticky bottom-2 z-30 mt-3">
+                  <div className="hidden sm:block sticky bottom-2 z-30 mt-3">
                     {renderBottomControls}
                   </div>
                 </>
