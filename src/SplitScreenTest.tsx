@@ -13,6 +13,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
   // 🚀 NHẬN TÍN HIỆU TỪ STUDENT PORTAL XEM CÓ PHẢI LÀ CHẾ ĐỘ XEM LẠI LỊCH SỬ KHÔNG
   const initIsReview = !!testData?.isReview;
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
 
   // KHÔI PHỤC BẢN NHÁP HOẶC ĐÁP ÁN LỊCH SỬ
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
@@ -122,7 +123,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
     if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) {
       return; 
     }
-    if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
+    if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài tập?")) {
       return;
     }
 
@@ -566,7 +567,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                        disabled={isSubmitting}
                        className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 shadow-md disabled:opacity-50"
                      >
-                       {isSubmitting ? 'AI đang chấm bài...' : 'Hoàn tất & Nộp bài thi'}
+                       {isSubmitting ? 'AI đang chấm bài...' : (isExercise ? 'Hoàn tất & Nộp bài tập' : 'Hoàn tất & Nộp bài thi')}
                      </button>
                   </div>
                 )}
