@@ -335,6 +335,44 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
       });
     }, []);
 
+    const playBritishSentence = useCallback((sentence: string, audioKey: string) => {
+      if (!sentence && !audioKey) return;
+
+      const localUrl = `/audio/communication/sentences/${audioKey}.mp3`;
+      const audio = new Audio(localUrl);
+
+      const playFallbackCloud = () => {
+         const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/${audioKey}.mp3`;
+         const cloudAudio = new Audio(cloudUrl);
+         cloudAudio.play().catch(() => {
+            if ('speechSynthesis' in window) {
+               window.speechSynthesis.cancel();
+               const utter = new SpeechSynthesisUtterance(sentence);
+               utter.lang = 'en-GB';
+               const voices = window.speechSynthesis.getVoices();
+               const gbMaleVoice = voices.find(v => 
+                  v.lang.toLowerCase().startsWith('en-gb') && 
+                  (v.name.toLowerCase().includes('male') || 
+                   v.name.toLowerCase().includes('george') || 
+                   v.name.toLowerCase().includes('ryan') || 
+                   v.name.toLowerCase().includes('thomas') ||
+                   v.name.toLowerCase().includes('daniel') ||
+                   v.name.toLowerCase().includes('oliver'))
+               ) || voices.find(v => v.lang.toLowerCase().startsWith('en-gb'));
+               if (gbMaleVoice) {
+                  utter.voice = gbMaleVoice;
+               }
+               utter.rate = 0.88;
+               window.speechSynthesis.speak(utter);
+            }
+         });
+      };
+
+      audio.play().catch(() => {
+         playFallbackCloud();
+      });
+    }, []);
+
     useEffect(() => { 
         setIframeHeight(10); 
     }, [html]);
@@ -358,6 +396,8 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
         } else if (e.data?.type === 'LECTURE_PLAY_WORD') {
           const rawWord = e.data.word || '';
           playBritishPronunciation(rawWord);
+        } else if (e.data?.type === 'LECTURE_PLAY_SENTENCE') {
+          playBritishSentence(e.data.sentence || '', e.data.audioKey || '');
         } else if (e.data?.type === 'LECTURE_RESIZE') {
           const h = e.data.height;
           if (h) {
@@ -408,7 +448,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
       
       window.addEventListener('message', handleMessage);
       return () => window.removeEventListener('message', handleMessage);
-    }, [onOpenPopup, onOpenDict, onCloseDict, playBritishPronunciation]);
+    }, [onOpenPopup, onOpenDict, onCloseDict, playBritishPronunciation, playBritishSentence]);
 
    const iframeContent = `
      <!DOCTYPE html>
@@ -591,6 +631,29 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
               color: #0284c7 !important;
               text-decoration: underline !important;
           }
+          .sentence-audio-card {
+              cursor: pointer !important;
+              transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+              user-select: none;
+          }
+          .sentence-audio-card:hover {
+              background-color: #f0f9ff !important;
+              border-left-color: #0284c7 !important;
+              transform: translateY(-1px);
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+          }
+          .sentence-audio-card:hover .speaker-icon {
+              transform: scale(1.18);
+              opacity: 1 !important;
+          }
+          .sentence-audio-card:active {
+              transform: translateY(0);
+              background-color: #e0f2fe !important;
+          }
+          .sentence-audio-card.is-playing {
+              background-color: #e0f2fe !important;
+              border-left-color: #0284c7 !important;
+          }
        </style>
      </head>
      <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
@@ -600,6 +663,11 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
        <script>
          window.playWord = function(w) {
            if (w) window.parent.postMessage({ type: 'LECTURE_PLAY_WORD', word: w }, '*');
+         };
+         window.playSentence = function(sentence, audioKey) {
+           if (sentence || audioKey) {
+             window.parent.postMessage({ type: 'LECTURE_PLAY_SENTENCE', sentence: sentence, audioKey: audioKey }, '*');
+           }
          };
          window.playaudio = function(w) {
            if (w) {
@@ -611,7 +679,22 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          document.addEventListener('click', function(e) {
            var target = e.target;
            
-           // 1. Intercept pronunciation links
+           // 1. Intercept sentence audio cards
+           var cardTarget = target.closest('.sentence-audio-card, [data-audio-key]');
+           if (cardTarget) {
+               e.preventDefault();
+               e.stopPropagation();
+               var sentence = cardTarget.getAttribute('data-sentence') || '';
+               var audioKey = cardTarget.getAttribute('data-audio-key') || '';
+               cardTarget.classList.add('is-playing');
+               setTimeout(function() {
+                   cardTarget.classList.remove('is-playing');
+               }, 1000);
+               window.playSentence(sentence, audioKey);
+               return false;
+           }
+
+           // 2. Intercept pronunciation links
            var audioTarget = target.closest('.audiolink a, [data-word], a[onclick*="playaudio"], a[onclick*="playWord"]');
            if (audioTarget) {
                e.preventDefault();
