@@ -284,7 +284,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
 };
 const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
-   const [iframeHeight, setIframeHeight] = useState(100);
+   const [iframeHeight, setIframeHeight] = useState(600);
 
     // Bỏ các style padding inline cứng có chứa !important do Jodit sinh ra, 
     // và các height/width gán cứng vào table/td/th để tránh bị lỗi hiển thị
@@ -581,7 +581,8 @@ Respond ONLY with valid JSON in this exact schema:
     }, [stopRecordingAndEvaluate]);
 
     useEffect(() => { 
-        setIframeHeight(10); 
+        // Giữ chiều cao an toàn tối thiểu thay vì 10px để màn hình không bị giật hoặc trắng khi đổi bài
+        setIframeHeight(prev => (prev > 500 ? prev : 600)); 
     }, [html]);
 
     useEffect(() => {
@@ -623,8 +624,8 @@ Respond ONLY with valid JSON in this exact schema:
           stopRecordingAndEvaluate();
         } else if (e.data?.type === 'LECTURE_RESIZE') {
           const h = e.data.height;
-          if (h) {
-              setIframeHeight(Math.max(100, h + 40));
+          if (h && h > 0) {
+              setIframeHeight(Math.max(400, Math.ceil(h) + 40));
           }
         } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
           if (iframeRef.current) {
@@ -935,6 +936,30 @@ Respond ONLY with valid JSON in this exact schema:
               box-sizing: border-box !important;
               animation: feedback-slide-down 0.25s ease-out !important;
           }
+          .retry-pronunciation-btn {
+              font-size: 12px !important;
+              font-weight: bold !important;
+              color: #b91c1c !important;
+              background: #ffffff !important;
+              border: 1px solid #f87171 !important;
+              padding: 4px 10px !important;
+              border-radius: 6px !important;
+              cursor: pointer !important;
+              transition: all 0.15s ease !important;
+              box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+          }
+          .retry-pronunciation-btn:hover {
+              background-color: #fee2e2 !important;
+          }
+          .retry-pronunciation-btn.is-warning {
+              color: #92400e !important;
+              border-color: #fbbf24 !important;
+              padding: 3px 8px !important;
+              border-radius: 4px !important;
+          }
+          .retry-pronunciation-btn.is-warning:hover {
+              background-color: #fef3c7 !important;
+          }
           @keyframes feedback-slide-down {
               from { opacity: 0; transform: translateY(-4px); }
               to { opacity: 1; transform: translateY(0); }
@@ -1062,114 +1087,115 @@ Respond ONLY with valid JSON in this exact schema:
            }
          };
 
-         window.addEventListener('message', function(e) {
-           if (e.data?.type === 'PRONUNCIATION_STATUS') {
-               var cardId = e.data.cardId;
-               var status = e.data.status;
-               var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
-               var card = mic ? mic.closest('.sentence-audio-card') : null;
-               var fb = card ? card.querySelector('.pronunciation-feedback') : null;
+          window.addEventListener('message', function(e) {
+            if (!e || !e.data) return;
+            if (e.data.type === 'PRONUNCIATION_STATUS') {
+                var cardId = e.data.cardId;
+                var status = e.data.status;
+                var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
+                var card = mic ? mic.closest('.sentence-audio-card') : null;
+                var fb = card ? card.querySelector('.pronunciation-feedback') : null;
 
-               if (status === 'EVALUATING') {
-                   if (mic) {
-                       mic.classList.remove('is-recording');
-                       mic.classList.add('is-evaluating');
-                       mic.innerHTML = '⏳';
-                       mic.title = 'AI đang chấm...';
-                   }
-                   if (fb) {
-                       fb.style.display = 'block';
-                       fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>Gemini AI đang lắng nghe và chấm phát âm...</strong></span></div>';
-                   }
-               }
-           } else if (e.data?.type === 'PRONUNCIATION_RESULT') {
-               var cardId = e.data.cardId;
-               var res = e.data.result || {};
-               var isCorrect = !!res.is_correct;
-               var score = res.accuracy_score !== undefined ? res.accuracy_score : (isCorrect ? 100 : 50);
-               var recognized = res.recognized_text || '';
-               var feedback = res.feedback || (isCorrect ? 'Phát âm rất chuẩn xác!' : 'Hãy cố gắng luyện tập lại nhé!');
-               var mispronounced = res.mispronounced_words || [];
+                if (status === 'EVALUATING') {
+                    if (mic) {
+                        mic.classList.remove('is-recording');
+                        mic.classList.add('is-evaluating');
+                        mic.innerHTML = '⏳';
+                        mic.title = 'AI đang chấm...';
+                    }
+                    if (fb) {
+                        fb.style.display = 'block';
+                        fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>Gemini AI đang lắng nghe và chấm phát âm...</strong></span></div>';
+                    }
+                }
+            } else if (e.data.type === 'PRONUNCIATION_RESULT') {
+                var cardId = e.data.cardId;
+                var res = e.data.result || {};
+                var isCorrect = !!res.is_correct;
+                var score = res.accuracy_score !== undefined ? res.accuracy_score : (isCorrect ? 100 : 50);
+                var recognized = res.recognized_text || '';
+                var feedback = res.feedback || (isCorrect ? 'Phát âm rất chuẩn xác!' : 'Hãy cố gắng luyện tập lại nhé!');
+                var mispronounced = res.mispronounced_words || [];
 
-               var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
-               var card = mic ? mic.closest('.sentence-audio-card') : null;
-               var fb = card ? card.querySelector('.pronunciation-feedback') : null;
+                var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
+                var card = mic ? mic.closest('.sentence-audio-card') : null;
+                var fb = card ? card.querySelector('.pronunciation-feedback') : null;
 
-               if (mic) {
-                   mic.classList.remove('is-recording');
-                   mic.classList.remove('is-evaluating');
-                   mic.innerHTML = isCorrect ? '✅' : '🎙️';
-                   mic.title = isCorrect ? 'Đã phát âm đúng!' : 'Kiểm tra lại phát âm';
-                   setTimeout(function() {
-                       if (mic && !mic.classList.contains('is-recording')) {
-                           mic.innerHTML = '🎙️';
-                       }
-                   }, 3500);
-               }
+                if (mic) {
+                    mic.classList.remove('is-recording');
+                    mic.classList.remove('is-evaluating');
+                    mic.innerHTML = isCorrect ? '✅' : '🎙️';
+                    mic.title = isCorrect ? 'Đã phát âm đúng!' : 'Kiểm tra lại phát âm';
+                    setTimeout(function() {
+                        if (mic && !mic.classList.contains('is-recording')) {
+                            mic.innerHTML = '🎙️';
+                        }
+                    }, 3500);
+                }
 
-               if (card) {
-                   if (isCorrect) {
-                       card.style.borderLeftColor = '#22c55e';
-                       card.style.backgroundColor = '#f0fdf4';
-                   } else {
-                       card.style.borderLeftColor = '#ef4444';
-                       card.style.backgroundColor = '#fef2f2';
-                   }
-               }
+                if (card) {
+                    if (isCorrect) {
+                        card.style.borderLeftColor = '#22c55e';
+                        card.style.backgroundColor = '#f0fdf4';
+                    } else {
+                        card.style.borderLeftColor = '#ef4444';
+                        card.style.backgroundColor = '#fef2f2';
+                    }
+                }
 
-               if (fb) {
-                   fb.style.display = 'block';
-                   var bg = isCorrect ? '#f0fdf4' : '#fef2f2';
-                   var border = isCorrect ? '#86efac' : '#fca5a5';
-                   var textColor = isCorrect ? '#15803d' : '#991b1b';
-                   var badgeBg = isCorrect ? '#dcfce7' : '#fee2e2';
-                   var badgeText = isCorrect ? '#166534' : '#b91c1c';
-                   var statusTitle = isCorrect ? '✅ Phát âm rất chuẩn!' : '❌ Chưa chuẩn lắm';
+                if (fb) {
+                    fb.style.display = 'block';
+                    var bg = isCorrect ? '#f0fdf4' : '#fef2f2';
+                    var border = isCorrect ? '#86efac' : '#fca5a5';
+                    var textColor = isCorrect ? '#15803d' : '#991b1b';
+                    var badgeBg = isCorrect ? '#dcfce7' : '#fee2e2';
+                    var badgeText = isCorrect ? '#166534' : '#b91c1c';
+                    var statusTitle = isCorrect ? '✅ Phát âm rất chuẩn!' : '❌ Chưa chuẩn lắm';
 
-                   var misHtml = '';
-                   if (!isCorrect && mispronounced.length > 0) {
-                       misHtml = '<div style="margin-top: 4px; font-size: 12px; color: #b91c1c;"><span>Từ cần chú ý: </span>' +
-                           mispronounced.map(function(w) {
-                               return '<span style="background: #fecaca; color: #991b1b; padding: 1px 6px; border-radius: 4px; font-weight: bold; margin-right: 4px;">' + w + '</span>';
-                           }).join('') + '</div>';
-                   }
+                    var misHtml = '';
+                    if (!isCorrect && mispronounced.length > 0) {
+                        misHtml = '<div style="margin-top: 4px; font-size: 12px; color: #b91c1c;"><span>Từ cần chú ý: </span>' +
+                            mispronounced.map(function(w) {
+                                return '<span style="background: #fecaca; color: #991b1b; padding: 1px 6px; border-radius: 4px; font-weight: bold; margin-right: 4px;">' + w + '</span>';
+                            }).join('') + '</div>';
+                    }
 
-                   var retryHtml = !isCorrect ? '<button type="button" class="retry-pronunciation-btn" style="font-size: 12px; font-weight: bold; color: #b91c1c; background: #ffffff; border: 1px solid #f87171; padding: 4px 10px; border-radius: 6px; cursor: pointer; transition: all 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.05);" onmouseover="this.style.backgroundColor=\'#fee2e2\'" onmouseout="this.style.backgroundColor=\'#ffffff\'">🔄 Thử lại</button>' : '';
+                    var retryHtml = !isCorrect ? '<button type="button" class="retry-pronunciation-btn">🔄 Thử lại</button>' : '';
 
-                   fb.innerHTML = '<div style="background: ' + bg + '; border: 1px solid ' + border + '; padding: 12px 14px; border-radius: 8px; margin-top: 10px;">' +
-                       '<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">' +
-                           '<div style="display: flex; align-items: center; gap: 6px;">' +
-                               '<span style="font-weight: bold; font-size: 14px; color: ' + textColor + ';">' + statusTitle + '</span>' +
-                               '<span style="background: ' + badgeBg + '; color: ' + badgeText + '; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">' + score + '%</span>' +
-                           '</div>' +
-                           retryHtml +
-                       '</div>' +
-                       (recognized ? '<div style="font-size: 13px; color: #334155; margin-bottom: 4px;"><span style="color: #64748b;">AI nghe được: </span><strong style="color: ' + textColor + ';">"' + recognized + '"</strong></div>' : '') +
-                       misHtml +
-                       (feedback ? '<div style="font-size: 13px; color: #475569; margin-top: 4px;">💡 ' + feedback + '</div>' : '') +
-                   '</div>';
-               }
-           } else if (e.data?.type === 'PRONUNCIATION_ERROR') {
-               var cardId = e.data.cardId;
-               var errMsg = e.data.error || 'Có lỗi xảy ra.';
-               var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
-               var card = mic ? mic.closest('.sentence-audio-card') : null;
-               var fb = card ? card.querySelector('.pronunciation-feedback') : null;
+                    fb.innerHTML = '<div style="background: ' + bg + '; border: 1px solid ' + border + '; padding: 12px 14px; border-radius: 8px; margin-top: 10px;">' +
+                        '<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">' +
+                            '<div style="display: flex; align-items: center; gap: 6px;">' +
+                                '<span style="font-weight: bold; font-size: 14px; color: ' + textColor + ';">' + statusTitle + '</span>' +
+                                '<span style="background: ' + badgeBg + '; color: ' + badgeText + '; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">' + score + '%</span>' +
+                            '</div>' +
+                            retryHtml +
+                        '</div>' +
+                        (recognized ? '<div style="font-size: 13px; color: #334155; margin-bottom: 4px;"><span style="color: #64748b;">AI nghe được: </span><strong style="color: ' + textColor + ';">"' + recognized + '"</strong></div>' : '') +
+                        misHtml +
+                        (feedback ? '<div style="font-size: 13px; color: #475569; margin-top: 4px;">💡 ' + feedback + '</div>' : '') +
+                    '</div>';
+                }
+            } else if (e.data.type === 'PRONUNCIATION_ERROR') {
+                var cardId = e.data.cardId;
+                var errMsg = e.data.error || 'Có lỗi xảy ra.';
+                var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
+                var card = mic ? mic.closest('.sentence-audio-card') : null;
+                var fb = card ? card.querySelector('.pronunciation-feedback') : null;
 
-               if (mic) {
-                   mic.classList.remove('is-recording');
-                   mic.classList.remove('is-evaluating');
-                   mic.innerHTML = '🎙️';
-               }
-               if (fb) {
-                   fb.style.display = 'block';
-                   fb.innerHTML = '<div style="background: #fffbeb; border: 1px solid #fcd34d; padding: 10px 14px; border-radius: 8px; margin-top: 10px; font-size: 13px; color: #92400e; display: flex; justify-content: space-between; align-items: center;">' +
-                       '<span>⚠️ ' + errMsg + '</span>' +
-                       '<button type="button" class="retry-pronunciation-btn" style="font-size: 12px; font-weight: bold; color: #92400e; background: #ffffff; border: 1px solid #fbbf24; padding: 3px 8px; border-radius: 4px; cursor: pointer;">Thử lại</button>' +
-                   '</div>';
-               }
-           }
-         });
+                if (mic) {
+                    mic.classList.remove('is-recording');
+                    mic.classList.remove('is-evaluating');
+                    mic.innerHTML = '🎙️';
+                }
+                if (fb) {
+                    fb.style.display = 'block';
+                    fb.innerHTML = '<div style="background: #fffbeb; border: 1px solid #fcd34d; padding: 10px 14px; border-radius: 8px; margin-top: 10px; font-size: 13px; color: #92400e; display: flex; justify-content: space-between; align-items: center;">' +
+                        '<span>⚠️ ' + errMsg + '</span>' +
+                        '<button type="button" class="retry-pronunciation-btn is-warning">Thử lại</button>' +
+                    '</div>';
+                }
+            }
+          });
 
          document.addEventListener('click', function(e) {
            var target = e.target;
@@ -1314,23 +1340,33 @@ Respond ONLY with valid JSON in this exact schema:
                window.parent.postMessage({ type: 'LECTURE_CLOSE_DICT' }, '*'); 
            }
          });
-         function reportHeight() {
-            var wrapper = document.getElementById('content-wrapper');
-            if (wrapper) {
-                var h = wrapper.getBoundingClientRect().height;
-                if (h > 0) {
-                    window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
-                }
-            }
-         }
-         
-         window.addEventListener('load', reportHeight);
-         if (window.ResizeObserver) {
-            var ro = new ResizeObserver(reportHeight);
-            ro.observe(document.body);
-            ro.observe(document.getElementById('content-wrapper'));
-         } else { 
-            setInterval(reportHeight, 500);
+          function reportHeight() {
+             var wrapper = document.getElementById('content-wrapper');
+             if (wrapper) {
+                 var h = Math.max(wrapper.scrollHeight || 0, wrapper.offsetHeight || 0, Math.ceil(wrapper.getBoundingClientRect().height || 0));
+                 if (h > 0) {
+                     window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
+                 }
+             }
+          }
+          
+          if (document.readyState === 'loading') {
+             document.addEventListener('DOMContentLoaded', reportHeight);
+          } else {
+             reportHeight();
+          }
+          window.addEventListener('load', reportHeight);
+          setTimeout(reportHeight, 50);
+          setTimeout(reportHeight, 200);
+          setTimeout(reportHeight, 600);
+          setTimeout(reportHeight, 1500);
+          if (window.ResizeObserver) {
+             var ro = new ResizeObserver(reportHeight);
+             ro.observe(document.body);
+             var wrapEl = document.getElementById('content-wrapper');
+             if (wrapEl) ro.observe(wrapEl);
+          } else { 
+             setInterval(reportHeight, 500);
           }
         </script>
      </body>
