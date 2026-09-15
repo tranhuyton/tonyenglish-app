@@ -3580,14 +3580,14 @@ export default function LectureViewer({
                               <button 
                                 onClick={() => handleStartTaskExercise(task)} 
                                 className={`text-[12px] font-semibold px-4 py-1.5 rounded-lg transition-all cursor-pointer ${
-                                  isCompleted 
+                                  isTaskChecked 
                                     ? 'bg-slate-100 text-slate-600 hover:bg-slate-200' 
                                     : scoreInfo && !scoreInfo.isPassed 
                                       ? 'bg-amber-500 hover:bg-amber-600 text-white shadow-sm shadow-amber-500/30' 
                                       : 'bg-[#0ea5e9] text-white shadow-sm shadow-blue-500/30 hover:bg-[#0284c7] active:scale-95'
                                 }`}
                               >
-                                {isCompleted ? 'Làm lại bài' : scoreInfo && !scoreInfo.isPassed ? 'Làm lại để đạt điểm ➜' : 'Bắt đầu làm bài ➜'}
+                                {isTaskChecked ? 'Làm lại bài' : scoreInfo && !scoreInfo.isPassed ? 'Làm lại để đạt điểm ➜' : 'Bắt đầu làm bài ➜'}
                               </button>
                            )}
                         </div>
