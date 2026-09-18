@@ -1351,202 +1351,213 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
          setTimeout(enhanceSentenceCards, 200);
          setTimeout(enhanceSentenceCards, 1000);
 
-           var activeDialoguePlayer = null;
+            var activeDialoguePlayer = null;
 
-           function stopActiveDialoguePlayer() {
-             if (activeDialoguePlayer) {
-               if (activeDialoguePlayer.audio) {
-                 try {
-                   activeDialoguePlayer.audio.pause();
-                   activeDialoguePlayer.audio.currentTime = 0;
-                 } catch(e) {}
-                 activeDialoguePlayer.audio = null;
-               }
-               if (activeDialoguePlayer.timer) {
-                 clearTimeout(activeDialoguePlayer.timer);
-                 activeDialoguePlayer.timer = null;
-               }
-               var box = document.querySelector('[data-dialogue-id="' + activeDialoguePlayer.dialogueId + '"]');
-               if (box) {
-                 box.querySelectorAll('.btn-dialogue-play').forEach(function(b) {
-                   b.classList.remove('is-active-btn');
-                   var origText = b.getAttribute('data-orig-text');
-                   if (origText) b.innerHTML = origText;
-                 });
-                 box.querySelectorAll('.dialogue-turn-row').forEach(function(r) {
-                   r.classList.remove('is-active-turn', 'is-muted-turn');
-                   var prompt = r.querySelector('.user-prompt-tag');
-                   if (prompt) prompt.remove();
-                 });
-               }
-               activeDialoguePlayer = null;
-             }
-           }
+            function stopActiveDialoguePlayer() {
+              if (activeDialoguePlayer) {
+                if (activeDialoguePlayer.audio) {
+                  try {
+                    activeDialoguePlayer.audio.pause();
+                    activeDialoguePlayer.audio.currentTime = 0;
+                  } catch(e) {}
+                  activeDialoguePlayer.audio = null;
+                }
+                if (activeDialoguePlayer.timer) {
+                  clearTimeout(activeDialoguePlayer.timer);
+                  activeDialoguePlayer.timer = null;
+                }
+                if (activeDialoguePlayer.safetyTimer) {
+                  clearTimeout(activeDialoguePlayer.safetyTimer);
+                  activeDialoguePlayer.safetyTimer = null;
+                }
+                var box = document.querySelector('[data-dialogue-id="' + activeDialoguePlayer.dialogueId + '"]');
+                if (box) {
+                  box.querySelectorAll('.btn-dialogue-play').forEach(function(b) {
+                    b.classList.remove('is-active-btn');
+                    var origText = b.getAttribute('data-orig-text');
+                    if (origText) b.innerHTML = origText;
+                  });
+                  box.querySelectorAll('.dialogue-turn-row').forEach(function(r) {
+                    r.classList.remove('is-active-turn', 'is-muted-turn');
+                    var prompt = r.querySelector('.user-prompt-tag');
+                    if (prompt) prompt.remove();
+                  });
+                }
+                activeDialoguePlayer = null;
+              }
+            }
 
-           function playDialogueTurn() {
-             if (!activeDialoguePlayer) return;
-             var p = activeDialoguePlayer;
-             var box = document.querySelector('[data-dialogue-id="' + p.dialogueId + '"]');
-             if (!box) { stopActiveDialoguePlayer(); return; }
+            function playDialogueTurn() {
+              if (!activeDialoguePlayer) return;
+              var p = activeDialoguePlayer;
+              var box = document.querySelector('[data-dialogue-id="' + p.dialogueId + '"]');
+              if (!box) { stopActiveDialoguePlayer(); return; }
 
-             box.querySelectorAll('.dialogue-turn-row').forEach(function(r) {
-               r.classList.remove('is-active-turn', 'is-muted-turn');
-               var prompt = r.querySelector('.user-prompt-tag');
-               if (prompt) prompt.remove();
-             });
+              box.querySelectorAll('.dialogue-turn-row').forEach(function(r) {
+                r.classList.remove('is-active-turn', 'is-muted-turn');
+                var prompt = r.querySelector('.user-prompt-tag');
+                if (prompt) prompt.remove();
+              });
 
-             if (p.currentIndex >= p.turns.length) {
-               stopActiveDialoguePlayer();
-               return;
-             }
+              if (p.currentIndex >= p.turns.length) {
+                stopActiveDialoguePlayer();
+                return;
+              }
 
-             var turnEl = p.turns[p.currentIndex];
-             var role = (turnEl.getAttribute('data-role') || 'A').toUpperCase();
-             var audioKey = turnEl.getAttribute('data-audio-key') || '';
-             var sentence = turnEl.getAttribute('data-sentence') || '';
-             var spkLabel = turnEl.querySelector('.speaker-label') ? turnEl.querySelector('.speaker-label').textContent.replace(':', '').trim() : role;
+              var turnEl = p.turns[p.currentIndex];
+              var role = (turnEl.getAttribute('data-role') || 'A').toUpperCase();
+              var audioKey = turnEl.getAttribute('data-audio-key') || '';
+              var sentence = turnEl.getAttribute('data-sentence') || '';
+              var spkLabel = turnEl.querySelector('.speaker-label') ? turnEl.querySelector('.speaker-label').textContent.replace(':', '').trim() : role;
 
-             // QUAN TRỌNG: Muting logic
-             // - mode === 'all': KHÔNG mute bất kỳ ai (nghe cả 2 người đối thoại)
-             // - mode === 'as_1' (Play as Người 1 / A): MUTE vai A, PHÁT vai B để người học tự nói vai A
-             // - mode === 'as_2' (Play as Người 2 / B): MUTE vai B, PHÁT vai A để người học tự nói vai B
-             var isMuted = false;
-             if (p.targetMutedRole && role === p.targetMutedRole) {
-               isMuted = true;
-             } else if (p.mode === 'as_1' && role === 'A') {
-               isMuted = true;
-             } else if (p.mode === 'as_2' && role === 'B') {
-               isMuted = true;
-             }
+              // QUAN TRỌNG: Muting logic
+              // - mode === 'all': KHÔNG mute bất kỳ ai (nghe cả 2 người đối thoại)
+              // - mode === 'as_1' (Play as Người 1 / A): MUTE vai A, PHÁT vai B để người học tự nói vai A
+              // - mode === 'as_2' (Play as Người 2 / B): MUTE vai B, PHÁT vai A để người học tự nói vai B
+              var isMuted = false;
+              if (p.targetMutedRole && role === p.targetMutedRole) {
+                isMuted = true;
+              } else if (p.mode === 'as_1' && role === 'A') {
+                isMuted = true;
+              } else if (p.mode === 'as_2' && role === 'B') {
+                isMuted = true;
+              }
 
-             if (isMuted) {
-               turnEl.classList.add('is-muted-turn');
-               var contentEl = turnEl.querySelector('.dialogue-turn-content');
-               if (contentEl && !contentEl.querySelector('.user-prompt-tag')) {
-                 var tag = document.createElement('span');
-                 tag.className = 'user-prompt-tag';
-                 tag.innerHTML = '🗣️ Đến lượt bạn nói (' + spkLabel + ')...';
-                 contentEl.appendChild(tag);
-               }
-             } else {
-               turnEl.classList.add('is-active-turn');
-             }
+              if (isMuted) {
+                turnEl.classList.add('is-muted-turn');
+                var contentEl = turnEl.querySelector('.dialogue-turn-content');
+                if (contentEl && !contentEl.querySelector('.user-prompt-tag')) {
+                  var tag = document.createElement('span');
+                  tag.className = 'user-prompt-tag';
+                  tag.innerHTML = '🗣️ Đến lượt bạn nói (' + spkLabel + ')...';
+                  contentEl.appendChild(tag);
+                }
+              } else {
+                turnEl.classList.add('is-active-turn');
+              }
 
-             try {
-               turnEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-             } catch(e) {}
+              try {
+                turnEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              } catch(e) {}
 
-             var localUrl = '/audio/communication/sentences/' + audioKey + '.mp3';
-             var cloudUrl = 'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/' + audioKey + '.mp3';
+              var localUrl = '/audio/communication/sentences/' + audioKey + '.mp3';
+              var cloudUrl = 'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/' + audioKey + '.mp3';
 
-             var words = sentence.split(/\\s+/).filter(Boolean).length;
-             var naturalSpeakingMs = Math.max(2500, words * 450);
+              var words = (sentence || '').trim().split(/\s+/).filter(Boolean).length;
+              var naturalSpeakingMs = Math.max(2800, words * 450 + 600);
 
-             var turnEnded = false;
-             var onTurnEnd = function() {
-               if (turnEnded) return;
-               turnEnded = true;
-               if (!activeDialoguePlayer || activeDialoguePlayer !== p) return;
-               if (p.audio) {
-                 try { p.audio.pause(); } catch(e) {}
-                 p.audio = null;
-               }
-               p.timer = setTimeout(function() {
-                 p.currentIndex++;
-                 playDialogueTurn();
-               }, 450);
-             };
+              var turnEnded = false;
+              var onTurnEnd = function() {
+                if (turnEnded) return;
+                turnEnded = true;
+                if (!activeDialoguePlayer || activeDialoguePlayer !== p) return;
+                if (p.safetyTimer) {
+                  clearTimeout(p.safetyTimer);
+                  p.safetyTimer = null;
+                }
+                if (p.timer) {
+                  clearTimeout(p.timer);
+                  p.timer = null;
+                }
+                if (p.audio) {
+                  try { p.audio.pause(); } catch(e) {}
+                  p.audio = null;
+                }
+                p.timer = setTimeout(function() {
+                  p.currentIndex++;
+                  playDialogueTurn();
+                }, 500);
+              };
 
-             if (isMuted) {
-               // Bị mute để học sinh tự nói: đợi chuẩn xác thời lượng tự nhiên của câu
-               var audio = new Audio(localUrl);
-               p.audio = audio;
-               audio.muted = true;
-               audio.volume = 0;
-               audio.onloadedmetadata = function() {
-                 if (audio.duration && !isNaN(audio.duration) && audio.duration > 0) {
-                   naturalSpeakingMs = Math.round(audio.duration * 1000);
-                 }
-               };
-               audio.onended = onTurnEnd;
-               // Timer bảo đảm chuyển câu đúng thời lượng nói tự nhiên
-               p.timer = setTimeout(onTurnEnd, naturalSpeakingMs + 200);
-               audio.play().catch(function() {});
-             } else {
-               // Phát tiếng rõ ràng (cho Listen all hoặc khi nghe đối phương)
-               var audio = new Audio(localUrl);
-               p.audio = audio;
-               audio.muted = false;
-               audio.volume = 1;
-               audio.onended = onTurnEnd;
-               audio.onerror = function() {
-                 var fallbackAudio = new Audio(cloudUrl);
-                 p.audio = fallbackAudio;
-                 fallbackAudio.muted = false;
-                 fallbackAudio.volume = 1;
-                 fallbackAudio.onended = onTurnEnd;
-                 fallbackAudio.onerror = function() {
-                   p.timer = setTimeout(onTurnEnd, naturalSpeakingMs);
-                 };
-                 fallbackAudio.play().catch(function() {
-                   fallbackAudio.onerror();
-                 });
-               };
-               audio.play().catch(function() {
-                 audio.onerror();
-               });
-             }
-           }
+              if (isMuted) {
+                // Vai này do học sinh nói: dành đủ thời lượng tự nhiên để học sinh nói trám vào
+                p.timer = setTimeout(onTurnEnd, naturalSpeakingMs);
+              } else {
+                // Vai này máy đọc: phát audio rõ ràng (nghe cả 2 hoặc nghe đối phương)
+                var audio = new Audio(localUrl);
+                p.audio = audio;
+                audio.muted = false;
+                audio.volume = 1;
+                audio.onended = onTurnEnd;
 
-           function startDialoguePlay(dialogueId, mode, clickedBtn, targetMutedRole) {
-             if (activeDialoguePlayer && activeDialoguePlayer.dialogueId === dialogueId && activeDialoguePlayer.mode === mode) {
-               stopActiveDialoguePlayer();
-               return;
-             }
+                var fallbackStarted = false;
+                var startFallback = function() {
+                  if (fallbackStarted) return;
+                  fallbackStarted = true;
+                  var fallbackAudio = new Audio(cloudUrl);
+                  p.audio = fallbackAudio;
+                  fallbackAudio.muted = false;
+                  fallbackAudio.volume = 1;
+                  fallbackAudio.onended = onTurnEnd;
+                  fallbackAudio.onerror = function() {
+                    p.timer = setTimeout(onTurnEnd, naturalSpeakingMs);
+                  };
+                  fallbackAudio.play().catch(function() {
+                    p.timer = setTimeout(onTurnEnd, naturalSpeakingMs);
+                  });
+                };
 
-             stopActiveDialoguePlayer();
-             clearAllPlayingCards();
-             window.parent.postMessage({ type: 'LECTURE_STOP_AUDIO' }, '*');
+                audio.onerror = startFallback;
+                audio.play().catch(function() {
+                  startFallback();
+                });
 
-             var box = document.querySelector('[data-dialogue-id="' + dialogueId + '"]');
-             if (!box) return;
+                // Safety timeout nếu mạng lag hoặc audio bị đơ
+                p.safetyTimer = setTimeout(function() {
+                  onTurnEnd();
+                }, Math.max(12000, naturalSpeakingMs * 2));
+              }
+            }
 
-             box.querySelectorAll('.btn-dialogue-play').forEach(function(b) {
-               b.classList.remove('is-active-btn');
-               var origText = b.getAttribute('data-orig-text');
-               if (origText) b.innerHTML = origText;
-             });
+            function startDialoguePlay(dialogueId, mode, clickedBtn, targetMutedRole) {
+              if (activeDialoguePlayer && activeDialoguePlayer.dialogueId === dialogueId && activeDialoguePlayer.mode === mode) {
+                stopActiveDialoguePlayer();
+                return;
+              }
 
-             if (!clickedBtn.hasAttribute('data-orig-text')) {
-               clickedBtn.setAttribute('data-orig-text', clickedBtn.innerHTML);
-             }
-             clickedBtn.classList.add('is-active-btn');
-             clickedBtn.innerHTML = '⏹️ Dừng';
+              stopActiveDialoguePlayer();
+              clearAllPlayingCards();
+              window.parent.postMessage({ type: 'LECTURE_STOP_AUDIO' }, '*');
 
-             var turns = Array.from(box.querySelectorAll('.dialogue-turn-row'));
-             if (turns.length === 0) return;
+              var box = document.querySelector('[data-dialogue-id="' + dialogueId + '"]');
+              if (!box) return;
 
-             var resolvedMutedRole = targetMutedRole;
-             if (!resolvedMutedRole) {
-               if (mode === 'as_1' || mode === 'as_a') resolvedMutedRole = 'A';
-               else if (mode === 'as_2' || mode === 'as_b') resolvedMutedRole = 'B';
-             }
+              box.querySelectorAll('.btn-dialogue-play').forEach(function(b) {
+                b.classList.remove('is-active-btn');
+                var origText = b.getAttribute('data-orig-text');
+                if (origText) b.innerHTML = origText;
+              });
 
-             activeDialoguePlayer = {
-               dialogueId: dialogueId,
-               mode: mode,
-               targetMutedRole: resolvedMutedRole,
-               turns: turns,
-               currentIndex: 0,
-               audio: null,
-               timer: null
-             };
+              if (!clickedBtn.hasAttribute('data-orig-text')) {
+                clickedBtn.setAttribute('data-orig-text', clickedBtn.innerHTML);
+              }
+              clickedBtn.classList.add('is-active-btn');
+              clickedBtn.innerHTML = '⏹️ Dừng';
 
-             playDialogueTurn();
-           }
+              var turns = Array.from(box.querySelectorAll('.dialogue-turn-row'));
+              if (turns.length === 0) return;
+
+              var resolvedMutedRole = targetMutedRole;
+              if (!resolvedMutedRole) {
+                if (mode === 'as_1' || mode === 'as_a') resolvedMutedRole = 'A';
+                else if (mode === 'as_2' || mode === 'as_b') resolvedMutedRole = 'B';
+              }
+
+              activeDialoguePlayer = {
+                dialogueId: dialogueId,
+                mode: mode,
+                targetMutedRole: resolvedMutedRole,
+                turns: turns,
+                currentIndex: 0,
+                audio: null,
+                timer: null,
+                safetyTimer: null
+              };
+
+              playDialogueTurn();
+            }
 
           function clearAllPlayingCards() {
-            stopActiveDialoguePlayer();
             var playingCards = document.querySelectorAll('.sentence-audio-card.is-playing');
             for (var i = 0; i < playingCards.length; i++) {
                 var c = playingCards[i];
@@ -1566,6 +1577,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
             var fb = card ? card.querySelector('.pronunciation-feedback') : null;
 
             // Dừng ngay lập tức bất kỳ âm thanh nào đang phát
+            stopActiveDialoguePlayer();
             window.parent.postMessage({ type: 'LECTURE_STOP_AUDIO' }, '*');
             clearAllPlayingCards();
 
@@ -1803,6 +1815,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                });
 
                clearAllPlayingCards();
+               stopActiveDialoguePlayer();
                cardTarget.classList.add('is-playing');
                var tid = setTimeout(function() {
                    cardTarget.classList.remove('is-playing');
@@ -1821,6 +1834,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                e.preventDefault();
                e.stopPropagation();
                clearAllPlayingCards();
+               stopActiveDialoguePlayer();
                var word = audioTarget.getAttribute('data-word') || audioTarget.textContent.trim();
                word = word.replace(/[^a-zA-Z]/g, '');
                if (word) {
