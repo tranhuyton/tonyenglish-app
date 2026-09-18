@@ -1102,6 +1102,175 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               from { opacity: 0; transform: translateY(-4px); }
               to { opacity: 1; transform: translateY(0); }
           }
+
+           /* INTERACTIVE DIALOGUE PRACTICE */
+           .dialogue-practice-box {
+               background: #ffffff !important;
+               border: 1.5px solid #cbd5e1 !important;
+               border-radius: 14px !important;
+               padding: 16px 18px !important;
+               margin-bottom: 24px !important;
+               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+               transition: all 0.2s ease !important;
+           }
+           .practice-toolbar {
+               display: flex !important;
+               align-items: center !important;
+               flex-wrap: wrap !important;
+               gap: 10px !important;
+               padding-bottom: 12px !important;
+               margin-bottom: 12px !important;
+               border-bottom: 1px solid #e2e8f0 !important;
+           }
+           .practice-toolbar .toolbar-label {
+               font-size: 13px !important;
+               font-weight: 800 !important;
+               color: #475569 !important;
+               margin-right: 4px !important;
+               text-transform: uppercase !important;
+               letter-spacing: 0.5px !important;
+           }
+           .btn-dialogue-play {
+               display: inline-flex !important;
+               align-items: center !important;
+               gap: 6px !important;
+               padding: 7px 14px !important;
+               font-size: 13px !important;
+               font-weight: 700 !important;
+               border-radius: 8px !important;
+               border: 1px solid transparent !important;
+               cursor: pointer !important;
+               transition: all 0.15s ease !important;
+               user-select: none !important;
+           }
+           .btn-dialogue-play.btn-mode-all {
+               background: #eff6ff !important;
+               color: #1d4ed8 !important;
+               border-color: #bfdbfe !important;
+           }
+           .btn-dialogue-play.btn-mode-all:hover {
+               background: #dbeafe !important;
+           }
+           .btn-dialogue-play.btn-mode-a {
+               background: #f0fdf4 !important;
+               color: #15803d !important;
+               border-color: #bbf7d0 !important;
+           }
+           .btn-dialogue-play.btn-mode-a:hover {
+               background: #dcfce7 !important;
+           }
+           .btn-dialogue-play.btn-mode-b {
+               background: #fdf4ff !important;
+               color: #a21caf !important;
+               border-color: #f5d0fe !important;
+           }
+           .btn-dialogue-play.btn-mode-b:hover {
+               background: #fae8ff !important;
+           }
+           .btn-dialogue-play.is-active-btn {
+               background: #fee2e2 !important;
+               color: #b91c1c !important;
+               border-color: #fca5a5 !important;
+               box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25) !important;
+               animation: pulse-active-btn 1.2s infinite alternate !important;
+           }
+           @keyframes pulse-active-btn {
+               from { transform: scale(1); }
+               to { transform: scale(1.03); }
+           }
+           .dialogue-turn-row {
+               display: flex !important;
+               align-items: flex-start !important;
+               justify-content: space-between !important;
+               gap: 12px !important;
+               padding: 10px 14px !important;
+               margin-bottom: 8px !important;
+               border-radius: 10px !important;
+               border-left: 4px solid transparent !important;
+               background: #f8fafc !important;
+               transition: all 0.2s ease !important;
+           }
+           .dialogue-turn-row:last-child {
+               margin-bottom: 0 !important;
+           }
+           .dialogue-turn-row.speaker-role-a {
+               border-left-color: #3b82f6 !important;
+           }
+           .dialogue-turn-row.speaker-role-b {
+               border-left-color: #10b981 !important;
+           }
+           .dialogue-turn-row.is-active-turn {
+               background: #eff6ff !important;
+               border-left-color: #2563eb !important;
+               box-shadow: 0 2px 10px rgba(37, 99, 235, 0.15) !important;
+               transform: translateX(4px) !important;
+           }
+           .dialogue-turn-row.is-muted-turn {
+               background: #fefce8 !important;
+               border-left-color: #eab308 !important;
+               box-shadow: 0 2px 10px rgba(234, 179, 8, 0.2) !important;
+               transform: translateX(4px) !important;
+           }
+           .dialogue-turn-content {
+               flex: 1 !important;
+           }
+           .dialogue-turn-content .speaker-label {
+               font-weight: 800 !important;
+               font-size: 15px !important;
+               margin-right: 6px !important;
+           }
+           .dialogue-turn-content .speaker-label.speaker-a {
+               color: #2563eb !important;
+           }
+           .dialogue-turn-content .speaker-label.speaker-b {
+               color: #059669 !important;
+           }
+           .dialogue-turn-content .turn-text {
+               font-size: 16px !important;
+               line-height: 1.5 !important;
+               color: #1e293b !important;
+           }
+           .user-prompt-tag {
+               display: inline-block !important;
+               margin-left: 8px !important;
+               padding: 2px 8px !important;
+               border-radius: 4px !important;
+               font-size: 12px !important;
+               font-weight: 800 !important;
+               background: #fef08a !important;
+               color: #854d0e !important;
+               border: 1px solid #fde047 !important;
+               animation: pulse-prompt 1s infinite alternate !important;
+           }
+           @keyframes pulse-prompt {
+               from { opacity: 0.85; transform: scale(0.97); }
+               to { opacity: 1; transform: scale(1.03); }
+           }
+           .turn-action-buttons {
+               display: flex !important;
+               align-items: center !important;
+               gap: 6px !important;
+               flex-shrink: 0 !important;
+           }
+           .turn-spk-btn {
+               background: #ffffff !important;
+               border: 1px solid #cbd5e1 !important;
+               border-radius: 50% !important;
+               width: 32px !important;
+               height: 32px !important;
+               display: flex !important;
+               align-items: center !important;
+               justify-content: center !important;
+               font-size: 14px !important;
+               cursor: pointer !important;
+               transition: all 0.15s ease !important;
+               box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+           }
+           .turn-spk-btn:hover {
+               background: #eff6ff !important;
+               border-color: #3b82f6 !important;
+               transform: scale(1.08) !important;
+           }
        </style>
      </head>
      <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
@@ -1182,7 +1351,172 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
          setTimeout(enhanceSentenceCards, 200);
          setTimeout(enhanceSentenceCards, 1000);
 
+           var activeDialoguePlayer = null;
+
+           function stopActiveDialoguePlayer() {
+             if (activeDialoguePlayer) {
+               if (activeDialoguePlayer.audio) {
+                 try {
+                   activeDialoguePlayer.audio.pause();
+                   activeDialoguePlayer.audio.currentTime = 0;
+                 } catch(e) {}
+                 activeDialoguePlayer.audio = null;
+               }
+               if (activeDialoguePlayer.timer) {
+                 clearTimeout(activeDialoguePlayer.timer);
+                 activeDialoguePlayer.timer = null;
+               }
+               var box = document.querySelector('[data-dialogue-id="' + activeDialoguePlayer.dialogueId + '"]');
+               if (box) {
+                 box.querySelectorAll('.btn-dialogue-play').forEach(function(b) {
+                   b.classList.remove('is-active-btn');
+                   var origText = b.getAttribute('data-orig-text');
+                   if (origText) b.innerHTML = origText;
+                 });
+                 box.querySelectorAll('.dialogue-turn-row').forEach(function(r) {
+                   r.classList.remove('is-active-turn', 'is-muted-turn');
+                   var prompt = r.querySelector('.user-prompt-tag');
+                   if (prompt) prompt.remove();
+                 });
+               }
+               activeDialoguePlayer = null;
+             }
+           }
+
+           function playDialogueTurn() {
+             if (!activeDialoguePlayer) return;
+             var p = activeDialoguePlayer;
+             var box = document.querySelector('[data-dialogue-id="' + p.dialogueId + '"]');
+             if (!box) { stopActiveDialoguePlayer(); return; }
+
+             box.querySelectorAll('.dialogue-turn-row').forEach(function(r) {
+               r.classList.remove('is-active-turn', 'is-muted-turn');
+               var prompt = r.querySelector('.user-prompt-tag');
+               if (prompt) prompt.remove();
+             });
+
+             if (p.currentIndex >= p.turns.length) {
+               stopActiveDialoguePlayer();
+               return;
+             }
+
+             var turnEl = p.turns[p.currentIndex];
+             var role = (turnEl.getAttribute('data-role') || 'A').toUpperCase();
+             var audioKey = turnEl.getAttribute('data-audio-key') || '';
+             var sentence = turnEl.getAttribute('data-sentence') || '';
+
+             var isMuted = false;
+             if (p.mode === 'as_a' && role === 'B') {
+               isMuted = true;
+             } else if (p.mode === 'as_b' && role === 'A') {
+               isMuted = true;
+             }
+
+             if (isMuted) {
+               turnEl.classList.add('is-muted-turn');
+               var contentEl = turnEl.querySelector('.dialogue-turn-content');
+               if (contentEl && !contentEl.querySelector('.user-prompt-tag')) {
+                 var tag = document.createElement('span');
+                 tag.className = 'user-prompt-tag';
+                 tag.innerHTML = '🗣️ Đến lượt bạn nói (' + role + ')...';
+                 contentEl.appendChild(tag);
+               }
+             } else {
+               turnEl.classList.add('is-active-turn');
+             }
+
+             try {
+               turnEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+             } catch(e) {}
+
+             var localUrl = '/audio/communication/sentences/' + audioKey + '.mp3';
+             var cloudUrl = 'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/' + audioKey + '.mp3';
+
+             var audio = new Audio(localUrl);
+             p.audio = audio;
+             if (isMuted) {
+               audio.muted = true;
+               audio.volume = 0;
+             }
+
+             var onTurnEnd = function() {
+               if (!activeDialoguePlayer || activeDialoguePlayer !== p) return;
+               p.audio = null;
+               p.timer = setTimeout(function() {
+                 p.currentIndex++;
+                 playDialogueTurn();
+               }, 450);
+             };
+
+             audio.onended = onTurnEnd;
+
+             audio.onerror = function() {
+               var fallbackAudio = new Audio(cloudUrl);
+               p.audio = fallbackAudio;
+               if (isMuted) {
+                 fallbackAudio.muted = true;
+                 fallbackAudio.volume = 0;
+               }
+               fallbackAudio.onended = onTurnEnd;
+               fallbackAudio.onerror = function() {
+                 var words = sentence.split(/\\s+/).length;
+                 var duration = Math.max(2200, words * 380);
+                 p.timer = setTimeout(function() {
+                   onTurnEnd();
+                 }, duration);
+               };
+               fallbackAudio.play().catch(function() {
+                 fallbackAudio.onerror();
+               });
+             };
+
+             audio.play().catch(function() {
+               audio.onerror();
+             });
+           }
+
+           function startDialoguePlay(dialogueId, mode, clickedBtn) {
+             if (activeDialoguePlayer && activeDialoguePlayer.dialogueId === dialogueId && activeDialoguePlayer.mode === mode) {
+               stopActiveDialoguePlayer();
+               return;
+             }
+
+             stopActiveDialoguePlayer();
+             clearAllPlayingCards();
+             window.parent.postMessage({ type: 'LECTURE_STOP_AUDIO' }, '*');
+
+             var box = document.querySelector('[data-dialogue-id="' + dialogueId + '"]');
+             if (!box) return;
+
+             box.querySelectorAll('.btn-dialogue-play').forEach(function(b) {
+               b.classList.remove('is-active-btn');
+               var origText = b.getAttribute('data-orig-text');
+               if (origText) b.innerHTML = origText;
+             });
+
+             if (!clickedBtn.hasAttribute('data-orig-text')) {
+               clickedBtn.setAttribute('data-orig-text', clickedBtn.innerHTML);
+             }
+             clickedBtn.classList.add('is-active-btn');
+             clickedBtn.innerHTML = '⏹️ Dừng';
+
+             var turns = Array.from(box.querySelectorAll('.dialogue-turn-row'));
+             if (turns.length === 0) return;
+
+             activeDialoguePlayer = {
+               dialogueId: dialogueId,
+               mode: mode,
+               turns: turns,
+               currentIndex: 0,
+               audio: null,
+               timer: null
+             };
+
+             playDialogueTurn();
+           }
+
           function clearAllPlayingCards() {
+            stopActiveDialoguePlayer();
             var playingCards = document.querySelectorAll('.sentence-audio-card.is-playing');
             for (var i = 0; i < playingCards.length; i++) {
                 var c = playingCards[i];
@@ -1366,6 +1700,41 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
          document.addEventListener('click', function(e) {
            var target = e.target;
            
+            // -1. Intercept interactive dialogue toolbar play buttons
+            var playBtn = target.closest('.btn-dialogue-play');
+            if (playBtn) {
+                e.preventDefault();
+                e.stopPropagation();
+                var dBox = playBtn.closest('[data-dialogue-id]');
+                var dId = dBox ? dBox.getAttribute('data-dialogue-id') : null;
+                var mode = playBtn.getAttribute('data-mode') || 'all';
+                if (dId) {
+                    startDialoguePlay(dId, mode, playBtn);
+                }
+                return false;
+            }
+
+            // -0.5 Intercept individual turn play button
+            var turnSpk = target.closest('.turn-spk-btn');
+            if (turnSpk) {
+                e.preventDefault();
+                e.stopPropagation();
+                stopActiveDialoguePlayer();
+                var turnRow = turnSpk.closest('.dialogue-turn-row');
+                if (turnRow) {
+                    var s = turnRow.getAttribute('data-sentence') || '';
+                    var ak = turnRow.getAttribute('data-audio-key') || '';
+                    clearAllPlayingCards();
+                    turnRow.classList.add('is-playing');
+                    var tid = setTimeout(function() {
+                        turnRow.classList.remove('is-playing');
+                    }, 12000);
+                    turnRow.setAttribute('data-play-timeout', tid);
+                    window.playSentence(s, ak);
+                }
+                return false;
+            }
+
            // 0. Intercept mic button for pronunciation checking
            var micTarget = target.closest('.sentence-mic-btn');
            if (micTarget) {
