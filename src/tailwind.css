@@ -158,14 +158,28 @@ table th {
   margin-bottom: 0;
 }
 
-/* Images inside content should display at a reasonable size */
+/* Images inside content should display at a reasonable size without borders or rounded corners */
 .html-content-renderer img {
   max-width: 100%;
   min-width: 200px;
   height: auto !important;
   display: block;
-  margin: 72px auto !important;
-  border-radius: 6px;
+  margin: 24px auto !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Ensure no borders or rounded corners on test images in standard test interfaces */
+.standard-mcq-test img,
+.split-screen-test img,
+img[alt*="Question"],
+img[alt*="Part Image"],
+img[alt*="Section Image"],
+img[alt*="Fill Image"] {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 /* When image has no explicit width/height or is very small, scale it up */
@@ -174,3 +188,4 @@ table th {
 .html-content-renderer img[width="1"] {
   width: 80%;
 }
+

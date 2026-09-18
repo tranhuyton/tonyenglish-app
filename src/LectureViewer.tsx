@@ -296,17 +296,104 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
         .replace(/<div\b[^>]*class=["']audi["'][^>]*>[\s\S]*?<\/div>/gi, '')
         .replace(/width:\s*(?:1086\.59|1771\.65)px;?/gi, 'max-width: 960px; width: 100%;');
 
+    const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+    const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+    const audioChunksRef = useRef<Blob[]>([]);
+    const activeRecordingCardIdRef = useRef<string | null>(null);
+    const activeTargetSentenceRef = useRef<string | null>(null);
+    const autoStopTimerRef = useRef<any>(null);
+    const audioStreamRef = useRef<MediaStream | null>(null);
+
+    const stopAllCurrentAudio = useCallback((notifyIframe: boolean = false) => {
+      if (currentAudioRef.current) {
+        try {
+          currentAudioRef.current.pause();
+          currentAudioRef.current.currentTime = 0;
+          currentAudioRef.current.onended = null;
+          currentAudioRef.current.onerror = null;
+          currentAudioRef.current.src = '';
+        } catch (e) {
+          // ignore
+        }
+        currentAudioRef.current = null;
+      }
+      if ('speechSynthesis' in window) {
+        try {
+          window.speechSynthesis.cancel();
+        } catch (e) {
+          // ignore
+        }
+      }
+      if (notifyIframe) {
+        try {
+          iframeRef.current?.contentWindow?.postMessage({
+            type: 'STOP_AUDIO_PLAYBACK'
+          }, '*');
+        } catch (e) {
+          // ignore
+        }
+      }
+    }, []);
+
+    const abortRecordingIfActive = useCallback(() => {
+      if (activeRecordingCardIdRef.current) {
+        if (autoStopTimerRef.current) {
+          clearTimeout(autoStopTimerRef.current);
+          autoStopTimerRef.current = null;
+        }
+        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+          try {
+            mediaRecorderRef.current.onstop = null;
+            mediaRecorderRef.current.stop();
+          } catch (e) {}
+        }
+        if (audioStreamRef.current) {
+          audioStreamRef.current.getTracks().forEach(t => t.stop());
+          audioStreamRef.current = null;
+        }
+        try {
+          iframeRef.current?.contentWindow?.postMessage({
+            type: 'PRONUNCIATION_STATUS',
+            cardId: activeRecordingCardIdRef.current,
+            status: 'STOPPED'
+          }, '*');
+        } catch (e) {}
+        activeRecordingCardIdRef.current = null;
+        activeTargetSentenceRef.current = null;
+        audioChunksRef.current = [];
+      }
+    }, []);
+
     const playBritishPronunciation = useCallback((word: string) => {
+      stopAllCurrentAudio(false);
+      abortRecordingIfActive();
+
       const cleanWord = word.trim().toLowerCase().replace(/[^a-z]/g, '');
       if (!cleanWord) return;
 
       const localUrl = `/audio/pronunciation/${cleanWord}.mp3`;
       const audio = new Audio(localUrl);
+      currentAudioRef.current = audio;
+
+      audio.onended = () => {
+        if (currentAudioRef.current === audio) {
+          currentAudioRef.current = null;
+        }
+      };
 
       const playFallbackCloud = () => {
          const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/pronunciation/${cleanWord}.mp3`;
          const cloudAudio = new Audio(cloudUrl);
+         currentAudioRef.current = cloudAudio;
+         cloudAudio.onended = () => {
+           if (currentAudioRef.current === cloudAudio) {
+             currentAudioRef.current = null;
+           }
+         };
          cloudAudio.play().catch(() => {
+            if (currentAudioRef.current === cloudAudio) {
+              currentAudioRef.current = null;
+            }
             if ('speechSynthesis' in window) {
                window.speechSynthesis.cancel();
                const utter = new SpeechSynthesisUtterance(cleanWord);
@@ -331,20 +418,52 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
       };
 
       audio.play().catch(() => {
+         if (currentAudioRef.current === audio) {
+           currentAudioRef.current = null;
+         }
          playFallbackCloud();
       });
-    }, []);
+    }, [stopAllCurrentAudio, abortRecordingIfActive]);
 
     const playBritishSentence = useCallback((sentence: string, audioKey: string) => {
+      stopAllCurrentAudio(false);
+      abortRecordingIfActive();
+
       if (!sentence && !audioKey) return;
+
+      const notifyAudioEnded = () => {
+        try {
+          iframeRef.current?.contentWindow?.postMessage({
+            type: 'STOP_AUDIO_PLAYBACK'
+          }, '*');
+        } catch (e) {}
+      };
 
       const localUrl = `/audio/communication/sentences/${audioKey}.mp3`;
       const audio = new Audio(localUrl);
+      currentAudioRef.current = audio;
+
+      audio.onended = () => {
+        if (currentAudioRef.current === audio) {
+          currentAudioRef.current = null;
+        }
+        notifyAudioEnded();
+      };
 
       const playFallbackCloud = () => {
          const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/${audioKey}.mp3`;
          const cloudAudio = new Audio(cloudUrl);
+         currentAudioRef.current = cloudAudio;
+         cloudAudio.onended = () => {
+           if (currentAudioRef.current === cloudAudio) {
+             currentAudioRef.current = null;
+           }
+           notifyAudioEnded();
+         };
          cloudAudio.play().catch(() => {
+            if (currentAudioRef.current === cloudAudio) {
+              currentAudioRef.current = null;
+            }
             if ('speechSynthesis' in window) {
                window.speechSynthesis.cancel();
                const utter = new SpeechSynthesisUtterance(sentence);
@@ -363,22 +482,26 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
                   utter.voice = gbMaleVoice;
                }
                utter.rate = 0.88;
+               utter.onend = () => {
+                 notifyAudioEnded();
+               };
+               utter.onerror = () => {
+                 notifyAudioEnded();
+               };
                window.speechSynthesis.speak(utter);
+            } else {
+               notifyAudioEnded();
             }
          });
       };
 
       audio.play().catch(() => {
+         if (currentAudioRef.current === audio) {
+           currentAudioRef.current = null;
+         }
          playFallbackCloud();
       });
-    }, []);
-
-    const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-    const audioChunksRef = useRef<Blob[]>([]);
-    const activeRecordingCardIdRef = useRef<string | null>(null);
-    const activeTargetSentenceRef = useRef<string | null>(null);
-    const autoStopTimerRef = useRef<any>(null);
-    const audioStreamRef = useRef<MediaStream | null>(null);
+    }, [stopAllCurrentAudio, abortRecordingIfActive]);
 
     const playChimeSound = useCallback((isSuccess: boolean) => {
       try {
@@ -414,6 +537,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
     }, []);
 
     const stopRecordingAndEvaluate = useCallback(() => {
+      stopAllCurrentAudio(true);
       if (autoStopTimerRef.current) {
         clearTimeout(autoStopTimerRef.current);
         autoStopTimerRef.current = null;
@@ -460,17 +584,20 @@ The student is trying to speak the following target sentence:
 
 Please listen to the attached student audio recording:
 1. Determine what words the student actually spoke.
-2. Check whether the pronunciation matches the target sentence accurately.
-3. If they missed words or pronounced words noticeably wrong, specify them.
-4. If it's correct (or naturally close with acceptable accent), mark is_correct as true. Otherwise false.
+2. Check if the pronunciation of each word is correct and understandable.
+3. Compare against the target sentence.
+4. Calculate an accuracy_score between 0 and 100.
+5. Provide a list of mispronounced_words (words from the sentence that were pronounced incorrectly or skipped). If all correct, return empty array.
+6. Provide a short, encouraging feedback in Vietnamese (max 1-2 sentences), pointing out which sound or word to improve.
+7. Set is_correct to true if accuracy_score >= 70, else false.
 
-Respond ONLY with valid JSON in this exact schema:
+CRITICAL: Return ONLY valid JSON in this exact structure without markdown or backticks:
 {
-  "is_correct": boolean,
-  "accuracy_score": number, // 0 to 100
-  "recognized_text": string,
-  "mispronounced_words": string[],
-  "feedback": string // in Vietnamese, short, friendly, encouraging, max 2 sentences
+  "recognized_text": "...",
+  "accuracy_score": 85,
+  "is_correct": true,
+  "mispronounced_words": [],
+  "feedback": "..."
 }`;
 
             const { data, error } = await supabase.functions.invoke('ai-grader', {
@@ -507,6 +634,7 @@ Respond ONLY with valid JSON in this exact schema:
 
             if (resultData) {
               playChimeSound(resultData.is_correct);
+
               iframeRef.current?.contentWindow?.postMessage({
                 type: 'PRONUNCIATION_RESULT',
                 cardId: cardId,
@@ -528,9 +656,11 @@ Respond ONLY with valid JSON in this exact schema:
       };
 
       mediaRecorderRef.current.stop();
-    }, [playChimeSound]);
+    }, [playChimeSound, stopAllCurrentAudio]);
 
     const startRecordingSentence = useCallback(async (cardId: string, targetSentence: string) => {
+      stopAllCurrentAudio(true);
+
       if (activeRecordingCardIdRef.current && mediaRecorderRef.current?.state !== 'inactive') {
         stopRecordingAndEvaluate();
       }
@@ -578,7 +708,7 @@ Respond ONLY with valid JSON in this exact schema:
         activeRecordingCardIdRef.current = null;
         activeTargetSentenceRef.current = null;
       }
-    }, [stopRecordingAndEvaluate]);
+    }, [stopAllCurrentAudio, stopRecordingAndEvaluate]);
 
     useEffect(() => { 
         // Giữ chiều cao an toàn tối thiểu thay vì 10px để màn hình không bị giật hoặc trắng khi đổi bài
@@ -587,6 +717,7 @@ Respond ONLY with valid JSON in this exact schema:
 
     useEffect(() => {
       return () => {
+        stopAllCurrentAudio(true);
         if (autoStopTimerRef.current) clearTimeout(autoStopTimerRef.current);
         if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
           mediaRecorderRef.current.stop();
@@ -595,7 +726,7 @@ Respond ONLY with valid JSON in this exact schema:
           audioStreamRef.current.getTracks().forEach(t => t.stop());
         }
       };
-    }, []);
+    }, [stopAllCurrentAudio]);
 
     useEffect(() => {
       const handleMessage = (e: MessageEvent) => {
@@ -622,6 +753,8 @@ Respond ONLY with valid JSON in this exact schema:
           startRecordingSentence(e.data.cardId, e.data.targetSentence);
         } else if (e.data?.type === 'LECTURE_STOP_RECORDING') {
           stopRecordingAndEvaluate();
+        } else if (e.data?.type === 'LECTURE_STOP_AUDIO') {
+          stopAllCurrentAudio(true);
         } else if (e.data?.type === 'LECTURE_RESIZE') {
           const h = e.data.height;
           if (h && h > 0) {
@@ -672,7 +805,7 @@ Respond ONLY with valid JSON in this exact schema:
       
       window.addEventListener('message', handleMessage);
       return () => window.removeEventListener('message', handleMessage);
-    }, [onOpenPopup, onOpenDict, onCloseDict, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate]);
+    }, [onOpenPopup, onOpenDict, onCloseDict, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate, stopAllCurrentAudio]);
 
    const iframeContent = `
      <!DOCTYPE html>
@@ -878,6 +1011,11 @@ Respond ONLY with valid JSON in this exact schema:
               background-color: #e0f2fe !important;
               border-left-color: #0284c7 !important;
           }
+          .sentence-audio-card.is-playing .speaker-icon {
+              transform: scale(1.18);
+              opacity: 1 !important;
+              color: #0284c7 !important;
+          }
           .card-actions {
               display: inline-flex !important;
               align-items: center !important;
@@ -1044,59 +1182,87 @@ Respond ONLY with valid JSON in this exact schema:
          setTimeout(enhanceSentenceCards, 200);
          setTimeout(enhanceSentenceCards, 1000);
 
-         window.handleMicClick = function(micBtn) {
-           var cardId = micBtn.getAttribute('data-card-id');
-           var sentence = micBtn.getAttribute('data-sentence');
-           var card = micBtn.closest('.sentence-audio-card');
-           var fb = card ? card.querySelector('.pronunciation-feedback') : null;
+          function clearAllPlayingCards() {
+            var playingCards = document.querySelectorAll('.sentence-audio-card.is-playing');
+            for (var i = 0; i < playingCards.length; i++) {
+                var c = playingCards[i];
+                c.classList.remove('is-playing');
+                var tid = c.getAttribute('data-play-timeout');
+                if (tid) {
+                    clearTimeout(parseInt(tid, 10));
+                    c.removeAttribute('data-play-timeout');
+                }
+            }
+          }
 
-           if (micBtn.classList.contains('is-recording')) {
-               micBtn.classList.remove('is-recording');
-               micBtn.classList.add('is-evaluating');
-               micBtn.innerHTML = '⏳';
-               micBtn.title = 'AI đang chấm...';
+          window.handleMicClick = function(micBtn) {
+            var cardId = micBtn.getAttribute('data-card-id');
+            var sentence = micBtn.getAttribute('data-sentence');
+            var card = micBtn.closest('.sentence-audio-card');
+            var fb = card ? card.querySelector('.pronunciation-feedback') : null;
 
-               if (fb) {
-                   fb.style.display = 'block';
-                   fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>Gemini AI đang lắng nghe và chấm phát âm...</strong> Vui lòng đợi trong giây lát</span></div>';
-               }
+            // Dừng ngay lập tức bất kỳ âm thanh nào đang phát
+            window.parent.postMessage({ type: 'LECTURE_STOP_AUDIO' }, '*');
+            clearAllPlayingCards();
 
-               window.parent.postMessage({ type: 'LECTURE_STOP_RECORDING', cardId: cardId }, '*');
-           } else {
-               document.querySelectorAll('.sentence-mic-btn.is-recording').forEach(function(m) {
-                   m.classList.remove('is-recording');
-                   m.innerHTML = '🎙️';
-               });
+            if (micBtn.classList.contains('is-recording')) {
+                micBtn.classList.remove('is-recording');
+                micBtn.classList.add('is-evaluating');
+                micBtn.innerHTML = '⏳';
+                micBtn.title = 'AI đang chấm...';
 
-               micBtn.classList.add('is-recording');
-               micBtn.innerHTML = '⏹️';
-               micBtn.title = 'Đang thu âm... Bấm vào đây để dừng và chấm điểm';
+                if (fb) {
+                    fb.style.display = 'block';
+                    fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>Gemini AI đang lắng nghe và chấm phát âm...</strong> Vui lòng đợi trong giây lát</span></div>';
+                }
 
-               if (fb) {
-                   fb.style.display = 'block';
-                   fb.innerHTML = '<div style="display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: #b91c1c; background: #fef2f2; padding: 10px 14px; border-radius: 8px; border: 1px solid #fecaca; margin-top: 10px;">' +
-                       '<div style="display: flex; align-items: center; gap: 8px;">' +
-                           '<span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ef4444; animation: pulse-mic 1s infinite;"></span>' +
-                           '<span><strong>Đang nghe:</strong> Hãy đọc câu trên vào mic...</span>' +
-                       '</div>' +
-                       '<span style="font-size: 12px; color: #991b1b; font-weight: bold; cursor: pointer; text-decoration: underline;">Bấm ⏹️ để chấm</span>' +
-                   '</div>';
-               }
+                window.parent.postMessage({ type: 'LECTURE_STOP_RECORDING', cardId: cardId }, '*');
+            } else {
+                document.querySelectorAll('.sentence-mic-btn.is-recording').forEach(function(m) {
+                    m.classList.remove('is-recording');
+                    m.innerHTML = '🎙️';
+                });
 
-               window.parent.postMessage({ type: 'LECTURE_START_RECORDING', cardId: cardId, targetSentence: sentence }, '*');
-           }
-         };
+                micBtn.classList.add('is-recording');
+                micBtn.innerHTML = '⏹️';
+                micBtn.title = 'Đang thu âm... Bấm vào đây để dừng và chấm điểm';
 
-          window.addEventListener('message', function(e) {
+                if (fb) {
+                    fb.style.display = 'block';
+                    fb.innerHTML = '<div style="display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: #b91c1c; background: #fef2f2; padding: 10px 14px; border-radius: 8px; border: 1px solid #fecaca; margin-top: 10px;">' +
+                        '<div style="display: flex; align-items: center; gap: 8px;">' +
+                            '<span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ef4444; animation: pulse-mic 1s infinite;"></span>' +
+                            '<span><strong>Đang nghe:</strong> Hãy đọc câu trên vào mic...</span>' +
+                        '</div>' +
+                        '<span style="font-size: 12px; color: #991b1b; font-weight: bold; cursor: pointer; text-decoration: underline;">Bấm ⏹️ để chấm</span>' +
+                    '</div>';
+                }
+
+                window.parent.postMessage({ type: 'LECTURE_START_RECORDING', cardId: cardId, targetSentence: sentence }, '*');
+            }
+          };
+
+           window.addEventListener('message', function(e) {
             if (!e || !e.data) return;
-            if (e.data.type === 'PRONUNCIATION_STATUS') {
+            if (e.data.type === 'STOP_AUDIO_PLAYBACK') {
+                clearAllPlayingCards();
+            } else if (e.data.type === 'PRONUNCIATION_STATUS') {
                 var cardId = e.data.cardId;
                 var status = e.data.status;
                 var mic = document.querySelector('.sentence-mic-btn[data-card-id="' + cardId + '"]');
                 var card = mic ? mic.closest('.sentence-audio-card') : null;
                 var fb = card ? card.querySelector('.pronunciation-feedback') : null;
 
-                if (status === 'EVALUATING') {
+                if (status === 'STOPPED') {
+                    if (mic) {
+                        mic.classList.remove('is-recording');
+                        mic.classList.remove('is-evaluating');
+                        mic.innerHTML = '🎙️';
+                    }
+                    if (fb) {
+                        fb.style.display = 'none';
+                    }
+                } else if (status === 'EVALUATING') {
                     if (mic) {
                         mic.classList.remove('is-recording');
                         mic.classList.add('is-evaluating');
@@ -1229,12 +1395,22 @@ Respond ONLY with valid JSON in this exact schema:
            if (cardTarget) {
                e.preventDefault();
                e.stopPropagation();
+
+               // Tắt trạng thái đang thu âm nếu học sinh chuyển sang nghe audio
+               document.querySelectorAll('.sentence-mic-btn.is-recording').forEach(function(m) {
+                   m.classList.remove('is-recording');
+                   m.innerHTML = '🎙️';
+               });
+
+               clearAllPlayingCards();
+               cardTarget.classList.add('is-playing');
+               var tid = setTimeout(function() {
+                   cardTarget.classList.remove('is-playing');
+               }, 12000);
+               cardTarget.setAttribute('data-play-timeout', tid);
+
                var sentence = cardTarget.getAttribute('data-sentence') || '';
                var audioKey = cardTarget.getAttribute('data-audio-key') || '';
-               cardTarget.classList.add('is-playing');
-               setTimeout(function() {
-                   cardTarget.classList.remove('is-playing');
-               }, 1000);
                window.playSentence(sentence, audioKey);
                return false;
            }
@@ -1244,6 +1420,7 @@ Respond ONLY with valid JSON in this exact schema:
            if (audioTarget) {
                e.preventDefault();
                e.stopPropagation();
+               clearAllPlayingCards();
                var word = audioTarget.getAttribute('data-word') || audioTarget.textContent.trim();
                word = word.replace(/[^a-zA-Z]/g, '');
                if (word) {

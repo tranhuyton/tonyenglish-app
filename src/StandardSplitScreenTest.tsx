@@ -1331,7 +1331,7 @@ const handleFinish = async () => {
                         )}
                         
                         {part?.imageUrl && (
-                            <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />
+                            <img src={part.imageUrl} className="max-w-full mb-6" alt="Part Image" />
                         )}
                         
                         {(isReviewMode || basicInfo?.category === 'exercise') && pIdx === 0 && globalAudio && (
@@ -1398,7 +1398,7 @@ const handleFinish = async () => {
                            <div className="mb-8 bg-transparent">
                                {part?.title && <h3 className="font-black text-xl text-slate-800 mb-2">{part.title}</h3>}
                                {part?.content && <div className="text-[15px] text-slate-600 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} />}
-                               {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />}
+                               {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6" alt="Part Image" />}
                            </div>
                        )}
 
@@ -1446,7 +1446,7 @@ const handleFinish = async () => {
                              {/* NỘI DUNG VÀ HÌNH ẢNH SECTION (CHO CẢ LISTENING VÀ READING) */}
                              <div className="mb-6">
                                 {isListening && displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
-                                {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
+                                {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4" alt="Section Image" />}
                                 {sec?.content && !( ["Điền từ", "Điền khuyết", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(sec?.questionType) && /\[\s*\d+\s*\]/.test(String(sec.content || '')) ) && (
                                    <div className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed mb-6 bg-white p-5 rounded-xl border border-slate-200 shadow-sm" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} />
                                 )}
@@ -1496,7 +1496,7 @@ const handleFinish = async () => {
                                return (
                                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
                                   {sec?.imageUrl && !isListening && (
-                                      <img src={sec.imageUrl} className="max-w-full mb-6 rounded-lg border border-slate-200" alt="Fill Image" />
+                                      <img src={sec.imageUrl} className="max-w-full mb-6" alt="Fill Image" />
                                   )}
                                   
                                   {(() => {
@@ -1663,7 +1663,7 @@ const handleFinish = async () => {
                                        <div className="flex gap-4 mb-2">
                                          <span className="font-bold text-slate-800 shrink-0 w-6 text-right pt-[2px]">{displayIdx}.</span>
                                          <div className="flex-1">
-                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded border border-slate-200" alt="Question" />}
+                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4" alt="Question" />}
                                            {cleanQText && <div className="text-[16px] text-slate-800 font-medium leading-relaxed whitespace-pre-wrap mb-4" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
                                            
                                            <div className="flex flex-row flex-wrap gap-4">
@@ -1771,7 +1771,7 @@ const handleFinish = async () => {
                                            <span className="font-bold text-white bg-slate-800 px-2 py-0.5 rounded text-[13px] mt-0.5">{displayIdx}</span>
                                         )}
                                         <div className="flex-1 w-full">
-                                           {q.imageUrl && <img src={q.imageUrl} className={`mb-4 rounded-xl border border-slate-200 shadow-sm ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
+                                           {q.imageUrl && <img src={q.imageUrl} className={`mb-4 ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
                                            {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium mb-3 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
                                         </div>
                                      </div>

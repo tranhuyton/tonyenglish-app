@@ -54,11 +54,37 @@ const cleanHtmlContent = (html: any) => {
   let cleaned = String(html);
   
   // Xử lý riêng cho thẻ img: giữ nguyên style (width/height cần thiết cho hiển thị đúng kích thước)
-  // Chỉ xóa width/height/overflow cho các thẻ KHÔNG phải img
+  // Xóa các thuộc tính border, border-radius, box-shadow khỏi style của img
+  cleaned = cleaned.replace(/<img\b([^>]*?)style\s*=\s*(['"])(.*?)\2([^>]*?)>/gi, 
+    (match, before, quote, styleContent, after) => {
+      let newStyle = styleContent
+          .replace(/(?:^|;)\s*(border|border-[^;]+|border-radius|box-shadow)\s*:[^;]+/gi, '')
+          .replace(/^;+|;+$/g, '')
+          .trim();
+      if (newStyle) {
+          return `<img${before}style=${quote}${newStyle}${quote}${after}>`;
+      }
+      return `<img${before}${after}>`;
+  });
+
+  // Loại bỏ các class bo viền và đổ bóng khỏi thẻ img
+  cleaned = cleaned.replace(/<img\b([^>]*?)class\s*=\s*(['"])(.*?)\2([^>]*?)>/gi,
+    (match, before, quote, classContent, after) => {
+      let newClass = classContent
+          .replace(/\b(border(-\w+)?|rounded(-\w+)?|shadow(-\w+)?)\b/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+      if (newClass) {
+          return `<img${before}class=${quote}${newClass}${quote}${after}>`;
+      }
+      return `<img${before}${after}>`;
+  });
+  
+  // Xử lý cho các thẻ KHÔNG phải img: xóa width/height/overflow
   cleaned = cleaned.replace(/<([a-z][a-z0-9]*)\b([^>]*?)style\s*=\s*(['"])(.*?)\3([^>]*?)>/gi, 
     (match, tagName, before, quote, styleContent, after) => {
       if (tagName.toLowerCase() === 'img') {
-        return match; // Giữ nguyên style cho img
+        return match;
       }
       let newStyle = styleContent
           .replace(/(?:^|;)\s*(max-width|width|max-height|min-height|height|overflow|overflow-y|overflow-x)\s*:[^;]+/gi, '')
@@ -1329,7 +1355,7 @@ const handleFinish = async () => {
                         )}
                         
                         {/* {part?.imageUrl && (
-                            <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />
+                            <img src={part.imageUrl} className="max-w-full mb-6" alt="Part Image" />
                         )} */}
                         
                         {part?.content && (
@@ -1376,7 +1402,7 @@ const handleFinish = async () => {
                               {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
                               
                               {/* {sec?.imageUrl && (
-                                  <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />
+                                  <img src={sec.imageUrl} className="max-w-full mb-4" alt="Section Image" />
                               )} */}
                               {/* Section content has been moved to the right pane above questions */}
                             </div>
@@ -1446,7 +1472,7 @@ const handleFinish = async () => {
                            )}
                            
                            {/* part.content is displayed in the left pane during review mode (or reading test) */}
-                           {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />}
+                           {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6" alt="Part Image" />}
                        </div>
 
                        {isReviewMode && part?.translation && (part.translation.replace(/<[^>]*>?/gm, '').replace(/&nbsp;/g, '').replace(/[\u200B-\u200D\uFEFF]/g, '').trim() !== '' || part.translation.includes('<img')) && (
@@ -1493,7 +1519,7 @@ const handleFinish = async () => {
                              {/* NỘI DUNG SECTION */}
                              <div className="mb-6">
                                 {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
-                                {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
+                                {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4" alt="Section Image" />}
                                 {sec?.content && !( ["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(sec?.questionType) && /\[\s*\d+\s*\]/.test(String(sec.content || '')) ) && (
                                     <div className="text-[15px] text-slate-600 leading-relaxed mb-6 format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
                                 )}
@@ -1561,7 +1587,7 @@ const handleFinish = async () => {
                                return (
                                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
                                   {sec?.imageUrl && !isListening && (
-                                      <img src={sec.imageUrl} className="max-w-full mb-6 rounded-lg border border-slate-200" alt="Fill Image" />
+                                      <img src={sec.imageUrl} className="max-w-full mb-6" alt="Fill Image" />
                                   )}
                                   
                                   {(() => {
@@ -1727,7 +1753,7 @@ const handleFinish = async () => {
                                        <div className="flex gap-4 mb-2">
                                          <span className="font-bold text-slate-800 shrink-0 w-6 text-right pt-[2px]">{displayIdx}.</span>
                                          <div className="flex-1">
-                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] my-8 rounded border border-slate-200" alt="Question" />}
+                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] my-8" alt="Question" />}
                                            {cleanQText && <div className="text-[16px] text-slate-800 font-medium leading-relaxed whitespace-pre-wrap html-content-renderer mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
                                            
                                            <div className="flex flex-row flex-wrap gap-4">
@@ -1826,7 +1852,7 @@ const handleFinish = async () => {
 
                                      <div className="flex gap-4 mb-5 pr-10 items-start">
                                         <div className="flex-1 w-full">
-                                           {q.imageUrl && <img src={q.imageUrl} className={`my-8 rounded-xl border border-slate-200 shadow-sm ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
+                                           {q.imageUrl && <img src={q.imageUrl} className={`my-8 ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
                                            {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium whitespace-pre-wrap html-content-renderer mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
                                         </div>
                                      </div>
