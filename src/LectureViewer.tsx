@@ -1404,11 +1404,18 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              var role = (turnEl.getAttribute('data-role') || 'A').toUpperCase();
              var audioKey = turnEl.getAttribute('data-audio-key') || '';
              var sentence = turnEl.getAttribute('data-sentence') || '';
+             var spkLabel = turnEl.querySelector('.speaker-label') ? turnEl.querySelector('.speaker-label').textContent.replace(':', '').trim() : role;
 
+             // QUAN TRỌNG: Muting logic
+             // - mode === 'all': KHÔNG mute bất kỳ ai (nghe cả 2 người đối thoại)
+             // - mode === 'as_1' (Play as Người 1 / A): MUTE vai A, PHÁT vai B để người học tự nói vai A
+             // - mode === 'as_2' (Play as Người 2 / B): MUTE vai B, PHÁT vai A để người học tự nói vai B
              var isMuted = false;
-             if (p.mode === 'as_a' && role === 'B') {
+             if (p.targetMutedRole && role === p.targetMutedRole) {
                isMuted = true;
-             } else if (p.mode === 'as_b' && role === 'A') {
+             } else if (p.mode === 'as_1' && role === 'A') {
+               isMuted = true;
+             } else if (p.mode === 'as_2' && role === 'B') {
                isMuted = true;
              }
 
@@ -1418,7 +1425,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                if (contentEl && !contentEl.querySelector('.user-prompt-tag')) {
                  var tag = document.createElement('span');
                  tag.className = 'user-prompt-tag';
-                 tag.innerHTML = '🗣️ Đến lượt bạn nói (' + role + ')...';
+                 tag.innerHTML = '🗣️ Đến lượt bạn nói (' + spkLabel + ')...';
                  contentEl.appendChild(tag);
                }
              } else {
@@ -1432,50 +1439,66 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              var localUrl = '/audio/communication/sentences/' + audioKey + '.mp3';
              var cloudUrl = 'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/' + audioKey + '.mp3';
 
-             var audio = new Audio(localUrl);
-             p.audio = audio;
-             if (isMuted) {
-               audio.muted = true;
-               audio.volume = 0;
-             }
+             var words = sentence.split(/\\s+/).filter(Boolean).length;
+             var naturalSpeakingMs = Math.max(2500, words * 450);
 
+             var turnEnded = false;
              var onTurnEnd = function() {
+               if (turnEnded) return;
+               turnEnded = true;
                if (!activeDialoguePlayer || activeDialoguePlayer !== p) return;
-               p.audio = null;
+               if (p.audio) {
+                 try { p.audio.pause(); } catch(e) {}
+                 p.audio = null;
+               }
                p.timer = setTimeout(function() {
                  p.currentIndex++;
                  playDialogueTurn();
                }, 450);
              };
 
-             audio.onended = onTurnEnd;
-
-             audio.onerror = function() {
-               var fallbackAudio = new Audio(cloudUrl);
-               p.audio = fallbackAudio;
-               if (isMuted) {
-                 fallbackAudio.muted = true;
-                 fallbackAudio.volume = 0;
-               }
-               fallbackAudio.onended = onTurnEnd;
-               fallbackAudio.onerror = function() {
-                 var words = sentence.split(/\\s+/).length;
-                 var duration = Math.max(2200, words * 380);
-                 p.timer = setTimeout(function() {
-                   onTurnEnd();
-                 }, duration);
+             if (isMuted) {
+               // Bị mute để học sinh tự nói: đợi chuẩn xác thời lượng tự nhiên của câu
+               var audio = new Audio(localUrl);
+               p.audio = audio;
+               audio.muted = true;
+               audio.volume = 0;
+               audio.onloadedmetadata = function() {
+                 if (audio.duration && !isNaN(audio.duration) && audio.duration > 0) {
+                   naturalSpeakingMs = Math.round(audio.duration * 1000);
+                 }
                };
-               fallbackAudio.play().catch(function() {
-                 fallbackAudio.onerror();
+               audio.onended = onTurnEnd;
+               // Timer bảo đảm chuyển câu đúng thời lượng nói tự nhiên
+               p.timer = setTimeout(onTurnEnd, naturalSpeakingMs + 200);
+               audio.play().catch(function() {});
+             } else {
+               // Phát tiếng rõ ràng (cho Listen all hoặc khi nghe đối phương)
+               var audio = new Audio(localUrl);
+               p.audio = audio;
+               audio.muted = false;
+               audio.volume = 1;
+               audio.onended = onTurnEnd;
+               audio.onerror = function() {
+                 var fallbackAudio = new Audio(cloudUrl);
+                 p.audio = fallbackAudio;
+                 fallbackAudio.muted = false;
+                 fallbackAudio.volume = 1;
+                 fallbackAudio.onended = onTurnEnd;
+                 fallbackAudio.onerror = function() {
+                   p.timer = setTimeout(onTurnEnd, naturalSpeakingMs);
+                 };
+                 fallbackAudio.play().catch(function() {
+                   fallbackAudio.onerror();
+                 });
+               };
+               audio.play().catch(function() {
+                 audio.onerror();
                });
-             };
-
-             audio.play().catch(function() {
-               audio.onerror();
-             });
+             }
            }
 
-           function startDialoguePlay(dialogueId, mode, clickedBtn) {
+           function startDialoguePlay(dialogueId, mode, clickedBtn, targetMutedRole) {
              if (activeDialoguePlayer && activeDialoguePlayer.dialogueId === dialogueId && activeDialoguePlayer.mode === mode) {
                stopActiveDialoguePlayer();
                return;
@@ -1503,9 +1526,16 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              var turns = Array.from(box.querySelectorAll('.dialogue-turn-row'));
              if (turns.length === 0) return;
 
+             var resolvedMutedRole = targetMutedRole;
+             if (!resolvedMutedRole) {
+               if (mode === 'as_1' || mode === 'as_a') resolvedMutedRole = 'A';
+               else if (mode === 'as_2' || mode === 'as_b') resolvedMutedRole = 'B';
+             }
+
              activeDialoguePlayer = {
                dialogueId: dialogueId,
                mode: mode,
+               targetMutedRole: resolvedMutedRole,
                turns: turns,
                currentIndex: 0,
                audio: null,
@@ -1708,8 +1738,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 var dBox = playBtn.closest('[data-dialogue-id]');
                 var dId = dBox ? dBox.getAttribute('data-dialogue-id') : null;
                 var mode = playBtn.getAttribute('data-mode') || 'all';
+                var targetRole = playBtn.getAttribute('data-target-role') || (mode === 'as_1' ? 'A' : (mode === 'as_2' ? 'B' : null));
                 if (dId) {
-                    startDialoguePlay(dId, mode, playBtn);
+                    startDialoguePlay(dId, mode, playBtn, targetRole);
                 }
                 return false;
             }
