@@ -1178,41 +1178,47 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                from { transform: scale(1); }
                to { transform: scale(1.03); }
            }
-           .dialogue-turn-row {
-               display: flex !important;
-               align-items: flex-start !important;
-               justify-content: space-between !important;
-               gap: 12px !important;
-               padding: 10px 14px !important;
-               margin-bottom: 8px !important;
-               border-radius: 10px !important;
-               border-left: 4px solid transparent !important;
-               background: #f8fafc !important;
-               transition: all 0.2s ease !important;
-           }
-           .dialogue-turn-row:last-child {
-               margin-bottom: 0 !important;
-           }
-           .dialogue-turn-row.speaker-role-a {
-               border-left-color: #3b82f6 !important;
-           }
-           .dialogue-turn-row.speaker-role-b {
-               border-left-color: #10b981 !important;
-           }
-           .dialogue-turn-row.is-active-turn {
-               background: #eff6ff !important;
-               border-left-color: #2563eb !important;
-               box-shadow: 0 2px 10px rgba(37, 99, 235, 0.15) !important;
-               transform: translateX(4px) !important;
-           }
-           .dialogue-turn-row.is-muted-turn {
-               background: #fefce8 !important;
-               border-left-color: #eab308 !important;
-               box-shadow: 0 2px 10px rgba(234, 179, 8, 0.2) !important;
-               transform: translateX(4px) !important;
-           }
-           .dialogue-turn-content {
-               flex: 1 !important;
+            .dialogue-turn-row {
+                display: flex !important;
+                align-items: flex-start !important;
+                justify-content: space-between !important;
+                gap: 12px !important;
+                transition: all 0.2s ease !important;
+            }
+            .dialogue-turn-row:not(.sentence-audio-card) {
+                padding: 10px 14px !important;
+                margin-bottom: 8px !important;
+                border-radius: 10px !important;
+                border-left: 4px solid transparent !important;
+                background: #f8fafc !important;
+            }
+            .dialogue-turn-row:not(.sentence-audio-card):last-child {
+                margin-bottom: 0 !important;
+            }
+            .dialogue-turn-row.speaker-role-a:not(.sentence-audio-card) {
+                border-left-color: #3b82f6 !important;
+            }
+            .dialogue-turn-row.speaker-role-b:not(.sentence-audio-card) {
+                border-left-color: #10b981 !important;
+            }
+            .dialogue-turn-row.is-active-turn {
+                background: #eff6ff !important;
+                border-left-color: #2563eb !important;
+                border-left-width: 4px !important;
+                border-left-style: solid !important;
+                box-shadow: 0 2px 10px rgba(37, 99, 235, 0.15) !important;
+                transform: translateX(4px) !important;
+            }
+            .dialogue-turn-row.is-muted-turn {
+                background: #fefce8 !important;
+                border-left-color: #eab308 !important;
+                border-left-width: 4px !important;
+                border-left-style: solid !important;
+                box-shadow: 0 2px 10px rgba(234, 179, 8, 0.2) !important;
+                transform: translateX(4px) !important;
+            }
+            .dialogue-turn-content {
+                flex: 1 !important;
            }
            .dialogue-turn-content .speaker-label {
                font-weight: 800 !important;
@@ -1282,6 +1288,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
            if (w) window.parent.postMessage({ type: 'LECTURE_PLAY_WORD', word: w }, '*');
          };
          window.playSentence = function(sentence, audioKey) {
+           if (typeof stopActiveDialoguePlayer === 'function') {
+             stopActiveDialoguePlayer();
+           }
            if (sentence || audioKey) {
              window.parent.postMessage({ type: 'LECTURE_PLAY_SENTENCE', sentence: sentence, audioKey: audioKey }, '*');
            }
@@ -1425,7 +1434,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
 
               if (isMuted) {
                 turnEl.classList.add('is-muted-turn');
-                var contentEl = turnEl.querySelector('.dialogue-turn-content');
+                var contentEl = turnEl.querySelector('.dialogue-turn-content') || turnEl;
                 if (contentEl && !contentEl.querySelector('.user-prompt-tag')) {
                   var tag = document.createElement('span');
                   tag.className = 'user-prompt-tag';
