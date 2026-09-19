@@ -1236,22 +1236,50 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                line-height: 1.5 !important;
                color: #1e293b !important;
            }
-           .user-prompt-tag {
-               display: inline-block !important;
-               margin-left: 8px !important;
-               padding: 2px 8px !important;
-               border-radius: 4px !important;
-               font-size: 12px !important;
-               font-weight: 800 !important;
-               background: #fef08a !important;
-               color: #854d0e !important;
-               border: 1px solid #fde047 !important;
-               animation: pulse-prompt 1s infinite alternate !important;
-           }
-           @keyframes pulse-prompt {
-               from { opacity: 0.85; transform: scale(0.97); }
-               to { opacity: 1; transform: scale(1.03); }
-           }
+            .user-prompt-tag {
+                display: inline-flex !important;
+                align-items: center !important;
+                flex-wrap: wrap !important;
+                gap: 6px !important;
+                margin-left: 8px !important;
+                padding: 3px 10px !important;
+                border-radius: 6px !important;
+                font-size: 12.5px !important;
+                font-weight: 800 !important;
+                background: #fef08a !important;
+                color: #854d0e !important;
+                border: 1px solid #fde047 !important;
+                box-shadow: 0 1px 3px rgba(133, 77, 14, 0.12) !important;
+            }
+            .btn-skip-silence {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 4px !important;
+                padding: 2px 8px !important;
+                font-size: 11px !important;
+                font-weight: 700 !important;
+                color: #854d0e !important;
+                background: #ffffff !important;
+                border: 1px solid #eab308 !important;
+                border-radius: 999px !important;
+                cursor: pointer !important;
+                transition: all 0.15s ease !important;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+                user-select: none !important;
+            }
+            .btn-skip-silence:hover {
+                background: #fef9c3 !important;
+                border-color: #ca8a04 !important;
+                color: #713f12 !important;
+                transform: scale(1.04) !important;
+            }
+            .btn-skip-silence:active {
+                transform: scale(0.97) !important;
+            }
+            @keyframes pulse-prompt {
+                from { opacity: 0.85; transform: scale(0.97); }
+                to { opacity: 1; transform: scale(1.03); }
+            }
            .turn-action-buttons {
                display: flex !important;
                align-items: center !important;
@@ -1438,7 +1466,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 if (contentEl && !contentEl.querySelector('.user-prompt-tag')) {
                   var tag = document.createElement('span');
                   tag.className = 'user-prompt-tag';
-                  tag.innerHTML = '🗣️ Đến lượt bạn nói (' + spkLabel + ')...';
+                  tag.innerHTML = '🗣️ Đến lượt bạn nói (' + spkLabel + ')... <button type="button" class="btn-skip-silence" title="Bấm nếu bạn đã nói xong để chuyển câu tiếp ngay">⏭️ Đã nói xong</button>';
                   contentEl.appendChild(tag);
                 }
               } else {
@@ -1453,7 +1481,11 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               var cloudUrl = 'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/' + audioKey + '.mp3';
 
               var words = (sentence || '').trim().split(/\s+/).filter(Boolean).length;
-              var naturalSpeakingMs = Math.max(2800, words * 450 + 600);
+              // Tính thời lượng nói thoải mái cho học viên:
+              // - Tốc độ đọc tự nhiên của học viên: ~900ms / từ
+              // - 3.5s đệm cho quan sát, lấy hơi và khoảng lặng phản xạ
+              // - Tối thiểu 6.5s kể cả câu ngắn nhất
+              var baseSpeakingMs = Math.max(6500, words * 900 + 3500);
 
               var turnEnded = false;
               var onTurnEnd = function() {
@@ -1472,15 +1504,46 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                   try { p.audio.pause(); } catch(e) {}
                   p.audio = null;
                 }
+                p.skipTurn = null;
                 p.timer = setTimeout(function() {
                   p.currentIndex++;
                   playDialogueTurn();
-                }, 500);
+                }, 600);
               };
 
+              p.skipTurn = onTurnEnd;
+
               if (isMuted) {
-                // Vai này do học sinh nói: dành đủ thời lượng tự nhiên để học sinh nói trám vào
-                p.timer = setTimeout(onTurnEnd, naturalSpeakingMs);
+                // Vai này do học sinh nói:
+                // Tải audio mẫu để lấy duration thực tế, luôn nhân 1.65x + 3.5s đệm
+                // để đảm bảo thời gian cho phép luôn dài hơn đáng kể so với bản nói mẫu
+                var applySpeakingTimer = function(durationMs) {
+                  if (turnEnded || !activeDialoguePlayer || activeDialoguePlayer !== p) return;
+                  if (p.timer) clearTimeout(p.timer);
+                  p.timer = setTimeout(onTurnEnd, durationMs);
+                };
+
+                applySpeakingTimer(baseSpeakingMs);
+
+                var sampleAudio = new Audio(localUrl);
+                p.audio = sampleAudio;
+                sampleAudio.onloadedmetadata = function() {
+                  if (sampleAudio.duration && !isNaN(sampleAudio.duration) && sampleAudio.duration > 0) {
+                    var sampleDurationMs = Math.round(sampleAudio.duration * 1000 * 1.65 + 3500);
+                    var finalSpeakingMs = Math.max(sampleDurationMs, baseSpeakingMs);
+                    applySpeakingTimer(finalSpeakingMs);
+                  }
+                };
+                sampleAudio.onerror = function() {
+                  var cloudSample = new Audio(cloudUrl);
+                  cloudSample.onloadedmetadata = function() {
+                    if (cloudSample.duration && !isNaN(cloudSample.duration) && cloudSample.duration > 0) {
+                      var sampleDurationMs = Math.round(cloudSample.duration * 1000 * 1.65 + 3500);
+                      var finalSpeakingMs = Math.max(sampleDurationMs, baseSpeakingMs);
+                      applySpeakingTimer(finalSpeakingMs);
+                    }
+                  };
+                };
               } else {
                 // Vai này máy đọc: phát audio rõ ràng (nghe cả 2 hoặc nghe đối phương)
                 var audio = new Audio(localUrl);
@@ -1499,10 +1562,10 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                   fallbackAudio.volume = 1;
                   fallbackAudio.onended = onTurnEnd;
                   fallbackAudio.onerror = function() {
-                    p.timer = setTimeout(onTurnEnd, naturalSpeakingMs);
+                    p.timer = setTimeout(onTurnEnd, baseSpeakingMs);
                   };
                   fallbackAudio.play().catch(function() {
-                    p.timer = setTimeout(onTurnEnd, naturalSpeakingMs);
+                    p.timer = setTimeout(onTurnEnd, baseSpeakingMs);
                   });
                 };
 
@@ -1514,7 +1577,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 // Safety timeout nếu mạng lag hoặc audio bị đơ
                 p.safetyTimer = setTimeout(function() {
                   onTurnEnd();
-                }, Math.max(12000, naturalSpeakingMs * 2));
+                }, Math.max(16000, baseSpeakingMs * 2));
               }
             }
 
@@ -1762,6 +1825,17 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 var targetRole = playBtn.getAttribute('data-target-role') || (mode === 'as_1' ? 'A' : (mode === 'as_2' ? 'B' : null));
                 if (dId) {
                     startDialoguePlay(dId, mode, playBtn, targetRole);
+                }
+                return false;
+            }
+
+            // -0.8 Intercept skip silence button when user finished speaking in Play as mode
+            var skipBtn = target.closest('.btn-skip-silence');
+            if (skipBtn) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (activeDialoguePlayer && typeof activeDialoguePlayer.skipTurn === 'function') {
+                    activeDialoguePlayer.skipTurn();
                 }
                 return false;
             }
