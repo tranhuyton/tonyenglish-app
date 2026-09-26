@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { supabase } from './supabase';
 import Home from './Home';
 import StudentPortal from './StudentPortal';
+import ResetPasswordModal from './ResetPasswordModal';
 import { lazyWithRetry, AppErrorBoundary } from './chunkReload';
 
 // 🚀 CODE SPLITTING: Lazy load các component nặng có cơ chế tự động phục hồi khi có bản cập nhật mới
@@ -53,6 +54,9 @@ export default function App() {
 
   // 🚀 LIVE TUTOR WIDGET STATE
   const [liveTutorState, setLiveTutorState] = useState<'CLOSED' | 'FULLSCREEN' | 'MINIMIZED'>('CLOSED');
+  
+  // 🔐 RESET PASSWORD MODAL STATE (Khi học sinh bấm link khôi phục mật khẩu từ email)
+  const [showResetPasswordModal, setShowResetPasswordModal] = useState(false);
 
   useEffect(() => {
     const handleGlobalClick = (e: MouseEvent) => {
@@ -208,9 +212,21 @@ export default function App() {
     };
     document.addEventListener('visibilitychange', handleVisibility);
 
+    // 🔐 Tự động phát hiện khi học sinh nhấp vào liên kết đổi mật khẩu từ email
+    try {
+      const hash = window.location.hash || '';
+      const search = window.location.search || '';
+      if (hash.includes('type=recovery') || search.includes('type=recovery')) {
+        setShowResetPasswordModal(true);
+      }
+    } catch (e) {}
+
     supabase.auth.getSession().then(({ data: { session } }) => { if (session) { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); } }).catch(console.warn);
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN') { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); }
+      else if (event === 'PASSWORD_RECOVERY') {
+        setShowResetPasswordModal(true);
+      }
       else if (event === 'SIGNED_OUT') {
         setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login') ? 'home' : prev); 
         try { sessionStorage.removeItem('lms_current_view'); sessionStorage.removeItem('lms_current_test'); sessionStorage.removeItem('lms_active_course_id'); sessionStorage.removeItem('lms_return_view'); } catch(e) {}
@@ -341,6 +357,13 @@ export default function App() {
           )}
         </Suspense>
       </AppErrorBoundary>
+
+      {/* 🔐 MODAL ĐẶT LẠI MẬT KHẨU MỚI KHI CLICK LINK EMAIL */}
+      <ResetPasswordModal 
+        isOpen={showResetPasswordModal} 
+        onClose={() => setShowResetPasswordModal(false)} 
+        onNavigate={handleNavigate} 
+      />
 
       {!validViews.includes(currentView) && (
         <div className="h-screen bg-red-50 flex flex-col items-center justify-center p-8 text-center font-sans">

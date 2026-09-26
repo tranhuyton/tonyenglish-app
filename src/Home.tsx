@@ -3,9 +3,16 @@ import { supabase } from './supabase';
 
 export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: string) => void, onStartTest: (type: string, data: any) => void }) {
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [authModalMode, setAuthModalMode] = useState<'login' | 'forgot'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  
+  // 🔐 FORGOT PASSWORD STATE
+  const [resetEmail, setResetEmail] = useState('');
+  const [isResetting, setIsResetting] = useState(false);
+  const [resetSentSuccess, setResetSentSuccess] = useState(false);
+  const [resetError, setResetError] = useState('');
   
   const [currentUserRole, setCurrentUserRole] = useState<string | null>(null);
 
@@ -56,6 +63,24 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
       }
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleForgotPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!resetEmail.trim()) return;
+    setIsResetting(true);
+    setResetError('');
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(resetEmail.trim(), {
+        redirectTo: `${window.location.origin}/`,
+      });
+      if (error) throw error;
+      setResetSentSuccess(true);
+    } catch (err: any) {
+      setResetError(err.message || 'Không thể gửi email đặt lại mật khẩu. Vui lòng kiểm tra lại địa chỉ email.');
+    } finally {
+      setIsResetting(false);
     }
   };
 
@@ -244,52 +269,159 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
         </div>
       </footer>
 
-      {/* MODAL ĐĂNG NHẬP */}
+      {/* MODAL ĐĂNG NHẬP & QUÊN MẬT KHẨU */}
       {showLoginModal && (
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden animate-in zoom-in-95">
             
             <div className="bg-[#f8fafc] px-8 py-6 border-b border-slate-200 flex justify-between items-center">
-              <h2 className="text-2xl font-black text-slate-800">Đăng Nhập</h2>
-              <button onClick={() => setShowLoginModal(false)} className="text-slate-400 hover:text-red-500 text-2xl font-bold transition-colors">&times;</button>
+              <div className="flex items-center gap-3">
+                {authModalMode === 'forgot' && (
+                  <button 
+                    type="button"
+                    onClick={() => { setAuthModalMode('login'); setResetSentSuccess(false); setResetError(''); }}
+                    className="w-8 h-8 rounded-full hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors text-sm font-bold"
+                    title="Quay lại đăng nhập"
+                  >
+                    ←
+                  </button>
+                )}
+                <h2 className="text-2xl font-black text-slate-800">
+                  {authModalMode === 'login' ? 'Đăng Nhập' : 'Quên Mật Khẩu'}
+                </h2>
+              </div>
+              <button 
+                onClick={() => { setShowLoginModal(false); setAuthModalMode('login'); setResetSentSuccess(false); setResetError(''); }} 
+                className="text-slate-400 hover:text-red-500 text-2xl font-bold transition-colors"
+              >
+                &times;
+              </button>
             </div>
 
-            <form onSubmit={handleLogin} className="p-8 space-y-6">
-              <div className="space-y-2">
-                <label className="text-[13px] font-bold text-slate-500 uppercase tracking-widest">Email</label>
-                <input 
-                  type="email" 
-                  required
-                  placeholder="Nhập email của bạn..." 
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#1e88e5] text-[15px] font-medium transition-shadow bg-white" 
-                />
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <label className="text-[13px] font-bold text-slate-500 uppercase tracking-widest">Mật khẩu</label>
-                  <a href="#" className="text-[12px] font-bold text-[#1e88e5] hover:underline">Quên mật khẩu?</a>
+            {authModalMode === 'login' ? (
+              <form onSubmit={handleLogin} className="p-8 space-y-6">
+                <div className="space-y-2">
+                  <label className="text-[13px] font-bold text-slate-500 uppercase tracking-widest">Email</label>
+                  <input 
+                    type="email" 
+                    required
+                    placeholder="Nhập email của bạn..." 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#1e88e5] text-[15px] font-medium transition-shadow bg-white" 
+                  />
                 </div>
-                <input 
-                  type="password" 
-                  required
-                  placeholder="••••••••" 
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#1e88e5] text-[15px] font-medium transition-shadow bg-white" 
-                />
-              </div>
 
-              <button 
-                type="submit" 
-                disabled={isLoading}
-                className="w-full bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-400 text-white font-black py-4 rounded-xl shadow-lg transition-transform active:scale-95 flex justify-center items-center gap-2 mt-4"
-              >
-                {isLoading ? '⏳ ĐANG XỬ LÝ...' : 'ĐĂNG NHẬP HỆ THỐNG ➜'}
-              </button>
-            </form>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <label className="text-[13px] font-bold text-slate-500 uppercase tracking-widest">Mật khẩu</label>
+                    <button 
+                      type="button"
+                      onClick={() => {
+                        setAuthModalMode('forgot');
+                        setResetEmail(email);
+                        setResetSentSuccess(false);
+                        setResetError('');
+                      }} 
+                      className="text-[12px] font-bold text-[#1e88e5] hover:underline"
+                    >
+                      Quên mật khẩu?
+                    </button>
+                  </div>
+                  <input 
+                    type="password" 
+                    required
+                    placeholder="••••••••" 
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#1e88e5] text-[15px] font-medium transition-shadow bg-white" 
+                  />
+                </div>
+
+                <button 
+                  type="submit" 
+                  disabled={isLoading}
+                  className="w-full bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-400 text-white font-black py-4 rounded-xl shadow-lg transition-transform active:scale-95 flex justify-center items-center gap-2 mt-4"
+                >
+                  {isLoading ? '⏳ ĐANG XỬ LÝ...' : 'ĐĂNG NHẬP HỆ THỐNG ➜'}
+                </button>
+              </form>
+            ) : (
+              <div className="p-8">
+                {resetSentSuccess ? (
+                  <div className="text-center py-4 space-y-4 animate-in fade-in">
+                    <div className="w-16 h-16 bg-sky-100 text-[#0a5482] rounded-full flex items-center justify-center mx-auto text-3xl shadow-sm">
+                      📧
+                    </div>
+                    <h3 className="text-xl font-black text-slate-800">Đã Gửi Email Khôi Phục!</h3>
+                    <p className="text-slate-600 text-[14px] leading-relaxed">
+                      Hệ thống đã gửi liên kết đặt lại mật khẩu đến: <br/>
+                      <strong className="text-slate-800 font-bold">{resetEmail}</strong>
+                    </p>
+                    <p className="text-[12px] text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                      💡 Vui lòng mở hòm thư (kiểm tra cả mục <strong>Spam / Thư rác</strong>) và nhấn vào liên kết để tạo mật khẩu mới.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => { setAuthModalMode('login'); setResetSentSuccess(false); setResetError(''); }}
+                      className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-black py-3.5 rounded-xl shadow-lg transition-all active:scale-95 text-[14px]"
+                    >
+                      ← Quay lại Đăng nhập
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleForgotPassword} className="space-y-5">
+                    <p className="text-slate-600 text-[14px] leading-relaxed">
+                      Nhập email đã đăng ký của bạn. Chúng tôi sẽ gửi một liên kết an toàn qua email để bạn đặt lại mật khẩu mới.
+                    </p>
+
+                    {resetError && (
+                      <div className="p-3.5 bg-rose-50 border border-rose-200 rounded-xl text-rose-700 text-[13px] font-bold flex items-center gap-2">
+                        <span>⚠️</span>
+                        <span>{resetError}</span>
+                      </div>
+                    )}
+
+                    <div className="space-y-2">
+                      <label className="text-[13px] font-bold text-slate-500 uppercase tracking-widest">Email tài khoản</label>
+                      <input 
+                        type="email" 
+                        required
+                        placeholder="Ví dụ: hocvien@gmail.com" 
+                        value={resetEmail}
+                        onChange={(e) => setResetEmail(e.target.value)}
+                        className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#1e88e5] text-[15px] font-medium transition-shadow bg-white" 
+                      />
+                    </div>
+
+                    <button 
+                      type="submit" 
+                      disabled={isResetting}
+                      className="w-full bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-400 text-white font-black py-4 rounded-xl shadow-lg transition-transform active:scale-95 flex justify-center items-center gap-2 mt-4"
+                    >
+                      {isResetting ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          <span>ĐANG GỬI EMAIL...</span>
+                        </>
+                      ) : (
+                        'GỬI LIÊN KẾT ĐẶT LẠI MẬT KHẨU ➜'
+                      )}
+                    </button>
+
+                    <div className="text-center pt-2">
+                      <button
+                        type="button"
+                        onClick={() => { setAuthModalMode('login'); setResetError(''); }}
+                        className="text-[13px] font-bold text-slate-500 hover:text-[#0a5482] transition-colors"
+                      >
+                        ← Quay lại Đăng nhập
+                      </button>
+                    </div>
+                  </form>
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}

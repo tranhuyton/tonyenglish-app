@@ -303,6 +303,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
     const activeTargetSentenceRef = useRef<string | null>(null);
     const autoStopTimerRef = useRef<any>(null);
     const audioStreamRef = useRef<MediaStream | null>(null);
+    const audioDurationCacheRef = useRef<Map<string, number>>(new Map());
 
     const stopAllCurrentAudio = useCallback((notifyIframe: boolean = false) => {
       if (currentAudioRef.current) {
@@ -443,6 +444,14 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
       const audio = new Audio(localUrl);
       currentAudioRef.current = audio;
 
+      if (audioKey) {
+        audio.onloadedmetadata = () => {
+          if (audio.duration && !isNaN(audio.duration) && audio.duration > 0) {
+            audioDurationCacheRef.current.set(audioKey, audio.duration);
+          }
+        };
+      }
+
       audio.onended = () => {
         if (currentAudioRef.current === audio) {
           currentAudioRef.current = null;
@@ -454,6 +463,13 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/${audioKey}.mp3`;
          const cloudAudio = new Audio(cloudUrl);
          currentAudioRef.current = cloudAudio;
+         if (audioKey) {
+           cloudAudio.onloadedmetadata = () => {
+             if (cloudAudio.duration && !isNaN(cloudAudio.duration) && cloudAudio.duration > 0) {
+               audioDurationCacheRef.current.set(audioKey, cloudAudio.duration);
+             }
+           };
+         }
          cloudAudio.onended = () => {
            if (currentAudioRef.current === cloudAudio) {
              currentAudioRef.current = null;
@@ -658,7 +674,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
       mediaRecorderRef.current.stop();
     }, [playChimeSound, stopAllCurrentAudio]);
 
-    const startRecordingSentence = useCallback(async (cardId: string, targetSentence: string) => {
+    const startRecordingSentence = useCallback(async (cardId: string, targetSentence: string, audioKey?: string) => {
       stopAllCurrentAudio(true);
 
       if (activeRecordingCardIdRef.current && mediaRecorderRef.current?.state !== 'inactive') {
@@ -694,9 +710,65 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
           status: 'RECORDING'
         }, '*');
 
-        autoStopTimerRef.current = setTimeout(() => {
-          stopRecordingAndEvaluate();
-        }, 6000);
+        // Tính toán thời lượng thu âm thông minh:
+        // So sánh với thời lượng của câu đọc mẫu bên cạnh và cộng thêm 2-3 giây đệm để học sinh đọc thoải mái
+        const wordCount = (targetSentence || '').trim().split(/\s+/).filter(Boolean).length;
+        // Cơ bản: người học cần ~850ms/từ + 3.5s đệm (chuẩn bị, lấy hơi, ngắt nghỉ), tối thiểu 7.5s
+        const baseSpeakingMs = Math.max(7500, wordCount * 850 + 3500);
+
+        let finalTimeoutMs = baseSpeakingMs;
+
+        const applyTimeout = (durMs: number) => {
+          if (autoStopTimerRef.current) {
+            clearTimeout(autoStopTimerRef.current);
+          }
+          autoStopTimerRef.current = setTimeout(() => {
+            stopRecordingAndEvaluate();
+          }, durMs);
+        };
+
+        if (audioKey) {
+          if (audioDurationCacheRef.current.has(audioKey)) {
+            const sampleDur = audioDurationCacheRef.current.get(audioKey)!;
+            // Thời lượng câu mẫu nhân hệ số tốc độ người học 1.35x + thêm 2.5s đệm (hoặc tối thiểu mẫu + 2.0s)
+            const sampleBasedMs = Math.max(
+              Math.round(sampleDur * 1000 * 1.35 + 2500),
+              Math.round((sampleDur + 2.0) * 1000)
+            );
+            finalTimeoutMs = Math.max(baseSpeakingMs, sampleBasedMs);
+            applyTimeout(finalTimeoutMs);
+          } else {
+            // Đặt timer cơ bản trước trong lúc load metadata câu đọc mẫu
+            applyTimeout(finalTimeoutMs);
+
+            const localUrl = `/audio/communication/sentences/${audioKey}.mp3`;
+            const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/${audioKey}.mp3`;
+            const probeAudio = new Audio(localUrl);
+
+            const onProbeLoaded = (dur: number) => {
+              if (dur && !isNaN(dur) && dur > 0) {
+                audioDurationCacheRef.current.set(audioKey, dur);
+                const sampleBasedMs = Math.max(
+                  Math.round(dur * 1000 * 1.35 + 2500),
+                  Math.round((dur + 2.0) * 1000)
+                );
+                const adjustedTimeout = Math.max(baseSpeakingMs, sampleBasedMs);
+                if (adjustedTimeout > finalTimeoutMs && activeRecordingCardIdRef.current === cardId) {
+                  finalTimeoutMs = adjustedTimeout;
+                  applyTimeout(finalTimeoutMs);
+                }
+              }
+            };
+
+            probeAudio.onloadedmetadata = () => onProbeLoaded(probeAudio.duration);
+            probeAudio.onerror = () => {
+              const probeCloud = new Audio(cloudUrl);
+              probeCloud.onloadedmetadata = () => onProbeLoaded(probeCloud.duration);
+            };
+          }
+        } else {
+          applyTimeout(finalTimeoutMs);
+        }
 
       } catch (err: any) {
         console.error('Lỗi truy cập micro:', err);
@@ -750,7 +822,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
         } else if (e.data?.type === 'LECTURE_PLAY_SENTENCE') {
           playBritishSentence(e.data.sentence || '', e.data.audioKey || '');
         } else if (e.data?.type === 'LECTURE_START_RECORDING') {
-          startRecordingSentence(e.data.cardId, e.data.targetSentence);
+          startRecordingSentence(e.data.cardId, e.data.targetSentence, e.data.audioKey);
         } else if (e.data?.type === 'LECTURE_STOP_RECORDING') {
           stopRecordingAndEvaluate();
         } else if (e.data?.type === 'LECTURE_STOP_AUDIO') {
@@ -1345,13 +1417,17 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                var existingMic = card.querySelector('.sentence-mic-btn');
                if (!existingMic) {
                    var spkIcon = card.querySelector('.speaker-icon');
-                   var micBtn = document.createElement('button');
-                   micBtn.className = 'sentence-mic-btn';
-                   micBtn.setAttribute('type', 'button');
-                   micBtn.setAttribute('data-card-id', cardId);
-                   micBtn.setAttribute('data-sentence', sentence);
-                   micBtn.title = 'Kiểm tra phát âm bằng AI (Gemini Flash)';
-                   micBtn.innerHTML = '🎙️';
+                    var micBtn = document.createElement('button');
+                    micBtn.className = 'sentence-mic-btn';
+                    micBtn.setAttribute('type', 'button');
+                    micBtn.setAttribute('data-card-id', cardId);
+                    micBtn.setAttribute('data-sentence', sentence);
+                    var audioKey = card.getAttribute('data-audio-key') || '';
+                    if (audioKey) {
+                        micBtn.setAttribute('data-audio-key', audioKey);
+                    }
+                    micBtn.title = 'Kiểm tra phát âm bằng AI';
+                    micBtn.innerHTML = '🎙️';
 
                    if (spkIcon && spkIcon.parentNode) {
                        var p = spkIcon.parentNode;
@@ -1646,6 +1722,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
             var cardId = micBtn.getAttribute('data-card-id');
             var sentence = micBtn.getAttribute('data-sentence');
             var card = micBtn.closest('.sentence-audio-card');
+            var audioKey = micBtn.getAttribute('data-audio-key') || (card ? card.getAttribute('data-audio-key') : '') || '';
             var fb = card ? card.querySelector('.pronunciation-feedback') : null;
 
             // Dừng ngay lập tức bất kỳ âm thanh nào đang phát
@@ -1661,7 +1738,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
 
                 if (fb) {
                     fb.style.display = 'block';
-                    fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>Gemini AI đang lắng nghe và chấm phát âm...</strong> Vui lòng đợi trong giây lát</span></div>';
+                    fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>AI đang lắng nghe và chấm phát âm...</strong> Vui lòng đợi trong giây lát</span></div>';
                 }
 
                 window.parent.postMessage({ type: 'LECTURE_STOP_RECORDING', cardId: cardId }, '*');
@@ -1682,11 +1759,11 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                             '<span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ef4444; animation: pulse-mic 1s infinite;"></span>' +
                             '<span><strong>Đang nghe:</strong> Hãy đọc câu trên vào mic...</span>' +
                         '</div>' +
-                        '<span style="font-size: 12px; color: #991b1b; font-weight: bold; cursor: pointer; text-decoration: underline;">Bấm ⏹️ để chấm</span>' +
+                        '<button type="button" class="btn-stop-recording-prompt" style="font-size: 12px; color: #991b1b; font-weight: bold; cursor: pointer; text-decoration: underline; background: none; border: none; padding: 0;">Bấm ⏹️ để chấm</button>' +
                     '</div>';
                 }
 
-                window.parent.postMessage({ type: 'LECTURE_START_RECORDING', cardId: cardId, targetSentence: sentence }, '*');
+                window.parent.postMessage({ type: 'LECTURE_START_RECORDING', cardId: cardId, targetSentence: sentence, audioKey: audioKey }, '*');
             }
           };
 
@@ -1719,7 +1796,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                     }
                     if (fb) {
                         fb.style.display = 'block';
-                        fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>Gemini AI đang lắng nghe và chấm phát âm...</strong></span></div>';
+                        fb.innerHTML = '<div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #0284c7; background: #f0f9ff; padding: 10px 14px; border-radius: 8px; border: 1px solid #bae6fd; margin-top: 10px;"><span style="font-size: 16px;">⏳</span><span><strong>AI đang lắng nghe và chấm phát âm...</strong></span></div>';
                     }
                 }
             } else if (e.data.type === 'PRONUNCIATION_RESULT') {
@@ -1867,6 +1944,21 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                e.preventDefault();
                e.stopPropagation();
                window.handleMicClick && window.handleMicClick(micTarget);
+               return false;
+           }
+
+           // 0.05 Intercept stop recording text prompt
+           var stopPromptTarget = target.closest('.btn-stop-recording-prompt');
+           if (stopPromptTarget) {
+               e.preventDefault();
+               e.stopPropagation();
+               var card = stopPromptTarget.closest('.sentence-audio-card');
+               if (card) {
+                   var mic = card.querySelector('.sentence-mic-btn');
+                   if (mic) {
+                       window.handleMicClick && window.handleMicClick(mic);
+                   }
+               }
                return false;
            }
 

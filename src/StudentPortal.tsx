@@ -210,9 +210,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [showModeSelection, setShowModeSelection] = useState(false);
   const [testToStart, setTestToStart] = useState<any>(null);
 
-  const [newPassword, setNewPassword] = useState('');
   const [newFullName, setNewFullName] = useState('');
   const [isUpdatingProfile, setIsUpdatingProfile] = useState(false);
+  const [profileSuccessMsg, setProfileSuccessMsg] = useState('');
+  const [profileErrorMsg, setProfileErrorMsg] = useState('');
+
+  // 🔐 Đổi mật khẩu trong trang cá nhân
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isChangingPassword, setIsChangingPassword] = useState(false);
+  const [passwordSuccessMsg, setPasswordSuccessMsg] = useState('');
+  const [passwordErrorMsg, setPasswordErrorMsg] = useState('');
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -543,26 +553,55 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     }
   };
 
-  const handleUpdateProfile = async () => {
+  const handleUpdateProfile = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     setIsUpdatingProfile(true);
+    setProfileSuccessMsg('');
+    setProfileErrorMsg('');
     try {
-      if (newFullName && currentUser?.id) {
-          await supabase.from('profiles').update({ full_name: newFullName }).eq('id', currentUser.id);
+      if (newFullName.trim() && currentUser?.id) {
+        const { error } = await supabase.from('profiles').update({ full_name: newFullName.trim() }).eq('id', currentUser.id);
+        if (error) throw error;
+        if (userProfile) {
+          setUserProfile({ ...userProfile, full_name: newFullName.trim() });
+        }
       }
-      if (newPassword && newPassword.length >= 6) {
-        const { error } = await supabase.auth.updateUser({ password: newPassword });
-        if (error) throw error; 
-        setNewPassword('');
-      } else if (newPassword && newPassword.length < 6) {
-        alert("Mật khẩu mới phải có ít nhất 6 ký tự!"); 
-        setIsUpdatingProfile(false); 
-        return;
-      }
-      alert("Cập nhật tài khoản thành công!");
+      setProfileSuccessMsg('✓ Đã lưu thông tin cá nhân thành công!');
+      setTimeout(() => setProfileSuccessMsg(''), 4000);
     } catch (error: any) { 
-        alert("Lỗi cập nhật: " + error.message); 
+      setProfileErrorMsg('Lỗi cập nhật: ' + (error.message || 'Vui lòng thử lại sau.')); 
     } finally { 
-        setIsUpdatingProfile(false); 
+      setIsUpdatingProfile(false); 
+    }
+  };
+
+  const handleChangePassword = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    setPasswordSuccessMsg('');
+    setPasswordErrorMsg('');
+
+    if (!newPassword || newPassword.length < 6) {
+      setPasswordErrorMsg('Mật khẩu mới phải có tối thiểu 6 ký tự!');
+      return;
+    }
+
+    if (newPassword !== confirmPassword) {
+      setPasswordErrorMsg('Mật khẩu xác nhận không khớp với mật khẩu mới!');
+      return;
+    }
+
+    setIsChangingPassword(true);
+    try {
+      const { error } = await supabase.auth.updateUser({ password: newPassword });
+      if (error) throw error;
+      setNewPassword('');
+      setConfirmPassword('');
+      setPasswordSuccessMsg('✓ Đổi mật khẩu thành công! Mật khẩu mới đã được cập nhật.');
+      setTimeout(() => setPasswordSuccessMsg(''), 5000);
+    } catch (error: any) {
+      setPasswordErrorMsg('Lỗi đổi mật khẩu: ' + (error.message || 'Vui lòng thử lại sau.'));
+    } finally {
+      setIsChangingPassword(false);
     }
   };
 
@@ -2718,46 +2757,224 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             🚀 TRANG CẤU HÌNH TÀI KHOẢN (PROFILE)
             ===================================================================== */}
         {activeTab === 'profile' && (
-          <div className="max-w-xl mx-auto mt-8 md:mt-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div className="bg-white p-8 md:p-12 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.04)] text-center mx-2 md:mx-0">
-              
-              {/* Avatar */}
-              <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 text-white flex items-center justify-center font-black text-4xl md:text-5xl mx-auto mb-5 shadow-lg border-4 border-white">
+          <div className="max-w-2xl mx-auto mt-6 md:mt-10 mb-16 px-2 sm:px-0 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            
+            {/* Header Thẻ Cá Nhân */}
+            <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 text-white flex items-center justify-center font-black text-3xl md:text-4xl shadow-lg border-4 border-white shrink-0">
                 {displayUserInitial}
               </div>
-              <h2 className="text-2xl md:text-3xl font-black text-slate-800 mb-1 tracking-tight">{displayUserName}</h2>
-              <p className="text-[#0ea5e9] font-bold mb-8 text-[14px] md:text-[15px] bg-sky-50 inline-block px-4 py-1 rounded-full border border-sky-100 uppercase tracking-widest">
-                {userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên TonyEnglish'}
-              </p>
-              
-              <div className="space-y-5 border-t border-slate-100 pt-8 text-left">
-                <h3 className="font-black text-lg text-slate-800 mb-6">Cài đặt cá nhân</h3>
-                
-                <div className="space-y-2">
-                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Họ và tên</label>
-                  <input type="text" value={newFullName} onChange={e => setNewFullName(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 font-semibold text-slate-800 focus:border-[#0ea5e9] focus:bg-white focus:ring-4 focus:ring-[#0ea5e9]/10 outline-none transition-all text-[15px] shadow-sm" placeholder="Nhập họ và tên..." />
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+                  <h2 className="text-2xl md:text-3xl font-black text-slate-800 tracking-tight">{displayUserName}</h2>
+                  <span className="text-[#0ea5e9] font-bold text-[12px] bg-sky-50 px-3 py-0.5 rounded-full border border-sky-100 uppercase tracking-widest">
+                    {userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên TonyEnglish'}
+                  </span>
                 </div>
-                
-                <div className="space-y-2">
-                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Mục tiêu IELTS</label>
-                  <input type="text" value={courseTargets.ielts || ''} onChange={e => handleUpdateTarget('ielts', e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 font-semibold text-slate-800 focus:border-amber-500 focus:bg-white focus:ring-4 focus:ring-amber-500/10 outline-none transition-all text-[15px] shadow-sm" placeholder="Ví dụ: 7.0" />
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Email đăng nhập</label>
-                  <input type="email" defaultValue={currentUser?.email || ""} disabled className="w-full bg-slate-100 border border-slate-200 rounded-xl px-5 py-4 font-semibold text-slate-400 outline-none cursor-not-allowed text-[15px]" />
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Đổi mật khẩu (Tùy chọn)</label>
-                  <input type="password" placeholder="••••••••" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 font-semibold text-slate-800 focus:border-[#0ea5e9] focus:bg-white focus:ring-4 focus:ring-[#0ea5e9]/10 outline-none transition-all text-[15px] shadow-sm" />
-                </div>
-                
-                <button onClick={handleUpdateProfile} disabled={isUpdatingProfile} className="bg-[#0ea5e9] hover:bg-[#0284c7] disabled:bg-slate-300 text-white font-black px-6 py-4 rounded-xl transition-all w-full mt-6 text-[14px] uppercase tracking-widest shadow-[0_8px_20px_rgba(14,165,233,0.3)] disabled:shadow-none hover:-translate-y-0.5 active:translate-y-0">
-                  {isUpdatingProfile ? 'Đang lưu...' : 'Lưu thay đổi'}
-                </button>
+                <p className="text-slate-500 text-[14px] flex items-center justify-center sm:justify-start gap-1.5 font-medium">
+                  <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  {currentUser?.email || "Chưa có email"}
+                </p>
               </div>
             </div>
+
+            {/* Khối 1: Thông tin học viên */}
+            <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0ea5e9] flex items-center justify-center text-xl font-bold">
+                  👤
+                </div>
+                <div>
+                  <h3 className="font-black text-lg text-slate-800 tracking-tight">Thông Tin Cá Nhân</h3>
+                  <p className="text-slate-400 text-[13px]">Cập nhật họ tên hiển thị và mục tiêu học tập</p>
+                </div>
+              </div>
+
+              {profileSuccessMsg && (
+                <div className="mb-5 p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-[14px] font-bold rounded-xl flex items-center gap-2 animate-in fade-in">
+                  <span>✓</span>
+                  <span>{profileSuccessMsg}</span>
+                </div>
+              )}
+              {profileErrorMsg && (
+                <div className="mb-5 p-3.5 bg-rose-50 border border-rose-200 text-rose-700 text-[14px] font-bold rounded-xl flex items-center gap-2 animate-in shake">
+                  <span>⚠️</span>
+                  <span>{profileErrorMsg}</span>
+                </div>
+              )}
+
+              <form onSubmit={handleUpdateProfile} className="space-y-4">
+                <div className="space-y-1.5">
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Họ và tên</label>
+                  <input 
+                    type="text" 
+                    value={newFullName} 
+                    onChange={e => setNewFullName(e.target.value)} 
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-semibold text-slate-800 focus:border-[#0ea5e9] focus:bg-white focus:ring-4 focus:ring-[#0ea5e9]/10 outline-none transition-all text-[15px]" 
+                    placeholder="Nhập họ và tên..." 
+                  />
+                </div>
+                
+                <div className="space-y-1.5">
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Mục tiêu IELTS / Điểm số</label>
+                  <input 
+                    type="text" 
+                    value={courseTargets.ielts || ''} 
+                    onChange={e => handleUpdateTarget('ielts', e.target.value)} 
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-semibold text-slate-800 focus:border-amber-500 focus:bg-white focus:ring-4 focus:ring-amber-500/10 outline-none transition-all text-[15px]" 
+                    placeholder="Ví dụ: 7.0 hoặc A*" 
+                  />
+                </div>
+                
+                <div className="space-y-1.5">
+                  <div className="flex justify-between items-center ml-1">
+                    <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Email đăng nhập</label>
+                    <span className="text-[11px] text-slate-400 font-medium flex items-center gap-1">🔒 Cố định</span>
+                  </div>
+                  <input 
+                    type="email" 
+                    defaultValue={currentUser?.email || ""} 
+                    disabled 
+                    className="w-full bg-slate-100 border border-slate-200 rounded-xl px-4 py-3.5 font-semibold text-slate-400 outline-none cursor-not-allowed text-[15px]" 
+                  />
+                </div>
+
+                <div className="pt-2">
+                  <button 
+                    type="submit" 
+                    disabled={isUpdatingProfile} 
+                    className="bg-[#0ea5e9] hover:bg-[#0284c7] disabled:bg-slate-300 text-white font-black px-6 py-3.5 rounded-xl transition-all w-full text-[14px] uppercase tracking-wider shadow-md hover:shadow-lg disabled:shadow-none active:scale-[0.99] flex items-center justify-center gap-2"
+                  >
+                    {isUpdatingProfile ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <span>Đang lưu...</span>
+                      </>
+                    ) : (
+                      'Lưu Thông Tin Cá Nhân'
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* Khối 2: Đổi mật khẩu tài khoản */}
+            <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-200 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold">
+                  🔐
+                </div>
+                <div>
+                  <h3 className="font-black text-lg text-slate-800 tracking-tight">Đổi Mật Khẩu Tài Khoản</h3>
+                  <p className="text-slate-400 text-[13px]">Bảo vệ tài khoản với mật khẩu mới có ít nhất 6 ký tự</p>
+                </div>
+              </div>
+
+              {passwordSuccessMsg && (
+                <div className="mb-5 p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-[14px] font-bold rounded-xl flex items-center gap-2 animate-in fade-in">
+                  <span>✓</span>
+                  <span>{passwordSuccessMsg}</span>
+                </div>
+              )}
+              {passwordErrorMsg && (
+                <div className="mb-5 p-3.5 bg-rose-50 border border-rose-200 text-rose-700 text-[14px] font-bold rounded-xl flex items-center gap-2 animate-in shake">
+                  <span>⚠️</span>
+                  <span>{passwordErrorMsg}</span>
+                </div>
+              )}
+
+              <form onSubmit={handleChangePassword} className="space-y-4">
+                <div className="space-y-1.5">
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Mật khẩu mới</label>
+                  <div className="relative">
+                    <input 
+                      type={showNewPassword ? 'text' : 'password'}
+                      placeholder="Nhập mật khẩu mới (tối thiểu 6 ký tự)..." 
+                      value={newPassword} 
+                      onChange={(e) => {
+                        setNewPassword(e.target.value);
+                        setPasswordErrorMsg('');
+                      }} 
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 pr-12 font-semibold text-slate-800 focus:border-[#0ea5e9] focus:bg-white focus:ring-4 focus:ring-[#0ea5e9]/10 outline-none transition-all text-[15px]" 
+                    />
+                    <button 
+                      type="button" 
+                      onClick={() => setShowNewPassword(!showNewPassword)}
+                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1"
+                    >
+                      {showNewPassword ? (
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" />
+                        </svg>
+                      ) : (
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Xác nhận mật khẩu mới</label>
+                  <div className="relative">
+                    <input 
+                      type={showConfirmPassword ? 'text' : 'password'}
+                      placeholder="Nhập lại mật khẩu mới..." 
+                      value={confirmPassword} 
+                      onChange={(e) => {
+                        setConfirmPassword(e.target.value);
+                        setPasswordErrorMsg('');
+                      }} 
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 pr-12 font-semibold text-slate-800 focus:border-[#0ea5e9] focus:bg-white focus:ring-4 focus:ring-[#0ea5e9]/10 outline-none transition-all text-[15px]" 
+                    />
+                    <button 
+                      type="button" 
+                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1"
+                    >
+                      {showConfirmPassword ? (
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" />
+                        </svg>
+                      ) : (
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                      )}
+                    </button>
+                  </div>
+                  {confirmPassword && newPassword && confirmPassword !== newPassword && (
+                    <p className="text-[12px] text-rose-500 font-semibold ml-1">Mật khẩu xác nhận không khớp!</p>
+                  )}
+                  {confirmPassword && newPassword && confirmPassword === newPassword && (
+                    <p className="text-[12px] text-emerald-600 font-semibold ml-1 flex items-center gap-1">✓ Mật khẩu khớp</p>
+                  )}
+                </div>
+
+                <div className="pt-2">
+                  <button 
+                    type="submit" 
+                    disabled={isChangingPassword || !newPassword || newPassword.length < 6 || newPassword !== confirmPassword} 
+                    className="bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 text-white font-black px-6 py-3.5 rounded-xl transition-all w-full text-[14px] uppercase tracking-wider shadow-md hover:shadow-lg disabled:shadow-none active:scale-[0.99] flex items-center justify-center gap-2"
+                  >
+                    {isChangingPassword ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <span>Đang cập nhật mật khẩu...</span>
+                      </>
+                    ) : (
+                      'Cập Nhật Mật Khẩu Mới ➔'
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
+
           </div>
         )}
 
