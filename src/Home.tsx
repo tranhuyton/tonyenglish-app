@@ -68,11 +68,25 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
 
   const handleForgotPassword = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!resetEmail.trim()) return;
+    const cleanEmail = resetEmail.trim().toLowerCase();
+    if (!cleanEmail) return;
     setIsResetting(true);
     setResetError('');
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(resetEmail.trim(), {
+      // 1. Kiểm tra email có thuộc danh sách tài khoản học viên / giáo viên TonyEnglish không
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('id, email')
+        .ilike('email', cleanEmail)
+        .maybeSingle();
+
+      if (!profile) {
+        setResetError('Email này không tồn tại trong danh sách học viên của hệ thống TonyEnglish.');
+        return;
+      }
+
+      // 2. Nếu có, tiến hành gửi email khôi phục mật khẩu
+      const { error } = await supabase.auth.resetPasswordForEmail(cleanEmail, {
         redirectTo: `${window.location.origin}/`,
       });
       if (error) throw error;
