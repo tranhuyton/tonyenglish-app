@@ -510,7 +510,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
       const { data, error } = await authSupabase.auth.signUp({
         email: email,
         password: password,
-        options: { data: { full_name: fullName, role: newUserRole } }
+        options: { data: { full_name: fullName, role: newUserRole, app: 'tonyenglish' } }
       });
 
       if (error) throw error;
