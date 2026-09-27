@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { supabase } from './supabase';
 import { parseModuleTheme } from './moduleTheme';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
+import InteractiveLecturePlayer from './InteractiveLecturePlayer';
 
 // =========================================================================================
 // THƯ VIỆN ĐỌC PDF - TÍCH HỢP JUMP TO PAGE & VISION AI
@@ -304,6 +305,18 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
     const autoStopTimerRef = useRef<any>(null);
     const audioStreamRef = useRef<MediaStream | null>(null);
     const audioDurationCacheRef = useRef<Map<string, number>>(new Map());
+
+    useEffect(() => {
+      const handleHighlight = (e: any) => {
+        iframeRef.current?.contentWindow?.postMessage({
+          type: 'HIGHLIGHT_LECTURE_SECTION',
+          selector: e.detail?.selector,
+          autoScroll: e.detail?.autoScroll
+        }, '*');
+      };
+      window.addEventListener('tony-lecture-highlight-section', handleHighlight);
+      return () => window.removeEventListener('tony-lecture-highlight-section', handleHighlight);
+    }, []);
 
     const stopAllCurrentAudio = useCallback((notifyIframe: boolean = false) => {
       if (currentAudioRef.current) {
@@ -873,6 +886,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               fakeLiveBtn.remove(); 
           }, 100);
         }
+        else if (e.data?.type === 'LECTURE_PLAY_SECTION') {
+          window.dispatchEvent(new CustomEvent('tony-lecture-play-section', { detail: { sectionId: e.data.sectionId } }));
+        }
       };
       
       window.addEventListener('message', handleMessage);
@@ -1060,6 +1076,40 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               color: #0284c7 !important;
               text-decoration: underline !important;
           }
+
+          /* Interactive Lecture Highlight */
+          .active-lecture-highlight {
+              outline: 3.5px solid #0284c7 !important;
+              box-shadow: 0 0 25px rgba(2, 132, 199, 0.45) !important;
+              border-radius: 12px !important;
+              background-color: #f0f9ff !important;
+              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+              position: relative !important;
+          }
+          .active-lecture-highlight::before {
+              content: "🎙️ Đang giảng...";
+              position: absolute;
+              top: -12px;
+              right: 12px;
+              background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+              color: #ffffff;
+              font-size: 11px;
+              font-weight: 800;
+              padding: 3px 10px;
+              border-radius: 20px;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+              z-index: 50;
+              letter-spacing: 0.5px;
+              pointer-events: none;
+          }
+          [data-lecture-section] {
+              cursor: pointer !important;
+              transition: all 0.2s ease !important;
+          }
+          [data-lecture-section]:hover {
+              filter: brightness(0.97);
+          }
+
           .sentence-audio-card {
               cursor: pointer !important;
               transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -2134,6 +2184,34 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
           } else { 
              setInterval(reportHeight, 500);
           }
+
+          // Lắng nghe lệnh Highlight phân đoạn từ Player
+          window.addEventListener('message', function(e) {
+             if (e.data?.type === 'HIGHLIGHT_LECTURE_SECTION') {
+                var sel = e.data.selector;
+                document.querySelectorAll('.active-lecture-highlight').forEach(function(el) {
+                   el.classList.remove('active-lecture-highlight');
+                });
+                if (sel) {
+                   var target = document.querySelector(sel);
+                   if (target) {
+                      target.classList.add('active-lecture-highlight');
+                      if (e.data.autoScroll) {
+                         target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                      }
+                   }
+                }
+             }
+          });
+
+          // Click vào thẻ trên bài giảng để nghe giảng riêng thẻ đó
+          document.addEventListener('click', function(e) {
+             var sec = e.target.closest('[data-lecture-section]');
+             if (sec) {
+                var sid = sec.getAttribute('data-lecture-section');
+                window.parent.postMessage({ type: 'LECTURE_PLAY_SECTION', sectionId: sid }, '*');
+             }
+          });
         </script>
      </body>
      </html>
@@ -4028,6 +4106,9 @@ export default function LectureViewer({
                        <h2 className="text-[26px] md:text-[36px] text-slate-900 font-extrabold mb-8 md:mb-12 pb-6 border-b border-slate-100 leading-tight tracking-tight">
                            {activeLecture?.title}
                        </h2>
+                       {activeLectureId === '6286cb6f-b4ac-495b-b2ea-5a2bab09f764' && currentPage === 1 && (
+                         <InteractiveLecturePlayer manifestUrl="/audio/lectures/geography/1_1/manifest.json" />
+                       )}
                        <StaticLectureContent 
                            key={`${activeLectureId}_page_${currentPage}`}
                            html={currentHtmlContent} 
