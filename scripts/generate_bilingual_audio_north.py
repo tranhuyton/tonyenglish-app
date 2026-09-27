@@ -240,12 +240,12 @@ def get_duration(file_path):
     res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
     return round(float(res.stdout.strip()), 2)
 
-async def tts_save_retry(text, voice, out_path, max_retries=6):
+async def tts_save_retry(text, voice, out_path, pitch="+0Hz", rate="+0%", max_retries=6):
     if os.path.exists(out_path) and os.path.getsize(out_path) > 1000:
         return
     for attempt in range(1, max_retries + 1):
         try:
-            comm = edge_tts.Communicate(text, voice, rate="+0%")
+            comm = edge_tts.Communicate(text, voice, pitch=pitch, rate=rate)
             await comm.save(out_path)
             if os.path.exists(out_path) and os.path.getsize(out_path) > 1000:
                 return
@@ -263,13 +263,14 @@ async def generate_segment_audio(seg, index, total):
     combined_path = os.path.join(AUDIO_OUTPUT_DIR, f"{seg_id}.mp3")
 
     # 1. Generate English with Ryan (British Male)
-    await tts_save_retry(seg["en"], EN_VOICE, en_path)
+    await tts_save_retry(seg["en"], EN_VOICE, en_path, pitch="+0Hz", rate="+0%")
 
-    # 2. Generate Vietnamese with HoaiMy (Northern Female, sweet & standard)
-    await tts_save_retry(seg["vi"], VI_VOICE, vi_path)
+    # 2. Generate Northern Male Vietnamese voice (Hanoi accent)
+    # Using authentic Hanoi phonetics lowered to masculine fundamental frequency (-70Hz, ~135Hz)
+    await tts_save_retry(seg["vi"], VI_VOICE, vi_path, pitch="-70Hz", rate="-3%")
 
-    # 3. Concatenate using ffmpeg filter_complex with 0.4s silence pause
-    filter_expr = "[0:a][1:a][2:a]concat=n=3:v=0:a=1[out]"
+    # 3. Concatenate using ffmpeg filter_complex with 0.4s silence pause & warm chest resonance EQ
+    filter_expr = "[2:a]equalizer=f=125:width_type=o:w=1:g=3.5,equalizer=f=3600:width_type=o:w=1:g=-2.5[vi_m];[0:a][1:a][vi_m]concat=n=3:v=0:a=1[out]"
     cmd = [
         'ffmpeg', '-y',
         '-i', en_path,

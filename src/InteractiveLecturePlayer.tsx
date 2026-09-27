@@ -263,7 +263,7 @@ export default function InteractiveLecturePlayer({
                 Song ngữ Cambridge
               </span>
               <span className="text-[11px] text-slate-300">
-                🇬🇧 Giọng Anh - Anh Nam & 🇻🇳 Tiếng Việt (Giọng Bắc)
+                🇬🇧 Giọng Anh - Anh Nam & 🇻🇳 Tiếng Việt (Giọng Nam Hà Nội)
               </span>
             </div>
           </div>
