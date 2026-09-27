@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { 
   Play, Pause, RotateCcw, RotateCw, SkipBack, SkipForward, 
   Volume2, VolumeX, ExternalLink, List, ChevronDown, ChevronUp, 
-  Sparkles, CheckCircle2, Headphones, Radio
+  Sparkles, CheckCircle2, Headphones, Radio, Film, Download
 } from 'lucide-react';
 
 export interface LectureSegment {
@@ -21,6 +21,7 @@ export interface LectureManifest {
   lectureId: string;
   courseTitle: string;
   lectureTitle: string;
+  videoUrl?: string;
   totalDuration: number;
   segments: LectureSegment[];
 }
@@ -39,6 +40,7 @@ export default function InteractiveLecturePlayer({
   onClearActiveSection
 }: InteractiveLecturePlayerProps) {
   const [manifest, setManifest] = useState<LectureManifest | null>(null);
+  const [playerMode, setPlayerMode] = useState<'interactive' | 'video'>('interactive');
   const [currentSegmentIndex, setCurrentSegmentIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<number>(0);
@@ -49,6 +51,7 @@ export default function InteractiveLecturePlayer({
   const [isMinimized, setIsMinimized] = useState<boolean>(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   // 1. Tải Manifest
   useEffect(() => {
@@ -269,14 +272,53 @@ export default function InteractiveLecturePlayer({
           </div>
 
           <div className="flex items-center gap-2">
-            <button
-              onClick={() => setShowChapters(!showChapters)}
-              className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold transition-all flex items-center gap-1.5 text-sky-200"
-              title="Xem danh sách các phân đoạn bài giảng"
-            >
-              <List className="w-3.5 h-3.5" />
-              <span>Mục lục ({currentSegmentIndex + 1}/{manifest.segments.length})</span>
-            </button>
+            {/* Mode Switcher Tabs */}
+            <div className="flex items-center bg-black/40 p-0.5 rounded-xl border border-white/10">
+              <button
+                onClick={() => {
+                  setPlayerMode('interactive');
+                  if (videoRef.current) videoRef.current.pause();
+                }}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  playerMode === 'interactive'
+                    ? 'bg-[#2bd6eb] text-[#032b44] shadow'
+                    : 'text-slate-300 hover:text-white'
+                }`}
+              >
+                <Headphones className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Audio Tương Tác</span>
+                <span className="sm:hidden">Audio</span>
+              </button>
+              <button
+                onClick={() => {
+                  setPlayerMode('video');
+                  if (audioRef.current) {
+                    audioRef.current.pause();
+                    setIsPlaying(false);
+                  }
+                }}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  playerMode === 'video'
+                    ? 'bg-gradient-to-r from-amber-400 to-orange-400 text-slate-900 shadow'
+                    : 'text-slate-300 hover:text-white'
+                }`}
+              >
+                <Film className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Video Full HD</span>
+                <span className="sm:hidden">Video</span>
+              </button>
+            </div>
+
+            {playerMode === 'interactive' && (
+              <button
+                onClick={() => setShowChapters(!showChapters)}
+                className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold transition-all flex items-center gap-1.5 text-sky-200"
+                title="Xem danh sách các phân đoạn bài giảng"
+              >
+                <List className="w-3.5 h-3.5" />
+                <span className="hidden md:inline">Mục lục ({currentSegmentIndex + 1}/{manifest.segments.length})</span>
+              </button>
+            )}
 
             <button
               onClick={() => setIsMinimized(!isMinimized)}
@@ -290,7 +332,67 @@ export default function InteractiveLecturePlayer({
 
         {/* PLAYER MAIN CONTENT */}
         {!isMinimized && (
-          <div className="p-5 md:p-6 space-y-4">
+          <div className="p-4 md:p-6 space-y-4">
+            
+            {playerMode === 'video' ? (
+              /* VIDEO MODE */
+              <div className="space-y-3">
+                <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black border border-sky-500/30">
+                  <video
+                    ref={videoRef}
+                    src={manifest.videoUrl || '/videos/geography_1_1_lecture.mp4'}
+                    poster="/videos/geography_1_1_poster.png"
+                    controls
+                    playsInline
+                    className="w-full aspect-video object-contain bg-black"
+                    onTimeUpdate={(e) => {
+                      const vTime = e.currentTarget.currentTime;
+                      const foundIdx = manifest.segments.findIndex(s => vTime >= s.startTime && vTime <= s.endTime);
+                      if (foundIdx !== -1 && foundIdx !== currentSegmentIndex) {
+                        setCurrentSegmentIndex(foundIdx);
+                      }
+                    }}
+                  />
+                </div>
+
+                {/* Video Navigation Bar */}
+                <div className="flex flex-wrap items-center justify-between gap-3 bg-black/30 p-3 rounded-xl border border-white/10 backdrop-blur-sm">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-xs font-bold text-sky-300">Chuyển đoạn nhanh trong Video:</span>
+                    <select
+                      value={currentSegmentIndex}
+                      onChange={(e) => {
+                        const idx = Number(e.target.value);
+                        setCurrentSegmentIndex(idx);
+                        if (videoRef.current && manifest.segments[idx]) {
+                          videoRef.current.currentTime = manifest.segments[idx].startTime;
+                          videoRef.current.play().catch(console.warn);
+                        }
+                      }}
+                      className="bg-slate-900/90 text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-400/40 focus:outline-none focus:border-[#2bd6eb]"
+                    >
+                      {manifest.segments.map((seg, idx) => (
+                        <option key={seg.id} value={idx}>
+                          {idx + 1}. {seg.title} ({formatTime(seg.startTime)})
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <a
+                    href={manifest.videoUrl || '/videos/geography_1_1_lecture.mp4'}
+                    download="IGCSE_Geography_1.1_Lecture_TonyEnglish.mp4"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition-all shadow hover:shadow-emerald-500/20"
+                    title="Tải video độ phân giải cao MP4 về máy"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Tải Video MP4 (Full HD)</span>
+                  </a>
+                </div>
+              </div>
+            ) : (
+              /* AUDIO INTERACTIVE MODE */
+              <>
             
             {/* SUBTITLE & SECTION INFO */}
             <div className="bg-black/25 rounded-xl p-4 border border-white/10 backdrop-blur-sm">
@@ -448,9 +550,11 @@ export default function InteractiveLecturePlayer({
               </div>
 
             </div>
-
-          </div>
+          </>
         )}
+
+      </div>
+    )}
 
         {/* CHAPTERS DRAWER (Danh sách mục lục phân đoạn) */}
         {showChapters && !isMinimized && (
