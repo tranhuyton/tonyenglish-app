@@ -1,8 +1,8 @@
 {
   "lectureId": "33c91ae9-b13f-49d7-b29f-0c3b794d192d",
-  "courseTitle": "IGCSE Geography (0460)",
-  "lectureTitle": "6.3 Causes and Impacts of International Migration",
-  "totalDuration": 393.69,
+  "courseTitle": "Cambridge IGCSE Geography",
+  "lectureTitle": "6.3 The causes and impacts of international migration",
+  "totalDuration": 523.66,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -97,14 +97,25 @@
       "audioUrl": "/audio/lectures/geography/6_3/sec_bilateral_impacts.mp3"
     },
     {
+      "id": "bilateral_table",
+      "title": "Bảng so sánh tác động hai chiều của Di cư quốc tế",
+      "selector": "#card-bilateral-table",
+      "en": "This comparative matrix summarizes the bilateral impacts of international migration on source and destination countries across three dimensions. For source nations, emigration provides vital remittance inflows and relieves domestic underemployment, but creates severe brain drain and depopulates working-age cohorts. For destination countries, migrant inflows provide essential flexible labour and mitigate the economic burden of an ageing population, but can strain public housing, healthcare infrastructure, and school provision.",
+      "vi": "Bảng ma trận so sánh này tổng hợp các tác động hai chiều của di cư quốc tế đối với cả quốc gia xuất cư và nhập cư trên ba khía cạnh cốt lõi. Đối với nước xuất cư, di cư mang lại nguồn kiều hối quan trọng và giải tỏa áp lực thiếu việc làm trong nước, nhưng lại gây ra tình trạng chảy máu chất xám nghiêm trọng và làm suy giảm lực lượng lao động trẻ. Ngược lại, đối với nước nhập cư, dòng người di cư bổ sung nguồn nhân lực thiết yếu và giảm nhẹ gánh nặng của cơ cấu dân số già hóa, nhưng đồng thời cũng gây áp lực lớn lên hệ thống nhà ở công cộng, bệnh viện và trường học.",
+      "duration": 62.68,
+      "startTime": 240.53,
+      "endTime": 303.21,
+      "audioUrl": "/audio/lectures/geography/6_3/bilateral_table.mp3"
+    },
+    {
       "id": "sec_mexico_usa",
       "title": "4. Nghiên cứu tình huống: Hành lang Mexico - Hoa Kỳ",
       "selector": "#sec-mexico-usa",
       "en": "Section 4 analyzes the world's largest bilateral migration corridor. Over 11.5 million Mexican-born individuals reside in the United States, initiated historically by the wartime Bracero Program.",
       "vi": "Mục bốn phân tích hành lang di cư song phương lớn nhất thế giới. Hơn mười một phẩy năm triệu người gốc Mexico đang cư trú tại Hoa Kỳ, bắt nguồn lịch sử từ Chương trình Bracero thời Thế chiến thứ hai.",
       "duration": 26.13,
-      "startTime": 240.53,
-      "endTime": 266.66,
+      "startTime": 303.21,
+      "endTime": 329.34,
       "audioUrl": "/audio/lectures/geography/6_3/sec_mexico_usa.mp3"
     },
     {
@@ -114,8 +125,8 @@
       "en": "Mexican workers supply essential labor to US agriculture, construction, and hospitality while replenishing the payroll tax base. In return, remittances to Mexico exceed sixty billion dollars annually, surpassing foreign direct investment. However, strict border militarization has increased smuggling costs and trapped workers permanently inside the US.",
       "vi": "Lao động Mexico cung cấp nhân lực thiết yếu cho nông nghiệp, xây dựng và dịch vụ của Mỹ, đồng thời đóng góp lớn vào quỹ an sinh xã hội. Ngược lại, kiều hối gửi về Mexico vượt sáu mươi tỷ đô la mỗi năm, cao hơn cả đầu tư trực tiếp nước ngoài. Tuy nhiên, việc tăng cường quân sự hóa biên giới đã đẩy chi phí buôn người lên cao và khiến người di cư chuyển sang ở lại vĩnh viễn thay vì về thăm quê.",
       "duration": 46.53,
-      "startTime": 266.66,
-      "endTime": 313.19,
+      "startTime": 329.34,
+      "endTime": 375.87,
       "audioUrl": "/audio/lectures/geography/6_3/mexico_usa_details.mp3"
     },
     {
@@ -125,9 +136,20 @@
       "en": "Section 5 examines the 2011 Syrian civil war, which forcibly displaced over thirteen million people. Turkey absorbed 3.7 million refugees, and in Lebanon refugees reached one in four of the population, triggering massive economic strain. In Europe, Germany's 2015 open door policy integrated one million asylum seekers, while the EU-Turkey deal erected externalized border checks.",
       "vi": "Mục năm khảo sát cuộc nội chiến Syria năm 2011, khiến hơn mười ba triệu người phải di dời cưỡng bức. Thổ Nhĩ Kỳ tiếp nhận ba phẩy bảy triệu người tị nạn, và tại Liban người tị nạn chiếm tới một phần tư dân số, gây tê liệt hạ tầng. Tại châu Âu, chính sách mở cửa của Đức năm 2015 đã tiếp nhận một triệu người, trong khi thỏa ước giữa EU và Thổ Nhĩ Kỳ siết chặt kiểm soát biên giới trên biển.",
       "duration": 51.18,
-      "startTime": 313.19,
-      "endTime": 364.37,
+      "startTime": 375.87,
+      "endTime": 427.05,
       "audioUrl": "/audio/lectures/geography/6_3/sec_syria_crisis.mp3"
+    },
+    {
+      "id": "syria_details",
+      "title": "Tác động của Khủng hoảng tị nạn Syria đối với Trung Đông và Châu Âu",
+      "selector": "#card-syria-details",
+      "en": "The Syrian displacement crisis created immense geopolitical and socio-economic pressures across two distinct tiers of host destinations. Frontline Middle Eastern neighbors absorbed the vast majority: Turkey hosts 3.7 million refugees, while in Lebanon, refugees comprise one in four residents, overwhelming municipal sanitation and electricity grids. Meanwhile, over one million Syrian asylum seekers reached European nations like Germany and Sweden, sparking intense debates over border control, the EU Dublin Regulation, and social integration.",
+      "vi": "Cuộc khủng hoảng tị nạn Syria đã tạo ra những áp lực địa chính trị và kinh tế - xã hội khổng lồ lên hai nhóm quốc gia tiếp nhận chính. Các nước láng giềng tuyến đầu tại Trung Đông gánh vác phần lớn nhất: Thổ Nhĩ Kỳ tiếp nhận 3,7 triệu người tị nạn, trong khi tại Lebanon, người tị nạn chiếm tới một phần tư dân số, làm quá tải nghiêm trọng mạng lưới điện và cấp thoát nước đô thị. Trong khi đó, hơn một triệu người xin tị nạn đã đến các nước châu Âu như Đức và Thụy Điển, làm dấy lên những tranh luận gay gắt về kiểm soát biên giới, Quy chế Dublin của EU và các chính sách hòa nhập xã hội.",
+      "duration": 67.29,
+      "startTime": 427.05,
+      "endTime": 494.34,
+      "audioUrl": "/audio/lectures/geography/6_3/syria_details.mp3"
     },
     {
       "id": "exam_strategy",
@@ -136,8 +158,8 @@
       "en": "To maximize examination marks: explicitly classify migration as voluntary or forced; structure bilateral impact essays into balanced origin and destination pros and cons; and name specific intervening obstacles alongside quantified case evidence.",
       "vi": "Để đạt điểm tối đa trong bài thi: các em hãy phân loại rõ di cư là tự nguyện hay cưỡng bức; trình bày cân đối các tác động tích cực và tiêu cực cho cả nước đi và nước đến; đồng thời nêu rõ các trở ngại can thiệp cụ thể kèm theo số liệu thực tế.",
       "duration": 29.32,
-      "startTime": 364.37,
-      "endTime": 393.69,
+      "startTime": 494.34,
+      "endTime": 523.66,
       "audioUrl": "/audio/lectures/geography/6_3/exam_strategy.mp3"
     }
   ]

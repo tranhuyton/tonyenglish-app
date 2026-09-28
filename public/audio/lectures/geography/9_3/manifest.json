@@ -1,8 +1,8 @@
 {
   "lectureId": "53517557-9eb4-450d-a8dd-18b73c71938a",
-  "courseTitle": "IGCSE Geography (0460)",
-  "lectureTitle": "9.3 Tourism is a Growing Industry",
-  "totalDuration": 317.57,
+  "courseTitle": "Cambridge IGCSE Geography",
+  "lectureTitle": "9.3 Tourism is a growing industry",
+  "totalDuration": 466.85,
   "majorSections": [
     {
       "id": "sec_growth_tourism",
@@ -120,14 +120,47 @@
       "audioUrl": "/audio/lectures/geography/9_3/impacts_grid.mp3"
     },
     {
+      "id": "impact_econ",
+      "title": "Tác động kinh tế của Du lịch (Economic Impacts)",
+      "selector": "#card-impact-econ",
+      "en": "Economically, tourism injects foreign exchange currency and stimulates the cumulative multiplier effect, creating direct jobs in hospitality and indirect jobs in transport, food supply, and construction. However, in many developing islands, up to 80% of tourist expenditures leak back to foreign hotel chains, airlines, and imported luxury goods, leaving local workers trapped in low-wage, seasonal employment.",
+      "vi": "Về mặt kinh tế, du lịch mang lại nguồn thu ngoại tệ lớn và kích hoạt hiệu ứng cấp số nhân lan tỏa, tạo việc làm trực tiếp trong ngành khách sạn và việc làm gián tiếp trong giao thông, cung ứng thực phẩm và xây dựng. Tuy nhiên, tại nhiều đảo quốc đang phát triển, có tới 80% chi tiêu của du khách bị rò rỉ ngược về các chuỗi khách sạn, hãng hàng không nước ngoài và hàng hóa nhập khẩu, khiến lao động địa phương chịu cảnh thu nhập bấp bênh theo mùa vụ.",
+      "duration": 50.39,
+      "startTime": 256.32,
+      "endTime": 306.71,
+      "audioUrl": "/audio/lectures/geography/9_3/impact_econ.mp3"
+    },
+    {
+      "id": "impact_social",
+      "title": "Tác động văn hóa - xã hội của Du lịch (Socio-Cultural Impacts)",
+      "selector": "#card-impact-social",
+      "en": "Socio-culturally, tourism can fund the preservation of historic monuments, revitalize traditional arts and folklore, and foster international cross-cultural understanding. Conversely, intense tourism often triggers the demonstration effect, where local youths copy western consumer habits and abandon traditional customs, while overtourism causes unbearable traffic congestion, noise, and rising crime rates.",
+      "vi": "Về văn hóa - xã hội, du lịch tạo nguồn tài chính để tu bổ các di tích lịch sử, phục hưng nghệ thuật truyền thống và thúc đẩy giao lưu văn hóa quốc tế. Ngược lại, mật độ du khách quá cao thường dẫn đến hiệu ứng bắt chước, khi thanh niên địa phương chạy theo lối sống tiêu dùng phương Tây và xói mòn phong tục truyền thống, đồng thời quá tải du lịch còn gây ùn tắc giao thông, ô nhiễm tiếng ồn và gia tăng tệ nạn.",
+      "duration": 47.49,
+      "startTime": 306.71,
+      "endTime": 354.2,
+      "audioUrl": "/audio/lectures/geography/9_3/impact_social.mp3"
+    },
+    {
+      "id": "impact_env",
+      "title": "Tác động môi trường của Du lịch (Environmental Impacts)",
+      "selector": "#card-impact-env",
+      "en": "Environmentally, national park entry fees and marine reserves generate crucial conservation revenue to protect endangered wildlife and restore fragile ecosystems. On the downside, mass tourism inflicts widespread habitat degradation: anchor drops crush coral reefs, jet skis disrupt marine life, luxury resorts consume enormous amounts of scarce freshwater for swimming pools and golf courses, and plastic waste pollutes pristine beaches.",
+      "vi": "Về môi trường, phí tham quan các vườn quốc gia và khu bảo tồn biển tạo nguồn kinh phí vô cùng quý giá để bảo tồn động vật hoang dã và phục hồi các hệ sinh thái nhạy cảm. Mặt tiêu cực là du lịch đại chúng gây suy thoái môi trường trên diện rộng: mỏ neo tàu làm vỡ rạn san hô, mô tô nước quấy nhiễu sinh vật biển, các khu nghỉ dưỡng tiêu tốn lượng nước ngọt khổng lồ cho hồ bơi và sân golf, trong khi rác thải nhựa đe dọa các bãi biển nguyên sơ.",
+      "duration": 51.4,
+      "startTime": 354.2,
+      "endTime": 405.6,
+      "audioUrl": "/audio/lectures/geography/9_3/impact_env.mp3"
+    },
+    {
       "id": "sec_sustainable_tourism",
       "title": "5. Du lịch bền vững và Nghiên cứu tình huống: Jamaica",
       "selector": "#sec-sustainable-tourism",
       "en": "Section 5 presents sustainable management frameworks, spotlighting Jamaica's transition towards eco-tourism: zoning marine parks, instituting reef protection ordinances, and channeling visitor entry levies into local rainforest preservation.",
       "vi": "Mục năm trình bày các khung quản lý du lịch bền vững, làm nổi bật bước chuyển của Jamaica sang du lịch sinh thái: phân vùng các công viên hải dương, ban hành quy chế bảo vệ rạn san hô, và trích phí tham quan để tài trợ trực tiếp cho các dự án bảo tồn rừng nhiệt đới của cộng đồng bản địa.",
       "duration": 30.11,
-      "startTime": 256.32,
-      "endTime": 286.43,
+      "startTime": 405.6,
+      "endTime": 435.71,
       "audioUrl": "/audio/lectures/geography/9_3/sec_sustainable_tourism.mp3"
     },
     {
@@ -137,8 +170,8 @@
       "en": "Figure 9.47 highlights Jamaica's protected conservation networks: Montego Bay Marine Park and the Blue and John Crow Mountains, demonstrating how community-managed ecotourism creates sustainable ranger jobs while protecting fragile biodiversity.",
       "vi": "Hình chín chấm bốn mươi bảy làm nổi bật mạng lưới bảo tồn của Jamaica: Công viên Hải dương Vịnh Montego và Vườn quốc gia dãy núi Blue và John Crow, minh chứng cho việc du lịch sinh thái do cộng đồng quản lý đã tạo ra việc làm kiểm lâm bền vững trong khi bảo vệ đa dạng sinh học mong manh.",
       "duration": 31.14,
-      "startTime": 286.43,
-      "endTime": 317.57,
+      "startTime": 435.71,
+      "endTime": 466.85,
       "audioUrl": "/audio/lectures/geography/9_3/jamaica_case_study.mp3"
     }
   ]
