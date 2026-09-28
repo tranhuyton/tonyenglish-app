@@ -1,0 +1,172 @@
+{
+  "lectureId": "0b658b3f-bf70-4991-95d5-d65616b7ec1a",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "7.3 The Management of Urban Growth",
+  "totalDuration": 358.37,
+  "majorSections": [
+    {
+      "id": "sec_housing_brownfield",
+      "title": "1. Nhà ở đô thị: Đất nâu vs Đất xanh",
+      "startSegmentId": "sec_housing_brownfield"
+    },
+    {
+      "id": "sec_sustainable_cities",
+      "title": "2. Nguyên lý thành phố bền vững",
+      "startSegmentId": "sec_sustainable_cities"
+    },
+    {
+      "id": "sec_transport_strategies",
+      "title": "3. Chiến lược giao thông bền vững",
+      "startSegmentId": "sec_transport_strategies"
+    },
+    {
+      "id": "sec_shanghai_casestudy",
+      "title": "4. Quy hoạch siêu đô thị Thượng Hải",
+      "startSegmentId": "sec_shanghai_casestudy"
+    },
+    {
+      "id": "sec_delhi_hazards",
+      "title": "5. Quản lý chất lượng không khí tại Delhi",
+      "startSegmentId": "sec_delhi_hazards"
+    },
+    {
+      "id": "card_exam_strategy",
+      "title": "Chiến lược làm bài thi",
+      "startSegmentId": "exam_strategy"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 7.3: Quản lý tăng trưởng đô thị",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 7.3: The Management of Urban Growth. In this lecture, we tackle sustainable urban development: resolving the brownfield versus greenfield debate, exploring the Egan Wheel framework, analyzing carrots and sticks in public transit, evaluating Shanghai's dual-core master plan, and examining policy interventions to combat Delhi's hazardous air quality crisis.",
+      "vi": "Chào mừng các em đến với bài bảy chấm ba: Quản lý tăng trưởng đô thị. Trong bài học này, chúng ta sẽ tìm hiểu các giải pháp phát triển đô thị bền vững: giải quyết bài toán giữa khu đất nâu và khu đất xanh, khám phá khung mô hình Bánh xe Egan, phân tích chiến lược cây gậy và củ cà rốt trong giao thông công cộng, đánh giá quy hoạch tổng thể hai lõi của Thượng Hải, và khảo sát các chính sách can thiệp nhằm giảm thiểu ô nhiễm không khí nguy hại tại Delhi.",
+      "duration": 48.04,
+      "startTime": 0.0,
+      "endTime": 48.04,
+      "audioUrl": "/audio/lectures/geography/7_3/intro.mp3"
+    },
+    {
+      "id": "sec_housing_brownfield",
+      "title": "1. Nhà ở đô thị và Bài toán Đất nâu vs Đất xanh",
+      "selector": "#sec-housing-brownfield",
+      "en": "Section 1 addresses the critical planning dilemma between urban densification and outward expansion. Brownfield sites repurpose contaminated or derelict industrial lands inside the urban core, while greenfield sites develop untouched agricultural countryside at the urban fringe.",
+      "vi": "Mục một giải quyết bài toán quy hoạch giữa tăng mật độ nội đô và mở rộng ra bên ngoài. Khu đất nâu tái sử dụng đất công nghiệp cũ bị bỏ hoang hoặc ô nhiễm trong lõi đô thị, trong khi khu đất xanh khai phá các vùng đồng ruộng nông thôn nguyên vẹn ở rìa thành phố.",
+      "duration": 31.67,
+      "startTime": 48.04,
+      "endTime": 79.71,
+      "audioUrl": "/audio/lectures/geography/7_3/sec_housing_brownfield.mp3"
+    },
+    {
+      "id": "brownfield_greenfield_table",
+      "title": "Bảng so sánh: Dự án Đất nâu vs Dự án Đất xanh",
+      "selector": "#card-brownfield-greenfield-table",
+      "en": "This table contrasts the two approaches: Brownfields preserve precious green belts and utilize existing roads and sewers, though they carry higher decontamination costs. Greenfields offer cheaper flat land with blank-slate architectural flexibility, but destroy farmland and lock in car dependence.",
+      "vi": "Bảng này so sánh hai hướng tiếp cận: Đất nâu bảo vệ vành đai xanh và tận dụng đường xá cấp thoát nước sẵn có dù chi phí xử lý ô nhiễm cao hơn. Đất xanh có quỹ đất bằng phẳng giá rẻ với thiết kế linh hoạt, nhưng phá vỡ đất canh tác nông nghiệp và gây phụ thuộc vào xe ô tô cá nhân.",
+      "duration": 35.1,
+      "startTime": 79.71,
+      "endTime": 114.81,
+      "audioUrl": "/audio/lectures/geography/7_3/brownfield_greenfield_table.mp3"
+    },
+    {
+      "id": "sec_sustainable_cities",
+      "title": "2. Các nguyên lý thành phố bền vững: Khung mô hình Bánh xe Egan",
+      "selector": "#sec-sustainable-cities",
+      "en": "Section 2 introduces the Egan Wheel framework for urban sustainability. A truly sustainable city balances environmental stewardship, economic viability, and social inclusion to meet current needs without compromising future generations.",
+      "vi": "Mục hai giới thiệu khung mô hình Bánh xe Egan cho phát triển đô thị bền vững. Một thành phố thực sự bền vững phải cân bằng giữa bảo vệ môi trường sinh thái, tăng trưởng kinh tế bền vững và hòa nhập xã hội để phục vụ nhu cầu hôm nay mà không phương hại tới thế hệ mai sau.",
+      "duration": 30.38,
+      "startTime": 114.81,
+      "endTime": 145.19,
+      "audioUrl": "/audio/lectures/geography/7_3/sec_sustainable_cities.mp3"
+    },
+    {
+      "id": "egan_wheel_svg",
+      "title": "Sơ đồ tương tác: Ba trụ cột quản lý đô thị bền vững",
+      "selector": "#card-egan-wheel-svg",
+      "en": "This interactive diagram breaks down the three integrated pillars: Environmental protection through zero-waste circular loops, Social harmony via inclusive governance and affordable housing, and Economic vitality through green employment and efficient transit.",
+      "vi": "Sơ đồ tương tác này phân tích ba trụ cột gắn kết: Bảo vệ môi trường qua mô hình tuần hoàn không rác thải, Hài hòa xã hội nhờ quản trị dung nạp và nhà ở vừa túi tiền, cùng Sức sống kinh tế từ việc làm xanh và giao thông hiệu quả.",
+      "duration": 27.88,
+      "startTime": 145.19,
+      "endTime": 173.07,
+      "audioUrl": "/audio/lectures/geography/7_3/egan_wheel_svg.mp3"
+    },
+    {
+      "id": "sec_transport_strategies",
+      "title": "3. Chiến lược giao thông đô thị bền vững",
+      "selector": "#sec-transport-strategies",
+      "en": "Section 3 evaluates how modern metropolises conquer gridlock and emissions by harmonizing carrot policies that incentivize mass transit with stick policies that penalize private vehicle usage.",
+      "vi": "Mục ba đánh giá cách các đại đô thị giải quyết ùn tắc và khí thải thông qua kết hợp hài hòa các chính sách củ cà rốt khuyến khích giao thông công cộng với các chính sách cây gậy hạn chế phương tiện cá nhân.",
+      "duration": 21.5,
+      "startTime": 173.07,
+      "endTime": 194.57,
+      "audioUrl": "/audio/lectures/geography/7_3/sec_transport_strategies.mp3"
+    },
+    {
+      "id": "transit_carrot_stick",
+      "title": "Chiến lược Cây gậy và Củ cà rốt trong giao thông",
+      "selector": "#card-transit-carrot-stick",
+      "en": "Carrot incentives include Curitiba's Bus Rapid Transit tube stations and Copenhagen's Cycle Superhighways. Stick restrictions include London's Congestion Charge, Singapore's Electronic Road Pricing, and restricted parking quotas.",
+      "vi": "Chính sách củ cà rốt bao gồm trạm xe buýt nhanh BRT dạng ống tại Curitiba và siêu xa lộ xe đạp ở Copenhagen. Chính sách cây gậy gồm phí ùn tắc ở Luân Đôn, thu phí đường bộ điện tử tại Singapore và hạn ngạch bãi đỗ xe nội đô nghiêm ngặt.",
+      "duration": 30.45,
+      "startTime": 194.57,
+      "endTime": 225.02,
+      "audioUrl": "/audio/lectures/geography/7_3/transit_carrot_stick.mp3"
+    },
+    {
+      "id": "sec_shanghai_casestudy",
+      "title": "4. Nghiên cứu tình huống: Quy hoạch Thượng Hải và Tái tạo sinh thái",
+      "selector": "#sec-shanghai-casestudy",
+      "en": "Section 4 investigates Shanghai, China's economic juggernaut. We analyze its transformation from dense historic Puxi into a futuristic dual-core metropolis anchored by the Lujiazui financial center in Pudong.",
+      "vi": "Mục bốn nghiên cứu Thượng Hải, đầu tàu kinh tế của Trung Quốc. Chúng ta phân tích quá trình chuyển mình từ khu Phố Tây lịch sử đông đúc thành đại đô thị hai lõi hiện đại với trung tâm tài chính Lục Gia Chủy bên bờ Phố Đông.",
+      "duration": 26.46,
+      "startTime": 225.02,
+      "endTime": 251.48,
+      "audioUrl": "/audio/lectures/geography/7_3/sec_shanghai_casestudy.mp3"
+    },
+    {
+      "id": "shanghai_svg",
+      "title": "Sơ đồ quy hoạch hai lõi và giao thông Thượng Hải",
+      "selector": "#card-shanghai-svg",
+      "en": "This spatial diagram details Shanghai's master plan: the 800-kilometer Shanghai Metro network connecting satellite eco-cities like Lingang, alongside environmental remediation projects like the Suzhou Creek Rehabilitation.",
+      "vi": "Sơ đồ không gian này chi tiết hóa quy hoạch của Thượng Hải: mạng lưới tàu điện ngầm dài tám trăm cây số kết nối các đô thị sinh thái vệ tinh như Lâm Cảng, song hành cùng các dự án phục hồi môi trường tiêu biểu như cải tạo sông Tô Châu.",
+      "duration": 26.66,
+      "startTime": 251.48,
+      "endTime": 278.14,
+      "audioUrl": "/audio/lectures/geography/7_3/shanghai_svg.mp3"
+    },
+    {
+      "id": "sec_delhi_hazards",
+      "title": "5. Hiểm họa môi trường ở đại đô thị: Chất lượng không khí tại Delhi",
+      "selector": "#sec-delhi-hazards",
+      "en": "Section 5 confronts the severe environmental fallout of uncurbed megacity growth, focusing on Delhi's seasonal air pollution crisis where winter thermal inversions trap deadly particulate matter.",
+      "vi": "Mục năm đối diện với những hệ lụy môi trường nghiêm trọng của các siêu đô thị bùng nổ dân số, tập trung vào cuộc khủng hoảng ô nhiễm không khí theo mùa ở Delhi khi hiện tượng nghịch nhiệt mùa đông giam giữ các hạt bụi mịn độc hại.",
+      "duration": 23.22,
+      "startTime": 278.14,
+      "endTime": 301.36,
+      "audioUrl": "/audio/lectures/geography/7_3/sec_delhi_hazards.mp3"
+    },
+    {
+      "id": "delhi_interventions",
+      "title": "Các giải pháp đa tầng cải thiện không khí tại Delhi",
+      "selector": "#card-delhi-interventions",
+      "en": "To combat hazardous Air Quality Index spikes over 450, Delhi deployed multi-tiered interventions: converting all public buses and auto-rickshaws to Compressed Natural Gas, enforcing Odd-Even license plate traffic rationing, and installing anti-smog water cannons.",
+      "vi": "Để ứng phó với chỉ số AQI vượt ngưỡng nguy hại trên bốn trăm năm mươi, Delhi đã áp dụng các giải pháp đa tầng: chuyển toàn bộ xe buýt và xe lam sang chạy khí thiên nhiên nén CNG, phân luồng xe biển số chẵn lẻ và lắp đặt các tháp phun sương dập bụi.",
+      "duration": 30.69,
+      "startTime": 301.36,
+      "endTime": 332.05,
+      "audioUrl": "/audio/lectures/geography/7_3/delhi_interventions.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược thi cử Cambridge IGCSE: Chủ đề 7.3",
+      "selector": "#card-exam-strategy",
+      "en": "In exam 7-mark case study questions on urban sustainability, always name specific schemes, cite quantifiable data, and critically analyze both short-term economic trade-offs and long-term socio-environmental dividends.",
+      "vi": "Trong các câu hỏi tình huống bảy điểm về đô thị bền vững, các em phải luôn nêu tên dự án cụ thể, trích dẫn số liệu định lượng và phân tích sắc bén cả sự đánh đổi chi phí kinh tế ngắn hạn lẫn lợi ích xã hội môi trường dài hạn.",
+      "duration": 26.32,
+      "startTime": 332.05,
+      "endTime": 358.37,
+      "audioUrl": "/audio/lectures/geography/7_3/exam_strategy.mp3"
+    }
+  ]
+}

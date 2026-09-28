@@ -22,6 +22,29 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '7c30919a-5d22-425a-a167-21e5de07d203': '/audio/lectures/geography/5_1/manifest.json', // 5.1
   '23eee2fb-427c-4843-8d2d-ec296188730d': '/audio/lectures/geography/5_2/manifest.json', // 5.2
   '36e35bdb-986b-4cd5-b8df-6bb0f93282e5': '/audio/lectures/geography/5_3/manifest.json', // 5.3
+  // Topic 6: Population and Migration
+  'c6fccfc5-088b-4145-9a23-9cbb2df1cce9': '/audio/lectures/geography/6_1/manifest.json', // 6.1
+  '5390b0d7-995c-4c18-a092-b5cdd4eda49a': '/audio/lectures/geography/6_2/manifest.json', // 6.2
+  '33c91ae9-b13f-49d7-b29f-0c3b794d192d': '/audio/lectures/geography/6_3/manifest.json', // 6.3
+  // Topic 7: Settlement & Urbanisation
+  '556bc6b6-1555-49a9-a043-35f059b44559': '/audio/lectures/geography/7_1/manifest.json', // 7.1
+  '30bae547-a9b0-4c09-8850-ce22b96cfea2': '/audio/lectures/geography/7_2/manifest.json', // 7.2
+  '0b658b3f-bf70-4991-95d5-d65616b7ec1a': '/audio/lectures/geography/7_3/manifest.json', // 7.3
+  // Topic 8: Economic Development
+  '5ff5f837-df39-4488-bbd2-5138f4faed1e': '/audio/lectures/geography/8_1/manifest.json', // 8.1
+  '9cf90212-43f4-4b28-8014-fd6c130db8ef': '/audio/lectures/geography/8_2/manifest.json', // 8.2
+  '7da208d1-559d-4e60-a6a3-ebfb8c2d232f': '/audio/lectures/geography/8_3/manifest.json', // 8.3
+  // Topic 9: Employment, Globalisation & Tourism
+  '6c14f92b-774a-45d1-a68d-2e9fe5e0b85d': '/audio/lectures/geography/9_1/manifest.json', // 9.1
+  '5b7da7e1-3da1-4bf4-9700-6e11d7a7ef6b': '/audio/lectures/geography/9_2/manifest.json', // 9.2
+  '53517557-9eb4-450d-a8dd-18b73c71938a': '/audio/lectures/geography/9_3/manifest.json', // 9.3
+  // Topic 10: Food & Energy Resources
+  '362104be-aedc-4cbe-87b2-29034e93cc9c': '/audio/lectures/geography/10_1/manifest.json', // 10.1
+  '76dcafbf-e6b8-47f1-8618-be1b14e975ed': '/audio/lectures/geography/10_2/manifest.json', // 10.2
+  '96d7f427-3b6d-43e3-84dc-f8f052f20033': '/audio/lectures/geography/10_3/manifest.json', // 10.3
+  '199a26cd-1226-4ff7-b063-f7df7fa7b5ba': '/audio/lectures/geography/10_4/manifest.json', // 10.4
+  'a3a8d904-d277-4eef-b8ff-52a913ebc5f6': '/audio/lectures/geography/10_5/manifest.json', // 10.5
+  'fb30c141-db3a-49e8-aa55-028c913640d4': '/audio/lectures/geography/10_6/manifest.json', // 10.6
 };
 
 // =========================================================================================

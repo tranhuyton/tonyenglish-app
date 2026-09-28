@@ -1,0 +1,112 @@
+{
+  "lectureId": "76dcafbf-e6b8-47f1-8618-be1b14e975ed",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "10.2 Global Patterns of Food Supply and Demand",
+  "totalDuration": 249.71,
+  "majorSections": [
+    {
+      "id": "sec_calorie_patterns",
+      "title": "1. Phân bố nguồn cung calo toàn cầu",
+      "startSegmentId": "sec_calorie_patterns"
+    },
+    {
+      "id": "sec_food_map",
+      "title": "2. Bản đồ động lực hệ thống lương thực",
+      "startSegmentId": "sec_food_map"
+    },
+    {
+      "id": "sec_meat_demand",
+      "title": "3. Canh tác gia súc & Cái giá môi trường",
+      "startSegmentId": "sec_meat_demand"
+    },
+    {
+      "id": "sec_food_waste",
+      "title": "4. Địa lý lãng phí lương thực & Agribusiness",
+      "startSegmentId": "sec_food_waste"
+    },
+    {
+      "id": "card_exam_strategy",
+      "title": "Chiến lược làm bài thi",
+      "startSegmentId": "exam_strategy"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 10.2: Bức tranh toàn cầu về Cung và Cầu Lương thực",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 10.2: Global Patterns of Food Supply and Demand. In this lecture, we examine global caloric distribution: contrasting undernourishment in Sub-Saharan Africa against hyper-affluent overconsumption in North America, analyzing the meat-intensive Nutrition Transition, calculating the ecological footprint of livestock feed conversion, and exposing the structural contrasts of post-harvest versus consumer food waste.",
+      "vi": "Chào mừng các em đến với bài mười chấm hai: Bức tranh toàn cầu về Cung và Cầu Lương thực. Trong bài giảng này, chúng ta sẽ khảo sát sự phân bố calo toàn cầu: đối chiếu nạn suy dinh dưỡng tại châu Phi cận Sahara với tình trạng dư thừa calo tại Bắc Mỹ, phân tích sự chuyển dịch dinh dưỡng sang thịt, tính toán dấu chân sinh thái chuyển đổi thức ăn chăn nuôi, và bóc tách nghịch lý lãng phí thực phẩm sau thu hoạch so với lãng phí ở khâu tiêu dùng.",
+      "duration": 50.2,
+      "startTime": 0.0,
+      "endTime": 50.2,
+      "audioUrl": "/audio/lectures/geography/10_2/intro.mp3"
+    },
+    {
+      "id": "sec_calorie_patterns",
+      "title": "1. Phân bố nguồn cung calo toàn cầu và Sự chuyển dịch dinh dưỡng",
+      "selector": "#sec-calorie-patterns",
+      "en": "Section 1 charts daily per capita calorie intake worldwide. The United Nations FAO establishes an absolute minimum threshold of 2,100 calories per day for adult survival. Yet global averages range from under 1,800 calories across impoverished nations to over 3,800 calories in high-income economies.",
+      "vi": "Mục một phác thảo mức tiêu thụ calo bình quân đầu người hàng ngày trên toàn thế giới. Tổ chức Lương thực và Nông nghiệp Liên Hợp Quốc FAO thiết lập ngưỡng sinh tồn tối thiểu là hai nghìn một trăm calo mỗi ngày cho một người trưởng thành. Tuy nhiên, mức bình quân thực tế dao động từ dưới một nghìn tám trăm calo tại các quốc gia nghèo đói tới hơn ba nghìn tám trăm calo tại các nước phát triển.",
+      "duration": 42.54,
+      "startTime": 50.2,
+      "endTime": 92.74,
+      "audioUrl": "/audio/lectures/geography/10_2/sec_calorie_patterns.mp3"
+    },
+    {
+      "id": "nutrition_transition",
+      "title": "Hiện tượng chuyển dịch dinh dưỡng và Bệnh lý phồn vinh",
+      "selector": "#card-nutrition-transition",
+      "en": "As national disposable incomes rise across emerging economies, populations undergo Bennett's Law and the Nutrition Transition: shifting from traditional plant-based starchy diets towards energy-dense animal proteins, fats, and ultra-processed sugars.",
+      "vi": "Khi thu nhập khả dụng tăng lên tại các nền kinh tế mới nổi, cơ cấu bữa ăn chuyển dịch theo Quy luật Bennett và sự chuyển dịch dinh dưỡng: từ chế độ ăn truyền thống giàu tinh bột từ thực vật sang tiêu thụ nhiều đạm động vật, chất béo và đường tinh luyện.",
+      "duration": 27.76,
+      "startTime": 92.74,
+      "endTime": 120.5,
+      "audioUrl": "/audio/lectures/geography/10_2/nutrition_transition.mp3"
+    },
+    {
+      "id": "sec_food_map",
+      "title": "2. Bản đồ tương tác: Động lực hệ thống lương thực và Điểm nóng toàn cầu",
+      "selector": "#sec-food-map",
+      "en": "Section 2 investigates global food supply dynamics: revealing intense export flows of wheat, corn, and soy from the Americas to Asia, alongside severe structural food insecurity hotspots across the Horn of Africa and the Sahel.",
+      "vi": "Mục hai khảo sát động lực của hệ thống lương thực toàn cầu: chỉ ra các dòng xuất khẩu ồ ạt lúa mì, ngô và đậu tương từ châu Mỹ sang châu Á, song song với các điểm nóng khủng hoảng an ninh lương thực nghiêm trọng tại vùng sừng châu Phi và dải Sahel.",
+      "duration": 27.98,
+      "startTime": 120.5,
+      "endTime": 148.48,
+      "audioUrl": "/audio/lectures/geography/10_2/sec_food_map.mp3"
+    },
+    {
+      "id": "sec_meat_demand",
+      "title": "3. Công nghiệp hóa nông nghiệp và Cái giá môi trường của nhu cầu tiêu thụ thịt",
+      "selector": "#sec-meat-demand",
+      "en": "Section 3 evaluates the ecological burden of animal agriculture. Livestock occupies nearly 80 percent of global farmland while providing less than 20 percent of calories. Producing one kilogram of beef requires up to 15,000 liters of water and 10 kilograms of grain feed.",
+      "vi": "Mục ba đánh giá gánh nặng sinh thái của ngành chăn nuôi đại gia súc. Chăn nuôi chiếm tới gần tám mươi phần trăm tổng diện tích đất nông nghiệp toàn cầu nhưng chỉ cung cấp chưa đầy hai mươi phần trăm lượng calo. Để sản xuất một kilôgam thịt bò cần tới mười lăm nghìn lít nước ngọt và mười kilôgam ngũ cốc thức ăn gia súc.",
+      "duration": 36.64,
+      "startTime": 148.48,
+      "endTime": 185.12,
+      "audioUrl": "/audio/lectures/geography/10_2/sec_meat_demand.mp3"
+    },
+    {
+      "id": "sec_food_waste",
+      "title": "4. Địa lý lãng phí thực phẩm và Các tập đoàn nông nghiệp đa quốc gia",
+      "selector": "#sec-food-waste",
+      "en": "Section 4 contrasts food waste across development stages: Low-income nations lose up to 40 percent of harvests early in the supply chain due to lack of cold storage and poor roads, whereas high-income societies waste vast volumes at retail and household levels due to aesthetic standards and expired shelf-life dates.",
+      "vi": "Mục bốn đối chiếu sự lãng phí lương thực theo từng nấc thang phát triển: Các nước nghèo thất thoát tới bốn mươi phần trăm sản lượng ngay sau thu hoạch do thiếu kho lạnh bảo quản và đường xá yếu kém, trong khi xã hội giàu có lại vứt bỏ khối lượng khổng lồ tại siêu thị và gia đình do tiêu chuẩn thẩm mỹ ngoại hình và hạn dùng hết hạn.",
+      "duration": 35.03,
+      "startTime": 185.12,
+      "endTime": 220.15,
+      "audioUrl": "/audio/lectures/geography/10_2/sec_food_waste.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược thi cử Cambridge IGCSE: Chủ đề 10.2",
+      "selector": "#card-exam-strategy",
+      "en": "In exam questions on food supply disparities, synthesize physical factors like monsoonal droughts with economic drivers like global trade barriers, commodity market speculation, and the diversion of edible corn crops into biofuel ethanol.",
+      "vi": "Trong các câu hỏi thi về chênh lệch nguồn cung lương thực, các em hãy kết hợp cả yếu tố tự nhiên như hạn hán do biến động gió mùa với các động lực kinh tế như hàng rào thuế quan thương mại, nạn đầu cơ giá nông sản và việc chuyển đổi ngô thực phẩm sang sản xuất nhiên liệu sinh học ethanol.",
+      "duration": 29.56,
+      "startTime": 220.15,
+      "endTime": 249.71,
+      "audioUrl": "/audio/lectures/geography/10_2/exam_strategy.mp3"
+    }
+  ]
+}

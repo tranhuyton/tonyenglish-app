@@ -1,0 +1,117 @@
+{
+  "lectureId": "fb30c141-db3a-49e8-aa55-028c913640d4",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "10.6 The Impacts of Energy Production",
+  "totalDuration": 289.49,
+  "majorSections": [
+    {
+      "id": "sec_fossil_impacts",
+      "title": "1. Tác động của nhiên liệu hóa thạch",
+      "startSegmentId": "sec_fossil_impacts"
+    },
+    {
+      "id": "sec_nuclear_power",
+      "title": "2. Điện hạt nhân: Ưu điểm & Rủi ro",
+      "startSegmentId": "sec_nuclear_power"
+    },
+    {
+      "id": "sec_renewable_tradeoffs",
+      "title": "3. Đánh đổi sinh thái của năng lượng tái tạo",
+      "startSegmentId": "sec_renewable_tradeoffs"
+    },
+    {
+      "id": "sec_global_trends",
+      "title": "4. Xu hướng tiêu thụ năng lượng toàn cầu",
+      "startSegmentId": "sec_global_trends"
+    },
+    {
+      "id": "sec_sweden_casestudy",
+      "title": "5. Nghiên cứu tình huống: Thụy Điển",
+      "startSegmentId": "sec_sweden_casestudy"
+    },
+    {
+      "id": "card_exam_strategy",
+      "title": "Chiến lược làm bài thi",
+      "startSegmentId": "exam_strategy"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 10.6: Tác động của Sản xuất Năng lượng",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 10.6: The Impacts of Energy Production. In this lecture, we critically evaluate the global energy trilemma: analyzing the environmental and respiratory costs of fossil fuels, evaluating the low-carbon baseload advantages and radiological hazards of nuclear power, assessing ecological trade-offs of renewables like wind and hydroelectricity, and examining Sweden's world-leading transition towards 100 percent fossil-free energy.",
+      "vi": "Chào mừng các em đến với bài mười chấm sáu: Tác động của Sản xuất Năng lượng. Trong bài giảng này, chúng ta sẽ đánh giá toàn diện tam giác nan giải năng lượng: phân tích cái giá môi trường và sức khỏe hô hấp của nhiên liệu hóa thạch, cân nhắc giữa lợi thế điện nền phát thải thấp và hiểm họa phóng xạ của điện hạt nhân, đánh giá các tác động đánh đổi sinh thái của năng lượng tái tạo như thủy điện và điện gió, đồng thời phân tích hình mẫu chuyển dịch năng lượng không hóa thạch của Thụy Điển.",
+      "duration": 51.86,
+      "startTime": 0.0,
+      "endTime": 51.86,
+      "audioUrl": "/audio/lectures/geography/10_6/intro.mp3"
+    },
+    {
+      "id": "sec_fossil_impacts",
+      "title": "1. Tác động môi trường và Sức khỏe của Nhiên liệu hóa thạch",
+      "selector": "#sec-fossil-impacts",
+      "en": "Section 1 examines the destructive lifecycle impacts of coal, oil, and gas: mountaintop removal mining obliterating watersheds, acid rain triggered by sulfur dioxide emissions dissolving forest canopies and leaching toxic heavy metals, particulate matter causing millions of premature cardiopulmonary deaths, and massive carbon dioxide emissions driving catastrophic anthropogenic climate change.",
+      "vi": "Mục một phân tích các tác động phá hủy môi trường trong toàn bộ vòng đời của than đá, dầu mỏ và khí đốt: khai thác bạt đỉnh núi san phẳng lưu vực sông, mưa axit từ khí lưu huỳnh đioxit làm trơ trụi rừng cây và hòa tan kim loại nặng độc hại, bụi mịn gây ra hàng triệu ca tử vong sớm do bệnh tim phổi, cùng lượng khí nhà kính khổng lồ thúc đẩy biến đổi khí hậu do con người gây ra.",
+      "duration": 43.74,
+      "startTime": 51.86,
+      "endTime": 95.6,
+      "audioUrl": "/audio/lectures/geography/10_6/sec_fossil_impacts.mp3"
+    },
+    {
+      "id": "sec_nuclear_power",
+      "title": "2. Điện hạt nhân: Nguồn điện nền phát thải thấp vs Hiểm họa phóng xạ",
+      "selector": "#sec-nuclear-power",
+      "en": "Section 2 investigates nuclear energy: generating colossal gigawatts of continuous baseload electricity with virtually zero operational greenhouse gas emissions and high energy density. However, it carries extreme capital construction costs, the unsolved multi-millennial dilemma of deep geological high-level radioactive waste disposal, and catastrophic meltdown risks as witnessed at Chernobyl and Fukushima.",
+      "vi": "Mục hai nghiên cứu năng lượng hạt nhân: cung cấp nguồn điện nền liên tục khổng lồ với phát thải khí nhà kính gần như bằng không trong quá trình vận hành và mật độ năng lượng cực cao. Tuy nhiên, nó đòi hỏi chi phí đầu tư ban đầu đắt đỏ, bài toán nan giải hàng ngàn năm về chôn lấp rác thải phóng xạ hoạt tính cao dưới lòng đất, cùng nguy cơ thảm họa nóng chảy lõi lò phản ứng như bài học Chernobyl và Fukushima.",
+      "duration": 46.91,
+      "startTime": 95.6,
+      "endTime": 142.51,
+      "audioUrl": "/audio/lectures/geography/10_6/sec_nuclear_power.mp3"
+    },
+    {
+      "id": "sec_renewable_tradeoffs",
+      "title": "3. Năng lượng tái tạo: Nhãn xanh vs Các đánh đổi sinh thái",
+      "selector": "#sec-renewable-tradeoffs",
+      "en": "Section 3 evaluates renewable energy trade-offs: Large hydroelectric mega-dams like Three Gorges displace hundreds of thousands of people and trigger downstream silt starvation, wind turbines generate visual and acoustic blight while fragmenting avian flyways, and solar photovoltaic utility fields consume vast land tracts and demand rare mineral extraction.",
+      "vi": "Mục ba đánh giá các đánh đổi sinh thái của năng lượng tái tạo: Đại thủy điện như đập Tam Hiệp làm xáo trộn cuộc sống của hàng trăm ngàn dân tái định cư và chặn giữ phù sa hạ lưu, tua-bin gió gây ô nhiễm thị giác tiếng ồn và đe dọa đường bay của các loài chim, trong khi cánh đồng điện mặt trời chiếm diện tích đất khổng lồ và đòi hỏi khai thác khoáng sản đất hiếm phức tạp.",
+      "duration": 39.35,
+      "startTime": 142.51,
+      "endTime": 181.86,
+      "audioUrl": "/audio/lectures/geography/10_6/sec_renewable_tradeoffs.mp3"
+    },
+    {
+      "id": "sec_global_trends",
+      "title": "4. Xu hướng tiêu thụ năng lượng toàn cầu (1970–2023)",
+      "selector": "#sec-global-trends",
+      "en": "Section 4 analyzes five decades of global consumption patterns: while renewable capacity has expanded rapidly in percentage terms, absolute fossil fuel combustion continues to increase in emerging economies to support urbanization, underscoring the formidable inertia of the global hydrocarbon economy.",
+      "vi": "Mục bốn phân tích xu hướng tiêu thụ năng lượng toàn cầu trong năm thập kỷ qua: dù công suất năng lượng tái tạo tăng trưởng nhanh về mặt tỉ lệ, tổng khối lượng đốt nhiên liệu hóa thạch tuyệt đối vẫn tiếp tục gia tăng tại các nền kinh tế mới nổi để đáp ứng đô thị hóa, cho thấy sức ì to lớn của nền kinh tế carbon toàn cầu.",
+      "duration": 34.38,
+      "startTime": 181.86,
+      "endTime": 216.24,
+      "audioUrl": "/audio/lectures/geography/10_6/sec_global_trends.mp3"
+    },
+    {
+      "id": "sec_sweden_casestudy",
+      "title": "5. Nghiên cứu tình huống IGCSE: Chiến lược phi carbon hóa của Thụy Điển",
+      "selector": "#sec-sweden-casestudy",
+      "en": "Section 5 showcases Sweden as an exemplary decarbonization model: leveraging a stable twin foundation of hydro and nuclear baseload power, combined with pioneering district heating networks powered by municipal waste-to-energy incineration and aggressive carbon taxation enacted in 1991.",
+      "vi": "Mục năm giới thiệu Thụy Điển như một hình mẫu chuyển dịch phi carbon hóa tiêu biểu: tận dụng nền tảng điện kép vững chắc giữa thủy điện và điện hạt nhân, kết hợp mạng lưới sưởi ấm khu vực tuần hoàn đốt rác thu hồi năng lượng, cùng chính sách thuế carbon mang tính đột phá được ban hành từ năm 1991.",
+      "duration": 33.66,
+      "startTime": 216.24,
+      "endTime": 249.9,
+      "audioUrl": "/audio/lectures/geography/10_6/sec_sweden_casestudy.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược thi cử Cambridge IGCSE: Chủ đề 10.6",
+      "selector": "#card-exam-strategy",
+      "en": "In exam 7-mark case study questions on energy impacts, never depict any energy source as flawless: critically balance economic feasibility against environmental degradation, discuss NIMBYism and aesthetic opposition, and cite quantitative national data like Sweden's 98 percent fossil-free electricity generation.",
+      "vi": "Trong các câu hỏi tình huống bảy điểm về tác động năng lượng, các em không bao giờ được mô tả bất kỳ nguồn năng lượng nào là hoàn hảo tuyệt đối: hãy cân nhắc giữa tính khả thi kinh tế với suy thoái môi trường, đề cập đến tâm lý phản đối xây dựng tại địa phương NIMBY, và trích dẫn số liệu định lượng quốc gia như việc Thụy Điển đã đạt chín mươi tám phần trăm sản lượng điện không phát thải hóa thạch.",
+      "duration": 39.59,
+      "startTime": 249.9,
+      "endTime": 289.49,
+      "audioUrl": "/audio/lectures/geography/10_6/exam_strategy.mp3"
+    }
+  ]
+}

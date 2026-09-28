@@ -1,0 +1,199 @@
+{
+  "lectureId": "5390b0d7-995c-4c18-a092-b5cdd4eda49a",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "6.2 Population Structures Change Over Time",
+  "totalDuration": 497.0,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_structure_dependency": {
+      "start": 1,
+      "end": 4
+    },
+    "sec_pyramid_stages": {
+      "start": 5,
+      "end": 7
+    },
+    "sec_youthful_gambia": {
+      "start": 8,
+      "end": 10
+    },
+    "sec_ageing_crisis": {
+      "start": 11,
+      "end": 12
+    },
+    "sec_india_disparities": {
+      "start": 13,
+      "end": 14
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 6.2: Cơ cấu dân số biến đổi theo thời gian",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 6.2: Population Structures Change Over Time. In this lecture, we examine the age and gender architecture of nations. We analyze the three functional age cohorts, master the Dependency Ratio formula, interpret population pyramids across DTM stages, and contrast the youthful population challenge of The Gambia against the hyper-aged society of Japan and India's regional disparities.",
+      "vi": "Chào mừng các em đến với bài sáu chấm hai: Cơ cấu dân số biến đổi theo thời gian. Trong bài học này, chúng ta sẽ khảo sát cấu trúc độ tuổi và giới tính của các quốc gia. Chúng ta sẽ phân tích ba nhóm tuổi chức năng, thành thạo công thức tính tỉ số phụ thuộc, đọc tháp dân số qua các giai đoạn DTM, và so sánh thách thức dân số trẻ ở Gambia với xã hội siêu già hóa ở Nhật Bản cùng sự phân hóa vùng miền tại Ấn Độ.",
+      "duration": 51.45,
+      "startTime": 0.0,
+      "endTime": 51.45,
+      "audioUrl": "/audio/lectures/geography/6_2/intro.mp3"
+    },
+    {
+      "id": "sec_structure_dependency",
+      "title": "1. Cơ cấu dân số và Tỉ số phụ thuộc",
+      "selector": "#sec-structure-dependency",
+      "en": "Section 1 establishes the structural framework of demography. A population is divided into three functional cohorts: Young Dependents aged under 15, the Economically Active labor force aged 15 to 64 who pay income taxes, and Elderly Dependents aged 65 and over who draw on pensions and healthcare.",
+      "vi": "Mục một thiết lập khuôn khổ phân tích cơ cấu dân số. Dân số được chia làm ba nhóm tuổi chức năng: Nhóm phụ thuộc trẻ dưới mười lăm tuổi, nhóm lao động từ mười lăm đến sáu mươi tư tuổi đóng thuế thu nhập, và nhóm phụ thuộc già từ sáu mươi lăm tuổi trở lên hưởng lương hưu và chăm sóc y tế.",
+      "duration": 35.94,
+      "startTime": 51.45,
+      "endTime": 87.39,
+      "audioUrl": "/audio/lectures/geography/6_2/sec_structure_dependency.mp3"
+    },
+    {
+      "id": "age_cohorts",
+      "title": "Ba nhóm tuổi chức năng trong dân số",
+      "selector": "#card-age-cohorts",
+      "en": "The relative size of these three cohorts dictates a country's economic vitality and government fiscal allocations between schools, job creation, and elderly healthcare.",
+      "vi": "Quy mô tương đối của ba nhóm tuổi này quyết định sức sống kinh tế của một quốc gia và sự phân bổ ngân sách nhà nước giữa trường học, tạo việc làm và dịch vụ y tế cho người cao tuổi.",
+      "duration": 20.03,
+      "startTime": 87.39,
+      "endTime": 107.42,
+      "audioUrl": "/audio/lectures/geography/6_2/age_cohorts.mp3"
+    },
+    {
+      "id": "dependency_formula",
+      "title": "Công thức tính tỉ số phụ thuộc",
+      "selector": "#card-dependency-formula",
+      "en": "The Dependency Ratio measures the burden supported by the working population. It equals the percentage of population aged 0 to 14 plus the percentage aged 65 and over, divided by the percentage of working age 15 to 64, multiplied by 100. It can be split into Youth Dependency and Old-Age Dependency.",
+      "vi": "Tỉ số phụ thuộc đo lường gánh nặng kinh tế đặt lên lực lượng lao động. Tỉ số này bằng tổng phần trăm dân số từ không đến mười bốn tuổi cộng phần trăm trên sáu mươi lăm tuổi, chia cho phần trăm độ tuổi lao động từ mười lăm đến sáu mươi tư, nhân với một trăm. Chỉ số này có thể tách riêng thành tỉ số phụ thuộc trẻ và tỉ số phụ thuộc già.",
+      "duration": 41.08,
+      "startTime": 107.42,
+      "endTime": 148.5,
+      "audioUrl": "/audio/lectures/geography/6_2/dependency_formula.mp3"
+    },
+    {
+      "id": "pyramid_anatomy",
+      "title": "Giải phẫu tháp dân số",
+      "selector": "#card-pyramid-anatomy",
+      "en": "This diagram illustrates the anatomy of an age-sex population pyramid: males on the left, females on the right, five-year age bands stacked along the vertical central axis, and horizontal tiers delineating the three functional dependent and active cohorts.",
+      "vi": "Sơ đồ này minh họa giải phẫu của một tháp dân số theo tuổi và giới tính: nam giới bên trái, nữ giới bên phải, các dải độ tuổi năm năm xếp dọc theo trục trung tâm, và các tầng ngang phân định rõ ba nhóm phụ thuộc và lao động.",
+      "duration": 28.19,
+      "startTime": 148.5,
+      "endTime": 176.69,
+      "audioUrl": "/audio/lectures/geography/6_2/pyramid_anatomy.mp3"
+    },
+    {
+      "id": "sec_pyramid_stages",
+      "title": "2. Phân tích tháp dân số qua các giai đoạn DTM",
+      "selector": "#sec-pyramid-stages",
+      "en": "Section 2 traces how population pyramids transform from expansive triangles with wide bases in Stage 2 like Niger, to transitional beehives in Stage 3 like Pakistan, columnar stationary rectangles in Stage 4 like Canada, and constrictive inverted urns in Stage 5 like Japan.",
+      "vi": "Mục hai theo dõi sự biến đổi hình thái tháp dân số: từ dạng tam giác đáy rộng mở rộng ở giai đoạn hai như Niger, sang dạng tổ ong chuyển tiếp ở giai đoạn ba như Pakistan, dạng cột ổn định ở giai đoạn bốn như Canada, và dạng thắt đáy thu hẹp ở giai đoạn năm như Nhật Bản.",
+      "duration": 33.4,
+      "startTime": 176.69,
+      "endTime": 210.09,
+      "audioUrl": "/audio/lectures/geography/6_2/sec_pyramid_stages.mp3"
+    },
+    {
+      "id": "pyramid_comparison_table",
+      "title": "Bảng đối chiếu nhân khẩu học bốn quốc gia",
+      "selector": "#card-pyramid-comparison-table",
+      "en": "Comparing Niger, Pakistan, Canada, and Japan highlights extreme demographic divergence: Niger has nearly half its population under age 15, whereas Japan has thirty percent of its citizens aged 65 and over.",
+      "vi": "Bảng đối chiếu giữa Niger, Pakistan, Canada và Nhật Bản làm nổi bật sự phân hóa nhân khẩu sâu sắc: Niger có gần một nửa dân số dưới mười lăm tuổi, trong khi Nhật Bản có tới ba mươi phần trăm công dân từ sáu mươi lăm tuổi trở lên.",
+      "duration": 27.62,
+      "startTime": 210.09,
+      "endTime": 237.71,
+      "audioUrl": "/audio/lectures/geography/6_2/pyramid_comparison_table.mp3"
+    },
+    {
+      "id": "pyramid_anomalies",
+      "title": "Cách đọc các vết lõm, phình to và bất đối xứng",
+      "selector": "#card-pyramid-anomalies",
+      "en": "Demographers examine structural anomalies: indentations left by past wars or famines, bulges caused by baby booms or male guest-worker migration in Gulf oil states, and the universal female longevity advantage in elderly cohorts.",
+      "vi": "Các nhà địa lý phân tích các bất thường cấu trúc: các vết lõm do chiến tranh hoặc nạn đói trong quá khứ, các chỗ phình to do bùng nổ trẻ sơ sinh hoặc nhập cư lao động nam giới tại các nước Vùng Vịnh, cùng ưu thế tuổi thọ tự nhiên của phụ nữ ở các nhóm tuổi già.",
+      "duration": 28.91,
+      "startTime": 237.71,
+      "endTime": 266.62,
+      "audioUrl": "/audio/lectures/geography/6_2/pyramid_anomalies.mp3"
+    },
+    {
+      "id": "sec_youthful_gambia",
+      "title": "3. Thách thức dân số trẻ và Nghiên cứu tình huống: Gambia",
+      "selector": "#sec-youthful-gambia",
+      "en": "Section 3 investigates the youthful population crisis. When over forty percent of citizens are under fifteen, severe public finance strains emerge across primary schooling, pediatric health, deforestation for firewood, and youth unemployment.",
+      "vi": "Mục ba tìm hiểu cuộc khủng hoảng dân số trẻ. Khi hơn bốn mươi phần trăm dân số dưới mười lăm tuổi, những áp lực tài chính công gay gắt sẽ xuất hiện trong giáo dục tiểu học, y tế nhi khoa, nạn phá rừng lấy củi đun và thất nghiệp thanh niên.",
+      "duration": 30.18,
+      "startTime": 266.62,
+      "endTime": 296.8,
+      "audioUrl": "/audio/lectures/geography/6_2/sec_youthful_gambia.mp3"
+    },
+    {
+      "id": "case_study_matrix",
+      "title": "Ma trận đối chiếu Gambia và Nhật Bản",
+      "selector": "#card-case-study-matrix",
+      "en": "This interactive matrix contrasts the opposing challenges: The Gambia struggling with classroom shortages and infant mortality versus Japan confronting pension deficits and deserted rural towns.",
+      "vi": "Ma trận so sánh này đối chiếu hai thái cực thách thức: Gambia đối mặt với tình trạng thiếu lớp học và tử vong trẻ sơ sinh, trong khi Nhật Bản đối mặt với thâm hụt quỹ lương hưu và các thị trấn nông thôn bị bỏ hoang.",
+      "duration": 23.46,
+      "startTime": 296.8,
+      "endTime": 320.26,
+      "audioUrl": "/audio/lectures/geography/6_2/case_study_matrix.mp3"
+    },
+    {
+      "id": "gambia_details",
+      "title": "Chi tiết nghiên cứu tình huống Cộng hòa Gambia",
+      "selector": "#card-gambia-details",
+      "en": "In The Gambia, a high fertility rate of over five children per woman doubles the population in twenty-four years. Schools operate mandatory two-shift days with class sizes over fifty pupils, forests around the capital are decimated for fuel, and youth flock into informal urban settlements.",
+      "vi": "Tại Gambia, mức sinh cao trên năm con trên một phụ nữ khiến dân số tăng gấp đôi chỉ trong hai mươi tư năm. Các trường học phải chia làm hai ca học với sĩ số trên năm mươi học sinh một lớp, rừng quanh thủ đô bị đốn hạ để lấy chất đốt, và thanh niên đổ xô vào các khu nhà ổ chuột ven đô.",
+      "duration": 34.48,
+      "startTime": 320.26,
+      "endTime": 354.74,
+      "audioUrl": "/audio/lectures/geography/6_2/gambia_details.mp3"
+    },
+    {
+      "id": "sec_ageing_crisis",
+      "title": "4. Cuộc khủng hoảng già hóa dân số và Nghiên cứu tình huống: Nhật Bản",
+      "selector": "#sec-ageing-crisis",
+      "en": "Section 4 evaluates demographic aging. When sub-replacement fertility combines with life expectancy exceeding eighty years, societies face shrinking workforces, surging healthcare costs, and unsustainable pension commitments.",
+      "vi": "Mục bốn đánh giá cuộc khủng hoảng già hóa dân số. Khi mức sinh dưới ngưỡng thay thế kết hợp cùng tuổi thọ vượt tám mươi năm, xã hội phải đối mặt với lực lượng lao động suy giảm, chi phí y tế tăng vọt và quỹ lương hưu mất cân đối nghiêm trọng.",
+      "duration": 28.96,
+      "startTime": 354.74,
+      "endTime": 383.7,
+      "audioUrl": "/audio/lectures/geography/6_2/sec_ageing_crisis.mp3"
+    },
+    {
+      "id": "japan_details",
+      "title": "Chi tiết xã hội siêu già hóa tại Nhật Bản",
+      "selector": "#card-japan-details",
+      "en": "Japan's total population shrinks by hundreds of thousands annually. With barely two workers per retiree, public debt has ballooned beyond 260% of GDP. To adapt, Japan is pioneering robotic eldercare, automated transport, and raising retirement ages to seventy.",
+      "vi": "Dân số Nhật Bản sụt giảm hàng trăm nghìn người mỗi năm. Với tỉ lệ chỉ còn hai người lao động gánh một người về hưu, nợ công đã phình to vượt hai trăm sáu mươi phần trăm GDP. Để thích ứng, Nhật Bản đang tiên phong ứng dụng robot chăm sóc người già, tự động hóa và nâng tuổi nghỉ hưu lên bảy mươi.",
+      "duration": 37.86,
+      "startTime": 383.7,
+      "endTime": 421.56,
+      "audioUrl": "/audio/lectures/geography/6_2/japan_details.mp3"
+    },
+    {
+      "id": "sec_india_disparities",
+      "title": "5. Phân hóa nhân khẩu học vùng miền tại Ấn Độ",
+      "selector": "#sec-india-disparities",
+      "en": "Section 5 highlights spatial disparities within India. Northern states like Bihar and Uttar Pradesh retain high fertility of 2.4 to 3.0 children per woman due to agrarian dependence and lower female literacy. In stark contrast, southern states like Kerala achieved near-universal female literacy and comprehensive healthcare, dropping fertility below replacement to 1.8.",
+      "vi": "Mục năm làm nổi bật sự phân hóa không gian bên trong Ấn Độ. Các bang miền Bắc như Bihar và Uttar Pradesh duy trì mức sinh cao từ hai phẩy bốn đến ba phẩy không do phụ thuộc nông nghiệp và học vấn phụ nữ còn thấp. Trái lại, các bang miền Nam như Kerala đã phổ cập giáo dục cho phụ nữ và mạng lưới y tế hoàn thiện, đưa mức sinh xuống dưới ngưỡng thay thế chỉ còn một phẩy tám con.",
+      "duration": 46.74,
+      "startTime": 421.56,
+      "endTime": 468.3,
+      "audioUrl": "/audio/lectures/geography/6_2/sec_india_disparities.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược làm bài thi IGCSE về Cơ cấu dân số",
+      "selector": "#card-exam-strategy",
+      "en": "When answering exam questions: quote specific cohort categories Young, Active, and Elderly; show full workings when calculating the Dependency Ratio; and explicitly link pyramid shapes to their corresponding DTM stage.",
+      "vi": "Khi làm bài thi IGCSE: các em hãy gọi tên chính xác ba nhóm tuổi gồm Phụ thuộc trẻ, Lao động và Phụ thuộc già; trình bày đầy đủ các bước tính Tỉ số phụ thuộc; và nêu rõ hình thái tháp dân số tương ứng với giai đoạn nào của mô hình DTM.",
+      "duration": 28.7,
+      "startTime": 468.3,
+      "endTime": 497.0,
+      "audioUrl": "/audio/lectures/geography/6_2/exam_strategy.mp3"
+    }
+  ]
+}

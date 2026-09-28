@@ -1,0 +1,189 @@
+{
+  "lectureId": "30bae547-a9b0-4c09-8850-ce22b96cfea2",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "7.2 The Opportunities and Challenges of Urbanisation",
+  "totalDuration": 379.83,
+  "majorSections": [
+    {
+      "id": "sec_opportunities",
+      "title": "1. Cơ hội kinh tế & xã hội",
+      "startSegmentId": "sec_opportunities"
+    },
+    {
+      "id": "sec_hic_challenges",
+      "title": "2. Thách thức ở HIC & Mô hình đất đai",
+      "startSegmentId": "sec_hic_challenges"
+    },
+    {
+      "id": "sec_lic_challenges",
+      "title": "3. Thách thức ở LIC & Khu ổ chuột",
+      "startSegmentId": "sec_lic_challenges"
+    },
+    {
+      "id": "sec_squatter_management",
+      "title": "4. Quản lý ổ chuột & Favela-Bairro",
+      "startSegmentId": "sec_squatter_management"
+    },
+    {
+      "id": "card_exam_strategy",
+      "title": "Chiến lược làm bài thi",
+      "startSegmentId": "exam_strategy"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 7.2: Cơ hội và Thách thức của Đô thị hóa",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 7.2: The Opportunities and Challenges of Urbanisation. In this lecture, we explore the dual nature of rapid city growth: examining economic agglomeration and service accessibility, contrasting classic land use models, investigating rural-urban fringe conflicts, and analyzing the extreme socio-economic divide of squatter settlements through Rio de Janeiro's Favela-Bairro upgrade program.",
+      "vi": "Chào mừng các em đến với bài bảy chấm hai: Cơ hội và Thách thức của Đô thị hóa. Trong bài học này, chúng ta sẽ khám phá tính chất hai mặt của sự phát triển đô thị nhanh chóng: khảo sát hiệu ứng tích tụ kinh tế và tiếp cận dịch vụ, đối chiếu các mô hình sử dụng đất kinh điển, tìm hiểu xung đột lợi ích ở vùng ven đô thị, và phân tích sự phân hóa kinh tế xã hội gay gắt của các khu nhà ổ chuột thông qua dự án nâng cấp Favela-Bairro tại Rio de Janeiro.",
+      "duration": 50.63,
+      "startTime": 0.0,
+      "endTime": 50.63,
+      "audioUrl": "/audio/lectures/geography/7_2/intro.mp3"
+    },
+    {
+      "id": "sec_opportunities",
+      "title": "1. Cơ hội kinh tế và xã hội của đô thị hóa",
+      "selector": "#sec-opportunities",
+      "en": "Section 1 examines why cities function as engines of human progress. Urban agglomeration concentrates capital, talent, and infrastructure, sparking positive cumulative causation and multiplier effects that raise living standards.",
+      "vi": "Mục một phân tích lý do tại sao các thành phố đóng vai trò là đầu tàu phát triển của nhân loại. Sự tích tụ đô thị tập trung vốn, nhân tài và cơ sở hạ tầng, kích hoạt hiệu ứng nhân tử và chuỗi tăng trưởng tích lũy giúp nâng cao chất lượng sống.",
+      "duration": 29.18,
+      "startTime": 50.63,
+      "endTime": 79.81,
+      "audioUrl": "/audio/lectures/geography/7_2/sec_opportunities.mp3"
+    },
+    {
+      "id": "economic_drivers",
+      "title": "Động lực kinh tế và Hiệu ứng nhân tử",
+      "selector": "#card-economic-drivers",
+      "en": "Cities attract foreign direct investment and foster innovation through dense business clustering, offering formal employment with higher median wages, diverse career pathways, and substantial local tax revenues.",
+      "vi": "Đô thị thu hút vốn đầu tư trực tiếp nước ngoài và thúc đẩy đổi mới sáng tạo nhờ cụm doanh nghiệp tập trung, mang lại cơ hội việc làm chính thức với thu nhập cao hơn, lộ trình nghề nghiệp đa dạng và nguồn thu ngân sách dồi dào.",
+      "duration": 24.38,
+      "startTime": 79.81,
+      "endTime": 104.19,
+      "audioUrl": "/audio/lectures/geography/7_2/economic_drivers.mp3"
+    },
+    {
+      "id": "social_benefits",
+      "title": "Lợi ích xã hội và Chất lượng cuộc sống",
+      "selector": "#card-social-benefits",
+      "en": "Urban residents enjoy superior access to specialized healthcare, tertiary education, piped water, reliable electricity networks, and rich cultural amenities rarely available in peripheral rural areas.",
+      "vi": "Cư dân đô thị được tiếp cận vượt trội với dịch vụ y tế chuyên sâu, giáo dục đại học, mạng lưới nước máy và điện lưới ổn định, cùng các tiện ích văn hóa phong phú vốn rất hiếm thấy ở các vùng nông thôn xa xôi.",
+      "duration": 24.9,
+      "startTime": 104.19,
+      "endTime": 129.09,
+      "audioUrl": "/audio/lectures/geography/7_2/social_benefits.mp3"
+    },
+    {
+      "id": "sec_hic_challenges",
+      "title": "2. Thách thức ở các nước phát triển HIC: Mô hình đất đai, Vết loang và Sang trọng hóa",
+      "selector": "#sec-hic-challenges",
+      "en": "Section 2 examines spatial challenges in high-income cities: suburban sprawl gobbling countryside, urban decay in the inner city, and the social controversies of gentrification.",
+      "vi": "Mục hai khảo sát các thách thức không gian tại các thành phố phát triển: vết loang đô thị xâm lấn nông thôn, suy thoái lõi nội đô cũ, và những tranh cãi xã hội xoay quanh hiện tượng sang trọng hóa đô thị.",
+      "duration": 22.22,
+      "startTime": 129.09,
+      "endTime": 151.31,
+      "audioUrl": "/audio/lectures/geography/7_2/sec_hic_challenges.mp3"
+    },
+    {
+      "id": "land_use_models",
+      "title": "Bảng so sánh ba mô hình sử dụng đất đô thị",
+      "selector": "#card-land-use-models",
+      "en": "This matrix compares the three foundational urban land-use models: Burgess's Concentric Zone Model driven by bid-rent distance decay, Hoyt's Sector Model shaped by transport arteries, and Harris and Ullman's Multiple Nuclei Model reflecting decentralized suburban clusters.",
+      "vi": "Bảng này đối chiếu ba mô hình sử dụng đất đô thị kinh điển: Mô hình các vòng tròn đồng tâm của Burgess dựa trên cự ly đến trung tâm, Mô hình hình quạt của Hoyt định hình theo các trục giao thông, và Mô hình đa nhân của Harris và Ullman phản ánh sự phân tán của các cụm đô thị vệ tinh.",
+      "duration": 31.94,
+      "startTime": 151.31,
+      "endTime": 183.25,
+      "audioUrl": "/audio/lectures/geography/7_2/land_use_models.mp3"
+    },
+    {
+      "id": "rural_urban_fringe",
+      "title": "Vùng ven đô thị và Xung đột lợi ích",
+      "selector": "#sec-rural-urban-fringe",
+      "en": "The rural-urban fringe is a zone of intense competition between agricultural conservation, retail parks, science campuses, and new housing estates seeking cheap land and motorway links.",
+      "vi": "Vùng ven đô thị là khu vực cạnh tranh gay gắt giữa bảo tồn đất nông nghiệp, xây dựng trung tâm mua sắm, khu công nghệ cao và các khu đô thị mới nhằm tận dụng quỹ đất giá rẻ và kết nối cao tốc.",
+      "duration": 21.95,
+      "startTime": 183.25,
+      "endTime": 205.2,
+      "audioUrl": "/audio/lectures/geography/7_2/rural_urban_fringe.mp3"
+    },
+    {
+      "id": "gentrification",
+      "title": "Hiện tượng Sang trọng hóa và Phân tầng xã hội",
+      "selector": "#sec-gentrification",
+      "en": "Gentrification revitalizes derelict inner-city architecture and attracts affluent professionals, but simultaneously drives up property rents, displacing long-standing low-income communities as seen in Cape Town.",
+      "vi": "Sang trọng hóa giúp cải tạo các khu nhà cũ nát ở nội đô và thu hút giới tri thức thượng lưu, nhưng đồng thời đẩy giá thuê nhà lên cao, làm bật bãi các cộng đồng người nghèo cư trú lâu đời như bài học tại Cape Town.",
+      "duration": 24.3,
+      "startTime": 205.2,
+      "endTime": 229.5,
+      "audioUrl": "/audio/lectures/geography/7_2/gentrification.mp3"
+    },
+    {
+      "id": "sec_lic_challenges",
+      "title": "3. Thách thức ở các nước đang phát triển: Khu ổ chuột và Favela",
+      "selector": "#sec-lic-challenges",
+      "en": "Section 3 addresses the severe urban crisis in developing nations, where rapid rural exodus overwhelms planning infrastructure, spawning massive spontaneous squatter settlements.",
+      "vi": "Mục ba đề cập đến cuộc khủng hoảng đô thị nghiêm trọng tại các quốc gia đang phát triển, nơi dòng người di cư ồ ạt từ nông thôn làm tê liệt năng lực quy hoạch, hình thành nên các khu định cư tự phát và ổ chuột khổng lồ.",
+      "duration": 22.53,
+      "startTime": 229.5,
+      "endTime": 252.03,
+      "audioUrl": "/audio/lectures/geography/7_2/sec_lic_challenges.mp3"
+    },
+    {
+      "id": "inequality_lorenz",
+      "title": "Bất bình đẳng thu nhập và Đường cong Lorenz tại Rio",
+      "selector": "#card-inequality-lorenz",
+      "en": "Figure 7.7 displays Rio de Janeiro's extreme Lorenz curve: the top 10 percent command over half of total city wealth, while the bottom 40 percent share less than 10 percent, creating severe spatial segregation.",
+      "vi": "Hình bảy chấm bảy minh họa đường cong Lorenz về sự bất bình đẳng cùng cực ở Rio de Janeiro: mười phần trăm người giàu nhất nắm giữ hơn một nửa tổng tài sản thành phố, trong khi bốn mươi phần trăm dân số nghèo nhất chỉ sở hữu dưới mười phần trăm, tạo nên sự phân tầng không gian gay gắt.",
+      "duration": 28.62,
+      "startTime": 252.03,
+      "endTime": 280.65,
+      "audioUrl": "/audio/lectures/geography/7_2/inequality_lorenz.mp3"
+    },
+    {
+      "id": "sec_squatter_management",
+      "title": "4. Quản lý khu ổ chuột: Dự án nâng cấp Favela-Bairro",
+      "selector": "#sec-squatter-management",
+      "en": "Section 4 highlights progressive urban policy: moving away from violent bulldozing towards site-and-service infrastructure upgrades and community integration.",
+      "vi": "Mục bốn nêu bật bước chuyển trong chính sách đô thị tiến bộ: từ bỏ việc cưỡng chế giải tỏa bằng máy ủi để chuyển sang nâng cấp hạ tầng tại chỗ và hòa nhập cộng đồng.",
+      "duration": 18.78,
+      "startTime": 280.65,
+      "endTime": 299.43,
+      "audioUrl": "/audio/lectures/geography/7_2/sec_squatter_management.mp3"
+    },
+    {
+      "id": "favela_bairro_svg",
+      "title": "Sơ đồ cắt ngang: Hiểm họa ổ chuột và Dự án Favela-Bairro",
+      "selector": "#card-favela-bairro-svg",
+      "en": "This cutaway diagram highlights how the Favela-Bairro scheme transformed fragile hillside slums through reinforced retaining walls, paved drainage channels, legal electricity grids, and aerial cable car transit.",
+      "vi": "Sơ đồ cắt ngang này minh họa cách dự án Favela-Bairro chuyển hóa các khu sườn dốc hiểm trở thông qua kè bê tông chống sạt lở, cống thoát nước kiên cố, điện lưới hợp pháp và hệ thống cáp treo trên không.",
+      "duration": 24.57,
+      "startTime": 299.43,
+      "endTime": 324.0,
+      "audioUrl": "/audio/lectures/geography/7_2/favela_bairro_svg.mp3"
+    },
+    {
+      "id": "favela_bairro_details",
+      "title": "Chi tiết dự án nâng cấp Favela-Bairro tại Rio de Janeiro",
+      "selector": "#card-favela-bairro-details",
+      "en": "With 300 million dollars in investment, the Favela-Bairro project upgraded over 140 favelas, cutting waterborne illnesses by 60 percent, integrating informal residents into municipal tax rolls, and providing vital job training centers.",
+      "vi": "Với số vốn đầu tư ba trăm triệu đô la, dự án Favela-Bairro đã nâng cấp hơn một trăm bốn mươi khu ổ chuột, giảm sáu mươi phần trăm các bệnh truyền nhiễm qua nước, đưa người dân vào hệ thống quản lý chính thức và mở các trung tâm đào tạo nghề thiết thực.",
+      "duration": 29.2,
+      "startTime": 324.0,
+      "endTime": 353.2,
+      "audioUrl": "/audio/lectures/geography/7_2/favela_bairro_details.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược thi cử Cambridge IGCSE: Chủ đề 7.2",
+      "selector": "#card-exam-strategy",
+      "en": "In exam questions on squatter settlements, always provide balanced arguments: evaluate both structural achievements like landslide prevention alongside ongoing hurdles such as municipal maintenance funding and drug cartel violence.",
+      "vi": "Khi làm các bài thi về khu ổ chuột, các em luôn cần lập luận hai mặt cân bằng: đánh giá cả thành quả kiến tạo hạ tầng như chống sạt lở đất đi kèm với những thách thức còn tồn tại như kinh phí bảo trì của chính quyền và vấn nạn tội phạm ma túy.",
+      "duration": 26.63,
+      "startTime": 353.2,
+      "endTime": 379.83,
+      "audioUrl": "/audio/lectures/geography/7_2/exam_strategy.mp3"
+    }
+  ]
+}

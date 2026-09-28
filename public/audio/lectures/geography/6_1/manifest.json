@@ -1,0 +1,199 @@
+{
+  "lectureId": "c6fccfc5-088b-4145-9a23-9cbb2df1cce9",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "6.1 Populations Grow and Decline",
+  "totalDuration": 554.98,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_demographic_concepts": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_milestones": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_birth_death_factors": {
+      "start": 5,
+      "end": 7
+    },
+    "sec_dtm": {
+      "start": 8,
+      "end": 10
+    },
+    "sec_population_policies": {
+      "start": 11,
+      "end": 14
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 6.1: Sự tăng trưởng và suy giảm dân số",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 6.1: Populations Grow and Decline. In this lecture, we examine the fundamental mechanisms of human demography: key population indicators, the exponential acceleration of global population milestones, factors governing birth and death rates, the five stages of the Demographic Transition Model, and governmental population policies.",
+      "vi": "Chào mừng các em đến với bài sáu chấm một: Sự tăng trưởng và suy giảm dân số. Trong bài giảng này, chúng ta sẽ tìm hiểu các cơ chế nền tảng của nhân khẩu học: các chỉ số dân số cốt lõi, cột mốc tăng trưởng dân số toàn cầu, các yếu tố quyết định tỉ suất sinh và tử, năm giai đoạn của mô hình chuyển tiếp dân số, và các chính sách can thiệp dân số của chính phủ.",
+      "duration": 43.17,
+      "startTime": 0.0,
+      "endTime": 43.17,
+      "audioUrl": "/audio/lectures/geography/6_1/intro.mp3"
+    },
+    {
+      "id": "sec_demographic_concepts",
+      "title": "1. Các khái niệm nhân khẩu học cốt lõi",
+      "selector": "#sec-demographic-concepts",
+      "en": "Section 1 establishes core demographic definitions. The Crude Birth Rate and Crude Death Rate measure annual live births and deaths per one thousand individuals. The Rate of Natural Increase is calculated as the birth rate minus the death rate divided by ten. Other vital metrics include Total Fertility Rate, Replacement Level Fertility at approximately 2.1 children per woman, Infant Mortality Rate, and Life Expectancy.",
+      "vi": "Mục một thiết lập các định nghĩa nhân khẩu học cốt lõi. Tỉ suất sinh thô và tỉ suất tử thô đo lường số trẻ sinh sống và số ca tử vong trên một nghìn dân mỗi năm. Tỉ suất gia tăng dân số tự nhiên được tính bằng tỉ suất sinh trừ tỉ suất tử chia cho mười. Các chỉ số quan trọng khác gồm tổng tỉ suất sinh, mức sinh thay thế chuẩn là hai phẩy một con trên một phụ nữ, tỉ suất tử vong ở trẻ sơ sinh và tuổi thọ trung bình.",
+      "duration": 51.3,
+      "startTime": 43.17,
+      "endTime": 94.47,
+      "audioUrl": "/audio/lectures/geography/6_1/sec_demographic_concepts.mp3"
+    },
+    {
+      "id": "balancing_equation",
+      "title": "Phương trình cân bằng dân số",
+      "selector": "#card-balancing-equation",
+      "en": "The Demographic Balancing Equation states that total population change equals natural change plus net migration. That is, ending population equals starting population plus births minus deaths, plus immigrants minus emigrants.",
+      "vi": "Phương trình cân bằng dân số khẳng định: sự thay đổi tổng dân số bằng biến động tự nhiên cộng biến động cơ học. Tức là, dân số cuối kỳ bằng dân số đầu kỳ cộng số sinh trừ số tử, cộng số người nhập cư trừ số người xuất cư.",
+      "duration": 28.6,
+      "startTime": 94.47,
+      "endTime": 123.07,
+      "audioUrl": "/audio/lectures/geography/6_1/balancing_equation.mp3"
+    },
+    {
+      "id": "sec_milestones",
+      "title": "2. Các mốc tăng trưởng dân số toàn cầu",
+      "selector": "#sec-milestones",
+      "en": "Section 2 investigates historical population growth. For most of human history, global population remained small. Following the Industrial Revolution, global population expanded exponentially: reaching one billion in 1804, two billion in 1927, and crossing eight billion in 2022. While adding each billion once accelerated down to just eleven years, growth velocity is now gradually decelerating.",
+      "vi": "Mục hai khảo sát lịch sử tăng trưởng dân số. Suốt phần lớn lịch sử loài người, quy mô dân số duy trì ở mức nhỏ. Sau Cách mạng Công nghiệp, dân số bùng nổ theo cấp số nhân: đạt một tỷ người năm 1804, hai tỷ năm 1927 và vượt tám tỷ vào năm 2022. Dù thời gian tăng thêm một tỷ người từng rút ngắn chỉ còn mười một năm, hiện nay tốc độ tăng trưởng đang chậm dần lại.",
+      "duration": 54.4,
+      "startTime": 123.07,
+      "endTime": 177.47,
+      "audioUrl": "/audio/lectures/geography/6_1/sec_milestones.mp3"
+    },
+    {
+      "id": "milestones_table",
+      "title": "Bảng phân tích các mốc một tỷ dân",
+      "selector": "#card-milestones-table",
+      "en": "This table reveals how industrialization, public sanitation, antibiotics, and the Green Revolution drastically compressed the time required to add one billion people from millennia down to just over a decade.",
+      "vi": "Bảng số liệu này minh chứng quá trình công nghiệp hóa, vệ sinh môi trường, kháng sinh và Cách mạng Xanh đã rút ngắn thời gian tăng thêm một tỷ dân từ hàng nghìn năm xuống chỉ còn hơn một thập kỷ.",
+      "duration": 22.96,
+      "startTime": 177.47,
+      "endTime": 200.43,
+      "audioUrl": "/audio/lectures/geography/6_1/milestones_table.mp3"
+    },
+    {
+      "id": "sec_birth_death_factors",
+      "title": "3. Các yếu tố quyết định tỉ suất sinh và tử",
+      "selector": "#sec-birth-death-factors",
+      "en": "Section 3 analyzes the drivers of demographic variation. Fertility and mortality are governed by social traditions, economic structures, healthcare availability, and female education.",
+      "vi": "Mục ba phân tích các động lực thúc đẩy sự biến động nhân khẩu. Tỉ suất sinh và tỉ suất tử phụ thuộc chặt chẽ vào truyền thống xã hội, cơ cấu kinh tế, điều kiện chăm sóc y tế và trình độ học vấn của phụ nữ.",
+      "duration": 25.46,
+      "startTime": 200.43,
+      "endTime": 225.89,
+      "audioUrl": "/audio/lectures/geography/6_1/sec_birth_death_factors.mp3"
+    },
+    {
+      "id": "fertility_factors",
+      "title": "Các yếu tố chi phối mức sinh",
+      "selector": "#card-fertility-factors",
+      "en": "Birth rates vary across four dimensions: social traditions like marriage age, economic factors such as whether children are economic assets on farms or financial liabilities in cities, female empowerment through secondary schooling, and infant mortality where high child loss induces an insurance birth strategy.",
+      "vi": "Mức sinh chịu ảnh hưởng bởi bốn nhóm yếu tố: tập quán xã hội như độ tuổi kết hôn, yếu tố kinh tế xem con cái là lực lượng lao động nông nghiệp hay gánh nặng chi phí tại đô thị, giáo dục phụ nữ giúp nâng cao quyền tự quyết, và tỉ lệ tử vong trẻ em cao thúc đẩy tâm lý sinh nhiều con để bù đắp rủi ro.",
+      "duration": 34.86,
+      "startTime": 225.89,
+      "endTime": 260.75,
+      "audioUrl": "/audio/lectures/geography/6_1/fertility_factors.mp3"
+    },
+    {
+      "id": "mortality_transition",
+      "title": "Chuyển tiếp dịch tễ học và tỉ suất tử",
+      "selector": "#card-mortality-transition",
+      "en": "The Epidemiological Transition explains falling mortality in three historic phases: pestilence and famine dominated by infectious disease, receding pandemics through clean water and antibiotics, and modern degenerative diseases like cardiovascular illnesses and cancer in aging populations.",
+      "vi": "Quá trình chuyển tiếp dịch tễ học giải thích sự sụt giảm tỉ suất tử qua ba giai đoạn: thời kỳ dịch bệnh và nạn đói do bệnh truyền nhiễm, thời kỳ thoái lui dịch bệnh nhờ nước sạch và thuốc kháng sinh, và thời kỳ bệnh thoái hóa mạn tính như tim mạch và ung thư ở xã hội già hóa.",
+      "duration": 32.15,
+      "startTime": 260.75,
+      "endTime": 292.9,
+      "audioUrl": "/audio/lectures/geography/6_1/mortality_transition.mp3"
+    },
+    {
+      "id": "sec_dtm",
+      "title": "4. Mô hình chuyển tiếp dân số (DTM)",
+      "selector": "#sec-dtm",
+      "en": "Section 4 introduces the Demographic Transition Model. Originally formulated by Warren Thompson, the DTM tracks how birth rates, death rates, and total population evolve across five developmental stages.",
+      "vi": "Mục bốn giới thiệu Mô hình chuyển tiếp dân số DTM. Được xây dựng bởi nhà nhân khẩu học Warren Thompson, mô hình DTM theo dõi sự thay đổi của tỉ suất sinh, tỉ suất tử và tổng dân số qua năm giai đoạn phát triển kinh tế.",
+      "duration": 28.29,
+      "startTime": 292.9,
+      "endTime": 321.19,
+      "audioUrl": "/audio/lectures/geography/6_1/sec_dtm.mp3"
+    },
+    {
+      "id": "dtm_stages",
+      "title": "Chi tiết năm giai đoạn của mô hình DTM",
+      "selector": "#card-dtm-stages",
+      "en": "Stage 1 High Stationary features high birth and death rates. Stage 2 Early Expanding brings plunging death rates while births remain high, triggering a population explosion. Stage 3 Late Expanding sees falling birth rates due to urbanization and female careers. Stage 4 Low Stationary reaches equilibrium with low births and deaths. Stage 5 Natural Decrease occurs when birth rates fall below death rates, shrinking the population.",
+      "vi": "Giai đoạn một duy trì sinh và tử đều cao. Giai đoạn hai chứng kiến tỉ suất tử giảm mạnh trong khi tỉ suất sinh vẫn cao, gây ra bùng nổ dân số. Giai đoạn ba ghi nhận tỉ suất sinh giảm nhanh do đô thị hóa và giáo dục phụ nữ. Giai đoạn bốn đạt trạng thái ổn định với mức sinh và tử đều thấp. Giai đoạn năm suy giảm tự nhiên khi tỉ suất sinh rơi xuống thấp hơn tỉ suất tử, khiến quy mô dân số thu hẹp.",
+      "duration": 54.33,
+      "startTime": 321.19,
+      "endTime": 375.52,
+      "audioUrl": "/audio/lectures/geography/6_1/dtm_stages.mp3"
+    },
+    {
+      "id": "dtm_evaluation",
+      "title": "Đánh giá ưu điểm và hạn chế của mô hình DTM",
+      "selector": "#card-dtm-evaluation",
+      "en": "While the DTM serves as a universal benchmark and illustrates the demographic time-lag, it has notable limitations: its Eurocentric assumption that all nations industrialize identically, its omission of international migration, and its inability to foresee epidemics like HIV and COVID-19 or authoritarian mandates like China's One-Child Policy.",
+      "vi": "Dù mô hình DTM là công cụ đối chiếu chuẩn mực và giải thích rõ độ trễ nhân khẩu học, mô hình này vẫn có những hạn chế lớn: mang tính vị châu Âu khi giả định mọi nước đều công nghiệp hóa giống nhau, bỏ qua tác động của di cư quốc tế, và không dự đoán được các đại dịch bất ngờ hay sự can thiệp cưỡng chế như chính sách một con của Trung Quốc.",
+      "duration": 38.87,
+      "startTime": 375.52,
+      "endTime": 414.39,
+      "audioUrl": "/audio/lectures/geography/6_1/dtm_evaluation.mp3"
+    },
+    {
+      "id": "sec_population_policies",
+      "title": "5. Chính sách dân số: Giảm sinh và Khuyến sinh",
+      "selector": "#sec-population-policies",
+      "en": "Section 5 explores state demographic interventions. Governments adopt anti-natalist policies to curb unsustainable expansion, or pro-natalist policies to prevent demographic aging and economic contraction.",
+      "vi": "Mục năm khảo sát các chính sách can thiệp dân số của nhà nước. Chính phủ ban hành chính sách giảm sinh nhằm ngăn chặn áp lực bùng nổ quá mức, hoặc chính sách khuyến sinh nhằm khắc phục tình trạng già hóa và suy giảm lực lượng lao động.",
+      "duration": 25.53,
+      "startTime": 414.39,
+      "endTime": 439.92,
+      "audioUrl": "/audio/lectures/geography/6_1/sec_population_policies.mp3"
+    },
+    {
+      "id": "policy_china_antinatalist",
+      "title": "Chính sách một con của Trung Quốc",
+      "selector": "#card-policy-china",
+      "en": "China's One-Child Policy from 1979 to 2015 utilized strict financial penalties and quotas, averting an estimated 400 million births. However, it generated severe unintended consequences: an acute gender imbalance with millions of surplus men, the four-two-one dependency burden, and an accelerating workforce contraction.",
+      "vi": "Chính sách Một Con của Trung Quốc từ năm 1979 đến 2015 sử dụng các chế tài tài chính và giám sát nghiêm ngặt, ngăn chặn khoảng bốn trăm triệu ca sinh. Tuy nhiên, chính sách này để lại nhiều hệ lụy nặng nề: mất cân bằng giới tính trầm trọng với hàng chục triệu nam giới dư thừa, gánh nặng chăm sóc theo mô hình bốn hai một, và lực lượng lao động suy giảm nhanh chóng.",
+      "duration": 43.31,
+      "startTime": 439.92,
+      "endTime": 483.23,
+      "audioUrl": "/audio/lectures/geography/6_1/policy_china_antinatalist.mp3"
+    },
+    {
+      "id": "policy_france_pronatalist",
+      "title": "Chính sách khuyến sinh tại Pháp và Singapore",
+      "selector": "#card-policy-france",
+      "en": "France's Code de la Famille combats aging through generous child allowances, subsidized state creches, paid parental leave, and tax reductions. By supporting working mothers, France maintains one of the highest fertility rates in Europe, showing family-work balance outperforms pure cash incentives.",
+      "vi": "Bộ luật Gia đình của Pháp chống già hóa dân số thông qua trợ cấp nuôi con lũy tiến, hệ thống nhà trẻ công lập chất lượng cao, nghỉ thai sản hưởng nguyên lương và giảm thuế thu nhập. Bằng cách hỗ trợ phụ nữ vừa đi làm vừa sinh con, Pháp duy trì mức sinh cao hàng đầu châu Âu, chứng minh cân bằng công việc và gia đình hiệu quả hơn các khoản thưởng tiền mặt đơn thuần.",
+      "duration": 38.49,
+      "startTime": 483.23,
+      "endTime": 521.72,
+      "audioUrl": "/audio/lectures/geography/6_1/policy_france_pronatalist.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược làm bài thi IGCSE về Dân số",
+      "selector": "#card-exam-strategy",
+      "en": "In Cambridge IGCSE examination questions: always quote precise statistical figures including birth rates, death rates, and natural increase; distinguish natural population change from total change; and explain the specific socio-economic drivers behind demographic transitions.",
+      "vi": "Khi làm bài thi IGCSE: các em hãy luôn trích dẫn số liệu thống kê cụ thể gồm tỉ suất sinh, tỉ suất tử và mức gia tăng tự nhiên; phân biệt rõ biến động tự nhiên với biến động tổng dân số; đồng thời giải thích rõ các cơ chế kinh tế xã hội đằng sau sự chuyển dịch nhân khẩu học.",
+      "duration": 33.26,
+      "startTime": 521.72,
+      "endTime": 554.98,
+      "audioUrl": "/audio/lectures/geography/6_1/exam_strategy.mp3"
+    }
+  ]
+}

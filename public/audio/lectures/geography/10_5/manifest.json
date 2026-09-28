@@ -1,0 +1,85 @@
+{
+  "lectureId": "a3a8d904-d277-4eef-b8ff-52a913ebc5f6",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "10.5 Global Patterns of Energy Supply and Demand",
+  "totalDuration": 204.28,
+  "majorSections": [
+    {
+      "id": "sec_consumption_surges",
+      "title": "1. Tiêu thụ năng lượng toàn cầu",
+      "startSegmentId": "sec_consumption_surges"
+    },
+    {
+      "id": "sec_fuel_mix_map",
+      "title": "2. Bản đồ cơ cấu nhiên liệu khu vực",
+      "startSegmentId": "sec_fuel_mix_map"
+    },
+    {
+      "id": "sec_energy_security",
+      "title": "3. An ninh năng lượng & Gián đoạn nguồn cung",
+      "startSegmentId": "sec_energy_security"
+    },
+    {
+      "id": "card_exam_strategy",
+      "title": "Chiến lược làm bài thi",
+      "startSegmentId": "exam_strategy"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 10.5: Bức tranh toàn cầu về Cung và Cầu Năng lượng",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 10.5: Global Patterns of Energy Supply and Demand. In this lecture, we investigate the global energy balance: analyzing the relentless surge in worldwide primary consumption, mapping regional fuel mix profiles across Europe, Asia-Pacific, and the Middle East, and exploring the geopolitical vulnerability of energy security through the three-stage supply disruption sequence.",
+      "vi": "Chào mừng các em đến với bài mười chấm năm: Bức tranh toàn cầu về Cung và Cầu Năng lượng. Trong bài giảng này, chúng ta sẽ khảo sát cán cân năng lượng toàn cầu: phân tích sự gia tăng nhanh chóng của tổng mức tiêu thụ năng lượng sơ cấp trên thế giới, lập bản đồ cơ cấu nhiên liệu theo từng khu vực tại châu Âu, châu Á - Thái Bình Dương và Trung Đông, đồng thời khám phá lỗ hổng địa chính trị của an ninh năng lượng thông qua chuỗi ba giai đoạn gián đoạn nguồn cung.",
+      "duration": 48.33,
+      "startTime": 0.0,
+      "endTime": 48.33,
+      "audioUrl": "/audio/lectures/geography/10_5/intro.mp3"
+    },
+    {
+      "id": "sec_consumption_surges",
+      "title": "1. Sự bùng nổ tiêu thụ năng lượng toàn cầu và Thị phần nhiên liệu sơ cấp",
+      "selector": "#sec-consumption-surges",
+      "en": "Section 1 charts the exponential trajectory of global energy demand over the past half-century. Global energy consumption has nearly tripled since 1970, driven by industrialization in emerging giants like China and India, the proliferation of private automobiles, and massive expansions in high-tech digital computing infrastructure.",
+      "vi": "Mục một phác họa quỹ đạo tăng trưởng theo cấp số nhân của nhu cầu năng lượng toàn cầu trong nửa thế kỷ qua. Tổng mức tiêu thụ năng lượng toàn cầu đã tăng gần gấp ba lần kể từ năm 1970, được thúc đẩy bởi quá trình công nghiệp hóa tại các nước mới nổi như Trung Quốc và Ấn Độ, sự gia tăng nhanh chóng của xe hơi cá nhân, cùng sự bùng nổ hạ tầng trung tâm dữ liệu và điện toán số.",
+      "duration": 42.09,
+      "startTime": 48.33,
+      "endTime": 90.42,
+      "audioUrl": "/audio/lectures/geography/10_5/sec_consumption_surges.mp3"
+    },
+    {
+      "id": "sec_fuel_mix_map",
+      "title": "2. Bản đồ tương tác: Cơ cấu nhiên liệu theo từng khu vực toàn cầu",
+      "selector": "#sec-fuel-mix-map",
+      "en": "Section 2 investigates regional variations in fuel portfolios: contrasting the Middle East's overwhelming reliance on indigenous oil and natural gas, the Asia-Pacific region's heavy dependence on coal for power generation, and Europe's rapid decarbonization pivoting towards wind, solar, and nuclear power.",
+      "vi": "Mục hai khảo sát sự khác biệt sâu sắc trong cơ cấu nhiên liệu giữa các khu vực: đối chiếu sự phụ thuộc gần như tuyệt đối vào dầu mỏ và khí đốt nội địa của Trung Đông, sự phụ thuộc nặng nề vào nhiệt điện than tại khu vực châu Á - Thái Bình Dương, với bước chuyển dịch phi carbon hóa mạnh mẽ của châu Âu hướng tới năng lượng gió, mặt trời và điện hạt nhân.",
+      "duration": 37.53,
+      "startTime": 90.42,
+      "endTime": 127.95,
+      "audioUrl": "/audio/lectures/geography/10_5/sec_fuel_mix_map.mp3"
+    },
+    {
+      "id": "sec_energy_security",
+      "title": "3. An ninh năng lượng và Chuỗi gián đoạn nguồn cung ba giai đoạn",
+      "selector": "#sec-energy-security",
+      "en": "Section 3 models the vulnerability of international supply routes: tracing how physical choke-points like the Strait of Hormuz and the Malacca Strait, political pipeline embargoes, and acute natural disasters trigger immediate physical shortages, secondary industrial shutdowns, and tertiary macroeconomic recessions.",
+      "vi": "Mục ba mô hình hóa mức độ tổn thương của các tuyến vận tải năng lượng huyết mạch quốc tế: chỉ rõ cách các điểm nghẽn địa lý như eo biển Hormuz và eo biển Malacca, các lệnh cấm vận đường ống dẫn khí đốt chính trị, cùng thiên tai bất ngờ kích hoạt tình trạng thiếu hụt nhiên liệu vật lý trước mắt, đình trệ sản xuất công nghiệp thứ cấp, và gây ra suy thoái kinh tế vĩ mô trên diện rộng.",
+      "duration": 38.56,
+      "startTime": 127.95,
+      "endTime": 166.51,
+      "audioUrl": "/audio/lectures/geography/10_5/sec_energy_security.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược thi cử Cambridge IGCSE: Chủ đề 10.5",
+      "selector": "#card-exam-strategy",
+      "en": "In exam answers assessing energy security risks, always cite specific geopolitical case studies: evaluate how oil-importing economies insulate themselves by establishing strategic petroleum reserves, constructing liquefied natural gas regasification terminals, and aggressively expanding domestic renewable wind and nuclear capacity.",
+      "vi": "Trong các câu trả lời thi đánh giá rủi ro an ninh năng lượng, các em hãy luôn trích dẫn các dẫn chứng thực tế cụ thể: phân tích cách các quốc gia nhập khẩu dầu mỏ bảo vệ mình bằng việc xây dựng kho dự trữ dầu chiến lược, xây các cảng tái hóa khí tự nhiên hóa lỏng LNG, và đẩy mạnh phát triển năng lượng gió và điện hạt nhân nội địa.",
+      "duration": 37.77,
+      "startTime": 166.51,
+      "endTime": 204.28,
+      "audioUrl": "/audio/lectures/geography/10_5/exam_strategy.mp3"
+    }
+  ]
+}

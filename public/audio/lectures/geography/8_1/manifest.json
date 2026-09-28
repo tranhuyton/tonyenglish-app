@@ -1,0 +1,167 @@
+{
+  "lectureId": "5ff5f837-df39-4488-bbd2-5138f4faed1e",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "8.1 Measuring Development",
+  "totalDuration": 372.11,
+  "majorSections": [
+    {
+      "id": "sec_what_is_dev",
+      "title": "1. Khái niệm Phát triển & Chất lượng sống",
+      "startSegmentId": "sec_what_is_dev"
+    },
+    {
+      "id": "sec_single_indicators",
+      "title": "2. Các chỉ số phát triển đơn lẻ",
+      "startSegmentId": "sec_single_indicators"
+    },
+    {
+      "id": "sec_hdi",
+      "title": "3. Chỉ số phát triển con người HDI",
+      "startSegmentId": "sec_hdi"
+    },
+    {
+      "id": "sec_brandt_multipolar",
+      "title": "4. Ranh giới Brandt & Thế giới đa cực",
+      "startSegmentId": "sec_brandt_multipolar"
+    },
+    {
+      "id": "card_exam_summary",
+      "title": "Trọng tâm ôn thi Cambridge",
+      "startSegmentId": "exam_summary"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 8.1: Đo lường sự phát triển",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 8.1: Measuring Development. In this lecture, we examine how geographers assess human progress: distinguishing Standard of Living from Quality of Life, evaluating economic versus social single indicators, mastering the multi-dimensional Human Development Index, and analyzing why the historic 1980 Brandt Line collapsed into today's complex multi-polar economic reality.",
+      "vi": "Chào mừng các em đến với bài tám chấm một: Đo lường sự phát triển. Trong bài học này, chúng ta sẽ khảo sát cách các nhà địa lý đánh giá sự tiến bộ của con người: phân biệt mức sống vật chất với chất lượng cuộc sống toàn diện, đánh giá các chỉ số đơn lẻ về kinh tế và xã hội, thành thạo Chỉ số Phát triển Con người đa chiều HDI, và phân tích lý do đường ranh giới Brandt năm 1980 đã sụp đổ trước trật tự thế giới đa cực ngày nay.",
+      "duration": 48.98,
+      "startTime": 0.0,
+      "endTime": 48.98,
+      "audioUrl": "/audio/lectures/geography/8_1/intro.mp3"
+    },
+    {
+      "id": "sec_what_is_dev",
+      "title": "1. Khái niệm Phát triển và Chất lượng cuộc sống",
+      "selector": "#sec-what-is-dev",
+      "en": "Section 1 establishes the fundamental difference between economic wealth and human well-being. Standard of living refers purely to material possessions and monetary income, whereas Quality of life encompasses total physical health, social equality, environmental safety, and personal freedom.",
+      "vi": "Mục một thiết lập sự khác biệt cốt lõi giữa của cải kinh tế và hạnh phúc con người. Mức sống thuần túy đo lường của cải vật chất và thu nhập tiền tệ, trong khi chất lượng cuộc sống bao quát sức khỏe thể chất, bình đẳng xã hội, an toàn môi trường và tự do cá nhân.",
+      "duration": 33.3,
+      "startTime": 48.98,
+      "endTime": 82.28,
+      "audioUrl": "/audio/lectures/geography/8_1/sec_what_is_dev.mp3"
+    },
+    {
+      "id": "sol_qol_table",
+      "title": "Bảng phân loại các trụ cột phát triển",
+      "selector": "#card-sol-qol-table",
+      "en": "This table categorizes development into four interdependent domains: Economic prosperity, Social advancement, Environmental stability, and Political freedom. True sustainable development requires concurrent progress across all four dimensions.",
+      "vi": "Bảng này phân loại sự phát triển thành bốn lĩnh vực tương hỗ: Thịnh vượng kinh tế, Tiến bộ xã hội, Ổn định môi trường và Tự do chính trị. Sự phát triển bền vững thực sự đòi hỏi sự tiến bộ đồng thời trên cả bốn phương diện này.",
+      "duration": 29.46,
+      "startTime": 82.28,
+      "endTime": 111.74,
+      "audioUrl": "/audio/lectures/geography/8_1/sol_qol_table.mp3"
+    },
+    {
+      "id": "sec_single_indicators",
+      "title": "2. Các chỉ số phát triển đơn lẻ: Ưu điểm và Hạn chế",
+      "selector": "#sec-single-indicators",
+      "en": "Section 2 investigates single indicators of development. While simple to calculate, single indicators can be profoundly misleading because national averages conceal stark internal inequalities between billionaire elites and impoverished rural workers.",
+      "vi": "Mục hai nghiên cứu các chỉ số phát triển đơn lẻ. Dù dễ tính toán, các chỉ số đơn lẻ có thể gây hiểu lầm nghiêm trọng do số liệu trung bình quốc gia che giấu sự bất bình đẳng gay gắt giữa giới thượng lưu giàu có và tầng lớp lao động nông thôn nghèo khó.",
+      "duration": 29.3,
+      "startTime": 111.74,
+      "endTime": 141.04,
+      "audioUrl": "/audio/lectures/geography/8_1/sec_single_indicators.mp3"
+    },
+    {
+      "id": "economic_indicators",
+      "title": "Các chỉ số kinh tế đơn lẻ: GDP, GNI và PPP",
+      "selector": "#card-economic-indicators",
+      "en": "Economic indicators include Gross Domestic Product, Gross National Income which captures overseas remittances and corporate earnings, and Purchasing Power Parity adjustments which equalize currency purchasing power across different domestic cost levels.",
+      "vi": "Các chỉ số kinh tế bao gồm Tổng sản phẩm quốc nội GDP, Tổng thu nhập quốc dân GNI phản ánh cả kiều hối và lợi nhuận đầu tư nước ngoài, cùng hiệu chỉnh Sức mua tương đương PPP nhằm chuẩn hóa giá trị tiền tệ theo mức giá cả sinh hoạt tại từng quốc gia.",
+      "duration": 28.74,
+      "startTime": 141.04,
+      "endTime": 169.78,
+      "audioUrl": "/audio/lectures/geography/8_1/economic_indicators.mp3"
+    },
+    {
+      "id": "social_indicators",
+      "title": "Các chỉ số xã hội đơn lẻ: Y tế và Giáo dục",
+      "selector": "#card-social-indicators",
+      "en": "Social indicators reflect essential human welfare, such as Adult Literacy Rate, People per Doctor, and Infant Mortality Rate, which serves as the most sensitive bellwether of maternal nutrition and healthcare access.",
+      "vi": "Các chỉ số xã hội phản ánh phúc lợi thiết yếu của con người, như Tỉ lệ người lớn biết chữ, Số dân trên một bác sĩ, và Tỉ lệ tử vong ở trẻ sơ sinh - thước đo nhạy cảm nhất về tình trạng dinh dưỡng của bà mẹ và khả năng tiếp cận dịch vụ y tế.",
+      "duration": 27.28,
+      "startTime": 169.78,
+      "endTime": 197.06,
+      "audioUrl": "/audio/lectures/geography/8_1/social_indicators.mp3"
+    },
+    {
+      "id": "sec_hdi",
+      "title": "3. Chỉ số phát triển con người HDI",
+      "selector": "#sec-hdi",
+      "en": "Section 3 examines the United Nations Human Development Index. Created by Mahbub ul Haq and Amartya Sen, the HDI combines three vital dimensions: Decent Standard of Living, Long and Healthy Life, and Knowledge.",
+      "vi": "Mục ba xem xét Chỉ số Phát triển Con người HDI của Liên Hợp Quốc. Được khởi xướng bởi Mahbub ul Haq và Amartya Sen, HDI kết hợp ba chiều kích thiết yếu: Mức sống khá giả, Đời sống dài lâu khỏe mạnh, và Kiến thức tri thức.",
+      "duration": 29.56,
+      "startTime": 197.06,
+      "endTime": 226.62,
+      "audioUrl": "/audio/lectures/geography/8_1/sec_hdi.mp3"
+    },
+    {
+      "id": "hdi_architecture",
+      "title": "Sơ đồ cấu trúc tính toán chỉ số HDI",
+      "selector": "#card-hdi-architecture",
+      "en": "This diagram illustrates the mathematical architecture of HDI: combining GNI per capita at PPP, Life Expectancy at birth, and Education measured by Mean and Expected Years of Schooling, synthesized using a geometric mean.",
+      "vi": "Sơ đồ này minh họa cấu trúc toán học của HDI: kết hợp GNI bình quân đầu người theo PPP, Kỳ vọng sống khi sinh, và Giáo dục đo bằng Số năm đi học trung bình và kỳ vọng, được tổng hợp bằng phương pháp trung bình nhân.",
+      "duration": 27.52,
+      "startTime": 226.62,
+      "endTime": 254.14,
+      "audioUrl": "/audio/lectures/geography/8_1/hdi_architecture.mp3"
+    },
+    {
+      "id": "sec_brandt_multipolar",
+      "title": "4. Từ Ranh giới Brandt đến Thế giới đa cực",
+      "selector": "#sec-brandt-multipolar",
+      "en": "Section 4 tracks the shifting geopolitics of global development. The 1980 Brandt Report drew a simplistic north-south line dividing the rich industrialized world from the poor agricultural south, an analytical model that has since completely broken down.",
+      "vi": "Mục bốn theo dõi sự biến chuyển địa chính trị của phát triển toàn cầu. Báo cáo Brandt năm 1980 đã vẽ một đường phân chia bắc nam đơn giản hóa giữa thế giới công nghiệp giàu có và phương nam nông nghiệp nghèo nàn, một mô hình phân tích nay đã hoàn toàn lỗi thời.",
+      "duration": 30.45,
+      "startTime": 254.14,
+      "endTime": 284.59,
+      "audioUrl": "/audio/lectures/geography/8_1/sec_brandt_multipolar.mp3"
+    },
+    {
+      "id": "multipolar_evolution",
+      "title": "Sơ đồ tiến hóa: Ranh giới Brandt 1980 so với Trật tự đa cực 2020",
+      "selector": "#card-multipolar-evolution",
+      "en": "This spatial visualization contrasts the 1980 binary division against the 2020s landscape, where Asian Tigers, China, India, and Gulf States have surged into economic powerhouses, invalidating simplistic North-South dichotomies.",
+      "vi": "Minh họa không gian này đối chiếu sự phân chia nhị nguyên năm 1980 với cục diện thập niên 2020, nơi các con rồng châu Á, Trung Quốc, Ấn Độ và các quốc gia vùng Vịnh đã vươn lên thành cường quốc kinh tế, phá vỡ hoàn toàn định kiến Bắc - Nam cũ.",
+      "duration": 30.3,
+      "startTime": 284.59,
+      "endTime": 314.89,
+      "audioUrl": "/audio/lectures/geography/8_1/multipolar_evolution.mp3"
+    },
+    {
+      "id": "brandt_failure",
+      "title": "Tại sao Ranh giới Brandt thất bại trong phân tích hiện đại",
+      "selector": "#card-brandt-failure",
+      "en": "The Brandt Line collapsed because it treated the global South as homogeneous, ignored the explosive growth of Newly Industrialized Economies, and was undermined by resource-rich Gulf nations surpassing many European living standards.",
+      "vi": "Đường ranh giới Brandt sụp đổ vì đã coi toàn bộ phương Nam là đồng nhất, phớt lờ sự trỗi dậy vũ bão của các nền kinh tế mới công nghiệp hóa, và bị phủ định bởi các quốc gia vùng Vịnh giàu dầu mỏ có mức sống vượt qua nhiều nước châu Âu.",
+      "duration": 25.74,
+      "startTime": 314.89,
+      "endTime": 340.63,
+      "audioUrl": "/audio/lectures/geography/8_1/brandt_failure.mp3"
+    },
+    {
+      "id": "exam_summary",
+      "title": "Tổng kết trọng tâm ôn thi Cambridge IGCSE: Chủ đề 8.1",
+      "selector": "#card-exam-summary",
+      "en": "For exam success, always explain why composite indicators like HDI are superior to single GDP metrics, describe the three core pillars of HDI accurately, and cite anomalies like oil-rich states that have high income but lower social index scores.",
+      "vi": "Để đạt điểm cao trong kỳ thi, các em luôn cần giải thích tại sao chỉ số tổng hợp HDI vượt trội hơn chỉ số GDP đơn lẻ, mô tả chính xác ba trụ cột của HDI, và dẫn chứng các trường hợp dị biệt như các nước giàu dầu mỏ có thu nhập cao nhưng chỉ số xã hội chưa tương xứng.",
+      "duration": 31.48,
+      "startTime": 340.63,
+      "endTime": 372.11,
+      "audioUrl": "/audio/lectures/geography/8_1/exam_summary.mp3"
+    }
+  ]
+}

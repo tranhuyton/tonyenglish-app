@@ -1,0 +1,144 @@
+{
+  "lectureId": "33c91ae9-b13f-49d7-b29f-0c3b794d192d",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "6.3 Causes and Impacts of International Migration",
+  "totalDuration": 393.69,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_migration_typology": {
+      "start": 1,
+      "end": 2
+    },
+    "sec_push_pull": {
+      "start": 3,
+      "end": 4
+    },
+    "sec_bilateral_impacts": {
+      "start": 5,
+      "end": 5
+    },
+    "sec_mexico_usa": {
+      "start": 6,
+      "end": 7
+    },
+    "sec_syria_crisis": {
+      "start": 8,
+      "end": 9
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 6.3: Nguyên nhân và tác động của Di cư quốc tế",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 6.3: Causes and Impacts of International Migration. In this lecture, we investigate the spatial movement of people: distinguishing voluntary economic migrants from forced refugees, mastering Everett Lee's Push-Pull Model, evaluating bilateral source versus destination impacts, and analyzing major case studies including the Mexico to United States corridor and the Syrian refugee displacement.",
+      "vi": "Chào mừng các em đến với bài sáu chấm ba: Nguyên nhân và tác động của Di cư quốc tế. Trong bài giảng này, chúng ta sẽ khảo sát sự dịch chuyển không gian của con người: phân biệt người di cư kinh tế tự nguyện với người tị nạn cưỡng bức, nắm vững Mô hình Đẩy và Kéo của Everett Lee, đánh giá tác động hai chiều giữa nước xuất cư và nhập cư, đồng thời phân tích các nghiên cứu tình huống điển hình như hành lang Mexico - Hoa Kỳ và cuộc khủng hoảng tị nạn Syria.",
+      "duration": 50.2,
+      "startTime": 0.0,
+      "endTime": 50.2,
+      "audioUrl": "/audio/lectures/geography/6_3/intro.mp3"
+    },
+    {
+      "id": "sec_migration_typology",
+      "title": "1. Phân loại di cư và Khung pháp lý",
+      "selector": "#sec-migration-typology",
+      "en": "Section 1 categorizes migration along three axes: internal versus international crossing sovereign borders, voluntary chosen for prosperity versus forced fleeing conflict, and permanent settlement versus temporary seasonal guest work.",
+      "vi": "Mục một phân loại di cư theo ba tiêu chí: di cư nội địa so với quốc tế vượt qua biên giới chủ quyền, di cư tự nguyện vì mưu cầu kinh tế so với di cư cưỡng bức để trốn chạy hiểm nguy, và định cư vĩnh viễn so với làm việc thời vụ ngắn hạn.",
+      "duration": 28.1,
+      "startTime": 50.2,
+      "endTime": 78.3,
+      "audioUrl": "/audio/lectures/geography/6_3/sec_migration_typology.mp3"
+    },
+    {
+      "id": "legal_distinctions",
+      "title": "Phân biệt Người di cư, Người tị nạn và IDP",
+      "selector": "#card-legal-distinctions",
+      "en": "International law draws strict distinctions: Economic Migrants move voluntarily seeking prosperity and retain national protection; Refugees are forced outside their home country due to well-founded fear of persecution and are protected by the 1951 Refugee Convention against non-refoulement; while Internally Displaced Persons are displaced within their own borders without formal international legal status.",
+      "vi": "Luật pháp quốc tế phân định rạch ròi: Người di cư kinh tế chủ động di chuyển để tìm kiếm cơ hội và vẫn được nhà nước của họ bảo hộ; Người tị nạn bị cưỡng bức rời khỏi quê hương do lo sợ bị đàn áp và được Công ước Geneva năm 1951 bảo vệ với nguyên tắc không cưỡng ép hồi hương; còn Người mất nhà cửa nội địa IDP phải sơ tán ngay bên trong biên giới nước mình mà không có quy chế bảo vệ quốc tế tương đương.",
+      "duration": 45.18,
+      "startTime": 78.3,
+      "endTime": 123.48,
+      "audioUrl": "/audio/lectures/geography/6_3/legal_distinctions.mp3"
+    },
+    {
+      "id": "sec_push_pull",
+      "title": "2. Mô hình Đẩy - Kéo và Trở ngại can thiệp",
+      "selector": "#sec-push-pull",
+      "en": "Section 2 examines Everett Lee's Push-Pull Model. Push factors operate at the origin forcing people away, such as drought, unemployment, and persecution. Pull factors operate at destinations attracting migrants, including high wages, political freedom, and healthcare. Intervening obstacles are physical, financial, or political barriers like militarized border walls, desert crossings, and visa quotas.",
+      "vi": "Mục hai tìm hiểu Mô hình Đẩy - Kéo của Everett Lee. Lực đẩy xuất phát từ nơi đi buộc con người phải rời bỏ, như hạn hán, thất nghiệp và xung đột. Lực kéo xuất phát từ nơi đến thu hút người di cư, bao gồm mức lương cao, tự do chính trị và y tế hiện đại. Trở ngại can thiệp là các rào cản địa lý, tài chính hoặc luật pháp như hàng rào biên giới kiên cố, sa mạc khắc nghiệt và hạn ngạch thị thực.",
+      "duration": 51.93,
+      "startTime": 123.48,
+      "endTime": 175.41,
+      "audioUrl": "/audio/lectures/geography/6_3/sec_push_pull.mp3"
+    },
+    {
+      "id": "push_pull_factors",
+      "title": "Chi tiết các lực Đẩy và lực Kéo",
+      "selector": "#card-push-pull-factors",
+      "en": "Economic push-pull disparities often exceed five to one in wages, while social networks and historical diaspora chains generate self-reinforcing migration momentum.",
+      "vi": "Sự chênh lệch về tiền lương giữa hai đầu di cư thường vượt quá tỉ lệ năm trên một, trong khi mạng lưới cộng đồng kiều bào đồng hương tạo ra quán tính di cư tự củng cố mạnh mẽ.",
+      "duration": 20.3,
+      "startTime": 175.41,
+      "endTime": 195.71,
+      "audioUrl": "/audio/lectures/geography/6_3/push_pull_factors.mp3"
+    },
+    {
+      "id": "sec_bilateral_impacts",
+      "title": "3. Tác động hai chiều: Nước xuất cư vs Nước nhập cư",
+      "selector": "#sec-bilateral-impacts",
+      "en": "Section 3 evaluates bilateral trade-offs across four domains: economic, social, political, and environmental. Source countries benefit from massive financial remittances but suffer brain drain and an aging population. Destination countries gain vital labor to sustain pensions and fill shortages, but face pressure on housing, schools, and cultural friction.",
+      "vi": "Mục ba đánh giá tác động hai chiều trên bốn phương diện: kinh tế, xã hội, chính trị và môi trường. Quốc gia xuất cư hưởng lợi từ nguồn kiều hối khổng lồ nhưng chịu tổn thất do chảy máu chất xám và già hóa dân số. Quốc gia nhập cư có thêm nguồn lao động dồi dào để bù đắp thâm hụt lương hưu, nhưng chịu áp lực lớn về nhà ở, trường học và bất đồng văn hóa.",
+      "duration": 44.82,
+      "startTime": 195.71,
+      "endTime": 240.53,
+      "audioUrl": "/audio/lectures/geography/6_3/sec_bilateral_impacts.mp3"
+    },
+    {
+      "id": "sec_mexico_usa",
+      "title": "4. Nghiên cứu tình huống: Hành lang Mexico - Hoa Kỳ",
+      "selector": "#sec-mexico-usa",
+      "en": "Section 4 analyzes the world's largest bilateral migration corridor. Over 11.5 million Mexican-born individuals reside in the United States, initiated historically by the wartime Bracero Program.",
+      "vi": "Mục bốn phân tích hành lang di cư song phương lớn nhất thế giới. Hơn mười một phẩy năm triệu người gốc Mexico đang cư trú tại Hoa Kỳ, bắt nguồn lịch sử từ Chương trình Bracero thời Thế chiến thứ hai.",
+      "duration": 26.13,
+      "startTime": 240.53,
+      "endTime": 266.66,
+      "audioUrl": "/audio/lectures/geography/6_3/sec_mexico_usa.mp3"
+    },
+    {
+      "id": "mexico_usa_details",
+      "title": "Chi tiết kinh tế và kiều hối hành lang Mexico - Mỹ",
+      "selector": "#card-mexico-usa-details",
+      "en": "Mexican workers supply essential labor to US agriculture, construction, and hospitality while replenishing the payroll tax base. In return, remittances to Mexico exceed sixty billion dollars annually, surpassing foreign direct investment. However, strict border militarization has increased smuggling costs and trapped workers permanently inside the US.",
+      "vi": "Lao động Mexico cung cấp nhân lực thiết yếu cho nông nghiệp, xây dựng và dịch vụ của Mỹ, đồng thời đóng góp lớn vào quỹ an sinh xã hội. Ngược lại, kiều hối gửi về Mexico vượt sáu mươi tỷ đô la mỗi năm, cao hơn cả đầu tư trực tiếp nước ngoài. Tuy nhiên, việc tăng cường quân sự hóa biên giới đã đẩy chi phí buôn người lên cao và khiến người di cư chuyển sang ở lại vĩnh viễn thay vì về thăm quê.",
+      "duration": 46.53,
+      "startTime": 266.66,
+      "endTime": 313.19,
+      "audioUrl": "/audio/lectures/geography/6_3/mexico_usa_details.mp3"
+    },
+    {
+      "id": "sec_syria_crisis",
+      "title": "5. Nghiên cứu tình huống Di cư cưỡng bức: Khủng hoảng tị nạn Syria",
+      "selector": "#sec-syria-crisis",
+      "en": "Section 5 examines the 2011 Syrian civil war, which forcibly displaced over thirteen million people. Turkey absorbed 3.7 million refugees, and in Lebanon refugees reached one in four of the population, triggering massive economic strain. In Europe, Germany's 2015 open door policy integrated one million asylum seekers, while the EU-Turkey deal erected externalized border checks.",
+      "vi": "Mục năm khảo sát cuộc nội chiến Syria năm 2011, khiến hơn mười ba triệu người phải di dời cưỡng bức. Thổ Nhĩ Kỳ tiếp nhận ba phẩy bảy triệu người tị nạn, và tại Liban người tị nạn chiếm tới một phần tư dân số, gây tê liệt hạ tầng. Tại châu Âu, chính sách mở cửa của Đức năm 2015 đã tiếp nhận một triệu người, trong khi thỏa ước giữa EU và Thổ Nhĩ Kỳ siết chặt kiểm soát biên giới trên biển.",
+      "duration": 51.18,
+      "startTime": 313.19,
+      "endTime": 364.37,
+      "audioUrl": "/audio/lectures/geography/6_3/sec_syria_crisis.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược làm bài thi IGCSE về Di cư",
+      "selector": "#card-exam-strategy",
+      "en": "To maximize examination marks: explicitly classify migration as voluntary or forced; structure bilateral impact essays into balanced origin and destination pros and cons; and name specific intervening obstacles alongside quantified case evidence.",
+      "vi": "Để đạt điểm tối đa trong bài thi: các em hãy phân loại rõ di cư là tự nguyện hay cưỡng bức; trình bày cân đối các tác động tích cực và tiêu cực cho cả nước đi và nước đến; đồng thời nêu rõ các trở ngại can thiệp cụ thể kèm theo số liệu thực tế.",
+      "duration": 29.32,
+      "startTime": 364.37,
+      "endTime": 393.69,
+      "audioUrl": "/audio/lectures/geography/6_3/exam_strategy.mp3"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "lectureId": "199a26cd-1226-4ff7-b063-f7df7fa7b5ba",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "10.4 How Our Energy is Produced: Sources & Systems",
+  "totalDuration": 205.6,
+  "majorSections": [
+    {
+      "id": "sec_energy_taxonomy",
+      "title": "1. Phân loại năng lượng sơ cấp & thứ cấp",
+      "startSegmentId": "sec_energy_taxonomy"
+    },
+    {
+      "id": "sec_fuelwood_crisis",
+      "title": "2. Khủng hoảng củi đốt & Nghèo năng lượng",
+      "startSegmentId": "sec_fuelwood_crisis"
+    },
+    {
+      "id": "sec_energy_ladder",
+      "title": "3. Thang năng lượng & Chuyển dịch xanh",
+      "startSegmentId": "sec_energy_ladder"
+    },
+    {
+      "id": "card_exam_strategy",
+      "title": "Chiến lược làm bài thi",
+      "startSegmentId": "exam_strategy"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 10.4: Các nguồn năng lượng và Hệ thống sản xuất",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 10.4: How Our Energy is Produced: Sources & Systems. In this lecture, we examine global energy foundations: distinguishing primary natural fuels from secondary electricity, analyzing non-renewable fossil stocks versus renewable flows, investigating the acute fuelwood crisis affecting billions in low-income nations, and tracking the progressive ascent up the Energy Ladder from dung to zero-carbon solar and nuclear baseloads.",
+      "vi": "Chào mừng các em đến với bài mười chấm bốn: Các nguồn năng lượng và Hệ thống sản xuất. Trong bài giảng này, chúng ta sẽ khảo sát nền tảng năng lượng toàn cầu: phân biệt các nhiên liệu tự nhiên sơ cấp với dòng điện thứ cấp, phân tích trữ lượng hóa thạch không thể tái tạo so với các dòng năng lượng tái tạo vô tận, điều tra cuộc khủng hoảng củi đốt đè nặng lên hàng tỉ người tại các quốc gia thu nhập thấp, và theo dõi nấc thang tiến bộ năng lượng từ sinh khối chất đốt thô sơ lên điện hạt nhân và năng lượng mặt trời không phát thải.",
+      "duration": 53.66,
+      "startTime": 0.0,
+      "endTime": 53.66,
+      "audioUrl": "/audio/lectures/geography/10_4/intro.mp3"
+    },
+    {
+      "id": "sec_energy_taxonomy",
+      "title": "1. Phân loại năng lượng nền tảng: Sơ cấp vs Thứ cấp",
+      "selector": "#sec-energy-taxonomy",
+      "en": "Section 1 establishes foundational energy taxonomy: Primary energy captures unconverted raw natural resources like coal seams, crude oil deposits, moving river currents, and raw uranium ores. Secondary energy represents manufactured, refined carriers like electricity grids and refined petrol created through conversion processes.",
+      "vi": "Mục một thiết lập hệ thống phân loại năng lượng nền tảng: Năng lượng sơ cấp là các nguồn tài nguyên thiên nhiên thô nguyên bản chưa qua biến đổi như vỉa than đá, mỏ dầu thô, dòng chảy thủy điện và quặng uranium. Năng lượng thứ cấp đại diện cho các dạng năng lượng đã qua chế biến tinh chế như lưới điện quốc gia và xăng dầu thương phẩm.",
+      "duration": 39.66,
+      "startTime": 53.66,
+      "endTime": 93.32,
+      "audioUrl": "/audio/lectures/geography/10_4/sec_energy_taxonomy.mp3"
+    },
+    {
+      "id": "sec_fuelwood_crisis",
+      "title": "2. Khủng hoảng củi đốt: Nghèo đói năng lượng ở các quốc gia thu nhập thấp",
+      "selector": "#sec-fuelwood-crisis",
+      "en": "Section 2 investigates energy poverty: over 2.4 billion people worldwide rely on traditional biomass and fuelwood for cooking and basic heating. In Sub-Saharan Africa and rural South Asia, women and children walk up to 10 kilometers daily to gather scarce wood, causing severe deforestation, accelerated soil erosion, and deadly indoor smoke inhalation.",
+      "vi": "Mục hai nghiên cứu tình trạng nghèo đói năng lượng: hơn hai phẩy bốn tỉ người trên thế giới vẫn phụ thuộc vào sinh khối truyền thống và củi khô để đun nấu và sưởi ấm. Tại châu Phi cận Sahara và vùng nông thôn Nam Á, phụ nữ và trẻ em phải đi bộ tới mười cây số mỗi ngày để kiếm củi, gây ra nạn phá rừng nghiêm trọng, thúc đẩy xói mòn đất và gây tử vong do ngạt khói độc trong nhà.",
+      "duration": 44.18,
+      "startTime": 93.32,
+      "endTime": 137.5,
+      "audioUrl": "/audio/lectures/geography/10_4/sec_fuelwood_crisis.mp3"
+    },
+    {
+      "id": "sec_energy_ladder",
+      "title": "3. Thang năng lượng tương tác và Quá trình chuyển dịch phi carbon hóa",
+      "selector": "#sec-energy-ladder",
+      "en": "Section 3 models the socioeconomic Energy Ladder: showing how households and nations transition as disposable income rises: moving upward from animal dung and charcoal, through kerosene and liquefied petroleum gas, to modern networked electricity and distributed rooftop photovoltaic solar arrays.",
+      "vi": "Mục ba mô hình hóa Thang bậc Năng lượng kinh tế xã hội: minh họa cách các hộ gia đình và quốc gia chuyển dịch khi thu nhập tăng lên: từ chất thải động vật và than củi thô sơ bước lên dầu hỏa và khí hóa lỏng LPG, tiến tới mạng lưới điện thông minh và hệ thống pin mặt trời áp mái phi tập trung.",
+      "duration": 34.12,
+      "startTime": 137.5,
+      "endTime": 171.62,
+      "audioUrl": "/audio/lectures/geography/10_4/sec_energy_ladder.mp3"
+    },
+    {
+      "id": "exam_strategy",
+      "title": "Chiến lược thi cử Cambridge IGCSE: Chủ đề 10.4",
+      "selector": "#card-exam-strategy",
+      "en": "In exam questions on energy supply, always provide precise technical classifications: clearly separate non-renewable exhaustible fossil fuels like coal from infinite renewable flows like geothermal, and explain the physical-geographical conditions required to site hydroelectric dams or offshore wind arrays.",
+      "vi": "Trong các câu hỏi thi về nguồn cung năng lượng, các em hãy luôn phân loại kỹ thuật chính xác: tách bạch nhiên liệu hóa thạch hữu hạn không thể tái sinh với các dòng năng lượng vô tận như địa nhiệt, đồng thời giải thích rõ các điều kiện địa lý tự nhiên cần thiết để lựa chọn địa điểm xây đập thủy điện hoặc trang trại điện gió ngoài khơi.",
+      "duration": 33.98,
+      "startTime": 171.62,
+      "endTime": 205.6,
+      "audioUrl": "/audio/lectures/geography/10_4/exam_strategy.mp3"
+    }
+  ]
+}
