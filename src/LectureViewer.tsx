@@ -1147,6 +1147,24 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               letter-spacing: 0.5px;
               pointer-events: none;
           }
+          /* SVG Element Active Highlight */
+          g.active-lecture-highlight circle,
+          g.active-lecture-highlight rect,
+          g.active-lecture-highlight path {
+              stroke: #0284c7 !important;
+              stroke-width: 4px !important;
+              filter: drop-shadow(0 0 10px rgba(2, 132, 199, 0.95)) !important;
+              animation: pulse-svg-active 1.5s infinite alternate !important;
+          }
+          @keyframes pulse-svg-active {
+              0% { filter: drop-shadow(0 0 4px rgba(2, 132, 199, 0.6)); }
+              100% { filter: drop-shadow(0 0 14px rgba(2, 132, 199, 1)); }
+          }
+          .active-svg-parent-highlight {
+              outline: 2px dashed #0284c7 !important;
+              outline-offset: 4px !important;
+              border-radius: 12px !important;
+          }
           [data-lecture-section] {
               cursor: pointer !important;
               transition: all 0.2s ease !important;
@@ -2237,12 +2255,23 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 document.querySelectorAll('.active-lecture-highlight').forEach(function(el) {
                    el.classList.remove('active-lecture-highlight');
                 });
+                document.querySelectorAll('.active-svg-parent-highlight').forEach(function(el) {
+                   el.classList.remove('active-svg-parent-highlight');
+                });
                 if (sel) {
                    var target = document.querySelector(sel);
                    if (target) {
                       target.classList.add('active-lecture-highlight');
-                      if (e.data.autoScroll) {
-                         target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                      var scrollTarget = target;
+                      if (target instanceof SVGElement) {
+                         var parentContainer = target.closest('div, section, article') || target.ownerSVGElement;
+                         if (parentContainer) {
+                            parentContainer.classList.add('active-svg-parent-highlight');
+                            scrollTarget = parentContainer;
+                         }
+                      }
+                      if (e.data.autoScroll && scrollTarget && typeof scrollTarget.scrollIntoView === 'function') {
+                         scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
                       }
                    }
                 }
