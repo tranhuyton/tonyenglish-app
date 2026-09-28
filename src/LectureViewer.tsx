@@ -11,6 +11,17 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   'd38db7a8-e92e-450c-a034-b9d46dc10a7f': '/audio/lectures/geography/2_1/manifest.json', // 2.1
   'b0ca05f2-dab3-4223-9c25-c92d73df56c1': '/audio/lectures/geography/2_2/manifest.json', // 2.2
   '446dabf6-7c9d-4509-a3f9-78161a684e3e': '/audio/lectures/geography/2_3/manifest.json', // 2.3
+  '1b4caf37-15e4-475a-939c-e6490b366fd0': '/audio/lectures/geography/3_1/manifest.json', // 3.1
+  '93a28707-1b95-4ed2-a3ff-4789143118cd': '/audio/lectures/geography/3_2/manifest.json', // 3.2
+  '7d543b73-837d-4129-afc6-7196df47b6f6': '/audio/lectures/geography/3_3/manifest.json', // 3.3
+  'c5ce49f0-7b81-4843-a477-3ee46e41928e': '/audio/lectures/geography/3_4/manifest.json', // 3.4
+  'e5fde4e7-a1e6-4b3c-aeb2-756155f06ff5': '/audio/lectures/geography/4_1/manifest.json', // 4.1
+  'f45dd9b1-ef60-4521-a067-04bd896fc7e2': '/audio/lectures/geography/4_2/manifest.json', // 4.2
+  '1f909afc-865f-46d0-bb20-2e6d474fa87b': '/audio/lectures/geography/4_3/manifest.json', // 4.3
+  'c81dc416-7aa4-4e26-a2af-341d6c03fa52': '/audio/lectures/geography/4_4/manifest.json', // 4.4
+  '7c30919a-5d22-425a-a167-21e5de07d203': '/audio/lectures/geography/5_1/manifest.json', // 5.1
+  '23eee2fb-427c-4843-8d2d-ec296188730d': '/audio/lectures/geography/5_2/manifest.json', // 5.2
+  '36e35bdb-986b-4cd5-b8df-6bb0f93282e5': '/audio/lectures/geography/5_3/manifest.json', // 5.3
 };
 
 // =========================================================================================

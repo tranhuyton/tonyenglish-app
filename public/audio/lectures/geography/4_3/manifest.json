@@ -1,0 +1,195 @@
+{
+  "lectureId": "1f909afc-865f-46d0-bb20-2e6d474fa87b",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "4.3 The Impact of Tectonic Hazards",
+  "totalDuration": 482.76,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 3
+    },
+    "sec_vulnerability_factors": {
+      "start": 1,
+      "end": 3
+    },
+    "sec_primary_secondary": {
+      "start": 4,
+      "end": 6
+    },
+    "sec_severity_scales": {
+      "start": 7,
+      "end": 10
+    },
+    "sec_case_studies": {
+      "start": 11,
+      "end": 14
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4.3: Tác động của các Hiểm họa Địa chất",
+      "selector": "#sec-header",
+      "en": "Lesson 4.3: The Impact of Tectonic Hazards. In this lesson, we analyze physical and human vulnerability factors, primary versus secondary hazard effects, measurement scales, and case study contrasts between HICs and LICs.",
+      "vi": "Bài bốn chấm ba: Tác động của các Hiểm họa Địa chất. Trong bài học này, chúng ta sẽ phân tích các yếu tố tổn thương về tự nhiên và con người, tác động sơ cấp so với thứ cấp, các thang đo lường và so sánh điển cứu giữa các nước phát triển và đang phát triển.",
+      "duration": 31.58,
+      "startTime": 0.0,
+      "endTime": 31.58,
+      "audioUrl": "/audio/lectures/geography/4_3/intro.mp3"
+    },
+    {
+      "id": "sec_vulnerability_factors",
+      "title": "1. Các yếu tố ảnh hưởng đến mức độ thiệt hại (Tự nhiên vs Con người)",
+      "selector": "#sec-vulnerability-factors",
+      "en": "Section 1: Factors Influencing Hazard Impact. A hazard only becomes a disaster when it strikes a vulnerable population. Impacts are determined by physical magnitude and focal depth interacting with economic wealth, population density, and building regulations.",
+      "vi": "Phần một: Các yếu tố ảnh hưởng đến mức độ thiệt hại. Một hiểm họa chỉ trở thành thảm họa khi nó tấn công một cộng đồng dễ bị tổn thương. Mức độ thiệt hại được quyết định bởi cường độ và độ sâu chấn tiêu tương tác với tiềm lực kinh tế, mật độ dân số và quy chuẩn xây dựng.",
+      "duration": 34.38,
+      "startTime": 31.58,
+      "endTime": 65.96,
+      "audioUrl": "/audio/lectures/geography/4_3/sec_vulnerability_factors.mp3"
+    },
+    {
+      "id": "fact_physical",
+      "title": "Các yếu tố tự nhiên (Physical Factors: Magnitude, Depth, Geology)",
+      "selector": "#card-fact-physical",
+      "en": "Physical Vulnerability Factors. High earthquake magnitude and shallow focal depth release devastating seismic energy. Saturated sandy soils suffer liquefaction, while offshore seabed displacement triggers destructive tsunamis.",
+      "vi": "Các yếu tố tự nhiên. Cường độ chấn động lớn và độ sâu chấn tiêu nông giải phóng năng lượng địa chấn có sức tàn phá dữ dội. Nền đất cát bão hòa nước dễ bị hóa lỏng, trong khi sự dịch chuyển đáy biển ngoài khơi sẽ kích hoạt sóng thần hủy diệt.",
+      "duration": 30.18,
+      "startTime": 65.96,
+      "endTime": 96.14,
+      "audioUrl": "/audio/lectures/geography/4_3/fact_physical.mp3"
+    },
+    {
+      "id": "fact_human",
+      "title": "Các yếu tố con người & Năng lực ứng phó (Human Resilience & HIC vs LIC)",
+      "selector": "#card-fact-human",
+      "en": "Human Vulnerability and Economic Development. High-income countries enforce strict seismic building codes and early warning networks. In low-income countries, poor governance, corrupt construction practices, and dense unreinforced masonry cause catastrophic pancake collapse.",
+      "vi": "Yếu tố con người và Mức độ phát triển kinh tế. Các quốc gia phát triển thực thi nghiêm ngặt quy chuẩn xây dựng kháng chấn và hệ thống cảnh báo sớm. Tại các nước thu nhập thấp, quản lý yếu kém và nhà cửa bê tông giòn không cốt thép dẫn đến sự sụp đổ tầng lớp như bánh kếp.",
+      "duration": 34.43,
+      "startTime": 96.14,
+      "endTime": 130.57,
+      "audioUrl": "/audio/lectures/geography/4_3/fact_human.mp3"
+    },
+    {
+      "id": "sec_primary_secondary",
+      "title": "2. Tác động sơ cấp vs Tác động thứ cấp (Primary vs Secondary)",
+      "selector": "#sec-primary-secondary",
+      "en": "Section 2: Primary versus Secondary Impacts. Primary impacts occur instantaneously from ground shaking or eruption. Secondary impacts emerge hours, days, or weeks later as fires spread, water supplies fail, and epidemics take hold.",
+      "vi": "Phần hai: Tác động sơ cấp và Tác động thứ cấp. Tác động sơ cấp xảy ra tức thì do rung lắc mặt đất hoặc núi lửa phun. Tác động thứ cấp phát sinh sau vài giờ, vài ngày hoặc vài tuần do hỏa hoạn lan rộng, mất nước sạch và dịch bệnh bùng phát.",
+      "duration": 33.02,
+      "startTime": 130.57,
+      "endTime": 163.59,
+      "audioUrl": "/audio/lectures/geography/4_3/sec_primary_secondary.mp3"
+    },
+    {
+      "id": "impact_earthquakes",
+      "title": "Tác động của Động đất: Đổ sập công trình, Hỏa hoạn & Sóng thần",
+      "selector": "#card-impact-earthquakes",
+      "en": "Earthquake Impacts. Primary shaking collapses bridges and buildings, severing pipelines. Secondary consequences include catastrophic tsunamis, uncontrollable gas fires, landslides, and cholera outbreaks in displaced camps.",
+      "vi": "Tác động của động đất. Rung lắc sơ cấp làm sập cầu cống và nhà cửa, đứt gãy đường ống dẫn. Hậu quả thứ cấp bao gồm sóng thần thảm khốc, cháy nổ đường ống dẫn khí không thể dập tắt, sạt lở đất và dịch tả trong các trại tị nạn.",
+      "duration": 31.38,
+      "startTime": 163.59,
+      "endTime": 194.97,
+      "audioUrl": "/audio/lectures/geography/4_3/impact_earthquakes.mp3"
+    },
+    {
+      "id": "impact_volcanoes",
+      "title": "Tác động của Núi lửa: Dòng mạt vụn, Tro bụi & Dòng bùn Lahar",
+      "selector": "#card-impact-volcanoes",
+      "en": "Volcanic Impacts. Primary hazards incinerate landscapes with pyroclastic surges and blanket towns in suffocating ash. Secondary hazards trigger roaring mudflows called lahars, roof collapse, global atmospheric cooling, and airspace shutdown.",
+      "vi": "Tác động của núi lửa. Hiểm họa sơ cấp thiêu rụi cảnh quan bằng các luồng mạt vụn và phủ kín các thị trấn trong tro bụi độc hại. Hiểm họa thứ cấp gây ra lũ bùn núi lửa lahar kinh hoàng, sập mái nhà, hạ nhiệt độ khí hậu toàn cầu và tê liệt hàng không.",
+      "duration": 33.38,
+      "startTime": 194.97,
+      "endTime": 228.35,
+      "audioUrl": "/audio/lectures/geography/4_3/impact_volcanoes.mp3"
+    },
+    {
+      "id": "sec_severity_scales",
+      "title": "3. Đo lường cường độ và sức phá hủy (Magnitude, Mercalli & VEI)",
+      "selector": "#sec-severity-scales",
+      "en": "Section 3: Measuring Hazard Magnitude and Intensity. Geographers contrast logarithmic physical energy release against observed surface destruction and volcanic ejecta volumes.",
+      "vi": "Phần ba: Đo lường cường độ và sức phá hủy. Các nhà địa lý phân biệt giữa năng lượng vật lý giải phóng theo thang logarit với mức độ tàn phá quan sát được trên bề mặt và thể tích vật liệu núi lửa phun ra.",
+      "duration": 24.35,
+      "startTime": 228.35,
+      "endTime": 252.7,
+      "audioUrl": "/audio/lectures/geography/4_3/sec_severity_scales.mp3"
+    },
+    {
+      "id": "scale_moment_magnitude",
+      "title": "Thang độ lớn Mômen (Moment Magnitude Scale - Mw)",
+      "selector": "#scale-moment-magnitude",
+      "en": "Moment Magnitude Scale. A logarithmic physical scale measuring total seismic energy release based on fault slip area and rock rigidity. Each whole integer increase represents approximately 31.6 times more energy.",
+      "vi": "Thang độ lớn Mômen. Thang đo vật lý theo hàm logarit đo lường tổng năng lượng địa chấn giải phóng dựa trên diện tích đứt gãy và độ cứng của đá. Mỗi một bậc tăng biểu thị năng lượng giải phóng gấp khoảng ba mươi mốt phẩy sáu lần.",
+      "duration": 29.82,
+      "startTime": 252.7,
+      "endTime": 282.52,
+      "audioUrl": "/audio/lectures/geography/4_3/scale_moment_magnitude.mp3"
+    },
+    {
+      "id": "scale_mercalli",
+      "title": "Thang đo cường độ chấn động Mercalli (MMI: I - XII)",
+      "selector": "#scale-mercalli",
+      "en": "Modified Mercalli Intensity Scale. An observational twelve-point scale rating witnessed human sensations and structural damage, varying inversely with distance from the epicentre.",
+      "vi": "Thang đo cường độ chấn động Mercalli. Thang đánh giá mười hai cấp dựa trên cảm nhận của con người và mức độ hư hại công trình quan sát được trên thực địa, giảm dần khi càng ra xa tâm chấn.",
+      "duration": 23.42,
+      "startTime": 282.52,
+      "endTime": 305.94,
+      "audioUrl": "/audio/lectures/geography/4_3/scale_mercalli.mp3"
+    },
+    {
+      "id": "scale_vei",
+      "title": "Chỉ số bùng nổ núi lửa (VEI: 0 - 8)",
+      "selector": "#scale-vei",
+      "en": "Volcanic Explosivity Index. A logarithmic scale from zero to eight measuring eruption volume of tephra and eruptive column height, from gentle Hawaiian fountains to catastrophic supervolcano calderas.",
+      "vi": "Chỉ số bùng nổ núi lửa. Thang logarit từ không đến tám đo lường thể tích mạt vụn tro núi lửa và độ cao của cột khói phun trào, từ các vòi dung nham êm dịu ở Ha-oai đến các vụ nổ siêu núi lửa kinh hoàng.",
+      "duration": 26.25,
+      "startTime": 305.94,
+      "endTime": 332.19,
+      "audioUrl": "/audio/lectures/geography/4_3/scale_vei.mp3"
+    },
+    {
+      "id": "sec_case_studies",
+      "title": "4. So sánh các Nghiên cứu Điển hình: HIC vs LIC (Nhật Bản, Haiti, Pinatubo)",
+      "selector": "#sec-case-studies",
+      "en": "Section 4: Comparative Case Studies: High-Income versus Low-Income Countries. Contrasting Tohoku, Haiti, and Mount Pinatubo proves that human vulnerability and economic resources dictate disaster survival.",
+      "vi": "Phần bốn: So sánh các Nghiên cứu Điển hình giữa các nước giàu và nước nghèo. So sánh giữa Tohoku Nhật Bản, Haiti và núi lửa Pinatubo chứng minh rõ ràng rằng tính dễ tổn thương và tiềm lực kinh tế quyết định tỷ lệ sống sót trước thảm họa.",
+      "duration": 28.82,
+      "startTime": 332.19,
+      "endTime": 361.01,
+      "audioUrl": "/audio/lectures/geography/4_3/sec_case_studies.mp3"
+    },
+    {
+      "id": "case_japan_2011",
+      "title": "🇯🇵 Điển cứu HIC: Động đất & Sóng thần Tohoku, Nhật Bản (2011)",
+      "selector": "#case-japan-2011",
+      "en": "Case Study 1: Tohoku, Japan 2011 (HIC). An Mw 9.0 megathrust earthquake caused minimal structural shaking collapse due to strict building codes. However, a forty-metre tsunami overtopped seawalls, causing eighteen thousand deaths and a nuclear meltdown, costing 235 billion dollars.",
+      "vi": "Nghiên cứu điển hình một: Tohoku Nhật Bản năm hai nghìn không trăm mười một. Trận siêu động đất chín phẩy không độ Mw hầu như không làm sập nhà cửa nhờ quy chuẩn xây dựng nghiêm ngặt. Tuy nhiên sóng thần cao bốn mươi mét đã vượt qua đê biển làm mười tám nghìn người chết và gây sự cố hạt nhân, thiệt hại hai trăm ba mươi lăm tỷ đô-la.",
+      "duration": 41.68,
+      "startTime": 361.01,
+      "endTime": 402.69,
+      "audioUrl": "/audio/lectures/geography/4_3/case_japan_2011.mp3"
+    },
+    {
+      "id": "case_haiti_2010",
+      "title": "🇭🇹 Điển cứu LIC: Động đất tàn phá Port-au-Prince, Haiti (2010)",
+      "selector": "#case-haiti-2010",
+      "en": "Case Study 2: Port-au-Prince, Haiti 2010 (LIC). An Mw 7.0 shallow earthquake destroyed over 250,000 unreinforced concrete homes. Weak governance and poverty caused over 220,000 fatalities, followed by a secondary cholera epidemic that killed thousands more.",
+      "vi": "Nghiên cứu điển hình hai: Port-au-Prince Haiti năm hai nghìn không trăm mười. Trận động đất nông bảy phẩy không độ Mw đã làm sụp đổ hoàn toàn hơn hai trăm năm mươi nghìn ngôi nhà bê tông không cốt thép. Quản lý yếu kém và đói nghèo dẫn tới hơn hai trăm hai mươi nghìn người thiệt mạng, cùng dịch tả sau đó cướp đi thêm hàng nghìn sinh mạng.",
+      "duration": 41.2,
+      "startTime": 402.69,
+      "endTime": 443.89,
+      "audioUrl": "/audio/lectures/geography/4_3/case_haiti_2010.mp3"
+    },
+    {
+      "id": "case_pinatubo_1991",
+      "title": "🇵🇭 Điển cứu Núi lửa MIC: Núi Pinatubo, Philippines (1991)",
+      "selector": "#case-pinatubo-1991",
+      "en": "Case Study 3: Mount Pinatubo, Philippines 1991 (MIC). A colossal VEI 6 eruption combined with Typhoon Yunya triggered catastrophic lahars. Timely seismic forecasting and coordinated evacuation saved over seventy-five thousand lives, demonstrating the power of early warning.",
+      "vi": "Nghiên cứu điển hình ba: Núi lửa Pinatubo Phi-líp-pin năm một nghìn chín trăm chín mươi mốt. Vụ nổ núi lửa khổng lồ cấp sáu kết hợp với bão nhiệt đới gây ra các dòng bùn lahar quét sạch các thung lũng sông. Công tác dự báo địa chấn kịp thời và sơ tán có tổ chức đã cứu sống hơn bảy mươi lăm nghìn người.",
+      "duration": 38.87,
+      "startTime": 443.89,
+      "endTime": 482.76,
+      "audioUrl": "/audio/lectures/geography/4_3/case_pinatubo_1991.mp3"
+    }
+  ]
+}

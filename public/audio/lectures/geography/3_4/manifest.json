@@ -1,0 +1,228 @@
+{
+  "lectureId": "c5ce49f0-7b81-4843-a477-3ee46e41928e",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "3.4 Threats to Tropical Rainforests & Sustainable Management",
+  "totalDuration": 504.76,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 5
+    },
+    "sec_deforestation_drivers": {
+      "start": 1,
+      "end": 5
+    },
+    "sec_environmental_impacts": {
+      "start": 6,
+      "end": 8
+    },
+    "sec_tipping_point": {
+      "start": 9,
+      "end": 10
+    },
+    "sec_management": {
+      "start": 11,
+      "end": 17
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 3.4: Hiểm họa đối với Rừng mưa nhiệt đới & Quản lý bền vững",
+      "selector": "#sec-header",
+      "en": "Lesson 3.4: Threats to Tropical Rainforests and Sustainable Management. In this lesson, we examine economic causes of deforestation, severe environmental impacts, the Amazon tipping point, and sustainable management strategies.",
+      "vi": "Bài ba chấm bốn: Các hiểm họa đối với Rừng mưa nhiệt đới và Chiến lược quản lý bền vững. Trong bài học này, chúng ta sẽ tìm hiểu các nguyên nhân kinh tế dẫn đến nạn phá rừng, các tác động môi trường nghiêm trọng, điểm bùng phát A-ma-dôn và các chiến lược bảo tồn bền vững.",
+      "duration": 31.46,
+      "startTime": 0.0,
+      "endTime": 31.46,
+      "audioUrl": "/audio/lectures/geography/3_4/intro.mp3"
+    },
+    {
+      "id": "sec_deforestation_drivers",
+      "title": "1. Nguyên nhân kinh tế chính gây mất rừng (Drivers of Deforestation)",
+      "selector": "#sec-deforestation-drivers",
+      "en": "Section 1: Primary Economic Drivers of Deforestation. Large-scale commercial cattle ranching, soybean cultivation, commercial logging, mining, and hydroelectric infrastructure drive the loss of millions of hectares of virgin forest annually.",
+      "vi": "Phần một: Các nguyên nhân kinh tế hàng đầu gây mất rừng. Chăn nuôi gia súc quy mô lớn, trồng đậu tương công nghiệp, khai thác gỗ thương mại, khai khoáng và xây đập thủy điện là những tác nhân chính hủy hoại hàng triệu héc-ta rừng nguyên sinh mỗi năm.",
+      "duration": 29.99,
+      "startTime": 31.46,
+      "endTime": 61.45,
+      "audioUrl": "/audio/lectures/geography/3_4/sec_deforestation_drivers.mp3"
+    },
+    {
+      "id": "driver_cattle",
+      "title": "Chăn nuôi đại gia súc ở Amazon (Cattle Ranching - 80%)",
+      "selector": "#driver-cattle",
+      "en": "Cattle Ranching in the Brazilian Amazon. Responsible for eighty percent of Amazonian deforestation. Pastures are cleared via slash-and-burn to supply global beef and leather markets, degrading fragile soils within five to eight years.",
+      "vi": "Chăn nuôi đại gia súc ở lưu vực A-ma-dôn. Chiếm tới tám mươi phần trăm diện tích rừng bị phá tại Bra-xin. Rừng bị phát quang đốt trụi để làm đồng cỏ cung cấp thịt bò và da cho thị trường toàn cầu, khiến đất bị thoái hóa chỉ sau năm đến tám năm.",
+      "duration": 31.19,
+      "startTime": 61.45,
+      "endTime": 92.64,
+      "audioUrl": "/audio/lectures/geography/3_4/driver_cattle.mp3"
+    },
+    {
+      "id": "driver_palmoil",
+      "title": "Độc canh cọ dầu tại Borneo & Sumatra (Palm Oil)",
+      "selector": "#driver-palmoil",
+      "en": "Oil Palm Monoculture in Borneo and Sumatra. Peat swamp forests are clear-felled and drained, obliterating critical habitat for endangered orangutans, releasing gigatonnes of subterranean carbon into the atmosphere.",
+      "vi": "Độc canh cọ dầu tại đảo Boóc-nê-ô và Su-ma-tra. Rừng đầm lầy than bùn bị đốn hạ và tháo cạn nước, xóa sổ sinh cảnh sống còn của đười ươi, đồng thời giải phóng hàng tỷ tấn các-bon tích tụ dưới lòng đất vào khí quyển.",
+      "duration": 27.83,
+      "startTime": 92.64,
+      "endTime": 120.47,
+      "audioUrl": "/audio/lectures/geography/3_4/driver_palmoil.mp3"
+    },
+    {
+      "id": "driver_logging",
+      "title": "Khai thác gỗ & Nông nghiệp nương rẫy tại Congo",
+      "selector": "#driver-logging",
+      "en": "Commercial Logging and Smallholder Agriculture in the Congo Basin. Selective logging builds logging roads that open up remote forest interiors to charcoal production and slash-and-burn farming.",
+      "vi": "Khai thác gỗ thương mại và Nông nghiệp nương rẫy ở lưu vực Công-gô. Việc khai thác gỗ chọn lọc mở ra các tuyến đường xẻ ngang lõi rừng, tạo điều kiện cho hoạt động đốn củi đốt than và canh tác du canh lấn chiếm.",
+      "duration": 24.52,
+      "startTime": 120.47,
+      "endTime": 144.99,
+      "audioUrl": "/audio/lectures/geography/3_4/driver_logging.mp3"
+    },
+    {
+      "id": "driver_infrastructure",
+      "title": "Thủy điện & Giao thông (Sarawak & BR-163 Highway)",
+      "selector": "#driver-infrastructure",
+      "en": "Hydroelectric Mega-Dams and Highway Corridors. Projects like Batang Ai Dam and the Trans-Amazonian Highway flood hundreds of square kilometres of forest and initiate fishbone deforestation along road corridors.",
+      "vi": "Các siêu đập thủy điện và Tuyến quốc lộ xuyên rừng. Các công trình như đập Batang Ai và đường cao tốc xuyên A-ma-dôn nhấn chìm hàng trăm ki-lô-mét vuông rừng và tạo ra mô hình phá rừng hình xương cá dọc theo hành lang giao thông.",
+      "duration": 25.96,
+      "startTime": 144.99,
+      "endTime": 170.95,
+      "audioUrl": "/audio/lectures/geography/3_4/driver_infrastructure.mp3"
+    },
+    {
+      "id": "sec_environmental_impacts",
+      "title": "2. Tác động môi trường nghiêm trọng của việc mất rừng",
+      "selector": "#sec-environmental-impacts",
+      "en": "Section 2: Severe Environmental Impacts of Forest Clearance. Deforestation eliminates biological diversity, disrupts global carbon sequestration, and triggers catastrophic soil erosion and siltation.",
+      "vi": "Phần hai: Những tác động môi trường nghiêm trọng của việc phá rừng. Mất rừng làm suy giảm đa dạng sinh học, phá vỡ khả năng hấp thụ các-bon toàn cầu và gây ra xói mòn đất cùng bồi lắng phù sa thảm khốc.",
+      "duration": 26.1,
+      "startTime": 170.95,
+      "endTime": 197.05,
+      "audioUrl": "/audio/lectures/geography/3_4/sec_environmental_impacts.mp3"
+    },
+    {
+      "id": "impact_erosion",
+      "title": "Xói mòn đất & Mất tầng mùn (Soil Erosion & Leaching)",
+      "selector": "#card-impact-erosion",
+      "en": "Soil Erosion and Nutrient Leaching. Stripped of canopy interception, heavy torrential rain strikes bare ground directly. Topsoil washes into rivers, transforming fertile land into hardened laterite scrub.",
+      "vi": "Xói mòn đất và Rửa trôi tầng mùn. Khi mất đi tầng tán che chắn, những cơn mưa xối xả đập trực tiếp xuống mặt đất trống. Lớp đất mặt màu mỡ bị cuốn trôi ra sông ngòi, biến đất rừng thành những vùng đất đá ong cằn cỗi.",
+      "duration": 28.86,
+      "startTime": 197.05,
+      "endTime": 225.91,
+      "audioUrl": "/audio/lectures/geography/3_4/impact_erosion.mp3"
+    },
+    {
+      "id": "impact_carbon",
+      "title": "Phát thải khí nhà kính & Mất bồn chứa Carbon",
+      "selector": "#card-impact-carbon",
+      "en": "Loss of Carbon Sinks and Global Warming. Tropical rainforests absorb billions of tonnes of carbon dioxide annually. Burning cleared vegetation releases massive carbon pulses, converting forests from net carbon sinks into net carbon sources.",
+      "vi": "Mất bồn chứa Các-bon và Gia tăng hiệu ứng nhà kính. Rừng mưa hấp thụ hàng tỷ tấn khí các-bô-níc mỗi năm. Việc đốt phá cây rừng giải phóng một lượng lớn khí thải, biến rừng từ bể hấp thụ thành nguồn phát thải các-bon ròng.",
+      "duration": 30.76,
+      "startTime": 225.91,
+      "endTime": 256.67,
+      "audioUrl": "/audio/lectures/geography/3_4/impact_carbon.mp3"
+    },
+    {
+      "id": "sec_tipping_point",
+      "title": "3. Điểm bùng phát Amazon & Vòng lặp Xavan hóa (Tipping Point)",
+      "selector": "#sec-tipping-point",
+      "en": "Section 3: The Amazon Tipping Point and Savannification. Scientists project that exceeding twenty to twenty-five percent total deforestation could cause the hydrological cycle to collapse, irreversibly shifting fifty percent of the rainforest into dry savannah.",
+      "vi": "Phần ba: Điểm bùng phát A-ma-dôn và Vòng xoáy Xavan hóa. Các nhà khoa học cảnh báo nếu tỷ lệ mất rừng vượt quá hai mươi đến hai mươi lăm phần trăm, vòng tuần hoàn nước sẽ sụp đổ, khiến một nửa diện tích rừng nhiệt đới biến thành đồng cỏ xavan khô hạn không thể phục hồi.",
+      "duration": 32.13,
+      "startTime": 256.67,
+      "endTime": 288.8,
+      "audioUrl": "/audio/lectures/geography/3_4/sec_tipping_point.mp3"
+    },
+    {
+      "id": "loop_transpiration",
+      "title": "Mất thoát hơi nước & Hạn hán kéo dài (Savannification Loop)",
+      "selector": "#step-lost-transpiration",
+      "en": "Lost Evapotranspiration and Diminished Rainfall. Over half of Amazonian rainfall is recycled from tree transpiration. Clearing trees deprives the atmosphere of aerial moisture, triggering severe extended droughts and forest fires.",
+      "vi": "Mất thoát hơi nước và Suy giảm lượng mưa. Hơn một nửa lượng mưa ở A-ma-dôn bắt nguồn từ hơi nước do cây rừng bốc thoát. Chặt phá cây cối làm khô cạn bầu khí quyển, gây ra hạn hán kéo dài và cháy rừng lan rộng.",
+      "duration": 30.04,
+      "startTime": 288.8,
+      "endTime": 318.84,
+      "audioUrl": "/audio/lectures/geography/3_4/loop_transpiration.mp3"
+    },
+    {
+      "id": "sec_management",
+      "title": "4. Chiến lược quản lý & Bảo tồn bền vững",
+      "selector": "#sec-management",
+      "en": "Section 4: Sustainable Management and Conservation Strategies. Safeguarding tropical rainforests requires integrating local selective harvesting with international financial frameworks like REDD-plus and debt-for-nature swaps.",
+      "vi": "Phần bốn: Các chiến lược quản lý và Bảo tồn bền vững. Bảo vệ rừng mưa nhiệt đới đòi hỏi sự kết hợp giữa khai thác chọn lọc tại địa phương với các cơ chế tài chính quốc tế như chương trình giảm phát thải mất rừng và đổi nợ lấy bảo tồn thiên nhiên.",
+      "duration": 28.0,
+      "startTime": 318.84,
+      "endTime": 346.84,
+      "audioUrl": "/audio/lectures/geography/3_4/sec_management.mp3"
+    },
+    {
+      "id": "strat_selective",
+      "title": "Khai thác gỗ chọn lọc (Selective Logging) & Chứng chỉ FSC",
+      "selector": "#strat-selective-logging",
+      "en": "Selective Logging and FSC Certification. Only mature commercial trees over sixty centimetres in diameter are felled, leaving seedlings and canopy cover intact to regenerate the stand naturally.",
+      "vi": "Khai thác gỗ chọn lọc và Chứng chỉ rừng quốc tế. Chỉ những cây gỗ trưởng thành có đường kính trên sáu mươi xăng-ti-mét mới được đốn hạ, giữ nguyên cây non và tầng tán để rừng tự tái sinh tự nhiên.",
+      "duration": 24.59,
+      "startTime": 346.84,
+      "endTime": 371.43,
+      "audioUrl": "/audio/lectures/geography/3_4/strat_selective.mp3"
+    },
+    {
+      "id": "strat_agroforestry",
+      "title": "Nông lâm kết hợp (Agroforestry) & Trồng trọt dưới bóng râm",
+      "selector": "#strat-agroforestry",
+      "en": "Agroforestry Systems. Farmers cultivate cash crops such as cacao, coffee, and vanilla beneath native rainforest canopy trees, preserving soil fertility and animal biodiversity while securing resilient livelihoods.",
+      "vi": "Mô hình Nông lâm kết hợp. Nông dân canh tác các loại cây có giá trị cao như ca-cao, cà phê và vani dưới bóng mát của tán rừng tự nhiên, vừa bảo vệ độ phì nhiêu của đất vừa tạo sinh kế lâu dài.",
+      "duration": 27.35,
+      "startTime": 371.43,
+      "endTime": 398.78,
+      "audioUrl": "/audio/lectures/geography/3_4/strat_agroforestry.mp3"
+    },
+    {
+      "id": "strat_ecotourism",
+      "title": "Du lịch sinh thái (Ecotourism - Danum Valley)",
+      "selector": "#strat-ecotourism",
+      "en": "Sustainable Ecotourism. Initiatives like Sabah's Danum Valley charge conservation entry fees, reinvesting tourist revenues directly into antipoaching ranger patrols and local community schools.",
+      "vi": "Du lịch sinh thái bền vững. Các mô hình như Thung lũng Danum thu phí bảo tồn, tái đầu tư doanh thu du lịch trực tiếp vào các đội tuần tra kiểm lâm chống săn trộm và hỗ trợ giáo dục cộng đồng địa phương.",
+      "duration": 25.12,
+      "startTime": 398.78,
+      "endTime": 423.9,
+      "audioUrl": "/audio/lectures/geography/3_4/strat_ecotourism.mp3"
+    },
+    {
+      "id": "strat_debt_redd",
+      "title": "Đổi nợ lấy thiên nhiên (Debt-for-Nature) & Quỹ REDD+",
+      "selector": "#strat-debt-redd",
+      "en": "Debt-for-Nature Swaps and REDD-Plus. High-income nations cancel developing country sovereign debts in exchange for guaranteed legal forest reserves, creating powerful economic incentives to keep forests standing.",
+      "vi": "Đổi nợ lấy thiên nhiên và Quỹ tín chỉ các-bon. Các nước phát triển xóa một phần nợ cho các quốc gia đang phát triển để đổi lấy cam kết thành lập các khu bảo tồn rừng pháp lý, tạo động lực kinh tế to lớn để giữ rừng.",
+      "duration": 26.18,
+      "startTime": 423.9,
+      "endTime": 450.08,
+      "audioUrl": "/audio/lectures/geography/3_4/strat_debt_redd.mp3"
+    },
+    {
+      "id": "strat_indigenous",
+      "title": "Quyền đất đai người bản địa (Indigenous Reserves)",
+      "selector": "#strat-indigenous",
+      "en": "Indigenous Territorial Rights. Satellite data proves that legally demarcated indigenous territories experience significantly lower deforestation rates than state parks, as indigenous tribes actively patrol ancestral lands.",
+      "vi": "Quyền đất đai của các bộ tộc bản địa. Dữ liệu vệ tinh chứng minh rằng các vùng đất của người bản địa được pháp luật công nhận có tỷ lệ mất rừng thấp hơn đáng kể so với cả các vườn quốc gia, do các bộ tộc chủ động tuần tra bảo vệ lãnh thổ tổ tiên.",
+      "duration": 28.65,
+      "startTime": 450.08,
+      "endTime": 478.73,
+      "audioUrl": "/audio/lectures/geography/3_4/strat_indigenous.mp3"
+    },
+    {
+      "id": "summary_insights",
+      "title": "📌 Tổng kết thi IGCSE: Cân bằng phát triển & Bảo tồn",
+      "selector": "#card-summary-insights",
+      "en": "IGCSE Core Summary. Successful rainforest conservation cannot rely on protectionism alone; it requires economic viability for local populations combined with decisive international carbon financing.",
+      "vi": "Tổng kết trọng tâm bài thi. Bảo tồn rừng mưa thành công không thể chỉ dựa vào các lệnh cấm đoán thuần túy; nó đòi hỏi phải đảm bảo kinh tế cho người dân bản địa song hành cùng các nguồn tài chính các-bon quốc tế.",
+      "duration": 26.03,
+      "startTime": 478.73,
+      "endTime": 504.76,
+      "audioUrl": "/audio/lectures/geography/3_4/summary_insights.mp3"
+    }
+  ]
+}

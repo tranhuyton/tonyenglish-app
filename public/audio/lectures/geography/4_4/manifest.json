@@ -1,0 +1,217 @@
+{
+  "lectureId": "c81dc416-7aa4-4e26-a2af-341d6c03fa52",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "4.4 Managing the Impacts of Tectonic Hazards",
+  "totalDuration": 459.01,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 5
+    },
+    "sec_4ps_framework": {
+      "start": 1,
+      "end": 5
+    },
+    "sec_park_model": {
+      "start": 6,
+      "end": 9
+    },
+    "sec_earthquake_mitigation": {
+      "start": 10,
+      "end": 13
+    },
+    "sec_volcano_management": {
+      "start": 14,
+      "end": 16
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4.4: Quản lý tác động của Hiểm họa Địa chất",
+      "selector": "#sec-header",
+      "en": "Lesson 4.4: Managing the Impacts of Tectonic Hazards. In this lesson, we master the 4 Ps management framework, the Park Model disaster response curve, seismic engineering, and volcano mitigation case studies.",
+      "vi": "Bài bốn chấm bốn: Quản lý tác động của các Hiểm họa Địa chất. Trong bài học này, chúng ta sẽ làm chủ khung quản lý bốn chữ P, mô hình đường cong phản ứng thảm họa Park Model, kỹ thuật xây dựng kháng chấn và các điển cứu giảm nhẹ núi lửa.",
+      "duration": 29.44,
+      "startTime": 0.0,
+      "endTime": 29.44,
+      "audioUrl": "/audio/lectures/geography/4_4/intro.mp3"
+    },
+    {
+      "id": "sec_4ps_framework",
+      "title": "1. Khung quản lý 4 chữ P (Prediction, Protection, Preparation, Planning)",
+      "selector": "#sec-4ps-framework",
+      "en": "Section 1: The 4 Ps Management Framework. Minimizing human disaster relies on prediction using science, protection through engineering, community preparation via drills, and spatial planning restricting hazard-zone construction.",
+      "vi": "Phần một: Khung quản lý bốn chữ P. Giảm thiểu thảm họa dựa trên dự báo khoa học, bảo vệ bằng các công trình công nghệ, chuẩn bị cộng đồng qua diễn tập và quy hoạch không gian hạn chế xây dựng ở vùng nguy hiểm.",
+      "duration": 26.87,
+      "startTime": 29.44,
+      "endTime": 56.31,
+      "audioUrl": "/audio/lectures/geography/4_4/sec_4ps_framework.mp3"
+    },
+    {
+      "id": "p_prediction",
+      "title": "1. Dự báo khoa học (Prediction: Núi lửa vs Động đất)",
+      "selector": "#card-p-prediction",
+      "en": "Prediction. Highly reliable for volcanic monitoring through ground swelling and gas emissions, but impossible for earthquakes beyond broad statistical probability over centuries.",
+      "vi": "Dự báo khoa học. Rất chính xác đối với núi lửa thông qua đo biến dạng mặt đất và khí thải, nhưng hiện tại bất khả thi đối với động đất ngoài việc xác định xác suất thống kê dài hạn.",
+      "duration": 22.14,
+      "startTime": 56.31,
+      "endTime": 78.45,
+      "audioUrl": "/audio/lectures/geography/4_4/p_prediction.mp3"
+    },
+    {
+      "id": "p_protection",
+      "title": "2. Bảo vệ & Công trình chống chịu (Protection: Engineering)",
+      "selector": "#card-p-protection",
+      "en": "Protection. Designing physical defenses that withstand shockwaves or divert volcanic material, including base isolators, tuned mass dampers, and lava diversion channels.",
+      "vi": "Bảo vệ và Công trình chống chịu. Thiết kế các công trình phòng thủ vật lý có thể chịu được sóng xung kích hoặc chuyển hướng dòng núi lửa, bao gồm gối cách chấn đáy, con lắc triệt tiêu dao động và kênh chuyển hướng dung nham.",
+      "duration": 24.88,
+      "startTime": 78.45,
+      "endTime": 103.33,
+      "audioUrl": "/audio/lectures/geography/4_4/p_protection.mp3"
+    },
+    {
+      "id": "p_preparation",
+      "title": "3. Chuẩn bị cộng đồng (Preparation: Drills & Kits)",
+      "selector": "#card-p-preparation",
+      "en": "Preparation. Training emergency services and the public through routine nationwide evacuation drills, automated phone alerts, emergency grab-and-go kits, and medical stockpiling.",
+      "vi": "Chuẩn bị cộng đồng. Huấn luyện các lực lượng cứu hộ và người dân thông qua diễn tập sơ tán định kỳ toàn quốc, cảnh báo tự động qua điện thoại, balo khẩn cấp và tích trữ vật tư y tế.",
+      "duration": 23.82,
+      "startTime": 103.33,
+      "endTime": 127.15,
+      "audioUrl": "/audio/lectures/geography/4_4/p_preparation.mp3"
+    },
+    {
+      "id": "p_planning",
+      "title": "4. Quy hoạch sử dụng đất (Planning: Land-Use Zoning)",
+      "selector": "#card-p-planning",
+      "en": "Spatial Planning. Enforcing strict land-use zoning that bans high-density residential development, schools, and hospitals on active fault lines, liquefaction zones, or lahar pathways.",
+      "vi": "Quy hoạch không gian sử dụng đất. Thực thi phân vùng sử dụng đất nghiêm ngặt, cấm xây dựng các khu dân cư đông đúc, trường học và bệnh viện trên các đường đứt gãy, vùng đất hóa lỏng hoặc lòng máng lũ bùn núi lửa.",
+      "duration": 25.19,
+      "startTime": 127.15,
+      "endTime": 152.34,
+      "audioUrl": "/audio/lectures/geography/4_4/p_planning.mp3"
+    },
+    {
+      "id": "sec_park_model",
+      "title": "2. Mô hình Park Model: Đường cong phản ứng thảm họa (Disaster Response Curve)",
+      "selector": "#sec-park-model",
+      "en": "Section 2: The Park Model. Depicts the trajectory of quality of life following a disaster, tracking the steep descent during impact through relief and rehabilitation to long-term reconstruction.",
+      "vi": "Phần hai: Mô hình Park Model và Đường cong phản ứng thảm họa. Minh họa quỹ đạo chất lượng cuộc sống sau thảm họa, từ cú sụt giảm nghiêm trọng trong giai đoạn tác động đến cứu trợ khẩn cấp, phục hồi và tái thiết lâu dài.",
+      "duration": 25.72,
+      "startTime": 152.34,
+      "endTime": 178.06,
+      "audioUrl": "/audio/lectures/geography/4_4/sec_park_model.mp3"
+    },
+    {
+      "id": "park_phase_relief",
+      "title": "Giai đoạn Cứu trợ khẩn cấp (Relief Phase: Giờ đến Ngày)",
+      "selector": "#park-phase-relief",
+      "en": "The Relief Phase. Hours to days after impact. Search-and-rescue teams deploy sniffer dogs and thermal cameras; emergency triage clinics, bottled water, and temporary tents prevent hypothermia and dehydration.",
+      "vi": "Giai đoạn Cứu trợ khẩn cấp. Vài giờ đến vài ngày sau thảm họa. Các đội tìm kiếm cứu nạn sử dụng chó nghiệp vụ và camera nhiệt; các bệnh viện dã chiến, nước uống đóng chai và lều bạt khẩn cấp giúp ngăn mất nước và hạ thân nhiệt.",
+      "duration": 30.21,
+      "startTime": 178.06,
+      "endTime": 208.27,
+      "audioUrl": "/audio/lectures/geography/4_4/park_phase_relief.mp3"
+    },
+    {
+      "id": "park_phase_rehab",
+      "title": "Giai đoạn Phục hồi sinh hoạt (Rehabilitation: Tuần đến Tháng)",
+      "selector": "#park-phase-rehab",
+      "en": "The Rehabilitation Phase. Weeks to months later. Essential lifelines are restored: reconnecting electricity grids, repairing water mains, clearing transport arteries, and opening temporary schools.",
+      "vi": "Giai đoạn Phục hồi sinh hoạt. Vài tuần đến vài tháng sau đó. Các huyết mạch thiết yếu được tái kết nối: khôi phục mạng lưới điện, hàn gắn ống nước, thông đường giao thông và mở các trường học dã chiến.",
+      "duration": 27.95,
+      "startTime": 208.27,
+      "endTime": 236.22,
+      "audioUrl": "/audio/lectures/geography/4_4/park_phase_rehab.mp3"
+    },
+    {
+      "id": "park_phase_reconstruction",
+      "title": "Giai đoạn Tái thiết lâu dài: Xây dựng lại tốt hơn (Reconstruction)",
+      "selector": "#park-phase-reconstruction",
+      "en": "The Reconstruction Phase. Months to years of rebuilding. High-income countries build back better with upgraded seismic standards; poor low-income countries often remain trapped in permanent quality of life deficits.",
+      "vi": "Giai đoạn Tái thiết lâu dài. Nhiều tháng đến nhiều năm tái thiết. Các nước giàu tái thiết tốt hơn với các tiêu chuẩn kháng chấn nâng cấp; ngược lại, các nước nghèo thường bị mắc kẹt trong tình trạng suy giảm chất lượng sống vĩnh viễn.",
+      "duration": 27.86,
+      "startTime": 236.22,
+      "endTime": 264.08,
+      "audioUrl": "/audio/lectures/geography/4_4/park_phase_reconstruction.mp3"
+    },
+    {
+      "id": "sec_earthquake_mitigation",
+      "title": "3. Kỹ thuật công trình chống động đất (Earthquake Engineering)",
+      "selector": "#sec-earthquake-mitigation",
+      "en": "Section 3: Earthquake Mitigation and Structural Engineering. Modern buildings are designed to absorb and dissipate seismic shear forces through flexible structural design rather than rigid brittle strength.",
+      "vi": "Phần ba: Kỹ thuật công trình chống động đất. Các tòa nhà hiện đại được thiết kế để hấp thụ và tiêu tán lực cắt địa chấn thông qua cấu trúc linh hoạt uốn dẻo thay vì độ cứng giòn cố định.",
+      "duration": 24.11,
+      "startTime": 264.08,
+      "endTime": 288.19,
+      "audioUrl": "/audio/lectures/geography/4_4/sec_earthquake_mitigation.mp3"
+    },
+    {
+      "id": "eng_base_isolation",
+      "title": "Gối cách chấn đáy (Base Isolation: Cao su & Chì)",
+      "selector": "#eng-base-isolation",
+      "en": "Base Isolation Bearings. Heavy laminated lead-rubber bearings installed between foundations and bedrock decouple the building from ground motion, absorbing up to eighty percent of horizontal seismic shock.",
+      "vi": "Gối cách chấn đáy. Các tấm đệm cao su nhiều lớp có lõi chì đặt giữa móng và nền đá giúp tách rời tòa nhà khỏi rung chấn mặt đất, hấp thụ tới tám mươi phần trăm xung lực ngang.",
+      "duration": 23.61,
+      "startTime": 288.19,
+      "endTime": 311.8,
+      "audioUrl": "/audio/lectures/geography/4_4/eng_base_isolation.mp3"
+    },
+    {
+      "id": "eng_tuned_mass_damper",
+      "title": "Con lắc triệt tiêu dao động (Tuned Mass Damper: Taipei 101)",
+      "selector": "#eng-tuned-mass-damper",
+      "en": "Tuned Mass Dampers. Enormous suspended pendulum counterweights, such as the 660-tonne steel sphere in Taipei 101, sway in the opposite direction of ground vibrations to dampen skyscraper oscillation.",
+      "vi": "Con lắc triệt tiêu dao động. Những quả cầu kim loại đối trọng khổng lồ như khối thép nặng sáu trăm sáu mươi tấn trên đỉnh tháp Đài Bắc một trăm lẻ một, đu đưa ngược hướng chấn động để dập tắt sự rung lắc của tòa nhà chọc trời.",
+      "duration": 26.9,
+      "startTime": 311.8,
+      "endTime": 338.7,
+      "audioUrl": "/audio/lectures/geography/4_4/eng_tuned_mass_damper.mp3"
+    },
+    {
+      "id": "eng_cross_bracing",
+      "title": "Hệ giằng thép chữ X (Steel Cross-Bracing)",
+      "selector": "#eng-cross-bracing",
+      "en": "Steel Cross-Bracing. Diagonal lattice frameworks built into building frames distribute twisting shear forces evenly throughout the structure, preventing catastrophic pancaking.",
+      "vi": "Hệ giằng thép chữ X. Khung giằng chéo hình mắt cáo gia cố ngoại thất giúp phân tán đều các lực xoắn cắt địa chấn khắp khung nhà, ngăn ngừa hiện tượng sụp đổ tầng.",
+      "duration": 20.3,
+      "startTime": 338.7,
+      "endTime": 359.0,
+      "audioUrl": "/audio/lectures/geography/4_4/eng_cross_bracing.mp3"
+    },
+    {
+      "id": "sec_volcano_management",
+      "title": "4. Quản lý núi lửa & Nghiên cứu điển hình (Núi Etna vs Haiti 2021)",
+      "selector": "#sec-volcano-management",
+      "en": "Section 4: Volcano Management and Case Studies. Active surveillance through seismographs, tiltmeters, and gas sensors enables successful warning, as demonstrated on Mount Etna, contrasted with compound disasters in Haiti.",
+      "vi": "Phần bốn: Quản lý núi lửa và Các nghiên cứu điển hình. Giám sát địa chấn, đo độ nghiêng và cảm biến khí giúp dự báo chính xác, minh chứng tại núi lửa Etna ở Ý, đối lập với thảm họa kép tại Haiti năm hai nghìn không trăm hai mươi mốt.",
+      "duration": 29.73,
+      "startTime": 359.0,
+      "endTime": 388.73,
+      "audioUrl": "/audio/lectures/geography/4_4/sec_volcano_management.mp3"
+    },
+    {
+      "id": "case_etna_italy",
+      "title": "🌋 Điển cứu Núi Etna, Ý: Giám sát hiện đại & Kênh đổi dòng dung nham",
+      "selector": "#case-etna-italy",
+      "en": "Case Study: Mount Etna, Sicily. Monitored continuously by the INGV. Explosives and concrete blocks diverted advancing lava flows away from Zafferana, ensuring zero casualties despite regular explosive activity.",
+      "vi": "Nghiên cứu điển hình: Núi Etna ở Si-xin nước Ý. Được viện địa chất quốc gia giám sát liên tục hai mươi tư trên bảy. Thuốc nổ và các khối bê tông đã chuyển hướng thành công dòng dung nham ra khỏi thị trấn Zafferana, không để xảy ra thương vong dù núi lửa thường xuyên hoạt động.",
+      "duration": 31.65,
+      "startTime": 388.73,
+      "endTime": 420.38,
+      "audioUrl": "/audio/lectures/geography/4_4/case_etna_italy.mp3"
+    },
+    {
+      "id": "case_haiti_2021",
+      "title": "🇭🇹 Điển cứu Bán đảo Tiburon, Haiti (2021): Thảm họa kép",
+      "selector": "#case-haiti-2021",
+      "en": "Case Study: Haiti 2021 Earthquake. An Mw 7.2 earthquake was struck 48 hours later by Tropical Storm Grace. Extreme poverty and political collapse crippled search-and-rescue, leaving 2,200 dead and 137,000 homes wrecked.",
+      "vi": "Nghiên cứu điển hình: Động đất Bán đảo Tiburon Haiti năm hai nghìn không trăm hai mươi mốt. Trận động đất bảy phẩy hai độ Mw bị bão nhiệt đới Grace bồi thêm chỉ sau bốn mươi tám giờ. Đói nghèo và khủng hoảng chính trị làm tê liệt công tác cứu hộ, khiến hơn hai nghìn hai trăm người chết và hàng trăm nghìn ngôi nhà đổ nát.",
+      "duration": 38.63,
+      "startTime": 420.38,
+      "endTime": 459.01,
+      "audioUrl": "/audio/lectures/geography/4_4/case_haiti_2021.mp3"
+    }
+  ]
+}

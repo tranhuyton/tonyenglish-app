@@ -1,0 +1,239 @@
+{
+  "lectureId": "e5fde4e7-a1e6-4b3c-aeb2-756155f06ff5",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "4.1 The Structure of the Earth and the Distribution of Earthquakes and Volcanoes",
+  "totalDuration": 532.47,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 5
+    },
+    "sec_earth_structure": {
+      "start": 1,
+      "end": 5
+    },
+    "sec_driving_mechanisms": {
+      "start": 6,
+      "end": 8
+    },
+    "sec_boundary_types": {
+      "start": 9,
+      "end": 13
+    },
+    "sec_hazard_belts": {
+      "start": 14,
+      "end": 18
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4.1: Cấu trúc Trái Đất & Phân bố Động đất Núi lửa",
+      "selector": "#sec-header",
+      "en": "Lesson 4.1: The Structure of the Earth and the Distribution of Earthquakes and Volcanoes. In this lesson, we study the concentric layers of the Earth, the triad of tectonic driving forces, plate boundary types, and global hazard belts.",
+      "vi": "Bài bốn chấm một: Cấu trúc của Trái Đất và Sự phân bố của Động đất và Núi lửa. Trong bài học này, chúng ta sẽ nghiên cứu các tầng cấu tạo đồng tâm của Trái Đất, bộ ba động lực dịch chuyển mảng kiến tạo, các loại ranh giới mảng và các vành đai hiểm họa toàn cầu.",
+      "duration": 30.74,
+      "startTime": 0.0,
+      "endTime": 30.74,
+      "audioUrl": "/audio/lectures/geography/4_1/intro.mp3"
+    },
+    {
+      "id": "sec_earth_structure",
+      "title": "1. Cấu trúc bên trong của Trái Đất (Concentric Layers)",
+      "selector": "#sec-earth-structure",
+      "en": "Section 1: The Internal Structure of the Earth. Earth is organized into concentric spherical layers: the solid brittle crust, the semi-molten convective mantle, the liquid outer core, and the solid metallic inner core.",
+      "vi": "Phần một: Cấu trúc bên trong của Trái Đất. Trái Đất được cấu tạo thành các tầng đồng tâm: lớp vỏ cứng giòn ngoài cùng, lớp manti đối lưu bán nóng chảy, lớp lõi ngoài dạng lỏng và lớp lõi trong kim loại rắn đặc.",
+      "duration": 27.14,
+      "startTime": 30.74,
+      "endTime": 57.88,
+      "audioUrl": "/audio/lectures/geography/4_1/sec_earth_structure.mp3"
+    },
+    {
+      "id": "layer_crust",
+      "title": "Lớp vỏ Trái Đất: Vỏ đại dương & Vỏ lục địa (Crust)",
+      "selector": "#layer-crust",
+      "en": "The Crust and Lithosphere. Oceanic crust is thin, dense, and basaltic, averaging five to ten kilometres. Continental crust is thick, buoyant, and granitic, averaging thirty-five kilometres and unable to subduct into the mantle.",
+      "vi": "Lớp vỏ Trái Đất và Thạch quyển. Vỏ đại dương mỏng, nặng và chứa nhiều bazan, dày trung bình từ năm đến mười ki-lô-mét. Vỏ lục địa dày, nhẹ và chứa nhiều granit, dày trung bình ba mươi lăm ki-lô-mét và không thể bị chìm vào lớp manti.",
+      "duration": 32.87,
+      "startTime": 57.88,
+      "endTime": 90.75,
+      "audioUrl": "/audio/lectures/geography/4_1/layer_crust.mp3"
+    },
+    {
+      "id": "layer_mantle",
+      "title": "Lớp Manti & Dòng đối lưu nhiệt (Mantle Convection)",
+      "selector": "#layer-mantle",
+      "en": "The Mantle and Asthenosphere. Extending to 2,900 kilometres, comprising eighty-four percent of Earth's volume. Heat from radioactive decay drives sluggish thermal convection cells that drag overlying tectonic plates.",
+      "vi": "Lớp Manti và Tầng mềm quyển. Sâu tới hai nghìn chín trăm ki-lô-mét, chiếm tám mươi tư phần trăm thể tích Trái Đất. Nhiệt sinh ra từ phân rã phóng xạ kích hoạt các ô đối lưu nhiệt chậm chạp, kéo trôi các mảng kiến tạo bên trên.",
+      "duration": 29.78,
+      "startTime": 90.75,
+      "endTime": 120.53,
+      "audioUrl": "/audio/lectures/geography/4_1/layer_mantle.mp3"
+    },
+    {
+      "id": "layer_outer_core",
+      "title": "Lõi ngoài dạng lỏng & Từ trường Trái Đất (Outer Core)",
+      "selector": "#layer-outer-core",
+      "en": "The Liquid Outer Core. Composed of molten iron and nickel between 2,900 and 5,100 kilometres depth. Churning metallic convection currents act as a planetary dynamo, generating Earth's protective geomagnetic shield.",
+      "vi": "Lớp Lõi ngoài dạng lỏng. Cấu tạo từ sắt và niken nóng chảy ở độ sâu từ hai nghìn chín trăm đến năm nghìn một trăm ki-lô-mét. Dòng kim loại lỏng đối lưu mạnh mẽ đóng vai trò như một máy phát điện hành tinh, tạo ra từ trường bảo vệ Trái Đất.",
+      "duration": 31.67,
+      "startTime": 120.53,
+      "endTime": 152.2,
+      "audioUrl": "/audio/lectures/geography/4_1/layer_outer_core.mp3"
+    },
+    {
+      "id": "layer_inner_core",
+      "title": "Lõi trong rắn đặc & Áp suất cực đại (Inner Core)",
+      "selector": "#layer-inner-core",
+      "en": "The Solid Inner Core. A dense sphere of iron-nickel alloy reaching 6,000 degrees Celsius. Incomprehensible gravitational pressure exceeding 3.6 million atmospheres forces atoms into an immoveable solid crystalline lattice.",
+      "vi": "Lớp Lõi trong rắn đặc. Một khối cầu hợp kim sắt niken đặc quánh đạt tới sáu nghìn độ C. Áp suất trọng lực khủng khiếp vượt quá ba phẩy sáu triệu át-mốt-phe ép chặt các nguyên tử thành một mạng tinh thể rắn bất động.",
+      "duration": 27.59,
+      "startTime": 152.2,
+      "endTime": 179.79,
+      "audioUrl": "/audio/lectures/geography/4_1/layer_inner_core.mp3"
+    },
+    {
+      "id": "sec_driving_mechanisms",
+      "title": "2. Thuyết kiến tạo mảng & Bộ ba động lực chuyển động",
+      "selector": "#sec-driving-mechanisms",
+      "en": "Section 2: Plate Tectonics and Driving Mechanisms. Earth's lithosphere is fractured into major tectonic plates moving at two to ten centimetres annually, driven by three interrelated physical forces.",
+      "vi": "Phần hai: Kiến tạo mảng và Cơ chế vận động. Thạch quyển bị phân cắt thành các mảng kiến tạo lớn dịch chuyển từ hai đến mười xăng-ti-mét mỗi năm, được thúc đẩy bởi ba lực vật lý tương tác lẫn nhau.",
+      "duration": 25.24,
+      "startTime": 179.79,
+      "endTime": 205.03,
+      "audioUrl": "/audio/lectures/geography/4_1/sec_driving_mechanisms.mp3"
+    },
+    {
+      "id": "driver_slab_pull",
+      "title": "Lực kéo mảng chìm (Slab Pull: Động lực chủ đạo)",
+      "selector": "#card-slab-pull",
+      "en": "Slab Pull, the Primary Driving Force. As cold, dense oceanic lithosphere plunges into a deep oceanic trench at subduction zones, gravity pulls the entire trailing plate downward into the mantle behind it.",
+      "vi": "Lực kéo mảng chìm, động lực chủ đạo. Khi mảng vỏ đại dương lạnh và đặc chìm sâu vào rãnh hút chìm, trọng lực sẽ kéo toàn bộ phần thân mảng phía sau trôi tuột xuống lớp manti theo sau nó.",
+      "duration": 25.26,
+      "startTime": 205.03,
+      "endTime": 230.29,
+      "audioUrl": "/audio/lectures/geography/4_1/driver_slab_pull.mp3"
+    },
+    {
+      "id": "driver_ridge_push",
+      "title": "Lực đẩy sống núi & Trôi trượt trọng lực (Ridge Push)",
+      "selector": "#card-ridge-push",
+      "en": "Ridge Push and Gravitational Sliding. Magma upwelling creates buoyant, elevated mid-ocean ridges two to three kilometres above ocean basins. Gravity forces the elevated crust to slide downslope away from the ridge crest.",
+      "vi": "Lực đẩy sống núi và Trôi trượt trọng lực. Magma trồi lên tạo thành các sống núi ngầm nhô cao hai đến ba ki-lô-mét so với đáy biển. Trọng lực khiến lớp vỏ trên cao trượt dốc ra xa khỏi đỉnh sống núi.",
+      "duration": 28.48,
+      "startTime": 230.29,
+      "endTime": 258.77,
+      "audioUrl": "/audio/lectures/geography/4_1/driver_ridge_push.mp3"
+    },
+    {
+      "id": "sec_boundary_types",
+      "title": "3. Bốn loại ranh giới mảng kiến tạo (Plate Boundaries)",
+      "selector": "#sec-boundary-types",
+      "en": "Section 3: Types of Plate Boundaries. Active geological hazards occur where plates interact. The syllabus examines four boundaries: constructive, destructive, collision, and conservative margins.",
+      "vi": "Phần ba: Bốn loại ranh giới mảng kiến tạo. Các hiểm họa địa chất xuất hiện tập trung tại nơi các mảng tương tác với nhau. Chương trình học phân loại thành bốn ranh giới: tách giãn, hút chìm, va chạm và chuyển dạng.",
+      "duration": 28.89,
+      "startTime": 258.77,
+      "endTime": 287.66,
+      "audioUrl": "/audio/lectures/geography/4_1/sec_boundary_types.mp3"
+    },
+    {
+      "id": "bnd_constructive",
+      "title": "Ranh giới Tách giãn / Kiến tạo (Constructive / Divergent)",
+      "selector": "#card-bnd-constructive",
+      "en": "Constructive Plate Boundaries. Plates pull apart, allowing basaltic magma to erupt as gentle effusive shield volcanoes and fissure vents, forming mid-ocean ridges like the Mid-Atlantic Ridge and rift valleys in East Africa.",
+      "vi": "Ranh giới Tách giãn hay Kiến tạo. Các mảng kéo xa nhau, tạo điều kiện cho magma bazan phun trào tạo thành các núi lửa hình khiên êm đềm và khe nứt ngầm, hình thành sống núi giữa Đại Tây Dương và thung lũng tách giãn Đông Phi.",
+      "duration": 27.18,
+      "startTime": 287.66,
+      "endTime": 314.84,
+      "audioUrl": "/audio/lectures/geography/4_1/bnd_constructive.mp3"
+    },
+    {
+      "id": "bnd_destructive",
+      "title": "Ranh giới Hút chìm / Phá hủy (Destructive / Subduction)",
+      "selector": "#card-bnd-destructive",
+      "en": "Destructive Subduction Boundaries. Dense oceanic plates plunge beneath lighter continental plates, melting to form violent composite stratovolcanoes, deep ocean trenches, and high-magnitude earthquakes along the Benioff zone.",
+      "vi": "Ranh giới Hút chìm hay Phá hủy. Mảng đại dương nặng chìm xuống dưới mảng lục địa nhẹ, bị nóng chảy sinh ra các núi lửa tầng phun nổ dữ dội, các rãnh đại dương sâu thẳm và các trận động đất mạnh dọc đới Bê-ni-ốp.",
+      "duration": 27.4,
+      "startTime": 314.84,
+      "endTime": 342.24,
+      "audioUrl": "/audio/lectures/geography/4_1/bnd_destructive.mp3"
+    },
+    {
+      "id": "bnd_collision",
+      "title": "Ranh giới Va chạm lục địa (Collision: Himalayas)",
+      "selector": "#card-bnd-collision",
+      "en": "Continental Collision Boundaries. Two buoyant continental plates collide head-on. Neither can sink; the crust buckles upward into immense fold mountains like the Himalayas, producing severe earthquakes with zero volcanism.",
+      "vi": "Ranh giới Va chạm lục địa. Hai mảng lục địa nhẹ đâm trực diện vào nhau. Không mảng nào có thể chìm xuống; vỏ đất đá bị dồn nén uốn nếp vồng lên thành các dãy núi khổng lồ như Hi-ma-lay-a, gây ra động đất dữ dội nhưng hoàn toàn không có núi lửa.",
+      "duration": 30.76,
+      "startTime": 342.24,
+      "endTime": 373.0,
+      "audioUrl": "/audio/lectures/geography/4_1/bnd_collision.mp3"
+    },
+    {
+      "id": "bnd_conservative",
+      "title": "Ranh giới Chuyển dạng / Bảo toàn (Conservative / Transform)",
+      "selector": "#card-bnd-conservative",
+      "en": "Conservative Transform Boundaries. Plates grind past each other horizontally along transform faults like the San Andreas Fault. Friction locks plates until sudden slips trigger catastrophic shallow-focus earthquakes without volcanic activity.",
+      "vi": "Ranh giới Chuyển dạng hay Bảo toàn. Các mảng trượt ngang qua nhau dọc theo các đứt gãy biến đổi như San An-đrê-át. Ma sát khóa chặt các mảng cho đến khi giải phóng đột ngột gây ra các trận động đất nông thảm khốc mà không có núi lửa.",
+      "duration": 29.78,
+      "startTime": 373.0,
+      "endTime": 402.78,
+      "audioUrl": "/audio/lectures/geography/4_1/bnd_conservative.mp3"
+    },
+    {
+      "id": "sec_hazard_belts",
+      "title": "4. Phân bố toàn cầu của Động đất và Núi lửa",
+      "selector": "#sec-hazard-belts",
+      "en": "Section 4: Global Distribution of Earthquakes and Volcanoes. Seismicity and volcanism form distinct planetary belts corresponding closely to plate margins, most famously the Pacific Ring of Fire.",
+      "vi": "Phần bốn: Phân bố toàn cầu của Động đất và Núi lửa. Động đất và núi lửa phân bố thành các vành đai hành tinh rõ rệt trùng khớp với ranh giới mảng, nổi tiếng nhất là Vành đai lửa Thái Bình Dương.",
+      "duration": 25.22,
+      "startTime": 402.78,
+      "endTime": 428.0,
+      "audioUrl": "/audio/lectures/geography/4_1/sec_hazard_belts.mp3"
+    },
+    {
+      "id": "belt_ring_of_fire",
+      "title": "Vành đai lửa Thái Bình Dương (Pacific Ring of Fire: 75% núi lửa)",
+      "selector": "#belt-ring-of-fire",
+      "en": "The Pacific Ring of Fire. A forty-thousand-kilometre horseshoe encircling the Pacific Basin where subduction zones trigger seventy-five percent of the world's active volcanoes and ninety percent of all earthquakes.",
+      "vi": "Vành đai lửa Thái Bình Dương. Một vòng cung hình móng ngựa dài bốn mươi nghìn ki-lô-mét bao quanh lòng chảo Thái Bình Dương, nơi các đới hút chìm gây ra bảy mươi lăm phần trăm số núi lửa hoạt động và chín mươi phần trăm các trận động đất trên toàn cầu.",
+      "duration": 26.49,
+      "startTime": 428.0,
+      "endTime": 454.49,
+      "audioUrl": "/audio/lectures/geography/4_1/belt_ring_of_fire.mp3"
+    },
+    {
+      "id": "belt_mid_atlantic",
+      "title": "Sống núi giữa Đại Tây Dương (Mid-Atlantic Ridge)",
+      "selector": "#belt-mid-atlantic",
+      "en": "The Mid-Atlantic Ridge. A continuous underwater mountain range stretching over sixteen thousand kilometres, where sea-floor spreading drives steady volcanic eruptions and submarine hydrothermal vents.",
+      "vi": "Sống núi giữa Đại Tây Dương. Dãy núi ngầm liên tục trải dài hơn mười sáu nghìn ki-lô-mét dưới lòng biển, nơi sự tách giãn đáy đại dương tạo ra các vụ phun trào núi lửa êm đềm và các miệng thủy nhiệt dưới đáy biển.",
+      "duration": 25.58,
+      "startTime": 454.49,
+      "endTime": 480.07,
+      "audioUrl": "/audio/lectures/geography/4_1/belt_mid_atlantic.mp3"
+    },
+    {
+      "id": "belt_himalayas",
+      "title": "Đới đứt gãy Alp-Himalaya (Alpine-Himalayan Belt)",
+      "selector": "#belt-himalayas",
+      "en": "The Alpine-Himalayan Orogenic Belt. Formed by collision between the African, Arabian, and Indian plates with Eurasia, generating devastating shallow-focus earthquakes across Southern Europe, the Middle East, and Nepal.",
+      "vi": "Vành đai kiến tạo An-pơ Hi-ma-lay-a. Hình thành do sự va chạm giữa mảng châu Phi, Ả Rập và Ấn Độ với mảng Á-Âu, tạo ra các trận động đất chấn tiêu nông có sức tàn phá khủng khiếp qua Nam Âu, Trung Đông và Nê-pan.",
+      "duration": 26.8,
+      "startTime": 480.07,
+      "endTime": 506.87,
+      "audioUrl": "/audio/lectures/geography/4_1/belt_himalayas.mp3"
+    },
+    {
+      "id": "belt_hotspots",
+      "title": "Điểm nóng nội mảng: Hawaii & Yellowstone (Intraplate Hotspots)",
+      "selector": "#belt-hotspots",
+      "en": "Intraplate Volcanic Hotspots. Anomalously hot stationary mantle plumes breach through tectonic plates far from boundaries, forming the Hawaiian volcanic chain and the Yellowstone supervolcano caldera.",
+      "vi": "Các điểm nóng núi lửa nội mảng. Các luồng manti nhiệt đứng yên dị thường khoét thủng lớp vỏ mảng kiến tạo từ bên dưới dù ở xa ranh giới mảng, tạo thành chuỗi đảo núi lửa Ha-oai và siêu núi lửa Y-eo-lâu-xtôn.",
+      "duration": 25.6,
+      "startTime": 506.87,
+      "endTime": 532.47,
+      "audioUrl": "/audio/lectures/geography/4_1/belt_hotspots.mp3"
+    }
+  ]
+}

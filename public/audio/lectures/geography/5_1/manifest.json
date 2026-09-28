@@ -1,0 +1,224 @@
+{
+  "lectureId": "7c30919a-5d22-425a-a167-21e5de07d203",
+  "courseTitle": "IGCSE Geography (0460)",
+  "lectureTitle": "5.1 The Natural and Human Causes of Climate Change",
+  "totalDuration": 699.58,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 4
+    },
+    "sec_weather_climate": {
+      "start": 1,
+      "end": 4
+    },
+    "sec_evidence": {
+      "start": 5,
+      "end": 8
+    },
+    "sec_natural_drivers": {
+      "start": 9,
+      "end": 13
+    },
+    "sec_human_causes": {
+      "start": 14,
+      "end": 17
+    },
+    "sec_takeaways": {
+      "start": 18,
+      "end": 18
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Introduction to Climate Change",
+      "en": "Welcome to Topic 5.1: The Natural and Human Causes of Climate Change. In this lecture, we investigate the fundamental mechanisms driving Earth's climate system. We distinguish weather from climate, analyze geological and instrumental evidence, unpick Milankovitch orbital cycles and volcanic cooling, and examine the physics of the human-enhanced greenhouse effect.",
+      "vi": "Chào mừng các em đến với bài năm chấm một: Các nguyên nhân tự nhiên và nhân tạo của biến đổi khí hậu. Trong bài giảng này, chúng ta sẽ khảo sát các cơ chế nền tảng điều khiển hệ thống khí hậu Trái Đất. Chúng ta sẽ phân biệt thời tiết và khí hậu, phân tích các bằng chứng địa chất và quan trắc thực tế, tìm hiểu chu kỳ quỹ đạo và làm mát do núi lửa, đồng thời khám phá bản chất vật lý của hiệu ứng nhà kính tăng cường do con người gây ra.",
+      "duration": 47.68,
+      "startTime": 0.0,
+      "endTime": 47.68,
+      "audioUrl": "/audio/lectures/geography/5_1/intro.mp3"
+    },
+    {
+      "id": "sec_weather_climate",
+      "title": "1. Weather, Climate & Climate Change Definitions",
+      "en": "Section 1 establishes core scientific definitions. Weather describes the day-to-day conditions of the atmosphere at a specific place and time, such as temperature, precipitation, and wind. Climate is the long-term statistical average of weather over a standardized period of at least thirty consecutive years. Climate change is a statistically significant, sustained shift in mean climate or climate variability persisting over decades or longer.",
+      "vi": "Mục một thiết lập các định nghĩa khoa học cốt lõi. Thời tiết mô tả các trạng thái diễn ra từng ngày của khí quyển tại một địa điểm và thời điểm cụ thể, như nhiệt độ, lượng mưa và gió. Khí hậu là giá trị trung bình thống kê dài hạn của thời tiết trong một khoảng thời gian chuẩn hóa ít nhất ba mươi năm liên tục. Còn biến đổi khí hậu là sự thay đổi đáng kể và kéo dài về trạng thái trung bình hoặc mức độ dao động của khí hậu, duy trì qua nhiều thập kỷ hoặc dài hơn.",
+      "duration": 53.66,
+      "startTime": 47.68,
+      "endTime": 101.34,
+      "audioUrl": "/audio/lectures/geography/5_1/sec_weather_climate.mp3"
+    },
+    {
+      "id": "def_weather",
+      "title": "Weather Concept",
+      "en": "Weather refers to dynamic, short-term atmospheric states. It fluctuates hour by hour and day by day, influenced by moving high and low-pressure air masses, fronts, and local geography.",
+      "vi": "Thời tiết biểu thị các trạng thái khí quyển ngắn hạn và luôn biến động. Nó thay đổi theo từng giờ và từng ngày dưới ảnh hưởng của các khối khí áp cao, áp thấp, frông thời tiết và địa hình địa phương.",
+      "duration": 25.05,
+      "startTime": 101.34,
+      "endTime": 126.39,
+      "audioUrl": "/audio/lectures/geography/5_1/def_weather.mp3"
+    },
+    {
+      "id": "def_climate",
+      "title": "Climate Concept (30-Year Baseline)",
+      "en": "Climate requires at least thirty years of continuous meteorological data. This standard baseline smooths out temporary annual extremes, enabling geographers to establish true expected regional averages and seasonal patterns.",
+      "vi": "Khí hậu đòi hỏi chuỗi số liệu khí tượng liên tục trong ít nhất ba mươi năm. Mốc chuẩn này giúp loại bỏ các hiện tượng cực đoan tạm thời hàng năm, giúp các nhà địa lý xác định chính xác mức trung bình khu vực và các quy luật theo mùa.",
+      "duration": 27.3,
+      "startTime": 126.39,
+      "endTime": 153.69,
+      "audioUrl": "/audio/lectures/geography/5_1/def_climate.mp3"
+    },
+    {
+      "id": "def_climate_change",
+      "title": "Climate Change Definition",
+      "en": "Climate change represents a statistically robust trend that departs permanently or semi-permanently from established long-term averages, whether driven by natural astronomical cycles or anthropogenic forcing.",
+      "vi": "Biến đổi khí hậu thể hiện một xu hướng thay đổi rõ rệt về mặt thống kê, lệch hẳn khỏi các mức trung bình dài hạn đã được thiết lập, dù nguyên nhân do chu kỳ thiên văn tự nhiên hay do tác động của con người.",
+      "duration": 22.7,
+      "startTime": 153.69,
+      "endTime": 176.39,
+      "audioUrl": "/audio/lectures/geography/5_1/def_climate_change.mp3"
+    },
+    {
+      "id": "sec_evidence",
+      "title": "2. Empirical Evidence for Global Climate Change",
+      "en": "Section 2 reviews multiple independent lines of observational evidence. Instrumental records demonstrate that global surface temperatures have risen by one point one to one point two degrees Celsius since pre-industrial times. The past decade has recorded the highest global average temperatures since systematic thermometer records began in 1880.",
+      "vi": "Mục hai tổng hợp các bằng chứng quan trắc độc lập. Số liệu đo đạc thực tế chỉ ra nhiệt độ bề mặt toàn cầu đã tăng khoảng một phẩy một đến một phẩy hai độ C kể từ thời kỳ tiền công nghiệp. Thập kỷ vừa qua ghi nhận mức nhiệt trung bình toàn cầu cao nhất kể từ khi hệ thống đo đạc bằng nhiệt kế bắt đầu từ năm 1880.",
+      "duration": 39.74,
+      "startTime": 176.39,
+      "endTime": 216.13,
+      "audioUrl": "/audio/lectures/geography/5_1/sec_evidence.mp3"
+    },
+    {
+      "id": "evidence_ice_cores",
+      "title": "Ice Core Proxies (800,000 Year Record)",
+      "en": "Antarctic and Greenland ice cores trap ancient atmospheric gas bubbles. For eight hundred thousand years across glacial and interglacial cycles, carbon dioxide naturally oscillated between 180 and 280 parts per million. Following industrialization, carbon dioxide abruptly spiked past 420 parts per million, proving modern concentrations are unprecedented in human history.",
+      "vi": "Các lõi băng ở Nam Cực và đảo Grin-lân lưu giữ những bọt khí cổ đại trong khí quyển. Suốt tám trăm nghìn năm qua qua các chu kỳ băng hà và gian băng, nồng độ khí các-bô-níc dao động tự nhiên trong khoảng một trăm tám mươi đến hai trăm tám mươi phần triệu. Nhưng sau khi công nghiệp hóa bắt đầu, nồng độ này đã vọt qua mốc bốn trăm hai mươi phần triệu, chứng minh mức độ hiện nay là chưa từng có trong lịch sử loài người.",
+      "duration": 48.86,
+      "startTime": 216.13,
+      "endTime": 264.99,
+      "audioUrl": "/audio/lectures/geography/5_1/evidence_ice_cores.mp3"
+    },
+    {
+      "id": "evidence_arctic_sea_ice",
+      "title": "Arctic Sea Ice Decline",
+      "en": "Satellite telemetry reveals that Arctic sea ice extent at its September minimum has contracted by over twelve percent per decade since 1979. Thick multi-year sea ice is being replaced by fragile, thin seasonal ice.",
+      "vi": "Dữ liệu vệ tinh chỉ ra diện tích băng biển Bắc Cực vào thời điểm tối thiểu tháng chín đã sụt giảm hơn mười hai phần trăm mỗi thập kỷ kể từ năm 1979. Lớp băng vĩnh cửu dày nhiều năm đang dần bị thay thế bởi lớp băng mỏng chỉ tồn tại theo mùa.",
+      "duration": 29.22,
+      "startTime": 264.99,
+      "endTime": 294.21,
+      "audioUrl": "/audio/lectures/geography/5_1/evidence_arctic_sea_ice.mp3"
+    },
+    {
+      "id": "evidence_historical_proxies",
+      "title": "Historical Proxies & Little Ice Age",
+      "en": "Historical records, agricultural harvest dates, and artwork provide cultural climate proxies. Pieter Bruegel's famous painting, The Hunters in the Snow from 1565, documents harsh frozen conditions in Western Europe during the Little Ice Age between 1300 and 1850.",
+      "vi": "Ghi chép lịch sử, thời gian thu hoạch mùa màng và các tác phẩm nghệ thuật cung cấp bằng chứng gián tiếp về khí hậu trong quá khứ. Bức tranh nổi tiếng Thợ săn trong tuyết vẽ năm 1565 đã ghi lại điều kiện băng giá khắc nghiệt tại Tây Âu trong thời kỳ tiểu băng hà kéo dài từ năm 1300 đến năm 1850.",
+      "duration": 36.4,
+      "startTime": 294.21,
+      "endTime": 330.61,
+      "audioUrl": "/audio/lectures/geography/5_1/evidence_historical_proxies.mp3"
+    },
+    {
+      "id": "sec_natural_drivers",
+      "title": "3. Natural Drivers of Climate Change",
+      "en": "Section 3 examines natural climate drivers. Throughout the Quaternary period, Earth naturally cycled between glacial ice ages and warm interglacials. The pacing of these long cycles is governed by Milankovitch orbital mechanics, punctuated by volcanic eruptions and solar variations.",
+      "vi": "Mục ba xem xét các yếu tố tự nhiên thúc đẩy biến đổi khí hậu. Trong suốt kỷ Đệ Tứ, Trái Đất liên tục trải qua các chu kỳ tự nhiên giữa các thời kỳ băng hà lạnh giá và các thời kỳ gian băng ấm áp. Nhịp điệu của các chu kỳ dài này được điều khiển bởi quỹ đạo của Trái Đất, kết hợp với các đợt phun trào núi lửa và biến thiên năng lượng Mặt Trời.",
+      "duration": 38.82,
+      "startTime": 330.61,
+      "endTime": 369.43,
+      "audioUrl": "/audio/lectures/geography/5_1/sec_natural_drivers.mp3"
+    },
+    {
+      "id": "milan_eccentricity",
+      "title": "Milankovitch Cycle 1: Eccentricity (~100,000 Years)",
+      "en": "Eccentricity describes the cyclical stretching of Earth's orbit from nearly circular to slightly elliptical over roughly one hundred thousand years. In high eccentricity, Earth receives twenty-three percent more solar radiation at perihelion than at aphelion, pacing major glacial-interglacial cycles.",
+      "vi": "Độ lệch tâm mô tả sự biến đổi hình dạng quỹ đạo Trái Đất từ gần tròn sang hình elip dẹt theo chu kỳ khoảng một trăm nghìn năm. Khi quỹ đạo dẹt nhất, Trái Đất nhận được nhiều bức xạ Mặt Trời hơn hai mươi ba phần trăm ở điểm cận nhật so với điểm viễn nhật, tạo ra nhịp điệu cho các chu kỳ băng hà lớn.",
+      "duration": 34.43,
+      "startTime": 369.43,
+      "endTime": 403.86,
+      "audioUrl": "/audio/lectures/geography/5_1/milan_eccentricity.mp3"
+    },
+    {
+      "id": "milan_obliquity",
+      "title": "Milankovitch Cycle 2: Obliquity (~41,000 Years)",
+      "en": "Obliquity is the variation in Earth's axial tilt between 22.1 and 24.5 degrees every forty-one thousand years. A smaller tilt produces milder winters and cooler summers, preventing polar snow from melting and initiating ice sheet expansion.",
+      "vi": "Độ nghiêng trục tự quay biến đổi trong khoảng hai mươi hai phẩy một đến hai mươi tư phẩy năm độ theo chu kỳ bốn mươi mốt nghìn năm. Khi góc nghiêng nhỏ hơn, mùa đông bớt giá buốt và mùa hè mát mẻ hơn, khiến tuyết ở vùng cực không kịp tan vào mùa hè và bắt đầu hình thành nên các dải băng lục địa.",
+      "duration": 33.02,
+      "startTime": 403.86,
+      "endTime": 436.88,
+      "audioUrl": "/audio/lectures/geography/5_1/milan_obliquity.mp3"
+    },
+    {
+      "id": "milan_precession",
+      "title": "Milankovitch Cycle 3: Precession (~23,000 Years)",
+      "en": "Precession is the slow wobble of Earth's axis like a spinning top over nineteen to twenty-three thousand years. This wobble alters which hemisphere experiences summer closest to the Sun, shifting regional seasonal extremes over millennia.",
+      "vi": "Hiện tượng tiến động là sự lắc lư chậm của trục quay Trái Đất giống như một con quay, diễn ra trong khoảng mười chín nghìn đến hai mươi ba nghìn năm. Sự lắc lư này làm thay đổi thời điểm bán cầu nào trải qua mùa hè khi ở gần Mặt Trời nhất, làm thay đổi mức độ khắc nghiệt của các mùa qua hàng thiên niên kỷ.",
+      "duration": 30.76,
+      "startTime": 436.88,
+      "endTime": 467.64,
+      "audioUrl": "/audio/lectures/geography/5_1/milan_precession.mp3"
+    },
+    {
+      "id": "volcanic_cooling",
+      "title": "Volcanic Eruptions & Sulfate Aerosols",
+      "en": "Violent explosive eruptions inject millions of tons of sulfur dioxide straight into the stratosphere. There, it forms highly reflective sulfate aerosols that scatter incoming solar radiation back into space, causing global temporary cooling of half a degree Celsius for one to three years, as seen after Mount Pinatubo in 1991.",
+      "vi": "Các vụ phun trào núi lửa dữ dội đẩy hàng triệu tấn khí lưu huỳnh đi-ô-xít thẳng lên tầng bình lưu. Tại đây, nó phản ứng tạo thành các hạt sương son khí sun-phát phản xạ mạnh bức xạ Mặt Trời ngược vào không gian, gây ra hiện tượng làm mát toàn cầu giảm khoảng không phẩy năm độ C trong một đến ba năm, điển hình như sau vụ núi lửa Pi-na-tu-bo năm 1991.",
+      "duration": 40.82,
+      "startTime": 467.64,
+      "endTime": 508.46,
+      "audioUrl": "/audio/lectures/geography/5_1/volcanic_cooling.mp3"
+    },
+    {
+      "id": "sec_human_causes",
+      "title": "4. The Enhanced Greenhouse Effect (EGHE)",
+      "en": "Section 4 contrasts the natural greenhouse effect with human-induced enhanced warming. Naturally, atmospheric gases trap infrared heat to keep Earth at a hospitable fifteen degrees Celsius. Human emissions thicken this thermal blanket, trapping excess heat and forcing mean global temperatures upward.",
+      "vi": "Mục bốn phân biệt giữa hiệu ứng nhà kính tự nhiên và hiện tượng nóng lên do con người làm gia tăng. Trong tự nhiên, các chất khí giữ lại nhiệt hồng ngoại để duy trì Trái Đất ở mức nhiệt độ thuận lợi khoảng mười lăm độ C. Nhưng khí thải nhân tạo đã làm lớp chăn giữ nhiệt này dày lên đáng kể, giữ lại quá nhiều nhiệt và đẩy nhiệt độ trung bình toàn cầu tăng lên.",
+      "duration": 37.74,
+      "startTime": 508.46,
+      "endTime": 546.2,
+      "audioUrl": "/audio/lectures/geography/5_1/sec_human_causes.mp3"
+    },
+    {
+      "id": "gh_natural",
+      "title": "Natural Greenhouse Effect Baseline (+15°C)",
+      "en": "Under natural conditions, water vapor, carbon dioxide, and methane absorb part of the outgoing terrestrial infrared heat, maintaining a global average surface temperature of fifteen degrees Celsius. Without this natural insulation, Earth would freeze at minus eighteen degrees Celsius.",
+      "vi": "Dưới điều kiện tự nhiên, hơi nước, khí các-bô-níc và mê-tan hấp thụ một phần nhiệt hồng ngoại do mặt đất phát ra, duy trì nhiệt độ trung bình toàn cầu ở mức mười lăm độ C. Nếu không có lớp cách nhiệt tự nhiên này, Trái Đất sẽ đóng băng ở âm mười tám độ C.",
+      "duration": 32.42,
+      "startTime": 546.2,
+      "endTime": 578.62,
+      "audioUrl": "/audio/lectures/geography/5_1/gh_natural.mp3"
+    },
+    {
+      "id": "gh_enhanced",
+      "title": "Enhanced Greenhouse Effect (+16.2°C)",
+      "en": "The enhanced greenhouse effect occurs because burning fossil fuels and deforestation increase greenhouse gas concentrations. Less longwave heat escapes into space, and intense back-radiation warms the atmosphere and oceans, driving rapid contemporary climate disruption.",
+      "vi": "Hiệu ứng nhà kính tăng cường xảy ra do việc đốt nhiên liệu hóa thạch và chặt phá rừng làm tăng mạnh nồng độ các khí nhà kính. Nhiệt lượng sóng dài thoát ra ngoài vũ trụ bị giảm bớt, trong khi bức xạ nhiệt ngược trở lại mặt đất tăng mạnh, làm ấm nhanh khí quyển và các đại dương.",
+      "duration": 32.39,
+      "startTime": 578.62,
+      "endTime": 611.01,
+      "audioUrl": "/audio/lectures/geography/5_1/gh_enhanced.mp3"
+    },
+    {
+      "id": "gh_gases_breakdown",
+      "title": "The Four Key Anthropogenic Gases",
+      "en": "Four gases dominate human climate forcing. Carbon dioxide has a long atmospheric lifetime and accounts for the largest radiative forcing. Methane has twenty-eight to thirty-six times the global warming potential of CO2 over a century. Nitrous oxide is nearly three hundred times more potent, and synthetic halocarbons can be thousands of times more potent per molecule.",
+      "vi": "Bốn loại khí chính chi phối tác động khí hậu do con người gây ra. Khí các-bô-níc tồn tại rất lâu trong khí quyển và chiếm phần lớn tác động giữ nhiệt. Khí mê-tan có tiềm năng gây nóng lên toàn cầu cao gấp hai mươi tám đến ba mươi sáu lần các-bô-níc trong một thế kỷ. Khí ni-tơ oxit mạnh gấp gần ba trăm lần, còn các hợp chất nhân tạo chứa halogen có thể giữ nhiệt gấp hàng nghìn lần trên mỗi phân tử.",
+      "duration": 48.04,
+      "startTime": 611.01,
+      "endTime": 659.05,
+      "audioUrl": "/audio/lectures/geography/5_1/gh_gases_breakdown.mp3"
+    },
+    {
+      "id": "sec_takeaways",
+      "title": "5. IGCSE Core Takeaways",
+      "en": "To summarize Topic 5.1: natural cycles operate over tens of thousands of years, whereas human-driven greenhouse emissions have caused unprecedented warming in just 150 years. Understanding the physical mechanism of radiative heat trapping and the differing potencies of greenhouse gases is essential for answering IGCSE exam questions.",
+      "vi": "Tổng kết lại bài năm chấm một: các chu kỳ tự nhiên diễn ra qua hàng chục nghìn năm, trong khi khí thải nhà kính do con người tạo ra đã gây ra hiện tượng nóng lên chưa từng thấy chỉ trong vòng một trăm năm mươi năm. Nắm vững cơ chế vật lý giữ nhiệt bức xạ và tiềm năng giữ nhiệt khác nhau của các loại khí nhà kính là điều cốt lõi để làm tốt các câu hỏi thi.",
+      "duration": 40.53,
+      "startTime": 659.05,
+      "endTime": 699.58,
+      "audioUrl": "/audio/lectures/geography/5_1/sec_takeaways.mp3"
+    }
+  ]
+}
