@@ -22,6 +22,7 @@ export interface LectureManifest {
   courseTitle: string;
   lectureTitle: string;
   totalDuration: number;
+  majorSections?: Record<string, { start: number; end: number }>;
   segments: LectureSegment[];
 }
 
@@ -233,7 +234,8 @@ export default function InteractiveLecturePlayer({
     );
     if (idx === -1) return;
 
-    const range = MAJOR_SECTION_RANGES[cleanId];
+    const ranges = manifest.majorSections || MAJOR_SECTION_RANGES;
+    const range = ranges[cleanId];
     const isMajor = !!range;
 
     const curIdx = currentSegmentIndexRef.current;
@@ -325,7 +327,8 @@ export default function InteractiveLecturePlayer({
   const handleSelectSegment = useCallback((index: number) => {
     if (!manifest) return;
     const seg = manifest.segments[index];
-    const range = MAJOR_SECTION_RANGES[seg.id];
+    const ranges = manifest.majorSections || MAJOR_SECTION_RANGES;
+    const range = ranges[seg.id];
     if (range) {
       setPlayMode('section');
       setSectionEndIndex(range.end);
@@ -357,17 +360,17 @@ export default function InteractiveLecturePlayer({
   const progressPercent = Math.min(100, Math.max(0, (currentTime / totalDuration) * 100));
 
   return (
-    <div className="w-full max-w-[960px] mx-auto mb-8 transition-all duration-300">
+    <div className="w-full max-w-[960px] mx-auto mb-10 transition-all duration-300">
       <div className="bg-gradient-to-br from-[#0a5482] via-[#084266] to-[#032b44] text-white rounded-2xl shadow-xl border border-sky-500/30 overflow-hidden">
         
         {/* TOP BRANDING BAR: Logo TonyEnglish & link tonyenglish.vn */}
-        <div className="px-5 py-3 bg-black/20 border-b border-white/10 flex flex-wrap items-center justify-between gap-3">
+        <div className="px-5 py-3 bg-black/20 border-b border-white/10 flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <a 
               href="https://tonyenglish.vn/vi" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-2 group hover:opacity-90 transition-opacity"
+              className="flex items-center gap-2 group hover:opacity-90 transition-opacity shrink-0"
               title="Truy cập website chính thức TonyEnglish"
             >
               <img 
@@ -385,30 +388,27 @@ export default function InteractiveLecturePlayer({
               </div>
             </a>
 
-            <div className="hidden sm:flex items-center gap-2 pl-3 border-l border-white/15">
+            <div className="hidden sm:flex items-center pl-3 border-l border-white/15">
               <span className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-400/20 text-[#2bd6eb] text-[11px] font-bold border border-sky-400/30">
                 <Radio className="w-3 h-3 animate-pulse text-rose-400" />
                 Song ngữ Cambridge
               </span>
-              <span className="text-[11px] text-slate-300">
-                🇬🇧 Giọng Anh - Anh Nam & 🇻🇳 Tiếng Việt (Giọng Bắc Hà Nội Chuẩn)
-              </span>
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={() => setShowChapters(!showChapters)}
-              className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold transition-all flex items-center gap-1.5 text-sky-200"
+              className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold transition-all flex items-center gap-1.5 text-sky-200 hover:text-white"
               title="Xem danh sách các phân đoạn bài giảng"
             >
-              <List className="w-3.5 h-3.5" />
+              <List className="w-3.5 h-3.5 text-[#2bd6eb]" />
               <span>Mục lục ({currentSegmentIndex + 1}/{manifest.segments.length})</span>
             </button>
 
             <button
               onClick={() => setIsMinimized(!isMinimized)}
-              className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-sky-200 transition-all"
+              className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-sky-200 hover:text-white transition-all"
               title={isMinimized ? "Mở rộng thanh nghe giảng" : "Thu gọn"}
             >
               {isMinimized ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}

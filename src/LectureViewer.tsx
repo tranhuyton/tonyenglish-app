@@ -4,6 +4,15 @@ import { parseModuleTheme } from './moduleTheme';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import InteractiveLecturePlayer from './InteractiveLecturePlayer';
 
+const LECTURE_MANIFEST_MAP: Record<string, string> = {
+  '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
+  'bade96ee-497d-4d75-8d82-c691133eb9d6': '/audio/lectures/geography/1_2/manifest.json', // 1.2
+  'fea9a6ec-9ff0-456a-9185-4076073b04c1': '/audio/lectures/geography/1_3/manifest.json', // 1.3
+  'd38db7a8-e92e-450c-a034-b9d46dc10a7f': '/audio/lectures/geography/2_1/manifest.json', // 2.1
+  'b0ca05f2-dab3-4223-9c25-c92d73df56c1': '/audio/lectures/geography/2_2/manifest.json', // 2.2
+  '446dabf6-7c9d-4509-a3f9-78161a684e3e': '/audio/lectures/geography/2_3/manifest.json', // 2.3
+};
+
 // =========================================================================================
 // THƯ VIỆN ĐỌC PDF - TÍCH HỢP JUMP TO PAGE & VISION AI
 // =========================================================================================
@@ -1064,7 +1073,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               pre { padding: 0.75rem; font-size: 0.8rem; }
           }
           
-          #content-wrapper { display: flow-root; width: 100%; padding-bottom: 2rem; }
+          #content-wrapper { display: flow-root; width: 100%; padding-top: 24px; padding-bottom: 2rem; }
           .audi { display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
           #lib_content { width: 100% !important; max-width: 960px !important; margin: 0 auto !important; box-sizing: border-box !important; }
           .audiolink a, [data-word] {
@@ -4106,8 +4115,11 @@ export default function LectureViewer({
                        <h2 className="text-[26px] md:text-[36px] text-slate-900 font-extrabold mb-8 md:mb-12 pb-6 border-b border-slate-100 leading-tight tracking-tight">
                            {activeLecture?.title}
                        </h2>
-                       {activeLectureId === '6286cb6f-b4ac-495b-b2ea-5a2bab09f764' && currentPage === 1 && (
-                         <InteractiveLecturePlayer manifestUrl="/audio/lectures/geography/1_1/manifest.json" />
+                       {activeLectureId && currentPage === 1 && LECTURE_MANIFEST_MAP[activeLectureId] && (
+                         <InteractiveLecturePlayer 
+                           key={activeLectureId}
+                           manifestUrl={LECTURE_MANIFEST_MAP[activeLectureId]} 
+                         />
                        )}
                        <StaticLectureContent 
                            key={`${activeLectureId}_page_${currentPage}`}
