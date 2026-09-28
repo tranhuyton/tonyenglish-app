@@ -30,7 +30,8 @@
       "duration": 48.71,
       "startTime": 0.0,
       "endTime": 48.71,
-      "audioUrl": "/audio/lectures/geography/5_3/intro.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/intro.mp3",
+      "selector": "#sec-header"
     },
     {
       "id": "sec_golden_rule",
@@ -40,7 +41,8 @@
       "duration": 44.01,
       "startTime": 48.71,
       "endTime": 92.72,
-      "audioUrl": "/audio/lectures/geography/5_3/sec_golden_rule.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/sec_golden_rule.mp3",
+      "selector": "#sec-golden-rule"
     },
     {
       "id": "strat_mitigation_def",
@@ -50,7 +52,8 @@
       "duration": 32.46,
       "startTime": 92.72,
       "endTime": 125.18,
-      "audioUrl": "/audio/lectures/geography/5_3/strat_mitigation_def.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/strat_mitigation_def.mp3",
+      "selector": "#strat-mitigation-def"
     },
     {
       "id": "strat_adaptation_def",
@@ -60,7 +63,8 @@
       "duration": 36.57,
       "startTime": 125.18,
       "endTime": 161.75,
-      "audioUrl": "/audio/lectures/geography/5_3/strat_adaptation_def.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/strat_adaptation_def.mp3",
+      "selector": "#strat-adaptation-def"
     },
     {
       "id": "accords_history",
@@ -70,7 +74,8 @@
       "duration": 49.91,
       "startTime": 161.75,
       "endTime": 211.66,
-      "audioUrl": "/audio/lectures/geography/5_3/accords_history.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/accords_history.mp3",
+      "selector": "#accords-history"
     },
     {
       "id": "sec_strategy_matrix",
@@ -80,7 +85,8 @@
       "duration": 40.82,
       "startTime": 211.66,
       "endTime": 252.48,
-      "audioUrl": "/audio/lectures/geography/5_3/sec_strategy_matrix.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/sec_strategy_matrix.mp3",
+      "selector": "#sec-strategy-matrix"
     },
     {
       "id": "strat_renewables",
@@ -90,7 +96,8 @@
       "duration": 34.72,
       "startTime": 252.48,
       "endTime": 287.2,
-      "audioUrl": "/audio/lectures/geography/5_3/strat_renewables.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/strat_renewables.mp3",
+      "selector": "#strat-renewables"
     },
     {
       "id": "strat_efficiency",
@@ -100,7 +107,8 @@
       "duration": 30.71,
       "startTime": 287.2,
       "endTime": 317.91,
-      "audioUrl": "/audio/lectures/geography/5_3/strat_efficiency.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/strat_efficiency.mp3",
+      "selector": "#strat-efficiency"
     },
     {
       "id": "strat_ccs",
@@ -110,7 +118,8 @@
       "duration": 37.65,
       "startTime": 317.91,
       "endTime": 355.56,
-      "audioUrl": "/audio/lectures/geography/5_3/strat_ccs.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/strat_ccs.mp3",
+      "selector": "#strat-ccs"
     },
     {
       "id": "strat_coastal",
@@ -120,7 +129,8 @@
       "duration": 38.06,
       "startTime": 355.56,
       "endTime": 393.62,
-      "audioUrl": "/audio/lectures/geography/5_3/strat_coastal.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/strat_coastal.mp3",
+      "selector": "#strat-coastal"
     },
     {
       "id": "strat_agri",
@@ -130,7 +140,8 @@
       "duration": 33.93,
       "startTime": 393.62,
       "endTime": 427.55,
-      "audioUrl": "/audio/lectures/geography/5_3/strat_agri.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/strat_agri.mp3",
+      "selector": "#strat-agri"
     },
     {
       "id": "strat_overlap",
@@ -140,7 +151,8 @@
       "duration": 32.8,
       "startTime": 427.55,
       "endTime": 460.35,
-      "audioUrl": "/audio/lectures/geography/5_3/strat_overlap.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/strat_overlap.mp3",
+      "selector": "#strat-overlap"
     },
     {
       "id": "sec_bangladesh_case",
@@ -150,7 +162,8 @@
       "duration": 39.02,
       "startTime": 460.35,
       "endTime": 499.37,
-      "audioUrl": "/audio/lectures/geography/5_3/sec_bangladesh_case.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/sec_bangladesh_case.mp3",
+      "selector": "#sec-bangladesh-case"
     },
     {
       "id": "bd_mangrove",
@@ -160,7 +173,8 @@
       "duration": 29.78,
       "startTime": 499.37,
       "endTime": 529.15,
-      "audioUrl": "/audio/lectures/geography/5_3/bd_mangrove.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/bd_mangrove.mp3",
+      "selector": "#bd-mangrove"
     },
     {
       "id": "bd_polder",
@@ -170,7 +184,8 @@
       "duration": 26.08,
       "startTime": 529.15,
       "endTime": 555.23,
-      "audioUrl": "/audio/lectures/geography/5_3/bd_polder.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/bd_polder.mp3",
+      "selector": "#bd-polder"
     },
     {
       "id": "bd_shelter",
@@ -180,7 +195,8 @@
       "duration": 35.01,
       "startTime": 555.23,
       "endTime": 590.24,
-      "audioUrl": "/audio/lectures/geography/5_3/bd_shelter.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/bd_shelter.mp3",
+      "selector": "#bd-shelter"
     },
     {
       "id": "bd_crops",
@@ -190,7 +206,8 @@
       "duration": 27.69,
       "startTime": 590.24,
       "endTime": 617.93,
-      "audioUrl": "/audio/lectures/geography/5_3/bd_crops.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/bd_crops.mp3",
+      "selector": "#bd-crops"
     },
     {
       "id": "bd_shs",
@@ -200,7 +217,8 @@
       "duration": 32.92,
       "startTime": 617.93,
       "endTime": 650.85,
-      "audioUrl": "/audio/lectures/geography/5_3/bd_shs.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/bd_shs.mp3",
+      "selector": "#bd-shs"
     },
     {
       "id": "bd_policy_framework",
@@ -210,7 +228,8 @@
       "duration": 30.93,
       "startTime": 650.85,
       "endTime": 681.78,
-      "audioUrl": "/audio/lectures/geography/5_3/bd_policy_framework.mp3"
+      "audioUrl": "/audio/lectures/geography/5_3/bd_policy_framework.mp3",
+      "selector": "#bd-policy-framework"
     }
   ]
 }

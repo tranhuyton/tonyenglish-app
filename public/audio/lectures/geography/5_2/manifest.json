@@ -34,7 +34,8 @@
       "duration": 51.06,
       "startTime": 0.0,
       "endTime": 51.06,
-      "audioUrl": "/audio/lectures/geography/5_2/intro.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/intro.mp3",
+      "selector": "#sec-header"
     },
     {
       "id": "sec_global_trends",
@@ -44,7 +45,8 @@
       "duration": 48.74,
       "startTime": 51.06,
       "endTime": 99.8,
-      "audioUrl": "/audio/lectures/geography/5_2/sec_global_trends.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/sec_global_trends.mp3",
+      "selector": "#sec-global-trends"
     },
     {
       "id": "sec_hotspots_map",
@@ -54,7 +56,8 @@
       "duration": 34.94,
       "startTime": 99.8,
       "endTime": 134.74,
-      "audioUrl": "/audio/lectures/geography/5_2/sec_hotspots_map.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/sec_hotspots_map.mp3",
+      "selector": "#sec-hotspots-map"
     },
     {
       "id": "hotspot_arctic",
@@ -64,7 +67,8 @@
       "duration": 46.34,
       "startTime": 134.74,
       "endTime": 181.08,
-      "audioUrl": "/audio/lectures/geography/5_2/hotspot_arctic.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/hotspot_arctic.mp3",
+      "selector": "#hotspot-arctic"
     },
     {
       "id": "hotspot_himalaya",
@@ -74,7 +78,8 @@
       "duration": 45.16,
       "startTime": 181.08,
       "endTime": 226.24,
-      "audioUrl": "/audio/lectures/geography/5_2/hotspot_himalaya.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/hotspot_himalaya.mp3",
+      "selector": "#hotspot-himalaya"
     },
     {
       "id": "hotspot_bangladesh",
@@ -84,7 +89,8 @@
       "duration": 41.97,
       "startTime": 226.24,
       "endTime": 268.21,
-      "audioUrl": "/audio/lectures/geography/5_2/hotspot_bangladesh.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/hotspot_bangladesh.mp3",
+      "selector": "#hotspot-bangladesh"
     },
     {
       "id": "hotspot_maldives",
@@ -94,7 +100,8 @@
       "duration": 39.76,
       "startTime": 268.21,
       "endTime": 307.97,
-      "audioUrl": "/audio/lectures/geography/5_2/hotspot_maldives.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/hotspot_maldives.mp3",
+      "selector": "#hotspot-maldives"
     },
     {
       "id": "hotspot_sahel",
@@ -104,7 +111,8 @@
       "duration": 42.86,
       "startTime": 307.97,
       "endTime": 350.83,
-      "audioUrl": "/audio/lectures/geography/5_2/hotspot_sahel.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/hotspot_sahel.mp3",
+      "selector": "#hotspot-sahel"
     },
     {
       "id": "hotspot_gbr",
@@ -114,7 +122,8 @@
       "duration": 35.34,
       "startTime": 350.83,
       "endTime": 386.17,
-      "audioUrl": "/audio/lectures/geography/5_2/hotspot_gbr.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/hotspot_gbr.mp3",
+      "selector": "#hotspot-gbr"
     },
     {
       "id": "hotspot_amazon",
@@ -124,7 +133,8 @@
       "duration": 38.97,
       "startTime": 386.17,
       "endTime": 425.14,
-      "audioUrl": "/audio/lectures/geography/5_2/hotspot_amazon.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/hotspot_amazon.mp3",
+      "selector": "#hotspot-amazon"
     },
     {
       "id": "hotspot_mediterranean",
@@ -134,7 +144,8 @@
       "duration": 35.66,
       "startTime": 425.14,
       "endTime": 460.8,
-      "audioUrl": "/audio/lectures/geography/5_2/hotspot_mediterranean.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/hotspot_mediterranean.mp3",
+      "selector": "#hotspot-mediterranean"
     },
     {
       "id": "sec_sea_level",
@@ -144,7 +155,8 @@
       "duration": 42.9,
       "startTime": 460.8,
       "endTime": 503.7,
-      "audioUrl": "/audio/lectures/geography/5_2/sec_sea_level.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/sec_sea_level.mp3",
+      "selector": "#sec-sea-level"
     },
     {
       "id": "slr_thermal_expansion",
@@ -154,7 +166,8 @@
       "duration": 27.64,
       "startTime": 503.7,
       "endTime": 531.34,
-      "audioUrl": "/audio/lectures/geography/5_2/slr_thermal_expansion.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/slr_thermal_expansion.mp3",
+      "selector": "#slr-thermal-expansion"
     },
     {
       "id": "slr_melting_ice",
@@ -164,7 +177,8 @@
       "duration": 27.21,
       "startTime": 531.34,
       "endTime": 558.55,
-      "audioUrl": "/audio/lectures/geography/5_2/slr_melting_ice.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/slr_melting_ice.mp3",
+      "selector": "#slr-melting-ice"
     },
     {
       "id": "slr_terrestrial_storage",
@@ -174,7 +188,8 @@
       "duration": 22.46,
       "startTime": 558.55,
       "endTime": 581.01,
-      "audioUrl": "/audio/lectures/geography/5_2/slr_terrestrial_storage.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/slr_terrestrial_storage.mp3",
+      "selector": "#slr-terrestrial-storage"
     },
     {
       "id": "sec_systemic_impacts",
@@ -184,7 +199,8 @@
       "duration": 40.34,
       "startTime": 581.01,
       "endTime": 621.35,
-      "audioUrl": "/audio/lectures/geography/5_2/sec_systemic_impacts.mp3"
+      "audioUrl": "/audio/lectures/geography/5_2/sec_systemic_impacts.mp3",
+      "selector": "#sec-systemic-impacts"
     }
   ]
 }
