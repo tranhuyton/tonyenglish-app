@@ -1,35 +1,34 @@
 {
   "lectureId": "76dcafbf-e6b8-47f1-8618-be1b14e975ed",
   "courseTitle": "IGCSE Geography (0460)",
-  "lectureTitle": "10.2 Global Patterns of Food Supply and Demand",
-  "totalDuration": 249.71,
-  "majorSections": [
-    {
-      "id": "sec_calorie_patterns",
-      "title": "1. Phân bố nguồn cung calo toàn cầu",
-      "startSegmentId": "sec_calorie_patterns"
+  "lectureTitle": "10.2 The Global Patterns of Food Supply and Demand",
+  "totalDuration": 481.44,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_food_map",
-      "title": "2. Bản đồ động lực hệ thống lương thực",
-      "startSegmentId": "sec_food_map"
+    "sec_calorie_patterns": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_meat_demand",
-      "title": "3. Canh tác gia súc & Cái giá môi trường",
-      "startSegmentId": "sec_meat_demand"
+    "sec_food_map": {
+      "start": 3,
+      "end": 8
     },
-    {
-      "id": "sec_food_waste",
-      "title": "4. Địa lý lãng phí lương thực & Agribusiness",
-      "startSegmentId": "sec_food_waste"
+    "sec_meat_demand": {
+      "start": 9,
+      "end": 9
     },
-    {
-      "id": "card_exam_strategy",
-      "title": "Chiến lược làm bài thi",
-      "startSegmentId": "exam_strategy"
+    "sec_food_waste": {
+      "start": 10,
+      "end": 10
+    },
+    "card_exam_strategy": {
+      "start": 11,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -76,14 +75,69 @@
       "audioUrl": "/audio/lectures/geography/10_2/sec_food_map.mp3"
     },
     {
+      "id": "food_usa",
+      "title": "Điểm nóng bản đồ: Bắc Mỹ (>3,600 kcal/ngày)",
+      "selector": "#pin-food-usa",
+      "en": "North America Food Hotspot: Average intake exceeds 3,600 kilocalories per person per day. Driven by intensive corporate agribusiness and corn-soy rotations, the region produces vast food surpluses and massive grain exports. However, diet is characterized by high meat consumption and high carbon footprints per calorie due to fossil fuel mechanization and long food miles.",
+      "vi": "Điểm nóng bản đồ Bắc Mỹ: Mức tiêu thụ trung bình vượt quá ba nghìn sáu trăm calo mỗi người một ngày. Nhờ nền nông nghiệp tập đoàn thâm canh cao và mô hình luân canh ngô đậu tương, khu vực tạo ra thặng dư lương thực khổng lồ và xuất khẩu ngũ cốc đứng đầu thế giới. Tuy nhiên, khẩu phần ăn tại đây thâm dụng thịt và dấu chân carbon cao trên mỗi calo do cơ giới hóa hóa thạch và quãng đường vận chuyển thực phẩm dài.",
+      "duration": 47.68,
+      "startTime": 148.48,
+      "endTime": 196.16,
+      "audioUrl": "/audio/lectures/geography/10_2/food_usa.mp3"
+    },
+    {
+      "id": "food_netherlands",
+      "title": "Điểm nóng bản đồ: Hà Lan (Nghịch lý đổi mới nông công nghiệp)",
+      "selector": "#pin-food-netherlands",
+      "en": "The Netherlands Innovation Paradox: The world's second-largest agricultural exporter by value, generating over 100 billion euros annually from a tiny land area of just 41,500 square kilometers. Dutch agriculture relies on extreme agro-industrial intensification, featuring ten thousand hectares of geothermal-heated glasshouses that use twenty times less water per kilogram of tomatoes than open-field cultivation.",
+      "vi": "Nghịch lý đổi mới nông công nghiệp Hà Lan: Nước xuất khẩu nông nghiệp lớn thứ hai thế giới theo giá trị, thu về hơn một trăm tỷ euro mỗi năm dù diện tích đất đai vỏn vẹn bốn mươi mốt nghìn năm trăm ki-lô-mét vuông. Nông nghiệp Hà Lan dựa vào thâm canh công nghệ cao cực độ với mười nghìn héc-ta nhà kính sưởi bằng địa nhiệt, tiêu tốn lượng nước ít hơn hai mươi lần cho mỗi ki-lô-gam cà chua so với canh tác ngoài đồng ruộng.",
+      "duration": 48.52,
+      "startTime": 196.16,
+      "endTime": 244.68,
+      "audioUrl": "/audio/lectures/geography/10_2/food_netherlands.mp3"
+    },
+    {
+      "id": "food_sahel",
+      "title": "Điểm nóng bản đồ: Châu Phi hạ Sahara (Thâm hụt calo & tổn thất sau thu hoạch)",
+      "selector": "#pin-food-sahel",
+      "en": "Sub-Saharan Africa Caloric Deficit Hotspot: Average consumption languishes between 1,900 and 2,150 kilocalories daily, below minimum metabolic requirements. The region suffers from severe post-harvest losses of up to 40 percent due to inadequate cold storage and pest infestation, rendering communities acutely vulnerable to climate droughts and global food price volatility.",
+      "vi": "Điểm nóng thâm hụt calo châu Phi hạ Sahara: Mức tiêu thụ trung bình chỉ đạt từ một nghìn chín trăm đến hai nghìn một trăm năm mươi calo mỗi ngày, dưới mức chuẩn trao đổi chất tối thiểu. Khu vực chịu tổn thất sau thu hoạch nặng nề lên tới bốn mươi phần trăm do thiếu kho lạnh bảo quản và côn trùng phá hoại, khiến người dân dễ bị tổn thương nghiêm trọng trước các đợt hạn hán khí hậu và biến động giá lương thực thế giới.",
+      "duration": 45.98,
+      "startTime": 244.68,
+      "endTime": 290.66,
+      "audioUrl": "/audio/lectures/geography/10_2/food_sahel.mp3"
+    },
+    {
+      "id": "food_brazil",
+      "title": "Điểm nóng bản đồ: Brazil (Siêu cường đậu tương và thịt bò Cerrado)",
+      "selector": "#pin-food-brazil",
+      "en": "Brazil Cerrado Agribusiness Superpower: By applying agricultural lime and phosphorus to acidic savanna soils, Brazil transformed the Cerrado biome into the world's premier soy and cattle production belt, exporting millions of tons to China and Europe. However, this massive commercial expansion creates severe deforestation and biodiversity trade-offs along the Amazon frontier.",
+      "vi": "Siêu cường nông nghiệp Cerrado Brazil: Bằng cách bón vôi và phốt pho cải tạo đất trảng cỏ xavan chua phèn, Brazil đã biến vùng Cerrado thành vành đai sản xuất đậu tương và thịt bò hàng đầu thế giới, xuất khẩu hàng triệu tấn sang Trung Quốc và châu Âu. Tuy nhiên, sự mở rộng thương mại ồ ạt này tạo ra sự đánh đổi nghiêm trọng giữa phát triển kinh tế và nạn phá rừng phá hủy đa dạng sinh học ven rừng Amazon.",
+      "duration": 46.07,
+      "startTime": 290.66,
+      "endTime": 336.73,
+      "audioUrl": "/audio/lectures/geography/10_2/food_brazil.mp3"
+    },
+    {
+      "id": "food_china",
+      "title": "Điểm nóng bản đồ: Đông Á / Trung Quốc (Chuyển dịch dinh dưỡng nhanh chóng)",
+      "selector": "#pin-food-china",
+      "en": "East Asia Rapid Nutrition Transition: Driven by four decades of historic income growth, China's diet has fundamentally shifted from traditional rice and coarse grains toward meat, dairy, and ultra-processed foods. China now consumes half the world's pork, necessitating massive grain imports from Brazil and the United States to feed domestic livestock herds.",
+      "vi": "Chuyển dịch dinh dưỡng thần tốc tại Đông Á và Trung Quốc: Thúc đẩy bởi bốn thập kỷ tăng trưởng thu nhập lịch sử, chế độ ăn uống của người dân Trung Quốc đã chuyển dịch căn bản từ lúa gạo và ngũ cốc thô truyền thống sang thịt, sữa và thực phẩm chế biến sẵn. Hiện Trung Quốc tiêu thụ một nửa lượng thịt lợn của toàn thế giới, đòi hỏi nhập khẩu ngũ cốc khổng lồ từ Brazil và Hoa Kỳ để làm thức ăn chăn nuôi gia súc.",
+      "duration": 43.48,
+      "startTime": 336.73,
+      "endTime": 380.21,
+      "audioUrl": "/audio/lectures/geography/10_2/food_china.mp3"
+    },
+    {
       "id": "sec_meat_demand",
       "title": "3. Công nghiệp hóa nông nghiệp và Cái giá môi trường của nhu cầu tiêu thụ thịt",
       "selector": "#sec-meat-demand",
       "en": "Section 3 evaluates the ecological burden of animal agriculture. Livestock occupies nearly 80 percent of global farmland while providing less than 20 percent of calories. Producing one kilogram of beef requires up to 15,000 liters of water and 10 kilograms of grain feed.",
       "vi": "Mục ba đánh giá gánh nặng sinh thái của ngành chăn nuôi đại gia súc. Chăn nuôi chiếm tới gần tám mươi phần trăm tổng diện tích đất nông nghiệp toàn cầu nhưng chỉ cung cấp chưa đầy hai mươi phần trăm lượng calo. Để sản xuất một kilôgam thịt bò cần tới mười lăm nghìn lít nước ngọt và mười kilôgam ngũ cốc thức ăn gia súc.",
       "duration": 36.64,
-      "startTime": 148.48,
-      "endTime": 185.12,
+      "startTime": 380.21,
+      "endTime": 416.85,
       "audioUrl": "/audio/lectures/geography/10_2/sec_meat_demand.mp3"
     },
     {
@@ -93,8 +147,8 @@
       "en": "Section 4 contrasts food waste across development stages: Low-income nations lose up to 40 percent of harvests early in the supply chain due to lack of cold storage and poor roads, whereas high-income societies waste vast volumes at retail and household levels due to aesthetic standards and expired shelf-life dates.",
       "vi": "Mục bốn đối chiếu sự lãng phí lương thực theo từng nấc thang phát triển: Các nước nghèo thất thoát tới bốn mươi phần trăm sản lượng ngay sau thu hoạch do thiếu kho lạnh bảo quản và đường xá yếu kém, trong khi xã hội giàu có lại vứt bỏ khối lượng khổng lồ tại siêu thị và gia đình do tiêu chuẩn thẩm mỹ ngoại hình và hạn dùng hết hạn.",
       "duration": 35.03,
-      "startTime": 185.12,
-      "endTime": 220.15,
+      "startTime": 416.85,
+      "endTime": 451.88,
       "audioUrl": "/audio/lectures/geography/10_2/sec_food_waste.mp3"
     },
     {
@@ -104,8 +158,8 @@
       "en": "In exam questions on food supply disparities, synthesize physical factors like monsoonal droughts with economic drivers like global trade barriers, commodity market speculation, and the diversion of edible corn crops into biofuel ethanol.",
       "vi": "Trong các câu hỏi thi về chênh lệch nguồn cung lương thực, các em hãy kết hợp cả yếu tố tự nhiên như hạn hán do biến động gió mùa với các động lực kinh tế như hàng rào thuế quan thương mại, nạn đầu cơ giá nông sản và việc chuyển đổi ngô thực phẩm sang sản xuất nhiên liệu sinh học ethanol.",
       "duration": 29.56,
-      "startTime": 220.15,
-      "endTime": 249.71,
+      "startTime": 451.88,
+      "endTime": 481.44,
       "audioUrl": "/audio/lectures/geography/10_2/exam_strategy.mp3"
     }
   ]

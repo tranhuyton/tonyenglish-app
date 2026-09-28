@@ -2,34 +2,33 @@
   "lectureId": "362104be-aedc-4cbe-87b2-29034e93cc9c",
   "courseTitle": "IGCSE Geography (0460)",
   "lectureTitle": "10.1 How Our Food is Produced: Agricultural Systems",
-  "totalDuration": 231.51,
-  "majorSections": [
-    {
-      "id": "sec_farming_classification",
-      "title": "1. Phân loại canh tác nông nghiệp",
-      "startSegmentId": "sec_farming_classification"
+  "totalDuration": 417.15,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_agricultural_ipo",
-      "title": "2. Khung hệ thống IPO nông nghiệp",
-      "startSegmentId": "sec_agricultural_ipo"
+    "sec_farming_classification": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_ipo_explorer",
-      "title": "3. Đối chiếu Sri Lanka & Canada",
-      "startSegmentId": "sec_ipo_explorer"
+    "sec_agricultural_ipo": {
+      "start": 2,
+      "end": 3
     },
-    {
-      "id": "sec_hightech_farming",
-      "title": "4. Nông nghiệp công nghệ cao",
-      "startSegmentId": "sec_hightech_farming"
+    "sec_ipo_explorer": {
+      "start": 4,
+      "end": 8
     },
-    {
-      "id": "card_exam_strategy",
-      "title": "Chiến lược làm bài thi",
-      "startSegmentId": "exam_strategy"
+    "sec_hightech_farming": {
+      "start": 9,
+      "end": 9
+    },
+    "card_exam_strategy": {
+      "start": 10,
+      "end": 10
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -87,14 +86,58 @@
       "audioUrl": "/audio/lectures/geography/10_1/sec_ipo_explorer.mp3"
     },
     {
+      "id": "farm_prairies",
+      "title": "Hệ thống canh tác: Đồng bằng lúa mì Canada (Quảng canh thương mại)",
+      "selector": "#fbtn-prairies",
+      "en": "Canadian Prairies Commercial Wheat Farming: This is an extensive commercial arable system operating on thousands of hectares. It relies heavily on high capital inputs including massive combine harvesters, GPS-guided tractors, and chemical fertilizers, resulting in very high output per worker but lower yield per hectare. All wheat is sold on the global export market.",
+      "vi": "Đại quảng canh lúa mì thương mại tại thảo nguyên Canada: Đây là hệ thống canh tác cây lương thực thương mại quy mô lớn trên hàng nghìn héc-ta. Trang trại sử dụng lượng vốn cơ giới hóa khổng lồ gồm máy gặt đập liên hợp, máy kéo định vị vệ tinh và phân bón hóa học, mang lại sản lượng rất cao trên mỗi lao động nhưng năng suất trên mỗi héc-ta ở mức trung bình. Toàn bộ lúa mì được bán ra thị trường xuất khẩu toàn cầu.",
+      "duration": 46.22,
+      "startTime": 171.89,
+      "endTime": 218.11,
+      "audioUrl": "/audio/lectures/geography/10_1/farm_prairies.mp3"
+    },
+    {
+      "id": "farm_ganges",
+      "title": "Hệ thống canh tác: Ruộng lúa nước sông Hằng & Sri Lanka (Thâm canh tự cung tự cấp)",
+      "selector": "#fbtn-ganges",
+      "en": "Ganges Valley and Sri Lanka Wet Rice Cultivation: An intensive subsistence arable system practiced on small, fragmented plots under one hectare. It requires high labor inputs from family members using water buffalo and monsoonal flood irrigation, achieving high yields per hectare with zero mechanization. Virtually all harvested rice is consumed locally by the farming household.",
+      "vi": "Thâm canh lúa nước tại thung lũng sông Hằng và Sri Lanka: Hệ thống trồng trọt tự cung tự cấp thâm canh trên các thửa ruộng nhỏ hẹp dưới một héc-ta. Quy trình đòi hỏi sức lao động chân tay rất lớn của các thành viên trong gia đình kết hợp sức trâu kéo và nước lũ mùa mưa, đạt năng suất lúa rất cao trên mỗi héc-ta dù hầu như không cơ giới hóa. Gần như toàn bộ lúa gạo thu hoạch được dùng để nuôi sống gia đình nông dân tại chỗ.",
+      "duration": 47.7,
+      "startTime": 218.11,
+      "endTime": 265.81,
+      "audioUrl": "/audio/lectures/geography/10_1/farm_ganges.mp3"
+    },
+    {
+      "id": "farm_sahel",
+      "title": "Hệ thống canh tác: Du mục chăn thả vùng Sahel (Quảng canh tự cung tự cấp)",
+      "selector": "#fbtn-sahel",
+      "en": "African Sahel Nomadic Pastoral Herding: An extensive subsistence pastoral system across marginal semi-arid grasslands. Pastoralists migrate seasonally following erratic rainfall to find grazing for zebu cattle, camels, and goats. Output per hectare is extremely low, and the system is acutely vulnerable to prolonged droughts and desertification.",
+      "vi": "Chăn thả gia súc du mục vùng Sahel châu Phi: Hệ thống chăn nuôi tự cung tự cấp quảng canh trên các đồng cỏ bán khô hạn cằn cỗi. Người du mục di chuyển theo mùa lần theo những cơn mưa hiếm hoi để tìm nguồn cỏ cho bò u, lạc đà và dê. Năng suất trên mỗi héc-ta cực kỳ thấp và hệ thống này đặc biệt dễ bị tổn thương trước hạn hán kéo dài và quá trình sa mạc hóa.",
+      "duration": 44.06,
+      "startTime": 265.81,
+      "endTime": 309.87,
+      "audioUrl": "/audio/lectures/geography/10_1/farm_sahel.mp3"
+    },
+    {
+      "id": "farm_vertical",
+      "title": "Hệ thống canh tác: Nông nghiệp thẳng đứng công nghệ cao (Thâm canh thương mại)",
+      "selector": "#fbtn-vertical",
+      "en": "Indoor Controlled-Environment Vertical Farming: An ultra-intensive commercial arable system built in urban warehouses. Crops grow on vertical stacked shelving using nutrient-rich water mists and tuned LED lights. This system slashes water consumption by 95 percent, eliminates pesticides, and produces year-round yields immune to weather fluctuations, though it requires immense initial capital investment.",
+      "vi": "Nông nghiệp thẳng đứng trong nhà công nghệ cao: Hệ thống trồng trọt thương mại siêu thâm canh đặt trong các nhà kho đô thị. Cây trồng phát triển trên các giá tầng xếp chồng thẳng đứng nhờ màng sương giàu dinh dưỡng và ánh sáng đèn LED chuyên dụng. Mô hình này tiết kiệm đến chín mươi lăm phần trăm lượng nước, hoàn toàn không dùng thuốc trừ sâu và cho năng suất quanh năm bất chấp thời tiết, dù đòi hỏi chi phí đầu tư ban đầu rất lớn.",
+      "duration": 47.66,
+      "startTime": 309.87,
+      "endTime": 357.53,
+      "audioUrl": "/audio/lectures/geography/10_1/farm_vertical.mp3"
+    },
+    {
       "id": "sec_hightech_farming",
       "title": "4. Biên giới công nghệ cao: Thủy canh, Khí canh và Nông nghiệp thẳng đứng",
       "selector": "#sec-hightech-farming",
       "en": "Section 4 showcases modern controlled-environment agriculture: soil-less hydroponics, mist-based aeroponics, and indoor vertical farms that slash water usage by 95 percent and produce year-round harvests insulated from climate shocks.",
       "vi": "Mục bốn giới thiệu nông nghiệp môi trường kiểm soát hiện đại: thủy canh không cần đất, khí canh nuôi rễ bằng màng sương dinh dưỡng, và các trang trại thẳng đứng nhiều tầng trong nhà giúp tiết kiệm chín mươi lăm phần trăm lượng nước và cho thu hoạch quanh năm không phụ thuộc vào thời tiết.",
       "duration": 28.31,
-      "startTime": 171.89,
-      "endTime": 200.2,
+      "startTime": 357.53,
+      "endTime": 385.84,
       "audioUrl": "/audio/lectures/geography/10_1/sec_hightech_farming.mp3"
     },
     {
@@ -104,8 +147,8 @@
       "en": "In exam 7-mark case study questions on agricultural systems, always classify the farm precisely along all three axes, categorize inputs into physical versus human, describe specific processes, and identify both commercial outputs and environmental byproducts.",
       "vi": "Trong các câu hỏi tình huống bảy điểm về hệ thống nông nghiệp, các em hãy luôn phân loại chính xác trang trại theo cả ba trục, tách bạch đầu vào tự nhiên và con người, mô tả chi tiết các công đoạn canh tác, và chỉ rõ sản phẩm thu hoạch thương mại đi kèm với phụ phẩm môi trường.",
       "duration": 31.31,
-      "startTime": 200.2,
-      "endTime": 231.51,
+      "startTime": 385.84,
+      "endTime": 417.15,
       "audioUrl": "/audio/lectures/geography/10_1/exam_strategy.mp3"
     }
   ]

@@ -2,29 +2,33 @@
   "lectureId": "6c14f92b-774a-45d1-a68d-2e9fe5e0b85d",
   "courseTitle": "IGCSE Geography (0460)",
   "lectureTitle": "9.1 Changing Employment Structures",
-  "totalDuration": 297.69,
-  "majorSections": [
-    {
-      "id": "sec_four_sectors",
-      "title": "1. Bốn khu vực kinh tế",
-      "startSegmentId": "sec_four_sectors"
+  "totalDuration": 498.8,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_employment_map",
-      "title": "2. Cơ cấu lao động toàn cầu",
-      "startSegmentId": "sec_employment_map"
+    "sec_four_sectors": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_clark_fisher",
-      "title": "3. Mô hình Clark-Fisher",
-      "startSegmentId": "sec_clark_fisher"
+    "sec_employment_map": {
+      "start": 3,
+      "end": 8
     },
-    {
-      "id": "sec_product_chain",
-      "title": "4. Chuỗi sản phẩm ngành thực phẩm",
-      "startSegmentId": "sec_product_chain"
+    "sec_clark_fisher": {
+      "start": 9,
+      "end": 10
+    },
+    "card_triangular_graph": {
+      "start": 11,
+      "end": 11
+    },
+    "sec_product_chain": {
+      "start": 12,
+      "end": 13
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -82,14 +86,58 @@
       "audioUrl": "/audio/lectures/geography/9_1/employment_map_svg.mp3"
     },
     {
+      "id": "emp_mali",
+      "title": "Cơ cấu lao động: Mali (Quốc gia thu nhập thấp - LIC)",
+      "selector": "#pin-emp-mali",
+      "en": "Mali Employment Structure: Classified as a low-income country in the pre-industrial stage. 80 percent of the labor force works in the primary sector—dominated by smallholder subsistence farming, cotton cultivation, and artisanal mining. Low levels of mechanization mean farming requires vast human labor, leaving only 10 percent in secondary processing and 10 percent in basic tertiary services.",
+      "vi": "Cơ cấu việc làm tại Mali: Điển hình cho quốc gia thu nhập thấp ở giai đoạn tiền công nghiệp. Có tới tám mươi phần trăm lực lượng lao động làm việc trong khu vực một sơ khai, chủ yếu là làm nông tự cung tự cấp, trồng bông và khai thác thủ công. Do mức độ cơ giới hóa rất thấp, sản xuất nông nghiệp cần lượng lớn sức người, khiến khu vực hai sản xuất công nghiệp chỉ chiếm mười phần trăm và dịch vụ sơ cấp mười phần trăm.",
+      "duration": 48.54,
+      "startTime": 162.63,
+      "endTime": 211.17,
+      "audioUrl": "/audio/lectures/geography/9_1/emp_mali.mp3"
+    },
+    {
+      "id": "emp_vietnam",
+      "title": "Cơ cấu lao động: Việt Nam (Quốc gia mới công nghiệp hóa - MIC / NIC)",
+      "selector": "#pin-emp-vietnam",
+      "en": "Vietnam Employment Structure: An exemplary middle-income country experiencing rapid industrialization. Primary employment has steadily dropped to 35 percent, while secondary manufacturing and construction has surged to 30 percent, driven by massive foreign direct investment in electronics and apparel export factories. The tertiary service sector has expanded in tandem to 35 percent.",
+      "vi": "Cơ cấu việc làm tại Việt Nam: Hình mẫu cho quốc gia thu nhập trung bình và mới công nghiệp hóa nhanh chóng. Tỷ lệ lao động nông nghiệp đã giảm đều đặn xuống còn ba mươi lăm phần trăm, trong khi khu vực hai gồm chế biến chế tạo và xây dựng tăng vọt lên ba mươi phần trăm nhờ dòng vốn đầu tư trực tiếp nước ngoài khổng lồ vào các nhà máy lắp ráp điện tử và dệt may xuất khẩu. Khu vực ba dịch vụ cũng mở rộng song hành đạt ba mươi lăm phần trăm.",
+      "duration": 48.33,
+      "startTime": 211.17,
+      "endTime": 259.5,
+      "audioUrl": "/audio/lectures/geography/9_1/emp_vietnam.mp3"
+    },
+    {
+      "id": "emp_usa",
+      "title": "Cơ cấu lao động: Hoa Kỳ (Kinh tế hậu công nghiệp - HIC)",
+      "selector": "#pin-emp-usa",
+      "en": "United States Employment Structure: A mature high-income post-industrial economy. The primary sector employs barely 2 percent of the workforce due to colossal agricultural mechanization and GPS combine harvesters. Secondary manufacturing accounts for only 15 percent due to foreign outsourcing, while an overwhelming 83 percent of jobs are in tertiary and quaternary knowledge services such as corporate finance, healthcare, and software engineering.",
+      "vi": "Cơ cấu việc làm tại Hoa Kỳ: Nền kinh tế hậu công nghiệp phát triển thu nhập cao. Khu vực nông nghiệp sơ cấp chỉ còn chiếm vẻn vẹn hai phần trăm lao động nhờ cơ giới hóa quy mô lớn và máy gặt định vị vệ tinh. Khu vực hai công nghiệp chế tạo chỉ chiếm mười lăm phần trăm do xu hướng gia công sản xuất ở nước ngoài, trong khi có tới tám mươi ba phần trăm lao động tập trung vào khu vực dịch vụ bậc ba và kinh tế tri thức bậc bốn như tài chính, y tế và phần mềm.",
+      "duration": 53.3,
+      "startTime": 259.5,
+      "endTime": 312.8,
+      "audioUrl": "/audio/lectures/geography/9_1/emp_usa.mp3"
+    },
+    {
+      "id": "emp_uk",
+      "title": "Cơ cấu lao động: Vương quốc Anh (Kinh tế hậu công nghiệp - HIC)",
+      "selector": "#pin-emp-uk",
+      "en": "United Kingdom Employment Structure: A pioneering post-industrial nation shaped by late-twentieth-century deindustrialization. Primary agriculture employs merely 1 percent of workers, and secondary manufacturing has contracted to 18 percent. Over 81 percent of workers are employed in tertiary and high-tech quaternary sectors, including London's global financial hub, international higher education, and biomedical research.",
+      "vi": "Cơ cấu việc làm tại Vương quốc Anh: Quốc gia hậu công nghiệp tiên phong được định hình bởi làn sóng phi công nghiệp hóa cuối thế kỷ hai mươi. Nông nghiệp chỉ chiếm vỏn vẹn một phần trăm lao động và công nghiệp chế tạo thu hẹp còn mười tám phần trăm. Hơn tám mươi mốt phần trăm người lao động làm việc trong khu vực dịch vụ bậc ba và công nghệ cao bậc bốn, nổi bật là trung tâm tài chính toàn cầu Luân Đôn, giáo dục đại học quốc tế và nghiên cứu y sinh học.",
+      "duration": 50.94,
+      "startTime": 312.8,
+      "endTime": 363.74,
+      "audioUrl": "/audio/lectures/geography/9_1/emp_uk.mp3"
+    },
+    {
       "id": "sec_clark_fisher",
       "title": "3. Mô hình Clark-Fisher",
       "selector": "#sec-clark-fisher",
       "en": "Section 3 analyzes the Clark-Fisher Model. It traces national economic transformation through three distinct phases: the Pre-industrial agrarian stage, the Industrial manufacturing boom, and the Post-industrial service revolution.",
       "vi": "Mục ba phân tích Mô hình Clark-Fisher. Mô hình theo dõi sự chuyển mình kinh tế của một quốc gia qua ba giai đoạn riêng biệt: giai đoạn Tiền công nghiệp lấy nông nghiệp làm trụ cột, giai đoạn Bùng nổ công nghiệp chế tạo, và giai đoạn Hậu công nghiệp bùng nổ dịch vụ.",
       "duration": 29.87,
-      "startTime": 162.63,
-      "endTime": 192.5,
+      "startTime": 363.74,
+      "endTime": 393.61,
       "audioUrl": "/audio/lectures/geography/9_1/sec_clark_fisher.mp3"
     },
     {
@@ -99,8 +147,8 @@
       "en": "This interactive graph illustrates the historical transition curves: as agricultural mechanization releases labor, secondary factory employment surges, before automation and consumer affluence elevate tertiary and quaternary services to complete dominance.",
       "vi": "Đồ thị tương tác này minh họa các đường cong chuyển dịch lịch sử: khi cơ giới hóa nông nghiệp giải phóng sức lao động, việc làm trong nhà máy công nghiệp tăng vọt, trước khi tự động hóa và đời sống tiêu dùng nâng tầm ngành dịch vụ và tri thức chiếm lĩnh vị trí áp đảo.",
       "duration": 28.89,
-      "startTime": 192.5,
-      "endTime": 221.39,
+      "startTime": 393.61,
+      "endTime": 422.5,
       "audioUrl": "/audio/lectures/geography/9_1/clark_fisher_svg.mp3"
     },
     {
@@ -110,8 +158,8 @@
       "en": "Figure 9.11 demonstrates how geographers plot three simultaneous percentage variables on a triangular graph, allowing direct spatial comparison of employment structures across dozens of nations simultaneously.",
       "vi": "Hình chín chấm mười một minh chứng cách các nhà địa lý biểu diễn đồng thời ba biến số phần trăm trên một biểu đồ tam giác, cho phép so sánh trực quan cấu trúc việc làm của hàng chục quốc gia cùng một lúc.",
       "duration": 22.89,
-      "startTime": 221.39,
-      "endTime": 244.28,
+      "startTime": 422.5,
+      "endTime": 445.39,
       "audioUrl": "/audio/lectures/geography/9_1/triangular_graph.mp3"
     },
     {
@@ -121,8 +169,8 @@
       "en": "Section 4 tracks the intersectoral commodity chain using the food industry as a classic case: illustrating how raw agricultural inputs are transported, industrially refined, packaged, and retailed to modern consumers.",
       "vi": "Mục bốn theo dõi chuỗi giá trị hàng hóa liên ngành lấy công nghiệp thực phẩm làm ví dụ kinh điển: minh họa cách các nông sản thô sơ cấp được vận tải, chế biến tinh trong nhà máy, đóng gói và phân phối bán lẻ đến tay người tiêu dùng hiện đại.",
       "duration": 26.15,
-      "startTime": 244.28,
-      "endTime": 270.43,
+      "startTime": 445.39,
+      "endTime": 471.54,
       "audioUrl": "/audio/lectures/geography/9_1/sec_product_chain.mp3"
     },
     {
@@ -132,8 +180,8 @@
       "en": "This diagram links primary wheat farms and dairy herds, secondary flour mills and bakeries, tertiary refrigerated logistics fleets and supermarkets, and quaternary food science research developing longer shelf-life packaging.",
       "vi": "Sơ đồ này kết nối các trang trại lúa mì và bò sữa sơ cấp, nhà máy xay xát và lò bánh mì thứ cấp, đội xe lạnh và hệ thống siêu thị bán lẻ dịch vụ, cùng các phòng nghiên cứu khoa học thực phẩm tri thức phát triển bao bì sinh học bảo quản dài lâu.",
       "duration": 27.26,
-      "startTime": 270.43,
-      "endTime": 297.69,
+      "startTime": 471.54,
+      "endTime": 498.8,
       "audioUrl": "/audio/lectures/geography/9_1/product_chain_svg.mp3"
     }
   ]

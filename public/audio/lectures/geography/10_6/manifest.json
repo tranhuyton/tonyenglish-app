@@ -1,40 +1,38 @@
 {
   "lectureId": "fb30c141-db3a-49e8-aa55-028c913640d4",
   "courseTitle": "IGCSE Geography (0460)",
-  "lectureTitle": "10.6 The Impacts of Energy Production",
-  "totalDuration": 289.49,
-  "majorSections": [
-    {
-      "id": "sec_fossil_impacts",
-      "title": "1. Tác động của nhiên liệu hóa thạch",
-      "startSegmentId": "sec_fossil_impacts"
+  "lectureTitle": "10.6 The Impacts of Energy Production: Environmental & Geopolitical Trade-offs",
+  "totalDuration": 530.44,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_nuclear_power",
-      "title": "2. Điện hạt nhân: Ưu điểm & Rủi ro",
-      "startSegmentId": "sec_nuclear_power"
+    "sec_fossil_impacts": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_renewable_tradeoffs",
-      "title": "3. Đánh đổi sinh thái của năng lượng tái tạo",
-      "startSegmentId": "sec_renewable_tradeoffs"
+    "sec_nuclear_power": {
+      "start": 2,
+      "end": 2
     },
-    {
-      "id": "sec_global_trends",
-      "title": "4. Xu hướng tiêu thụ năng lượng toàn cầu",
-      "startSegmentId": "sec_global_trends"
+    "sec_renewable_tradeoffs": {
+      "start": 3,
+      "end": 7
     },
-    {
-      "id": "sec_sweden_casestudy",
-      "title": "5. Nghiên cứu tình huống: Thụy Điển",
-      "startSegmentId": "sec_sweden_casestudy"
+    "sec_global_trends": {
+      "start": 8,
+      "end": 8
     },
-    {
-      "id": "card_exam_strategy",
-      "title": "Chiến lược làm bài thi",
-      "startSegmentId": "exam_strategy"
+    "sec_sweden_casestudy": {
+      "start": 9,
+      "end": 9
+    },
+    "card_exam_strategy": {
+      "start": 10,
+      "end": 10
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -81,14 +79,58 @@
       "audioUrl": "/audio/lectures/geography/10_6/sec_renewable_tradeoffs.mp3"
     },
     {
+      "id": "tab_emissions",
+      "title": "Tác động phát điện: Phát thải nhà kính vòng đời (g CO2e/kWh)",
+      "selector": "#btn-tab-emissions",
+      "en": "Lifecycle Greenhouse Gas Emissions: Examining total emissions per kilowatt-hour across construction, operation, and decommissioning. Coal is the most polluting at 820 grams of CO2 equivalent per kilowatt-hour, followed by Oil at 720 grams and Natural Gas at 490 grams. Conversely, Solar PV emits 48 grams, Geothermal 38 grams, Hydro 24 grams, while Nuclear and Wind boast the lowest lifecycle footprints at just 11 to 12 grams.",
+      "vi": "Phát thải khí nhà kính theo vòng đời: Đánh giá tổng lượng phát thải trên mỗi kilowatt-giờ điện xuyên suốt quá trình xây dựng, vận hành và phá dỡ nhà máy. Than đá gây ô nhiễm nặng nề nhất với tám trăm hai mươi gam CO2 tương đương trên mỗi kilowatt-giờ, tiếp theo là dầu mỏ bảy trăm hai mươi gam và khí đốt bốn trăm chín mươi gam. Ngược lại, điện mặt trời chỉ phát thải bốn mươi tám gam, địa nhiệt ba mươi tám gam, thủy điện hai mươi tư gam, trong khi điện hạt nhân và điện gió có dấu chân carbon thấp nhất chỉ từ mười một đến mười hai gam.",
+      "duration": 61.89,
+      "startTime": 181.86,
+      "endTime": 243.75,
+      "audioUrl": "/audio/lectures/geography/10_6/tab_emissions.mp3"
+    },
+    {
+      "id": "tab_ecosystem",
+      "title": "Tác động phát điện: Hệ sinh thái địa phương & Môi trường đất",
+      "selector": "#btn-tab-ecosystem",
+      "en": "Local Ecosystem and Land Impacts: Coal and oil extraction causes open-cast strip mining, wiping out topsoil and native biodiversity. Combustion releases sulfur dioxide and nitrogen oxides that cause Acid Rain with a pH below 4.5, destroying northern forests and poisoning aquatic ecosystems. Meanwhile, large hydroelectric dams flood fertile river valleys and displace communities, while solar farms require extensive land areas.",
+      "vi": "Tác động tới hệ sinh thái địa phương và cảnh quan: Khai thác than và dầu bằng phương pháp mỏ lộ thiên phá hủy hoàn toàn thảm thực vật, tầng đất mặt và đa dạng sinh học bản địa. Quá trình đốt nhiên liệu hóa thạch thải ra khí lưu huỳnh đioxit và oxit nitơ tạo nên mưa axit có độ pH dưới bốn phẩy năm, tàn phá rừng lá kim và làm chua độc các hồ nước ngọt. Trong khi đó, các đập thủy điện lớn nhấn chìm thung lũng màu mỡ làm di dời dân cư, còn điện mặt trời đòi hỏi quỹ đất mặt rất lớn.",
+      "duration": 56.87,
+      "startTime": 243.75,
+      "endTime": 300.62,
+      "audioUrl": "/audio/lectures/geography/10_6/tab_ecosystem.mp3"
+    },
+    {
+      "id": "tab_reliability",
+      "title": "Tác động phát điện: Độ tin cậy lưới điện (Phụ tải nền vs Gián đoạn)",
+      "selector": "#btn-tab-reliability",
+      "en": "Grid Reliability: Baseload Power versus Intermittency. Baseload power stations—including nuclear, geothermal, and coal—provide steady, continuous 24/7 electricity to meet minimum base demand. In contrast, solar and wind are weather-dependent intermittent sources that fluctuate with daylight and wind speed, requiring massive grid-scale battery storage, pumped hydroelectricity, or rapid-dispatch natural gas peaker plants to maintain grid stability.",
+      "vi": "Độ tin cậy của lưới điện: Nguồn điện phụ tải nền so với Năng lượng gián đoạn. Các nhà máy điện phụ tải nền gồm hạt nhân, địa nhiệt và than đá cung cấp nguồn điện liên tục hai mươi tư trên bảy ổn định để đáp ứng nhu cầu tối thiểu của xã hội. Trái lại, điện mặt trời và điện gió là nguồn năng lượng gián đoạn phụ thuộc vào thời tiết và nắng gió, đòi hỏi pin lưu trữ quy mô lớn, thủy điện tích năng hoặc nhà máy tua bin khí linh hoạt để duy trì ổn định lưới điện.",
+      "duration": 55.72,
+      "startTime": 300.62,
+      "endTime": 356.34,
+      "audioUrl": "/audio/lectures/geography/10_6/tab_reliability.mp3"
+    },
+    {
+      "id": "tab_sweden",
+      "title": "Nghiên cứu điển hình: Mô hình Thụy Điển - 4 Trụ cột khử carbon",
+      "selector": "#btn-tab-sweden",
+      "en": "Sweden Decarbonisation Case Study: Catalyzed by the 1973 global oil shock when Sweden imported 75 percent of its energy as oil, the nation enacted a decisive strategy. During the 1980s, Sweden constructed 12 nuclear reactors and harnessed northern mountain rivers for hydropower. In 1991, it introduced the world's first carbon tax of over 130 dollars per tonne, and expanded municipal district heating using biomass forestry waste, achieving over 60 percent renewable energy share.",
+      "vi": "Nghiên cứu điển hình Mô hình Thụy Điển: Khởi nguồn từ cú sốc dầu mỏ năm 1973 khi Thụy Điển phải nhập khẩu tới bảy mươi lăm phần trăm năng lượng dưới dạng dầu, quốc gia này đã ban hành chiến lược chuyển đổi mang tính quyết định. Trong thập niên 1980, Thụy Điển đã xây dựng mười hai lò phản ứng hạt nhân và tận dụng các dòng sông miền bắc để phát triển thủy điện. Năm 1991, Thụy Điển áp dụng thuế carbon đầu tiên trên thế giới với mức hơn một trăm ba mươi đô la một tấn, đồng thời mở rộng mạng lưới sưởi ấm đô thị bằng phế phẩm lâm nghiệp sinh khối, đưa tỷ lệ năng lượng tái tạo vượt trên sáu mươi phần trăm.",
+      "duration": 66.47,
+      "startTime": 356.34,
+      "endTime": 422.81,
+      "audioUrl": "/audio/lectures/geography/10_6/tab_sweden.mp3"
+    },
+    {
       "id": "sec_global_trends",
       "title": "4. Xu hướng tiêu thụ năng lượng toàn cầu (1970–2023)",
       "selector": "#sec-global-trends",
       "en": "Section 4 analyzes five decades of global consumption patterns: while renewable capacity has expanded rapidly in percentage terms, absolute fossil fuel combustion continues to increase in emerging economies to support urbanization, underscoring the formidable inertia of the global hydrocarbon economy.",
       "vi": "Mục bốn phân tích xu hướng tiêu thụ năng lượng toàn cầu trong năm thập kỷ qua: dù công suất năng lượng tái tạo tăng trưởng nhanh về mặt tỉ lệ, tổng khối lượng đốt nhiên liệu hóa thạch tuyệt đối vẫn tiếp tục gia tăng tại các nền kinh tế mới nổi để đáp ứng đô thị hóa, cho thấy sức ì to lớn của nền kinh tế carbon toàn cầu.",
       "duration": 34.38,
-      "startTime": 181.86,
-      "endTime": 216.24,
+      "startTime": 422.81,
+      "endTime": 457.19,
       "audioUrl": "/audio/lectures/geography/10_6/sec_global_trends.mp3"
     },
     {
@@ -98,8 +140,8 @@
       "en": "Section 5 showcases Sweden as an exemplary decarbonization model: leveraging a stable twin foundation of hydro and nuclear baseload power, combined with pioneering district heating networks powered by municipal waste-to-energy incineration and aggressive carbon taxation enacted in 1991.",
       "vi": "Mục năm giới thiệu Thụy Điển như một hình mẫu chuyển dịch phi carbon hóa tiêu biểu: tận dụng nền tảng điện kép vững chắc giữa thủy điện và điện hạt nhân, kết hợp mạng lưới sưởi ấm khu vực tuần hoàn đốt rác thu hồi năng lượng, cùng chính sách thuế carbon mang tính đột phá được ban hành từ năm 1991.",
       "duration": 33.66,
-      "startTime": 216.24,
-      "endTime": 249.9,
+      "startTime": 457.19,
+      "endTime": 490.85,
       "audioUrl": "/audio/lectures/geography/10_6/sec_sweden_casestudy.mp3"
     },
     {
@@ -109,8 +151,8 @@
       "en": "In exam 7-mark case study questions on energy impacts, never depict any energy source as flawless: critically balance economic feasibility against environmental degradation, discuss NIMBYism and aesthetic opposition, and cite quantitative national data like Sweden's 98 percent fossil-free electricity generation.",
       "vi": "Trong các câu hỏi tình huống bảy điểm về tác động năng lượng, các em không bao giờ được mô tả bất kỳ nguồn năng lượng nào là hoàn hảo tuyệt đối: hãy cân nhắc giữa tính khả thi kinh tế với suy thoái môi trường, đề cập đến tâm lý phản đối xây dựng tại địa phương NIMBY, và trích dẫn số liệu định lượng quốc gia như việc Thụy Điển đã đạt chín mươi tám phần trăm sản lượng điện không phát thải hóa thạch.",
       "duration": 39.59,
-      "startTime": 249.9,
-      "endTime": 289.49,
+      "startTime": 490.85,
+      "endTime": 530.44,
       "audioUrl": "/audio/lectures/geography/10_6/exam_strategy.mp3"
     }
   ]

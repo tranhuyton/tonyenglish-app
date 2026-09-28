@@ -1,30 +1,30 @@
 {
   "lectureId": "5b7da7e1-3da1-4bf4-9700-6e11d7a7ef6b",
   "courseTitle": "IGCSE Geography (0460)",
-  "lectureTitle": "9.2 The Impact of Globalisation and Transnational Corporations",
-  "totalDuration": 279.08,
-  "majorSections": [
-    {
-      "id": "sec_globalisation",
-      "title": "1. Toàn cầu hóa & Động lực thúc đẩy",
-      "startSegmentId": "sec_globalisation"
+  "lectureTitle": "9.2 The Impact of Globalisation and the Role of Transnational Corporations (TNCs)",
+  "totalDuration": 478.87,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_what_is_tnc",
-      "title": "2. Cấu trúc tập đoàn đa quốc gia",
-      "startSegmentId": "sec_what_is_tnc"
+    "sec_globalisation": {
+      "start": 1,
+      "end": 2
     },
-    {
-      "id": "sec_nike_supply_chain",
-      "title": "3. Chuỗi cung ứng toàn cầu của Nike",
-      "startSegmentId": "sec_nike_supply_chain"
+    "sec_what_is_tnc": {
+      "start": 3,
+      "end": 4
     },
-    {
-      "id": "sec_tnc_impacts",
-      "title": "4. Tác động đa chiều của TNC",
-      "startSegmentId": "sec_tnc_impacts"
+    "sec_nike_supply_chain": {
+      "start": 5,
+      "end": 10
+    },
+    "sec_tnc_impacts": {
+      "start": 11,
+      "end": 12
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -104,14 +104,58 @@
       "audioUrl": "/audio/lectures/geography/9_2/nike_map_svg.mp3"
     },
     {
+      "id": "nike_hq",
+      "title": "Chuỗi cung ứng Nike: Trụ sở chính (Oregon, Hoa Kỳ)",
+      "selector": "#node-nike-hq",
+      "en": "Nike Global Headquarters, Beaverton, Oregon: The high-value brain of the transnational corporation. Directly employs thousands of specialized professionals in product research, advanced material engineering, brand marketing, and global financial control. Nike captures maximum economic value here by retaining intellectual property and high-margin design while owning zero manufacturing factories.",
+      "vi": "Trụ sở chính toàn cầu của Nike tại bang Oregon, Hoa Kỳ: Trung tâm đầu não giá trị cao của tập đoàn đa quốc gia. Nơi đây tập trung hàng nghìn chuyên gia nghiên cứu thiết kế sản phẩm, kỹ thuật vật liệu mới, chiến dịch tiếp thị thương hiệu và quản lý tài chính toàn cầu. Nike giữ lại phần lớn giá trị gia tăng nhờ sở hữu quyền sở hữu trí tuệ và mẫu mã độc quyền dù hoàn toàn không trực tiếp sở hữu bất kỳ nhà máy gia công nào.",
+      "duration": 49.72,
+      "startTime": 221.83,
+      "endTime": 271.55,
+      "audioUrl": "/audio/lectures/geography/9_2/nike_hq.mp3"
+    },
+    {
+      "id": "nike_factories",
+      "title": "Chuỗi cung ứng Nike: Nhà máy gia công (Việt Nam & Trung Quốc)",
+      "selector": "#node-nike-factories",
+      "en": "Nike Subcontracted Factories in Vietnam and China: Nike outsources 100 percent of shoe and apparel assembly to independent supplier factories in developing Asian nations. This spatial separation exploits competitive labor costs, tax holidays in Export Processing Zones, and flexible workforces. It generates vital industrial wages and export revenues for host countries, but historically faced scrutiny regarding worker overtime and shop-floor conditions.",
+      "vi": "Nhà máy gia công hợp đồng của Nike tại Việt Nam và Trung Quốc: Nike thuê ngoài một trăm phần trăm công đoạn may và lắp ráp giày cho các nhà máy đối tác độc lập tại châu Á. Chiến lược phân tán không gian này nhằm tận dụng chi phí nhân công cạnh tranh, các ưu đãi thuế tại khu chế xuất và nguồn lao động dồi dào. Mô hình này mang lại thu nhập công nghiệp và kim ngạch xuất khẩu quan trọng cho các nước tiếp nhận, dù từng đối mặt với nhiều giám sát về điều kiện làm việc và giờ làm thêm của công nhân.",
+      "duration": 53.7,
+      "startTime": 271.55,
+      "endTime": 325.25,
+      "audioUrl": "/audio/lectures/geography/9_2/nike_factories.mp3"
+    },
+    {
+      "id": "nike_materials",
+      "title": "Chuỗi cung ứng Nike: Vùng nguyên liệu thô (Cao su & Da thuộc)",
+      "selector": "#node-nike-materials",
+      "en": "Raw Material Sourcing: Rubber plantations in Southeast Asia, petroleum-derived synthetic polymers in Taiwan, and leather tanneries in Brazil supply specialized components to Nike's assembly plants. Raw material prices represent only a minuscule fraction—typically under 5 percent—of the final retail shoe price, illustrating unequal terms of trade between primary commodity suppliers and brand-holding corporations.",
+      "vi": "Cung ứng nguyên liệu thô của Nike: Các đồn điền cao su ở Đông Nam Á, polyme nhân tạo gốc dầu mỏ từ Đài Loan và xưởng da thuộc ở Brazil cung cấp linh kiện chuyên biệt tới các nhà máy lắp ráp. Giá trị nguyên liệu thô chỉ chiếm một tỷ lệ rất nhỏ, thường dưới năm phần trăm giá bán lẻ cuối cùng của một đôi giày, minh chứng cho sự bất bình đẳng trong chuỗi giá trị giữa các nhà cung cấp sơ cấp và các tập đoàn sở hữu thương hiệu.",
+      "duration": 48.26,
+      "startTime": 325.25,
+      "endTime": 373.51,
+      "audioUrl": "/audio/lectures/geography/9_2/nike_materials.mp3"
+    },
+    {
+      "id": "nike_sales",
+      "title": "Chuỗi cung ứng Nike: Thị trường bán lẻ toàn cầu (Bắc Mỹ, Châu Âu, Châu Á)",
+      "selector": "#node-nike-sales",
+      "en": "Global Retail & Digital Distribution: Finished footwear is shipped via high-capacity container vessels through mega-ports like Singapore and Rotterdam to flagship retail hubs in North America, Western Europe, and rapidly growing consumer markets in Asia. Massive corporate advertising campaigns featuring elite athlete endorsements allow Nike to sell shoes for well over 100 dollars that cost merely a few dollars to physically assemble.",
+      "vi": "Thị trường phân phối và bán lẻ toàn cầu của Nike: Giày hoàn thiện được vận chuyển bằng các tàu container sức chở lớn qua các siêu cảng biển như Singapore và Rotterdam tới các trung tâm bán lẻ tại Bắc Mỹ, Tây Âu và thị trường tiêu dùng đang bùng nổ ở châu Á. Các chiến dịch quảng cáo trị giá hàng tỷ đô la gắn với các vận động viên ngôi sao cho phép Nike bán một đôi giày với giá hơn một trăm đô la dù chi phí nhân công trực tiếp lắp ráp chỉ tốn vài đô la.",
+      "duration": 48.11,
+      "startTime": 373.51,
+      "endTime": 421.62,
+      "audioUrl": "/audio/lectures/geography/9_2/nike_sales.mp3"
+    },
+    {
       "id": "sec_tnc_impacts",
       "title": "4. Tác động đa chiều của các tập đoàn TNC",
       "selector": "#sec-tnc-impacts",
       "en": "Section 4 critically balances TNC impacts: host countries gain formal manufacturing jobs, foreign currency, and infrastructure upgrades, but risk economic leakage of profits back to Western headquarters, sweatshop working conditions, and environmental pollution.",
       "vi": "Mục bốn đánh giá khách quan các tác động đa chiều của TNC: các nước tiếp nhận có thêm hàng triệu việc làm công nghiệp, nguồn thu ngoại tệ và cơ sở hạ tầng, nhưng đối mặt nguy cơ chảy máu lợi nhuận về các công ty mẹ ở phương Tây, điều kiện lao động áp lực và ô nhiễm môi trường.",
       "duration": 32.01,
-      "startTime": 221.83,
-      "endTime": 253.84,
+      "startTime": 421.62,
+      "endTime": 453.63,
       "audioUrl": "/audio/lectures/geography/9_2/sec_tnc_impacts.mp3"
     },
     {
@@ -121,8 +165,8 @@
       "en": "This comparative summary provides essential balance for Cambridge exams: contrasting employment generation and technology transfer against footloose mobility, tax avoidance, and environmental exploitation.",
       "vi": "Bảng tổng hợp đối chiếu này cung cấp góc nhìn cân bằng cốt lõi cho kỳ thi Cambridge: so sánh giữa tạo việc làm và chuyển giao công nghệ với tính chất doanh nghiệp dễ dịch chuyển footloose, né tránh thuế và khai thác kiệt quệ tài nguyên môi trường.",
       "duration": 25.24,
-      "startTime": 253.84,
-      "endTime": 279.08,
+      "startTime": 453.63,
+      "endTime": 478.87,
       "audioUrl": "/audio/lectures/geography/9_2/tnc_impacts_list.mp3"
     }
   ]

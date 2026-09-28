@@ -1,35 +1,38 @@
 {
   "lectureId": "96d7f427-3b6d-43e3-84dc-f8f052f20033",
   "courseTitle": "IGCSE Geography (0460)",
-  "lectureTitle": "10.3 The Challenges of Food Supply: Insecurity & Solutions",
-  "totalDuration": 250.26,
-  "majorSections": [
-    {
-      "id": "sec_food_security",
-      "title": "1. Khái niệm An ninh Lương thực",
-      "startSegmentId": "sec_food_security"
+  "lectureTitle": "10.3 The Challenges of Food Supply: Food Insecurity & Solutions",
+  "totalDuration": 483.62,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_insecurity_hotspots",
-      "title": "2. Điểm nóng & Tranh luận Malthus - Boserup",
-      "startSegmentId": "sec_insecurity_hotspots"
+    "sec_food_security": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_nigeria_crisis",
-      "title": "3. Nghiên cứu tình huống: Nigeria",
-      "startSegmentId": "sec_nigeria_crisis"
+    "sec_insecurity_hotspots": {
+      "start": 2,
+      "end": 7
     },
-    {
-      "id": "sec_sustainable_food",
-      "title": "4. Chiến lược bền vững & Tưới tiêu",
-      "startSegmentId": "sec_sustainable_food"
+    "card_malthus_boserup": {
+      "start": 8,
+      "end": 8
     },
-    {
-      "id": "card_exam_strategy",
-      "title": "Chiến lược làm bài thi",
-      "startSegmentId": "exam_strategy"
+    "sec_nigeria_crisis": {
+      "start": 9,
+      "end": 9
+    },
+    "sec_sustainable_food": {
+      "start": 10,
+      "end": 10
+    },
+    "card_exam_strategy": {
+      "start": 11,
+      "end": 11
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -65,14 +68,69 @@
       "audioUrl": "/audio/lectures/geography/10_3/sec_insecurity_hotspots.mp3"
     },
     {
+      "id": "hunger_nigeria",
+      "title": "Điểm nóng mất an ninh lương thực: Nigeria (Xung đột & lạm phát)",
+      "selector": "#pin-hunger-nigeria",
+      "en": "Nigeria Food Crisis: A complex humanitarian emergency driven by armed conflict and macroeconomic shocks. In Borno state, Boko Haram attacks displaced over two million farmers from fertile croplands. Desertification pushes Fulani pastoralists southward into violent clash with crop farmers, while currency devaluation tripled the price of imported fertilizers.",
+      "vi": "Khủng hoảng lương thực tại Nigeria: Tình trạng khẩn cấp nhân đạo phức tạp bắt nguồn từ xung đột vũ trang và các cú sốc kinh tế vĩ mô. Tại bang Borno, các cuộc tấn công của nhóm khủng bố Boko Haram đã buộc hơn hai triệu nông dân phải bỏ hoang đồng ruộng màu mỡ. Quá trình sa mạc hóa đẩy người du mục chăn thả Fulani xuống phía nam gây xung đột đẫm máu với nông dân trồng trọt, trong khi đồng nội tệ mất giá đã làm tăng gấp ba chi phí phân bón nhập khẩu.",
+      "duration": 49.34,
+      "startTime": 115.59,
+      "endTime": 164.93,
+      "audioUrl": "/audio/lectures/geography/10_3/hunger_nigeria.mp3"
+    },
+    {
+      "id": "hunger_haiti",
+      "title": "Điểm nóng mất an ninh lương thực: Haiti (Thiên tai & nghịch lý viện trợ)",
+      "selector": "#pin-hunger-haiti",
+      "en": "Haiti Hazard Vulnerability & Aid Dilemma: Consecutive disasters—including the devastating 2010 earthquake and Hurricane Matthew—wrecked rural irrigation infrastructure. While emergency international food shipments save lives during famines, prolonged dumping of subsidized foreign rice undercut local peasant farmers, bankrupting domestic agriculture and worsening chronic dependence.",
+      "vi": "Điểm nóng thiên tai và nghịch lý viện trợ tại Haiti: Những thảm họa liên tiếp gồm trận động đất kinh hoàng năm 2010 và bão Matthew đã phá hủy hoàn toàn hệ thống kênh mương tưới tiêu nông thôn. Mặc dù hàng cứu trợ lương thực khẩn cấp quốc tế giúp cứu sống hàng triệu người lúc đói kém, nhưng việc viện trợ gạo ngoại giá rẻ kéo dài đã bóp chết nông dân bản địa, phá hủy nền sản xuất nông nghiệp trong nước và làm trầm trọng thêm sự lệ thuộc.",
+      "duration": 46.26,
+      "startTime": 164.93,
+      "endTime": 211.19,
+      "audioUrl": "/audio/lectures/geography/10_3/hunger_haiti.mp3"
+    },
+    {
+      "id": "hunger_peru",
+      "title": "Điểm nóng thích ứng lương thực: Peru (Bậc thang Andes & bản địa)",
+      "selector": "#pin-hunger-peru",
+      "en": "Peru Andean Terracing and Indigenous Adaptation: Smallholder mountain farmers in the Andes preserve centuries-old Incan stone terraces known as andenes. Terraces convert steep, erosion-prone mountain slopes into stable agricultural platforms, and dark stone retaining walls absorb solar heat during high-altitude days to protect potato and quinoa crops from freezing nighttime frosts.",
+      "vi": "Thích ứng bản địa vùng núi Andes Peru: Nông dân miền núi Peru duy trì các bậc thang đá hàng trăm năm tuổi của nền văn minh Inca được gọi là andenes. Ruộng bậc thang biến các sườn dốc dễ xói mòn thành các thềm canh tác ổn định, đồng thời các bức tường đá tối màu hấp thụ nhiệt mặt trời vào ban ngày để sưởi ấm bảo vệ cây khoai tây và hạt diêm mạch khỏi sương giá băng giá ban đêm.",
+      "duration": 44.58,
+      "startTime": 211.19,
+      "endTime": 255.77,
+      "audioUrl": "/audio/lectures/geography/10_3/hunger_peru.mp3"
+    },
+    {
+      "id": "hunger_spain",
+      "title": "Điểm nóng quản lý nước: Tây Ban Nha (Tưới chính xác & nhiễm mặn)",
+      "selector": "#pin-hunger-spain",
+      "en": "Spain Precision Irrigation and Soil Salinisation: In arid southern Spain, traditional furrow and excessive spray irrigation caused severe water table rise and rapid surface evaporation, leaving toxic salt crusts that sterilize productive soils. Farmers are now adopting computer-controlled subsurface drip systems and treated wastewater reuse to conserve water without inducing salinisation.",
+      "vi": "Tưới tiêu chính xác và chống mặn hóa đất tại Tây Ban Nha: Tại miền nam khô hạn của Tây Ban Nha, kỹ thuật tưới tràn và tưới phun quá mức từng làm mực nước ngầm dâng cao và bốc hơi cực nhanh, để lại các lớp muối độc làm chai cứng đất trồng. Hiện nay nông dân đang chuyển đổi sang hệ thống tưới nhỏ giọt ngầm dưới rễ điều khiển bằng máy tính và tái sử dụng nước thải đã qua xử lý nhằm bảo tồn nguồn nước mà không gây mặn hóa đất.",
+      "duration": 46.34,
+      "startTime": 255.77,
+      "endTime": 302.11,
+      "audioUrl": "/audio/lectures/geography/10_3/hunger_spain.mp3"
+    },
+    {
+      "id": "hunger_vietnam",
+      "title": "Điểm nóng an ninh lương thực: Việt Nam (Đồng bằng sông Cửu Long & xâm nhập mặn)",
+      "selector": "#pin-hunger-vietnam",
+      "en": "Vietnam Mekong Delta Rice Security: The Mekong Delta produces over 50 percent of Vietnam's national rice output and 90 percent of rice exports. However, upstream hydropower dams holding back freshwater combined with rising sea levels cause sea salinity to penetrate up to 70 kilometers inland during dry seasons, driving farmers to rotate seasonal rice with brackish-water shrimp aquaculture.",
+      "vi": "An ninh lương thực Đồng bằng sông Cửu Long Việt Nam: Vựa lúa này cung cấp hơn năm mươi phần trăm tổng sản lượng lúa cả nước và chín mươi phần trăm lượng gạo xuất khẩu của Việt Nam. Tuy nhiên, các đập thủy điện thượng nguồn giữ nước ngọt kết hợp với biến đổi khí hậu nước biển dâng khiến xâm nhập mặn lấn sâu tới bảy mươi ki-lô-mét vào nội đồng trong mùa khô, buộc nông dân phải thích ứng bằng mô hình luân canh một vụ lúa một vụ tôm nước lợ.",
+      "duration": 46.84,
+      "startTime": 302.11,
+      "endTime": 348.95,
+      "audioUrl": "/audio/lectures/geography/10_3/hunger_vietnam.mp3"
+    },
+    {
       "id": "malthus_boserup",
       "title": "Tranh luận lý thuyết: Thomas Malthus đối đầu Ester Boserup",
       "selector": "#card-malthus-boserup",
       "en": "This card contrasts Thomas Malthus's pessimistic thesis that arithmetic food growth cannot support exponential population growth leading to inevitable famine checks, against Ester Boserup's optimistic model where population pressure acts as an indispensable catalyst driving agricultural technological innovation.",
       "vi": "Mục này đối chiếu quan điểm bi quan của Thomas Malthus rằng sản lượng lương thực tăng theo cấp số cộng không thể bắt kịp dân số tăng theo cấp số nhân dẫn tới nạn đói thảm khốc không thể tránh khỏi, với mô hình lạc quan của Ester Boserup cho rằng áp lực dân số chính là chất xúc tác bắt buộc thúc đẩy đổi mới công nghệ nông nghiệp.",
       "duration": 33.83,
-      "startTime": 115.59,
-      "endTime": 149.42,
+      "startTime": 348.95,
+      "endTime": 382.78,
       "audioUrl": "/audio/lectures/geography/10_3/malthus_boserup.mp3"
     },
     {
@@ -82,8 +140,8 @@
       "en": "Section 3 examines Nigeria, Africa's most populous nation with over 220 million people. Despite abundant arable land, Nigeria faces acute food insecurity driven by Boko Haram insurgencies displacing northern farmers, desertification encroaching south, and extreme food inflation.",
       "vi": "Mục ba nghiên cứu Nigeria, quốc gia đông dân nhất châu Phi với hơn hai trăm hai mươi triệu người. Dù sở hữu quỹ đất canh tác màu mỡ dồi dào, Nigeria đối mặt với nạn mất an ninh lương thực gay gắt do phiến quân Boko Haram làm gián đoạn mùa màng ở miền bắc, sa mạc hóa xâm lấn xuống phía nam, cùng lạm phát giá lương thực phi mã.",
       "duration": 38.7,
-      "startTime": 149.42,
-      "endTime": 188.12,
+      "startTime": 382.78,
+      "endTime": 421.48,
       "audioUrl": "/audio/lectures/geography/10_3/sec_nigeria_crisis.mp3"
     },
     {
@@ -93,8 +151,8 @@
       "en": "Section 4 highlights physical and technological remediation: contour plowing and hillside terracing to prevent topsoil gullying, shelterbelt windbreaks to halt desert encroachment, and precision drip irrigation that delivers micro-doses of water directly to plant roots with zero evaporative loss.",
       "vi": "Mục bốn nêu bật các giải pháp công nghệ và canh tác bền vững: cày rãnh theo đường đồng mức và làm ruộng bậc thang chống xói mòn rửa trôi tầng đất mặt, trồng đai rừng chắn gió chặn đứng sa mạc hóa, cùng hệ thống tưới nhỏ giọt chính xác đưa từng giọt nước dinh dưỡng tới tận rễ cây mà không bị bốc hơi lãng phí.",
       "duration": 32.58,
-      "startTime": 188.12,
-      "endTime": 220.7,
+      "startTime": 421.48,
+      "endTime": 454.06,
       "audioUrl": "/audio/lectures/geography/10_3/sec_sustainable_food.mp3"
     },
     {
@@ -104,8 +162,8 @@
       "en": "For 7-mark case study questions on food shortages, always balance physical causes like drought and locust swarms with human triggers like armed conflict and food hoarding, and evaluate both emergency food aid versus long-term soil conservation schemes.",
       "vi": "Trong các câu hỏi tình huống bảy điểm về khan hiếm lương thực, các em hãy luôn cân bằng giữa nguyên nhân tự nhiên như hạn hán dịch châu chấu với nguyên nhân nhân tạo như xung đột vũ trang và găm hàng đầu cơ, đồng thời đánh giá cả cứu trợ lương thực khẩn cấp lẫn các chương trình bảo tồn đất dài hạn.",
       "duration": 29.56,
-      "startTime": 220.7,
-      "endTime": 250.26,
+      "startTime": 454.06,
+      "endTime": 483.62,
       "audioUrl": "/audio/lectures/geography/10_3/exam_strategy.mp3"
     }
   ]

@@ -1,30 +1,30 @@
 {
   "lectureId": "199a26cd-1226-4ff7-b063-f7df7fa7b5ba",
   "courseTitle": "IGCSE Geography (0460)",
-  "lectureTitle": "10.4 How Our Energy is Produced: Sources & Systems",
-  "totalDuration": 205.6,
-  "majorSections": [
-    {
-      "id": "sec_energy_taxonomy",
-      "title": "1. Phân loại năng lượng sơ cấp & thứ cấp",
-      "startSegmentId": "sec_energy_taxonomy"
+  "lectureTitle": "10.4 How Our Energy is Produced: Energy Mix & Systems",
+  "totalDuration": 391.01,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
     },
-    {
-      "id": "sec_fuelwood_crisis",
-      "title": "2. Khủng hoảng củi đốt & Nghèo năng lượng",
-      "startSegmentId": "sec_fuelwood_crisis"
+    "sec_energy_taxonomy": {
+      "start": 1,
+      "end": 1
     },
-    {
-      "id": "sec_energy_ladder",
-      "title": "3. Thang năng lượng & Chuyển dịch xanh",
-      "startSegmentId": "sec_energy_ladder"
+    "sec_fuelwood_crisis": {
+      "start": 2,
+      "end": 2
     },
-    {
-      "id": "card_exam_strategy",
-      "title": "Chiến lược làm bài thi",
-      "startSegmentId": "exam_strategy"
+    "sec_energy_ladder": {
+      "start": 3,
+      "end": 7
+    },
+    "card_exam_strategy": {
+      "start": 8,
+      "end": 8
     }
-  ],
+  },
   "segments": [
     {
       "id": "intro",
@@ -71,14 +71,58 @@
       "audioUrl": "/audio/lectures/geography/10_4/sec_energy_ladder.mp3"
     },
     {
+      "id": "ladder_biomass",
+      "title": "Nấc thang năng lượng: Bậc 1 - Sinh khối truyền thống",
+      "selector": "#rung-biomass",
+      "en": "Energy Ladder Rung 1: Traditional Biomass, including fuelwood, animal dung, and agricultural waste. Predominantly used by over 2.5 billion people in rural low-income countries. While free to gather in nature, it carries immense labor opportunity costs for women and children, delivers under 10 percent thermal efficiency, and produces toxic indoor smoke causing acute respiratory diseases and childhood pneumonia.",
+      "vi": "Bậc một trên thang năng lượng: Sinh khối truyền thống, bao gồm củi đốt, phân gia súc và phế phẩm nông nghiệp. Đây là nguồn năng lượng chính của hơn hai tỷ rưỡi người dân tại các vùng nông thôn nghèo. Dù có thể nhặt tự do trong tự nhiên nhưng nó cướp đi lượng lớn thời gian lao động học tập của phụ nữ và trẻ em, hiệu suất nhiệt chỉ đạt dưới mười phần trăm và khói độc trong nhà gây ra các bệnh hô hấp cấp tính và viêm phổi ở trẻ nhỏ.",
+      "duration": 50.8,
+      "startTime": 171.62,
+      "endTime": 222.42,
+      "audioUrl": "/audio/lectures/geography/10_4/ladder_biomass.mp3"
+    },
+    {
+      "id": "ladder_transition",
+      "title": "Nấc thang năng lượng: Bậc 2 - Nhiên liệu chuyển tiếp (Than củi, dầu hỏa)",
+      "selector": "#rung-transition",
+      "en": "Energy Ladder Rung 2: Transition Fuels, comprising charcoal, kerosene, and coal briquettes. Common in rapidly urbanizing informal settlements. Charcoal offers 20 to 30 percent thermal efficiency and less direct smoke, but traditional earth-kiln production loses 80 percent of original wood energy, accelerating severe deforestation around expanding peri-urban zones.",
+      "vi": "Bậc hai trên thang năng lượng: Nhiên liệu chuyển tiếp, bao gồm than củi, dầu hỏa và than bánh. Phổ biến tại các khu ổ chuột đang đô thị hóa nhanh chóng. Than củi cho hiệu suất nhiệt hai mươi đến ba mươi phần trăm và ít khói trực tiếp hơn, nhưng các lò hầm đất truyền thống làm thất thoát tới tám mươi phần trăm năng lượng của gỗ, đẩy nhanh nạn phá rừng quanh các vùng ven đô.",
+      "duration": 45.71,
+      "startTime": 222.42,
+      "endTime": 268.13,
+      "audioUrl": "/audio/lectures/geography/10_4/ladder_transition.mp3"
+    },
+    {
+      "id": "ladder_grid",
+      "title": "Nấc thang năng lượng: Bậc 3 - Lưới điện tập trung & Khí dầu mỏ hóa lỏng (LPG)",
+      "selector": "#rung-grid",
+      "en": "Energy Ladder Rung 3: Centralized Grid Electricity and Liquefied Petroleum Gas (LPG). Characterized by high connection fees and recurring utility bills, it delivers clean, instantaneous heat at 50 to 60 percent efficiency with zero indoor air pollution, transforming household productivity, though power generation relies predominantly on central fossil fuel plants.",
+      "vi": "Bậc ba trên thang năng lượng: Lưới điện quốc gia tập trung và Khí dầu mỏ hóa lỏng LPG. Dù đòi hỏi phí đấu nối ban đầu và hóa đơn tiền điện hàng tháng, hệ thống mang lại nguồn nhiệt sạch tiện lợi tức thì với hiệu suất năm mươi đến sáu mươi phần trăm và không gây ô nhiễm không khí trong nhà, giúp nâng cao năng suất gia đình dù việc phát điện vẫn dựa chủ yếu vào nhiên liệu hóa thạch.",
+      "duration": 44.08,
+      "startTime": 268.13,
+      "endTime": 312.21,
+      "audioUrl": "/audio/lectures/geography/10_4/ladder_grid.mp3"
+    },
+    {
+      "id": "ladder_renewables",
+      "title": "Nấc thang năng lượng: Bậc 4 - Năng lượng tái tạo sạch phi tập trung",
+      "selector": "#rung-renewables",
+      "en": "Energy Ladder Rung 4: Zero-Carbon Clean Renewables and Microgrids. Comprising rooftop solar photovoltaics, micro-hydro turbines, and advanced battery storage. This summit of the ladder eliminates transmission losses and allows developing rural communities to leapfrog expensive fossil fuel power plants directly into clean, resilient energy autonomy.",
+      "vi": "Bậc bốn trên thang năng lượng: Năng lượng tái tạo sạch phi tập trung và lưới điện vi mô. Bao gồm các tấm pin mặt trời mái nhà, tuabin thủy điện nhỏ và hệ thống pin lưu trữ hiện đại. Đỉnh cao của thang năng lượng này loại bỏ hoàn toàn tổn thất đường truyền và cho phép các cộng đồng nông thôn nhảy cóc qua giai đoạn nhà máy điện hóa thạch đắt đỏ để tiến thẳng tới tự chủ năng lượng sạch bền vững.",
+      "duration": 44.82,
+      "startTime": 312.21,
+      "endTime": 357.03,
+      "audioUrl": "/audio/lectures/geography/10_4/ladder_renewables.mp3"
+    },
+    {
       "id": "exam_strategy",
       "title": "Chiến lược thi cử Cambridge IGCSE: Chủ đề 10.4",
       "selector": "#card-exam-strategy",
       "en": "In exam questions on energy supply, always provide precise technical classifications: clearly separate non-renewable exhaustible fossil fuels like coal from infinite renewable flows like geothermal, and explain the physical-geographical conditions required to site hydroelectric dams or offshore wind arrays.",
       "vi": "Trong các câu hỏi thi về nguồn cung năng lượng, các em hãy luôn phân loại kỹ thuật chính xác: tách bạch nhiên liệu hóa thạch hữu hạn không thể tái sinh với các dòng năng lượng vô tận như địa nhiệt, đồng thời giải thích rõ các điều kiện địa lý tự nhiên cần thiết để lựa chọn địa điểm xây đập thủy điện hoặc trang trại điện gió ngoài khơi.",
       "duration": 33.98,
-      "startTime": 171.62,
-      "endTime": 205.6,
+      "startTime": 357.03,
+      "endTime": 391.01,
       "audioUrl": "/audio/lectures/geography/10_4/exam_strategy.mp3"
     }
   ]
