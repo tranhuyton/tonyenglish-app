@@ -1073,7 +1073,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               pre { padding: 0.75rem; font-size: 0.8rem; }
           }
           
-          #content-wrapper { display: flow-root; width: 100%; padding-top: 24px; padding-bottom: 2rem; }
+          #content-wrapper { display: flow-root; width: 100%; padding: 24px 14px 2rem 14px; box-sizing: border-box; }
           .audi { display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
           #lib_content { width: 100% !important; max-width: 960px !important; margin: 0 auto !important; box-sizing: border-box !important; }
           .audiolink a, [data-word] {
@@ -1088,12 +1088,14 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
 
           /* Interactive Lecture Highlight */
           .active-lecture-highlight {
-              outline: 3.5px solid #0284c7 !important;
+              outline: 3px solid #0284c7 !important;
+              outline-offset: -2px !important;
               box-shadow: 0 0 25px rgba(2, 132, 199, 0.45) !important;
               border-radius: 12px !important;
               background-color: #f0f9ff !important;
               transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
               position: relative !important;
+              box-sizing: border-box !important;
           }
           .active-lecture-highlight::before {
               content: "🎙️ Đang giảng...";

@@ -1,0 +1,228 @@
+{
+  "lectureId": "b0ca05f2-dab3-4223-9c25-c92d73df56c1",
+  "courseTitle": "IGCSE-Geography-0460",
+  "lectureTitle": "2.2 The main landforms associated with these processes",
+  "totalDuration": 441.53,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_coastline_types": {
+      "start": 1,
+      "end": 4
+    },
+    "sec_erosional_landforms": {
+      "start": 5,
+      "end": 12
+    },
+    "sec_depositional_landforms": {
+      "start": 13,
+      "end": 16
+    },
+    "summary_table": {
+      "start": 17,
+      "end": 17
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.2",
+      "selector": "#sec-header",
+      "en": "Lesson 2.2: The main landforms associated with coastal processes. In this lesson, we explore how marine erosion and deposition sculpt distinctive coastal features.",
+      "vi": "Bài hai chấm hai: Các dạng địa hình chính gắn liền với các quá trình bờ biển. Trong bài học này, chúng ta sẽ tìm hiểu cách xói mòn và bồi tụ biển kiến tạo nên các dạng địa hình ven biển độc đáo.",
+      "duration": 23.78,
+      "audioUrl": "/audio/lectures/geography/2_2/intro.mp3",
+      "startTime": 0.0,
+      "endTime": 23.78
+    },
+    {
+      "id": "sec_coastline_types",
+      "title": "Bờ biển Thuận và Nghịch (Concordant & Discordant)",
+      "selector": "#sec-coastline-types",
+      "en": "Section 1: Concordant and Discordant Coastlines. Geological alignment relative to the incoming waves dictates the formation of bays and headlands.",
+      "vi": "Phần một: Bờ biển Thuận và Bờ biển Nghịch. Sự sắp xếp của các tầng đá so với hướng sóng tới quyết định sự hình thành của các vịnh và mũi đất.",
+      "duration": 19.34,
+      "audioUrl": "/audio/lectures/geography/2_2/sec_coastline_types.mp3",
+      "startTime": 23.78,
+      "endTime": 43.12
+    },
+    {
+      "id": "coast_discordant",
+      "title": "Đặc điểm Bờ biển Nghịch (Discordant)",
+      "selector": "#card-coast-discordant",
+      "en": "Discordant Coastlines. Alternating bands of hard and soft rock run perpendicular to the coast. Differential erosion scours soft clays into sheltered bays, while resistant rocks project seaward as headlands.",
+      "vi": "Bờ biển Nghịch. Các dải đá cứng và đá mềm nằm xen kẽ vuông góc với đường bờ biển. Hiện tượng xói mòn chênh lệch bào mòn các tầng đá mềm tạo thành các vịnh kín gió, trong khi các khối đá cứng nhô ra biển thành các mũi đất.",
+      "duration": 28.17,
+      "audioUrl": "/audio/lectures/geography/2_2/coast_discordant.mp3",
+      "startTime": 43.12,
+      "endTime": 71.29
+    },
+    {
+      "id": "coast_concordant",
+      "title": "Đặc điểm Bờ biển Thuận (Concordant)",
+      "selector": "#card-coast-concordant",
+      "en": "Concordant Coastlines. Rock strata run parallel to the shore. A single resistant outer rock barrier produces a uniform coastline until wave breaches hollow out coves behind.",
+      "vi": "Bờ biển Thuận. Các tầng đá chạy song song với đường bờ biển. Lớp đá cứng ngoài cùng tạo nên một đường bờ thẳng và đồng nhất cho đến khi sóng biển chọc thủng để khoét sâu các vịnh nhỏ phía sau.",
+      "duration": 24.95,
+      "audioUrl": "/audio/lectures/geography/2_2/coast_concordant.mp3",
+      "startTime": 71.29,
+      "endTime": 96.24
+    },
+    {
+      "id": "headlands_bays_figs",
+      "title": "Khúc xạ sóng tại Mũi đất & Vịnh biển (Figures 2.9 & 2.10)",
+      "selector": "#card-headlands-bays-figs",
+      "en": "Headlands and Bays in Action. Wave refraction focuses destructive energy on protruding headlands, while dispersing constructive energy within bays to accumulate sandy beaches.",
+      "vi": "Hiện tượng Khúc xạ sóng tại Mũi đất và Vịnh biển. Sự khúc xạ sóng hội tụ năng lượng phá hủy vào các mũi đất nhô ra ngoài, đồng thời phân tán năng lượng trong lòng vịnh giúp bồi lắng các bãi cát êm đềm.",
+      "duration": 23.46,
+      "audioUrl": "/audio/lectures/geography/2_2/headlands_bays_figs.mp3",
+      "startTime": 96.24,
+      "endTime": 119.7
+    },
+    {
+      "id": "sec_erosional_landforms",
+      "title": "Địa hình Xói mòn (Cliffs, Caves, Arches, Stacks)",
+      "selector": "#sec-erosional-landforms",
+      "en": "Section 2: Coastal Erosional Landforms. Relentless marine erosion cuts cliffs, hollows out caves, carves sea arches, and leaves isolated stacks.",
+      "vi": "Phần hai: Các dạng địa hình xói mòn bờ biển. Sức công phá không ngừng của sóng biển tạo nên vách đá, khoét sâu hang luồn, đục rỗng cổng vòm đá và để lại các cột đá cô độc giữa biển.",
+      "duration": 23.73,
+      "audioUrl": "/audio/lectures/geography/2_2/sec_erosional_landforms.mp3",
+      "startTime": 119.7,
+      "endTime": 143.43
+    },
+    {
+      "id": "erosion_scene",
+      "title": "Toàn cảnh Chuỗi tiến hóa bờ biển",
+      "selector": "#card-erosion-scene",
+      "en": "Interactive Coastal Progression. As waves exploit fault weaknesses, a crack expands into a cave, breaches into an arch, collapses into a stack, and degrades into a stump.",
+      "vi": "Toàn cảnh chuỗi tiến hóa bờ biển. Khi sóng biển khai thác các vết nứt đứt gãy, vết nứt mở rộng thành hang biển, khoét thủng thành vòm đá, sập vòm tạo cột đá và cuối cùng bị bào mòn thành mỏm đá ngầm.",
+      "duration": 24.76,
+      "audioUrl": "/audio/lectures/geography/2_2/erosion_scene.mp3",
+      "startTime": 143.43,
+      "endTime": 168.19
+    },
+    {
+      "id": "feat_cliff",
+      "title": "Vách đá & Thềm mài mòn (Cliffs & Wave-cut Platforms)",
+      "selector": "#feat-cliff",
+      "en": "Cliffs and Wave-Cut Platforms. Waves notch the cliff base at high tide. The unsupported cliff face shears off and retreats inland, leaving a gently sloping wave-cut platform exposed at low tide.",
+      "vi": "Vách đá và Thềm mài mòn. Sóng biển khoét hàm ếch dưới chân vách đá lúc triều dâng. Vách đá mất chân trụ sụp đổ và lùi dần vào đất liền, để lại một thềm đá mài mòn thoai thoải lộ ra khi triều rút.",
+      "duration": 27.04,
+      "audioUrl": "/audio/lectures/geography/2_2/feat_cliff.mp3",
+      "startTime": 168.19,
+      "endTime": 195.23
+    },
+    {
+      "id": "feat_cave",
+      "title": "Hang biển (Sea Caves)",
+      "selector": "#feat-cave",
+      "en": "Sea Caves. Hydraulic pressure and abrasive scour force open structural joints and faults on exposed headlands, excavating deep hollowed chambers within the rock face.",
+      "vi": "Hang biển. Áp lực thủy lực và sự mài mòn liên tục mở rộng các khe nứt và đứt gãy trên các mũi đất, khoét sâu vào lòng đá tạo thành các hang động ngầm ven biển.",
+      "duration": 21.06,
+      "audioUrl": "/audio/lectures/geography/2_2/feat_cave.mp3",
+      "startTime": 195.23,
+      "endTime": 216.29
+    },
+    {
+      "id": "feat_arch",
+      "title": "Cổng vòm đá tự nhiên (Natural Arches)",
+      "selector": "#feat-arch",
+      "en": "Natural Arches. When opposing sea caves on either side of a headland erode backward and merge, a daylight arch is pierced, celebrated by Durdle Door on the Dorset coast.",
+      "vi": "Cổng vòm đá tự nhiên. Khi hai hang biển ở hai bên sườn mũi đất khoét sâu dần và thông vào nhau, một chiếc cổng vòm tự nhiên lộ thiên được tạo thành, tiêu biểu là cổng vòm đá Đơ-đô Đoa ở bờ biển Đô-sét nước Anh.",
+      "duration": 24.33,
+      "audioUrl": "/audio/lectures/geography/2_2/feat_arch.mp3",
+      "startTime": 216.29,
+      "endTime": 240.62
+    },
+    {
+      "id": "feat_stack",
+      "title": "Cột đá biển (Sea Stacks)",
+      "selector": "#feat-stack",
+      "en": "Sea Stacks. Aerial weathering weakens the roof of a coastal arch until gravitational collapse severs the arch, leaving a dramatic freestanding pillar known as a sea stack.",
+      "vi": "Cột đá biển hay Tháp đá. Phong hóa khí quyển làm suy yếu mái vòm đá cho đến khi mái sụp đổ xuống biển, để lại một cột đá dựng đứng sừng sững trơ trọi giữa đại dương.",
+      "duration": 21.5,
+      "audioUrl": "/audio/lectures/geography/2_2/feat_stack.mp3",
+      "startTime": 240.62,
+      "endTime": 262.12
+    },
+    {
+      "id": "feat_stump",
+      "title": "Mỏm đá ngầm (Stumps)",
+      "selector": "#feat-stump",
+      "en": "Stumps. Unrelenting base attack by breaking waves causes the sea stack to topple. Continued subaerial weathering reduces the remnants to a low stump submerged at high tide.",
+      "vi": "Mỏm đá ngầm. Chân cột đá tiếp tục bị sóng đánh bào mòn khiến cột đá đổ sụp. Quá trình phong hóa dần san phẳng tàn tích này thành một mỏm đá cụt thấp chỉ lộ ra khi thủy triều rút xuống.",
+      "duration": 24.21,
+      "audioUrl": "/audio/lectures/geography/2_2/feat_stump.mp3",
+      "startTime": 262.12,
+      "endTime": 286.33
+    },
+    {
+      "id": "caves_arches_figs",
+      "title": "Trình tự Hang - Vòm - Cột - Mỏm (Figures 2.11 & 2.12)",
+      "selector": "#card-caves-arches-figs",
+      "en": "The Erosional Headland Cycle. Figures 2.11 and 2.12 depict the evolutionary sequence from initial micro-fissure to majestic arch and solitary stack.",
+      "vi": "Chu trình tiến hóa xói mòn mũi đất. Hình hai chấm mười một và hai chấm mười hai minh họa toàn bộ trình tự tiến hóa tuần tự từ khe nứt vi mô ban đầu đến cổng vòm đá tráng lệ và cột đá cô đơn.",
+      "duration": 22.58,
+      "audioUrl": "/audio/lectures/geography/2_2/caves_arches_figs.mp3",
+      "startTime": 286.33,
+      "endTime": 308.91
+    },
+    {
+      "id": "sec_depositional_landforms",
+      "title": "Địa hình Bồi tụ (Beaches, Spits & Dunes)",
+      "selector": "#sec-depositional-landforms",
+      "en": "Section 3: Depositional Coastal Landforms. Constructive swash and longshore drift amass sand and shingle into expansive beaches, spits, baymouth bars, and sand dunes.",
+      "vi": "Phần ba: Các dạng địa hình bồi tụ bờ biển. Sóng bồi tụ nhẹ nhàng và hiện tượng trôi dạt ven bờ tích tụ cát sỏi tạo nên các bãi biển mênh mông, mũi tên cát, bờ chắn cửa vịnh và đụn cát ven biển.",
+      "duration": 25.19,
+      "audioUrl": "/audio/lectures/geography/2_2/sec_depositional_landforms.mp3",
+      "startTime": 308.91,
+      "endTime": 334.1
+    },
+    {
+      "id": "feat_beach",
+      "title": "Cấu trúc Bãi biển (Beaches)",
+      "selector": "#feat-beach",
+      "en": "Beaches. Formed where constructive waves accumulate marine sediments along sheltered coastlines, divided into the backshore storm berms, intertidal foreshore, and nearshore zone.",
+      "vi": "Bãi biển. Hình thành nơi sóng bồi tụ bồi đắp cát sỏi dọc theo dải bờ biển kín gió, được chia thành bờ bãi cao đón bão, bãi triều lên xuống và vùng nước ven bờ.",
+      "duration": 22.5,
+      "audioUrl": "/audio/lectures/geography/2_2/feat_beach.mp3",
+      "startTime": 334.1,
+      "endTime": 356.6
+    },
+    {
+      "id": "spits_bars_tombolos",
+      "title": "Mũi tên cát, Bờ chắn vịnh & Doi cát nối đảo",
+      "selector": "#card-spits-bars-tombolos",
+      "en": "Spits, Bars, and Tombolos. Longshore drift extends sand ridges across estuaries to create spits with hooked recurved tips, seal bays into lagoons as bars, or tie islands to mainland as tombolos.",
+      "vi": "Mũi tên cát, Bờ chắn vịnh và Doi cát nối đảo. Trôi dạt ven bờ kéo dài dải cát qua các cửa sông tạo thành mũi tên cát có mũi uốn cong, bịt kín vịnh tạo thành đầm phá hoặc nối liền đảo với đất liền thành doi cát nối đảo.",
+      "duration": 27.9,
+      "audioUrl": "/audio/lectures/geography/2_2/spits_bars_tombolos.mp3",
+      "startTime": 356.6,
+      "endTime": 384.5
+    },
+    {
+      "id": "dunes_succession",
+      "title": "Đụn cát ven biển & Diễn thế thực vật",
+      "selector": "#card-dunes-succession",
+      "en": "Sand Dunes and Plant Succession. Onshore winds blow dry beach sand inland. Embryo dunes give way to yellow dunes colonized by marram grass, culminating in stabilized grey dunes rich in biodiversity.",
+      "vi": "Đụn cát ven biển và Diễn thế sinh thái. Gió từ biển thổi cát khô vào bờ. Các cồn cát phôi thai ban đầu dần phát triển thành cồn cát vàng có cỏ cát bám rễ, và cuối cùng tiến hóa thành cồn cát xám ổn định giàu thảm thực vật.",
+      "duration": 29.2,
+      "audioUrl": "/audio/lectures/geography/2_2/dunes_succession.mp3",
+      "startTime": 384.5,
+      "endTime": 413.7
+    },
+    {
+      "id": "summary_table",
+      "title": "Bảng tổng kết Địa hình bờ biển (Summary Table)",
+      "selector": "#sec-summary-table",
+      "en": "Coastal Landforms Summary. Differential erosion generates headlands, wave-cut platforms, arches, and stacks, whereas deposition forms sandy beaches, spits, tombolos, and coastal dunes.",
+      "vi": "Bảng tổng kết Địa hình bờ biển. Quá trình xói mòn chênh lệch tạo ra mũi đất, thềm mài mòn, cổng vòm và cột đá, trong khi quá trình bồi tụ kiến tạo nên bãi cát, mũi tên cát, doi cát nối đảo và đụn cát ven bờ.",
+      "duration": 27.83,
+      "audioUrl": "/audio/lectures/geography/2_2/summary_table.mp3",
+      "startTime": 413.7,
+      "endTime": 441.53
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "lectureId": "446dabf6-7c9d-4509-a3f9-78161a684e3e",
+  "courseTitle": "IGCSE-Geography-0460",
+  "lectureTitle": "2.3 Coasts present opportunities and hazards for people",
+  "totalDuration": 416.12,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "banner_overview": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_opportunities": {
+      "start": 2,
+      "end": 7
+    },
+    "sec_hazards": {
+      "start": 8,
+      "end": 12
+    },
+    "sec_management": {
+      "start": 13,
+      "end": 15
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.3",
+      "selector": "#sec-header",
+      "en": "Lesson 2.3: Coasts present opportunities and hazards for people. In this lesson, we examine economic opportunities, marine hazards, and coastal protection management.",
+      "vi": "Bài hai chấm ba: Vùng bờ biển đem lại cơ hội và hiểm họa cho con người. Trong bài học này, chúng ta sẽ khảo sát các cơ hội kinh tế, hiểm họa từ biển cả và các chiến lược quản lý bảo vệ bờ biển.",
+      "duration": 24.95,
+      "audioUrl": "/audio/lectures/geography/2_3/intro.mp3",
+      "startTime": 0.0,
+      "endTime": 24.95
+    },
+    {
+      "id": "banner_overview",
+      "title": "Tổng quan: Cơ hội và Hiểm họa bờ biển",
+      "selector": "#sec-banner-overview",
+      "en": "Coastal Opportunities and Hazards Overview. Over forty percent of global humanity lives within coastal zones, exploiting maritime trade and tourism while facing erosion, storm surges, and rising seas.",
+      "vi": "Tổng quan Cơ hội và Hiểm họa bờ biển. Hơn bốn mươi phần trăm dân số thế giới sinh sống trong dải bờ biển, khai thác thương mại hàng hải và du lịch trong khi phải đối mặt với sạt lở bờ biển, triều cường bão và mực nước biển dâng.",
+      "duration": 27.18,
+      "audioUrl": "/audio/lectures/geography/2_3/banner_overview.mp3",
+      "startTime": 24.95,
+      "endTime": 52.13
+    },
+    {
+      "id": "sec_opportunities",
+      "title": "Các Cơ hội Kinh tế vùng Bờ biển",
+      "selector": "#sec-opportunities",
+      "en": "Section 1: Coastal Opportunities. Marine environments provide prime locations for international tourism, aquaculture, ocean shipping, and coastal urban development.",
+      "vi": "Phần một: Các cơ hội kinh tế vùng bờ biển. Môi trường biển mang lại những địa điểm lý tưởng cho ngành du lịch quốc tế, nuôi trồng thủy hải sản, vận tải biển và phát triển đô thị sinh thái.",
+      "duration": 23.73,
+      "audioUrl": "/audio/lectures/geography/2_3/sec_opportunities.mp3",
+      "startTime": 52.13,
+      "endTime": 75.86
+    },
+    {
+      "id": "opp_tourism",
+      "title": "Du lịch & Nghỉ dưỡng ven biển",
+      "selector": "#card-opp-tourism",
+      "en": "Coastal Tourism and Leisure. Sandy beaches, warm sunshine, and coral reef water sports drive multi-billion dollar tourism sectors across the Caribbean, Mediterranean, and Southeast Asia.",
+      "vi": "Du lịch và Nghỉ dưỡng ven biển. Những bãi cát mịn, ánh nắng ấm áp và các môn thể thao lặn ngắm san hô tạo nên ngành công nghiệp du lịch tỷ đô khắp vùng biển Ca-ri-bê, Địa Trung Hải và Đông Nam Á.",
+      "duration": 25.02,
+      "audioUrl": "/audio/lectures/geography/2_3/opp_tourism.mp3",
+      "startTime": 75.86,
+      "endTime": 100.88
+    },
+    {
+      "id": "opp_fishing",
+      "title": "Đánh bắt & Nuôi trồng hải sản (Aquaculture)",
+      "selector": "#card-opp-fishing",
+      "en": "Fisheries and Marine Aquaculture. Rich coastal waters yield abundant food supplies through artisanal fishing and rapid expansion of shrimp, oyster, and salmon farms.",
+      "vi": "Đánh bắt và Nuôi trồng thủy hải sản. Vùng nước ven bờ giàu dưỡng chất cung cấp nguồn thực phẩm dồi dào qua nghề cá truyền thống và sự bùng nổ của các trang trại nuôi tôm, hàu và cá hồi.",
+      "duration": 22.36,
+      "audioUrl": "/audio/lectures/geography/2_3/opp_fishing.mp3",
+      "startTime": 100.88,
+      "endTime": 123.24
+    },
+    {
+      "id": "opp_transport",
+      "title": "Vận tải biển & Các siêu cảng quốc tế",
+      "selector": "#card-opp-transport",
+      "en": "Maritime Shipping and Trade Ports. Over eighty percent of international trade volume moves by sea. Deepwater megavessel hubs like Singapore and Rotterdam power the global economy.",
+      "vi": "Vận tải biển và Các đại cảng quốc tế. Hơn tám mươi phần trăm khối lượng thương mại toàn cầu được vận chuyển bằng đường biển. Những đại cảng nước sâu như Xinh-ga-po và Rốt-téc-đam là động cơ thúc đẩy nền kinh tế thế giới.",
+      "duration": 26.75,
+      "audioUrl": "/audio/lectures/geography/2_3/opp_transport.mp3",
+      "startTime": 123.24,
+      "endTime": 149.99
+    },
+    {
+      "id": "opp_settlement",
+      "title": "Định cư, Công nghiệp & Năng lượng tái tạo",
+      "selector": "#card-opp-settlement",
+      "en": "Settlement, Industry, and Energy. Flat fertile coastal deltas support mega-cities, oil refineries, and cutting-edge green energy such as offshore wind farms and tidal barrages.",
+      "vi": "Đô thị hóa, Công nghiệp và Năng lượng tái tạo. Các đồng bằng châu thổ bằng phẳng là nơi tọa lạc của các siêu đô thị, nhà máy lọc dầu và các dự án năng lượng xanh đột phá như điện gió ngoài khơi và năng lượng thủy triều.",
+      "duration": 25.38,
+      "audioUrl": "/audio/lectures/geography/2_3/opp_settlement.mp3",
+      "startTime": 149.99,
+      "endTime": 175.37
+    },
+    {
+      "id": "rodney_bay_fig",
+      "title": "Phát triển Du lịch tại Rodney Bay (Figure 2.29)",
+      "selector": "#card-rodney-bay-fig",
+      "en": "Tourism Development at Rodney Bay, Saint Lucia. As seen in Figure 2.29, cruise ship docks and luxury waterfronts generate local prosperity but require careful ecological preservation.",
+      "vi": "Phát triển Du lịch tại vịnh Rót-ni, đảo quốc Xanh Lu-xi-a. Như thấy trong hình hai chấm hai mươi chín, cảng tàu du lịch và khu đô thị ven nước mang lại thịnh vượng nhưng đòi hỏi phải bảo vệ nghiêm ngặt hệ sinh thái biển.",
+      "duration": 24.52,
+      "audioUrl": "/audio/lectures/geography/2_3/rodney_bay_fig.mp3",
+      "startTime": 175.37,
+      "endTime": 199.89
+    },
+    {
+      "id": "sec_hazards",
+      "title": "Các Hiểm họa Bờ biển (Coastal Hazards)",
+      "selector": "#sec-hazards",
+      "en": "Section 2: Coastal Hazards. Marine frontiers pose formidable threats, including rapid cliff retreat, storm surge inundation, tropical cyclones, and pollution.",
+      "vi": "Phần hai: Các hiểm họa ven biển. Vùng ven biển luôn phải đối mặt với những mối đe dọa khôn lường như sạt lở vách đá, triều cường dâng, bão nhiệt đới và ô nhiễm môi trường.",
+      "duration": 23.54,
+      "audioUrl": "/audio/lectures/geography/2_3/sec_hazards.mp3",
+      "startTime": 199.89,
+      "endTime": 223.43
+    },
+    {
+      "id": "haz_erosion",
+      "title": "Xói lở bờ biển & Bờ biển Holderness",
+      "selector": "#card-haz-erosion",
+      "en": "Coastal Erosion and Cliff Retreat. Soft rock shorelines erode rapidly. On the Holderness Coast in Yorkshire, UK, cliffs retreat by approximately two metres per year, claiming farmland and entire historic villages.",
+      "vi": "Xói lở bờ biển và Bờ biển Hâu-đơ-nét. Các bờ đá mềm bị bào mòn với tốc độ chóng mặt. Tại bờ biển Hâu-đơ-nét ở nước Anh, vách đất lùi sâu khoảng hai mét mỗi năm, nuốt chửng đất nông nghiệp và nhiều ngôi làng cổ.",
+      "duration": 29.8,
+      "audioUrl": "/audio/lectures/geography/2_3/haz_erosion.mp3",
+      "startTime": 223.43,
+      "endTime": 253.23
+    },
+    {
+      "id": "haz_flooding",
+      "title": "Ngập lụt bờ biển, Triều cường & Mực nước biển dâng",
+      "selector": "#card-haz-flooding",
+      "en": "Coastal Flooding, Storm Surges, and Sea Level Rise. Low atmospheric pressure drives destructive storm surges inland. Combined with global sea level rise of 3.7 millimetres annually, low-lying deltas like Bangladesh and the Maldives face existential danger.",
+      "vi": "Ngập lụt bờ biển, Triều cường và Mực nước biển dâng. Vùng áp thấp hút nước biển dâng cao tràn sâu vào nội địa. Kết hợp với mực nước biển dâng khoảng ba phẩy bảy mi-li-mét mỗi năm, các vùng đất thấp như Băng-la-đét và quần đảo Man-đi-vơ đang đối mặt với nguy cơ bị nhấn chìm.",
+      "duration": 35.01,
+      "audioUrl": "/audio/lectures/geography/2_3/haz_flooding.mp3",
+      "startTime": 253.23,
+      "endTime": 288.24
+    },
+    {
+      "id": "haz_cyclones",
+      "title": "Bão nhiệt đới (Hurricanes, Typhoons & Cyclones)",
+      "selector": "#card-haz-cyclones",
+      "en": "Tropical Cyclones. Intense marine storms generating gale-force winds exceeding one hundred and nineteen kilometres per hour, torrential rainfall, and coastal storm surges up to nine metres high.",
+      "vi": "Bão nhiệt đới khốc liệt. Các cơn bão biển cực mạnh mang theo sức gió giật trên một trăm mười chín ki-lô-mét một giờ, mưa xối xả và triều cường dâng cao tới chín mét tàn phá dải ven biển.",
+      "duration": 24.14,
+      "audioUrl": "/audio/lectures/geography/2_3/haz_cyclones.mp3",
+      "startTime": 288.24,
+      "endTime": 312.38
+    },
+    {
+      "id": "haz_pollution",
+      "title": "Ô nhiễm nước biển & Vùng chết sinh thái",
+      "selector": "#card-haz-pollution",
+      "en": "Marine Pollution and Eutrophication. Runoff containing chemical fertilisers and raw sewage triggers toxic algae blooms and hypoxic dead zones, decimating marine biodiversity and endangering fisheries.",
+      "vi": "Ô nhiễm Nước biển và Hiện tượng Phì dưỡng. Nước thải sinh hoạt và phân bón nông nghiệp chảy ra biển kích thích tảo độc bùng phát, tạo ra các vùng chết thiếu ô-xy hủy diệt nguồn lợi thủy sản.",
+      "duration": 25.0,
+      "audioUrl": "/audio/lectures/geography/2_3/haz_pollution.mp3",
+      "startTime": 312.38,
+      "endTime": 337.38
+    },
+    {
+      "id": "sec_management",
+      "title": "Chiến lược Quản lý & Bảo vệ bờ biển",
+      "selector": "#sec-management",
+      "en": "Section 3: Coastal Management Strategies. Authorities adopt four key policies: do nothing, hold the existing line, advance the shoreline, or planned managed retreat.",
+      "vi": "Phần ba: Các chiến lược quản lý và bảo vệ bờ biển. Cơ quan chức năng áp dụng bốn định hướng: để tự nhiên, giữ nguyên tuyến phòng thủ hiện tại, lấn biển hoặc chủ động rút lui có kiểm soát.",
+      "duration": 24.11,
+      "audioUrl": "/audio/lectures/geography/2_3/sec_management.mp3",
+      "startTime": 337.38,
+      "endTime": 361.49
+    },
+    {
+      "id": "mgmt_hard",
+      "title": "Công trình Cứng: Kè biển, Đê chắn cát & Kè đá hộc",
+      "selector": "#card-mgmt-hard",
+      "en": "Hard Engineering Defenses. Heavy structural solutions include curved concrete sea walls to reflect waves, sloping revetments, perpendicular groynes to trap sand, and massive rip-rap rock armour to dissipate wave impact.",
+      "vi": "Các công trình kỹ thuật cứng. Gồm các giải pháp kiên cố như tường kè bê tông uốn cong phản hồi sóng, mái kè nghiêng, đê cọc gỗ chắn cát vuông góc và các bãi đá hộc lớn giảm chấn động lực sóng.",
+      "duration": 26.46,
+      "audioUrl": "/audio/lectures/geography/2_3/mgmt_hard.mp3",
+      "startTime": 361.49,
+      "endTime": 387.95
+    },
+    {
+      "id": "mgmt_soft",
+      "title": "Công trình Mềm: Bồi tụ bãi, Rút lui có kiểm soát & Trồng cỏ",
+      "selector": "#card-mgmt-soft",
+      "en": "Soft Engineering and Nature-Based Solutions. Sustainable techniques work with coastal dynamics, including beach nourishment dredging, planting marram grass for dune stabilization, creating offshore reefs, and managed coastal retreat.",
+      "vi": "Các giải pháp kỹ thuật mềm bền vững. Hoạt động thuận theo quy luật tự nhiên, bao gồm bơm cát bồi đắp bãi biển, trồng cỏ cát giữ đụn cát ổn định, làm rạn nhân tạo ngoài khơi và chủ động rút lui nhường không gian cho biển.",
+      "duration": 28.17,
+      "audioUrl": "/audio/lectures/geography/2_3/mgmt_soft.mp3",
+      "startTime": 387.95,
+      "endTime": 416.12
+    }
+  ]
+}
