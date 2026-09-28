@@ -2,7 +2,7 @@
   "lectureId": "b0ca05f2-dab3-4223-9c25-c92d73df56c1",
   "courseTitle": "IGCSE-Geography-0460",
   "lectureTitle": "2.2 The main landforms associated with these processes",
-  "totalDuration": 441.53,
+  "totalDuration": 666.35,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -10,7 +10,7 @@
     },
     "sec_coastline_types": {
       "start": 1,
-      "end": 4
+      "end": 3
     },
     "sec_erosional_landforms": {
       "start": 5,
@@ -18,11 +18,11 @@
     },
     "sec_depositional_landforms": {
       "start": 13,
-      "end": 16
+      "end": 21
     },
     "summary_table": {
-      "start": 17,
-      "end": 17
+      "start": 22,
+      "end": 22
     }
   },
   "segments": [
@@ -192,26 +192,81 @@
       "endTime": 356.6
     },
     {
-      "id": "spits_bars_tombolos",
-      "title": "Mũi tên cát, Bờ chắn vịnh & Doi cát nối đảo",
-      "selector": "#card-spits-bars-tombolos",
-      "en": "Spits, Bars, and Tombolos. Longshore drift extends sand ridges across estuaries to create spits with hooked recurved tips, seal bays into lagoons as bars, or tie islands to mainland as tombolos.",
-      "vi": "Mũi tên cát, Bờ chắn vịnh và Doi cát nối đảo. Trôi dạt ven bờ kéo dài dải cát qua các cửa sông tạo thành mũi tên cát có mũi uốn cong, bịt kín vịnh tạo thành đầm phá hoặc nối liền đảo với đất liền thành doi cát nối đảo.",
-      "duration": 27.9,
-      "audioUrl": "/audio/lectures/geography/2_2/spits_bars_tombolos.mp3",
+      "id": "dep_spit",
+      "title": "Mũi tên cát (Spits)",
+      "selector": "#card-dep-spit",
+      "en": "Spits. A spit is an extended ridge of sand or shingle connected to the mainland at one end, extending across an estuary or bay. Longshore drift carries sediment until the coastline abruptly changes direction. Wave refraction curves the tip into a recurved hook, while the sheltered waters behind enable salt marshes to develop.",
+      "vi": "Mũi tên cát. Là một doi cát hoặc sỏi dài nối với đất liền ở một đầu, vươn dài qua cửa vịnh hoặc cửa sông. Hiện tượng trôi dạt ven bờ vận chuyển trầm tích cho tới khi bờ biển đổi hướng đột ngột. Hiện tượng khúc xạ sóng uốn cong đầu mũi cát thành hình lưỡi câu, trong khi vùng nước lặng phía sau tạo điều kiện cho đầm lầy muối phát triển.",
+      "duration": 41.54,
+      "audioUrl": "/audio/lectures/geography/2_2/dep_spit.mp3",
       "startTime": 356.6,
-      "endTime": 384.5
+      "endTime": 398.14
     },
     {
-      "id": "dunes_succession",
-      "title": "Đụn cát ven biển & Diễn thế thực vật",
-      "selector": "#card-dunes-succession",
-      "en": "Sand Dunes and Plant Succession. Onshore winds blow dry beach sand inland. Embryo dunes give way to yellow dunes colonized by marram grass, culminating in stabilized grey dunes rich in biodiversity.",
-      "vi": "Đụn cát ven biển và Diễn thế sinh thái. Gió từ biển thổi cát khô vào bờ. Các cồn cát phôi thai ban đầu dần phát triển thành cồn cát vàng có cỏ cát bám rễ, và cuối cùng tiến hóa thành cồn cát xám ổn định giàu thảm thực vật.",
-      "duration": 29.2,
-      "audioUrl": "/audio/lectures/geography/2_2/dunes_succession.mp3",
-      "startTime": 384.5,
-      "endTime": 413.7
+      "id": "dep_bar",
+      "title": "Bờ chắn vịnh (Bars & Baymouth Bars)",
+      "selector": "#card-dep-bar",
+      "en": "Bars and Baymouth Bars. A bar forms when a spit grows completely across a bay, connecting two headlands. This seals off the bay, trapping a body of calm water known as a lagoon. Over time, deposition infills the lagoon, converting it into fertile coastal wetland.",
+      "vi": "Bờ chắn vịnh và Đầm phá. Bờ chắn hình thành khi mũi tên cát phát triển vươn dài bịt kín hoàn toàn cửa vịnh, nối liền hai mũi đất lại với nhau. Quá trình này cô lập một vùng nước lặng gọi là đầm phá. Theo thời gian, trầm tích bồi tụ dần lấp đầy đầm phá, biến nó thành vùng đất ngập nước phì nhiêu.",
+      "duration": 38.56,
+      "audioUrl": "/audio/lectures/geography/2_2/dep_bar.mp3",
+      "startTime": 398.14,
+      "endTime": 436.7
+    },
+    {
+      "id": "dep_tombolo",
+      "title": "Doi cát nối đảo (Tombolos)",
+      "selector": "#card-dep-tombolo",
+      "en": "Tombolos. A tombolo is a sand or shingle ridge linking an offshore island to the mainland. Wave refraction around both sides of the island produces opposing wave crests that cancel out, creating a sheltered zone where sediment drops and builds up a connecting land bridge. Examples include St Ninians Isle and Mont Saint-Michel.",
+      "vi": "Doi cát nối đảo. Doi cát nối đảo là một dải cát sỏi bồi tụ nối liền một hòn đảo ngoài khơi với đất liền. Sóng biển khúc xạ bao quanh hai bên hòn đảo tạo ra vùng nước lặng triệt tiêu năng lượng sóng, khiến trầm tích bồi đắp thành một cây cầu đất tự nhiên. Ví dụ tiêu biểu là đảo thánh Ni-ni-an ở nước Anh và đảo Mông Xanh-Mi-xen ở nước Pháp.",
+      "duration": 42.06,
+      "audioUrl": "/audio/lectures/geography/2_2/dep_tombolo.mp3",
+      "startTime": 436.7,
+      "endTime": 478.76
+    },
+    {
+      "id": "dune_embryo",
+      "title": "Đụn cát phôi thai (1. Embryo Dune)",
+      "selector": "#card-dune-embryo",
+      "en": "Stage 1: Embryo Dunes. Embryo dunes develop at the high-water strandline where dry sand blown inland accumulates around driftwood and seaweed. Extremely saline and alkaline, they are colonised by tough pioneer plants like sea rocket, whose sparse roots begin anchoring the loose sand.",
+      "vi": "Giai đoạn một: Đụn cát phôi thai. Đụn cát phôi thai hình thành tại đường mép nước triều cao nhất, nơi cát khô bị gió thổi vào bị giữ lại quanh các khúc gỗ mục và rong biển. Môi trường ở đây rất mặn và có tính kiềm cao, chỉ có các loài cây tiên phong như cải dại biển mới có thể bén rễ bước đầu cố định hạt cát.",
+      "duration": 37.55,
+      "audioUrl": "/audio/lectures/geography/2_2/dune_embryo.mp3",
+      "startTime": 478.76,
+      "endTime": 516.31
+    },
+    {
+      "id": "dune_yellow",
+      "title": "Đụn cát vàng (2. Yellow Dune / Foredune)",
+      "selector": "#card-dune-yellow",
+      "en": "Stage 2: Yellow Dunes and Foredunes. Growing up to five to ten metres tall, yellow dunes are dominated by marram grass. Marram thrives as fresh sand buries it, pushing out extensive rhizomes and root networks that bind dunes firmly. Sand remains distinctly yellow due to minimal organic humus.",
+      "vi": "Giai đoạn hai: Đụn cát vàng và Đụn cát phía trước. Đạt độ cao từ năm đến mười mét, đụn cát vàng được thống trị bởi cỏ cát ma-ram. Cỏ cát phát triển mạnh mẽ khi bị cát vùi lấp, đâm sâu mạng lưới rễ chằng chịt giúp liên kết các hạt cát thật vững chắc. Cát có màu vàng đặc trưng vì hàm lượng chất mùn còn rất thấp.",
+      "duration": 41.01,
+      "audioUrl": "/audio/lectures/geography/2_2/dune_yellow.mp3",
+      "startTime": 516.31,
+      "endTime": 557.32
+    },
+    {
+      "id": "dune_semifixed",
+      "title": "Đụn cát bán cố định (3. Semi-fixed Dune)",
+      "selector": "#card-dune-semifixed",
+      "en": "Stage 3: Semi-fixed Dunes. Situated further inland away from harsh salt spray. Decaying marram grass enriches the sand with dark humus, retaining moisture and lowering soil alkalinity. A diverse community of mosses, clovers, dandelions, and fescue grasses flourishes.",
+      "vi": "Giai đoạn ba: Đụn cát bán cố định. Nằm sâu hơn vào đất liền, tránh được hơi muối biển gay gắt. Xác cỏ cát ma-ram phân hủy làm giàu thêm chất mùn hữu cơ màu sẫm, giúp giữ ẩm và làm giảm độ kiềm của đất. Một thảm thực vật đa dạng gồm rêu, cỏ ba lá và hoa bồ công anh bắt đầu sinh sôi.",
+      "duration": 40.46,
+      "audioUrl": "/audio/lectures/geography/2_2/dune_semifixed.mp3",
+      "startTime": 557.32,
+      "endTime": 597.78
+    },
+    {
+      "id": "dune_fixed",
+      "title": "Đụn cát cố định (4. Fixed Grey Dune & Dune Slacks)",
+      "selector": "#card-dune-fixed",
+      "en": "Stage 4: Fixed Grey Dunes and Dune Slacks. A mature, stable climax ecosystem. Deep grey soil supports heather, gorse shrubs, and woodland birch trees. In low sheltered depressions between ridges known as dune slacks, the water table reaches the surface, creating lush wetland pools.",
+      "vi": "Giai đoạn bốn: Đụn cát cố định và Đầm trũng giữa đụn. Là hệ sinh thái đỉnh cực trưởng thành và ổn định. Tầng đất xám sâu giàu dinh dưỡng nuôi sống cây thạch nam, bụi kim tước và cây gỗ thân nhỏ. Tại các vùng trũng sâu giữa các sống đụn nơi mực nước ngầm lộ ra, các đầm nước ngọt trù phú được hình thành.",
+      "duration": 40.74,
+      "audioUrl": "/audio/lectures/geography/2_2/dune_fixed.mp3",
+      "startTime": 597.78,
+      "endTime": 638.52
     },
     {
       "id": "summary_table",
@@ -221,8 +276,8 @@
       "vi": "Bảng tổng kết Địa hình bờ biển. Quá trình xói mòn chênh lệch tạo ra mũi đất, thềm mài mòn, cổng vòm và cột đá, trong khi quá trình bồi tụ kiến tạo nên bãi cát, mũi tên cát, doi cát nối đảo và đụn cát ven bờ.",
       "duration": 27.83,
       "audioUrl": "/audio/lectures/geography/2_2/summary_table.mp3",
-      "startTime": 413.7,
-      "endTime": 441.53
+      "startTime": 638.52,
+      "endTime": 666.35
     }
   ]
 }

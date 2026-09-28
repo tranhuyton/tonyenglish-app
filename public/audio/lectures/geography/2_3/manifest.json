@@ -2,7 +2,7 @@
   "lectureId": "446dabf6-7c9d-4509-a3f9-78161a684e3e",
   "courseTitle": "IGCSE-Geography-0460",
   "lectureTitle": "2.3 Coasts present opportunities and hazards for people",
-  "totalDuration": 416.12,
+  "totalDuration": 457.54,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -18,11 +18,11 @@
     },
     "sec_hazards": {
       "start": 8,
-      "end": 12
+      "end": 13
     },
     "sec_management": {
-      "start": 13,
-      "end": 15
+      "start": 14,
+      "end": 16
     }
   },
   "segments": [
@@ -159,6 +159,17 @@
       "endTime": 312.38
     },
     {
+      "id": "haz_tsunami",
+      "title": "Sóng thần (Tsunami) & Hiểm họa biển sâu",
+      "selector": "#card-haz-tsunami",
+      "en": "Tsunamis and Coastal Inundation. Giant ocean waves triggered by submarine earthquakes or landslides. Barely detectable in deep water, they travel at eight hundred kilometres per hour, swelling up to thirty metres high in shallow bays with catastrophic destructive force, as seen in the 2004 Indian Ocean disaster.",
+      "vi": "Sóng thần và Thảm họa ngập lụt ven biển. Là những đợt sóng xung kích đại dương khổng lồ sinh ra do động đất dưới đáy biển hoặc sạt lở ngầm. Khi ở ngoài khơi xa sóng rất thấp, di chuyển với vận tốc tám trăm ki-lô-mét một giờ, nhưng khi vào bờ chúng dâng cao tới ba mươi mét với sức tàn phá khủng khiếp, như thảm họa sóng thần Ấn Độ Dương năm hai nghìn không trăm lẻ tư.",
+      "duration": 41.42,
+      "audioUrl": "/audio/lectures/geography/2_3/haz_tsunami.mp3",
+      "startTime": 312.38,
+      "endTime": 353.8
+    },
+    {
       "id": "haz_pollution",
       "title": "Ô nhiễm nước biển & Vùng chết sinh thái",
       "selector": "#card-haz-pollution",
@@ -166,8 +177,8 @@
       "vi": "Ô nhiễm Nước biển và Hiện tượng Phì dưỡng. Nước thải sinh hoạt và phân bón nông nghiệp chảy ra biển kích thích tảo độc bùng phát, tạo ra các vùng chết thiếu ô-xy hủy diệt nguồn lợi thủy sản.",
       "duration": 25.0,
       "audioUrl": "/audio/lectures/geography/2_3/haz_pollution.mp3",
-      "startTime": 312.38,
-      "endTime": 337.38
+      "startTime": 353.8,
+      "endTime": 378.8
     },
     {
       "id": "sec_management",
@@ -177,8 +188,8 @@
       "vi": "Phần ba: Các chiến lược quản lý và bảo vệ bờ biển. Cơ quan chức năng áp dụng bốn định hướng: để tự nhiên, giữ nguyên tuyến phòng thủ hiện tại, lấn biển hoặc chủ động rút lui có kiểm soát.",
       "duration": 24.11,
       "audioUrl": "/audio/lectures/geography/2_3/sec_management.mp3",
-      "startTime": 337.38,
-      "endTime": 361.49
+      "startTime": 378.8,
+      "endTime": 402.91
     },
     {
       "id": "mgmt_hard",
@@ -188,8 +199,8 @@
       "vi": "Các công trình kỹ thuật cứng. Gồm các giải pháp kiên cố như tường kè bê tông uốn cong phản hồi sóng, mái kè nghiêng, đê cọc gỗ chắn cát vuông góc và các bãi đá hộc lớn giảm chấn động lực sóng.",
       "duration": 26.46,
       "audioUrl": "/audio/lectures/geography/2_3/mgmt_hard.mp3",
-      "startTime": 361.49,
-      "endTime": 387.95
+      "startTime": 402.91,
+      "endTime": 429.37
     },
     {
       "id": "mgmt_soft",
@@ -199,8 +210,8 @@
       "vi": "Các giải pháp kỹ thuật mềm bền vững. Hoạt động thuận theo quy luật tự nhiên, bao gồm bơm cát bồi đắp bãi biển, trồng cỏ cát giữ đụn cát ổn định, làm rạn nhân tạo ngoài khơi và chủ động rút lui nhường không gian cho biển.",
       "duration": 28.17,
       "audioUrl": "/audio/lectures/geography/2_3/mgmt_soft.mp3",
-      "startTime": 387.95,
-      "endTime": 416.12
+      "startTime": 429.37,
+      "endTime": 457.54
     }
   ]
 }

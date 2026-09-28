@@ -2,7 +2,7 @@
   "lectureId": "d38db7a8-e92e-450c-a034-b9d46dc10a7f",
   "courseTitle": "IGCSE-Geography-0460",
   "lectureTitle": "2.1 The physical processes that shape the coast",
-  "totalDuration": 505.46,
+  "totalDuration": 551.15,
   "majorSections": {
     "intro": {
       "start": 0,
@@ -26,11 +26,11 @@
     },
     "sec_longshore_drift": {
       "start": 17,
-      "end": 19
+      "end": 20
     },
     "sec_wave_types": {
-      "start": 20,
-      "end": 23
+      "start": 21,
+      "end": 24
     }
   },
   "segments": [
@@ -125,7 +125,7 @@
     {
       "id": "erosion_hydraulic",
       "title": "Thủy lực học (Hydraulic Action)",
-      "selector": "#card-erosion-hydraulic",
+      "selector": "#btn-erosion-hydraulic",
       "en": "Hydraulic Action in detail. The physical force of crashing waves traps air in cliff fissures. Receding water triggers violent air expansion, shattering rock faces.",
       "vi": "Chi tiết Tác động thủy lực. Áp lực vật lý của những đợt sóng va đập nén chặt không khí vào các kẽ nứt của vách đá. Khi sóng rút, áp suất bung nở đột ngột làm vỡ vụn các khối đá.",
       "duration": 24.09,
@@ -136,7 +136,7 @@
     {
       "id": "erosion_abrasion",
       "title": "Mài mòn cơ học (Corrasion / Abrasion)",
-      "selector": "#card-erosion-abrasion",
+      "selector": "#btn-erosion-abrasion",
       "en": "Corrasion and Abrasion in detail. Waves throw hurled sand, shingle, and pebbles like sandpaper against cliffs, carving deep wave-cut notches.",
       "vi": "Chi tiết Mài mòn cơ học. Sóng biển ném cát sỏi và đá cuội vào chân vách đá giống như một tờ giấy ráp khổng lồ, khoét sâu các hàm ếch bờ biển.",
       "duration": 19.91,
@@ -147,7 +147,7 @@
     {
       "id": "erosion_attrition",
       "title": "Va đập tự vỡ (Attrition)",
-      "selector": "#card-erosion-attrition",
+      "selector": "#btn-erosion-attrition",
       "en": "Attrition in detail. Transported boulders and pebbles crash into one another, progressively fracturing jagged rocks into smooth, rounded pebbles and sand.",
       "vi": "Chi tiết Quá trình va đập tự vỡ vụn. Các tảng đá và sỏi cuội va đập liên hoàn vào nhau dưới tác động của sóng, mài nhẵn các góc cạnh sắc nhọn thành những viên sỏi tròn bóng và hạt cát mịn.",
       "duration": 22.31,
@@ -158,7 +158,7 @@
     {
       "id": "erosion_solution",
       "title": "Hòa tan hóa học (Corrosion / Solution)",
-      "selector": "#card-erosion-solution",
+      "selector": "#btn-erosion-solution",
       "en": "Corrosion and Solution in detail. Weak carbonic acid in seawater chemically dissolves vulnerable carbonate minerals in limestone and chalk cliffs.",
       "vi": "Chi tiết Xói mòn hòa tan hóa học. Tính axit nhẹ của nước biển phản ứng và hòa tan các khoáng chất canxi cacbonat trong các vách đá vôi và vách đá phấn.",
       "duration": 19.98,
@@ -244,6 +244,17 @@
       "endTime": 404.06
     },
     {
+      "id": "lsd_how_it_works",
+      "title": "Cơ chế hoạt động của trôi dạt ven bờ",
+      "selector": "#card-lsd-how-it-works",
+      "en": "How Longshore Drift Works. First, prevailing winds drive waves to approach the beach at an angle. The swash rushes diagonally up the beach slope, carrying sediment along with it. Second, gravity pulls the backwash straight down the beach perpendicular to the shoreline. Repeating this continuous zigzag pattern moves sand and shingle step by step along the coast.",
+      "vi": "Cơ chế hoạt động của hiện tượng trôi dạt ven bờ. Đầu tiên, gió thịnh hành đẩy các con sóng vỗ vào bờ theo một góc chéo. Đợt sóng tràn cuốn theo cát sỏi chạy xiên lên bãi biển. Tiếp theo, trọng lực kéo đợt sóng rút thẳng góc trở lại biển. Quá trình dích dắc này lặp đi lặp lại liên tục, đẩy cát sỏi dịch chuyển từng bước một dọc theo bờ biển.",
+      "duration": 45.69,
+      "audioUrl": "/audio/lectures/geography/2_1/lsd_how_it_works.mp3",
+      "startTime": 404.06,
+      "endTime": 449.75
+    },
+    {
       "id": "lsd_groynes",
       "title": "Quản lý bằng Đê chắn cát (Groynes)",
       "selector": "#card-lsd-groynes",
@@ -251,8 +262,8 @@
       "vi": "Quản lý bằng đê chắn cát vuông góc. Các hàng cọc gỗ hoặc bờ đá xây vuông góc với bờ biển giúp giữ cát ở phía đón dòng trôi, nhưng lại khiến bãi biển phía sau bị thiếu hụt cát trầm trọng.",
       "duration": 20.94,
       "audioUrl": "/audio/lectures/geography/2_1/lsd_groynes.mp3",
-      "startTime": 404.06,
-      "endTime": 425.0
+      "startTime": 449.75,
+      "endTime": 470.69
     },
     {
       "id": "sec_wave_types",
@@ -262,8 +273,8 @@
       "vi": "Phần sáu: Phân loại Sóng biển. Sóng bồi tụ xây đắp bãi biển nhờ lực tràn bờ nhẹ nhàng, trong khi sóng phá hủy cào xới và cuốn trôi cát ra xa.",
       "duration": 19.82,
       "audioUrl": "/audio/lectures/geography/2_1/sec_wave_types.mp3",
-      "startTime": 425.0,
-      "endTime": 444.82
+      "startTime": 470.69,
+      "endTime": 490.51
     },
     {
       "id": "wave_constructive",
@@ -273,8 +284,8 @@
       "vi": "Đặc điểm Sóng bồi tụ. Có bước sóng dài, chiều cao sóng thấp, độ dốc bãi biển thoai thoải và đợt sóng tràn lên bờ mạnh hơn hẳn đợt sóng rút lui.",
       "duration": 19.86,
       "audioUrl": "/audio/lectures/geography/2_1/wave_constructive.mp3",
-      "startTime": 444.82,
-      "endTime": 464.68
+      "startTime": 490.51,
+      "endTime": 510.37
     },
     {
       "id": "wave_destructive",
@@ -284,8 +295,8 @@
       "vi": "Đặc điểm Sóng phá hủy. Chiều cao sóng lớn, tần số dồn dập, chuyển động hạt tròn và đợt sóng rút xuống cực mạnh cuốn sạch cát sỏi khỏi bờ biển.",
       "duration": 20.22,
       "audioUrl": "/audio/lectures/geography/2_1/wave_destructive.mp3",
-      "startTime": 464.68,
-      "endTime": 484.9
+      "startTime": 510.37,
+      "endTime": 530.59
     },
     {
       "id": "wave_comparison",
@@ -295,8 +306,8 @@
       "vi": "Bảng tổng kết so sánh Sóng biển. Sóng bồi tụ bồi lắng cát tạo nên các bãi cát rộng thoải, trong khi sóng bão phá hủy xói lở tạo nên các bờ biển dốc đứng.",
       "duration": 20.56,
       "audioUrl": "/audio/lectures/geography/2_1/wave_comparison.mp3",
-      "startTime": 484.9,
-      "endTime": 505.46
+      "startTime": 530.59,
+      "endTime": 551.15
     }
   ]
 }
