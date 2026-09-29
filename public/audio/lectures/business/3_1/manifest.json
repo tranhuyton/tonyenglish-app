@@ -1,0 +1,88 @@
+{
+  "lectureId": "6cbe4a84-26ed-4a1d-933b-5843e9b9a501",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "3.1. Marketing, competition and the customer",
+  "totalDuration": 226.92,
+  "majorSections": [
+    {
+      "id": "sec_what_is_marketing",
+      "title": "1. Bản chất và Mục tiêu Tiếp thị"
+    },
+    {
+      "id": "sec_market_changes",
+      "title": "2. Biến động Thị trường và Cạnh tranh"
+    },
+    {
+      "id": "sec_niche_mass",
+      "title": "3. Thị trường Ngách và Thị trường Đại trà"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 3.1: Tiếp thị, Cạnh tranh và Khách hàng",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 3.1: Marketing, Competition and the Customer. In this opening chapter of Topic 3, we define the strategic role of marketing, explore why consumer spending patterns change, evaluate intensifying market competition, and contrast niche versus mass marketing.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 3.1: Tiếp thị, Cạnh tranh và Khách hàng. Trong bài mở đầu của Chủ đề ba về Tiếp thị, chúng ta sẽ định nghĩa vai trò chiến lược của marketing, tìm hiểu lý do thay đổi xu hướng tiêu dùng, đánh giá áp lực cạnh tranh gia tăng và so sánh thị trường ngách với thị trường đại trà.",
+      "duration": 41.32,
+      "startTime": 0.0,
+      "endTime": 41.32,
+      "audioUrl": "/audio/lectures/business/3_1/intro.mp3"
+    },
+    {
+      "id": "sec_what_is_marketing",
+      "title": "1. Bản chất và Vai trò của Tiếp thị (Marketing)",
+      "selector": "#sec-what-is-marketing",
+      "en": "Section 1 defines marketing as identifying, anticipating, and satisfying customer requirements profitably. Modern marketing centers on building long-term customer relationships and brand loyalty rather than merely making one-off sales.",
+      "vi": "Mục một định nghĩa marketing là quá trình nhận diện, dự đoán và thỏa mãn nhu cầu của khách hàng một cách có sinh lời. Marketing hiện đại tập trung vào việc kiến tạo mối quan hệ lâu dài và lòng trung thành với thương hiệu thay vì chỉ bán hàng một lần.",
+      "duration": 29.44,
+      "startTime": 41.32,
+      "endTime": 70.76,
+      "audioUrl": "/audio/lectures/business/3_1/sec_what_is_marketing.mp3"
+    },
+    {
+      "id": "card_marketing_role",
+      "title": "Các Mục tiêu Marketing then chốt",
+      "selector": "#card-marketing-role",
+      "en": "Core marketing objectives include: boosting sales revenue and market share, building brand image and perceived customer equity, entering foreign overseas markets, and innovating new products to replace declining product lines.",
+      "vi": "Các mục tiêu marketing then chốt gồm: gia tăng doanh thu và mở rộng thị phần, củng cố hình ảnh thương hiệu và giá trị cảm nhận của khách hàng, thâm nhập thị trường quốc tế mới và liên tục cải tiến sản phẩm để thay thế các dòng sản phẩm đang bước vào giai đoạn suy thoái.",
+      "duration": 28.31,
+      "startTime": 70.76,
+      "endTime": 99.07,
+      "audioUrl": "/audio/lectures/business/3_1/card_marketing_role.mp3"
+    },
+    {
+      "id": "sec_market_changes",
+      "title": "2. Biến động Thị trường và Áp lực Cạnh tranh",
+      "selector": "#sec-market-changes",
+      "en": "Section 2 investigates market dynamics. Customer spending shifts due to changing consumer tastes and fashions, rising disposable incomes, demographic changes such as an aging population, and rapid technological breakthroughs. To survive intensifying globalization and e-commerce rivalry, businesses must maintain competitive prices, uphold superior quality, and sustain promotional presence.",
+      "vi": "Mục hai nghiên cứu sự biến động của thị trường. Hành vi chi tiêu của người tiêu dùng thay đổi do thị hiếu và xu hướng mới, thu nhập khả dụng tăng, biến đổi nhân khẩu học như già hóa dân số và sự phát triển công nghệ vượt bậc. Để tồn tại trước sức ép toàn cầu hóa và thương mại điện tử, doanh nghiệp phải duy trì mức giá cạnh tranh, chất lượng vượt trội và đẩy mạnh truyền thông quảng bá.",
+      "duration": 47.56,
+      "startTime": 99.07,
+      "endTime": 146.63,
+      "audioUrl": "/audio/lectures/business/3_1/sec_market_changes.mp3"
+    },
+    {
+      "id": "sec_niche_mass",
+      "title": "3. Thị trường Ngách (Niche) và Thị trường Đại trà (Mass)",
+      "selector": "#sec-niche-mass",
+      "en": "Section 3 compares Niche Marketing—targeting a small, highly specialized segment of a larger market—against Mass Marketing, which sells standardized products to the entire market. Niche marketing avoids giant competitors and commands premium pricing, while mass marketing exploits massive economies of scale and widespread market reach.",
+      "vi": "Mục ba so sánh Thị trường ngách (Niche Marketing) – nhắm vào một phân khúc khách hàng nhỏ có nhu cầu chuyên biệt – với Thị trường đại trà (Mass Marketing) cung cấp sản phẩm chuẩn hóa cho số đông. Thị trường ngách giúp né tránh các đối thủ khổng lồ và định giá cao, trong khi thị trường đại trà tận dụng triệt để lợi thế kinh tế theo quy mô và độ phủ rộng lớn.",
+      "duration": 40.77,
+      "startTime": 146.63,
+      "endTime": 187.4,
+      "audioUrl": "/audio/lectures/business/3_1/sec_niche_mass.mp3"
+    },
+    {
+      "id": "card_niche_vs_mass",
+      "title": "So sánh Ưu nhược điểm: Niche vs Mass Marketing",
+      "selector": "#card-niche-vs-mass",
+      "en": "Niche marketing benefits from high profit margins and dedicated customer loyalty, but suffers from limited total sales volume and vulnerability if niche demand collapses. Conversely, mass marketing yields high total revenues, but faces cutthroat price competition, heavy advertising expenditures, and standardized product inflexibility.",
+      "vi": "Thị trường ngách mang lại biên lợi nhuận cao và sự gắn bó của khách hàng nhưng quy mô doanh thu bị giới hạn và rủi ro cao nếu nhu cầu phân khúc đó biến mất. Ngược lại, thị trường đại trà đem lại tổng doanh số khổng lồ nhưng phải đối mặt với cuộc chiến giá khốc liệt, ngân sách quảng cáo tốn kém và sự thiếu linh hoạt của sản phẩm đại trà.",
+      "duration": 39.52,
+      "startTime": 187.4,
+      "endTime": 226.92,
+      "audioUrl": "/audio/lectures/business/3_1/card_niche_vs_mass.mp3"
+    }
+  ]
+}

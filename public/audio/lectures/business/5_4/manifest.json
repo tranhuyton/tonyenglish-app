@@ -1,0 +1,92 @@
+{
+  "lectureId": "5421db93-9d7b-4241-b362-171974092a30",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "5.4. Statement of financial position",
+  "totalDuration": 194.58,
+  "majorSections": [
+    {
+      "id": "sec_balance_sheet",
+      "title": "1. Bản chất Bảng Cân đối Kế toán"
+    },
+    {
+      "id": "card_assets",
+      "title": "2. Tài sản Dài hạn & Ngắn hạn"
+    },
+    {
+      "id": "card_liabilities",
+      "title": "3. Nợ Dài hạn & Ngắn hạn"
+    },
+    {
+      "id": "sec_using_balance_sheet",
+      "title": "4. Phân tích Thanh khoản & Vốn chủ sở hữu"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5.4: Bảng Cân đối Kế toán (Statement of Financial Position)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 5.4: Statement of Financial Position. In this chapter, formerly known as the Balance Sheet, we examine how a business records its assets, liabilities, and shareholder equity on a specific calendar date.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 5.4: Bảng Cân đối Kế toán. Trong bài học này, chúng ta sẽ khảo sát cách doanh nghiệp ghi nhận tài sản, nợ phải trả và vốn chủ sở hữu tại một thời điểm nhất định.",
+      "duration": 32.2,
+      "startTime": 0.0,
+      "endTime": 32.2,
+      "audioUrl": "/audio/lectures/business/5_4/intro.mp3"
+    },
+    {
+      "id": "sec_balance_sheet",
+      "title": "1. Bản chất của Bảng Cân đối Kế toán",
+      "selector": "#sec-balance-sheet",
+      "en": "Section 1 defines the Statement of Financial Position as a financial snapshot recording the net worth of an enterprise. It balances Total Assets perfectly against Total Liabilities plus Shareholders' Equity.",
+      "vi": "Mục một định nghĩa Bảng cân đối kế toán là bức tranh chụp nhanh tình hình tài chính của doanh nghiệp tại một thời điểm. Bảng này luôn bảo đảm nguyên tắc Tổng tài sản luôn bằng Tổng nợ phải trả cộng Vốn chủ sở hữu.",
+      "duration": 24.83,
+      "startTime": 32.2,
+      "endTime": 57.03,
+      "audioUrl": "/audio/lectures/business/5_4/sec_balance_sheet.mp3"
+    },
+    {
+      "id": "card_assets",
+      "title": "Tài sản: Tài sản Dài hạn và Tài sản Ngắn hạn",
+      "selector": "#card-assets",
+      "en": "Assets represent items of value owned by the business. Non-current assets are tangible resources held for longer than one year, such as land, factories, and vehicles. Current assets are short-term resources converted into cash within twelve months: inventory, trade receivables, and bank balances.",
+      "vi": "Tài sản là những nguồn lực có giá trị thuộc quyền sở hữu của doanh nghiệp. Tài sản dài hạn (Non-current assets) có thời gian sử dụng trên một năm như đất đai, nhà xưởng, xe cộ. Tài sản ngắn hạn (Current assets) chuyển hóa thành tiền trong vòng 12 tháng: hàng tồn kho, khoản phải thu khách hàng và tiền gửi ngân hàng.",
+      "duration": 40.0,
+      "startTime": 57.03,
+      "endTime": 97.03,
+      "audioUrl": "/audio/lectures/business/5_4/card_assets.mp3"
+    },
+    {
+      "id": "card_liabilities",
+      "title": "Nợ phải trả: Nợ Ngắn hạn và Nợ Dài hạn",
+      "selector": "#card-liabilities",
+      "en": "Liabilities represent debts owed to external creditors. Current liabilities must be settled within one year, including trade payables and bank overdrafts. Non-current liabilities represent long-term obligations repayable after more than a year, such as bank mortgages and debentures.",
+      "vi": "Nợ phải trả là các nghĩa vụ tài chính mà doanh nghiệp nợ bên thứ ba. Nợ ngắn hạn (Current liabilities) phải trả trong vòng một năm như nợ nhà cung cấp và thấu chi ngân hàng. Nợ dài hạn (Non-current liabilities) là các khoản vay có thời hạn thanh toán trên một năm như vay thế chấp và trái phiếu dài hạn.",
+      "duration": 37.86,
+      "startTime": 97.03,
+      "endTime": 134.89,
+      "audioUrl": "/audio/lectures/business/5_4/card_liabilities.mp3"
+    },
+    {
+      "id": "sec_using_balance_sheet",
+      "title": "2. Sử dụng Báo cáo để Đánh giá Khả năng Thanh toán",
+      "selector": "#sec-using-balance-sheet",
+      "en": "Section 2 investigates net current assets, or working capital. If current liabilities exceed current assets, the business exhibits negative working capital, signaling impending cash default and vulnerability to sudden supplier liquidations.",
+      "vi": "Mục hai nghiên cứu tài sản ngắn hạn thuần, tức vốn lưu động. Nếu nợ ngắn hạn vượt quá tài sản ngắn hạn, doanh nghiệp rơi vào tình trạng vốn lưu động âm, cảnh báo nguy cơ mất khả năng trả nợ và đối mặt nguy cơ bị nhà cung cấp siết nợ phát mại.",
+      "duration": 29.58,
+      "startTime": 134.89,
+      "endTime": 164.47,
+      "audioUrl": "/audio/lectures/business/5_4/sec_using_balance_sheet.mp3"
+    },
+    {
+      "id": "sec_interpret_balance_sheet",
+      "title": "3. Phân tích Bảng Cân đối Kế toán theo chuẩn Cambridge",
+      "selector": "#sec-interpret-balance-sheet",
+      "en": "Section 3 evaluates capital employed and shareholder funds. Candidates must evaluate capital structure: high debt gearing exposes the firm to interest rate surges, while healthy equity reserves provide solid financial resilience.",
+      "vi": "Mục ba đánh giá vốn hoạt động (capital employed) và vốn chủ sở hữu. Thí sinh cần phân tích cơ cấu vốn: tỷ lệ nợ vay quá cao khiến doanh nghiệp dễ tổn thương trước biến động lãi suất, trong khi nguồn vốn chủ sở hữu dồi dào tạo nền tảng tài chính vững chắc.",
+      "duration": 30.11,
+      "startTime": 164.47,
+      "endTime": 194.58,
+      "audioUrl": "/audio/lectures/business/5_4/sec_interpret_balance_sheet.mp3"
+    }
+  ]
+}

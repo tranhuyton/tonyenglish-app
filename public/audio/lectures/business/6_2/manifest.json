@@ -1,0 +1,107 @@
+{
+  "lectureId": "a1d571ff-fa12-46c2-a49d-1df88df13214",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "6.2. Environmental and ethical issues",
+  "totalDuration": 240.95,
+  "majorSections": [
+    {
+      "id": "sec_environmental_concerns",
+      "title": "1. Mối quan tâm Môi trường"
+    },
+    {
+      "id": "sec_externalities",
+      "title": "2. Ngoại tác (Social Costs & Benefits)"
+    },
+    {
+      "id": "sec_sustainable_development",
+      "title": "3. Phát triển Bền vững & Nhóm Áp lực"
+    },
+    {
+      "id": "sec_business_ethics",
+      "title": "4. Đạo đức Kinh doanh (Ethics)"
+    },
+    {
+      "id": "sec_ethics_profitability",
+      "title": "5. Đạo đức vs Lợi nhuận & Chiến lược thi Cambridge"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 6.2: Các Vấn đề Môi trường và Đạo đức",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 6.2: Environmental and Ethical Issues. In this modern chapter, we evaluate social costs and benefits, unpack negative externalities, explore sustainable development and environmental pressure groups, and examine the trade-off between ethical principles and commercial profit.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 6.2: Các Vấn đề Môi trường và Đạo đức kinh doanh. Trong bài học mang tính thời sự này, chúng ta sẽ đánh giá chi phí xã hội và lợi ích xã hội, ngoại tác tiêu cực, phát triển bền vững và các nhóm áp lực môi trường, cùng sự đánh đổi giữa đạo đức và lợi nhuận.",
+      "duration": 40.89,
+      "startTime": 0.0,
+      "endTime": 40.89,
+      "audioUrl": "/audio/lectures/business/6_2/intro.mp3"
+    },
+    {
+      "id": "sec_environmental_concerns",
+      "title": "1. Mối quan tâm Môi trường và Trách nhiệm Xã hội",
+      "selector": "#sec-environmental-concerns",
+      "en": "Section 1 examines environmental impacts: air and river pollution, global warming carbon emissions, and resource depletion. Governments enforce legal environmental controls, fines, and pollution permits to curb industrial degradation.",
+      "vi": "Mục một xem xét các tác động môi trường: ô nhiễm không khí và nguồn nước, khí thải carbon gây biến đổi khí hậu và cạn kiệt tài nguyên thiên nhiên. Chính phủ áp dụng các chế tài pháp lý, xử phạt hành chính và giấy phép xả thải để kiểm soát ô nhiễm công nghiệp.",
+      "duration": 30.47,
+      "startTime": 40.89,
+      "endTime": 71.36,
+      "audioUrl": "/audio/lectures/business/6_2/sec_environmental_concerns.mp3"
+    },
+    {
+      "id": "sec_externalities",
+      "title": "2. Ngoại tác: Chi phí Xã hội và Lợi ích Xã hội",
+      "selector": "#sec-externalities",
+      "en": "Section 2 provides the core economic equation: Social Costs equal Private Costs plus External Costs. Social Benefits equal Private Benefits plus External Benefits. Negative externalities—such as toxic factory smog or heavy traffic congestion—are borne by the local community rather than the polluting firm.",
+      "vi": "Mục hai đưa ra công thức kinh tế học cốt lõi: Chi phí xã hội bằng Chi phí tư nhân cộng Chi phí ngoại tác. Lợi ích xã hội bằng Lợi ích tư nhân cộng Lợi ích ngoại tác. Ngoại tác tiêu cực như khói bụi độc hại hay tắc đường do xe tải nhà máy gây ra là những tổn thất mà cộng đồng địa phương phải gánh chịu thay cho doanh nghiệp.",
+      "duration": 39.42,
+      "startTime": 71.36,
+      "endTime": 110.78,
+      "audioUrl": "/audio/lectures/business/6_2/sec_externalities.mp3"
+    },
+    {
+      "id": "sec_sustainable_development",
+      "title": "3. Phát triển Bền vững (Sustainable Development)",
+      "selector": "#sec-sustainable-development",
+      "en": "Section 3 defines Sustainable Development as economic activity that meets the needs of the present without compromising the ability of future generations to meet their own needs. Enterprises embrace renewable solar energy, biodegradable packaging, and circular recycling initiatives.",
+      "vi": "Mục ba định nghĩa Phát triển bền vững là hoạt động kinh tế đáp ứng các nhu cầu của hiện tại mà không làm tổn hại đến khả năng đáp ứng nhu cầu của các thế hệ tương lai. Doanh nghiệp chủ động chuyển đổi sang năng lượng mặt trời, bao bì tự phân hủy sinh học và mô hình tái chế tuần hoàn.",
+      "duration": 32.42,
+      "startTime": 110.78,
+      "endTime": 143.2,
+      "audioUrl": "/audio/lectures/business/6_2/sec_sustainable_development.mp3"
+    },
+    {
+      "id": "card_pressure_groups",
+      "title": "Vai trò của Nhóm Áp lực (Pressure Groups)",
+      "selector": "#card-pressure-groups",
+      "en": "Pressure Groups are organized citizen associations that seek to influence government policies and corporate actions. Tactics include consumer boycotts, viral social media campaigns, and staging peaceful demonstrations to hold polluting enterprises publicly accountable.",
+      "vi": "Nhóm áp lực (Pressure Groups) là tổ chức của người dân nhằm tác động lên chính sách của chính phủ và hành vi của doanh nghiệp. Các biện pháp bao gồm kêu gọi người tiêu dùng tẩy chay sản phẩm, tổ chức chiến dịch truyền thông và biểu tình hòa bình để buộc các doanh nghiệp gây ô nhiễm phải chịu trách nhiệm trước công chúng.",
+      "duration": 33.11,
+      "startTime": 143.2,
+      "endTime": 176.31,
+      "audioUrl": "/audio/lectures/business/6_2/card_pressure_groups.mp3"
+    },
+    {
+      "id": "sec_business_ethics",
+      "title": "4. Đạo đức Kinh doanh (Business Ethics)",
+      "selector": "#sec-business-ethics",
+      "en": "Section 4 investigates Business Ethics: moral rules and behavioral standards guiding decision making beyond statutory legal compliance. Issues include child labour in overseas factories, fair trade wages for smallholder farmers, and deceptive marketing to vulnerable children.",
+      "vi": "Mục bốn phân tích Đạo đức kinh doanh: các nguyên tắc đạo đức và chuẩn mực hành vi định hướng ra quyết định vượt lên trên các yêu cầu tối thiểu của luật pháp. Các vấn đề bao gồm bóc lột lao động trẻ em tại các xưởng gia công, trả giá thương mại công bằng (fair trade) cho nông dân và cấm quảng cáo lừa dối hướng vào trẻ em.",
+      "duration": 35.58,
+      "startTime": 176.31,
+      "endTime": 211.89,
+      "audioUrl": "/audio/lectures/business/6_2/sec_business_ethics.mp3"
+    },
+    {
+      "id": "sec_ethics_profitability",
+      "title": "5. Đạo đức đối chiếu với Lợi nhuận (Cambridge Exam Strategy)",
+      "selector": "#sec-ethics-profitability",
+      "en": "Section 5 details the Cambridge evaluation dilemma: Acting ethically raises operating production costs in the short run, but builds prestigious brand reputation, attracts ethical investors, and avoids crippling consumer boycotts in the long term.",
+      "vi": "Mục năm cung cấp chiến lược giải quyết bài toán tình huống Cambridge: Hành xử có đạo đức có thể làm tăng chi phí sản xuất trong ngắn hạn, nhưng về lâu dài lại kiến tạo uy tín thương hiệu vững chắc, thu hút các quỹ đầu tư bền vững và tránh được những làn sóng tẩy chay phá hủy doanh nghiệp.",
+      "duration": 29.06,
+      "startTime": 211.89,
+      "endTime": 240.95,
+      "audioUrl": "/audio/lectures/business/6_2/sec_ethics_profitability.mp3"
+    }
+  ]
+}

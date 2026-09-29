@@ -45,6 +45,41 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '199a26cd-1226-4ff7-b063-f7df7fa7b5ba': '/audio/lectures/geography/10_4/manifest.json', // 10.4
   'a3a8d904-d277-4eef-b8ff-52a913ebc5f6': '/audio/lectures/geography/10_5/manifest.json', // 10.5
   'fb30c141-db3a-49e8-aa55-028c913640d4': '/audio/lectures/geography/10_6/manifest.json', // 10.6
+
+  // ==========================================
+  // Business Studies 0450 (Course ID: 564f9e56-b77c-43af-9299-23eb2e7dcb7e)
+  // ==========================================
+  // Topic 1: Understanding business activity
+  '6049f916-3af9-428a-bcd0-ce0574f1d7f7': '/audio/lectures/business/1_1/manifest.json', // 1.1 Business activity
+  '7027f2e2-0ac5-4ee6-8913-7d93c7857733': '/audio/lectures/business/1_2/manifest.json', // 1.2 Classification of businesses
+  'a8ebc541-78ef-4202-96ad-161ed647a1b1': '/audio/lectures/business/1_3/manifest.json', // 1.3 Enterprise, business growth and size
+  '71458f5f-ba54-4ac7-a4c2-8bc68f8f15a0': '/audio/lectures/business/1_4/manifest.json', // 1.4 Types of business organisation
+  'a6bf8fbd-9c3d-45a3-8cd7-d63a3e79e7b3': '/audio/lectures/business/1_5/manifest.json', // 1.5 Business objectives and stakeholder objectives
+  // Topic 2: People in business
+  'cd1763a9-f030-4be1-b65b-c6dc6dde91c9': '/audio/lectures/business/2_1/manifest.json', // 2.1 Motivating employees
+  'fe4967aa-7d4c-480c-af71-e0d867459044': '/audio/lectures/business/2_2/manifest.json', // 2.2 Organisation and people management
+  'c2d359f6-1921-459e-a295-def7e891c352': '/audio/lectures/business/2_3/manifest.json', // 2.3 Recruitment, selection and training
+  '47166a31-2a55-40ea-a86c-81569cfafa32': '/audio/lectures/business/2_4/manifest.json', // 2.4 Internal and external communication
+  // Topic 3: Marketing
+  '6cbe4a84-26ed-4a1d-933b-5843e9b9a501': '/audio/lectures/business/3_1/manifest.json', // 3.1 Marketing, competition and customer
+  '356dede8-277a-441a-ad73-ef9384973eb7': '/audio/lectures/business/3_2/manifest.json', // 3.2 Market research
+  '25fe41d9-780d-41a6-876d-fff3e0d854c5': '/audio/lectures/business/3_3/manifest.json', // 3.3 The marketing mix
+  'c0d60bf9-ad33-456c-807e-9e29318113b8': '/audio/lectures/business/3_4/manifest.json', // 3.4 The marketing strategy
+  // Topic 4: Operations management
+  '1e280547-ce64-44c2-8fcf-997f7d61cacf': '/audio/lectures/business/4_1/manifest.json', // 4.1 Production of goods and services
+  '66589390-767c-4aab-957b-a970fa1a976e': '/audio/lectures/business/4_2/manifest.json', // 4.2 Costs, scale and break-even
+  '8f0fd09a-d6e6-438f-a2ab-ddc1447e0b00': '/audio/lectures/business/4_3/manifest.json', // 4.3 Quality management
+  '95eb54ae-44d4-42f6-9d1d-c5c729a69954': '/audio/lectures/business/4_4/manifest.json', // 4.4 Location decisions
+  // Topic 5: Financial information and decisions
+  '7b510a8f-757c-4856-9c68-65f98bf96836': '/audio/lectures/business/5_1/manifest.json', // 5.1 Business Finance: Needs and Sources
+  'dc0411df-d831-468a-9a7d-16fb4009290d': '/audio/lectures/business/5_2/manifest.json', // 5.2 Cash flow forecasting and working capital
+  '71f25939-98d4-4fa3-8227-be8434f64581': '/audio/lectures/business/5_3/manifest.json', // 5.3 Income statements
+  '5421db93-9d7b-4241-b362-171974092a30': '/audio/lectures/business/5_4/manifest.json', // 5.4 Statement of financial position
+  'd7564fe9-d338-4abc-acf3-affd8cca23fa': '/audio/lectures/business/5_5/manifest.json', // 5.5 Analysis of accounts
+  // Topic 6: External influences on business activity
+  '0e8fbc94-5976-4c7f-8588-471ea93926f5': '/audio/lectures/business/6_1/manifest.json', // 6.1 Economic issues
+  'a1d571ff-fa12-46c2-a49d-1df88df13214': '/audio/lectures/business/6_2/manifest.json', // 6.2 Environmental and ethical issues
+  '1bc6f5c1-e71b-4d0d-8153-d2f74180a845': '/audio/lectures/business/6_3/manifest.json', // 6.3 Business and globalisation
 };
 
 const LECTURE_VIDEO_MAP: Record<string, string> = {

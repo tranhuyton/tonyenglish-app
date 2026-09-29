@@ -1,0 +1,118 @@
+{
+  "lectureId": "fe4967aa-7d4c-480c-af71-e0d867459044",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "2.2. Organisation and people management",
+  "totalDuration": 350.66,
+  "majorSections": [
+    {
+      "id": "sec_org_structure",
+      "title": "1. Cơ cấu Tổ chức Doanh nghiệp"
+    },
+    {
+      "id": "sec_management",
+      "title": "2. Vai trò Quản trị và Sự ủy quyền"
+    },
+    {
+      "id": "sec_leadership_styles",
+      "title": "3. Ba Phong cách Lãnh đạo"
+    },
+    {
+      "id": "sec_trade_unions",
+      "title": "4. Công đoàn lao động"
+    },
+    {
+      "id": "sec_recommend_leadership",
+      "title": "5. Chiến lược làm bài thi Cambridge"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.2: Cơ cấu tổ chức và Quản trị con người",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 2.2: Organisation and People Management. In this lesson, we analyze how enterprises design organizational charts, explore spans of control and chain of command, evaluate management roles and delegation, compare autocratic, democratic, and laissez-faire leadership, and assess the role of trade unions.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 2.2: Cơ cấu tổ chức và Quản trị con người. Trong bài học này, chúng ta sẽ khảo sát sơ đồ tổ chức doanh nghiệp, tầm kiểm soát và chuỗi mệnh lệnh, vai trò của nhà quản trị và sự ủy quyền, so sánh ba phong cách lãnh đạo độc đoán, dân chủ, tự do, cùng vai trò của công đoàn.",
+      "duration": 44.92,
+      "startTime": 0.0,
+      "endTime": 44.92,
+      "audioUrl": "/audio/lectures/business/2_2/intro.mp3"
+    },
+    {
+      "id": "sec_org_structure",
+      "title": "1. Cơ cấu Tổ chức Doanh nghiệp",
+      "selector": "#sec-org-structure",
+      "en": "Section 1 examines organizational structures. An organizational chart illustrates lines of authority and communication across functional departments. We contrast tall hierarchical structures—having narrow spans of control and long chains of command—against flat structures with wide spans of control. Delayering removes intermediate management tiers to accelerate decision making and lower overhead expenses.",
+      "vi": "Mục một xem xét cơ cấu tổ chức doanh nghiệp. Sơ đồ tổ chức thể hiện quyền hạn và các kênh liên lạc giữa các phòng ban. Chúng ta phân biệt cơ cấu hình tháp nhiều tầng (tall structure) có tầm kiểm soát hẹp và chuỗi mệnh lệnh dài với cơ cấu phẳng (flat structure) có tầm kiểm soát rộng. Quá trình cắt giảm tầng nấc quản lý (delayering) giúp ra quyết định nhanh hơn và tiết kiệm chi phí lương.",
+      "duration": 49.72,
+      "startTime": 44.92,
+      "endTime": 94.64,
+      "audioUrl": "/audio/lectures/business/2_2/sec_org_structure.mp3"
+    },
+    {
+      "id": "card_org_concepts",
+      "title": "Các khái niệm then chốt trong Sơ đồ tổ chức",
+      "selector": "#card-org-concepts",
+      "en": "Key structural concepts include: Chain of Command—the vertical route through which instructions pass down from directors to shopfloor workers; Span of Control—the number of subordinates directly answering to a superior; and the distinction between Line Managers possessing executive authority and Staff Managers providing specialist advisory support.",
+      "vi": "Các khái niệm then chốt gồm: Chuỗi mệnh lệnh (Chain of Command) – con đường truyền đạt chỉ thị từ giám đốc xuống nhân viên; Tầm kiểm soát (Span of Control) – số lượng cấp dưới do một cấp trên trực tiếp quản lý; cùng sự phân biệt giữa Nhà quản lý trực tiếp (Line Manager) có quyền ra lệnh và Nhà quản lý chuyên trách (Staff Manager) giữ vai trò cố vấn chuyên môn.",
+      "duration": 40.55,
+      "startTime": 94.64,
+      "endTime": 135.19,
+      "audioUrl": "/audio/lectures/business/2_2/card_org_concepts.mp3"
+    },
+    {
+      "id": "sec_management",
+      "title": "2. Vai trò và Chức năng Quản trị",
+      "selector": "#sec-management",
+      "en": "Section 2 details the classical five managerial functions defined by Henri Fayol: Planning strategic targets, Organising corporate resources, Commanding operational directives, Coordinating cross-departmental efforts, and Controlling performance against planned budgets.",
+      "vi": "Mục hai trình bày năm chức năng quản trị kinh điển của Henri Fayol: Lập kế hoạch (Planning) mục tiêu tương lai, Tổ chức (Organising) phân bổ nguồn lực, Chỉ huy (Commanding) ban hành mệnh lệnh, Điều phối (Coordinating) phối hợp giữa các phòng ban, và Kiểm soát (Controlling) đo lường hiệu quả so với chỉ tiêu đã định.",
+      "duration": 36.76,
+      "startTime": 135.19,
+      "endTime": 171.95,
+      "audioUrl": "/audio/lectures/business/2_2/sec_management.mp3"
+    },
+    {
+      "id": "card_delegation",
+      "title": "Sự Ủy quyền trong Quản lý (Delegation)",
+      "selector": "#card-delegation",
+      "en": "Delegation is the passing down of operational authority from a senior manager to a subordinate to execute specific tasks, while ultimate accountability remains with the manager. Effective delegation frees executive time for strategic planning, trains employees for promotion, and demonstrates trust, though poor supervision risks operational blunders.",
+      "vi": "Ủy quyền (Delegation) là việc trao quyền quyết định từ cấp quản lý xuống cấp dưới để hoàn thành công việc cụ thể, nhưng trách nhiệm giải trình cuối cùng vẫn thuộc về nhà quản lý. Ủy quyền hiệu quả giúp cấp trên có thời gian cho chiến lược dài hạn, rèn luyện nhân viên thăng tiến và thể hiện sự tin tưởng, dù việc thiếu giám sát có thể gây sai sót nghiệp vụ.",
+      "duration": 40.5,
+      "startTime": 171.95,
+      "endTime": 212.45,
+      "audioUrl": "/audio/lectures/business/2_2/card_delegation.mp3"
+    },
+    {
+      "id": "sec_leadership_styles",
+      "title": "3. Ba Phong cách Lãnh đạo",
+      "selector": "#sec-leadership-styles",
+      "en": "Section 3 compares three primary leadership styles: Autocratic leaders retain all decision-making authority without consulting workers, vital in emergencies or on fast production lines. Democratic leaders involve employees through active consultation, enhancing motivation and idea generation. Laissez-faire leaders provide broad objectives and allow skilled professionals total execution autonomy.",
+      "vi": "Mục ba so sánh ba phong cách lãnh đạo chủ đạo: Lãnh đạo độc đoán (Autocratic) nắm giữ mọi quyền quyết định không qua thảo luận, rất cần thiết trong tình huống khẩn cấp hoặc sản xuất dây chuyền. Lãnh đạo dân chủ (Democratic) lắng nghe và tham vấn ý kiến nhân viên, giúp nâng cao động lực và tính sáng tạo. Lãnh đạo tự do (Laissez-faire) giao mục tiêu tổng thể và trao quyền hành động tuyệt đối cho đội ngũ chuyên gia tự quyết.",
+      "duration": 50.7,
+      "startTime": 212.45,
+      "endTime": 263.15,
+      "audioUrl": "/audio/lectures/business/2_2/sec_leadership_styles.mp3"
+    },
+    {
+      "id": "sec_trade_unions",
+      "title": "4. Công đoàn và Thương lượng tập thể",
+      "selector": "#sec-trade-unions",
+      "en": "Section 4 explores Trade Unions—independent worker associations that engage in collective bargaining with employers to secure fair wages, safe working environments, and legal representation. For employers, negotiating with a single union representative streamlines discussions, although unresolved labour disputes can trigger disruptive industrial action.",
+      "vi": "Mục bốn phân tích vai trò của Công đoàn (Trade Unions) – tổ chức đại diện cho người lao động tiến hành thương lượng tập thể với người sử dụng lao động để bảo đảm mức lương công bằng, điều kiện an toàn và hỗ trợ pháp lý. Với chủ doanh nghiệp, việc đàm phán qua một đại diện công đoàn giúp tiết kiệm thời gian, dù tranh chấp bất đồng có thể dẫn tới đình công ảnh hưởng sản xuất.",
+      "duration": 41.58,
+      "startTime": 263.15,
+      "endTime": 304.73,
+      "audioUrl": "/audio/lectures/business/2_2/sec_trade_unions.mp3"
+    },
+    {
+      "id": "sec_recommend_leadership",
+      "title": "5. Chiến lược làm bài thi Cambridge: Đề xuất phong cách lãnh đạo",
+      "selector": "#sec-recommend-leadership",
+      "en": "Section 5 presents Cambridge exam techniques for recommending leadership styles. High-scoring answers evaluate situational context: autocratic leadership suits crisis turnarounds or low-skilled repetitive assembly, whereas democratic styles maximize productivity among creative teams and R&D engineers. Justify by weighing speed of execution against workforce morale.",
+      "vi": "Mục năm cung cấp kỹ năng làm bài Cambridge khi đề xuất phong cách lãnh đạo. Bài làm điểm cao cần bám sát tình huống: lãnh đạo độc đoán phù hợp khi khủng hoảng cần hành động gấp hoặc công việc lặp đi lặp lại ít đòi hỏi kỹ năng, trong khi phong cách dân chủ phát huy tối đa hiệu quả trong nhóm sáng tạo và nghiên cứu phát triển. Biện minh bằng cách cân đối giữa tốc độ xử lý và tinh thần nhân viên.",
+      "duration": 45.93,
+      "startTime": 304.73,
+      "endTime": 350.66,
+      "audioUrl": "/audio/lectures/business/2_2/sec_recommend_leadership.mp3"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "lectureId": "71458f5f-ba54-4ac7-a4c2-8bc68f8f15a0",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "1.4. Types of business organisation",
+  "totalDuration": 379.93,
+  "majorSections": [
+    {
+      "id": "sec_sole_trader",
+      "title": "1. Doanh nghiệp tư nhân (Sole Trader)"
+    },
+    {
+      "id": "sec_partnerships",
+      "title": "2. Công ty hợp danh (Partnerships)"
+    },
+    {
+      "id": "sec_companies",
+      "title": "3. Công ty cổ phần (Joint-Stock Companies)"
+    },
+    {
+      "id": "sec_franchises",
+      "title": "4. Nhượng quyền thương mại (Franchises)"
+    },
+    {
+      "id": "sec_joint_ventures",
+      "title": "5. Doanh nghiệp Liên doanh (Joint Ventures)"
+    },
+    {
+      "id": "sec_public_corporations",
+      "title": "6. Tổng công ty Nhà nước"
+    },
+    {
+      "id": "sec_exam_recommendation",
+      "title": "7. Chiến lược đề xuất loại hình doanh nghiệp"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 1.4: Các loại hình tổ chức doanh nghiệp",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 1.4: Types of Business Organisation. In this pivotal lesson, we examine the legal structures available to commercial enterprises: sole traders, partnerships, private limited companies (Ltd), public limited companies (Plc), franchises, joint ventures, and public sector corporations.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 1.4: Các loại hình tổ chức doanh nghiệp. Trong bài học then chốt này, chúng ta sẽ khảo sát các hình thức pháp lý của doanh nghiệp: doanh nghiệp tư nhân, công ty hợp danh, công ty trách nhiệm hữu hạn tư nhân (Ltd), công ty đại chúng (Plc), nhượng quyền thương mại, liên doanh và các tổng công ty nhà nước.",
+      "duration": 46.24,
+      "startTime": 0.0,
+      "endTime": 46.24,
+      "audioUrl": "/audio/lectures/business/1_4/intro.mp3"
+    },
+    {
+      "id": "sec_sole_trader",
+      "title": "1. Doanh nghiệp tư nhân (Sole Trader)",
+      "selector": "#sec-sole-trader",
+      "en": "Section 1 analyzes the sole trader structure. Owned and managed by a single individual, sole proprietorships offer total autonomy, simple statutory establishment, and complete retention of profits. However, the crucial legal disadvantage is unlimited liability: the owner is personally responsible for all business debts, placing private assets like houses and vehicles at risk if the business becomes insolvent.",
+      "vi": "Mục một phân tích loại hình doanh nghiệp tư nhân (sole trader). Do một cá nhân sở hữu và điều hành, loại hình này mang lại quyền tự quyết tuyệt đối, thủ tục thành lập đơn giản và hưởng trọn lợi nhuận. Tuy nhiên, bất lợi pháp lý lớn nhất là chế độ trách nhiệm vô hạn (unlimited liability): chủ sở hữu phải chịu trách nhiệm bằng toàn bộ tài sản cá nhân cho các khoản nợ của doanh nghiệp nếu phá sản.",
+      "duration": 48.11,
+      "startTime": 46.24,
+      "endTime": 94.35,
+      "audioUrl": "/audio/lectures/business/1_4/sec_sole_trader.mp3"
+    },
+    {
+      "id": "sec_partnerships",
+      "title": "2. Công ty hợp danh (Partnerships)",
+      "selector": "#sec-partnerships",
+      "en": "Section 2 examines partnerships, formed between two and twenty individuals under a formal Deed of Partnership. Partnerships inject greater capital, share workloads, and combine complementary professional expertise. Yet, partners typically share joint and several unlimited liability, and business continuity is legally dissolved if any partner resigns or passes away.",
+      "vi": "Mục hai tìm hiểu về công ty hợp danh (partnerships), được thành lập giữa 2 đến 20 thành viên dựa trên Hợp đồng hợp danh (Deed of Partnership). Công ty hợp danh giúp huy động nguồn vốn lớn hơn, chia sẻ khối lượng công việc và kết hợp chuyên môn đa dạng. Dù vậy, các thành viên vẫn phải chịu trách nhiệm vô hạn liên đới, và doanh nghiệp có nguy cơ giải thể nếu một thành viên rút vốn hoặc qua đời.",
+      "duration": 46.91,
+      "startTime": 94.35,
+      "endTime": 141.26,
+      "audioUrl": "/audio/lectures/business/1_4/sec_partnerships.mp3"
+    },
+    {
+      "id": "sec_companies",
+      "title": "3. Công ty cổ phần (Joint-Stock Companies)",
+      "selector": "#sec-companies",
+      "en": "Section 3 introduces joint-stock companies. Unlike unincorporated entities, companies possess separate legal personality from their owners and offer limited liability, meaning shareholders risk only their invested share capital. Private limited companies (Ltd) sell shares privately with existing shareholder consent, preventing hostile takeovers, whereas Public Limited Companies (Plc) trade shares publicly on the stock exchange, raising colossal capital but exposing the firm to hostile acquisition.",
+      "vi": "Mục ba giới thiệu về công ty cổ phần. Khác với doanh nghiệp tư nhân, công ty cổ phần có tư cách pháp nhân độc lập và chế độ trách nhiệm hữu hạn (limited liability), bảo vệ an toàn tài sản cá nhân của cổ đông. Công ty TNHH tư nhân (Ltd) chỉ bán cổ phần nội bộ để tránh nguy cơ bị thâu tóm, trong khi Công ty cổ phần đại chúng (Plc) niêm yết tự do trên sàn chứng khoán, huy động vốn cực lớn nhưng đối mặt nguy cơ bị thâu tóm thù địch.",
+      "duration": 59.97,
+      "startTime": 141.26,
+      "endTime": 201.23,
+      "audioUrl": "/audio/lectures/business/1_4/sec_companies.mp3"
+    },
+    {
+      "id": "sec_franchises",
+      "title": "4. Nhượng quyền thương mại (Franchises)",
+      "selector": "#sec-franchises",
+      "en": "Section 4 investigates the franchise business model. A franchisor licenses a proven commercial brand, recipes, and operational systems to an independent franchisee in exchange for upfront license fees and ongoing management royalties. Franchisees gain immediate brand recognition and head-office support, but must surrender operational flexibility and accept strict brand conformity.",
+      "vi": "Mục bốn phân tích mô hình nhượng quyền thương mại (franchise). Bên nhượng quyền (franchisor) cấp phép thương hiệu, công thức và quy trình vận hành cho bên nhận quyền (franchisee) để thu phí nhượng quyền ban đầu và phần trăm doanh thu định kỳ. Bên nhận quyền được thừa hưởng uy tín thương hiệu ngay từ ngày đầu, nhưng bị ràng buộc nghiêm ngặt và không có quyền tự ý thay đổi sản phẩm.",
+      "duration": 46.24,
+      "startTime": 201.23,
+      "endTime": 247.47,
+      "audioUrl": "/audio/lectures/business/1_4/sec_franchises.mp3"
+    },
+    {
+      "id": "sec_joint_ventures",
+      "title": "5. Doanh nghiệp Liên doanh (Joint Ventures)",
+      "selector": "#sec-joint-ventures",
+      "en": "Section 5 explores joint ventures—formal collaborations where two or more independent corporations launch a joint project, sharing capital investment, operational risks, and profits. Joint ventures are widely deployed when Western multinationals enter foreign markets, partnering with indigenous domestic firms to navigate local legal regulations, distribution channels, and cultural nuances.",
+      "vi": "Mục năm tìm hiểu về doanh nghiệp liên doanh (joint ventures) – sự hợp tác chính thức giữa hai hay nhiều tập đoàn độc lập nhằm thực hiện một dự án chung, cùng chia sẻ vốn đầu tư, rủi ro và lợi nhuận. Liên doanh thường được các tập đoàn đa quốc gia áp dụng khi thâm nhập thị trường nước ngoài bằng cách bắt tay với doanh nghiệp bản địa để nắm vững luật pháp và thị hiếu địa phương.",
+      "duration": 44.39,
+      "startTime": 247.47,
+      "endTime": 291.86,
+      "audioUrl": "/audio/lectures/business/1_4/sec_joint_ventures.mp3"
+    },
+    {
+      "id": "sec_public_corporations",
+      "title": "6. Tổng công ty Nhà nước (Public Sector Corporations)",
+      "selector": "#sec-public-corporations",
+      "en": "Section 6 examines public sector corporations, fully owned by the state and funded through the national treasury. These entities operate vital strategic infrastructure such as national railways, water utilities, and postal networks, where natural monopolies exist, prioritizing universal affordability and equitable service over short-term commercial profits.",
+      "vi": "Mục sáu xem xét các tổng công ty nhà nước (public sector corporations), thuộc sở hữu nhà nước và cấp vốn từ ngân sách quốc gia. Các tổ chức này quản lý cơ sở hạ tầng chiến lược như đường sắt, mạng lưới cấp nước và bưu chính quốc gia – những lĩnh vực có tính chất độc quyền tự nhiên, ưu tiên phục vụ cộng đồng và giá cả ổn định hơn là chạy theo lợi nhuận trước mắt.",
+      "duration": 42.38,
+      "startTime": 291.86,
+      "endTime": 334.24,
+      "audioUrl": "/audio/lectures/business/1_4/sec_public_corporations.mp3"
+    },
+    {
+      "id": "sec_exam_recommendation",
+      "title": "7. Chiến lược làm bài thi Cambridge: Đề xuất loại hình doanh nghiệp",
+      "selector": "#sec-exam-recommendation",
+      "en": "Section 7 details the Cambridge Exam Justification Formula for evaluation questions. When recommending a business structure, candidates must balance capital requirements, the owner's risk appetite regarding unlimited liability, the desired degree of operational secrecy, and the potential threat of losing control. Always evaluate the trade-offs in context before delivering a justified recommendation.",
+      "vi": "Mục bảy hướng dẫn công thức biện minh chuẩn Cambridge cho các câu hỏi đánh giá. Khi đề xuất loại hình doanh nghiệp, học sinh cần cân nhắc nhu cầu vốn, mức độ chấp nhận rủi ro trách nhiệm vô hạn của chủ sở hữu, mức độ bảo mật báo cáo tài chính và nguy cơ mất quyền kiểm soát. Luôn phân tích ưu nhược điểm gắn liền với ngữ cảnh tình huống trước khi đưa ra kết luận thuyết phục.",
+      "duration": 45.69,
+      "startTime": 334.24,
+      "endTime": 379.93,
+      "audioUrl": "/audio/lectures/business/1_4/sec_exam_recommendation.mp3"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "lectureId": "c0d60bf9-ad33-456c-807e-9e29318113b8",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "3.4. The marketing strategy",
+  "totalDuration": 189.18,
+  "majorSections": [
+    {
+      "id": "sec_marketing_strategy",
+      "title": "1. Chiến lược Marketing Tích hợp"
+    },
+    {
+      "id": "sec_legal_controls",
+      "title": "2. Pháp lý Bảo vệ Người tiêu dùng"
+    },
+    {
+      "id": "sec_entering_markets",
+      "title": "3. Thâm nhập Thị trường Quốc tế"
+    },
+    {
+      "id": "sec_recommend_strategy",
+      "title": "4. Chiến lược làm bài thi Cambridge"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 3.4: Chiến lược tiếp thị",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 3.4: The Marketing Strategy. In this concluding chapter of Topic 3, we define how businesses combine the 4Ps into an integrated marketing strategy, examine legal consumer protections, analyze the hurdles of global market entry, and master Cambridge evaluation questions.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 3.4: Chiến lược tiếp thị. Trong bài học tổng kết Chủ đề ba, chúng ta sẽ tìm hiểu cách kết hợp 4 chữ P thành một chiến lược tiếp thị nhất quán, các quy định pháp luật bảo vệ người tiêu dùng, cách vượt qua rào cản khi mở rộng ra thị trường quốc tế và phương pháp làm bài thi Cambridge.",
+      "duration": 41.9,
+      "startTime": 0.0,
+      "endTime": 41.9,
+      "audioUrl": "/audio/lectures/business/3_4/intro.mp3"
+    },
+    {
+      "id": "sec_marketing_strategy",
+      "title": "1. Chiến lược Marketing Tích hợp",
+      "selector": "#sec-marketing-strategy",
+      "en": "Section 1 defines a Marketing Strategy as a coherent plan combining the 4Ps of the marketing mix to achieve specific corporate marketing objectives. The elements of the marketing mix must be mutually supportive: a premium luxury perfume requires prestigious glass packaging, selective boutique distribution, and sophisticated lifestyle advertising.",
+      "vi": "Mục một định nghĩa Chiến lược tiếp thị là một kế hoạch phối hợp chặt chẽ bốn chữ P nhằm đạt được các mục tiêu kinh doanh cụ thể. Các yếu tố marketing mix phải bổ trợ tương hỗ cho nhau: một dòng nước hoa cao cấp đòi hỏi thiết kế chai thủy tinh sang trọng, phân phối tại các cửa hàng chọn lọc và quảng cáo tôn vinh đẳng cấp sống.",
+      "duration": 38.73,
+      "startTime": 41.9,
+      "endTime": 80.63,
+      "audioUrl": "/audio/lectures/business/3_4/sec_marketing_strategy.mp3"
+    },
+    {
+      "id": "sec_legal_controls",
+      "title": "2. Khung Pháp lý Bảo vệ Người tiêu dùng",
+      "selector": "#sec-legal-controls",
+      "en": "Section 2 investigates statutory consumer protection laws: bans on misleading advertising, weight and measurement standards, product safety regulations, and laws against anti-competitive price collusion. Businesses failing to comply risk hefty fines, loss of reputation, and product recalls.",
+      "vi": "Mục hai khảo sát các quy định pháp luật bảo vệ người tiêu dùng: nghiêm cấm quảng cáo sai sự thật, chuẩn hóa đơn vị đo lường và trọng lượng, quy chuẩn an toàn sản phẩm và luật chống độc quyền thao túng giá. Doanh nghiệp vi phạm sẽ bị xử phạt hành chính nặng nề, mất uy tín thương hiệu và bị buộc thu hồi sản phẩm.",
+      "duration": 36.26,
+      "startTime": 80.63,
+      "endTime": 116.89,
+      "audioUrl": "/audio/lectures/business/3_4/sec_legal_controls.mp3"
+    },
+    {
+      "id": "sec_entering_markets",
+      "title": "3. Thâm nhập Thị trường Quốc tế",
+      "selector": "#sec-entering-markets",
+      "en": "Section 3 analyzes the challenges of entering foreign overseas markets: linguistic barriers, cultural differences in consumer tastes, import tariffs and trade quotas, and exchange rate volatility. Strategies to overcome these hurdles include international joint ventures, franchising to domestic partners, and establishing local production subsidiaries.",
+      "vi": "Mục ba phân tích những thách thức khi vươn ra thị trường quốc tế: rào cản ngôn ngữ, khác biệt văn hóa tiêu dùng, thuế quan nhập khẩu và hạn ngạch thương mại, cùng biến động tỷ giá hối đoái. Giải pháp vượt qua khó khăn bao gồm liên doanh quốc tế, nhượng quyền cho đối tác bản địa và thành lập chi nhánh sản xuất tại nước sở tại.",
+      "duration": 40.02,
+      "startTime": 116.89,
+      "endTime": 156.91,
+      "audioUrl": "/audio/lectures/business/3_4/sec_entering_markets.mp3"
+    },
+    {
+      "id": "sec_recommend_strategy",
+      "title": "4. Chiến lược làm bài thi Cambridge: Đề xuất Chiến lược Tiếp thị",
+      "selector": "#sec-recommend-strategy",
+      "en": "Section 4 presents the Cambridge examination formula for evaluating marketing strategies. Candidates must synthesize available financial resources, target customer demographic profiles, and competitor strengths to construct a cohesive, fully justified marketing plan.",
+      "vi": "Mục bốn hướng dẫn công thức chấm điểm của giám khảo Cambridge cho câu hỏi chiến lược tiếp thị. Thí sinh cần tổng hợp ngân sách tài chính sẵn có, đặc điểm nhân khẩu học của khách hàng mục tiêu và điểm mạnh của đối thủ để xây dựng một kế hoạch tiếp thị nhất quán và có sức thuyết phục cao.",
+      "duration": 32.27,
+      "startTime": 156.91,
+      "endTime": 189.18,
+      "audioUrl": "/audio/lectures/business/3_4/sec_recommend_strategy.mp3"
+    }
+  ]
+}

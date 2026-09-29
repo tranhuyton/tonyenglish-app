@@ -1,0 +1,107 @@
+{
+  "lectureId": "1bc6f5c1-e71b-4d0d-8153-d2f74180a845",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "6.3. Business and globalisation",
+  "totalDuration": 248.19,
+  "majorSections": [
+    {
+      "id": "sec_globalisation",
+      "title": "1. Bản chất & Động lực Toàn cầu hóa"
+    },
+    {
+      "id": "sec_tariffs_quotas",
+      "title": "2. Thuế quan & Hạn ngạch (Protectionism)"
+    },
+    {
+      "id": "sec_mncs",
+      "title": "3. Tập đoàn Đa quốc gia (MNCs)"
+    },
+    {
+      "id": "sec_impact_host_countries",
+      "title": "4. Tác động của MNCs lên Nước sở tại"
+    },
+    {
+      "id": "sec_exchange_rates",
+      "title": "5. Biến động Tỷ giá & Quy tắc SPICED"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 6.3: Doanh nghiệp và Toàn cầu hóa",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 6.3: Business and Globalisation. In this final chapter of the course, we examine the forces driving globalisation, import tariffs and quotas, multinational corporations (MNCs), their impacts on host nations, and the mechanics of foreign exchange rate fluctuations.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 6.3: Doanh nghiệp và Toàn cầu hóa. Trong bài học kết thúc toàn bộ khóa học, chúng ta sẽ khảo sát động lực của toàn cầu hóa, thuế quan và hạn ngạch nhập khẩu, các tập đoàn đa quốc gia (MNC), tác động của họ lên các nước sở tại cùng tác động của biến động tỷ giá hối đoái.",
+      "duration": 43.02,
+      "startTime": 0.0,
+      "endTime": 43.02,
+      "audioUrl": "/audio/lectures/business/6_3/intro.mp3"
+    },
+    {
+      "id": "sec_globalisation",
+      "title": "1. Động lực và Tác động của Toàn cầu hóa",
+      "selector": "#sec-globalisation",
+      "en": "Section 1 defines Globalisation as the increasing integration and interdependence of world economies through trade, capital flows, and technology. Drivers include reduced transport container shipping costs, free trade agreements, and global internet e-commerce platforms.",
+      "vi": "Mục một định nghĩa Toàn cầu hóa là sự gia tăng hội nhập và phụ thuộc lẫn nhau giữa các nền kinh tế trên thế giới qua thương mại, luân chuyển vốn và công nghệ. Các động lực chính gồm chi phí vận tải container giảm, các hiệp định thương mại tự do và sự phát triển của thương mại điện tử toàn cầu.",
+      "duration": 33.76,
+      "startTime": 43.02,
+      "endTime": 76.78,
+      "audioUrl": "/audio/lectures/business/6_3/sec_globalisation.mp3"
+    },
+    {
+      "id": "sec_tariffs_quotas",
+      "title": "2. Bảo hộ Thương mại: Thuế quan và Hạn ngạch (Tariffs & Quotas)",
+      "selector": "#sec-tariffs-quotas",
+      "en": "Section 2 investigates trade protectionism: Import Tariffs—taxes levied on imported foreign goods to make them more expensive than domestic products; and Import Quotas—physical quantitative ceilings on the volume of foreign goods allowed into the country.",
+      "vi": "Mục hai nghiên cứu các biện pháp bảo hộ mậu dịch: Thuế quan nhập khẩu (Import Tariffs) là thuế đánh vào hàng hóa nước ngoài để làm tăng giá bán so với hàng nội địa; và Hạn ngạch nhập khẩu (Import Quotas) là giới hạn định lượng về số lượng sản phẩm nhập khẩu tối đa được phép đưa vào thị trường trong nước.",
+      "duration": 31.31,
+      "startTime": 76.78,
+      "endTime": 108.09,
+      "audioUrl": "/audio/lectures/business/6_3/sec_tariffs_quotas.mp3"
+    },
+    {
+      "id": "sec_mncs",
+      "title": "3. Tập đoàn Đa quốc gia (Multinational Corporations - MNCs)",
+      "selector": "#sec-mncs",
+      "en": "Section 3 examines Multinational Corporations: businesses that possess manufacturing operations or service branches in more than one country. Motives for foreign direct investment include slashing labor costs, avoiding import tariffs, and accessing local mineral resources.",
+      "vi": "Mục ba xem xét các Tập đoàn đa quốc gia (MNCs): doanh nghiệp có cơ sở sản xuất hoặc chi nhánh dịch vụ tại nhiều hơn một quốc gia. Động lực đầu tư trực tiếp nước ngoài (FDI) gồm cắt giảm chi phí nhân công, vượt qua hàng rào thuế quan và tiếp cận trực tiếp nguồn tài nguyên thiên nhiên bản địa.",
+      "duration": 34.14,
+      "startTime": 108.09,
+      "endTime": 142.23,
+      "audioUrl": "/audio/lectures/business/6_3/sec_mncs.mp3"
+    },
+    {
+      "id": "sec_impact_host_countries",
+      "title": "4. Tác động của MNCs lên Quốc gia Sở tại",
+      "selector": "#sec-impact-host-countries",
+      "en": "Section 4 weighs the benefits and drawbacks of MNCs on host nations. Benefits include generating employment, transferring modern industrial skills, and paying corporate taxes. Drawbacks include driving local indigenous competitors out of business, repatriating profits back to foreign headquarters, and exploiting lax environmental standards.",
+      "vi": "Mục bốn cân nhắc mặt tích cực và tiêu cực của MNCs đối với nước sở tại. Mặt tích cực gồm tạo việc làm cho lao động địa phương, chuyển giao công nghệ kỹ thuật và đóng góp thuế cho ngân sách. Mặt tiêu cực gồm đè bẹp các doanh nghiệp bản địa, chuyển toàn bộ lợi nhuận về nước mẹ và khai thác lỗ hổng môi trường.",
+      "duration": 40.94,
+      "startTime": 142.23,
+      "endTime": 183.17,
+      "audioUrl": "/audio/lectures/business/6_3/sec_impact_host_countries.mp3"
+    },
+    {
+      "id": "sec_exchange_rates",
+      "title": "5. Biến động Tỷ giá Hối đoái và Quy tắc SPICED",
+      "selector": "#sec-exchange-rates",
+      "en": "Section 5 analyzes exchange rate currency fluctuations using the famous Cambridge mnemonic: SPICED—Stronger Pound Imports Cheaper, Exports Dearer. A currency appreciation makes imported raw materials cheaper but reduces overseas price competitiveness for domestic exporters.",
+      "vi": "Mục năm phân tích biến động tỷ giá hối đoái thông qua quy tắc ghi nhớ Cambridge SPICED: Đồng nội tệ tăng giá làm cho hàng nhập khẩu rẻ hơn nhưng hàng xuất khẩu trở nên đắt đỏ hơn. Ngược lại, đồng nội tệ giảm giá kích thích xuất khẩu nhưng làm tăng chi phí nhập khẩu nguyên liệu từ nước ngoài.",
+      "duration": 34.62,
+      "startTime": 183.17,
+      "endTime": 217.79,
+      "audioUrl": "/audio/lectures/business/6_3/sec_exchange_rates.mp3"
+    },
+    {
+      "id": "sec_recommend_globalisation",
+      "title": "6. Chiến lược làm bài thi Cambridge: Đánh giá Tác động của MNCs",
+      "selector": "#sec-recommend-globalisation",
+      "en": "Section 6 presents the Cambridge evaluation formula for globalization case studies. Candidates must balance national economic growth against sovereignty, environmental degradation, and profit repatriation before delivering a balanced final judgement.",
+      "vi": "Mục sáu cung cấp công thức đánh giá toàn diện đề thi Cambridge cho các bài tập tình huống toàn cầu hóa. Thí sinh phải cân nhắc giữa lợi ích tăng trưởng kinh tế, việc làm với các nguy cơ ô nhiễm môi trường và chuyển giá lợi nhuận trước khi đưa ra nhận định tổng kết xác đáng.",
+      "duration": 30.4,
+      "startTime": 217.79,
+      "endTime": 248.19,
+      "audioUrl": "/audio/lectures/business/6_3/sec_recommend_globalisation.mp3"
+    }
+  ]
+}

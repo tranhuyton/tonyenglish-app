@@ -1,0 +1,129 @@
+{
+  "lectureId": "7b510a8f-757c-4856-9c68-65f98bf96836",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "5.1. Business Finance: Needs and Sources",
+  "totalDuration": 334.47,
+  "majorSections": [
+    {
+      "id": "sec_need_finance",
+      "title": "1. Nhu cầu Vốn Doanh nghiệp"
+    },
+    {
+      "id": "sec_short_long_term",
+      "title": "2. Thời hạn Vốn (Ngắn hạn & Dài hạn)"
+    },
+    {
+      "id": "sec_internal_external",
+      "title": "3. Nguồn vốn Nội bộ và Bên ngoài"
+    },
+    {
+      "id": "sec_alternative_sources",
+      "title": "4. Vốn Thay thế (Crowdfunding, Venture Capital)"
+    },
+    {
+      "id": "sec_choosing_finance",
+      "title": "5. Tiêu chí Lựa chọn & Chiến lược thi Cambridge"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5.1: Nhu cầu và Nguồn vốn Doanh nghiệp",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 5.1: Business Finance: Needs and Sources. In this opening chapter of Topic 5, Financial Information and Decisions, we examine why enterprises require capital, compare short-term versus long-term financing needs, evaluate internal versus external capital sources, and analyze microfinance and venture capital.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 5.1: Nhu cầu và Nguồn vốn Doanh nghiệp. Trong bài mở đầu của Chủ đề năm về Tài chính và Ra quyết định Doanh nghiệp, chúng ta sẽ phân tích lý do doanh nghiệp cần vốn, phân biệt nhu cầu vốn ngắn hạn và dài hạn, đánh giá các nguồn vốn nội bộ và bên ngoài, cùng các hình thức tài chính vi mô và vốn mạo hiểm.",
+      "duration": 46.7,
+      "startTime": 0.0,
+      "endTime": 46.7,
+      "audioUrl": "/audio/lectures/business/5_1/intro.mp3"
+    },
+    {
+      "id": "sec_need_finance",
+      "title": "1. Nhu cầu Vốn của Doanh nghiệp",
+      "selector": "#sec-need-finance",
+      "en": "Section 1 outlines the primary commercial reasons for raising finance: initial startup capital to acquire premises and capital equipment; working capital to finance day-to-day trading inventories and trade credit; and business expansion capital to construct new factories or acquire competitor businesses.",
+      "vi": "Mục một tổng hợp các lý do chính để huy động vốn: vốn khởi nghiệp ban đầu để mua sắm cơ sở vật chất và máy móc thiết bị; vốn lưu động để duy trì vòng quay hàng ngày như mua hàng tồn kho và cho khách nợ; và vốn mở rộng kinh doanh để xây dựng nhà máy mới hoặc mua lại doanh nghiệp đối thủ.",
+      "duration": 33.23,
+      "startTime": 46.7,
+      "endTime": 79.93,
+      "audioUrl": "/audio/lectures/business/5_1/sec_need_finance.mp3"
+    },
+    {
+      "id": "sec_short_long_term",
+      "title": "2. Nhu cầu Vốn Ngắn hạn và Dài hạn",
+      "selector": "#sec-short-long-term",
+      "en": "Section 2 matches financing durations to asset life. Short-term finance, under one year, bridges immediate liquidity deficits via bank overdrafts and trade credit. Long-term finance, extending beyond five years, funds major capital assets through bank mortgages, debentures, and issuing equity share capital.",
+      "vi": "Mục hai ghép nối thời hạn vay vốn với tuổi thọ của tài sản. Vốn ngắn hạn dưới một năm bù đắp thiếu hụt thanh khoản tạm thời qua thấu chi ngân hàng và tín dụng thương mại. Vốn dài hạn trên năm năm tài trợ cho các tài sản cố định lớn thông qua các khoản vay thế chấp ngân hàng, trái phiếu doanh nghiệp và phát hành cổ phiếu mới.",
+      "duration": 40.34,
+      "startTime": 79.93,
+      "endTime": 120.27,
+      "audioUrl": "/audio/lectures/business/5_1/sec_short_long_term.mp3"
+    },
+    {
+      "id": "sec_internal_external",
+      "title": "3. Nguồn vốn Nội bộ và Nguồn vốn Bên ngoài",
+      "selector": "#sec-internal-external",
+      "en": "Section 3 classifies finance by origin. Internal finance comes from retained operating profits, sale of redundant non-current assets, and managing working capital tightly. External finance originates from commercial lenders, leasing companies, new equity investors, and government grants.",
+      "vi": "Mục ba phân loại vốn theo xuất xứ. Vốn nội bộ bắt nguồn từ lợi nhuận giữ lại qua các năm, thanh lý tài sản cố định dư thừa và siết chặt quản lý vốn lưu động. Vốn bên ngoài đến từ các ngân hàng thương mại, công ty cho thuê tài chính, cổ đông góp vốn mới và các gói trợ cấp của chính phủ.",
+      "duration": 37.38,
+      "startTime": 120.27,
+      "endTime": 157.65,
+      "audioUrl": "/audio/lectures/business/5_1/sec_internal_external.mp3"
+    },
+    {
+      "id": "card_internal_sources",
+      "title": "Ưu nhược điểm của Nguồn vốn Nội bộ",
+      "selector": "#card-internal-sources",
+      "en": "Internal finance incurs zero interest charges, requires no debt collateral, and maintains 100% owner control. However, newly formed startups lack retained earnings, and selling essential factory machinery permanently degrades production capacity.",
+      "vi": "Vốn nội bộ không phát sinh chi phí lãi vay, không cần thế chấp tài sản và duy trì trọn vẹn quyền kiểm soát của chủ sở hữu. Tuy nhiên, các công ty mới thành lập chưa có lợi nhuận tích lũy, và việc bán máy móc thiết bị thiết yếu có thể làm suy giảm nghiêm trọng năng lực sản xuất.",
+      "duration": 32.8,
+      "startTime": 157.65,
+      "endTime": 190.45,
+      "audioUrl": "/audio/lectures/business/5_1/card_internal_sources.mp3"
+    },
+    {
+      "id": "card_external_sources",
+      "title": "Các Kênh Vốn Bên ngoài Cốt lõi",
+      "selector": "#card-external-sources",
+      "en": "External financing channels include: Bank overdrafts offering flexible emergency cash; Trade credit providing 30 to 60 days of interest-free supplier financing; Hire purchase and leasing avoiding massive upfront capital outlay; and Share issues raising vast equity without debt repayment deadlines.",
+      "vi": "Các kênh vốn bên ngoài cốt lõi gồm: Thấu chi ngân hàng (Bank overdraft) cung ứng tiền mặt linh hoạt trong tình huống khẩn cấp; Tín dụng thương mại (Trade credit) cho phép nợ tiền nhà cung cấp 30 đến 60 ngày không lãi suất; Thuê mua và thuê tài chính giúp tránh chi khoản tiền vốn ban đầu quá lớn; và Phát hành cổ phiếu huy động nguồn vốn khổng lồ mà không phải chịu áp lực trả nợ gốc.",
+      "duration": 38.78,
+      "startTime": 190.45,
+      "endTime": 229.23,
+      "audioUrl": "/audio/lectures/business/5_1/card_external_sources.mp3"
+    },
+    {
+      "id": "sec_alternative_sources",
+      "title": "4. Các Nguồn vốn Hiện đại: Crowdfunding và Venture Capital",
+      "selector": "#sec-alternative-sources",
+      "en": "Section 4 explores innovative financing: Crowdfunding raises micro-contributions from thousands of online backers; Microfinance delivers small loans to impoverished entrepreneurs in developing nations; and Venture Capital provides equity funding and mentorship to high-risk, high-growth technology ventures.",
+      "vi": "Mục bốn tìm hiểu các nguồn vốn đổi mới sáng tạo: Gọi vốn cộng đồng (Crowdfunding) huy động hàng ngàn khoản tiền nhỏ từ công chúng trực tuyến; Tài chính vi mô (Microfinance) cung cấp các khoản vay nhỏ cho người nghèo khởi nghiệp tại các nước đang phát triển; và Quỹ đầu tư mạo hiểm (Venture Capital) rót vốn cổ phần kèm cố vấn chiến lược cho các startup công nghệ tăng trưởng nhanh.",
+      "duration": 38.9,
+      "startTime": 229.23,
+      "endTime": 268.13,
+      "audioUrl": "/audio/lectures/business/5_1/sec_alternative_sources.mp3"
+    },
+    {
+      "id": "sec_choosing_finance",
+      "title": "5. Tiêu chí Lựa chọn Nguồn vốn Phù hợp",
+      "selector": "#sec-choosing-finance",
+      "en": "Section 5 presents the selection matrix: purpose and duration of finance, total amount required, legal business structure (sole traders cannot issue shares), interest rate expense, and owner appetite for debt gearing versus equity dilution.",
+      "vi": "Mục năm cung cấp ma trận lựa chọn nguồn vốn: mục đích và thời hạn sử dụng vốn, tổng số tiền cần huy động, loại hình pháp lý (doanh nghiệp tư nhân không được phát hành cổ phiếu), chi phí lãi suất vay và mức độ sẵn sàng chấp nhận đòn bẩy nợ so với việc bị pha loãng quyền sở hữu công ty.",
+      "duration": 30.76,
+      "startTime": 268.13,
+      "endTime": 298.89,
+      "audioUrl": "/audio/lectures/business/5_1/sec_choosing_finance.mp3"
+    },
+    {
+      "id": "sec_recommend_finance",
+      "title": "6. Chiến lược làm bài thi Cambridge: Đề xuất Nguồn vốn",
+      "selector": "#sec-recommend-finance",
+      "en": "Section 6 details the Cambridge evaluation strategy for finance questions. Candidates must evaluate gearing risks: borrowing excessively increases default bankruptcy risks if trading conditions deteriorate, while equity issues permanently surrender future dividend yields to incoming shareholders.",
+      "vi": "Mục sáu hướng dẫn chiến lược trả lời câu hỏi thi Cambridge về nguồn vốn. Thí sinh phải phân tích rủi ro tỷ lệ đòn bẩy tài chính (gearing): vay nợ quá nhiều làm tăng nguy cơ vỡ nợ phá sản khi thị trường biến động tiêu cực, trong khi phát hành cổ phiếu mới sẽ vĩnh viễn chia sẻ cổ tức tương lai cho các cổ đông mới.",
+      "duration": 35.58,
+      "startTime": 298.89,
+      "endTime": 334.47,
+      "audioUrl": "/audio/lectures/business/5_1/sec_recommend_finance.mp3"
+    }
+  ]
+}

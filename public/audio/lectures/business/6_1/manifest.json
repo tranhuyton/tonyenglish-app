@@ -1,0 +1,107 @@
+{
+  "lectureId": "0e8fbc94-5976-4c7f-8588-471ea93926f5",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "6.1. Economic issues",
+  "totalDuration": 263.08,
+  "majorSections": [
+    {
+      "id": "sec_business_cycle",
+      "title": "1. Chu kỳ Kinh tế (Business Cycle)"
+    },
+    {
+      "id": "sec_economic_impacts",
+      "title": "2. Tác động của Lạm phát, Thất nghiệp & GDP"
+    },
+    {
+      "id": "sec_gov_objectives",
+      "title": "3. Mục tiêu Kinh tế của Chính phủ"
+    },
+    {
+      "id": "sec_economic_policies",
+      "title": "4. Chính sách Tài khóa & Tiền tệ"
+    },
+    {
+      "id": "sec_business_policy_response",
+      "title": "5. Phản ứng Doanh nghiệp & Chiến lược thi Cambridge"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 6.1: Các Vấn đề Kinh tế vĩ mô",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 6.1: Economic Issues. In this opening chapter of Topic 6, External Influences on Business Activity, we explore the four stages of the business cycle, analyze how GDP, inflation, and unemployment impact enterprises, examine government economic objectives, and assess fiscal and monetary policy.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 6.1: Các Vấn đề Kinh tế vĩ mô. Trong bài mở đầu của Chủ đề sáu về Các Tác động Bên ngoài, chúng ta sẽ khảo sát bốn giai đoạn của chu kỳ kinh tế, tác động của GDP, lạm phát và thất nghiệp đến doanh nghiệp, các mục tiêu kinh tế vĩ mô của chính phủ cùng chính sách tài khóa và tiền tệ.",
+      "duration": 45.26,
+      "startTime": 0.0,
+      "endTime": 45.26,
+      "audioUrl": "/audio/lectures/business/6_1/intro.mp3"
+    },
+    {
+      "id": "sec_business_cycle",
+      "title": "1. Chu kỳ Kinh tế (The Business Cycle)",
+      "selector": "#sec-business-cycle",
+      "en": "Section 1 charts fluctuations in national output over time across four recurring stages: Growth, where consumer spending and employment climb; Boom, where factories operate at full capacity and inflation overheats; Recession, where GDP contracts for two consecutive quarters; and Slump, marked by high unemployment and business bankruptcies.",
+      "vi": "Mục một phác họa sự biến động của sản lượng quốc gia qua bốn giai đoạn chu kỳ kinh tế: Tăng trưởng (Growth) khi chi tiêu tiêu dùng và việc làm gia tăng; Đỉnh hưng thịnh (Boom) khi nhà máy vận hành hết công suất và lạm phát tăng cao; Suy thoái (Recession) khi GDP sụt giảm hai quý liên tiếp; và Đình đốn (Slump) với tỷ lệ thất nghiệp tăng vọt và hàng loạt doanh nghiệp phá sản.",
+      "duration": 42.88,
+      "startTime": 45.26,
+      "endTime": 88.14,
+      "audioUrl": "/audio/lectures/business/6_1/sec_business_cycle.mp3"
+    },
+    {
+      "id": "card_cycle_stages",
+      "title": "Chiến lược Thích ứng với Chu kỳ Kinh tế",
+      "selector": "#card-cycle-stages",
+      "en": "During economic booms, luxury brands expand production lines and raise prices. During recessions, discount retailers thrive as consumers downscale spending to essential budget ranges, while heavy capital machinery producers face collapsing demand.",
+      "vi": "Trong thời kỳ đỉnh cao kinh tế, các thương hiệu cao cấp mở rộng sản xuất và tăng giá bán. Trong giai đoạn suy thoái, các nhà bán lẻ giá rẻ lại phát đạt do người tiêu dùng thắt chặt chi tiêu vào các mặt hàng thiết yếu, trong khi các nhà sản xuất máy móc thiết bị nặng phải đối mặt với sự sụt giảm nhu cầu nghiêm trọng.",
+      "duration": 32.94,
+      "startTime": 88.14,
+      "endTime": 121.08,
+      "audioUrl": "/audio/lectures/business/6_1/card_cycle_stages.mp3"
+    },
+    {
+      "id": "sec_economic_impacts",
+      "title": "2. Tác động của Thất nghiệp, Lạm phát và GDP",
+      "selector": "#sec-economic-impacts",
+      "en": "Section 2 investigates macroeconomic indicators: Rising unemployment reduces consumer purchasing power but lowers recruitment wage pressures. High inflation erodes real wages, escalates raw material costs, and diminishes export competitiveness. Expanding GDP widens sales opportunities across consumer markets.",
+      "vi": "Mục hai nghiên cứu các chỉ số kinh tế vĩ mô: Thất nghiệp tăng làm giảm sức mua của người tiêu dùng nhưng giúp doanh nghiệp dễ tuyển dụng lao động với chi phí thấp hơn. Lạm phát cao bào mòn tiền lương thực tế, đẩy chi phí nguyên vật liệu tăng vọt và làm giảm sức cạnh tranh xuất khẩu. GDP tăng trưởng mở rộng cơ hội bán hàng trên toàn thị trường.",
+      "duration": 41.39,
+      "startTime": 121.08,
+      "endTime": 162.47,
+      "audioUrl": "/audio/lectures/business/6_1/sec_economic_impacts.mp3"
+    },
+    {
+      "id": "sec_gov_objectives",
+      "title": "3. Bốn Mục tiêu Kinh tế của Chính phủ",
+      "selector": "#sec-gov-objectives",
+      "en": "Section 3 outlines the four core macroeconomic aims of national governments: sustainable economic growth measured by rising real GDP, low stable inflation, low unemployment, and a healthy balance of payments where export revenues balance import expenditures.",
+      "vi": "Mục ba tổng kết bốn mục tiêu kinh tế vĩ mô của chính phủ: tăng trưởng kinh tế bền vững đo lường bằng sự gia tăng GDP thực tế, lạm phát thấp và ổn định, duy trì tỷ lệ thất nghiệp thấp, và cân bằng cán cân thanh toán quốc tế giữa kim ngạch xuất khẩu và nhập khẩu.",
+      "duration": 30.83,
+      "startTime": 162.47,
+      "endTime": 193.3,
+      "audioUrl": "/audio/lectures/business/6_1/sec_gov_objectives.mp3"
+    },
+    {
+      "id": "sec_economic_policies",
+      "title": "4. Chính sách Tài khóa, Tiền tệ và Cung ứng",
+      "selector": "#sec-economic-policies",
+      "en": "Section 4 contrasts economic management tools: Fiscal Policy uses taxes and government spending; Monetary Policy adjusts interest rates and credit availability; and Supply-Side Policy invests in vocational training, deregulation, and infrastructure to boost national productive potential.",
+      "vi": "Mục bốn phân biệt các công cụ điều hành kinh tế: Chính sách tài khóa (Fiscal Policy) sử dụng thuế và chi tiêu công; Chính sách tiền tệ (Monetary Policy) điều chỉnh lãi suất và hạn mức tín dụng; và Chính sách phía cung (Supply-Side Policy) đầu tư vào đào tạo nghề, giảm bớt thủ tục hành chính và nâng cấp cơ sở hạ tầng để mở rộng năng lực sản xuất quốc gia.",
+      "duration": 39.02,
+      "startTime": 193.3,
+      "endTime": 232.32,
+      "audioUrl": "/audio/lectures/business/6_1/sec_economic_policies.mp3"
+    },
+    {
+      "id": "sec_business_policy_response",
+      "title": "5. Phản ứng của Doanh nghiệp trước Chính sách Kinh tế",
+      "selector": "#sec-business-policy-response",
+      "en": "Section 5 details corporate adaptation. When central banks hike interest rates, borrowing costs soar and consumer mortgage payments climb, forcing businesses to cancel debt-funded investments and discount inventory to generate immediate cash reserves.",
+      "vi": "Mục năm phân tích sự thích ứng của doanh nghiệp. Khi ngân hàng trung ương tăng lãi suất, chi phí vay nợ tăng cao và gánh nặng trả góp của người dân tăng lên, buộc doanh nghiệp phải hủy bỏ các dự án đầu tư sử dụng vốn vay và giảm giá hàng tồn kho để tạo dòng tiền mặt dự phòng.",
+      "duration": 30.76,
+      "startTime": 232.32,
+      "endTime": 263.08,
+      "audioUrl": "/audio/lectures/business/6_1/sec_business_policy_response.mp3"
+    }
+  ]
+}

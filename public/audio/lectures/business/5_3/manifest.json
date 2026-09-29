@@ -1,0 +1,92 @@
+{
+  "lectureId": "71f25939-98d4-4fa3-8227-be8434f64581",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "5.3. Income statements",
+  "totalDuration": 177.76,
+  "majorSections": [
+    {
+      "id": "sec_profit_importance",
+      "title": "1. Tầm quan trọng Lợi nhuận"
+    },
+    {
+      "id": "card_profit_vs_cash",
+      "title": "2. Phân biệt Lợi nhuận và Tiền mặt"
+    },
+    {
+      "id": "sec_income_statement",
+      "title": "3. Cấu trúc Báo cáo Thu nhập"
+    },
+    {
+      "id": "sec_income_decision",
+      "title": "4. Ra Quyết định dựa trên Báo cáo"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5.3: Báo cáo Kết quả Hoạt động Kinh doanh",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 5.3: Income Statements. In this financial accounting lesson, we explore why profit matters, clearly distinguish profit from cash flow, deconstruct the line items of an income statement, and use gross and profit for the year to guide management decisions.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 5.3: Báo cáo Kết quả Hoạt động Kinh doanh. Trong bài học kế toán tài chính này, chúng ta sẽ làm rõ tầm quan trọng của lợi nhuận, phân biệt rạch ròi giữa lợi nhuận và dòng tiền, phân tích từng mục trong báo cáo thu nhập và ứng dụng số liệu để ra quyết định quản trị.",
+      "duration": 39.23,
+      "startTime": 0.0,
+      "endTime": 39.23,
+      "audioUrl": "/audio/lectures/business/5_3/intro.mp3"
+    },
+    {
+      "id": "sec_profit_importance",
+      "title": "1. Tầm quan trọng của Lợi nhuận",
+      "selector": "#sec-profit-importance",
+      "en": "Section 1 defines profit as total revenue minus total operating costs over a trading period. Profit acts as a reward for enterprise risk-taking, provides vital internal finance for retained reinvestment, and serves as a barometer of managerial competence.",
+      "vi": "Mục một định nghĩa lợi nhuận là tổng doanh thu trừ đi tổng chi phí hoạt động trong một kỳ kinh doanh. Lợi nhuận là phần thưởng cho việc chấp nhận rủi ro kinh doanh, cung cấp nguồn vốn nội bộ để tái đầu tư mở rộng và là thước đo chuẩn xác năng lực điều hành của ban giám đốc.",
+      "duration": 31.48,
+      "startTime": 39.23,
+      "endTime": 70.71,
+      "audioUrl": "/audio/lectures/business/5_3/sec_profit_importance.mp3"
+    },
+    {
+      "id": "card_profit_vs_cash",
+      "title": "Phân biệt Lợi nhuận đối chiếu với Dòng tiền (Profit vs Cash)",
+      "selector": "#card-profit-vs-cash",
+      "en": "The golden Cambridge rule: Profit is not Cash! A company can record immense paper profits while simultaneously hurtling toward insolvency if all sales were made on long trade credit terms while immediate supplier invoices demand hard cash.",
+      "vi": "Quy tắc vàng Cambridge: Lợi nhuận không đồng nghĩa với Tiền mặt! Một doanh nghiệp có thể ghi nhận khoản lãi khổng lồ trên sổ sách nhưng vẫn hoàn toàn có thể phá sản nếu toàn bộ doanh số bán hàng là cho khách nợ tiền trong khi các hóa đơn nhà cung cấp đòi hỏi tiền mặt thanh toán ngay.",
+      "duration": 30.57,
+      "startTime": 70.71,
+      "endTime": 101.28,
+      "audioUrl": "/audio/lectures/business/5_3/card_profit_vs_cash.mp3"
+    },
+    {
+      "id": "sec_income_statement",
+      "title": "2. Cấu trúc Báo cáo Thu nhập (Income Statement)",
+      "selector": "#sec-income-statement",
+      "en": "Section 2 walks through an Income Statement: Revenue minus Cost of Sales gives Gross Profit; subtracting Overheads yields Operating Profit; deducting finance interest costs and corporation tax leaves Profit for the Year.",
+      "vi": "Mục hai đi qua cấu trúc Báo cáo thu nhập: Doanh thu trừ Giá vốn hàng bán cho ra Lợi nhuận gộp; trừ tiếp Chi phí quản lý và bán hàng cho ra Lợi nhuận thuần từ hoạt động kinh doanh; sau khi trừ chi phí lãi vay và thuế thu nhập doanh nghiệp sẽ thu được Lợi nhuận ròng của năm.",
+      "duration": 28.14,
+      "startTime": 101.28,
+      "endTime": 129.42,
+      "audioUrl": "/audio/lectures/business/5_3/sec_income_statement.mp3"
+    },
+    {
+      "id": "card_income_structure",
+      "title": "Phân bổ Lợi nhuận ròng: Cổ tức và Lợi nhuận giữ lại",
+      "selector": "#card-income-structure",
+      "en": "Profit for the Year is allocated between Dividends distributed to reward shareholders, and Retained Profit plowed back into the corporate balance sheet to finance future growth.",
+      "vi": "Lợi nhuận ròng sau thuế được phân bổ thành Cổ tức (Dividends) chi trả để tri ân cổ đông, và Lợi nhuận giữ lại (Retained Profit) được giữ lại trên bảng cân đối kế toán để tài trợ cho các dự án tăng trưởng trong tương lai.",
+      "duration": 22.91,
+      "startTime": 129.42,
+      "endTime": 152.33,
+      "audioUrl": "/audio/lectures/business/5_3/card_income_structure.mp3"
+    },
+    {
+      "id": "sec_income_decision",
+      "title": "3. Sử dụng Báo cáo Thu nhập để Ra Quyết định Quản trị",
+      "selector": "#sec-income-decision",
+      "en": "Section 3 evaluates how managers interpret income statements: comparing year-on-year gross margin trends to detect rising raw material supplier prices, and auditing overhead ratios to eliminate administrative waste.",
+      "vi": "Mục ba đánh giá cách thức ban quản trị phân tích báo cáo thu nhập: so sánh biên lợi nhuận gộp qua các năm để phát hiện tình trạng nhà cung cấp tăng giá nguyên liệu, và kiểm soát tỷ lệ chi phí quản lý nhằm cắt giảm lãng phí hành chính.",
+      "duration": 25.43,
+      "startTime": 152.33,
+      "endTime": 177.76,
+      "audioUrl": "/audio/lectures/business/5_3/sec_income_decision.mp3"
+    }
+  ]
+}

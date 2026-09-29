@@ -1,0 +1,129 @@
+{
+  "lectureId": "cd1763a9-f030-4be1-b65b-c6dc6dde91c9",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "2.1. Motivating employees",
+  "totalDuration": 398.09,
+  "majorSections": [
+    {
+      "id": "sec_motivation_work",
+      "title": "1. Vai trò của Động lực lao động"
+    },
+    {
+      "id": "sec_theories",
+      "title": "2. Các Học thuyết Động lực (Taylor, Maslow, Herzberg)"
+    },
+    {
+      "id": "sec_financial",
+      "title": "3. Đãi ngộ Tài chính"
+    },
+    {
+      "id": "sec_non_financial",
+      "title": "4. Đãi ngộ Phi tài chính"
+    },
+    {
+      "id": "sec_recommend_motivation",
+      "title": "5. Chiến lược làm bài thi Cambridge"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.1: Động lực làm việc của nhân viên",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 2.1: Motivating Employees. In this opening chapter of Topic 2, People in Business, we examine why employee motivation is critical to enterprise performance, unpack classical theories by Taylor, Maslow, and Herzberg, and analyze financial and non-financial motivation methods.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 2.1: Động lực làm việc của nhân viên. Trong bài mở đầu của Chủ đề hai về Con người trong Doanh nghiệp, chúng ta sẽ phân tích tầm quan trọng của động lực lao động, các học thuyết kinh điển của Taylor, Maslow, Herzberg, cùng các phương pháp tạo động lực bằng tài chính và phi tài chính.",
+      "duration": 43.07,
+      "startTime": 0.0,
+      "endTime": 43.07,
+      "audioUrl": "/audio/lectures/business/2_1/intro.mp3"
+    },
+    {
+      "id": "sec_motivation_work",
+      "title": "1. Vai trò của Động lực lao động",
+      "selector": "#sec-motivation-work",
+      "en": "Section 1 defines motivation as the internal and external factors that stimulate desire and energy in workers to remain committed to a job. A highly motivated workforce drives higher labour productivity, lowers absenteeism, cuts employee turnover and recruitment expenses, improves customer service quality, and fosters workplace innovation.",
+      "vi": "Mục một định nghĩa động lực là các yếu tố kích thích sự nhiệt huyết và năng lượng của người lao động để cống hiến cho công việc. Lực lượng lao động có động lực cao sẽ nâng cao năng suất lao động, giảm tỷ lệ vắng mặt, cắt giảm chi phí tuyển dụng do nhân viên thôi việc, nâng cao chất lượng dịch vụ khách hàng và thúc đẩy tinh thần đổi mới sáng tạo.",
+      "duration": 39.28,
+      "startTime": 43.07,
+      "endTime": 82.35,
+      "audioUrl": "/audio/lectures/business/2_1/sec_motivation_work.mp3"
+    },
+    {
+      "id": "sec_theories",
+      "title": "2. Tổng quan các Học thuyết Động lực",
+      "selector": "#sec-theories",
+      "en": "Section 2 introduces three foundational motivation frameworks examined in the Cambridge syllabus: F.W. Taylor's Scientific Management, Abraham Maslow's Hierarchy of Needs, and Frederick Herzberg's Two-Factor Theory. Understanding how psychological needs evolve is essential for designing effective workforce rewards.",
+      "vi": "Mục hai giới thiệu ba học thuyết động lực nền tảng trong chương trình Cambridge: Quản trị khoa học của F.W. Taylor, Tháp nhu cầu của Abraham Maslow và Thuyết hai yếu tố của Frederick Herzberg. Hiểu rõ sự phát triển nhu cầu tâm lý là cơ sở để thiết kế chính sách đãi ngộ nhân sự hiệu quả.",
+      "duration": 36.45,
+      "startTime": 82.35,
+      "endTime": 118.8,
+      "audioUrl": "/audio/lectures/business/2_1/sec_theories.mp3"
+    },
+    {
+      "id": "card_taylor",
+      "title": "Học thuyết F. W. Taylor: Quản trị theo khoa học",
+      "selector": "#card-taylor",
+      "en": "F.W. Taylor viewed workers as purely rational economic agents driven by financial gain. His scientific management model breaks down tasks into standard repetitive movements and links compensation directly to output through differential piece-rates. While effective for simple factory production lines, Taylorism ignores social belonging, causes workplace boredom, and neglects intrinsic job satisfaction.",
+      "vi": "F.W. Taylor coi người lao động là những cá nhân kinh tế thuần túy hành động vì tiền bạc. Mô hình quản trị khoa học chia nhỏ quy trình thành các thao tác chuẩn mực lặp đi lặp lại và trả lương theo sản phẩm (piece-rate). Dù rất hiệu quả trong các dây chuyền sản xuất đơn giản, học thuyết Taylor bỏ qua nhu cầu xã hội, gây ra sự nhàm chán và xem nhẹ niềm vui công việc nội tại.",
+      "duration": 46.91,
+      "startTime": 118.8,
+      "endTime": 165.71,
+      "audioUrl": "/audio/lectures/business/2_1/card_taylor.mp3"
+    },
+    {
+      "id": "card_maslow",
+      "title": "Tháp Nhu cầu của Abraham Maslow",
+      "selector": "#card-maslow",
+      "en": "Abraham Maslow proposed that human beings are motivated by five ascending tiers of needs: physiological survival, safety and job security, social belonging and team camaraderie, esteem and recognition, and finally self-actualisation. Once a lower-level need is satisfied, it ceases to motivate, and the individual strives to fulfil the next level.",
+      "vi": "Abraham Maslow đưa ra hệ thống phân cấp gồm năm tầng nhu cầu: sinh lý căn bản, an toàn và việc làm ổn định, xã hội và gắn kết đồng đội, được tôn trọng và công nhận, và cuối cùng là hoàn thiện bản thân (self-actualisation). Khi một nhu cầu bậc thấp đã được thỏa mãn, nó không còn là động lực thúc đẩy nữa và con người sẽ hướng lên bậc cao hơn.",
+      "duration": 42.71,
+      "startTime": 165.71,
+      "endTime": 208.42,
+      "audioUrl": "/audio/lectures/business/2_1/card_maslow.mp3"
+    },
+    {
+      "id": "card_herzberg",
+      "title": "Thuyết Hai yếu tố của Frederick Herzberg",
+      "selector": "#card-herzberg",
+      "en": "Herzberg separated workplace drivers into Hygiene factors and Motivators. Hygiene factors, such as basic pay, clean working conditions, company policy, and job security, prevent dissatisfaction but cannot stimulate superior performance. True motivation comes exclusively from Motivators: achievement, meaningful responsibility, personal recognition, and career advancement.",
+      "vi": "Herzberg chia các yếu tố nơi làm việc thành Yếu tố duy trì (Hygiene factors) và Yếu tố tạo động lực (Motivators). Yếu tố duy trì như mức lương cơ bản, điều kiện làm việc, chính sách công ty và sự an toàn chỉ giúp ngăn ngừa bất mãn chứ không tạo ra động lực bứt phá. Động lực thực sự chỉ đến từ các yếu tố thúc đẩy: thành tựu, trách nhiệm công việc, sự công nhận và cơ hội thăng tiến.",
+      "duration": 49.82,
+      "startTime": 208.42,
+      "endTime": 258.24,
+      "audioUrl": "/audio/lectures/business/2_1/card_herzberg.mp3"
+    },
+    {
+      "id": "sec_financial",
+      "title": "3. Phương pháp tạo Động lực bằng Tài chính",
+      "selector": "#sec-financial",
+      "en": "Section 3 evaluates financial reward systems: hourly wages, fixed salaries, piece rates, sales commissions, performance-related bonuses, profit sharing, and share ownership schemes. While financial rewards are direct and quantifiable, over-reliance on individual incentives can sacrifice product quality, undermine teamwork, and escalate total operational costs.",
+      "vi": "Mục ba đánh giá các phương thức đãi ngộ tài chính: tiền công theo giờ, tiền lương cố định, trả theo sản phẩm, hoa hồng bán hàng, tiền thưởng hiệu suất, chia sẻ lợi nhuận và cổ phiếu thưởng. Mặc dù khuyến khích tài chính mang lại tác dụng tức thì, việc quá phụ thuộc vào tiền thưởng cá nhân có thể làm giảm chất lượng sản phẩm, chia rẽ tinh thần đồng đội và đẩy chi phí vận hành tăng vọt.",
+      "duration": 45.21,
+      "startTime": 258.24,
+      "endTime": 303.45,
+      "audioUrl": "/audio/lectures/business/2_1/sec_financial.mp3"
+    },
+    {
+      "id": "sec_non_financial",
+      "title": "4. Phương pháp tạo Động lực Phi tài chính",
+      "selector": "#sec-non-financial",
+      "en": "Section 4 investigates non-financial motivators and job redesign. Techniques include job rotation to relieve monotony, job enlargement to broaden variety, and job enrichment to delegate higher-level decision making. Combined with teamworking, flexible working hours, and subsidized fringe benefits, non-financial strategies foster long-term loyalty and deep intrinsic job engagement.",
+      "vi": "Mục bốn phân tích các giải pháp phi tài chính và thiết kế lại công việc. Các kỹ thuật bao gồm luân chuyển công việc (job rotation) giảm sự nhàm chán, mở rộng công việc (job enlargement) tăng thêm đầu việc tương đương, và làm giàu công việc (job enrichment) trao thêm quyền tự quyết cao hơn. Kết hợp cùng làm việc nhóm, giờ giấc linh hoạt và phúc lợi phụ cấp, phương pháp phi tài chính giúp xây dựng lòng trung thành bền vững.",
+      "duration": 49.38,
+      "startTime": 303.45,
+      "endTime": 352.83,
+      "audioUrl": "/audio/lectures/business/2_1/sec_non_financial.mp3"
+    },
+    {
+      "id": "sec_recommend_motivation",
+      "title": "5. Chiến lược làm bài thi Cambridge: Đề xuất phương pháp tạo động lực",
+      "selector": "#sec-recommend-motivation",
+      "en": "Section 5 details the Cambridge evaluation strategy for motivation questions. Candidates must tailor recommendations to employee types and business context: factory operatives often respond to piece rates and bonuses, whereas creative and professional staff prioritize autonomy and enrichment. Conclude by balancing financial cost against potential productivity gains.",
+      "vi": "Mục năm cung cấp chiến lược làm bài thi Cambridge cho các câu hỏi đánh giá tạo động lực. Thí sinh phải gắn giải pháp với từng đối tượng lao động và bối cảnh cụ thể: công nhân sản xuất thường phản ứng tốt với lương sản phẩm và thưởng năng suất, trong khi chuyên gia sáng tạo lại coi trọng sự tự chủ và trao quyền. Luôn kết luận bằng cách cân đối giữa chi phí tài chính và mức tăng năng suất dự kiến.",
+      "duration": 45.26,
+      "startTime": 352.83,
+      "endTime": 398.09,
+      "audioUrl": "/audio/lectures/business/2_1/sec_recommend_motivation.mp3"
+    }
+  ]
+}

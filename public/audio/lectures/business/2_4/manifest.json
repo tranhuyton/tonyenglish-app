@@ -1,0 +1,92 @@
+{
+  "lectureId": "47166a31-2a55-40ea-a86c-81569cfafa32",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "2.4. Internal and external communication",
+  "totalDuration": 233.27,
+  "majorSections": [
+    {
+      "id": "sec_effective_comm",
+      "title": "1. Bản chất Giao tiếp và 4 Thành tố"
+    },
+    {
+      "id": "sec_directions",
+      "title": "2. Hướng Giao tiếp trong Tổ chức"
+    },
+    {
+      "id": "sec_comm_methods",
+      "title": "3. Phương thức Giao tiếp"
+    },
+    {
+      "id": "sec_comm_barriers",
+      "title": "4. Rào cản Giao tiếp và Giải pháp"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.4: Giao tiếp nội bộ và bên ngoài",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 2.4: Internal and External Communication. In this final chapter of Topic 2, we explore the four essential components of effective communication, analyze vertical and horizontal communication directions, evaluate verbal, written, visual, and electronic media, and overcome communication barriers.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 2.4: Giao tiếp nội bộ và bên ngoài. Trong bài học khép lại Chủ đề hai, chúng ta sẽ khảo sát bốn thành phần cốt lõi của giao tiếp hiệu quả, các hướng giao tiếp dọc và ngang, đánh giá các phương thức truyền thông bằng lời, văn bản, hình ảnh, điện tử và các giải pháp vượt qua rào cản giao tiếp.",
+      "duration": 44.56,
+      "startTime": 0.0,
+      "endTime": 44.56,
+      "audioUrl": "/audio/lectures/business/2_4/intro.mp3"
+    },
+    {
+      "id": "sec_effective_comm",
+      "title": "1. Bản chất của Giao tiếp hiệu quả",
+      "selector": "#sec-effective-comm",
+      "en": "Section 1 defines effective communication as the transfer of information from a sender to a receiver with the message being clearly understood. Effective communication ensures clear instructions, speeds up decision execution, reduces costly mistakes, and builds employee morale.",
+      "vi": "Mục một định nghĩa giao tiếp hiệu quả là sự truyền đạt thông tin từ người gửi đến người nhận sao cho thông điệp được thấu hiểu chính xác. Giao tiếp mạch lạc giúp hướng dẫn rõ ràng, đẩy nhanh tốc độ thực thi, hạn chế sai sót gây lãng phí và củng cố tinh thần làm việc của nhân viên.",
+      "duration": 32.15,
+      "startTime": 44.56,
+      "endTime": 76.71,
+      "audioUrl": "/audio/lectures/business/2_4/sec_effective_comm.mp3"
+    },
+    {
+      "id": "card_comm_elements",
+      "title": "Bốn thành tố của Quy trình Giao tiếp",
+      "selector": "#card-comm-elements",
+      "en": "The communication process consists of four indispensable elements: The Transmitter or sender who initiates the message; The Medium or channel carrying the message; The Receiver who decodes the information; and Crucially, Feedback, which confirms whether the message was received and understood correctly.",
+      "vi": "Quy trình giao tiếp bao gồm bốn thành tố không thể thiếu: Người gửi (Transmitter) khởi tạo thông điệp; Phương tiện truyền tải (Medium) như email hay thư từ; Người nhận (Receiver) tiếp nhận và giải mã thông tin; và đặc biệt là Phản hồi (Feedback) giúp xác nhận thông điệp đã được hiểu đúng hay chưa.",
+      "duration": 34.62,
+      "startTime": 76.71,
+      "endTime": 111.33,
+      "audioUrl": "/audio/lectures/business/2_4/card_comm_elements.mp3"
+    },
+    {
+      "id": "sec_directions",
+      "title": "2. Các Hướng Giao tiếp trong Tổ chức",
+      "selector": "#sec-directions",
+      "en": "Section 2 maps organizational communication pathways: Downward communication sends instructions from executives to operational staff; Upward communication conveys worker feedback and grievance reporting back to management; and Horizontal communication coordinates projects between peers across departments.",
+      "vi": "Mục hai phác thảo các tuyến đường truyền thông trong tổ chức: Giao tiếp từ trên xuống (Downward) truyền đạt chỉ đạo từ ban giám đốc xuống cấp dưới; Giao tiếp từ dưới lên (Upward) phản hồi tâm tư và đề xuất của nhân viên lên lãnh đạo; và Giao tiếp ngang (Horizontal) phối hợp công việc giữa các đồng nghiệp cùng cấp giữa các phòng ban.",
+      "duration": 36.4,
+      "startTime": 111.33,
+      "endTime": 147.73,
+      "audioUrl": "/audio/lectures/business/2_4/sec_directions.mp3"
+    },
+    {
+      "id": "sec_comm_methods",
+      "title": "3. Các Phương thức Giao tiếp",
+      "selector": "#sec-comm-methods",
+      "en": "Section 3 evaluates communication media: Verbal communication via meetings provides instant feedback and tone nuance but leaves no written record. Written communication via letters and reports creates permanent audit trails but lacks personal warmth. Visual diagrams and electronic communications like intranet and video conferencing offer rapid global reach.",
+      "vi": "Mục ba đánh giá các phương thức truyền thông: Giao tiếp bằng lời nói (Verbal) qua các cuộc họp cho phép phản hồi tức thì và biểu cảm sinh động nhưng không để lại bằng chứng văn bản. Giao tiếp bằng văn bản (Written) lưu trữ hồ sơ pháp lý rõ ràng nhưng thiếu sự tương tác cảm xúc. Phương tiện trực quan và các kênh điện tử như mạng nội bộ, video conference mang lại tốc độ truyền tải xuyên biên giới vượt trội.",
+      "duration": 46.31,
+      "startTime": 147.73,
+      "endTime": 194.04,
+      "audioUrl": "/audio/lectures/business/2_4/sec_comm_methods.mp3"
+    },
+    {
+      "id": "sec_comm_barriers",
+      "title": "4. Rào cản Giao tiếp và Cách khắc phục",
+      "selector": "#sec-comm-barriers",
+      "en": "Section 4 investigates communication barriers: technical jargon, excessive information overload, physical noise, inappropriate channels, long chains of command distorting messages, and cultural misunderstandings. Solutions require concise messaging, active two-way feedback, and selecting the right medium for the context.",
+      "vi": "Mục bốn phân tích các rào cản giao tiếp: thuật ngữ chuyên môn khó hiểu, quá tải thông tin, tiếng ồn vật lý, chọn sai phương tiện truyền tải, chuỗi mệnh lệnh quá dài gây tam sao thất bản và khác biệt văn hóa. Giải pháp khắc phục đòi hỏi thông điệp súc tích, khuyến khích phản hồi hai chiều và lựa chọn phương tiện phù hợp với ngữ cảnh.",
+      "duration": 39.23,
+      "startTime": 194.04,
+      "endTime": 233.27,
+      "audioUrl": "/audio/lectures/business/2_4/sec_comm_barriers.mp3"
+    }
+  ]
+}

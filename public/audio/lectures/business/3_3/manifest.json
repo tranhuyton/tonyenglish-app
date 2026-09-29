@@ -1,0 +1,118 @@
+{
+  "lectureId": "25fe41d9-780d-41a6-876d-fff3e0d854c5",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "3.3. The marketing mix",
+  "totalDuration": 302.57,
+  "majorSections": [
+    {
+      "id": "sec_product",
+      "title": "1. Chiến lược Sản phẩm & PLC"
+    },
+    {
+      "id": "sec_price",
+      "title": "2. Chiến lược Giá cả & PED"
+    },
+    {
+      "id": "sec_place",
+      "title": "3. Kênh Phân phối (Place)"
+    },
+    {
+      "id": "sec_promotion",
+      "title": "4. Phối thức Chiêu thị (Promotion)"
+    },
+    {
+      "id": "sec_marketing_tech",
+      "title": "5. E-commerce & Digital Marketing"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 3.3: Tiếp thị hỗn hợp (The 4Ps)",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 3.3: The Marketing Mix. In this flagship chapter, we unpack the four Ps of marketing: Product, Price, Place, and Promotion, evaluate the product life cycle, examine pricing mechanisms, map distribution channels, and analyze e-commerce and social media.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 3.3: Tiếp thị hỗn hợp (Marketing Mix 4P). Trong bài học trọng tâm này, chúng ta sẽ khảo sát bốn chữ P của tiếp thị: Sản phẩm (Product), Giá (Price), Phân phối (Place) và Chiêu thị (Promotion), cùng vòng đời sản phẩm, các chiến lược định giá, kênh phân phối và thương mại điện tử.",
+      "duration": 45.93,
+      "startTime": 0.0,
+      "endTime": 45.93,
+      "audioUrl": "/audio/lectures/business/3_3/intro.mp3"
+    },
+    {
+      "id": "sec_product",
+      "title": "1. Chữ P thứ nhất: Sản phẩm (Product)",
+      "selector": "#sec-product",
+      "en": "Section 1 analyzes Product strategy. New Product Development (NPD) generates ideas, creates prototypes, and conducts test marketing. Strong branding and distinctive packaging differentiate the product, establish consumer trust, and allow premium pricing.",
+      "vi": "Mục một phân tích chiến lược Sản phẩm. Quá trình phát triển sản phẩm mới (NPD) bao gồm sáng tạo ý tưởng, thử nghiệm mẫu và bán thử nghiệm trên thị trường. Thương hiệu mạnh và bao bì bắt mắt giúp định vị sản phẩm khác biệt, xây dựng niềm tin và cho phép định giá cao hơn đối thủ.",
+      "duration": 36.09,
+      "startTime": 45.93,
+      "endTime": 82.02,
+      "audioUrl": "/audio/lectures/business/3_3/sec_product.mp3"
+    },
+    {
+      "id": "card_plc",
+      "title": "Vòng đời Sản phẩm (Product Life Cycle - PLC)",
+      "selector": "#card-plc",
+      "en": "The Product Life Cycle traces sales volume across six stages: Development, Introduction, Growth, Maturity, Saturation, and Decline. Extension strategies—such as rebranding, reformulating ingredients, or entering overseas markets—rejuvenate sales before a product reaches full obsolescence.",
+      "vi": "Vòng đời sản phẩm (PLC) theo dõi doanh số qua sáu giai đoạn: Phát triển, Giới thiệu, Tăng trưởng, Chín muồi, Bão hòa và Suy thoái. Các chiến lược kéo dài vòng đời như đổi mới bao bì, cải tiến công thức hoặc mở rộng thị trường xuất khẩu giúp khôi phục đà tăng trưởng trước khi sản phẩm bị đào thải.",
+      "duration": 38.68,
+      "startTime": 82.02,
+      "endTime": 120.7,
+      "audioUrl": "/audio/lectures/business/3_3/card_plc.mp3"
+    },
+    {
+      "id": "sec_price",
+      "title": "2. Chữ P thứ hai: Giá cả (Price)",
+      "selector": "#sec-price",
+      "en": "Section 2 investigates pricing strategies: Cost-plus pricing adds a markup margin over unit costs; Penetration pricing sets low entry prices to rapidly capture market share; Price skimming charges high initial prices for novel technologies; and Competitive pricing matches prevailing market levels.",
+      "vi": "Mục hai nghiên cứu các chiến lược định giá: Định giá cộng chi phí (Cost-plus) cộng biên lợi nhuận vào chi phí đơn vị; Định giá thâm nhập (Penetration) đặt giá thấp ban đầu để nhanh chóng chiếm thị phần; Định giá hớt váng (Skimming) đặt giá cao ngất ngưởng cho công nghệ mới độc quyền; và Định giá theo đối thủ cạnh tranh.",
+      "duration": 36.69,
+      "startTime": 120.7,
+      "endTime": 157.39,
+      "audioUrl": "/audio/lectures/business/3_3/sec_price.mp3"
+    },
+    {
+      "id": "card_pricing_methods",
+      "title": "Độ co giãn của Cầu theo Giá (Price Elasticity of Demand - PED)",
+      "selector": "#card-pricing-methods",
+      "en": "Price Elasticity of Demand measures the responsiveness of quantity demanded to a change in price. For price-elastic goods with many substitutes, price cuts boost total revenue; for price-inelastic necessities, raising prices expands revenue without significantly denting sales volume.",
+      "vi": "Độ co giãn của cầu theo giá (PED) đo lường mức độ phản ứng của lượng cầu khi giá thay đổi. Với hàng hóa co giãn có nhiều sản phẩm thay thế, giảm giá sẽ làm tăng tổng doanh thu; ngược lại với hàng thiết yếu kém co giãn, tăng giá giúp tăng mạnh doanh thu mà không làm sụt giảm sản lượng.",
+      "duration": 35.18,
+      "startTime": 157.39,
+      "endTime": 192.57,
+      "audioUrl": "/audio/lectures/business/3_3/card_pricing_methods.mp3"
+    },
+    {
+      "id": "sec_place",
+      "title": "3. Chữ P thứ ba: Phân phối (Place)",
+      "selector": "#sec-place",
+      "en": "Section 3 evaluates distribution channels: Channel 1 sells directly from producer to consumer; Channel 2 utilizes independent retailers; Channel 3 introduces wholesalers; and Channel 4 deploys overseas sales agents. Direct selling maximizes profit margins, while wholesaler networks maximize physical retail coverage.",
+      "vi": "Mục ba đánh giá các kênh phân phối: Kênh 1 bán trực tiếp từ nhà sản xuất đến người tiêu dùng; Kênh 2 thông qua nhà bán lẻ; Kênh 3 qua nhà bán buôn và bán lẻ; Kênh 4 qua đại lý xuất khẩu. Bán trực tiếp tối đa hóa biên lợi nhuận, trong khi mạng lưới đại lý và bán buôn tối đa hóa độ phủ sóng trên thị trường.",
+      "duration": 39.62,
+      "startTime": 192.57,
+      "endTime": 232.19,
+      "audioUrl": "/audio/lectures/business/3_3/sec_place.mp3"
+    },
+    {
+      "id": "sec_promotion",
+      "title": "4. Chữ P thứ tư: Chiêu thị (Promotion)",
+      "selector": "#sec-promotion",
+      "en": "Section 4 covers the promotional mix: Above-the-line advertising via television, radio, billboards, and internet banners; and Below-the-line promotions via point-of-sale discounts, buy-one-get-one-free offers, sponsorship, and public relations.",
+      "vi": "Mục bốn bao quát phối thức chiêu thị: Quảng cáo trên các phương tiện đại chúng (Above-the-line) như truyền hình, phát thanh, biển bảng và banner trực tuyến; cùng các chương trình xúc tiến bán trực tiếp (Below-the-line) như giảm giá tại quầy, mua một tặng một, tài trợ sự kiện và quan hệ công chúng (PR).",
+      "duration": 33.64,
+      "startTime": 232.19,
+      "endTime": 265.83,
+      "audioUrl": "/audio/lectures/business/3_3/sec_promotion.mp3"
+    },
+    {
+      "id": "sec_marketing_tech",
+      "title": "5. Công nghệ trong Tiếp thị: Thương mại điện tử và Mạng xã hội",
+      "selector": "#sec-marketing-tech",
+      "en": "Section 5 evaluates how digital technology transforms marketing. E-commerce enables round-the-clock global trading, dynamic algorithmic pricing, and reduced physical shop rent. Social media advertising facilitates precision demographic targeting and viral word-of-mouth campaigns.",
+      "vi": "Mục năm phân tích sự chuyển đổi tiếp thị trong thời đại số. Thương mại điện tử cho phép bán hàng toàn cầu 24/7, định giá linh hoạt theo thuật toán và cắt giảm chi phí thuê mặt bằng vật lý. Quảng cáo mạng xã hội giúp nhắm mục tiêu chính xác theo nhân khẩu học và tạo chiến dịch lan tỏa tự nhiên.",
+      "duration": 36.74,
+      "startTime": 265.83,
+      "endTime": 302.57,
+      "audioUrl": "/audio/lectures/business/3_3/sec_marketing_tech.mp3"
+    }
+  ]
+}

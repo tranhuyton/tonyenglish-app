@@ -1,0 +1,122 @@
+{
+  "lectureId": "c2d359f6-1921-459e-a295-def7e891c352",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "2.3. Recruitment, selection and training of employees",
+  "totalDuration": 334.06,
+  "majorSections": [
+    {
+      "id": "sec_hr_role",
+      "title": "1. Vai trò của Bộ phận Nhân sự"
+    },
+    {
+      "id": "sec_recruitment",
+      "title": "2. Quy trình Tuyển dụng"
+    },
+    {
+      "id": "sec_selection",
+      "title": "3. Phương pháp Chọn lọc và Hợp đồng"
+    },
+    {
+      "id": "sec_training",
+      "title": "4. Đào tạo nhân sự (On-the-job & Off-the-job)"
+    },
+    {
+      "id": "sec_part_full_time",
+      "title": "5. Bán thời gian & Tinh giản nhân sự"
+    },
+    {
+      "id": "sec_recommend_recruitment",
+      "title": "6. Chiến lược làm bài thi Cambridge"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.3: Tuyển dụng, Chọn lọc và Đào tạo nhân viên",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 2.3: Recruitment, Selection and Training of Employees. In this lesson, we study the human resources department lifecycle: identifying vacancies, writing job descriptions and person specifications, internal versus external recruitment, selection methods, induction, on-the-job and off-the-job training, workforce downsizing, and employment legislation.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 2.3: Tuyển dụng, Chọn lọc và Đào tạo nhân viên. Trong bài học này, chúng ta sẽ tìm hiểu toàn diện quy trình nhân sự: xác định vị trí trống, xây dựng bản mô tả và tiêu chuẩn công việc, tuyển dụng nội bộ và bên ngoài, các phương pháp phỏng vấn, đào tạo hội nhập, tại chỗ và ngoài chỗ làm, tinh giản nhân sự cùng luật lao động.",
+      "duration": 50.49,
+      "startTime": 0.0,
+      "endTime": 50.49,
+      "audioUrl": "/audio/lectures/business/2_3/intro.mp3"
+    },
+    {
+      "id": "sec_hr_role",
+      "title": "1. Vai trò của Bộ phận Quản trị Nhân sự",
+      "selector": "#sec-hr-role",
+      "en": "Section 1 defines the strategic role of Human Resources. The HR team forecasts workforce requirements, plans recruitment campaigns, designs remuneration packages, oversees health and safety compliance, administers disciplinary procedures, and mediates industrial relations.",
+      "vi": "Mục một xác định vai trò chiến lược của Bộ phận Nhân sự. Đội ngũ nhân sự chịu trách nhiệm dự báo nhu cầu nhân lực, lên kế hoạch tuyển dụng, thiết kế chế độ lương thưởng, giám sát an toàn lao động, giải quyết kỷ luật và hòa giải quan hệ lao động trong doanh nghiệp.",
+      "duration": 33.62,
+      "startTime": 50.49,
+      "endTime": 84.11,
+      "audioUrl": "/audio/lectures/business/2_3/sec_hr_role.mp3"
+    },
+    {
+      "id": "sec_recruitment",
+      "title": "2. Quy trình Tuyển dụng và Tài liệu cốt lõi",
+      "selector": "#sec-recruitment",
+      "en": "Section 2 distinguishes the three vital documents of recruitment: Job Analysis identifies tasks involved; Job Description outlines responsibilities, reporting lines, and working conditions of the role; and Person Specification details qualifications, experience, skills, and personal attributes demanded of the ideal candidate.",
+      "vi": "Mục hai phân biệt ba tài liệu cốt lõi trong tuyển dụng: Phân tích công việc (Job Analysis) khảo sát chi tiết đầu việc; Bản mô tả công việc (Job Description) nêu rõ trách nhiệm, cấp quản lý trực tiếp và điều kiện làm việc; và Bản tiêu chuẩn ứng viên (Person Specification) quy định bằng cấp, kinh nghiệm và kỹ năng cần có của người ứng tuyển.",
+      "duration": 40.19,
+      "startTime": 84.11,
+      "endTime": 124.3,
+      "audioUrl": "/audio/lectures/business/2_3/sec_recruitment.mp3"
+    },
+    {
+      "id": "card_job_analysis",
+      "title": "Tuyển dụng Nội bộ đối chiếu với Tuyển dụng Bên ngoài",
+      "selector": "#card-job-analysis",
+      "en": "Internal recruitment fills vacancies by promoting existing staff, which is cheaper, faster, motivates loyal workers, and minimizes induction time. However, it limits the applicant pool and creates a subsequent vacancy. External recruitment advertises vacancies publicly, injecting fresh talent and innovative industry ideas, though advertising and agency fees are significantly higher.",
+      "vi": "Tuyển dụng nội bộ cất nhắc nhân viên hiện có, giúp tiết kiệm chi phí, quy trình nhanh chóng, khích lệ nhân viên và rút ngắn thời gian hội nhập nhưng không đem lại ý tưởng mới và để lại vị trí trống phía dưới. Ngược lại, tuyển dụng bên ngoài mở rộng ra công chúng mang về nhân tố mới với góc nhìn đột phá, dù chi phí quảng cáo và tuyển mộ tốn kém hơn nhiều.",
+      "duration": 44.63,
+      "startTime": 124.3,
+      "endTime": 168.93,
+      "audioUrl": "/audio/lectures/business/2_3/card_job_analysis.mp3"
+    },
+    {
+      "id": "sec_selection",
+      "title": "3. Phương pháp Chọn lọc và Hợp đồng lao động",
+      "selector": "#sec-selection",
+      "en": "Section 3 covers selection instruments: CV screening, structured interviews, aptitude tests, psychometric profiling, and practical assessment tasks. Once an offer is accepted, a legally binding Contract of Employment defines wages, working hours, statutory holiday entitlement, job title, and notice periods.",
+      "vi": "Mục ba bao gồm các công cụ chọn lọc: sàng lọc hồ sơ CV, phỏng vấn có cấu trúc, bài kiểm tra năng lực, trắc nghiệm tâm lý tính cách và bài kiểm tra kỹ năng thực tế. Khi trúng tuyển, Hợp đồng lao động (Contract of Employment) mang tính pháp lý ràng buộc sẽ quy định mức lương, thời gian làm việc, chế độ nghỉ phép, chức danh và thời hạn thông báo nghỉ việc.",
+      "duration": 42.57,
+      "startTime": 168.93,
+      "endTime": 211.5,
+      "audioUrl": "/audio/lectures/business/2_3/sec_selection.mp3"
+    },
+    {
+      "id": "sec_training",
+      "title": "4. Các hình thức Đào tạo nhân sự",
+      "selector": "#sec-training",
+      "en": "Section 4 investigates Induction training for new joiners, On-the-job training where employees learn from experienced colleagues while working on real machinery, and Off-the-job training at specialized educational colleges. On-the-job is cost-effective but passes on bad habits, whereas off-the-job imparts state-of-the-art skills without disrupting actual workshop output.",
+      "vi": "Mục bốn phân tích Đào tạo hội nhập (Induction) cho nhân viên mới, Đào tạo tại chỗ (On-the-job) kèm cặp trực tiếp trên dây chuyền sản xuất, và Đào tạo ngoài chỗ làm (Off-the-job) tại các trung tâm đào tạo chuyên nghiệp. Đào tạo tại chỗ chi phí thấp nhưng dễ lây thói quen xấu, trong khi đào tạo ngoài chỗ làm tiếp thu kỹ thuật hiện đại mà không làm gián đoạn sản xuất tại phân xưởng.",
+      "duration": 43.38,
+      "startTime": 211.5,
+      "endTime": 254.88,
+      "audioUrl": "/audio/lectures/business/2_3/sec_training.mp3"
+    },
+    {
+      "id": "sec_part_full_time",
+      "title": "5. Nhân viên Bán thời gian và Tinh giản nhân sự",
+      "selector": "#sec-part-full-time",
+      "en": "Section 5 contrasts part-time flexibility against full-time loyalty, and clarifies the legal difference between Dismissal and Redundancy. Dismissal occurs when an employee is terminated due to incompetence or gross misconduct. Redundancy happens when a post becomes completely unnecessary due to falling demand, factory closure, or technological automation.",
+      "vi": "Mục năm đối chiếu sự linh hoạt của nhân viên bán thời gian với tính gắn kết của nhân viên toàn thời gian, đồng thời phân biệt rõ Sa thải (Dismissal) và Cắt giảm dôi dư (Redundancy). Sa thải diễn ra khi nhân viên yếu kém năng lực hoặc vi phạm kỷ luật nghiêm trọng. Trong khi đó, cắt giảm dôi dư là do vị trí công việc không còn cần thiết vì nhu cầu thị trường sụt giảm, đóng cửa nhà máy hoặc tự động hóa công nghệ.",
+      "duration": 47.46,
+      "startTime": 254.88,
+      "endTime": 302.34,
+      "audioUrl": "/audio/lectures/business/2_3/sec_part_full_time.mp3"
+    },
+    {
+      "id": "sec_recommend_recruitment",
+      "title": "6. Chiến lược làm bài thi Cambridge: Đề xuất phương án nhân sự",
+      "selector": "#sec-recommend-recruitment",
+      "en": "Section 6 guides exam answers on staffing decisions. Candidates must balance financial budget, speed of deployment, required technical mastery, and long-term staff morale before recommending whether to train existing workers or recruit external specialists.",
+      "vi": "Mục sáu hướng dẫn giải quyết bài tập tình huống nhân sự trong đề thi Cambridge. Thí sinh phải cân nhắc kỹ lưỡng ngân sách tài chính, tiến độ thực hiện, yêu cầu chuyên môn kỹ thuật và tâm lý nhân viên trước khi đưa ra quyết định nên đào tạo nhân sự nội bộ hay tuyển chuyên gia bên ngoài.",
+      "duration": 31.72,
+      "startTime": 302.34,
+      "endTime": 334.06,
+      "audioUrl": "/audio/lectures/business/2_3/sec_recommend_recruitment.mp3"
+    }
+  ]
+}

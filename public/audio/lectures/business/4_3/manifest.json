@@ -1,0 +1,99 @@
+{
+  "lectureId": "8f0fd09a-d6e6-438f-a2ab-ddc1447e0b00",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "4.3. Quality management",
+  "totalDuration": 225.46,
+  "majorSections": [
+    {
+      "id": "sec_what_is_quality",
+      "title": "1. Khái niệm Chất lượng"
+    },
+    {
+      "id": "sec_quality_methods",
+      "title": "2. So sánh QC, QA và TQM"
+    },
+    {
+      "id": "sec_recommend_quality",
+      "title": "3. Chiến lược làm bài thi Cambridge"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4.3: Quản trị chất lượng",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 4.3: Quality Management. In this chapter, we define quality standards, explore why defect prevention matters, compare Quality Control, Quality Assurance, and Total Quality Management, and provide Cambridge evaluation frameworks.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 4.3: Quản trị chất lượng. Trong bài học này, chúng ta sẽ định nghĩa các tiêu chuẩn chất lượng, tầm quan trọng của việc ngăn ngừa lỗi sản phẩm, so sánh Kiểm soát chất lượng (QC), Đảm bảo chất lượng (QA) và Quản trị chất lượng toàn diện (TQM).",
+      "duration": 40.0,
+      "startTime": 0.0,
+      "endTime": 40.0,
+      "audioUrl": "/audio/lectures/business/4_3/intro.mp3"
+    },
+    {
+      "id": "sec_what_is_quality",
+      "title": "1. Khái niệm và Tầm quan trọng của Chất lượng",
+      "selector": "#sec-what-is-quality",
+      "en": "Section 1 defines Quality as delivering goods or services that satisfy or exceed customer expectations, operate reliably without faults, and conform strictly to design specifications. Superior quality fosters customer brand loyalty, reduces expensive warranty claims, and prevents devastating social media complaints.",
+      "vi": "Mục một định nghĩa Chất lượng là việc cung cấp sản phẩm hoặc dịch vụ thỏa mãn hoặc vượt trên mong đợi của khách hàng, hoạt động tin cậy không lỗi hỏng và chuẩn xác theo quy chuẩn thiết kế. Chất lượng vượt trội giúp giữ chân khách hàng trung thành, giảm chi phí bồi thường bảo hành và ngăn chặn các khủng hoảng truyền thông.",
+      "duration": 37.14,
+      "startTime": 40.0,
+      "endTime": 77.14,
+      "audioUrl": "/audio/lectures/business/4_3/sec_what_is_quality.mp3"
+    },
+    {
+      "id": "sec_quality_methods",
+      "title": "2. Ba Phương pháp Quản trị Chất lượng",
+      "selector": "#sec-quality-methods",
+      "en": "Section 2 outlines the three accepted methods of quality management examined in the Cambridge syllabus: Quality Control (QC), Quality Assurance (QA), and Total Quality Management (TQM).",
+      "vi": "Mục hai tổng hợp ba phương pháp quản trị chất lượng trong chương trình Cambridge: Kiểm soát chất lượng (QC), Đảm bảo chất lượng (QA) và Quản trị chất lượng toàn diện (TQM).",
+      "duration": 24.57,
+      "startTime": 77.14,
+      "endTime": 101.71,
+      "audioUrl": "/audio/lectures/business/4_3/sec_quality_methods.mp3"
+    },
+    {
+      "id": "card_qc",
+      "title": "Kiểm soát Chất lượng (Quality Control - QC)",
+      "selector": "#card-qc",
+      "en": "Quality Control inspects completed finished goods at the end of the production line to weed out defective items before dispatch. While simple to organize, QC is fundamentally reactive, results in massive scrap material waste, and does not identify root causes of manufacturing errors.",
+      "vi": "Kiểm soát chất lượng (QC) là hoạt động kiểm tra thành phẩm ở cuối dây chuyền sản xuất để loại bỏ các sản phẩm lỗi trước khi giao hàng. Dù dễ thực hiện, QC mang tính đối phó thụ động, gây lãng phí nguyên vật liệu phế phẩm rất lớn và không giải quyết được tận gốc nguyên nhân gây lỗi.",
+      "duration": 34.02,
+      "startTime": 101.71,
+      "endTime": 135.73,
+      "audioUrl": "/audio/lectures/business/4_3/card_qc.mp3"
+    },
+    {
+      "id": "card_qa",
+      "title": "Đảm bảo Chất lượng (Quality Assurance - QA)",
+      "selector": "#card-qa",
+      "en": "Quality Assurance establishes strict quality standards at every progressive stage of the production process—from raw material inspection through machine calibration to packaging. Workers 'get it right first time', dramatically reducing scrap rework costs.",
+      "vi": "Đảm bảo chất lượng (QA) thiết lập tiêu chuẩn kiểm soát nghiêm ngặt ở từng công đoạn sản xuất – từ khâu nhập nguyên liệu, căn chỉnh máy móc đến đóng gói. Công nhân hướng tới mục tiêu 'làm đúng ngay từ lần đầu tiên', giúp cắt giảm tối đa chi phí sửa chữa phế phẩm.",
+      "duration": 30.78,
+      "startTime": 135.73,
+      "endTime": 166.51,
+      "audioUrl": "/audio/lectures/business/4_3/card_qa.mp3"
+    },
+    {
+      "id": "card_tqm",
+      "title": "Quản trị Chất lượng Toàn diện (Total Quality Management - TQM)",
+      "selector": "#card-tqm",
+      "en": "Total Quality Management embeds a continuous commitment to excellence across the entire corporate culture. Every worker treats the next employee in the workflow as an internal customer, fostering zero-defect mentalities and collective empowerment.",
+      "vi": "Quản trị chất lượng toàn diện (TQM) đưa cam kết chất lượng thành văn hóa doanh nghiệp lan tỏa đến mọi phòng ban. Mỗi nhân viên coi người ở khâu tiếp theo là một 'khách hàng nội bộ', xây dựng tư duy không chấp nhận lỗi sai (zero-defects) và trao quyền tự chủ cho toàn bộ tập thể.",
+      "duration": 31.6,
+      "startTime": 166.51,
+      "endTime": 198.11,
+      "audioUrl": "/audio/lectures/business/4_3/card_tqm.mp3"
+    },
+    {
+      "id": "sec_recommend_quality",
+      "title": "3. Chiến lược làm bài thi Cambridge: Đề xuất Phương pháp Quản trị Chất lượng",
+      "selector": "#sec-recommend-quality",
+      "en": "Section 3 presents the Cambridge Quality Recommendation Matrix. Candidates must weigh implementation expenses, staff training disruption, and defect tolerances before justifying the most appropriate quality system.",
+      "vi": "Mục ba cung cấp Ma trận đề xuất giải pháp chất lượng Cambridge. Thí sinh cần cân nhắc giữa chi phí triển khai, thời gian đào tạo lại nhân viên và yêu cầu dung sai lỗi trước khi kết luận hệ thống quản trị chất lượng phù hợp nhất cho doanh nghiệp.",
+      "duration": 27.35,
+      "startTime": 198.11,
+      "endTime": 225.46,
+      "audioUrl": "/audio/lectures/business/4_3/sec_recommend_quality.mp3"
+    }
+  ]
+}

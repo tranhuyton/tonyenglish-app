@@ -1,0 +1,103 @@
+{
+  "lectureId": "356dede8-277a-441a-ad73-ef9384973eb7",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "3.2. Market research",
+  "totalDuration": 239.49,
+  "majorSections": [
+    {
+      "id": "sec_business_orientation",
+      "title": "1. Định hướng Doanh nghiệp"
+    },
+    {
+      "id": "sec_primary_research",
+      "title": "2. Nghiên cứu Sơ cấp (Primary)"
+    },
+    {
+      "id": "sec_secondary_research",
+      "title": "3. Nghiên cứu Thứ cấp (Secondary)"
+    },
+    {
+      "id": "sec_sampling_methods",
+      "title": "4. Kỹ thuật Chọn mẫu và Độ chính xác"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 3.2: Nghiên cứu thị trường",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 3.2: Market Research. In this lesson, we explore product-oriented versus market-oriented business approaches, examine primary and secondary data collection techniques, evaluate sampling methods, and assess the accuracy of market intelligence.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 3.2: Nghiên cứu thị trường. Trong bài học này, chúng ta sẽ tìm hiểu định hướng sản phẩm và định hướng thị trường, các phương pháp thu thập dữ liệu sơ cấp và thứ cấp, kỹ thuật chọn mẫu cùng phương pháp đánh giá độ tin cậy của số liệu.",
+      "duration": 38.08,
+      "startTime": 0.0,
+      "endTime": 38.08,
+      "audioUrl": "/audio/lectures/business/3_2/intro.mp3"
+    },
+    {
+      "id": "sec_business_orientation",
+      "title": "1. Định hướng Doanh nghiệp: Sản phẩm hay Thị trường",
+      "selector": "#sec-business-orientation",
+      "en": "Section 1 contrasts Product-Oriented businesses—which focus primarily on manufacturing excellence and technical innovation before trying to sell—against Market-Oriented businesses, which conduct comprehensive consumer research first to ensure new goods align precisely with customer preferences.",
+      "vi": "Mục một đối chiếu Doanh nghiệp định hướng sản phẩm (Product-Oriented) – tập trung vào kỹ thuật và chất lượng sản phẩm trước khi bán – với Doanh nghiệp định hướng thị trường (Market-Oriented), luôn nghiên cứu nhu cầu khách hàng trước để bảo đảm sản phẩm mới đáp ứng đúng kỳ vọng của người tiêu dùng.",
+      "duration": 32.3,
+      "startTime": 38.08,
+      "endTime": 70.38,
+      "audioUrl": "/audio/lectures/business/3_2/sec_business_orientation.mp3"
+    },
+    {
+      "id": "sec_market_research_intro",
+      "title": "2. Vai trò của Nghiên cứu Thị trường",
+      "selector": "#sec-market-research-intro",
+      "en": "Section 2 introduces Market Research: the systematic gathering, recording, and analysis of data about the market for goods and services. Research minimizes commercial launch risks, identifies market gaps, reveals customer willingness to pay, and gauges competitive strengths.",
+      "vi": "Mục hai giới thiệu về Nghiên cứu thị trường: quá trình thu thập, ghi chép và phân tích có hệ thống thông tin về thị trường hàng hóa và dịch vụ. Nghiên cứu giúp hạn chế rủi ro ra mắt sản phẩm mới, phát hiện khoảng trống thị trường, xác định mức giá sẵn sàng chi trả và đánh giá đối thủ cạnh tranh.",
+      "duration": 34.84,
+      "startTime": 70.38,
+      "endTime": 105.22,
+      "audioUrl": "/audio/lectures/business/3_2/sec_market_research_intro.mp3"
+    },
+    {
+      "id": "sec_primary_research",
+      "title": "3. Nghiên cứu Sơ cấp (Field Research)",
+      "selector": "#sec-primary-research",
+      "en": "Section 3 examines Primary Research: gathering original first-hand data directly from respondents via questionnaires, focus groups, interviews, and direct observation. Primary data is up-to-date, directly relevant, and exclusive to the firm, but is expensive and time-consuming to execute.",
+      "vi": "Mục ba phân tích Nghiên cứu sơ cấp (Primary Research): thu thập dữ liệu gốc lần đầu từ đối tượng khảo sát thông qua bảng câu hỏi, nhóm thảo luận tập trung, phỏng vấn sâu và quan sát thực tế. Dữ liệu sơ cấp có tính cập nhật cao, liên quan trực tiếp và mang tính độc quyền nhưng tốn kém chi phí và thời gian.",
+      "duration": 36.59,
+      "startTime": 105.22,
+      "endTime": 141.81,
+      "audioUrl": "/audio/lectures/business/3_2/sec_primary_research.mp3"
+    },
+    {
+      "id": "sec_secondary_research",
+      "title": "4. Nghiên cứu Thứ cấp (Desk Research)",
+      "selector": "#sec-secondary-research",
+      "en": "Section 4 covers Secondary Research: gathering second-hand data already published by internal records, government census bureaus, trade journals, or commercial research agencies. Secondary research is cheap and instantly accessible, but may be outdated, biased, or too general.",
+      "vi": "Mục bốn trình bày Nghiên cứu thứ cấp (Secondary Research): khai thác dữ liệu đã được công bố từ hồ sơ nội bộ, số liệu thống kê chính phủ, tạp chí chuyên ngành hoặc báo cáo thị trường. Nghiên cứu thứ cấp chi phí thấp và tra cứu tức thì nhưng số liệu có thể bị lỗi thời hoặc không khớp với mục tiêu nghiên cứu cụ thể.",
+      "duration": 36.02,
+      "startTime": 141.81,
+      "endTime": 177.83,
+      "audioUrl": "/audio/lectures/business/3_2/sec_secondary_research.mp3"
+    },
+    {
+      "id": "sec_accuracy_presentation",
+      "title": "5. Độ chính xác và Trình bày Dữ liệu",
+      "selector": "#sec-accuracy-presentation",
+      "en": "Section 5 analyzes data presentation via bar charts, pie charts, and line graphs, and identifies sources of inaccuracies such as sample bias, poorly worded leading questions, dishonest respondent replies, and outdated secondary data.",
+      "vi": "Mục năm phân tích cách trình bày dữ liệu bằng biểu đồ cột, biểu đồ tròn và đồ thị đường thẳng, đồng thời chỉ ra các nguyên nhân gây sai lệch số liệu như mẫu khảo sát thiếu đại diện, câu hỏi định kiến dẫn dắt, câu trả lời thiếu trung thực và số liệu thứ cấp đã lỗi thời.",
+      "duration": 30.11,
+      "startTime": 177.83,
+      "endTime": 207.94,
+      "audioUrl": "/audio/lectures/business/3_2/sec_accuracy_presentation.mp3"
+    },
+    {
+      "id": "sec_sampling_methods",
+      "title": "6. Kỹ thuật Chọn mẫu và Chiến lược thi Cambridge",
+      "selector": "#sec-sampling-methods",
+      "en": "Section 6 explores sampling methods including random sampling and quota sampling. In Cambridge exam evaluations, candidates must balance the budget constraints and speed of secondary desk research against the specialized accuracy of primary field studies.",
+      "vi": "Mục sáu nghiên cứu các phương pháp chọn mẫu như chọn mẫu ngẫu nhiên (random sampling) và chọn mẫu theo hạn ngạch (quota sampling). Trong đề thi Cambridge, thí sinh cần cân đối ngân sách và tốc độ của nghiên cứu thứ cấp với độ chính xác chuyên sâu của nghiên cứu sơ cấp.",
+      "duration": 31.55,
+      "startTime": 207.94,
+      "endTime": 239.49,
+      "audioUrl": "/audio/lectures/business/3_2/sec_sampling_methods.mp3"
+    }
+  ]
+}

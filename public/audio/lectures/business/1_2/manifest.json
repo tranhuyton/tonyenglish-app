@@ -1,0 +1,84 @@
+{
+  "lectureId": "7027f2e2-0ac5-4ee6-8913-7d93c7857733",
+  "courseTitle": "Cambridge IGCSE Business Studies",
+  "lectureTitle": "1.2. Classification of businesses",
+  "totalDuration": 296.14,
+  "majorSections": [
+    {
+      "id": "sec_sectors",
+      "title": "1. Ba khu vực kinh tế"
+    },
+    {
+      "id": "sec_mixed_economy",
+      "title": "2. Khu vực Tư nhân và Nhà nước trong Nền kinh tế hỗn hợp"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 1.2: Phân loại Doanh nghiệp",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Business Studies, Chapter 1.2: Classification of Businesses. In this lesson, we examine how economies are structured into primary, secondary, and tertiary stages of production, explore the structural shift known as de-industrialisation, and compare private versus public sector ownership in mixed economies.",
+      "vi": "Chào mừng các bạn đến với môn Kinh doanh Cambridge IGCSE, Bài 1.2: Phân loại Doanh nghiệp. Trong bài học này, chúng ta sẽ tìm hiểu cơ cấu nền kinh tế qua ba khu vực sản xuất: sơ cấp, thứ cấp và tam cấp, hiện tượng phi công nghiệp hóa trong các nền kinh tế phát triển, và so sánh vai trò giữa khu vực tư nhân và khu vực nhà nước trong nền kinh tế hỗn hợp.",
+      "duration": 42.88,
+      "startTime": 0.0,
+      "endTime": 42.88,
+      "audioUrl": "/audio/lectures/business/1_2/intro.mp3"
+    },
+    {
+      "id": "sec_sectors",
+      "title": "1. Ba khu vực kinh tế: Sơ cấp, Thứ cấp và Tam cấp",
+      "selector": "#sec-sectors",
+      "en": "Section 1 classifies economic activities into three progressive stages. The primary sector extracts and harvests natural resources, such as farming, fishing, forestry, and mining. The secondary sector processes, manufactures, and constructs tangible goods from raw materials. The tertiary sector provides commercial and personal services, including banking, transportation, retail, healthcare, and education.",
+      "vi": "Mục một phân loại hoạt động kinh tế thành ba khu vực kế tiếp nhau. Khu vực sơ cấp (primary sector) khai thác tài nguyên thiên nhiên như nông nghiệp, đánh bắt thủy sản, lâm nghiệp và khai khoáng. Khu vực thứ cấp (secondary sector) chế biến và sản xuất hàng hóa vật chất từ nguyên liệu thô. Khu vực tam cấp (tertiary sector) cung cấp các dịch vụ thương mại và cá nhân, bao gồm ngân hàng, vận tải, bán lẻ, y tế và giáo dục.",
+      "duration": 55.94,
+      "startTime": 42.88,
+      "endTime": 98.82,
+      "audioUrl": "/audio/lectures/business/1_2/sec_sectors.mp3"
+    },
+    {
+      "id": "card_sector_basis",
+      "title": "Cơ sở phân loại và Chuỗi giá trị kinh tế",
+      "selector": "#card-sector-basis",
+      "en": "Economists measure the relative importance of these three sectors through two key metrics: the percentage of total national employment in each sector, and the proportion of total output contributing to Gross Domestic Product. All three sectors are deeply interdependent, forming an integrated supply chain that takes raw materials from the earth through factories to retail shelves.",
+      "vi": "Các nhà kinh tế đo lường tầm quan trọng của ba khu vực này dựa trên hai chỉ số chính: tỷ lệ việc làm trong từng khu vực và tỷ trọng đóng góp vào Tổng sản phẩm quốc nội (GDP). Cả ba khu vực đều có mối quan hệ phụ thuộc lẫn nhau chặt chẽ, tạo thành chuỗi cung ứng khép kín từ khâu khai thác tài nguyên, qua nhà máy chế tạo đến kệ hàng bán lẻ.",
+      "duration": 40.53,
+      "startTime": 98.82,
+      "endTime": 139.35,
+      "audioUrl": "/audio/lectures/business/1_2/card_sector_basis.mp3"
+    },
+    {
+      "id": "card_deindustrialisation",
+      "title": "Quá trình phi công nghiệp hóa (De-industrialisation)",
+      "selector": "#card-deindustrialisation",
+      "en": "Over time, economic development alters the balance between sectors. In developed high-income nations, de-industrialisation occurs as manufacturing employment declines while service sector jobs expand. This structural shift is driven by depletion of domestic raw materials, rising local wage rates causing factories to relocate to lower-cost emerging economies, and rising consumer disposable incomes spent increasingly on travel, leisure, and financial services.",
+      "vi": "Theo thời gian, phát triển kinh tế làm thay đổi cán cân giữa các khu vực. Tại các quốc gia phát triển, quá trình phi công nghiệp hóa (de-industrialisation) diễn ra khi việc làm trong ngành sản xuất sụt giảm và dịch vụ tăng vọt. Sự dịch chuyển này bắt nguồn từ sự cạn kiệt tài nguyên thô, chi phí nhân công trong nước tăng khiến nhà máy chuyển dịch sang các nước đang phát triển, và thu nhập khả dụng tăng thúc đẩy người dân chi tiêu nhiều hơn cho du lịch, giải trí và dịch vụ tài chính.",
+      "duration": 54.66,
+      "startTime": 139.35,
+      "endTime": 194.01,
+      "audioUrl": "/audio/lectures/business/1_2/card_deindustrialisation.mp3"
+    },
+    {
+      "id": "sec_mixed_economy",
+      "title": "2. Nền kinh tế hỗn hợp (Mixed Economy)",
+      "selector": "#sec-mixed-economy",
+      "en": "Section 2 explores mixed economies, where resources are allocated by both market forces and government intervention. In a pure market economy, all resources are privately owned; in a command economy, the state controls all production. Modern nations operate as mixed economies to capture the efficiency of private enterprise while protecting public welfare through state-funded infrastructure and essential services.",
+      "vi": "Mục hai khám phá nền kinh tế hỗn hợp, nơi nguồn lực được phân bổ bởi cả cơ chế thị trường và sự can thiệp của chính phủ. Trong nền kinh tế thị trường thuần túy, mọi nguồn lực do tư nhân sở hữu; ngược lại trong nền kinh tế chỉ huy, nhà nước kiểm soát toàn bộ. Các quốc gia hiện đại đều áp dụng mô hình kinh tế hỗn hợp nhằm tận dụng tính năng động của doanh nghiệp tư nhân, đồng thời bảo đảm an sinh xã hội qua các dịch vụ công thiết yếu.",
+      "duration": 49.46,
+      "startTime": 194.01,
+      "endTime": 243.47,
+      "audioUrl": "/audio/lectures/business/1_2/sec_mixed_economy.mp3"
+    },
+    {
+      "id": "card_private_public_sector",
+      "title": "So sánh Khu vực Tư nhân và Khu vực Nhà nước",
+      "selector": "#card-private-public-sector",
+      "en": "In the private sector, businesses are owned by private individuals, partners, or shareholders, with primary aims of profitability, growth, and market share. In contrast, the public sector is owned and managed by the government, financed through taxation, and focuses on social equity, universal accessibility, and public healthcare. When governments sell state-owned enterprises to private investors, this process is called privatisation.",
+      "vi": "Trong khu vực tư nhân, doanh nghiệp thuộc sở hữu của các cá nhân hoặc cổ đông, với mục tiêu hàng đầu là lợi nhuận, tăng trưởng và thị phần. Ngược lại, khu vực nhà nước thuộc sở hữu của chính phủ, vận hành bằng tiền thuế và hướng tới mục tiêu phục vụ cộng đồng, duy trì giá cả hợp lý và bảo đảm an sinh xã hội. Quá trình chính phủ bán các doanh nghiệp nhà nước cho các nhà đầu tư tư nhân được gọi là tư nhân hóa (privatisation).",
+      "duration": 52.67,
+      "startTime": 243.47,
+      "endTime": 296.14,
+      "audioUrl": "/audio/lectures/business/1_2/card_private_public_sector.mp3"
+    }
+  ]
+}
